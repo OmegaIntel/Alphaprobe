@@ -1,5 +1,5 @@
 
-# Weaviate File Upload and Summarization API
+# Alphaprobe
 
 This project provides a FastAPI-based service that allows users to upload text files for a specific company, store the content in a Weaviate database, and optionally summarize the content using the Ollama model with LangChain.
 
