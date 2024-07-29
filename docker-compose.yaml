@@ -26,6 +26,7 @@ services:
       - ollama
     ports:
       - "8004:8000"
+      - "8003:8501"
     volumes:
       - .:/app
     environment:
