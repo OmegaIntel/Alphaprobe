@@ -1,9 +1,64 @@
 import weaviate
 from tqdm import tqdm
+from werkzeug.security import generate_password_hash, check_password_hash
+
 
 class WeaviateDb:
     def __init__(self, url: str = "http://weaviate:8080"):
         self.client = weaviate.Client(url)
+        self.create_user_schema()
+
+    def create_user_schema(self):
+        class_name = "User"
+        existing_classes = self.client.schema.get()["classes"]
+        if any(cls["class"] == class_name for cls in existing_classes):
+            return
+        
+        schema = {
+            "classes": [
+                {
+                    "class": class_name,
+                    "description": "User details",
+                    "properties": [
+                        {
+                            "name": "email",
+                            "dataType": ["string"]
+                        },
+                        {
+                            "name": "password",
+                            "dataType": ["string"]
+                        }
+                    ]
+                }
+            ]
+        }
+        self.client.schema.create(schema)
+
+    def register_user(self, email: str, password: str):
+        class_name = "User"
+        hashed_password = generate_password_hash(password, method='sha256')
+        
+        user_data = {
+            "email": email,
+            "password": hashed_password
+        }
+        
+        self.client.data_object.create(user_data, class_name)
+
+    def authenticate_user(self, email: str, password: str):
+        class_name = "User"
+        query_result = self.client.query.get(class_name, ["email", "password"]).with_where({
+            "path": ["email"],
+            "operator": "Equal",
+            "valueString": email
+        }).do()
+        
+        if query_result["data"]["Get"][class_name]:
+            user = query_result["data"]["Get"][class_name][0]
+            if check_password_hash(user["password"], password):
+                return True
+        return False
+
 
     def create_schema(self, company: str):
         class_name = f"{company}_Documents"
@@ -86,3 +141,15 @@ class WeaviateDb:
             print(f"Error querying Weaviate: {e}")
             return []
 
+    def register_company(self, company_name: str):
+        class_name = f"{company_name}_Documents"
+        existing_classes = self.client.schema.get()["classes"]
+        if any(cls["class"] == class_name for cls in existing_classes):
+            return False  # Company already registered
+        self.create_schema(company_name)
+        return True
+
+    def get_registered_companies(self):
+        existing_classes = self.client.schema.get()["classes"]
+        companies = [cls["class"].replace("_Documents", "") for cls in existing_classes]
+        return companies
