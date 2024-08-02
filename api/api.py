@@ -27,34 +27,6 @@ class UploadResponse(BaseModel):
     file_type: str
     detail: str
 
-class UserRegistrationRequest(BaseModel):
-    email: str
-    password: str
-
-class UserLoginRequest(BaseModel):
-    email: str
-    password: str
-
-@router.post("/register_user")
-async def register_user(request: UserRegistrationRequest):
-    email = request.email
-    password = request.password
-    
-    if weaviate_handler.register_user(email, password):
-        return {"detail": "User registered successfully"}
-    else:
-        raise HTTPException(status_code=400, detail="User already exists")
-
-@router.post("/login_user")
-async def login_user(request: UserLoginRequest):
-    email = request.email
-    password = request.password
-    
-    if weaviate_handler.authenticate_user(email, password):
-        return {"detail": "Login successful"}
-    else:
-        raise HTTPException(status_code=401, detail="Invalid credentials")
-
 @router.post("/companies")
 async def register_company(request: CompanyRegistrationRequest):
     company_name = request.company_name
@@ -92,17 +64,27 @@ async def upload_file(
 ):
     file_location = f"/app/data/{company}_{file.filename}"
     with open(file_location, "wb") as buffer:
-        buffer.write(await file.read())
+        buffer.write(await file.read())  # Use await to read file content asynchronously
     
-    # Upload file content to Weaviate
-    with open(file_location, "r") as file_content:
-        content = file_content.read()
-        class_name = weaviate_handler.create_schema(company)
-        weaviate_handler.upload_content(class_name, content, file_location)
+    with open(file_location, "r") as file_obj:
+        file_content = file_obj.read()
+    
+    class_name = weaviate_handler.create_schema(company)
+    
+    if file_type == "financial":
+        file_summary = llm_wrapper.summarize_content(file_content)
+        weaviate_handler.upload_content(class_name, file_summary, file_location)
+    else:
+        weaviate_handler.upload_content(class_name, file_content, file_location)
     
     return UploadResponse(
         company=company,
         file_name=file.filename,
         file_type=file_type,
-        detail="File uploaded and content stored successfully"
+        detail="File uploaded successfully"
     )
+
+@router.get("/companies")
+async def get_companies():
+    companies = weaviate_handler.get_registered_companies()
+    return {"companies": companies}
