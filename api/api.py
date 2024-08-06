@@ -7,12 +7,14 @@ import os
 from api.db_models.weaviate_db import WeaviateDb
 from api.llm_models.llm import LLM
 from api.search.bing_search import BingSearch
+from api.stock.openbb_stock_api import OpenBBStockAPI
 
 router = APIRouter()
 
 weaviate_handler = WeaviateDb()
 llm_wrapper = LLM()
 bing_search = BingSearch()
+openbb_stock_api = OpenBBStockAPI()
 
 class CompanyRegistrationRequest(BaseModel):
     company_name: str
@@ -46,41 +48,38 @@ async def chat(request: ChatRequest):
     # Extract user message from the conversation
     user_message = conversation[-1]["content"]
 
-    # Check if the query is about real-world data using LLM
-    if llm_wrapper.is_real_world_query(user_message):
-        # Perform a search on Bing
+    # Initialize the context
+    context = ' '.join([entry["content"] for entry in conversation if entry["role"] == "ai"])
+
+    # Check if the query is about stock market history
+    if llm_wrapper.is_stock_history_query(user_message):
+        ticker = llm_wrapper.extract_ticker_from_query(user_message)
+        start_date, end_date = llm_wrapper.extract_dates_from_query(user_message)
+        if not ticker or not start_date or not end_date:
+            raise HTTPException(status_code=400, detail="Error extracting ticker or dates from query.")
+        stock_history = openbb_stock_api.get_stock_history(ticker, start_date, end_date)
+        if stock_history is None:
+            context += f" Company {ticker} appears to be delisted and no historical data is available."
+        else:
+            context += f" Stock history for {ticker} from {start_date} to {end_date}: {stock_history}"
+
+    # Check if the query is about real-world data
+    elif llm_wrapper.is_real_world_query(user_message):
         search_results = bing_search.search(user_message)
         parsed_results = bing_search.parse_search_results(search_results)
-
         if not parsed_results:
             raise HTTPException(status_code=400, detail="No relevant data found for the query.")
-
-        # Retrieve context from Weaviate
-        weaviate_context = weaviate_handler.get_context(user_message, company)
-
-        # Concatenate context from both sources
-        context = ' '.join([entry["content"] for entry in conversation if entry["role"] == "ai"])
-        if weaviate_context:
-            context += ' ' + ' '.join([res['content'] for res in weaviate_context])
-        context += " \n following is search result from internet \n "
+        context += " \n Following is search result from internet \n "
         for result in parsed_results:
             context += f" {result['name']}: {result['snippet']} (Source: {result['url']})"
 
-        # Generate response using the LLM
-        ai_response = llm_wrapper.generate_response(user_message, context)
-        return ChatResponse(response=ai_response)
+    # Retrieve context from Weaviate
+    weaviate_context = weaviate_handler.get_context(user_message, company)
+    if weaviate_context:
+        context += ' ' + ' '.join([res['content'] for res in weaviate_context])
 
-    # Query Weaviate for context
-    query_result = weaviate_handler.get_context(user_message, company)
-    
-    # Concatenate all previous conversation and context
-    context = ' '.join([entry["content"] for entry in conversation if entry["role"] == "ai"])
-    if query_result:
-        context += ' ' + ' '.join([res['content'] for res in query_result])
-    
     # Generate response using the LLM
     ai_response = llm_wrapper.generate_response(user_message, context)
-    
     return ChatResponse(response=ai_response)
 
 @router.post("/upload", response_model=UploadResponse)
