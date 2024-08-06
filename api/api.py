@@ -1,3 +1,4 @@
+# api.py
 from fastapi import APIRouter, HTTPException, UploadFile, File, Form
 from pydantic import BaseModel
 from typing import Literal
@@ -5,11 +6,13 @@ import os
 
 from api.db_models.weaviate_db import WeaviateDb
 from api.llm_models.llm import LLM
+from api.search.bing_search import BingSearch
 
 router = APIRouter()
 
 weaviate_handler = WeaviateDb()
 llm_wrapper = LLM()
+bing_search = BingSearch()
 
 class CompanyRegistrationRequest(BaseModel):
     company_name: str
@@ -42,6 +45,30 @@ async def chat(request: ChatRequest):
 
     # Extract user message from the conversation
     user_message = conversation[-1]["content"]
+
+    # Check if the query is about real-world data using LLM
+    if llm_wrapper.is_real_world_query(user_message):
+        # Perform a search on Bing
+        search_results = bing_search.search(user_message)
+        parsed_results = bing_search.parse_search_results(search_results)
+
+        if not parsed_results:
+            raise HTTPException(status_code=400, detail="No relevant data found for the query.")
+
+        # Retrieve context from Weaviate
+        weaviate_context = weaviate_handler.get_context(user_message, company)
+
+        # Concatenate context from both sources
+        context = ' '.join([entry["content"] for entry in conversation if entry["role"] == "ai"])
+        if weaviate_context:
+            context += ' ' + ' '.join([res['content'] for res in weaviate_context])
+        context += " \n following is search result from internet \n "
+        for result in parsed_results:
+            context += f" {result['name']}: {result['snippet']} (Source: {result['url']})"
+
+        # Generate response using the LLM
+        ai_response = llm_wrapper.generate_response(user_message, context)
+        return ChatResponse(response=ai_response)
 
     # Query Weaviate for context
     query_result = weaviate_handler.get_context(user_message, company)

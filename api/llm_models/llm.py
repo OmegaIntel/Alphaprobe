@@ -1,7 +1,6 @@
+# llm.py
 import os
-import time
 import openai
-from tqdm import tqdm
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 from langchain.chat_models import ChatOpenAI
@@ -26,9 +25,16 @@ class LLM:
             template="User message: {user_message}\nContext: {context}\nProvide a relevant answer based on the context."
         )
 
+        # Define a prompt template for determining if a query is about real-world data
+        self.real_world_query_prompt_template = PromptTemplate(
+            input_variables=["query"],
+            template="Determine if the following query is about real-world data and should better be searched on internet:\n\n{query}\nRespond with 'yes' or 'no'."
+        )
+
         # Create LangChain chains for both tasks
         self.summarization_chain = LLMChain(llm=self.openai_client, prompt=self.summarization_prompt_template)
         self.response_chain = LLMChain(llm=self.openai_client, prompt=self.response_prompt_template)
+        self.real_world_query_chain = LLMChain(llm=self.openai_client, prompt=self.real_world_query_prompt_template)
 
     def chunk_content(self, content: str, max_tokens: int = 2048) -> list:
         tokens = content.split()
@@ -46,15 +52,6 @@ class LLM:
             chunks.append(' '.join(current_chunk))
 
         return chunks
-
-    def upload_content(self, class_name: str, content: str, file_path: str):
-        chunks = self.chunk_content(content)
-        for chunk in tqdm(chunks, desc="Uploading content", unit="chunk"):
-            data_object = {
-                "content": chunk,
-                "file_path": file_path
-            }
-            self.client.data_object.create(data_object, class_name)
 
     def summarize_content(self, content: str) -> str:
         try:
@@ -75,3 +72,11 @@ class LLM:
         except Exception as e:
             print(f"Error generating response: {e}")
             return "An error occurred while generating the response."
+
+    def is_real_world_query(self, query: str) -> bool:
+        try:
+            response = self.real_world_query_chain.run({"query": query}).strip().lower()
+            return response == "yes"
+        except Exception as e:
+            print(f"Error determining if query is real-world: {e}")
+            return False

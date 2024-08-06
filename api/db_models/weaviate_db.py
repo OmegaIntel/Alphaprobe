@@ -1,7 +1,7 @@
+# weaviate_db.py
 import weaviate
 from tqdm import tqdm
 from werkzeug.security import generate_password_hash, check_password_hash
-
 
 class WeaviateDb:
     def __init__(self, url: str = "http://weaviate:8080"):
@@ -59,7 +59,6 @@ class WeaviateDb:
                 return True
         return False
 
-
     def create_schema(self, company: str):
         class_name = f"{company}_Documents"
 
@@ -92,10 +91,10 @@ class WeaviateDb:
 
         # Create the schema
         self.client.schema.create(schema)
+        print(f"Schema for {class_name} created.")
         return class_name
 
     def chunk_content(self, content: str, max_tokens: int = 2048) -> list:
-        # Simple chunking based on max tokens (This is a basic approach, further improvement might be required)
         tokens = content.split()
         chunks = []
         current_chunk = []
