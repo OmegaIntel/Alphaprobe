@@ -121,9 +121,10 @@ async def send_message(session_id: str, request: MessageRequest, current_user: U
     if llm_wrapper.is_real_world_query(user_message):
         search_results = bing_search.search(user_message)
         parsed_results = bing_search.parse_search_results(search_results)
+        print(parsed_results)
         if not parsed_results:
             raise HTTPException(status_code=400, detail="No relevant data found for the query.")
-        context += "\n Following is search result from internet \n"
+        context += "\n Following is search result from internet for real-time \n"
         for result in parsed_results:
             context += f" {result['name']}: {result['snippet']} (Source: {result['url']})"
     
