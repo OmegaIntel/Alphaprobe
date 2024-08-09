@@ -1,7 +1,10 @@
 # search.py
 import os
 import requests
+import requests
+from bs4 import BeautifulSoup
 from fastapi import HTTPException
+from api.llm_models.llm import LLM
 
 class BingSearch:
     def __init__(self):
@@ -9,6 +12,7 @@ class BingSearch:
         if not self.api_key:
             raise ValueError("Bing API key is not set in environment variables.")
         self.endpoint = "https://api.bing.microsoft.com/v7.0/search"
+        self.llm = LLM()
 
     def search(self, query: str):
         headers = {"Ocp-Apim-Subscription-Key": self.api_key}
@@ -20,15 +24,34 @@ class BingSearch:
             raise HTTPException(status_code=response.status_code, detail="Error fetching data from Bing API")
 
         return response.json()
+    
+    def fetch_and_summarize(self, url):
+        try:
+            response = requests.get(url)
+            if response.status_code == 200:
+                page_content = response.text
+                soup = BeautifulSoup(page_content, 'html.parser')
+                paragraphs = soup.find_all('p')
+                text = ' '.join([para.get_text() for para in paragraphs])
+                
+                summary = self.llm.summarize_content(text)
+                return summary[0]['summary_text']
+            else:
+                return "Content not accessible."
+        except Exception as e:
+            return f"Error fetching content: {str(e)}"
+
 
     def parse_search_results(self, search_results):
         # Extract relevant information from the search results
         parsed_results = []
         for result in search_results.get("webPages", {}).get("value", []):
+            url = result.get("url")
+            summary = self.fetch_and_summarize(url)
             parsed_results.append({
                 "name": result.get("name"),
-                "url": result.get("url"),
-                "snippet": result.get("snippet"),
+                "url": url,
+                "snippet": result.get("snippet") + " | Summary: " + summary,
                 "dateLastCrawled": result.get("dateLastCrawled")
             })
         return parsed_results
