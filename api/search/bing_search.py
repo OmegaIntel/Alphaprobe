@@ -35,7 +35,7 @@ class BingSearch:
                 text = ' '.join([para.get_text() for para in paragraphs])
                 
                 summary = self.llm.summarize_content(text)
-                return summary[0]['summary_text']
+                return summary
             else:
                 return "Content not accessible."
         except Exception as e:
