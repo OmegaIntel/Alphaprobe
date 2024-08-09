@@ -118,7 +118,7 @@ async def send_message(session_id: str, request: MessageRequest, current_user: U
             context += f" Key metrics for {ticker} are as follows : {key_metrics} \n\n\n"
     
     # Check if the query is about real-world data
-    elif llm_wrapper.is_real_world_query(user_message):
+    if llm_wrapper.is_real_world_query(user_message):
         search_results = bing_search.search(user_message)
         parsed_results = bing_search.parse_search_results(search_results)
         if not parsed_results:
