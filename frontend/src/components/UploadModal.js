@@ -17,7 +17,12 @@ const UploadModal = ({ isOpen, onRequestClose }) => {
   useEffect(() => {
     const fetchCompanies = async () => {
       try {
-        const response = await axiosInstance.get('/companies');
+        const token = localStorage.getItem('token'); // Get the auth token from localStorage
+        const response = await axiosInstance.get('/companies', {
+          headers: {
+            'Authorization': `Bearer ${token}`, // Pass the token in the Authorization header
+          },
+        });
         setCompanies(response.data.companies);
       } catch (error) {
         console.error('Error fetching companies:', error);
@@ -36,9 +41,9 @@ const UploadModal = ({ isOpen, onRequestClose }) => {
     const formData = new FormData();
     formData.append('file', file);
     formData.append('company', company);
-    formData.append('file_type', fileType); // Ensure it matches the expected field name
+    formData.append('file_type', fileType);
   
-    const token = localStorage.getItem('token'); // Get the auth token from localStorage
+    const token = localStorage.getItem('token');
   
     try {
       const response = await axiosInstance.post('/upload', formData, {
@@ -49,7 +54,7 @@ const UploadModal = ({ isOpen, onRequestClose }) => {
       });
       if (response.status === 200) {
         setUploadStatus('File uploaded successfully');
-        onRequestClose();
+        // Keep the modal open and show the success message
       } else {
         setUploadStatus('Failed to upload file');
       }
@@ -60,7 +65,6 @@ const UploadModal = ({ isOpen, onRequestClose }) => {
       setLoading(false);
     }
   };
-  
 
   return (
     <Modal
