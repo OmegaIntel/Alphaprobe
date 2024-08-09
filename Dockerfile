@@ -8,4 +8,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /app
 
-CMD ["uvicorn", "api.app:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+ENV STREAMLIT_DISABLE_ONBOARDING=true
+
+# Set the start script as the default command
+CMD ["/app/scripts/start.sh"]
