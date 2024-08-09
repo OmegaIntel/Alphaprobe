@@ -34,7 +34,7 @@ body {
 .sidebar h1 {
   color: #eaeaea;
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .sidebar ul {
@@ -42,8 +42,91 @@ body {
   padding: 0;
 }
 
+
+.sidebar ul li a {
+  color: #eaeaea;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+  background-color: #3b3b3b;
+}
+
+/* Sidebar styles */
+.sidebar ul li.active-session a {
+  background-color: #1e9bf0;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.sidebar ul li.active-session a:hover {
+  background-color: #1b8dd4;
+}
+
+.session-tab {
+  font-size: 14px;
+  white-space: nowrap; /* Prevents word wrap */
+  overflow: hidden;    /* Hides the overflow text */
+  text-overflow: ellipsis; /* Adds an ellipsis to indicate text is cut off */
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  color: #333; /* Adjust the color as needed */
+}
+
+.session-tab:hover {
+  text-decoration: underline;
+}
+
+.active-session {
+  font-weight: bold;
+  color: #000; /* Adjust the color for the active session as needed */
+}
+
+.sidebar {
+  background-color: #2e2e2e;
+  width: 250px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh; /* Make sure the sidebar takes up the full height */
+}
+
+.sidebar h1 {
+  color: #eaeaea;
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+.sidebar-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  overflow-y: auto; /* Add scrolling if necessary */
+}
+
 .sidebar ul li {
-  margin-bottom: 10px;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0px;
 }
 
 .sidebar ul li a {
@@ -59,15 +142,158 @@ body {
   background-color: #3b3b3b;
 }
 
+.sidebar ul li.active-session a {
+  background-color: #1e9bf0;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.sidebar ul li.active-session a:hover {
+  background-color: #1b8dd4;
+}
+
+.session-tab {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  color: #eaeaea;
+}
+
+.session-tab:hover {
+  text-decoration: underline;
+}
+
+.sidebar button.upload-link {
+  padding: 10px 15px;  /* Increased padding */
+  font-size: 16px;
+  background-color: #1e9bf0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.new-session-button{
+  background: #5b5b5b;
+  padding: 10px 15px;  /* Increased padding */
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.new-session-button:hover{
+  color: #333;
+}
+
+
+.sidebar button.logout-button {
+  padding: 10px 15px;  /* Increased padding */
+  font-size: 16px;
+  background-color: #eaeaea;
+  color: #000;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end; /* Aligns the logout button to the bottom */
+  margin-top: auto;  /* Ensures it stays at the bottom */
+}
+
+.sidebar .session-item {
+  align-items: center;
+  padding: 5px 0;
+  position: relative;
+}
+
+.sidebar .delete-session-icon {
+  color: rgb(203, 203, 203);
+  cursor: pointer;
+  margin-left: 10px;
+  position: absolute;
+  right: 10px;
+  top: 16px;
+  display: none;
+}
+
+.session-item:hover .delete-session-icon {
+  display: block;
+}
+
+.session-item .delete-session-icon:hover {
+  display: block;
+}
+
+
+.logout-button {
+  position: absolute; /* Position it absolutely within the parent container */
+  top: 10px;          /* Adjust the top position as needed */
+  right: 10px;        /* Align it to the right */
+  background: none;   /* Remove background */
+  border: none;       /* Remove border */
+  cursor: pointer;    /* Change cursor to pointer */
+  padding: 0;         /* Remove padding */
+  z-index: 100;       /* Ensure it stays on top */
+  border-radius: 10px !important;
+}
+
+.logout-button img {
+  width: 24px;        /* Adjust size to match your design */
+  height: 24px;
+}
+
+.logout-button img:hover {
+  filter: brightness(0.8); /* Add hover effect */
+}
+
+.new-session-button,
+.logout-button,
+.upload-link {
+  display: block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.new-session-button:hover,
+.logout-button:hover,
+.upload-link:hover {
+  background-color: #ddd;
+}
+
+.upload-link {
+  margin-top: 40px;
+}
+
+.logout-button {
+  margin-top: auto;
+  margin-bottom: 10px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+}
+
+
 .logout-button {
   background-color: #3b3b3b; /* Example red color */
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
-  width: 100%;
   text-align: left;
   margin-top: 10px;
+  margin-right: 10px;
 }
 
 .logout-button:hover {
@@ -107,6 +333,7 @@ body {
   flex-grow: 1;
   overflow-y: auto;
   padding: 20px;
+  padding-top: 25px;
   background-color: #3b3b3b;
   border-radius: 10px;
   display: flex;
@@ -654,4 +881,21 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word;
   font-family: inherit;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Make the button vertically and horizontally centered */
+}
+
+.create-session-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #1e9bf0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

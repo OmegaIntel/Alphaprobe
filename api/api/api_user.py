@@ -14,7 +14,7 @@ from api.db_models.weaviate_db import WeaviateDb
 # Environment variables and constants
 SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key")
 ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
+ACCESS_TOKEN_EXPIRE_MINUTES = 120
 
 # FastAPI OAuth2 scheme
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
@@ -62,7 +62,7 @@ def create_access_token(data: dict, expires_delta: timedelta = None):
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
 
-async def get_current_user(token: str = Depends(oauth2_scheme)):
+async def get_current_user(token: str = Depends(oauth2_scheme)) -> User:
     credentials_exception = HTTPException(
         status_code=401,
         detail="Could not validate credentials",
@@ -76,10 +76,15 @@ async def get_current_user(token: str = Depends(oauth2_scheme)):
         token_data = TokenData(email=email)
     except jwt.PyJWTError:
         raise credentials_exception
-    user = weaviate_handler.get_user(token_data.email)
-    if user is None:
+    
+    user_data = weaviate_handler.get_user(token_data.email)
+    if user_data is None:
         raise credentials_exception
+
+    # Convert dictionary to User model instance
+    user = User(email=user_data["email"])
     return user
+
 
 # API route for user registration
 @user_router.post("/register", response_model=User)

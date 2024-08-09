@@ -1,14 +1,18 @@
-# weaviate_db.py
 import re
+import datetime
 import weaviate
 from weaviate import Client
 from tqdm import tqdm
 from werkzeug.security import generate_password_hash, check_password_hash
+import uuid
+from api.llm_models.llm import LLM
 
 class WeaviateDb:
     def __init__(self, url: str = "http://weaviate:8080"):
         self.client = Client(url=url)
         self.create_user_schema()
+        self.create_chat_schema()
+        self.llm = LLM() 
 
     def create_user_schema(self):
         class_name = "User"
@@ -24,6 +28,35 @@ class WeaviateDb:
             ],
         }
         self.client.schema.create_class(schema)
+
+    def create_chat_schema(self):
+        chat_session_class = {
+            "class": "ChatSession",
+            "description": "Chat session details",
+            "properties": [
+                {"name": "session_id", "dataType": ["string"]},
+                {"name": "session_name", "dataType": ["string"]},
+                {"name": "user_email", "dataType": ["string"]},
+                {"name": "created_at", "dataType": ["date"]},  # Add the creation timestamp property
+            ],
+        }
+
+        chat_message_class = {
+            "class": "ChatMessage",
+            "description": "Chat message details",
+            "properties": [
+                {"name": "session_id", "dataType": ["string"]},
+                {"name": "role", "dataType": ["string"]},
+                {"name": "content", "dataType": ["text"]},
+            ],
+        }
+
+        if not self.client.schema.exists("ChatSession"):
+            self.client.schema.create_class(chat_session_class)
+
+        if not self.client.schema.exists("ChatMessage"):
+            self.client.schema.create_class(chat_message_class)
+
 
     def register_user(self, email: str, hashed_password: str):
         class_name = "User"
@@ -46,12 +79,10 @@ class WeaviateDb:
         return None
 
     def sanitize_class_name(self, company_name: str) -> str:
-        # Remove any non-alphanumeric characters and capitalize the name
         sanitized_name = re.sub(r'\W+', '_', company_name)
         return sanitized_name.capitalize()
 
     def create_company_schema(self, company_name: str):
-        # Sanitize the company name before using it as a class name
         sanitized_name = self.sanitize_class_name(company_name)
         class_name = f"{sanitized_name}_Documents"
 
@@ -73,7 +104,144 @@ class WeaviateDb:
         print(f"Schema for {class_name} created.")
         return class_name
 
+    def create_chat_session(self, user_email: str) -> (str, str):
+        session_id = str(uuid.uuid4())
+        session_name = f"Session {session_id[:8]}"
+        timestamp = datetime.datetime.utcnow().isoformat() + 'Z'  # Weaviate uses ISO format for date-time
 
+        session_data = {
+            "session_id": session_id,
+            "session_name": session_name,
+            "user_email": user_email,
+            "created_at": timestamp  # Add the creation timestamp
+        }
+        self.client.data_object.create(session_data, "ChatSession")
+        return session_id, session_name
+
+
+    def get_chat_sessions(self, user_email: str):
+        query_result = self.client.query.get("ChatSession", ["session_id", "session_name", "created_at"]).with_where({
+            "path": ["user_email"],
+            "operator": "Equal",
+            "valueString": user_email,
+        }).with_sort({
+            "path": ["created_at"],
+            "order": "desc"
+        }).do()
+
+        return query_result["data"]["Get"]["ChatSession"]
+
+
+    def get_chat_session(self, session_id: str, user_email: str):
+        query_result = self.client.query.get("ChatSession", ["session_id", "session_name"]).with_where({
+            "operator": "And",
+            "operands": [
+                {
+                    "path": ["session_id"],
+                    "operator": "Equal",
+                    "valueString": session_id,
+                },
+                {
+                    "path": ["user_email"],
+                    "operator": "Equal",
+                    "valueString": user_email,
+                }
+            ]
+        }).do()
+
+        if query_result["data"]["Get"]["ChatSession"]:
+            return query_result["data"]["Get"]["ChatSession"][0]
+        return None
+    
+    # def update_chat_session_name(self, session_id: str, session_name: str, user_email: str):
+    #     session = self.get_chat_session(session_id, user_email)
+    #     if session is None:
+    #         return None
+
+    #     # Update the session name
+    #     update_data = {
+    #         "session_name": session_name
+    #     }
+
+    #     # Get the UUID of the object to update
+    #     session_uuid = session["_additional"]["id"]
+
+    #     self.client.data_object.update(update_data, "ChatSession", session_uuid)
+
+    def get_chat_messages(self, session_id: str, user_email: str):
+        session = self.get_chat_session(session_id, user_email)
+        if session is None:
+            return None
+
+        query_result = self.client.query.get("ChatMessage", ["role", "content"]).with_where({
+            "path": ["session_id"],
+            "operator": "Equal",
+            "valueString": session_id,
+        }).do()
+
+        return query_result["data"]["Get"]["ChatMessage"]
+    
+    def delete_chat_session(self, session_id: str, user_email: str):
+        # Query Weaviate to get the UUID for the session with the given session_id
+        query_result = self.client.query.get("ChatSession", ["_additional { id }"]).with_where({
+            "path": ["session_id"],
+            "operator": "Equal",
+            "valueString": session_id,
+        }).do()
+
+        # Extract the UUID from the query result
+        if query_result and query_result["data"]["Get"]["ChatSession"]:
+            session_uuid = query_result["data"]["Get"]["ChatSession"][0]["_additional"]["id"]
+
+            # Delete the session using the UUID
+            try:
+                self.client.data_object.delete(session_uuid, "ChatSession")
+                return {"message": "Session deleted successfully"}
+            except weaviate.exceptions.UnexpectedStatusCodeException as e:
+                print(f"Error deleting session: {e}")
+                return {"error": "Failed to delete session"}
+        else:
+            return {"error": "Session not found"}
+
+
+
+    def save_chat_message(self, session_id: str, user_message: dict, ai_message: dict, user_email: str):
+        session = self.get_chat_session(session_id, user_email)
+        if session is None:
+            return None
+
+        user_message_data = {
+            "session_id": session_id,
+            "role": user_message["role"],
+            "content": user_message["content"],
+        }
+
+        ai_message_data = {
+            "session_id": session_id,
+            "role": ai_message["role"],
+            "content": ai_message["content"],
+        }
+
+        self.client.data_object.create(user_message_data, "ChatMessage")
+        self.client.data_object.create(ai_message_data, "ChatMessage")
+
+    def update_chat_session_name(self, session_id: str, session_name: str):
+        # Query Weaviate to get the UUID for the session with the given session_id
+        query_result = self.client.query.get("ChatSession", ["_additional { id }"]).with_where({
+            "path": ["session_id"],
+            "operator": "Equal",
+            "valueString": session_id,
+        }).do()
+
+        # Extract the UUID from the query result
+        if query_result and query_result["data"]["Get"]["ChatSession"]:
+            session_uuid = query_result["data"]["Get"]["ChatSession"][0]["_additional"]["id"]
+
+            # Update the session name using the UUID
+            update_data = {
+                "session_name": session_name
+            }
+            self.client.data_object.update(update_data, "ChatSession", session_uuid)
 
     def upload_content(self, class_name: str, content: str, file_path: str):
         chunks = self.chunk_content(content)

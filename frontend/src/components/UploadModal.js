@@ -37,11 +37,14 @@ const UploadModal = ({ isOpen, onRequestClose }) => {
     formData.append('file', file);
     formData.append('company', company);
     formData.append('file_type', fileType); // Ensure it matches the expected field name
-
+  
+    const token = localStorage.getItem('token'); // Get the auth token from localStorage
+  
     try {
       const response = await axiosInstance.post('/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
+          'Authorization': `Bearer ${token}`, // Pass the token in the Authorization header
         },
       });
       if (response.status === 200) {
@@ -57,6 +60,7 @@ const UploadModal = ({ isOpen, onRequestClose }) => {
       setLoading(false);
     }
   };
+  
 
   return (
     <Modal

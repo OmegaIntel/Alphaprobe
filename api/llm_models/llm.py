@@ -37,6 +37,16 @@ class LLM:
             template="Extract the company ticker symbol from the following query:\n\n{query}\nRespond in the format 'ticker: SYMBOL'."
         )
 
+        self.session_name_summarization_prompt_template = PromptTemplate(
+            input_variables=["content"],
+            template="Summarize the following content in 3-4 words:\n\n{content}"
+        )
+
+        self.enhance_user_message_chain_prompt_template = PromptTemplate(
+            input_variables=["content"],
+            template="rewrite the user message just replace the generic nounce and pronounce with company specific words repond only the user message:\n\n{content}"
+        )
+
         # Create LangChain chains for these tasks
         self.summarization_chain = RunnableSequence(
             RunnableLambda(lambda x: self.summarization_prompt_template.format(**x)),
@@ -62,6 +72,17 @@ class LLM:
             RunnableLambda(lambda x: self.ticker_extraction_prompt_template.format(**x)),
             self.openai_client
         )
+
+        self.session_name_summarization_chain = RunnableSequence(
+            RunnableLambda(lambda x: self.session_name_summarization_prompt_template.format(**x)),
+            self.openai_client
+        )
+
+        self.enhance_user_message_chain = RunnableSequence(
+            RunnableLambda(lambda x: self.enhance_user_message_chain_prompt_template.format(**x)),
+            self.openai_client
+        )
+
 
     def chunk_content(self, content: str, max_tokens: int = 2048) -> list:
         tokens = content.split()
@@ -137,3 +158,19 @@ class LLM:
         except Exception as e:
             print(f"Error extracting ticker from query: {e}")
             return None
+        
+    def generate_summary_name(self, user_message: str, ai_message: str) -> str:
+        try:
+            summary_message = self.session_name_summarization_chain.invoke({"content": f"{user_message} {ai_message}"})
+            return summary_message.content.strip()
+        except Exception as e:
+            print(f"Error generating session name: {e}")
+            return "Session"
+        
+    def enhance_user_message(self, company_context: str, past_messages_context: str, user_message: str) -> str:
+        try:
+            summary_message = self.enhance_user_message_chain.invoke({"content":  f"company_context:{company_context}\n\n\n past_messages_context:{past_messages_context}\n\n\n user_message:{user_message}"})
+            return summary_message.content.strip()
+        except Exception as e:
+            print(f"Error generating session name: {e}")
+            return "Session"

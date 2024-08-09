@@ -1,12 +1,12 @@
 # api/api_chat.py
-from fastapi import APIRouter, HTTPException, UploadFile, File, Form
+from fastapi import APIRouter, HTTPException, UploadFile, File, Form, Depends
 from pydantic import BaseModel
-from typing import Literal
-
+from typing import List, Literal
 from api.db_models.weaviate_db import WeaviateDb
 from api.llm_models.llm import LLM
 from api.search.bing_search import BingSearch
 from api.stock.openbb_stock_api import OpenBBStockAPI
+from api.api.api_user import get_current_user, User
 
 chat_router = APIRouter()
 
@@ -15,12 +15,15 @@ llm_wrapper = LLM()
 bing_search = BingSearch()
 openbb_stock_api = OpenBBStockAPI()
 
+with open('/app/api/prompts/intro_prompt.txt', 'r') as file:
+    intro_prompt = file.read()
+
+
 class CompanyRegistrationRequest(BaseModel):
     company_name: str
 
 class ChatRequest(BaseModel):
-    company: str
-    conversation: list[dict[str, str]]
+    conversation: List[dict[str, str]]
 
 class ChatResponse(BaseModel):
     response: str
@@ -31,26 +34,62 @@ class UploadResponse(BaseModel):
     file_type: str
     detail: str
 
-@chat_router.post("/companies")
-async def register_company(request: CompanyRegistrationRequest):
-    company_name = request.company_name
-    if weaviate_handler.register_company(company_name):
-        return {"detail": "Company registered successfully"}
-    else:
-        raise HTTPException(status_code=400, detail="Company already registered")
+class ChatSession(BaseModel):
+    id: str
+    name: str
 
-@chat_router.post("/chat", response_model=ChatResponse)
-async def chat(request: ChatRequest):
-    conversation = request.conversation
+class MessageRequest(BaseModel):
+    content: str
+    company: str
+
+class ChatMessagesResponse(BaseModel):
+    messages: List[dict[str, str]]
+
+@chat_router.post("/chat/sessions", response_model=ChatSession)
+async def create_chat_session(current_user: User = Depends(get_current_user)):
+    session_id, session_name = weaviate_handler.create_chat_session(current_user.email)
+    return ChatSession(id=session_id, name=session_name)
+
+@chat_router.get("/chat/sessions", response_model=List[ChatSession])
+async def get_chat_sessions(current_user: User = Depends(get_current_user)):
+    sessions = weaviate_handler.get_chat_sessions(current_user.email)
+    return [ChatSession(id=session.get('session_id', session.get('_id', '')), name=session.get('session_name', 'Session')) for session in sessions]
+
+@chat_router.get("/chat/{session_id}/messages", response_model=ChatMessagesResponse)
+async def get_chat_messages(session_id: str, current_user: User = Depends(get_current_user)):
+    messages = weaviate_handler.get_chat_messages(session_id, current_user.email)
+    if messages is None:
+        raise HTTPException(status_code=404, detail="Chat session not found")
+    return ChatMessagesResponse(messages=messages)
+
+@chat_router.post("/chat/{session_id}/message", response_model=ChatResponse)
+async def send_message(session_id: str, request: MessageRequest, current_user: User = Depends(get_current_user)):
+    session = weaviate_handler.get_chat_session(session_id, current_user.email)
+    if session is None:
+        raise HTTPException(status_code=404, detail="Chat session not found")
+
+    # Extract the company from the request
     company = request.company
+    
+    # Initialize conversation with existing messages or empty if none
+    conversation = session.get('messages', []) + [{"role": "user", "content": request.content}]
+    message_count = len(conversation)
+    # Extract user message
+    user_message = request.content
 
-    # Extract user message from the conversation
-    user_message = conversation[-1]["content"]
-
+    
     # Initialize the context
     context = 'old messages:\n'
     for entry in conversation:
-        context += "\n" + entry["role"] +": "+ entry["content"]
+        context += f"\n{entry['role']}: {entry['content']}"
+
+    weaviate_context = weaviate_handler.get_context(user_message, company)
+    original_user_message = user_message
+    user_message = llm_wrapper.enhance_user_message(
+        company_context=weaviate_context, 
+        past_messages_context=context,
+        user_message=user_message
+    )
 
     # Check if the query is about stock market history
     if llm_wrapper.is_stock_history_query(user_message):
@@ -63,40 +102,61 @@ async def chat(request: ChatRequest):
             context += f" Company {ticker} appears to be delisted and no historical data is available."
         else:
             context += f" Stock history for {ticker} from {start_date} to {end_date}: {stock_history}"
-
+    
     # Check if the query is about real-world data
-    if llm_wrapper.is_real_world_query(user_message):
+    elif llm_wrapper.is_real_world_query(user_message):
         search_results = bing_search.search(user_message)
         parsed_results = bing_search.parse_search_results(search_results)
         if not parsed_results:
             raise HTTPException(status_code=400, detail="No relevant data found for the query.")
-        context += " \n Following is search result from internet \n "
+        context += "\n Following is search result from internet \n"
         for result in parsed_results:
             context += f" {result['name']}: {result['snippet']} (Source: {result['url']})"
-
+    
     # Retrieve context from Weaviate
     weaviate_context = weaviate_handler.get_context(user_message, company)
     if weaviate_context:
         context += ' ' + ' '.join([res['content'] for res in weaviate_context])
-
-    # Generate response using the LLM
+    
+    # Generate the AI response using the full context
+    context = "General Introduction about tool:\n" + intro_prompt + " Current task at hand:\n " + context
     ai_response = llm_wrapper.generate_response(user_message, context)
-    print(ai_response)
+    
+    # Save both the user's message and the AI's response
+    ai_message = {"role": "ai", "content": ai_response}
+    user_message = {"role": "user", "content": original_user_message}
+    weaviate_handler.save_chat_message(session_id, user_message, ai_message, current_user.email)
+
+    if message_count < 10:
+        session_summary = weaviate_handler.llm.generate_summary_name(user_message["content"], ai_message["content"])
+        weaviate_handler.update_chat_session_name(session_id, session_summary)
     return ChatResponse(response=ai_response)
+
+@chat_router.delete("/chat/sessions/{session_id}", status_code=204)
+async def delete_chat_session(session_id: str, user=Depends(get_current_user)):
+    result = weaviate_handler.delete_chat_session(session_id, user.email)
+    print(result)
+    if result is None:
+        raise HTTPException(status_code=404, detail="Session not found or not authorized")
+    elif "error" in result:
+        raise HTTPException(status_code=500, detail=result["error"])
+    return {"message": "Session deleted successfully"}
+
 
 @chat_router.post("/upload", response_model=UploadResponse)
 async def upload_file(
     company: str = Form(...),
     file_type: Literal["descriptive", "financial"] = Form(...),
-    file: UploadFile = File(...)
+    file: UploadFile = File(...),
+    current_user: User = Depends(get_current_user)
 ):
     file_location = f"/app/data/{company}_{file.filename}"
     with open(file_location, "wb") as buffer:
-        buffer.write(await file.read())  # Use await to read file content asynchronously
-    
+        buffer.write(await file.read())
+
     with open(file_location, "r") as file_obj:
         file_content = file_obj.read()
-    
+
     class_name = weaviate_handler.create_company_schema(company)
     
     if file_type == "financial":
