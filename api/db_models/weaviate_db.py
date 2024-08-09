@@ -1,98 +1,88 @@
 # weaviate_db.py
+import re
 import weaviate
+from weaviate import Client
 from tqdm import tqdm
 from werkzeug.security import generate_password_hash, check_password_hash
 
 class WeaviateDb:
     def __init__(self, url: str = "http://weaviate:8080"):
-        self.client = weaviate.Client(url)
+        self.client = Client(url=url)
         self.create_user_schema()
 
     def create_user_schema(self):
         class_name = "User"
-        existing_classes = self.client.schema.get()["classes"]
-        if any(cls["class"] == class_name for cls in existing_classes):
+        if self.client.schema.exists(class_name):
             return
-        
-        schema = {
-            "classes": [
-                {
-                    "class": class_name,
-                    "description": "User details",
-                    "properties": [
-                        {
-                            "name": "email",
-                            "dataType": ["string"]
-                        },
-                        {
-                            "name": "password",
-                            "dataType": ["string"]
-                        }
-                    ]
-                }
-            ]
-        }
-        self.client.schema.create(schema)
 
-    def register_user(self, email: str, password: str):
+        schema = {
+            "class": class_name,
+            "description": "User details",
+            "properties": [
+                {"name": "email", "dataType": ["string"]},
+                {"name": "password", "dataType": ["string"]},
+            ],
+        }
+        self.client.schema.create_class(schema)
+
+    def register_user(self, email: str, hashed_password: str):
         class_name = "User"
-        hashed_password = generate_password_hash(password, method='sha256')
-        
         user_data = {
             "email": email,
-            "password": hashed_password
+            "password": hashed_password,
         }
-        
         self.client.data_object.create(user_data, class_name)
 
-    def authenticate_user(self, email: str, password: str):
+    def get_user(self, email: str):
         class_name = "User"
         query_result = self.client.query.get(class_name, ["email", "password"]).with_where({
             "path": ["email"],
             "operator": "Equal",
-            "valueString": email
+            "valueString": email,
         }).do()
-        
+
         if query_result["data"]["Get"][class_name]:
-            user = query_result["data"]["Get"][class_name][0]
-            if check_password_hash(user["password"], password):
-                return True
-        return False
+            return query_result["data"]["Get"][class_name][0]
+        return None
 
-    def create_schema(self, company: str):
-        class_name = f"{company}_Documents"
+    def sanitize_class_name(self, company_name: str) -> str:
+        # Remove any non-alphanumeric characters and capitalize the name
+        sanitized_name = re.sub(r'\W+', '_', company_name)
+        return sanitized_name.capitalize()
 
-        # Check if the schema already exists
-        existing_classes = self.client.schema.get()["classes"]
-        if any(cls["class"] == class_name for cls in existing_classes):
+    def create_company_schema(self, company_name: str):
+        # Sanitize the company name before using it as a class name
+        sanitized_name = self.sanitize_class_name(company_name)
+        class_name = f"{sanitized_name}_Documents"
+
+        if self.client.schema.exists(class_name):
             print(f"Schema for {class_name} already exists.")
             return class_name
 
-        # Define the schema
         schema = {
-            "classes": [
-                {
-                    "class": class_name,
-                    "description": f"Documents for {company}",
-                    "vectorizer": "text2vec-openai",
-                    "properties": [
-                        {
-                            "name": "content",
-                            "dataType": ["text"]
-                        },
-                        {
-                            "name": "file_path",
-                            "dataType": ["string"]
-                        }
-                    ]
-                }
-            ]
+            "class": class_name,
+            "description": f"Documents for {company_name}",
+            "vectorizer": "text2vec-openai",
+            "properties": [
+                {"name": "content", "dataType": ["text"]},
+                {"name": "file_path", "dataType": ["string"]},
+            ],
         }
 
-        # Create the schema
-        self.client.schema.create(schema)
+        self.client.schema.create_class(schema)
         print(f"Schema for {class_name} created.")
         return class_name
+
+
+
+    def upload_content(self, class_name: str, content: str, file_path: str):
+        chunks = self.chunk_content(content)
+        for chunk in tqdm(chunks, desc="Uploading content", unit="chunk"):
+            data_object = {
+                "content": chunk,
+                "file_path": file_path,
+            }
+            self.client.data_object.create(data_object, class_name)
 
     def chunk_content(self, content: str, max_tokens: int = 2048) -> list:
         tokens = content.split()
@@ -111,17 +101,9 @@ class WeaviateDb:
 
         return chunks
 
-    def upload_content(self, class_name: str, content: str, file_path: str):
-        chunks = self.chunk_content(content)
-        for chunk in tqdm(chunks, desc="Uploading content", unit="chunk"):
-            data_object = {
-                "content": chunk,
-                "file_path": file_path
-            }
-            self.client.data_object.create(data_object, class_name)
-
-    def get_context(self, query: str, company: str):
-        class_name = f"{company}_Documents"
+    def get_context(self, query: str, company_name: str):
+        company_name = self.sanitize_class_name(company_name)
+        class_name = f"{company_name}_Documents"
         try:
             query_result = (
                 self.client.query
@@ -130,7 +112,6 @@ class WeaviateDb:
                 .with_limit(5)
                 .do()
             )
-            # Ensure the response contains the expected structure
             if 'data' in query_result and 'Get' in query_result['data']:
                 return query_result['data']['Get'][class_name]
             else:
@@ -141,14 +122,9 @@ class WeaviateDb:
             return []
 
     def register_company(self, company_name: str):
-        class_name = f"{company_name}_Documents"
-        existing_classes = self.client.schema.get()["classes"]
-        if any(cls["class"] == class_name for cls in existing_classes):
-            return False  # Company already registered
-        self.create_schema(company_name)
-        return True
+        return self.create_company_schema(company_name)
 
     def get_registered_companies(self):
         existing_classes = self.client.schema.get()["classes"]
-        companies = [cls["class"].replace("_Documents", "") for cls in existing_classes]
+        companies = [cls["class"].replace("_Documents", "").replace('_', ' ') for cls in existing_classes if "_Documents" in cls["class"]]
         return companies
