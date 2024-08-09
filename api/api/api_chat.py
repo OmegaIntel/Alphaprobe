@@ -6,6 +6,7 @@ from api.db_models.weaviate_db import WeaviateDb
 from api.llm_models.llm import LLM
 from api.search.bing_search import BingSearch
 from api.stock.openbb_stock_api import OpenBBStockAPI
+from api.metrics.openbb_metrics_api import OpenBBMetricsAPI
 from api.api.api_user import get_current_user, User
 
 chat_router = APIRouter()
@@ -14,6 +15,7 @@ weaviate_handler = WeaviateDb()
 llm_wrapper = LLM()
 bing_search = BingSearch()
 openbb_stock_api = OpenBBStockAPI()
+openbb_metrics_api = OpenBBMetricsAPI()
 
 with open('/app/api/prompts/intro_prompt.txt', 'r') as file:
     intro_prompt = file.read()
@@ -101,7 +103,19 @@ async def send_message(session_id: str, request: MessageRequest, current_user: U
         if stock_history is None:
             context += f" Company {ticker} appears to be delisted and no historical data is available."
         else:
-            context += f" Stock history for {ticker} from {start_date} to {end_date}: {stock_history}"
+            context += f" Stock history for {ticker} from {start_date} to {end_date}: {stock_history} \n\n\n"
+
+    # Check if the query is about stock market history
+    if llm_wrapper.is_key_metrics_query(user_message):
+        print("fetching key metics of the company")
+        ticker = llm_wrapper.extract_ticker_from_query(user_message)
+        if not ticker:
+            raise HTTPException(status_code=400, detail="Error extracting ticker or dates from query.")
+        key_metrics = openbb_metrics_api.get_key_metrics(ticker)
+        if key_metrics is None:
+            context += f" Company {ticker} appears to be delisted and no key metrics data is available."
+        else:
+            context += f" Key metrics for {ticker} are as follows : {key_metrics} \n\n\n"
     
     # Check if the query is about real-world data
     elif llm_wrapper.is_real_world_query(user_message):

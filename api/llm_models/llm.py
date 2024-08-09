@@ -28,6 +28,11 @@ class LLM:
             input_variables=["query"],
             template="Determine if the following query is about stock market history:\n\n{query}\nRespond with 'yes' or 'no'."
         )
+
+        self.is_key_metrics_query_prompt_template = PromptTemplate(
+            input_variables=["query"],
+            template="Determine if the following query is about companies fundamental metrics which may include balance, balance_growth, cash, cash_growth, dividends, employee_count, filings, historical_attributes, historical_eps, historical_splits, income, income_growth, latest_attributes, management, management_compensation, metrics, multiples, ratios, reported_financials, revenue_per_geography, revenue_per_segment, search_attributes, trailing_dividend_yield or transcript etc:\n\n{query}\nRespond with 'yes' or 'no'."
+        )
         self.date_extraction_prompt_template = PromptTemplate(
             input_variables=["query"],
             template="Extract the start date and end date for stock history from the following query:\n\n{query}\nRespond in the format 'start_date: YYYY-MM-DD, end_date: YYYY-MM-DD'."
@@ -64,6 +69,12 @@ class LLM:
             RunnableLambda(lambda x: self.stock_query_prompt_template.format(**x)),
             self.openai_client
         )
+
+        self.is_key_metrics_query_chain = RunnableSequence(
+            RunnableLambda(lambda x: self.is_key_metrics_query_prompt_template.format(**x)),
+            self.openai_client
+        )
+
         self.date_extraction_chain = RunnableSequence(
             RunnableLambda(lambda x: self.date_extraction_prompt_template.format(**x)),
             self.openai_client
@@ -133,6 +144,14 @@ class LLM:
     def is_stock_history_query(self, query: str) -> bool:
         try:
             response_message = self.stock_query_chain.invoke({"query": query})
+            return response_message.content.strip().lower() == "yes"
+        except Exception as e:
+            print(f"Error determining if query is about stock history: {e}")
+            return False
+    
+    def is_key_metrics_query(self, query: str) -> bool:
+        try:
+            response_message = self.is_key_metrics_query_chain.invoke({"query": query})
             return response_message.content.strip().lower() == "yes"
         except Exception as e:
             print(f"Error determining if query is about stock history: {e}")
