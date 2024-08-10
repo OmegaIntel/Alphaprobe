@@ -27,19 +27,25 @@ class BingSearch:
     
     def fetch_and_summarize(self, url):
         try:
-            response = requests.get(url)
+            response = requests.get(url, timeout=10)  # Set a 10-second timeout for the request
             if response.status_code == 200:
                 page_content = response.text
                 soup = BeautifulSoup(page_content, 'html.parser')
                 paragraphs = soup.find_all('p')
                 text = ' '.join([para.get_text() for para in paragraphs])
-                
-                summary = self.llm.summarize_content(text)
+                print("content loaded")
+
+                # Use the LLM for summarization
+                summary = self.llm.summarize_content(text)  # Assuming `self.llm.summarize` is the method for summarization
+                print("summary generated")
                 return summary
             else:
                 return "Content not accessible."
+        except requests.Timeout:
+            return "Request timed out."
         except Exception as e:
             return f"Error fetching content: {str(e)}"
+
 
 
     def parse_search_results(self, search_results):
