@@ -45,8 +45,11 @@ class BingSearch:
     def parse_search_results(self, search_results):
         # Extract relevant information from the search results
         parsed_results = []
+        max_count = 5
+        i = 0
         for result in search_results.get("webPages", {}).get("value", []):
             url = result.get("url")
+            print(f"fetching {url}")
             summary = self.fetch_and_summarize(url)
             parsed_results.append({
                 "name": result.get("name"),
@@ -54,6 +57,9 @@ class BingSearch:
                 "snippet": result.get("snippet") + " | Summary: " + summary,
                 "dateLastCrawled": result.get("dateLastCrawled")
             })
+            i += 1
+            if i >= max_count:
+                break
         return parsed_results
 
     def is_real_world_query(self, query: str) -> bool:
