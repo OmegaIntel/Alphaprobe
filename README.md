@@ -1,7 +1,7 @@
 
 # Alphaprobe
 
-This project provides a FastAPI-based service that allows users to upload text files for a specific company, store the content in a Weaviate database, and optionally summarize the content using the Ollama model with LangChain.
+This project provides a FastAPI-based service that allows users to upload text files for a specific company, store the content in a Weaviate database, and optionally summarize them using LLMs.
 
 ## Table of Contents
 
@@ -16,7 +16,7 @@ This project provides a FastAPI-based service that allows users to upload text f
 
 - Upload text files associated with a company.
 - Store the file content in a Weaviate database.
-- Summarize financial documents using the Ollama model via LangChain.
+- Summarize financial documents using LLM via LangChain.
 - Automatically create a schema per company in the Weaviate database.
 
 ## Setup Instructions
@@ -41,7 +41,6 @@ This project provides a FastAPI-based service that allows users to upload text f
    Create a `.env` file in the project root with the following content:
 
    ```sh
-   OLLAMA_MODEL_NAME=llama2
    ```
 
 3. **Build and start the Docker containers**
@@ -56,7 +55,6 @@ This project provides a FastAPI-based service that allows users to upload text f
 
 ## Environment Variables
 
-- `OLLAMA_MODEL_NAME`: The name of the Ollama model to use for summarization.
 
 ## Project Structure
 
@@ -148,9 +146,9 @@ This project provides a FastAPI-based service that allows users to upload text f
 
 ### `api/llm_models/llm.py`
 
-- **Purpose**: Provides a wrapper for summarization using the Ollama model with LangChain.
+- **Purpose**: Provides a wrapper for summarization using LLM with LangChain.
 - **Key Methods**:
-  - `summarize_content(content)`: Summarizes the given content using the specified Ollama model.
+  - `summarize_content(content)`: Summarizes the given content using the specified LLM.
 
 ### `api/models/chat/chat_request.py`
 
