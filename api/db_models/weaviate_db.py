@@ -1,4 +1,5 @@
 import re
+import hashlib
 import datetime
 import weaviate
 from weaviate import Client
@@ -28,6 +29,10 @@ class WeaviateDb:
             ],
         }
         self.client.schema.create_class(schema)
+
+    def hash_email(self, email: str) -> str:
+        """Generate a hash of the email to use in class names."""
+        return hashlib.md5(email.encode()).hexdigest()
 
     def create_chat_schema(self):
         chat_session_class = {
@@ -81,10 +86,11 @@ class WeaviateDb:
     def sanitize_class_name(self, company_name: str) -> str:
         sanitized_name = re.sub(r'\W+', '_', company_name)
         return sanitized_name.capitalize()
-
-    def create_company_schema(self, company_name: str):
+    
+    def create_company_schema(self, company_name: str, user_email: str):
         sanitized_name = self.sanitize_class_name(company_name)
-        class_name = f"{sanitized_name}_Documents"
+        email_hash = self.hash_email(user_email)
+        class_name = f"{sanitized_name}_{email_hash}_Documents"
 
         if self.client.schema.exists(class_name):
             print(f"Schema for {class_name} already exists.")
@@ -92,17 +98,19 @@ class WeaviateDb:
 
         schema = {
             "class": class_name,
-            "description": f"Documents for {company_name}",
+            "description": f"Documents for {company_name} associated with {user_email}",
             "vectorizer": "text2vec-openai",
             "properties": [
                 {"name": "content", "dataType": ["text"]},
                 {"name": "file_path", "dataType": ["string"]},
+                {"name": "user_email", "dataType": ["string"]},
             ],
         }
 
         self.client.schema.create_class(schema)
         print(f"Schema for {class_name} created.")
         return class_name
+
 
     def create_chat_session(self, user_email: str) -> (str, str):
         session_id = str(uuid.uuid4())
@@ -152,21 +160,6 @@ class WeaviateDb:
         if query_result["data"]["Get"]["ChatSession"]:
             return query_result["data"]["Get"]["ChatSession"][0]
         return None
-    
-    # def update_chat_session_name(self, session_id: str, session_name: str, user_email: str):
-    #     session = self.get_chat_session(session_id, user_email)
-    #     if session is None:
-    #         return None
-
-    #     # Update the session name
-    #     update_data = {
-    #         "session_name": session_name
-    #     }
-
-    #     # Get the UUID of the object to update
-    #     session_uuid = session["_additional"]["id"]
-
-    #     self.client.data_object.update(update_data, "ChatSession", session_uuid)
 
     def get_chat_messages(self, session_id: str, user_email: str):
         session = self.get_chat_session(session_id, user_email)
@@ -243,14 +236,16 @@ class WeaviateDb:
             }
             self.client.data_object.update(update_data, "ChatSession", session_uuid)
 
-    def upload_content(self, class_name: str, content: str, file_path: str):
+    def upload_content(self, class_name: str, content: str, file_path: str, user_email: str):
         chunks = self.chunk_content(content)
         for chunk in tqdm(chunks, desc="Uploading content", unit="chunk"):
             data_object = {
                 "content": chunk,
                 "file_path": file_path,
+                "user_email": user_email,  # Associate the file content with the user
             }
             self.client.data_object.create(data_object, class_name)
+
 
     def chunk_content(self, content: str, max_tokens: int = 2048) -> list:
         tokens = content.split()
@@ -269,9 +264,9 @@ class WeaviateDb:
 
         return chunks
 
-    def get_context(self, query: str, company_name: str):
+    def get_context(self, query: str, company_name: str, user_email: str):
         company_name = self.sanitize_class_name(company_name)
-        class_name = f"{company_name}_Documents"
+        class_name = f"{company_name}_{self.hash_email(user_email)}_Documents"
         try:
             query_result = (
                 self.client.query
@@ -289,10 +284,17 @@ class WeaviateDb:
             print(f"Error querying Weaviate: {e}")
             return []
 
-    def register_company(self, company_name: str):
-        return self.create_company_schema(company_name)
+    def get_registered_companies(self, user_email: str):
+        # Generate the hash of the current user's email
+        hashed_email = self.hash_email(user_email)
 
-    def get_registered_companies(self):
         existing_classes = self.client.schema.get()["classes"]
-        companies = [cls["class"].replace("_Documents", "").replace('_', ' ') for cls in existing_classes if "_Documents" in cls["class"]]
+        companies = []
+
+        for cls in existing_classes:
+            # Check if the class name contains the hashed email and "_Documents"
+            if "_Documents" in cls["class"] and hashed_email in cls["class"]:
+                company_name = cls["class"].replace("_Documents", "").replace(f"_{hashed_email}", "").replace('_', ' ')
+                companies.append(company_name)
+
         return companies

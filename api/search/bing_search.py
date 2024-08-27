@@ -1,7 +1,10 @@
 # search.py
 import os
 import requests
+import requests
+from bs4 import BeautifulSoup
 from fastapi import HTTPException
+from api.llm_models.llm import LLM
 
 class BingSearch:
     def __init__(self):
@@ -9,6 +12,7 @@ class BingSearch:
         if not self.api_key:
             raise ValueError("Bing API key is not set in environment variables.")
         self.endpoint = "https://api.bing.microsoft.com/v7.0/search"
+        self.llm = LLM()
 
     def search(self, query: str):
         headers = {"Ocp-Apim-Subscription-Key": self.api_key}
@@ -20,17 +24,48 @@ class BingSearch:
             raise HTTPException(status_code=response.status_code, detail="Error fetching data from Bing API")
 
         return response.json()
+    
+    def fetch_and_summarize(self, url):
+        try:
+            response = requests.get(url, timeout=10)  # Set a 10-second timeout for the request
+            if response.status_code == 200:
+                page_content = response.text
+                soup = BeautifulSoup(page_content, 'html.parser')
+                paragraphs = soup.find_all('p')
+                text = ' '.join([para.get_text() for para in paragraphs])
+                print("content loaded")
+
+                # Use the LLM for summarization
+                summary = self.llm.summarize_content(text)  # Assuming `self.llm.summarize` is the method for summarization
+                print("summary generated")
+                return summary
+            else:
+                return "Content not accessible."
+        except requests.Timeout:
+            return "Request timed out."
+        except Exception as e:
+            return f"Error fetching content: {str(e)}"
+
+
 
     def parse_search_results(self, search_results):
         # Extract relevant information from the search results
         parsed_results = []
+        max_count = 5
+        i = 0
         for result in search_results.get("webPages", {}).get("value", []):
+            url = result.get("url")
+            print(f"fetching {url}")
+            summary = self.fetch_and_summarize(url)
             parsed_results.append({
                 "name": result.get("name"),
-                "url": result.get("url"),
-                "snippet": result.get("snippet"),
+                "url": url,
+                "snippet": result.get("snippet") + " | Summary: " + summary,
                 "dateLastCrawled": result.get("dateLastCrawled")
             })
+            i += 1
+            if i >= max_count:
+                break
         return parsed_results
 
     def is_real_world_query(self, query: str) -> bool:
