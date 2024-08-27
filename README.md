@@ -39,6 +39,10 @@ export DOCKER_BUILDKIT=1
    ```sh
    git clone https://github.com/chat-omega/Alphaprobe
    cd Alphaprobe
+
+   # working directories
+   mkdir data
+   mkdir database
    ```
 
 2. **Set up environment variables**
@@ -46,6 +50,13 @@ export DOCKER_BUILDKIT=1
    Create a `.env` file in the project root with the following content:
 
    ```sh
+   # need to edit this one
+   cp .env.example .env
+   
+   cd frontend
+   cp .env.example .env
+
+   cd ..
    ```
 
 3. **Build and start the Docker containers**
