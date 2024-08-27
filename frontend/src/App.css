@@ -362,7 +362,7 @@ button.new-session-button:hover{
   align-self: flex-start;
   color: #000000;
   background-color: #f1f1f1;
-  padding: 10px;
+  padding: 0px 15px;
   border-radius: 10px;
   display: inline-block;
   max-width: 70%;
@@ -898,4 +898,16 @@ pre {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.upload-status {
+  color: #28a745; /* Use a green color for success */
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #d4edda;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #c3e6cb;
 }

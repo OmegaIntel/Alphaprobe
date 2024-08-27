@@ -85,7 +85,7 @@ async def send_message(session_id: str, request: MessageRequest, current_user: U
     for entry in conversation:
         context += f"\n{entry['role']}: {entry['content']}"
 
-    weaviate_context = weaviate_handler.get_context(user_message, company)
+    weaviate_context = weaviate_handler.get_context(user_message, company, current_user.email)
     original_user_message = user_message
     user_message = llm_wrapper.enhance_user_message(
         company_context=weaviate_context, 
@@ -118,17 +118,18 @@ async def send_message(session_id: str, request: MessageRequest, current_user: U
             context += f" Key metrics for {ticker} are as follows : {key_metrics} \n\n\n"
     
     # Check if the query is about real-world data
-    elif llm_wrapper.is_real_world_query(user_message):
+    if llm_wrapper.is_real_world_query(user_message):
         search_results = bing_search.search(user_message)
         parsed_results = bing_search.parse_search_results(search_results)
+        print(parsed_results)
         if not parsed_results:
             raise HTTPException(status_code=400, detail="No relevant data found for the query.")
-        context += "\n Following is search result from internet \n"
+        context += "\n Following is search result from internet for real-time \n"
         for result in parsed_results:
             context += f" {result['name']}: {result['snippet']} (Source: {result['url']})"
     
     # Retrieve context from Weaviate
-    weaviate_context = weaviate_handler.get_context(user_message, company)
+    weaviate_context = weaviate_handler.get_context(user_message, company, current_user.email)
     if weaviate_context:
         context += ' ' + ' '.join([res['content'] for res in weaviate_context])
     
@@ -162,7 +163,7 @@ async def upload_file(
     company: str = Form(...),
     file_type: Literal["descriptive", "financial"] = Form(...),
     file: UploadFile = File(...),
-    current_user: User = Depends(get_current_user)
+    current_user: User = Depends(get_current_user)  # Get the current user
 ):
     file_location = f"/app/data/{company}_{file.filename}"
     with open(file_location, "wb") as buffer:
@@ -171,13 +172,15 @@ async def upload_file(
     with open(file_location, "r") as file_obj:
         file_content = file_obj.read()
 
-    class_name = weaviate_handler.create_company_schema(company)
-    
+    # Ensure the company schema is associated with the current user
+    class_name = weaviate_handler.create_company_schema(company, current_user.email)
+
+
     if file_type == "financial":
         file_summary = llm_wrapper.summarize_content(file_content)
-        weaviate_handler.upload_content(class_name, file_summary, file_location)
+        weaviate_handler.upload_content(class_name, file_summary, file_location, current_user.email)
     else:
-        weaviate_handler.upload_content(class_name, file_content, file_location)
+        weaviate_handler.upload_content(class_name, file_content, file_location, current_user.email)
     
     return UploadResponse(
         company=company,
@@ -186,7 +189,8 @@ async def upload_file(
         detail="File uploaded successfully"
     )
 
+
 @chat_router.get("/companies")
-async def get_companies():
-    companies = weaviate_handler.get_registered_companies()
+async def get_companies(current_user: User = Depends(get_current_user)):
+    companies = weaviate_handler.get_registered_companies(current_user.email)
     return {"companies": companies}
