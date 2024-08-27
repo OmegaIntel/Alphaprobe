@@ -21,6 +21,11 @@ This project provides a FastAPI-based service that allows users to upload text f
 
 ## Setup Instructions
 
+```sh
+# enable for caching Python packages
+export DOCKER_BUILDKIT=1
+```
+
 ### Prerequisites
 
 - Docker
@@ -46,12 +51,19 @@ This project provides a FastAPI-based service that allows users to upload text f
 3. **Build and start the Docker containers**
 
    ```sh
+   # only run once to download packages
+   docker compose run frontend npm install react-scripts
+   
+   # older version of compose
    docker-compose up --build
+
+   # newer version of compose:
+   docker compose up --build
    ```
 
 4. **Access the FastAPI documentation**
 
-   Open your browser and go to http://localhost:8000/docs to view and test the API endpoints.
+   Open your browser and go to http://localhost:8004/docs to view and test the API endpoints.
 
 ## Environment Variables
 
