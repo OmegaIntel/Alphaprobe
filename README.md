@@ -41,8 +41,8 @@ export DOCKER_BUILDKIT=1
    cd Alphaprobe
 
    # working directories
-   mkdir data
-   mkdir database
+   mkdir -p data
+   mkdir -p database
    ```
 
 2. **Set up environment variables**
