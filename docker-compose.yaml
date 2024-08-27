@@ -1,12 +1,8 @@
-version: '3.8'
-
 services:
   weaviate:
     image: semitechnologies/weaviate:latest
     ports:
       - "8002:8080"
-    depends_on:
-      - ollama
     environment:
       QUERY_DEFAULTS_LIMIT: ${QUERY_DEFAULTS_LIMIT}
       AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: ${AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED}
@@ -14,16 +10,10 @@ services:
       ENABLE_MODULES: ${ENABLE_MODULES}
       OPENAI_APIKEY: ${OPENAI_API_KEY}
 
-  ollama:
-    image: ollama/ollama:latest
-    ports:
-      - "8001:11434"
-
   app:
     build: .
     depends_on:
       - weaviate
-      - ollama
     ports:
       - "8004:8000"
       - "8003:8501"
@@ -43,8 +33,8 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    volumes:
-      - ./frontend:/app
+    # volumes:
+    #   - ./frontend:/app
       # - /app/node_modules
     ports:
       - "3000:3000"

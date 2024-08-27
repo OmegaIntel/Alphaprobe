@@ -1,7 +1,7 @@
 
 # Alphaprobe
 
-This project provides a FastAPI-based service that allows users to upload text files for a specific company, store the content in a Weaviate database, and optionally summarize the content using the Ollama model with LangChain.
+This project provides a FastAPI-based service that allows users to upload text files for a specific company, store the content in a Weaviate database, and optionally summarize them using LLMs.
 
 ## Table of Contents
 
@@ -16,10 +16,15 @@ This project provides a FastAPI-based service that allows users to upload text f
 
 - Upload text files associated with a company.
 - Store the file content in a Weaviate database.
-- Summarize financial documents using the Ollama model via LangChain.
+- Summarize financial documents using LLM via LangChain.
 - Automatically create a schema per company in the Weaviate database.
 
 ## Setup Instructions
+
+```sh
+# enable for caching Python packages
+export DOCKER_BUILDKIT=1
+```
 
 ### Prerequisites
 
@@ -34,6 +39,10 @@ This project provides a FastAPI-based service that allows users to upload text f
    ```sh
    git clone https://github.com/chat-omega/Alphaprobe
    cd Alphaprobe
+
+   # working directories
+   mkdir -p data
+   mkdir -p database
    ```
 
 2. **Set up environment variables**
@@ -41,22 +50,38 @@ This project provides a FastAPI-based service that allows users to upload text f
    Create a `.env` file in the project root with the following content:
 
    ```sh
-   OLLAMA_MODEL_NAME=llama2
+   cp .env.example .env
+   # AFTER THIS, REPLACE WITH THE ACTUAL VALUES
+   # ...
+
+   cd frontend
+   cp .env.example .env
+   # AFTER THIS, REPLACE WITH THE ACTUAL VALUES
+   # REACT_APP_API_BASE_URL=http://localhost:8004   # LOCAL DEBUG
+   REACT_APP_API_BASE_URL=http://52.91.51.105:8004  # REMOTE, SUCH AS AWS
+
+   cd ..
    ```
 
 3. **Build and start the Docker containers**
 
    ```sh
+   # only run once to download packages
+   docker compose run frontend npm install react-scripts
+   
+   # older version of compose
    docker-compose up --build
+
+   # newer version of compose:
+   docker compose up --build
    ```
 
 4. **Access the FastAPI documentation**
 
-   Open your browser and go to http://localhost:8000/docs to view and test the API endpoints.
+   Open your browser and go to http://localhost:8004/docs to view and test the API endpoints.
 
 ## Environment Variables
 
-- `OLLAMA_MODEL_NAME`: The name of the Ollama model to use for summarization.
 
 ## Project Structure
 
@@ -148,9 +173,9 @@ This project provides a FastAPI-based service that allows users to upload text f
 
 ### `api/llm_models/llm.py`
 
-- **Purpose**: Provides a wrapper for summarization using the Ollama model with LangChain.
+- **Purpose**: Provides a wrapper for summarization using LLM with LangChain.
 - **Key Methods**:
-  - `summarize_content(content)`: Summarizes the given content using the specified Ollama model.
+  - `summarize_content(content)`: Summarizes the given content using the specified LLM.
 
 ### `api/models/chat/chat_request.py`
 
