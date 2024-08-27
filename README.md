@@ -50,11 +50,15 @@ export DOCKER_BUILDKIT=1
    Create a `.env` file in the project root with the following content:
 
    ```sh
-   # need to edit this one
    cp .env.example .env
-   
+   # AFTER THIS, REPLACE WITH THE ACTUAL VALUES
+   # ...
+
    cd frontend
    cp .env.example .env
+   # AFTER THIS, REPLACE WITH THE ACTUAL VALUES
+   # REACT_APP_API_BASE_URL=http://localhost:8004   # LOCAL DEBUG
+   REACT_APP_API_BASE_URL=http://52.91.51.105:8004  # REMOTE, SUCH AS AWS
 
    cd ..
    ```
