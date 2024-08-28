@@ -7,6 +7,14 @@ from tqdm import tqdm
 from werkzeug.security import generate_password_hash, check_password_hash
 import uuid
 from api.llm_models.llm import LLM
+from llmsherpa.readers import LayoutPDFReader
+from dotenv import load_dotenv
+from os import getenv
+from typing import List
+
+
+load_dotenv()
+
 
 class WeaviateDb:
     def __init__(self, url: str = "http://weaviate:8080"):
@@ -196,8 +204,6 @@ class WeaviateDb:
         else:
             return {"error": "Session not found"}
 
-
-
     def save_chat_message(self, session_id: str, user_message: dict, ai_message: dict, user_email: str):
         session = self.get_chat_session(session_id, user_email)
         if session is None:
@@ -236,8 +242,15 @@ class WeaviateDb:
             }
             self.client.data_object.update(update_data, "ChatSession", session_uuid)
 
-    def upload_content(self, class_name: str, content: str, file_path: str, user_email: str):
-        chunks = self.chunk_content(content)
+    def get_file_chunks(self, file_path: str) -> List[str]:
+        """Use LLM Sherpa to chunk the file into pieces (paragraphs, for now)."""
+        reader = LayoutPDFReader(getenv('LLMSHERPA_API_URL'))
+        doc = reader.read_pdf(file_path)
+        chunks = [para.to_text() for para in doc.chunks()]
+        return chunks
+
+    def upload_content(self, class_name: str, file_path: str, user_email: str):
+        chunks = self.get_file_chunks(file_path)
         for chunk in tqdm(chunks, desc="Uploading content", unit="chunk"):
             data_object = {
                 "content": chunk,
@@ -245,24 +258,6 @@ class WeaviateDb:
                 "user_email": user_email,  # Associate the file content with the user
             }
             self.client.data_object.create(data_object, class_name)
-
-
-    def chunk_content(self, content: str, max_tokens: int = 2048) -> list:
-        tokens = content.split()
-        chunks = []
-        current_chunk = []
-
-        for token in tokens:
-            if len(current_chunk) + len(token) + 1 > max_tokens:
-                chunks.append(' '.join(current_chunk))
-                current_chunk = [token]
-            else:
-                current_chunk.append(token)
-
-        if current_chunk:
-            chunks.append(' '.join(current_chunk))
-
-        return chunks
 
     def get_context(self, query: str, company_name: str, user_email: str):
         company_name = self.sanitize_class_name(company_name)

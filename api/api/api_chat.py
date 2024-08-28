@@ -169,18 +169,9 @@ async def upload_file(
     with open(file_location, "wb") as buffer:
         buffer.write(await file.read())
 
-    with open(file_location, "r") as file_obj:
-        file_content = file_obj.read()
-
     # Ensure the company schema is associated with the current user
     class_name = weaviate_handler.create_company_schema(company, current_user.email)
-
-
-    if file_type == "financial":
-        file_summary = llm_wrapper.summarize_content(file_content)
-        weaviate_handler.upload_content(class_name, file_summary, file_location, current_user.email)
-    else:
-        weaviate_handler.upload_content(class_name, file_content, file_location, current_user.email)
+    weaviate_handler.upload_content(class_name, file_location, current_user.email)
     
     return UploadResponse(
         company=company,
