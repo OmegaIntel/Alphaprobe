@@ -246,7 +246,12 @@ class WeaviateDb:
         """Use LLM Sherpa to chunk the file into pieces (paragraphs, for now)."""
         reader = LayoutPDFReader(getenv('LLMSHERPA_API_URL'))
         doc = reader.read_pdf(file_path)
-        chunks = [para.to_text() for para in doc.chunks()]
+        chunks = []
+        for para in doc.chunks():
+            try:
+                chunks.append(para.to_context_text())
+            except:
+                chunks.append(para.to_text())
         return chunks
 
     def upload_content(self, class_name: str, file_path: str, user_email: str):
