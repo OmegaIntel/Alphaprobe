@@ -11,7 +11,7 @@ from llmsherpa.readers import LayoutPDFReader
 from dotenv import load_dotenv
 from os import getenv
 from typing import List
-from interfaces import Retriever
+from api.interfaces import Retriever
 
 
 load_dotenv()
@@ -300,7 +300,7 @@ class WeaviateDb(Retriever):
 
         return companies
 
-    def retrieved_context(self, user_query: str, company_name: str, user_email: str) -> str:
+    def context(self, user_query: str, company_name: str, user_email: str) -> str:
         """Implements the interface."""
         context = self.get_context(user_query, company_name, user_email)
         return ' '.join([res['content'] for res in context])

@@ -8,7 +8,7 @@ from api.search.bing_search import BingSearch
 from api.stock.openbb_stock_api import OpenBBStockAPI
 from api.metrics.openbb_metrics_api import OpenBBMetricsAPI
 from api.api.api_user import get_current_user, User
-from interfaces import Retriever
+from api.interfaces import Retriever
 
 chat_router = APIRouter()
 
@@ -153,7 +153,7 @@ async def send_message(session_id: str, request: MessageRequest, current_user: U
             context += f" {result['name']}: {result['snippet']} (Source: {result['url']})"
     
     retriever: Retriever = RETRIEVERS.get(CURRENT_RETRIEVER, DEFAULT_RETRIEVER)
-    context = retriever.retrieved_context(user_message, company, current_user.email)
+    context = retriever.context(user_message, company, current_user.email)
     
     # Generate the AI response using the full context
     context = "General Introduction about tool:\n" + intro_prompt + " Current task at hand:\n " + context

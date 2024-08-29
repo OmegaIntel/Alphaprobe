@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 from fastapi import HTTPException
 from api.llm_models.llm import LLM
-from interfaces import Retriever
+from api.interfaces import Retriever
 
 
 class BingSearch(Retriever):
@@ -64,7 +64,7 @@ class BingSearch(Retriever):
             })
         return parsed_results
 
-    def get_context(self, user_query: str, company_name: str, user_email: str) -> str:
+    def context(self, user_query: str, company_name: str, user_email: str) -> str:
         """Implements the interface."""
         assert company_name
         assert user_email
