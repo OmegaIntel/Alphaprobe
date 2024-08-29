@@ -94,33 +94,11 @@ class LLM:
             self.openai_client
         )
 
-
-    def chunk_content(self, content: str, max_tokens: int = 2048) -> list:
-        tokens = content.split()
-        chunks = []
-        current_chunk = []
-
-        for token in tokens:
-            if len(current_chunk) + len(token) + 1 > max_tokens:
-                chunks.append(' '.join(current_chunk))
-                current_chunk = [token]
-            else:
-                current_chunk.append(token)
-
-        if current_chunk:
-            chunks.append(' '.join(current_chunk))
-
-        return chunks
-
     def summarize_content(self, content: str) -> str:
         try:
-            chunks = self.chunk_content(content)
-            summaries = []
-            for chunk in chunks:
-                summary_message = self.summarization_chain.invoke({"content": chunk})
-                summary_text = summary_message.content.strip()
-                summaries.append(summary_text)
-            return ' '.join(summaries)
+            summary_message = self.summarization_chain.invoke({"content": content})
+            summary_text = summary_message.content.strip()
+            return summary_text
         except Exception as e:
             print(f"Error summarizing content: {e}")
             return "An error occurred while summarizing the content."

@@ -46,14 +46,11 @@ class BingSearch:
         except Exception as e:
             return f"Error fetching content: {str(e)}"
 
-
-
     def parse_search_results(self, search_results):
         # Extract relevant information from the search results
         parsed_results = []
-        max_count = 5
-        i = 0
-        for result in search_results.get("webPages", {}).get("value", []):
+        MAX_PAGES_TO_SUMMARIZE = 5
+        for result in search_results.get("webPages", {}).get("value", [])[:MAX_PAGES_TO_SUMMARIZE]:
             url = result.get("url")
             print(f"fetching {url}")
             summary = self.fetch_and_summarize(url)
@@ -63,7 +60,4 @@ class BingSearch:
                 "snippet": result.get("snippet") + " | Summary: " + summary,
                 "dateLastCrawled": result.get("dateLastCrawled")
             })
-            i += 1
-            if i >= max_count:
-                break
         return parsed_results
