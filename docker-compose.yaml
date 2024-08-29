@@ -1,4 +1,5 @@
 services:
+
   weaviate:
     image: semitechnologies/weaviate:latest
     ports:
@@ -9,6 +10,11 @@ services:
       PERSISTENCE_DATA_PATH: ${PERSISTENCE_DATA_PATH}
       ENABLE_MODULES: ${ENABLE_MODULES}
       OPENAI_APIKEY: ${OPENAI_API_KEY}
+
+  llmsherpa:
+    image: ghcr.io/nlmatics/nlm-ingestor:latest
+    ports:
+      - "5501:5001"
 
   app:
     build: .
