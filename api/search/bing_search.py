@@ -67,8 +67,3 @@ class BingSearch:
             if i >= max_count:
                 break
         return parsed_results
-
-    def is_real_world_query(self, query: str) -> bool:
-        # Simple keyword matching to determine if the query is about real-world data
-        keywords = ["latest", "current", "real-time", "news", "update"]
-        return any(keyword in query.lower() for keyword in keywords)
