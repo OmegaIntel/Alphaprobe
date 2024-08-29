@@ -5,8 +5,10 @@ import requests
 from bs4 import BeautifulSoup
 from fastapi import HTTPException
 from api.llm_models.llm import LLM
+from interfaces import Retriever
 
-class BingSearch:
+
+class BingSearch(Retriever):
     def __init__(self):
         self.api_key = os.getenv("BING_API_KEY")
         if not self.api_key:
@@ -61,3 +63,17 @@ class BingSearch:
                 "dateLastCrawled": result.get("dateLastCrawled")
             })
         return parsed_results
+
+    def get_context(self, user_query: str, company_name: str, user_email: str) -> str:
+        """Implements the interface."""
+        assert company_name
+        assert user_email
+        search_results = self.search(user_query)
+        parsed_results = self.parse_search_results(search_results)
+        print(parsed_results)
+        if not parsed_results:
+            raise HTTPException(status_code=400, detail="No relevant data found for the query.")
+        context = "\n Following is search result from internet for real-time \n"
+        for result in parsed_results:
+            context += f" {result['name']}: {result['snippet']} (Source: {result['url']})"
+        return context
