@@ -46,7 +46,6 @@ class ChatResponse(BaseModel):
 class UploadResponse(BaseModel):
     company: str
     file_name: str
-    file_type: str
     detail: str
 
 class ChatSession(BaseModel):
@@ -150,7 +149,6 @@ async def delete_chat_session(session_id: str, user=Depends(get_current_user)):
 @chat_router.post("/upload", response_model=UploadResponse)
 async def upload_file(
     company: str = Form(...),
-    file_type: Literal["descriptive", "financial"] = Form(...),
     file: UploadFile = File(...),
     current_user: User = Depends(get_current_user)  # Get the current user
 ):
@@ -165,7 +163,6 @@ async def upload_file(
     return UploadResponse(
         company=company,
         file_name=file.filename,
-        file_type=file_type,
         detail="File uploaded successfully"
     )
 

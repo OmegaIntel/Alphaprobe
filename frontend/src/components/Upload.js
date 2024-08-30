@@ -7,7 +7,6 @@ const Upload = () => {
   const [newCompany, setNewCompany] = useState('');
   const [company, setCompany] = useState('');
   const [file, setFile] = useState(null);
-  const [fileType, setFileType] = useState('descriptive');
   const [addNewCompany, setAddNewCompany] = useState(false);
 
   useEffect(() => {
@@ -47,7 +46,6 @@ const Upload = () => {
       const formData = new FormData();
       formData.append('file', file);
       formData.append('company', company);
-      formData.append('file_type', fileType);
 
       const response = await axiosInstance.post('/upload', formData);
       if (response.status === 200) {
@@ -94,10 +92,6 @@ const Upload = () => {
           </select>
         )}
         <input type="file" onChange={(e) => setFile(e.target.files[0])} className="input-file" />
-        <select onChange={(e) => setFileType(e.target.value)} value={fileType} className="input-select">
-          <option value="descriptive">Descriptive</option>
-          <option value="financial">Financial</option>
-        </select>
         <button onClick={uploadFile} className="upload-button">
           Upload File
         </button>
