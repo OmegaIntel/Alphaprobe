@@ -20,13 +20,13 @@ openbb_metrics_api = OpenBBMetricsAPI()
 
 
 RETRIEVERS = {
-    'web': bing_search,
+    'web_search': bing_search,
     'documents': weaviate_handler,
     'ticker_metrics': openbb_metrics_api,
     'ticker_history': openbb_stock_api,
 }
 
-CURRENT_RETRIEVER = 'web'
+CURRENT_RETRIEVER = 'web_search'
 DEFAULT_RETRIEVER = weaviate_handler
 
 
@@ -89,7 +89,7 @@ async def set_retriever(session_id: str, request: RetrieverRequest, current_user
     if session is None:
         raise HTTPException(status_code=404, detail="Chat session not found")
     CURRENT_RETRIEVER = request.retriever
-    
+
 @chat_router.post("/chat/{session_id}/message", response_model=ChatResponse)
 async def send_message(session_id: str, request: MessageRequest, current_user: User = Depends(get_current_user)):
     session = weaviate_handler.get_chat_session(session_id, current_user.email)

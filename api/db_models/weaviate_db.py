@@ -10,7 +10,7 @@ from api.llm_models.llm import LLM
 from llmsherpa.readers import LayoutPDFReader
 from dotenv import load_dotenv
 from os import getenv
-from typing import List
+from typing import List, Tuple
 from api.interfaces import Retriever
 
 
@@ -121,7 +121,7 @@ class WeaviateDb(Retriever):
         return class_name
 
 
-    def create_chat_session(self, user_email: str) -> (str, str):
+    def create_chat_session(self, user_email: str) -> Tuple[str, str]:
         session_id = str(uuid.uuid4())
         session_name = f"Session {session_id[:8]}"
         timestamp = datetime.datetime.utcnow().isoformat() + 'Z'  # Weaviate uses ISO format for date-time
