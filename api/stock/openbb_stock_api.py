@@ -1,9 +1,14 @@
 # openbb_stock.py
 import os
-import openbb
 from openbb import obb
+from api.interfaces import Retriever
+from api.llm_models.llm import LLM
 
-class OpenBBStockAPI:
+
+llm_wrapper = LLM()
+
+
+class OpenBBStockAPI(Retriever):
     def __init__(self):
         self.setup_api_keys()
 
@@ -38,3 +43,18 @@ class OpenBBStockAPI:
         except Exception as e:
             print(f"Error fetching stock history: {e}")
             return None
+
+    def llm_context(self, user_query: str, company_name: str, user_email: str) -> str:
+        """Implements the interface."""
+        # TODO: rewrite with proper exception, logging, etc.
+        assert company_name
+        assert user_email
+        ticker = llm_wrapper.extract_ticker_from_query(user_query)
+        start_date, end_date = llm_wrapper.extract_dates_from_query(user_query)
+        assert ticker and start_date and end_date, "Error extracting ticker or dates from query."
+        stock_history = self.get_stock_history(ticker, start_date, end_date)
+        if stock_history is None:
+            out = f"Company {ticker} appears to be delisted and no historical data is available."
+        else:
+            out = f"Stock history for {ticker} from {start_date} to {end_date}: {stock_history} \n\n\n"
+        return out

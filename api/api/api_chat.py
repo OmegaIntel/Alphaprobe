@@ -8,6 +8,7 @@ from api.search.bing_search import BingSearch
 from api.stock.openbb_stock_api import OpenBBStockAPI
 from api.metrics.openbb_metrics_api import OpenBBMetricsAPI
 from api.api.api_user import get_current_user, User
+from api.interfaces import Retriever
 
 chat_router = APIRouter()
 
@@ -16,6 +17,18 @@ llm_wrapper = LLM()
 bing_search = BingSearch()
 openbb_stock_api = OpenBBStockAPI()
 openbb_metrics_api = OpenBBMetricsAPI()
+
+
+RETRIEVERS = {
+    'web_search': bing_search,
+    'documents': weaviate_handler,
+    'ticker_metrics': openbb_metrics_api,
+    'ticker_history': openbb_stock_api,
+}
+
+CURRENT_RETRIEVER = 'web_search'
+DEFAULT_RETRIEVER = weaviate_handler
+
 
 with open('/app/api/prompts/intro_prompt.txt', 'r') as file:
     intro_prompt = file.read()
@@ -44,6 +57,12 @@ class MessageRequest(BaseModel):
     content: str
     company: str
 
+class RetrieverRequest(BaseModel):
+    retriever: str
+
+class RetrieverResponse(BaseModel):
+    retriever: str
+
 class ChatMessagesResponse(BaseModel):
     messages: List[dict[str, str]]
 
@@ -64,6 +83,13 @@ async def get_chat_messages(session_id: str, current_user: User = Depends(get_cu
         raise HTTPException(status_code=404, detail="Chat session not found")
     return ChatMessagesResponse(messages=messages)
 
+@chat_router.post("/chat/retriever", response_model=RetrieverResponse)
+async def set_retriever(session_id: str, request: RetrieverRequest, current_user: User = Depends(get_current_user)):
+    session = weaviate_handler.get_chat_session(session_id, current_user.email)
+    if session is None:
+        raise HTTPException(status_code=404, detail="Chat session not found")
+    CURRENT_RETRIEVER = request.retriever
+
 @chat_router.post("/chat/{session_id}/message", response_model=ChatResponse)
 async def send_message(session_id: str, request: MessageRequest, current_user: User = Depends(get_current_user)):
     session = weaviate_handler.get_chat_session(session_id, current_user.email)
@@ -78,7 +104,6 @@ async def send_message(session_id: str, request: MessageRequest, current_user: U
     message_count = len(conversation)
     # Extract user message
     user_message = request.content
-
     
     # Initialize the context
     context = 'old messages:\n'
@@ -93,50 +118,13 @@ async def send_message(session_id: str, request: MessageRequest, current_user: U
         user_message=user_message
     )
 
-    # Check if the query is about stock market history
-    if llm_wrapper.is_stock_history_query(user_message):
-        ticker = llm_wrapper.extract_ticker_from_query(user_message)
-        start_date, end_date = llm_wrapper.extract_dates_from_query(user_message)
-        if not ticker or not start_date or not end_date:
-            raise HTTPException(status_code=400, detail="Error extracting ticker or dates from query.")
-        stock_history = openbb_stock_api.get_stock_history(ticker, start_date, end_date)
-        if stock_history is None:
-            context += f" Company {ticker} appears to be delisted and no historical data is available."
-        else:
-            context += f" Stock history for {ticker} from {start_date} to {end_date}: {stock_history} \n\n\n"
+    retriever: Retriever = RETRIEVERS.get(CURRENT_RETRIEVER, DEFAULT_RETRIEVER)
+    context = retriever.llm_context(user_message, company, current_user.email)
 
-    # Check if the query is about stock market history
-    if llm_wrapper.is_key_metrics_query(user_message):
-        print("fetching key metics of the company")
-        ticker = llm_wrapper.extract_ticker_from_query(user_message)
-        if not ticker:
-            raise HTTPException(status_code=400, detail="Error extracting ticker or dates from query.")
-        key_metrics = openbb_metrics_api.get_key_metrics(ticker)
-        if key_metrics is None:
-            context += f" Company {ticker} appears to be delisted and no key metrics data is available."
-        else:
-            context += f" Key metrics for {ticker} are as follows : {key_metrics} \n\n\n"
-    
-    # Check if the query is about real-world data
-    if llm_wrapper.is_real_world_query(user_message):
-        search_results = bing_search.search(user_message)
-        parsed_results = bing_search.parse_search_results(search_results)
-        print(parsed_results)
-        if not parsed_results:
-            raise HTTPException(status_code=400, detail="No relevant data found for the query.")
-        context += "\n Following is search result from internet for real-time \n"
-        for result in parsed_results:
-            context += f" {result['name']}: {result['snippet']} (Source: {result['url']})"
-    
-    # Retrieve context from Weaviate
-    weaviate_context = weaviate_handler.get_context(user_message, company, current_user.email)
-    if weaviate_context:
-        context += ' ' + ' '.join([res['content'] for res in weaviate_context])
-    
     # Generate the AI response using the full context
     context = "General Introduction about tool:\n" + intro_prompt + " Current task at hand:\n " + context
     ai_response = llm_wrapper.generate_response(user_message, context)
-    
+
     # Save both the user's message and the AI's response
     ai_message = {"role": "ai", "content": ai_response}
     user_message = {"role": "user", "content": original_user_message}
@@ -145,6 +133,7 @@ async def send_message(session_id: str, request: MessageRequest, current_user: U
     if message_count < 10:
         session_summary = weaviate_handler.llm.generate_summary_name(user_message["content"], ai_message["content"])
         weaviate_handler.update_chat_session_name(session_id, session_summary)
+
     return ChatResponse(response=ai_response)
 
 @chat_router.delete("/chat/sessions/{session_id}", status_code=204)

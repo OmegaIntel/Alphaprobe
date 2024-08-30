@@ -10,13 +10,14 @@ from api.llm_models.llm import LLM
 from llmsherpa.readers import LayoutPDFReader
 from dotenv import load_dotenv
 from os import getenv
-from typing import List
+from typing import List, Tuple
+from api.interfaces import Retriever
 
 
 load_dotenv()
 
 
-class WeaviateDb:
+class WeaviateDb(Retriever):
     def __init__(self, url: str = "http://weaviate:8080"):
         self.client = Client(url=url)
         self.create_user_schema()
@@ -120,7 +121,7 @@ class WeaviateDb:
         return class_name
 
 
-    def create_chat_session(self, user_email: str) -> (str, str):
+    def create_chat_session(self, user_email: str) -> Tuple[str, str]:
         session_id = str(uuid.uuid4())
         session_name = f"Session {session_id[:8]}"
         timestamp = datetime.datetime.utcnow().isoformat() + 'Z'  # Weaviate uses ISO format for date-time
@@ -298,3 +299,8 @@ class WeaviateDb:
                 companies.append(company_name)
 
         return companies
+
+    def llm_context(self, user_query: str, company_name: str, user_email: str) -> str:
+        """Implements the interface."""
+        context = self.get_context(user_query, company_name, user_email)
+        return ' '.join([res['content'] for res in context])
