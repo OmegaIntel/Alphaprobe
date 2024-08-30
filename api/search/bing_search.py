@@ -64,8 +64,9 @@ class BingSearch(Retriever):
             })
         return parsed_results
 
-    def context(self, user_query: str, company_name: str, user_email: str) -> str:
+    def llm_context(self, user_query: str, company_name: str, user_email: str) -> str:
         """Implements the interface."""
+        # TODO: revise not to throw an exception, be in line with other returned contexts.
         assert company_name
         assert user_email
         search_results = self.search(user_query)
@@ -73,7 +74,7 @@ class BingSearch(Retriever):
         print(parsed_results)
         if not parsed_results:
             raise HTTPException(status_code=400, detail="No relevant data found for the query.")
-        context = "\n Following is search result from internet for real-time \n"
+        out = "\n Following is search result from internet for real-time \n"
         for result in parsed_results:
-            context += f" {result['name']}: {result['snippet']} (Source: {result['url']})"
-        return context
+            out += f" {result['name']}: {result['snippet']} (Source: {result['url']})"
+        return out
