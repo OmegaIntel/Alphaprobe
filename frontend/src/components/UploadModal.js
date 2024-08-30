@@ -10,7 +10,6 @@ const UploadModal = ({ isOpen, onRequestClose }) => {
   const [newCompany, setNewCompany] = useState(false);
   const [company, setCompany] = useState('');
   const [file, setFile] = useState(null);
-  const [fileType, setFileType] = useState('');
   const [loading, setLoading] = useState(false);
   const [uploadStatus, setUploadStatus] = useState('');
 
@@ -41,7 +40,6 @@ const UploadModal = ({ isOpen, onRequestClose }) => {
     const formData = new FormData();
     formData.append('file', file);
     formData.append('company', company);
-    formData.append('file_type', fileType);
   
     const token = localStorage.getItem('token');
   
@@ -108,13 +106,6 @@ const UploadModal = ({ isOpen, onRequestClose }) => {
           </select>
         )}
         <input type="file" onChange={handleFileChange} />
-        <select value={fileType} onChange={(e) => setFileType(e.target.value)}>
-          <option value="" disabled>
-            Select file type
-          </option>
-          <option value="descriptive">Descriptive</option>
-          <option value="financial">Financial</option>
-        </select>
         {loading ? (
           <div className="spinner"></div>
         ) : (
