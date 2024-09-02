@@ -92,14 +92,14 @@ class WeaviateDb(Retriever):
             return query_result["data"]["Get"][class_name][0]
         return None
 
-    def sanitize_class_name(self, company_name: str) -> str:
-        sanitized_name = re.sub(r'\W+', '_', company_name)
-        return sanitized_name.capitalize()
-    
-    def create_company_schema(self, company_name: str, user_email: str):
-        sanitized_name = self.sanitize_class_name(company_name)
+    def class_name(self, company_name: str, user_email: str) -> str:
+        """Return standard class name."""
+        sanitized_name = re.sub(r'\W+', '_', company_name).capitalize()
         email_hash = self.hash_email(user_email)
-        class_name = f"{sanitized_name}_{email_hash}_Documents"
+        return f"{sanitized_name}_{email_hash}_Documents"
+
+    def create_company_schema(self, company_name: str, user_email: str):
+        class_name = self.class_name(company_name, user_email)
 
         if self.client.schema.exists(class_name):
             print(f"Schema for {class_name} already exists.")
@@ -266,8 +266,7 @@ class WeaviateDb(Retriever):
             self.client.data_object.create(data_object, class_name)
 
     def get_context(self, query: str, company_name: str, user_email: str):
-        company_name = self.sanitize_class_name(company_name)
-        class_name = f"{company_name}_{self.hash_email(user_email)}_Documents"
+        class_name = self.class_name(company_name, user_email)
         try:
             query_result = (
                 self.client.query
