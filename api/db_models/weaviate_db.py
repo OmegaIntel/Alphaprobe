@@ -16,7 +16,6 @@ from api.interfaces import Retriever
 
 load_dotenv()
 
-
 class WeaviateDb(Retriever):
     def __init__(self, url: str = "http://weaviate:8080"):
         self.client = Client(url=url)

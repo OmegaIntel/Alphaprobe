@@ -30,3 +30,5 @@ google-auth-oauthlib==1.2.1
 googleapis-common-protos==1.65.0
 langchain-google-community==1.0.8
 llama-index-readers-google==0.4.0
+boto3==1.35.12
+
