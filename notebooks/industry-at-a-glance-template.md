@@ -1,5 +1,3 @@
-Industry at a Glance
-
 1. KeyStatistics
    1. Revenue
    2. Historical Revenue Growth
