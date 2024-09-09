@@ -5,6 +5,141 @@ SUMMARY_TEMPLATE = {
         "json": {
             "type": "object",
             "properties": {
+                # "key_statistics": {
+                #     "type": "object",
+                #     "description": "Key Statistics",
+                #     "properties": {
+                #         "revenue": {
+                #             "type": "string",
+                #             "description": "The annual revenue."
+                #         },
+                #         "historical_revenue_growth": {
+                #             "type": "string",
+                #             "description": "Historical revenue growth."
+                #         },
+                #         "projected_revenue_growth": {
+                #             "type": "string",
+                #             "description": "Projected revenue growth."
+                #         },
+                #         "profit margins": {
+                #             "type": "string",
+                #             "description": "Profit margins."
+                #         },
+                #     }
+                # },
+                # "executive_summary": {
+                #     "type": "string",
+                #     "description": "Executive summary."
+                # },
+                # "current_performance": {
+                #     "type": "string",
+                #     "description": "Current Performance."
+                # },
+                # "future_outlook": {
+                #     "type": "string",
+                #     "description": "Future Outlook."
+                # },
+                # "industry_definition": {
+                #     "type": "string",
+                #     "description": "Industry Definition and Impact."
+                # },
+                # "swot_analysis": {
+                #     "type": "object",
+                #     "description": "SWOT Analysis",
+                #     "properties": {
+                #         "strengths": {
+                #             "type": "string",
+                #             "description": "Strengths."
+                #         },
+                #         "weaknesses": {
+                #             "type": "string",
+                #             "description": "Weaknesses."
+                #         },
+                #         "opportunities": {
+                #             "type": "string",
+                #             "description": "Opportunities."
+                #         },
+                #         "threats": {
+                #             "type": "string",
+                #             "description": "Threats."
+                #         },
+                #     }
+                # },
+                "supply_chain": {
+                    "type": "object",
+                    "description": "Supply Chain Related Industries",
+                    "properties": {
+                        "tier_1_suppliers": {
+                            "name": "Tier 1 suppliers",
+                            "type": "array",
+                            "items": { "type": "string" },
+                            "description": "Tier 1 suppliers: 2-3 industry names."
+                        },
+                        "tier_2_suppliers": {
+                            "name": "Tier 2 suppliers",
+                            "type": "array",
+                            "items": { "type": "string" },
+                            "description": "Tier 2 suppliers: 2-3 industry names."
+                        },
+                        "tier_1_buyers": {
+                            "name": "Tier 1 buyers",
+                            "type": "array",
+                            "items": { "type": "string" },
+                            "description": "Tier 2 buyers: 4-5 industry names."
+                        },
+                    }
+                },
+                "products_and_services": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "product_or_service": {
+                                "type": "string",
+                                "description": "The name of product or service."
+                            },
+                            "percentage": {
+                                "type": "integer",
+                                "description": "The percentage of the product or service.",
+                            }
+                        }
+                    },
+                    "description": "Products & Services: names and percentages of contribution of product/service to industry."
+                },
+                "key_trends": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "description": "Key Trends."
+                },
+                "market_segmentation": {
+                    "type": "array",
+                    "items": { "type": "object" },
+                    "description": "Market Segmentation: customer segmentation by sector – names and percentages."
+                },
+                "related_international_industries": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "description": "Related International Industries."
+                },
+            },
+            # "required": [
+            #     # "key_statistics",
+            #     # "executive_summary",
+            #     # "current_performance",
+            #     # "future_outlook",
+            #     # "industry_definition",
+            #     "swot_analysis",
+            #     "supply_chain",
+            #     "products_and_services",
+            #     "key_trends",
+            #     "market_segmentation",
+            #     "related_international_industries",
+            # ]
+        }
+    }
+}
+
+
                 # "escalate_complaint": {
                 #     "type": "boolean",
                 #     "description": "Indicates if this email is serious enough to be immediately escalated for further review."
@@ -27,60 +162,11 @@ SUMMARY_TEMPLATE = {
                 # },
                 # "customer_names": {
                 #     "type": "array",
-                #     "description": "An array of customer names mentioned in the email.",
+                #     "description": "An array of customer names mentioned in the email.",  
                 #     "items": { "type": "string" }
                 # },
-                "key_statistics": {
-                    "type": "object",
-                    "properties": {
-                        "revenue": {
-                            "type": "string",
-                            "description": "The annual revenue."
-                        },
-                        "historical_revenue_growth": {
-                            "type": "string",
-                            "description": "Historical revenue growth."
-                        },
-                        "projected_revenue_growth": {
-                            "type": "string",
-                            "description": "Projected revenue growth."
-                        },
-                        "profit margins": {
-                            "type": "string",
-                            "description": "Profit margins."
-                        },
                         # "sentiment": {
                         #     "type": "string",
                         #     "description": "The sender's sentiment towards the employee.",
                         #     "enum": ["Positive", "Neutral", "Negative"]
                         # }
-                    }
-                },
-                "executive_summary": {
-                    "type": "string",
-                    "description": "Executive summary."
-                },
-                "current_performance": {
-                    "type": "string",
-                    "description": "Current Performance."
-                },
-                "future_outlook": {
-                    "type": "string",
-                    "description": "Future Outlook."
-                },
-                "industry_definition": {
-                    "type": "string",
-                    "description": "Industry Definition and Impact."
-                },
-            },
-            "required": [
-                # "summary",
-                "key_statistics",
-                "executive_summary",
-                "current_performance",
-                "future_outlook",
-                "industry_definition",
-            ]
-        }
-    }
-}
