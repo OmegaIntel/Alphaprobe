@@ -30,11 +30,11 @@ _PARTS = [{
     },
     "current_performance": {
         "type": "string",
-        "description": "Current Performance."
+        "description": "Current performance."
     },
     "future_outlook": {
         "type": "string",
-        "description": "Future Outlook."
+        "description": "Future outlook."
     },
     "industry_definition": {
         "type": "string",
@@ -153,7 +153,19 @@ _PARTS = [{
     "major_players": {
         "type": "array",
         "items": { "type": "string" },
-        "description": "Major Players."
+        "description": "Major players."
+    },
+    "industry_name": {
+        "type": "string",
+        "description": "Industry name."
+    },
+    "country_name": {
+        "type": "string",
+        "description": "Full country name."
+    },
+    "last_updated": {
+        "type": "string",
+        "description": "Date when the document was Last updated."
     },
 }]
 
@@ -169,13 +181,13 @@ _ROOT = {
 }
 
 
-SUMMARY_TEMPLATE = []
+IBIS_SUMMARY_TEMPLATE = []
 
 for part in _PARTS:
     part_template = deepcopy(_ROOT)
     part_template["inputSchema"]["json"]["properties"] = part
     part_template["inputSchema"]["json"]["required"] = list(part.keys())
-    SUMMARY_TEMPLATE.append(part_template)
+    IBIS_SUMMARY_TEMPLATE.append(part_template)
 
 # "escalate_complaint": {
 #     "type": "boolean",
