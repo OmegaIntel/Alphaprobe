@@ -32,8 +32,8 @@ class WeaviateDb(Retriever):
             "class": class_name,
             "description": "User details",
             "properties": [
-                {"name": "email", "dataType": ["string"]},
-                {"name": "password", "dataType": ["string"]},
+                {"name": "email", "dataType": ["text"]},
+                {"name": "password", "dataType": ["text"]},
             ],
         }
         self.client.schema.create_class(schema)
@@ -47,9 +47,9 @@ class WeaviateDb(Retriever):
             "class": "ChatSession",
             "description": "Chat session details",
             "properties": [
-                {"name": "session_id", "dataType": ["string"]},
-                {"name": "session_name", "dataType": ["string"]},
-                {"name": "user_email", "dataType": ["string"]},
+                {"name": "session_id", "dataType": ["text"]},
+                {"name": "session_name", "dataType": ["text"]},
+                {"name": "user_email", "dataType": ["text"]},
                 {"name": "created_at", "dataType": ["date"]},  # Add the creation timestamp property
             ],
         }
@@ -58,8 +58,8 @@ class WeaviateDb(Retriever):
             "class": "ChatMessage",
             "description": "Chat message details",
             "properties": [
-                {"name": "session_id", "dataType": ["string"]},
-                {"name": "role", "dataType": ["string"]},
+                {"name": "session_id", "dataType": ["text"]},
+                {"name": "role", "dataType": ["text"]},
                 {"name": "content", "dataType": ["text"]},
             ],
         }
@@ -70,6 +70,30 @@ class WeaviateDb(Retriever):
         if not self.client.schema.exists("ChatMessage"):
             self.client.schema.create_class(chat_message_class)
 
+    def create_industry_summary_schema(self):
+        """Create industry info schema from dict"""
+        class_name = "IndustrySummary"
+        
+        schema = {
+            "class": class_name,
+            "description": "Industry Summary",
+            "properties": [
+                {"name": "source", "dataType": ["text"]},
+                {"name": "type", "dataType": ["text"]},
+                {"name": "subtype", "dataType": ["text"]},
+                {"name": "industry_name", "dataType": ["text"]},
+                {"name": "last_updated", "dataType": ["date"]},
+                {"name": "summary", "dataType": ["object"]},
+            ],
+        }
+        self.client.schema.create_class(schema)
+
+    
+    def add_industry_summary(self, summary: dict):
+        for key in ["source", "type", "subtype", "industry_name", "last_updated", "industry_summary"]:
+            assert key in summary, f"{key} is not present in the summary"
+        class_name = "IndustrySummary"
+        self.client.data_object.create(summary, class_name)
 
     def register_user(self, email: str, hashed_password: str):
         class_name = "User"
@@ -110,8 +134,8 @@ class WeaviateDb(Retriever):
             "vectorizer": "text2vec-openai",
             "properties": [
                 {"name": "content", "dataType": ["text"]},
-                {"name": "file_path", "dataType": ["string"]},
-                {"name": "user_email", "dataType": ["string"]},
+                {"name": "file_path", "dataType": ["text"]},
+                {"name": "user_email", "dataType": ["text"]},
             ],
         }
 
