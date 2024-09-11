@@ -13,71 +13,19 @@ from os import getenv
 from typing import List, Tuple
 from api.interfaces import Retriever
 
+WEAVIATE_URL = "http://weaviate:8080"
+
 load_dotenv()
 
 
 class WeaviateDb(Retriever):
-    def __init__(self, url: str = "http://weaviate:8080"):
+    def __init__(self, url=WEAVIATE_URL):
         self.client = Client(url=url)
-        self.create_chat_schema()
         self.llm = LLM() 
 
     def hash_email(self, email: str) -> str:
         """Generate a hash of the email to use in class names."""
         return hashlib.md5(email.encode()).hexdigest()
-
-    def create_chat_schema(self):
-        chat_session_class = {
-            "class": "ChatSession",
-            "description": "Chat session details",
-            "properties": [
-                {"name": "session_id", "dataType": ["text"]},
-                {"name": "session_name", "dataType": ["text"]},
-                {"name": "user_email", "dataType": ["text"]},
-                {"name": "created_at", "dataType": ["date"]},  # Add the creation timestamp property
-            ],
-        }
-
-        chat_message_class = {
-            "class": "ChatMessage",
-            "description": "Chat message details",
-            "properties": [
-                {"name": "session_id", "dataType": ["text"]},
-                {"name": "role", "dataType": ["text"]},
-                {"name": "content", "dataType": ["text"]},
-            ],
-        }
-
-        if not self.client.schema.exists("ChatSession"):
-            self.client.schema.create_class(chat_session_class)
-
-        if not self.client.schema.exists("ChatMessage"):
-            self.client.schema.create_class(chat_message_class)
-
-    def create_industry_summary_schema(self):
-        """Create industry info schema from dict"""
-        class_name = "IndustrySummary"
-        
-        schema = {
-            "class": class_name,
-            "description": "Industry Summary",
-            "properties": [
-                {"name": "source", "dataType": ["text"]},
-                {"name": "type", "dataType": ["text"]},
-                {"name": "subtype", "dataType": ["text"]},
-                {"name": "industry_name", "dataType": ["text"]},
-                {"name": "last_updated", "dataType": ["date"]},
-                {"name": "summary", "dataType": ["object"]},
-            ],
-        }
-        self.client.schema.create_class(schema)
-
-    
-    def add_industry_summary(self, summary: dict):
-        for key in ["source", "type", "subtype", "industry_name", "last_updated", "industry_summary"]:
-            assert key in summary, f"{key} is not present in the summary"
-        class_name = "IndustrySummary"
-        self.client.data_object.create(summary, class_name)
 
     def class_name(self, company_name: str, user_email: str) -> str:
         """Return standard class name."""
@@ -107,6 +55,101 @@ class WeaviateDb(Retriever):
         print(f"Schema for {class_name} created.")
         return class_name
 
+    def get_file_chunks(self, file_path: str) -> List[str]:
+        """Use LLM Sherpa to chunk the file into pieces (paragraphs, for now)."""
+        reader = LayoutPDFReader(getenv('LLMSHERPA_API_URL'))
+        doc = reader.read_pdf(file_path)
+        chunks = []
+        for para in doc.chunks():
+            try:
+                chunks.append(para.to_context_text())
+            except:
+                chunks.append(para.to_text())
+        return chunks
+
+    def upload_content(self, class_name: str, file_path: str, user_email: str):
+        chunks = self.get_file_chunks(file_path)
+        for chunk in tqdm(chunks, desc="Uploading content", unit="chunk"):
+            data_object = {
+                "content": chunk,
+                "file_path": file_path,
+                "user_email": user_email,  # Associate the file content with the user
+            }
+            self.client.data_object.create(data_object, class_name)
+
+    def get_context(self, query: str, company_name: str, user_email: str):
+        class_name = self.class_name(company_name, user_email)
+        try:
+            query_result = (
+                self.client.query
+                .get(class_name, ["content"])
+                .with_near_text({"concepts": [query]})
+                .with_limit(5)
+                .do()
+            )
+            if 'data' in query_result and 'Get' in query_result['data']:
+                return query_result['data']['Get'][class_name]
+            else:
+                print("Unexpected response structure:", query_result)
+                return []
+        except Exception as e:
+            print(f"Error querying Weaviate: {e}")
+            return []
+
+    def get_registered_companies(self, user_email: str):
+        # Generate the hash of the current user's email
+        hashed_email = self.hash_email(user_email)
+
+        existing_classes = self.client.schema.get()["classes"]
+        companies = []
+
+        for cls in existing_classes:
+            # Check if the class name contains the hashed email and "_Documents"
+            if "_Documents" in cls["class"] and hashed_email in cls["class"]:
+                company_name = cls["class"].replace("_Documents", "").replace(f"_{hashed_email}", "").replace('_', ' ')
+                companies.append(company_name)
+
+        return companies
+
+    def llm_context(self, user_query: str, company_name: str, user_email: str) -> str:
+        """Implements the interface."""
+        context = self.get_context(user_query, company_name, user_email)
+        return ' '.join([res['content'] for res in context])
+
+
+class WeaviateChatSessionDb(WeaviateDb):
+    def __init__(self, url=WEAVIATE_URL):
+        super().__init__(url)
+        self.class_name = "ChatSession"
+        self.create_chat_schema()
+        
+    def create_chat_schema(self):
+        chat_session_class = {
+            "class": "ChatSession",
+            "description": "Chat session details",
+            "properties": [
+                {"name": "session_id", "dataType": ["text"]},
+                {"name": "session_name", "dataType": ["text"]},
+                {"name": "user_email", "dataType": ["text"]},
+                {"name": "created_at", "dataType": ["date"]},  # Add the creation timestamp property
+            ],
+        }
+
+        chat_message_class = {
+            "class": "ChatMessage",
+            "description": "Chat message details",
+            "properties": [
+                {"name": "session_id", "dataType": ["text"]},
+                {"name": "role", "dataType": ["text"]},
+                {"name": "content", "dataType": ["text"]},
+            ],
+        }
+
+        if not self.client.schema.exists("ChatSession"):
+            self.client.schema.create_class(chat_session_class)
+
+        if not self.client.schema.exists("ChatMessage"):
+            self.client.schema.create_class(chat_message_class)
 
     def create_chat_session(self, user_email: str) -> Tuple[str, str]:
         session_id = str(uuid.uuid4())
@@ -230,80 +273,19 @@ class WeaviateDb(Retriever):
             }
             self.client.data_object.update(update_data, "ChatSession", session_uuid)
 
-    def get_file_chunks(self, file_path: str) -> List[str]:
-        """Use LLM Sherpa to chunk the file into pieces (paragraphs, for now)."""
-        reader = LayoutPDFReader(getenv('LLMSHERPA_API_URL'))
-        doc = reader.read_pdf(file_path)
-        chunks = []
-        for para in doc.chunks():
-            try:
-                chunks.append(para.to_context_text())
-            except:
-                chunks.append(para.to_text())
-        return chunks
-
-    def upload_content(self, class_name: str, file_path: str, user_email: str):
-        chunks = self.get_file_chunks(file_path)
-        for chunk in tqdm(chunks, desc="Uploading content", unit="chunk"):
-            data_object = {
-                "content": chunk,
-                "file_path": file_path,
-                "user_email": user_email,  # Associate the file content with the user
-            }
-            self.client.data_object.create(data_object, class_name)
-
-    def get_context(self, query: str, company_name: str, user_email: str):
-        class_name = self.class_name(company_name, user_email)
-        try:
-            query_result = (
-                self.client.query
-                .get(class_name, ["content"])
-                .with_near_text({"concepts": [query]})
-                .with_limit(5)
-                .do()
-            )
-            if 'data' in query_result and 'Get' in query_result['data']:
-                return query_result['data']['Get'][class_name]
-            else:
-                print("Unexpected response structure:", query_result)
-                return []
-        except Exception as e:
-            print(f"Error querying Weaviate: {e}")
-            return []
-
-    def get_registered_companies(self, user_email: str):
-        # Generate the hash of the current user's email
-        hashed_email = self.hash_email(user_email)
-
-        existing_classes = self.client.schema.get()["classes"]
-        companies = []
-
-        for cls in existing_classes:
-            # Check if the class name contains the hashed email and "_Documents"
-            if "_Documents" in cls["class"] and hashed_email in cls["class"]:
-                company_name = cls["class"].replace("_Documents", "").replace(f"_{hashed_email}", "").replace('_', ' ')
-                companies.append(company_name)
-
-        return companies
-
-    def llm_context(self, user_query: str, company_name: str, user_email: str) -> str:
-        """Implements the interface."""
-        context = self.get_context(user_query, company_name, user_email)
-        return ' '.join([res['content'] for res in context])
-
 
 class WeaviateUserDb(WeaviateDb):
-    def __init__(self, url: str = "http://weaviate:8080"):
-        super().__init__(self, url)
+    def __init__(self, url=WEAVIATE_URL):
+        super().__init__(url)
+        self.class_name = 'User'
         self.create_user_schema()
 
     def create_user_schema(self):
-        class_name = "User"
-        if self.client.schema.exists(class_name):
+        if self.client.schema.exists(self.class_name):
             return
 
         schema = {
-            "class": class_name,
+            "class": self.class_name,
             "description": "User details",
             "properties": [
                 {"name": "email", "dataType": ["text"]},
@@ -313,21 +295,46 @@ class WeaviateUserDb(WeaviateDb):
         self.client.schema.create_class(schema)
 
     def register_user(self, email: str, hashed_password: str):
-        class_name = "User"
         user_data = {
             "email": email,
             "password": hashed_password,
         }
-        self.client.data_object.create(user_data, class_name)
+        self.client.data_object.create(user_data, self.class_name)
 
     def get_user(self, email: str):
-        class_name = "User"
-        query_result = self.client.query.get(class_name, ["email", "password"]).with_where({
+        query_result = self.client.query.get(self.class_name, ["email", "password"]).with_where({
             "path": ["email"],
             "operator": "Equal",
             "valueString": email,
         }).do()
 
-        if query_result["data"]["Get"][class_name]:
-            return query_result["data"]["Get"][class_name][0]
+        if query_result["data"]["Get"][self.class_name]:
+            return query_result["data"]["Get"][self.class_name][0]
         return None
+
+
+class WeaviateIndustryDb(WeaviateDb):
+    def __init__(self, url=WEAVIATE_URL):
+        super().__init__(url)
+        self.class_name = "IndustrySummary"
+
+    def create_industry_summary_schema(self):
+        """Create industry info schema from dict"""
+        schema = {
+            "class": self.class_name,
+            "description": "Industry Summary",
+            "properties": [
+                {"name": "source", "dataType": ["text"]},
+                {"name": "type", "dataType": ["text"]},
+                {"name": "subtype", "dataType": ["text"]},
+                {"name": "industry_name", "dataType": ["text"]},
+                {"name": "last_updated", "dataType": ["date"]},
+                {"name": "summary", "dataType": ["object"]},
+            ],
+        }
+        self.client.schema.create_class(schema)
+
+    def add_industry_summary(self, summary: dict):
+        for key in ["source", "type", "subtype", "industry_name", "last_updated", "industry_summary"]:
+            assert key in summary, f"{key} is not present in the summary"
+        self.client.data_object.create(summary, self.class_name)

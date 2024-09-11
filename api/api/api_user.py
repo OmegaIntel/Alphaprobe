@@ -21,7 +21,7 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 # Initialize the router and Weaviate handler
 user_router = APIRouter()
-weaviate_handler = WeaviateUserDb()
+user_db_handler = WeaviateUserDb()
 
 # Configure password hashing context
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
@@ -45,7 +45,7 @@ def get_password_hash(password):
     return pwd_context.hash(password)
 
 def authenticate_user(email: str, password: str):
-    user = weaviate_handler.get_user(email)
+    user = user_db_handler.get_user(email)
     if not user:
         return False
     if not verify_password(password, user["password"]):
@@ -77,7 +77,7 @@ async def get_current_user(token: str = Depends(oauth2_scheme)) -> User:
     except jwt.PyJWTError:
         raise credentials_exception
     
-    user_data = weaviate_handler.get_user(token_data.email)
+    user_data = user_db_handler.get_user(token_data.email)
     if user_data is None:
         raise credentials_exception
 
@@ -91,11 +91,11 @@ async def get_current_user(token: str = Depends(oauth2_scheme)) -> User:
 async def register(email: EmailStr = Form(...), password: str = Form(...), request: Request = None):
     if request:
         logging.info(f"Register request: {await request.form()}")
-    user = weaviate_handler.get_user(email)
+    user = user_db_handler.get_user(email)
     if user:
         raise HTTPException(status_code=400, detail="Email already registered")
     hashed_password = get_password_hash(password)
-    weaviate_handler.register_user(email, hashed_password)
+    user_db_handler.register_user(email, hashed_password)
     return {"email": email}
 
 # API route for token-based login
