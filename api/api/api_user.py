@@ -9,7 +9,7 @@ from passlib.context import CryptContext
 import os
 import logging
 
-from api.db_models.weaviate_db import WeaviateDb
+from api.db_models.weaviate_db import WeaviateUserDb
 
 # Environment variables and constants
 SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key")
@@ -21,7 +21,7 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 # Initialize the router and Weaviate handler
 user_router = APIRouter()
-weaviate_handler = WeaviateDb()
+weaviate_handler = WeaviateUserDb()
 
 # Configure password hashing context
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")

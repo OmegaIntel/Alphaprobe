@@ -13,30 +13,14 @@ from os import getenv
 from typing import List, Tuple
 from api.interfaces import Retriever
 
-
 load_dotenv()
+
 
 class WeaviateDb(Retriever):
     def __init__(self, url: str = "http://weaviate:8080"):
         self.client = Client(url=url)
-        self.create_user_schema()
         self.create_chat_schema()
         self.llm = LLM() 
-
-    def create_user_schema(self):
-        class_name = "User"
-        if self.client.schema.exists(class_name):
-            return
-
-        schema = {
-            "class": class_name,
-            "description": "User details",
-            "properties": [
-                {"name": "email", "dataType": ["text"]},
-                {"name": "password", "dataType": ["text"]},
-            ],
-        }
-        self.client.schema.create_class(schema)
 
     def hash_email(self, email: str) -> str:
         """Generate a hash of the email to use in class names."""
@@ -94,26 +78,6 @@ class WeaviateDb(Retriever):
             assert key in summary, f"{key} is not present in the summary"
         class_name = "IndustrySummary"
         self.client.data_object.create(summary, class_name)
-
-    def register_user(self, email: str, hashed_password: str):
-        class_name = "User"
-        user_data = {
-            "email": email,
-            "password": hashed_password,
-        }
-        self.client.data_object.create(user_data, class_name)
-
-    def get_user(self, email: str):
-        class_name = "User"
-        query_result = self.client.query.get(class_name, ["email", "password"]).with_where({
-            "path": ["email"],
-            "operator": "Equal",
-            "valueString": email,
-        }).do()
-
-        if query_result["data"]["Get"][class_name]:
-            return query_result["data"]["Get"][class_name][0]
-        return None
 
     def class_name(self, company_name: str, user_email: str) -> str:
         """Return standard class name."""
@@ -326,3 +290,44 @@ class WeaviateDb(Retriever):
         """Implements the interface."""
         context = self.get_context(user_query, company_name, user_email)
         return ' '.join([res['content'] for res in context])
+
+
+class WeaviateUserDb(WeaviateDb):
+    def __init__(self, url: str = "http://weaviate:8080"):
+        super().__init__(self, url)
+        self.create_user_schema()
+
+    def create_user_schema(self):
+        class_name = "User"
+        if self.client.schema.exists(class_name):
+            return
+
+        schema = {
+            "class": class_name,
+            "description": "User details",
+            "properties": [
+                {"name": "email", "dataType": ["text"]},
+                {"name": "password", "dataType": ["text"]},
+            ],
+        }
+        self.client.schema.create_class(schema)
+
+    def register_user(self, email: str, hashed_password: str):
+        class_name = "User"
+        user_data = {
+            "email": email,
+            "password": hashed_password,
+        }
+        self.client.data_object.create(user_data, class_name)
+
+    def get_user(self, email: str):
+        class_name = "User"
+        query_result = self.client.query.get(class_name, ["email", "password"]).with_where({
+            "path": ["email"],
+            "operator": "Equal",
+            "valueString": email,
+        }).do()
+
+        if query_result["data"]["Get"][class_name]:
+            return query_result["data"]["Get"][class_name][0]
+        return None
