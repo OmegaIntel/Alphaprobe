@@ -3,6 +3,7 @@ import hashlib
 import datetime
 import weaviate
 from weaviate import Client
+from weaviate.classes.query import Filter
 from tqdm import tqdm
 from werkzeug.security import generate_password_hash, check_password_hash
 import uuid
@@ -12,29 +13,30 @@ from dotenv import load_dotenv
 from os import getenv
 from typing import List, Tuple
 from api.interfaces import Retriever
+import json
 
 WEAVIATE_URL = "http://weaviate:8080"
 
 load_dotenv()
 
 
-class WeaviateDb(Retriever):
+class WeaviateDbRetriever(Retriever):
     def __init__(self, url=WEAVIATE_URL):
         self.client = Client(url=url)
-        self.llm = LLM() 
+        self.llm = LLM()
 
-    def hash_email(self, email: str) -> str:
+    def _hash_email(self, email: str) -> str:
         """Generate a hash of the email to use in class names."""
         return hashlib.md5(email.encode()).hexdigest()
 
-    def class_name(self, company_name: str, user_email: str) -> str:
+    def _class_name(self, company_name: str, user_email: str) -> str:
         """Return standard class name."""
         sanitized_name = re.sub(r'\W+', '_', company_name).capitalize()
-        email_hash = self.hash_email(user_email)
+        email_hash = self._hash_email(user_email)
         return f"{sanitized_name}_{email_hash}_Documents"
 
     def create_company_schema(self, company_name: str, user_email: str):
-        class_name = self.class_name(company_name, user_email)
+        class_name = self._class_name(company_name, user_email)
 
         if self.client.schema.exists(class_name):
             print(f"Schema for {class_name} already exists.")
@@ -98,7 +100,7 @@ class WeaviateDb(Retriever):
 
     def get_registered_companies(self, user_email: str):
         # Generate the hash of the current user's email
-        hashed_email = self.hash_email(user_email)
+        hashed_email = self._hash_email(user_email)
 
         existing_classes = self.client.schema.get()["classes"]
         companies = []
@@ -115,6 +117,12 @@ class WeaviateDb(Retriever):
         """Implements the interface."""
         context = self.get_context(user_query, company_name, user_email)
         return ' '.join([res['content'] for res in context])
+
+
+class WeaviateDb:
+    def __init__(self, url=WEAVIATE_URL):
+        self.client = Client(url=url)
+        self.llm = LLM()
 
 
 class WeaviateChatSessionDb(WeaviateDb):
@@ -317,9 +325,13 @@ class WeaviateIndustryDb(WeaviateDb):
     def __init__(self, url=WEAVIATE_URL):
         super().__init__(url)
         self.class_name = "IndustrySummary"
+        self.create_industry_summary_schema()
 
     def create_industry_summary_schema(self):
         """Create industry info schema from dict"""
+        if self.client.schema.exists(self.class_name):
+            return
+
         schema = {
             "class": self.class_name,
             "description": "Industry Summary",
@@ -328,8 +340,8 @@ class WeaviateIndustryDb(WeaviateDb):
                 {"name": "type", "dataType": ["text"]},
                 {"name": "subtype", "dataType": ["text"]},
                 {"name": "industry_name", "dataType": ["text"]},
-                {"name": "last_updated", "dataType": ["date"]},
-                {"name": "summary", "dataType": ["object"]},
+                {"name": "last_updated", "dataType": ["text"]},
+                {"name": "summary", "dataType": ["text"]},
             ],
         }
         self.client.schema.create_class(schema)
@@ -337,4 +349,19 @@ class WeaviateIndustryDb(WeaviateDb):
     def add_industry_summary(self, summary: dict):
         for key in ["source", "type", "subtype", "industry_name", "last_updated", "industry_summary"]:
             assert key in summary, f"{key} is not present in the summary"
+        if isinstance(summary['industry_summary'], dict):
+            summary['industry_summary'] = json.dumps(summary['industry_summary'])
         self.client.data_object.create(summary, self.class_name)
+
+    def get_industry_summaries(self, **kwargs) -> List:
+        summaries = self.client.collections.get(self.class_name)
+        key_vals = list(kwargs.items())
+        key, val = key_vals[0]
+        f0 = Filter.by_property(key).equal(val)
+        for key, val in key_vals[1:]:
+            f0 = f0 & Filter.by_property(key).equal(val)
+        response = summaries.query.fetch_objects(
+            filters=f0,
+            limit=5
+        )
+        return response
