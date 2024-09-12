@@ -1,23 +1,30 @@
 import re
 import hashlib
 import datetime
+
 import weaviate
 from weaviate import Client
+
 from weaviate.classes.query import Filter
+import weaviate.classes as wvc
+from weaviate.connect.v4 import UnexpectedStatusCodeError
+
 from tqdm import tqdm
 from werkzeug.security import generate_password_hash, check_password_hash
 import uuid
 from api.llm_models.llm import LLM
 from llmsherpa.readers import LayoutPDFReader
-from dotenv import load_dotenv
 from os import getenv
 from typing import List, Tuple
 from api.interfaces import Retriever
 import json
 
-WEAVIATE_URL = "http://weaviate:8080"
+from dotenv import load_dotenv
 
 load_dotenv()
+
+
+WEAVIATE_URL = "http://weaviate:8080"
 
 
 class WeaviateDbRetriever(Retriever):
@@ -119,13 +126,13 @@ class WeaviateDbRetriever(Retriever):
         return ' '.join([res['content'] for res in context])
 
 
-class WeaviateDb:
+class WeaviateDbV3:
     def __init__(self, url=WEAVIATE_URL):
+        # this is v3
         self.client = Client(url=url)
-        self.llm = LLM()
 
 
-class WeaviateChatSessionDb(WeaviateDb):
+class WeaviateChatSessionDb(WeaviateDbV3):
     def __init__(self, url=WEAVIATE_URL):
         super().__init__(url)
         self.class_name = "ChatSession"
@@ -282,7 +289,7 @@ class WeaviateChatSessionDb(WeaviateDb):
             self.client.data_object.update(update_data, "ChatSession", session_uuid)
 
 
-class WeaviateUserDb(WeaviateDb):
+class WeaviateUserDb(WeaviateDbV3):
     def __init__(self, url=WEAVIATE_URL):
         super().__init__(url)
         self.class_name = 'User'
@@ -321,37 +328,70 @@ class WeaviateUserDb(WeaviateDb):
         return None
 
 
-class WeaviateIndustryDb(WeaviateDb):
-    def __init__(self, url=WEAVIATE_URL):
-        super().__init__(url)
+# TODO: subclass from v4, not v3.
+class WeaviateIndustryDb:
+    def __init__(self, host='weaviate', port=8080, grpc_port=50051):
+        # super().__init__(url)
+        self.client = weaviate.connect_to_local(
+            host=host,
+            port=port,
+            grpc_port=grpc_port,
+            skip_init_checks=True
+        )
         self.class_name = "IndustrySummary"
         self.create_industry_summary_schema()
 
+    def __del__(self):
+        self.client.close()
+
     def create_industry_summary_schema(self):
         """Create industry info schema from dict"""
-        if self.client.schema.exists(self.class_name):
-            return
-
-        schema = {
-            "class": self.class_name,
-            "description": "Industry Summary",
-            "properties": [
-                {"name": "source", "dataType": ["text"]},
-                {"name": "type", "dataType": ["text"]},
-                {"name": "subtype", "dataType": ["text"]},
-                {"name": "industry_name", "dataType": ["text"]},
-                {"name": "last_updated", "dataType": ["text"]},
-                {"name": "summary", "dataType": ["text"]},
-            ],
-        }
-        self.client.schema.create_class(schema)
+        try:
+            self.client.collections.create(
+                name=self.class_name,
+                # vectorizer_config=wvc.config.Configure.Vectorizer.text2vec_openai(),    # Set the vectorizer to "text2vec-openai" to use the OpenAI API for vector-related operations
+                # generative_config=wvc.config.Configure.Generative.cohere(),             # Set the generative module to "generative-cohere" to use the Cohere API for RAG
+                properties=[
+                    wvc.config.Property(
+                        name="source",
+                        data_type=wvc.config.DataType.TEXT,
+                    ),
+                    wvc.config.Property(
+                        name="type",
+                        data_type=wvc.config.DataType.TEXT,
+                    ),
+                    wvc.config.Property(
+                        name="subtype",
+                        data_type=wvc.config.DataType.TEXT,
+                    ),
+                    wvc.config.Property(
+                        name="industry_name",
+                        data_type=wvc.config.DataType.TEXT,
+                    ),
+                    wvc.config.Property(
+                        name="industry_name",
+                        data_type=wvc.config.DataType.TEXT,
+                    ),
+                    wvc.config.Property(
+                        name="last_updated",
+                        data_type=wvc.config.DataType.DATE,
+                    ),
+                    wvc.config.Property(
+                        name="summary",
+                        data_type=wvc.config.DataType.TEXT,
+                    ),
+                ]
+            )
+        except UnexpectedStatusCodeError:
+            pass    # the schema exists already
 
     def add_industry_summary(self, summary: dict):
         for key in ["source", "type", "subtype", "industry_name", "last_updated", "industry_summary"]:
             assert key in summary, f"{key} is not present in the summary"
         if isinstance(summary['industry_summary'], dict):
             summary['industry_summary'] = json.dumps(summary['industry_summary'])
-        self.client.data_object.create(summary, self.class_name)
+        collection = self.client.collections.get(self.class_name)
+        collection.data.insert(summary)
 
     def get_industry_summaries(self, **kwargs) -> List:
         summaries = self.client.collections.get(self.class_name)

@@ -131,7 +131,7 @@ async def send_message(session_id: str, request: MessageRequest, current_user: U
     chat_session_db_handler.save_chat_message(session_id, user_message, ai_message, current_user.email)
 
     if message_count < 10:
-        session_summary = chat_session_db_handler.llm.generate_summary_name(user_message["content"], ai_message["content"])
+        session_summary = llm_wrapper.generate_summary_name(user_message["content"], ai_message["content"])
         chat_session_db_handler.update_chat_session_name(session_id, session_summary)
 
     return ChatResponse(response=ai_response)

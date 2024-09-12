@@ -4,6 +4,7 @@ services:
     image: semitechnologies/weaviate:latest
     ports:
       - "8002:8080"
+      - "50051:50051"
     environment:
       QUERY_DEFAULTS_LIMIT: ${QUERY_DEFAULTS_LIMIT}
       AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: ${AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED}
