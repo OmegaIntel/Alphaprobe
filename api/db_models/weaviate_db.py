@@ -8,6 +8,7 @@ from weaviate import Client
 from weaviate.classes.query import Filter
 import weaviate.classes as wvc
 from weaviate.connect.v4 import UnexpectedStatusCodeError
+from abc import ABC, abstractmethod
 
 from tqdm import tqdm
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -17,14 +18,17 @@ from llmsherpa.readers import LayoutPDFReader
 from os import getenv
 from typing import List, Tuple
 from api.interfaces import Retriever
-import json
 
 from dotenv import load_dotenv
 
 load_dotenv()
 
 
-WEAVIATE_URL = "http://weaviate:8080"
+WEAVIATE_HOST = 'weaviate'
+WEAVIATE_PORT = 8080
+WEAVIATE_GRPC_PORT = 50051
+
+WEAVIATE_URL = f"http://{WEAVIATE_HOST}:{WEAVIATE_PORT}"
 
 
 class WeaviateDbRetriever(Retriever):
@@ -328,23 +332,34 @@ class WeaviateUserDb(WeaviateDbV3):
         return None
 
 
-# TODO: subclass from v4, not v3.
-class WeaviateIndustryDb:
-    def __init__(self, host='weaviate', port=8080, grpc_port=50051):
-        # super().__init__(url)
+class WeaviateDbV4(ABC):
+    """Base v4 class"""
+
+    class_name = ''
+
+    def __init__(self, host=WEAVIATE_HOST, port=WEAVIATE_PORT, grpc_port=WEAVIATE_GRPC_PORT):
         self.client = weaviate.connect_to_local(
             host=host,
             port=port,
             grpc_port=grpc_port,
-            skip_init_checks=True
         )
-        self.class_name = "IndustrySummary"
-        self.create_industry_summary_schema()
+        self.create_schema()
 
     def __del__(self):
         self.client.close()
 
-    def create_industry_summary_schema(self):
+    @abstractmethod
+    def create_schema(self):
+        assert self.class_name
+
+
+class WeaviateIndustryDb(WeaviateDbV4):
+    class_name = "IndustrySummary"
+
+    def __init__(self, host='weaviate', port=8080, grpc_port=50051):
+        super().__init__(host, port, grpc_port)
+
+    def create_schema(self):
         """Create industry info schema from dict"""
         try:
             self.client.collections.create(
@@ -369,16 +384,12 @@ class WeaviateIndustryDb:
                         data_type=wvc.config.DataType.TEXT,
                     ),
                     wvc.config.Property(
-                        name="industry_name",
-                        data_type=wvc.config.DataType.TEXT,
-                    ),
-                    wvc.config.Property(
                         name="last_updated",
                         data_type=wvc.config.DataType.DATE,
                     ),
                     wvc.config.Property(
-                        name="summary",
-                        data_type=wvc.config.DataType.TEXT,
+                        name="industry_summary",
+                        data_type=wvc.config.DataType.OBJECT,
                     ),
                 ]
             )
@@ -388,8 +399,9 @@ class WeaviateIndustryDb:
     def add_industry_summary(self, summary: dict):
         for key in ["source", "type", "subtype", "industry_name", "last_updated", "industry_summary"]:
             assert key in summary, f"{key} is not present in the summary"
-        if isinstance(summary['industry_summary'], dict):
-            summary['industry_summary'] = json.dumps(summary['industry_summary'])
+        print("GOT TYPE", type(summary['industry_summary']))
+        # if isinstance(summary['industry_summary'], dict):
+        #     summary['industry_summary'] = json.dumps(summary['industry_summary'])
         collection = self.client.collections.get(self.class_name)
         collection.data.insert(summary)
 

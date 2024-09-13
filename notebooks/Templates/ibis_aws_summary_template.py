@@ -1,26 +1,40 @@
 from copy import deepcopy
 
 
-_PARTS = [{
+_PARTS = [
+{
     "key_statistics": {
         "type": "object",
         "description": "Key Statistics",
         "properties": {
-            "revenue": {
-                "type": "string",
-                "description": "The annual revenue."
+            "revenue_dollars": {
+                "description": "The annual revenue.",
+                "type": "number",
+                "minimum": 0,
+                "maximum": 10**15,
+                "multipleOf": 1000,
             },
-            "historical_revenue_growth": {
-                "type": "string",
-                "description": "Historical revenue growth."
+            "historical_revenue_growth_percentage": {
+                "description": "Historical revenue growth precentage.",
+                "type": "number",
+                "minimum": -100,
+                "maximum": 100,
+                "multipleOf": 0.1,
             },
-            "projected_revenue_growth": {
-                "type": "string",
-                "description": "Projected revenue growth."
+            "projected_revenue_growth_percentage": {
+                "description": "Projected revenue growth percentage.",
+                "type": "number",
+                "minimum": -100,
+                "maximum": 100,
+                "multipleOf": 0.1,
             },
-            "profit margins": {
+            "profit_margins_percentage": {
+                "description": "Profit margines percentage.",
                 "type": "string",
-                "description": "Profit margins."
+                "type": "number",
+                "minimum": -100,
+                "maximum": 100,
+                "multipleOf": 0.1,
             },
         }
     },
@@ -28,6 +42,9 @@ _PARTS = [{
         "type": "string",
         "description": "Executive summary."
     },
+},
+
+{
     "current_performance": {
         "type": "string",
         "description": "Current performance."
@@ -40,6 +57,9 @@ _PARTS = [{
         "type": "string",
         "description": "Industry Definition and Impact."
     },
+},
+
+{
     "swot_analysis": {
         "type": "object",
         "description": "SWOT Analysis",
@@ -167,7 +187,8 @@ _PARTS = [{
         "type": "string",
         "description": "Date when the document was Last updated."
     },
-}]
+}
+]
 
 
 _ROOT = {
