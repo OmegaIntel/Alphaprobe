@@ -364,8 +364,6 @@ class WeaviateIndustryDb(WeaviateDbV4):
         try:
             self.client.collections.create(
                 name=self.class_name,
-                # vectorizer_config=wvc.config.Configure.Vectorizer.text2vec_openai(),    # Set the vectorizer to "text2vec-openai" to use the OpenAI API for vector-related operations
-                # generative_config=wvc.config.Configure.Generative.cohere(),             # Set the generative module to "generative-cohere" to use the Cohere API for RAG
                 properties=[
                     wvc.config.Property(
                         name="source",
