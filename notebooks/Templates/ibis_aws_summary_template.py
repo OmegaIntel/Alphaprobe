@@ -65,20 +65,28 @@ _PARTS = [
         "description": "SWOT Analysis",
         "properties": {
             "strengths": {
-                "type": "string",
-                "description": "Strengths."
+                "name": "Strengths.",
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "Strengths.",
             },
             "weaknesses": {
-                "type": "string",
-                "description": "Weaknesses."
+                "name": "Weaknesses.",
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "Weaknesses.",
             },
             "opportunities": {
-                "type": "string",
-                "description": "Opportunities."
+                "name": "Opportunities.",
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "Opportunities.",
             },
             "threats": {
-                "type": "string",
-                "description": "Threats."
+                "name": "Threats.",
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "Threats.",
             },
         }
     },
