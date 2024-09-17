@@ -332,8 +332,8 @@ class WeaviateUserDb(WeaviateDbV3):
         return None
 
 
-class WeaviateDbV4(ABC):
-    """Base v4 class"""
+class WeaviateDbV4Retriever(Retriever):
+    """Base V4 Retriever class"""
 
     class_name = ''
 
@@ -348,12 +348,15 @@ class WeaviateDbV4(ABC):
     def __del__(self):
         self.client.close()
 
+    def llm_context(self, user_query: str, company_name: str, user_email: str) -> str:
+        return ""
+
     @abstractmethod
     def create_schema(self):
         assert self.class_name
 
 
-class WeaviateIndustryDb(WeaviateDbV4):
+class WeaviateIndustryDb(WeaviateDbV4Retriever):
     class_name = "IndustrySummary"
 
     def __init__(self, host='weaviate', port=8080, grpc_port=50051):
@@ -397,9 +400,6 @@ class WeaviateIndustryDb(WeaviateDbV4):
     def add_industry_summary(self, summary: dict):
         for key in ["source", "type", "subtype", "industry_name", "last_updated", "industry_summary"]:
             assert key in summary, f"{key} is not present in the summary"
-        print("GOT TYPE", type(summary['industry_summary']))
-        # if isinstance(summary['industry_summary'], dict):
-        #     summary['industry_summary'] = json.dumps(summary['industry_summary'])
         collection = self.client.collections.get(self.class_name)
         collection.data.insert(summary)
 
