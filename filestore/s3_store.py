@@ -1,5 +1,7 @@
 """Store files in S3."""
 
+# TODO: replace prints with logging
+
 import boto3
 import os
 import hashlib
@@ -51,25 +53,52 @@ def delete_object(object_key: str, bucket_name=S3_DEFAULT_BUCKET) -> str:
     except Exception as e:
         print(f"Error deleting object: {e}")
         return ''
+    
+
+def hash_file(filepath: str):
+   """Returns the SHA-1 hash of the file passed into it"""
+
+   # make a hash object
+   h = hashlib.sha1()
+
+   # open file for reading in binary mode
+   with open(filepath,'rb') as file:
+
+       # loop till the end of the file
+       chunk = 0
+       while chunk != b'':
+           # read only 1024 bytes at a time
+           chunk = file.read(1024)
+           h.update(chunk)
+
+   # return the hex representation of digest
+   return h.hexdigest()
 
 
 class UserDocumentStore:
-    """Store versioned documents for users."""
+    """
+    Store documents for users.
+    The caller would know the store ID (depends on user/company, for example.)
 
-    def __init__(self, email: str):
-        self.email = email
+    Stores a file using its hash code to avoid duplicate documents.
+    Returns the file using its S3 path (stored in Weaviate or elsewhere).
+    """
 
-    @staticmethod
-    def _hs(s: str) -> str:
-        return hashlib.md5(s.encode()).hexdigest()
-    
-    def _obj_key(self, doc_name: str, doc_version: str) -> str:
-        return f'{self._hs(self.email)}/{self._hs(doc_name)}/{self._hs(doc_version)}'
+    def __init__(self, user_store_id: str):
+        self.store_id = user_store_id
 
-    def store_document(self, doc_path: str, doc_name: str, doc_version: str) -> str:
+    def _obj_key(self, doc_hash: str) -> str:
+        return f'{self.store_id}/{doc_hash}'
+
+    def store_document(self, doc_path: str) -> str:
         """Uploads the document, returns its URL."""
-        return upload_object(doc_path, self._obj_key(doc_name, doc_version))
+        doc_hash = hash_file(doc_path)
+        return upload_object(doc_path, self._obj_key(doc_hash))
 
-    def delete_document(self, doc_name: str, doc_version: str):
-        # TODO: delete all under doc_name
-        return delete_object(self._obj_key(doc_name, doc_version))
+    def delete_document(self, doc_location: str):
+        assert doc_location.startswith('s3://')
+        location = doc_location[5:]
+        arr = location.split('/')
+        bucket = arr[0]
+        path = '/'.join(arr[1:])
+        return delete_object(path, bucket)

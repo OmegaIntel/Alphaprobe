@@ -8,6 +8,9 @@ from weaviate import Client
 from weaviate.classes.query import Filter
 import weaviate.classes as wvc
 from weaviate.connect.v4 import UnexpectedStatusCodeError
+
+from filestore import s3_store
+
 from abc import ABC, abstractmethod
 
 from tqdm import tqdm
@@ -332,10 +335,8 @@ class WeaviateUserDb(WeaviateDbV3):
         return None
 
 
-class WeaviateDbV4Retriever(Retriever):
-    """Base V4 Retriever class"""
-
-    class_name = ''
+class WeaviateDbV4():
+    """Base Weaviate V4 class"""
 
     def __init__(self, host=WEAVIATE_HOST, port=WEAVIATE_PORT, grpc_port=WEAVIATE_GRPC_PORT):
         self.client = weaviate.connect_to_local(
@@ -343,68 +344,101 @@ class WeaviateDbV4Retriever(Retriever):
             port=port,
             grpc_port=grpc_port,
         )
-        self.create_schema()
 
     def __del__(self):
         self.client.close()
 
-    def llm_context(self, user_query: str, company_name: str, user_email: str) -> str:
-        return ""
+    # def llm_context(self, user_query: str, company_name: str, user_email: str) -> str:
+    #     return ""
 
     @abstractmethod
-    def create_schema(self):
-        assert self.class_name
+    def create_schema(self, schema_name: str):
+        assert schema_name
+
+        # s3_location = s3_store.UserDocumentStore(self)
 
 
-class WeaviateIndustryDb(WeaviateDbV4Retriever):
-    class_name = "IndustrySummary"
+class UserDocumentManager:
+    """Manages user documents: upload, download, etc."""
 
-    def __init__(self, host='weaviate', port=8080, grpc_port=50051):
-        super().__init__(host, port, grpc_port)
+    # TODO: check for existence of the document
+    
+    def __init__(self, email: str, company_name: str, client: weaviate.client.WeaviateClient):
+        '''Defines the schema name as a composite of email and company name.'''
+        email = email.lower()
+        company_name = re.sub(r'\W+', '_', company_name).capitalize()
+        both = f'{email}:{company_name}'
+        self._schema = 'udm_' + hashlib.md5(both.encode()).hexdigest()
+        self.wsdb = WeaviateSummaryDb(client)
 
-    def create_schema(self):
-        """Create industry info schema from dict"""
+    def upload_document_to_filestore(self, file_path: str):
+        """Uploads document to file storage. Todo: connection to file store."""
+        uds = s3_store.UserDocumentStore(self._schema)
+        return uds.store_document(file_path)
+
+    def upload_document_summary(self, properties: dict):
+        self.wsdb.create_schema(self._schema)
+        self.wsdb.add_document(self._schema, properties)
+
+    def get_documents(self, **kwargs) -> List:
+        """Returns a collection of documents for the filters."""
+        return self.wsdb.get_documents(self._schema, **kwargs)
+
+
+# class WeaviateDocumentDb(WeaviateDbV4Retriever):
+# class WeaviateSummaryDb(WeaviateDbV4):
+class WeaviateSummaryDb:
+    """Storing arbitrary documents in the specified format."""
+
+    PROPERTIES = {
+        "location": wvc.config.DataType.TEXT,
+
+        "title": wvc.config.DataType.TEXT,
+        
+        "category": wvc.config.DataType.TEXT,
+        "subcategory": wvc.config.DataType.TEXT,
+        "tags": wvc.config.DataType.TEXT_ARRAY,
+        
+        "last_updated": wvc.config.DataType.DATE,
+        
+        "summary": wvc.config.DataType.OBJECT,
+    }
+
+    # def __init__(self, host='weaviate', port=8080, grpc_port=50051):
+    def __init__(self, weaviate_client: weaviate.client.WeaviateClient):
+        """Connection to Weaviate."""
+        self.client: weaviate.client.WeaviateClient = weaviate_client
+        # super().__init__(host, port, grpc_port)
+
+    def create_schema(self, schema_name: str):
+        """
+        Create schema for a user collection.
+        The name will encode user email, transaction, etc.
+        """
+
         try:
             self.client.collections.create(
-                name=self.class_name,
+                name=schema_name,
                 properties=[
                     wvc.config.Property(
-                        name="source",
-                        data_type=wvc.config.DataType.TEXT,
-                    ),
-                    wvc.config.Property(
-                        name="type",
-                        data_type=wvc.config.DataType.TEXT,
-                    ),
-                    wvc.config.Property(
-                        name="subtype",
-                        data_type=wvc.config.DataType.TEXT,
-                    ),
-                    wvc.config.Property(
-                        name="industry_name",
-                        data_type=wvc.config.DataType.TEXT,
-                    ),
-                    wvc.config.Property(
-                        name="last_updated",
-                        data_type=wvc.config.DataType.DATE,
-                    ),
-                    wvc.config.Property(
-                        name="industry_summary",
-                        data_type=wvc.config.DataType.OBJECT,
-                    ),
+                        name=cname,
+                        data_type=ctype,
+                    ) for cname, ctype in self.PROPERTIES.items()
                 ]
             )
         except UnexpectedStatusCodeError:
             pass    # the schema exists already
 
-    def add_industry_summary(self, summary: dict):
-        for key in ["source", "type", "subtype", "industry_name", "last_updated", "industry_summary"]:
-            assert key in summary, f"{key} is not present in the summary"
-        collection = self.client.collections.get(self.class_name)
-        collection.data.insert(summary)
+    def add_document(self, schema_name: str, properties: dict):
+        """Add the document"""
+        for key in self.PROPERTIES.keys():
+            assert key in properties, f"{key} is not present in the properties"
+        collection = self.client.collections.get(schema_name)
+        collection.data.insert(properties)
 
-    def get_industry_summaries(self, **kwargs) -> List:
-        summaries = self.client.collections.get(self.class_name)
+    def get_documents(self, schema_name: str, **kwargs) -> List:
+        # Query documents
+        summaries = self.client.collections.get(schema_name)
         key_vals = list(kwargs.items())
         key, val = key_vals[0]
         f0 = Filter.by_property(key).equal(val)
