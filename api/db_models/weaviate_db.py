@@ -8,6 +8,7 @@ from weaviate import Client
 from weaviate.classes.query import Filter
 import weaviate.classes as wvc
 from weaviate.connect.v4 import UnexpectedStatusCodeError
+from weaviate.collections.classes.internal import QueryReturn
 
 from filestore import s3_store
 
@@ -362,27 +363,37 @@ class UserDocumentManager:
     """Manages user documents: upload, download, etc."""
 
     # TODO: check for existence of the document
-    
+
     def __init__(self, email: str, company_name: str, client: weaviate.client.WeaviateClient):
         '''Defines the schema name as a composite of email and company name.'''
         email = email.lower()
         company_name = re.sub(r'\W+', '_', company_name).capitalize()
         both = f'{email}:{company_name}'
         self._schema = 'udm_' + hashlib.md5(both.encode()).hexdigest()
-        self.wsdb = WeaviateSummaryDb(client)
+        self._wsdb = WeaviateSummaryDb(client)
+        self._wsdb.create_schema(self._schema)
+        self._uds = s3_store.UserDocumentStore(self._schema)
 
     def upload_document_to_filestore(self, file_path: str):
         """Uploads document to file storage. Todo: connection to file store."""
-        uds = s3_store.UserDocumentStore(self._schema)
-        return uds.store_document(file_path)
+        return self._uds.store_document(file_path)
+
+    def document_exists(self, location: str) -> bool:
+        """Checks if the document already exists."""
+        try:
+            result = self.get_documents(location=location)
+            docs = result.objects
+            return len(docs) > 0
+        except Exception as e:
+            print("GOT EXCEPTION", e)
+            return False
 
     def upload_document_summary(self, properties: dict):
-        self.wsdb.create_schema(self._schema)
-        self.wsdb.add_document(self._schema, properties)
+        self._wsdb.add_document(self._schema, properties)
 
-    def get_documents(self, **kwargs) -> List:
+    def get_documents(self, **kwargs) -> QueryReturn:
         """Returns a collection of documents for the filters."""
-        return self.wsdb.get_documents(self._schema, **kwargs)
+        return self._wsdb.get_documents(self._schema, **kwargs)
 
 
 # class WeaviateDocumentDb(WeaviateDbV4Retriever):
@@ -404,7 +415,6 @@ class WeaviateSummaryDb:
         "summary": wvc.config.DataType.OBJECT,
     }
 
-    # def __init__(self, host='weaviate', port=8080, grpc_port=50051):
     def __init__(self, weaviate_client: weaviate.client.WeaviateClient):
         """Connection to Weaviate."""
         self.client: weaviate.client.WeaviateClient = weaviate_client
@@ -429,23 +439,27 @@ class WeaviateSummaryDb:
         except UnexpectedStatusCodeError:
             pass    # the schema exists already
 
-    def add_document(self, schema_name: str, properties: dict):
+    def add_document(self, schema_name: str, properties: dict) -> bool:
         """Add the document"""
-        for key in self.PROPERTIES.keys():
-            assert key in properties, f"{key} is not present in the properties"
-        collection = self.client.collections.get(schema_name)
-        collection.data.insert(properties)
+        try:
+            for key in self.PROPERTIES.keys():
+                assert key in properties, f"{key} is not present in the properties"
+            collection = self.client.collections.get(schema_name)
+            collection.data.insert(properties)
+            return True
+        except Exception:
+            return False
 
-    def get_documents(self, schema_name: str, **kwargs) -> List:
-        # Query documents
+    def get_documents(self, schema_name: str, **kwargs) -> QueryReturn:
+        """Query documents"""
+        limit = kwargs.pop('limit', 5)
         summaries = self.client.collections.get(schema_name)
         key_vals = list(kwargs.items())
         key, val = key_vals[0]
         f0 = Filter.by_property(key).equal(val)
         for key, val in key_vals[1:]:
             f0 = f0 & Filter.by_property(key).equal(val)
-        response = summaries.query.fetch_objects(
+        return summaries.query.fetch_objects(
             filters=f0,
-            limit=5
+            limit=limit
         )
-        return response
