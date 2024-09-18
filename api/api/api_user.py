@@ -8,8 +8,9 @@ from passlib.context import CryptContext
 import os
 import logging
 from sqlalchemy.orm import Session
-from db_models.users import User as DbUser, SessionLocal
+from db_models.users import User as DbUser
 from typing import Annotated
+from db_models.session import get_db
 
 # Environment variables and constants
 SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key")
@@ -35,13 +36,6 @@ class TokenData(BaseModel):
 
 class User(BaseModel):
     email: str
-
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
 
 # Utility functions for password management and JWT handling
 def verify_password(plain_password, hashed_password):
@@ -69,22 +63,18 @@ def create_access_token(data: dict, expires_delta: timedelta = None):
     return encoded_jwt
 
 async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)], db: Session = Depends(get_db)) -> User:
-    print("starting")
     credentials_exception = HTTPException(
         status_code=401,
         detail="Could not validate credentials",
         headers={"WWW-Authenticate": "Bearer"},
     )
     try:
-        print("test")
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        print(payload, "test")
         email: str = payload.get("sub")
         if email is None:
             raise credentials_exception
         token_data = TokenData(email=email)
     except jwt.PyJWTError:
-        print("test")
         raise credentials_exception
     
     user = db.query(DbUser).filter(DbUser.email == token_data.email).first()
@@ -126,5 +116,4 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
 # API route to get the current logged-in user
 @user_router.get("/users/me")
 async def read_users_me(current_user: Annotated[User, Depends(get_current_user)]):
-    print("test")
     return current_user
