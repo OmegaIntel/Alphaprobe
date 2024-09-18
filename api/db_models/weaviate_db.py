@@ -353,8 +353,8 @@ class WeaviateDbV4():
     #     return ""
 
     @abstractmethod
-    def create_schema(self, schema_name: str):
-        assert schema_name
+    def create_coll(self, coll_name: str):
+        assert coll_name
 
         # s3_location = s3_store.UserDocumentStore(self)
 
@@ -365,23 +365,23 @@ class UserDocumentManager:
     # TODO: check for existence of the document
 
     def __init__(self, email: str, company_name: str, client: weaviate.client.WeaviateClient):
-        '''Defines the schema name as a composite of email and company name.'''
+        '''Defines the collection name as a composite of email and company name.'''
         email = email.lower()
         company_name = re.sub(r'\W+', '_', company_name).capitalize()
         both = f'{email}:{company_name}'
-        self._schema = 'udm_' + hashlib.md5(both.encode()).hexdigest()
+        self._coll = 'udm_' + hashlib.md5(both.encode()).hexdigest()
         self._wsdb = WeaviateSummaryDb(client)
-        self._wsdb.create_schema(self._schema)
-        self._uds = s3_store.UserDocumentStore(self._schema)
+        self._wsdb.create_coll(self._coll)
+        self._uds = s3_store.UserDocumentStore(self._coll)
 
     def upload_document_to_filestore(self, file_path: str):
         """Uploads document to file storage. Todo: connection to file store."""
         return self._uds.store_document(file_path)
 
-    def document_exists(self, location: str) -> bool:
+    def document_exists(self, doc_url: str) -> bool:
         """Checks if the document already exists."""
         try:
-            result = self.get_documents(location=location)
+            result = self.get_documents(doc_url=doc_url)
             docs = result.objects
             return len(docs) > 0
         except Exception as e:
@@ -389,11 +389,11 @@ class UserDocumentManager:
             return False
 
     def upload_document_summary(self, properties: dict):
-        self._wsdb.add_document(self._schema, properties)
+        self._wsdb.add_document(self._coll, properties)
 
     def get_documents(self, **kwargs) -> QueryReturn:
         """Returns a collection of documents for the filters."""
-        return self._wsdb.get_documents(self._schema, **kwargs)
+        return self._wsdb.get_documents(self._coll, **kwargs)
 
 
 # class WeaviateDocumentDb(WeaviateDbV4Retriever):
@@ -402,7 +402,7 @@ class WeaviateSummaryDb:
     """Storing arbitrary documents in the specified format."""
 
     PROPERTIES = {
-        "location": wvc.config.DataType.TEXT,
+        "doc_url": wvc.config.DataType.TEXT,
 
         "title": wvc.config.DataType.TEXT,
         
@@ -420,15 +420,12 @@ class WeaviateSummaryDb:
         self.client: weaviate.client.WeaviateClient = weaviate_client
         # super().__init__(host, port, grpc_port)
 
-    def create_schema(self, schema_name: str):
-        """
-        Create schema for a user collection.
-        The name will encode user email, transaction, etc.
-        """
+    def create_coll(self, coll_name: str):
+        """Create collection for user documents."""
 
         try:
             self.client.collections.create(
-                name=schema_name,
+                name=coll_name,
                 properties=[
                     wvc.config.Property(
                         name=cname,
@@ -439,21 +436,21 @@ class WeaviateSummaryDb:
         except UnexpectedStatusCodeError:
             pass    # the schema exists already
 
-    def add_document(self, schema_name: str, properties: dict) -> bool:
+    def add_document(self, coll_name: str, properties: dict) -> bool:
         """Add the document"""
         try:
             for key in self.PROPERTIES.keys():
                 assert key in properties, f"{key} is not present in the properties"
-            collection = self.client.collections.get(schema_name)
+            collection = self.client.collections.get(coll_name)
             collection.data.insert(properties)
             return True
         except Exception:
             return False
 
-    def get_documents(self, schema_name: str, **kwargs) -> QueryReturn:
+    def get_documents(self, coll_name: str, **kwargs) -> QueryReturn:
         """Query documents"""
         limit = kwargs.pop('limit', 5)
-        summaries = self.client.collections.get(schema_name)
+        summaries = self.client.collections.get(coll_name)
         key_vals = list(kwargs.items())
         key, val = key_vals[0]
         f0 = Filter.by_property(key).equal(val)
