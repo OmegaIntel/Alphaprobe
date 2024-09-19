@@ -95,9 +95,9 @@ class UserDocumentStore:
         doc_hash = hash_file(doc_path)
         return upload_object(doc_path, self._obj_key(doc_hash))
 
-    def delete_document(self, doc_location: str):
-        assert doc_location.startswith('s3://')
-        location = doc_location[5:]
+    def delete_document(self, doc_url: str):
+        assert doc_url.startswith('s3://')
+        location = doc_url[5:]
         arr = location.split('/')
         bucket = arr[0]
         path = '/'.join(arr[1:])
