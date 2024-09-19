@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import RequestDemo from "../modals/request_demo";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -113,12 +114,7 @@ const Register = () => {
             <div className="text-sm font-bold text-white mb-4">
               Schedule a personalized demo
             </div>
-            <Link
-              to="#"
-              className="h-[45px] text-xs bg-[#eaeaea] p-4 rounded-md text-black text-center"
-            >
-              Request a demo
-            </Link>
+            <RequestDemo/>
           </div>
         </form>
       </div>

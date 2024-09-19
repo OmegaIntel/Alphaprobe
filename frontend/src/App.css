@@ -301,7 +301,7 @@ button.new-session-button:hover {
   background-color: #1e1e1e;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  /* padding: 20px; */
   overflow: hidden;
   width: 100%; /* Ensure main content takes full width */
 }
@@ -624,6 +624,7 @@ input:checked + .slider:before {
   box-shadow: none !important; /* Remove any box-shadow */
 }
 
+
 /* Optionally, if you want a subtle focus indication, you can add this: */
 .input-container input:focus,
 .input-container select:focus,
@@ -765,7 +766,7 @@ input:checked + .slider:before {
   background-color: #1e1e1e;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  /* padding: 20px; */
   overflow: hidden;
   width: calc(100% - 250px); /* Adjust width considering sidebar */
 }
@@ -906,4 +907,8 @@ pre {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #c3e6cb;
+}
+
+.date-input::-webkit-calendar-picker-indicator {
+  filter: invert(1)
 }

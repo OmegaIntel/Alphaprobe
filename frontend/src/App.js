@@ -10,6 +10,7 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import Sidebar from "./components/Sidebar";
 import "./App.css";
+import CreateDeal from "./components/create_deal/index";
 
 const App = () => {
   const [token, setToken] = useState(localStorage.getItem("token") || "");
@@ -46,6 +47,10 @@ const App = () => {
               path="/register"
               element={isLoggedIn ? <Navigate to="/chat" /> : <Register />}
             />
+            <Route 
+              path="/create-deal"
+              element={<CreateDeal/>}
+            ></Route>
             <Route
               path="/login"
               element={
