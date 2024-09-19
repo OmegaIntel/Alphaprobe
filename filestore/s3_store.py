@@ -4,7 +4,6 @@
 
 import boto3
 import os
-import hashlib
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -55,50 +54,30 @@ def delete_object(object_key: str, bucket_name=S3_DEFAULT_BUCKET) -> str:
         return ''
     
 
-def hash_file(filepath: str):
-   """Returns the SHA-1 hash of the file passed into it"""
+# class UserDocumentStore:
+#     """
+#     Store documents for users.
+#     The caller would know the store ID (depends on user/company, for example.)
 
-   # make a hash object
-   h = hashlib.sha1()
+#     Stores a file using its hash code to avoid duplicate documents.
+#     Returns the file using its S3 path (stored in Weaviate or elsewhere).
+#     """
 
-   # open file for reading in binary mode
-   with open(filepath,'rb') as file:
+#     def __init__(self, user_store_id: str):
+#         self.store_id = user_store_id
 
-       # loop till the end of the file
-       chunk = 0
-       while chunk != b'':
-           # read only 1024 bytes at a time
-           chunk = file.read(1024)
-           h.update(chunk)
+#     def _obj_key(self, doc_hash: str) -> str:
+#         return f'{self.store_id}/{doc_hash}'
 
-   # return the hex representation of digest
-   return h.hexdigest()
+#     def store_document(self, doc_path: str) -> str:
+#         """Uploads the document, returns its URL."""
+#         doc_hash = hash_file(doc_path)
+#         return upload_object(doc_path, self._obj_key(doc_hash))
 
-
-class UserDocumentStore:
-    """
-    Store documents for users.
-    The caller would know the store ID (depends on user/company, for example.)
-
-    Stores a file using its hash code to avoid duplicate documents.
-    Returns the file using its S3 path (stored in Weaviate or elsewhere).
-    """
-
-    def __init__(self, user_store_id: str):
-        self.store_id = user_store_id
-
-    def _obj_key(self, doc_hash: str) -> str:
-        return f'{self.store_id}/{doc_hash}'
-
-    def store_document(self, doc_path: str) -> str:
-        """Uploads the document, returns its URL."""
-        doc_hash = hash_file(doc_path)
-        return upload_object(doc_path, self._obj_key(doc_hash))
-
-    def delete_document(self, doc_url: str):
-        assert doc_url.startswith('s3://')
-        location = doc_url[5:]
-        arr = location.split('/')
-        bucket = arr[0]
-        path = '/'.join(arr[1:])
-        return delete_object(path, bucket)
+#     def delete_document(self, doc_url: str):
+#         assert doc_url.startswith('s3://')
+#         location = doc_url[5:]
+#         arr = location.split('/')
+#         bucket = arr[0]
+#         path = '/'.join(arr[1:])
+#         return delete_object(path, bucket)
