@@ -3,8 +3,8 @@ import uvicorn
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-from api.api.api_chat import chat_router
-from api.api.api_user import user_router
+# from api.api_chat import chat_router
+from api.api_user import user_router
 from pydantic import ValidationError
 
 
@@ -29,7 +29,7 @@ async def validation_exception_handler(request: Request, exc: ValidationError):
 
 
 
-app.include_router(chat_router)
+# app.include_router(chat_router)
 app.include_router(user_router)
 
 if __name__ == "__main__":

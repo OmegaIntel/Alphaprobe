@@ -138,7 +138,6 @@ async def send_message(session_id: str, request: MessageRequest, current_user: U
 @chat_router.delete("/chat/sessions/{session_id}", status_code=204)
 async def delete_chat_session(session_id: str, user=Depends(get_current_user)):
     result = weaviate_handler.delete_chat_session(session_id, user.email)
-    print(result)
     if result is None:
         raise HTTPException(status_code=404, detail="Session not found or not authorized")
     elif "error" in result:
