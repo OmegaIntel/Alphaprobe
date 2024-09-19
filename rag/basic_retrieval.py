@@ -34,9 +34,10 @@ class DocumentManager:
         "page_number": wvc.config.DataType.NUMBER,
     }
 
-    def __init__(self, coll_id: str, client: WeaviateClient):
+    def __init__(self, coll_id: str, weaviate_client: WeaviateClient, pdf_reader: LayoutPDFReader):
         self._coll_id = coll_id
-        self._client = client
+        self._wclient = weaviate_client
+        self._pdf_reader = pdf_reader
 
     def add_file(self, file_path: str, last_updated: str, tags: List[str]) -> str:
         """Returns S3 location, for now."""
@@ -52,9 +53,8 @@ class DocumentManager:
 
     def _upload_chunks(self, file_path: str, doc_url: str, last_updated: str, doc_tags: List[str]) -> bool:
         """Upload chunks -- the best attempt, for now."""
-        reader = LayoutPDFReader(getenv('LLMSHERPA_API_URL'))
-        doc = reader.read_pdf(file_path)
-        coll = self._client.collections.get(self._coll_id)
+        doc = self._pdf_reader.read_pdf(file_path)
+        coll = self._wclient.collections.get(self._coll_id)
         try:
             for chunk in doc.chunks():
                 chunk: Paragraph
@@ -88,7 +88,7 @@ class DocumentManager:
     def _create_chunk_collection(self):
         """Creates collection of fragments."""
         try:
-            self._client.collections.create(
+            self._wclient.collections.create(
                 name=self._coll_id,
                 description=f"Documents for collection with ID {self._coll_id}",
                 vectorizer_config=wvc.config.Configure.Vectorizer.text2vec_openai(),
