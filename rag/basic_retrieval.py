@@ -20,7 +20,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-def hash_file(filepath: str):
+def file_id(filepath: str):
    """Returns the SHA-1 hash of the file passed into it"""
 
    # make a hash object
@@ -63,7 +63,7 @@ class DocumentManager:
 
     def _file_storage_key(self, file_path: str) -> str:
         """Provides unique file ID."""
-        return f'{self._coll_id}/{hash_file(file_path)}'
+        return f'{self._coll_id}/{file_id(file_path)}'
 
 
     def add_file(self, file_path: str, last_updated: str, tags: List[str]) -> str:
