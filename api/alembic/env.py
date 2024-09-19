@@ -3,6 +3,8 @@ from logging.config import fileConfig
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 from db_models.users import Base as UserBase
+from db_models.demo_requests import Base as DemoRequestBase
+from db_models.deals import Base as DealsBase
 
 from alembic import context
 
@@ -19,7 +21,7 @@ if config.config_file_name is not None:
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
-target_metadata = [UserBase.metadata]
+target_metadata = [UserBase.metadata,DemoRequestBase.metadata,DealsBase.metadata]
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
