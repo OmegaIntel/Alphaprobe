@@ -301,7 +301,6 @@ button.new-session-button:hover {
   background-color: #1e1e1e;
   display: flex;
   flex-direction: column;
-  padding: 20px;
   overflow: hidden;
   width: 100%; /* Ensure main content takes full width */
 }
@@ -765,7 +764,6 @@ input:checked + .slider:before {
   background-color: #1e1e1e;
   display: flex;
   flex-direction: column;
-  padding: 20px;
   overflow: hidden;
   width: calc(100% - 250px); /* Adjust width considering sidebar */
 }
@@ -906,4 +904,10 @@ pre {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #c3e6cb;
+}
+.ant-menu-item-selected {
+  background-color: #303038 !important; /* Replace with your desired color */
+}
+.ant-menu.ant-menu-sub.ant-menu-inline {
+  background: transparent !important;
 }
