@@ -1,4 +1,4 @@
-from loading_utils import new_lines_to_list
+from loading_utils import new_lines_to_list, get_initial_pages
 
 
 def test_new_lines_to_list():
@@ -25,3 +25,10 @@ def test_new_lines_to_list():
     assert isinstance(dd['industry_summary']['key_trends'], str)
     res = new_lines_to_list(dd)
     assert isinstance(dd['industry_summary']['key_trends'], list)
+
+
+def test_initial_pdf_pages():
+    filename = 'IndustrySource/Misc/study_id66974_in-depth-report-industry-40.pdf'
+    pmax=20
+    result = get_initial_pages(filename, pmax=pmax)
+    print(result)
