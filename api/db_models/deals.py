@@ -3,6 +3,7 @@ from sqlalchemy_utils import UUIDType
 from sqlalchemy.ext.declarative import declarative_base
 import uuid
 from .users import User
+from sqlalchemy import Column, String, Text, JSON
 
 Base = declarative_base()
 

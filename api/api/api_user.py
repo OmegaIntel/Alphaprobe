@@ -35,7 +35,11 @@ class TokenData(BaseModel):
     email: Optional[str] = None
 
 class User(BaseModel):
+    id: str
     email: str
+
+    class Config:
+        orm_mode = True
 
 # Utility functions for password management and JWT handling
 def verify_password(plain_password, hashed_password):
@@ -80,8 +84,10 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)], db: Se
     user = db.query(DbUser).filter(DbUser.email == token_data.email).first()
     if user is None:
         raise credentials_exception
+    
+    print(user.id)
 
-    return User(email=user.email)
+    return User(id=str(user.id), email=user.email)
 
 # API route for user registration
 @user_router.post("/register", response_model=User)
