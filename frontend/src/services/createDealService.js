@@ -1,15 +1,16 @@
 import axios from "axios";
-import { API_BASE_URL } from ".";
+import { API_BASE_URL, token } from ".";
 
 // Function to send demo request
-export const requestDemo = async (formData) => {
+export const createDeal = async (dealData) => {
   try {
     const response = await axios.post(
-      `${API_BASE_URL}/request-demo`,
-      formData,
+      `${API_BASE_URL}/deals/`,
+      dealData,
       {
         headers: {
           "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`,
         },
       }
     );

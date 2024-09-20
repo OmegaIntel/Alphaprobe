@@ -11,6 +11,7 @@ import Login from "./components/Login";
 import Sidebar from "./components/Sidebar";
 import "./App.css";
 import CreateDeal from "./components/create_deal/index";
+import DilligenceContainer from "./components/dilligence_list/container";
 
 const App = () => {
   const [token, setToken] = useState(localStorage.getItem("token") || "");
@@ -23,12 +24,13 @@ const App = () => {
     localStorage.setItem("token", newToken);
   };
 
-  const isLoggedIn = Boolean(token);
+  const isLoggedIn = Boolean(true);
   const ProtectedRoute = ({ isLoggedIn, children }) => {
     return isLoggedIn ? children : <Navigate to="/login" />;
   };
 
   return (
+    // <KanbanBoard/>
     <Router>
       <div className="App">
         {isLoggedIn && (
@@ -50,6 +52,10 @@ const App = () => {
             <Route 
               path="/create-deal"
               element={<CreateDeal/>}
+            ></Route>
+            <Route
+              path="/action-items"
+              element={<DilligenceContainer/>}
             ></Route>
             <Route
               path="/login"

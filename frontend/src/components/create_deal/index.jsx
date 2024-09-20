@@ -1,6 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import DealDocumentsCard from "../card";
 import { useMediaQuery } from "react-responsive";
+import { createDeal } from "../../services/createDealService";
+import { notification } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const CreateDeal = () => {
   const [projectName, setProjectName] = useState("");
@@ -9,6 +12,7 @@ const CreateDeal = () => {
   const [investmentThesis, setInvestmentThesis] = useState("");
   const [industry, setIndustry] = useState("");
   const [isOverflowing, setIsOverflowing] = useState(false);
+  const navigation = useNavigate();
 
   const containerRef = useRef(null);
 
@@ -43,12 +47,45 @@ const CreateDeal = () => {
     }
   }, [containerRef]);
 
+  const handleClick = async () => {
+    if (!projectName || !projectDescription || !investmentThesis || !industry || !dueDate) {
+      notification.error({
+        message: 'Missing Required Fields',
+        description: 'Please fill out all required fields.',
+      });
+      return;
+    }
+
+    const dealData = {
+      name: projectName,
+      overview: projectDescription,
+      investment_thesis: investmentThesis,
+      industry: industry,
+      due_date: new Date(dueDate).toISOString(), // Convert to ISO format
+      start_date: new Date().toISOString(), // Current date in ISO format
+      progress: "started"
+    };
+
+    try {
+      await createDeal(dealData);
+      notification.success({
+        message: 'Deal Created',
+        description: 'Your deal is created successfully.',
+      });
+    } catch (error) {
+      notification.error({
+        message: 'Something went wrong!',
+        description: 'There was an error submitting your deal request. Please try again.',
+      });
+    }
+  };
+
   return (
     <div
       ref={containerRef}
       className="flex flex-col space-y-1 overflow-y-auto min-h-screen">
       <div className="flex p-2 bg-[#151518]">
-        <button className="bg-white text-black p-1 rounded-md w-52 hover:bg-gray-200">
+        <button className="bg-white text-black p-1 rounded-md w-52 hover:bg-gray-200" onClick={handleClick}>
           <div className="text-center w-full">
             Create New Deal
           </div>
@@ -120,7 +157,7 @@ const CreateDeal = () => {
               </select>
             </div>
             <div className="w-2/5 flex justify-between space-x-4">
-              <button className="bg-white text-black p-1 rounded-md w-[60%] hover:bg-gray-200">
+              <button className="bg-white text-black p-1 rounded-md w-[60%] hover:bg-gray-200" onClick={() => navigation("/action-items")}>
                 Add Action Items
               </button>
               <button className="bg-white text-black p-1 rounded-md w-[40%] hover:bg-gray-200">
