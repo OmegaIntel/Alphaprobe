@@ -908,6 +908,12 @@ pre {
 .ant-menu-item-selected {
   background-color: #303038 !important; /* Replace with your desired color */
 }
+.ant-menu-sub .ant-menu-item-selected {
+  background-color: transparent !important; /* Replace with your desired color */
+}
 .ant-menu.ant-menu-sub.ant-menu-inline {
   background: transparent !important;
+}
+.ant-modal-close {
+  color: #dcdcdc !important;
 }

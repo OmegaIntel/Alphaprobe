@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import UploadModal from "../UploadModal";
 import axiosInstance from "../../axiosConfig";
 
 import { Input, Layout, Menu } from "antd";
@@ -12,9 +11,11 @@ import {
   MagnifyingGlassIcon,
   ShareWithPeopleIcon,
 } from "../../constants/IconPack";
+import { useModal } from "../UploadFilesModal/ModalContext";
 
 const { Sider } = Layout;
 const Sidebar = ({ setToken }) => {
+  const { setIsUploadModalVisible, isUploadModalVisible } = useModal();
   const [sessions, setSessions] = useState([]);
   const navigate = useNavigate();
 
@@ -138,7 +139,8 @@ const Sidebar = ({ setToken }) => {
               <Menu.Item
                 key="4"
                 icon={<DataConnectorsIcon />}
-                className="!flex !items-center gap-3"
+                className="!flex !items-center gap-3 !bg-transparent"
+                onClick={() => setIsUploadModalVisible(!isUploadModalVisible)}
               >
                 Upload Files
               </Menu.Item>

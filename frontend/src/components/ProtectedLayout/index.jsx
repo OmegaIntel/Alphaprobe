@@ -2,6 +2,8 @@ import React from "react";
 import { Navigate } from "react-router-dom";
 import Sidebar from "../Sidebar";
 import Navbar from "../Navbar";
+import UploadFilesModal from "../UploadFilesModal";
+import { ModalProvider } from "../UploadFilesModal/ModalContext";
 
 const ProtectedLayout = ({
   children,
@@ -15,14 +17,17 @@ const ProtectedLayout = ({
 
   return (
     <div className="App">
-      <Sidebar
-        setToken={setToken}
-        setUpdateSidebarSessions={setUpdateSidebarSessions}
-      />
-      <div className="main-content with-sidebar">
-        <Navbar />
-        {children}
-      </div>
+      <ModalProvider>
+        <Sidebar
+          setToken={setToken}
+          setUpdateSidebarSessions={setUpdateSidebarSessions}
+        />
+        <div className="main-content with-sidebar">
+          <Navbar />
+          <UploadFilesModal />
+          {children}
+        </div>
+      </ModalProvider>
     </div>
   );
 };
