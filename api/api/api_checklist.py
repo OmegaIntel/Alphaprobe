@@ -16,6 +16,7 @@ from typing import List
 from pydantic import BaseModel
 from db_models.checklist import Checklist
 from api.api_user import get_current_user, User as UserModelSerializer
+from db_models.deals import Deal
 
 
 checklist_base_router = APIRouter()
@@ -39,6 +40,9 @@ class Checklistresponse(BaseModel):
 
 @checklist_base_router.post("/checklist/", response_model=Checklistresponse)
 def add_checklist(item: checklist, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
+    data=db.query(Deal).filter(Deal.id==item.deal_id).first()
+    if str(data.user_id) != current_user.id:
+        raise HTTPException(status_code=404, detail="You are not authorized to add Checklist")
     data =Checklist (**item.dict())
     db.add(data)
     db.commit()
@@ -47,27 +51,36 @@ def add_checklist(item: checklist, db: Session = Depends(get_db),current_user: U
 
 @checklist_base_router.put("/checklist/{checklist_id}", response_model=Checklistresponse)
 def update_checklist(checklist_id: str, item: BaseTableSchema, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
-    data = db.query(Checklist).filter(Checklist.id == checklist_id).first()
+    base = db.query(Checklist).filter(Checklist.id == checklist_id).first()
+    data=db.query(Deal).filter(Deal.id==base.deal_id).first()
+    if str(data.user_id) != current_user.id:
+        raise HTTPException(status_code=404, detail="You are not authorized to modify Checklist")
     if not data:
         raise HTTPException(status_code=404, detail="data item not found")
-    data.type = item.type
-    data.text = item.text
+    base.type = item.type
+    base.text = item.text
     db.commit()
-    db.refresh(data)
-    return data
+    db.refresh(base)
+    return base
 
 
 @checklist_base_router.delete("/checklist/{checklist_id}", response_model=Checklistresponse)
 def delete_data(checklist_id: str, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
-    data = db.query(Checklist).filter(Checklist.id == checklist_id).first()
+    base = db.query(Checklist).filter(Checklist.id == checklist_id).first()
+    data=db.query(Deal).filter(Deal.id==base.deal_id).first()
+    if str(data.user_id) != current_user.id:
+        raise HTTPException(status_code=404, detail="You are not authorized to delete Checklist")
     if not data:
         raise HTTPException(status_code=404, detail="Current data not found")
-    db.delete(data)
+    db.delete(base)
     db.commit()
-    return data
+    return base
 
 @checklist_base_router.get("/checklist/", response_model=List[Checklistresponse])
 def checklistcontext(deal_id: Optional[UUID] = None, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
+    data=db.query(Deal).filter(Deal.id==deal_id).first()
+    if str(data.user_id) != current_user.id:
+        raise HTTPException(status_code=404, detail="You are not authorized to fetch checklist")
     query = db.query(Checklist)
     if deal_id:
         query = query.filter(Checklist.deal_id == deal_id)

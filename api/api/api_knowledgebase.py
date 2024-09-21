@@ -18,7 +18,6 @@ from db_models.knowledgebase import knowledgebase
 from api.api_user import get_current_user, User as UserModelSerializer
 from db_models.deals import Deal
 
-
 knowledge_base_router = APIRouter()
 
 # Base schema for all tables
@@ -40,6 +39,9 @@ class Knowledgebaseresponse(BaseModel):
 
 @knowledge_base_router.post("/knowledgebase/", response_model=Knowledgebaseresponse)
 def add_knowledgebase(item: Knowledgebasecreate, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
+    data=db.query(Deal).filter(Deal.id==item.deal_id).first()
+    if str(data.user_id) != current_user.id:
+        raise HTTPException(status_code=404, detail="You are not authorized to add knowledgebase")
     data =knowledgebase (**item.dict())
     db.add(data)
     db.commit()
@@ -48,27 +50,36 @@ def add_knowledgebase(item: Knowledgebasecreate, db: Session = Depends(get_db),c
 
 @knowledge_base_router.put("/knowledgebase/{knowledgebase_id}", response_model=Knowledgebaseresponse)
 def update_knowledge(knowledgebase_id: str, item: BaseTableSchema, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
-    data = db.query(knowledgebase).filter(knowledgebase.id == knowledgebase_id).first()
-    if not data:
+    base = db.query(knowledgebase).filter(knowledgebase.id == knowledgebase_id).first()
+    data=db.query(Deal).filter(Deal.id==base.deal_id).first()
+    if str(data.user_id) != current_user.id:
+        raise HTTPException(status_code=404, detail="You are not authorized to modify KNowledgebase")
+    if not base:
         raise HTTPException(status_code=404, detail="data item not found")
-    data.type = item.type
-    data.text = item.text
+    base.type = item.type
+    base.text = item.text
     db.commit()
-    db.refresh(data)
-    return data
+    db.refresh(base)
+    return base
 
 
 @knowledge_base_router.delete("/knowledgebase/{knowledgebase_id}", response_model=Knowledgebaseresponse)
 def delete_data(knowledgebase_id: str, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
-    data = db.query(knowledgebase).filter(knowledgebase.id == knowledgebase_id).first()
-    if not data:
+    base = db.query(knowledgebase).filter(knowledgebase.id == knowledgebase_id).first()
+    data=db.query(Deal).filter(Deal.id==base.deal_id).first()
+    if str(data.user_id) != current_user.id:
+        raise HTTPException(status_code=404, detail="You are not authorized to delete KNowledgebase")
+    if not base:
         raise HTTPException(status_code=404, detail="Current data not found")
-    db.delete(data)
+    db.delete(base)
     db.commit()
-    return data
+    return base
 
 @knowledge_base_router.get("/knowledgebase/", response_model=List[Knowledgebaseresponse])
 def knowledgecontext(deal_id: Optional[UUID] = None, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
+    data=db.query(Deal).filter(Deal.id==deal_id).first()
+    if str(data.user_id) != current_user.id:
+        raise HTTPException(status_code=404, detail="You are not authorized to fetch Knowledgebase")
     query = db.query(knowledgebase)
     if deal_id:
         query = query.filter(knowledgebase.deal_id == deal_id)

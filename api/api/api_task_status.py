@@ -24,7 +24,8 @@ from pydantic import BaseModel
 from datetime import datetime
 from db_models.task_status import ToDo
 from api.api_user import get_current_user, User as UserModelSerializer
-
+from db_models.deals import Deal
+from db_models.task_status import ToDo
 
 task_status_router = APIRouter()
 
@@ -47,6 +48,9 @@ class ToDoResponse(BaseModel):
 
 @task_status_router.post("/todos/", response_model=ToDoResponse)
 def add_todo(item: ToDoCreate, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
+    data=db.query(Deal).filter(Deal.id==item.deal_id).first()
+    if str(data.user_id) != current_user.id:
+        raise HTTPException(status_code=404, detail="You are not authorized to add To-Do items")
     todo = ToDo(**item.dict())
     db.add(todo)
     db.commit()
@@ -56,6 +60,9 @@ def add_todo(item: ToDoCreate, db: Session = Depends(get_db),current_user: UserM
 
 @task_status_router.get("/todos/", response_model=List[ToDoResponse])
 def get_todos(deal_id: Optional[UUID] = None, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
+    data=db.query(Deal).filter(Deal.id==deal_id).first()
+    if str(data.user_id) != current_user.id:
+        raise HTTPException(status_code=404, detail="You are not authorized to fetch To-Do items")
     query = db.query(ToDo)
     if deal_id:
         query = query.filter(ToDo.deal_id == deal_id)
@@ -72,6 +79,9 @@ def get_todos(deal_id: Optional[UUID] = None, db: Session = Depends(get_db),curr
 @task_status_router.put("/todos/{todo_id}", response_model=ToDoResponse)
 def update_todo(todo_id: str, item: ToDoBase, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
     todo = db.query(ToDo).filter(ToDo.id == todo_id).first()
+    data=db.query(Deal).filter(Deal.id==todo.deal_id).first()
+    if str(data.user_id) != current_user.id:
+        raise HTTPException(status_code=404, detail="You are not authorized to modify To-Do items")
     if not todo:
         raise HTTPException(status_code=404, detail="To-Do item not found")
     todo.task = item.task
@@ -83,6 +93,9 @@ def update_todo(todo_id: str, item: ToDoBase, db: Session = Depends(get_db),curr
 @task_status_router.delete("/todos/{todo_id}", response_model=ToDoResponse)
 def delete_todo(todo_id: str, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
     todo = db.query(ToDo).filter(ToDo.id == todo_id).first()
+    data=db.query(Deal).filter(Deal.id==todo.deal_id).first()
+    if str(data.user_id) != current_user.id:
+        raise HTTPException(status_code=404, detail="You are not authorized to delete To-Do items")
     if not todo:
         raise HTTPException(status_code=404, detail="To-Do item not found")
     db.delete(todo)
