@@ -35,7 +35,11 @@ class TokenData(BaseModel):
     email: Optional[str] = None
 
 class User(BaseModel):
+    id: str
     email: str
+
+    class Config:
+        from_attributes = True
 
 # Utility functions for password management and JWT handling
 def verify_password(plain_password, hashed_password):
@@ -80,22 +84,30 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)], db: Se
     user = db.query(DbUser).filter(DbUser.email == token_data.email).first()
     if user is None:
         raise credentials_exception
-
-    return User(email=user.email)
+    
+    return User(id=str(user.id), email=user.email)
 
 # API route for user registration
 @user_router.post("/register", response_model=User)
 async def register(email: EmailStr = Form(...), password: str = Form(...), request: Request = None, db: Session = Depends(get_db)):
     if request:
         logging.info(f"Register request: {await request.form()}")
-    user = db.query(DbUser).filter(DbUser.email == email).first()
+    
+        user = db.query(DbUser).filter(DbUser.email == email).first()
     if user:
         raise HTTPException(status_code=400, detail="Email already registered")
+    
     hashed_password = get_password_hash(password)
     new_user = DbUser(email=email, password_hash=hashed_password)
     db.add(new_user)
     db.commit()
-    return {"email": email}
+    
+    # Refresh to get the id from the database
+    db.refresh(new_user)
+    
+    # Convert UUID to string and return
+    return {"id": str(new_user.id), "email": new_user.email}
+
 
 # API route for token-based login
 @user_router.post("/token")

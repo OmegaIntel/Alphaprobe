@@ -2,9 +2,17 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import os
+from dotenv import load_dotenv
 
-# Database URL, adjust to your specific database (Postgres, MySQL, SQLite, etc.)
-DATABASE_URL = f"mysql+mysqldb://{os.getenv('DATABASE_USER_NAME')}:{os.getenv('DATABASE_PASSWORD')}@{os.getenv('DATABASE_HOST')}:{os.getenv('DATABASE_PORT')}/{os.getenv('DATABASE_NAME')}"
+load_dotenv()
+
+DATABASE_USER_NAME = os.getenv('DATABASE_USER_NAME')
+DATABASE_PASSWORD = os.getenv('DATABASE_PASSWORD')
+DATABASE_HOST = os.getenv('DATABASE_HOST')
+DATABASE_PORT = int(os.getenv('DATABASE_PORT'))
+DATABASE_NAME = os.getenv('DATABASE_NAME')
+
+DATABASE_URL = f"mysql+mysqldb://{DATABASE_USER_NAME}:{DATABASE_PASSWORD}@{DATABASE_HOST}:{DATABASE_PORT}/{DATABASE_NAME}"
 
 # Create the SQLAlchemy engine
 engine = create_engine(DATABASE_URL)
