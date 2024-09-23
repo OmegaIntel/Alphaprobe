@@ -8,6 +8,7 @@ from db_models.task_status import Base as TaskStatusBase
 from db_models.workspace import Base as WorkspaceBase
 from db_models.checklist import Base as ChecklistBase
 from db_models.knowledgebase import Base as KnowledgeBase
+from db_models.file_upload import Base as DocumentBase
 from alembic import context
 
 # this is the Alembic Config object, which provides
@@ -23,7 +24,7 @@ if config.config_file_name is not None:
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
-target_metadata = [UserBase.metadata,DemoRequestBase.metadata,DealsBase.metadata,TaskStatusBase.metadata,WorkspaceBase.metadata,KnowledgeBase.metadata,ChecklistBase.metadata]
+target_metadata = [UserBase.metadata,DemoRequestBase.metadata,DealsBase.metadata,TaskStatusBase.metadata,WorkspaceBase.metadata,KnowledgeBase.metadata,ChecklistBase.metadata,DocumentBase.metadata]
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
