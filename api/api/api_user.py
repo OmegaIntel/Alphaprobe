@@ -1,4 +1,3 @@
-# api/api_user.py
 from fastapi import APIRouter, HTTPException, Form, Depends, Request
 from pydantic import BaseModel, EmailStr
 from typing import Optional
@@ -8,8 +7,10 @@ from datetime import datetime, timedelta
 from passlib.context import CryptContext
 import os
 import logging
-
-from api.db_models.weaviate_db import WeaviateDb
+from sqlalchemy.orm import Session
+from db_models.users import User as DbUser
+from typing import Annotated
+from db_models.session import get_db
 
 # Environment variables and constants
 SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key")
@@ -19,9 +20,8 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 120
 # FastAPI OAuth2 scheme
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
-# Initialize the router and Weaviate handler
+# Initialize the router
 user_router = APIRouter()
-weaviate_handler = WeaviateDb()
 
 # Configure password hashing context
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
@@ -35,7 +35,11 @@ class TokenData(BaseModel):
     email: Optional[str] = None
 
 class User(BaseModel):
+    id: str
     email: str
+
+    class Config:
+        from_attributes = True
 
 # Utility functions for password management and JWT handling
 def verify_password(plain_password, hashed_password):
@@ -44,11 +48,11 @@ def verify_password(plain_password, hashed_password):
 def get_password_hash(password):
     return pwd_context.hash(password)
 
-def authenticate_user(email: str, password: str):
-    user = weaviate_handler.get_user(email)
+def authenticate_user(db: Session, email: str, password: str):
+    user = db.query(DbUser).filter(DbUser.email == email).first()
     if not user:
         return False
-    if not verify_password(password, user["password"]):
+    if not verify_password(password, user.password_hash):
         return False
     return user
 
@@ -62,7 +66,7 @@ def create_access_token(data: dict, expires_delta: timedelta = None):
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
 
-async def get_current_user(token: str = Depends(oauth2_scheme)) -> User:
+async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)], db: Session = Depends(get_db)) -> User:
     credentials_exception = HTTPException(
         status_code=401,
         detail="Could not validate credentials",
@@ -77,31 +81,38 @@ async def get_current_user(token: str = Depends(oauth2_scheme)) -> User:
     except jwt.PyJWTError:
         raise credentials_exception
     
-    user_data = weaviate_handler.get_user(token_data.email)
-    if user_data is None:
+    user = db.query(DbUser).filter(DbUser.email == token_data.email).first()
+    if user is None:
         raise credentials_exception
-
-    # Convert dictionary to User model instance
-    user = User(email=user_data["email"])
-    return user
-
+    
+    return User(id=str(user.id), email=user.email)
 
 # API route for user registration
 @user_router.post("/register", response_model=User)
-async def register(email: EmailStr = Form(...), password: str = Form(...), request: Request = None):
+async def register(email: EmailStr = Form(...), password: str = Form(...), request: Request = None, db: Session = Depends(get_db)):
     if request:
         logging.info(f"Register request: {await request.form()}")
-    user = weaviate_handler.get_user(email)
+    
+        user = db.query(DbUser).filter(DbUser.email == email).first()
     if user:
         raise HTTPException(status_code=400, detail="Email already registered")
+    
     hashed_password = get_password_hash(password)
-    weaviate_handler.register_user(email, hashed_password)
-    return {"email": email}
+    new_user = DbUser(email=email, password_hash=hashed_password)
+    db.add(new_user)
+    db.commit()
+    
+    # Refresh to get the id from the database
+    db.refresh(new_user)
+    
+    # Convert UUID to string and return
+    return {"id": str(new_user.id), "email": new_user.email}
+
 
 # API route for token-based login
-@user_router.post("/token", response_model=Token)
-async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends()):
-    user = authenticate_user(form_data.username, form_data.password)
+@user_router.post("/token")
+async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
+    user = authenticate_user(db, form_data.username, form_data.password)
     if not user:
         raise HTTPException(
             status_code=401,
@@ -110,11 +121,11 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
         )
     access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
     access_token = create_access_token(
-        data={"sub": user["email"]}, expires_delta=access_token_expires
+        data={"sub": user.email}, expires_delta=access_token_expires
     )
     return {"access_token": access_token, "token_type": "bearer"}
 
 # API route to get the current logged-in user
-@user_router.get("/users/me", response_model=User)
-async def read_users_me(current_user: User = Depends(get_current_user)):
+@user_router.get("/users/me")
+async def read_users_me(current_user: Annotated[User, Depends(get_current_user)]):
     return current_user
