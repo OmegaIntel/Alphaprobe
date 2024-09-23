@@ -10,10 +10,22 @@ from db_models.checklist import Base as ChecklistBase
 from db_models.knowledgebase import Base as KnowledgeBase
 from db_models.file_upload import Base as DocumentBase
 from alembic import context
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
+
+DATABASE_USER_NAME = os.getenv('DATABASE_USER_NAME')
+DATABASE_PASSWORD = os.getenv('DATABASE_PASSWORD')
+DATABASE_HOST = os.getenv('DATABASE_HOST')
+DATABASE_PORT = int(os.getenv('DATABASE_PORT'))
+DATABASE_NAME = os.getenv('DATABASE_NAME')
+
+DATABASE_URL = f"mysql+mysqldb://{DATABASE_USER_NAME}:{DATABASE_PASSWORD}@{DATABASE_HOST}:{DATABASE_PORT}/{DATABASE_NAME}"
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
+config.set_main_option('sqlalchemy.url', DATABASE_URL)
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.

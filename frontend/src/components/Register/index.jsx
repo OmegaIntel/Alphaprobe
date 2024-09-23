@@ -1,40 +1,30 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-
-  const [isRegistered, setIsRegistered] = useState(false);
-  const [error, setError] = useState("");
   const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+  const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    if (password !== confirmPassword) {
-      setError("Passwords do not match");
-      return;
-    }
-
     const formData = new FormData();
     formData.append("email", email);
     formData.append("password", password);
-
     try {
       const response = await axios.post(`${API_BASE_URL}/register`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
       });
-
       if (response.status === 200) {
-        setIsRegistered(true);
+        navigate("/login");
       }
     } catch (error) {
-      setError("Registration failed");
+      console.log(error);
     }
   };
 
@@ -65,7 +55,7 @@ const Register = () => {
             </Link>
           </p>
         </div>
-        <form>
+        <form onSubmit={handleRegister}>
           <div className="mb-5 flex flex-col gap-3">
             <label className="text-xs text-[#8a8a90]">Email</label>
             <input

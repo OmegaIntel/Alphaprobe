@@ -23,8 +23,8 @@ const App = () => {
     localStorage.setItem("token", newToken);
   };
 
-  // const isLoggedIn = Boolean(token);
-  const isLoggedIn = true;
+  const isLoggedIn = Boolean(token);
+  // const isLoggedIn = true;
   return (
     <Router>
       <Routes>

@@ -13,7 +13,7 @@ DATABASE_PORT = int(os.getenv('DATABASE_PORT'))
 DATABASE_NAME = os.getenv('DATABASE_NAME')
 
 DATABASE_URL = f"mysql+mysqldb://{DATABASE_USER_NAME}:{DATABASE_PASSWORD}@{DATABASE_HOST}:{DATABASE_PORT}/{DATABASE_NAME}"
-
+print(DATABASE_URL)
 # Create the SQLAlchemy engine
 engine = create_engine(DATABASE_URL)
 

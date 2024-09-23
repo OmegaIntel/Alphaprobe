@@ -6,13 +6,11 @@ const Login = ({ setToken }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState("");
   const navigate = useNavigate();
   const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError(""); // Clear any previous errors
 
     const formData = new FormData();
     formData.append("username", email);
@@ -27,10 +25,10 @@ const Login = ({ setToken }) => {
 
       if (response.status === 200) {
         setToken(response.data.access_token);
-        navigate("/chat");
+        navigate("/dashboard");
       }
     } catch (error) {
-      setError("Login failed. Please check your credentials.");
+      console.log(error);
     }
   };
 
@@ -54,7 +52,7 @@ const Login = ({ setToken }) => {
             </Link>
           </p>
         </div>
-        <form>
+        <form onSubmit={handleLogin}>
           <div className="mb-5 flex flex-col gap-3">
             <label className="text-xs text-[#8a8a90]">Email</label>
             <input
