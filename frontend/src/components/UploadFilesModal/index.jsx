@@ -1,11 +1,47 @@
-import React, { useState } from "react";
-import { Modal, Upload, Button, Form, Input, Select, Tag } from "antd";
+import React, { useReducer } from "react";
 import { useModal } from "./ModalContext.js";
-import { DownloadOutlined } from "../../constants/IconPack.js";
+import UploadModal from "./UploadModal/index.jsx";
+import UpdateModal from "./UpdateModal/index.jsx";
 
-const { Dragger } = Upload;
-const { Option } = Select;
-
+const initialState = {
+  selectedFile: null,
+  tags: [],
+  category: null,
+  subCategory: null,
+  description: "",
+  newTag: "",
+  isDocumentInfoVisible: false,
+};
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "SET_SELECTED_FILE":
+      return { ...state, selectedFile: action.payload };
+    case "ADD_TAG":
+      if (!state.tags.includes(action.payload) && state.newTag !== "") {
+        return { ...state, tags: [...state.tags, action.payload], newTag: "" };
+      }
+      return state;
+    case "REMOVE_TAG":
+      return {
+        ...state,
+        tags: state.tags.filter((tag) => tag !== action.payload),
+      };
+    case "SET_NEW_TAG":
+      return { ...state, newTag: action.payload };
+    case "TOGGLE_DOCUMENT_INFO":
+      return { ...state, isDocumentInfoVisible: !state.isDocumentInfoVisible };
+    case "SET_CATEGORY":
+      return { ...state, category: action.payload };
+    case "SET_SUBCATEGORY":
+      return { ...state, subCategory: action.payload };
+    case "SET_DESCRIPTION":
+      return { ...state, description: action.payload };
+    case "RESET_STATE":
+      return initialState;
+    default:
+      return state;
+  }
+};
 const UploadFilesModal = () => {
   const {
     isUploadModalVisible,
@@ -13,16 +49,12 @@ const UploadFilesModal = () => {
     isUpdateModalVisible,
     setIsUpdateModalVisible,
   } = useModal();
-  const [fileList, setFileList] = useState([]);
-  const [selectedFile, setSelectedFile] = useState(null);
-  const [tags, setTags] = useState([]); // Manage tags here
-  const [newTag, setNewTag] = useState(""); // Current input for a new tag
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   const handleUploadOk = () => {
     setIsUploadModalVisible(false);
-    if (fileList.length > 0) {
+    if (state.selectedFile) {
       setIsUpdateModalVisible(true);
-      setSelectedFile(fileList[0]);
     }
   };
 
@@ -32,176 +64,46 @@ const UploadFilesModal = () => {
   };
 
   const handleUploadCancel = () => {
+    dispatch({ type: "RESET_STATE" });
     setIsUploadModalVisible(false);
   };
 
   const handleUpdateCancel = () => {
+    dispatch({ type: "RESET_STATE" });
     setIsUpdateModalVisible(false);
   };
 
   const uploadProps = {
-    fileList,
+    fileList: state.selectedFile ? [state.selectedFile] : [],
     onChange: (info) => {
-      setFileList(info.fileList);
+      dispatch({
+        type: "SET_SELECTED_FILE",
+        payload: info.fileList[0],
+      });
     },
-    multiple: true,
+    multiple: false,
   };
-  const handleAddTag = () => {
-    if (newTag && !tags.includes(newTag)) {
-      setTags([...tags, newTag]);
-    }
-    setNewTag(""); // Reset input field after adding tag
-  };
+  console.log(state);
 
-  const handleRemoveTag = (removedTag) => {
-    setTags(tags.filter((tag) => tag !== removedTag));
-  };
   return (
     <>
       {/* First Modal: File Upload */}
-      <Modal
-        title={
-          <div className="text-white text-base font-bold">Upload File(s)</div>
-        }
-        open={isUploadModalVisible}
+      <UploadModal
+        isVisible={isUploadModalVisible}
         onOk={handleUploadOk}
-        centered
         onCancel={handleUploadCancel}
-        styles={{
-          content: {
-            background: "#1F1E23",
-            color: "#FFFFFF",
-            boxShadow: "0px 2px 10px 0px #000000CC",
-          },
-          header: { background: "#1F1E23", color: "#FFFFFF" },
-        }}
-        footer={[
-          <Button
-            key="cancel"
-            className="bg-[#303038] text-[#DCDCDC] border-none"
-            onClick={handleUploadCancel}
-          >
-            Cancel
-          </Button>,
-          <Button
-            key="continue"
-            type="primary"
-            className="!bg-[#303038] text-[#DCDCDC] disabled:text-[#46464F] border-none "
-            onClick={handleUploadOk}
-            disabled={fileList.length === 0}
-          >
-            Continue
-          </Button>,
-        ]}
-      >
-        <Dragger
-          {...uploadProps}
-          style={{
-            padding: "20px",
-            textAlign: "center",
-            marginTop: "1.5rem",
-            marginBottom: "1.5rem",
-            border: "2px dashed #505059",
-            backgroundColor: "#303038",
-          }}
-        >
-          <p className="text-[#6D6E74] w-full flex justify-center mb-4">
-            <DownloadOutlined />
-          </p>
-          <p className="ant-upload-text !text-[#6D6E74]">Drag file(s) here</p>
-          <p className="ant-upload-hint !text-[#6D6E74]">
-            Or click to select file(s)
-          </p>
-        </Dragger>
-      </Modal>
-
+        uploadProps={uploadProps}
+        selectedFile={state.selectedFile}
+      />
       {/* Second Modal: Update File Metadata */}
-      {selectedFile && (
-        <Modal
-          title={
-            <div className="text-white text-base font-bold">Upload File(s)</div>
-          }
-          open={isUpdateModalVisible}
+      {state.selectedFile && (
+        <UpdateModal
+          isVisible={isUpdateModalVisible}
           onOk={handleUpdateOk}
-          centered
           onCancel={handleUpdateCancel}
-          styles={{
-            content: {
-              background: "#1F1E23",
-              color: "#FFFFFF",
-              boxShadow: "0px 2px 10px 0px #000000CC",
-            },
-            header: { background: "#1F1E23", color: "#FFFFFF" },
-          }}
-          footer={[
-            <Button key="cancel" onClick={handleUpdateCancel}>
-              Cancel
-            </Button>,
-            <Button key="save" type="primary" onClick={handleUpdateOk}>
-              Save
-            </Button>,
-          ]}
-        >
-          <Form layout="inline">
-            {/* File Name */}
-            <Form.Item
-              label={<div className="text-[#C8C8C8] text-xs">Name</div>}
-              name="name"
-              initialValue={selectedFile.name}
-            >
-              <Input placeholder="Enter file name" />
-            </Form.Item>
-
-            {/* Category */}
-            <Form.Item label="Category" name="category">
-              <Select placeholder="Select category">
-                <Option value="document">Document</Option>
-                <Option value="image">Image</Option>
-                <Option value="video">Video</Option>
-              </Select>
-            </Form.Item>
-
-            {/* Sub-category */}
-            <Form.Item label="Sub-category" name="subCategory">
-              <Select placeholder="Select sub-category">
-                <Option value="technical">Technical</Option>
-                <Option value="financial">Financial</Option>
-                <Option value="marketing">Marketing</Option>
-              </Select>
-            </Form.Item>
-
-            {/* Tags */}
-            <Form.Item label="Tags">
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <Input
-                  value={newTag}
-                  onChange={(e) => setNewTag(e.target.value)}
-                  placeholder="Enter a tag and press +"
-                />
-                <Button onClick={handleAddTag} style={{ marginLeft: "10px" }}>
-                  +
-                </Button>
-              </div>
-              <div style={{ marginTop: "10px" }}>
-                {tags.map((tag) => (
-                  <Tag
-                    closable
-                    key={tag}
-                    onClose={() => handleRemoveTag(tag)}
-                    style={{ marginBottom: "5px" }}
-                  >
-                    {tag}
-                  </Tag>
-                ))}
-              </div>
-            </Form.Item>
-
-            {/* Description */}
-            <Form.Item label="Description" name="description">
-              <Input.TextArea rows={4} placeholder="Enter file description" />
-            </Form.Item>
-          </Form>
-        </Modal>
+          state={state}
+          dispatch={dispatch}
+        />
       )}
     </>
   );

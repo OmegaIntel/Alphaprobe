@@ -54,3 +54,26 @@ export const newsData = [
     date: "Aug 28, 2024, 3:13 PM",
   },
 ];
+export const metaDataCategory = [
+  "Investment Thesis",
+  "Market Research",
+  "Financial Insights",
+  "Valuation",
+];
+export const metaDataSubCategory = [
+  "Investment Memo (CIM)",
+  "Financials",
+  "Industry Research Report",
+  "Equity Research ",
+  "10K Document",
+  "Earnings Call Transcript",
+  "Expert Call Transcript",
+  "Management Presentation",
+];
+export const metaDataTags = [
+  "Corporate & Legal",
+  "Financial & Tax",
+  "Operations & Technology",
+  "HR & Employee",
+  "Sales & Marketing",
+];

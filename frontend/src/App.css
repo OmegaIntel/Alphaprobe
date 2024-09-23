@@ -917,3 +917,17 @@ pre {
 .ant-modal-close {
   color: #dcdcdc !important;
 }
+.ant-collapse-header .ant-collapse-header-text,
+.ant-collapse-expand-icon {
+  color: #eaeaea;
+}
+/* className="bg-[] border-2 border-[#46464F] hover:bg-[#212126] focus:bg-[#212126] focus:border-[#46464F] hover:border-[#46464F]" */
+.ant-select .ant-select-selector {
+  background-color: #212126 !important;
+  color: #f6f6f6 !important;
+  border: 2px solid #46464f !important;
+}
+.ant-select-selection-placeholder,
+.ant-select-arrow {
+  color: #f6f6f6 !important;
+}

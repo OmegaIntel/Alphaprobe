@@ -39,17 +39,17 @@ const Sidebar = ({ setToken }) => {
     }
   };
 
-  useEffect(() => {
-    fetchAndSortSessions();
+  // useEffect(() => {
+  //   fetchAndSortSessions();
 
-    // Set up an interval to refresh the list every 5 seconds
-    const intervalId = setInterval(() => {
-      fetchAndSortSessions();
-    }, 5000);
+  //   // Set up an interval to refresh the list every 5 seconds
+  //   const intervalId = setInterval(() => {
+  //     fetchAndSortSessions();
+  //   }, 5000);
 
-    // Cleanup the interval when the component unmounts
-    return () => clearInterval(intervalId);
-  }, [token]);
+  //   // Cleanup the interval when the component unmounts
+  //   return () => clearInterval(intervalId);
+  // }, [token]);
 
   const handleLogout = () => {
     if (setToken) {
