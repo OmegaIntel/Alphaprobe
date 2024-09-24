@@ -301,7 +301,6 @@ button.new-session-button:hover {
   background-color: #1e1e1e;
   display: flex;
   flex-direction: column;
-  /* padding: 20px; */
   overflow: hidden;
   width: 100%; /* Ensure main content takes full width */
 }
@@ -766,7 +765,6 @@ input:checked + .slider:before {
   background-color: #1e1e1e;
   display: flex;
   flex-direction: column;
-  /* padding: 20px; */
   overflow: hidden;
   width: calc(100% - 250px); /* Adjust width considering sidebar */
 }
@@ -907,6 +905,33 @@ pre {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #c3e6cb;
+}
+
+.ant-menu-item-selected {
+  background-color: #303038 !important; /* Replace with your desired color */
+}
+.ant-menu-sub .ant-menu-item-selected {
+  background-color: transparent !important; /* Replace with your desired color */
+}
+.ant-menu.ant-menu-sub.ant-menu-inline {
+  background: transparent !important;
+}
+.ant-modal-close {
+  color: #dcdcdc !important;
+}
+.ant-collapse-header .ant-collapse-header-text,
+.ant-collapse-expand-icon {
+  color: #eaeaea;
+}
+/* className="bg-[] border-2 border-[#46464F] hover:bg-[#212126] focus:bg-[#212126] focus:border-[#46464F] hover:border-[#46464F]" */
+.ant-select .ant-select-selector {
+  background-color: #212126 !important;
+  color: #f6f6f6 !important;
+  border: 2px solid #46464f !important;
+}
+.ant-select-selection-placeholder,
+.ant-select-arrow {
+  color: #f6f6f6 !important;
 }
 
 .date-input::-webkit-calendar-picker-indicator {

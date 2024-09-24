@@ -5,7 +5,7 @@ import { API_BASE_URL, token } from ".";
 export const createDeal = async (dealData) => {
   try {
     const response = await axios.post(
-      `${API_BASE_URL}/deals/`,
+      `${API_BASE_URL}/deals`,
       dealData,
       {
         headers: {
