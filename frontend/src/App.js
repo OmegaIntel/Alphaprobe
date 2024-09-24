@@ -9,6 +9,8 @@ import Chat from "./components/Chat";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import "./App.css";
+import CreateDeal from "./components/create_deal/index";
+import DilligenceContainer from "./components/dilligence_list/container";
 import Dashboard from "./components/Dashboard";
 import ProtectedLayout from "./components/ProtectedLayout";
 
@@ -24,8 +26,9 @@ const App = () => {
   };
 
   const isLoggedIn = Boolean(token);
-  // const isLoggedIn = true;
+
   return (
+    // <KanbanBoard/>
     <Router>
       <Routes>
         <Route
@@ -55,6 +58,26 @@ const App = () => {
             </ProtectedLayout>
           }
         />
+        <Route
+          path="/create-deal"
+          element={
+            <ProtectedLayout
+              setToken={handleSetToken}
+              setUpdateSidebarSessions={setUpdateSidebarSessions}
+              isLoggedIn={isLoggedIn}
+            >
+              <CreateDeal />
+            </ProtectedLayout>
+          }
+        ></Route>
+        <Route
+          path="/action-items"
+          element={
+            <ProtectedLayout>
+              <DilligenceContainer />
+            </ProtectedLayout>
+          }
+        ></Route>
         <Route
           path="/chat"
           element={
