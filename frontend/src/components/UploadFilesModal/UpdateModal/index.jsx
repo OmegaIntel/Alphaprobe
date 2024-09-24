@@ -51,14 +51,21 @@ const UpdateModal = ({ isVisible, onOk, onCancel, state, dispatch }) => {
           label={<div className="text-[#C8C8C8] text-sm">Name</div>}
           name="name"
           className="w-[50%]"
-          initialValue={state.selectedFile.name}
+          initialValue={state.baseName}
         >
           <Input
-            placeholder="Enter file name"
-            className="text-[#F6F6F6] bg-[#212126] border-2 border-[#46464F] hover:bg-[#212126] focus:bg-[#212126] focus:border-[#46464F] hover:border-[#46464F]"
+            value={state.baseName}
+            onChange={(e) =>
+              dispatch({ type: "SET_FILE_NAME", payload: e.target.value })
+            }
+            classNames={{
+              input:
+                "text-[#F6F6F6] bg-[#212126] border-2 border-[#46464F] hover:bg-[#212126] focus:bg-[#212126] focus:border-[#46464F] hover:border-[#46464F]",
+            }}
+            addonAfter={state.extension}
           />
         </Form.Item>
-        <hr class="w-full h-[1px] bg-[#303038] border-none mt-4" />
+        <hr className="w-full h-[1px] bg-[#303038] border-none mt-4" />
         <Collapse
           accordion
           ghost

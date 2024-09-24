@@ -1,95 +1,76 @@
-import React, { useState, useEffect } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
-import axiosInstance from "../../axiosConfig";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-import { Input, Layout, Menu } from "antd";
+import { Layout, Menu } from "antd";
 import {
   CalenderIcon,
-  DataConnectorsIcon,
   EmailIcon,
   FileOutlinedIcon,
   MagnifyingGlassIcon,
   ShareWithPeopleIcon,
 } from "../../constants/IconPack";
-import { useModal } from "../UploadFilesModal/ModalContext";
+import { getDeals } from "../../services/dealService";
+import { PlusOutlined } from "@ant-design/icons";
 
 const { Sider } = Layout;
-const Sidebar = ({ setToken }) => {
-  const { setIsUploadModalVisible, isUploadModalVisible } = useModal();
-  const [sessions, setSessions] = useState([]);
+const Sidebar = () => {
+  const [deals, setDeals] = useState([]);
   const navigate = useNavigate();
-
-  // Fetch token from localStorage
-  const token = localStorage.getItem("token");
-
-  // Function to fetch and sort sessions by time
-  const fetchAndSortSessions = async () => {
-    try {
-      const response = await axiosInstance.get("/chat/sessions", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-      const sortedSessions = response.data.sort(
-        (a, b) => new Date(b.updatedAt) - new Date(a.updatedAt)
-      ); // Sort sessions by time
-      setSessions(sortedSessions);
-    } catch (error) {
-      console.error("Error fetching chat sessions:", error);
-    }
-  };
-
-  // useEffect(() => {
-  //   fetchAndSortSessions();
-
-  //   // Set up an interval to refresh the list every 5 seconds
-  //   const intervalId = setInterval(() => {
-  //     fetchAndSortSessions();
-  //   }, 5000);
-
-  //   // Cleanup the interval when the component unmounts
-  //   return () => clearInterval(intervalId);
-  // }, [token]);
-
-  const handleLogout = () => {
-    if (setToken) {
-      setToken(""); // Clear the authentication token
-    }
-    localStorage.removeItem("token"); // Clear the token from local storage
-    navigate("/login"); // Redirect to the login page
-  };
-
-  const createNewSession = async () => {
-    try {
-      const response = await axiosInstance.post(
-        "/chat/sessions",
-        {},
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-      const newSession = response.data;
-      setSessions([newSession, ...sessions]); // Add the new session at the top of the list
-      navigate(`/chat/${newSession.id}`);
-    } catch (error) {
-      console.error("Error creating new session:", error);
-    }
-  };
-
-  const deleteSession = async (sessionId) => {
-    try {
-      await axiosInstance.delete(`/chat/sessions/${sessionId}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-      setSessions(sessions.filter((session) => session.id !== sessionId)); // Remove deleted session from the list
-    } catch (error) {
-      console.error("Error deleting session:", error);
-    }
-  };
+  useEffect(() => {
+    const fetchDealsData = async () => {
+      try {
+        const data = await getDeals();
+        if (data) setDeals(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchDealsData();
+  }, []);
+  const menuItems = [
+    {
+      key: "1",
+      icon: <FileOutlinedIcon />,
+      label: "Dashboard",
+      onClick: () => navigate("/dashboard"),
+    },
+    {
+      key: "2",
+      icon: <FileOutlinedIcon />,
+      label: "Templates",
+    },
+    {
+      key: "3",
+      label: "MY WORKSPACE",
+      children:
+        deals.length > 0
+          ? deals.map((deal) => ({
+              key: deal.id,
+              icon: <FileOutlinedIcon />,
+              label: deal.name,
+            }))
+          : [
+              {
+                key: "no-projects",
+                disabled: true,
+                label: "No projects available",
+              },
+            ],
+      expandIcon: () => (
+        <PlusOutlined
+          onClick={(e) => {
+            e.stopPropagation();
+            navigate("/create-deal");
+          }}
+        />
+      ),
+    },
+    {
+      key: "4",
+      label: "DATA SOURCE INTEGRATION",
+      children: [], // Add submenu items here if needed
+    },
+  ];
 
   return (
     <Layout hasSider>
@@ -111,41 +92,10 @@ const Sidebar = ({ setToken }) => {
           <Menu
             mode="inline"
             theme="dark"
-            className="bg-transparent text-white h-[65%] "
+            className="bg-transparent text-white h-[65%]"
             defaultSelectedKeys={["1"]}
-          >
-            <Menu.Item
-              key="1"
-              icon={<FileOutlinedIcon />}
-              className="!flex !items-center"
-            >
-              Dashboard
-            </Menu.Item>
-            <Menu.Item
-              key="2"
-              icon={<FileOutlinedIcon />}
-              className="!flex !items-center "
-            >
-              Templates
-            </Menu.Item>
-
-            <Menu.ItemGroup title="MY WORKSPACE"></Menu.ItemGroup>
-
-            <Menu.SubMenu
-              title="DATA SOURCE INTEGRATION"
-              style={{ backgroundColor: "transparent" }}
-              theme="dark"
-            >
-              <Menu.Item
-                key="4"
-                icon={<DataConnectorsIcon />}
-                className="!flex !items-center gap-3 !bg-transparent"
-                onClick={() => setIsUploadModalVisible(!isUploadModalVisible)}
-              >
-                Upload Files
-              </Menu.Item>
-            </Menu.SubMenu>
-          </Menu>
+            items={menuItems}
+          />
           <div className="flex flex-col gap-3 h-[35%] w-[85%] mx-auto">
             <div className="p-3 bg-[#1F1E23] rounded font-bold">
               Omega Terminal

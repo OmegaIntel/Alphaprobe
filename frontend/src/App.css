@@ -623,7 +623,6 @@ input:checked + .slider:before {
   box-shadow: none !important; /* Remove any box-shadow */
 }
 
-
 /* Optionally, if you want a subtle focus indication, you can add this: */
 .input-container input:focus,
 .input-container select:focus,
@@ -933,7 +932,12 @@ pre {
 .ant-select-arrow {
   color: #f6f6f6 !important;
 }
-
+.ant-input-group-addon {
+  background-color: #212126 !important;
+  color: #f6f6f6 !important;
+  border: 2px solid #46464f !important;
+  border-left: none !important;
+}
 .date-input::-webkit-calendar-picker-indicator {
-  filter: invert(1)
+  filter: invert(1);
 }

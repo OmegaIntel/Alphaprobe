@@ -10,6 +10,7 @@ export const useModal = () => useContext(ModalContext);
 export const ModalProvider = ({ children }) => {
   const [isUploadModalVisible, setIsUploadModalVisible] = useState(false);
   const [isUpdateModalVisible, setIsUpdateModalVisible] = useState(false);
+  const [dealId, setDealId] = useState(null);
 
   return (
     <ModalContext.Provider
@@ -18,6 +19,8 @@ export const ModalProvider = ({ children }) => {
         setIsUploadModalVisible,
         isUpdateModalVisible,
         setIsUpdateModalVisible,
+        dealId,
+        setDealId,
       }}
     >
       {children}

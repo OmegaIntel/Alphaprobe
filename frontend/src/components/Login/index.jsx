@@ -1,34 +1,58 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
+import { notification } from "antd";
+import { login } from "../../services/loginService";
 
 const Login = ({ setToken }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
-  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    if (!email || !password) {
+      notification.error({
+        message: "Missing Required Fields",
+        description: "Please fill out all required fields.",
+      });
+      return;
+    }
 
     const formData = new FormData();
     formData.append("username", email);
     formData.append("password", password);
 
     try {
-      const response = await axios.post(`${API_BASE_URL}/token`, formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
-
-      if (response.status === 200) {
+      const response = await login(formData);
+      if (response.data.access_token) {
         setToken(response.data.access_token);
-        navigate("/dashboard");
+        notification.success({
+          message: "LoggedIn Successfully",
+          description: "Your are loggedIn successfully",
+        });
+        setTimeout(() => {
+          navigate("/dashboard");
+        }, 2000);
+      } else {
+        notification.error({
+          message: "Something went wrong!",
+          description:
+            "There was an error submitting your deal request. Please try again.",
+        });
       }
     } catch (error) {
       console.log(error);
+      if (error.response.data.detail) {
+        notification.error({
+          message: error.response.data.detail,
+        });
+      } else
+        notification.error({
+          message: "Something went wrong!",
+          description:
+            "There was an error submitting your deal request. Please try again.",
+        });
     }
   };
 

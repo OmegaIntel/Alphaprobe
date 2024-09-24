@@ -2,9 +2,13 @@ import React, { useReducer } from "react";
 import { useModal } from "./ModalContext.js";
 import UploadModal from "./UploadModal/index.jsx";
 import UpdateModal from "./UpdateModal/index.jsx";
+import { notification } from "antd";
+import { uploadFiles } from "../../services/uploadService.js";
 
 const initialState = {
   selectedFile: null,
+  baseName: "",
+  extension: "",
   tags: [],
   category: null,
   subCategory: null,
@@ -15,7 +19,16 @@ const initialState = {
 const reducer = (state, action) => {
   switch (action.type) {
     case "SET_SELECTED_FILE":
-      return { ...state, selectedFile: action.payload };
+      const fullName = action.payload.name;
+      const dotIndex = fullName.lastIndexOf(".");
+      return {
+        ...state,
+        selectedFile: action.payload,
+        baseName: fullName.substring(0, dotIndex),
+        extension: fullName.substring(dotIndex),
+      };
+    case "SET_FILE_NAME":
+      return { ...state, baseName: action.payload };
     case "ADD_TAG":
       if (!state.tags.includes(action.payload) && state.newTag !== "") {
         return { ...state, tags: [...state.tags, action.payload], newTag: "" };
@@ -48,6 +61,7 @@ const UploadFilesModal = () => {
     setIsUploadModalVisible,
     isUpdateModalVisible,
     setIsUpdateModalVisible,
+    dealId,
   } = useModal();
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -58,9 +72,44 @@ const UploadFilesModal = () => {
     }
   };
 
-  const handleUpdateOk = () => {
-    setIsUpdateModalVisible(false);
-    // Add logic to save file details (name/category)
+  const handleUpdateOk = async () => {
+    if (!state.baseName || !state.selectedFile) {
+      notification.error({
+        message: "Missing Required Fields",
+        description: "Please fill out all required fields.",
+      });
+      return;
+    }
+    const formData = new FormData();
+
+    // Append the file to the form data
+    formData.append("files", state.selectedFile.originFileObj);
+
+    // Append other fields from the state
+    formData.append("deal_id", dealId); // Assuming dealId is part of your modal context
+    formData.append("name", state.baseName);
+    formData.append("description", state.description);
+    formData.append("category", state.category);
+    formData.append("sub_category", state.subCategory);
+
+    // Append tags array as a JSON string
+    formData.append("tags", state.tags);
+    try {
+      const response = await uploadFiles(formData);
+      if (response) {
+        notification.success({
+          message: response.message,
+        });
+        dispatch({ type: "RESET_STATE" });
+        setIsUpdateModalVisible(false);
+      }
+    } catch (error) {
+      notification.error({
+        message: "Something went wrong!",
+        description:
+          "There was an error submitting your deal request. Please try again.",
+      });
+    }
   };
 
   const handleUploadCancel = () => {
@@ -78,7 +127,7 @@ const UploadFilesModal = () => {
     onChange: (info) => {
       dispatch({
         type: "SET_SELECTED_FILE",
-        payload: info.fileList[0],
+        payload: info.fileList[info.fileList.length - 1],
       });
     },
     multiple: false,
