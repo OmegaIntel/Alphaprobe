@@ -77,16 +77,20 @@ def delete_data(checklist_id: str, db: Session = Depends(get_db),current_user: U
     return base
 
 @checklist_base_router.get("/checklist/", response_model=List[Checklistresponse])
-def checklistcontext(deal_id: Optional[UUID] = None, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
-    data=db.query(Deal).filter(Deal.id==deal_id).first()
-    if str(data.user_id) != current_user.id:
+def checklistcontext(deal_id: Optional[UUID] = None,type: Optional[str] = None,  db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
+    data = db.query(Deal).filter(Deal.id == deal_id).first()
+    if not data or str(data.user_id) != current_user.id:
         raise HTTPException(status_code=404, detail="You are not authorized to fetch checklist")
     query = db.query(Checklist)
     if deal_id:
         query = query.filter(Checklist.deal_id == deal_id)
+    if type:
+        query = query.filter(Checklist.type == type)
     data = query.all()
     if not data:
-        if deal_id:
+        if deal_id and type:
+            error_message = f"No data items found for deal_id: {deal_id} and type: {type}"
+        elif deal_id:
             error_message = f"No data items found for deal_id: {deal_id}"
         else:
             error_message = "No data items found."
