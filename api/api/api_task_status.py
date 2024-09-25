@@ -1,17 +1,13 @@
-from fastapi import APIRouter, HTTPException, Form, Depends, Request
+from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel, EmailStr
 from db_models.session import get_db
 from sqlalchemy.orm import Session
 from fastapi import HTTPException
 from typing import Optional, List
 from uuid import UUID
-from db_models.demo_requests import DemoRequests
-import uuid
 from typing import Optional
-from sqlalchemy.exc import SQLAlchemyError
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.orm import Session
-from db_models.users import User 
 from pydantic import BaseModel, Field
 from uuid import UUID
 from datetime import datetime
@@ -25,13 +21,17 @@ from datetime import datetime
 from db_models.task_status import ToDo
 from api.api_user import get_current_user, User as UserModelSerializer
 from db_models.deals import Deal
-from db_models.task_status import ToDo
 
 task_status_router = APIRouter()
+
 
 class ToDoBase(BaseModel):
     task: str
     status: str
+    due_date: Optional[datetime] = None
+    priority: Optional[str] = Field(None, description="Priority of the task (High, Medium, Low)")
+    custom_tags: Optional[str] = None
+    description: Optional[str] = None
 
 class ToDoCreate(ToDoBase):
     deal_id: str
@@ -41,14 +41,19 @@ class ToDoResponse(BaseModel):
     deal_id: UUID
     task: str
     status: str
+    due_date: Optional[datetime] = None
+    priority: Optional[str]
+    custom_tags: Optional[str]
+    description: Optional[str]
 
     class Config:
         from_attributes = True
 
 
+
 @task_status_router.post("/todos/", response_model=ToDoResponse)
-def add_todo(item: ToDoCreate, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
-    data=db.query(Deal).filter(Deal.id==item.deal_id).first()
+def add_todo(item: ToDoCreate, db: Session = Depends(get_db), current_user: UserModelSerializer = Depends(get_current_user)):
+    data = db.query(Deal).filter(Deal.id == item.deal_id).first()
     if str(data.user_id) != current_user.id:
         raise HTTPException(status_code=404, detail="You are not authorized to add To-Do items")
     todo = ToDo(**item.dict())
@@ -59,8 +64,8 @@ def add_todo(item: ToDoCreate, db: Session = Depends(get_db),current_user: UserM
 
 
 @task_status_router.get("/todos/", response_model=List[ToDoResponse])
-def get_todos(deal_id: Optional[UUID] = None, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
-    data=db.query(Deal).filter(Deal.id==deal_id).first()
+def get_todos(deal_id: Optional[UUID] = None, db: Session = Depends(get_db), current_user: UserModelSerializer = Depends(get_current_user)):
+    data = db.query(Deal).filter(Deal.id == deal_id).first()
     if str(data.user_id) != current_user.id:
         raise HTTPException(status_code=404, detail="You are not authorized to fetch To-Do items")
     query = db.query(ToDo)
@@ -75,7 +80,6 @@ def get_todos(deal_id: Optional[UUID] = None, db: Session = Depends(get_db),curr
         raise HTTPException(status_code=404, detail=error_message)
     return todos
 
-
 @task_status_router.put("/todos/{todo_id}", response_model=ToDoResponse)
 def update_todo(todo_id: str, item: ToDoBase, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
     todo = db.query(ToDo).filter(ToDo.id == todo_id).first()
@@ -86,6 +90,10 @@ def update_todo(todo_id: str, item: ToDoBase, db: Session = Depends(get_db),curr
         raise HTTPException(status_code=404, detail="To-Do item not found")
     todo.task = item.task
     todo.status = item.status
+    todo.due_date = item.due_date
+    todo.priority = item.priority
+    todo.custom_tags = item.custom_tags
+    todo.description = item.description
     db.commit()
     db.refresh(todo)
     return todo

@@ -1,4 +1,4 @@
-from sqlalchemy import Column, TIMESTAMP, ForeignKey, func,String
+from sqlalchemy import Column, TIMESTAMP, ForeignKey, func, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy_utils import UUIDType
 from db_models.deals import Deal
@@ -14,4 +14,7 @@ class ToDo(Base):
     status = Column(String(255), nullable=False)
     created_at = Column(TIMESTAMP, server_default=func.now())
     updated_at = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
-    
+    due_date = Column(TIMESTAMP, nullable=True)  
+    description = Column(String(500), nullable=True) 
+    priority = Column(String(255), nullable=True) 
+    custom_tags = Column(String(255), nullable=True)  
