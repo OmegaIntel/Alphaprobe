@@ -71,35 +71,32 @@ const UploadFilesModal = () => {
       setIsUpdateModalVisible(true);
     }
   };
-
   const handleUpdateOk = async () => {
-    if (!state.baseName || !state.selectedFile) {
-      notification.error({
-        message: "Missing Required Fields",
-        description: "Please fill out all required fields.",
+    const { baseName, selectedFile, description, category, subCategory, tags } =
+      state;
+
+    if (!baseName || !selectedFile) {
+      return notification.error({
+        message: "File Upload Incomplete",
+        description:
+          "Please select a file and provide a valid file name before proceeding.",
       });
-      return;
     }
-    const formData = new FormData();
 
-    // Append the file to the form data
-    formData.append("files", state.selectedFile.originFileObj);
-
-    // Append other fields from the state
-    formData.append("deal_id", dealId); // Assuming dealId is part of your modal context
-    formData.append("name", state.baseName);
-    formData.append("description", state.description);
-    formData.append("category", state.category);
-    formData.append("sub_category", state.subCategory);
-
-    // Append tags array as a JSON string
-    formData.append("tags", state.tags);
     try {
+      const formData = new FormData();
+      formData.append("files", selectedFile.originFileObj);
+      formData.append("deal_id", dealId);
+      formData.append("name", baseName);
+      formData.append("description", description);
+      formData.append("category", category);
+      formData.append("sub_category", subCategory);
+      formData.append("tags", tags);
+
       const response = await uploadFiles(formData);
+
       if (response) {
-        notification.success({
-          message: response.message,
-        });
+        notification.success({ message: response.message });
         dispatch({ type: "RESET_STATE" });
         setIsUpdateModalVisible(false);
       }
@@ -132,7 +129,6 @@ const UploadFilesModal = () => {
     },
     multiple: false,
   };
-  console.log(state);
 
   return (
     <>

@@ -46,7 +46,6 @@ const CreateDeal = () => {
         const isContentOverflowing =
           container.scrollHeight - 53 > container.clientHeight;
         setIsOverflowing(isContentOverflowing);
-        console.log(container.scrollHeight, container.clientHeight);
       }
     }
   }, [containerRef]);
