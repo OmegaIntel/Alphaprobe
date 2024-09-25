@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Button } from 'antd';
+import { CloseCircleFilled, DeleteFilled, EditFilled, SaveFilled } from '@ant-design/icons';
 
 const EditableProjectCard = ({ project, onSave, onCancel, onEdit, handleInputChange }) => {
     return (
@@ -14,14 +15,14 @@ const EditableProjectCard = ({ project, onSave, onCancel, onEdit, handleInputCha
                             className="mb-2 p-2 rounded-md bg-[#151518] w-full h-32"
                         />
                         <div className="flex gap-4 mt-4 w-full">
-                            <Button onClick={() => onSave(project.id, project.text)} type="primary">Save</Button>
-                            <Button onClick={() => onCancel(project.id, true)} type="default">Remove</Button>
+                            <Button onClick={() => onSave(project.id, project.text)} type="primary"><SaveFilled/></Button>
+                            <Button onClick={() => onCancel(project.id, true)} type="default"><DeleteFilled/></Button>
                         </div>
                     </>
                 ) : (
                     <div className='flex flex-row justify-between w-full'>
                         <div className="text-sm mt-3 mr-3 text-left">{project.text}</div>
-                        <Button onClick={() => onEdit(project.id)} type="default" className="mt-4">Edit</Button>
+                        <Button onClick={() => onEdit(project.id)} type="default" className="mt-4"><EditFilled/></Button>
                     </div>
                 )}
             </div>

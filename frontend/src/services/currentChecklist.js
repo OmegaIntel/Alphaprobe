@@ -1,11 +1,11 @@
 import axiosInstance from "../axiosConfig";
 import { API_BASE_URL, token } from ".";
 
-export const createWorkspace = async (workSpaceData) => {
+export const createChecklist = async (checklistData) => {
   try {
     const response = await axiosInstance.post(
-      `${API_BASE_URL}/current_workspace/`,
-      workSpaceData,
+      `${API_BASE_URL}/checklist/`,
+      checklistData,
       {
         headers: {
           "Content-Type": "application/json",
@@ -19,10 +19,10 @@ export const createWorkspace = async (workSpaceData) => {
   }
 };
 
-export const getWorkspace = async (dealId, type) => {
+export const getChecklist = async (dealId, type) => {
   try {
     const response = await axiosInstance.get(
-      `${API_BASE_URL}/current_workspace/?deal_id=${dealId}&type=${type}`,
+      `${API_BASE_URL}/checklist/?deal_id=${dealId}&type=${type}`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -37,10 +37,10 @@ export const getWorkspace = async (dealId, type) => {
 };
 
 
-export const deleteWorkspace = async (id) => {
+export const deleteChecklist = async (id) => {
   try {
     const response = await axiosInstance.delete(
-      `${API_BASE_URL}/current_workspace/${id}`,
+      `${API_BASE_URL}/checklist/${id}`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -54,10 +54,10 @@ export const deleteWorkspace = async (id) => {
   }
 };
 
-export const editWorkspace = async (dealId, updateData) => {
+export const editChecklist = async (dealId, updateData) => {
   try {
     const response = await axiosInstance.put(
-      `${API_BASE_URL}/current_workspace/${dealId}`,
+      `${API_BASE_URL}/checklist/${dealId}`,
       updateData,
       {
         headers: {

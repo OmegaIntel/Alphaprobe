@@ -19,10 +19,10 @@ export const createKnoledgeBase = async (knoledgeBaseData) => {
   }
 };
 
-export const getKnoledgeBase = async (dealId) => {
+export const getKnoledgeBase = async (dealId, type) => {
   try {
     const response = await axiosInstance.get(
-      `${API_BASE_URL}/knowledgebase/?deal_id=${dealId}`,
+      `${API_BASE_URL}/knowledgebase/?deal_id=${dealId}&type=${type}`,
       {
         headers: {
           "Content-Type": "application/json",

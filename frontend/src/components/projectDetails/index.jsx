@@ -5,10 +5,11 @@ import { createWorkspace, deleteWorkspace, editWorkspace, getWorkspace } from '.
 import { notification } from 'antd';
 import { createKnoledgeBase, deleteKnowledgebase, editKnowledgebase, getKnoledgeBase } from '../../services/currentKnoledgeBase';
 import { createChecklist, deleteChecklist, editChecklist, getChecklist } from '../../services/currentChecklist';
-
-const dealId = "df62a2bf8e6a4fc1872502d8d8ce6966";
+import { useModal } from '../UploadFilesModal/ModalContext';
 
 const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
+
+    const {dealId} = useModal();
 
     const [toggle, setToggle] = useState(false);
     const [projects, setProjects] = useState([]);
@@ -21,9 +22,9 @@ const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
     }
 
     useEffect(() => {
-        if (isActiveSubCategory && isActiveCategory) {
+        if (isActiveSubCategory && isActiveCategory && dealId) {
             if (isActiveSubCategory === "Current Workspace") {
-                getWorkspace(dealId).then((data) => {
+                getWorkspace(dealId,isActiveCategory).then((data) => {
                     setProjects(data);
                 })
                     .catch((e) => {
@@ -31,7 +32,7 @@ const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
                     })
             }
             else if (isActiveSubCategory === "Knowledge Base") {
-                getKnoledgeBase(dealId).then((data) => {
+                getKnoledgeBase(dealId,isActiveCategory).then((data) => {
                     setProjects(data);
                 })
                     .catch((e) => {
@@ -39,7 +40,7 @@ const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
                     })
             }
             else if (isActiveSubCategory === "Checklist") {
-                getChecklist(dealId).then((data) => {
+                getChecklist(dealId,isActiveCategory).then((data) => {
                     setProjects(data);
                 })
                     .catch((e) => {
@@ -50,7 +51,7 @@ const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
                 setProjects([]);
             }
         }
-    }, [isActiveCategory, isActiveSubCategory, toggle])
+    }, [isActiveCategory, isActiveSubCategory, toggle, dealId])
 
 
     const addProject = () => {

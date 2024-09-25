@@ -1,11 +1,11 @@
 import axiosInstance from "../axiosConfig";
 import { API_BASE_URL, token } from ".";
 
-export const createChecklist = async (checklistData) => {
+export const createTask = async (todoData) => {
   try {
     const response = await axiosInstance.post(
-      `${API_BASE_URL}/checklist/`,
-      checklistData,
+      `${API_BASE_URL}/todos/`,
+      todoData,
       {
         headers: {
           "Content-Type": "application/json",
@@ -19,10 +19,10 @@ export const createChecklist = async (checklistData) => {
   }
 };
 
-export const getChecklist = async (dealId) => {
+export const getTasks = async (dealId) => {
   try {
     const response = await axiosInstance.get(
-      `${API_BASE_URL}/checklist/?deal_id=${dealId}`,
+      `${API_BASE_URL}/todos/?deal_id=${dealId}`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -37,10 +37,10 @@ export const getChecklist = async (dealId) => {
 };
 
 
-export const deleteChecklist = async (id) => {
+export const deleteTodo = async (id) => {
   try {
     const response = await axiosInstance.delete(
-      `${API_BASE_URL}/checklist/${id}`,
+      `${API_BASE_URL}/todos/${id}`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -54,10 +54,10 @@ export const deleteChecklist = async (id) => {
   }
 };
 
-export const editChecklist = async (dealId, updateData) => {
+export const editTasks = async (taskId, updateData) => {
   try {
     const response = await axiosInstance.put(
-      `${API_BASE_URL}/checklist/${dealId}`,
+      `${API_BASE_URL}/todos/${taskId}`,
       updateData,
       {
         headers: {

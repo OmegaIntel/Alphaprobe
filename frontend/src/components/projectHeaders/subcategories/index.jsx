@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ProjectDetails from '../../projectDetails';
 
 const Subcategories = ({isActiveCategory}) => {
     const categoryList = ["Current Workspace", "Knowledge Base", "Checklist"];
     const [isActive, setActive] = useState("Current Workspace");
+
     return (
         <>
             <div className='flex flex-row bg-[#151518] pt-5 px-5 ml-1'>

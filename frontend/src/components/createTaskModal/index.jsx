@@ -1,18 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Modal from 'react-modal';
-import { Input, Tag, Tooltip } from 'antd';
+import { Input, notification, Tag, Tooltip } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
 import './TaskModal.css'; // Custom CSS for styling the modal
 import { ReactComponent as CrossIcon } from "../../icons/svgviewer-output_14.svg";
+import { createTask, editTasks } from '../../services/taskService';
+import { useModal } from '../UploadFilesModal/ModalContext';
 
 // For accessibility, we need to bind the modal to the app element
 Modal.setAppElement('#root');
 
-const TaskModal = ({ isOpen, onRequestClose }) => {
+const TaskModal = ({ isOpen, onRequestClose, type, values, setToggle }) => {
     const [taskName, setTaskName] = useState('');
     const [dueDate, setDueDate] = useState('');
     const [description, setDescription] = useState('');
     const [priority, setPriority] = useState('');
+    const { dealId } = useModal();
 
     // Tag-related state
     const [tags, setTags] = useState([]);
@@ -31,6 +34,18 @@ const TaskModal = ({ isOpen, onRequestClose }) => {
     }, [inputVisible]);
 
     useEffect(() => {
+        if (values) {
+            setTaskName(values.taskName || '');
+            const dateObj = new Date(values.dueDate);
+            const formattedDate = dateObj.toISOString().split('T')[0]; // Get only the date part
+            setDueDate(formattedDate);
+            setDescription(values.description || '');
+            setPriority(values.priority || '');
+            setTags(values.tags || []);
+        }
+    }, [values])
+
+    useEffect(() => {
         editInputRef.current?.focus();
     }, [editInputValue]);
 
@@ -39,13 +54,49 @@ const TaskModal = ({ isOpen, onRequestClose }) => {
     };
 
     const handleCreateTask = () => {
-        console.log({
-            taskName,
-            dueDate,
-            description,
-            priority,
-            tags,  // Include tags in the task data
-        });
+        const formattedDueDate = new Date(dueDate).toISOString();
+        const formattedTags = tags.join(', ');
+        const taskData = {
+            task: taskName,
+            status: type,
+            due_date: formattedDueDate,
+            priority: priority,
+            custom_tags: formattedTags,
+            description: description,
+            deal_id: dealId
+        }
+        createTask(taskData).
+            then((data) => {
+                setToggle((prev)=>!prev);
+                notification.success({ "message": "Task added successfully!" })
+            }).
+            catch((e) => {
+                notification.error({ "message": "Error creating new task!" })
+            });
+        resetForm();
+        onRequestClose(); // Close the modal after submission
+    };
+
+
+    const handleEditTasks = () => {
+        const formattedDueDate = new Date(dueDate).toISOString();
+        const formattedTags = tags.join(', ');
+        const taskData = {
+            task: taskName,
+            status: type,
+            due_date: formattedDueDate,
+            priority: priority,
+            custom_tags: formattedTags,
+            description: description,
+        }
+        editTasks(values.id, taskData).
+            then((data) => {
+                notification.success({ "message": "Task edited successfully!" })
+            }).
+            catch((e) => {
+                notification.error({ "message": "Error editing new task!" })
+            });
+        resetForm();
         onRequestClose(); // Close the modal after submission
     };
 
@@ -90,6 +141,18 @@ const TaskModal = ({ isOpen, onRequestClose }) => {
         verticalAlign: 'top',
     };
 
+    const resetForm = () => {
+        setTaskName('');
+        setDueDate('');
+        setDescription('');
+        setPriority('');
+        setTags([]);
+        setInputVisible(false);
+        setInputValue('');
+        setEditInputIndex(-1);
+        setEditInputValue('');
+    };
+
     return (
         <Modal
             isOpen={isOpen}
@@ -99,7 +162,7 @@ const TaskModal = ({ isOpen, onRequestClose }) => {
         >
             <div className='text-xl font-bold flex flex-row justify-between my-2'>
                 Create a Task
-                <CrossIcon className="mx-2 cursor-pointer" onClick={()=>onRequestClose()}/>
+                <CrossIcon className="mx-2 cursor-pointer" onClick={() => { onRequestClose(); resetForm() }} />
             </div>
             <div className="modal-content mt-4">
                 <div className='bg-[#24242a] p-4 rounded-md'>
@@ -224,8 +287,8 @@ const TaskModal = ({ isOpen, onRequestClose }) => {
                 </div>
 
                 <div className="modal-actions mt-4">
-                    <button onClick={onRequestClose}>Cancel</button>
-                    <button onClick={handleCreateTask}>Create Task</button>
+                    <button onClick={() => { onRequestClose(); resetForm() }}>Cancel</button>
+                    {values !== undefined ? <button onClick={handleEditTasks}>Edit Task</button> : <button onClick={handleCreateTask}>Create Task</button>}
                 </div>
             </div>
         </Modal>

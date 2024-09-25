@@ -72,19 +72,7 @@ const App = () => {
           }
         ></Route>
         <Route
-          path="/action-items"
-          element={
-            <ProtectedLayout
-              setToken={handleSetToken}
-              setUpdateSidebarSessions={setUpdateSidebarSessions}
-              isLoggedIn={isLoggedIn}
-            >
-              <DilligenceContainer />
-            </ProtectedLayout>
-          }
-        ></Route>
-        <Route
-          path="/projects"
+          path="/projects/:id"
           element={
             <ProtectedLayout
               setToken={handleSetToken}
