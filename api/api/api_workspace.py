@@ -77,16 +77,21 @@ def delete_todo(workspace_id: str, db: Session = Depends(get_db), current_user: 
     return workspace
 
 @current_workspace_router.get("/current_workspace/", response_model=List[CurrentWorkspaceResponse])
-def current_worspace(deal_id: Optional[UUID] = None, db: Session = Depends(get_db), current_user: UserModelSerializer = Depends(get_current_user)):
-    data=db.query(Deal).filter(Deal.id==deal_id).first()
+def current_workspace(deal_id: Optional[UUID] = None,type: Optional[str] = None, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
+    data = db.query(Deal).filter(Deal.id == deal_id).first()
     if str(data.user_id) != current_user.id:
         raise HTTPException(status_code=404, detail="You are not authorized to fetch workspace")
     query = db.query(CurrentWorkspace)
     if deal_id:
         query = query.filter(CurrentWorkspace.deal_id == deal_id)
+    if type:
+        query = query.filter(CurrentWorkspace.type == type)
+
     current_workspace = query.all()
     if not current_workspace:
-        if deal_id:
+        if deal_id and type:
+            error_message = f"No data items found for deal_id: {deal_id} and type: {type}"
+        elif deal_id:
             error_message = f"No data items found for deal_id: {deal_id}"
         else:
             error_message = "No data items found."
