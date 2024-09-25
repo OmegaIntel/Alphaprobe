@@ -2,9 +2,13 @@ import React, { useReducer } from "react";
 import { useModal } from "./ModalContext.js";
 import UploadModal from "./UploadModal/index.jsx";
 import UpdateModal from "./UpdateModal/index.jsx";
+import { notification } from "antd";
+import { uploadFiles } from "../../services/uploadService.js";
 
 const initialState = {
   selectedFile: null,
+  baseName: "",
+  extension: "",
   tags: [],
   category: null,
   subCategory: null,
@@ -15,7 +19,16 @@ const initialState = {
 const reducer = (state, action) => {
   switch (action.type) {
     case "SET_SELECTED_FILE":
-      return { ...state, selectedFile: action.payload };
+      const fullName = action.payload.name;
+      const dotIndex = fullName.lastIndexOf(".");
+      return {
+        ...state,
+        selectedFile: action.payload,
+        baseName: fullName.substring(0, dotIndex),
+        extension: fullName.substring(dotIndex),
+      };
+    case "SET_FILE_NAME":
+      return { ...state, baseName: action.payload };
     case "ADD_TAG":
       if (!state.tags.includes(action.payload) && state.newTag !== "") {
         return { ...state, tags: [...state.tags, action.payload], newTag: "" };
@@ -48,6 +61,7 @@ const UploadFilesModal = () => {
     setIsUploadModalVisible,
     isUpdateModalVisible,
     setIsUpdateModalVisible,
+    dealId,
   } = useModal();
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -57,10 +71,42 @@ const UploadFilesModal = () => {
       setIsUpdateModalVisible(true);
     }
   };
+  const handleUpdateOk = async () => {
+    const { baseName, selectedFile, description, category, subCategory, tags } =
+      state;
 
-  const handleUpdateOk = () => {
-    setIsUpdateModalVisible(false);
-    // Add logic to save file details (name/category)
+    if (!baseName || !selectedFile) {
+      return notification.error({
+        message: "File Upload Incomplete",
+        description:
+          "Please select a file and provide a valid file name before proceeding.",
+      });
+    }
+
+    try {
+      const formData = new FormData();
+      formData.append("files", selectedFile.originFileObj);
+      formData.append("deal_id", dealId);
+      formData.append("name", baseName);
+      formData.append("description", description);
+      formData.append("category", category);
+      formData.append("sub_category", subCategory);
+      formData.append("tags", tags);
+
+      const response = await uploadFiles(formData);
+
+      if (response) {
+        notification.success({ message: response.message });
+        dispatch({ type: "RESET_STATE" });
+        setIsUpdateModalVisible(false);
+      }
+    } catch (error) {
+      notification.error({
+        message: "Something went wrong!",
+        description:
+          "There was an error submitting your deal request. Please try again.",
+      });
+    }
   };
 
   const handleUploadCancel = () => {
@@ -78,12 +124,11 @@ const UploadFilesModal = () => {
     onChange: (info) => {
       dispatch({
         type: "SET_SELECTED_FILE",
-        payload: info.fileList[0],
+        payload: info.fileList[info.fileList.length - 1],
       });
     },
     multiple: false,
   };
-  console.log(state);
 
   return (
     <>

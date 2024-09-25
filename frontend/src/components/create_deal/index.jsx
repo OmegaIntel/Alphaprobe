@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import DealDocumentsCard from "../card";
 import { useMediaQuery } from "react-responsive";
-import { createDeal } from "../../services/createDealService";
+import { createDeal } from "../../services/dealService";
 import { notification } from "antd";
 import { useNavigate } from "react-router-dom";
+import { useModal } from "../UploadFilesModal/ModalContext";
 
 const CreateDeal = () => {
   const [projectName, setProjectName] = useState("");
@@ -12,6 +13,7 @@ const CreateDeal = () => {
   const [investmentThesis, setInvestmentThesis] = useState("");
   const [industry, setIndustry] = useState("");
   const [isOverflowing, setIsOverflowing] = useState(false);
+  const { setIsUploadModalVisible, setDealId } = useModal();
   const navigation = useNavigate();
 
   const containerRef = useRef(null);
@@ -20,38 +22,45 @@ const CreateDeal = () => {
 
   const cardsData = [
     {
-      "title": "Request Deal Documents",
-      "description": "Request Diligence documents to from Management",
-      "type": "1"
+      title: "Request Deal Documents",
+      description: "Request Diligence documents to from Management",
+      type: "1",
     },
     {
-      "title": "Diligence Planning",
-      "description": "Stay organized and plan different phases of your deal",
-      "type": "2"
+      title: "Diligence Planning",
+      description: "Stay organized and plan different phases of your deal",
+      type: "2",
     },
     {
-      "title": "Meet with Management",
-      "description": "Setup a Kickoff call with Management. Send a meeting invite using templates",
-      "type": "3"
-    }
-  ]
+      title: "Meet with Management",
+      description:
+        "Setup a Kickoff call with Management. Send a meeting invite using templates",
+      type: "3",
+    },
+  ];
 
   useEffect(() => {
     if (containerRef) {
       const container = containerRef.current;
       if (container) {
-        const isContentOverflowing = (container.scrollHeight - 53) > container.clientHeight;
+        const isContentOverflowing =
+          container.scrollHeight - 53 > container.clientHeight;
         setIsOverflowing(isContentOverflowing);
-        console.log(container.scrollHeight, container.clientHeight)
       }
     }
   }, [containerRef]);
 
   const handleClick = async () => {
-    if (!projectName || !projectDescription || !investmentThesis || !industry || !dueDate) {
+    if (
+      !projectName ||
+      !projectDescription ||
+      !investmentThesis ||
+      !industry ||
+      !dueDate
+    ) {
       notification.error({
-        message: 'Missing Required Fields',
-        description: 'Please fill out all required fields.',
+        message: "Missing Required Fields",
+        description: "Please fill out all required fields.",
       });
       return;
     }
@@ -63,19 +72,24 @@ const CreateDeal = () => {
       industry: industry,
       due_date: new Date(dueDate).toISOString(), // Convert to ISO format
       start_date: new Date().toISOString(), // Current date in ISO format
-      progress: "started"
+      progress: "started",
     };
 
     try {
-      await createDeal(dealData);
+      const response = await createDeal(dealData);
       notification.success({
-        message: 'Deal Created',
-        description: 'Your deal is created successfully.',
+        message: "Deal Created",
+        description: "Your deal is created successfully.",
       });
+      if (response) {
+        setDealId(response.id);
+        setIsUploadModalVisible(true);
+      }
     } catch (error) {
       notification.error({
-        message: 'Something went wrong!',
-        description: 'There was an error submitting your deal request. Please try again.',
+        message: "Something went wrong!",
+        description:
+          "There was an error submitting your deal request. Please try again.",
       });
     }
   };
@@ -83,19 +97,18 @@ const CreateDeal = () => {
   return (
     <div
       ref={containerRef}
-      className="flex flex-col space-y-1 overflow-y-auto min-h-screen">
-      <div className="flex p-2 bg-[#151518]">
-        <button className="bg-white text-black p-1 rounded-md w-52 hover:bg-gray-200" onClick={handleClick}>
-          <div className="text-center w-full">
-            Create New Deal
-          </div>
-        </button>
-      </div>
-      <div className={`flex text-white p-5 bg-[#151518] ${isOverflowing ? "min-h-fit" : "flex-1"
-        } ${isSmallScreen ? "flex-col" : "flex-row"
-        }`}>
-        <div className={`bg-[#24242A] p-8 rounded-lg h-fit m-auto ${isSmallScreen ? "" : "w-[75%]"
-          }`}>
+      className="flex flex-col space-y-1 overflow-y-auto min-h-screen"
+    >
+      <div
+        className={`ml-1 flex text-white p-5 bg-[#151518] ${
+          isOverflowing ? "min-h-fit" : "flex-1"
+        } ${isSmallScreen ? "flex-col" : "flex-row"}`}
+      >
+        <div
+          className={`bg-[#24242A] p-8 rounded-lg h-fit m-auto ${
+            isSmallScreen ? "" : "w-[75%]"
+          }`}
+        >
           <div className="flex space-x-4 mb-6">
             <div className="w-2/3 flex flex-row items-center">
               <label className="block text-base mr-5">Name</label>
@@ -118,7 +131,7 @@ const CreateDeal = () => {
             </div>
           </div>
 
-          <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-[#36363F]"></hr>
+          <hr className="h-px my-4 bg-gray-200 border-0 dark:bg-[#36363F]"></hr>
 
           <div className="mb-6 mt-10">
             <label className="block mb-2">Overview</label>
@@ -156,22 +169,32 @@ const CreateDeal = () => {
                 <option value="healthcare">Healthcare</option>
               </select>
             </div>
-            <div className="w-2/5 flex justify-between space-x-4">
-              <button className="bg-white text-black p-1 rounded-md w-[60%] hover:bg-gray-200" onClick={() => navigation("/action-items")}>
-                Add Action Items
-              </button>
-              <button className="bg-white text-black p-1 rounded-md w-[40%] hover:bg-gray-200">
-                Upload file(s)
+            <div className="w-2/5 flex justify-end">
+              <button
+                className="bg-white text-black p-1 rounded-md w-52 hover:bg-gray-200"
+                onClick={handleClick}
+              >
+                <div className="text-center w-full">Create New Deal</div>
               </button>
             </div>
           </div>
         </div>
-        <div className={`p-8 rounded-lg flex ${isSmallScreen ? "flex-row space-x-4" : "flex-col space-y-4 ml-2 w-[25%]"
-          } m-auto`}>
+        <div
+          className={`rounded-lg flex ${
+            isSmallScreen
+              ? "flex-row space-x-4"
+              : "flex-col space-y-4 ml-2 w-[25%]"
+          } m-auto`}
+        >
           {cardsData.map((data, index) => {
             return (
-              <DealDocumentsCard title={data.title} description={data.description} type={data.type} key={index} />
-            )
+              <DealDocumentsCard
+                title={data.title}
+                description={data.description}
+                type={data.type}
+                key={index}
+              />
+            );
           })}
         </div>
       </div>

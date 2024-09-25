@@ -77,3 +77,14 @@ export const metaDataTags = [
   "HR & Employee",
   "Sales & Marketing",
 ];
+export const activeItems = [
+  "Assess Intellectual Property (IP) Ownership",
+  "Client Contracts and Key Revenue Sources Review",
+  "Request Tax Filings and Compliance Documents",
+  "Investor Presentation Preparation",
+  "Discuss Capital Expenditure Plans with Management",
+  "Client and Supplier Dependency Check",
+  "Request Historical Financial Statements",
+  "Confirm Revenue Growth Projections",
+  "Verify Working Capital Requirements",
+];

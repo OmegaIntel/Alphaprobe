@@ -1,31 +1,51 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import RequestDemo from "../modals/request_demo";
+import { notification } from "antd";
+import { register } from "../../services/registerService";
 
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
   const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
+    if (!email || !password) {
+      notification.error({
+        message: "Missing Required Fields",
+        description: "Please fill out all required fields.",
+      });
+      return;
+    }
     const formData = new FormData();
     formData.append("email", email);
     formData.append("password", password);
     try {
-      const response = await axios.post(`${API_BASE_URL}/register`, formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
-      if (response.status === 200) {
-        navigate("/login");
+      const response = await register(formData);
+      if (response.data.id) {
+        notification.success({
+          message: "Registered Successfully",
+          description: "Your User is created successfully.",
+        });
+        setTimeout(() => {
+          navigate("/login");
+        }, 2000);
+      } else {
+        notification.error({
+          message: "Something went wrong!",
+          description:
+            "There was an error submitting your deal request. Please try again.",
+        });
       }
     } catch (error) {
       console.log(error);
+      notification.error({
+        message: "Something went wrong!",
+        description:
+          "There was an error submitting your deal request. Please try again.",
+      });
     }
   };
 
@@ -104,7 +124,7 @@ const Register = () => {
             <div className="text-sm font-bold text-white mb-4">
               Schedule a personalized demo
             </div>
-            <RequestDemo/>
+            <RequestDemo />
           </div>
         </form>
       </div>
