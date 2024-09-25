@@ -941,3 +941,42 @@ pre {
 .date-input::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
+.chatbox-container {
+  position: relative;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+
+.chatbox-open {
+  width: 400px; /* Width of the chatbox */
+  height: 575px; /* Height of the chatbox */
+}
+
+.chatbox-closed {
+  width: 0;
+  height: 0;
+}
+
+.chatbox-content {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.chatbox-open .chatbox-content {
+  opacity: 1;
+  transform: scale(1);
+}
+.chats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  margin-block: 12px;
+  height: calc(100% - 200px);
+  overflow: auto;
+  padding: 10px;
+  scrollbar-width: none;
+}
