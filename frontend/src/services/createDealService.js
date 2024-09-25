@@ -1,10 +1,10 @@
-import axios from "axios";
+import axiosInstance from "../axiosConfig";
 import { API_BASE_URL, token } from ".";
 
 // Function to send demo request
 export const createDeal = async (dealData) => {
   try {
-    const response = await axios.post(
+    const response = await axiosInstance.post(
       `${API_BASE_URL}/deals`,
       dealData,
       {

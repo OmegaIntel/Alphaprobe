@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between w-full bg-[#151518] p-3 ml-1 mb-1">
+    <div className="flex justify-between bg-[#151518] p-3 ml-1 mb-1">
       <div className="flex items-center">
         <h2>Omega Intelligence</h2>
       </div>

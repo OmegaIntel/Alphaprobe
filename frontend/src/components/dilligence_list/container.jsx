@@ -7,13 +7,13 @@ import { ReactComponent as CrossIcon } from "../../icons/svgviewer-output_14.svg
 const DilligenceContainer = () => {
     return (
         <>
-            <div className="bg-[#151518] flex flex-col w-full min-h-screen overflow-auto">
-                <div className="flex justify-end items-start p-4">
+            <div className="bg-[#151518] flex flex-col w-full flex-grow overflow-auto ml-1">
+                {/* <div className="flex justify-end items-start p-4">
                     <TimeIcon className="mx-2 cursor-pointer" />
                     <ChatPlusIcon className="mx-2 cursor-pointer" />
                     <DotsIcon className="mx-2 cursor-pointer" />
                     <CrossIcon className="mx-2 cursor-pointer" />
-                </div>
+                </div> */}
                 <div className="text-4xl font-bold m-10">
                     Project Alpha
                 </div>

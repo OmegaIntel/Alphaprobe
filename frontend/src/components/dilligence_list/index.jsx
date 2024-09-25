@@ -5,6 +5,7 @@ import { ReactComponent as CrossIcon } from "../../icons/svgviewer-output_14.svg
 import { EditOutlined } from "@ant-design/icons";
 import { SaveOutlined } from "@ant-design/icons";
 import { CheckCircleOutlined } from "@ant-design/icons";
+import TaskModal from "../createTaskModal";
 
 // Initial columns data
 const initialData = {
@@ -78,6 +79,7 @@ const KanbanBoard = () => {
   const [editIndex, setEditIndex] = useState(null);
   const [editColumnId, setEditColumnId] = useState(null);
   const [editContent, setEditContent] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
 
   const onDragEnd = (result) => {
     const { source, destination } = result;
@@ -188,6 +190,10 @@ const KanbanBoard = () => {
     marginLeft: "8px",
   };
 
+  const onRequestClose = () => {
+    setIsOpen(false);
+  }
+
   return (
     <div className="flex mx-auto">
       <DragDropContext onDragEnd={onDragEnd} className="m-auto">
@@ -250,7 +256,7 @@ const KanbanBoard = () => {
                   </Draggable>
                 ))}
                 {provided.placeholder}
-                <button onClick={() => handleAddCard(columnId)} className="m-5 flex flex-row">
+                <button onClick={() => setIsOpen(true)} className="m-5 flex flex-row">
                   <PlusOutlined className="font-bold text-2xl" />
                   <div className="mx-2">
                     Add a Card
@@ -261,6 +267,7 @@ const KanbanBoard = () => {
           </Droppable>
         ))}
       </DragDropContext>
+      <TaskModal onRequestClose={onRequestClose} isOpen={isOpen}/>
     </div>
   );
 };
