@@ -13,6 +13,7 @@ import CreateDeal from "./components/create_deal/index";
 import DilligenceContainer from "./components/dilligence_list/container";
 import Dashboard from "./components/Dashboard";
 import ProtectedLayout from "./components/ProtectedLayout";
+import Categories from "./components/projectHeaders/categories";
 
 const App = () => {
   const [token, setToken] = useState(localStorage.getItem("token") || "");
@@ -71,14 +72,14 @@ const App = () => {
           }
         ></Route>
         <Route
-          path="/action-items"
+          path="/projects/:id"
           element={
             <ProtectedLayout
               setToken={handleSetToken}
               setUpdateSidebarSessions={setUpdateSidebarSessions}
               isLoggedIn={isLoggedIn}
             >
-              <DilligenceContainer />
+              <Categories />
             </ProtectedLayout>
           }
         ></Route>
