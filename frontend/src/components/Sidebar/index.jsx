@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { Layout, Menu } from "antd";
 import {
@@ -12,12 +12,14 @@ import { getDeals } from "../../services/dealService";
 import { PlusOutlined } from "@ant-design/icons";
 import ChatBox from "../ChatBox";
 import SendEmail from "../modals/send_email";
+import { useModal } from "../UploadFilesModal/ModalContext";
 
 const { Sider } = Layout;
 
 const Sidebar = () => {
   const [deals, setDeals] = useState([]);
   const navigate = useNavigate();
+  const { setDealId } = useModal();
   useEffect(() => {
     const fetchDealsData = async () => {
       try {
@@ -49,7 +51,7 @@ const Sidebar = () => {
           ? deals.map((deal) => ({
               key: deal.id,
               icon: <FileOutlinedIcon />,
-              label: deal.name,
+              label: <Link to={`/projects/${deal.id}`} onClick={()=>setDealId(deal.id)}>{deal.name}</Link>,
             }))
           : [
               {
