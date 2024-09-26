@@ -4,16 +4,18 @@ import { Link, useNavigate } from "react-router-dom";
 import { Layout, Menu } from "antd";
 import {
   CalenderIcon,
-  EmailIcon,
   FileOutlinedIcon,
   MagnifyingGlassIcon,
   ShareWithPeopleIcon,
 } from "../../constants/IconPack";
 import { getDeals } from "../../services/dealService";
 import { PlusOutlined } from "@ant-design/icons";
+import ChatBox from "../ChatBox";
+import SendEmail from "../modals/send_email";
 import { useModal } from "../UploadFilesModal/ModalContext";
 
 const { Sider } = Layout;
+
 const Sidebar = () => {
   const [deals, setDeals] = useState([]);
   const navigate = useNavigate();
@@ -70,7 +72,7 @@ const Sidebar = () => {
     {
       key: "4",
       label: "DATA SOURCE INTEGRATION",
-      children: [], // Add submenu items here if needed
+      children: [],
     },
   ];
 
@@ -99,9 +101,7 @@ const Sidebar = () => {
             items={menuItems}
           />
           <div className="flex flex-col gap-3 h-[35%] w-[85%] mx-auto">
-            <div className="p-3 bg-[#1F1E23] rounded font-bold">
-              Omega Terminal
-            </div>
+            <ChatBox deals={deals} />
             <span className="text-xs">
               Email{" "}
               <a
@@ -113,9 +113,7 @@ const Sidebar = () => {
               for support.
             </span>
             <div className="flex gap-3 justify-center">
-              <div className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer ">
-                <EmailIcon />
-              </div>
+              <SendEmail />
               <div className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer ">
                 <CalenderIcon />
               </div>
