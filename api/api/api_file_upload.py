@@ -5,21 +5,29 @@ from db_models.file_upload import Document
 from db_models.session import get_db
 import os
 import uuid
-import json  
+import json 
+from db_models.weaviatedb import WeaviateManager
+from typing import Optional,List
+
+weaviate=WeaviateManager()
 
 upload_file_router = APIRouter()
 
 UPLOAD_DIRECTORY = "ENTER_UPLOAD_DIRECTORY_HERE"  
 
+def sanitize_class_name(name: str) -> str:
+    sanitized = ''.join(e for e in name if e.isalnum())
+    return sanitized.capitalize()
+
 @upload_file_router.post("/upload")
 async def upload_files(
-    deal_id: uuid.UUID = Form(...),
-    name: str = Form(...),
-    description: str = Form(...),
-    category: str = Form(...),
-    sub_category: str = Form(...),
-    tags: list[str] = Form(...),  
-    files: list[UploadFile] = File(...),  
+    deal_id: Optional[uuid.UUID] = Form(None), 
+    name: str = Form(...),                       
+    description: Optional[str] = Form(None),     
+    category: Optional[str] = Form(None),        
+    sub_category: Optional[str] = Form(None),     
+    tags: Optional[str] = Form(None),     
+    files: List[UploadFile] = File(...),        
     db: Session = Depends(get_db)
 ):
     deal = db.query(Deal).filter(Deal.id == deal_id).first()
@@ -43,12 +51,17 @@ async def upload_files(
         except Exception as e:
             raise HTTPException(status_code=500, detail=f"File upload failed: {str(e)}")
 
+        if tags:
+            tags_list = [tag.strip() for tag in tags.split(",") if tag.strip()]
+            tags = json.dumps(tags_list) if tags_list else None
+        else:
+            tags = None
         new_document = Document(
             name=name,
             description=description,
             category=category,
             sub_category=sub_category,
-            tags=json.dumps(tags), 
+            tags=tags, 
             file_path=file_location,
             deal_id=deal_id
         )
@@ -59,6 +72,9 @@ async def upload_files(
 
     for doc in uploaded_documents:
         db.refresh(doc)
+        collection_name = str(deal_id)
+        collection_name = sanitize_class_name(collection_name)  
+        weaviate.create_collection(collection_name, new_document.id, file_location)  
 
     return {
         "message": "Files uploaded successfully",
@@ -70,10 +86,10 @@ async def upload_files(
 async def update_document(
     document_id: str,  
     name: str = Form(...),
-    description: str = Form(...),
-    category: str = Form(...),
-    sub_category: str = Form(...),
-    tags: list[str] = Form(...),
+    description: Optional[str] = Form(None),   
+    category: Optional[str] = Form(None),        
+    sub_category: Optional[str] = Form(None),     
+    tags: Optional[str] = Form(None),             
     db: Session = Depends(get_db)
 ):
     try:
@@ -85,20 +101,32 @@ async def update_document(
     if not document:
         raise HTTPException(status_code=404, detail="Document not found.")
     
+    if tags:
+        tags_list = [tag.strip() for tag in tags.split(",") if tag.strip()]
+        tags = json.dumps(tags_list) if tags_list else None
+    else:
+        tags = None
+    
+    # Update document fields
     document.name = name
     document.description = description
     document.category = category
     document.sub_category = sub_category
-    document.tags = json.dumps(tags)  
+    document.tags = tags
+
     db.commit()
     db.refresh(document)
 
+    tags_response = json.loads(document.tags) if document.tags else None
     return {
         "message": "Document updated successfully.",
         "document": {
             "id": str(document.id),
             "name": document.name,
-            "description": document.description
+            "description": document.description,
+            "category": document.category,
+            "sub_category": document.sub_category,
+            "tags": tags_response
         }
     }
 
@@ -147,12 +175,13 @@ async def get_document_details(document_id: str, db: Session = Depends(get_db)):
     document = db.query(Document).filter(Document.id == document_uuid).first()
     if not document:
         raise HTTPException(status_code=404, detail="Document not found.")
-    
+
+    tags = json.loads(document.tags) if document.tags else None
     return {
         "id": str(document.id),
         "name": document.name,
         "description": document.description,
         "category": document.category,
         "sub_category": document.sub_category,
-        "tags": json.loads(document.tags)  
+        "tags": tags  
     }

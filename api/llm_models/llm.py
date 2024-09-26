@@ -2,11 +2,14 @@ import os
 from langchain.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain_core.runnables import RunnableSequence, RunnableLambda
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class LLM:
     def __init__(self):
         self.model_name = os.getenv("OPENAI_MODEL_NAME", "gpt-4")
-        self.openai_api_key = os.getenv("OPENAI_API_KEY")
+        self.openai_api_key = os.environ['OPENAI_API_KEY']
 
         # Initialize the ChatOpenAI client
         self.openai_client = ChatOpenAI(model_name=self.model_name, openai_api_key=self.openai_api_key)
@@ -49,7 +52,7 @@ class LLM:
 
         self.enhance_user_message_chain_prompt_template = PromptTemplate(
             input_variables=["content"],
-            template="rewrite the user message just replace the generic nounce and pronounce with company specific words repond only the user message:\n\n{content}"
+            template="rewrite the user message just replace the generic nounce and pronounce with deal specific words repond only the user message:\n\n{content}"
         )
 
         # Create LangChain chains for these tasks
@@ -164,9 +167,9 @@ class LLM:
             print(f"Error generating session name: {e}")
             return "Session"
         
-    def enhance_user_message(self, company_context: str, past_messages_context: str, user_message: str) -> str:
+    def enhance_user_message(self, deal_context: str, past_messages_context: str, user_message: str) -> str:
         try:
-            summary_message = self.enhance_user_message_chain.invoke({"content":  f"company_context:{company_context}\n\n\n past_messages_context:{past_messages_context}\n\n\n user_message:{user_message}"})
+            summary_message = self.enhance_user_message_chain.invoke({"content":  f"deal_context:{deal_context}\n\n\n past_messages_context:{past_messages_context}\n\n\n user_message:{user_message}"})
             return summary_message.content.strip()
         except Exception as e:
             print(f"Error generating session name: {e}")
