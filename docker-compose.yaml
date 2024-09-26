@@ -1,49 +1,34 @@
+---
 services:
-
   weaviate:
-    image: semitechnologies/weaviate:latest
+    command:
+    - --host
+    - 0.0.0.0
+    - --port
+    - '8080'
+    - --scheme
+    - http
+    image: cr.weaviate.io/semitechnologies/weaviate:1.26.1
     ports:
-      - "8002:8080"
-    environment:
-      QUERY_DEFAULTS_LIMIT: ${QUERY_DEFAULTS_LIMIT}
-      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: ${AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED}
-      PERSISTENCE_DATA_PATH: ${PERSISTENCE_DATA_PATH}
-      ENABLE_MODULES: ${ENABLE_MODULES}
-      OPENAI_APIKEY: ${OPENAI_API_KEY}
-
-  llmsherpa:
-    image: ghcr.io/nlmatics/nlm-ingestor:latest
-    ports:
-      - "5501:5001"
-
-  app:
-    build: .
-    depends_on:
-      - weaviate
-    ports:
-      - "8004:8000"
-      - "8003:8501"
+    - 8080:8080
+    - 50051:50051
     volumes:
-      - .:/app
+    - weaviate_data:/var/lib/weaviate
+    restart: on-failure:0
     environment:
-      - PYTHONUNBUFFERED=1
-      - OPENAI_MODEL_NAME=${OPENAI_MODEL_NAME}
-      - OPENAI_API_KEY=${OPENAI_API_KEY}
-      - BING_API_KEY=${BING_API_KEY}
-      - FMP_API_KEY=${FMP_API_KEY}
-      - POLYGON_API_KEY=${POLYGON_API_KEY}
-      - ALPHA_VANTAGE_API_KEY=${ALPHA_VANTAGE_API_KEY}
-      - TIINGO_API_KEY=${TIINGO_API_KEY}
-
-  frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    # volumes:
-    #   - ./frontend:/app
-      # - /app/node_modules
-    ports:
-      - "3000:3000"
+      TRANSFORMERS_INFERENCE_API: 'http://t2v-transformers:8080'
+      OPENAI_API_KEY: $OPENAI_API_KEY
+      OPENAI_MODEL_NAME: $OPENAI_MODEL_NAME
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: ${PERSISTENCE_DATA_PATH}
+      DEFAULT_VECTORIZER_MODULE: 'text2vec-transformers'
+      ENABLE_MODULES: 'text2vec-transformers,generative-openai'
+      CLUSTER_HOSTNAME: 'node1'
+  t2v-transformers:
+    image: cr.weaviate.io/semitechnologies/transformers-inference:sentence-transformers-multi-qa-MiniLM-L6-cos-v1
     environment:
-      - NODE_ENV=development
-    command: ["npm", "start"]
+      ENABLE_CUDA: '0'
+volumes:
+  weaviate_data:
+...
