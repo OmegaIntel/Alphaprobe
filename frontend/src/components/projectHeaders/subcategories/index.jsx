@@ -1,27 +1,38 @@
-import React, { useEffect, useState } from 'react'
-import ProjectDetails from '../../projectDetails';
+import React, { useState } from "react";
+import ProjectDetails from "../../projectDetails";
+import { subCategoryList } from "../../../constants";
 
-const Subcategories = ({isActiveCategory}) => {
-    const categoryList = ["Current Workspace", "Knowledge Base", "Checklist"];
-    const [isActive, setActive] = useState("Current Workspace");
+const Subcategories = ({ isActiveCategory }) => {
+  const [isActive, setActive] = useState("Current Workspace");
 
-    return (
-        <>
-            <div className='flex flex-row bg-[#151518] pt-5 px-5 ml-1'>
-                {categoryList.map((data, index) => {
-                    return (
-                        data === isActive ? <div className='bg-[#212126] p-3 rounded-lg cursor-pointer' key={index}>
-                            {data}
-                        </div> :
-                        <div key={index} className=' cursor-pointer p-3' onClick={() => setActive(data)}>
-                            {data}
-                        </div>
-                    )
-                })}
+  return (
+    <>
+      <div className="flex flex-row bg-[#151518] pt-5 px-5 ml-1">
+        {subCategoryList.map((data, index) => {
+          return data === isActive ? (
+            <div
+              className="bg-[#212126] p-3 rounded-lg cursor-pointer"
+              key={index}
+            >
+              {data}
             </div>
-            <ProjectDetails isActiveCategory={isActiveCategory} isActiveSubCategory={isActive}/>
-        </>
-    )
-}
+          ) : (
+            <div
+              key={index}
+              className=" cursor-pointer p-3"
+              onClick={() => setActive(data)}
+            >
+              {data}
+            </div>
+          );
+        })}
+      </div>
+      <ProjectDetails
+        isActiveCategory={isActiveCategory}
+        isActiveSubCategory={isActive}
+      />
+    </>
+  );
+};
 
 export default Subcategories;

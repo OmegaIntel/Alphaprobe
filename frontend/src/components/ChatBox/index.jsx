@@ -116,6 +116,7 @@ const ChatBox = ({ deals }) => {
               {answers.length > 0 ? (
                 answers.map((ans, index) => (
                   <div
+                    key={index}
                     className={`py-4 px-[14px] w-fit max-w-[200px] text-sm leading-5 bg-[#001529] ${
                       ans.message_sender === "A"
                         ? "rounded-[8px] rounded-bl-none"
