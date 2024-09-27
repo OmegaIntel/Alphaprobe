@@ -90,7 +90,7 @@ export const activeItems = [
 ];
 export const categoryList = [
   "Investment Thesis",
-  "Market research",
+  "Market Research",
   "Financial Insights",
   "Valuation",
   "Documents",

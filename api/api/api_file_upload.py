@@ -13,7 +13,7 @@ weaviate=WeaviateManager()
 
 upload_file_router = APIRouter()
 
-UPLOAD_DIRECTORY = "ENTER_UPLOAD_DIRECTORY_HERE"  
+UPLOAD_DIRECTORY = "data"  
 
 def sanitize_class_name(name: str) -> str:
     sanitized = ''.join(e for e in name if e.isalnum())

@@ -19,7 +19,9 @@ const { Sider } = Layout;
 const Sidebar = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { setDealId, setDeals, deals } = useModal();
+  const [deals, setDeals] = useState([]);
+  const { dealId, setDealId } = useModal();
+  console.log(dealId, "dealId");
   useEffect(() => {
     const fetchDealsData = async () => {
       try {
@@ -31,6 +33,16 @@ const Sidebar = () => {
     };
     fetchDealsData();
   }, []);
+  useEffect(() => {
+    const pathMatch = location.pathname.match(/^\/projects\/([a-f0-9-]+)$/);
+    if (pathMatch) {
+      const dealId = pathMatch[1];
+      setDealId(dealId);
+    } else {
+      setDealId(null);
+    }
+  }, [location, setDealId]);
+
   const menuItems = [
     {
       key: "1",
@@ -51,7 +63,14 @@ const Sidebar = () => {
           ? deals.map((deal) => ({
               key: deal.id,
               icon: <FileOutlinedIcon />,
-              label: <Link to={`/projects/${deal.id}`} onClick={()=>setDealId(deal.id)}>{deal.name}</Link>,
+              label: (
+                <Link
+                  to={`/projects/${deal.id}`}
+                  onClick={() => setDealId(deal.id)}
+                >
+                  {deal.name}
+                </Link>
+              ),
             }))
           : [
               {
@@ -75,12 +94,13 @@ const Sidebar = () => {
       children: [],
     },
   ];
-  
-  const currentDealId = location.pathname.startsWith("/projects/")
-  ? location.pathname.split("/projects/")[1]
-  : null;
 
-  const selectedKey = location.pathname === "/dashboard" ? "1" : currentDealId || "";
+  const currentDealId = location.pathname.startsWith("/projects/")
+    ? location.pathname.split("/projects/")[1]
+    : null;
+
+  const selectedKey =
+    location.pathname === "/dashboard" ? "1" : currentDealId || "";
 
   return (
     <Layout hasSider>
@@ -107,7 +127,7 @@ const Sidebar = () => {
             items={menuItems}
           />
           <div className="flex flex-col gap-3 h-[35%] w-[85%] mx-auto">
-            <ChatBox deals={deals} />
+            <ChatBox />
             <span className="text-xs">
               Email{" "}
               <a
