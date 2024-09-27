@@ -1,82 +1,136 @@
-import { CloseOutlined, PlusOutlined } from "@ant-design/icons";
-import { Select } from "antd";
-import React, { useState } from "react";
+import {
+  CloseOutlined,
+  LoadingOutlined,
+  PlusOutlined,
+} from "@ant-design/icons";
+import { Alert, notification, Select } from "antd";
+import React, { useCallback, useEffect, useState } from "react";
 import { RobotOutlined, SendButtonIcon } from "../../constants/IconPack";
+import { fetchAllDocument } from "../../services/uploadService";
+import {
+  addToWorkSpace,
+  createChatSession,
+  deleteChatSession,
+  sendChatMessage,
+} from "../../services/chatService";
+import { categoryList } from "../../constants";
+import { useModal } from "../UploadFilesModal/ModalContext";
 
 const { Option } = Select;
 
-const ChatBox = ({ deals }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const ChatBox = () => {
+  const { dealId } = useModal();
 
-  const toggleChat = () => {
-    setIsOpen(!isOpen);
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectCategory, setSelectCategory] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [currentChatSession, setCurrentChatSession] = useState(null);
+  const [messages, setMessages] = useState([]); // State to store messages
+  const [isLoadingMessage, setIsLoadingMessage] = useState(false);
+  const [inputMessage, setInputMessage] = useState(""); // State to store user input
+
+  const resetState = useCallback(async () => {
+    if (currentChatSession) {
+      try {
+        const response = await deleteChatSession(currentChatSession);
+        console.log(response);
+      } catch (error) {
+        console.error("Error during cleanup:", error);
+      }
+    }
+    setSelectCategory(null);
+    setError(null);
+    setCurrentChatSession(null);
+    setMessages([]);
+    setInputMessage("");
+  }, [currentChatSession]);
+  const toggleChat = (userInitiated = false) => {
+    if (dealId) {
+      if (isOpen) {
+        resetState();
+      }
+      setIsOpen(!isOpen);
+    } else if (userInitiated) {
+      notification.warning({
+        message: "No deal selected. Please select a deal to start chatting.",
+      });
+    }
   };
-  const answers = [
-    {
-      message: "Hello! What can I do for you today?",
-      message_sender: "A",
-    },
-    {
-      message: "Hello",
-      message_sender: "H",
-    },
-    {
-      message: "Hello! How can I assist you today?",
-      message_sender: "A",
-    },
-    {
-      message: "Hello",
-      message_sender: "H",
-    },
-    {
-      message: "Hello! How can I assist you today?",
-      message_sender: "A",
-    },
-    {
-      message: "Hello",
-      message_sender: "H",
-    },
-    {
-      message: "Hello! How can I assist you today?",
-      message_sender: "A",
-    },
-    {
-      message: "Hello",
-      message_sender: "H",
-    },
-    {
-      message: "Hello! How can I assist you today?",
-      message_sender: "A",
-    },
-    {
-      message: "Hello",
-      message_sender: "H",
-    },
-    {
-      message: "Hello! How can I assist you today?",
-      message_sender: "A",
-    },
-    {
-      message: "Hello",
-      message_sender: "H",
-    },
-    {
-      message: "Hello! How can I assist you today?",
-      message_sender: "A",
-    },
-    {
-      message: "Hello",
-      message_sender: "H",
-    },
-    {
-      message: "Hello! How can I assist you today?",
-      message_sender: "A",
-    },
-  ];
+  useEffect(() => {
+    if (dealId === null) {
+      setIsOpen(false); // Close the chatbox
+      resetState(); // Reset the state when dealId is null
+    }
+  }, [dealId, resetState]);
+
+  useEffect(() => {
+    const fetchDealDocuments = async () => {
+      setLoading(true);
+      try {
+        const response = await fetchAllDocument(dealId);
+        if (response.documents?.length > 0) {
+          if (selectCategory) {
+            const res = await createChatSession(dealId);
+            setCurrentChatSession(res.id);
+            setError(null);
+          } else {
+            setCurrentChatSession(null);
+            setError("Please Select the category");
+          }
+        } else {
+          setCurrentChatSession(null);
+          setError("No documents available for this deal.");
+        }
+      } catch (error) {
+        setError("No documents available for this deal.");
+      } finally {
+        setLoading(false);
+      }
+    };
+    if (dealId) {
+      fetchDealDocuments();
+    }
+  }, [dealId, selectCategory]);
+
+  const handleSendMessage = async () => {
+    if (!inputMessage.trim()) return;
+
+    const userMessage = { message: inputMessage, message_sender: "H" };
+    setMessages((prevMessages) => [...prevMessages, userMessage]);
+
+    setInputMessage("");
+    setIsLoadingMessage(true);
+    try {
+      const message = await sendChatMessage(
+        currentChatSession,
+        dealId,
+        inputMessage
+      );
+      setIsLoadingMessage(false);
+      const botReply = { message: message.response, message_sender: "A" };
+      setMessages((prevMessages) => [...prevMessages, botReply]);
+    } catch (error) {
+      console.log("Error sending message:", error);
+      setIsLoadingMessage(false);
+      setError("Failed to send message. Please try again.");
+    }
+  };
+
+  const handleAddToWorkspace = async () => {
+    try {
+      const response = await addToWorkSpace(currentChatSession, selectCategory);
+      if (response) notification.success({ message: response.message });
+    } catch (error) {
+      console.log("Error to add to current workspace:", error);
+      setError("Failed to add to current workspace. Please try again.");
+    }
+  };
+
   return (
     <>
       <button
-        onClick={toggleChat}
+        onClick={() => toggleChat(true)}
         className="p-3 bg-[#1F1E23] text-left rounded font-bold"
       >
         Omega Terminal
@@ -87,7 +141,7 @@ const ChatBox = ({ deals }) => {
             isOpen ? "chatbox-open" : "chatbox-closed"
           }`}
         >
-          <div className="bg-[#24242A] shadow-lg rounded-lg p-4 w-96 h-[36rem] mb-4">
+          <div className="bg-[#24242A] shadow-lg rounded-lg p-4 w-[36rem] h-[38rem] mb-4">
             <div className="p-1 flex flex-col justify-center gap-2 items-center">
               <div className="flex justify-between w-full">
                 <span className="text-base font-semibold">Omega Copilot</span>
@@ -95,29 +149,38 @@ const ChatBox = ({ deals }) => {
                   <PlusOutlined className="text-white text-sm cursor-pointer" />
                   <CloseOutlined
                     className="text-white text-sm cursor-pointer"
-                    onClick={toggleChat}
+                    onClick={() => toggleChat(true)}
                   />
                 </div>
               </div>
-              <Select placeholder="Select Project" className="w-full">
-                {deals.map((deal, idx) => (
-                  <Option value={deal.id} key={idx}>
-                    {deal.name}
+              <Select
+                placeholder="Select Category"
+                className="w-full"
+                onChange={(dealId) => setSelectCategory(dealId)}
+                loading={loading}
+                value={selectCategory}
+              >
+                {categoryList.slice(0, 4).map((category, idx) => (
+                  <Option value={category} key={idx}>
+                    {category}
                   </Option>
                 ))}
               </Select>
             </div>
+            {error && (
+              <Alert message={error} type="warning" showIcon className="mt-4" />
+            )}
             <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-[#36363F]"></hr>
             <div
               className={`chats-container ${
-                answers.length === 0 && "justify-center"
+                messages.length === 0 && "justify-center"
               }`}
             >
-              {answers.length > 0 ? (
-                answers.map((ans, index) => (
+              {!error && currentChatSession && messages.length > 0 ? (
+                messages.map((ans, index) => (
                   <div
                     key={index}
-                    className={`py-4 px-[14px] w-fit max-w-[200px] text-sm leading-5 bg-[#001529] ${
+                    className={`py-4 px-[14px] w-fit max-w-[55%] text-sm leading-5 bg-[#001529] ${
                       ans.message_sender === "A"
                         ? "rounded-[8px] rounded-bl-none"
                         : "rounded-[8px] rounded-br-none ml-auto"
@@ -148,23 +211,39 @@ const ChatBox = ({ deals }) => {
                   </p>
                 </div>
               )}
+              {isLoadingMessage && (
+                <div className="py-4 px-[14px] w-fit max-w-[50%] text-sm leading-5 bg-[#001529] rounded-[8px] rounded-bl-none">
+                  <LoadingOutlined className="text-white" spin />
+                </div>
+              )}
             </div>
-            <div className="flex w-full flex-col gap-4">
-              <button className="w-[60%] rounded bg-[#0088CC] p-2">
-                <PlusOutlined />
-                <span className="ml-2">Add to current workspace</span>
-              </button>
-              <div className="flex relative items-center isolate">
-                <input
-                  type="text"
-                  className="break-words bg-[#212126] border border-[#303038] focus:outline-none w-full rounded py-2 px-3 mb-4"
-                  placeholder="Ask a question"
-                />
-                <button className="absolute right-2 top-2 bg-[#303038] rounded p-1 ">
-                  <SendButtonIcon />
+            {!error && currentChatSession && (
+              <div className="flex w-full flex-col gap-4">
+                <button
+                  className="w-[50%] rounded bg-[#0088CC] disabled:bg-gray-600 disabled:cursor-not-allowed p-2"
+                  onClick={handleAddToWorkspace}
+                  disabled={messages.length === 0}
+                >
+                  <PlusOutlined />
+                  <span className="ml-2">Add to current workspace</span>
                 </button>
+                <div className="flex relative items-center isolate">
+                  <input
+                    type="text"
+                    className="break-words bg-[#212126] border border-[#303038] focus:outline-none w-full rounded py-2 px-3 mb-4"
+                    placeholder="Ask a question"
+                    value={inputMessage}
+                    onChange={(e) => setInputMessage(e.target.value)}
+                  />
+                  <button
+                    className="absolute right-2 top-2 bg-[#303038] rounded p-1 "
+                    onClick={handleSendMessage}
+                  >
+                    <SendButtonIcon />
+                  </button>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>

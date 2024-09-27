@@ -18,6 +18,7 @@ from db_models.users import User
 from uuid import UUID
 from typing import Optional
 from api.api_user import get_current_user, User as UserModelSerializer
+from db_models.workspace import CurrentWorkspace
 
 
 chat_router = APIRouter()
@@ -32,9 +33,10 @@ def sanitize_class_name(name: str) -> str:
     sanitized = ''.join(e for e in name if e.isalnum())
     return sanitized.capitalize()
 
-def sanitize_class_name_without_cap(name: str) -> str:
+def sanitize_class_name_nocap(name: str) -> str:
     sanitized = ''.join(e for e in name if e.isalnum())
     return sanitized
+
 
 class ChatSessionResponse(BaseModel):
     id: str
@@ -64,7 +66,7 @@ class ChatMessagesResponse(BaseModel):
 async def create_chat_session(deal_id: str = Form(...), db: Session = Depends(get_db)):
     session_id = str(uuid.uuid4())
     session_name = f"Chat Session for Deal {deal_id}"
-    deal_id=sanitize_class_name_without_cap(deal_id)
+    deal_id=sanitize_class_name_nocap(deal_id)
     new_session = ChatSession(id=session_id, deal_id=deal_id, session_name=session_name)
     db.add(new_session)
     db.commit()
@@ -150,3 +152,9 @@ async def add_to_workspace(type: str, session_id: str, current_user: User = Depe
 
     return {"message":"messages added to current workspace successfully"}
      
+@chat_router.get("/chat_sessions/")
+def get_chat_sessions(deal_id: str, db: Session = Depends(get_db)):
+    chat_sessions = db.query(ChatSession).filter(ChatSession.deal_id == deal_id).all()
+    if not chat_sessions:
+        raise HTTPException(status_code=404, detail="No chat sessions found for this deal ID")
+    return chat_sessions

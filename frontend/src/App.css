@@ -950,8 +950,8 @@ pre {
 }
 
 .chatbox-open {
-  width: 400px; /* Width of the chatbox */
-  height: 575px; /* Height of the chatbox */
+  width: 575px;
+  height: 625px;
 }
 
 .chatbox-closed {
