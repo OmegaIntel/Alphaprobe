@@ -1,11 +1,17 @@
-from sqlalchemy import Column, String, Text, TIMESTAMP, ForeignKey, func
+from sqlalchemy import Column, String, Text, TIMESTAMP, ForeignKey, func, Enum
 from sqlalchemy_utils import UUIDType
 from sqlalchemy.ext.declarative import declarative_base
 import uuid
 from .users import User
-from sqlalchemy import Column, String, Text, JSON
+from enum import Enum as PyEnum
 
 Base = declarative_base()
+
+# Define the possible statuses as an Enum
+class DealStatus(PyEnum):
+    NOT_STARTED = "Not Started"
+    IN_PROGRESS = "In Progress"
+    COMPLETED = "Completed"
 
 class Deal(Base):
     __tablename__ = "deals"
@@ -18,3 +24,4 @@ class Deal(Base):
     due_date = Column(TIMESTAMP)
     industry = Column(String(255))
     progress = Column(String(255))
+    status = Column(Enum(DealStatus), default=DealStatus.NOT_STARTED)

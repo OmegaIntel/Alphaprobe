@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { activeItems, dashboardData } from "../../constants";
+import { dashboardData } from "../../constants";
 import NewsBar from "../NewsBar";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button, Tag } from "antd";
-import { getDeals } from "../../services/dealService";
+import DiligenceDocumentsModal from "../requestDocuments";
+import { useModal } from "../UploadFilesModal/ModalContext";
+import { getTasks } from "../../services/taskService";
+
 const Card = ({ title, description, buttonText, onClick }) => {
   return (
     <div className="h-[100%] bg-[#1F1E23] text-white p-6 rounded-lg shadow-lg">
@@ -19,26 +22,56 @@ const Card = ({ title, description, buttonText, onClick }) => {
   );
 };
 const Dashboard = () => {
-  const [deals, setDeals] = useState([]);
-  const navigate = useNavigate();
-  useEffect(() => {
-    const fetchDealsData = async () => {
-      try {
-        const data = await getDeals();
-        if (data) setDeals(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchDealsData();
-  }, []);
+  const { deals } = useModal();
+  const [requestModal, setRequestModal] = useState(false);
+  const [recentDeal, setRecentDeal] = useState();
+  const [otherDeals, setOtherDeals] = useState([]);
+  const [activeItems, setActiveItems] = useState([]);
 
-  const handleNavigate = () => {
-    navigate("/create-deal");
+  const onRequestClose = () => {
+    setRequestModal(false);
+  }
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (deals.length > 0) {
+      const sortedDeals = deals.sort((a, b) => new Date(b.start_date) - new Date(a.start_date));
+      const [firstDeal, ...remainingDeals] = sortedDeals;
+      getTasks(firstDeal.id)
+        .then((data) => setActiveItems(data))
+        .catch((e) => {
+          if (e.response.status === 404) {
+            setActiveItems([])
+          }
+          else {
+            console.log(e)
+          }
+        });
+      setRecentDeal(firstDeal);
+      setOtherDeals(remainingDeals);
+    }
+  }, [deals])
+
+  const handleNavigate = (index) => {
+    if (index === 0) {
+      navigate("/create-deal");
+    }
+    else if (index === 1) {
+      setRequestModal(true);
+    }
   };
+
+  const tags = (status) => {
+    return (
+      status === "Completed" ?
+        <Tag color="#e8883a">Completed</Tag>
+        : status === "In Progress" ? <Tag color="green-inverse">In Progress</Tag> : <Tag color="red-inverse">Not Started</Tag>
+    )
+  }
 
   return (
     <div className="w-full flex">
+      <DiligenceDocumentsModal isOpen={requestModal} onRequestClose={onRequestClose} />
       {deals.length > 0 ? (
         <div className="w-[70%] h-[90vh] rounded ml-1 p-4">
           <div className="flex justify-between h-full gap-4">
@@ -46,60 +79,52 @@ const Dashboard = () => {
               <h5 className="text-sm font-semibold mb-6">Recent Activity</h5>
               <div className="mb-6 bg-[#1F1E23] p-4 flex flex-col gap-4 rounded">
                 <div className="flex items-center justify-between mb-2">
-                  <Tag color="green-inverse">In Progress</Tag>
+                  {tags(recentDeal?.status)}
                 </div>
                 <span className="text-[#8A8A90] text-base font-semibold">
-                  PROJECT ALPHA
+                  {recentDeal?.name}
                 </span>
                 <div className="flex justify-between items-center">
                   <span className="text-base font-bold">Track Progress</span>
                   <Button className="bg-[#303038] border-none text-white font-semibold">
-                    Open
+                    <Link to={`/projects/${recentDeal?.id}`}>
+                      Open
+                    </Link>
                   </Button>
                 </div>
               </div>
               <div className="bg-[#1F1E23] p-4 flex flex-col gap-4 rounded h-[70%]">
                 <span className="mb-6 text-base font-bold">Action Items</span>
-                {activeItems.map((item, index) => (
+                {activeItems.length === 0 ? <div>No Items Found</div> : activeItems.map((item, index) => (
                   <span key={index} className="text-sm font-semibold">
-                    {index + 1}. {item}
+                    {index + 1}. 
+                    {(item.task)}
                   </span>
                 ))}
               </div>
             </div>
-            <div className="flex-1 bg-[#151518] p-4 rounded">
+            <div className="flex-1 bg-[#151518] p-4 rounded overflow-auto">
               <h5 className="text-sm font-semibold mb-6">Deal Pipeline</h5>
-              {/* Project Beta */}
-              <div className="mb-6 bg-[#1F1E23] p-4 flex flex-col gap-4 rounded">
-                <div className="flex items-center justify-between mb-2">
-                  <Tag color="gold-inverse">Planning</Tag>
-                </div>
-                <span className="text-[#8A8A90] text-base font-semibold">
-                  PROJECT BETA
-                </span>
-                <div className="flex justify-between items-center">
-                  <span className="text-base font-bold">Track Progress</span>
-                  <Button className="bg-[#303038] border-none text-white font-semibold">
-                    Open
-                  </Button>
-                </div>
-              </div>
-
-              {/* Project Gamma */}
-              <div className="bg-[#1F1E23] p-4 flex flex-col gap-4 rounded">
-                <div className="flex items-center justify-between mb-2">
-                  <Tag color="red-inverse">Not Started</Tag>
-                </div>
-                <span className="text-[#8A8A90] text-base font-semibold">
-                  PROJECT GAMMA
-                </span>
-                <div className="flex justify-between items-center">
-                  <span className="text-base font-bold">Track Progress</span>
-                  <Button className="bg-[#303038] border-none text-white font-semibold">
-                    Open
-                  </Button>
-                </div>
-              </div>
+              {otherDeals?.map((data, index) => {
+                return (
+                  <div className="mb-6 bg-[#1F1E23] p-4 flex flex-col gap-4 rounded" key={index}>
+                    <div className="flex items-center justify-between mb-2">
+                      {tags(data.status)}
+                    </div>
+                    <span className="text-[#8A8A90] text-base font-semibold">
+                      {data.name}
+                    </span>
+                    <div className="flex justify-between items-center">
+                      <span className="text-base font-bold">Track Progress</span>
+                      <Button className="bg-[#303038] border-none text-white font-semibold">
+                        <Link to={`/projects/${data.id}`}>
+                          Open
+                        </Link>
+                      </Button>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>
@@ -116,7 +141,7 @@ const Dashboard = () => {
                   title={item.title}
                   description={item.description}
                   buttonText={item.buttonText}
-                  onClick={index === 0 ? handleNavigate : null}
+                  onClick={() => handleNavigate(index)}
                 />
               </div>
             ))}

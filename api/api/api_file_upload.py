@@ -73,7 +73,7 @@ async def upload_files(
 
     for doc in uploaded_documents:
         db.refresh(doc)
-        collection_name = str(deal_id)
+        collection_name = "d"+str(deal_id)
         collection_name = sanitize_class_name(collection_name)  
         weaviate.create_collection(collection_name, new_document.id, file_location)  
 

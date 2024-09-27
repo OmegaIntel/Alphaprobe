@@ -31,9 +31,9 @@ const Login = ({ setToken }) => {
           message: "LoggedIn Successfully",
           description: "Your are loggedIn successfully",
         });
-        setTimeout(() => {
-          navigate("/dashboard");
-        }, 2000);
+        const anchor = document.createElement("a");
+        anchor.href = "/dashboard";
+        anchor.click();
       } else {
         notification.error({
           message: "Something went wrong!",

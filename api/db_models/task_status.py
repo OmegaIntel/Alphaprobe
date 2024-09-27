@@ -1,4 +1,4 @@
-from sqlalchemy import Column, TIMESTAMP, ForeignKey, func, String
+from sqlalchemy import Column, TIMESTAMP, ForeignKey, func, String, Text
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy_utils import UUIDType
 from db_models.deals import Deal
@@ -17,4 +17,4 @@ class ToDo(Base):
     due_date = Column(TIMESTAMP, nullable=True)  
     description = Column(String(500), nullable=True) 
     priority = Column(String(255), nullable=True) 
-    custom_tags = Column(String(255), nullable=True)  
+    custom_tags = Column(Text, nullable=True)  

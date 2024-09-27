@@ -5,6 +5,7 @@ import { createDeal } from "../../services/dealService";
 import { notification } from "antd";
 import { useNavigate } from "react-router-dom";
 import { useModal } from "../UploadFilesModal/ModalContext";
+import DiligenceDocumentsModal from "../requestDocuments";
 
 const CreateDeal = () => {
   const [projectName, setProjectName] = useState("");
@@ -14,6 +15,7 @@ const CreateDeal = () => {
   const [industry, setIndustry] = useState("");
   const [isOverflowing, setIsOverflowing] = useState(false);
   const { setIsUploadModalVisible, setDealId } = useModal();
+  const [requestModal, setRequestModal] = useState(false);
   const navigation = useNavigate();
 
   const containerRef = useRef(null);
@@ -72,7 +74,7 @@ const CreateDeal = () => {
       industry: industry,
       due_date: new Date(dueDate).toISOString(), // Convert to ISO format
       start_date: new Date().toISOString(), // Current date in ISO format
-      progress: "started",
+      progress: "0",
     };
 
     try {
@@ -94,11 +96,16 @@ const CreateDeal = () => {
     }
   };
 
+  const onRequestClose = () => {
+    setRequestModal(false);
+  }
+
   return (
     <div
       ref={containerRef}
       className="flex flex-col space-y-1 overflow-y-auto min-h-screen"
     >
+      <DiligenceDocumentsModal isOpen={requestModal} onRequestClose={onRequestClose}/>
       <div
         className={`ml-1 flex text-white p-5 bg-[#151518] ${
           isOverflowing ? "min-h-fit" : "flex-1"
@@ -193,6 +200,7 @@ const CreateDeal = () => {
                 description={data.description}
                 type={data.type}
                 key={index}
+                setRequestModal={setRequestModal}
               />
             );
           })}

@@ -21,7 +21,7 @@ const EditableProjectCard = ({ project, onSave, onCancel, onEdit, handleInputCha
                     </>
                 ) : (
                     <div className='flex flex-row justify-between w-full'>
-                        <div className="text-sm mt-3 mr-3 text-left">{project.text}</div>
+                        <div className="text-sm mt-3 mr-3 text-left whitespace-pre-wrap">{project.text}</div>
                         <Button onClick={() => onEdit(project.id)} type="default" className="mt-4"><EditFilled/></Button>
                     </div>
                 )}

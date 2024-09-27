@@ -51,9 +51,9 @@ const getItemStyle = (isDragging, draggableStyle) => ({
 const getListStyle = (isDraggingOver) => ({
   background: isDraggingOver ? "lightblue" : "#ebecf0",
   padding: grid,
-  minWidth: 400,
-  maxWidth: 400,
-  width: "400px",
+  minWidth: 340,
+  maxWidth: 340,
+  width: "340px",
   alignSelf: "flex-start",
 });
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 import { Layout, Menu } from "antd";
 import {
@@ -17,9 +17,9 @@ import { useModal } from "../UploadFilesModal/ModalContext";
 const { Sider } = Layout;
 
 const Sidebar = () => {
-  const [deals, setDeals] = useState([]);
   const navigate = useNavigate();
-  const { setDealId } = useModal();
+  const location = useLocation();
+  const { setDealId, setDeals, deals } = useModal();
   useEffect(() => {
     const fetchDealsData = async () => {
       try {
@@ -75,6 +75,12 @@ const Sidebar = () => {
       children: [],
     },
   ];
+  
+  const currentDealId = location.pathname.startsWith("/projects/")
+  ? location.pathname.split("/projects/")[1]
+  : null;
+
+  const selectedKey = location.pathname === "/dashboard" ? "1" : currentDealId || "";
 
   return (
     <Layout hasSider>
@@ -97,7 +103,7 @@ const Sidebar = () => {
             mode="inline"
             theme="dark"
             className="bg-transparent text-white h-[65%]"
-            defaultSelectedKeys={["1"]}
+            defaultSelectedKeys={[selectedKey]}
             items={menuItems}
           />
           <div className="flex flex-col gap-3 h-[35%] w-[85%] mx-auto">

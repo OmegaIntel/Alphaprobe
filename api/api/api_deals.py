@@ -15,7 +15,7 @@ from pydantic import BaseModel, Field
 from uuid import UUID
 from datetime import datetime
 from typing import Optional
-from db_models.deals import Deal
+from db_models.deals import Deal, DealStatus
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
@@ -32,6 +32,7 @@ class DealBase(BaseModel):
     due_date: Optional[datetime] = None
     industry: Optional[str] = Field(None, max_length=255)
     progress: Optional[str] = Field(None, max_length=255)
+    status: Optional[str] = None
 
 class DealResponse(DealBase):
     id: UUID
@@ -62,7 +63,7 @@ def create_deal(
         db.refresh(new_deal)
 
         # Create and add the workspace entry
-        new_ws = CurrentWorkspace(deal_id=new_deal.id, text=deal_data.investment_thesis, type="investment_thesis")
+        new_ws = CurrentWorkspace(deal_id=new_deal.id, text=deal_data.investment_thesis, type="Investment Thesis")
         db.add(new_ws)
         db.commit()
         db.refresh(new_ws)
@@ -79,6 +80,64 @@ def create_deal(
         )
     except SQLAlchemyError as e:
         db.rollback()  # Rollback the session on error
+        raise HTTPException(status_code=500, detail=str(e))
+    
+
+@deals_router.put("/deals/{deal_id}", response_model=DealResponse)
+def update_deal(
+    deal_id: str,
+    deal_data: DealBase,
+    db: Session = Depends(get_db),
+    current_user: UserModelSerializer = Depends(get_current_user)
+):
+    try:
+        # Fetch the deal by ID and ensure it belongs to the current user
+        deal = db.query(Deal).filter(Deal.id == deal_id, Deal.user_id == current_user.id).first()
+        
+        if not deal:
+            raise HTTPException(status_code=404, detail="Deal not found or you do not have access to it")
+
+        # Update the deal fields that are provided
+        if deal_data.name:
+            deal.name = deal_data.name
+        if deal_data.overview:
+            deal.overview = deal_data.overview
+        if deal_data.start_date:
+            deal.start_date = deal_data.start_date
+        if deal_data.due_date:
+            deal.due_date = deal_data.due_date
+        if deal_data.industry:
+            deal.industry = deal_data.industry
+        
+        if deal_data.progress is not None:  # Ensure progress is not skipped
+            progress = int(deal_data.progress)  # Convert progress from string to integer
+            deal.progress = deal_data.progress
+            
+            # Update the status based on the progress value
+            if progress == 0:
+                deal.status = DealStatus.NOT_STARTED
+            elif progress == 100:
+                deal.status = DealStatus.COMPLETED
+            else:
+                deal.status = DealStatus.IN_PROGRESS
+        
+        # Commit the changes to the database
+        db.commit()
+        db.refresh(deal)
+
+        # Return the updated deal
+        return DealResponse(
+            id=deal.id,
+            name=deal.name,
+            overview=deal.overview,
+            start_date=deal.start_date,
+            due_date=deal.due_date,
+            industry=deal.industry,
+            progress=deal.progress,
+            status=deal.status.value  # Return the string value of the Enum
+        )
+    except SQLAlchemyError as e:
+        db.rollback()  # Rollback the session in case of an error
         raise HTTPException(status_code=500, detail=str(e))
 
 
