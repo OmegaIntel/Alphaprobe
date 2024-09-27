@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from typing import List
 import uuid
 from sqlalchemy.orm import Session
+from api.db_models.workspace import CurrentWorkspace
 from db_models.session import get_db  
 from api.llm_models.llm import LLM
 from api.search.bing_search import BingSearch
@@ -31,6 +32,9 @@ def sanitize_class_name(name: str) -> str:
     sanitized = ''.join(e for e in name if e.isalnum())
     return sanitized.capitalize()
 
+def sanitize_class_name_without_cap(name: str) -> str:
+    sanitized = ''.join(e for e in name if e.isalnum())
+    return sanitized
 
 class ChatSessionResponse(BaseModel):
     id: str
@@ -60,6 +64,7 @@ class ChatMessagesResponse(BaseModel):
 async def create_chat_session(deal_id: str = Form(...), db: Session = Depends(get_db)):
     session_id = str(uuid.uuid4())
     session_name = f"Chat Session for Deal {deal_id}"
+    deal_id=sanitize_class_name_without_cap(deal_id)
     new_session = ChatSession(id=session_id, deal_id=deal_id, session_name=session_name)
     db.add(new_session)
     db.commit()
@@ -82,7 +87,7 @@ async def send_message(session_id: str, request: MessageRequest, current_user: U
     messages = db.query(ChatMessage).filter(ChatMessage.session_id == session_id).all()
     conversation = [{"role": msg.role, "content": msg.content} for msg in messages]
     
-    deal_id = request.deal_id
+    deal_id = "d"+request.deal_id
     deal_id = sanitize_class_name(deal_id)
     context = 'old messages:\n'
     for entry in conversation:
@@ -128,3 +133,20 @@ async def delete_chat_session(session_id: str, current_user: User = Depends(get_
     db.commit()
     return {"message": "Session deleted successfully"}
 
+@chat_router.post("/workspace/add/{session_id}")
+async def add_to_workspace(type: str, session_id: str, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+    messages = db.query(ChatMessage).filter(ChatMessage.session_id == session_id).all()
+    deal_id = db.query(ChatSession).filter(session_id==session_id).first().deal_id
+    payload_string = ""
+    for msg in messages:
+        payload_string += msg.role +":" + " " + msg.content + "\n"
+    data=db.query(Deal).filter(Deal.id==deal_id).first()
+    if str(data.user_id) != current_user.id:
+        raise HTTPException(status_code=404, detail="You are not authorized to add workspace")
+    new_ws = CurrentWorkspace(deal_id=deal_id, text=payload_string, type=type)
+    db.add(new_ws)
+    db.commit()
+    db.refresh(new_ws)
+
+    return {"message":"messages added to current workspace successfully"}
+     

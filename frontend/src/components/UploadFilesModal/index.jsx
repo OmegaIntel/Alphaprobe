@@ -4,6 +4,7 @@ import UploadModal from "./UploadModal/index.jsx";
 import UpdateModal from "./UpdateModal/index.jsx";
 import { notification } from "antd";
 import { uploadFiles } from "../../services/uploadService.js";
+import { useNavigate } from "react-router-dom";
 
 const initialState = {
   selectedFile: null,
@@ -64,6 +65,7 @@ const UploadFilesModal = () => {
     dealId,
   } = useModal();
   const [state, dispatch] = useReducer(reducer, initialState);
+  const navigate = useNavigate();
 
   const handleUploadOk = () => {
     setIsUploadModalVisible(false);
@@ -99,6 +101,7 @@ const UploadFilesModal = () => {
         notification.success({ message: response.message });
         dispatch({ type: "RESET_STATE" });
         setIsUpdateModalVisible(false);
+        navigate(`/projects/${dealId}`);
       }
     } catch (error) {
       notification.error({
@@ -106,12 +109,14 @@ const UploadFilesModal = () => {
         description:
           "There was an error submitting your deal request. Please try again.",
       });
+      navigate(`/projects/${dealId}`);
     }
   };
 
   const handleUploadCancel = () => {
     dispatch({ type: "RESET_STATE" });
     setIsUploadModalVisible(false);
+    navigate(`/projects/${dealId}`);
   };
 
   const handleUpdateCancel = () => {
