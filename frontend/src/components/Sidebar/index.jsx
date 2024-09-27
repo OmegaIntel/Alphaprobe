@@ -17,9 +17,8 @@ import { useModal } from "../UploadFilesModal/ModalContext";
 const { Sider } = Layout;
 
 const Sidebar = () => {
-  const [deals, setDeals] = useState([]);
   const navigate = useNavigate();
-  const { setDealId } = useModal();
+  const { setDealId, setDeals, deals } = useModal();
   useEffect(() => {
     const fetchDealsData = async () => {
       try {

@@ -212,7 +212,7 @@ const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
     return (
         <>
             <div className='flex-grow overflow-y-auto bg-[#151518] ml-1'>
-                <PlusButton className='absolute bottom-5 right-10 z-10 cursor-pointer' onClick={addProject} />
+                <PlusButton className='absolute bottom-5 right-96 z-10 cursor-pointer' onClick={addProject} />
                 <div className="grid grid-cols-1 gap-4 p-4">
                     {projects?.map((project) => (
                         <EditableProjectCard

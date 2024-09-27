@@ -72,7 +72,7 @@ const CreateDeal = () => {
       industry: industry,
       due_date: new Date(dueDate).toISOString(), // Convert to ISO format
       start_date: new Date().toISOString(), // Current date in ISO format
-      progress: "started",
+      progress: "0",
     };
 
     try {
