@@ -19,9 +19,7 @@ const { Sider } = Layout;
 const Sidebar = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const [deals, setDeals] = useState([]);
-  const { dealId, setDealId } = useModal();
-  console.log(dealId, "dealId");
+  const { setDealId, setDeals, deals } = useModal();
   useEffect(() => {
     const fetchDealsData = async () => {
       try {
@@ -57,37 +55,46 @@ const Sidebar = () => {
     },
     {
       key: "3",
-      label: "MY WORKSPACE",
-      children:
-        deals.length > 0
-          ? deals.map((deal) => ({
-              key: deal.id,
-              icon: <FileOutlinedIcon />,
-              label: (
-                <Link
-                  to={`/projects/${deal.id}`}
-                  onClick={() => setDealId(deal.id)}
-                >
-                  {deal.name}
-                </Link>
-              ),
-            }))
-          : [
-              {
-                key: "no-projects",
-                disabled: true,
-                label: "No projects available",
-              },
-            ],
-      expandIcon: () => (
-        <PlusOutlined
-          onClick={(e) => {
-            e.stopPropagation();
-            navigate("/create-deal");
+      label: (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
           }}
-        />
+        >
+          <span>MY WORKSPACE</span>
+          <PlusOutlined
+            onClick={(e) => {
+              e.stopPropagation();
+              navigate("/create-deal");
+            }}
+            style={{ cursor: "pointer" }}
+          />
+        </div>
       ),
+      type: "group",
     },
+    ...(deals.length > 0
+      ? deals.map((deal) => ({
+          key: deal.id,
+          icon: <FileOutlinedIcon />,
+          label: (
+            <Link
+              to={`/projects/${deal.id}`}
+              onClick={() => setDealId(deal.id)}
+            >
+              {deal.name}
+            </Link>
+          ),
+        }))
+      : [
+          {
+            key: "no-projects",
+            disabled: true,
+            label: "No projects available",
+          },
+        ]),
     {
       key: "4",
       label: "DATA SOURCE INTEGRATION",

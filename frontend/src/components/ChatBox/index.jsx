@@ -15,6 +15,7 @@ import {
 } from "../../services/chatService";
 import { categoryList } from "../../constants";
 import { useModal } from "../UploadFilesModal/ModalContext";
+import Markdown from "react-markdown";
 
 const { Option } = Select;
 
@@ -146,7 +147,6 @@ const ChatBox = () => {
               <div className="flex justify-between w-full">
                 <span className="text-base font-semibold">Omega Copilot</span>
                 <div className="flex items-center space-x-2">
-                  <PlusOutlined className="text-white text-sm cursor-pointer" />
                   <CloseOutlined
                     className="text-white text-sm cursor-pointer"
                     onClick={() => toggleChat(true)}
@@ -186,7 +186,9 @@ const ChatBox = () => {
                         : "rounded-[8px] rounded-br-none ml-auto"
                     }`}
                   >
-                    <p>{ans.message}</p>
+                    <p>
+                      <Markdown>{ans.message}</Markdown>
+                    </p>
                   </div>
                 ))
               ) : (
@@ -234,6 +236,11 @@ const ChatBox = () => {
                     placeholder="Ask a question"
                     value={inputMessage}
                     onChange={(e) => setInputMessage(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        handleSendMessage();
+                      }
+                    }}
                   />
                   <button
                     className="absolute right-2 top-2 bg-[#303038] rounded p-1 "

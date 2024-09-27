@@ -6,8 +6,8 @@ export const initialState = {
   category: null,
   subCategory: null,
   description: "",
-  newTag: "",
   isDocumentInfoVisible: false,
+  loading: false,
 };
 export const reducer = (state, action) => {
   switch (action.type) {
@@ -29,10 +29,9 @@ export const reducer = (state, action) => {
         return {
           ...state,
           tags: action.payload ? [action.payload] : [],
-          newTag: "",
         };
-      } else if (!state.tags.includes(action.payload) && state.newTag !== "") {
-        return { ...state, tags: [...state.tags, action.payload], newTag: "" };
+      } else if (!state.tags.includes(action.payload)) {
+        return { ...state, tags: [...state.tags, action.payload] };
       }
       return state;
     case "SET_TAGS":
@@ -42,8 +41,6 @@ export const reducer = (state, action) => {
         ...state,
         tags: state.tags.filter((tag) => tag !== action.payload),
       };
-    case "SET_NEW_TAG":
-      return { ...state, newTag: action.payload };
     case "TOGGLE_DOCUMENT_INFO":
       return { ...state, isDocumentInfoVisible: !state.isDocumentInfoVisible };
     case "SET_CATEGORY":
@@ -52,6 +49,8 @@ export const reducer = (state, action) => {
       return { ...state, subCategory: action.payload };
     case "SET_DESCRIPTION":
       return { ...state, description: action.payload };
+    case "START_UPLOAD":
+      return { ...state, loading: true };
     case "RESET_STATE":
       return initialState;
     default:
