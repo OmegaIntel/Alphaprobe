@@ -1,0 +1,60 @@
+export const initialState = {
+  selectedFile: null,
+  baseName: "",
+  extension: "",
+  tags: [],
+  category: null,
+  subCategory: null,
+  description: "",
+  newTag: "",
+  isDocumentInfoVisible: false,
+};
+export const reducer = (state, action) => {
+  switch (action.type) {
+    case "SET_SELECTED_FILE":
+      if (action.payload) {
+        const fullName = action.payload.name;
+        const dotIndex = fullName.lastIndexOf(".");
+        return {
+          ...state,
+          selectedFile: action.payload,
+          baseName: fullName.substring(0, dotIndex),
+          extension: fullName.substring(dotIndex),
+        };
+      } else return state;
+    case "SET_FILE_NAME":
+      return { ...state, baseName: action.payload };
+    case "ADD_TAG":
+      if (!state.tags) {
+        return {
+          ...state,
+          tags: action.payload ? [action.payload] : [],
+          newTag: "",
+        };
+      } else if (!state.tags.includes(action.payload) && state.newTag !== "") {
+        return { ...state, tags: [...state.tags, action.payload], newTag: "" };
+      }
+      return state;
+    case "SET_TAGS":
+      return { ...state, tags: action.payload || [] };
+    case "REMOVE_TAG":
+      return {
+        ...state,
+        tags: state.tags.filter((tag) => tag !== action.payload),
+      };
+    case "SET_NEW_TAG":
+      return { ...state, newTag: action.payload };
+    case "TOGGLE_DOCUMENT_INFO":
+      return { ...state, isDocumentInfoVisible: !state.isDocumentInfoVisible };
+    case "SET_CATEGORY":
+      return { ...state, category: action.payload };
+    case "SET_SUBCATEGORY":
+      return { ...state, subCategory: action.payload };
+    case "SET_DESCRIPTION":
+      return { ...state, description: action.payload };
+    case "RESET_STATE":
+      return initialState;
+    default:
+      return state;
+  }
+};

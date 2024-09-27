@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import DilligenceContainer from '../../dilligence_list/container';
-import Subcategories from '../subcategories';
+import React, { useState } from "react";
+import DilligenceContainer from "../../dilligence_list/container";
+import Subcategories from "../subcategories";
+import { categoryList } from "../../../constants";
+import FileUploadComponent from "../../FileUploadComponent";
 import { MoreOutlined } from '@ant-design/icons';
 import AddProgress from '../../progressModal';
 import { useModal } from '../../UploadFilesModal/ModalContext';
@@ -8,8 +10,7 @@ import { getDeals } from '../../../services/createDealService';
 import { notification } from 'antd';
 
 const Categories = () => {
-    const categoryList = ["Investment Thesis", "Market research", "Financial Insights", "Valuation", "Action Items"];
-    const [isActive, setActive] = useState("Investment Thesis");
+  const [isActive, setActive] = useState("Investment Thesis");
 
     const [progress, setProgress] = useState();
     const [name, setName] = useState("");
@@ -44,7 +45,7 @@ const Categories = () => {
                             )
                         })}
                     </div>
-                    {isActive === "Action Items" ? <DilligenceContainer /> : <Subcategories isActiveCategory={isActive} />}
+                    {isActive === "Action Items" ? <DilligenceContainer /> : isActive === "Documents"? <FileUploadComponent/>:  <Subcategories isActiveCategory={isActive} />}
                 </div>
                 <div>
                     <div className='w-80 bg-black p-2 flex flex-row justify-between'>

@@ -52,10 +52,11 @@ async def upload_files(
             raise HTTPException(status_code=500, detail=f"File upload failed: {str(e)}")
 
         if tags:
-            tags_list = [tag.strip() for tag in tags.split(",") if tag.strip()]
+            tags_list = [tag.strip() for tag in tags.split(",") if tag.strip() and tag.strip().lower() != "null"]
             tags = json.dumps(tags_list) if tags_list else None
         else:
-            tags = None
+            tags = None 
+
         new_document = Document(
             name=name,
             description=description,
@@ -102,11 +103,11 @@ async def update_document(
         raise HTTPException(status_code=404, detail="Document not found.")
     
     if tags:
-        tags_list = [tag.strip() for tag in tags.split(",") if tag.strip()]
+        tags_list = [tag.strip() for tag in tags.split(",") if tag.strip() and tag.strip().lower() != "null"]
         tags = json.dumps(tags_list) if tags_list else None
     else:
-        tags = None
-    
+        tags = None 
+
     # Update document fields
     document.name = name
     document.description = description
@@ -159,9 +160,12 @@ async def get_uploaded_documents(deal_id: str, db: Session = Depends(get_db)):
     documents = db.query(Document).filter(Document.deal_id == deal_uuid).all()
     if not documents:
         raise HTTPException(status_code=404, detail="No documents found for this deal ID.")
-    
+
+    def clean_value(value):
+        return None if value == "null" else value
+
     return {
-        "documents": [{"id": str(doc.id), "name": doc.name, "description": doc.description} for doc in documents]
+        "documents": [{"id": str(doc.id), "name": doc.name, "description": clean_value(doc.description)} for doc in documents]
     }
 
 
@@ -176,12 +180,16 @@ async def get_document_details(document_id: str, db: Session = Depends(get_db)):
     if not document:
         raise HTTPException(status_code=404, detail="Document not found.")
 
+    def clean_value(value):
+        return None if value == "null" else value
+
     tags = json.loads(document.tags) if document.tags else None
+    cleaned_tags = [clean_value(tag) for tag in tags] if tags else None
     return {
         "id": str(document.id),
-        "name": document.name,
-        "description": document.description,
-        "category": document.category,
-        "sub_category": document.sub_category,
-        "tags": tags  
+        "name": clean_value(document.name),
+        "description": clean_value(document.description),
+        "category": clean_value(document.category),
+        "sub_category": clean_value(document.sub_category),
+        "tags": cleaned_tags
     }

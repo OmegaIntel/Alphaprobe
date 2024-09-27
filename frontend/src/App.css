@@ -980,3 +980,6 @@ pre {
   padding: 10px;
   scrollbar-width: none;
 }
+.ant-empty-description {
+  color: white !important;
+}

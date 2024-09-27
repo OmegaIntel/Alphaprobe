@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Modal, Button, Form, Input, Select, Tag, Collapse } from "antd";
 import {
   metaDataCategory,
@@ -8,7 +8,19 @@ import {
 
 const { Option } = Select;
 const { Panel } = Collapse;
+
 const UpdateModal = ({ isVisible, onOk, onCancel, state, dispatch }) => {
+  const [form] = Form.useForm();
+
+  useEffect(() => {
+    form.setFieldsValue({
+      name: state.baseName || "",
+      category: state.category || null,
+      subCategory: state.subCategory || null,
+      description: state.description || "",
+    });
+  }, [state, form]);
+
   return (
     <Modal
       title={
@@ -45,16 +57,19 @@ const UpdateModal = ({ isVisible, onOk, onCancel, state, dispatch }) => {
         </Button>,
       ]}
     >
-      <Form layout="horizontal" className="!bg-[#24242A] p-3 rounded">
+      <Form
+        form={form}
+        layout="horizontal"
+        className="!bg-[#24242A] p-3 rounded"
+      >
         {/* File Name */}
         <Form.Item
           label={<div className="text-[#C8C8C8] text-sm">Name</div>}
           name="name"
           className="w-[50%]"
-          initialValue={state.baseName}
+          rules={[{ required: true, message: "File name is required" }]}
         >
           <Input
-            value={state.baseName}
             onChange={(e) =>
               dispatch({ type: "SET_FILE_NAME", payload: e.target.value })
             }
@@ -65,7 +80,9 @@ const UpdateModal = ({ isVisible, onOk, onCancel, state, dispatch }) => {
             addonAfter={state.extension}
           />
         </Form.Item>
+
         <hr className="w-full h-[1px] bg-[#303038] border-none mt-4" />
+
         <Collapse
           accordion
           ghost
@@ -149,18 +166,19 @@ const UpdateModal = ({ isVisible, onOk, onCancel, state, dispatch }) => {
                     </Button>
                   </div>
                   <div style={{ marginTop: "10px" }}>
-                    {state.tags.map((tag) => (
-                      <Tag
-                        closable
-                        key={tag}
-                        onClose={() =>
-                          dispatch({ type: "REMOVE_TAG", payload: tag })
-                        }
-                        style={{ marginBottom: "5px" }}
-                      >
-                        {tag}
-                      </Tag>
-                    ))}
+                    {state.tags &&
+                      state.tags.map((tag) => (
+                        <Tag
+                          closable
+                          key={tag}
+                          onClose={() =>
+                            dispatch({ type: "REMOVE_TAG", payload: tag })
+                          }
+                          style={{ marginBottom: "5px" }}
+                        >
+                          {tag}
+                        </Tag>
+                      ))}
                   </div>
                 </Form.Item>
               </div>
