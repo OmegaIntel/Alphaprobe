@@ -91,6 +91,7 @@ const TaskModal = ({ isOpen, onRequestClose, type, values, setToggle }) => {
         }
         editTasks(values.id, taskData).
             then((data) => {
+                setToggle((prev)=>!prev);
                 notification.success({ "message": "Task edited successfully!" })
             }).
             catch((e) => {
