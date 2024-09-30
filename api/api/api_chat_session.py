@@ -22,6 +22,7 @@ from api.interfaces import Retriever
 from db_models.shared_user_deals import SharedUserDeals
 from db_models.workspace import CurrentWorkspace
 from sqlalchemy import or_
+from sqlalchemy import asc
 
 
 chat_router = APIRouter()
@@ -121,20 +122,21 @@ async def send_message(session_id: str, request: MessageRequest, current_user: U
         past_messages_context=context,
         user_message=user_message
     )
-    ai_response = llm_wrapper.generate_response(user_message, weaviate_context)
     new_user_message = ChatMessage(
         id=str(uuid.uuid4()),  
         session_id=session.id,
         role="user",
         content=original_user_message
     )
+    db.add(new_user_message)
+    db.commit()
+    ai_response = llm_wrapper.generate_response(user_message, weaviate_context)
     new_ai_message = ChatMessage(
         id=str(uuid.uuid4()), 
         session_id=session.id,
         role="ai",
         content=ai_response
     )
-    db.add(new_user_message)
     db.add(new_ai_message)
     db.commit()
     return ChatResponse(response=ai_response)
@@ -170,13 +172,13 @@ def get_chat_sessions(deal_id: str, db: Session = Depends(get_db)):
 
 @chat_router.post("/workspace/add/{session_id}")
 async def add_to_workspace(type: str, session_id: str, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
-    messages = db.query(ChatMessage).filter(ChatMessage.session_id == session_id).all()
-    deal_id = db.query(ChatSession).filter(session_id==session_id).first().deal_id
+    messages = db.query(ChatMessage).filter(ChatMessage.session_id == session_id).order_by(asc(ChatMessage.created_at)).all()
+    deal_id = db.query(ChatSession).filter(ChatSession.id==session_id).first().deal_id
     payload_string = ""
     for msg in messages:
-        payload_string += msg.role +":" + " " + msg.content + "\n"
-    data=db.query(Deal).filter(Deal.id==deal_id).first()
-    if str(data.user_id) != current_user.id:
+        payload_string += f"**{msg.role}**" +":" + " " + msg.content + "\n"
+    data=db.query(Deal).filter(Deal.id==deal_id and Deal.user_id==current_user.id).first()
+    if not data:
         shared_deal = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id).first()
         if shared_deal:
             pass

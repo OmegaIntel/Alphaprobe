@@ -13,15 +13,18 @@ import { PlusOutlined } from "@ant-design/icons";
 import ChatBox from "../ChatBox";
 import SendEmail from "../modals/send_email";
 import { useModal } from "../UploadFilesModal/ModalContext";
+import AddCollaboration from "../collaborationModal";
 
 const { Sider } = Layout;
 
 const Sidebar = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const [deals, setDeals] = useState([]);
-  const { dealId, setDealId } = useModal();
-  console.log(dealId, "dealId");
+  const [isOpen, setIsOpen] = useState(false);
+  const { dealId, setDealId, deals, setDeals } = useModal();
+  const onRequestClose = () => {
+    setIsOpen(false);
+  }
   useEffect(() => {
     const fetchDealsData = async () => {
       try {
@@ -61,24 +64,24 @@ const Sidebar = () => {
       children:
         deals.length > 0
           ? deals.map((deal) => ({
-              key: deal.id,
-              icon: <FileOutlinedIcon />,
-              label: (
-                <Link
-                  to={`/projects/${deal.id}`}
-                  onClick={() => setDealId(deal.id)}
-                >
-                  {deal.name}
-                </Link>
-              ),
-            }))
+            key: deal.id,
+            icon: <FileOutlinedIcon />,
+            label: (
+              <Link
+                to={`/projects/${deal.id}`}
+                onClick={() => setDealId(deal.id)}
+              >
+                {deal.name}
+              </Link>
+            ),
+          }))
           : [
-              {
-                key: "no-projects",
-                disabled: true,
-                label: "No projects available",
-              },
-            ],
+            {
+              key: "no-projects",
+              disabled: true,
+              label: "No projects available",
+            },
+          ],
       expandIcon: () => (
         <PlusOutlined
           onClick={(e) => {
@@ -143,13 +146,14 @@ const Sidebar = () => {
               <div className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer ">
                 <CalenderIcon />
               </div>
-              <div className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer ">
+              <div className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer " onClick={() => setIsOpen(true)}>
                 <ShareWithPeopleIcon />
               </div>
             </div>
           </div>
         </div>
       </Sider>
+      <AddCollaboration isOpen={isOpen} onRequestClose={onRequestClose} />
     </Layout>
   );
 };
