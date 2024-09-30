@@ -18,7 +18,11 @@ from db_models.users import User
 from uuid import UUID
 from typing import Optional
 from api.api_user import get_current_user, User as UserModelSerializer
+from api.interfaces import Retriever
+from db_models.shared_user_deals import SharedUserDeals
 from db_models.workspace import CurrentWorkspace
+from sqlalchemy import or_
+from sqlalchemy import asc
 
 
 chat_router = APIRouter()
@@ -28,6 +32,20 @@ llm_wrapper = LLM()
 bing_search = BingSearch()
 openbb_stock_api = OpenBBStockAPI()
 openbb_metrics_api = OpenBBMetricsAPI()
+
+# RETRIEVERS = {
+#     'web_search': bing_search,
+#     'documents': weaviate_handler,
+#     'ticker_metrics': openbb_metrics_api,
+#     'ticker_history': openbb_stock_api,
+# }
+
+# CURRENT_RETRIEVER = 'web_search'
+# DEFAULT_RETRIEVER = weaviate_handler
+
+# with open('/api/prompts/intro_prompt.txt', 'r') as file:
+#     intro_prompt = file.read()
+#     print("Intro prompt is:", intro_prompt)
 
 def sanitize_class_name(name: str) -> str:
     sanitized = ''.join(e for e in name if e.isalnum())
@@ -95,6 +113,8 @@ async def send_message(session_id: str, request: MessageRequest, current_user: U
     for entry in conversation:
         context += f"\n{entry['role']}: {entry['content']}"
 
+    # retriever: Retriever = RETRIEVERS.get(CURRENT_RETRIEVER, DEFAULT_RETRIEVER)
+    # context = retriever.llm_context(user_message, deal_id, current_user.email)
     weaviate_context = weaviate_handler.retrieve_content(user_message, deal_id)
     original_user_message = user_message
     user_message = llm_wrapper.enhance_user_message(
@@ -102,59 +122,70 @@ async def send_message(session_id: str, request: MessageRequest, current_user: U
         past_messages_context=context,
         user_message=user_message
     )
-    ai_response = llm_wrapper.generate_response(user_message, weaviate_context)
     new_user_message = ChatMessage(
         id=str(uuid.uuid4()),  
         session_id=session.id,
         role="user",
         content=original_user_message
     )
+    db.add(new_user_message)
+    db.commit()
+    ai_response = llm_wrapper.generate_response(user_message, weaviate_context)
     new_ai_message = ChatMessage(
         id=str(uuid.uuid4()), 
         session_id=session.id,
         role="ai",
         content=ai_response
     )
-    db.add(new_user_message)
     db.add(new_ai_message)
     db.commit()
     return ChatResponse(response=ai_response)
 
-@chat_router.delete("/chat/sessions/{session_id}", status_code=204)
+@chat_router.delete("/chat/sessions/{session_id}", response_model=None)
 async def delete_chat_session(session_id: str, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     session = db.query(ChatSession).filter(
         ChatSession.id == session_id,
-        ChatSession.deal_id.in_(
-            db.query(Deal.id).filter(Deal.user_id == current_user.id)
-        )
     ).first()
-    if session is None:
-        raise HTTPException(status_code=404, detail="Session not found or not authorized")
+
+    if not session:
+        raise HTTPException(status_code=404, detail="Session not found")
+    
+    deal_object = db.query(Deal.id).filter(Deal.user_id == current_user.id, Deal.id == session.deal_id).first()
+
+    if not deal_object:
+        shared_deal_object = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id, SharedUserDeals.deal_id == session.deal_id).first()
+        if not shared_deal_object:
+            raise HTTPException(status_code=404, detail="Session not found or not authorized")
     db.query(ChatMessage).filter(ChatMessage.session_id == session.id).delete()
     db.delete(session)
     db.commit()
     return {"message": "Session deleted successfully"}
 
-@chat_router.post("/workspace/add/{session_id}")
-async def add_to_workspace(type: str, session_id: str, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
-    messages = db.query(ChatMessage).filter(ChatMessage.session_id == session_id).all()
-    deal_id = db.query(ChatSession).filter(session_id==session_id).first().deal_id
-    payload_string = ""
-    for msg in messages:
-        payload_string += msg.role +":" + " " + msg.content + "\n"
-    data=db.query(Deal).filter(Deal.id==deal_id).first()
-    if str(data.user_id) != current_user.id:
-        raise HTTPException(status_code=404, detail="You are not authorized to add workspace")
-    new_ws = CurrentWorkspace(deal_id=deal_id, text=payload_string, type=type)
-    db.add(new_ws)
-    db.commit()
-    db.refresh(new_ws)
 
-    return {"message":"messages added to current workspace successfully"}
-     
 @chat_router.get("/chat_sessions/")
 def get_chat_sessions(deal_id: str, db: Session = Depends(get_db)):
     chat_sessions = db.query(ChatSession).filter(ChatSession.deal_id == deal_id).all()
     if not chat_sessions:
         raise HTTPException(status_code=404, detail="No chat sessions found for this deal ID")
     return chat_sessions
+
+
+@chat_router.post("/workspace/add/{session_id}")
+async def add_to_workspace(type: str, session_id: str, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+    messages = db.query(ChatMessage).filter(ChatMessage.session_id == session_id).order_by(asc(ChatMessage.created_at)).all()
+    deal_id = db.query(ChatSession).filter(ChatSession.id==session_id).first().deal_id
+    payload_string = ""
+    for msg in messages:
+        payload_string += f"**{msg.role}**" +":" + " " + msg.content + "\n"
+    data=db.query(Deal).filter(Deal.id==deal_id and Deal.user_id==current_user.id).first()
+    if not data:
+        shared_deal = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id).first()
+        if shared_deal:
+            pass
+        else:
+            raise HTTPException(status_code=404, detail="You are not authorized to add workspace")
+    new_ws = CurrentWorkspace(deal_id=deal_id, text=payload_string, type=type)
+    db.add(new_ws)
+    db.commit()
+    db.refresh(new_ws)
+    return {"message":"messages added to current workspace successfully"}

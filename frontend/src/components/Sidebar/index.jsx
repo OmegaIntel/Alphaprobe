@@ -13,6 +13,7 @@ import { PlusOutlined } from "@ant-design/icons";
 import ChatBox from "../ChatBox";
 import SendEmail from "../modals/send_email";
 import { useModal } from "../UploadFilesModal/ModalContext";
+import AddCollaboration from "../collaborationModal";
 
 const { Sider } = Layout;
 
@@ -20,6 +21,10 @@ const Sidebar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { setDealId, setDeals, deals } = useModal();
+  const [isOpen, setIsOpen] = useState(false);
+  const onRequestClose = () => {
+    setIsOpen(false);
+  };
   useEffect(() => {
     const fetchDealsData = async () => {
       try {
@@ -30,7 +35,7 @@ const Sidebar = () => {
       }
     };
     fetchDealsData();
-  }, []);
+  }, [setDeals]);
   useEffect(() => {
     const pathMatch = location.pathname.match(/^\/projects\/([a-f0-9-]+)$/);
     if (pathMatch) {
@@ -150,13 +155,17 @@ const Sidebar = () => {
               <div className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer ">
                 <CalenderIcon />
               </div>
-              <div className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer ">
+              <div
+                className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer "
+                onClick={() => setIsOpen(true)}
+              >
                 <ShareWithPeopleIcon />
               </div>
             </div>
           </div>
         </div>
       </Sider>
+      <AddCollaboration isOpen={isOpen} onRequestClose={onRequestClose} />
     </Layout>
   );
 };

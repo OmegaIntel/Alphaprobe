@@ -21,6 +21,7 @@ from datetime import datetime
 from db_models.task_status import ToDo
 from api.api_user import get_current_user, User as UserModelSerializer
 from db_models.deals import Deal
+from db_models.shared_user_deals import SharedUserDeals
 
 task_status_router = APIRouter()
 
@@ -55,7 +56,11 @@ class ToDoResponse(BaseModel):
 def add_todo(item: ToDoCreate, db: Session = Depends(get_db), current_user: UserModelSerializer = Depends(get_current_user)):
     data = db.query(Deal).filter(Deal.id == item.deal_id).first()
     if str(data.user_id) != current_user.id:
-        raise HTTPException(status_code=404, detail="You are not authorized to add To-Do items")
+        shared_deal = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id).first()
+        if shared_deal:
+            pass
+        else:
+            raise HTTPException(status_code=404, detail="You are not authorized to add To-Do items")
     todo = ToDo(**item.dict())
     db.add(todo)
     db.commit()
@@ -67,7 +72,11 @@ def add_todo(item: ToDoCreate, db: Session = Depends(get_db), current_user: User
 def get_todos(deal_id: Optional[UUID] = None, db: Session = Depends(get_db), current_user: UserModelSerializer = Depends(get_current_user)):
     data = db.query(Deal).filter(Deal.id == deal_id).first()
     if str(data.user_id) != current_user.id:
-        raise HTTPException(status_code=404, detail="You are not authorized to fetch To-Do items")
+        shared_deal = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id).first()
+        if shared_deal:
+            pass
+        else:
+            raise HTTPException(status_code=404, detail="You are not authorized to fetch To-Do items")
     query = db.query(ToDo)
     if deal_id:
         query = query.filter(ToDo.deal_id == deal_id)
@@ -85,7 +94,11 @@ def update_todo(todo_id: str, item: ToDoBase, db: Session = Depends(get_db),curr
     todo = db.query(ToDo).filter(ToDo.id == todo_id).first()
     data=db.query(Deal).filter(Deal.id==todo.deal_id).first()
     if str(data.user_id) != current_user.id:
-        raise HTTPException(status_code=404, detail="You are not authorized to modify To-Do items")
+        shared_deal = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id).first()
+        if shared_deal:
+            pass
+        else:
+            raise HTTPException(status_code=404, detail="You are not authorized to modify To-Do items")
     if not todo:
         raise HTTPException(status_code=404, detail="To-Do item not found")
     todo.task = item.task
@@ -103,10 +116,13 @@ def delete_todo(todo_id: str, db: Session = Depends(get_db),current_user: UserMo
     todo = db.query(ToDo).filter(ToDo.id == todo_id).first()
     data=db.query(Deal).filter(Deal.id==todo.deal_id).first()
     if str(data.user_id) != current_user.id:
-        raise HTTPException(status_code=404, detail="You are not authorized to delete To-Do items")
+        shared_deal = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id).first()
+        if shared_deal:
+            pass
+        else:
+            raise HTTPException(status_code=404, detail="You are not authorized to delete To-Do items")
     if not todo:
         raise HTTPException(status_code=404, detail="To-Do item not found")
     db.delete(todo)
     db.commit()
     return todo
-
