@@ -11,6 +11,8 @@ from sqlalchemy.orm import Session
 from db_models.users import User as DbUser
 from typing import Annotated
 from db_models.session import get_db
+from db_models.new_users import NewUsersDeals
+from db_models.shared_user_deals import SharedUserDeals
 
 # Environment variables and constants
 SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key")
@@ -97,6 +99,8 @@ async def register(email: EmailStr = Form(...), password: str = Form(...), reque
     if user:
         raise HTTPException(status_code=400, detail="Email already registered")
     
+    newUser = db.query(NewUsersDeals).filter(NewUsersDeals.email_id == email).first()
+
     hashed_password = get_password_hash(password)
     new_user = DbUser(email=email, password_hash=hashed_password)
     db.add(new_user)
@@ -104,6 +108,15 @@ async def register(email: EmailStr = Form(...), password: str = Form(...), reque
     
     # Refresh to get the id from the database
     db.refresh(new_user)
+
+    if newUser:
+        sharedUser = SharedUserDeals(
+            user_id=str(new_user.id),
+            deal_id=str(newUser.deal_id)
+        )
+        db.add(sharedUser)
+        db.commit()
+        db.refresh(sharedUser)
     
     # Convert UUID to string and return
     return {"id": str(new_user.id), "email": new_user.email}

@@ -16,6 +16,7 @@ from pydantic import BaseModel
 from db_models.checklist import Checklist
 from api.api_user import get_current_user, User as UserModelSerializer
 from db_models.deals import Deal
+from db_models.shared_user_deals import SharedUserDeals
 
 
 checklist_base_router = APIRouter()
@@ -41,7 +42,11 @@ class Checklistresponse(BaseModel):
 def add_checklist(item: checklist, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
     data=db.query(Deal).filter(Deal.id==item.deal_id).first()
     if str(data.user_id) != current_user.id:
-        raise HTTPException(status_code=404, detail="You are not authorized to add Checklist")
+        shared_deal = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id).first()
+        if shared_deal:
+            pass
+        else:
+            raise HTTPException(status_code=404, detail="You are not authorized to add Checklist")
     data =Checklist (**item.dict())
     db.add(data)
     db.commit()
@@ -53,7 +58,11 @@ def update_checklist(checklist_id: str, item: BaseTableSchema, db: Session = Dep
     base = db.query(Checklist).filter(Checklist.id == checklist_id).first()
     data=db.query(Deal).filter(Deal.id==base.deal_id).first()
     if str(data.user_id) != current_user.id:
-        raise HTTPException(status_code=404, detail="You are not authorized to modify Checklist")
+        shared_deal = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id).first()
+        if shared_deal:
+            pass
+        else:
+            raise HTTPException(status_code=404, detail="You are not authorized to modify Checklist")
     if not data:
         raise HTTPException(status_code=404, detail="data item not found")
     base.type = item.type
@@ -68,7 +77,11 @@ def delete_data(checklist_id: str, db: Session = Depends(get_db),current_user: U
     base = db.query(Checklist).filter(Checklist.id == checklist_id).first()
     data=db.query(Deal).filter(Deal.id==base.deal_id).first()
     if str(data.user_id) != current_user.id:
-        raise HTTPException(status_code=404, detail="You are not authorized to delete Checklist")
+        shared_deal = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id).first()
+        if shared_deal:
+            pass
+        else:
+            raise HTTPException(status_code=404, detail="You are not authorized to delete Checklist")
     if not data:
         raise HTTPException(status_code=404, detail="Current data not found")
     db.delete(base)
@@ -79,7 +92,11 @@ def delete_data(checklist_id: str, db: Session = Depends(get_db),current_user: U
 def checklistcontext(deal_id: Optional[UUID] = None,type: Optional[str] = None,  db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
     data = db.query(Deal).filter(Deal.id == deal_id).first()
     if not data or str(data.user_id) != current_user.id:
-        raise HTTPException(status_code=404, detail="You are not authorized to fetch checklist")
+        shared_deal = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id).first()
+        if shared_deal:
+            pass
+        else:
+            raise HTTPException(status_code=404, detail="You are not authorized to fetch checklist")
     query = db.query(Checklist)
     if deal_id:
         query = query.filter(Checklist.deal_id == deal_id)
