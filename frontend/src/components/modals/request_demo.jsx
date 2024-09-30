@@ -38,6 +38,7 @@ const RequestDemo = () => {
         open={visible}
         onCancel={handleClose}
         footer={null}
+        centered
       >
         <Form
           layout="vertical"
