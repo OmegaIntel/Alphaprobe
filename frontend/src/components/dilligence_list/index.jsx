@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { PlusOutlined } from "@ant-design/icons";
 import { ReactComponent as CrossIcon } from "../../icons/svgviewer-output_14.svg";
@@ -58,19 +58,24 @@ const getListStyle = (isDraggingOver) => ({
 });
 
 const KanbanBoard = () => {
-  const initalState = {todo: {
-    name: "To Do",
-    items: [],
-  },
-  inProgress: {
-    name: "In Progress",
-    items: [],
-  },
-  done: {
-    name: "Done",
-    items: [],
-  },}
-  const [columns, setColumns] = useState(initalState);
+  const initialState = useMemo(
+    () => ({
+      todo: {
+        name: "To Do",
+        items: [],
+      },
+      inProgress: {
+        name: "In Progress",
+        items: [],
+      },
+      done: {
+        name: "Done",
+        items: [],
+      },
+    }),
+    []
+  );
+  const [columns, setColumns] = useState(initialState);
   const [isOpen, setIsOpen] = useState(false);
   const [type, setType] = useState("");
   const [values, setValues] = useState();
@@ -92,7 +97,7 @@ const KanbanBoard = () => {
             description: task.description,
             priority: task.priority,
             due_date: task.due_date,
-            tags: task.custom_tags.split(",").map(item => item.trim())
+            tags: task.custom_tags.split(",").map((item) => item.trim()),
           };
 
           switch (task.status) {
@@ -118,9 +123,9 @@ const KanbanBoard = () => {
       })
       .catch((err) => {
         console.error("Error fetching tasks:", err);
-        setColumns(initalState);
+        setColumns(initialState);
       });
-  }, [dealId, toggle]);
+  }, [dealId, toggle, initialState]);
 
   const onDragEnd = (result) => {
     const { source, destination } = result;
@@ -167,10 +172,10 @@ const KanbanBoard = () => {
 
       const status = columns[destination.droppableId].name;
 
-      const task = movedTask.find(t => t.id === result.draggableId);
+      const task = movedTask.find((t) => t.id === result.draggableId);
 
       const formattedDueDate = new Date(task.due_date).toISOString();
-      const formattedTags = task.tags.join(', ');
+      const formattedTags = task.tags.join(", ");
 
       const taskData = {
         task: task.content,
@@ -180,7 +185,6 @@ const KanbanBoard = () => {
         custom_tags: formattedTags,
         description: task.description,
       };
-
 
       // Call the API to update the task with all data
       editTasks(result.draggableId, taskData)
@@ -215,11 +219,11 @@ const KanbanBoard = () => {
   };
 
   const handleRemoveCard = (columnId, index, id) => {
-    deleteTodo(id).then(() => {
-
-    }).catch(() => {
-      notification.error({ "message": "Error in removing task!" })
-    });
+    deleteTodo(id)
+      .then(() => {})
+      .catch(() => {
+        notification.error({ message: "Error in removing task!" });
+      });
     const updatedItems = columns[columnId].items.filter((_, i) => i !== index);
     setColumns((prevColumns) => ({
       ...prevColumns,
@@ -285,10 +289,27 @@ const KanbanBoard = () => {
                           </div>
                           <span style={spanStyle}>{item.content}</span>
                           <div style={buttonContainerStyle}>
-                            <button onClick={() => handleRemoveCard(columnId, index, columns[columnId].items[index].id)}>
+                            <button
+                              onClick={() =>
+                                handleRemoveCard(
+                                  columnId,
+                                  index,
+                                  columns[columnId].items[index].id
+                                )
+                              }
+                            >
                               <CrossIcon />
                             </button>
-                            <button onClick={() => handleEditClick(columns[columnId].name, columnId, index, columns)}>
+                            <button
+                              onClick={() =>
+                                handleEditClick(
+                                  columns[columnId].name,
+                                  columnId,
+                                  index,
+                                  columns
+                                )
+                              }
+                            >
                               <EditOutlined />
                             </button>
                           </div>
@@ -313,7 +334,13 @@ const KanbanBoard = () => {
           </Droppable>
         ))}
       </DragDropContext>
-      <TaskModal onRequestClose={onRequestClose} isOpen={isOpen} type={type} values={values} setToggle={setToggle}/>
+      <TaskModal
+        onRequestClose={onRequestClose}
+        isOpen={isOpen}
+        type={type}
+        values={values}
+        setToggle={setToggle}
+      />
     </div>
   );
 };

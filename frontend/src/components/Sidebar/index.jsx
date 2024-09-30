@@ -20,7 +20,7 @@ const { Sider } = Layout;
 const Sidebar = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { setDealId, setDeals, deals } = useModal();
+  const { setDealId, setDeals, deals, dealId } = useModal();
   const [isOpen, setIsOpen] = useState(false);
   const onRequestClose = () => {
     setIsOpen(false);
@@ -35,16 +35,7 @@ const Sidebar = () => {
       }
     };
     fetchDealsData();
-  }, [setDeals]);
-  useEffect(() => {
-    const pathMatch = location.pathname.match(/^\/projects\/([a-f0-9-]+)$/);
-    if (pathMatch) {
-      const dealId = pathMatch[1];
-      setDealId(dealId);
-    } else {
-      setDealId(null);
-    }
-  }, [location, setDealId]);
+  }, [dealId, setDeals]);
 
   const menuItems = [
     {
@@ -57,6 +48,7 @@ const Sidebar = () => {
       key: "2",
       icon: <FileOutlinedIcon />,
       label: "Templates",
+      disabled: true,
     },
     {
       key: "3",
@@ -152,9 +144,13 @@ const Sidebar = () => {
             </span>
             <div className="flex gap-3 justify-center">
               <SendEmail />
-              <div className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer ">
+              <Link
+                to={process.env.REACT_APP_CALENDLY_URL}
+                target="_blank"
+                className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer "
+              >
                 <CalenderIcon />
-              </div>
+              </Link>
               <div
                 className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer "
                 onClick={() => setIsOpen(true)}

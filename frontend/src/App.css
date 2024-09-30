@@ -922,7 +922,6 @@ pre {
 .ant-collapse-expand-icon {
   color: #eaeaea;
 }
-/* className="bg-[] border-2 border-[#46464F] hover:bg-[#212126] focus:bg-[#212126] focus:border-[#46464F] hover:border-[#46464F]" */
 .ant-select .ant-select-selector {
   background-color: #212126 !important;
   color: #f6f6f6 !important;
@@ -975,7 +974,7 @@ pre {
   gap: 0.5rem;
   width: 100%;
   margin-block: 12px;
-  height: calc(100% - 200px);
+  height: calc(100% - 235px);
   overflow: auto;
   padding: 10px;
   scrollbar-width: none;

@@ -26,7 +26,7 @@ const UpdateModal = ({ isVisible, onOk, onCancel, state, dispatch }) => {
       });
     }
   }, [state, form]);
-  console.log(state);
+
   return (
     <Modal
       title={

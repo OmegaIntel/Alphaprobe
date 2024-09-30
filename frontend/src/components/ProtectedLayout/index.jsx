@@ -39,6 +39,8 @@ const ProtectedLayoutInner = ({
   useEffect(() => {
     if (id) {
       setDealId(id); // Set dealId from the URL param
+    } else {
+      setDealId(null);
     }
   }, [id, setDealId]);
 
@@ -48,7 +50,10 @@ const ProtectedLayoutInner = ({
 
   return (
     <div className="App">
-      <Sidebar setToken={setToken} setUpdateSidebarSessions={setUpdateSidebarSessions} />
+      <Sidebar
+        setToken={setToken}
+        setUpdateSidebarSessions={setUpdateSidebarSessions}
+      />
       <div className="main-content with-sidebar">
         <Navbar />
         <UploadFilesModal />

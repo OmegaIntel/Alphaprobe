@@ -1,5 +1,4 @@
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import axios from "axios";
 
 const axiosInstance = axios.create({
   baseURL: process.env.REACT_APP_API_BASE_URL,
@@ -15,13 +14,16 @@ axiosInstance.interceptors.response.use(
   (error) => {
     // Navigate needs to be called within a component, so use a callback pattern
     const handleUnauthorized = () => {
-      localStorage.removeItem('token'); // Remove the token
-      window.location.href = '/login';  // Redirect to login
+      localStorage.removeItem("token"); // Remove the token
+      window.location.href = "/login"; // Redirect to login
     };
 
     // Any status codes that fall outside the range of 2xx trigger this function
-    if (error.response && (error.response.status === 401 || error.response.status === 403)) {
-      handleUnauthorized();  // Handle token expiration
+    if (
+      error.response &&
+      (error.response.status === 401 || error.response.status === 403)
+    ) {
+      handleUnauthorized(); // Handle token expiration
     }
     return Promise.reject(error);
   }

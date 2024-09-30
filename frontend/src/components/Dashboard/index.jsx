@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { dashboardData } from "../../constants";
 import NewsBar from "../NewsBar";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Button, Tag } from "antd";
 import DiligenceDocumentsModal from "../requestDocuments";
 import { useModal } from "../UploadFilesModal/ModalContext";
@@ -30,48 +30,53 @@ const Dashboard = () => {
 
   const onRequestClose = () => {
     setRequestModal(false);
-  }
+  };
   const navigate = useNavigate();
 
   useEffect(() => {
     if (deals.length > 0) {
-      const sortedDeals = deals.sort((a, b) => new Date(b.start_date) - new Date(a.start_date));
+      const sortedDeals = deals.sort(
+        (a, b) => new Date(b.start_date) - new Date(a.start_date)
+      );
       const [firstDeal, ...remainingDeals] = sortedDeals;
       getTasks(firstDeal.id)
         .then((data) => setActiveItems(data))
         .catch((e) => {
           if (e.response.status === 404) {
-            setActiveItems([])
-          }
-          else {
-            console.log(e)
+            setActiveItems([]);
+          } else {
+            console.log(e);
           }
         });
       setRecentDeal(firstDeal);
       setOtherDeals(remainingDeals);
     }
-  }, [deals])
+  }, [deals]);
 
   const handleNavigate = (index) => {
     if (index === 0) {
       navigate("/create-deal");
-    }
-    else if (index === 1) {
+    } else if (index === 1) {
       setRequestModal(true);
     }
   };
 
   const tags = (status) => {
-    return (
-      status === "Completed" ?
-        <Tag color="#e8883a">Completed</Tag>
-        : status === "In Progress" ? <Tag color="green-inverse">In Progress</Tag> : <Tag color="red-inverse">Not Started</Tag>
-    )
-  }
+    return status === "Completed" ? (
+      <Tag color="#e8883a">Completed</Tag>
+    ) : status === "In Progress" ? (
+      <Tag color="green-inverse">In Progress</Tag>
+    ) : (
+      <Tag color="red-inverse">Not Started</Tag>
+    );
+  };
 
   return (
     <div className="w-full flex">
-      <DiligenceDocumentsModal isOpen={requestModal} onRequestClose={onRequestClose} />
+      <DiligenceDocumentsModal
+        isOpen={requestModal}
+        onRequestClose={onRequestClose}
+      />
       {deals.length > 0 ? (
         <div className="w-[70%] h-[90vh] rounded ml-1 p-4">
           <div className="flex justify-between h-full gap-4">
@@ -87,27 +92,31 @@ const Dashboard = () => {
                 <div className="flex justify-between items-center">
                   <span className="text-base font-bold">Track Progress</span>
                   <Button className="bg-[#303038] border-none text-white font-semibold">
-                    <Link to={`/projects/${recentDeal?.id}`}>
-                      Open
-                    </Link>
+                    <a href={`/projects/${recentDeal?.id}`}>Open</a>
                   </Button>
                 </div>
               </div>
               <div className="bg-[#1F1E23] p-4 flex flex-col gap-4 rounded h-[70%]">
                 <span className="mb-6 text-base font-bold">Action Items</span>
-                {activeItems.length === 0 ? <div>No Items Found</div> : activeItems.map((item, index) => (
-                  <span key={index} className="text-sm font-semibold">
-                    {index + 1}. 
-                    {(item.task)}
-                  </span>
-                ))}
+                {activeItems.length === 0 ? (
+                  <div>No Items Found</div>
+                ) : (
+                  activeItems.map((item, index) => (
+                    <span key={index} className="text-sm font-semibold">
+                      {index + 1}.{item.task}
+                    </span>
+                  ))
+                )}
               </div>
             </div>
             <div className="flex-1 bg-[#151518] p-4 rounded overflow-auto">
               <h5 className="text-sm font-semibold mb-6">Deal Pipeline</h5>
               {otherDeals?.map((data, index) => {
                 return (
-                  <div className="mb-6 bg-[#1F1E23] p-4 flex flex-col gap-4 rounded" key={index}>
+                  <div
+                    className="mb-6 bg-[#1F1E23] p-4 flex flex-col gap-4 rounded"
+                    key={index}
+                  >
                     <div className="flex items-center justify-between mb-2">
                       {tags(data.status)}
                     </div>
@@ -115,15 +124,15 @@ const Dashboard = () => {
                       {data.name}
                     </span>
                     <div className="flex justify-between items-center">
-                      <span className="text-base font-bold">Track Progress</span>
+                      <span className="text-base font-bold">
+                        Track Progress
+                      </span>
                       <Button className="bg-[#303038] border-none text-white font-semibold">
-                        <Link to={`/projects/${data.id}`}>
-                          Open
-                        </Link>
+                        <a href={`/projects/${data.id}`}>Open</a>
                       </Button>
                     </div>
                   </div>
-                )
+                );
               })}
             </div>
           </div>

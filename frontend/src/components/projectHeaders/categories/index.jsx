@@ -10,14 +10,18 @@ import { getDeals } from "../../../services/createDealService";
 import { notification } from "antd";
 
 const Categories = () => {
-  const [isActive, setActive] = useState("Investment Thesis");
+  const [isActive, setIsActive] = useState("Investment Thesis");
 
   const [progress, setProgress] = useState();
   const [name, setName] = useState("");
 
   const [toggle, setToggle] = useState(false);
 
-  const { dealId } = useModal();
+  const { dealId, setSelectedCategory } = useModal();
+
+  useEffect(() => {
+    setSelectedCategory(isActive);
+  }, [isActive, setSelectedCategory]);
 
   useEffect(() => {
     if (dealId) {
@@ -40,24 +44,17 @@ const Categories = () => {
       <div className="flex flex-row flex-grow overflow-auto">
         <div className="flex flex-grow flex-col overflow-auto">
           <div className="flex flex-row bg-[#151518] pt-5 px-5 ml-1">
-            {categoryList.map((data, index) => {
-              return data === isActive ? (
-                <div
-                  className="bg-[#212126] p-3 rounded-lg cursor-pointer"
-                  key={index}
-                >
-                  {data}
-                </div>
-              ) : (
-                <div
-                  key={index}
-                  className=" cursor-pointer p-3"
-                  onClick={() => setActive(data)}
-                >
-                  {data}
-                </div>
-              );
-            })}
+            {categoryList.map((data, index) => (
+              <div
+                className={`${
+                  data === isActive && "bg-[#212126] rounded-lg"
+                } p-3 cursor-pointer`}
+                key={index}
+                onClick={() => setIsActive(data)}
+              >
+                {data}
+              </div>
+            ))}
           </div>
           {isActive === "Action Items" ? (
             <DilligenceContainer />
