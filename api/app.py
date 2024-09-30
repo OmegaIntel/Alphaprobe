@@ -15,6 +15,7 @@ from api.api_checklist import checklist_base_router
 from api.api_file_upload import upload_file_router
 from api.api_email import Email_router
 from api.api_chat_session import chat_router
+from api.api_collaboration import collaboration_router
 
 app = FastAPI()
 
@@ -45,6 +46,7 @@ app.include_router(checklist_base_router)
 app.include_router(upload_file_router)
 app.include_router(Email_router)
 app.include_router(chat_router)
+app.include_router(collaboration_router)
 
 if __name__ == "__main__":
     uvicorn.run("api.app:app", host="0.0.0.0", port=8000, reload=True)

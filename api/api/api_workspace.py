@@ -18,6 +18,7 @@ from db_models.workspace import CurrentWorkspace
 from api.api_user import get_current_user, User as UserModelSerializer
 from db_models.workspace import CurrentWorkspace
 from db_models.deals import Deal
+from db_models.shared_user_deals import SharedUserDeals
 
 current_workspace_router = APIRouter()
 
@@ -42,7 +43,11 @@ class CurrentWorkspaceResponse(BaseModel):
 def add_current_workspace(item: CurrentWorkspaceCreate, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
     data=db.query(Deal).filter(Deal.id==item.deal_id).first()
     if str(data.user_id) != current_user.id:
-        raise HTTPException(status_code=404, detail="You are not authorized to add workspace")
+        shared_deal = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id).first()
+        if shared_deal:
+            pass
+        else:
+            raise HTTPException(status_code=404, detail="You are not authorized to add workspace")
     workspace = CurrentWorkspace(**item.dict())
     db.add(workspace)
     db.commit()
@@ -54,7 +59,11 @@ def update_workspace(workspace_id: str, item: BaseTableSchema, db: Session = Dep
     workspace = db.query(CurrentWorkspace).filter(CurrentWorkspace.id == workspace_id).first()
     data=db.query(Deal).filter(Deal.id==workspace.deal_id).first()
     if str(data.user_id) != current_user.id:
-        raise HTTPException(status_code=404, detail="You are not authorized to modify workspace")
+        shared_deal = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id).first()
+        if shared_deal:
+            pass
+        else:
+            raise HTTPException(status_code=404, detail="You are not authorized to modify workspace")
     if not workspace:
         raise HTTPException(status_code=404, detail="data item not found")
     workspace.type = item.type
@@ -69,7 +78,11 @@ def delete_todo(workspace_id: str, db: Session = Depends(get_db), current_user: 
     workspace = db.query(CurrentWorkspace).filter(CurrentWorkspace.id == workspace_id).first()
     data=db.query(Deal).filter(Deal.id==workspace.deal_id).first()
     if str(data.user_id) != current_user.id:
-        raise HTTPException(status_code=404, detail="You are not authorized to delete workspace")
+        shared_deal = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id).first()
+        if shared_deal:
+            pass
+        else:
+            raise HTTPException(status_code=404, detail="You are not authorized to delete workspace")
     if not workspace:
         raise HTTPException(status_code=404, detail="Current workspace not found")
     db.delete(workspace)
@@ -80,7 +93,11 @@ def delete_todo(workspace_id: str, db: Session = Depends(get_db), current_user: 
 def current_workspace(deal_id: Optional[UUID] = None,type: Optional[str] = None, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
     data = db.query(Deal).filter(Deal.id == deal_id).first()
     if str(data.user_id) != current_user.id:
-        raise HTTPException(status_code=404, detail="You are not authorized to fetch workspace")
+        shared_deal = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id).first()
+        if shared_deal:
+            pass
+        else:
+            raise HTTPException(status_code=404, detail="You are not authorized to fetch workspace")
     query = db.query(CurrentWorkspace)
     if deal_id:
         query = query.filter(CurrentWorkspace.deal_id == deal_id)

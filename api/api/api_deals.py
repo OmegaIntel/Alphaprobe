@@ -16,6 +16,7 @@ from uuid import UUID
 from datetime import datetime
 from typing import Optional
 from db_models.deals import Deal, DealStatus
+from db_models.shared_user_deals import SharedUserDeals
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
@@ -95,7 +96,11 @@ def update_deal(
         deal = db.query(Deal).filter(Deal.id == deal_id, Deal.user_id == current_user.id).first()
         
         if not deal:
-            raise HTTPException(status_code=404, detail="Deal not found or you do not have access to it")
+            shared_deal = db.query(SharedUserDeals).filter(SharedUserDeals.deal_id == deal_id, SharedUserDeals.user_id == current_user.id).first()
+            if shared_deal:
+                deal = db.query(Deal).filter(Deal.id == shared_deal.deal_id).first()
+            else:
+                raise HTTPException(status_code=404, detail="Deal not found or you do not have access to it")
 
         # Update the deal fields that are provided
         if deal_data.name:
@@ -148,5 +153,9 @@ def get_deals(
 ):
     deals = db.query(Deal).filter(Deal.user_id == current_user.id).all()
     if not deals:
-        raise HTTPException(status_code=404, detail="No deals found for this user")
+        shared_deal = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id).first()
+        if shared_deal:
+            deals = db.query(Deal).filter(Deal.id == shared_deal.deal_id).all()
+        else:
+            raise HTTPException(status_code=404, detail="No deals found for this user")
     return deals
