@@ -204,7 +204,7 @@ export const RobotOutlined = () => (
     </defs>
   </svg>
 );
-export const SendButtonIcon = () => (
+export const SendButtonIcon = ({ color = "white" }) => (
   <svg
     width="17"
     height="17"
@@ -215,7 +215,7 @@ export const SendButtonIcon = () => (
     <g clipPath="url(#clip0_165_195)">
       <path
         d="M14.7848 1.77653L7.45428 9.114M14.7848 1.77653L10.1241 15.1127L7.45428 9.114M14.7848 1.77653L1.45301 6.44984L7.45428 9.114"
-        stroke="#46464F"
+        stroke={color}
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"

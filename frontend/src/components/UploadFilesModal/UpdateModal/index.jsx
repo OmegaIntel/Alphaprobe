@@ -5,6 +5,7 @@ import {
   metaDataSubCategory,
   metaDataTags,
 } from "../../../constants/index.js";
+import { initialState } from "../../../reducer/modalReducer.js";
 
 const { Option } = Select;
 const { Panel } = Collapse;
@@ -13,12 +14,17 @@ const UpdateModal = ({ isVisible, onOk, onCancel, state, dispatch }) => {
   const [form] = Form.useForm();
 
   useEffect(() => {
-    form.setFieldsValue({
-      name: state.baseName || "",
-      category: state.category || null,
-      subCategory: state.subCategory || null,
-      description: state.description || "",
-    });
+    if (state === initialState) {
+      form.resetFields();
+    } else {
+      form.setFieldsValue({
+        name: state.baseName || "",
+        category: state.category || null,
+        subCategory: state.subCategory || null,
+        description: state.description || "",
+        tags: state.tags || [],
+      });
+    }
   }, [state, form]);
 
   return (
@@ -30,7 +36,7 @@ const UpdateModal = ({ isVisible, onOk, onCancel, state, dispatch }) => {
       onOk={onOk}
       centered
       onCancel={onCancel}
-      width={700}
+      width={800}
       styles={{
         content: {
           background: "#1F1E23",
@@ -52,6 +58,7 @@ const UpdateModal = ({ isVisible, onOk, onCancel, state, dispatch }) => {
           type="primary"
           onClick={onOk}
           className="!bg-[#303038] text-[#DCDCDC] disabled:text-[#46464F] border-none "
+          loading={state.loading}
         >
           Save
         </Button>,
@@ -137,14 +144,13 @@ const UpdateModal = ({ isVisible, onOk, onCancel, state, dispatch }) => {
                 </Form.Item>
 
                 {/* Tags */}
-                <Form.Item>
+                <Form.Item name="tags">
                   <div style={{ display: "flex", alignItems: "center" }}>
                     <Select
                       placeholder="Tags"
                       onChange={(value) =>
-                        dispatch({ type: "SET_NEW_TAG", payload: value })
+                        dispatch({ type: "ADD_TAG", payload: value })
                       }
-                      value={state.newTag}
                     >
                       {metaDataTags.map((tag, idx) => (
                         <Option value={tag} key={idx}>
@@ -152,18 +158,6 @@ const UpdateModal = ({ isVisible, onOk, onCancel, state, dispatch }) => {
                         </Option>
                       ))}
                     </Select>
-                    <Button
-                      onClick={() =>
-                        dispatch({ type: "ADD_TAG", payload: state.newTag })
-                      }
-                      style={{
-                        backgroundColor: "transparent",
-                        border: "none",
-                        color: "#f6f6f6",
-                      }}
-                    >
-                      +
-                    </Button>
                   </div>
                   <div style={{ marginTop: "10px" }}>
                     {state.tags &&

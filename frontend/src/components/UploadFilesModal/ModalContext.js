@@ -11,6 +11,7 @@ export const ModalProvider = ({ children }) => {
   const [isUploadModalVisible, setIsUploadModalVisible] = useState(false);
   const [isUpdateModalVisible, setIsUpdateModalVisible] = useState(false);
   const [dealId, setDealId] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(null);
   const [deals, setDeals] = useState([]);
 
   return (
@@ -23,7 +24,9 @@ export const ModalProvider = ({ children }) => {
         dealId,
         setDealId,
         deals,
-        setDeals
+        setDeals,
+        selectedCategory,
+        setSelectedCategory,
       }}
     >
       {children}

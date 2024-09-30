@@ -30,6 +30,7 @@ const FileUploadComponent = () => {
       try {
         const res = await fetchAllDocument(dealId);
         if (res) setFiles(res.documents);
+        else setFiles([]);
       } catch (error) {
         console.log(error);
       } finally {

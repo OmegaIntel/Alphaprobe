@@ -53,6 +53,7 @@ const SendEmailModal = () => {
         centered
       >
         <Form
+          form={form}
           layout="vertical"
           onFinish={handleFormSubmit}
           initialValues={{

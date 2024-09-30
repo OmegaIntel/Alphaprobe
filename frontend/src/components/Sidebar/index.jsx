@@ -20,11 +20,11 @@ const { Sider } = Layout;
 const Sidebar = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { setDealId, setDeals, deals, dealId } = useModal();
   const [isOpen, setIsOpen] = useState(false);
-  const { dealId, setDealId, deals, setDeals } = useModal();
   const onRequestClose = () => {
     setIsOpen(false);
-  }
+  };
   useEffect(() => {
     const fetchDealsData = async () => {
       try {
@@ -35,16 +35,7 @@ const Sidebar = () => {
       }
     };
     fetchDealsData();
-  }, []);
-  useEffect(() => {
-    const pathMatch = location.pathname.match(/^\/projects\/([a-f0-9-]+)$/);
-    if (pathMatch) {
-      const dealId = pathMatch[1];
-      setDealId(dealId);
-    } else {
-      setDealId(null);
-    }
-  }, [location, setDealId]);
+  }, [dealId, setDeals]);
 
   const menuItems = [
     {
@@ -57,40 +48,50 @@ const Sidebar = () => {
       key: "2",
       icon: <FileOutlinedIcon />,
       label: "Templates",
+      disabled: true,
     },
     {
       key: "3",
-      label: "MY WORKSPACE",
-      children:
-        deals.length > 0
-          ? deals.map((deal) => ({
-            key: deal.id,
-            icon: <FileOutlinedIcon />,
-            label: (
-              <Link
-                to={`/projects/${deal.id}`}
-                onClick={() => setDealId(deal.id)}
-              >
-                {deal.name}
-              </Link>
-            ),
-          }))
-          : [
-            {
-              key: "no-projects",
-              disabled: true,
-              label: "No projects available",
-            },
-          ],
-      expandIcon: () => (
-        <PlusOutlined
-          onClick={(e) => {
-            e.stopPropagation();
-            navigate("/create-deal");
+      label: (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
           }}
-        />
+        >
+          <span>MY WORKSPACE</span>
+          <PlusOutlined
+            onClick={(e) => {
+              e.stopPropagation();
+              navigate("/create-deal");
+            }}
+            style={{ cursor: "pointer" }}
+          />
+        </div>
       ),
+      type: "group",
     },
+    ...(deals.length > 0
+      ? deals.map((deal) => ({
+          key: deal.id,
+          icon: <FileOutlinedIcon />,
+          label: (
+            <Link
+              to={`/projects/${deal.id}`}
+              onClick={() => setDealId(deal.id)}
+            >
+              {deal.name}
+            </Link>
+          ),
+        }))
+      : [
+          {
+            key: "no-projects",
+            disabled: true,
+            label: "No projects available",
+          },
+        ]),
     {
       key: "4",
       label: "DATA SOURCE INTEGRATION",
@@ -143,10 +144,17 @@ const Sidebar = () => {
             </span>
             <div className="flex gap-3 justify-center">
               <SendEmail />
-              <div className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer ">
+              <Link
+                to={process.env.REACT_APP_CALENDLY_URL}
+                target="_blank"
+                className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer "
+              >
                 <CalenderIcon />
-              </div>
-              <div className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer " onClick={() => setIsOpen(true)}>
+              </Link>
+              <div
+                className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer "
+                onClick={() => setIsOpen(true)}
+              >
                 <ShareWithPeopleIcon />
               </div>
             </div>

@@ -36,6 +36,7 @@ const UploadFilesModal = () => {
       });
     }
     try {
+      dispatch({ type: "START_UPLOAD" });
       const formData = new FormData();
       formData.append("files", selectedFile.originFileObj);
       formData.append("deal_id", dealId);

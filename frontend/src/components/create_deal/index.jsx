@@ -3,7 +3,6 @@ import DealDocumentsCard from "../card";
 import { useMediaQuery } from "react-responsive";
 import { createDeal } from "../../services/dealService";
 import { notification } from "antd";
-import { useNavigate } from "react-router-dom";
 import { useModal } from "../UploadFilesModal/ModalContext";
 import DiligenceDocumentsModal from "../requestDocuments";
 
@@ -16,7 +15,6 @@ const CreateDeal = () => {
   const [isOverflowing, setIsOverflowing] = useState(false);
   const { setIsUploadModalVisible, setDealId } = useModal();
   const [requestModal, setRequestModal] = useState(false);
-  const navigation = useNavigate();
 
   const containerRef = useRef(null);
 
@@ -98,14 +96,17 @@ const CreateDeal = () => {
 
   const onRequestClose = () => {
     setRequestModal(false);
-  }
+  };
 
   return (
     <div
       ref={containerRef}
       className="flex flex-col space-y-1 overflow-y-auto min-h-screen"
     >
-      <DiligenceDocumentsModal isOpen={requestModal} onRequestClose={onRequestClose}/>
+      <DiligenceDocumentsModal
+        isOpen={requestModal}
+        onRequestClose={onRequestClose}
+      />
       <div
         className={`ml-1 flex text-white p-5 bg-[#151518] ${
           isOverflowing ? "min-h-fit" : "flex-1"

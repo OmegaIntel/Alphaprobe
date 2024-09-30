@@ -10,7 +10,6 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import "./App.css";
 import CreateDeal from "./components/create_deal/index";
-import DilligenceContainer from "./components/dilligence_list/container";
 import Dashboard from "./components/Dashboard";
 import ProtectedLayout from "./components/ProtectedLayout";
 import Categories from "./components/projectHeaders/categories";
@@ -29,7 +28,6 @@ const App = () => {
   const isLoggedIn = Boolean(token);
 
   return (
-    // <KanbanBoard/>
     <Router>
       <Routes>
         <Route

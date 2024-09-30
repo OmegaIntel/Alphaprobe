@@ -15,14 +15,15 @@ import {
 } from "../../services/chatService";
 import { categoryList } from "../../constants";
 import { useModal } from "../UploadFilesModal/ModalContext";
+import Markdown from "react-markdown";
 
 const { Option } = Select;
 
 const ChatBox = () => {
-  const { dealId } = useModal();
-
+  const { dealId, deals, selectedCategory } = useModal();
   const [isOpen, setIsOpen] = useState(false);
-  const [selectCategory, setSelectCategory] = useState(null);
+  const [selectDeal, setSelectDeal] = useState(dealId);
+  const [selectCategory, setSelectCategory] = useState(selectedCategory);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [currentChatSession, setCurrentChatSession] = useState(null);
@@ -39,39 +40,27 @@ const ChatBox = () => {
         console.error("Error during cleanup:", error);
       }
     }
-    setSelectCategory(null);
     setError(null);
     setCurrentChatSession(null);
     setMessages([]);
     setInputMessage("");
   }, [currentChatSession]);
-  const toggleChat = (userInitiated = false) => {
-    if (dealId) {
-      if (isOpen) {
-        resetState();
-      }
-      setIsOpen(!isOpen);
-    } else if (userInitiated) {
-      notification.warning({
-        message: "No deal selected. Please select a deal to start chatting.",
-      });
+
+  const toggleChat = () => {
+    if (isOpen) {
+      resetState();
     }
+    setIsOpen(!isOpen);
   };
-  useEffect(() => {
-    if (dealId === null) {
-      setIsOpen(false); // Close the chatbox
-      resetState(); // Reset the state when dealId is null
-    }
-  }, [dealId, resetState]);
 
   useEffect(() => {
     const fetchDealDocuments = async () => {
       setLoading(true);
       try {
-        const response = await fetchAllDocument(dealId);
+        const response = await fetchAllDocument(selectDeal);
         if (response.documents?.length > 0) {
           if (selectCategory) {
-            const res = await createChatSession(dealId);
+            const res = await createChatSession(selectDeal);
             setCurrentChatSession(res.id);
             setError(null);
           } else {
@@ -88,10 +77,27 @@ const ChatBox = () => {
         setLoading(false);
       }
     };
+    fetchDealDocuments();
+  }, [selectCategory, selectDeal]);
+
+  useEffect(() => {
     if (dealId) {
-      fetchDealDocuments();
+      setSelectDeal(dealId);
+    } else {
+      setSelectDeal(null);
     }
-  }, [dealId, selectCategory]);
+  }, [dealId]);
+
+  useEffect(() => {
+    if (
+      selectedCategory &&
+      categoryList.slice(0, 4).includes(selectedCategory)
+    ) {
+      setSelectCategory(selectedCategory);
+    } else {
+      setSelectCategory(null);
+    }
+  }, [selectedCategory]);
 
   const handleSendMessage = async () => {
     if (!inputMessage.trim()) return;
@@ -104,7 +110,7 @@ const ChatBox = () => {
     try {
       const message = await sendChatMessage(
         currentChatSession,
-        dealId,
+        selectDeal,
         inputMessage
       );
       setIsLoadingMessage(false);
@@ -146,7 +152,6 @@ const ChatBox = () => {
               <div className="flex justify-between w-full">
                 <span className="text-base font-semibold">Omega Copilot</span>
                 <div className="flex items-center space-x-2">
-                  <PlusOutlined className="text-white text-sm cursor-pointer" />
                   <CloseOutlined
                     className="text-white text-sm cursor-pointer"
                     onClick={() => toggleChat(true)}
@@ -154,9 +159,24 @@ const ChatBox = () => {
                 </div>
               </div>
               <Select
+                placeholder="Select Deal"
+                className="w-full"
+                onChange={(dealId) => setSelectDeal(dealId)}
+                loading={loading}
+                value={selectDeal}
+              >
+                {deals.map((deal, idx) => (
+                  <Option value={deal.id} key={idx}>
+                    {deal.name}
+                  </Option>
+                ))}
+              </Select>
+              <Select
                 placeholder="Select Category"
                 className="w-full"
-                onChange={(dealId) => setSelectCategory(dealId)}
+                onChange={(selectedCategory) =>
+                  setSelectCategory(selectedCategory)
+                }
                 loading={loading}
                 value={selectCategory}
               >
@@ -186,7 +206,9 @@ const ChatBox = () => {
                         : "rounded-[8px] rounded-br-none ml-auto"
                     }`}
                   >
-                    <p>{ans.message}</p>
+                    <p>
+                      <Markdown>{ans.message}</Markdown>
+                    </p>
                   </div>
                 ))
               ) : (
@@ -234,12 +256,20 @@ const ChatBox = () => {
                     placeholder="Ask a question"
                     value={inputMessage}
                     onChange={(e) => setInputMessage(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        handleSendMessage();
+                      }
+                    }}
                   />
                   <button
-                    className="absolute right-2 top-2 bg-[#303038] rounded p-1 "
+                    className="absolute right-2 top-2 bg-[#303038] rounded p-1 disabled:cursor-not-allowed"
                     onClick={handleSendMessage}
+                    disabled={isLoadingMessage}
                   >
-                    <SendButtonIcon />
+                    <SendButtonIcon
+                      color={isLoadingMessage ? "#46464F" : "white"}
+                    />
                   </button>
                 </div>
               </div>
