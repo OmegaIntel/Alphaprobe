@@ -6,6 +6,8 @@ from os import getenv
 from typing import List
 from weaviate import Client
 from pdfminer.high_level import extract_text
+import requests
+from io import BytesIO
 
 load_dotenv()
 
@@ -30,9 +32,15 @@ class WeaviateManager:
         return chunks
     
     def get_file_chunks(self, file_path: str) -> List[str]:
-        text = extract_text(file_path)
-        chunks=self.chunk_text(text)
-        return chunks
+        response = requests.get(file_path)
+
+        if response.status_code == 200:
+            pdf_content = BytesIO(response.content)
+            text = extract_text(pdf_content)
+            chunks=self.chunk_text(text)
+            return chunks
+        else:
+            raise Exception(f"Failed to fetch the PDF file. Status code: {response.status_code}")
 
 
     def create_objects(self, collection_name: str, document_id: str, chunks: List[str]) -> List[dict]:
