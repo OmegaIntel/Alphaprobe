@@ -1,7 +1,7 @@
 import os
 from openbb import obb
-from api.interfaces import Retriever
-from api.llm_models.llm import LLM
+from interfaces import Retriever
+from llm_models.llm import LLM
 
 
 llm_wrapper = LLM()

@@ -3,22 +3,21 @@ from pydantic import BaseModel
 from typing import List
 import uuid
 from sqlalchemy.orm import Session
-from api.db_models.workspace import CurrentWorkspace
 from db_models.session import get_db  
-from api.llm_models.llm import LLM
-from api.search.bing_search import BingSearch
-from api.api.api_user import get_current_user, User
+from llm_models.llm import LLM
+from search.bing_search import BingSearch
+from api.api_user import get_current_user, User
 from db_models.chat import ChatSession,ChatMessage
 from db_models.weaviatedb import WeaviateManager
-from api.stock.openbb_stock_api import OpenBBStockAPI
-from api.metrics.openbb_metrics_api import OpenBBMetricsAPI
-from api.db_models.deals import Deal
+from stock.openbb_stock_api import OpenBBStockAPI
+from metrics.openbb_metrics_api import OpenBBMetricsAPI
+from db_models.deals import Deal
 from pydantic import ValidationError
 from db_models.users import User
 from uuid import UUID
 from typing import Optional
 from api.api_user import get_current_user, User as UserModelSerializer
-from api.interfaces import Retriever
+from interfaces import Retriever
 from db_models.shared_user_deals import SharedUserDeals
 from db_models.workspace import CurrentWorkspace
 from sqlalchemy import or_
