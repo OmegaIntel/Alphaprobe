@@ -79,7 +79,7 @@ class RetrieverResponse(BaseModel):
 class ChatMessagesResponse(BaseModel):
     messages: List[dict[str, str]]
 
-@chat_router.post("/chat/sessions", response_model=ChatSessionResponse)
+@chat_router.post("/api/chat/sessions", response_model=ChatSessionResponse)
 async def create_chat_session(deal_id: str = Form(...), db: Session = Depends(get_db)):
     session_id = str(uuid.uuid4())
     session_name = f"Chat Session for Deal {deal_id}"
@@ -89,14 +89,14 @@ async def create_chat_session(deal_id: str = Form(...), db: Session = Depends(ge
     db.commit()
     return ChatSessionResponse(id=session_id, name=session_name)
 
-@chat_router.get("/chat/{session_id}/messages", response_model=ChatMessagesResponse)
+@chat_router.get("/api/chat/{session_id}/messages", response_model=ChatMessagesResponse)
 async def get_chat_messages(session_id: str, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     messages = db.query(ChatMessage).filter(ChatMessage.session_id == session_id).all()
     if not messages:
         raise HTTPException(status_code=404, detail="Chat session not found")
     return ChatMessagesResponse(messages=[{"role": msg.role, "content": msg.content} for msg in messages])
 
-@chat_router.post("/chat/{session_id}/message", response_model=ChatResponse)
+@chat_router.post("/api/chat/{session_id}/message", response_model=ChatResponse)
 async def send_message(session_id: str, request: MessageRequest, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     session = db.query(ChatSession).filter(ChatSession.id == session_id).first()
     if session is None:
@@ -140,7 +140,7 @@ async def send_message(session_id: str, request: MessageRequest, current_user: U
     db.commit()
     return ChatResponse(response=ai_response)
 
-@chat_router.delete("/chat/sessions/{session_id}", response_model=None)
+@chat_router.delete("/api/chat/sessions/{session_id}", response_model=None)
 async def delete_chat_session(session_id: str, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     session = db.query(ChatSession).filter(
         ChatSession.id == session_id,
@@ -161,7 +161,7 @@ async def delete_chat_session(session_id: str, current_user: User = Depends(get_
     return {"message": "Session deleted successfully"}
 
 
-@chat_router.get("/chat_sessions/")
+@chat_router.get("/api/chat_sessions/")
 def get_chat_sessions(deal_id: str, db: Session = Depends(get_db)):
     chat_sessions = db.query(ChatSession).filter(ChatSession.deal_id == deal_id).all()
     if not chat_sessions:
@@ -169,7 +169,7 @@ def get_chat_sessions(deal_id: str, db: Session = Depends(get_db)):
     return chat_sessions
 
 
-@chat_router.post("/workspace/add/{session_id}")
+@chat_router.post("/api/workspace/add/{session_id}")
 async def add_to_workspace(type: str, session_id: str, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     messages = db.query(ChatMessage).filter(ChatMessage.session_id == session_id).order_by(asc(ChatMessage.created_at)).all()
     deal_id = db.query(ChatSession).filter(ChatSession.id==session_id).first().deal_id

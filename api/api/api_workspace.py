@@ -39,7 +39,7 @@ class CurrentWorkspaceResponse(BaseModel):
     class Config:
         from_attributes = True
 
-@current_workspace_router.post("/current_workspace/", response_model=CurrentWorkspaceResponse)
+@current_workspace_router.post("/api/current_workspace/", response_model=CurrentWorkspaceResponse)
 def add_current_workspace(item: CurrentWorkspaceCreate, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
     data=db.query(Deal).filter(Deal.id==item.deal_id).first()
     if str(data.user_id) != current_user.id:
@@ -54,7 +54,7 @@ def add_current_workspace(item: CurrentWorkspaceCreate, db: Session = Depends(ge
     db.refresh(workspace)
     return workspace
 
-@current_workspace_router.put("/current_workspace/{workspace_id}", response_model=CurrentWorkspaceResponse)
+@current_workspace_router.put("/api/current_workspace/{workspace_id}", response_model=CurrentWorkspaceResponse)
 def update_workspace(workspace_id: str, item: BaseTableSchema, db: Session = Depends(get_db), current_user: UserModelSerializer = Depends(get_current_user)):
     workspace = db.query(CurrentWorkspace).filter(CurrentWorkspace.id == workspace_id).first()
     data=db.query(Deal).filter(Deal.id==workspace.deal_id).first()
@@ -73,7 +73,7 @@ def update_workspace(workspace_id: str, item: BaseTableSchema, db: Session = Dep
     return workspace
 
 
-@current_workspace_router.delete("/current_workspace/{workspace_id}", response_model=CurrentWorkspaceResponse)
+@current_workspace_router.delete("/api/current_workspace/{workspace_id}", response_model=CurrentWorkspaceResponse)
 def delete_todo(workspace_id: str, db: Session = Depends(get_db), current_user: UserModelSerializer = Depends(get_current_user)):
     workspace = db.query(CurrentWorkspace).filter(CurrentWorkspace.id == workspace_id).first()
     data=db.query(Deal).filter(Deal.id==workspace.deal_id).first()
@@ -89,7 +89,7 @@ def delete_todo(workspace_id: str, db: Session = Depends(get_db), current_user: 
     db.commit()
     return workspace
 
-@current_workspace_router.get("/current_workspace/", response_model=List[CurrentWorkspaceResponse])
+@current_workspace_router.get("/api/current_workspace/", response_model=List[CurrentWorkspaceResponse])
 def current_workspace(deal_id: Optional[UUID] = None,type: Optional[str] = None, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
     data = db.query(Deal).filter(Deal.id == deal_id).first()
     if str(data.user_id) != current_user.id:

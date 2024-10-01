@@ -38,7 +38,7 @@ class Knowledgebaseresponse(BaseModel):
     class Config:
         from_attributes = True
 
-@knowledge_base_router.post("/knowledgebase/", response_model=Knowledgebaseresponse)
+@knowledge_base_router.post("/api/knowledgebase/", response_model=Knowledgebaseresponse)
 def add_knowledgebase(item: Knowledgebasecreate, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
     data=db.query(Deal).filter(Deal.id==item.deal_id).first()
     if str(data.user_id) != current_user.id:
@@ -53,7 +53,7 @@ def add_knowledgebase(item: Knowledgebasecreate, db: Session = Depends(get_db),c
     db.refresh(data)
     return data
 
-@knowledge_base_router.put("/knowledgebase/{knowledgebase_id}", response_model=Knowledgebaseresponse)
+@knowledge_base_router.put("/api/knowledgebase/{knowledgebase_id}", response_model=Knowledgebaseresponse)
 def update_knowledge(knowledgebase_id: str, item: BaseTableSchema, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
     base = db.query(knowledgebase).filter(knowledgebase.id == knowledgebase_id).first()
     data=db.query(Deal).filter(Deal.id==base.deal_id).first()
@@ -72,7 +72,7 @@ def update_knowledge(knowledgebase_id: str, item: BaseTableSchema, db: Session =
     return base
 
 
-@knowledge_base_router.delete("/knowledgebase/{knowledgebase_id}", response_model=Knowledgebaseresponse)
+@knowledge_base_router.delete("/api/knowledgebase/{knowledgebase_id}", response_model=Knowledgebaseresponse)
 def delete_data(knowledgebase_id: str, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
     base = db.query(knowledgebase).filter(knowledgebase.id == knowledgebase_id).first()
     data=db.query(Deal).filter(Deal.id==base.deal_id).first()
@@ -88,7 +88,7 @@ def delete_data(knowledgebase_id: str, db: Session = Depends(get_db),current_use
     db.commit()
     return base
 
-@knowledge_base_router.get("/knowledgebase/", response_model=List[Knowledgebaseresponse])
+@knowledge_base_router.get("/api/knowledgebase/", response_model=List[Knowledgebaseresponse])
 def knowledgecontext(deal_id: Optional[UUID] = None,type: Optional[str] = None, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
     data = db.query(Deal).filter(Deal.id == deal_id).first()
     if not data or str(data.user_id) != current_user.id:

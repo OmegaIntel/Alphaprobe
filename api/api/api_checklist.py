@@ -38,7 +38,7 @@ class Checklistresponse(BaseModel):
     class Config:
         from_attributes = True
 
-@checklist_base_router.post("/checklist/", response_model=Checklistresponse)
+@checklist_base_router.post("/api/checklist/", response_model=Checklistresponse)
 def add_checklist(item: checklist, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
     data=db.query(Deal).filter(Deal.id==item.deal_id).first()
     if str(data.user_id) != current_user.id:
@@ -53,7 +53,7 @@ def add_checklist(item: checklist, db: Session = Depends(get_db),current_user: U
     db.refresh(data)
     return data
 
-@checklist_base_router.put("/checklist/{checklist_id}", response_model=Checklistresponse)
+@checklist_base_router.put("/api/checklist/{checklist_id}", response_model=Checklistresponse)
 def update_checklist(checklist_id: str, item: BaseTableSchema, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
     base = db.query(Checklist).filter(Checklist.id == checklist_id).first()
     data=db.query(Deal).filter(Deal.id==base.deal_id).first()
@@ -72,7 +72,7 @@ def update_checklist(checklist_id: str, item: BaseTableSchema, db: Session = Dep
     return base
 
 
-@checklist_base_router.delete("/checklist/{checklist_id}", response_model=Checklistresponse)
+@checklist_base_router.delete("/api/checklist/{checklist_id}", response_model=Checklistresponse)
 def delete_data(checklist_id: str, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
     base = db.query(Checklist).filter(Checklist.id == checklist_id).first()
     data=db.query(Deal).filter(Deal.id==base.deal_id).first()
@@ -88,7 +88,7 @@ def delete_data(checklist_id: str, db: Session = Depends(get_db),current_user: U
     db.commit()
     return base
 
-@checklist_base_router.get("/checklist/", response_model=List[Checklistresponse])
+@checklist_base_router.get("/api/checklist/", response_model=List[Checklistresponse])
 def checklistcontext(deal_id: Optional[UUID] = None,type: Optional[str] = None,  db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
     data = db.query(Deal).filter(Deal.id == deal_id).first()
     if not data or str(data.user_id) != current_user.id:

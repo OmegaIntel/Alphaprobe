@@ -36,7 +36,7 @@ def sanitize_class_name(name: str) -> str:
     sanitized = ''.join(e for e in name if e.isalnum())
     return sanitized.capitalize()
 
-@upload_file_router.post("/upload")
+@upload_file_router.post("/api/upload")
 async def upload_files(
     deal_id: Optional[uuid.UUID] = Form(None), 
     name: str = Form(...),                       
@@ -116,7 +116,7 @@ async def upload_files(
     }
 
 
-@upload_file_router.put("/documents/{document_id}")
+@upload_file_router.put("/api/documents/{document_id}")
 async def update_document(
     document_id: str,  
     name: str = Form(...),
@@ -165,7 +165,7 @@ async def update_document(
     }
 
 
-@upload_file_router.delete("/documents/{document_id}")
+@upload_file_router.delete("/api/documents/{document_id}")
 async def delete_document(document_id: str, db: Session = Depends(get_db)):
     try:
         document_uuid = uuid.UUID(document_id) 
@@ -187,7 +187,7 @@ async def delete_document(document_id: str, db: Session = Depends(get_db)):
 
     return {"detail": "Document deleted successfully."}
 
-@upload_file_router.get("/documents/{deal_id}")
+@upload_file_router.get("/api/documents/{deal_id}")
 async def get_uploaded_documents(deal_id: str, db: Session = Depends(get_db)):
     try:
         deal_uuid = uuid.UUID(deal_id)
@@ -206,7 +206,7 @@ async def get_uploaded_documents(deal_id: str, db: Session = Depends(get_db)):
     }
 
 
-@upload_file_router.get("/documents/details/{document_id}")
+@upload_file_router.get("/api/documents/details/{document_id}")
 async def get_document_details(document_id: str, db: Session = Depends(get_db)):
     try:
         document_uuid = uuid.UUID(document_id)

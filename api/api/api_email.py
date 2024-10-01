@@ -48,7 +48,7 @@ def send_email(to_email: str, subject: str, body: str):
         return False
 
 # FastAPI route to send email
-@Email_router.post("/send-email/")
+@Email_router.post("/api/send-email/")
 def send_email_endpoint(email_data: EmailSchema):
     to_email = email_data.email
     subject = email_data.title
