@@ -46,11 +46,21 @@ const SendEmailModal = () => {
       </button>
 
       <Modal
-        title="Send an Email"
+        title={
+          <div className="text-white text-base font-bold">Send an Email</div>
+        }
         open={isModalVisible}
         onCancel={handleCloseModal}
         footer={null}
         centered
+        styles={{
+          content: {
+            background: "#1F1E23",
+            color: "white",
+            boxShadow: "0px 2px 10px 0px #000000CC",
+          },
+          header: { background: "#1F1E23", color: "#FFFFFF" },
+        }}
       >
         <Form
           form={form}
@@ -63,7 +73,7 @@ const SendEmailModal = () => {
         >
           <Form.Item
             name="email"
-            label="Recipient's Email"
+            label={<span style={{ color: "white" }}>Recipient's Email</span>}
             rules={[
               {
                 required: true,
@@ -72,21 +82,21 @@ const SendEmailModal = () => {
               },
             ]}
           >
-            <Input placeholder="Enter recipient's email address" />
+            <Input className=" placeholder:text-gray-400" style={{ backgroundColor: "#212126", color: "#fff", border: "10px solid !important", borderColor: "#46464f" }} placeholder="Enter recipient's email address" />
           </Form.Item>
           <Form.Item
             name="title"
-            label="Subject"
+            label={<span style={{ color: "white" }}>Subject</span>}
             rules={[{ required: true, message: "Please enter the subject." }]}
           >
-            <Input placeholder="Enter the email subject" />
+            <Input className=" placeholder:text-gray-400" style={{ backgroundColor: "#212126", color: "#fff", border: "10px solid !important", borderColor: "#46464f" }} placeholder="Enter the email subject" />
           </Form.Item>
           <Form.Item
             name="description"
-            label="Message"
+            label={<span style={{ color: "white" }}>Message</span>}
             rules={[{ required: true, message: "Please enter your message." }]}
           >
-            <Input.TextArea rows={4} placeholder="Enter your message" />
+            <Input.TextArea className=" placeholder:text-gray-400" style={{ backgroundColor: "#212126", color: "#fff", border: "10px solid !important", borderColor: "#46464f" }} rows={4} placeholder="Enter your message" />
           </Form.Item>
           <Form.Item>
             <Button type="primary" htmlType="submit" block disabled={isLoading}>

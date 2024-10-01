@@ -9,7 +9,7 @@ import {
   ShareWithPeopleIcon,
 } from "../../constants/IconPack";
 import { getDeals } from "../../services/dealService";
-import { PlusOutlined } from "@ant-design/icons";
+import { LogoutOutlined, PlusOutlined } from "@ant-design/icons";
 import ChatBox from "../ChatBox";
 import SendEmail from "../modals/send_email";
 import { useModal } from "../UploadFilesModal/ModalContext";
@@ -21,7 +21,9 @@ const Sidebar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { setDealId, setDeals, deals, dealId } = useModal();
+  const [filteredDeals, setFilteredDeals] = useState(deals);
   const [isOpen, setIsOpen] = useState(false);
+  const [search, setSearch] = useState("");
   const onRequestClose = () => {
     setIsOpen(false);
   };
@@ -29,13 +31,25 @@ const Sidebar = () => {
     const fetchDealsData = async () => {
       try {
         const data = await getDeals();
-        if (data) setDeals(data);
+        if (data) {
+          setDeals(data);
+          setFilteredDeals(data);
+        }
       } catch (error) {
         console.log(error);
       }
     };
     fetchDealsData();
   }, [dealId, setDeals]);
+
+
+  useEffect(() => {
+    // Filter deals based on the search input
+    const results = deals.filter(deal =>
+      deal.name.toLowerCase().includes(search.toLowerCase())
+    );
+    setFilteredDeals(results);
+  }, [search]);
 
   const menuItems = [
     {
@@ -72,8 +86,8 @@ const Sidebar = () => {
       ),
       type: "group",
     },
-    ...(deals.length > 0
-      ? deals.map((deal) => ({
+    ...(filteredDeals.length > 0
+      ? filteredDeals.map((deal) => ({
           key: deal.id,
           icon: <FileOutlinedIcon />,
           label: (
@@ -117,7 +131,7 @@ const Sidebar = () => {
           <img src="/images/logo.png" alt="" />
         </div>
         <div className="px-4 relative">
-          <input className="rounded mb-6 bg-[#212126] border border-[#303038] focus:bg-[#212126] hover:bg-[#212126] outline-none py-1 px-6 w-[95%]" />
+          <input className="rounded mb-6 bg-[#212126] border border-[#303038] focus:bg-[#212126] hover:bg-[#212126] outline-none py-1 px-6 w-[95%]" value={search} onChange={(e)=>setSearch(e.target.value)}/>
           <div className="absolute top-2 left-5">
             <MagnifyingGlassIcon />
           </div>
@@ -156,6 +170,11 @@ const Sidebar = () => {
                 onClick={() => setIsOpen(true)}
               >
                 <ShareWithPeopleIcon />
+              </div>
+              <div
+                className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer "
+              >
+                <LogoutOutlined />
               </div>
             </div>
           </div>

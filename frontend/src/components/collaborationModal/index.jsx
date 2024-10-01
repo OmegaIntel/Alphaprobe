@@ -1,7 +1,6 @@
 import React from "react";
 import { Modal, Form, Input, Button, notification, Select } from "antd";
 import { useModal } from "../UploadFilesModal/ModalContext";
-import "./styles.css";
 import { addCollaboration } from "../../services/addCollaboration";
 
 const AddCollaboration = ({ isOpen, onRequestClose }) => {
@@ -35,7 +34,9 @@ const AddCollaboration = ({ isOpen, onRequestClose }) => {
   return (
     <>
       <Modal
-        title="Request a Collaboration"
+        title={
+          <div className="text-white text-base font-bold">Request a Collaboration</div>
+        }
         open={isOpen}
         onCancel={() => {
           onRequestClose();
@@ -43,6 +44,14 @@ const AddCollaboration = ({ isOpen, onRequestClose }) => {
         }}
         footer={null}
         centered
+        styles={{
+          content: {
+            background: "#1F1E23",
+            color: "white",
+            boxShadow: "0px 2px 10px 0px #000000CC",
+          },
+          header: { background: "#1F1E23", color: "#FFFFFF" },
+        }}
       >
         <Form
           layout="vertical"
@@ -52,14 +61,14 @@ const AddCollaboration = ({ isOpen, onRequestClose }) => {
         >
           <Form.Item
             name="email"
-            label="Email"
+            label={<span style={{ color: "white" }}>Email</span>}
             rules={[{ required: true, message: "Please enter your email!" }]}
           >
-            <Input type="email" />
+            <Input style={{ backgroundColor: "#212126", color: "#fff", border: "10px solid !important", borderColor: "#46464f" }} type="email"/>
           </Form.Item>
           <Form.Item
             name="project"
-            label="Project"
+            label={<span style={{ color: "white" }}>Project</span>}
             rules={[{ required: true, message: "Please enter your project!" }]}
           >
             <Select
@@ -71,6 +80,7 @@ const AddCollaboration = ({ isOpen, onRequestClose }) => {
               style={{
                 backgroundColor: "white !important",
                 color: "black !important",
+                border: "none"
               }}
             />
           </Form.Item>

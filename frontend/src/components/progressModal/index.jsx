@@ -61,10 +61,20 @@ const AddProgress = ({ progress, setToggle, name }) => {
         <MoreOutlined />
       </button>
       <Modal
-        title="Update Progress"
+        title={
+          <div className="text-white text-base font-bold">Update Progress</div>
+        }
         open={visible}
         onCancel={handleClose}
         footer={null}
+        styles={{
+          content: {
+            background: "#1F1E23",
+            color: "white",
+            boxShadow: "0px 2px 10px 0px #000000CC",
+          },
+          header: { background: "#1F1E23", color: "#FFFFFF" },
+        }}
       >
         <Form
           form={form}
@@ -74,13 +84,13 @@ const AddProgress = ({ progress, setToggle, name }) => {
         >
           <Form.Item
             name="progress"
-            label="Progress %"
+            label={<span style={{ color: "white" }}>Progress %</span>}
             rules={[
               { required: true, message: "Please enter progress!" },
               { validator: validateProgress },
             ]}
           >
-            <Input type="number" min={0} max={100} />
+            <Input style={{ backgroundColor: "#212126", color: "#fff", border: "10px solid !important", borderColor: "#46464f", padding: "8px" }} type="number" min={0} max={100} />
           </Form.Item>
           <Form.Item>
             <Button type="primary" htmlType="submit" disabled={!submittable}>
