@@ -17,7 +17,7 @@ class DemoRequestCreate(BaseModel):
     email: EmailStr
     message: Optional[str] = None
 
-@demo_request_router.post("/request-demo", response_model=None)
+@demo_request_router.post("/api/request-demo", response_model=None)
 async def request_demo(request: DemoRequestCreate, db: Session = Depends(get_db)):
     try:
         demo_request = DemoRequests(

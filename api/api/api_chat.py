@@ -65,31 +65,31 @@ class RetrieverResponse(BaseModel):
 class ChatMessagesResponse(BaseModel):
     messages: List[dict[str, str]]
 
-@chat_router.post("/chat/sessions", response_model=ChatSession)
+@chat_router.post("/api/chat/sessions", response_model=ChatSession)
 async def create_chat_session(current_user: User = Depends(get_current_user)):
     session_id, session_name = weaviate_handler.create_chat_session(current_user.email)
     return ChatSession(id=session_id, name=session_name)
 
-@chat_router.get("/chat/sessions", response_model=List[ChatSession])
+@chat_router.get("/api/chat/sessions", response_model=List[ChatSession])
 async def get_chat_sessions(current_user: User = Depends(get_current_user)):
     sessions = weaviate_handler.get_chat_sessions(current_user.email)
     return [ChatSession(id=session.get('session_id', session.get('_id', '')), name=session.get('session_name', 'Session')) for session in sessions]
 
-@chat_router.get("/chat/{session_id}/messages", response_model=ChatMessagesResponse)
+@chat_router.get("/api/chat/{session_id}/messages", response_model=ChatMessagesResponse)
 async def get_chat_messages(session_id: str, current_user: User = Depends(get_current_user)):
     messages = weaviate_handler.get_chat_messages(session_id, current_user.email)
     if messages is None:
         raise HTTPException(status_code=404, detail="Chat session not found")
     return ChatMessagesResponse(messages=messages)
 
-@chat_router.post("/chat/retriever", response_model=RetrieverResponse)
+@chat_router.post("/api/chat/retriever", response_model=RetrieverResponse)
 async def set_retriever(session_id: str, request: RetrieverRequest, current_user: User = Depends(get_current_user)):
     session = weaviate_handler.get_chat_session(session_id, current_user.email)
     if session is None:
         raise HTTPException(status_code=404, detail="Chat session not found")
     CURRENT_RETRIEVER = request.retriever
 
-@chat_router.post("/chat/{session_id}/message", response_model=ChatResponse)
+@chat_router.post("/api/chat/{session_id}/message", response_model=ChatResponse)
 async def send_message(session_id: str, request: MessageRequest, current_user: User = Depends(get_current_user)):
     session = weaviate_handler.get_chat_session(session_id, current_user.email)
     if session is None:
@@ -135,7 +135,7 @@ async def send_message(session_id: str, request: MessageRequest, current_user: U
 
     return ChatResponse(response=ai_response)
 
-@chat_router.delete("/chat/sessions/{session_id}", status_code=204)
+@chat_router.delete("/api/chat/sessions/{session_id}", status_code=204)
 async def delete_chat_session(session_id: str, user=Depends(get_current_user)):
     result = weaviate_handler.delete_chat_session(session_id, user.email)
     if result is None:
@@ -145,7 +145,7 @@ async def delete_chat_session(session_id: str, user=Depends(get_current_user)):
     return {"message": "Session deleted successfully"}
 
 
-@chat_router.post("/upload", response_model=UploadResponse)
+@chat_router.post("/api/upload", response_model=UploadResponse)
 async def upload_file(
     company: str = Form(...),
     file: UploadFile = File(...),
@@ -166,7 +166,7 @@ async def upload_file(
     )
 
 
-@chat_router.get("/companies")
+@chat_router.get("/api/companies")
 async def get_companies(current_user: User = Depends(get_current_user)):
     companies = weaviate_handler.get_registered_companies(current_user.email)
     return {"companies": companies}

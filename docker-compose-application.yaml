@@ -37,5 +37,5 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - NODE_ENV=development
+      - REACT_APP_API_BASE_URL=
     command: [ "npm", "start" ]

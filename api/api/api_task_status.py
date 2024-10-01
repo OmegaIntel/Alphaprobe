@@ -52,7 +52,7 @@ class ToDoResponse(BaseModel):
 
 
 
-@task_status_router.post("/todos/", response_model=ToDoResponse)
+@task_status_router.post("/api/todos/", response_model=ToDoResponse)
 def add_todo(item: ToDoCreate, db: Session = Depends(get_db), current_user: UserModelSerializer = Depends(get_current_user)):
     data = db.query(Deal).filter(Deal.id == item.deal_id).first()
     if str(data.user_id) != current_user.id:
@@ -68,7 +68,7 @@ def add_todo(item: ToDoCreate, db: Session = Depends(get_db), current_user: User
     return todo
 
 
-@task_status_router.get("/todos/", response_model=List[ToDoResponse])
+@task_status_router.get("/api/todos/", response_model=List[ToDoResponse])
 def get_todos(deal_id: Optional[UUID] = None, db: Session = Depends(get_db), current_user: UserModelSerializer = Depends(get_current_user)):
     data = db.query(Deal).filter(Deal.id == deal_id).first()
     if str(data.user_id) != current_user.id:
@@ -89,7 +89,7 @@ def get_todos(deal_id: Optional[UUID] = None, db: Session = Depends(get_db), cur
         raise HTTPException(status_code=404, detail=error_message)
     return todos
 
-@task_status_router.put("/todos/{todo_id}", response_model=ToDoResponse)
+@task_status_router.put("/api/todos/{todo_id}", response_model=ToDoResponse)
 def update_todo(todo_id: str, item: ToDoBase, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
     todo = db.query(ToDo).filter(ToDo.id == todo_id).first()
     data=db.query(Deal).filter(Deal.id==todo.deal_id).first()
@@ -111,7 +111,7 @@ def update_todo(todo_id: str, item: ToDoBase, db: Session = Depends(get_db),curr
     db.refresh(todo)
     return todo
 
-@task_status_router.delete("/todos/{todo_id}", response_model=ToDoResponse)
+@task_status_router.delete("/api/todos/{todo_id}", response_model=ToDoResponse)
 def delete_todo(todo_id: str, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
     todo = db.query(ToDo).filter(ToDo.id == todo_id).first()
     data=db.query(Deal).filter(Deal.id==todo.deal_id).first()

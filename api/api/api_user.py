@@ -90,7 +90,7 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)], db: Se
     return User(id=str(user.id), email=user.email)
 
 # API route for user registration
-@user_router.post("/register", response_model=User)
+@user_router.post("/api/register", response_model=User)
 async def register(email: EmailStr = Form(...), password: str = Form(...), request: Request = None, db: Session = Depends(get_db)):
     if request:
         logging.info(f"Register request: {await request.form()}")
@@ -123,7 +123,7 @@ async def register(email: EmailStr = Form(...), password: str = Form(...), reque
 
 
 # API route for token-based login
-@user_router.post("/token")
+@user_router.post("/api/token")
 async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
     user = authenticate_user(db, form_data.username, form_data.password)
     if not user:
@@ -139,6 +139,6 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
     return {"access_token": access_token, "token_type": "bearer"}
 
 # API route to get the current logged-in user
-@user_router.get("/users/me")
+@user_router.get("/api/users/me")
 async def read_users_me(current_user: Annotated[User, Depends(get_current_user)]):
     return current_user

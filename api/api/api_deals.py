@@ -42,7 +42,7 @@ class DealCreation(DealBase):
     investment_thesis: Optional[str] = None
 
 
-@deals_router.post("/deals/", response_model=DealResponse)
+@deals_router.post("/api/deals/", response_model=DealResponse)
 def create_deal(
     deal_data: DealCreation,
     db: Session = Depends(get_db),
@@ -84,7 +84,7 @@ def create_deal(
         raise HTTPException(status_code=500, detail=str(e))
     
 
-@deals_router.put("/deals/{deal_id}", response_model=DealResponse)
+@deals_router.put("/api/deals/{deal_id}", response_model=DealResponse)
 def update_deal(
     deal_id: str,
     deal_data: DealBase,
@@ -146,7 +146,7 @@ def update_deal(
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@deals_router.get("/fetch_deals", response_model=List[DealResponse])
+@deals_router.get("/api/fetch_deals", response_model=List[DealResponse])
 def get_deals(
     db: Session = Depends(get_db),
     current_user: UserModelSerializer = Depends(get_current_user)

@@ -18,7 +18,7 @@ class CollaborationCreate(BaseModel):
     email : str
 
 
-@collaboration_router.post("/collaborate/", response_model=None)
+@collaboration_router.post("/api/collaborate/", response_model=None)
 def add_collaboration(
     item: CollaborationCreate, 
     db: Session = Depends(get_db),
