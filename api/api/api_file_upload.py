@@ -1,3 +1,4 @@
+import boto3
 from fastapi import APIRouter, Depends, UploadFile, File, Form, HTTPException
 from sqlalchemy.orm import Session
 from db_models.deals import Deal
@@ -8,12 +9,28 @@ import uuid
 import json 
 from db_models.weaviatedb import WeaviateManager
 from typing import Optional,List
+from botocore.exceptions import NoCredentialsError
+from datetime import datetime
 
 weaviate=WeaviateManager()
 
 upload_file_router = APIRouter()
 
 UPLOAD_DIRECTORY = "data"  
+
+S3_BUCKET=os.environ["S3_BUCKET"]
+S3_REGION=os.environ["S3_REGION"]
+S3_ACCESS_KEY=os.environ["S3_ACCESS_KEY"]
+S3_SECRET_KEY=os.environ["S3_SECRET_KEY"]
+
+# Create an S3 client
+s3 = boto3.client(
+    "s3",
+    aws_access_key_id=S3_ACCESS_KEY,
+    aws_secret_access_key=S3_SECRET_KEY,
+    region_name=S3_REGION
+)
+
 
 def sanitize_class_name(name: str) -> str:
     sanitized = ''.join(e for e in name if e.isalnum())
@@ -42,14 +59,21 @@ async def upload_files(
         original_filename = file.filename
         
         sanitized_filename = original_filename.replace(" ", "_").replace("/", "_").replace("\\", "_")
-        file_location = os.path.join(UPLOAD_DIRECTORY, sanitized_filename)
+        timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+        
+        file_location = f"{timestamp}_{sanitized_filename}"
 
         try:
             # Save the uploaded file to the server
-            with open(file_location, "wb") as f:
-                f.write(await file.read())
+            s3.upload_fileobj(
+                file.file,  # File object
+                S3_BUCKET,  # S3 bucket name
+                file_location  # S3 file path
+            )
+        except NoCredentialsError:
+            raise HTTPException(status_code=500, detail="S3 credentials not available")
         except Exception as e:
-            raise HTTPException(status_code=500, detail=f"File upload failed: {str(e)}")
+            raise HTTPException(status_code=500, detail=f"File upload to S3 failed: {str(e)}")
 
         if tags:
             tags_list = [tag.strip() for tag in tags.split(",") if tag.strip() and tag.strip().lower() != "null"]
@@ -72,14 +96,23 @@ async def upload_files(
     db.commit()
 
     for doc in uploaded_documents:
+        try:
+            presigned_url = s3.generate_presigned_url(
+                'get_object',
+                Params={'Bucket': S3_BUCKET, 'Key': doc.file_path},
+                ExpiresIn=3600  # URL expiration time in seconds (1 hour)
+            )
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=f"Error generating presigned URL: {str(e)}")
         db.refresh(doc)
         collection_name = "d"+str(deal_id)
         collection_name = sanitize_class_name(collection_name)  
-        weaviate.create_collection(collection_name, new_document.id, file_location)  
+        weaviate.create_collection(collection_name, new_document.id, presigned_url)  
+        
 
     return {
         "message": "Files uploaded successfully",
-        "documents": [{"id": doc.id, "name": doc.name, "file_path": doc.file_path} for doc in uploaded_documents]
+        "documents": [{"id": doc.id, "name": doc.name, "file_path": f"s3://{S3_BUCKET}/{doc.file_path}"} for doc in uploaded_documents]
     }
 
 
@@ -143,9 +176,13 @@ async def delete_document(document_id: str, db: Session = Depends(get_db)):
     if not document:
         raise HTTPException(status_code=404, detail="Document not found.")
     
-    if os.path.exists(document.file_path):
-        os.remove(document.file_path)
+    try:
+        s3.delete_object(Bucket=S3_BUCKET, Key=document.file_path)
         db.delete(document)
+    except NoCredentialsError:
+        raise HTTPException(status_code=500, detail="S3 credentials not available")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to delete the file from S3: {str(e)}")
     db.commit()
 
     return {"detail": "Document deleted successfully."}

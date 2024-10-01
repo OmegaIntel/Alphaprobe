@@ -29,3 +29,4 @@ sqlalchemy_utils==0.41.2
 mysqlclient==2.2.4
 pdfminer==20191125
 pdfminer.six==20240706
+boto3==1.35.30
