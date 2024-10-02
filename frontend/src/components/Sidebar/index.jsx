@@ -171,11 +171,13 @@ const Sidebar = () => {
               >
                 <ShareWithPeopleIcon />
               </div>
-              <div
+              <a
                 className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer "
+                onClick={()=>{localStorage.removeItem("token");}}
+                href="/login"
               >
                 <LogoutOutlined />
-              </div>
+              </a>
             </div>
           </div>
         </div>

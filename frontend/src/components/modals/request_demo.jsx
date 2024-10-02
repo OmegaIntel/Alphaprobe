@@ -65,21 +65,21 @@ const RequestDemo = () => {
             label={<span style={{ color: "white" }}>Name</span>}
             rules={[{ required: true, message: "Please enter your name!" }]}
           >
-            <Input style={{ backgroundColor: "#212126", color: "#fff", border: "none", padding: "8px" }} />
+            <Input style={{ backgroundColor: "#212126", color: "#fff",border: "10px solid !important", borderColor: "#46464f", padding: "8px" }} />
           </Form.Item>
           <Form.Item
             name="email"
             label={<span style={{ color: "white" }}>Email</span>}
             rules={[{ required: true, message: "Please enter your email!" }]}
           >
-            <Input style={{ backgroundColor: "#212126", color: "#fff", border: "none", padding: "8px" }} />
+            <Input style={{ backgroundColor: "#212126", color: "#fff",border: "10px solid !important", borderColor: "#46464f", padding: "8px" }} />
           </Form.Item>
           <Form.Item
             name="company"
             label={<span style={{ color: "white" }}>Company</span>}
             rules={[{ required: true, message: "Please enter your company!" }]}
           >
-            <Input style={{ backgroundColor: "#212126", color: "#fff", border: "none", padding: "8px" }} />
+            <Input style={{ backgroundColor: "#212126", color: "#fff", border: "10px solid !important", borderColor: "#46464f", padding: "8px" }} />
           </Form.Item>
           <Form.Item
             name="message"
@@ -88,7 +88,7 @@ const RequestDemo = () => {
           >
             <Input.TextArea
               rows={4}
-              style={{ backgroundColor: "#212126", color: "#fff", border: "none", padding: "8px" }}
+              style={{ backgroundColor: "#212126", color: "#fff", border: "10px solid !important", borderColor: "#46464f", padding: "8px" }}
             />
           </Form.Item>
           <Form.Item>
