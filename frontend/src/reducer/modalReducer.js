@@ -12,16 +12,22 @@ export const initialState = {
 export const reducer = (state, action) => {
   switch (action.type) {
     case "SET_SELECTED_FILE":
-      if (action.payload) {
-        const fullName = action.payload.name;
-        const dotIndex = fullName.lastIndexOf(".");
+      if (!action.payload) {
         return {
           ...state,
-          selectedFile: action.payload,
-          baseName: fullName.substring(0, dotIndex),
-          extension: fullName.substring(dotIndex),
+          selectedFile: null,
+          baseName: "",
+          extension: "",
         };
-      } else return state;
+      }
+      const { name: fullName } = action.payload;
+      const dotIndex = fullName.lastIndexOf(".");
+      return {
+        ...state,
+        selectedFile: action.payload,
+        baseName: fullName.substring(0, dotIndex),
+        extension: fullName.substring(dotIndex),
+      };
     case "SET_FILE_NAME":
       return { ...state, baseName: action.payload };
     case "ADD_TAG":

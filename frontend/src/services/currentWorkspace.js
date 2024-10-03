@@ -1,10 +1,10 @@
-import axiosInstance from "../axiosConfig";
-import { API_BASE_URL, token } from ".";
+import axiosInstance from "./axiosConfig";
+import { token } from ".";
 
 export const createWorkspace = async (workSpaceData) => {
   try {
     const response = await axiosInstance.post(
-      `${API_BASE_URL}/current_workspace/`,
+      `/current_workspace/`,
       workSpaceData,
       {
         headers: {
@@ -22,7 +22,7 @@ export const createWorkspace = async (workSpaceData) => {
 export const getWorkspace = async (dealId, type) => {
   try {
     const response = await axiosInstance.get(
-      `${API_BASE_URL}/current_workspace/?deal_id=${dealId}&type=${type}`,
+      `/current_workspace/?deal_id=${dealId}&type=${type}`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -36,18 +36,14 @@ export const getWorkspace = async (dealId, type) => {
   }
 };
 
-
 export const deleteWorkspace = async (id) => {
   try {
-    const response = await axiosInstance.delete(
-      `${API_BASE_URL}/current_workspace/${id}`,
-      {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
+    const response = await axiosInstance.delete(`/current_workspace/${id}`, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
     return response.data;
   } catch (error) {
     throw error;
@@ -57,7 +53,7 @@ export const deleteWorkspace = async (id) => {
 export const editWorkspace = async (dealId, updateData) => {
   try {
     const response = await axiosInstance.put(
-      `${API_BASE_URL}/current_workspace/${dealId}`,
+      `/current_workspace/${dealId}`,
       updateData,
       {
         headers: {

@@ -1,10 +1,10 @@
-import axios from "axios";
-import { API_BASE_URL, token } from ".";
+import axiosInstance from "./axiosConfig";
+import { token } from ".";
 
 // Function to send demo request
 export const createDeal = async (dealData) => {
   try {
-    const response = await axios.post(`${API_BASE_URL}/deals`, dealData, {
+    const response = await axiosInstance.post(`/deals`, dealData, {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
@@ -15,9 +15,24 @@ export const createDeal = async (dealData) => {
     throw error; // Rethrow the error to be handled by the caller
   }
 };
+
+export const updateDeal = async (dealData, dealId) => {
+  try {
+    const response = await axiosInstance.put(`/deals/${dealId}`, dealData, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    throw error; // Rethrow the error to be handled by the caller
+  }
+};
+
 export const getDeals = async () => {
   try {
-    const response = await axios.get(`${API_BASE_URL}/fetch_deals`, {
+    const response = await axiosInstance.get(`/fetch_deals`, {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,

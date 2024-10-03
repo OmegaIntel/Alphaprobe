@@ -1,10 +1,10 @@
-import axiosInstance from "../axiosConfig";
-import { API_BASE_URL, token } from ".";
+import axiosInstance from "./axiosConfig";
+import { token } from ".";
 
 export const createKnoledgeBase = async (knoledgeBaseData) => {
   try {
     const response = await axiosInstance.post(
-      `${API_BASE_URL}/knowledgebase/`,
+      `/knowledgebase/`,
       knoledgeBaseData,
       {
         headers: {
@@ -22,7 +22,7 @@ export const createKnoledgeBase = async (knoledgeBaseData) => {
 export const getKnoledgeBase = async (dealId, type) => {
   try {
     const response = await axiosInstance.get(
-      `${API_BASE_URL}/knowledgebase/?deal_id=${dealId}&type=${type}`,
+      `/knowledgebase/?deal_id=${dealId}&type=${type}`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -36,18 +36,14 @@ export const getKnoledgeBase = async (dealId, type) => {
   }
 };
 
-
 export const deleteKnowledgebase = async (id) => {
   try {
-    const response = await axiosInstance.delete(
-      `${API_BASE_URL}/knowledgebase/${id}`,
-      {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
+    const response = await axiosInstance.delete(`/knowledgebase/${id}`, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
     return response.data;
   } catch (error) {
     throw error;
@@ -57,7 +53,7 @@ export const deleteKnowledgebase = async (id) => {
 export const editKnowledgebase = async (dealId, updateData) => {
   try {
     const response = await axiosInstance.put(
-      `${API_BASE_URL}/knowledgebase/${dealId}`,
+      `/knowledgebase/${dealId}`,
       updateData,
       {
         headers: {

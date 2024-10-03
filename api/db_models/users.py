@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, TIMESTAMP, func
+from sqlalchemy import Column, String, TIMESTAMP, func,Text
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy_utils import UUIDType
 import uuid
@@ -12,4 +12,6 @@ class User(Base):
     id = Column(UUIDType(binary=False), primary_key=True, default=uuid.uuid4)
     email = Column(String(255), unique=True, index=True, nullable=False)
     password_hash = Column(String(255), nullable=False)
+    calendly_access_token = Column(Text, nullable=True)
+    calendly_refresh_token = Column(Text, nullable=True)
     created_at = Column(TIMESTAMP, server_default=func.current_timestamp())

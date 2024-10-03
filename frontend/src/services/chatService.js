@@ -1,10 +1,10 @@
-import axios from "axios";
-import { API_BASE_URL, token } from ".";
+import { token } from ".";
+import axiosInstance from "./axiosConfig";
 
 export const createChatSession = async (dealId) => {
   try {
-    const response = await axios.post(
-      `${API_BASE_URL}/chat/sessions`,
+    const response = await axiosInstance.post(
+      `/chat/sessions`,
       { deal_id: dealId },
       {
         headers: {
@@ -19,15 +19,12 @@ export const createChatSession = async (dealId) => {
 };
 export const deleteChatSession = async (sessionId) => {
   try {
-    const response = await axios.delete(
-      `${API_BASE_URL}/chat/sessions/${sessionId}`,
-      {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
+    const response = await axiosInstance.delete(`/chat/sessions/${sessionId}`, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
     return response.data;
   } catch (error) {
     console.log(error);
@@ -35,8 +32,8 @@ export const deleteChatSession = async (sessionId) => {
 };
 export const sendChatMessage = async (sessionId, dealId, message) => {
   try {
-    const response = await axios.post(
-      `${API_BASE_URL}/chat/${sessionId}/message`,
+    const response = await axiosInstance.post(
+      `/chat/${sessionId}/message`,
       { deal_id: dealId, content: message },
       {
         headers: {
@@ -52,8 +49,8 @@ export const sendChatMessage = async (sessionId, dealId, message) => {
 };
 export const addToWorkSpace = async (sessionId, type) => {
   try {
-    const response = await axios.post(
-      `${API_BASE_URL}/workspace/add/${sessionId}?type=${type}`,
+    const response = await axiosInstance.post(
+      `/workspace/add/${sessionId}?type=${type}`,
       {},
       {
         headers: {
