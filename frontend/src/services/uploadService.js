@@ -1,9 +1,8 @@
-import axios from "axios";
-import { API_BASE_URL } from ".";
+import axiosInstance from "./axiosConfig";
 
 export const uploadFiles = async (formData) => {
   try {
-    const response = await axios.post(`${API_BASE_URL}/upload`, formData, {
+    const response = await axiosInstance.post(`/upload`, formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -15,8 +14,8 @@ export const uploadFiles = async (formData) => {
 };
 export const updateDocument = async (document_id, formData) => {
   try {
-    const response = await axios.put(
-      `${API_BASE_URL}/documents/${document_id}`,
+    const response = await axiosInstance.put(
+      `/documents/${document_id}`,
       formData,
       {
         headers: {
@@ -31,14 +30,11 @@ export const updateDocument = async (document_id, formData) => {
 };
 export const deleteDocument = async (document_id) => {
   try {
-    const response = await axios.delete(
-      `${API_BASE_URL}/documents/${document_id}`,
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const response = await axiosInstance.delete(`/documents/${document_id}`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     return response.data;
   } catch (error) {
     console.log(error);
@@ -47,7 +43,7 @@ export const deleteDocument = async (document_id) => {
 
 export const fetchAllDocument = async (dealId) => {
   try {
-    const response = await axios.get(`${API_BASE_URL}/documents/${dealId}`, {
+    const response = await axiosInstance.get(`/documents/${dealId}`, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -59,8 +55,8 @@ export const fetchAllDocument = async (dealId) => {
 };
 export const fetchDocumentById = async (document_id) => {
   try {
-    const response = await axios.get(
-      `${API_BASE_URL}/documents/details/${document_id}`,
+    const response = await axiosInstance.get(
+      `/documents/details/${document_id}`,
       {
         headers: {
           "Content-Type": "application/json",

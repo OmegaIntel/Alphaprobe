@@ -1,4 +1,5 @@
 import React from "react";
+import ChatBox from "../ChatBox";
 
 const Navbar = () => {
   return (
@@ -6,10 +7,7 @@ const Navbar = () => {
       <div className="flex items-center">
         <h2>Omega Intelligence</h2>
       </div>
-      <div className="flex justify-center items-center">
-        <img src="/images/logo.png" alt="" />
-        <span className="text-xs font-bold">Omega Copilot</span>
-      </div>
+      <ChatBox />
     </div>
   );
 };

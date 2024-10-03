@@ -136,12 +136,13 @@ const ChatBox = () => {
   return (
     <>
       <button
+        className="flex justify-center items-center"
         onClick={() => toggleChat(true)}
-        className="p-3 bg-[#1F1E23] text-left rounded font-bold"
       >
-        Omega Terminal
+        <img src="/images/logo.png" alt="" />
+        <span className="text-xs font-bold">Omega Copilot</span>
       </button>
-      <div className="fixed bottom-[20%] left-[15%] z-50 flex flex-col items-end">
+      <div className="fixed top-[7%] right-[5%] z-50 flex flex-col items-end">
         <div
           className={`chatbox-container ${
             isOpen ? "chatbox-open" : "chatbox-closed"

@@ -6,7 +6,7 @@ import FileUploadComponent from "../../FileUploadComponent";
 import { MoreOutlined } from "@ant-design/icons";
 import AddProgress from "../../progressModal";
 import { useModal } from "../../UploadFilesModal/ModalContext";
-import { getDeals } from "../../../services/createDealService";
+import { getDeals } from "../../../services/dealService";
 import { notification } from "antd";
 
 const Categories = () => {

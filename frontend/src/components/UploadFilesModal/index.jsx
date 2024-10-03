@@ -78,22 +78,19 @@ const UploadFilesModal = () => {
   const uploadProps = {
     fileList: state.selectedFile ? [state.selectedFile] : [],
     onChange: (info) => {
-      const isValidFile =
-        info.fileList.length > 0 &&
-        (info.fileList[0].type === "application/pdf" ||
-          info.fileList[0].name.endsWith(".pdf"));
-
-      if (isValidFile) {
-        dispatch({
-          type: "SET_SELECTED_FILE",
-          payload: info.fileList[info.fileList.length - 1],
-        });
+      const fileList = info.fileList;
+      if (fileList.length === 0) {
+        dispatch({ type: "SET_SELECTED_FILE", payload: null });
+        return;
+      }
+      const file = fileList[fileList.length - 1];
+      const isPDF =
+        file.type === "application/pdf" || file.name.endsWith(".pdf");
+      if (isPDF) {
+        dispatch({ type: "SET_SELECTED_FILE", payload: file });
       } else {
         message.error("You can only upload PDF files!");
-        dispatch({
-          type: "SET_SELECTED_FILE",
-          payload: null,
-        });
+        dispatch({ type: "SET_SELECTED_FILE", payload: null });
       }
     },
     multiple: false,

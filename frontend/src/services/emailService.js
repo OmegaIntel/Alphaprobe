@@ -1,17 +1,12 @@
-import axiosInstance from "../axiosConfig";
-import { API_BASE_URL } from ".";
+import axiosInstance from "./axiosConfig";
 
 export const sendEmail = async (formData) => {
   try {
-    const response = await axiosInstance.post(
-      `${API_BASE_URL}/send-email`,
-      formData,
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const response = await axiosInstance.post(`/send-email`, formData, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     return response.data;
   } catch (error) {
     throw error;

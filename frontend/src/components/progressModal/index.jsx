@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Modal, Form, Input, Button, notification } from "antd";
 import { MoreOutlined } from "@ant-design/icons";
-import { updateDeal } from "../../services/createDealService";
+import { updateDeal } from "../../services/dealService";
 import { useModal } from "../UploadFilesModal/ModalContext";
 
 const AddProgress = ({ progress, setToggle, name }) => {
@@ -90,7 +90,18 @@ const AddProgress = ({ progress, setToggle, name }) => {
               { validator: validateProgress },
             ]}
           >
-            <Input style={{ backgroundColor: "#212126", color: "#fff", border: "10px solid !important", borderColor: "#46464f", padding: "8px" }} type="number" min={0} max={100} />
+            <Input
+              style={{
+                backgroundColor: "#212126",
+                color: "#fff",
+                border: "10px solid !important",
+                borderColor: "#46464f",
+                padding: "8px",
+              }}
+              type="number"
+              min={0}
+              max={100}
+            />
           </Form.Item>
           <Form.Item>
             <Button type="primary" htmlType="submit" disabled={!submittable}>
