@@ -15,25 +15,14 @@ const SendEmailModal = () => {
     setIsModalVisible(false);
   };
 
-  const handleFormSubmit = async (formData) => {
+  const handleFormSubmit = (formData) => {
     setIsLoading(true);
-    try {
-      const res = await sendEmail(formData);
-      if (res.message) {
-        notification.success({
-          message: res.message,
-          description: `Your email to ${formData.email} has been sent successfully.`,
-        });
-        handleCloseModal();
-      }
-    } catch (error) {
-      notification.error({
-        message: "Email Sending Failed",
-        description: "There was an issue sending your email. Please try again.",
-      });
-    } finally {
-      setIsLoading(false);
-    }
+      const { email, title, description } = formData;
+      const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(description)}`;
+  
+      window.location.href = mailtoLink; // Trigger the mailto link
+  
+      handleCloseModal();
   };
 
   return (

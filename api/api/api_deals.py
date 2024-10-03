@@ -17,6 +17,7 @@ from datetime import datetime
 from typing import Optional
 from db_models.deals import Deal, DealStatus
 from db_models.shared_user_deals import SharedUserDeals
+from db_models.utils import UserRole
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
@@ -37,6 +38,7 @@ class DealBase(BaseModel):
 
 class DealResponse(DealBase):
     id: UUID
+    role: Optional[str] = None
 
 class DealCreation(DealBase):
     investment_thesis: Optional[str] = None
@@ -57,7 +59,8 @@ def create_deal(
             start_date=deal_data.start_date or func.current_timestamp(),
             due_date=deal_data.due_date,
             industry=deal_data.industry,
-            progress=deal_data.progress
+            progress=deal_data.progress,
+            role="FULL_COLLABORATOR"
         )
         db.add(new_deal)
         db.commit()
@@ -77,7 +80,7 @@ def create_deal(
             start_date=new_deal.start_date,
             due_date=new_deal.due_date,
             industry=new_deal.industry,
-            progress=new_deal.progress
+            progress=new_deal.progress,
         )
     except SQLAlchemyError as e:
         db.rollback()  # Rollback the session on error
@@ -139,23 +142,38 @@ def update_deal(
             due_date=deal.due_date,
             industry=deal.industry,
             progress=deal.progress,
-            status=deal.status.value  # Return the string value of the Enum
+            status=deal.status.value,
         )
     except SQLAlchemyError as e:
         db.rollback()  # Rollback the session in case of an error
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@deals_router.get("/api/fetch_deals", response_model=List[DealResponse])
+@deals_router.get("/api/fetch_deals", response_model=None)
 def get_deals(
     db: Session = Depends(get_db),
     current_user: UserModelSerializer = Depends(get_current_user)
 ):
+    # Fetch the deals owned by the current user
     deals = db.query(Deal).filter(Deal.user_id == current_user.id).all()
+
+    # Check if there are shared deals
+    shared_deals = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id).all()
+
+    # Append shared deals to the user's deals
+    for shared_deal in shared_deals:
+        deal = db.query(Deal).filter(Deal.id == shared_deal.deal_id).first()
+        if deal:
+            # Ensure shared_deal.role is valid and assign a default value if None
+            role = shared_deal.role
+            
+            # Add a 'role' field to the deal to include the shared role
+            deal_dict = deal.__dict__
+            deal_dict["role"] = role
+            deals.append(deal_dict)
+
+    # If no deals found (including shared ones), raise exception
     if not deals:
-        shared_deal = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id).first()
-        if shared_deal:
-            deals = db.query(Deal).filter(Deal.id == shared_deal.deal_id).all()
-        else:
-            raise HTTPException(status_code=404, detail="No deals found for this user")
+        raise HTTPException(status_code=404, detail="No deals found for this user")
+    
     return deals

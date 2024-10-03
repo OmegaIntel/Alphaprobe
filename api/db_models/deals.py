@@ -4,6 +4,7 @@ from sqlalchemy.ext.declarative import declarative_base
 import uuid
 from .users import User
 from enum import Enum as PyEnum
+from .utils import UserRole
 
 Base = declarative_base()
 
@@ -25,3 +26,4 @@ class Deal(Base):
     industry = Column(String(255))
     progress = Column(String(255))
     status = Column(Enum(DealStatus), default=DealStatus.NOT_STARTED)
+    role = Column(Enum(UserRole), default=UserRole.FULL_COLLABORATOR)

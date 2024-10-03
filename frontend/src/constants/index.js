@@ -97,6 +97,11 @@ export const categoryList = [
   "Action Items",
 ];
 
+export const partialCategoryList = [
+  "Documents",
+];
+
+
 export const subCategoryList = [
   "Current Workspace",
   "Knowledge Base",

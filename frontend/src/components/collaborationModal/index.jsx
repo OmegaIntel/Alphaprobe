@@ -13,6 +13,7 @@ const AddCollaboration = ({ isOpen, onRequestClose }) => {
       const payload = {
         email: values.email,
         deal_id: values.project,
+        role: "FULL_COLLABORATOR"
       };
       await addCollaboration(payload);
       notification.success({

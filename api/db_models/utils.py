@@ -1,0 +1,4 @@
+from enum import Enum as PyEnum
+class UserRole(PyEnum):
+    DOCUMENT_COLLABORATOR = "DOCUMENT_COLLABORATOR"
+    FULL_COLLABORATOR = "FULL_COLLABORATOR"

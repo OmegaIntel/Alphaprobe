@@ -10,12 +10,14 @@ from db_models.new_users import NewUsersDeals
 from db_models.shared_user_deals import SharedUserDeals
 from db_models.users import User
 from db_models.deals import Deal
+from db_models.utils import UserRole
 
 collaboration_router = APIRouter()
 
 class CollaborationCreate(BaseModel):
     deal_id: UUID
     email : str
+    role: str
 
 
 @collaboration_router.post("/api/collaborate/", response_model=None)
@@ -37,7 +39,8 @@ def add_collaboration(
 
         new_user = NewUsersDeals(
             deal_id=item.deal_id,
-            email_id=item.email
+            email_id=item.email,
+            role=item.role
         )
 
         db.add(new_user)
@@ -46,7 +49,6 @@ def add_collaboration(
         return {"message": "User added successfully"}
 
     else:
-        print(data.id, "test")
         existing_user = db.query(Deal).filter(
             Deal.user_id == data.id, 
             Deal.id == item.deal_id
@@ -60,14 +62,13 @@ def add_collaboration(
             SharedUserDeals.deal_id == item.deal_id
         ).first()
 
-        print(shared_user_data)
-
         if shared_user_data:
             raise HTTPException(status_code=400, detail="User already added")
 
         shared_user = SharedUserDeals(
             user_id=data.id,
-            deal_id=item.deal_id
+            deal_id=item.deal_id,
+            role=item.role
         )
 
         db.add(shared_user)

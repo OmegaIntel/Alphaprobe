@@ -109,11 +109,14 @@ async def register(email: EmailStr = Form(...), password: str = Form(...), reque
     # Refresh to get the id from the database
     db.refresh(new_user)
 
+
     if newUser:
         sharedUser = SharedUserDeals(
             user_id=str(new_user.id),
-            deal_id=str(newUser.deal_id)
+            deal_id=str(newUser.deal_id),
+            role=newUser.role.value
         )
+        print(sharedUser, "test")
         db.add(sharedUser)
         db.commit()
         db.refresh(sharedUser)

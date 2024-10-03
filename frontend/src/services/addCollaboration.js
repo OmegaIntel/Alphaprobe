@@ -4,7 +4,7 @@ import { API_BASE_URL, token } from ".";
 export const addCollaboration = async (values) => {
   try {
     const response = await axios.post(
-      `${API_BASE_URL}/collaborate/`,
+      `${API_BASE_URL}/api/collaborate/`,
       values,
       {
         headers: {

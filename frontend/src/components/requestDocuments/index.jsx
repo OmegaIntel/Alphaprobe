@@ -6,11 +6,15 @@ import {
   DownloadOutlined,
   PaperClipOutlined,
 } from "@ant-design/icons";
+import { addCollaboration } from "../../services/addCollaboration";
+import { notification } from "antd";
+import { useModal } from "../UploadFilesModal/ModalContext";
 
 Modal.setAppElement("#root");
 
 const DiligenceDocumentsModal = ({ isOpen, onRequestClose }) => {
   const [activeSection, setActiveSection] = useState("File");
+  const {dealId} = useModal();
   const [files, setFiles] = useState({
     File: [],
     "Corporate & Legal": [],
@@ -25,18 +29,18 @@ const DiligenceDocumentsModal = ({ isOpen, onRequestClose }) => {
   const handleFileChange = (event) => {
     const selectedFiles = Array.from(event.target.files);
     const validFiles = selectedFiles.filter(
-      (file) => file.size <= 25 * 1024 * 1024
-    ); // 25MB limit
+      (file) => file.size <= 25 * 1024 * 1024 && file.type === "application/pdf"
+    ); // 25MB limit and only PDFs
     const invalidFiles = selectedFiles.filter(
-      (file) => file.size > 25 * 1024 * 1024
+      (file) => file.size > 25 * 1024 * 1024 || file.type !== "application/pdf"
     );
-
+  
     if (invalidFiles.length > 0) {
-      setError(`Some files are too large. The maximum file size is 25MB.`);
+      // setError(`Some files are too large or not PDF. Only PDFs under 25MB are allowed.`);
     } else {
       setError(null); // Clear error if all files are valid
     }
-
+  
     if (validFiles.length > 0) {
       setFiles((prevFiles) => ({
         ...prevFiles,
@@ -53,18 +57,18 @@ const DiligenceDocumentsModal = ({ isOpen, onRequestClose }) => {
     event.preventDefault();
     const droppedFiles = Array.from(event.dataTransfer.files);
     const validFiles = droppedFiles.filter(
-      (file) => file.size <= 25 * 1024 * 1024
-    ); // 25MB limit
+      (file) => file.size <= 25 * 1024 * 1024 && file.type === "application/pdf"
+    ); // 25MB limit and only PDFs
     const invalidFiles = droppedFiles.filter(
-      (file) => file.size > 25 * 1024 * 1024
+      (file) => file.size > 25 * 1024 * 1024 || file.type !== "application/pdf"
     );
-
+  
     if (invalidFiles.length > 0) {
-      setError(`Some files are too large. The maximum file size is 25MB.`);
+      // setError(`Some files are too large or not PDF. Only PDFs under 25MB are allowed.`);
     } else {
       setError(null); // Clear error if all files are valid
     }
-
+  
     if (validFiles.length > 0) {
       setFiles((prevFiles) => ({
         ...prevFiles,
@@ -83,7 +87,15 @@ const DiligenceDocumentsModal = ({ isOpen, onRequestClose }) => {
       return;
     }
 
-    console.log("Sending email request to: ", email);
+    const payload = {
+      email: email,
+      deal_id: dealId,
+      role: "DOCUMENT_COLLABORATOR"
+    };
+
+    addCollaboration(payload).then(() => {
+      notification.success({ "message": "User added!" })
+    }).catch(() => notification.error({ "message": "Error in adding user" }))
   };
 
   const renderSectionContent = () => {

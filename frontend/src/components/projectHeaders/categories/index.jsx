@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import DilligenceContainer from "../../dilligence_list/container";
 import Subcategories from "../subcategories";
 import { categoryList } from "../../../constants";
+import { partialCategoryList } from "../../../constants";
 import FileUploadComponent from "../../FileUploadComponent";
 import { MoreOutlined } from "@ant-design/icons";
 import AddProgress from "../../progressModal";
@@ -16,8 +17,9 @@ const Categories = () => {
   const [name, setName] = useState("");
 
   const [toggle, setToggle] = useState(false);
+  const [role, setRole] = useState();
 
-  const { dealId, setSelectedCategory } = useModal();
+  const { dealId, setSelectedCategory, deals } = useModal();
 
   useEffect(() => {
     setSelectedCategory(isActive);
@@ -30,6 +32,10 @@ const Categories = () => {
           const dealData = data.find((deal) => deal.id === dealId);
           setProgress(dealData?.progress);
           setName(dealData?.name);
+          setRole(dealData?.role);
+          if(dealData?.role==="DOCUMENT_COLLABORATOR"){
+            setIsActive("Documents");
+          }
         })
         .catch(() =>
           notification.error({
@@ -44,7 +50,7 @@ const Categories = () => {
       <div className="flex flex-row flex-grow overflow-auto">
         <div className="w-[70%] flex flex-grow flex-col overflow-auto">
           <div className="flex flex-row bg-[#151518] pt-5 px-5 ml-1">
-            {categoryList.map((data, index) => (
+            {(role==="DOCUMENT_COLLABORATOR"?partialCategoryList:categoryList).map((data, index) => (
               <div
                 className={`${
                   data === isActive && "bg-[#212126] rounded-lg"
