@@ -24,7 +24,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 9999;
+  z-index: 1;
   border: none;
 }
 
@@ -42,10 +42,6 @@
   border-color: #46464f;
   background-color: #212126;
   color: #fff;
-}
-
-.ant-select-selection {
-  background-color: green;
 }
 
 textarea {
@@ -72,14 +68,6 @@ textarea {
 }
 
 .modal-actions button:last-child {
-  background-color: white;
-  color: black;
-}
-
-.custom-select>option {
-  background-color: #2c2c2c; /* This won't be visible in many browsers */
+  background-color: #303038;
   color: #fff;
-  border: none;
-  outline: none;
-  border-radius: 10px;
 }

@@ -1,20 +1,22 @@
 import React, { useState, useEffect, useRef } from "react";
 import Modal from "react-modal";
-import { Input, notification, Tag, Tooltip } from "antd";
+import { Input, notification, Tag, Tooltip, Select } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 import "./TaskModal.css"; // Custom CSS for styling the modal
 import { ReactComponent as CrossIcon } from "../../icons/svgviewer-output_14.svg";
 import { createTask, editTasks } from "../../services/taskService";
 import { useModal } from "../UploadFilesModal/ModalContext";
+import { CloseOutlined } from "@ant-design/icons";
 
 // For accessibility, we need to bind the modal to the app element
 Modal.setAppElement("#root");
+const  {Option} = Select;
 
 const TaskModal = ({ isOpen, onRequestClose, type, values, setToggle }) => {
   const [taskName, setTaskName] = useState("");
   const [dueDate, setDueDate] = useState("");
   const [description, setDescription] = useState("");
-  const [priority, setPriority] = useState("");
+  const [priority, setPriority] = useState("medium");
   const { dealId } = useModal();
 
   // Tag-related state
@@ -49,8 +51,8 @@ const TaskModal = ({ isOpen, onRequestClose, type, values, setToggle }) => {
     editInputRef.current?.focus();
   }, [editInputValue]);
 
-  const handlePriorityChange = (e) => {
-    setPriority(e.target.value);
+  const handlePriorityChange = (value) => {
+    setPriority(value);
   };
 
   const handleCreateTask = () => {
@@ -204,8 +206,9 @@ const TaskModal = ({ isOpen, onRequestClose, type, values, setToggle }) => {
             />
           </div>
 
-          <div className="flex flex-row mt-5 mb-16">
-            <select
+          <div className="flex flex-row mt-5 mb-16 items-center">
+            <div className="mx-2">Priority</div>
+            <Select
               value={priority}
               onChange={handlePriorityChange}
               style={{
@@ -213,16 +216,14 @@ const TaskModal = ({ isOpen, onRequestClose, type, values, setToggle }) => {
                 backgroundColor: "#303038",
                 color: "#fff",
                 outline: "none",
+                height: "40px"
               }}
-              className="p-1 rounded cursor-pointer custom-select"
+              zIndexPopup={1000}
             >
-              <option value="" disabled>
-                Priority
-              </option>
-              <option value="low">Low</option>
-              <option value="medium">Medium</option>
-              <option value="high">High</option>
-            </select>
+              <Option value="low">Low</Option>
+              <Option value="medium">Medium</Option>
+              <Option value="high">High</Option>
+            </Select>
 
             <div className="tags-container mx-10">
               {tags.map((tag, index) => {
@@ -246,13 +247,14 @@ const TaskModal = ({ isOpen, onRequestClose, type, values, setToggle }) => {
                   <Tag
                     key={tag}
                     closable={true}
-                    closeIcon={<span style={{ color: "white" }}>x</span>}
+                    closeIcon={<CloseOutlined style={{ color: "white" }}/>}
                     style={{
                       userSelect: "none",
                       backgroundColor: "#303038",
                       text: "white",
                       border: "none",
                       padding: "8px",
+                      color: "white"
                     }}
                     onClose={() => handleCloseTag(tag)}
                   >
@@ -264,7 +266,7 @@ const TaskModal = ({ isOpen, onRequestClose, type, values, setToggle }) => {
                           e.preventDefault();
                         }
                       }}
-                      className="text-white"
+                      className="text-base"
                     >
                       {isLongTag ? `${tag.slice(0, 20)}...` : tag}
                     </span>
@@ -296,10 +298,12 @@ const TaskModal = ({ isOpen, onRequestClose, type, values, setToggle }) => {
                     border: "none",
                     padding: "8px",
                     cursor: "pointer",
+                    color: "white"
                   }}
                   icon={<PlusOutlined className="text-white" />}
+                  className="rounded text-base"
                 >
-                  <span className="text-white">Custom Tag</span>
+                  Custom Tag
                 </Tag>
               )}
             </div>

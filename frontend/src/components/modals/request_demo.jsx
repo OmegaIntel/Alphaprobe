@@ -34,11 +34,21 @@ const RequestDemo = () => {
         Request a Demo
       </button>
       <Modal
-        title="Request a Demo"
+        title={
+          <div className="text-white text-base font-bold">Request a Demo</div>
+        }
         open={visible}
         onCancel={handleClose}
         footer={null}
         centered
+        styles={{
+          content: {
+            background: "#1F1E23",
+            color: "white",
+            boxShadow: "0px 2px 10px 0px #000000CC",
+          },
+          header: { background: "#1F1E23", color: "#FFFFFF" },
+        }}
       >
         <Form
           layout="vertical"
@@ -52,31 +62,34 @@ const RequestDemo = () => {
         >
           <Form.Item
             name="name"
-            label="Name"
+            label={<span style={{ color: "white" }}>Name</span>}
             rules={[{ required: true, message: "Please enter your name!" }]}
           >
-            <Input />
+            <Input style={{ backgroundColor: "#212126", color: "#fff",border: "10px solid !important", borderColor: "#46464f", padding: "8px" }} />
           </Form.Item>
           <Form.Item
             name="email"
-            label="Email"
+            label={<span style={{ color: "white" }}>Email</span>}
             rules={[{ required: true, message: "Please enter your email!" }]}
           >
-            <Input />
+            <Input style={{ backgroundColor: "#212126", color: "#fff",border: "10px solid !important", borderColor: "#46464f", padding: "8px" }} />
           </Form.Item>
           <Form.Item
             name="company"
-            label="Company"
+            label={<span style={{ color: "white" }}>Company</span>}
             rules={[{ required: true, message: "Please enter your company!" }]}
           >
-            <Input />
+            <Input style={{ backgroundColor: "#212126", color: "#fff", border: "10px solid !important", borderColor: "#46464f", padding: "8px" }} />
           </Form.Item>
           <Form.Item
             name="message"
-            label="Message"
+            label={<span style={{ color: "white" }}>Message</span>}
             rules={[{ required: true, message: "Please enter your message!" }]}
           >
-            <Input.TextArea rows={4} />
+            <Input.TextArea
+              rows={4}
+              style={{ backgroundColor: "#212126", color: "#fff", border: "10px solid !important", borderColor: "#46464f", padding: "8px" }}
+            />
           </Form.Item>
           <Form.Item>
             <Button type="primary" htmlType="submit">

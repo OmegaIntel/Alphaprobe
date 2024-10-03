@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ReactComponent as PlusButton } from "../../icons/plus_button.svg";
+import { PlusCircleFilled } from "@ant-design/icons";
 import EditableProjectCard from "./editableCards";
 import {
   createWorkspace,
@@ -7,7 +8,7 @@ import {
   editWorkspace,
   getWorkspace,
 } from "../../services/currentWorkspace";
-import { notification } from "antd";
+import { Button, notification } from "antd";
 import {
   createKnoledgeBase,
   deleteKnowledgebase,
@@ -239,9 +240,11 @@ const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
   return (
     <>
       <div className="flex-grow overflow-y-auto bg-[#151518] ml-1">
-        <PlusButton
-          className="absolute bottom-5 right-96 z-10 cursor-pointer"
+        <Button
+          className="absolute bottom-5 right-[345px] z-10 cursor-pointer"
           onClick={addProject}
+          icon={<PlusCircleFilled style={{fontSize: "30px"}}/>}
+          style={{ padding: '12px 24px', fontSize: '16px', height: '48px' }}
         />
         <div className="grid grid-cols-1 gap-4 p-4">
           {projects?.map((project) => (

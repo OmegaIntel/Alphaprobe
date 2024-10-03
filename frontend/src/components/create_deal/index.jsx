@@ -5,6 +5,9 @@ import { createDeal } from "../../services/dealService";
 import { notification } from "antd";
 import { useModal } from "../UploadFilesModal/ModalContext";
 import DiligenceDocumentsModal from "../requestDocuments";
+import { Select } from "antd";
+
+const { Option } = Select;
 
 const CreateDeal = () => {
   const [projectName, setProjectName] = useState("");
@@ -164,22 +167,21 @@ const CreateDeal = () => {
           <div className="flex space-x-4 mt-11 mb-6">
             <div className="w-3/5 flex flex-row items-center">
               <label className="block mr-5">Industry</label>
-              <select
-                className="p-2 bg-[#212126] pr-8 rounded-md border border-[#46464F] w-[60%]"
+              <Select
+                className="w-[60%] bg-[#212126] rounded-md border border-[#46464F]"
                 value={industry}
-                onChange={(e) => setIndustry(e.target.value)}
+                onChange={(value) => setIndustry(value)}
+                placeholder="Select industry"
+                style={{height: "40px"}}
               >
-                <option value="" disabled>
-                  Select industry
-                </option>
-                <option value="tech">Technology</option>
-                <option value="finance">Finance</option>
-                <option value="healthcare">Healthcare</option>
-              </select>
+                <Option value="tech">Technology</Option>
+                <Option value="finance">Finance</Option>
+                <Option value="healthcare">Healthcare</Option>
+              </Select>
             </div>
             <div className="w-2/5 flex justify-end">
               <button
-                className="bg-white text-black p-1 rounded-md w-52 hover:bg-gray-200"
+                className="bg-[#303038] text-white p-1 rounded-md w-52"
                 onClick={handleClick}
               >
                 <div className="text-center w-full">Create New Deal</div>
