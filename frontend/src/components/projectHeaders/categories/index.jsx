@@ -42,7 +42,7 @@ const Categories = () => {
   return (
     <>
       <div className="flex flex-row flex-grow overflow-auto">
-        <div className="flex flex-grow flex-col overflow-auto">
+        <div className="w-[70%] flex flex-grow flex-col overflow-auto">
           <div className="flex flex-row bg-[#151518] pt-5 px-5 ml-1">
             {categoryList.map((data, index) => (
               <div
@@ -64,8 +64,8 @@ const Categories = () => {
             <Subcategories isActiveCategory={isActive} />
           )}
         </div>
-        <div>
-          <div className="w-80 bg-black p-2 flex flex-row justify-between">
+        <div className="w-[30%]">
+          <div className="bg-black p-2 flex flex-row justify-between">
             <div>{progress}% complete</div>
             <AddProgress
               progress={progress}

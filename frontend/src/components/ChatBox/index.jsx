@@ -56,6 +56,7 @@ const ChatBox = () => {
   useEffect(() => {
     const fetchDealDocuments = async () => {
       setLoading(true);
+      resetState();
       try {
         const response = await fetchAllDocument(selectDeal);
         if (response.documents?.length > 0) {
@@ -77,8 +78,9 @@ const ChatBox = () => {
         setLoading(false);
       }
     };
-    fetchDealDocuments();
-  }, [selectCategory, selectDeal]);
+    if (isOpen) fetchDealDocuments();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectCategory, selectDeal, isOpen]);
 
   useEffect(() => {
     if (dealId) {
@@ -95,7 +97,7 @@ const ChatBox = () => {
     ) {
       setSelectCategory(selectedCategory);
     } else {
-      setSelectCategory(null);
+      setSelectCategory("Investment Thesis");
     }
   }, [selectedCategory]);
 
@@ -142,13 +144,13 @@ const ChatBox = () => {
         <img src="/images/logo.png" alt="" />
         <span className="text-xs font-bold">Omega Copilot</span>
       </button>
-      <div className="fixed top-[7%] right-[5%] z-50 flex flex-col items-end">
+      <div className="fixed top-[7%] right-2 z-50 flex flex-col items-end">
         <div
           className={`chatbox-container ${
             isOpen ? "chatbox-open" : "chatbox-closed"
           }`}
         >
-          <div className="bg-[#24242A] shadow-lg rounded-lg p-4 w-[36rem] h-[38rem] mb-4">
+          <div className="bg-[#24242A] shadow-lg rounded-lg p-4 w-[32rem] h-[38rem] mb-4">
             <div className="p-1 flex flex-col justify-center gap-2 items-center">
               <div className="flex justify-between w-full">
                 <span className="text-base font-semibold">Omega Copilot</span>
@@ -169,21 +171,6 @@ const ChatBox = () => {
                 {deals.map((deal, idx) => (
                   <Option value={deal.id} key={idx}>
                     {deal.name}
-                  </Option>
-                ))}
-              </Select>
-              <Select
-                placeholder="Select Category"
-                className="w-full"
-                onChange={(selectedCategory) =>
-                  setSelectCategory(selectedCategory)
-                }
-                loading={loading}
-                value={selectCategory}
-              >
-                {categoryList.slice(0, 4).map((category, idx) => (
-                  <Option value={category} key={idx}>
-                    {category}
                   </Option>
                 ))}
               </Select>

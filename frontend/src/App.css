@@ -949,7 +949,7 @@ pre {
 }
 
 .chatbox-open {
-  width: 575px;
+  width: 512px;
   height: 625px;
 }
 
@@ -974,7 +974,7 @@ pre {
   gap: 0.5rem;
   width: 100%;
   margin-block: 12px;
-  height: calc(100% - 235px);
+  height: calc(100% - 200px);
   overflow: auto;
   padding: 10px;
   scrollbar-width: none;
