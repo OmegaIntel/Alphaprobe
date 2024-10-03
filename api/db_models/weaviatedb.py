@@ -115,4 +115,18 @@ class WeaviateManager:
             retrieved_contents.append(retrieved_content)  
         
         return retrieved_contents
+    
+    def delete_context(self, collection_name: str) -> List[str]:
+        """
+        Delete existing collection
+        """
+
+        collection_object = self.client.collections.get(collection_name)
+
+        if not collection_object:
+            raise Exception(f"Failed to fetch the collection")
+
+        temp = self.client.collections.delete(collection_name)
+        
+        return "Collection deleted successfully!"
         
