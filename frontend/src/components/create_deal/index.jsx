@@ -172,7 +172,7 @@ const CreateDeal = () => {
                 value={industry}
                 onChange={(value) => setIndustry(value)}
                 placeholder="Select industry"
-                style={{height: "40px"}}
+                style={{ height: "40px" }}
               >
                 <Option value="tech">Technology</Option>
                 <Option value="finance">Finance</Option>

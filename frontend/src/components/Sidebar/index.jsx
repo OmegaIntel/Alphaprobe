@@ -10,7 +10,6 @@ import {
 } from "../../constants/IconPack";
 import { getDeals } from "../../services/dealService";
 import { LogoutOutlined, PlusOutlined } from "@ant-design/icons";
-import ChatBox from "../ChatBox";
 import SendEmail from "../modals/send_email";
 import { useModal } from "../UploadFilesModal/ModalContext";
 import AddCollaboration from "../collaborationModal";
@@ -42,14 +41,12 @@ const Sidebar = () => {
     fetchDealsData();
   }, [dealId, setDeals]);
 
-
   useEffect(() => {
-    // Filter deals based on the search input
-    const results = deals.filter(deal =>
+    const results = deals.filter((deal) =>
       deal.name.toLowerCase().includes(search.toLowerCase())
     );
     setFilteredDeals(results);
-  }, [search]);
+  }, [search, deals]);
 
   const menuItems = [
     {
@@ -131,7 +128,11 @@ const Sidebar = () => {
           <img src="/images/logo.png" alt="" />
         </div>
         <div className="px-4 relative">
-          <input className="rounded mb-6 bg-[#212126] border border-[#303038] focus:bg-[#212126] hover:bg-[#212126] outline-none py-1 px-6 w-[95%]" value={search} onChange={(e)=>setSearch(e.target.value)}/>
+          <input
+            className="rounded mb-6 bg-[#212126] border border-[#303038] focus:bg-[#212126] hover:bg-[#212126] outline-none py-1 px-6 w-[95%]"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
           <div className="absolute top-2 left-5">
             <MagnifyingGlassIcon />
           </div>
@@ -145,7 +146,9 @@ const Sidebar = () => {
             items={menuItems}
           />
           <div className="flex flex-col gap-3 h-[35%] w-[85%] mx-auto">
-            <ChatBox />
+            <button className="p-3 bg-[#1F1E23] text-left rounded font-bold">
+              Omega Terminal
+            </button>
             <span className="text-xs">
               Email{" "}
               <a
@@ -173,7 +176,9 @@ const Sidebar = () => {
               </div>
               <a
                 className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer "
-                onClick={()=>{localStorage.removeItem("token");}}
+                onClick={() => {
+                  localStorage.removeItem("token");
+                }}
                 href="/login"
               >
                 <LogoutOutlined />

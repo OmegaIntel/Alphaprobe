@@ -1,30 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import Modal from 'react-modal';
-import axiosInstance from '../axiosConfig';
-import '../App.css';
+import React, { useState, useEffect } from "react";
+import Modal from "react-modal";
+import axiosInstance from "../services/axiosConfig";
+import "../App.css";
 
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 
 const UploadModal = ({ isOpen, onRequestClose }) => {
   const [companies, setCompanies] = useState([]);
   const [newCompany, setNewCompany] = useState(false);
-  const [company, setCompany] = useState('');
+  const [company, setCompany] = useState("");
   const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [uploadStatus, setUploadStatus] = useState('');
+  const [uploadStatus, setUploadStatus] = useState("");
 
   useEffect(() => {
     const fetchCompanies = async () => {
       try {
-        const token = localStorage.getItem('token'); // Get the auth token from localStorage
-        const response = await axiosInstance.get('/companies', {
+        const token = localStorage.getItem("token"); // Get the auth token from localStorage
+        const response = await axiosInstance.get("/companies", {
           headers: {
-            'Authorization': `Bearer ${token}`, // Pass the token in the Authorization header
+            Authorization: `Bearer ${token}`, // Pass the token in the Authorization header
           },
         });
         setCompanies(response.data.companies);
       } catch (error) {
-        console.error('Error fetching companies:', error);
+        console.error("Error fetching companies:", error);
       }
     };
     fetchCompanies();
@@ -36,29 +36,29 @@ const UploadModal = ({ isOpen, onRequestClose }) => {
 
   const handleUpload = async () => {
     setLoading(true);
-    setUploadStatus('');
+    setUploadStatus("");
     const formData = new FormData();
-    formData.append('file', file);
-    formData.append('company', company);
-  
-    const token = localStorage.getItem('token');
-  
+    formData.append("file", file);
+    formData.append("company", company);
+
+    const token = localStorage.getItem("token");
+
     try {
-      const response = await axiosInstance.post('/upload', formData, {
+      const response = await axiosInstance.post("/upload", formData, {
         headers: {
-          'Content-Type': 'multipart/form-data',
-          'Authorization': `Bearer ${token}`, // Pass the token in the Authorization header
+          "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${token}`, // Pass the token in the Authorization header
         },
       });
       if (response.status === 200) {
-        setUploadStatus('File uploaded successfully');
+        setUploadStatus("File uploaded successfully");
         // Keep the modal open and show the success message
       } else {
-        setUploadStatus('Failed to upload file');
+        setUploadStatus("Failed to upload file");
       }
     } catch (error) {
-      console.error('Error uploading file:', error);
-      setUploadStatus('Failed to upload file');
+      console.error("Error uploading file:", error);
+      setUploadStatus("Failed to upload file");
     } finally {
       setLoading(false);
     }
@@ -72,15 +72,17 @@ const UploadModal = ({ isOpen, onRequestClose }) => {
       className="upload-modal"
       overlayClassName="upload-modal-overlay"
     >
-      <button className="modal-close-button" onClick={onRequestClose}>×</button>
+      <button className="modal-close-button" onClick={onRequestClose}>
+        ×
+      </button>
       <h2>Upload a File</h2>
       <div className="input-container">
         <div className="toggle-container">
           <label className="switch">
-            <input 
-              type="checkbox" 
-              checked={newCompany} 
-              onChange={() => setNewCompany(!newCompany)} 
+            <input
+              type="checkbox"
+              checked={newCompany}
+              onChange={() => setNewCompany(!newCompany)}
             />
             <span className="slider round"></span>
           </label>

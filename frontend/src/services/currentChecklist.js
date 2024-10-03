@@ -1,18 +1,14 @@
-import axiosInstance from "../axiosConfig";
-import { API_BASE_URL, token } from ".";
+import axiosInstance from "./axiosConfig";
+import { token } from ".";
 
 export const createChecklist = async (checklistData) => {
   try {
-    const response = await axiosInstance.post(
-      `${API_BASE_URL}/checklist/`,
-      checklistData,
-      {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
+    const response = await axiosInstance.post(`/checklist/`, checklistData, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
     return response.data;
   } catch (error) {
     throw error;
@@ -22,7 +18,7 @@ export const createChecklist = async (checklistData) => {
 export const getChecklist = async (dealId, type) => {
   try {
     const response = await axiosInstance.get(
-      `${API_BASE_URL}/checklist/?deal_id=${dealId}&type=${type}`,
+      `/checklist/?deal_id=${dealId}&type=${type}`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -36,18 +32,14 @@ export const getChecklist = async (dealId, type) => {
   }
 };
 
-
 export const deleteChecklist = async (id) => {
   try {
-    const response = await axiosInstance.delete(
-      `${API_BASE_URL}/checklist/${id}`,
-      {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
+    const response = await axiosInstance.delete(`/checklist/${id}`, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
     return response.data;
   } catch (error) {
     throw error;
@@ -57,7 +49,7 @@ export const deleteChecklist = async (id) => {
 export const editChecklist = async (dealId, updateData) => {
   try {
     const response = await axiosInstance.put(
-      `${API_BASE_URL}/checklist/${dealId}`,
+      `/checklist/${dealId}`,
       updateData,
       {
         headers: {
