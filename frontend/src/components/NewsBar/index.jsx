@@ -28,15 +28,15 @@ const NewsBar = () => {
     <div className="bg-[#151518] w-[30%] h-screen ml-1 p-2 overflow-y-auto">
       <h5 className="text-sm font-semibold">Latest PE Markets Deals / News</h5>
       {loading ? (
-        <div className="flex justify-center items-center h-full">
+        <div className="flex justify-center items-center h-[80%]">
           <Spin size="large" />
         </div>
       ) : error ? (
-        <div className="flex justify-center items-center h-full">
-          <Alert message="Error" description={error} type="error" showIcon />
+        <div className="flex justify-center items-center h-[80%]">
+          <Alert description={error} type="error" showIcon />
         </div>
       ) : (
-        <div className="flex flex-col gap-4 mt-2  ">
+        <div className="flex flex-col gap-4 mt-4">
           {newsData.map((data, index) => (
             <div key={index} className="flex flex-col gap-3 ">
               <a
