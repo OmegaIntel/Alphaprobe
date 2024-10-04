@@ -20,7 +20,7 @@ from api.api_temp_chat import temp_chat_router
 from api.api_calendly import calendly_router
 from api.api_news import new_router
 
-app = FastAPI(docs_url="/api/docs")
+app = FastAPI(docs_url="/api/docs", openapi_url="/api/openapi.json")
 
 # Configure CORS
 app.add_middleware(
