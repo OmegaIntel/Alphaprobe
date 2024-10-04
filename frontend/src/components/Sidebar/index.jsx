@@ -3,7 +3,6 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 
 import { Layout, Menu } from "antd";
 import {
-  CalenderIcon,
   FileOutlinedIcon,
   MagnifyingGlassIcon,
   ShareWithPeopleIcon,
@@ -13,6 +12,7 @@ import { LogoutOutlined, PlusOutlined } from "@ant-design/icons";
 import SendEmail from "../modals/send_email";
 import { useModal } from "../UploadFilesModal/ModalContext";
 import AddCollaboration from "../collaborationModal";
+import CalendlyModal from "../CalendlyModal";
 
 const { Sider } = Layout;
 
@@ -161,13 +161,7 @@ const Sidebar = () => {
             </span>
             <div className="flex gap-3 justify-center">
               <SendEmail />
-              <Link
-                to={process.env.REACT_APP_CALENDLY_URL}
-                target="_blank"
-                className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer "
-              >
-                <CalenderIcon />
-              </Link>
+              <CalendlyModal />
               <div
                 className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer "
                 onClick={() => setIsOpen(true)}
