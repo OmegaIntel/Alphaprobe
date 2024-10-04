@@ -1,5 +1,4 @@
 import React, { useReducer } from "react";
-import { useModal } from "./ModalContext.js";
 import UploadModal from "./UploadModal/index.jsx";
 import UpdateModal from "./UpdateModal/index.jsx";
 import { message, notification } from "antd";
@@ -7,14 +6,13 @@ import { uploadFiles } from "../../services/uploadService.js";
 import { useNavigate } from "react-router-dom";
 import { initialState, reducer } from "../../reducer/modalReducer.js";
 
-const UploadFilesModal = () => {
-  const {
-    isUploadModalVisible,
-    setIsUploadModalVisible,
-    isUpdateModalVisible,
-    setIsUpdateModalVisible,
-    dealId,
-  } = useModal();
+const UploadFilesModal = ({ isUploadModalVisible,
+  setIsUploadModalVisible,
+  isUpdateModalVisible,
+  setIsUpdateModalVisible,
+  dealId,
+  isPublic
+}) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const navigate = useNavigate();
 
@@ -52,7 +50,9 @@ const UploadFilesModal = () => {
         notification.success({ message: response.message });
         dispatch({ type: "RESET_STATE" });
         setIsUpdateModalVisible(false);
-        navigate(`/projects/${dealId}`);
+        if (!isPublic) {
+          navigate(`/projects/${dealId}`);
+        }
       }
     } catch (error) {
       notification.error({
@@ -60,14 +60,18 @@ const UploadFilesModal = () => {
         description:
           "There was an error submitting your deal request. Please try again.",
       });
-      navigate(`/projects/${dealId}`);
+      if (!isPublic) {
+        navigate(`/projects/${dealId}`);
+      }
     }
   };
 
   const handleUploadCancel = () => {
     dispatch({ type: "RESET_STATE" });
     setIsUploadModalVisible(false);
-    navigate(`/projects/${dealId}`);
+    if (!isPublic) {
+      navigate(`/projects/${dealId}`);
+    }
   };
 
   const handleUpdateCancel = () => {
@@ -104,6 +108,7 @@ const UploadFilesModal = () => {
         onCancel={handleUploadCancel}
         uploadProps={uploadProps}
         selectedFile={state.selectedFile}
+        isPublic={isPublic}
       />
       {/* Second Modal: Update File Metadata */}
       <UpdateModal

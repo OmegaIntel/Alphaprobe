@@ -1,7 +1,6 @@
 import React, { useEffect, useReducer, useState } from "react";
 import { Button, Empty, Modal, notification, Spin } from "antd";
 import { DeleteOutlined, EditOutlined, PlusOutlined } from "@ant-design/icons";
-import { useModal } from "../UploadFilesModal/ModalContext";
 import {
   deleteDocument,
   fetchAllDocument,
@@ -11,20 +10,21 @@ import {
 import { initialState, reducer } from "../../reducer/modalReducer";
 import { truncateDescription } from "../../utils/truncateDescription";
 import UpdateModal from "../UploadFilesModal/UpdateModal";
+import DiligenceDocumentsModal from "../requestDocuments";
 
-const FileUploadComponent = () => {
+const FileUploadComponent = ({ dealId,
+  isUploadModalVisible,
+  setIsUploadModalVisible,
+  isUpdateModalVisible,
+  isPublic
+}) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const {
-    dealId,
-    isUploadModalVisible,
-    setIsUploadModalVisible,
-    isUpdateModalVisible,
-  } = useModal();
   const [files, setFiles] = useState([]);
   const [documentId, setDocumentId] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isUpdateModal, setIsUpdateModal] = useState(false);
+  const [open, setOpen] = useState(false);
   useEffect(() => {
     const fetchDocumentData = async () => {
       try {
@@ -37,7 +37,9 @@ const FileUploadComponent = () => {
         setIsLoading(false);
       }
     };
-    fetchDocumentData();
+    if (dealId) {
+      fetchDocumentData();
+    }
   }, [dealId, isUpdateModalVisible, isUpdateModal]);
 
   const handleEditClick = async (fileId) => {
@@ -120,22 +122,39 @@ const FileUploadComponent = () => {
     dispatch({ type: "RESET_STATE" });
     setIsUpdateModal(false);
   };
+  const onRequestClose = () => {
+    setOpen(false);
+  }
   return (
-    <div className="bg-[#151518] flex flex-col w-full flex-grow overflow-auto ml-1">
+    <div className="bg-[#151518] flex flex-col w-full flex-grow h-screen overflow-auto ml-1">
+      <DiligenceDocumentsModal
+        isOpen={open}
+        onRequestClose={onRequestClose}
+        dealId={dealId}
+      />
       <div className="p-6">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-semibold">File Uploads</h2>
-          <button
-            onClick={() => setIsUploadModalVisible(!isUploadModalVisible)}
-            className="bg-[#EAEAEA] text-[#303038] text-sm flex items-center gap-1 border-none p-1.5 rounded"
-          >
-            <PlusOutlined />
-            Add File
-          </button>
+          <div className="flex flex-row gap-4">
+            <button
+              onClick={() => setIsUploadModalVisible(!isUploadModalVisible)}
+              className="bg-[#EAEAEA] text-[#303038] text-sm flex items-center gap-1 border-none p-1.5 rounded"
+            >
+              <PlusOutlined />
+              Add File
+            </button>
+            {!isPublic && <button
+              onClick={() => setOpen(true)}
+              className="bg-[#EAEAEA] text-[#303038] text-sm flex items-center gap-1 border-none p-1.5 rounded"
+            >
+              <PlusOutlined />
+              Request Documents
+            </button>}
+          </div>
         </div>
 
         {isLoading ? (
-          <div className="flex justify-center items-center py-10">
+          <div className="flex justify-center flex-grow items-center py-10">
             <Spin size="large" />
           </div>
         ) : (

@@ -17,7 +17,13 @@ const Categories = () => {
 
   const [toggle, setToggle] = useState(false);
 
-  const { dealId, setSelectedCategory } = useModal();
+  const {
+    dealId,
+    isUploadModalVisible,
+    setIsUploadModalVisible,
+    isUpdateModalVisible,
+    setSelectedCategory
+  } = useModal();
 
   useEffect(() => {
     setSelectedCategory(isActive);
@@ -59,7 +65,11 @@ const Categories = () => {
           {isActive === "Action Items" ? (
             <DilligenceContainer />
           ) : isActive === "Documents" ? (
-            <FileUploadComponent />
+            <FileUploadComponent dealId={dealId}
+            isUploadModalVisible={isUpdateModalVisible}
+            setIsUploadModalVisible={setIsUploadModalVisible}
+            isUpdateModalVisible={isUpdateModalVisible}
+            setSelectedCategory={setSelectedCategory}/>
           ) : (
             <Subcategories isActiveCategory={isActive} />
           )}
