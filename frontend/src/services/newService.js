@@ -1,5 +1,3 @@
-// import axios from "axios";
-// import { XMLParser } from "fast-xml-parser";
 import axiosInstance from "./axiosConfig";
 
 // Function to fetch and combine RSS feeds

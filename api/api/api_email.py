@@ -1,11 +1,10 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import APIRouter,HTTPException
 from pydantic import BaseModel
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
 import os
-from fastapi import APIRouter
 # Load environment variables from .env file
 load_dotenv()
 
