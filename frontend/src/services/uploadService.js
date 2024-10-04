@@ -1,3 +1,4 @@
+import { token } from ".";
 import axiosInstance from "./axiosConfig";
 
 export const uploadFiles = async (formData) => {
@@ -5,6 +6,7 @@ export const uploadFiles = async (formData) => {
     const response = await axiosInstance.post(`/upload`, formData, {
       headers: {
         "Content-Type": "multipart/form-data",
+        Authorization: `Bearer ${token}`,
       },
     });
     return response.data;

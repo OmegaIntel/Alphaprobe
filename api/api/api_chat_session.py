@@ -82,17 +82,17 @@ class ChatMessagesResponse(BaseModel):
 @chat_router.post("/api/chat/sessions", response_model=ChatSessionResponse)
 async def create_chat_session(
     deal_id: Optional[str] = Form(None),
-    is_public: bool = Form(False), 
+    is_global: bool = Form(False), 
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
     session_id = str(uuid.uuid4())
-    if not is_public and not deal_id:
+    if not is_global and not deal_id:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
-            detail="deal_id is required when is_public is False."
+            detail="deal_id is required when is_global is False."
         )
-    if is_public:
+    if is_global:
         user_id = current_user.id
         user_id = sanitize_class_name_nocap(user_id)
         session_name = f"Chat Session for usr {user_id}"
@@ -115,14 +115,14 @@ async def get_chat_messages(session_id: str, current_user: User = Depends(get_cu
     return ChatMessagesResponse(messages=[{"role": msg.role, "content": msg.content} for msg in messages])
 
 @chat_router.post("/api/chat/{session_id}/message", response_model=ChatResponse)
-async def send_message(session_id: str,content: str = Form(...), deal_id: Optional[str] = Form(None),is_public: bool = Form(False), current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+async def send_message(session_id: str,content: str = Form(...), deal_id: Optional[str] = Form(None),is_global: bool = Form(False), current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     session = db.query(ChatSession).filter(ChatSession.id == session_id).first()
     if session is None:
         raise HTTPException(status_code=404, detail="Chat session not found")
     user_message = content
     messages = db.query(ChatMessage).filter(ChatMessage.session_id == session_id).all()
     conversation = [{"role": msg.role, "content": msg.content} for msg in messages]
-    if not is_public:
+    if not is_global:
         deal_id = sanitize_class_name("d"+ deal_id)
     else:
         deal_id = "Dadmin"
@@ -160,27 +160,17 @@ async def send_message(session_id: str,content: str = Form(...), deal_id: Option
     return ChatResponse(response=ai_response)
 
 @chat_router.delete("/api/chat/sessions/{session_id}", response_model=None)
-async def delete_chat_session(session_id: str,is_public: bool = False, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+async def delete_chat_session(session_id: str,is_global: bool = False, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     session = db.query(ChatSession).filter(
         ChatSession.id == session_id,
     ).first()
 
     if not session:
         raise HTTPException(status_code=404, detail="Session not found")
-    if not is_public:
-        deal_object = db.query(Deal.id).filter(Deal.user_id == current_user.id, Deal.id == session.deal_id).first()
 
-        if not deal_object:
-            shared_deal_object = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id, SharedUserDeals.deal_id == session.deal_id).first()
-            if not shared_deal_object:
-                raise HTTPException(status_code=404, detail="Session not found or not authorized")
-        db.query(ChatMessage).filter(ChatMessage.session_id == session.id).delete()
-        db.delete(session)
-        db.commit()
-    else:
-        db.query(ChatMessage).filter(ChatMessage.session_id == session.id).delete()
-        db.delete(session)
-        db.commit()
+    db.query(ChatMessage).filter(ChatMessage.session_id == session.id).delete()
+    db.delete(session)
+    db.commit()
     return {"message": "Session deleted successfully"}
 
 
