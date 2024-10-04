@@ -13,8 +13,9 @@ class ChatSession(Base):
     __tablename__ = "chat_sessions"
 
     id = Column(UUIDType(binary=False), primary_key=True, default=uuid.uuid4)
-    deal_id = Column(String(255), ForeignKey(Deal.id))  
+    deal_id = Column(String(255), ForeignKey(Deal.id),nullable=True)  
     session_name = Column(String(255))  
+    user_id= Column(String(255), ForeignKey(User.id),nullable=True)
 
 class ChatMessage(Base):
     __tablename__ = "chat_messages"
