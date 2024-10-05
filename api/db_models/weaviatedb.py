@@ -1,13 +1,11 @@
 import weaviate.classes.config as wc
 import weaviate
-from llmsherpa.readers import LayoutPDFReader
 from dotenv import load_dotenv
-from os import getenv
 from typing import List
-from weaviate import Client
-from pdfminer.high_level import extract_text
 import requests
 from io import BytesIO
+from llama_index.core.schema import TextNode
+from api.doc_parser.llama_parse_pdf import llama_parse_pdf
 
 load_dotenv()
 
@@ -15,7 +13,6 @@ load_dotenv()
 class WeaviateManager:
     def __init__(self):
         self.client = weaviate.connect_to_local(host="weaviate")
-        # self.client = weaviate.connect_to_local()
 
     def __del__(self):
         self.client.close()
@@ -31,46 +28,45 @@ class WeaviateManager:
             start += chunk_size - overlap
         return chunks
     
-    def get_file_chunks(self, file_path: str) -> List[str]:
+    def get_file_chunks(self, file_path: str) -> List[TextNode]:
+        """file_path: AWS signed URL, for now."""
         response = requests.get(file_path)
-
         if response.status_code == 200:
             pdf_content = BytesIO(response.content)
-            text = extract_text(pdf_content)
-            chunks=self.chunk_text(text)
-            return chunks
+            return llama_parse_pdf(pdf_content)
         else:
             raise Exception(f"Failed to fetch the PDF file. Status code: {response.status_code}")
 
+    def create_objects(self, collection_name: str, document_id: str, file_path: str, chunks: List[TextNode]) -> List[dict]:
+        objects = []
+        for chunk in chunks:
+            obj = {
+                "class": collection_name,
+                "properties": {
+                    "document_id": str(document_id),
+                    "content": chunk,
+                    "page_number": chunk.metadata.get("page_number"),
+                    "file_path": file_path,
+                },
+            }
+            objects.append(obj)
+        return objects
 
-    def create_objects(self, collection_name: str, document_id: str, chunks: List[str]) -> List[dict]:
-            objects = []
-            for chunk in chunks:
-                obj = {
-                    "class": collection_name,
-                    "properties": {
-                        "content": chunk,
-                        "document_id": str(document_id),
-                    },
-                }
-                objects.append(obj)
-            return objects
 
     def insert_data(self, collection_name: str, document_id: str, file_path: str) -> str:
         chunks = self.get_file_chunks(file_path)
-        objects = self.create_objects(collection_name, document_id, chunks)
+        objects = self.create_objects(collection_name, document_id, file_path, chunks)
         collection = self.client.collections.get(collection_name)
 
         with collection.batch.dynamic() as batch:
             for obj in objects:
-                batch.add_object(
-                    properties=obj["properties"],
-                )
+                batch.add_object(properties=obj["properties"])
         return "Data inserted"
+
 
     def create_collection(self, collection_name: str, document_id: str, file_path: str) -> str:
         """Create a collection if it doesn't exist or append data to the existing collection."""
-        class_names = list( self.client.collections.list_all().keys())
+        class_names = list(self.client.collections.list_all().keys())
         if collection_name.capitalize() in class_names:
             # If the collection exists, just append the new document and chunks
             self.insert_data(collection_name, document_id, file_path)
@@ -81,6 +77,8 @@ class WeaviateManager:
                 properties=[
                     wc.Property(name="document_id", data_type=wc.DataType.TEXT),
                     wc.Property(name="content", data_type=wc.DataType.TEXT),
+                    wc.Property(name="page_number", data_type=wc.DataType.INT),
+                    wc.Property(name="file_path", data_type=wc.DataType.TEXT),
                 ],
                 vectorizer_config=wc.Configure.Vectorizer.text2vec_transformers(),
                 generative_config=wc.Configure.Generative.openai(),
@@ -91,6 +89,7 @@ class WeaviateManager:
             self.insert_data(collection_name, document_id, file_path)
             print(f"Collection '{collection_name}' created and data inserted.")
         return f"Collection {collection_name} handled"
+
 
     def retrieve_content(self, query: str, collection_name: str) -> List[str]:
         """
@@ -108,14 +107,14 @@ class WeaviateManager:
             limit=5
         )
         
-        retrieved_contents = []  
-        
-        for obj in response.objects:  
-            retrieved_content = obj.properties.get("content")  
-            retrieved_contents.append(retrieved_content)  
+        retrieved_contents = []
+        keys = ['content', 'page_number']
+        for obj in response.objects:
+            retrieved_contents.append(dict([(key, obj.properties.get(key)) for key in keys]))
         
         return retrieved_contents
-    
+
+
     def delete_context(self, collection_name: str) -> List[str]:
         """
         Delete existing collection
@@ -129,4 +128,3 @@ class WeaviateManager:
         temp = self.client.collections.delete(collection_name)
         
         return "Collection deleted successfully!"
-        

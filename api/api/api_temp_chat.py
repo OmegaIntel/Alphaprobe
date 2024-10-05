@@ -84,7 +84,7 @@ async def upload_file(file: UploadFile = File(...)):
 @temp_chat_router.post("/api/temporary/chat", response_model=ChatResponse)
 async def chat_using_document(request: ChatRequest):
     # Fetch the document context from Weaviate based on context_id
-    document_context = weaviate.retrieve_content(request.query,request.chat_id)
+    document_context = weaviate.retrieve_content(request.query, request.chat_id)
     
     if not document_context:
         raise HTTPException(status_code=404, detail="Document context not found")
