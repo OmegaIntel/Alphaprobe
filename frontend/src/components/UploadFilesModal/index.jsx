@@ -5,19 +5,20 @@ import { message, notification } from "antd";
 import { uploadFiles } from "../../services/uploadService.js";
 import { useNavigate } from "react-router-dom";
 import { initialState, reducer } from "../../reducer/modalReducer.js";
-import { useModal } from "./ModalContext.js";
 
 const UploadFilesModal = ({ isUploadModalVisible,
   setIsUploadModalVisible,
   isUpdateModalVisible,
   setIsUpdateModalVisible,
   dealId,
-  isPublic
+  isPublic,
+  setIsFileUploadModule,
+  isFileUploadModule,
+  deals
 }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const navigate = useNavigate();
   const [tempDealId, setTempDealId] = useState();
-  const { setIsFileUploadModule, isFileUploadModule } = useModal();
 
   const handleUploadOk = () => {
     setIsUploadModalVisible(false);
@@ -54,7 +55,9 @@ const UploadFilesModal = ({ isUploadModalVisible,
         notification.success({ message: response.message });
         dispatch({ type: "RESET_STATE" });
         setIsUpdateModalVisible(false);
-        setIsFileUploadModule(false);
+        if(!isPublic){
+          setIsFileUploadModule(false);
+        }
         setTempDealId();
         if (!isPublic && !isFileUploadModule) {
           navigate(`/projects/${dealId}`);
@@ -73,7 +76,9 @@ const UploadFilesModal = ({ isUploadModalVisible,
   };
 
   const handleUploadCancel = () => {
-    setIsFileUploadModule(false);
+    if(!isPublic){
+      setIsFileUploadModule(false);
+    }
     setTempDealId();
     dispatch({ type: "RESET_STATE" });
     setIsUploadModalVisible(false);
@@ -85,7 +90,9 @@ const UploadFilesModal = ({ isUploadModalVisible,
   const handleUpdateCancel = () => {
     dispatch({ type: "RESET_STATE" });
     setIsUpdateModalVisible(false);
-    setIsFileUploadModule(false);
+    if(!isPublic){
+      setIsFileUploadModule(false);
+    }
     setTempDealId();
   };
 
@@ -121,6 +128,8 @@ const UploadFilesModal = ({ isUploadModalVisible,
         isPublic={isPublic}
         setTempDealId={setTempDealId}
         tempDealId={tempDealId}
+        isFileUploadModule={isFileUploadModule}
+        deals={deals}
       />
       {/* Second Modal: Update File Metadata */}
       <UpdateModal

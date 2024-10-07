@@ -26,6 +26,7 @@ const DocumentsWrapper = () => {
                 setIsUpdateModalVisible={setIsUpdateModalVisible}
                 dealId={dealId}
                 isPublic={true}
+                isFileUploadModule={false}
             />
             <FileUploadComponent 
                 dealId={dealId} 

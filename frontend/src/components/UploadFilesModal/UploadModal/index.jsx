@@ -13,9 +13,10 @@ const UploadModal = ({
   uploadProps,
   selectedFile,
   setTempDealId,
-  tempDealId
+  tempDealId,
+  deals,
+  isFileUploadModule
 }) => {
-  const { deals, isFileUploadModule } = useModal();
   return (
     <Modal
       title={

@@ -40,7 +40,10 @@ const ProtectedLayoutInner = ({
     isUpdateModalVisible,
     setIsUpdateModalVisible,
     dealId,
-    setDealId
+    setDealId,
+    isFileUploadModule,
+    setIsFileUploadModule,
+    deals
   } = useModal();
 
   useEffect(() => {
@@ -67,7 +70,11 @@ const ProtectedLayoutInner = ({
           setIsUploadModalVisible={setIsUploadModalVisible}
           isUpdateModalVisible={isUpdateModalVisible}
           setIsUpdateModalVisible={setIsUpdateModalVisible}
-          dealId={dealId} />
+          dealId={dealId}
+          isFileUploadModule={isFileUploadModule}
+          setIsFileUploadModule={setIsFileUploadModule}
+          deals={deals}
+        />
         {children}
       </div>
     </div>
