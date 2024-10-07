@@ -160,7 +160,7 @@ async def send_message(session_id: str,content: str = Form(...), deal_id: Option
     return ChatResponse(response=ai_response)
 
 @chat_router.delete("/api/chat/sessions/{session_id}", response_model=None)
-async def delete_chat_session(session_id: str,is_global: bool = False, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+async def delete_chat_session(session_id: str, db: Session = Depends(get_db)):
     session = db.query(ChatSession).filter(
         ChatSession.id == session_id,
     ).first()
@@ -183,9 +183,8 @@ def get_chat_sessions(deal_id: str, db: Session = Depends(get_db)):
 
 
 @chat_router.post("/api/workspace/add/{session_id}")
-async def add_to_workspace(type: str, session_id: str, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+async def add_to_workspace(type: str, session_id: str,deal_id: str = Form(...), current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     messages = db.query(ChatMessage).filter(ChatMessage.session_id == session_id).order_by(asc(ChatMessage.created_at)).all()
-    deal_id = db.query(ChatSession).filter(ChatSession.id==session_id).first().deal_id
     payload_string = ""
     for msg in messages:
         payload_string += f"**{msg.role}**" +":" + " " + msg.content + "\n"

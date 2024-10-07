@@ -33,25 +33,18 @@ const Login = ({ setToken }) => {
         const anchor = document.createElement("a");
         anchor.href = "/dashboard";
         anchor.click();
-      } else {
-        notification.error({
-          message: "Something went wrong!",
-          description:
-            "There was an error submitting your deal request. Please try again.",
-        });
       }
     } catch (error) {
-      console.log(error);
-      if (error.response.data.detail) {
+      if (error?.response?.data?.detail) {
         notification.error({
           message: error.response.data.detail,
         });
-      } else
-        notification.error({
-          message: "Something went wrong!",
-          description:
-            "There was an error submitting your deal request. Please try again.",
-        });
+      }
+      notification.error({
+        message: "Something went wrong!",
+        description:
+          "There was an error submitting your deal request. Please try again.",
+      });
     }
   };
 
