@@ -126,7 +126,7 @@ const KanbanBoard = () => {
         console.error("Error fetching tasks:", err);
         setColumns(initialState);
       });
-  }, [dealId, toggle, initialState]);
+  }, [dealId, toggle, initialState, setTodo]);
 
   const onDragEnd = (result) => {
     const { source, destination } = result;
@@ -193,7 +193,7 @@ const KanbanBoard = () => {
           notification.success({
             message: "Task updated successfully!",
           });
-          setToggle(prev=>!prev);
+          setToggle((prev) => !prev);
         })
         .catch((err) => {
           console.error("Error updating task:", err);
@@ -222,7 +222,9 @@ const KanbanBoard = () => {
 
   const handleRemoveCard = (columnId, index, id) => {
     deleteTodo(id)
-      .then(() => {setToggle(prev=>!prev);})
+      .then(() => {
+        setToggle((prev) => !prev);
+      })
       .catch(() => {
         notification.error({ message: "Error in removing task!" });
       });

@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Button } from "antd";
-import { DeleteFilled, EditFilled, SaveFilled } from "@ant-design/icons";
+import { DeleteFilled, SaveFilled } from "@ant-design/icons";
 import Markdown from "react-markdown";
 const EditableProjectCard = ({
   project,
@@ -10,7 +10,10 @@ const EditableProjectCard = ({
   handleInputChange,
 }) => {
   return (
-    <Card className="text-center bg-[#1f1e23] shadow-lg rounded-lg border-none text-white" onDoubleClick={() => onEdit(project.id)}>
+    <Card
+      className="text-center bg-[#1f1e23] shadow-lg rounded-lg border-none text-white"
+      onDoubleClick={() => onEdit(project.id)}
+    >
       <div className="flex flex-col items-center">
         {project.isEditing ? (
           <div className="flex flex-row items-start w-full">
