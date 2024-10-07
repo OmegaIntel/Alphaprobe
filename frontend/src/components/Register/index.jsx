@@ -32,20 +32,18 @@ const Register = () => {
         setTimeout(() => {
           navigate("/login");
         }, 2000);
-      } else {
+      }
+    } catch (error) {
+      if (error?.response?.data?.detail) {
+        notification.error({
+          message: error.response.data.detail,
+        });
+      } else
         notification.error({
           message: "Something went wrong!",
           description:
             "There was an error submitting your deal request. Please try again.",
         });
-      }
-    } catch (error) {
-      console.log(error);
-      notification.error({
-        message: "Something went wrong!",
-        description:
-          "There was an error submitting your deal request. Please try again.",
-      });
     }
   };
 
