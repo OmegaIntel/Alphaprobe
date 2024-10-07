@@ -51,14 +51,14 @@ export const sendChatMessage = async (sessionId, dealId, message, isGlobal) => {
     console.log(error);
   }
 };
-export const addToWorkSpace = async (sessionId, type) => {
+export const addToWorkSpace = async (sessionId, type, dealId) => {
   try {
     const response = await axiosInstance.post(
       `/workspace/add/${sessionId}?type=${type}`,
-      {},
+      { deal_id: dealId },
       {
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
           Authorization: `Bearer ${token}`,
         },
       }
