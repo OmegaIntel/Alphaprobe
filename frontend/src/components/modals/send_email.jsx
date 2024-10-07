@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Modal, Form, Input, Button, notification, Spin } from "antd";
-import { sendEmail } from "../../services/emailService";
+import { Modal, Form, Input, Button, Spin } from "antd";
 import { EmailIcon } from "../../constants/IconPack";
 import { LoadingOutlined } from "@ant-design/icons";
 
@@ -16,24 +15,10 @@ const SendEmailModal = () => {
   };
 
   const handleFormSubmit = async (formData) => {
-    setIsLoading(true);
-    try {
-      const res = await sendEmail(formData);
-      if (res.message) {
-        notification.success({
-          message: res.message,
-          description: `Your email to ${formData.email} has been sent successfully.`,
-        });
-        handleCloseModal();
-      }
-    } catch (error) {
-      notification.error({
-        message: "Email Sending Failed",
-        description: "There was an issue sending your email. Please try again.",
-      });
-    } finally {
-      setIsLoading(false);
-    }
+    const mailtoLink = `mailto:${formData.email}?subject=${encodeURIComponent(
+      formData.title
+    )}&body=${encodeURIComponent(formData.description)}`;
+    window.open(mailtoLink, "_blank");
   };
 
   return (
@@ -82,21 +67,49 @@ const SendEmailModal = () => {
               },
             ]}
           >
-            <Input className=" placeholder:text-gray-400" style={{ backgroundColor: "#212126", color: "#fff", border: "10px solid !important", borderColor: "#46464f" }} placeholder="Enter recipient's email address" />
+            <Input
+              className=" placeholder:text-gray-400"
+              style={{
+                backgroundColor: "#212126",
+                color: "#fff",
+                border: "10px solid !important",
+                borderColor: "#46464f",
+              }}
+              placeholder="Enter recipient's email address"
+            />
           </Form.Item>
           <Form.Item
             name="title"
             label={<span style={{ color: "white" }}>Subject</span>}
             rules={[{ required: true, message: "Please enter the subject." }]}
           >
-            <Input className=" placeholder:text-gray-400" style={{ backgroundColor: "#212126", color: "#fff", border: "10px solid !important", borderColor: "#46464f" }} placeholder="Enter the email subject" />
+            <Input
+              className=" placeholder:text-gray-400"
+              style={{
+                backgroundColor: "#212126",
+                color: "#fff",
+                border: "10px solid !important",
+                borderColor: "#46464f",
+              }}
+              placeholder="Enter the email subject"
+            />
           </Form.Item>
           <Form.Item
             name="description"
             label={<span style={{ color: "white" }}>Message</span>}
             rules={[{ required: true, message: "Please enter your message." }]}
           >
-            <Input.TextArea className=" placeholder:text-gray-400" style={{ backgroundColor: "#212126", color: "#fff", border: "10px solid !important", borderColor: "#46464f" }} rows={4} placeholder="Enter your message" />
+            <Input.TextArea
+              className=" placeholder:text-gray-400"
+              style={{
+                backgroundColor: "#212126",
+                color: "#fff",
+                border: "10px solid !important",
+                borderColor: "#46464f",
+              }}
+              rows={4}
+              placeholder="Enter your message"
+            />
           </Form.Item>
           <Form.Item>
             <Button type="primary" htmlType="submit" block disabled={isLoading}>

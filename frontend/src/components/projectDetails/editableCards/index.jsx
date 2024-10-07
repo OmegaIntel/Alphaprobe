@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Button } from "antd";
-import { DeleteFilled, EditFilled, SaveFilled } from "@ant-design/icons";
+import { DeleteFilled, SaveFilled } from "@ant-design/icons";
 import Markdown from "react-markdown";
 const EditableProjectCard = ({
   project,
@@ -10,19 +10,24 @@ const EditableProjectCard = ({
   handleInputChange,
 }) => {
   return (
-    <Card className="text-center bg-[#1f1e23] shadow-lg rounded-lg border-none text-white">
+    <Card
+      className="text-center bg-[#1f1e23] shadow-lg rounded-lg border-none text-white"
+      onDoubleClick={() => onEdit(project.id)}
+    >
       <div className="flex flex-col items-center">
         {project.isEditing ? (
-          <>
-            <textarea
-              value={project.text}
-              onChange={(e) =>
-                handleInputChange(project.id, "text", e.target.value)
-              }
-              placeholder="Description"
-              className="mb-2 p-2 rounded-md bg-[#151518] w-full h-32"
-            />
-            <div className="flex gap-4 mt-4 w-full">
+          <div className="flex flex-row items-start w-full">
+            <div className="w-[95%]">
+              <textarea
+                value={project.text}
+                onChange={(e) =>
+                  handleInputChange(project.id, "text", e.target.value)
+                }
+                placeholder="Description"
+                className="mb-2 p-2 rounded-md bg-[#151518] w-full h-32"
+              />
+            </div>
+            <div className="flex flex-col gap-3 ml-3">
               <Button
                 onClick={() => onSave(project.id, project.text)}
                 type="primary"
@@ -33,19 +38,12 @@ const EditableProjectCard = ({
                 <DeleteFilled />
               </Button>
             </div>
-          </>
+          </div>
         ) : (
-          <div className="flex flex-row justify-between w-full">
-            <div className="text-sm mt-3 mr-3 text-left whitespace-pre-wrap">
+          <div className="flex flex-row justify-between w-full max-h-32 overflow-auto">
+            <div className="text-sm mt-3 mb-3 mr-3 text-left whitespace-pre-wrap">
               <Markdown>{project.text}</Markdown>
             </div>
-            <Button
-              onClick={() => onEdit(project.id)}
-              type="default"
-              className="mt-4"
-            >
-              <EditFilled />
-            </Button>
           </div>
         )}
       </div>

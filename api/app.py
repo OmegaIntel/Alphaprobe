@@ -3,7 +3,6 @@ import uvicorn
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-# from api.api_chat import chat_router
 from api.api_user import user_router
 from pydantic import ValidationError
 from api.api_demo_requests import demo_request_router
@@ -19,8 +18,9 @@ from api.api_collaboration import collaboration_router
 from api.api_temp_chat import temp_chat_router
 from api.api_calendly import calendly_router
 from api.api_news import new_router
+from api.api_magic_link import magic_link_router
 
-app = FastAPI(docs_url="/api/docs")
+app = FastAPI(docs_url="/api/docs", openapi_url="/api/openapi.json")
 
 # Configure CORS
 app.add_middleware(
@@ -38,7 +38,6 @@ async def validation_exception_handler(request: Request, exc: ValidationError):
         content={"detail": exc.errors(), "body": exc.body},
     )
 
-# app.include_router(chat_router)
 app.include_router(user_router)
 app.include_router(demo_request_router)
 app.include_router(deals_router)
@@ -53,6 +52,7 @@ app.include_router(collaboration_router)
 app.include_router(temp_chat_router)
 app.include_router(calendly_router)
 app.include_router(new_router)
+app.include_router(magic_link_router)
 
 if __name__ == "__main__":
     uvicorn.run("api.app:app", host="0.0.0.0", port=8000, reload=True)

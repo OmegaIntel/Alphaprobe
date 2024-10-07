@@ -5,7 +5,7 @@ from db_models.weaviatedb import WeaviateManager
 import boto3
 from botocore.exceptions import NoCredentialsError
 from pydantic import BaseModel
-from api.llm_models.llm import LLM
+from llm_models.llm import LLM
 
 temp_chat_router = APIRouter()
 

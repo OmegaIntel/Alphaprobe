@@ -3,7 +3,7 @@ import {
   LoadingOutlined,
   PlusOutlined,
 } from "@ant-design/icons";
-import { Alert, notification, Select } from "antd";
+import { Alert, notification, Switch } from "antd";
 import React, { useCallback, useEffect, useState } from "react";
 import { RobotOutlined, SendButtonIcon } from "../../constants/IconPack";
 import { fetchAllDocument } from "../../services/uploadService";
@@ -17,13 +17,11 @@ import { categoryList } from "../../constants";
 import { useModal } from "../UploadFilesModal/ModalContext";
 import Markdown from "react-markdown";
 
-const { Option } = Select;
-
 const ChatBox = () => {
   const { dealId, deals, selectedCategory } = useModal();
   const [isOpen, setIsOpen] = useState(false);
-  const [selectDeal, setSelectDeal] = useState(dealId);
   const [selectCategory, setSelectCategory] = useState(selectedCategory);
+  const [isGlobalData, setIsGlobalData] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [currentChatSession, setCurrentChatSession] = useState(null);
@@ -34,23 +32,26 @@ const ChatBox = () => {
   const resetState = useCallback(async () => {
     if (currentChatSession) {
       try {
-        const response = await deleteChatSession(currentChatSession);
-        console.log(response);
+        await deleteChatSession(currentChatSession, isGlobalData);
       } catch (error) {
         console.error("Error during cleanup:", error);
       }
     }
-    setError(null);
     setCurrentChatSession(null);
     setMessages([]);
     setInputMessage("");
-  }, [currentChatSession]);
+  }, [currentChatSession, isGlobalData]);
 
   const toggleChat = () => {
-    if (isOpen) {
-      resetState();
+    if (deals.length > 0) {
+      if (isOpen) {
+        resetState();
+        setIsGlobalData(false);
+      }
+      setIsOpen(!isOpen);
+    } else {
+      notification.warning({ message: "Please Create Deal to Chat" });
     }
-    setIsOpen(!isOpen);
   };
 
   useEffect(() => {
@@ -58,19 +59,30 @@ const ChatBox = () => {
       setLoading(true);
       resetState();
       try {
-        const response = await fetchAllDocument(selectDeal);
-        if (response.documents?.length > 0) {
-          if (selectCategory) {
-            const res = await createChatSession(selectDeal);
-            setCurrentChatSession(res.id);
-            setError(null);
+        if (!isGlobalData) {
+          const response = await fetchAllDocument(dealId);
+          if (response.documents?.length > 0) {
+            if (selectCategory) {
+              const res = await createChatSession(dealId, isGlobalData);
+              setCurrentChatSession(res.id);
+              setError(null);
+            } else {
+              setCurrentChatSession(null);
+              setError("Please Select the category");
+            }
           } else {
             setCurrentChatSession(null);
-            setError("Please Select the category");
+            setError("No documents available for this deal.");
           }
         } else {
-          setCurrentChatSession(null);
-          setError("No documents available for this deal.");
+          try {
+            const res = await createChatSession(dealId, isGlobalData);
+            setCurrentChatSession(res.id);
+            setError(null);
+          } catch (error) {
+            setCurrentChatSession(null);
+            setError("Try again later");
+          }
         }
       } catch (error) {
         setError("No documents available for this deal.");
@@ -80,15 +92,7 @@ const ChatBox = () => {
     };
     if (isOpen) fetchDealDocuments();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectCategory, selectDeal, isOpen]);
-
-  useEffect(() => {
-    if (dealId) {
-      setSelectDeal(dealId);
-    } else {
-      setSelectDeal(null);
-    }
-  }, [dealId]);
+  }, [dealId, isOpen, isGlobalData]);
 
   useEffect(() => {
     if (
@@ -112,8 +116,9 @@ const ChatBox = () => {
     try {
       const message = await sendChatMessage(
         currentChatSession,
-        selectDeal,
-        inputMessage
+        dealId,
+        inputMessage,
+        isGlobalData
       );
       setIsLoadingMessage(false);
       const botReply = { message: message.response, message_sender: "A" };
@@ -127,7 +132,11 @@ const ChatBox = () => {
 
   const handleAddToWorkspace = async () => {
     try {
-      const response = await addToWorkSpace(currentChatSession, selectCategory);
+      const response = await addToWorkSpace(
+        currentChatSession,
+        selectCategory,
+        dealId
+      );
       if (response) notification.success({ message: response.message });
     } catch (error) {
       console.log("Error to add to current workspace:", error);
@@ -161,19 +170,16 @@ const ChatBox = () => {
                   />
                 </div>
               </div>
-              <Select
-                placeholder="Select Deal"
-                className="w-full"
-                onChange={(dealId) => setSelectDeal(dealId)}
-                loading={loading}
-                value={selectDeal}
-              >
-                {deals.map((deal, idx) => (
-                  <Option value={deal.id} key={idx}>
-                    {deal.name}
-                  </Option>
-                ))}
-              </Select>
+              <div className="flex items-center w-full justify-start">
+                <div className="flex justify-center items-center gap-4">
+                  <label className="text-white text-sm">Global Data</label>
+                  <Switch
+                    checked={isGlobalData}
+                    onChange={(checked) => setIsGlobalData(checked)}
+                    className="ml-2"
+                  />
+                </div>
+              </div>
             </div>
             {error && (
               <Alert message={error} type="warning" showIcon className="mt-4" />
@@ -188,7 +194,7 @@ const ChatBox = () => {
                 messages.map((ans, index) => (
                   <div
                     key={index}
-                    className={`py-4 px-[14px] w-fit max-w-[55%] text-sm leading-5 bg-[#001529] ${
+                    className={`py-4 px-[14px] w-fit max-w-[80%] text-sm leading-5 bg-[#001529] ${
                       ans.message_sender === "A"
                         ? "rounded-[8px] rounded-bl-none"
                         : "rounded-[8px] rounded-br-none ml-auto"

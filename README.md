@@ -1,7 +1,7 @@
 
 # Alphaprobe
 
-This project provides a FastAPI-based service that allows users to upload text files for a specific company, store the content in a Weaviate database, and optionally summarize them using LLMs.
+This project provides a FastAPI-based service that allows users to upload PDF files for a specific deal/transaction and query the uploaded document for specific info using Weaviate as a vector store.
 
 ## Table of Contents
 
@@ -14,12 +14,12 @@ This project provides a FastAPI-based service that allows users to upload text f
 
 ## Features
 
-- Upload text files associated with a company.
+- Upload PDF files associated with a deal/transaction.
 - Store the file content in a Weaviate database.
-- Summarize financial documents using LLM via LangChain.
-- Automatically create a schema per company in the Weaviate database.
+- Query financial documents using LLM via LangChain.
+- Automatically create a schema per deal in the Weaviate database.
 
-## Setup Instructions
+## Local Development Setup Instructions
 
 ```sh
 # enable for caching Python packages
@@ -30,7 +30,7 @@ export DOCKER_BUILDKIT=1
 
 - Docker
 - Docker Compose
-- Python 3.9 or higher
+- Python 3.10.14 or higher (only for docker-less development)
 
 ### Steps
 
@@ -39,51 +39,33 @@ export DOCKER_BUILDKIT=1
    ```sh
    git clone https://github.com/chat-omega/Alphaprobe
    cd Alphaprobe
-
-   # working directories
-   mkdir -p data
-   mkdir -p database
    ```
 
 2. **Set up environment variables**
 
-   Create a `.env` file in the project root with the following content:
+Create a `.env` file in the project root by copying the production `.env`.
 
-   ```sh
-   cp .env.example .env
-   # AFTER THIS, REPLACE WITH THE ACTUAL VALUES
-   # ...
+Create a `.env` in `frontend` with the following line:
+`REACT_APP_API_BASE_URL = http://127.0.0.1:3000`
 
-   cd frontend
-   cp .env.example .env
-   # AFTER THIS, REPLACE WITH THE ACTUAL VALUES
-   # REACT_APP_API_BASE_URL=http://localhost:8004   # LOCAL DEBUG
-   REACT_APP_API_BASE_URL=http://52.91.51.105:8004  # REMOTE, SUCH AS AWS
+Note: in AWS this line is not needed or can be copied from `frontend/.env`.
 
-   cd ..
-   ```
+1. **Build and start the Docker containers**
 
-3. **Build and start the Docker containers**
+```sh
+# wait until the first one finishes
+docker compose -f docker-compose-weaviate.yaml up --build
+docker compose -f docker-compose-application.yaml up --build
+```
 
-   ```sh
-   # only run once to download packages
-   docker compose run frontend npm install react-scripts
-   
-   # older version of compose
-   docker-compose up --build
+1. **Access the FastAPI documentation**
 
-   # newer version of compose:
-   docker compose up --build
-   ```
-
-4. **Access the FastAPI documentation**
-
-   Open your browser and go to http://localhost:8004/docs to view and test the API endpoints.
+Open your browser and go to http://localhost:8000/api/docs to view and test the API endpoints.
 
 ## Environment Variables
 
 
-## Project Structure
+## Project Structure (DATED)
 
 ```
 .
@@ -116,7 +98,7 @@ export DOCKER_BUILDKIT=1
 └── requirements.txt
 ```
 
-## API Endpoints
+## API Endpoints (DATED AS WELL)
 
 ### `POST /chat`
 

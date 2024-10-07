@@ -13,9 +13,9 @@ Modal.setAppElement("#root");
 const  {Option} = Select;
 
 const TaskModal = ({ isOpen, onRequestClose, type, values, setToggle }) => {
-  const [taskName, setTaskName] = useState("");
-  const [dueDate, setDueDate] = useState("");
-  const [description, setDescription] = useState("");
+  const [taskName, setTaskName] = useState();
+  const [dueDate, setDueDate] = useState();
+  const [description, setDescription] = useState();
   const [priority, setPriority] = useState("medium");
   const { dealId } = useModal();
 
@@ -56,6 +56,10 @@ const TaskModal = ({ isOpen, onRequestClose, type, values, setToggle }) => {
   };
 
   const handleCreateTask = () => {
+    if (!taskName || !type || !dueDate || !priority || !description || !dealId) {
+      notification.error({ message: "Please fill in all required fields!" });
+      return
+    }
     const formattedDueDate = new Date(dueDate).toISOString();
     const formattedTags = tags.join(", ");
     const taskData = {
