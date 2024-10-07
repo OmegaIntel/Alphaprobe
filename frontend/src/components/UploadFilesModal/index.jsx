@@ -1,10 +1,11 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
 import UploadModal from "./UploadModal/index.jsx";
 import UpdateModal from "./UpdateModal/index.jsx";
 import { message, notification } from "antd";
 import { uploadFiles } from "../../services/uploadService.js";
 import { useNavigate } from "react-router-dom";
 import { initialState, reducer } from "../../reducer/modalReducer.js";
+import { useModal } from "./ModalContext.js";
 
 const UploadFilesModal = ({ isUploadModalVisible,
   setIsUploadModalVisible,
@@ -15,6 +16,8 @@ const UploadFilesModal = ({ isUploadModalVisible,
 }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const navigate = useNavigate();
+  const [tempDealId, setTempDealId] = useState();
+  const { setIsFileUploadModule, isFileUploadModule } = useModal();
 
   const handleUploadOk = () => {
     setIsUploadModalVisible(false);
@@ -36,8 +39,9 @@ const UploadFilesModal = ({ isUploadModalVisible,
     try {
       dispatch({ type: "START_UPLOAD" });
       const formData = new FormData();
+      console.log(tempDealId)
       formData.append("files", selectedFile.originFileObj);
-      formData.append("deal_id", dealId);
+      formData.append("deal_id", tempDealId || dealId);
       formData.append("name", baseName);
       formData.append("description", description || null);
       formData.append("category", category || null);
@@ -50,7 +54,9 @@ const UploadFilesModal = ({ isUploadModalVisible,
         notification.success({ message: response.message });
         dispatch({ type: "RESET_STATE" });
         setIsUpdateModalVisible(false);
-        if (!isPublic) {
+        setIsFileUploadModule(false);
+        setTempDealId();
+        if (!isPublic && !isFileUploadModule) {
           navigate(`/projects/${dealId}`);
         }
       }
@@ -60,16 +66,18 @@ const UploadFilesModal = ({ isUploadModalVisible,
         description:
           "There was an error submitting your deal request. Please try again.",
       });
-      if (!isPublic) {
+      if (!isPublic && !isFileUploadModule) {
         navigate(`/projects/${dealId}`);
       }
     }
   };
 
   const handleUploadCancel = () => {
+    setIsFileUploadModule(false);
+    setTempDealId();
     dispatch({ type: "RESET_STATE" });
     setIsUploadModalVisible(false);
-    if (!isPublic) {
+    if (!isPublic && !isFileUploadModule) {
       navigate(`/projects/${dealId}`);
     }
   };
@@ -77,6 +85,8 @@ const UploadFilesModal = ({ isUploadModalVisible,
   const handleUpdateCancel = () => {
     dispatch({ type: "RESET_STATE" });
     setIsUpdateModalVisible(false);
+    setIsFileUploadModule(false);
+    setTempDealId();
   };
 
   const uploadProps = {
@@ -109,6 +119,8 @@ const UploadFilesModal = ({ isUploadModalVisible,
         uploadProps={uploadProps}
         selectedFile={state.selectedFile}
         isPublic={isPublic}
+        setTempDealId={setTempDealId}
+        tempDealId={tempDealId}
       />
       {/* Second Modal: Update File Metadata */}
       <UpdateModal
