@@ -120,7 +120,7 @@ async def register(email: EmailStr = Form(...), password: str = Form(...), reque
         db.refresh(sharedUser)
     
     # Convert UUID to string and return
-    return {"id": str(new_user.id), "email": new_user.email}
+    return {"id": str(new_user.id), "email": new_user.email,'is_admin':new_user.is_master_admin}
 
 
 # API route for token-based login
