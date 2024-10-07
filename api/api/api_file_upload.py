@@ -11,12 +11,12 @@ from db_models.weaviatedb import WeaviateManager
 from typing import Optional,List
 from botocore.exceptions import NoCredentialsError
 from datetime import datetime
+from api.api_user import get_current_user, User as UserModelSerializer
 
 weaviate=WeaviateManager()
 
 upload_file_router = APIRouter()
 
-UPLOAD_DIRECTORY = "data"  
 
 S3_BUCKET=os.environ["S3_BUCKET"]
 S3_REGION=os.environ["S3_REGION"]
@@ -44,14 +44,13 @@ async def upload_files(
     category: Optional[str] = Form(None),        
     sub_category: Optional[str] = Form(None),     
     tags: Optional[str] = Form(None),     
-    files: List[UploadFile] = File(...),        
+    files: List[UploadFile] = File(...),
+    current_user: UserModelSerializer = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
     deal = db.query(Deal).filter(Deal.id == deal_id).first()
     if not deal:
         raise HTTPException(status_code=400, detail="Deal not found")
-
-    os.makedirs(UPLOAD_DIRECTORY, exist_ok=True)
 
     uploaded_documents = []
 
@@ -100,12 +99,17 @@ async def upload_files(
             presigned_url = s3.generate_presigned_url(
                 'get_object',
                 Params={'Bucket': S3_BUCKET, 'Key': doc.file_path},
-                ExpiresIn=3600  # URL expiration time in seconds (1 hour)
+                ExpiresIn=3600  
             )
         except Exception as e:
             raise HTTPException(status_code=500, detail=f"Error generating presigned URL: {str(e)}")
         db.refresh(doc)
-        collection_name = "d"+str(deal_id)
+
+        if current_user.is_admin :
+            collection_name="admin"
+            collection_name = "d"+str(collection_name)
+        else:
+            collection_name = "d"+str(deal_id)
         collection_name = sanitize_class_name(collection_name)  
         weaviate.create_collection(collection_name, new_document.id, presigned_url)  
         

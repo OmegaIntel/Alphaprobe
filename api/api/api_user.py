@@ -39,6 +39,7 @@ class TokenData(BaseModel):
 class User(BaseModel):
     id: str
     email: str
+    is_admin: bool
 
     class Config:
         from_attributes = True
@@ -87,7 +88,7 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)], db: Se
     if user is None:
         raise credentials_exception
     
-    return User(id=str(user.id), email=user.email)
+    return User(id=str(user.id), email=user.email,is_admin = user.is_master_admin)
 
 # API route for user registration
 @user_router.post("/api/register", response_model=User)
@@ -119,7 +120,7 @@ async def register(email: EmailStr = Form(...), password: str = Form(...), reque
         db.refresh(sharedUser)
     
     # Convert UUID to string and return
-    return {"id": str(new_user.id), "email": new_user.email}
+    return {"id": str(new_user.id), "email": new_user.email,'is_admin':new_user.is_master_admin}
 
 
 # API route for token-based login
