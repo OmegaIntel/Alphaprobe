@@ -79,12 +79,13 @@ const KanbanBoard = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [type, setType] = useState("");
   const [values, setValues] = useState();
-  const { dealId } = useModal();
+  const { dealId, setTodo } = useModal();
   const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     getTasks(dealId)
       .then((data) => {
+        setTodo(data);
         // Distribute tasks into columns based on their status
         const todoItems = [];
         const inProgressItems = [];
@@ -192,6 +193,7 @@ const KanbanBoard = () => {
           notification.success({
             message: "Task updated successfully!",
           });
+          setToggle(prev=>!prev);
         })
         .catch((err) => {
           console.error("Error updating task:", err);
@@ -220,7 +222,7 @@ const KanbanBoard = () => {
 
   const handleRemoveCard = (columnId, index, id) => {
     deleteTodo(id)
-      .then(() => {})
+      .then(() => {setToggle(prev=>!prev);})
       .catch(() => {
         notification.error({ message: "Error in removing task!" });
       });

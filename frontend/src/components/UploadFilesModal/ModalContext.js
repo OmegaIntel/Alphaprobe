@@ -13,6 +13,8 @@ export const ModalProvider = ({ children }) => {
   const [dealId, setDealId] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [deals, setDeals] = useState([]);
+  const [todo, setTodo] = useState([]);
+  const [isFileUploadModule, setIsFileUploadModule] = useState(false);
 
   return (
     <ModalContext.Provider
@@ -27,6 +29,10 @@ export const ModalProvider = ({ children }) => {
         setDeals,
         selectedCategory,
         setSelectedCategory,
+        todo,
+        setTodo,
+        isFileUploadModule,
+        setIsFileUploadModule
       }}
     >
       {children}

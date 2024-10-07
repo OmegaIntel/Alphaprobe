@@ -240,7 +240,7 @@ const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
     <>
       <div className="flex-grow overflow-y-auto bg-[#151518] ml-1">
         <Button
-          className="absolute bottom-5 right-[345px] z-10 cursor-pointer"
+          className="absolute bottom-5 right-[27vw] z-10 cursor-pointer"
           onClick={addProject}
           icon={<PlusCircleFilled style={{ fontSize: "30px" }} />}
           style={{ padding: "12px 24px", fontSize: "16px", height: "48px" }}

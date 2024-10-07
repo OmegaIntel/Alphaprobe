@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Modal, Form, Input, Button, notification, Spin } from "antd";
-import { sendEmail } from "../../services/emailService";
 import { EmailIcon } from "../../constants/IconPack";
 import { LoadingOutlined } from "@ant-design/icons";
 
@@ -16,24 +15,8 @@ const SendEmailModal = () => {
   };
 
   const handleFormSubmit = async (formData) => {
-    setIsLoading(true);
-    try {
-      const res = await sendEmail(formData);
-      if (res.message) {
-        notification.success({
-          message: res.message,
-          description: `Your email to ${formData.email} has been sent successfully.`,
-        });
-        handleCloseModal();
-      }
-    } catch (error) {
-      notification.error({
-        message: "Email Sending Failed",
-        description: "There was an issue sending your email. Please try again.",
-      });
-    } finally {
-      setIsLoading(false);
-    }
+    const mailtoLink = `mailto:${formData.email}?subject=${encodeURIComponent(formData.title)}&body=${encodeURIComponent(formData.description)}`;
+    window.open(mailtoLink, "_blank");
   };
 
   return (

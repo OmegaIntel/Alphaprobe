@@ -13,6 +13,8 @@ import CreateDeal from "./components/create_deal/index";
 import Dashboard from "./components/Dashboard";
 import ProtectedLayout from "./components/ProtectedLayout";
 import Categories from "./components/projectHeaders/categories";
+import FileUploadComponent from "./components/FileUploadComponent";
+import DocumentsWrapper from "./components/FileUploadComponent/wrapper";
 
 const App = () => {
   const [token, setToken] = useState(localStorage.getItem("token") || "");
@@ -30,6 +32,10 @@ const App = () => {
   return (
     <Router>
       <Routes>
+        <Route
+          path="/guest/:id"
+          element={<DocumentsWrapper />}
+        />
         <Route
           path="/register"
           element={isLoggedIn ? <Navigate to="/dashboard" /> : <Register />}

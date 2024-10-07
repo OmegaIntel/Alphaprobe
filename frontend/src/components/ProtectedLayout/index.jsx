@@ -34,7 +34,17 @@ const ProtectedLayoutInner = ({
   isLoggedIn,
   id,
 }) => {
-  const { setDealId } = useModal(); // Use modal context here
+  const {
+    isUploadModalVisible,
+    setIsUploadModalVisible,
+    isUpdateModalVisible,
+    setIsUpdateModalVisible,
+    dealId,
+    setDealId,
+    isFileUploadModule,
+    setIsFileUploadModule,
+    deals
+  } = useModal();
 
   useEffect(() => {
     if (id) {
@@ -56,7 +66,15 @@ const ProtectedLayoutInner = ({
       />
       <div className="main-content with-sidebar">
         <Navbar />
-        <UploadFilesModal />
+        <UploadFilesModal isUploadModalVisible={isUploadModalVisible}
+          setIsUploadModalVisible={setIsUploadModalVisible}
+          isUpdateModalVisible={isUpdateModalVisible}
+          setIsUpdateModalVisible={setIsUpdateModalVisible}
+          dealId={dealId}
+          isFileUploadModule={isFileUploadModule}
+          setIsFileUploadModule={setIsFileUploadModule}
+          deals={deals}
+        />
         {children}
       </div>
     </div>

@@ -106,10 +106,10 @@ const CreateDeal = () => {
       ref={containerRef}
       className="flex flex-col space-y-1 overflow-y-auto min-h-screen"
     >
-      <DiligenceDocumentsModal
+      {/* <DiligenceDocumentsModal
         isOpen={requestModal}
         onRequestClose={onRequestClose}
-      />
+      /> */}
       <div
         className={`ml-1 flex text-white p-5 bg-[#151518] ${
           isOverflowing ? "min-h-fit" : "flex-1"
