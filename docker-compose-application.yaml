@@ -27,6 +27,9 @@ services:
       - SMTP_USERNAME=${SMTP_USERNAME}
       - SMTP_PASSWORD=${SMTP_PASSWORD}
       - SENDER_EMAIL=${SENDER_EMAIL}
+      - CALENDLY_CLIENT_ID=${CALENDLY_CLIENT_ID}
+      - CALENDLY_CLIENT_SECRET=${CALENDLY_CLIENT_SECRET}
+      - REDIRECT_URI=${REDIRECT_URI}
     command: >
       /bin/sh -c "alembic upgrade head && uvicorn app:app --host 0.0.0.0 --port 8000 --reload"
 
