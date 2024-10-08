@@ -1,21 +1,21 @@
-import {
-  CloseOutlined,
-  LoadingOutlined,
-  PlusOutlined,
-} from "@ant-design/icons";
-import { Alert, notification, Switch } from "antd";
 import React, { useCallback, useEffect, useState } from "react";
-import { RobotOutlined, SendButtonIcon } from "../../constants/IconPack";
+import { Alert, notification } from "antd";
 import { fetchAllDocument } from "../../services/uploadService";
 import {
   addToWorkSpace,
   createChatSession,
   deleteChatSession,
+  fetchPreviousMessages,
+  fetchPreviousSessions,
   sendChatMessage,
 } from "../../services/chatService";
 import { categoryList } from "../../constants";
 import { useModal } from "../UploadFilesModal/ModalContext";
-import Markdown from "react-markdown";
+import ChatSidebar from "./ChatSidebar";
+import ChatHeader from "./ChatHeader";
+import ChatMessages from "./ChatMessages";
+import ChatInput from "./ChatInput";
+import ChatActions from "./ChatActions";
 
 const ChatBox = () => {
   const { dealId, deals, selectedCategory } = useModal();
@@ -25,14 +25,30 @@ const ChatBox = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [currentChatSession, setCurrentChatSession] = useState(null);
-  const [messages, setMessages] = useState([]); // State to store messages
+  const [messages, setMessages] = useState([]);
   const [isLoadingMessage, setIsLoadingMessage] = useState(false);
-  const [inputMessage, setInputMessage] = useState(""); // State to store user input
+  const [inputMessage, setInputMessage] = useState("");
+  const [previousSessions, setPreviousSessions] = useState([]);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+
+  const toggleChat = () => {
+    if (deals.length > 0 && dealId) {
+      if (isOpen) {
+        resetState();
+        setIsGlobalData(false);
+      }
+      setIsOpen(!isOpen);
+    } else {
+      notification.warning({ message: "Please Select or Create Deal to Chat" });
+    }
+  };
 
   const resetState = useCallback(async () => {
-    if (currentChatSession) {
+    if (dealId) {
       try {
-        await deleteChatSession(currentChatSession, isGlobalData);
+        await deleteChatSession(dealId);
       } catch (error) {
         console.error("Error during cleanup:", error);
       }
@@ -40,75 +56,66 @@ const ChatBox = () => {
     setCurrentChatSession(null);
     setMessages([]);
     setInputMessage("");
-  }, [currentChatSession, isGlobalData]);
+  }, [dealId]);
 
-  const toggleChat = () => {
-    if (deals.length > 0) {
-      if (isOpen) {
-        resetState();
-        setIsGlobalData(false);
-      }
-      setIsOpen(!isOpen);
-    } else {
-      notification.warning({ message: "Please Create Deal to Chat" });
-    }
-  };
-
-  useEffect(() => {
-    const fetchDealDocuments = async () => {
-      setLoading(true);
-      resetState();
-      try {
-        if (!isGlobalData) {
-          const response = await fetchAllDocument(dealId);
-          if (response.documents?.length > 0) {
-            if (selectCategory) {
-              const res = await createChatSession(dealId, isGlobalData);
-              setCurrentChatSession(res.id);
-              setError(null);
-            } else {
-              setCurrentChatSession(null);
-              setError("Please Select the category");
-            }
-          } else {
-            setCurrentChatSession(null);
-            setError("No documents available for this deal.");
-          }
-        } else {
-          try {
+  const fetchDealDocuments = async () => {
+    setLoading(true);
+    resetState();
+    try {
+      if (!isGlobalData) {
+        const response = await fetchAllDocument(dealId);
+        if (response.documents?.length > 0) {
+          if (selectCategory) {
             const res = await createChatSession(dealId, isGlobalData);
             setCurrentChatSession(res.id);
             setError(null);
-          } catch (error) {
+          } else {
             setCurrentChatSession(null);
-            setError("Try again later");
+            setError("Please Select the category");
           }
+        } else {
+          setCurrentChatSession(null);
+          setError("No documents available for this deal.");
         }
-      } catch (error) {
-        setError("No documents available for this deal.");
-      } finally {
-        setLoading(false);
+      } else {
+        try {
+          const res = await createChatSession(dealId, isGlobalData);
+          setCurrentChatSession(res.id);
+          setError(null);
+        } catch (error) {
+          setCurrentChatSession(null);
+          setError("Try again later");
+        }
       }
-    };
-    if (isOpen) fetchDealDocuments();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dealId, isOpen, isGlobalData]);
-
-  useEffect(() => {
-    if (
-      selectedCategory &&
-      categoryList.slice(0, 4).includes(selectedCategory)
-    ) {
-      setSelectCategory(selectedCategory);
-    } else {
-      setSelectCategory("Investment Thesis");
+    } catch (error) {
+      setError("No documents available for this deal.");
+    } finally {
+      setLoading(false);
     }
-  }, [selectedCategory]);
+  };
+  const loadPreviousMessages = async (sessionId) => {
+    setLoading(true);
+    try {
+      const previousMessages = await fetchPreviousMessages(sessionId);
+      if (previousMessages) {
+        setMessages(previousMessages);
+      } else {
+        setMessages([]);
+      }
+      setCurrentChatSession(sessionId);
+      setError(null);
+    } catch (error) {
+      setError("Failed to load previous messages.");
+    } finally {
+      setLoading(false);
+    }
+    setIsSidebarOpen(false);
+  };
 
   const handleSendMessage = async () => {
     if (!inputMessage.trim()) return;
 
-    const userMessage = { message: inputMessage, message_sender: "H" };
+    const userMessage = { content: inputMessage, role: "user" };
     setMessages((prevMessages) => [...prevMessages, userMessage]);
 
     setInputMessage("");
@@ -121,7 +128,7 @@ const ChatBox = () => {
         isGlobalData
       );
       setIsLoadingMessage(false);
-      const botReply = { message: message.response, message_sender: "A" };
+      const botReply = { content: message.response, role: "ai" };
       setMessages((prevMessages) => [...prevMessages, botReply]);
     } catch (error) {
       console.log("Error sending message:", error);
@@ -144,6 +151,37 @@ const ChatBox = () => {
     }
   };
 
+  useEffect(() => {
+    if (isOpen) fetchDealDocuments();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dealId, isOpen, isGlobalData]);
+
+  useEffect(() => {
+    if (
+      selectedCategory &&
+      categoryList.slice(0, 4).includes(selectedCategory)
+    ) {
+      setSelectCategory(selectedCategory);
+    } else {
+      setSelectCategory("Investment Thesis");
+    }
+  }, [selectedCategory]);
+
+  useEffect(() => {
+    const loadPreviousSessions = async () => {
+      try {
+        const sessions = await fetchPreviousSessions(dealId, isGlobalData); // Fetch the previous chat sessions
+        setPreviousSessions(sessions);
+      } catch (error) {
+        console.error("Failed to load previous sessions:", error);
+      }
+    };
+
+    if (isSidebarOpen) {
+      loadPreviousSessions();
+    }
+  }, [dealId, isGlobalData, isSidebarOpen, currentChatSession]);
+
   return (
     <>
       <button
@@ -159,28 +197,22 @@ const ChatBox = () => {
             isOpen ? "chatbox-open" : "chatbox-closed"
           }`}
         >
-          <div className="bg-[#24242A] shadow-lg rounded-lg p-4 w-[32rem] h-[38rem] mb-4">
-            <div className="p-1 flex flex-col justify-center gap-2 items-center">
-              <div className="flex justify-between w-full">
-                <span className="text-base font-semibold">Omega Copilot</span>
-                <div className="flex items-center space-x-2">
-                  <CloseOutlined
-                    className="text-white text-sm cursor-pointer"
-                    onClick={() => toggleChat(true)}
-                  />
-                </div>
-              </div>
-              <div className="flex items-center w-full justify-start">
-                <div className="flex justify-center items-center gap-4">
-                  <label className="text-white text-sm">Global Data</label>
-                  <Switch
-                    checked={isGlobalData}
-                    onChange={(checked) => setIsGlobalData(checked)}
-                    className="ml-2"
-                  />
-                </div>
-              </div>
-            </div>
+          <div
+            className={`bg-[#24242A] shadow-lg rounded-lg p-4 mb-4 w-[32rem] h-[38rem]`}
+          >
+            <ChatSidebar
+              isSidebarOpen={isSidebarOpen}
+              toggleSidebar={toggleSidebar}
+              previousSessions={previousSessions}
+              loadPreviousMessages={loadPreviousMessages}
+              fetchDealDocuments={fetchDealDocuments}
+            />
+            <ChatHeader
+              isGlobalData={isGlobalData}
+              setIsGlobalData={setIsGlobalData}
+              toggleChat={toggleChat}
+              toggleSidebar={toggleSidebar}
+            />
             {error && (
               <Alert message={error} type="warning" showIcon className="mt-4" />
             )}
@@ -190,82 +222,26 @@ const ChatBox = () => {
                 messages.length === 0 && "justify-center"
               }`}
             >
-              {!error && currentChatSession && messages.length > 0 ? (
-                messages.map((ans, index) => (
-                  <div
-                    key={index}
-                    className={`py-4 px-[14px] w-fit max-w-[80%] text-sm leading-5 bg-[#001529] ${
-                      ans.message_sender === "A"
-                        ? "rounded-[8px] rounded-bl-none"
-                        : "rounded-[8px] rounded-br-none ml-auto"
-                    }`}
-                  >
-                    <p>
-                      <Markdown>{ans.message}</Markdown>
-                    </p>
-                  </div>
-                ))
-              ) : (
-                <div className="text-center">
-                  <div className="w-10 h-10 bg-purple-600 rounded-md flex items-center justify-center mx-auto mb-4">
-                    <RobotOutlined className="text-white" />
-                  </div>
-                  <h2 className="text-base font-semibold mb-2">
-                    Welcome to Omega Copilot
-                  </h2>
-                  <p className="text-sm mb-2 text-[#F6F6F6]">
-                    Please select the Data Source for your Research
-                  </p>
-                  <p className="text-sm mb-2 text-[#F6F6F6]">
-                    To chat with only specific widgets, use the icon.
-                  </p>
-                  <p className="text-sm mb-2 text-[#F6F6F6]">
-                    For more information, see our{" "}
-                    <span className="text-[#9C76DC] underline cursor-pointer ">
-                      Copilot Documentation
-                    </span>
-                  </p>
-                </div>
-              )}
-              {isLoadingMessage && (
-                <div className="py-4 px-[14px] w-fit max-w-[50%] text-sm leading-5 bg-[#001529] rounded-[8px] rounded-bl-none">
-                  <LoadingOutlined className="text-white" spin />
-                </div>
-              )}
+              <ChatMessages
+                currentChatSession={currentChatSession}
+                error={error}
+                isLoadingMessage={isLoadingMessage}
+                loading={loading}
+                messages={messages}
+              />
             </div>
             {!error && currentChatSession && (
               <div className="flex w-full flex-col gap-4">
-                <button
-                  className="w-[50%] rounded bg-[#0088CC] disabled:bg-gray-600 disabled:cursor-not-allowed p-2"
-                  onClick={handleAddToWorkspace}
-                  disabled={messages.length === 0}
-                >
-                  <PlusOutlined />
-                  <span className="ml-2">Add to current workspace</span>
-                </button>
-                <div className="flex relative items-center isolate">
-                  <input
-                    type="text"
-                    className="break-words bg-[#212126] border border-[#303038] focus:outline-none w-full rounded py-2 px-3 mb-4"
-                    placeholder="Ask a question"
-                    value={inputMessage}
-                    onChange={(e) => setInputMessage(e.target.value)}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter") {
-                        handleSendMessage();
-                      }
-                    }}
-                  />
-                  <button
-                    className="absolute right-2 top-2 bg-[#303038] rounded p-1 disabled:cursor-not-allowed"
-                    onClick={handleSendMessage}
-                    disabled={isLoadingMessage}
-                  >
-                    <SendButtonIcon
-                      color={isLoadingMessage ? "#46464F" : "white"}
-                    />
-                  </button>
-                </div>
+                <ChatActions
+                  handleAddToWorkspace={handleAddToWorkspace}
+                  messages={messages}
+                />
+                <ChatInput
+                  inputMessage={inputMessage}
+                  handleSendMessage={handleSendMessage}
+                  isLoadingMessage={isLoadingMessage}
+                  setInputMessage={setInputMessage}
+                />
               </div>
             )}
           </div>
