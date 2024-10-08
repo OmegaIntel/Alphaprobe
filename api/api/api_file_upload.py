@@ -11,7 +11,7 @@ from db_models.weaviatedb import WeaviateManager
 from typing import Optional,List
 from botocore.exceptions import NoCredentialsError
 from datetime import datetime
-from api.api_user import get_current_user, User as UserModelSerializer
+from api.api_user import get_current_user, bypass_user, User as UserModelSerializer
 
 weaviate=WeaviateManager()
 
@@ -45,7 +45,7 @@ async def upload_files(
     sub_category: Optional[str] = Form(None),     
     tags: Optional[str] = Form(None),     
     files: List[UploadFile] = File(...),
-    current_user: UserModelSerializer = Depends(get_current_user),
+    current_user: UserModelSerializer = Depends(bypass_user),
     db: Session = Depends(get_db)
 ):
     deal = db.query(Deal).filter(Deal.id == deal_id).first()
@@ -105,11 +105,17 @@ async def upload_files(
             raise HTTPException(status_code=500, detail=f"Error generating presigned URL: {str(e)}")
         db.refresh(doc)
 
-        if current_user.is_admin :
-            collection_name="admin"
-            collection_name = "d"+str(collection_name)
-        else:
-            collection_name = "d"+str(deal_id)
+        try:
+            if current_user and current_user.is_admin:  # Check if user is authenticated and is admin
+                collection_name = "dadmin"
+            else:
+                collection_name = f"d{str(deal_id)}"  # Default to deal-based collection name
+        except HTTPException as auth_exception:
+            if auth_exception.status_code == 401:
+                # Handle the case where user authentication failed
+                collection_name = f"d{str(deal_id)}"  # Default to deal-based collection name if auth fails
+            else:
+                raise auth_exception
         collection_name = sanitize_class_name(collection_name)  
         weaviate.create_collection(collection_name, new_document.id, presigned_url)  
         
