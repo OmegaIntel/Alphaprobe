@@ -227,6 +227,9 @@ const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
           });
       }
     }
+    else{
+      cancelEditProject(id);
+    }
   };
 
   const editProject = (id) => {
@@ -235,6 +238,13 @@ const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
     );
     setProjects(updatedProjects);
   };
+
+  const cancelEditProject = (id) => {
+    const updatedProjects = projects.map((project) =>
+      project.id === id ? { ...project, isEditing: false } : project
+    );
+    setProjects(updatedProjects);
+  }
 
   return (
     <>
