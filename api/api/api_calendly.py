@@ -6,8 +6,7 @@ from sqlalchemy.orm import Session
 from db_models.session import get_db
 from dotenv import load_dotenv
 from db_models.users import User as UserModal
-from api.api.api_user import get_current_user,User
-
+from api.api_user import get_current_user,User
 
 load_dotenv()
 

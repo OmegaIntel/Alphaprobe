@@ -1,0 +1,108 @@
+{
+    "Financial_Diligence": {
+      "Historical_Financial_Performance": {
+        "Revenue_Analysis": {
+          "Detailed_Breakdown_of_Revenue_Streams": "What is the detailed breakdown of revenue streams (product lines, regions, customers), and how has this mix evolved over the last 3 years?",
+          "Revenue_Concentration_Top_10_Customers": "How concentrated is revenue among the top 10 customers? Are any customers responsible for more than 10% of total revenue?",
+          "Current_Year_Revenue_Run_Rate": "What is the revenue run-rate for the current year, and how does it compare to historical performance?",
+          "Revenue_Projections_vs_Actual_Results": "How do historical revenue projections compare to actual results? Were there any notable discrepancies, and why?",
+          "Repeat_vs_New_Customers": "What percentage of revenue comes from repeat versus new customers?"
+        },
+        "Cost_of_Goods_Sold_COGS": {
+          "Primary_Components_of_COGS": "What are the primary components of COGS, and how has COGS as a percentage of revenue fluctuated over the past 5 years?",
+          "Variable_vs_Fixed_COGS": "How much of COGS is variable versus fixed, and how have these percentages changed with scale?",
+          "Raw_Material_Prices_Impact_on_Gross_Margins": "How do raw material prices or fluctuations in supply chain costs impact gross margins?"
+        },
+        "Gross_Profit_and_Margins": {
+          "Gross_Margins_by_Product_Line": "What are the gross margins by product line or service offering, and how do they compare to industry benchmarks?",
+          "Margin_Compression_or_Expansion_Trends": "Have there been any margin compression or expansion trends over the last 5 years? What are the causes (e.g., pricing pressure, cost inflation, operating inefficiencies)?",
+          "Sensitivity_of_Gross_Margins_to_Product_Mix_or_Geography": "How sensitive are gross margins to changes in product mix or geography?"
+        }
+      },
+      "Profitability_and_Expense_Structure": {
+        "EBITDA_Analysis": {
+          "Adjustments_to_EBITDA": "What adjustments have been made to EBITDA in the last 3 years? Are there any recurring adjustments (e.g., non-operating expenses, stock-based compensation)?",
+          "Adjusted_vs_Unadjusted_EBITDA": "How does adjusted EBITDA compare to unadjusted EBITDA over the last 5 years, and what percentage of the adjustments are expected to continue?",
+          "Extraordinary_or_Non_Recurring_Expenses": "Are there any extraordinary or non-recurring expenses that need to be adjusted for? How significant are they relative to EBITDA?"
+        },
+        "Operating_Expenses": {
+          "Breakdown_of_Operating_Expenses": "What is the breakdown of operating expenses (sales and marketing, general and administrative, research and development)?",
+          "R&D_vs_Competitors": "What percentage of total expenses is dedicated to R&D, and how does this compare to competitors?",
+          "Variable_vs_Fixed_Opex_and_Scalability": "What percentage of Opex is variable versus fixed, and how scalable is the cost structure?",
+          "Impact_of_Management_Compensation": "How have management compensation and executive bonuses impacted the overall expense structure?"
+        }
+      },
+      "Cash_Flow_Analysis": {
+        "Operating_Cash_Flow": {
+          "EBITDA_to_Operating_Cash_Flow_Conversion": "What has been the historical conversion rate from EBITDA to operating cash flow over the last 5 years?",
+          "Percentage_of_EBITDA_Converted_to_Operating_Cash_Flow": "What percentage of EBITDA is converted into operating cash flow? Have there been periods of significant deviations, and what caused them?",
+          "Impact_of_Working_Capital_on_Cash_Flow": "How have changes in working capital impacted cash flow generation?"
+        },
+        "Free_Cash_Flow": {
+          "Average_Free_Cash_Flow_Margin": "What has been the average free cash flow margin over the past 3 years?",
+          "Reinvestment_of_Free_Cash_Flow": "What percentage of free cash flow is reinvested into the business (e.g., CapEx, R&D)?",
+          "Negative_Free_Cash_Flow_Instances": "Has the company experienced negative free cash flow in any of the last 5 years? If so, what were the key drivers?"
+        }
+      },
+      "Working_Capital": {
+        "Accounts_Receivable": {
+          "AR_Turnover_Ratio": "What is the AR turnover ratio, and how has this metric evolved over the past 3 years?",
+          "Overdue_Receivables_or_Bad_Debt_Write_Offs": "Are there any significant overdue receivables or bad debt write-offs in the last 3 years?",
+          "Slow_Payers_Revenue": "How much revenue is generated from customers who are slow payers (e.g., >90 days overdue)?"
+        },
+        "Inventory_Management": {
+          "Inventory_Turnover_Ratio": "What is the inventory turnover ratio, and how does it compare to industry standards?",
+          "Inventory_Obsolescence_or_Write_Downs": "Has there been any significant obsolescence or write-downs of inventory in recent years?",
+          "Inventory_Management_and_Safety_Stock": "How are inventory levels managed, and what percentage of inventory is typically held as safety stock?"
+        },
+        "Accounts_Payable": {
+          "AP_Turnover_Ratio": "What is the AP turnover ratio, and how has the company historically managed payment terms with suppliers?",
+          "Unfavorable_Payment_Terms_with_Key_Suppliers": "Are there any key suppliers with unfavorable payment terms that could impact liquidity?",
+          "Supplier_Relationship_Evolution": "How has the company’s relationship with key suppliers (e.g., extensions of credit terms) evolved?"
+        }
+      },
+      "Capital_Expenditures_CapEx": {
+        "Historical_CapEx": {
+          "Average_CapEx_as_Percentage_of_Revenue": "What has been the average CapEx as a percentage of revenue over the last 5 years?",
+          "CapEx_Allocation_Areas": "How has CapEx been allocated across different areas (e.g., equipment, facilities, technology)?",
+          "Maintenance_vs_Growth_CapEx": "What percentage of CapEx is for maintenance versus growth, and how does this compare to industry norms?"
+        },
+        "Future_CapEx_Requirements": {
+          "Expected_CapEx_Requirements": "What are the expected CapEx requirements over the next 3-5 years? Are there any large one-time projects planned?",
+          "Alignment_of_Future_CapEx_with_Growth_Strategy": "How aligned are future CapEx plans with the company’s growth strategy?",
+          "CapEx_Projections_and_Sensitivity_to_Market_Conditions": "What assumptions are driving CapEx projections, and how sensitive are they to changes in market conditions?"
+        }
+      },
+      "Debt_and_Leverage": {
+        "Debt_Structure": {
+          "Current_Debt_Structure": "What is the current debt structure (secured vs unsecured, long-term vs short-term)?",
+          "Covenant_Breaches_or_Risks": "Are there any covenant breaches or potential risks of breach in the near term?",
+          "Debt_to_EBITDA_Comparison": "How does the company’s debt-to-EBITDA ratio compare to industry averages?"
+        },
+        "Interest_Coverage_and_Debt_Service": {
+          "Interest_Coverage_Ratio": "What is the interest coverage ratio, and has the company ever struggled to meet its interest payments?",
+          "Balloon_Payments_or_Large_Maturities": "Are there any balloon payments or large maturities in the next 3-5 years that could create liquidity issues?",
+          "Refinancing_Risk_Management": "How has the company historically managed refinancing risk?"
+        }
+      },
+      "Tax_Considerations": {
+        "Effective_Tax_Rate": {
+          "Effective_Tax_Rate": "What is the company’s effective tax rate, and how has it fluctuated in the last 5 years?",
+          "Tax_Loss_Carryforwards": "Are there any tax loss carryforwards that could reduce future tax liabilities?",
+          "Tax_Disputes_or_Audits": "Has the company been involved in any tax disputes or audits?"
+        },
+        "Transfer_Pricing_and_International_Tax": {
+          "Transfer_Pricing_Risks": "Are there any transfer pricing risks associated with the company’s international operations?",
+          "Impact_of_International_Tax_Regulations": "How have recent changes in international tax regulations (e.g., BEPS, digital tax) impacted the company’s global tax strategy?",
+          "Off_Balance_Sheet_Tax_Liabilities": "Are there any off-balance sheet tax liabilities that should be considered?"
+        }
+      },
+      "Financial_Projections_and_Sensitivity_Analysis": {
+        "Revenue_Forecasts": {
+          "Realism_of_Revenue_Projections": "How realistic are management’s revenue projections for the next 3-5 years, based on historical performance and current market conditions?",
+          "Key_Assumptions_and_Sensitivity": "What are the key assumptions driving the revenue forecast, and how sensitive are they to changes in market demand, competition, or pricing?"
+        }
+      }
+    }
+  }
+  
