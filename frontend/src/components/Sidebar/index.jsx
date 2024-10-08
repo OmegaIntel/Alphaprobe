@@ -20,7 +20,14 @@ const { Sider } = Layout;
 const Sidebar = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { setDealId, setDeals, deals, dealId, setIsUploadModalVisible, setIsFileUploadModule } = useModal();
+  const {
+    setDealId,
+    setDeals,
+    deals,
+    dealId,
+    setIsUploadModalVisible,
+    setIsFileUploadModule,
+  } = useModal();
   const [filteredDeals, setFilteredDeals] = useState(deals);
   const [isOpen, setIsOpen] = useState(false);
   const [search, setSearch] = useState("");
@@ -86,24 +93,24 @@ const Sidebar = () => {
     },
     ...(filteredDeals.length > 0
       ? filteredDeals.map((deal) => ({
-        key: deal.id,
-        icon: <FileOutlinedIcon />,
-        label: (
-          <Link
-            to={`/projects/${deal.id}`}
-            onClick={() => setDealId(deal.id)}
-          >
-            {deal.name}
-          </Link>
-        ),
-      }))
+          key: deal.id,
+          icon: <FileOutlinedIcon />,
+          label: (
+            <Link
+              to={`/projects/${deal.id}`}
+              onClick={() => setDealId(deal.id)}
+            >
+              {deal.name}
+            </Link>
+          ),
+        }))
       : [
-        {
-          key: "no-projects",
-          disabled: true,
-          label: "No projects available",
-        },
-      ]),
+          {
+            key: "no-projects",
+            disabled: true,
+            label: "No projects available",
+          },
+        ]),
     {
       key: "4",
       label: "DATA SOURCE INTEGRATION",
@@ -111,8 +118,15 @@ const Sidebar = () => {
     },
     {
       key: "5",
-      label: <div className="flex flex-row items-center gap-3"><FileUpload /> File Upload</div>,
-      onClick: () => {setIsUploadModalVisible(true); setIsFileUploadModule(true);}
+      label: (
+        <div className="flex flex-row items-center gap-3">
+          <FileUpload /> File Upload
+        </div>
+      ),
+      onClick: () => {
+        setIsUploadModalVisible(true);
+        setIsFileUploadModule(true);
+      },
     },
   ];
 
@@ -150,6 +164,7 @@ const Sidebar = () => {
             className="bg-transparent text-white h-[65%]"
             defaultSelectedKeys={[selectedKey]}
             items={menuItems}
+            style={{ maxHeight: "800px", overflowY: "auto" }}
           />
           <div className="flex flex-col gap-3 h-[35%] w-[85%] mx-auto">
             <button className="p-3 bg-[#1F1E23] text-left rounded font-bold">

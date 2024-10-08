@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, Text, ForeignKey, DateTime,func,TIMESTAMP
+from sqlalchemy import Column, String, Text, ForeignKey, DateTime,func,TIMESTAMP,Enum
 from sqlalchemy.orm import relationship
 from datetime import datetime
 from db_models.users import User
@@ -6,8 +6,13 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy_utils import UUIDType
 import uuid
 from db_models.deals import Deal
+from enum import Enum as PyEnum
 
 Base = declarative_base()
+class LikeDislikeStatus(PyEnum):
+    NONE = None
+    LIKE = "like"
+    DISLIKE = "dislike"
 
 class ChatSession(Base):
     __tablename__ = "chat_sessions"
@@ -25,4 +30,5 @@ class ChatMessage(Base):
     session_id = Column(ForeignKey(ChatSession.id))
     role = Column(Text)  
     content = Column(Text)
+    like_dislike_status = Column(Enum(LikeDislikeStatus), default=LikeDislikeStatus.NONE)
     created_at = Column(DateTime, default=func.now())
