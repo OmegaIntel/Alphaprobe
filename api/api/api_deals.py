@@ -23,9 +23,14 @@ from typing import List
 from pydantic import BaseModel
 from datetime import datetime
 from api.api_user import get_current_user, User as UserModelSerializer
+from db_models.checklist import Checklist
 
 deals_router = APIRouter()
 
+def load_json_file(filename: str) -> str:
+    """Utility function to load and return the contents of a JSON file as a string."""
+    with open(filename, 'r') as file:
+        return file.read()
 class DealBase(BaseModel):
     name: str = Field(..., max_length=255)
     overview: Optional[str] = None
@@ -69,6 +74,23 @@ def create_deal(
         db.commit()
         db.refresh(new_ws)
 
+        investment_thesis_content = load_json_file('src/investment_thesis.json') 
+        valuation_content = load_json_file('src/valuation.json')
+        market_research_content = load_json_file('src/market_research.json')
+        financial_insights_content = load_json_file('src/financial_insights.json')
+
+        # Create and add checklist entries for each JSON file content
+        checklists = [
+            Checklist(deal_id=new_deal.id, type="Investment Thesis", text=investment_thesis_content),
+            Checklist(deal_id=new_deal.id, type="Valuation", text=valuation_content),
+            Checklist(deal_id=new_deal.id, type="Market Research", text=market_research_content),
+            Checklist(deal_id=new_deal.id, type="Financial Insights", text=financial_insights_content)
+        ]
+
+        # Add all checklist items to the session at once
+        db.add_all(checklists)
+        db.commit() 
+        
         # Return the new deal in the expected format
         return DealResponse(
             id=new_deal.id,
