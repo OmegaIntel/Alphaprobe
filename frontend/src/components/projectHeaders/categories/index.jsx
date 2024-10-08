@@ -84,7 +84,7 @@ const Categories = () => {
               <div
                 className={`${
                   data === activeCategory && "bg-[#212126] rounded-lg"
-                } p-3 cursor-pointer`}
+                } p-2 cursor-pointer text-sm`}
                 key={index}
                 onClick={() => setActiveCategory(data)}
               >

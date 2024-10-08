@@ -57,7 +57,6 @@ def sanitize_class_name_nocap(name: str) -> str:
 
 class ChatSessionResponse(BaseModel):
     id: str
-    name: str
 
 class ChatSessioninput(BaseModel):
     id: str
@@ -95,21 +94,19 @@ async def create_chat_session(
     if is_global:
         user_id = current_user.id
         user_id = sanitize_class_name_nocap(user_id)
-        session_name = f"Chat Session for usr {user_id}"
-        new_session = ChatSession(id=session_id, user_id=user_id, session_name=session_name)
+        new_session = ChatSession(id=session_id, user_id=user_id)
     else:
         deal_id = sanitize_class_name_nocap(deal_id)
-        session_name = f"Chat Session for Deal {deal_id}"
-        new_session = ChatSession(id=session_id, deal_id=deal_id, session_name=session_name)
+        new_session = ChatSession(id=session_id, deal_id=deal_id)
 
     db.add(new_session)
     db.commit()
     db.refresh(new_session)
-    return ChatSessionResponse(id=session_id, name=session_name)
+    return ChatSessionResponse(id=session_id)
 
 @chat_router.get("/api/chat/{session_id}/messages", response_model=ChatMessagesResponse)
 async def get_chat_messages(session_id: str, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
-    messages = db.query(ChatMessage).filter(ChatMessage.session_id == session_id).all()
+    messages = db.query(ChatMessage).filter(ChatMessage.session_id == session_id).order_by(asc(ChatMessage.created_at)).all()
     if not messages:
         raise HTTPException(status_code=404, detail="Chat session not found")
     return ChatMessagesResponse(messages=[{"role": msg.role, "content": msg.content} for msg in messages])
@@ -119,6 +116,12 @@ async def send_message(session_id: str,content: str = Form(...), deal_id: Option
     session = db.query(ChatSession).filter(ChatSession.id == session_id).first()
     if session is None:
         raise HTTPException(status_code=404, detail="Chat session not found")
+
+    if not session.session_name:
+        session.session_name = content
+        db.commit()
+        db.refresh(session)
+
     user_message = content
     messages = db.query(ChatMessage).filter(ChatMessage.session_id == session_id).all()
     conversation = [{"role": msg.role, "content": msg.content} for msg in messages]
@@ -159,28 +162,32 @@ async def send_message(session_id: str,content: str = Form(...), deal_id: Option
     db.commit()
     return ChatResponse(response=ai_response)
 
-@chat_router.delete("/api/chat/sessions/{session_id}", response_model=None)
-async def delete_chat_session(session_id: str, db: Session = Depends(get_db)):
-    session = db.query(ChatSession).filter(
-        ChatSession.id == session_id,
-    ).first()
-
-    if not session:
+@chat_router.delete("/api/chat/sessions/", response_model=None)
+async def delete_chat_session(deal_id: str, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
+    chat_sessions = db.query(ChatSession).filter(
+        or_(
+            ChatSession.user_id == sanitize_class_name_nocap(current_user.id), 
+            ChatSession.deal_id == sanitize_class_name_nocap(deal_id) 
+        )
+    ).all()
+    if not chat_sessions:
         raise HTTPException(status_code=404, detail="Session not found")
 
-    db.query(ChatMessage).filter(ChatMessage.session_id == session.id).delete()
-    db.delete(session)
+    for session in chat_sessions:
+        if not session.session_name:
+            db.delete(session)
     db.commit()
     return {"message": "Session deleted successfully"}
 
-
 @chat_router.get("/api/chat_sessions/")
-def get_chat_sessions(deal_id: str, db: Session = Depends(get_db)):
-    chat_sessions = db.query(ChatSession).filter(ChatSession.deal_id == deal_id).all()
+def get_chat_sessions(deal_id: Optional[str]  = None,is_global: bool = False, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
+    if is_global:
+        chat_sessions=db.query(ChatSession).filter(ChatSession.user_id==sanitize_class_name_nocap(current_user.id)).order_by(asc(ChatSession.created_at)).all()
+    else:
+        chat_sessions = db.query(ChatSession).filter(ChatSession.deal_id == sanitize_class_name_nocap(deal_id)).order_by(asc(ChatSession.created_at)).all()
     if not chat_sessions:
         raise HTTPException(status_code=404, detail="No chat sessions found for this deal ID")
     return chat_sessions
-
 
 @chat_router.post("/api/workspace/add/{session_id}")
 async def add_to_workspace(type: str, session_id: str,deal_id: str = Form(...), current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):

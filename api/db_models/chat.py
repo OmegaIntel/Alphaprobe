@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, Text, ForeignKey, DateTime
+from sqlalchemy import Column, String, Text, ForeignKey, DateTime,func,TIMESTAMP
 from sqlalchemy.orm import relationship
 from datetime import datetime
 from db_models.users import User
@@ -14,8 +14,9 @@ class ChatSession(Base):
 
     id = Column(UUIDType(binary=False), primary_key=True, default=uuid.uuid4)
     deal_id = Column(String(255), ForeignKey(Deal.id),nullable=True)  
-    session_name = Column(String(255))  
+    session_name = Column(String(255),nullable=True,default=None)  
     user_id= Column(String(255), ForeignKey(User.id),nullable=True)
+    created_at = Column(DateTime, default=func.now())
 
 class ChatMessage(Base):
     __tablename__ = "chat_messages"
@@ -24,4 +25,4 @@ class ChatMessage(Base):
     session_id = Column(ForeignKey(ChatSession.id))
     role = Column(Text)  
     content = Column(Text)
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=func.now())

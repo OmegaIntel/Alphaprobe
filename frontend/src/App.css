@@ -949,8 +949,8 @@ pre {
 }
 
 .chatbox-open {
-  width: 512px;
-  height: 625px;
+  width: fit-content;
+  height: fit-content;
 }
 
 .chatbox-closed {
@@ -970,6 +970,7 @@ pre {
 }
 .chats-container {
   display: flex;
+  position: relative;
   flex-direction: column;
   gap: 0.5rem;
   width: 100%;
