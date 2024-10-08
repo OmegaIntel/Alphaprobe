@@ -5,7 +5,6 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-import Chat from "./components/Chat";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import "./App.css";
@@ -13,7 +12,6 @@ import CreateDeal from "./components/create_deal/index";
 import Dashboard from "./components/Dashboard";
 import ProtectedLayout from "./components/ProtectedLayout";
 import Categories from "./components/projectHeaders/categories";
-import FileUploadComponent from "./components/FileUploadComponent";
 import DocumentsWrapper from "./components/FileUploadComponent/wrapper";
 
 const App = () => {
@@ -32,10 +30,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route
-          path="/guest/:id"
-          element={<DocumentsWrapper />}
-        />
+        <Route path="/guest/:id" element={<DocumentsWrapper />} />
         <Route
           path="/register"
           element={isLoggedIn ? <Navigate to="/dashboard" /> : <Register />}
@@ -87,30 +82,6 @@ const App = () => {
             </ProtectedLayout>
           }
         ></Route>
-        <Route
-          path="/chat"
-          element={
-            <ProtectedLayout
-              setToken={handleSetToken}
-              setUpdateSidebarSessions={setUpdateSidebarSessions}
-              isLoggedIn={isLoggedIn}
-            >
-              <Chat updateSidebarSessions={updateSidebarSessions} />
-            </ProtectedLayout>
-          }
-        />
-        <Route
-          path="/chat/:chatId"
-          element={
-            <ProtectedLayout
-              setToken={handleSetToken}
-              setUpdateSidebarSessions={setUpdateSidebarSessions}
-              isLoggedIn={isLoggedIn}
-            >
-              <Chat updateSidebarSessions={updateSidebarSessions} />
-            </ProtectedLayout>
-          }
-        />
 
         <Route
           path="/"
