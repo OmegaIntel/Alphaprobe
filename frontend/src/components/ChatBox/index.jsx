@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { Alert, notification } from "antd";
 import { fetchAllDocument } from "../../services/uploadService";
 import {
+  addMessageToWorkspace,
   addToWorkSpace,
   createChatSession,
   deleteChatSession,
@@ -128,8 +129,11 @@ const ChatBox = () => {
         isGlobalData
       );
       setIsLoadingMessage(false);
-      const botReply = { content: message.response, role: "ai" };
-      setMessages((prevMessages) => [...prevMessages, botReply]);
+      // const botReply = { content: message.response, role: "ai" };
+      const all_messages = await fetchPreviousMessages(currentChatSession);
+      console.log(all_messages, "test")
+      setMessages(all_messages);
+      // setMessages((prevMessages) => [...prevMessages, botReply]);
     } catch (error) {
       console.log("Error sending message:", error);
       setIsLoadingMessage(false);
@@ -150,6 +154,20 @@ const ChatBox = () => {
       setError("Failed to add to current workspace. Please try again.");
     }
   };
+
+  const handleAddMessageToWorkSpace = async(messageId) => {
+    try {
+      const response = await addMessageToWorkspace(
+        messageId,
+        selectCategory,
+        dealId
+      );
+      if (response) notification.success({ message: response.message });
+    } catch (error) {
+      console.log("Error to add to current workspace:", error);
+      setError("Failed to add to current workspace. Please try again.");
+    }
+  }
 
   useEffect(() => {
     if (isOpen) fetchDealDocuments();
@@ -228,6 +246,7 @@ const ChatBox = () => {
                 isLoadingMessage={isLoadingMessage}
                 loading={loading}
                 messages={messages}
+                handleAddMessageToWorkSpace={handleAddMessageToWorkSpace}
               />
             </div>
             {!error && currentChatSession && (

@@ -68,6 +68,7 @@ export const addToWorkSpace = async (sessionId, type, dealId) => {
     console.log(error);
   }
 };
+
 export const fetchPreviousSessions = async (dealId, isGlobal) => {
   try {
     const response = await axiosInstance.get(
@@ -91,6 +92,42 @@ export const fetchPreviousMessages = async (sessionId) => {
       },
     });
     return response.data.messages;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+
+export const handleLikeDislike = async (messageId, likeDislikeStatus) => {
+  try {
+    const response = await axiosInstance.put(
+      `/message?message_id=${messageId}&like_dislike_status=${likeDislikeStatus}`,
+      null,
+      {
+        headers: {
+          accept: "application/json",
+        },
+      }
+    );
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+export const addMessageToWorkspace = async (messageId, type, dealId) => {
+  try {
+    const response = await axiosInstance.post(
+      `/workspace/add/message/${messageId}?type=${type}`,
+      { deal_id: dealId },
+      {
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    return response.data;
   } catch (error) {
     console.log(error);
   }

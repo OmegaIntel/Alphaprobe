@@ -7,7 +7,7 @@ from db_models.session import get_db
 from llm_models.llm import LLM
 from search.bing_search import BingSearch
 from api.api_user import get_current_user, User
-from db_models.chat import ChatSession,ChatMessage
+from db_models.chat import ChatSession,ChatMessage,LikeDislikeStatus
 from db_models.weaviatedb import WeaviateManager
 from stock.openbb_stock_api import OpenBBStockAPI
 from metrics.openbb_metrics_api import OpenBBMetricsAPI
@@ -75,9 +75,6 @@ class RetrieverRequest(BaseModel):
 class RetrieverResponse(BaseModel):
     retriever: str
 
-class ChatMessagesResponse(BaseModel):
-    messages: List[dict[str, str]]
-
 @chat_router.post("/api/chat/sessions", response_model=ChatSessionResponse)
 async def create_chat_session(
     deal_id: Optional[str] = Form(None),
@@ -104,12 +101,26 @@ async def create_chat_session(
     db.refresh(new_session)
     return ChatSessionResponse(id=session_id)
 
-@chat_router.get("/api/chat/{session_id}/messages", response_model=ChatMessagesResponse)
+@chat_router.get("/api/chat/{session_id}/messages", response_model=None)
 async def get_chat_messages(session_id: str, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     messages = db.query(ChatMessage).filter(ChatMessage.session_id == session_id).order_by(asc(ChatMessage.created_at)).all()
     if not messages:
         raise HTTPException(status_code=404, detail="Chat session not found")
-    return ChatMessagesResponse(messages=[{"role": msg.role, "content": msg.content} for msg in messages])
+    return {"messages" : [{"role": msg.role, "content": msg.content, "id": msg.id, "like_dislike": msg.like_dislike_status} for msg in messages]}
+
+@chat_router.put("/api/message", response_model=None)
+async def update_chat_message(message_id: str, like_dislike_status: LikeDislikeStatus, db: Session = Depends(get_db)):
+    message_id = sanitize_class_name_nocap(message_id)
+    message = db.query(ChatMessage).filter(ChatMessage.id==message_id).first()
+    if not message:
+        raise HTTPException(status_code=404, detail="Message not found")
+    
+    message.like_dislike_status = like_dislike_status
+
+    db.commit()
+
+    return {"message": "Chat message updated successfully"}
+
 
 @chat_router.post("/api/chat/{session_id}/message", response_model=ChatResponse)
 async def send_message(session_id: str,content: str = Form(...), deal_id: Optional[str] = Form(None),is_global: bool = Form(False), current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
@@ -195,6 +206,27 @@ async def add_to_workspace(type: str, session_id: str,deal_id: str = Form(...), 
     payload_string = ""
     for msg in messages:
         payload_string += f"**{msg.role}**" +":" + " " + msg.content + "\n"
+    data=db.query(Deal).filter(Deal.id==deal_id and Deal.user_id==current_user.id).first()
+    if not data:
+        shared_deal = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id).first()
+        if shared_deal:
+            pass
+        else:
+            raise HTTPException(status_code=404, detail="You are not authorized to add workspace")
+    new_ws = CurrentWorkspace(deal_id=deal_id, text=payload_string, type=type)
+    db.add(new_ws)
+    db.commit()
+    db.refresh(new_ws)
+    return {"message":"messages added to current workspace successfully"}
+
+
+@chat_router.post("/api/workspace/add/message/{message_id}")
+async def add_to_workspace(type: str, message_id: str,deal_id: str = Form(...), current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+    message_id = sanitize_class_name_nocap(message_id)
+    messages = db.query(ChatMessage).filter(ChatMessage.id == message_id).all()
+    payload_string = ""
+    for msg in messages:
+        payload_string += msg.content + "\n"
     data=db.query(Deal).filter(Deal.id==deal_id and Deal.user_id==current_user.id).first()
     if not data:
         shared_deal = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id).first()

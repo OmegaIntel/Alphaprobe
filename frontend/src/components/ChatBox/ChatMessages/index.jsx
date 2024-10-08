@@ -1,7 +1,8 @@
-import React from "react";
-import { Spin } from "antd";
+import React, { useEffect, useState } from "react";
+import { Spin, message } from "antd";
 import Markdown from "react-markdown";
-import { RobotOutlined, LoadingOutlined } from "@ant-design/icons";
+import { RobotOutlined, LoadingOutlined, LikeOutlined, DislikeOutlined, CopyOutlined, LikeFilled, DislikeFilled } from "@ant-design/icons";
+import { handleLikeDislike } from "../../../services/chatService";
 
 const ChatMessages = ({
   loading,
@@ -9,7 +10,85 @@ const ChatMessages = ({
   messages,
   currentChatSession,
   isLoadingMessage,
+  handleAddMessageToWorkSpace
 }) => {
+  // State to track like/dislike for each message
+  const [likedMessages, setLikedMessages] = useState({});
+  const [dislikedMessages, setDislikedMessages] = useState({});
+
+  useEffect(() => {
+    if (messages) {
+      messages?.map((msg) => {
+        if (msg.like_dislike === "like") {
+          setLikedMessages((prev) => ({
+            ...prev, [msg.id]: true,
+          }))
+        }
+        if (msg.like_dislike === "dislike") {
+          setDislikedMessages((prev) => ({
+            ...prev, [msg.id]: true,
+          }))
+        }
+      })
+    }
+  }, [messages])
+
+  const toggleLike = (msgId) => {
+    if (likedMessages[msgId]) {
+      // If already liked, set status to None (reset like)
+      setLikedMessages((prev) => ({
+        ...prev,
+        [msgId]: false,
+      }));
+      handleLikeDislike(msgId, "none").then().catch((e) => message.error("Something went wrong!"));  // Use None to reset
+    } else {
+      // Otherwise, toggle like
+      setLikedMessages((prev) => ({
+        ...prev,
+        [msgId]: true,
+      }));
+
+      // Reset dislike if liked
+      if (dislikedMessages[msgId]) {
+        setDislikedMessages((prev) => ({
+          ...prev,
+          [msgId]: false,
+        }));
+        handleLikeDislike(msgId, "none").then().catch((e) => message.error("Something went wrong!"));  // Reset dislike status
+      }
+
+      handleLikeDislike(msgId, "like").then().catch((e) => message.error("Something went wrong!"));
+    }
+  };
+
+  const toggleDislike = (msgId) => {
+    if (dislikedMessages[msgId]) {
+      // If already disliked, set status to None (reset dislike)
+      setDislikedMessages((prev) => ({
+        ...prev,
+        [msgId]: false,
+      }));
+      handleLikeDislike(msgId, "none").then().catch((e) => message.error("Something went wrong!"));  // Use None to reset
+    } else {
+      // Otherwise, toggle dislike
+      setDislikedMessages((prev) => ({
+        ...prev,
+        [msgId]: true,
+      }));
+
+      // Reset like if disliked
+      if (likedMessages[msgId]) {
+        setLikedMessages((prev) => ({
+          ...prev,
+          [msgId]: false,
+        }));
+        handleLikeDislike(msgId, "None").then().catch((e) => message.error("Something went wrong!"));  // Reset like status
+      }
+
+      handleLikeDislike(msgId, "dislike").then().catch((e) => message.error("Something went wrong!"));
+    }
+  };
+
   if (loading) {
     return (
       <div className="flex justify-center items-center h-full">
@@ -21,19 +100,48 @@ const ChatMessages = ({
   if (!error && currentChatSession && messages.length > 0) {
     return (
       <>
-        {messages.map((msg, index) => (
-          <div
-            key={index}
-            className={`py-4 px-[14px] w-fit max-w-[80%] text-sm leading-5 bg-[#001529] ${
-              msg.role === "ai"
-                ? "rounded-[8px] rounded-bl-none"
-                : "rounded-[8px] rounded-br-none ml-auto"
-            }`}
-          >
-            <p>
-              <Markdown>{msg.content}</Markdown>
-            </p>
-          </div>
+        {messages?.map((msg, index) => (
+          <React.Fragment key={index}>
+            <div>
+              <div
+                className={`py-4 px-[14px] w-fit max-w-[80%] text-sm leading-5 bg-[#001529] ${msg.role === "ai"
+                  ? "rounded-[8px] rounded-bl-none"
+                  : "rounded-[8px] rounded-br-none ml-auto"
+                  }`}
+              >
+                <p>
+                  <Markdown>{msg.content}</Markdown>
+                </p>
+              </div>
+            </div>
+            <div className={`${msg.role !== "ai" && "ml-auto"} ${!msg.id && "hidden"} flex flex-row gap-3`}>
+              {likedMessages[msg.id] ? (
+                <LikeFilled
+                  className="cursor-pointer"
+                  onClick={() => toggleLike(msg.id)}
+                />
+              ) : (
+                <LikeOutlined
+                  className="cursor-pointer"
+                  onClick={() => toggleLike(msg.id)}
+                />
+              )}
+
+              {dislikedMessages[msg.id] ? (
+                <DislikeFilled
+                  className="cursor-pointer"
+                  onClick={() => toggleDislike(msg.id)}
+                />
+              ) : (
+                <DislikeOutlined
+                  className="cursor-pointer"
+                  onClick={() => toggleDislike(msg.id)}
+                />
+              )}
+
+              <CopyOutlined className="cursor-pointer" onClick={() => handleAddMessageToWorkSpace(msg.id)} />
+            </div>
+          </React.Fragment>
         ))}
         {isLoadingMessage && (
           <div className="py-4 px-[14px] w-fit max-w-[50%] text-sm leading-5 bg-[#001529] rounded-[8px] rounded-bl-none">
