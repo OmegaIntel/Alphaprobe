@@ -101,15 +101,19 @@ const CreateDeal = () => {
     setRequestModal(false);
   };
 
+  const getTodayDate = () => {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  };
+
   return (
     <div
       ref={containerRef}
       className="flex flex-col space-y-1 overflow-y-auto min-h-screen"
     >
-      {/* <DiligenceDocumentsModal
-        isOpen={requestModal}
-        onRequestClose={onRequestClose}
-      /> */}
       <div
         className={`ml-1 flex text-white p-5 bg-[#151518] ${
           isOverflowing ? "min-h-fit" : "flex-1"
@@ -138,6 +142,7 @@ const CreateDeal = () => {
                 className="p-2 bg-[#212126] w-[60%] rounded-md border border-[#46464F] date-input"
                 value={dueDate}
                 onChange={(e) => setDueDate(e.target.value)}
+                min={getTodayDate()}
               />
             </div>
           </div>
