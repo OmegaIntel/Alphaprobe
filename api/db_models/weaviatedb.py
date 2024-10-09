@@ -8,14 +8,14 @@ from weaviate import Client
 from pdfminer.high_level import extract_text
 import requests
 from io import BytesIO
+import os
 
 load_dotenv()
 
 
 class WeaviateManager:
     def __init__(self):
-        self.client = weaviate.connect_to_local(host="weaviate")
-        # self.client = weaviate.connect_to_local()
+        self.client = weaviate.connect_to_local(host=os.getenv("WEAVIATE_HOST"))
 
     def __del__(self):
         self.client.close()
