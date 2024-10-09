@@ -122,19 +122,24 @@ const ChatBox = () => {
     setInputMessage("");
     setIsLoadingMessage(true);
     try {
-      const message = await sendChatMessage(
+      await sendChatMessage(
         currentChatSession,
         dealId,
         inputMessage,
         isGlobalData
       );
-      setIsLoadingMessage(false);
-      const botReply = { content: message.response, role: "ai" };
-      setMessages((prevMessages) => [...prevMessages, botReply]);
+      const previousMessages = await fetchPreviousMessages(currentChatSession);
+      if (previousMessages) {
+        setMessages(previousMessages);
+      } else {
+        setMessages([]);
+        setError("Failed to send message. Please try again.");
+      }
     } catch (error) {
       console.log("Error sending message:", error);
-      setIsLoadingMessage(false);
       setError("Failed to send message. Please try again.");
+    } finally {
+      setIsLoadingMessage(false);
     }
   };
 
