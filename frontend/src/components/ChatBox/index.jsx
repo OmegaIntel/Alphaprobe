@@ -191,7 +191,6 @@ const ChatBox = () => {
         } else {
           setPreviousSessions([]);
         }
-        setPreviousSessions(sessions);
       } catch (error) {
         console.error("Failed to load previous sessions:", error);
       }
