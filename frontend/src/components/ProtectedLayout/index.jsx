@@ -5,35 +5,19 @@ import Navbar from "../Navbar";
 import UploadFilesModal from "../UploadFilesModal";
 import { ModalProvider, useModal } from "../UploadFilesModal/ModalContext";
 
-const ProtectedLayout = ({
-  children,
-  setToken,
-  setUpdateSidebarSessions,
-  isLoggedIn,
-}) => {
+const ProtectedLayout = ({ children, setToken, isLoggedIn }) => {
   const { id } = useParams();
 
   return (
     <ModalProvider>
-      <ProtectedLayoutInner
-        id={id}
-        setToken={setToken}
-        setUpdateSidebarSessions={setUpdateSidebarSessions}
-        isLoggedIn={isLoggedIn}
-      >
+      <ProtectedLayoutInner id={id} setToken={setToken} isLoggedIn={isLoggedIn}>
         {children}
       </ProtectedLayoutInner>
     </ModalProvider>
   );
 };
 
-const ProtectedLayoutInner = ({
-  children,
-  setToken,
-  setUpdateSidebarSessions,
-  isLoggedIn,
-  id,
-}) => {
+const ProtectedLayoutInner = ({ children, setToken, isLoggedIn, id }) => {
   const {
     isUploadModalVisible,
     setIsUploadModalVisible,
@@ -43,7 +27,7 @@ const ProtectedLayoutInner = ({
     setDealId,
     isFileUploadModule,
     setIsFileUploadModule,
-    deals
+    deals,
   } = useModal();
 
   useEffect(() => {
@@ -60,13 +44,11 @@ const ProtectedLayoutInner = ({
 
   return (
     <div className="App">
-      <Sidebar
-        setToken={setToken}
-        setUpdateSidebarSessions={setUpdateSidebarSessions}
-      />
+      <Sidebar setToken={setToken} />
       <div className="main-content with-sidebar">
         <Navbar />
-        <UploadFilesModal isUploadModalVisible={isUploadModalVisible}
+        <UploadFilesModal
+          isUploadModalVisible={isUploadModalVisible}
           setIsUploadModalVisible={setIsUploadModalVisible}
           isUpdateModalVisible={isUpdateModalVisible}
           setIsUpdateModalVisible={setIsUpdateModalVisible}

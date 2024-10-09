@@ -129,11 +129,8 @@ const ChatBox = () => {
         isGlobalData
       );
       setIsLoadingMessage(false);
-      // const botReply = { content: message.response, role: "ai" };
-      const all_messages = await fetchPreviousMessages(currentChatSession);
-      console.log(all_messages, "test")
-      setMessages(all_messages);
-      // setMessages((prevMessages) => [...prevMessages, botReply]);
+      const botReply = { content: message.response, role: "ai" };
+      setMessages((prevMessages) => [...prevMessages, botReply]);
     } catch (error) {
       console.log("Error sending message:", error);
       setIsLoadingMessage(false);
@@ -155,7 +152,7 @@ const ChatBox = () => {
     }
   };
 
-  const handleAddMessageToWorkSpace = async(messageId) => {
+  const handleAddMessageToWorkSpace = async (messageId) => {
     try {
       const response = await addMessageToWorkspace(
         messageId,
@@ -167,7 +164,7 @@ const ChatBox = () => {
       console.log("Error to add to current workspace:", error);
       setError("Failed to add to current workspace. Please try again.");
     }
-  }
+  };
 
   useEffect(() => {
     if (isOpen) fetchDealDocuments();
@@ -188,12 +185,13 @@ const ChatBox = () => {
   useEffect(() => {
     const loadPreviousSessions = async () => {
       try {
-        const sessions = await fetchPreviousSessions(dealId, isGlobalData);
+        const sessions = await fetchPreviousSessions(dealId, isGlobalData); // Fetch the previous chat sessions
         if (Array.isArray(sessions)) {
           setPreviousSessions(sessions);
         } else {
           setPreviousSessions([]);
         }
+        setPreviousSessions(sessions);
       } catch (error) {
         console.error("Failed to load previous sessions:", error);
       }

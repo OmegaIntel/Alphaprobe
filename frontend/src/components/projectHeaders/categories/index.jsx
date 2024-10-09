@@ -5,8 +5,7 @@ import FileUploadComponent from "../../FileUploadComponent";
 import { MoreOutlined } from "@ant-design/icons";
 import AddProgress from "../../progressModal";
 import { useModal } from "../../UploadFilesModal/ModalContext";
-import { getDeals } from "../../../services/dealService";
-import { notification, Select } from "antd";
+import { Select } from "antd";
 import ProjectDetails from "../../projectDetails";
 import { getTasks } from "../../../services/taskService";
 
@@ -26,6 +25,7 @@ const Categories = () => {
 
   const {
     dealId,
+    deals,
     todo,
     setIsUploadModalVisible,
     isUpdateModalVisible,
@@ -38,17 +38,9 @@ const Categories = () => {
 
   useEffect(() => {
     if (dealId) {
-      getDeals()
-        .then((data) => {
-          const dealData = data.find((deal) => deal.id === dealId);
-          setProgress(dealData?.progress);
-          setName(dealData?.name);
-        })
-        .catch(() =>
-          notification.error({
-            message: "Something went wrong in fetching progress!",
-          })
-        );
+      const dealData = deals.find((deal) => deal.id === dealId);
+      setProgress(dealData?.progress);
+      setName(dealData?.name);
       if (todo && todo.length > 0) {
         const groupedTasks = todo.reduce((acc, task) => {
           const status = task.status;
@@ -73,40 +65,44 @@ const Categories = () => {
           });
       }
     }
-  }, [dealId, toggle, todo]);
+  }, [dealId, toggle, todo, deals]);
 
   return (
     <>
       <div className="flex flex-row flex-grow overflow-auto">
         <div className="w-[70%] flex flex-grow flex-col overflow-auto">
-          <div className="flex items-center bg-[#151518] pt-5 px-5 ml-1">
-            {categoryList.map((data, index) => (
-              <div
-                className={`${
-                  data === activeCategory && "bg-[#212126] rounded-lg"
-                } p-2 cursor-pointer text-sm`}
-                key={index}
-                onClick={() => setActiveCategory(data)}
-              >
-                {data}
-              </div>
-            ))}
-            {activeCategory !== "Action Items" &&
-              activeCategory !== "Documents" && (
-                <Select
-                  className="ml-2 w-[170px]"
-                  value={selectedSubcategory}
-                  onChange={(value) => {
-                    setSelectedSubcategory(value);
-                  }}
+          <div className="flex items-center flex-col largeDesktop:flex-row bg-[#151518] pt-5 px-5 ml-1 gap-4">
+            <div className="flex laptop:gap-2 largeDesktop:gap-0">
+              {categoryList.map((data, index) => (
+                <div
+                  className={`${
+                    data === activeCategory && "bg-[#212126] rounded-lg"
+                  } p-1 text-center desktop:p-2 cursor-pointer text-sm`}
+                  key={index}
+                  onClick={() => setActiveCategory(data)}
                 >
-                  {subCategoryList.map((subcategory) => (
-                    <Option key={subcategory} value={subcategory}>
-                      {subcategory}
-                    </Option>
-                  ))}
-                </Select>
-              )}
+                  {data}
+                </div>
+              ))}
+            </div>
+            <div>
+              {activeCategory !== "Action Items" &&
+                activeCategory !== "Documents" && (
+                  <Select
+                    className="ml-2 largeDesktop:w-[170px] "
+                    value={selectedSubcategory}
+                    onChange={(value) => {
+                      setSelectedSubcategory(value);
+                    }}
+                  >
+                    {subCategoryList.map((subcategory) => (
+                      <Option key={subcategory} value={subcategory}>
+                        {subcategory}
+                      </Option>
+                    ))}
+                  </Select>
+                )}
+            </div>
           </div>
 
           {activeCategory === "Action Items" ? (

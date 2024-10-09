@@ -25,7 +25,7 @@ const NewsBar = () => {
     fetchNewsData();
   }, []);
   return (
-    <div className="bg-[#151518] w-[30%] h-screen ml-1 p-2 overflow-y-auto">
+    <div className="bg-[#151518] w-[30%] h-[88vh] ml-1 p-2 overflow-y-auto">
       <h5 className="text-sm font-semibold">Latest PE Markets Deals / News</h5>
       {loading ? (
         <div className="flex justify-center items-center h-[80%]">

@@ -4,7 +4,6 @@ import { useMediaQuery } from "react-responsive";
 import { createDeal } from "../../services/dealService";
 import { notification } from "antd";
 import { useModal } from "../UploadFilesModal/ModalContext";
-import DiligenceDocumentsModal from "../requestDocuments";
 import { Select } from "antd";
 
 const { Option } = Select;
@@ -17,7 +16,6 @@ const CreateDeal = () => {
   const [industry, setIndustry] = useState("");
   const [isOverflowing, setIsOverflowing] = useState(false);
   const { setIsUploadModalVisible, setDealId } = useModal();
-  const [requestModal, setRequestModal] = useState(false);
 
   const containerRef = useRef(null);
 
@@ -97,15 +95,11 @@ const CreateDeal = () => {
     }
   };
 
-  const onRequestClose = () => {
-    setRequestModal(false);
-  };
-
   const getTodayDate = () => {
     const today = new Date();
     const year = today.getFullYear();
-    const month = String(today.getMonth() + 1).padStart(2, '0');
-    const day = String(today.getDate()).padStart(2, '0');
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const day = String(today.getDate()).padStart(2, "0");
     return `${year}-${month}-${day}`;
   };
 
@@ -208,7 +202,6 @@ const CreateDeal = () => {
                 description={data.description}
                 type={data.type}
                 key={index}
-                setRequestModal={setRequestModal}
               />
             );
           })}
