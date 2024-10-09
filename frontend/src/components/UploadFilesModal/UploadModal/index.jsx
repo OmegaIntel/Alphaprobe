@@ -46,9 +46,7 @@ const UploadModal = ({
           type="primary"
           className="!bg-[#303038] text-[#DCDCDC] disabled:text-[#46464F] border-none "
           onClick={onOk}
-          disabled={
-            isFileUploadModule ? !selectedFile && !tempDealId : !selectedFile
-          }
+          disabled={isFileUploadModule ? !selectedFile || !tempDealId : !selectedFile}
         >
           Continue
         </Button>,

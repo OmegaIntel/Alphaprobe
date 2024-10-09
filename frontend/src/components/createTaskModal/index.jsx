@@ -29,6 +29,10 @@ const TaskModal = ({ isOpen, onRequestClose, type, values, setToggle }) => {
   const inputRef = useRef(null);
   const editInputRef = useRef(null);
 
+  useEffect(()=>{
+    setPriority("medium");
+  }, [isOpen])
+
   useEffect(() => {
     if (inputVisible) {
       inputRef.current?.focus();

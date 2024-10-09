@@ -7,12 +7,11 @@ const EditableProjectCard = ({
   onSave,
   onCancel,
   onEdit,
-  handleInputChange,
 }) => {
   const [cardText, setCardText] = useState();
   useEffect(()=>{
     setCardText(project?.text);
-  }, [project.text])
+  }, [project.text,project.isEditing])
   return (
     <Card
       className="text-center bg-[#1f1e23] shadow-lg rounded-lg border-none text-white"
@@ -25,7 +24,6 @@ const EditableProjectCard = ({
               <textarea
                 value={cardText}
                 onChange={(e) =>
-                  // handleInputChange(project.id, "text", e.target.value)
                   setCardText(e.target.value)
                 }
                 placeholder="Description"

@@ -88,7 +88,6 @@ class WeaviateManager:
                 ),
             )
             self.insert_data(collection_name, document_id, file_path)
-            print(f"Collection '{collection_name}' created and data inserted.")
         return f"Collection {collection_name} handled"
 
     def retrieve_content(self, query: str, collection_name: str) -> List[str]:
