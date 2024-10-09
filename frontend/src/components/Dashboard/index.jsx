@@ -3,7 +3,6 @@ import { dashboardData } from "../../constants";
 import NewsBar from "../NewsBar";
 import { useNavigate } from "react-router-dom";
 import { Button, Tag } from "antd";
-import DiligenceDocumentsModal from "../requestDocuments";
 import { useModal } from "../UploadFilesModal/ModalContext";
 import { getTasks } from "../../services/taskService";
 
@@ -23,14 +22,10 @@ const Card = ({ title, description, buttonText, onClick }) => {
 };
 const Dashboard = () => {
   const { deals } = useModal();
-  const [requestModal, setRequestModal] = useState(false);
   const [recentDeal, setRecentDeal] = useState();
   const [otherDeals, setOtherDeals] = useState([]);
   const [activeItems, setActiveItems] = useState([]);
 
-  const onRequestClose = () => {
-    setRequestModal(false);
-  };
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -56,8 +51,6 @@ const Dashboard = () => {
   const handleNavigate = (index) => {
     if (index === 0) {
       navigate("/create-deal");
-    } else if (index === 1) {
-      setRequestModal(true);
     }
   };
 
@@ -73,10 +66,6 @@ const Dashboard = () => {
 
   return (
     <div className="w-full flex">
-      <DiligenceDocumentsModal
-        isOpen={requestModal}
-        onRequestClose={onRequestClose}
-      />
       {deals.length > 0 ? (
         <div className="w-[70%] laptop:h-screen desktop:h-[90vh] x-[90vh] overflow-y-auto rounded ml-1 p-4">
           <div className="flex justify-between h-full gap-4">

@@ -5,7 +5,7 @@ import { ReactComponent as CrossIcon } from "../../icons/svgviewer-output_14.svg
 import { EditOutlined, CheckCircleOutlined } from "@ant-design/icons";
 import { deleteTodo, editTasks, getTasks } from "../../services/taskService";
 import TaskModal from "../createTaskModal";
-import { notification } from "antd";
+import { notification, Spin } from "antd";
 import { useModal } from "../UploadFilesModal/ModalContext";
 
 // Utility functions for reordering and moving items
@@ -58,6 +58,7 @@ const getListStyle = (isDraggingOver) => ({
 });
 
 const KanbanBoard = () => {
+  const [loading, setLoading] = useState(false);
   const initialState = useMemo(
     () => ({
       todo: {
@@ -221,13 +222,15 @@ const KanbanBoard = () => {
   };
 
   const handleRemoveCard = (columnId, index, id) => {
+    setLoading(true);
     deleteTodo(id)
       .then(() => {
         setToggle((prev) => !prev);
       })
       .catch(() => {
         notification.error({ message: "Error in removing task!" });
-      });
+      })
+      .finally(() => setLoading(false));
     const updatedItems = columns[columnId].items.filter((_, i) => i !== index);
     setColumns((prevColumns) => ({
       ...prevColumns,
@@ -261,90 +264,92 @@ const KanbanBoard = () => {
 
   return (
     <div className="flex mx-auto">
-      <DragDropContext onDragEnd={onDragEnd}>
-        {Object.keys(columns).map((columnId) => (
-          <Droppable droppableId={columnId} key={columnId}>
-            {(provided, snapshot) => (
-              <div
-                {...provided.droppableProps}
-                ref={provided.innerRef}
-                style={getListStyle(snapshot.isDraggingOver)}
-                className="text-black rounded-md p-3 mx-5"
-              >
-                <div className="text-2xl font-bold m-3">
-                  {columns[columnId].name}
-                </div>
-                {columns[columnId].items.map((item, index) => (
-                  <Draggable key={item.id} draggableId={item.id} index={index}>
-                    {(provided, snapshot) => (
-                      <div
-                        className="card"
-                        ref={provided.innerRef}
-                        {...provided.draggableProps}
-                        {...provided.dragHandleProps}
-                        style={getItemStyle(
-                          snapshot.isDragging,
-                          provided.draggableProps.style
-                        )}
-                      >
-                        <div style={{ display: "flex", width: "100%" }}>
-                          <div className="mr-2">
-                            <CheckCircleOutlined />
-                          </div>
-                          <span style={spanStyle}>{item.content}</span>
-                          <div style={buttonContainerStyle}>
-                            <button
-                              onClick={() =>
-                                handleRemoveCard(
-                                  columnId,
-                                  index,
-                                  columns[columnId].items[index].id
-                                )
-                              }
-                            >
-                              <CrossIcon />
-                            </button>
-                            <button
-                              onClick={() =>
-                                handleEditClick(
-                                  columns[columnId].name,
-                                  columnId,
-                                  index,
-                                  columns
-                                )
-                              }
-                            >
-                              <EditOutlined />
-                            </button>
+      {loading ? <Spin /> : <>
+        <DragDropContext onDragEnd={onDragEnd}>
+          {Object.keys(columns).map((columnId) => (
+            <Droppable droppableId={columnId} key={columnId}>
+              {(provided, snapshot) => (
+                <div
+                  {...provided.droppableProps}
+                  ref={provided.innerRef}
+                  style={getListStyle(snapshot.isDraggingOver)}
+                  className="text-black rounded-md p-3 mx-5"
+                >
+                  <div className="text-2xl font-bold m-3">
+                    {columns[columnId].name}
+                  </div>
+                  {columns[columnId].items.map((item, index) => (
+                    <Draggable key={item.id} draggableId={item.id} index={index}>
+                      {(provided, snapshot) => (
+                        <div
+                          className="card"
+                          ref={provided.innerRef}
+                          {...provided.draggableProps}
+                          {...provided.dragHandleProps}
+                          style={getItemStyle(
+                            snapshot.isDragging,
+                            provided.draggableProps.style
+                          )}
+                        >
+                          <div style={{ display: "flex", width: "100%" }}>
+                            <div className="mr-2">
+                              <CheckCircleOutlined />
+                            </div>
+                            <span style={spanStyle}>{item.content}</span>
+                            <div style={buttonContainerStyle}>
+                              <button
+                                onClick={() =>
+                                  handleRemoveCard(
+                                    columnId,
+                                    index,
+                                    columns[columnId].items[index].id
+                                  )
+                                }
+                              >
+                                <CrossIcon />
+                              </button>
+                              <button
+                                onClick={() =>
+                                  handleEditClick(
+                                    columns[columnId].name,
+                                    columnId,
+                                    index,
+                                    columns
+                                  )
+                                }
+                              >
+                                <EditOutlined />
+                              </button>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    )}
-                  </Draggable>
-                ))}
-                {provided.placeholder}
-                <button
-                  onClick={() => {
-                    setIsOpen(true);
-                    setType(columns[columnId].name);
-                  }}
-                  className="m-5 flex flex-row"
-                >
-                  <PlusOutlined className="font-bold text-2xl" />
-                  <div className="mx-2">Add a Card</div>
-                </button>
-              </div>
-            )}
-          </Droppable>
-        ))}
-      </DragDropContext>
-      <TaskModal
-        onRequestClose={onRequestClose}
-        isOpen={isOpen}
-        type={type}
-        values={values}
-        setToggle={setToggle}
-      />
+                      )}
+                    </Draggable>
+                  ))}
+                  {provided.placeholder}
+                  <button
+                    onClick={() => {
+                      setIsOpen(true);
+                      setType(columns[columnId].name);
+                    }}
+                    className="m-5 flex flex-row"
+                  >
+                    <PlusOutlined className="font-bold text-2xl" />
+                    <div className="mx-2">Add a Card</div>
+                  </button>
+                </div>
+              )}
+            </Droppable>
+          ))}
+        </DragDropContext>
+        <TaskModal
+          onRequestClose={onRequestClose}
+          isOpen={isOpen}
+          type={type}
+          values={values}
+          setToggle={setToggle}
+        />
+      </>}
     </div>
   );
 };
