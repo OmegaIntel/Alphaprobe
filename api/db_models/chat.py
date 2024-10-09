@@ -10,7 +10,7 @@ from enum import Enum as PyEnum
 
 Base = declarative_base()
 class LikeDislikeStatus(PyEnum):
-    NONE = None
+    NONE = "none"
     LIKE = "like"
     DISLIKE = "dislike"
 
