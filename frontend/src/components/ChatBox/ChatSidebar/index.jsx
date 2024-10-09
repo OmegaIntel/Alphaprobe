@@ -25,18 +25,24 @@ const ChatSidebar = ({
           <CloseOutlined className="cursor-pointer" onClick={toggleSidebar} />
         </div>
       </div>
-      <div className="overflow-y-auto p-4">
-        {previousSessions.map((session, index) => (
-          <div
-            key={session.id}
-            className="mb-2 px-2 py-1 text-sm font-semibold bg-[#303038] cursor-pointer rounded shadow "
-            onClick={() => loadPreviousMessages(session.id)}
-          >
-            {session.session_name
-              ? truncateDescription(session.session_name, 30)
-              : "New Chat Session"}
+      <div className="overflow-y-auto p-4 h-[80%]">
+        {previousSessions.length > 0 ? (
+          previousSessions.map((session, index) => (
+            <div
+              key={session.id}
+              className="mb-2 px-2 py-1 text-sm font-semibold bg-[#303038] cursor-pointer rounded shadow "
+              onClick={() => loadPreviousMessages(session.id)}
+            >
+              {session.session_name
+                ? truncateDescription(session.session_name, 30)
+                : "New Chat Session"}
+            </div>
+          ))
+        ) : (
+          <div className="h-full flex items-center text-center">
+            <h2>You don't have any previous chat session</h2>
           </div>
-        ))}
+        )}
       </div>
     </div>
   );

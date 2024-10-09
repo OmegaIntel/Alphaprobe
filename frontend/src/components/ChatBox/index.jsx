@@ -188,8 +188,12 @@ const ChatBox = () => {
   useEffect(() => {
     const loadPreviousSessions = async () => {
       try {
-        const sessions = await fetchPreviousSessions(dealId, isGlobalData); // Fetch the previous chat sessions
-        setPreviousSessions(sessions);
+        const sessions = await fetchPreviousSessions(dealId, isGlobalData);
+        if (Array.isArray(sessions)) {
+          setPreviousSessions(sessions);
+        } else {
+          setPreviousSessions([]);
+        }
       } catch (error) {
         console.error("Failed to load previous sessions:", error);
       }
