@@ -16,9 +16,6 @@ import DocumentsWrapper from "./components/FileUploadComponent/wrapper";
 
 const App = () => {
   const [token, setToken] = useState(localStorage.getItem("token") || "");
-  const [updateSidebarSessions, setUpdateSidebarSessions] = useState(
-    () => () => {}
-  );
 
   const handleSetToken = (newToken) => {
     setToken(newToken);
@@ -49,11 +46,7 @@ const App = () => {
         <Route
           path="/dashboard"
           element={
-            <ProtectedLayout
-              setToken={handleSetToken}
-              setUpdateSidebarSessions={setUpdateSidebarSessions}
-              isLoggedIn={isLoggedIn}
-            >
+            <ProtectedLayout setToken={handleSetToken} isLoggedIn={isLoggedIn}>
               <Dashboard />
             </ProtectedLayout>
           }
@@ -61,11 +54,7 @@ const App = () => {
         <Route
           path="/create-deal"
           element={
-            <ProtectedLayout
-              setToken={handleSetToken}
-              setUpdateSidebarSessions={setUpdateSidebarSessions}
-              isLoggedIn={isLoggedIn}
-            >
+            <ProtectedLayout setToken={handleSetToken} isLoggedIn={isLoggedIn}>
               <CreateDeal />
             </ProtectedLayout>
           }
@@ -73,11 +62,7 @@ const App = () => {
         <Route
           path="/projects/:id"
           element={
-            <ProtectedLayout
-              setToken={handleSetToken}
-              setUpdateSidebarSessions={setUpdateSidebarSessions}
-              isLoggedIn={isLoggedIn}
-            >
+            <ProtectedLayout setToken={handleSetToken} isLoggedIn={isLoggedIn}>
               <Categories />
             </ProtectedLayout>
           }

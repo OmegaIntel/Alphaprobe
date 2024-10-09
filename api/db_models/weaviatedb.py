@@ -74,7 +74,6 @@ class WeaviateManager:
         if collection_name.capitalize() in class_names:
             # If the collection exists, just append the new document and chunks
             self.insert_data(collection_name, document_id, file_path)
-            print(f"Collection '{collection_name}' already exists. Appending new data.")
         else:
             self.client.collections.create(
                 name=collection_name,

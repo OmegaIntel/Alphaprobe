@@ -1,7 +1,6 @@
 import React from "react";
 import { Modal, Upload, Button, Select } from "antd";
 import { DownloadOutlined } from "../../../constants/IconPack";
-import { useModal } from "../ModalContext";
 
 const { Dragger } = Upload;
 const { Option } = Select;
@@ -15,7 +14,7 @@ const UploadModal = ({
   setTempDealId,
   tempDealId,
   deals,
-  isFileUploadModule
+  isFileUploadModule,
 }) => {
   return (
     <Modal
@@ -47,19 +46,32 @@ const UploadModal = ({
           type="primary"
           className="!bg-[#303038] text-[#DCDCDC] disabled:text-[#46464F] border-none "
           onClick={onOk}
-          disabled={isFileUploadModule ? !selectedFile && !tempDealId : !selectedFile}
+          disabled={
+            isFileUploadModule ? !selectedFile && !tempDealId : !selectedFile
+          }
         >
           Continue
         </Button>,
       ]}
     >
-      {isFileUploadModule && <>
-        <Select className="w-full" placeholder="Select Deal" value={tempDealId} onChange={(value) => setTempDealId(value)}>
-          {deals.map((data, index) => {
-            return <Option value={data.id} key={index}>{data.name}</Option>
-          })}
-        </Select>
-      </>}
+      {isFileUploadModule && (
+        <>
+          <Select
+            className="w-full"
+            placeholder="Select Deal"
+            value={tempDealId}
+            onChange={(value) => setTempDealId(value)}
+          >
+            {deals.map((data, index) => {
+              return (
+                <Option value={data.id} key={index}>
+                  {data.name}
+                </Option>
+              );
+            })}
+          </Select>
+        </>
+      )}
       <Dragger
         {...uploadProps}
         style={{

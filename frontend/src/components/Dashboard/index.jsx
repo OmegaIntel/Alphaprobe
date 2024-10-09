@@ -78,7 +78,7 @@ const Dashboard = () => {
         onRequestClose={onRequestClose}
       />
       {deals.length > 0 ? (
-        <div className="w-[70%] h-[90vh] rounded ml-1 p-4">
+        <div className="w-[70%] laptop:h-screen desktop:h-[90vh] x-[90vh] overflow-y-auto rounded ml-1 p-4">
           <div className="flex justify-between h-full gap-4">
             <div className="flex-1 bg-[#151518] p-4 rounded">
               <h5 className="text-sm font-semibold mb-6">Recent Activity</h5>
@@ -96,7 +96,7 @@ const Dashboard = () => {
                   </Button>
                 </div>
               </div>
-              <div className="bg-[#1F1E23] p-4 flex flex-col gap-4 rounded h-[70%]">
+              <div className="bg-[#1F1E23] p-4 flex flex-col gap-4 rounded h-[65%]">
                 <span className="mb-6 text-base font-bold">Action Items</span>
                 {activeItems.length === 0 ? (
                   <div>No Items Found</div>
