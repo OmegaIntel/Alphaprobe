@@ -25,7 +25,7 @@ const SendEmailModal = () => {
     <>
       <button
         onClick={handleOpenModal}
-        className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer"
+        className="p-2 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer"
       >
         <EmailIcon />
       </button>

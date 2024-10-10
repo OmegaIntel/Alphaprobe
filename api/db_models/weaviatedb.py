@@ -4,15 +4,23 @@ from dotenv import load_dotenv
 from typing import List
 import requests
 from io import BytesIO
+<<<<<<< HEAD
 from llama_index.core.schema import TextNode
 from doc_parser.llama_parse_pdf import llama_parse_pdf
+=======
+import os
+>>>>>>> development
 
 load_dotenv()
 
 
 class WeaviateManager:
     def __init__(self):
+<<<<<<< HEAD
         self.client = weaviate.connect_to_local(host="weaviate")
+=======
+        self.client = weaviate.connect_to_local(host=os.getenv("WEAVIATE_HOST"))
+>>>>>>> development
 
     def __del__(self):
         self.client.close()
@@ -61,7 +69,6 @@ class WeaviateManager:
         if collection_name.capitalize() in class_names:
             # If the collection exists, just append the new document and chunks
             self.insert_data(collection_name, document_id, file_path)
-            print(f"Collection '{collection_name}' already exists. Appending new data.")
         else:
             self.client.collections.create(
                 name=collection_name,
@@ -78,7 +85,6 @@ class WeaviateManager:
                 ),
             )
             self.insert_data(collection_name, document_id, file_path)
-            print(f"Collection '{collection_name}' created and data inserted.")
         return f"Collection {collection_name} handled"
 
 

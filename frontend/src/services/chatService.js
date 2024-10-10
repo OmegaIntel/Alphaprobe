@@ -18,10 +18,10 @@ export const createChatSession = async (dealId, isGlobal) => {
     console.log(error);
   }
 };
-export const deleteChatSession = async (sessionId, isGlobal) => {
+export const deleteChatSession = async (dealId) => {
   try {
     const response = await axiosInstance.delete(
-      `/chat/sessions/${sessionId}?is_global=${isGlobal}`,
+      `/chat/sessions/?deal_id=${dealId}`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -55,6 +55,70 @@ export const addToWorkSpace = async (sessionId, type, dealId) => {
   try {
     const response = await axiosInstance.post(
       `/workspace/add/${sessionId}?type=${type}`,
+      { deal_id: dealId },
+      {
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const fetchPreviousSessions = async (dealId, isGlobal) => {
+  try {
+    const response = await axiosInstance.get(
+      `/chat_sessions/?deal_id=${dealId}&is_global=${isGlobal}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+export const fetchPreviousMessages = async (sessionId) => {
+  try {
+    const response = await axiosInstance.get(`/chat/${sessionId}/messages`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return response.data.messages;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+
+export const handleLikeDislike = async (messageId, likeDislikeStatus) => {
+  try {
+    const response = await axiosInstance.put(
+      `/message?message_id=${messageId}&like_dislike_status=${likeDislikeStatus}`,
+      null,
+      {
+        headers: {
+          accept: "application/json",
+        },
+      }
+    );
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+export const addMessageToWorkspace = async (messageId, type, dealId) => {
+  try {
+    const response = await axiosInstance.post(
+      `/workspace/add/message/${messageId}?type=${type}`,
       { deal_id: dealId },
       {
         headers: {

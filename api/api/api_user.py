@@ -90,6 +90,22 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)], db: Se
     
     return User(id=str(user.id), email=user.email,is_admin = user.is_master_admin)
 
+async def bypass_user(token: Annotated[str, Depends(oauth2_scheme)], db: Session = Depends(get_db)) -> User:
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        email: str = payload.get("sub")
+        if email is None:
+            return None
+        token_data = TokenData(email=email)
+    except jwt.PyJWTError:
+        return None
+    
+    user = db.query(DbUser).filter(DbUser.email == token_data.email).first()
+    if user is None:
+        return None
+    
+    return User(id=str(user.id), email=user.email,is_admin = user.is_master_admin)
+
 # API route for user registration
 @user_router.post("/api/register", response_model=User)
 async def register(email: EmailStr = Form(...), password: str = Form(...), request: Request = None, db: Session = Depends(get_db)):

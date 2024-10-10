@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import UploadFilesModal from '../UploadFilesModal';
 import { getDealId } from '../../services/magicLink';
 import { notification } from 'antd';
+import Navbar from '../Navbar';
 
 const DocumentsWrapper = () => {
     const { id } = useParams();
@@ -19,7 +20,9 @@ const DocumentsWrapper = () => {
         }
     }, [id])
     return (
-        <div>
+        <>
+            <Navbar isPublic={true}>
+            </Navbar>
             <UploadFilesModal isUploadModalVisible={isUploadModalVisible}
                 setIsUploadModalVisible={setIsUploadModalVisible}
                 isUpdateModalVisible={isUpdateModalVisible}
@@ -28,14 +31,17 @@ const DocumentsWrapper = () => {
                 isPublic={true}
                 isFileUploadModule={false}
             />
-            <FileUploadComponent 
-                dealId={dealId} 
-                isUploadModalVisible={isUploadModalVisible} 
-                setIsUploadModalVisible={setIsUploadModalVisible} 
-                isUpdateModalVisible={isUpdateModalVisible}
-                isPublic={true}
-            />
-        </div>
+            <div className='ml-[-1rem]'>
+
+                <FileUploadComponent
+                    dealId={dealId}
+                    isUploadModalVisible={isUploadModalVisible}
+                    setIsUploadModalVisible={setIsUploadModalVisible}
+                    isUpdateModalVisible={isUpdateModalVisible}
+                    isPublic={true}
+                />
+            </div>
+        </>
     )
 }
 

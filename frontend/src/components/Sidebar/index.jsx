@@ -20,7 +20,14 @@ const { Sider } = Layout;
 const Sidebar = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { setDealId, setDeals, deals, dealId, setIsUploadModalVisible, setIsFileUploadModule } = useModal();
+  const {
+    setDealId,
+    setDeals,
+    deals,
+    dealId,
+    setIsUploadModalVisible,
+    setIsFileUploadModule,
+  } = useModal();
   const [filteredDeals, setFilteredDeals] = useState(deals);
   const [isOpen, setIsOpen] = useState(false);
   const [search, setSearch] = useState("");
@@ -86,24 +93,24 @@ const Sidebar = () => {
     },
     ...(filteredDeals.length > 0
       ? filteredDeals.map((deal) => ({
-        key: deal.id,
-        icon: <FileOutlinedIcon />,
-        label: (
-          <Link
-            to={`/projects/${deal.id}`}
-            onClick={() => setDealId(deal.id)}
-          >
-            {deal.name}
-          </Link>
-        ),
-      }))
+          key: deal.id,
+          icon: <FileOutlinedIcon />,
+          label: (
+            <Link
+              to={`/projects/${deal.id}`}
+              onClick={() => setDealId(deal.id)}
+            >
+              {deal.name}
+            </Link>
+          ),
+        }))
       : [
-        {
-          key: "no-projects",
-          disabled: true,
-          label: "No projects available",
-        },
-      ]),
+          {
+            key: "no-projects",
+            disabled: true,
+            label: "No projects available",
+          },
+        ]),
     {
       key: "4",
       label: "DATA SOURCE INTEGRATION",
@@ -111,8 +118,15 @@ const Sidebar = () => {
     },
     {
       key: "5",
-      label: <div className="flex flex-row items-center gap-3"><FileUpload /> File Upload</div>,
-      onClick: () => {setIsUploadModalVisible(true); setIsFileUploadModule(true);}
+      label: (
+        <div className="flex flex-row items-center gap-3">
+          <FileUpload /> File Upload
+        </div>
+      ),
+      onClick: () => {
+        setIsUploadModalVisible(true);
+        setIsFileUploadModule(true);
+      },
     },
   ];
 
@@ -126,8 +140,7 @@ const Sidebar = () => {
   return (
     <Layout hasSider>
       <Sider
-        width={250}
-        className="bg-[#151518] h-screen text-white"
+        className="bg-[#151518] sidebar h-screen text-white"
         style={{ backgroundColor: "#151518" }}
       >
         <div className="p-3 text-center">
@@ -147,11 +160,12 @@ const Sidebar = () => {
           <Menu
             mode="inline"
             theme="dark"
-            className="bg-transparent text-white h-[65%]"
+            className="bg-transparent text-white laptop:h-[55%] desktop:h-[60%]  h-[60%]"
             defaultSelectedKeys={[selectedKey]}
             items={menuItems}
+            style={{ maxHeight: "800px", overflowY: "auto" }}
           />
-          <div className="flex flex-col gap-3 h-[35%] w-[85%] mx-auto">
+          <div className="flex flex-col gap-3 laptop:h-[45%] desktop:h-[40%] h-[40%]  w-[85%] mx-auto">
             <button className="p-3 bg-[#1F1E23] text-left rounded font-bold">
               Omega Terminal
             </button>
@@ -169,13 +183,13 @@ const Sidebar = () => {
               <SendEmail />
               <CalendlyModal />
               <div
-                className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer "
+                className="p-2 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer "
                 onClick={() => setIsOpen(true)}
               >
                 <ShareWithPeopleIcon />
               </div>
               <a
-                className="p-3 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer "
+                className="p-2 rounded bg-[#303038] border border-[#46464F] hover:bg-[#0088CC] hover:border-[#0088CC] cursor-pointer "
                 onClick={() => {
                   localStorage.removeItem("token");
                 }}

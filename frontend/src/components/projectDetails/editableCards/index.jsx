@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Card, Button } from "antd";
-import { DeleteFilled, SaveFilled } from "@ant-design/icons";
+import { CloseOutlined, DeleteFilled, SaveFilled } from "@ant-design/icons";
 import Markdown from "react-markdown";
 const EditableProjectCard = ({
   project,
   onSave,
   onCancel,
   onEdit,
-  handleInputChange,
 }) => {
+  const [cardText, setCardText] = useState();
+  useEffect(()=>{
+    setCardText(project?.text);
+  }, [project.text,project.isEditing])
   return (
     <Card
       className="text-center bg-[#1f1e23] shadow-lg rounded-lg border-none text-white"
@@ -19,9 +22,9 @@ const EditableProjectCard = ({
           <div className="flex flex-row items-start w-full">
             <div className="w-[95%]">
               <textarea
-                value={project.text}
+                value={cardText}
                 onChange={(e) =>
-                  handleInputChange(project.id, "text", e.target.value)
+                  setCardText(e.target.value)
                 }
                 placeholder="Description"
                 className="mb-2 p-2 rounded-md bg-[#151518] w-full h-32"
@@ -29,13 +32,16 @@ const EditableProjectCard = ({
             </div>
             <div className="flex flex-col gap-3 ml-3">
               <Button
-                onClick={() => onSave(project.id, project.text)}
+                onClick={() => {onSave(project.id, cardText)}}
                 type="primary"
               >
                 <SaveFilled />
               </Button>
               <Button onClick={() => onCancel(project.id, true)} type="default">
                 <DeleteFilled />
+              </Button>
+              <Button onClick={()=>onCancel(project.id, false)}>
+                <CloseOutlined/>
               </Button>
             </div>
           </div>

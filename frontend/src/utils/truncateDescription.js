@@ -1,6 +1,6 @@
-export const truncateDescription = (description) => {
-  if (description.length > 145) {
-    return description.slice(0, 145) + "...";
+export const truncateDescription = (description, length) => {
+  if (description.length > length) {
+    return description.slice(0, length) + "...";
   }
   return description;
 };

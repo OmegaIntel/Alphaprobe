@@ -5,7 +5,6 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-import Chat from "./components/Chat";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import "./App.css";
@@ -13,14 +12,10 @@ import CreateDeal from "./components/create_deal/index";
 import Dashboard from "./components/Dashboard";
 import ProtectedLayout from "./components/ProtectedLayout";
 import Categories from "./components/projectHeaders/categories";
-import FileUploadComponent from "./components/FileUploadComponent";
 import DocumentsWrapper from "./components/FileUploadComponent/wrapper";
 
 const App = () => {
   const [token, setToken] = useState(localStorage.getItem("token") || "");
-  const [updateSidebarSessions, setUpdateSidebarSessions] = useState(
-    () => () => {}
-  );
 
   const handleSetToken = (newToken) => {
     setToken(newToken);
@@ -32,10 +27,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route
-          path="/guest/:id"
-          element={<DocumentsWrapper />}
-        />
+        <Route path="/guest/:id" element={<DocumentsWrapper />} />
         <Route
           path="/register"
           element={isLoggedIn ? <Navigate to="/dashboard" /> : <Register />}
@@ -54,11 +46,7 @@ const App = () => {
         <Route
           path="/dashboard"
           element={
-            <ProtectedLayout
-              setToken={handleSetToken}
-              setUpdateSidebarSessions={setUpdateSidebarSessions}
-              isLoggedIn={isLoggedIn}
-            >
+            <ProtectedLayout setToken={handleSetToken} isLoggedIn={isLoggedIn}>
               <Dashboard />
             </ProtectedLayout>
           }
@@ -66,11 +54,7 @@ const App = () => {
         <Route
           path="/create-deal"
           element={
-            <ProtectedLayout
-              setToken={handleSetToken}
-              setUpdateSidebarSessions={setUpdateSidebarSessions}
-              isLoggedIn={isLoggedIn}
-            >
+            <ProtectedLayout setToken={handleSetToken} isLoggedIn={isLoggedIn}>
               <CreateDeal />
             </ProtectedLayout>
           }
@@ -78,39 +62,11 @@ const App = () => {
         <Route
           path="/projects/:id"
           element={
-            <ProtectedLayout
-              setToken={handleSetToken}
-              setUpdateSidebarSessions={setUpdateSidebarSessions}
-              isLoggedIn={isLoggedIn}
-            >
+            <ProtectedLayout setToken={handleSetToken} isLoggedIn={isLoggedIn}>
               <Categories />
             </ProtectedLayout>
           }
         ></Route>
-        <Route
-          path="/chat"
-          element={
-            <ProtectedLayout
-              setToken={handleSetToken}
-              setUpdateSidebarSessions={setUpdateSidebarSessions}
-              isLoggedIn={isLoggedIn}
-            >
-              <Chat updateSidebarSessions={updateSidebarSessions} />
-            </ProtectedLayout>
-          }
-        />
-        <Route
-          path="/chat/:chatId"
-          element={
-            <ProtectedLayout
-              setToken={handleSetToken}
-              setUpdateSidebarSessions={setUpdateSidebarSessions}
-              isLoggedIn={isLoggedIn}
-            >
-              <Chat updateSidebarSessions={updateSidebarSessions} />
-            </ProtectedLayout>
-          }
-        />
 
         <Route
           path="/"

@@ -4,7 +4,7 @@ import { token } from ".";
 // Function to send demo request
 export const createDeal = async (dealData) => {
   try {
-    const response = await axiosInstance.post(`/deals`, dealData, {
+    const response = await axiosInstance.post(`/deals/`, dealData, {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,

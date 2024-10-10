@@ -3,6 +3,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, EmailStr
 from db_models.session import get_db
 from db_models.request_document import RequestDocuments
+from db_models.deals import Deal
 from sqlalchemy.orm import Session
 from uuid import UUID
 import uuid
@@ -21,20 +22,21 @@ class MagicLinkRequest(BaseModel):
     email: EmailStr
 
 # Function to send the magic link email with a nice HTML template
-def send_magic_link_email(email: str, token: str, base_url: str):
+def send_magic_link_email(email: str, token: str, base_url: str, deal_name: str):
     # Prepare the email content with HTML template
+
     link = f"{base_url}/guest/{token}"
     
-    subject = "You are invited to collaborate"
+    subject = f"You have been invited to request documents for {deal_name}"
     
     html_content = f"""
     <html>
     <body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
         <div style="max-width: 600px; margin: auto; background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-            <h2 style="color: #333;">You're invited to collaborate on a deal</h2>
+            <h2 style="color: #333;">You've been invited to request documents for {deal_name}</h2>
             <p>Hello,</p>
-            <p>We would like to invite you to collaborate on a deal. Please click the link below to access it:</p>
-            <a href="{link}" style="background-color: #1a73e8; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px;">Access Your Deal</a>
+            <p>We would like to invite you to request documents for the deal named <b>{deal_name}</b>. Please click the link below to access the documents:</p>
+            <a href="{link}" style="background-color: #1a73e8; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px;">Access Your Documents</a>
             <p style="margin-top: 20px;">If the button doesn't work, you can copy and paste the following link into your browser:</p>
             <p><a href="{link}">{link}</a></p>
             <p>Thank you,</p>
@@ -49,7 +51,7 @@ def send_magic_link_email(email: str, token: str, base_url: str):
     msg['Subject'] = subject
     msg['From'] = os.getenv('SENDER_EMAIL')  # Use sender email from the environment
     msg['To'] = email
-    msg.set_content(f"Click the link to access your deal: {link}")  # Fallback for clients that don't support HTML
+    msg.set_content(f"Click the link to access your documents for {deal_name}: {link}")  # Fallback for clients that don't support HTML
     msg.add_alternative(html_content, subtype='html')  # HTML version
 
     # Fetch SMTP details from environment variables
@@ -74,14 +76,18 @@ def create_magic_link(data: MagicLinkRequest, db: Session = Depends(get_db)):
     db.add(request_doc_obj)
     db.commit()
     db.refresh(request_doc_obj)
+
+    deal_obj = db.query(Deal).filter(Deal.id == data.deal_id).first()
+    deal_name = deal_obj.name
     
     # Base URL for the frontend
     base_url = os.getenv('FRONTEND_URL')
 
     # Send the magic link email
-    send_magic_link_email(data.email, token, base_url)
+    send_magic_link_email(data.email, str(token), base_url, deal_name)
     
     return {"message": "Magic link sent to the provided email"}
+
 
 @magic_link_router.get("/api/deal_id/", response_model=None)
 def get_deal_id(token: str, db: Session = Depends(get_db)):

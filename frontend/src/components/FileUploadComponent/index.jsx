@@ -12,11 +12,12 @@ import { truncateDescription } from "../../utils/truncateDescription";
 import UpdateModal from "../UploadFilesModal/UpdateModal";
 import DiligenceDocumentsModal from "../requestDocuments";
 
-const FileUploadComponent = ({ dealId,
+const FileUploadComponent = ({
+  dealId,
   isUploadModalVisible,
   setIsUploadModalVisible,
   isUpdateModalVisible,
-  isPublic
+  isPublic,
 }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -124,7 +125,7 @@ const FileUploadComponent = ({ dealId,
   };
   const onRequestClose = () => {
     setOpen(false);
-  }
+  };
   return (
     <div className="bg-[#151518] flex flex-col w-full flex-grow h-screen overflow-auto ml-1">
       <DiligenceDocumentsModal
@@ -143,13 +144,15 @@ const FileUploadComponent = ({ dealId,
               <PlusOutlined />
               Add File
             </button>
-            {!isPublic && <button
-              onClick={() => setOpen(true)}
-              className="bg-[#EAEAEA] text-[#303038] text-sm flex items-center gap-1 border-none p-1.5 rounded"
-            >
-              <PlusOutlined />
-              Request Documents
-            </button>}
+            {!isPublic && (
+              <button
+                onClick={() => setOpen(true)}
+                className="bg-[#EAEAEA] text-[#303038] text-sm flex items-center gap-1 border-none p-1.5 rounded"
+              >
+                <PlusOutlined />
+                Request Documents
+              </button>
+            )}
           </div>
         </div>
 
@@ -172,7 +175,7 @@ const FileUploadComponent = ({ dealId,
                       </h3>
                       <p className="text-[#A2A2A2] text-sm">
                         {file.description &&
-                          truncateDescription(file.description)}
+                          truncateDescription(file.description, 145)}
                       </p>
                     </div>
                     <div className="flex space-x-2">

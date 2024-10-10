@@ -3,7 +3,7 @@ from pydantic import BaseModel, EmailStr
 from db_models.session import get_db
 from sqlalchemy.orm import Session
 from db_models.demo_requests import DemoRequests
-import uuid
+import json
 from typing import Optional
 from sqlalchemy.exc import SQLAlchemyError
 from fastapi import APIRouter, HTTPException, Depends
@@ -23,8 +23,91 @@ from typing import List
 from pydantic import BaseModel
 from datetime import datetime
 from api.api_user import get_current_user, User as UserModelSerializer
+from db_models.checklist import Checklist
 
 deals_router = APIRouter()
+
+def load_json_file(filename: str) -> str:
+    """Utility function to load and return the contents of a JSON file as a string."""
+    with open(filename, 'r') as file:
+        return file.read()
+
+
+def format_investment_thesis(json_data: str) -> str:
+    """Utility function to format investment thesis JSON data into a string."""
+    data = json.loads(json_data)
+    formatted_text = ""
+    
+    # Assuming the structure of the JSON you provided
+    for section, items in data.items():
+        formatted_text += f"**{section}**\n\n"
+        for item in items["MacroeconomicTrends"]:
+            formatted_text += f"{item}\n"
+    
+    return formatted_text
+
+
+def format_valuation(json_data: str) -> str:
+    """Utility function to format valuation JSON data into a readable string."""
+    data = json.loads(json_data)
+    formatted_text = ""
+    
+    # Loop through the main sections of the valuation
+    for section, methodologies in data["valuation"].items():
+        formatted_text += f"**{section.replace('_', ' ').title()}**\n\n"
+        
+        # Loop through each methodology and its questions
+        for methodology, content in methodologies.items():
+            formatted_text += f"  {methodology.replace('_', ' ').title()}:\n"
+            for question in content.get("questions", []):
+                formatted_text += f"    - {question}\n"
+        formatted_text += "\n"
+    
+    return formatted_text
+
+def format_market_research(json_data: str) -> str:
+    """Utility function to format market research JSON data into a readable string."""
+    data = json.loads(json_data)
+    formatted_text = ""
+
+    # Loop through the main sections of the market research
+    for section, subcategories in data.items():
+        section_title = section.replace('_', ' ').title()  # Format the section title
+        formatted_text += f"**{section_title}**\n\n"
+
+        # Loop through each subcategory within the section
+        for subcategory, content in subcategories.items():
+            subcategory_title = subcategory.replace('_', ' ').title()  # Format the subcategory title
+            formatted_text += f"{subcategory_title}\n"
+
+            # Loop through the list of questions for the subcategory, if available
+            questions = content.get("questions", [])
+            for question in questions:
+                formatted_text += f"- {question}\n"
+            formatted_text += "\n"
+
+    return formatted_text
+
+
+def format_financial_diligence(json_data: str) -> str:
+    """Utility function to format financial diligence JSON data into a readable string."""
+    data = json.loads(json_data)
+    formatted_text = ""
+
+    # Loop through the main sections of the financial diligence
+    for section, content in data["Financial_Diligence"].items():
+        formatted_text += f"**{section.replace('_', ' ').title()}**\n\n"
+
+        # Loop through each subsection and its questions
+        for subsection, details in content.items():
+            formatted_text += f"  {subsection.replace('_', ' ').title()}:\n"
+            
+            for key, value in details.items():
+                formatted_text += f"    - {key.replace('_', ' ').title()}: {value}\n"
+        
+        formatted_text += "\n"
+    
+    return formatted_text
 
 class DealBase(BaseModel):
     name: str = Field(..., max_length=255)
@@ -69,6 +152,30 @@ def create_deal(
         db.commit()
         db.refresh(new_ws)
 
+        investment_thesis_content = load_json_file('src/investment_thesis.json') 
+        formatted_investment_thesis = format_investment_thesis(investment_thesis_content)
+        valuation_content = load_json_file('src/valuation.json')
+        formatted_valuation = format_valuation(valuation_content)
+        market_research_content = load_json_file('src/market_research.json')
+        formatted_market_research = format_market_research(market_research_content)
+        financial_insights_content = load_json_file('src/financial_insights.json')
+        formatted_insights_contnet = format_financial_diligence(financial_insights_content)
+
+
+        print(investment_thesis_content, "!test!")
+
+        # Create and add checklist entries for each JSON file content
+        checklists = [
+            Checklist(deal_id=new_deal.id, type="Investment Thesis", text=formatted_investment_thesis),
+            Checklist(deal_id=new_deal.id, type="Valuation", text=formatted_valuation),
+            Checklist(deal_id=new_deal.id, type="Market Research", text=formatted_market_research),
+            Checklist(deal_id=new_deal.id, type="Financial Insights", text=formatted_insights_contnet)
+        ]
+
+        # Add all checklist items to the session at once
+        db.add_all(checklists)
+        db.commit() 
+        
         # Return the new deal in the expected format
         return DealResponse(
             id=new_deal.id,
