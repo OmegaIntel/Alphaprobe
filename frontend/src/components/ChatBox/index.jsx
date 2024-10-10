@@ -70,6 +70,7 @@ const ChatBox = () => {
             const res = await createChatSession(dealId, isGlobalData);
             setCurrentChatSession(res.id);
             setError(null);
+            setIsSidebarOpen(false)
           } else {
             setCurrentChatSession(null);
             setError("Please Select the category");
@@ -83,6 +84,7 @@ const ChatBox = () => {
           const res = await createChatSession(dealId, isGlobalData);
           setCurrentChatSession(res.id);
           setError(null);
+          setIsSidebarOpen(false)
         } catch (error) {
           setCurrentChatSession(null);
           setError("Try again later");
