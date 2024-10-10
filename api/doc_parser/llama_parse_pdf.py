@@ -31,7 +31,7 @@ def llama_parse_pdf(pdf: Union[str, bytes]) -> List[TextNode]:
         # fast_mode=True
     )
 
-    docs =  parser.load_data(pdf)
+    docs =  parser.load_data(pdf, extra_info={'file_name': 'temp.pdf'})
 
     nodes = []
     if SPLITTER == "sentence":

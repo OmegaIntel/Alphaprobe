@@ -29,13 +29,14 @@ class WeaviateManager:
 
     def create_objects(self, collection_name: str, document_id: str, file_path: str, chunks: List[TextNode]) -> List[dict]:
         """file_path: AWS signed URL, for now."""
+        collection_name = collection_name.capitalize()
         objects = []
         for chunk in chunks:
             obj = {
                 "class": collection_name,
                 "properties": {
                     "document_id": str(document_id),
-                    "content": chunk,
+                    "content": chunk.text,
                     "page_number": chunk.metadata.get("page_number"),
                     "file_path": file_path,
                 },
@@ -46,6 +47,7 @@ class WeaviateManager:
 
     def insert_data(self, collection_name: str, document_id: str, file_path: str) -> str:
         """file_path: AWS signed URL, for now."""
+        collection_name = collection_name.capitalize()
         chunks = self.get_file_chunks(file_path)
         objects = self.create_objects(collection_name, document_id, file_path, chunks)
         collection = self.client.collections.get(collection_name)
@@ -59,7 +61,8 @@ class WeaviateManager:
     def create_collection(self, collection_name: str, document_id: str, file_path: str) -> str:
         """Create a collection if it doesn't exist or append data to the existing collection."""
         class_names = list(self.client.collections.list_all().keys())
-        if collection_name.capitalize() in class_names:
+        collection_name = collection_name.capitalize()
+        if collection_name in class_names:
             # If the collection exists, just append the new document and chunks
             self.insert_data(collection_name, document_id, file_path)
         else:
@@ -90,6 +93,7 @@ class WeaviateManager:
         :return: List of content strings.
         """
 
+        collection_name = collection_name.capitalize()
         collection_object = self.client.collections.get(collection_name)
 
         response = collection_object.query.near_text(
@@ -110,6 +114,7 @@ class WeaviateManager:
         Delete existing collection
         """
 
+        collection_name = collection_name.capitalize()
         collection_object = self.client.collections.get(collection_name)
 
         if not collection_object:
