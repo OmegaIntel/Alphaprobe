@@ -5,8 +5,6 @@ PDF Parser using Llama Parse. Uses OpenAI for better parsing results.
 CHUNK_SIZE = 1024
 SPLITTER = "sentence"
 
-
-# llama-parse is async-first, running the async code in a notebook requires the use of nest_asyncio
 import nest_asyncio
 nest_asyncio.apply()
 
@@ -20,21 +18,20 @@ from llama_index.core.node_parser import SentenceSplitter
 from llama_parse import LlamaParse
 
 
-# API access to llama-cloud
-os.environ['LLAMA_CLOUD_API_KEY'] = os.getenv('LLAMA_CLOUD_API_KEY')
-
-
 def llama_parse_pdf(pdf: Union[str, bytes]) -> List[TextNode]:
     """
     Return a list of llama_index Text Nodes.
     Works with file names or their bytes. str -> local file name; bytes -> contents.
     Uses a fixed splitter, for now.
     """
-    docs = LlamaParse(
+    parser = LlamaParse(
         result_type="markdown",
+        api_key = os.getenv('LLAMA_CLOUD_API_KEY'),
         gpt4o_api_key=os.getenv('OPENAI_API_KEY'),
         # fast_mode=True
-    ).load_data(pdf)
+    )
+
+    docs =  parser.load_data(pdf)
 
     nodes = []
     if SPLITTER == "sentence":

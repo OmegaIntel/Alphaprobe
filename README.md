@@ -1,6 +1,8 @@
 # Alphaprobe
 
 
+## TODO: add/remove instructions for copying vars, starting server and frontend in container.
+
 ## Setup Instructions For Backend:
 
 

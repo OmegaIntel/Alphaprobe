@@ -4,23 +4,16 @@ from dotenv import load_dotenv
 from typing import List
 import requests
 from io import BytesIO
-<<<<<<< HEAD
 from llama_index.core.schema import TextNode
 from doc_parser.llama_parse_pdf import llama_parse_pdf
-=======
 import os
->>>>>>> development
 
 load_dotenv()
 
 
 class WeaviateManager:
     def __init__(self):
-<<<<<<< HEAD
-        self.client = weaviate.connect_to_local(host="weaviate")
-=======
         self.client = weaviate.connect_to_local(host=os.getenv("WEAVIATE_HOST"))
->>>>>>> development
 
     def __del__(self):
         self.client.close()
