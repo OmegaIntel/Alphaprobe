@@ -258,11 +258,13 @@ def get_deals(
     db: Session = Depends(get_db),
     current_user: UserModelSerializer = Depends(get_current_user)
 ):
+    all_deals = []
     deals = db.query(Deal).filter(Deal.user_id == current_user.id).all()
-    if not deals:
-        shared_deal = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id).first()
-        if shared_deal:
-            deals = db.query(Deal).filter(Deal.id == shared_deal.deal_id).all()
-        else:
-            raise HTTPException(status_code=404, detail="No deals found for this user")
-    return deals
+    for deal in deals:
+        all_deals.append(deal)
+    shared_deals = db.query(SharedUserDeals).filter(SharedUserDeals.user_id == current_user.id).all()
+    for shared_deal in shared_deals:
+        deals = db.query(Deal).filter(Deal.id == shared_deal.deal_id).all()
+        for deal in deals:
+            all_deals.append(deal)
+    return all_deals
