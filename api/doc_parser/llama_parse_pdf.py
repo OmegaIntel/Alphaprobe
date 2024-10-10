@@ -21,7 +21,7 @@ from llama_parse import LlamaParse
 
 
 # API access to llama-cloud
-os.environ["LLAMA_CLOUD_API_KEY"] = "llx-7K1IbMcLbyb8TDvMsIx3Brr7mD4K8ZnLaFMjbEq8S1uONYZp"
+os.environ['LLAMA_CLOUD_API_KEY'] = os.getenv('LLAMA_CLOUD_API_KEY')
 
 
 def llama_parse_pdf(pdf: Union[str, bytes]) -> List[TextNode]:

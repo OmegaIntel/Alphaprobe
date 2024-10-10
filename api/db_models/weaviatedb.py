@@ -5,7 +5,7 @@ from typing import List
 import requests
 from io import BytesIO
 from llama_index.core.schema import TextNode
-from api.doc_parser.llama_parse_pdf import llama_parse_pdf
+from doc_parser.llama_parse_pdf import llama_parse_pdf
 
 load_dotenv()
 
@@ -17,17 +17,6 @@ class WeaviateManager:
     def __del__(self):
         self.client.close()
 
-    def chunk_text(self,text, chunk_size=800, overlap=100):
-        chunks = []
-        start = 0
-        length = len(text)
-        while start < length:
-            end = min(start + chunk_size, length)
-            chunk = text[start:end]
-            chunks.append(chunk)
-            start += chunk_size - overlap
-        return chunks
-    
     def get_file_chunks(self, file_path: str) -> List[TextNode]:
         """file_path: AWS signed URL, for now."""
         response = requests.get(file_path)
@@ -38,6 +27,7 @@ class WeaviateManager:
             raise Exception(f"Failed to fetch the PDF file. Status code: {response.status_code}")
 
     def create_objects(self, collection_name: str, document_id: str, file_path: str, chunks: List[TextNode]) -> List[dict]:
+        """file_path: AWS signed URL, for now."""
         objects = []
         for chunk in chunks:
             obj = {
@@ -54,6 +44,7 @@ class WeaviateManager:
 
 
     def insert_data(self, collection_name: str, document_id: str, file_path: str) -> str:
+        """file_path: AWS signed URL, for now."""
         chunks = self.get_file_chunks(file_path)
         objects = self.create_objects(collection_name, document_id, file_path, chunks)
         collection = self.client.collections.get(collection_name)
