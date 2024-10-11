@@ -1,10 +1,10 @@
-import axios from "axios";
 import { API_BASE_URL, token } from ".";
+import axiosInstance from "./axiosConfig";
 
 export const addCollaboration = async (values) => {
   try {
-    const response = await axios.post(
-      `${API_BASE_URL}/collaborate/`,
+    const response = await axiosInstance.post(
+      `/collaborate/`,
       values,
       {
         headers: {
