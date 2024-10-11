@@ -1,0 +1,45 @@
+services:
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+      - OPENAI_MODEL_NAME=${OPENAI_MODEL_NAME}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - BING_API_KEY=${BING_API_KEY}
+      - FMP_API_KEY=${FMP_API_KEY}
+      - POLYGON_API_KEY=${POLYGON_API_KEY}
+      - ALPHA_VANTAGE_API_KEY=${ALPHA_VANTAGE_API_KEY}
+      - TIINGO_API_KEY=${TIINGO_API_KEY}
+      - DATABASE_HOST=${DATABASE_HOST}
+      - DATABASE_USER_NAME=${DATABASE_USER_NAME}
+      - DATABASE_PASSWORD=${DATABASE_PASSWORD}
+      - DATABASE_NAME=${DATABASE_NAME}
+      - DATABASE_PORT=${DATABASE_PORT}
+      - SMTP_SERVER=${SMTP_SERVER}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USERNAME=${SMTP_USERNAME}
+      - SMTP_PASSWORD=${SMTP_PASSWORD}
+      - SENDER_EMAIL=${SENDER_EMAIL}
+      - CALENDLY_CLIENT_ID=${CALENDLY_CLIENT_ID}
+      - CALENDLY_CLIENT_SECRET=${CALENDLY_CLIENT_SECRET}
+      - REDIRECT_URI=${REDIRECT_URI}
+      - WEAVIATE_HOST=${WEAVIATE_HOST}
+    command: >
+      /bin/sh -c "alembic upgrade head && uvicorn app:app --host 0.0.0.0 --port 8000 --reload"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_BASE_URL=
+    command: [ "npm", "start" ]

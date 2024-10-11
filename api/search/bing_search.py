@@ -4,8 +4,8 @@ import requests
 import requests
 from bs4 import BeautifulSoup
 from fastapi import HTTPException
-from api.llm_models.llm import LLM
-from api.interfaces import Retriever
+from llm_models.llm import LLM
+from interfaces import Retriever
 
 
 class BingSearch(Retriever):

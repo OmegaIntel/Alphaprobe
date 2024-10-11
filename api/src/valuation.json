@@ -1,0 +1,168 @@
+{
+    "valuation": {
+      "valuation_methodologies": {
+        "comparable_company_analysis": {
+          "questions": [
+            "Which public companies are considered appropriate comps, and why?",
+            "How does the target's valuation multiples (EV/EBITDA, P/E) compare to the peer group?",
+            "Are there any adjustments needed to account for differences in size, growth, or margin profiles between the target and its comparables?"
+          ]
+        },
+        "precedent_transactions_analysis": {
+          "questions": [
+            "What are the most relevant precedent transactions in the sector, and what were their valuation multiples?",
+            "How do industry trends or M&A cycles affect the reliability of these past transactions for current valuation purposes?",
+            "Were there any strategic synergies or premium payments in these deals that should be considered?"
+          ]
+        },
+        "discounted_cash_flow_analysis": {
+          "questions": [
+            "What are the key assumptions (e.g., growth rate, discount rate, terminal value) in the DCF model?",
+            "How sensitive is the valuation to changes in WACC, terminal growth rate, or free cash flow projections?",
+            "Are the cash flow forecasts based on management projections, and how realistic are these projections compared to historical performance?"
+          ]
+        },
+        "sum_of_the_parts_valuation": {
+          "questions": [
+            "How much value is derived from each business segment or asset within the company?",
+            "Do different segments require different valuation methodologies (e.g., DCF for one, market comps for another)?",
+            "Are there underperforming or non-core assets that could be divested to unlock value?"
+          ]
+        }
+      },
+      "key_value_drivers": {
+        "growth_potential": {
+          "questions": [
+            "What are the target’s projected revenue growth rates over the next 3-5 years, and how does this compare to industry averages?",
+            "What specific factors (e.g., product launches, geographic expansion) will drive future growth?",
+            "Is the current market position sustainable, and how is it expected to change relative to competitors?"
+          ]
+        },
+        "profitability_and_margin_expansion": {
+          "questions": [
+            "What are the historical and projected EBITDA and net income margins?",
+            "What margin expansion opportunities (e.g., cost reduction, pricing power) are realistically achievable in the next 3-5 years?",
+            "How does the company’s profitability compare to industry benchmarks?"
+          ]
+        },
+        "capital_structure_and_leverage": {
+          "questions": [
+            "What is the company’s current debt-to-equity ratio, and how does it affect the overall valuation?",
+            "How will any changes in capital structure (e.g., debt refinancing, equity issuance) impact value?",
+            "Is the company over-leveraged, and does it have the capacity to service its debt?"
+          ]
+        }
+      },
+      "sensitivity_and_scenario_analysis": {
+        "sensitivity_analysis": {
+          "questions": [
+            "How does the valuation change under different scenarios (e.g., varying discount rates, growth rates)?",
+            "What is the impact on valuation if key assumptions (e.g., margin growth, CapEx requirements) deviate from projections?",
+            "How does downside risk (e.g., slower growth, economic downturn) affect the overall valuation?"
+          ]
+        },
+        "break_even_analysis": {
+          "questions": [
+            "What level of revenue growth or profitability is required for the current valuation to hold?",
+            "How does the valuation fluctuate with incremental changes in gross margins or operating expenses?",
+            "What is the lowest acceptable level of EBITDA for the current valuation?"
+          ]
+        },
+        "scenario_planning": {
+          "questions": [
+            "What are the best-case, base-case, and worst-case scenarios for revenue and EBITDA growth over the next 3-5 years?",
+            "How do macroeconomic conditions (e.g., interest rates, inflation) influence these scenarios?",
+            "What external risks (e.g., regulatory changes, competitive pressures) could shift the valuation outlook?"
+          ]
+        }
+      },
+      "discount_rate_and_WACC": {
+        "cost_of_equity": {
+          "questions": [
+            "How is the cost of equity determined (e.g., CAPM model), and what assumptions are driving it?",
+            "What is the expected risk premium for the sector or geographic market in which the target operates?",
+            "How does the company’s beta compare to industry peers, and how does this impact the cost of equity?"
+          ]
+        },
+        "cost_of_debt": {
+          "questions": [
+            "What is the company’s current cost of debt, and how likely is this to change based on interest rate forecasts?",
+            "Are there any covenant restrictions that could affect the cost of debt?",
+            "How does the company’s credit rating impact its borrowing costs and overall WACC?"
+          ]
+        },
+        "WACC": {
+          "questions": [
+            "How does the company’s WACC compare to industry peers, and what factors explain any differences?",
+            "What are the assumptions behind the target’s WACC, and how sensitive is the valuation to changes in WACC?",
+            "Does the company have opportunities to lower its WACC (e.g., debt refinancing, changes in capital structure)?"
+          ]
+        }
+      },
+      "terminal_value": {
+        "terminal_growth_rate": {
+          "questions": [
+            "What assumptions underpin the terminal growth rate in the valuation model?",
+            "How does the terminal growth rate compare to long-term growth rates for the sector or economy?",
+            "Is the terminal growth rate consistent with the company’s historical growth trends?"
+          ]
+        },
+        "exit_multiple": {
+          "questions": [
+            "What is the rationale for the exit multiple used in the valuation?",
+            "How does the exit multiple compare to current trading multiples for industry peers?",
+            "How sensitive is the valuation to changes in the exit multiple?"
+          ]
+        }
+      },
+      "strategic_or_synergy_value": {
+        "synergies_in_M&A_scenarios": {
+          "questions": [
+            "What are the estimated cost and revenue synergies in a potential acquisition, and how do they affect the valuation?",
+            "What timeline is required to realize these synergies?",
+            "Are there any risks or barriers to achieving the expected synergies?"
+          ]
+        },
+        "strategic_premium": {
+          "questions": [
+            "Is the target likely to command a strategic premium, and if so, why (e.g., market position, intellectual property)?",
+            "How much of the valuation is attributable to strategic buyers versus financial buyers?",
+            "What potential acquirers would likely pay a premium for the target?"
+          ]
+        }
+      },
+      "market_sentiment_and_external_factors": {
+        "investor_sentiment": {
+          "questions": [
+            "How does current investor sentiment toward the sector influence valuation multiples?",
+            "Are there any recent events (e.g., regulatory changes, technological advancements) affecting the valuation outlook?",
+            "How are macroeconomic factors (e.g., inflation, interest rates) impacting overall market sentiment?"
+          ]
+        },
+        "competitive_and_market_risk": {
+          "questions": [
+            "What risks are associated with competitors’ actions (e.g., product launches, pricing strategies)?",
+            "How will competitive pressure impact the company’s future market share and valuation?",
+            "What external market risks (e.g., supply chain disruptions, regulatory shifts) could affect the valuation?"
+          ]
+        }
+      },
+      "exit_strategy_considerations": {
+        "timing_and_market_conditions": {
+          "questions": [
+            "What is the optimal timing for an exit (e.g., IPO, sale), considering current market conditions?",
+            "How will broader market trends (e.g., economic cycles, sector consolidation) influence exit opportunities?",
+            "What impact does the exit strategy have on the ultimate valuation (e.g., timing of cash flows, strategic sale vs. financial sale)?"
+          ]
+        },
+        "potential_buyers": {
+          "questions": [
+            "What is the likely buyer pool for the target (strategic vs. financial buyers)?",
+            "How does buyer interest impact the valuation and multiples?",
+            "Are there international or cross-border acquirers who may offer higher valuations due to geographic expansion or synergies?"
+          ]
+        }
+      }
+    }
+  }
+  

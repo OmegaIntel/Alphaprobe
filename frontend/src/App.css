@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: #1e1e1e;
   color: #eaeaea;
   margin: 0;
@@ -21,57 +21,10 @@ body {
   height: 100%;
 }
 
-.sidebar {
-  background-color: #2e2e2e;
-  width: 250px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.sidebar h1 {
-  color: #eaeaea;
-  font-size: 20px;
-  margin-bottom: 0px;
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-
-.sidebar ul li a {
-  color: #eaeaea;
-  text-decoration: none;
-  font-size: 16px;
-  display: block;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.sidebar ul li a:hover {
-  background-color: #3b3b3b;
-}
-
-/* Sidebar styles */
-.sidebar ul li.active-session a {
-  background-color: #1e9bf0;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
-}
-
-.sidebar ul li.active-session a:hover {
-  background-color: #1b8dd4;
-}
-
 .session-tab {
   font-size: 14px;
   white-space: nowrap; /* Prevents word wrap */
-  overflow: hidden;    /* Hides the overflow text */
+  overflow: hidden; /* Hides the overflow text */
   text-overflow: ellipsis; /* Adds an ellipsis to indicate text is cut off */
   display: block;
   width: 100%;
@@ -91,8 +44,7 @@ body {
 
 .sidebar {
   background-color: #2e2e2e;
-  width: 250px;
-  padding: 20px;
+  width: 250px !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -138,10 +90,6 @@ body {
   border-radius: 5px;
 }
 
-.sidebar ul li a:hover {
-  background-color: #3b3b3b;
-}
-
 .sidebar ul li.active-session a {
   background-color: #1e9bf0;
   color: white;
@@ -170,7 +118,7 @@ body {
 }
 
 .sidebar button.upload-link {
-  padding: 10px 15px;  /* Increased padding */
+  padding: 10px 15px; /* Increased padding */
   font-size: 16px;
   background-color: #1e9bf0;
   color: white;
@@ -179,9 +127,9 @@ body {
   cursor: pointer;
 }
 
-button.new-session-button{
+button.new-session-button {
   background: #5b5b5b;
-  padding: 10px 15px;  /* Increased padding */
+  padding: 10px 15px; /* Increased padding */
   font-size: 16px;
   color: white;
   border: none;
@@ -189,20 +137,19 @@ button.new-session-button{
   cursor: pointer;
 }
 
-button.new-session-button:hover{
+button.new-session-button:hover {
   color: #333;
 }
 
-
 .sidebar button.logout-button {
-  padding: 10px 15px;  /* Increased padding */
+  padding: 10px 15px; /* Increased padding */
   font-size: 16px;
   background-color: #eaeaea;
   color: #000;
   border-radius: 5px;
   cursor: pointer;
   align-self: flex-end; /* Aligns the logout button to the bottom */
-  margin-top: auto;  /* Ensures it stays at the bottom */
+  margin-top: auto; /* Ensures it stays at the bottom */
 }
 
 .sidebar .session-item {
@@ -229,21 +176,20 @@ button.new-session-button:hover{
   display: block;
 }
 
-
 .logout-button {
   position: absolute; /* Position it absolutely within the parent container */
-  top: 10px;          /* Adjust the top position as needed */
-  right: 10px;        /* Align it to the right */
-  background: none;   /* Remove background */
-  border: none;       /* Remove border */
-  cursor: pointer;    /* Change cursor to pointer */
-  padding: 0;         /* Remove padding */
-  z-index: 100;       /* Ensure it stays on top */
+  top: 10px; /* Adjust the top position as needed */
+  right: 10px; /* Align it to the right */
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor to pointer */
+  padding: 0; /* Remove padding */
+  z-index: 100; /* Ensure it stays on top */
   border-radius: 10px !important;
 }
 
 .logout-button img {
-  width: 24px;        /* Adjust size to match your design */
+  width: 24px; /* Adjust size to match your design */
   height: 24px;
 }
 
@@ -284,7 +230,6 @@ button.new-session-button:hover{
   border: none;
 }
 
-
 .logout-button {
   background-color: #3b3b3b; /* Example red color */
   color: white;
@@ -300,13 +245,11 @@ button.new-session-button:hover{
   background-color: #4b4b4b; /* Darker red on hover */
 }
 
-
 .main-content {
   flex-grow: 1;
   background-color: #1e1e1e;
   display: flex;
   flex-direction: column;
-  padding: 20px;
   overflow: hidden;
   width: 100%; /* Ensure main content takes full width */
 }
@@ -379,7 +322,6 @@ button.new-session-button:hover{
   width: 100%;
   box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
-
 
 .input-container select,
 .input-container textarea,
@@ -547,7 +489,7 @@ button.new-session-button:hover{
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 34px;
 }
 
@@ -559,7 +501,7 @@ button.new-session-button:hover{
   left: 3px;
   bottom: 3px;
   background-color: white;
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 50%;
 }
 
@@ -600,8 +542,12 @@ input:checked + .slider:before {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .upload-status {
@@ -610,7 +556,6 @@ input:checked + .slider:before {
   color: #4caf50;
   text-align: center;
 }
-
 
 /* App.css */
 
@@ -677,92 +622,90 @@ input:checked + .slider:before {
   border: None !important;
 }
 
-
-
-/* App.css */
-
-/* App.css */
-
 /* Add styles for authentication pages */
-.auth-container {
+.auth-gradient {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(0, 170, 255, 0.3) 0%,
+    rgba(0, 170, 255, 0) 100%
+  );
+}
+.remember-forgot {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
-  background-color: #1e1e1e;
-  color: #eaeaea;
-}
-
-.auth-container h2 {
-  margin-bottom: 20px;
-}
-
-.auth-container form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.auth-container input {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  width: 300px;
-  background-color: #2e2e2e;
-  color: #eaeaea;
-}
-
-.auth-container button {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #1e9bf0;
-  color: white;
-  cursor: pointer;
-}
-
-.auth-container button:hover {
-  background-color: #1b8dd4;
-}
-
-.auth-container p {
-  margin-top: 10px;
   font-size: 14px;
+  position: relative;
+  padding-left: 25px;
+}
+.remember-forgot label {
+  color: #eaeaea;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 18px;
 }
 
-.auth-container a {
-  color: #1e9bf0;
-  text-decoration: none;
-  font-weight: bold;
+.remember-forgot input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
-.auth-container a:hover {
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: transparent;
+  border: 1px solid #8a8a90;
+  border-radius: 2px;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.remember-forgot input:checked ~ .checkmark {
+  background-color: #33bbff;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.remember-forgot input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.remember-forgot .checkmark:after {
+  left: 5px;
+  top: 3px;
+  width: 3px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.remember-forgot a {
+  color: #33bbff;
+}
+
+.remember-forgot a:hover {
   text-decoration: underline;
 }
-
-/* App.css */
-
-#root {
-  width: 100%;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #1e1e1e;
-  color: #eaeaea;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-}
-
-.App {
-  display: flex;
-  width: 100%;
-  height: 100%;
+@media only screen and (max-width: 1024px) {
+  .login-container .login-gradient {
+    width: 80vw;
+    bottom: 40vh;
+    right: 60vw;
+  }
 }
 
 .with-sidebar {
@@ -770,14 +713,13 @@ body {
   background-color: #1e1e1e;
   display: flex;
   flex-direction: column;
-  padding: 20px;
   overflow: hidden;
-  width: calc(100% - 250px); /* Adjust width considering sidebar */
+  width: calc(100% - 200px); /* Adjust width considering sidebar */
 }
 
 .without-sidebar {
   flex-grow: 1;
-  background-color: #1e1e1e;
+  background-color: #151518;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -843,7 +785,6 @@ body {
   text-decoration: underline;
 }
 
-
 .typing-animation {
   display: flex;
   align-items: center;
@@ -867,7 +808,9 @@ body {
 }
 
 @keyframes typing {
-  0%, 80%, 100% {
+  0%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -910,4 +853,91 @@ pre {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #c3e6cb;
+}
+
+.ant-menu-item-selected {
+  background-color: #303038 !important; /* Replace with your desired color */
+}
+.ant-menu-sub .ant-menu-item-selected {
+  background-color: transparent !important; /* Replace with your desired color */
+}
+.ant-menu.ant-menu-sub.ant-menu-inline {
+  background: transparent !important;
+}
+.ant-menu-title-content {
+  background-color: transparent !important;
+}
+.ant-modal-close {
+  color: #dcdcdc !important;
+}
+.ant-collapse-header .ant-collapse-header-text,
+.ant-collapse-expand-icon {
+  color: #eaeaea;
+}
+.ant-select .ant-select-selector {
+  background-color: #212126 !important;
+  color: #f6f6f6 !important;
+  border: 2px solid #46464f !important;
+}
+.ant-select-selection-placeholder,
+.ant-select-arrow {
+  color: #f6f6f6 !important;
+}
+.ant-input-group-addon {
+  background-color: #212126 !important;
+  color: #f6f6f6 !important;
+  border: 2px solid #46464f !important;
+  border-left: none !important;
+}
+.date-input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.chatbox-container {
+  position: relative;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+
+.chatbox-open {
+  width: fit-content;
+  height: fit-content;
+}
+
+.chatbox-closed {
+  width: 0;
+  height: 0;
+}
+
+.chatbox-content {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.chatbox-open .chatbox-content {
+  opacity: 1;
+  transform: scale(1);
+}
+.chats-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  margin-block: 12px;
+  height: calc(100% - 200px);
+  overflow: auto;
+  padding: 10px;
+  scrollbar-width: none;
+}
+.ant-empty-description {
+  color: white !important;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px !important;
+  }
 }
