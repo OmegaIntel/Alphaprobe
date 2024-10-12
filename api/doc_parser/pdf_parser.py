@@ -5,16 +5,16 @@ from typing import List, Union
 
 from llama_index.core.schema import TextNode
 
+PAGE_NUMBER = 'page_number'
+LINE_NUMBER = 'line_number'
+LEVEL = 'level'
+
 
 class PDFParser(ABC):
     """Superclass for PDF parsers"""
 
     # Only basic metadata associated with the PDF structure.
-    METADATA = {
-        'page_number',
-        'line_number',
-        'level',
-    }
+    METADATA = [PAGE_NUMBER, LINE_NUMBER, LEVEL]
 
     def __init__(self, **kwargs):
         self.kwargs = kwargs
@@ -31,5 +31,5 @@ class PDFParser(ABC):
         result = self._parse_pdf(pdf)
         for text_node in result:
             for k in self.METADATA:
-                assert k in text_node.metadata
+                assert k in text_node.metadata, f'{k} not in text node metadata'
         return result

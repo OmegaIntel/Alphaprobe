@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-from api.doc_parser.pdf_parser import PDFParser
+from api.doc_parser.pdf_parser import PDFParser, PAGE_NUMBER, LINE_NUMBER, LEVEL
 
 from typing import List, Union
 from llama_index.core.schema import TextNode
@@ -47,7 +47,7 @@ class LlamaParser(PDFParser):
             chunks = splitter.split_text(doc.text)
             # create nodes with metadata
             for chunk in chunks:
-                node = TextNode(text=chunk, metadata={'page_number': idx+1})
+                node = TextNode(text=chunk, metadata={PAGE_NUMBER: idx+1, LINE_NUMBER: 0, LEVEL: 0})
                 nodes.append(node)
 
         return nodes
