@@ -9,7 +9,7 @@
   ],
   "last_updated": "2023-12-13T00:00:00+00:00",
   "summary": {
-    "executive_summary": "The household furniture manufacturing industry has faced significant challenges in recent years due to the COVID-19 pandemic, supply chain disruptions, and changing consumer preferences. The industry experienced a boom in sales during the early stages of the pandemic as consumers had higher disposable income and low interest rates supported the residential market. However, high inflation and rising interest rates have since caused the residential sector to slow down, negatively impacting furniture sales. Manufacturers also face intense competition from foreign producers with lower operating costs, leading to substantial price competition and import penetration.",
+    "executive_summary": "New furniture sales have been declining, a trend enhanced by the 2020 pandemic. During the early stages of the pandemic, manufacturers experienced a boom in sales, as low interest rates and high disposable income supported the residential market through gains in housing starts and existing home sales. Consumers often purchase new pieces to furnish their homes after moving. However, high inflation and elevated interest rates caused the residential sector to slow down, reversing the 2021 gains. These factors caused revenue to fall at an estimated CAGR of 4.8% to $23.5 billion over the past five years, including a 4.7% lag in 2023 alone.",
     "key_statistics": {
       "historical_revenue_growth_percentage": -2.54,
       "profit_margins_percentage": 3.1,
@@ -18,23 +18,37 @@
     },
     "current_performance": {
       "revenue_dollars_2023": 23511000000,
-      "profit_percentage_2023": 3.1,
+      "profit_dollars_2023": 729000000,
+      "profit_margin_percentage_2023": 3.1,
+      "revenue_growth_percentage_2005_2023": -2.54,
+      "profit_margin_growth_percentage_2005_2023": 0.98,
       "establishments_count_2023": 4092,
+      "establishments_growth_percentage_2004_2023": -2.88,
       "enterprises_count_2023": 3929,
+      "enterprises_growth_percentage_2004_2023": -2.79,
       "employment_count_2023": 125805,
+      "employment_growth_percentage_2004_2023": -3.07,
       "exports_dollars_2023": 3140000000,
+      "exports_growth_percentage_2004_2023": 2.41,
       "imports_dollars_2023": 42219000000,
+      "imports_growth_percentage_2004_2023": 2.72,
       "wages_dollars_2023": 5694000000,
+      "wages_growth_percentage_2004_2023": -2.92,
       "domestic_demand_dollars_2023": 62590000000,
-      "historical_revenue_growth_percentage_2005_2023": -2.54,
-      "historical_profit_margin_growth_percentage_2005_2023": 0.98,
-      "import_penetration_percentage_2023": 67
+      "domestic_demand_growth_percentage_2004_2023": -0.4
     },
     "future_outlook": {
-      "projected_revenue_growth_percentage_2023_2029": 0.42,
-      "projected_employment_growth_percentage_2023_2029": 0.25
+      "revenue_growth_percentage_2023_2029_projected": 0.42,
+      "iva_growth_percentage_2023_2029_projected": 0.32,
+      "establishments_growth_percentage_2023_2029_projected": 0.14,
+      "enterprises_growth_percentage_2023_2029_projected": 0.12,
+      "employment_growth_percentage_2023_2029_projected": 0.25,
+      "exports_growth_percentage_2023_2029_projected": 1.08,
+      "imports_growth_percentage_2023_2029_projected": -1.62,
+      "wages_growth_percentage_2023_2029_projected": 0.29,
+      "domestic_demand_growth_percentage_2023_2029_projected": -0.96
     },
-    "industry_definition": "The industry manufactures a range of furniture for personal, household and public use. Furniture may be made on a stock or custom basis and may be sold assembled or unassembled.",
+    "industry_definition": "The industry manufactures a range of furniture for personal, household and public use. Public furniture is used for hospitals, theaters, cafeterias, schools and other facilities. Furniture may be made on a stock or custom basis and may be sold assembled or unassembled.",
     "swot_analysis": {
       "strengths": [
         "Low Customer Class Concentration",
@@ -51,7 +65,8 @@
       ],
       "opportunities": [
         "High Revenue Growth (2023-2028)",
-        "High Performance Drivers"
+        "High Performance Drivers",
+        "Per capita disposable income"
       ],
       "threats": [
         "Very Low Revenue Growth (2005-2023)",
@@ -60,7 +75,25 @@
         "Import penetration into the manufacturing sector"
       ]
     },
-    "key_trends": "- Prominent import penetration harms domestic manufacturers as lower production costs overseas enable foreign producers to offer more affordable furniture.\n- Losses in the residential market amid elevated inflation and high interest rates result in falling revenue as consumers postpone large purchases.\n- The expected depreciation of the US dollar is likely to boost revenue growth by making domestic furniture more affordable, although growth will be slow due to unfavorable economic conditions.\n- Housing starts and existing home sales fall amid macroeconomic conditions, harming manufacturers as consumers tend to purchase new furniture when moving.\n- Manufacturers face various environmental regulations that increase operating costs.",
+    "key_trends": [
+      "Prominent import penetration harms domestic manufacturers.",
+      "Domestic producers struggle to compete with lower production costs overseas, enabling foreign producers to capture a large portion of domestic demand.",
+      "Losses in the residential market result in falling revenue. Elevated inflation and high interest rates discourage housing starts and existing home sales, negatively impacting new furniture sales.",
+      "The expected depreciation of the US dollar is likely to result in some revenue growth. However, this growth will be slow as unfavorable economic conditions prevent consumers from making large purchases.",
+      "Housing starts and existing home sales fall amid macroeconomic conditions. This trend harms manufacturers, as consumers tend to purchase new pieces when moving.",
+      "Manufacturers are subject to various environmental regulations, including laws protecting the water and air. This increases operating costs for domestic manufacturers.",
+      "Upholstered furniture generates the most revenue. These pieces are often heavier than other furniture, resulting in most of this furniture being produced or assembled domestically.",
+      "Foreign producers take over easy-to-ship furniture. This enables them to benefit from their lower operating costs and push out domestic producers that are unable to compete.",
+      "Retailers serve consumers directly, enabling them to become the largest market. Since household furniture is primarily used by consumers, retailers have opted to purchase products directly from manufacturers to save on costs.",
+      "Manufacturers base operations near highly populated areas. This provides them with proximity to more downstream consumers, boosting sales and lowering transportation costs.",
+      "Proximity to suppliers supports domestic producers. Manufacturers can maintain good relationships with major suppliers by operating out of the Southeast and the Great Lakes.",
+      "Domestic producers face strong competition from imports. A strong US dollar has enhanced this trend by making imported furniture more affordable for domestic consumers.",
+      "US producers compete on product design. Since domestic furniture is often unable to remain price-competitive, manufacturers aim to develop better products, including ergonomic and other value-added features.",
+      "Ashley Furniture acquires a logistics company. The company aims to expand its shipping capabilities by acquiring the western division of Wilson Logistics to better serve the western market.",
+      "Major manufacturers acquire other producers. By consolidating, manufacturers are able to expand their product portfolio and serve a broader market.",
+      "Making high-quality products is a labor intensive process. Manufacturers rely heavily on human labor to design, produce and assemble furniture.",
+      "Input price volatility boosts purchase costs. Manufacturers mainly use wood and steel to make furniture, both of which have experienced significant price volatility over recent years amid supply chain disruptions and shortages."
+    ],
     "market_segmentation": [
       {
         "segment": "Home furnishing stores",
@@ -110,15 +143,15 @@
       }
     ],
     "supply_chain": {
+      "tier_1_suppliers": [
+        "Electric Power Transmission in the US",
+        "Industrial Machinery & Equipment Wholesaling in the US"
+      ],
       "tier_2_suppliers": [
         "Sawmills & Wood Production in the US",
         "Wood Paneling Manufacturing in the US",
         "Hardware Manufacturing in the US",
         "Adhesive Manufacturing in the US"
-      ],
-      "tier_1_suppliers": [
-        "Electric Power Transmission in the US",
-        "Industrial Machinery & Equipment Wholesaling in the US"
       ],
       "tier_1_buyers": [
         "Furniture Stores in the US",
@@ -131,17 +164,6 @@
         "Department Stores in the US"
       ]
     },
-    "historical_revenue_dollars": 23511000000,
-    "projected_revenue_growth_percentage": 0.42,
-    "historical_revenue_growth_percentage": -3.27,
-    "establishments_count": 4092,
-    "enterprises_count": 3929,
-    "employment_count": 125805,
-    "exports_dollars": 3140000000,
-    "imports_dollars": 42219000000,
-    "wages_dollars": 5694000000,
-    "domestic_demand_dollars": 62590000000,
-    "profit_margin_percentage": 3.1,
     "country_name": "United States",
     "industry_name": "Household Furniture Manufacturing",
     "last_updated": "Dec 13, 2023",
@@ -153,8 +175,8 @@
       "Sauder Woodworking Co.",
       "Apex Tool Group, Llc"
     ],
-    "competitive_landscape": "The industry faces high competition and high import penetration. Domestic producers struggle to compete with lower production costs overseas, enabling foreign producers to capture a large portion of domestic demand. Major manufacturers have resorted to offshoring manufacturing capabilities, acquiring other producers, and focusing on high-end and value-added products to remain competitive.",
-    "costs_and_operations": "The industry has low capital intensity and relies heavily on human labor. Purchase costs have been volatile due to fluctuations in input prices like lumber and steel. Wage costs are significant given the labor-intensive nature of production. Other major costs include research and development, freight, and trade expenses.",
+    "competitive_landscape": "Domestic producers face strong competition from imports. A strong US dollar has enhanced this trend by making imported furniture more affordable for domestic consumers. US producers compete on product design. Since domestic furniture is often unable to remain price-competitive, manufacturers aim to develop better products, including ergonomic and other value-added features.",
+    "costs_and_operations": "Profit falls amid higher expenses. Purchase expenses grow amid input volatility. The industry relies on human labor, boosting wages. Other costs include trade expenses.",
     "related_international_industries": [
       "Wooden Furniture and Upholstered Seat Manufacturing in Australia",
       "Metal Furniture Manufacturing in Australia",

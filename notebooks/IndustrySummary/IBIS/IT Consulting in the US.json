@@ -9,13 +9,12 @@
   ],
   "last_updated": "2024-07-02T00:00:00+00:00",
   "summary": {
-    "executive_summary": "The IT Consulting industry has experienced steady growth driven by increasing corporate profit, private investment in computers and software, and the adoption of new technologies like cloud computing and data analytics. Major players have pursued mergers and acquisitions to gain market share and expand service offerings. The industry remains fragmented due to low barriers to entry and a wide range of niche services offered. Future growth is expected from continued technological innovation, improving economic conditions, and rising demand for online platforms and mobile applications.",
     "key_statistics": {
       "historical_revenue_growth_percentage": 3.93,
       "projected_revenue_growth_percentage": 2.36,
-      "profit_margins_percentage": 6.4,
       "revenue_dollars": 710683000000
     },
+    "executive_summary": "The IT Consulting industry has experienced revenue growth due to increasing corporate profit and demand for cloud computing and data analytics services. Major players have acquired smaller companies to gain market share. Over the next five years, revenue is expected to grow driven by rising business investment in technology and increasing use of online platforms and mobile devices.",
     "current_performance": {
       "revenue_dollars_2024": 710683000000,
       "enterprises_count_2024": 496630,
@@ -23,52 +22,70 @@
       "employment_count_2024": 2542152,
       "wages_dollars_2024": 305094000000,
       "industry_value_added_dollars_2024": 356003000000,
-      "revenue_growth_percentage_2019_2024": 3.93,
-      "wages_growth_percentage_2019_2024": 3.97,
-      "industry_value_added_growth_percentage_2019_2024": 4.11
+      "historical_revenue_growth_percentage_2002_2024": 3.93,
+      "projected_revenue_growth_percentage_2024_2029": 2.36,
+      "revenue_per_employee_dollars_2024": 279560,
+      "revenue_per_enterprise_dollars_2024": 1430000,
+      "employees_per_establishment_2024": 43,
+      "employees_per_enterprise_2024": 5,
+      "average_wage_dollars_2024": 120014,
+      "wages_percentage_of_revenue_2024": 43.0,
+      "establishments_per_enterprise_2024": 1.44,
+      "industry_value_added_percentage_of_revenue_2024": 50.1
     },
     "future_outlook": {
       "projected_revenue_growth_percentage_2024_2029": 2.36,
-      "projected_employment_growth_percentage_2024_2029": 2.32,
-      "projected_wages_growth_percentage_2024_2029": 2.33,
-      "projected_industry_value_added_growth_percentage_2024_2029": 2.34
+      "key_drivers": [
+        "Business confidence and investment will be critical drivers",
+        "Innovation and shifting technological trends will boost demand",
+        "Improving economic conditions and rising use of online platforms will assist revenue gains",
+        "Industry structure will keep transforming with new entrants and acquisitions"
+      ]
     },
     "industry_definition": "The IT Consulting industry includes firms that provide the following services to client companies: writing, testing and supporting custom software; planning and designing integrated hardware, software and communication infrastructure; and on-site management of computer systems and data processing facilities. This industry excludes packaged software publishers and off-site data processing and hosting services.",
     "swot_analysis": {
       "strengths": [
-        "Growth life cycle stage",
-        "Low volatility",
-        "Low imports",
-        "Low customer class concentration",
-        "Low product/service concentration",
-        "High revenue per employee",
-        "Low capital requirements"
+        "Growth Life Cycle Stage",
+        "Low Volatility",
+        "Low Imports",
+        "Low Customer Class Concentration",
+        "Low Product/Service Concentration",
+        "High Revenue per Employee",
+        "Low Capital Requirements"
       ],
       "weaknesses": [
-        "Low & increasing barriers to entry",
-        "Low & steady level of assistance",
-        "High competition",
-        "Low profit vs. sector average"
+        "Low & Increasing Barriers to Entry",
+        "Low & Steady Level of Assistance",
+        "High Competition",
+        "Low Profit vs. Sector Average"
       ],
       "opportunities": [
-        "High revenue growth (2005-2024)",
-        "High revenue growth (2019-2024)",
-        "High revenue growth (2024-2029)",
+        "High Revenue Growth (2005-2024)",
+        "High Revenue Growth (2019-2024)",
+        "High Revenue Growth (2024-2029)",
         "Corporate profit"
       ],
       "threats": [
-        "Low outlier growth",
-        "Low performance drivers",
+        "Low Outlier Growth",
+        "Low Performance Drivers",
         "Consumer price index"
       ]
     },
     "key_trends": [
-      "The industry has experienced an uptick in demand over the past five years as the economy grew steadily.",
-      "Major players in the industry have switched their focus toward cloud-based computing and data analytics.",
-      "Major players have looked to gain the upper hand in the industry as it adapts to cloud-based computing by merging or acquiring competitors.",
-      "The rapidly changing nature of the industry enables new entrants who specialize in new kinds of technology to enter the industry.",
-      "The increased use of mobile devices to access the internet will boost industry revenue.",
-      "Faster networks allow users to access data-heavy content, like streaming videos through their mobile devices, resulting in greater demand for application and system design."
+      "Competition is fierce as firms boast their abilities to provide insight and fulfill all of a client's needs. Competition is based on technical expertise, quality of service, availability of value-added services and price.",
+      "Maintaining relationships improves the client base and boosts a company's reputation as well. Previous clients' work is relied on to obtain future business through referrals and recommendations.",
+      "Shifting technology trends reshape the industry as the world becomes more technology-driven. Businesses across all industries have become reliant on external IT services.",
+      "As more business is conducted online, the need for the cloud network and other industry services will provide a boost to the industry. Operators constantly modify the software they provide to customers to remain competitive.",
+      "The five largest operators account for just over 5.0% of industry revenue. The sheer size of the industry and the services offered prevents a single company from dominating the industry.",
+      "Many operators are small nonemployers or independent contractors, contributing to the industry's fragmentation. In addition, new entrants enter the industry in an attempt to capture market share.",
+      "Intellectual property protects the products that operators create and is crucial to the profitability of the industry. Companies rely on patent, copyright, trademark and trade secret laws in the US.",
+      "Industry associations provide many services to aid operators. Government relations, business development, corporate education and intellectual property protection are some areas of association assistance.",
+      "Digital technology solutions that service all market sectors and new technology can improve profit. Clients continue to rely on digital technology solutions to drive business.",
+      "Constant development in technology keeps market share concentration low as new entrants cater their services to niche markets. The industry remains fragmented because of the abundance of products and services offered.",
+      "Regions with a cluster of financial services companies attract the services of the industry. New York being the financial capital of the world has directly benefited from industry services.",
+      "Silicon Valley is one of the largest centers of high technology and requires the support from IT consultants to operate their businesses more efficiently. California is home to the largest amount of industry establishments.",
+      "Computer systems development has enabled operators to expand services. On premise servers and storage devices increasingly help with managing information.",
+      "Rising demand during and after the pandemic shows the importance of industry services and the need for them in all realms of business. IT Consultants have advanced data processing capabilities and regularly work on reducing the risk of identity theft through more secure security systems."
     ],
     "market_segmentation": [
       {
@@ -84,16 +101,16 @@
         "percentage": 18.8
       },
       {
+        "segment": "Other sectors",
+        "percentage": 10.3
+      },
+      {
         "segment": "Healthcare companies",
         "percentage": 12.9
       },
       {
         "segment": "Manufacturing and retail companies",
         "percentage": 22.2
-      },
-      {
-        "segment": "Other sectors",
-        "percentage": 10.3
       }
     ],
     "products_and_services": [
@@ -141,34 +158,36 @@
         "Manufacturing in the US"
       ]
     },
-    "industry_name": "IT Consulting",
     "country_name": "United States",
+    "industry_name": "IT Consulting",
     "last_updated": "Jul 02, 2024",
     "revenue_dollars": 710683000000,
-    "revenue_growth_percentage_2002_2024": 3.93,
-    "revenue_growth_percentage_projected_2024_2029": 2.36,
+    "revenue_growth_percentage_2024": 0.43,
+    "revenue_growth_percentage_2024_2029_forecast": 2.36,
     "enterprises_count": 496630,
-    "enterprises_growth_percentage_2002_2024": 1.33,
-    "enterprises_growth_percentage_projected_2024_2029": 2.1,
+    "enterprises_growth_percentage_2024": 2.1,
     "establishments_count": 518365,
-    "establishments_growth_percentage_2002_2024": 1.4,
-    "establishments_growth_percentage_projected_2024_2029": 2.11,
+    "establishments_growth_percentage_2024": 2.11,
     "employment_count": 2542152,
-    "employment_growth_percentage_2002_2024": 2.86,
-    "employment_growth_percentage_projected_2024_2029": 2.32,
+    "employment_growth_percentage_2024": 2.32,
     "wages_dollars": 305094000000,
-    "wages_growth_percentage_2002_2024": 3.97,
-    "wages_growth_percentage_projected_2024_2029": 2.33,
+    "wages_growth_percentage_2024": 2.33,
     "iva_dollars": 356003000000,
-    "iva_growth_percentage_2002_2024": 4.11,
-    "iva_growth_percentage_projected_2024_2029": 2.34,
+    "iva_growth_percentage_2024": 2.34,
+    "competitive_landscape": "The five largest IT Consulting firms account for just over 5.0% of total industry revenue. The industry's sheer size and vast portfolio of services prevent any one company from dominating the industry as a whole.",
+    "costs_and_operations": "Wages represent the industry's single-largest expense, comprising 43.0% of revenue in 2023. Miscellaneous expenses like travel, vehicle costs, insurance and legal fees account for 38.9% of revenue in 2023. Purchases needed for hardware and software represent 7.1% of revenue in 2023.",
     "major_players": [
       "Dell Technologies Inc.",
       "Tata Consultancy Services Ltd",
       "Booz Allen Hamilton Inc.",
       "Accenture Plc"
     ],
-    "competitive_landscape": "The industry is fragmented with the top 4 players accounting for just over 5% of revenue. Rapid technological changes encourage new entrants catering to niche markets.",
-    "costs_and_operations": "Key costs are wages (43% of revenue), miscellaneous expenses like travel (38.9%), and purchases of hardware/software (7.1%). The industry has low capital requirements."
+    "related_international_industries": [
+      "Computer System Design Services in Australia",
+      "Computer Consultants in the UK",
+      "IT Consulting in Canada",
+      "Computer System Design Services in New Zealand",
+      "Computer Consultants in Ireland"
+    ]
   }
 }
