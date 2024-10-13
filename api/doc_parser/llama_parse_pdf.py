@@ -6,16 +6,16 @@ import nest_asyncio
 nest_asyncio.apply()
 
 import os
-from dotenv import load_dotenv
-load_dotenv()
-
-
-from api.doc_parser.pdf_parser import PDFParser, PAGE_NUMBER, LINE_NUMBER, LEVEL
 
 from typing import List, Union
 from llama_index.core.schema import TextNode
 from llama_index.core.node_parser import SentenceSplitter
 from llama_parse import LlamaParse
+
+from api.doc_parser.pdf_parser import PDFParser, PAGE_NUMBER, LINE_NUMBER, LEVEL
+
+from dotenv import load_dotenv
+load_dotenv()
 
 
 class LlamaParser(PDFParser):
