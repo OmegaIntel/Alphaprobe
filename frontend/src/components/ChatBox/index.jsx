@@ -9,6 +9,7 @@ import {
   fetchPreviousMessages,
   fetchPreviousSessions,
   sendChatMessage,
+  updateChatSessionType,
 } from "../../services/chatService";
 import { categoryList } from "../../constants";
 import { useModal } from "../UploadFilesModal/ModalContext";
@@ -67,7 +68,7 @@ const ChatBox = () => {
         const response = await fetchAllDocument(dealId);
         if (response.documents?.length > 0) {
           if (selectCategory) {
-            const res = await createChatSession(dealId, isGlobalData);
+            const res = await createChatSession(dealId, selectCategory);
             setCurrentChatSession(res.id);
             setError(null);
             setIsSidebarOpen(false)
@@ -81,7 +82,7 @@ const ChatBox = () => {
         }
       } else {
         try {
-          const res = await createChatSession(dealId, isGlobalData);
+          const res = await createChatSession(dealId, selectCategory);
           setCurrentChatSession(res.id);
           setError(null);
           setIsSidebarOpen(false)
@@ -144,6 +145,10 @@ const ChatBox = () => {
       setIsLoadingMessage(false);
     }
   };
+
+  useEffect(()=>{
+    updateChatSessionType(currentChatSession, selectCategory).then().catch();
+  }, [selectCategory])
 
   const handleAddToWorkspace = async () => {
     try {

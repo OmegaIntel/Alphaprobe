@@ -1,11 +1,29 @@
 import { token } from ".";
 import axiosInstance from "./axiosConfig";
 
-export const createChatSession = async (dealId, isGlobal) => {
+export const createChatSession = async (dealId, type) => {
   try {
     const response = await axiosInstance.post(
       `/chat/sessions`,
-      { deal_id: dealId, is_global: isGlobal },
+      { deal_id: dealId, type: type },
+      {
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const updateChatSessionType = async (id, type) => {
+  try {
+    const response = await axiosInstance.put(
+      `/chat_sessions/`,
+      {id: id, type: type},
       {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
