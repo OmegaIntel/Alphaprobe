@@ -20,10 +20,11 @@ const AddCollaboration = ({ isOpen, onRequestClose }) => {
         description: "Your request has been submitted successfully.",
       });
     } catch (error) {
+      console.log(error)
       notification.error({
         message: "Submission Failed",
         description:
-          "There was an error submitting your request. Please try again.",
+          error.response.data.detail
       });
     } finally {
       form.resetFields();

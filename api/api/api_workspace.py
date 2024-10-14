@@ -19,6 +19,7 @@ from api.api_user import get_current_user, User as UserModelSerializer
 from db_models.workspace import CurrentWorkspace
 from db_models.deals import Deal
 from db_models.shared_user_deals import SharedUserDeals
+from sqlalchemy import Column, String, Text, TIMESTAMP, ForeignKey, func, Enum
 
 current_workspace_router = APIRouter()
 
@@ -52,6 +53,10 @@ def add_current_workspace(item: CurrentWorkspaceCreate, db: Session = Depends(ge
     db.add(workspace)
     db.commit()
     db.refresh(workspace)
+    data.updated_at = func.current_timestamp()
+    db.add(data)
+    db.commit()
+    db.refresh(data)
     return workspace
 
 @current_workspace_router.put("/api/current_workspace/{workspace_id}", response_model=CurrentWorkspaceResponse)
@@ -70,6 +75,10 @@ def update_workspace(workspace_id: str, item: BaseTableSchema, db: Session = Dep
     workspace.text = item.text
     db.commit()
     db.refresh(workspace)
+    data.updated_at = func.current_timestamp()
+    db.add(data)
+    db.commit()
+    db.refresh(data)
     return workspace
 
 
@@ -87,6 +96,10 @@ def delete_todo(workspace_id: str, db: Session = Depends(get_db), current_user: 
         raise HTTPException(status_code=404, detail="Current workspace not found")
     db.delete(workspace)
     db.commit()
+    data.updated_at = func.current_timestamp()
+    db.add(data)
+    db.commit()
+    db.refresh(data)
     return workspace
 
 @current_workspace_router.get("/api/current_workspace/", response_model=List[CurrentWorkspaceResponse])

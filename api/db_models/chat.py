@@ -22,6 +22,7 @@ class ChatSession(Base):
     session_name = Column(String(255),nullable=True,default=None)  
     user_id= Column(String(255), ForeignKey(User.id),nullable=True)
     created_at = Column(DateTime, default=func.now())
+    type = Column(String(255), default=None)
 
 class ChatMessage(Base):
     __tablename__ = "chat_messages"

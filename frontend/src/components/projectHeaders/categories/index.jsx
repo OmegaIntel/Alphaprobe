@@ -51,7 +51,19 @@ const Categories = () => {
         setDone(groupedTasks["Done"] || []);
       } else {
         getTasks(dealId)
-          .then((data) => setTodoTask(data || []))
+          .then((data) => {
+            const groupedTasks = data.reduce((acc, task) => {
+              const status = task.status;
+              if (!acc[status]) {
+                acc[status] = [];
+              }
+              acc[status].push(task);
+              return acc;
+            }, {});
+            setTodoTask(groupedTasks["To Do"] || []);
+            setInprogress(groupedTasks["In Progress"] || []);
+            setDone(groupedTasks["Done"] || []);
+          })
           .catch((e) => {
             if (e.response.status === 404) {
               setTodoTask([]);
@@ -71,9 +83,8 @@ const Categories = () => {
             <div className="flex laptop:gap-2 largeDesktop:gap-0">
               {categoryList.map((data, index) => (
                 <div
-                  className={`${
-                    data === activeCategory && "bg-[#212126] rounded-lg"
-                  } p-1 text-center desktop:p-2 cursor-pointer text-sm`}
+                  className={`${data === activeCategory && "bg-[#212126] rounded-lg"
+                    } p-1 text-center desktop:p-2 cursor-pointer text-sm`}
                   key={index}
                   onClick={() => setActiveCategory(data)}
                 >
@@ -118,6 +129,7 @@ const Categories = () => {
             <AddProgress
               progress={progress}
               setToggle={setToggle}
+              setProgress={setProgress}
               name={name}
             />
           </div>

@@ -1,5 +1,6 @@
 import boto3
 from fastapi import APIRouter, Depends, UploadFile, File, Form, HTTPException
+from sqlalchemy import func
 from sqlalchemy.orm import Session
 from db_models.deals import Deal
 from db_models.file_upload import Document
@@ -96,8 +97,12 @@ async def upload_files(
         )
         db.add(new_document)
         uploaded_documents.append(new_document)
+    
+    deal.updated_at = func.current_timestamp()
+    db.add(deal)
 
     db.commit()
+    db.refresh(deal)
 
     for doc in uploaded_documents:
         try:
@@ -163,8 +168,14 @@ async def update_document(
     document.sub_category = sub_category
     document.tags = tags
 
+    deal = db.query(Deal).filter(Deal.id == document.deal_id).first()
+
+    deal.updated_at = func.current_timestamp()
+    db.add(deal)
+
     db.commit()
     db.refresh(document)
+    db.refresh(deal)
 
     tags_response = json.loads(document.tags) if document.tags else None
     return {
@@ -198,6 +209,10 @@ async def delete_document(document_id: str, db: Session = Depends(get_db)):
         raise HTTPException(status_code=500, detail="S3 credentials not available")
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to delete the file from S3: {str(e)}")
+    deal = db.query(Deal).filter(Deal.id == document.deal_id).first()
+
+    deal.updated_at = func.current_timestamp()
+    db.add(deal)
     db.commit()
 
     return {"detail": "Document deleted successfully."}

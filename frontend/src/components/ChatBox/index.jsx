@@ -9,6 +9,7 @@ import {
   fetchPreviousMessages,
   fetchPreviousSessions,
   sendChatMessage,
+  updateChatSessionType,
 } from "../../services/chatService";
 import { categoryList } from "../../constants";
 import ChatSidebar from "./ChatSidebar";
@@ -42,7 +43,7 @@ const ChatBox = () => {
   const toggleChat = () => {
     if (deals.length > 0 && dealId) {
       if (isOpen) {
-        resetState();
+        // resetState();
         setIsGlobalData(false);
       }
       setIsOpen(!isOpen);
@@ -72,7 +73,7 @@ const ChatBox = () => {
         const response = await fetchAllDocument(dealId);
         if (response.documents?.length > 0) {
           if (selectCategory) {
-            const res = await createChatSession(dealId, isGlobalData);
+            const res = await createChatSession(dealId, selectCategory);
             setCurrentChatSession(res.id);
             setError(null);
             setIsSidebarOpen(false);
@@ -86,7 +87,7 @@ const ChatBox = () => {
         }
       } else {
         try {
-          const res = await createChatSession(dealId, isGlobalData);
+          const res = await createChatSession(dealId, selectCategory);
           setCurrentChatSession(res.id);
           setError(null);
           setIsSidebarOpen(false);
@@ -150,6 +151,10 @@ const ChatBox = () => {
     }
   };
 
+  useEffect(()=>{
+    updateChatSessionType(currentChatSession, selectCategory).then().catch((e)=>console.log(e));
+  }, [selectCategory])
+
   const handleAddToWorkspace = async () => {
     try {
       const response = await addToWorkSpace(
@@ -190,7 +195,7 @@ const ChatBox = () => {
   useEffect(() => {
     if (isOpen) fetchDealDocuments();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dealId, isOpen, isGlobalData]);
+  }, [dealId, isOpen]);
 
   useEffect(() => {
     if (
@@ -206,7 +211,7 @@ const ChatBox = () => {
   useEffect(() => {
     const loadPreviousSessions = async () => {
       try {
-        const sessions = await fetchPreviousSessions(dealId, isGlobalData); // Fetch the previous chat sessions
+        const sessions = await fetchPreviousSessions(dealId); // Fetch the previous chat sessions
         if (Array.isArray(sessions)) {
           setPreviousSessions(sessions);
         } else {
@@ -220,7 +225,7 @@ const ChatBox = () => {
     if (isSidebarOpen) {
       loadPreviousSessions();
     }
-  }, [dealId, isGlobalData, isSidebarOpen, currentChatSession]);
+  }, [dealId, isSidebarOpen, currentChatSession]);
 
   return (
     <>

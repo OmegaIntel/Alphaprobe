@@ -1,5 +1,6 @@
 from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel, EmailStr
+from sqlalchemy import func
 from db_models.session import get_db
 from sqlalchemy.orm import Session
 from fastapi import HTTPException
@@ -63,8 +64,11 @@ def add_todo(item: ToDoCreate, db: Session = Depends(get_db), current_user: User
             raise HTTPException(status_code=404, detail="You are not authorized to add To-Do items")
     todo = ToDo(**item.dict())
     db.add(todo)
+    data.updated_at = func.current_timestamp()
+    db.add(data)
     db.commit()
     db.refresh(todo)
+    db.refresh(data)
     return todo
 
 
@@ -107,7 +111,10 @@ def update_todo(todo_id: str, item: ToDoBase, db: Session = Depends(get_db),curr
     todo.priority = item.priority
     todo.custom_tags = item.custom_tags
     todo.description = item.description
+    data.updated_at = func.current_timestamp()
+    db.add(data)
     db.commit()
+    db.refresh(data)
     db.refresh(todo)
     return todo
 
@@ -124,5 +131,8 @@ def delete_todo(todo_id: str, db: Session = Depends(get_db),current_user: UserMo
     if not todo:
         raise HTTPException(status_code=404, detail="To-Do item not found")
     db.delete(todo)
+    data.updated_at = func.current_timestamp()
+    db.add(data)
     db.commit()
+    db.refresh(data)
     return todo
