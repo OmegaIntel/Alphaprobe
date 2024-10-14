@@ -49,7 +49,7 @@ const ChatSidebar = ({
                 <div
                   key={session.id}
                   className="mb-2 px-2 py-1 text-sm font-semibold bg-[#303038] cursor-pointer rounded shadow"
-                  onClick={() => loadPreviousMessages(session.id)}
+                  onClick={() => session.session_name ? loadPreviousMessages(session.id) : fetchDealDocuments()}
                 >
                   {session.session_name
                     ? truncateDescription(session.session_name, 30)

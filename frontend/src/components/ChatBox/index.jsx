@@ -152,7 +152,7 @@ const ChatBox = () => {
   };
 
   useEffect(()=>{
-    updateChatSessionType(currentChatSession, selectCategory).then().catch();
+    updateChatSessionType(currentChatSession, selectCategory).then().catch((e)=>console.log(e));
   }, [selectCategory])
 
   const handleAddToWorkspace = async () => {
