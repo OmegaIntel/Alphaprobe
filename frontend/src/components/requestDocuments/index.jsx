@@ -45,10 +45,6 @@ const DiligenceDocumentsModal = ({ dealId, isOpen, onRequestClose }) => {
     }
 
     if (validFiles.length > 0) {
-      setFiles((prevFiles) => ({
-        ...prevFiles,
-        [activeSection]: [...prevFiles[activeSection], ...validFiles],
-      }));
       setLoading(true);
       try {
         // Upload all files concurrently
@@ -65,9 +61,13 @@ const DiligenceDocumentsModal = ({ dealId, isOpen, onRequestClose }) => {
             await uploadFiles(formData);
           })
         );
+        setFiles((prevFiles) => ({
+          ...prevFiles,
+          [activeSection]: [...prevFiles[activeSection], ...validFiles],
+        }));
         notification.success({ message: "All files uploaded successfully!" });
       } catch (error) {
-        notification.error({ message: "File upload failed!" });
+        notification.error({ message: error.response.data.detail });
       } finally {
         setLoading(false); // Set loading to false after all uploads
       }
@@ -98,10 +98,6 @@ const DiligenceDocumentsModal = ({ dealId, isOpen, onRequestClose }) => {
     }
 
     if (validFiles.length > 0) {
-      setFiles((prevFiles) => ({
-        ...prevFiles,
-        [activeSection]: [...prevFiles[activeSection], ...validFiles],
-      }));
       setLoading(true);
       try {
         // Upload all files concurrently
@@ -118,9 +114,13 @@ const DiligenceDocumentsModal = ({ dealId, isOpen, onRequestClose }) => {
             await uploadFiles(formData);
           })
         );
+        setFiles((prevFiles) => ({
+          ...prevFiles,
+          [activeSection]: [...prevFiles[activeSection], ...validFiles],
+        }));
         notification.success({ message: "All files uploaded successfully!" });
       } catch (error) {
-        notification.error({ message: "File upload failed!" });
+        notification.error({ message: error.response.data.detail });
       } finally {
         setLoading(false); // Set loading to false after all uploads
       }

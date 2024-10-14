@@ -54,15 +54,13 @@ async def upload_files(
         raise HTTPException(status_code=400, detail="Deal not found")
 
 
-    existing_document = db.query(Document).filter(Document.deal_id == deal_id, Document.name == name).first()
-    if existing_document:
-        raise HTTPException(status_code=400, detail=f"A file with the name '{name}' already exists in this deal.")
-
     uploaded_documents = []
 
     for file in files:
         original_filename = file.filename
-        
+        existing_document = db.query(Document).filter(Document.deal_id == deal_id, Document.original_filename == original_filename).first()
+        if existing_document:
+            raise HTTPException(status_code=400, detail=f"A file with the name '{name}' already exists in this deal.")
         sanitized_filename = original_filename.replace(" ", "_").replace("/", "_").replace("\\", "_")
         timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
         
@@ -93,7 +91,8 @@ async def upload_files(
             sub_category=sub_category,
             tags=tags, 
             file_path=file_location,
-            deal_id=deal_id
+            deal_id=deal_id,
+            original_filename=original_filename
         )
         db.add(new_document)
         uploaded_documents.append(new_document)
