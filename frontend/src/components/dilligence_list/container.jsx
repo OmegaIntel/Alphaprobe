@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import KanbanBoard from ".";
-import { useModal } from "../UploadFilesModal/ModalContext";
+import { useSelector } from "react-redux";
 
 const DilligenceContainer = () => {
-  const { deals, dealId } = useModal();
+  const { dealId, deals } = useSelector((state) => state.deals);
   const [currentDeal, setCurrentDeal] = useState("");
   useEffect(() => {
     if (deals && dealId) {

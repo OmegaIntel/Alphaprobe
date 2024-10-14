@@ -3,8 +3,10 @@ import DealDocumentsCard from "../card";
 import { useMediaQuery } from "react-responsive";
 import { createDeal } from "../../services/dealService";
 import { notification } from "antd";
-import { useModal } from "../UploadFilesModal/ModalContext";
 import { Select } from "antd";
+import { setDealId } from "../../redux/dealsSlice";
+import { setIsUploadModalVisible } from "../../redux/modalSlice";
+import { useDispatch } from "react-redux";
 
 const { Option } = Select;
 
@@ -15,7 +17,7 @@ const CreateDeal = () => {
   const [investmentThesis, setInvestmentThesis] = useState("");
   const [industry, setIndustry] = useState("");
   const [isOverflowing, setIsOverflowing] = useState(false);
-  const { setIsUploadModalVisible, setDealId } = useModal();
+  const dispatch = useDispatch();
 
   const containerRef = useRef(null);
 
@@ -83,8 +85,8 @@ const CreateDeal = () => {
         description: "Your deal is created successfully.",
       });
       if (response) {
-        setDealId(response.id);
-        setIsUploadModalVisible(true);
+        dispatch(setDealId(response.id));
+        dispatch(setIsUploadModalVisible(true));
       }
     } catch (error) {
       notification.error({

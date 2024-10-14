@@ -1,10 +1,10 @@
 import React from "react";
 import { Modal, Form, Input, Button, notification, Select } from "antd";
-import { useModal } from "../UploadFilesModal/ModalContext";
 import { addCollaboration } from "../../services/addCollaboration";
+import { useSelector } from "react-redux";
 
 const AddCollaboration = ({ isOpen, onRequestClose }) => {
-  const { deals } = useModal();
+  const { deals } = useSelector((state) => state.deals);
 
   const [form] = Form.useForm();
 
@@ -35,7 +35,9 @@ const AddCollaboration = ({ isOpen, onRequestClose }) => {
     <>
       <Modal
         title={
-          <div className="text-white text-base font-bold">Request a Collaboration</div>
+          <div className="text-white text-base font-bold">
+            Request a Collaboration
+          </div>
         }
         open={isOpen}
         onCancel={() => {
@@ -64,7 +66,15 @@ const AddCollaboration = ({ isOpen, onRequestClose }) => {
             label={<span style={{ color: "white" }}>Email</span>}
             rules={[{ required: true, message: "Please enter your email!" }]}
           >
-            <Input style={{ backgroundColor: "#212126", color: "#fff", border: "10px solid !important", borderColor: "#46464f" }} type="email"/>
+            <Input
+              style={{
+                backgroundColor: "#212126",
+                color: "#fff",
+                border: "10px solid !important",
+                borderColor: "#46464f",
+              }}
+              type="email"
+            />
           </Form.Item>
           <Form.Item
             name="project"
@@ -80,7 +90,7 @@ const AddCollaboration = ({ isOpen, onRequestClose }) => {
               style={{
                 backgroundColor: "white !important",
                 color: "black !important",
-                border: "none"
+                border: "none",
               }}
             />
           </Form.Item>

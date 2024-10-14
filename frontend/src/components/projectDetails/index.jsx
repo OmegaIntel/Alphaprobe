@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { PlusCircleFilled } from "@ant-design/icons";
 import EditableProjectCard from "./editableCards";
 import {
@@ -20,27 +20,30 @@ import {
   editChecklist,
   getChecklist,
 } from "../../services/currentChecklist";
-import { useModal } from "../UploadFilesModal/ModalContext";
+import { useDispatch, useSelector } from "react-redux";
+import { setProjects } from "../../redux/dealsSlice";
 
 const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
-  const { dealId } = useModal();
-
+  const { dealId, projects } = useSelector((state) => state.deals);
   const [toggle, setToggle] = useState(false);
-  const [projects, setProjects] = useState([]);
+  const dispatch = useDispatch();
 
-  const handleError = (e) => {
-    setProjects([]);
-    if (e.response.status !== 404) {
-      notification.error({ message: "Error fetching data..." });
-    }
-  };
+  const handleError = useCallback(
+    (e) => {
+      dispatch(setProjects([]));
+      if (e.response.status !== 404) {
+        notification.error({ message: "Error fetching data..." });
+      }
+    },
+    [dispatch]
+  );
 
   useEffect(() => {
     if (isActiveSubCategory && isActiveCategory && dealId) {
       if (isActiveSubCategory === "Current Workspace") {
         getWorkspace(dealId, isActiveCategory)
           .then((data) => {
-            setProjects(data);
+            dispatch(setProjects(data));
           })
           .catch((e) => {
             handleError(e);
@@ -48,7 +51,7 @@ const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
       } else if (isActiveSubCategory === "Knowledge Base") {
         getKnoledgeBase(dealId, isActiveCategory)
           .then((data) => {
-            setProjects(data);
+            dispatch(setProjects(data));
           })
           .catch((e) => {
             handleError(e);
@@ -56,16 +59,23 @@ const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
       } else if (isActiveSubCategory === "Checklist") {
         getChecklist(dealId, isActiveCategory)
           .then((data) => {
-            setProjects(data);
+            dispatch(setProjects(data));
           })
           .catch((e) => {
             handleError(e);
           });
       } else {
-        setProjects([]);
+        dispatch(setProjects([]));
       }
     }
-  }, [isActiveCategory, isActiveSubCategory, toggle, dealId]);
+  }, [
+    isActiveCategory,
+    isActiveSubCategory,
+    toggle,
+    dealId,
+    dispatch,
+    handleError,
+  ]);
 
   const addProject = () => {
     // Since you're adding a new project, you don't assign an id on the client-side.
@@ -85,7 +95,9 @@ const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
           const savedProject = { ...newProject, id: data.id, isEditing: true };
 
           // Add the newly created project to the state
-          setProjects((prevProjects) => [...prevProjects, savedProject]);
+          dispatch(
+            setProjects((prevProjects) => [...prevProjects, savedProject])
+          );
         })
         .catch((e) => {
           notification.error({
@@ -105,7 +117,9 @@ const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
           const savedProject = { ...newProject, id: data.id, isEditing: true };
 
           // Add the newly created project to the state
-          setProjects((prevProjects) => [...prevProjects, savedProject]);
+          dispatch(
+            setProjects((prevProjects) => [...prevProjects, savedProject])
+          );
         })
         .catch((e) => {
           notification.error({
@@ -125,7 +139,9 @@ const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
           const savedProject = { ...newProject, id: data.id, isEditing: true };
 
           // Add the newly created project to the state
-          setProjects((prevProjects) => [...prevProjects, savedProject]);
+          dispatch(
+            setProjects((prevProjects) => [...prevProjects, savedProject])
+          );
         })
         .catch((e) => {
           notification.error({
@@ -139,7 +155,7 @@ const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
     const updatedProjects = projects.map((project) =>
       project.id === id ? { ...project, [field]: value } : project
     );
-    setProjects(updatedProjects);
+    dispatch(setProjects(updatedProjects));
   };
 
   const saveProject = async (id, description) => {
@@ -226,8 +242,7 @@ const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
             });
           });
       }
-    }
-    else{
+    } else {
       cancelEditProject(id);
     }
   };
@@ -236,15 +251,15 @@ const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
     const updatedProjects = projects.map((project) =>
       project.id === id ? { ...project, isEditing: true } : project
     );
-    setProjects(updatedProjects);
+    dispatch(setProjects(updatedProjects));
   };
 
   const cancelEditProject = (id) => {
     const updatedProjects = projects.map((project) =>
       project.id === id ? { ...project, isEditing: false } : project
     );
-    setProjects(updatedProjects);
-  }
+    dispatch(setProjects(updatedProjects));
+  };
 
   return (
     <>

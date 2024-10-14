@@ -11,7 +11,7 @@ export const uploadFiles = async (formData) => {
     });
     return response.data;
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 };
 export const updateDocument = async (document_id, formData) => {
@@ -27,7 +27,7 @@ export const updateDocument = async (document_id, formData) => {
     );
     return response.data;
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 };
 export const deleteDocument = async (document_id) => {
@@ -39,7 +39,7 @@ export const deleteDocument = async (document_id) => {
     });
     return response.data;
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 };
 
@@ -52,7 +52,7 @@ export const fetchAllDocument = async (dealId) => {
     });
     return response.data;
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 };
 export const fetchDocumentById = async (document_id) => {
@@ -67,6 +67,6 @@ export const fetchDocumentById = async (document_id) => {
     );
     return response.data;
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 };

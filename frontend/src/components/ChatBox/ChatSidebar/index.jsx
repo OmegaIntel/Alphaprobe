@@ -11,7 +11,7 @@ const ChatSidebar = ({
 }) => {
   return (
     <div
-      className={`w-[300px] shadow z-10 bg-[#151518] rounded absolute top-0 h-[38rem]  transition-all duration-300 ease-in-out ${
+      className={`w-[300px] shadow z-10 bg-[#151518] rounded absolute top-0 h-full transition-all duration-300 ease-in-out ${
         isSidebarOpen ? "left-0" : "-left-[300px]"
       }`}
     >

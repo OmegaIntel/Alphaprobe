@@ -10,27 +10,27 @@ import {
 import { getDeals } from "../../services/dealService";
 import { LogoutOutlined, PlusOutlined } from "@ant-design/icons";
 import SendEmail from "../modals/send_email";
-import { useModal } from "../UploadFilesModal/ModalContext";
 import AddCollaboration from "../collaborationModal";
 import { ReactComponent as FileUpload } from "../../icons/file_upload.svg";
 import CalendlyModal from "../CalendlyModal";
+import { useDispatch, useSelector } from "react-redux";
+import { setDealId, setDeals } from "../../redux/dealsSlice";
+import {
+  setIsFileUploadModule,
+  setIsUploadModalVisible,
+} from "../../redux/modalSlice";
 
 const { Sider } = Layout;
 
 const Sidebar = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const {
-    setDealId,
-    setDeals,
-    deals,
-    dealId,
-    setIsUploadModalVisible,
-    setIsFileUploadModule,
-  } = useModal();
+  const { dealId, deals } = useSelector((state) => state.deals);
   const [filteredDeals, setFilteredDeals] = useState(deals);
   const [isOpen, setIsOpen] = useState(false);
   const [search, setSearch] = useState("");
+  const dispatch = useDispatch();
+
   const onRequestClose = () => {
     setIsOpen(false);
   };
@@ -39,7 +39,7 @@ const Sidebar = () => {
       try {
         const data = await getDeals();
         if (data) {
-          setDeals(data);
+          dispatch(setDeals(data));
           setFilteredDeals(data);
         }
       } catch (error) {
@@ -47,7 +47,7 @@ const Sidebar = () => {
       }
     };
     fetchDealsData();
-  }, [dealId, setDeals]);
+  }, [dealId, dispatch]);
 
   useEffect(() => {
     const results = deals.filter((deal) =>
@@ -98,7 +98,7 @@ const Sidebar = () => {
           label: (
             <Link
               to={`/projects/${deal.id}`}
-              onClick={() => setDealId(deal.id)}
+              onClick={() => dispatch(setDealId(deal.id))}
             >
               {deal.name}
             </Link>
@@ -124,8 +124,8 @@ const Sidebar = () => {
         </div>
       ),
       onClick: () => {
-        setIsUploadModalVisible(true);
-        setIsFileUploadModule(true);
+        dispatch(setIsUploadModalVisible(true));
+        dispatch(setIsFileUploadModule(true));
       },
     },
   ];
