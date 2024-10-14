@@ -2,14 +2,12 @@ from fastapi import APIRouter, HTTPException, Form, Depends, Request
 from pydantic import BaseModel, EmailStr
 from db_models.session import get_db
 from sqlalchemy.orm import Session
-from db_models.demo_requests import DemoRequests
 import json
 from typing import Optional
 from sqlalchemy.exc import SQLAlchemyError
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy import func
 from sqlalchemy.orm import Session
-from db_models.users import User
 from db_models.workspace import CurrentWorkspace
 from pydantic import BaseModel, Field
 from uuid import UUID
@@ -24,6 +22,7 @@ from pydantic import BaseModel
 from datetime import datetime
 from api.api_user import get_current_user, User as UserModelSerializer
 from db_models.checklist import Checklist
+from datetime import datetime
 
 deals_router = APIRouter()
 
@@ -233,9 +232,11 @@ def update_deal(
             else:
                 deal.status = DealStatus.IN_PROGRESS
         
+        deal.updated_at = func.current_timestamp()
         # Commit the changes to the database
         db.commit()
         db.refresh(deal)
+
 
         # Return the updated deal
         return DealResponse(
@@ -267,4 +268,12 @@ def get_deals(
         deals = db.query(Deal).filter(Deal.id == shared_deal.deal_id).all()
         for deal in deals:
             all_deals.append(deal)
-    return all_deals
+
+    for deal in all_deals:
+        if isinstance(deal.updated_at, str):
+            deal.updated_at = datetime.strptime(deal.updated_at, "%Y-%m-%d %H:%M:%S")
+
+    # Sort the deals by updated_at in descending order (newest first)
+    sorted_deals = sorted(all_deals, key=lambda deal: deal.updated_at, reverse=True)
+    
+    return sorted_deals

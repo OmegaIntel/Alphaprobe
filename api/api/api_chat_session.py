@@ -78,23 +78,17 @@ class RetrieverResponse(BaseModel):
 @chat_router.post("/api/chat/sessions", response_model=ChatSessionResponse)
 async def create_chat_session(
     deal_id: Optional[str] = Form(None),
-    is_global: bool = Form(False), 
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
     session_id = str(uuid.uuid4())
-    if not is_global and not deal_id:
+    if not deal_id:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="deal_id is required when is_global is False."
         )
-    if is_global:
-        user_id = current_user.id
-        user_id = sanitize_class_name_nocap(user_id)
-        new_session = ChatSession(id=session_id, user_id=user_id)
-    else:
-        deal_id = sanitize_class_name_nocap(deal_id)
-        new_session = ChatSession(id=session_id, deal_id=deal_id)
+    deal_id = sanitize_class_name_nocap(deal_id)
+    new_session = ChatSession(id=session_id, deal_id=deal_id)
 
     db.add(new_session)
     db.commit()
@@ -191,11 +185,8 @@ async def delete_chat_session(deal_id: str, db: Session = Depends(get_db),curren
     return {"message": "Session deleted successfully"}
 
 @chat_router.get("/api/chat_sessions/")
-def get_chat_sessions(deal_id: Optional[str]  = None,is_global: bool = False, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
-    if is_global:
-        chat_sessions=db.query(ChatSession).filter(ChatSession.user_id==sanitize_class_name_nocap(current_user.id)).order_by(asc(ChatSession.created_at)).all()
-    else:
-        chat_sessions = db.query(ChatSession).filter(ChatSession.deal_id == sanitize_class_name_nocap(deal_id)).order_by(asc(ChatSession.created_at)).all()
+def get_chat_sessions(deal_id: Optional[str]  = None, db: Session = Depends(get_db),current_user: UserModelSerializer = Depends(get_current_user)):
+    chat_sessions = db.query(ChatSession).filter(ChatSession.deal_id == sanitize_class_name_nocap(deal_id)).order_by(asc(ChatSession.created_at)).all()
     if not chat_sessions:
         raise HTTPException(status_code=404, detail="No chat sessions found for this deal ID")
     return chat_sessions

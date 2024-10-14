@@ -37,7 +37,7 @@ const ChatBox = () => {
   const toggleChat = () => {
     if (deals.length > 0 && dealId) {
       if (isOpen) {
-        resetState();
+        // resetState();
         setIsGlobalData(false);
       }
       setIsOpen(!isOpen);
@@ -176,7 +176,7 @@ const ChatBox = () => {
   useEffect(() => {
     if (isOpen) fetchDealDocuments();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dealId, isOpen, isGlobalData]);
+  }, [dealId, isOpen]);
 
   useEffect(() => {
     if (
@@ -192,7 +192,7 @@ const ChatBox = () => {
   useEffect(() => {
     const loadPreviousSessions = async () => {
       try {
-        const sessions = await fetchPreviousSessions(dealId, isGlobalData); // Fetch the previous chat sessions
+        const sessions = await fetchPreviousSessions(dealId); // Fetch the previous chat sessions
         if (Array.isArray(sessions)) {
           setPreviousSessions(sessions);
         } else {
@@ -206,7 +206,7 @@ const ChatBox = () => {
     if (isSidebarOpen) {
       loadPreviousSessions();
     }
-  }, [dealId, isGlobalData, isSidebarOpen, currentChatSession]);
+  }, [dealId, isSidebarOpen, currentChatSession]);
 
   return (
     <>

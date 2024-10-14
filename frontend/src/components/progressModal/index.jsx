@@ -4,7 +4,7 @@ import { MoreOutlined } from "@ant-design/icons";
 import { updateDeal } from "../../services/dealService";
 import { useModal } from "../UploadFilesModal/ModalContext";
 
-const AddProgress = ({ progress, setToggle, name }) => {
+const AddProgress = ({ progress, setProgress, setToggle, name }) => {
   const [visible, setVisible] = useState(false);
   const [form] = Form.useForm();
   const [submittable, setSubmittable] = useState(false);
@@ -28,7 +28,7 @@ const AddProgress = ({ progress, setToggle, name }) => {
     };
     updateDeal(dealData, dealId)
       .then(() => {
-        setToggle((prev) => !prev);
+        setProgress(dealData.progress);
         notification.success({ message: "Progress Updated!" });
       })
       .catch(() => {

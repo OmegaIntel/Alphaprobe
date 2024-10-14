@@ -128,6 +128,7 @@ const Categories = () => {
             <AddProgress
               progress={progress}
               setToggle={setToggle}
+              setProgress={setProgress}
               name={name}
             />
           </div>

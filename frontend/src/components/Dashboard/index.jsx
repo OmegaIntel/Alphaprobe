@@ -30,10 +30,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     if (deals.length > 0) {
-      const sortedDeals = deals.sort(
-        (a, b) => new Date(b.start_date) - new Date(a.start_date)
-      );
-      const [firstDeal, ...remainingDeals] = sortedDeals;
+      const [firstDeal, ...remainingDeals] = deals;
       getTasks(firstDeal.id)
         .then((data) => setActiveItems(data))
         .catch((e) => {

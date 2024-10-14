@@ -69,10 +69,10 @@ export const addToWorkSpace = async (sessionId, type, dealId) => {
   }
 };
 
-export const fetchPreviousSessions = async (dealId, isGlobal) => {
+export const fetchPreviousSessions = async (dealId) => {
   try {
     const response = await axiosInstance.get(
-      `/chat_sessions/?deal_id=${dealId}&is_global=${isGlobal}`,
+      `/chat_sessions/?deal_id=${dealId}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
