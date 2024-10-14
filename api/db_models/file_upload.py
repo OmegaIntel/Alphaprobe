@@ -18,3 +18,4 @@ class Document(Base):
     tags = Column(JSON(), nullable=True)
     file_path = Column(String(255), nullable=False)  
     deal_id = Column(UUIDType(binary=False), ForeignKey(Deal.id, ondelete='CASCADE'), nullable=False)
+    original_filename = Column(Text, default=None)
