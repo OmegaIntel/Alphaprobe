@@ -260,6 +260,7 @@ def get_deals(
     current_user: UserModelSerializer = Depends(get_current_user)
 ):
     all_deals = []
+    sorted_deals = []
     deals = db.query(Deal).filter(Deal.user_id == current_user.id).all()
     for deal in deals:
         all_deals.append(deal)
@@ -274,6 +275,7 @@ def get_deals(
             deal.updated_at = datetime.strptime(deal.updated_at, "%Y-%m-%d %H:%M:%S")
 
     # Sort the deals by updated_at in descending order (newest first)
-    sorted_deals = sorted(all_deals, key=lambda deal: deal.updated_at, reverse=True)
+    if len(all_deals) != 0:
+        sorted_deals = sorted(all_deals, key=lambda deal: deal.updated_at, reverse=True)
     
     return sorted_deals
