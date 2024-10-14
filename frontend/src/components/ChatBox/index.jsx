@@ -11,15 +11,18 @@ import {
   sendChatMessage,
 } from "../../services/chatService";
 import { categoryList } from "../../constants";
-import { useModal } from "../UploadFilesModal/ModalContext";
 import ChatSidebar from "./ChatSidebar";
 import ChatHeader from "./ChatHeader";
 import ChatMessages from "./ChatMessages";
 import ChatInput from "./ChatInput";
-import ChatActions from "./ChatActions";
+import { useDispatch, useSelector } from "react-redux";
+import { getWorkspace } from "../../services/currentWorkspace";
+import { setProjects } from "../../redux/dealsSlice";
 
 const ChatBox = () => {
-  const { dealId, deals, selectedCategory } = useModal();
+  const { dealId, deals, selectedCategory } = useSelector(
+    (state) => state.deals
+  );
   const [isOpen, setIsOpen] = useState(false);
   const [selectCategory, setSelectCategory] = useState(selectedCategory);
   const [isGlobalData, setIsGlobalData] = useState(false);
@@ -31,6 +34,8 @@ const ChatBox = () => {
   const [inputMessage, setInputMessage] = useState("");
   const [previousSessions, setPreviousSessions] = useState([]);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const dispatch = useDispatch();
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
@@ -70,7 +75,7 @@ const ChatBox = () => {
             const res = await createChatSession(dealId, isGlobalData);
             setCurrentChatSession(res.id);
             setError(null);
-            setIsSidebarOpen(false)
+            setIsSidebarOpen(false);
           } else {
             setCurrentChatSession(null);
             setError("Please Select the category");
@@ -84,7 +89,7 @@ const ChatBox = () => {
           const res = await createChatSession(dealId, isGlobalData);
           setCurrentChatSession(res.id);
           setError(null);
-          setIsSidebarOpen(false)
+          setIsSidebarOpen(false);
         } catch (error) {
           setCurrentChatSession(null);
           setError("Try again later");
@@ -166,7 +171,16 @@ const ChatBox = () => {
         selectCategory,
         dealId
       );
-      if (response) notification.success({ message: response.message });
+      if (response) {
+        getWorkspace(dealId, selectCategory)
+          .then((data) => {
+            dispatch(setProjects(data));
+          })
+          .catch((e) => {
+            console.log(e);
+          });
+        notification.success({ message: response.message });
+      }
     } catch (error) {
       console.log("Error to add to current workspace:", error);
       setError("Failed to add to current workspace. Please try again.");
@@ -224,7 +238,7 @@ const ChatBox = () => {
           }`}
         >
           <div
-            className={`bg-[#24242A] shadow-lg rounded-lg p-4 mb-4 w-[32rem] h-[38rem]`}
+            className={`bg-[#24242A] shadow-lg rounded-lg p-4 mb-4 w-[24.5rem] h-screen`}
           >
             <ChatSidebar
               isSidebarOpen={isSidebarOpen}
@@ -259,10 +273,6 @@ const ChatBox = () => {
             </div>
             {!error && currentChatSession && (
               <div className="flex w-full flex-col gap-4">
-                <ChatActions
-                  handleAddToWorkspace={handleAddToWorkspace}
-                  messages={messages}
-                />
                 <ChatInput
                   inputMessage={inputMessage}
                   handleSendMessage={handleSendMessage}

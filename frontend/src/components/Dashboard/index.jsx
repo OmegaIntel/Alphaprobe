@@ -3,8 +3,8 @@ import { dashboardData } from "../../constants";
 import NewsBar from "../NewsBar";
 import { useNavigate } from "react-router-dom";
 import { Button, Tag } from "antd";
-import { useModal } from "../UploadFilesModal/ModalContext";
 import { getTasks } from "../../services/taskService";
+import { useSelector } from "react-redux";
 
 const Card = ({ title, description, buttonText, onClick }) => {
   return (
@@ -21,7 +21,7 @@ const Card = ({ title, description, buttonText, onClick }) => {
   );
 };
 const Dashboard = () => {
-  const { deals } = useModal();
+  const { deals } = useSelector((state) => state.deals);
   const [recentDeal, setRecentDeal] = useState();
   const [otherDeals, setOtherDeals] = useState([]);
   const [activeItems, setActiveItems] = useState([]);

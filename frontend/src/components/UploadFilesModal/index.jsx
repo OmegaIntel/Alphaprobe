@@ -5,25 +5,26 @@ import { message, notification } from "antd";
 import { uploadFiles } from "../../services/uploadService.js";
 import { useNavigate } from "react-router-dom";
 import { initialState, reducer } from "../../reducer/modalReducer.js";
-
-const UploadFilesModal = ({ isUploadModalVisible,
-  setIsUploadModalVisible,
-  isUpdateModalVisible,
-  setIsUpdateModalVisible,
-  dealId,
-  isPublic,
+import {
   setIsFileUploadModule,
-  isFileUploadModule,
-  deals
-}) => {
+  setIsUpdateModalVisible,
+  setIsUploadModalVisible,
+} from "../../redux/modalSlice.js";
+import { useDispatch, useSelector } from "react-redux";
+
+const UploadFilesModal = ({ isPublic = false }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const navigate = useNavigate();
   const [tempDealId, setTempDealId] = useState();
+  const reduxDispatch = useDispatch();
+  const { isUploadModalVisible, isUpdateModalVisible, isFileUploadModule } =
+    useSelector((state) => state.modal);
+  const { dealId, deals } = useSelector((state) => state.deals);
 
   const handleUploadOk = () => {
-    setIsUploadModalVisible(false);
+    reduxDispatch(setIsUploadModalVisible(false));
     if (state.selectedFile) {
-      setIsUpdateModalVisible(true);
+      reduxDispatch(setIsUpdateModalVisible(true));
     }
   };
   const handleUpdateOk = async () => {
@@ -40,7 +41,6 @@ const UploadFilesModal = ({ isUploadModalVisible,
     try {
       dispatch({ type: "START_UPLOAD" });
       const formData = new FormData();
-      console.log(tempDealId)
       formData.append("files", selectedFile.originFileObj);
       formData.append("deal_id", tempDealId || dealId);
       formData.append("name", baseName);
@@ -54,9 +54,9 @@ const UploadFilesModal = ({ isUploadModalVisible,
       if (response) {
         notification.success({ message: response.message });
         dispatch({ type: "RESET_STATE" });
-        setIsUpdateModalVisible(false);
-        if(!isPublic){
-          setIsFileUploadModule(false);
+        reduxDispatch(setIsUpdateModalVisible(false));
+        if (!isPublic) {
+          reduxDispatch(setIsFileUploadModule(false));
         }
         setTempDealId();
         if (!isPublic && !isFileUploadModule) {
@@ -64,24 +64,30 @@ const UploadFilesModal = ({ isUploadModalVisible,
         }
       }
     } catch (error) {
-      notification.error({
-        message: "Something went wrong!",
-        description:
-          "There was an error submitting your deal request. Please try again.",
-      });
+      if (error?.response?.data?.detail) {
+        notification.error({
+          message: error.response.data.detail,
+        });
+      } else
+        notification.error({
+          message: "Something went wrong!",
+          description:
+            "There was an error submitting your deal request. Please try again.",
+        });
       if (!isPublic && !isFileUploadModule) {
         navigate(`/projects/${dealId}`);
       }
+      reduxDispatch(setIsUpdateModalVisible(false));
     }
   };
 
   const handleUploadCancel = () => {
-    if(!isPublic){
-      setIsFileUploadModule(false);
+    if (!isPublic) {
+      reduxDispatch(setIsFileUploadModule(false));
     }
     setTempDealId();
     dispatch({ type: "RESET_STATE" });
-    setIsUploadModalVisible(false);
+    reduxDispatch(setIsUploadModalVisible(false));
     if (!isPublic && !isFileUploadModule) {
       navigate(`/projects/${dealId}`);
     }
@@ -89,9 +95,9 @@ const UploadFilesModal = ({ isUploadModalVisible,
 
   const handleUpdateCancel = () => {
     dispatch({ type: "RESET_STATE" });
-    setIsUpdateModalVisible(false);
-    if(!isPublic){
-      setIsFileUploadModule(false);
+    reduxDispatch(setIsUpdateModalVisible(false));
+    if (!isPublic) {
+      reduxDispatch(setIsFileUploadModule(false));
     }
     setTempDealId();
   };

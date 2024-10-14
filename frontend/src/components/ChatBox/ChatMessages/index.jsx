@@ -125,7 +125,7 @@ const ChatMessages = ({
           <React.Fragment key={index}>
             <div>
               <div
-                className={`py-4 px-[14px] w-fit max-w-[80%] text-sm leading-5 bg-[#001529] ${
+                className={`py-4 px-[14px] w-fit max-w-[90%] text-sm leading-5 bg-[#001529] ${
                   msg.role === "ai"
                     ? "rounded-[8px] rounded-bl-none"
                     : "rounded-[8px] rounded-br-none ml-auto"
@@ -137,8 +137,8 @@ const ChatMessages = ({
               </div>
             </div>
             <div
-              className={`${msg.role !== "ai" && "ml-auto"} ${
-                !msg.id && "hidden"
+              className={`${
+                (!msg.id || msg.role === "user") && "hidden"
               } flex flex-row gap-3`}
             >
               {likedMessages[msg.id] ? (

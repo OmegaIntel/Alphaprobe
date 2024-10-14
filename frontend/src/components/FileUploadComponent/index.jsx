@@ -11,14 +11,10 @@ import { initialState, reducer } from "../../reducer/modalReducer";
 import { truncateDescription } from "../../utils/truncateDescription";
 import UpdateModal from "../UploadFilesModal/UpdateModal";
 import DiligenceDocumentsModal from "../requestDocuments";
+import { useDispatch, useSelector } from "react-redux";
+import { setIsUploadModalVisible } from "../../redux/modalSlice";
 
-const FileUploadComponent = ({
-  dealId,
-  isUploadModalVisible,
-  setIsUploadModalVisible,
-  isUpdateModalVisible,
-  isPublic,
-}) => {
+const FileUploadComponent = ({ isPublic = false }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const [files, setFiles] = useState([]);
@@ -26,6 +22,14 @@ const FileUploadComponent = ({
   const [isLoading, setIsLoading] = useState(true);
   const [isUpdateModal, setIsUpdateModal] = useState(false);
   const [open, setOpen] = useState(false);
+
+  const { isUploadModalVisible, isUpdateModalVisible } = useSelector(
+    (state) => state.modal
+  );
+  const { dealId } = useSelector((state) => state.deals);
+
+  const reduxDispatch = useDispatch();
+
   useEffect(() => {
     const fetchDocumentData = async () => {
       try {
@@ -138,7 +142,9 @@ const FileUploadComponent = ({
           <h2 className="text-xl font-semibold">File Uploads</h2>
           <div className="flex flex-row gap-4">
             <button
-              onClick={() => setIsUploadModalVisible(!isUploadModalVisible)}
+              onClick={() =>
+                reduxDispatch(setIsUploadModalVisible(!isUploadModalVisible))
+              }
               className="bg-[#EAEAEA] text-[#303038] text-sm flex items-center gap-1 border-none p-1.5 rounded"
             >
               <PlusOutlined />
