@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Modal, Form, Input, Button, notification } from "antd";
 import { MoreOutlined } from "@ant-design/icons";
 import { updateDeal } from "../../services/dealService";
-import { useModal } from "../UploadFilesModal/ModalContext";
+import { useSelector } from "react-redux";
 
 const AddProgress = ({ progress, setProgress, setToggle, name }) => {
   const [visible, setVisible] = useState(false);
   const [form] = Form.useForm();
   const [submittable, setSubmittable] = useState(false);
 
-  const { dealId } = useModal();
+  const { dealId } = useSelector((state) => state.deals);
 
   const handleOpen = () => setVisible(true);
   const handleClose = () => {

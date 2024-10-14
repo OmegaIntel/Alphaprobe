@@ -5,19 +5,19 @@ import { PlusOutlined } from "@ant-design/icons";
 import "./TaskModal.css"; // Custom CSS for styling the modal
 import { ReactComponent as CrossIcon } from "../../icons/svgviewer-output_14.svg";
 import { createTask, editTasks } from "../../services/taskService";
-import { useModal } from "../UploadFilesModal/ModalContext";
 import { CloseOutlined } from "@ant-design/icons";
+import { useSelector } from "react-redux";
 
 // For accessibility, we need to bind the modal to the app element
 Modal.setAppElement("#root");
-const  {Option} = Select;
+const { Option } = Select;
 
 const TaskModal = ({ isOpen, onRequestClose, type, values, setToggle }) => {
   const [taskName, setTaskName] = useState();
   const [dueDate, setDueDate] = useState();
   const [description, setDescription] = useState();
   const [priority, setPriority] = useState("medium");
-  const { dealId } = useModal();
+  const { dealId } = useSelector((state) => state.deals);
 
   // Tag-related state
   const [tags, setTags] = useState([]);
@@ -29,9 +29,9 @@ const TaskModal = ({ isOpen, onRequestClose, type, values, setToggle }) => {
   const inputRef = useRef(null);
   const editInputRef = useRef(null);
 
-  useEffect(()=>{
+  useEffect(() => {
     setPriority("medium");
-  }, [isOpen])
+  }, [isOpen]);
 
   useEffect(() => {
     if (inputVisible) {
@@ -60,9 +60,16 @@ const TaskModal = ({ isOpen, onRequestClose, type, values, setToggle }) => {
   };
 
   const handleCreateTask = () => {
-    if (!taskName || !type || !dueDate || !priority || !description || !dealId) {
+    if (
+      !taskName ||
+      !type ||
+      !dueDate ||
+      !priority ||
+      !description ||
+      !dealId
+    ) {
       notification.error({ message: "Please fill in all required fields!" });
-      return
+      return;
     }
     const formattedDueDate = new Date(dueDate).toISOString();
     const formattedTags = tags.join(", ");
@@ -224,7 +231,7 @@ const TaskModal = ({ isOpen, onRequestClose, type, values, setToggle }) => {
                 backgroundColor: "#303038",
                 color: "#fff",
                 outline: "none",
-                height: "40px"
+                height: "40px",
               }}
               zIndexPopup={1000}
             >
@@ -255,14 +262,14 @@ const TaskModal = ({ isOpen, onRequestClose, type, values, setToggle }) => {
                   <Tag
                     key={tag}
                     closable={true}
-                    closeIcon={<CloseOutlined style={{ color: "white" }}/>}
+                    closeIcon={<CloseOutlined style={{ color: "white" }} />}
                     style={{
                       userSelect: "none",
                       backgroundColor: "#303038",
                       text: "white",
                       border: "none",
                       padding: "8px",
-                      color: "white"
+                      color: "white",
                     }}
                     onClose={() => handleCloseTag(tag)}
                   >
@@ -306,7 +313,7 @@ const TaskModal = ({ isOpen, onRequestClose, type, values, setToggle }) => {
                     border: "none",
                     padding: "8px",
                     cursor: "pointer",
-                    color: "white"
+                    color: "white",
                   }}
                   icon={<PlusOutlined className="text-white" />}
                   className="rounded text-base"

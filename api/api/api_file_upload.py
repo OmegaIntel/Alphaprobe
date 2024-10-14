@@ -53,6 +53,11 @@ async def upload_files(
     if not deal:
         raise HTTPException(status_code=400, detail="Deal not found")
 
+
+    existing_document = db.query(Document).filter(Document.deal_id == deal_id, Document.name == name).first()
+    if existing_document:
+        raise HTTPException(status_code=400, detail=f"A file with the name '{name}' already exists in this deal.")
+
     uploaded_documents = []
 
     for file in files:

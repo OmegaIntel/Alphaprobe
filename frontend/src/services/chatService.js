@@ -33,7 +33,7 @@ export const updateChatSessionType = async (id, type) => {
     );
     return response.data;
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 };
 export const deleteChatSession = async (dealId) => {
@@ -49,7 +49,7 @@ export const deleteChatSession = async (dealId) => {
     );
     return response.data;
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 };
 export const sendChatMessage = async (sessionId, dealId, message, isGlobal) => {
@@ -66,7 +66,7 @@ export const sendChatMessage = async (sessionId, dealId, message, isGlobal) => {
     );
     return response.data;
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 };
 export const addToWorkSpace = async (sessionId, type, dealId) => {
@@ -83,7 +83,7 @@ export const addToWorkSpace = async (sessionId, type, dealId) => {
     );
     return response.data;
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 };
 
@@ -99,7 +99,7 @@ export const fetchPreviousSessions = async (dealId) => {
     );
     return response.data;
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 };
 export const fetchPreviousMessages = async (sessionId) => {
@@ -111,10 +111,9 @@ export const fetchPreviousMessages = async (sessionId) => {
     });
     return response.data.messages;
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 };
-
 
 export const handleLikeDislike = async (messageId, likeDislikeStatus) => {
   try {
@@ -147,6 +146,6 @@ export const addMessageToWorkspace = async (messageId, type, dealId) => {
     );
     return response.data;
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 };

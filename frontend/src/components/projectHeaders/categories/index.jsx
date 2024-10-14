@@ -4,10 +4,11 @@ import { categoryList, subCategoryList } from "../../../constants";
 import FileUploadComponent from "../../FileUploadComponent";
 import { MoreOutlined } from "@ant-design/icons";
 import AddProgress from "../../progressModal";
-import { useModal } from "../../UploadFilesModal/ModalContext";
 import { Select } from "antd";
 import ProjectDetails from "../../projectDetails";
 import { getTasks } from "../../../services/taskService";
+import { useDispatch, useSelector } from "react-redux";
+import { setSelectedCategory } from "../../../redux/dealsSlice";
 
 const { Option } = Select;
 
@@ -23,26 +24,21 @@ const Categories = () => {
 
   const [toggle, setToggle] = useState(false);
 
-  const {
-    dealId,
-    deals,
-    todo,
-    setIsUploadModalVisible,
-    isUpdateModalVisible,
-    setSelectedCategory,
-  } = useModal();
+  const { dealId, deals, todos } = useSelector((state) => state.deals);
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    setSelectedCategory(activeCategory);
-  }, [activeCategory, setSelectedCategory]);
+    dispatch(setSelectedCategory(activeCategory));
+  }, [activeCategory, dispatch]);
 
   useEffect(() => {
     if (dealId) {
       const dealData = deals.find((deal) => deal.id === dealId);
       setProgress(dealData?.progress);
       setName(dealData?.name);
-      if (todo && todo.length > 0) {
-        const groupedTasks = todo.reduce((acc, task) => {
+      if (todos && todos.length > 0) {
+        const groupedTasks = todos.reduce((acc, task) => {
           const status = task.status;
           if (!acc[status]) {
             acc[status] = [];
@@ -65,7 +61,7 @@ const Categories = () => {
           });
       }
     }
-  }, [dealId, toggle, todo, deals]);
+  }, [dealId, toggle, todos, deals]);
 
   return (
     <>
@@ -108,13 +104,7 @@ const Categories = () => {
           {activeCategory === "Action Items" ? (
             <DilligenceContainer />
           ) : activeCategory === "Documents" ? (
-            <FileUploadComponent
-              dealId={dealId}
-              isUploadModalVisible={isUpdateModalVisible}
-              setIsUploadModalVisible={setIsUploadModalVisible}
-              isUpdateModalVisible={isUpdateModalVisible}
-              setSelectedCategory={setSelectedCategory}
-            />
+            <FileUploadComponent />
           ) : (
             <ProjectDetails
               isActiveCategory={activeCategory}
