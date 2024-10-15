@@ -1,4 +1,5 @@
-from loading_utils import new_lines_to_list, get_initial_pages
+from loading_utils import new_lines_to_list, extract_pages
+import os
 
 
 def test_new_lines_to_list():
@@ -27,8 +28,8 @@ def test_new_lines_to_list():
     assert isinstance(dd['industry_summary']['key_trends'], list)
 
 
-def test_initial_pdf_pages():
+def test_extract_pages():
     filename = 'IndustrySource/Misc/study_id66974_in-depth-report-industry-40.pdf'
-    pmax=20
-    result = get_initial_pages(filename, pmax=pmax)
-    print(result)
+    with extract_pages(filename, first_page=5, last_page=15) as filename:
+        assert os.path.exists(filename)
+    assert not os.path.exists(filename)

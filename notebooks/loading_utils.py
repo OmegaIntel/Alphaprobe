@@ -1,5 +1,8 @@
 """A few utils helpful for loading."""
 
+import os
+from contextlib import contextmanager
+
 from pypdf import PdfWriter, PdfReader
 
 
@@ -21,22 +24,27 @@ def new_lines_to_list(obj: object) -> object:
     return obj
 
 
-def get_initial_pages(pdf_doc_path: str, pmin=0, pmax=5) -> str:
-    """Extract a specific number of pages from a PDF doc"""
+
+@contextmanager
+def extract_pages(pdf_doc_path: str, first_page=0, last_page=5):
+    """Extract specific consecutive pages from a PDF doc"""
     with open(pdf_doc_path, "rb") as f:
-      inputpdf = PdfReader(f)
-      output = PdfWriter()
+        inputpdf = PdfReader(f)
+        output = PdfWriter()
 
-      pmin = min(pmin, len(inputpdf.pages))
-      pmax = min(pmax, len(inputpdf.pages))
+        first_page = min(first_page, len(inputpdf.pages))
+        last_page = min(last_page, len(inputpdf.pages))
 
-      doc_root = pdf_doc_path[:-4]
-      target = f'{doc_root}-{pmin}:{pmax}.pdf'
+        doc_root = pdf_doc_path[:-4]
+        target = f'{doc_root}-{first_page}:{last_page}.pdf'
 
-      for i in range(pmin, pmax):
-          output.add_page(inputpdf.pages[i])
+        for i in range(first_page, last_page+1):
+            output.add_page(inputpdf.pages[i])
 
-      with open(target, "wb") as outputStream:
-          output.write(outputStream)
+        with open(target, "wb") as outputStream:
+            output.write(outputStream)
 
-      return target
+        try:
+            yield target
+        finally:
+            os.remove(target)
