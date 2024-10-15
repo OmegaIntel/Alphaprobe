@@ -26,19 +26,19 @@ def new_lines_to_list(obj: object) -> object:
 
 
 @contextmanager
-def extract_pages(pdf_doc_path: str, first_page=0, last_page=5):
+def extract_pages(pdf_doc_path: str, first_page: int, last_page: int):
     """Extract specific consecutive pages from a PDF doc"""
     with open(pdf_doc_path, "rb") as f:
         inputpdf = PdfReader(f)
         output = PdfWriter()
 
-        first_page = min(first_page, len(inputpdf.pages))
-        last_page = min(last_page, len(inputpdf.pages))
+        first_page = max(min(first_page, len(inputpdf.pages)), 0)
+        last_page = max(min(last_page+1, len(inputpdf.pages)), 0)
 
         doc_root = pdf_doc_path[:-4]
         target = f'{doc_root}-{first_page}:{last_page}.pdf'
 
-        for i in range(first_page, last_page+1):
+        for i in range(first_page, last_page):
             output.add_page(inputpdf.pages[i])
 
         with open(target, "wb") as outputStream:
