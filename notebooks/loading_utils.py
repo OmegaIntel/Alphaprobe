@@ -48,3 +48,9 @@ def extract_pages(pdf_doc_path: str, first_page: int, last_page: int):
             yield target
         finally:
             os.remove(target)
+
+
+def number_of_pages(pdf_doc_path: str) -> int:
+    with open(pdf_doc_path, "rb") as f:
+        inputpdf = PdfReader(f)
+        return len(inputpdf.pages)
