@@ -60,7 +60,7 @@ async def upload_files(
         original_filename = file.filename
         existing_document = db.query(Document).filter(Document.deal_id == deal_id, Document.original_filename == original_filename).first()
         if existing_document:
-            raise HTTPException(status_code=400, detail=f"A file with the name '{name}' already exists in this deal.")
+            raise HTTPException(status_code=400, detail=f"A file with the name '{original_filename}' already exists in this deal.")
         sanitized_filename = original_filename.replace(" ", "_").replace("/", "_").replace("\\", "_")
         timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
         
