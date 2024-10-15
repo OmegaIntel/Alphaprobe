@@ -1,8 +1,9 @@
-import axiosInstance from "./axiosConfig";
+import axios from "axios";
+import { API_BASE_URL } from ".";
 
 export const login = async (formData) => {
   try {
-    const response = await axiosInstance.post(`/token`, formData, {
+    const response = await axios.post(`${API_BASE_URL}/api/token`, formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },

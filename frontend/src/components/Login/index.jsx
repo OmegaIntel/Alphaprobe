@@ -39,12 +39,12 @@ const Login = ({ setToken }) => {
         notification.error({
           message: error.response.data.detail,
         });
-      }
-      notification.error({
-        message: "Something went wrong!",
-        description:
-          "There was an error submitting your deal request. Please try again.",
-      });
+      } else
+        notification.error({
+          message: "Something went wrong!",
+          description:
+            "There was an error submitting your deal request. Please try again.",
+        });
     }
   };
 
