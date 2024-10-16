@@ -1,11 +1,16 @@
 import boto3
 import os
 import json
+from typing import List, Dict
 
 from aws_bedrock.templates.common import build_aws_template
 from doc_parser.pdf_utils import extract_pages
+
 from aws_bedrock.templates.basic_info import TEMPLATE as BASIC_TEMPLATE
+from aws_bedrock.templates.industry_names_codes import TEMPLATE as INDUSTRIES_TEMPLATE
+
 from aws_bedrock.prompts.info_extraction import INFO_EXTRACTION_PROMPT
+from aws_bedrock.prompts.matching_qa_to_industries import MATCHING_QA_TO_INDUSTRIES_PROMPT
 
 
 from dotenv import load_dotenv
@@ -40,7 +45,7 @@ def get_raw_pdf_part(filename: str) -> dict:
         }
 
 
-def response_to_template(filename: str, template: dict, prompt: str) -> dict:
+def response_to_doc_template(filename: str, template: dict, prompt: str) -> dict:
 
     initial_message = {
         "role": "user",
@@ -92,7 +97,7 @@ def info_from_doc_template(filename: str, template: dict, prompt: str) -> dict:
     results = []
     for part in full_templates:
         try:
-            results.append(response_to_template(filename, part, prompt))
+            results.append(response_to_doc_template(filename, part, prompt))
         except Exception as e:
             print("EXCEPTION IN GETTING RESPONSE")
             print(str(e))
@@ -109,3 +114,57 @@ def extract_basic_info(filename: str) -> dict:
     with extract_pages(filename, first_page=0, last_page=10) as pages_filename:
         result = info_from_doc_template(filename=pages_filename, template=BASIC_TEMPLATE, prompt=INFO_EXTRACTION_PROMPT)
     return result
+
+####################
+# TODO: separate the two and unify the other two
+####################
+
+def response_to_data_template(data: object, template: dict, prompt: str) -> dict:
+
+    prompt += '\n"""\n' + json.dumps(data) + '\n"""\n'
+
+    initial_message = {
+        "role": "user",
+        "content": [
+            {
+                "text": prompt,
+            },
+        ],
+    }
+
+    # initial_message['content'].append(get_raw_pdf_part(filename))
+
+    tool_list = [{
+        "toolSpec": template
+    }]
+    response = bedrock.converse(
+        modelId="anthropic.claude-3-sonnet-20240229-v1:0",
+        messages=[initial_message],
+        inferenceConfig={
+            "temperature": 0
+        },
+        toolConfig={
+            "tools": tool_list,
+            "toolChoice": {
+                "tool": {
+                    "name": "info_extract"
+                }
+            }
+        }
+    )
+    core_response = response['output']['message']['content'][0]['toolUse']['input']
+    if 'properties' in core_response:
+        core_response: dict = core_response['properties']
+    for k, v in core_response.items():
+        if isinstance(v, str) and v[0] in '{[' and v[-1] in ']}':
+            try:
+                core_response[k] = json.loads(v)
+            except Exception:
+                pass
+
+    return core_response
+
+
+def matching_industry_names_codes_from_qa(qa: List[Dict[str, str]]) -> List[Dict[str, str]]:
+    """Return list of matching industries with their NAICS codes."""
+    return response_to_data_template(qa, template=INDUSTRIES_TEMPLATE, prompt=MATCHING_QA_TO_INDUSTRIES_PROMPT)
