@@ -1,5 +1,5 @@
 import pandas as pd
-from aws_bedrock.llm_response import extract_basic_info, matching_industry_names_codes_from_qa
+from llm_models.aws_bedrock.llm_response import extract_basic_info, matching_industry_names_codes_from_qa
 
 
 def test1():
