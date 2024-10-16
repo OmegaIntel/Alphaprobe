@@ -2,7 +2,10 @@ import boto3
 import os
 import json
 
-from aws_bedrock.templates_common import build_aws_template
+from aws_bedrock.templates.common import build_aws_template
+from doc_parser.pdf_utils import extract_pages
+from aws_bedrock.templates.basic_info import TEMPLATE as BASIC_TEMPLATE
+from aws_bedrock.prompts.info_extraction import INFO_EXTRACTION_PROMPT
 
 
 from dotenv import load_dotenv
@@ -99,3 +102,10 @@ def info_from_doc_template(filename: str, template: dict, prompt: str) -> dict:
         total.update(result)
 
     return total
+
+
+def extract_basic_info(filename: str) -> dict:
+    """Extract basic info based on the template and initial part of the file."""
+    with extract_pages(filename, first_page=0, last_page=10) as pages_filename:
+        result = info_from_doc_template(filename=pages_filename, template=BASIC_TEMPLATE, prompt=INFO_EXTRACTION_PROMPT)
+    return result
