@@ -1,7 +1,7 @@
 import boto3
 import os
 import json
-from typing import List, Dict, Union
+from typing import List, Dict
 
 from llm_models.aws_bedrock.templates.common import build_aws_template
 from doc_parser.pdf_utils import extract_pages
