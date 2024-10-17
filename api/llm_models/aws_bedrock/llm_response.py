@@ -48,6 +48,9 @@ def get_raw_pdf_part(filename: str) -> dict:
 def response_to_template_prompt(template: dict, prompt: str, filename: str=None, data: object=None) -> dict:
     """In addition, can submit PDF file and/or data."""
 
+    if data:
+        prompt += f"\n'''\n{json.dumps(data, indent=2)}\n'''\n"
+
     initial_message = {
         "role": "user",
         "content": [
@@ -57,11 +60,8 @@ def response_to_template_prompt(template: dict, prompt: str, filename: str=None,
         ],
     }
 
-    if filename:
+    if filename and filename.endswith('.pdf'):
         initial_message['content'].append(get_raw_pdf_part(filename))
-
-    if data:
-        prompt += f"\n'''\n{json.dumps(data)}\n'''\n"
 
     print("USING PROMPT")
     print(prompt)
@@ -126,9 +126,5 @@ def extract_basic_info(filename: str) -> dict:
 
 def matching_industry_names_codes_from_qa(qa: List[Dict[str, str]]) -> List[Dict[str, str]]:
     """Return list of matching industries with their NAICS codes."""
-    print(json.dumps(qa, indent=2))
-    filename = None
-    # filename = 'NAICS.pdf'
     return info_from_template_prompt(
-        template=INDUSTRIES_TEMPLATE, prompt=MATCHING_QA_TO_INDUSTRIES_PROMPT,
-        filename=None, data=None)
+        template=INDUSTRIES_TEMPLATE, prompt=MATCHING_QA_TO_INDUSTRIES_PROMPT, data=qa)
