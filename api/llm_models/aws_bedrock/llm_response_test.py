@@ -15,8 +15,17 @@ def test1():
     assert result == expected
 
 
-def test2():
+def test2_1():
     filename = 'test-data/related-industries-1.csv'
+    df = pd.read_csv(filename)
+    rows = df.to_dict(orient='records')
+    result = matching_industry_names_codes_from_qa(rows)
+    print("RESULT")
+    print(result)
+
+
+def test2_2():
+    filename = 'test-data/related-industries-2.csv'
     df = pd.read_csv(filename)
     rows = df.to_dict(orient='records')
     result = matching_industry_names_codes_from_qa(rows)
