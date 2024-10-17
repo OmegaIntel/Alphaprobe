@@ -203,6 +203,11 @@ def get_chat_sessions(id: Optional[str] = Form(None), type: str = Form(None), db
     db.refresh(chat_sessions)
     return chat_sessions
 
+@chat_router.get("/api/check_collection")
+def check_admin_collection(collection_name: str, current_user: UserModelSerializer = Depends(get_current_user)):
+    collection = weaviate_handler.get_collection(collection_name)
+    return {"message": collection}
+
 @chat_router.post("/api/workspace/add/{session_id}")
 async def add_to_workspace(type: str, session_id: str,deal_id: str = Form(...), current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     messages = db.query(ChatMessage).filter(ChatMessage.session_id == session_id).order_by(asc(ChatMessage.created_at)).all()
