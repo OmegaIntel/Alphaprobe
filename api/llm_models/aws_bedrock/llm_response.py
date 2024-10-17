@@ -1,3 +1,8 @@
+"""
+Gives examples on how to extract a few pieces of information from AWS hosted Claude,
+with and without PDF file input.
+"""
+
 import boto3
 import os
 import json
@@ -31,7 +36,7 @@ bedrock = boto3.client(
 
 
 def get_raw_pdf_part(filename: str) -> dict:
-    """This works best and parses quickly."""
+    """Use raw PDF as input to the LLM."""
     with open(filename, 'rb') as f:
         content = f.read()
         return {
@@ -46,7 +51,8 @@ def get_raw_pdf_part(filename: str) -> dict:
 
 
 def response_to_template_prompt(template: dict, prompt: str, filename: str=None, data: object=None) -> dict:
-    """In addition, can submit PDF file and/or data."""
+    """In addition to info extraction template and a prompt, you can submit PDF file and/or data."""
+    # Note: data is assumed to be a JSON-serializable object that has essential info.
 
     if data:
         prompt += f"\n'''\n{json.dumps(data, indent=2)}\n'''\n"
@@ -60,15 +66,18 @@ def response_to_template_prompt(template: dict, prompt: str, filename: str=None,
         ],
     }
 
+    # TODO: process other file types
     if filename and filename.endswith('.pdf'):
         initial_message['content'].append(get_raw_pdf_part(filename))
 
-    print("USING PROMPT")
-    print(prompt)
+    # for debugging purposes only
+    # print("USING PROMPT")
+    # print(prompt)
 
     tool_list = [{
         "toolSpec": template
     }]
+    # TODO: replace with a newer version if available
     response = bedrock.converse(
         modelId="anthropic.claude-3-sonnet-20240229-v1:0",
         messages=[initial_message],
@@ -85,6 +94,8 @@ def response_to_template_prompt(template: dict, prompt: str, filename: str=None,
         }
     )
     core_response = response['output']['message']['content'][0]['toolUse']['input']
+
+    # Fix JSON output that sometimes happens
     if 'properties' in core_response:
         core_response: dict = core_response['properties']
     for k, v in core_response.items():
@@ -120,7 +131,7 @@ def info_from_template_prompt(template: dict, prompt: str, filename: str=None, d
 def extract_basic_info(filename: str) -> dict:
     """Extract basic info based on the template and initial part of the file."""
     with extract_pages(filename, first_page=0, last_page=10) as pages_filename:
-        result = info_from_template_prompt(pages_filename, template=BASIC_TEMPLATE, prompt=INFO_EXTRACTION_PROMPT)
+        result = info_from_template_prompt(template=BASIC_TEMPLATE, prompt=INFO_EXTRACTION_PROMPT, filename=pages_filename)
     return result
 
 
