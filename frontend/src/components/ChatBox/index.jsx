@@ -4,6 +4,7 @@ import { fetchAllDocument } from "../../services/uploadService";
 import {
   addMessageToWorkspace,
   addToWorkSpace,
+  checkAdminCollection,
   createChatSession,
   deleteChatSession,
   fetchPreviousMessages,
@@ -35,6 +36,7 @@ const ChatBox = () => {
   const [inputMessage, setInputMessage] = useState("");
   const [previousSessions, setPreviousSessions] = useState([]);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [adminCollectionExists, setAdminCollectionExists] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -151,8 +153,8 @@ const ChatBox = () => {
     }
   };
 
-  useEffect(()=>{
-    updateChatSessionType(currentChatSession, selectCategory).then().catch((e)=>console.log(e));
+  useEffect(() => {
+    updateChatSessionType(currentChatSession, selectCategory).then().catch((e) => console.log(e));
   }, [selectCategory])
 
   const handleAddToWorkspace = async () => {
@@ -227,6 +229,10 @@ const ChatBox = () => {
     }
   }, [dealId, isSidebarOpen, currentChatSession]);
 
+  useEffect(() => {
+    checkAdminCollection("Dadmin").then((data) => {setAdminCollectionExists(data.message? true: false)}).catch((e) => { console.log(e) })
+  }, [isOpen])
+
   return (
     <>
       <button
@@ -238,9 +244,8 @@ const ChatBox = () => {
       </button>
       <div className="fixed top-[7%] right-2 z-50 flex flex-col items-end">
         <div
-          className={`chatbox-container ${
-            isOpen ? "chatbox-open" : "chatbox-closed"
-          }`}
+          className={`chatbox-container ${isOpen ? "chatbox-open" : "chatbox-closed"
+            }`}
         >
           <div
             className={`bg-[#24242A] shadow-lg rounded-lg p-4 mb-4 w-[24.5rem] h-screen`}
@@ -257,15 +262,15 @@ const ChatBox = () => {
               setIsGlobalData={setIsGlobalData}
               toggleChat={toggleChat}
               toggleSidebar={toggleSidebar}
+              adminCollectionExists={adminCollectionExists}
             />
             {error && (
               <Alert message={error} type="warning" showIcon className="mt-4" />
             )}
             <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-[#36363F]"></hr>
             <div
-              className={`chats-container ${
-                messages.length === 0 && "justify-center"
-              }`}
+              className={`chats-container ${messages.length === 0 && "justify-center"
+                }`}
             >
               <ChatMessages
                 currentChatSession={currentChatSession}
