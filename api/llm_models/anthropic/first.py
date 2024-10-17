@@ -12,7 +12,8 @@ client = anthropic.Anthropic(
     api_key=os.getenv("ANTHROPIC_API_KEY"),
 )
 
-qa = pd.read_csv('test-data/related-industries-1.csv')
+# qa = pd.read_csv('test-data/related-industries-1.csv')
+qa = pd.read_csv('../test-data/related-industries-2.csv')
 rows = qa.to_dict(orient='records')
 
 TEXT = f"""
