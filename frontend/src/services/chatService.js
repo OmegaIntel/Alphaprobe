@@ -36,6 +36,24 @@ export const updateChatSessionType = async (id, type) => {
     throw error;
   }
 };
+
+export const checkAdminCollection = async (collection_name, type) => {
+  try {
+    const response = await axiosInstance.get(
+      `/check_collection?collection_name=${collection_name}`,
+      {
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
 export const deleteChatSession = async (dealId) => {
   try {
     const response = await axiosInstance.delete(

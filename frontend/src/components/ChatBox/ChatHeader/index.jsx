@@ -1,12 +1,13 @@
 import React from "react";
 import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
-import { Switch } from "antd";
+import { Switch, Tooltip } from "antd";
 
 const ChatHeader = ({
   toggleSidebar,
   isGlobalData,
   setIsGlobalData,
   toggleChat,
+  adminCollectionExists
 }) => (
   <div className="p-1 flex flex-col justify-center gap-2 items-center">
     <div className="flex justify-between w-full">
@@ -25,11 +26,14 @@ const ChatHeader = ({
     <div className="flex items-center w-full justify-start">
       <div className="flex justify-center items-center gap-4">
         <label className="text-white text-sm">Global Data</label>
-        <Switch
-          checked={isGlobalData}
-          onChange={(checked) => setIsGlobalData(checked)}
-          className="ml-2"
-        />
+        <Tooltip title={!adminCollectionExists?"No docs uploaded for global data!": ""}>
+          <Switch
+            checked={isGlobalData}
+            onChange={(checked) => setIsGlobalData(checked)}
+            className="ml-2"
+            disabled={!adminCollectionExists}
+          />
+        </Tooltip>
       </div>
     </div>
   </div>
