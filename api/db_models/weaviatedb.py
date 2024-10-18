@@ -127,4 +127,14 @@ class WeaviateManager:
         temp = self.client.collections.delete(collection_name)
         
         return "Collection deleted successfully!"
-        
+    
+
+    def get_collection(self, collection_name: str) -> bool:
+
+        try:
+            collection_object = self.client.collections.get(collection_name)
+            if collection_object :
+                return True
+        except Exception as e:
+            print(e)
+            return False
