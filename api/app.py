@@ -19,6 +19,7 @@ from api.api_temp_chat import temp_chat_router
 from api.api_calendly import calendly_router
 from api.api_news import new_router
 from api.api_magic_link import magic_link_router
+from api.api_related_industries import related_industries_router
 
 app = FastAPI(docs_url="/api/docs", openapi_url="/api/openapi.json")
 
@@ -53,6 +54,7 @@ app.include_router(temp_chat_router)
 app.include_router(calendly_router)
 app.include_router(new_router)
 app.include_router(magic_link_router)
+app.include_router(related_industries_router)
 
 if __name__ == "__main__":
     uvicorn.run("api.app:app", host="0.0.0.0", port=8000, reload=True, loop='asyncio')
