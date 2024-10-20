@@ -137,5 +137,7 @@ def extract_basic_info(filename: str) -> dict:
 
 def matching_industry_names_codes_from_qa(qa: List[Dict[str, str]]) -> List[Dict[str, str]]:
     """Return list of matching industries with their NAICS codes."""
-    return info_from_template_prompt(
+    llm_result = info_from_template_prompt(
         template=INDUSTRIES_TEMPLATE, prompt=MATCHING_QA_TO_INDUSTRIES_PROMPT, data=qa)
+    # the outer key is the same as in the template.
+    return llm_result.get('industry_name_code', [])
