@@ -4,11 +4,11 @@ from typing import List
 from copy import deepcopy
 
 
-def build_aws_template(template_parts: List[dict]) -> List[dict]:
+def build_aws_template(template_parts: List[dict], tool_name: str="info_extract") -> List[dict]:
     """Return a list of templates, each can be used for extracting appropriate info."""
     out = []
     _ROOT = {
-        "name": 'info_extract',
+        "name": tool_name,
         "inputSchema": {
             "json": {
                 "type": "object",
