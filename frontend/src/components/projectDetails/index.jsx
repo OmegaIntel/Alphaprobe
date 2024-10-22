@@ -22,6 +22,7 @@ import {
 } from "../../services/currentChecklist";
 import { useDispatch, useSelector } from "react-redux";
 import { setProjects } from "../../redux/dealsSlice";
+import { ThesisForm } from "../InvestmentThesis/ThesisForm";
 
 const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
   const { dealId, projects } = useSelector((state) => state.deals);
@@ -261,10 +262,35 @@ const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
     dispatch(setProjects(updatedProjects));
   };
 
+  const questions = [
+    { id: 1, question: "What is your name?", type: "text" },
+    {
+      id: 2,
+      question: "What is your favorite color?",
+      type: "select",
+      options: ["Red", "Blue", "Green", "Other"],
+    },
+    { id: 3, question: "What is your age?", type: "text" },
+    { id: 4, question: "What is your name?", type: "text" },
+    {
+      id: 5,
+      question: "What is your favorite color?",
+      type: "select",
+      options: ["Red", "Blue", "Green", "Other"],
+    },
+    { id: 6, question: "What is your name?", type: "text" },
+    {
+      id: 7,
+      question: "What is your favorite color?",
+      type: "select",
+      options: ["Red", "Blue", "Green", "Red", "Other"],
+    },
+  ];
+
   return (
     <>
       <div className="flex-grow overflow-y-auto bg-[#151518] ml-1">
-        <Button
+        {/* <Button
           className="absolute bottom-5 right-[27vw] z-10 cursor-pointer"
           onClick={addProject}
           icon={<PlusCircleFilled style={{ fontSize: "30px" }} />}
@@ -281,7 +307,10 @@ const ProjectDetails = ({ isActiveCategory, isActiveSubCategory }) => {
               handleInputChange={handleInputChange}
             />
           ))}
-        </div>
+        </div> */}
+        {/* <div className="mt-10 p-3">
+          <ThesisForm questions={questions} />
+        </div> */}
       </div>
     </>
   );
