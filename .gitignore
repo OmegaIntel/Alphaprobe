@@ -128,3 +128,6 @@ cython_debug/
 
 # VS Code
 .vscode/
+
+# all rag outputs
+notebooks/rag_outputs/*
