@@ -71,6 +71,7 @@ if os.path.exists(JSON_PATH):
     loginfo(f"FOUND EXISTING SUMMARY {JSON_PATH}, SKIPPING")
 
 PAGES_PICKLE_PATH = os.path.join(OUTPUT_FOLDER, f"_{model_id}_pages.pkl")
+PAGE_MAPPING_PICKLE_PATH = os.path.join(OUTPUT_FOLDER, "page_mappings.pkl")
 
 
 # https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/bedrock-runtime.html
@@ -420,19 +421,19 @@ def extract_info_for_all_sections(page_mapping_list, full_templates, docs):
 
 sections_names = ["Industry at a Glance", "Supply Chain", "Competitive Landscape", "Costs & Operations", "Questions for Owners", "Datatables & Glossary"]
 
-page_mapping, page_response_raw = get_page_numbers_for_sections(all_titles)
+if os.path.exists(PAGE_MAPPING_PICKLE_PATH):
+    with open(PAGE_MAPPING_PICKLE_PATH, 'rb') as f:
+        page_mapping, page_response_raw = pickle.load(f)
+else:
+    page_mapping, page_response_raw = get_page_numbers_for_sections(all_titles)
+    with open(PAGE_MAPPING_PICKLE_PATH, "wb") as f:
+        pickle.dump((page_mapping, page_response_raw), f)
 
-
-
-# print(page_mapping)
 page_mapping_list = get_page_mapping_list(page_mapping, sections_names)
-# print(page_mapping_list)
-
 
 template_parts = IBIS_SUMMARY_TEMPLATE['data']
 full_templates = build_aws_template(template_parts)
 
-pickle.dump((page_mapping, page_response_raw), open(f"{OUTPUT_FOLDER}/page_mappings.pkl", "wb"))
 # print(full_templates)
 section_summaries, raw_responses = extract_info_for_all_sections(page_mapping_list, full_templates, docs)
 
