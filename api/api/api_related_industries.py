@@ -4,7 +4,7 @@ from fastapi import APIRouter
 from pydantic import BaseModel
 from typing import List
 
-import random
+from llm_models.aws_bedrock.llm_response import matching_industry_names_codes_from_qa
 
 
 class UserQR(BaseModel):
@@ -135,7 +135,9 @@ _FAKE_LIST = [
 async def industries_for_thesis(request: DataModelIn):
     """Takes users Questions and Answers and returns a list of industries and their codes."""
     user_qr = request.data
+    llm_input = []
     for elt in user_qr:
         assert elt.question, elt.response
-    sample = random.sample(_FAKE_LIST, 10)
-    return DataModelOut(result=sample)
+        llm_input.append({'question': elt.question, 'answer': elt.response})
+    result = matching_industry_names_codes_from_qa(llm_input)
+    return DataModelOut(result=result)
