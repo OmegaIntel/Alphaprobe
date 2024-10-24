@@ -3,10 +3,31 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
 import json
+import s3_tools
+from s3_tools.objects.read import read_object_to_text
 
 from typing import List, Dict
 
 import pandas as pd
+
+from doc_parser.pdf_utils import doc_id
+
+# for testability
+from dotenv import load_dotenv
+load_dotenv()
+
+S3_STORAGE_BUCKET = 'omega-intel-doc-storage'
+IBIS_SUMMARY_ROOT = 'Summaries/IBIS-reports'
+
+
+# Define the request and response models
+class ChatRequest(BaseModel):
+    query: str  # User's message
+    chat_id: str  # The document context ID
+
+class ChatResponse(BaseModel):
+    response: str
+
 
 IBIS_MAP_FILENAME = 'api/data/IBIS NAICS Code mapping.xlsx'
 IBIS_MAP = pd.read_excel(IBIS_MAP_FILENAME)
@@ -22,6 +43,19 @@ def ibis_industries(code: str, name: str) -> List[str]:
     if names:
         return names
     return [name]
+
+
+def summary_for_name(name: str) -> Dict:
+    """Return summary from S3 if it exists, else return None."""
+    doc_path = f'{IBIS_SUMMARY_ROOT}/{doc_id(name)}/section_summaries.json'
+    if s3_tools.object_exists(S3_STORAGE_BUCKET, doc_path):
+        text = read_object_to_text(S3_STORAGE_BUCKET, doc_path)
+        result = json.loads(text)
+        if isinstance(result, list):
+            result = result[0]
+    else:
+        result = {}
+    return result
 
 
 class Industry(BaseModel):
