@@ -54,6 +54,7 @@ def summary_for_name(name: str) -> Dict:
         if isinstance(result, list):
             result = result[0]
     else:
+        print("THE OBJECT DOES NOT EXIST", doc_path)
         result = {}
     return result
 
@@ -74,18 +75,6 @@ class DataModelOut(BaseModel):
 industry_summary_router = APIRouter()
 
 
-def mock_summaries() -> List[dict]:
-    out = []
-    filenames = ['api/data/atv-manufacturing.json', 'api/data/audiobooks.json']
-    for filename in filenames:
-        with open(filename, 'r') as fp:
-            dd = json.load(fp)
-            if isinstance(dd, list):
-                dd = dd[0]
-            out.append(dd)
-    return out
-
-
 @industry_summary_router.post("/api/industry-summary", response_model=DataModelOut)
 async def industry_summary_for_thesis(request: DataModelIn):
     """Returns industry summary based on the source (IBIS to start with)."""
@@ -95,13 +84,7 @@ async def industry_summary_for_thesis(request: DataModelIn):
     industry_names = ibis_industries(code, name)
     assert industry_names
 
-    summaries = mock_summaries()
-    if len(summaries) < len(industry_names):
-        summaries = len(industry_names) * summaries
+    summaries = [summary_for_name(name) for name in industry_names]
+    summaries = [summ for summ in summaries if summ]
 
-    result = []
-    for i, industry_name in enumerate(industry_names):
-        assert industry_name
-        result.append(summaries[i])
-
-    return DataModelOut(result=result)
+    return DataModelOut(result=summaries)
