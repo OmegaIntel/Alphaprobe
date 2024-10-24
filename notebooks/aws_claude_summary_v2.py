@@ -20,7 +20,7 @@ from Templates.ibis_aws_summary_template_all import TEMPLATE as IBIS_SUMMARY_TEM
 from Templates.aws_section_page_number_template import TEMPLATE as page_number_template
 from Templates.aws_templates_common import build_aws_template
 
-from api.doc_parser.pdf_utils import extract_pages, number_of_pages
+from api.doc_parser.pdf_utils import extract_pages, number_of_pages, split_dict_into_list
 
 import logging
 logging.basicConfig(
@@ -69,6 +69,7 @@ os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 JSON_PATH = f"{OUTPUT_FOLDER}/section_summaries.json"
 if os.path.exists(JSON_PATH):
     loginfo(f"FOUND EXISTING SUMMARY {JSON_PATH}, SKIPPING")
+    sys.exit(0)
 
 PAGES_PICKLE_PATH = os.path.join(OUTPUT_FOLDER, f"_{model_id}_pages.pkl")
 PAGE_MAPPING_PICKLE_PATH = os.path.join(OUTPUT_FOLDER, "page_mappings.pkl")
@@ -181,13 +182,14 @@ def sequentially_process_pdf(filename, np=1):
 
     results = []
     skipped_pages = []
+    MAX_FAILURES = 3
     for i in range(0, total_pages, np):
         loginfo(f"Processing pages {i} to {i+np-1}")
         with extract_pages(filename, first_page=i, last_page=i+np-1) as pages_filename:
             failures = 0
             success = False
             result = None
-            while (not success) and (failures < 3):
+            while (not success) and (failures < MAX_FAILURES):
                 try:
                     result = info_from_doc_template(filename=pages_filename, template=MARKDOWN_TEMPLATE, prompt=MARKDOWN_PROMPT)
                     success = True
@@ -198,11 +200,11 @@ def sequentially_process_pdf(filename, np=1):
                     failures += 1
                     loginfo(f"Retrying in {SLEEP_FAILURE} seconds.")
                     time.sleep(SLEEP_FAILURE)
-                    if failures == 3:
+                    if failures == MAX_FAILURES:
                         result = {
                             'markdown': "**skipped**",
                         }
-                        loginfo(f"Failed to process page {i+1} after 3 attempts.")
+                        loginfo(f"Failed to process page {i+1} after {MAX_FAILURES} attempts.")
                         skipped_pages.append(i+1)
             results.append(result)
 
@@ -229,7 +231,7 @@ else:
     pickle.dump(parsed_result, open(PAGES_PICKLE_PATH, 'wb'))
 
 
-def response_to_text(content_text: str, template: dict, main_prompt: str, system_prompt: str, final_prompt: str, tool_name: str="info_extract") -> dict:
+def response_to_text(content_text: str, template: dict, main_prompt: str, tool_name: str="info_extract") -> dict:
     initial_message = {
         "role": "user",
         "content": [
@@ -240,8 +242,6 @@ def response_to_text(content_text: str, template: dict, main_prompt: str, system
     }
 
     initial_message['content'].append({"text": content_text})
-    if final_prompt is not None:
-        initial_message['content'].append({"text": final_prompt})
 
     tool_list = [{
         "toolSpec": template
@@ -325,8 +325,8 @@ def get_page_numbers_for_sections(all_titles: List[List[str]]):
     response = None
     response_raw = None
     while num_failed < 5:
-        try:     
-            response, response_raw = response_to_text(titles_text, page_title_template, PAGE_TITLE_PROMPT, None, None, tool_name="page_number_inference")
+        try:
+            response, response_raw = response_to_text(titles_text, page_title_template, PAGE_TITLE_PROMPT, tool_name="page_number_inference")
             break
         except Exception as e:
             loginfo(f"Failed to get page numbers for sections. Retrying in {SLEEP_FAILURE} seconds.")
@@ -367,7 +367,7 @@ def get_page_mapping_list(page_mapping, sections_names):
             e_p = total_pages
         page_mapping_list.append((sec, f_p, e_p))
     return page_mapping_list
-        
+
 
 # # Phase 3: Extract info from respective section
 
@@ -387,30 +387,43 @@ def get_section_text(docs, start_page, end_page):
     return "\n".join(section_text)    
 
 
-def extract_info_for_section(docs, template, main_prompt, start_page, end_page):
-    section_text = get_section_text(docs, start_page, end_page)
-    num_failed = 0
-    result = None
-    while num_failed < 2:
-        try:
-            result = response_to_text(section_text, template, main_prompt, None, None)
-            break
-        except Exception as e:
-            num_failed += 1
-            loginfo(f"Error: {e}")
-            loginfo(f"Failed {num_failed} times. Sleeping for {SLEEP_FAILURE} seconds.")
-            time.sleep(SLEEP_FAILURE)
-    return result
+def response_from_parts(text: str, template_parts: list, main_prompt: str) -> dict:
+    """Populate the separate templates and merge the result."""
 
-def extract_info_for_all_sections(page_mapping_list, full_templates, docs):
+    total = {}
+    total_raw = []
+    full_templates = build_aws_template(template_parts)
+    for part in full_templates:
+        result, raw_result = response_to_text(text, part, main_prompt)
+        total.update(result)
+        total_raw.append(raw_result)
+    return total, total_raw
+
+
+def extract_info_for_section(docs, template_part: dict, main_prompt, start_page, end_page):
+    """template_part can be a dict or list, when the initial dict times out."""
+    section_text = get_section_text(docs, start_page, end_page)
+    for NUM_PARTS in [1, 2, 3, 4]:
+        try:
+            template_parts = split_dict_into_list(template_part, NUM_PARTS)
+            return response_from_parts(section_text, template_parts, main_prompt)
+        except Exception as e:
+            loginfo(f"Error: {e}")
+            time.sleep(SLEEP_FAILURE)
+    loginfo(f"Failed to extract info for the section.")
+    return None
+
+
+def extract_info_for_all_sections(page_mapping_list, template_parts: list, docs):
+    """This assumes that the number of sections and the number of template parts is the same."""
     section_summaries = []
     raw_responses = []
     for idx, elem in enumerate(page_mapping_list):
         loginfo(f"Extracting for section {elem}")
         section_name, start_page, end_page = elem
-        if idx >= len(full_templates):
+        if idx >= len(template_parts):
             break
-        section_summary, raw_response = extract_info_for_section(docs, full_templates[idx], INFO_EXTRACTION_PROMPT, start_page, end_page)
+        section_summary, raw_response = extract_info_for_section(docs, template_parts[idx], INFO_EXTRACTION_PROMPT, start_page, end_page)
         section_summaries.append(section_summary)
         raw_responses.append(raw_response)
         loginfo(f"Extracted for section {section_name}")
@@ -432,13 +445,11 @@ else:
 page_mapping_list = get_page_mapping_list(page_mapping, sections_names)
 
 template_parts = IBIS_SUMMARY_TEMPLATE['data']
-full_templates = build_aws_template(template_parts)
+# full_templates = build_aws_template(template_parts)
 
 # print(full_templates)
-section_summaries, raw_responses = extract_info_for_all_sections(page_mapping_list, full_templates, docs)
-
+section_summaries, raw_responses = extract_info_for_all_sections(page_mapping_list, template_parts, docs)
 section_results = {"section_summaries": section_summaries, "raw_responses": raw_responses}
-
 pickle.dump(section_results, open(f"{OUTPUT_FOLDER}/section_summaries.pkl", "wb"))
 
 
