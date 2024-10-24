@@ -2,6 +2,7 @@
 
 from fastapi import APIRouter
 from pydantic import BaseModel
+import json
 
 from typing import List, Dict
 
@@ -39,6 +40,18 @@ class DataModelOut(BaseModel):
 industry_summary_router = APIRouter()
 
 
+def mock_summaries() -> List[dict]:
+    out = []
+    filenames = ['data/atv-manufacturing.json', 'data/audiobooks.json']
+    for filename in filenames:
+        with open(filename, 'r') as fp:
+            dd = json.load(fp)
+            if isinstance(dd, list):
+                dd = dd[0]
+            out.append(dd)
+    return out
+
+
 @industry_summary_router.post("/api/industry-summary", response_model=DataModelOut)
 async def industry_summary_for_thesis(request: DataModelIn):
     """Returns industry summary based on the source (IBIS to start with)."""
@@ -48,14 +61,13 @@ async def industry_summary_for_thesis(request: DataModelIn):
     industry_names = ibis_industries(code, name)
     assert industry_names
 
-    result = []
-    for industry_name in industry_names:
-        result.append({industry_name: industry_name, 'temp': 'temp-temp'})
-    return DataModelOut(result=result)
+    summaries = mock_summaries()
+    if len(summaries) < len(industry_names):
+        summaries = len(industry_names) * summaries
 
-    llm_input = []
-    for elt in user_qr:
-        assert elt.question, elt.response
-        llm_input.append({'question': elt.question, 'answer': elt.response})
-    result = matching_industry_names_codes_from_qa(llm_input)
+    result = []
+    for i, industry_name in enumerate(industry_names):
+        assert industry_name
+        result.append(summaries[i])
+
     return DataModelOut(result=result)
