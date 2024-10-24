@@ -35,3 +35,8 @@ def number_of_pages(pdf_doc_path: str) -> int:
     with open(pdf_doc_path, "rb") as f:
         inputpdf = PdfReader(f)
         return len(inputpdf.pages)
+
+
+def doc_id(docpath: str) -> str:
+    """Standardized ID"""
+    return docpath.split('/')[-1].split('.')[0].lower().replace(' ', '-')
