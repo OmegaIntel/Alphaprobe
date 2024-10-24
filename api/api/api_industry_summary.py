@@ -8,7 +8,8 @@ from typing import List, Dict
 
 import pandas as pd
 
-IBIS_MAP_FILENAME = 'data/IBIS NAICS Code mapping.xlsx'
+# IBIS_MAP_FILENAME = 'data/IBIS NAICS Code mapping.xlsx'
+IBIS_MAP_FILENAME = 'api/data/IBIS NAICS Code mapping.xlsx'
 IBIS_MAP = pd.read_excel(IBIS_MAP_FILENAME)
 NAICS_CODE = 'NAICS Code'
 IBIS_REPORT_NAME = 'IBIS Report Name'
@@ -42,7 +43,7 @@ industry_summary_router = APIRouter()
 
 def mock_summaries() -> List[dict]:
     out = []
-    filenames = ['data/atv-manufacturing.json', 'data/audiobooks.json']
+    filenames = ['api/data/atv-manufacturing.json', 'api/data/audiobooks.json']
     for filename in filenames:
         with open(filename, 'r') as fp:
             dd = json.load(fp)
