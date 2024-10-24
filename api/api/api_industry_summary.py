@@ -8,7 +8,6 @@ from typing import List, Dict
 
 import pandas as pd
 
-# IBIS_MAP_FILENAME = 'data/IBIS NAICS Code mapping.xlsx'
 IBIS_MAP_FILENAME = 'api/data/IBIS NAICS Code mapping.xlsx'
 IBIS_MAP = pd.read_excel(IBIS_MAP_FILENAME)
 NAICS_CODE = 'NAICS Code'
