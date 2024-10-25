@@ -3,7 +3,6 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
 import json
-import s3_tools
 from s3_tools.objects.read import read_object_to_text
 
 from typing import List, Dict
@@ -61,12 +60,12 @@ def ibis_industries(code: str, name: str) -> List[str]:
 def summary_for_name(name: str) -> Dict:
     """Return summary from S3 if it exists, else return None."""
     doc_path = f'{IBIS_SUMMARY_ROOT}/{doc_id(name)}/section_summaries.json'
-    if s3_tools.object_exists(S3_STORAGE_BUCKET, doc_path):
+    try:
         text = read_object_to_text(S3_STORAGE_BUCKET, doc_path)
         result = json.loads(text)
         if isinstance(result, list):
             result = result[0]
-    else:
+    except:
         loginfo(f"The desired summary does not exist: {doc_path}")
         result = {}
     return result
