@@ -12,6 +12,19 @@ import pandas as pd
 
 from doc_parser.pdf_utils import doc_id
 
+import logging
+logging.basicConfig(
+    filename='summary.log',
+    encoding='utf-8',
+    filemode='a',
+    format="{asctime} - {levelname} - {message}",
+    style="{",
+    datefmt="%Y-%m-%d %H:%M:%S",
+    level=logging.INFO
+)
+
+loginfo = logging.info
+
 # for testability
 from dotenv import load_dotenv
 load_dotenv()
@@ -54,7 +67,7 @@ def summary_for_name(name: str) -> Dict:
         if isinstance(result, list):
             result = result[0]
     else:
-        print("THE OBJECT DOES NOT EXIST", doc_path)
+        loginfo(f"The desired summary does not exist: {doc_path}")
         result = {}
     return result
 

@@ -2,8 +2,8 @@
 
 import asyncio
 
-from api.api_industry_summary import Industry, DataModelIn, DataModelOut, industry_summary_for_thesis
-from api.api_industry_summary import summary_for_name
+from api.api_industry_summary import Industry, DataModelIn, DataModelOut
+from api.api_industry_summary import summary_for_name, industry_summary_for_thesis
 
 
 def run_test(industry_code: str, industry_name: str, min_entries: int):
