@@ -20,7 +20,7 @@ def test1():
 
 
 def test2():
-    run_test('336999', 'ATV Manufacturing in the US', 2)
+    run_test('336999', 'ATV Manufacturing in the US', 1)
 
 
 def test_summary_for_name1():
