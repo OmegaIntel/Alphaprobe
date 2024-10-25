@@ -25,8 +25,8 @@ def run_test(csv_name: str):
 
 
 def test1():
-    run_test("tests/related-industries-qa-1.csv")
+    run_test("api/tests/related-industries-qa-1.csv")
 
 
 def test2():
-    run_test("tests/related-industries-qa-2.csv")
+    run_test("api/tests/related-industries-qa-2.csv")
