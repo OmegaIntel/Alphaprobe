@@ -44,3 +44,21 @@ Backend (FastAPI):
 ```
 http://localhost:8000/api/docs
 ```
+
+## Manual deployment to AWS host
+
+1. Login into the box, such as `ssh ubuntu@ec2-34-228-44-47.compute-1.amazonaws.com`.
+
+1. Execute the following commands:
+    ```
+    cd Alphaprobe
+    git checkout development
+    git pull
+    docker compose -f docker-compose-application.yaml down
+    nohup docker compose -f docker-compose-application.yaml up --build &
+    ```
+
+1. See if there are any errors:
+    ```
+    tail -f nohup.out
+    ```
