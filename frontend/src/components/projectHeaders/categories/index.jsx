@@ -15,6 +15,7 @@ import CollapsibleSidebar from "../../Sidebar/CollapsibleSidebar";
 import ThesisCardComponent from "../../InvestmentThesis/ThesisSummary/ThesisCardComponent";
 import IndustryReport from "../../MarketResearch/IndustryReportSection/IndustryReport";
 import ReportDropdown from "../../MarketResearch/IndustryReportSection/ReportDropdown";
+import MarketResearchLayout from "../../MarketResearch/MarketResearchLayout";
 
 const { Option } = Select;
 
@@ -189,7 +190,8 @@ const Categories = () => {
             <>
               <div className="flex-grow overflow-y-auto bg-[#151518] ml-1 scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800">
                 <div className="p-3">
-                  <IndustryReport />
+                  {/* <IndustryReport /> */}
+                  <MarketResearchLayout />
                 </div>
               </div>
             </>
@@ -200,9 +202,9 @@ const Categories = () => {
             />
           )}
         </div>
-        <div>
+        {/* <div>
           <CollapsibleSidebar />
-        </div>
+        </div> */}
         {/* <div className="w-[30%] flex flex-col">
           <div className="bg-black p-2 flex flex-row justify-between border-b border-gray-800">
             <div>{progress}% complete</div>
