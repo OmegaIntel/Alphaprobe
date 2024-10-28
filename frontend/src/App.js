@@ -76,6 +76,8 @@ const App = () => {
           path="*"
           element={<Navigate to={isLoggedIn ? "/dashboard" : "/login"} />}
         />
+
+        {/* Trouble Shooting Route */}
       </Routes>
     </Router>
   );
