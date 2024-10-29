@@ -32,28 +32,21 @@ S3_STORAGE_BUCKET = 'omega-intel-doc-storage'
 IBIS_SUMMARY_ROOT = 'Summaries/IBIS-reports'
 
 
-# Define the request and response models
-class ChatRequest(BaseModel):
-    query: str  # User's message
-    chat_id: str  # The document context ID
-
-class ChatResponse(BaseModel):
-    response: str
-
-
 IBIS_MAP_FILENAME = 'api/data/IBIS NAICS Code mapping.csv'
-IBIS_MAP = pd.read_csv(IBIS_MAP_FILENAME)
-NAICS_CODE = 'NAICS Code'
 IBIS_REPORT_NAME = 'IBIS Report Name'
+NAICS_CODE = 'NAICS Code'
+IBIS_MAP = pd.read_csv(IBIS_MAP_FILENAME)
+IBIS_MAP[NAICS_CODE] = IBIS_MAP[NAICS_CODE].apply(str)
 
 
 def ibis_industries(code: str, name: str) -> List[str]:
     """Use primarily code. If not found, use heuristics."""
-    code = int(code)
+    code = str(code)
     rows = IBIS_MAP[IBIS_MAP[NAICS_CODE] == code].copy()
     names = list(rows[IBIS_REPORT_NAME])
     if names:
         return names
+    loginfo(f"The industry code was not mapped into a report {code}")
     return [name]
 
 

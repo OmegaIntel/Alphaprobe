@@ -23,6 +23,10 @@ def test2():
     run_test('336999', 'ATV Manufacturing in the US', 1)
 
 
+def test3():
+    run_test('324110', 'Petroleum Refineries', 1)
+
+
 def test_summary_for_name1():
     name = 'Audio Production Studios in the US.pdf'
     result = summary_for_name(name)
