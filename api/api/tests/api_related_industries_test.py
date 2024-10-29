@@ -23,6 +23,8 @@ def run_test(csv_name: str):
         assert elt.industry_name
         assert elt.industry_code
 
+    print(result.result)
+
 
 def test1():
     run_test("api/tests/related-industries-qa-1.csv")
@@ -30,3 +32,7 @@ def test1():
 
 def test2():
     run_test("api/tests/related-industries-qa-2.csv")
+
+
+def test3():
+    run_test("api/tests/related-industries-qa-3.csv")
