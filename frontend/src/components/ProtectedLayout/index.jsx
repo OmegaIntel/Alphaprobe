@@ -26,13 +26,16 @@ const ProtectedLayoutInner = ({ children, setToken, isLoggedIn, id }) => {
     }
   }, [id, dispatch]);
 
+
+  console.log(isLoggedIn);
+
   if (!isLoggedIn) {
     return <Navigate to="/login" />;
   }
 
   return (
     <div className="App">
-      <Sidebar setToken={setToken} />
+      {/* <Sidebar setToken={setToken} /> */}
       <div className="main-content with-sidebar">
         <Navbar />
         <UploadFilesModal />
