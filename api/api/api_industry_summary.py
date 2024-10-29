@@ -41,8 +41,8 @@ class ChatResponse(BaseModel):
     response: str
 
 
-IBIS_MAP_FILENAME = 'api/data/IBIS NAICS Code mapping.xlsx'
-IBIS_MAP = pd.read_excel(IBIS_MAP_FILENAME)
+IBIS_MAP_FILENAME = 'api/data/IBIS NAICS Code mapping.csv'
+IBIS_MAP = pd.read_csv(IBIS_MAP_FILENAME)
 NAICS_CODE = 'NAICS Code'
 IBIS_REPORT_NAME = 'IBIS Report Name'
 
