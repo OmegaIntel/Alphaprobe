@@ -1,9 +1,13 @@
 """Tests for industry summary functionality."""
 
 import asyncio
+import json
 
-from api.api_industry_summary import Industry, DataModelIn, DataModelOut
-from api.api_industry_summary import summary_for_name, industry_summary_for_thesis
+from api.api_industry_summary import (
+    Industry, DataModelIn, DataModelOut,
+    summary_for_name, industry_summary_for_thesis,
+    flatten_dict_once, industry_metrics
+)
 
 
 def run_test(industry_code: str, industry_name: str, min_entries: int):
@@ -41,3 +45,26 @@ def test_summary_for_name2():
     keys = list(result.keys())
     assert not 'report_title' in keys
     assert not 'future_outlook' in keys
+
+
+def test_flatten_dict_once():
+    dd = {
+        1: {
+            2: 3,
+            4: 5,
+        },
+        11: {
+            12: 13,
+            14: 15,
+        }
+    }
+    expected = {1: {2: 3, 4: 5}, 11: {12: 13, 14: 15}, 2: 3, 4: 5, 12: 13, 14: 15}
+    assert expected == flatten_dict_once(dd)
+
+
+def test_industry_metrics():
+    with open('api/tests/aluminum-manufacturing-summary.json') as f:
+        summary = json.load(f)
+    print()
+    industry_metrics(summary)
+    print()

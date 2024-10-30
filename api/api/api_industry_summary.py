@@ -38,6 +38,14 @@ NAICS_CODE = 'NAICS Code'
 IBIS_MAP = pd.read_csv(IBIS_MAP_FILENAME)
 IBIS_MAP[NAICS_CODE] = IBIS_MAP[NAICS_CODE].apply(str)
 
+MARKET_WEIGHTS_FILENAME = 'api/data/market-weights.csv'
+INVESTMENT_WEIGHTS_FILENAME = 'api/data/investment-weights.csv'
+CATEGORY_SCORES_FILENAME = 'api/data/category-scores.csv'
+
+MARKET_WEIGHTS = pd.read_csv(MARKET_WEIGHTS_FILENAME)
+INVESTMENT_WEIGHTS = pd.read_csv(INVESTMENT_WEIGHTS_FILENAME)
+CATEGORY_SCORES = pd.read_csv(CATEGORY_SCORES_FILENAME)
+
 
 def ibis_industries(code: str, name: str) -> List[str]:
     """Use primarily code. If not found, use heuristics."""
@@ -56,12 +64,58 @@ def summary_for_name(name: str) -> Dict:
     try:
         text = read_object_to_text(S3_STORAGE_BUCKET, doc_path)
         result = json.loads(text)
+        if isinstance(result, dict):
+            return result
         if isinstance(result, list):
-            result = result[0]
+            out = {}
+            for dd in result:
+                assert isinstance(dd, dict)
+                out.update(dd)
+            return out
     except:
         loginfo(f"The desired summary does not exist: {doc_path}")
-        result = {}
-    return result
+        return {}
+
+
+def flatten_dict_once(dd: Dict) -> Dict:
+    """Flatten the dict by 1 level."""
+    ddc = dd.copy()
+    for val in dd.values():
+        if isinstance(val, dict):
+            ddc.update(val)
+    return ddc
+
+
+def industry_metrics(summary: Dict) -> Dict:
+    """Compute metrics based on the summary dictionary."""
+    FIELD = 'JSON Field'
+    print(list(summary.keys()))
+    flattened = flatten_dict_once(summary)
+    flattened = flatten_dict_once(flattened)
+    df = INVESTMENT_WEIGHTS
+    dfm = pd.merge(df, CATEGORY_SCORES)
+    print("GOT MERGED")
+    print(dfm)
+    fields = list(df[FIELD].unique())
+
+    print(fields)
+    print(list(flattened.keys()))
+
+    for_ddf = []
+    for field in fields:
+        if field in flattened:
+            value = flattened[field]
+            for_ddf.append({FIELD: field, 'Result': value})
+
+    ddf = pd.DataFrame(for_ddf)
+    total = pd.merge(dfm, ddf)
+    print("TOTAL")
+    print(total)
+    # row = dfm[(dfm[FIELD] == field) & (dfm['Result'] == value)].copy()
+    # row['Total'] = row['Weight'] * row['Score']
+    # print(value, "GOT ROW")
+    # print(row)
+    # # print("GOT ROW", row.to_dict(orient='record'))
 
 
 class Industry(BaseModel):
