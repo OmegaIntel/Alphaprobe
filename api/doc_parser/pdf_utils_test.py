@@ -1,5 +1,5 @@
 
-from doc_parser.pdf_utils import extract_pages, number_of_pages, doc_id
+from doc_parser.pdf_utils import extract_pages, number_of_pages, doc_id, split_dict_into_list
 import os
 
 
@@ -27,3 +27,18 @@ def test_doc_id():
 
     assert os.sep not in result
     assert result.lower() == result
+
+
+def test_split_dict_into_list():
+    dd = {
+        1: 2,
+        3: 4,
+        5: 6,
+        7: 8,
+        9: 6,
+        11: 8,
+    }
+
+    ll = split_dict_into_list(dd, 2)
+    assert len(ll) == 2
+    assert len(ll[0]) == len(ll[1]) == 3

@@ -1,5 +1,7 @@
 """PDF utils"""
 
+from typing import List, Dict
+
 import os
 from contextlib import contextmanager
 
@@ -40,3 +42,14 @@ def number_of_pages(pdf_doc_path: str) -> int:
 def doc_id(docpath: str) -> str:
     """Standardized ID"""
     return docpath.split('/')[-1].split('.')[0].lower().replace(' ', '-')
+
+
+def split_dict_into_list(dd: Dict, n: int) -> List[Dict]:
+    """Splits a dictionary into a random list of such, with fixed number of elements."""
+    assert n > 0
+    out = [{} for _ in range(n)]
+    keys = list(dd.keys())
+    for i, key in enumerate(keys):
+        j = i % n
+        out[j][key] = dd[key]
+    return out
