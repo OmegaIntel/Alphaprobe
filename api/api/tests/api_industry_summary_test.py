@@ -65,6 +65,8 @@ def test_flatten_dict_once():
 def test_industry_metrics():
     with open('api/tests/aluminum-manufacturing-summary.json') as f:
         summary = json.load(f)
-    print()
-    industry_metrics(summary)
-    print()
+    result = industry_metrics(summary)
+    assert 'metrics' in result
+    assert len(result['metrics']) == 2
+    assert result['metrics'][0]['Total'] == 82
+    assert result['metrics'][1]['Total'] == 56

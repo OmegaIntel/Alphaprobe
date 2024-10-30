@@ -86,20 +86,14 @@ def flatten_dict_once(dd: Dict) -> Dict:
     return ddc
 
 
-def industry_metrics(summary: Dict) -> Dict:
+def industry_metric_for_weights(summary: Dict, weights: pd.DataFrame) -> Dict:
     """Compute metrics based on the summary dictionary."""
     FIELD = 'JSON Field'
-    print(list(summary.keys()))
+    TOTAL = 'Total'
     flattened = flatten_dict_once(summary)
     flattened = flatten_dict_once(flattened)
-    df = INVESTMENT_WEIGHTS
-    dfm = pd.merge(df, CATEGORY_SCORES)
-    print("GOT MERGED")
-    print(dfm)
-    fields = list(df[FIELD].unique())
-
-    print(fields)
-    print(list(flattened.keys()))
+    dfm = pd.merge(weights, CATEGORY_SCORES)
+    fields = list(weights[FIELD].unique())
 
     for_ddf = []
     for field in fields:
@@ -109,13 +103,27 @@ def industry_metrics(summary: Dict) -> Dict:
 
     ddf = pd.DataFrame(for_ddf)
     total = pd.merge(dfm, ddf)
-    print("TOTAL")
-    print(total)
-    # row = dfm[(dfm[FIELD] == field) & (dfm['Result'] == value)].copy()
-    # row['Total'] = row['Weight'] * row['Score']
-    # print(value, "GOT ROW")
-    # print(row)
-    # # print("GOT ROW", row.to_dict(orient='record'))
+    total[TOTAL] = total['Weight'] * total['Score'] / 5
+    del total[FIELD]
+    out = {}
+    out['Scores'] = total.to_dict(orient='records')
+    out[TOTAL] = total[TOTAL].sum()
+    return out
+
+
+def industry_metrics(summary: Dict) -> Dict:
+    """The metrics side of things."""
+    out = []
+
+    elt = {'Aspect': 'Market'}
+    elt.update(industry_metric_for_weights(summary, MARKET_WEIGHTS))
+    out.append(elt)
+
+    elt = {'Aspect': 'Investments'}
+    elt.update(industry_metric_for_weights(summary, INVESTMENT_WEIGHTS))
+    out.append(elt)
+
+    return {'metrics': out}
 
 
 class Industry(BaseModel):
@@ -143,7 +151,12 @@ async def industry_summary_for_thesis(request: DataModelIn):
     industry_names = ibis_industries(code, name)
     assert industry_names
 
-    summaries = [summary_for_name(name) for name in industry_names]
-    summaries = [summ for summ in summaries if summ]
+    summaries = []
+    for name in industry_names:
+        summary = summary_for_name(name)
+        if not summary: continue
+        metrics = industry_metrics(summary)
+        summary.update(metrics)
+        summaries.append(summary)
 
     return DataModelOut(result=summaries)
