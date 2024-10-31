@@ -58,20 +58,26 @@ def ibis_industries(code: str, name: str) -> List[str]:
     return [name]
 
 
+def dict_from_summary_json(text: str) -> Dict:
+    """Convert text in the JSON file to dict."""
+    result = json.loads(text)
+    if isinstance(result, dict):
+        return result
+    if isinstance(result, list):
+        out = {}
+        for dd in result:
+            assert isinstance(dd, dict)
+            out.update(dd)
+        return out
+    return {}
+
+
 def summary_for_name(name: str) -> Dict:
     """Return summary from S3 if it exists, else return None."""
     doc_path = f'{IBIS_SUMMARY_ROOT}/{doc_id(name)}/section_summaries.json'
     try:
         text = read_object_to_text(S3_STORAGE_BUCKET, doc_path)
-        result = json.loads(text)
-        if isinstance(result, dict):
-            return result
-        if isinstance(result, list):
-            out = {}
-            for dd in result:
-                assert isinstance(dd, dict)
-                out.update(dd)
-            return out
+        return dict_from_summary_json(text)
     except:
         loginfo(f"The desired summary does not exist: {doc_path}")
         return {}
