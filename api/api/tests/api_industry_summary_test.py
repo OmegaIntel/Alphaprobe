@@ -5,8 +5,7 @@ import json
 
 from api.api_industry_summary import (
     Industry, DataModelIn, DataModelOut,
-    summary_for_name, industry_summary_for_thesis,
-    flatten_dict_once, industry_metrics
+    summary_for_name, industry_summary_for_thesis, industry_metrics
 )
 
 
@@ -45,21 +44,6 @@ def test_summary_for_name2():
     keys = list(result.keys())
     assert not 'report_title' in keys
     assert not 'future_outlook' in keys
-
-
-def test_flatten_dict_once():
-    dd = {
-        1: {
-            2: 3,
-            4: 5,
-        },
-        11: {
-            12: 13,
-            14: 15,
-        }
-    }
-    expected = {1: {2: 3, 4: 5}, 11: {12: 13, 14: 15}, 2: 3, 4: 5, 12: 13, 14: 15}
-    assert expected == flatten_dict_once(dd)
 
 
 def test_industry_metrics():

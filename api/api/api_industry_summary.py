@@ -2,7 +2,6 @@
 
 from fastapi import APIRouter
 from pydantic import BaseModel
-import json
 from s3_tools.objects.read import read_object_to_text
 
 from typing import List, Dict
@@ -10,6 +9,8 @@ from typing import List, Dict
 import pandas as pd
 
 from doc_parser.pdf_utils import doc_id
+from doc_parser.doc_utils import dict_from_summary_json, flatten_dict_once
+
 
 import logging
 logging.basicConfig(
@@ -58,20 +59,6 @@ def ibis_industries(code: str, name: str) -> List[str]:
     return [name]
 
 
-def dict_from_summary_json(text: str) -> Dict:
-    """Convert text in the JSON file to dict."""
-    result = json.loads(text)
-    if isinstance(result, dict):
-        return result
-    if isinstance(result, list):
-        out = {}
-        for dd in result:
-            assert isinstance(dd, dict)
-            out.update(dd)
-        return out
-    return {}
-
-
 def summary_for_name(name: str) -> Dict:
     """Return summary from S3 if it exists, else return None."""
     doc_path = f'{IBIS_SUMMARY_ROOT}/{doc_id(name)}/section_summaries.json'
@@ -81,15 +68,6 @@ def summary_for_name(name: str) -> Dict:
     except:
         loginfo(f"The desired summary does not exist: {doc_path}")
         return {}
-
-
-def flatten_dict_once(dd: Dict) -> Dict:
-    """Flatten the dict by 1 level."""
-    ddc = dd.copy()
-    for val in dd.values():
-        if isinstance(val, dict):
-            ddc.update(val)
-    return ddc
 
 
 def industry_metric_for_weights(summary: Dict, weights: pd.DataFrame) -> Dict:
