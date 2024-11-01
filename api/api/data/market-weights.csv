@@ -1,7 +1,7 @@
 Category,JSON Field,Weight
-Exports,export_level,10
-Imports,import_level,15
-Basis of Competition,basis_level,20
-Barriers to Entry,barriers_level,20
-Industry Assistance,assistance_level,15
-Market Share Concentration,concentration_level,20
+Market Concentration,concentration_level,15
+Industry Growth,revenue_cagr_value_projected,20
+Barriers to Entry,barriers_level,10
+Industry Size,revenue_dollars,15
+Profit Margins,profit_margins_percentage,25
+Customer Concentration,leading segment_percentage,15
