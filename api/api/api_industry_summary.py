@@ -7,9 +7,10 @@ from s3_tools.objects.read import read_object_to_text
 from typing import List, Dict
 
 import pandas as pd
+import json
 
 from doc_parser.pdf_utils import doc_id
-from doc_parser.doc_utils import dict_from_summary_json, flatten_dict_once
+from doc_parser.doc_utils import dict_from_summary_json, flatten_dict_once, extract_key_val_from_dict
 
 
 import logging
@@ -42,7 +43,15 @@ IBIS_MAP[NAICS_CODE] = IBIS_MAP[NAICS_CODE].apply(str)
 MARKET_WEIGHTS = pd.read_csv('api/data/market-weights.csv')
 INVESTMENT_WEIGHTS = pd.read_csv('api/data/investment-weights.csv')
 CATEGORY_SCORES = pd.read_csv('api/data/category-scores.csv')
+
 RATINGS_THRESHOLDS = pd.read_csv('api/data/ratings-thresholds.csv')
+for cname in ['Upper', 'Lower']:
+    RATINGS_THRESHOLDS[cname] = RATINGS_THRESHOLDS[cname].astype(float)
+
+FIELD = 'JSON Field'
+
+with open('api/data/rated-metrics.json') as f:
+    RATED_METRICS = json.load(f)
 
 
 def ibis_industries(code: str, name: str) -> List[str]:
@@ -67,17 +76,22 @@ def summary_for_name(name: str) -> Dict:
         return {}
     
 
-def add_metric_rating(summary: Dict, metric: str) -> Dict:
+def add_metrics_ratings(flat_summary: Dict) -> Dict:
     """Convert metric value to metric raging (Low/High) and add it to the summary"""
 
+    for metric_name, metric_key in RATED_METRICS.items():
+        val = extract_key_val_from_dict(flat_summary, metric_key)
+        rt = RATINGS_THRESHOLDS[RATINGS_THRESHOLDS[FIELD] == metric_name].copy()
+        for dd in rt.to_dict(orient='records'):
+            if dd['Lower'] <= val < dd['Upper']:
+                flat_summary[metric_name] = dd['Rating']
+                break
+    return flat_summary
 
 
-def industry_metric_for_weights(summary: Dict, weights: pd.DataFrame) -> Dict:
+def industry_metric_for_weights(flattened: Dict, weights: pd.DataFrame) -> Dict:
     """Compute metrics based on the summary dictionary."""
-    FIELD = 'JSON Field'
     TOTAL = 'Total'
-    flattened = flatten_dict_once(summary)
-    flattened = flatten_dict_once(flattened)
     dfm = pd.merge(weights, CATEGORY_SCORES)
     fields = list(weights[FIELD].unique())
 
@@ -89,11 +103,19 @@ def industry_metric_for_weights(summary: Dict, weights: pd.DataFrame) -> Dict:
 
     ddf = pd.DataFrame(for_ddf)
     total = pd.merge(dfm, ddf)
-    total[TOTAL] = total['Weight'] * total['Score'] / 5
+    MAX_RATING = 5
+    total[TOTAL] = total['Weight'] * total['Score'] / MAX_RATING
     del total[FIELD]
     out = {}
+
+    # normalize for the case when not all fields are populated
+    MAX_TOTAL_WEIGHT = 100
     out['Scores'] = total.to_dict(orient='records')
-    out[TOTAL] = total[TOTAL].sum()
+    if total['Weight'].sum() == 0:
+        out[TOTAL] = 0
+    else:
+        out[TOTAL] = total[TOTAL].sum() * (MAX_TOTAL_WEIGHT / total['Weight'].sum())
+
     return out
 
 
@@ -101,12 +123,16 @@ def industry_metrics(summary: Dict) -> Dict:
     """The metrics side of things."""
     out = []
 
+    flattened = flatten_dict_once(summary)
+    flattened = flatten_dict_once(flattened)
+    flattened = add_metrics_ratings(flattened)
+
     elt = {'Aspect': 'Market'}
-    elt.update(industry_metric_for_weights(summary, MARKET_WEIGHTS))
+    elt.update(industry_metric_for_weights(flattened, MARKET_WEIGHTS))
     out.append(elt)
 
     elt = {'Aspect': 'Investments'}
-    elt.update(industry_metric_for_weights(summary, INVESTMENT_WEIGHTS))
+    elt.update(industry_metric_for_weights(flattened, INVESTMENT_WEIGHTS))
     out.append(elt)
 
     return {'metrics': out}

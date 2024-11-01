@@ -80,11 +80,11 @@ def test_extract_key_val_from_dict():
     }
 
     results = {
+        'simple': 'something',
+        'complex': 'two',
         'revenue_dollars': 45422000000,
         'segment_percentage': 35.0,
         'product_percentage': 17.0,
-        'simple': 'something',
-        'complex': 'two',
     }
 
     for key, val in metrics.items():
