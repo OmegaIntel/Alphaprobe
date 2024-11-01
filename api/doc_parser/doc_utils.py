@@ -31,7 +31,6 @@ def extract_key_val_from_dict(dd: Union[Dict, List], key: str):
     """Extracts from the dictionary or list of dictionaries the value(s) referenced by the key"""
     # The key can be composite: 'revenue_cagr_projected.revenue_cagr_value'
     # if dd is a list of dictionaries, returns the max of the list of referenced values or 0 if list is empty.
-    # TODO: tests for this
     sep = '.'
     if not sep in key:
         if isinstance(dd, dict):
