@@ -15,7 +15,7 @@ def run_test(industry_code: str, industry_name: str, min_entries: int):
     result = asyncio.run(industry_summary_for_thesis(request=data))
     assert isinstance(result, DataModelOut)
     assert isinstance(result.result, list)
-    assert len(result.result) >= min_entries
+    assert l/home/yakov/Other/Alphaprobe/notebooks/rag_outputs/wood-framing-in-the-usen(result.result) >= min_entries
 
 
 def test1():

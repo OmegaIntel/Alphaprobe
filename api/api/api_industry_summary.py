@@ -39,13 +39,10 @@ NAICS_CODE = 'NAICS Code'
 IBIS_MAP = pd.read_csv(IBIS_MAP_FILENAME)
 IBIS_MAP[NAICS_CODE] = IBIS_MAP[NAICS_CODE].apply(str)
 
-MARKET_WEIGHTS_FILENAME = 'api/data/market-weights.csv'
-INVESTMENT_WEIGHTS_FILENAME = 'api/data/investment-weights.csv'
-CATEGORY_SCORES_FILENAME = 'api/data/category-scores.csv'
-
-MARKET_WEIGHTS = pd.read_csv(MARKET_WEIGHTS_FILENAME)
-INVESTMENT_WEIGHTS = pd.read_csv(INVESTMENT_WEIGHTS_FILENAME)
-CATEGORY_SCORES = pd.read_csv(CATEGORY_SCORES_FILENAME)
+MARKET_WEIGHTS = pd.read_csv('api/data/market-weights.csv')
+INVESTMENT_WEIGHTS = pd.read_csv('api/data/investment-weights.csv')
+CATEGORY_SCORES = pd.read_csv('api/data/category-scores.csv')
+RATINGS_THRESHOLDS = pd.read_csv('api/data/ratings-thresholds.csv')
 
 
 def ibis_industries(code: str, name: str) -> List[str]:
@@ -68,6 +65,11 @@ def summary_for_name(name: str) -> Dict:
     except:
         loginfo(f"The desired summary does not exist: {doc_path}")
         return {}
+    
+
+def add_metric_rating(summary: Dict, metric: str) -> Dict:
+    """Convert metric value to metric raging (Low/High) and add it to the summary"""
+
 
 
 def industry_metric_for_weights(summary: Dict, weights: pd.DataFrame) -> Dict:
