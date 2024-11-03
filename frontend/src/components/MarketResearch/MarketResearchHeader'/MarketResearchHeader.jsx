@@ -75,7 +75,7 @@ const IndustryHeader = () => {
                     ? "bg-gray-500" // Active button style
                     : "bg-gray-700 hover:bg-gray-600"
                 } 
-                w-1/3 h-12 flex-shrink-0`} // Fixed size for buttons
+                w-3/5 h-12 flex-shrink-0`} // Fixed size for buttons
                 title={`${industry.industry_code} - ${industry.industry_name}`}
                 onClick={() =>
                   handleButtonClick(

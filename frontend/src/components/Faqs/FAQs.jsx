@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 const FAQsComponent = ({ faqs }) => {
   const [openFAQ, setOpenFAQ] = useState(null);
+  const [visibleFAQs, setVisibleFAQs] = useState(4);
 
   // Toggle function to open/close FAQs
   const toggleFAQ = (index) => {
@@ -12,24 +13,41 @@ const FAQsComponent = ({ faqs }) => {
     }
   };
 
+  // Show more FAQs
+  const showMoreFAQs = () => {
+    setVisibleFAQs(prevVisible => Math.min(prevVisible + 4, faqs.length));
+  };
+
   return (
-    <div className="grid grid-cols-2 gap-4 p-4">
-      {faqs.map((faq, index) => (
-        <div key={index} className="border-b border-gray-200 pb-2 mb-2">
-          <div
+    <div className="mx-10">
+      {faqs.slice(0, visibleFAQs).map((faq, index) => (
+        <div 
+          key={index} 
+          className="border-b border-gray-400 py-4"
+        >
+          <div 
             onClick={() => toggleFAQ(index)}
-            className="cursor-pointer text-lg font-semibold text-white flex justify-between items-center"
+            className="cursor-pointer text-lg font-semibold text-gray-400 flex justify-between items-center"
           >
-            <span>{faq.question}</span>
-            <span>{openFAQ === index ? "▲" : "▼"}</span>
+            {faq.question}
+            {/* {openFAQ === index ? "▲" : "▼"} */}
           </div>
           {openFAQ === index && (
-            <div className="pt-2 text-white">
+            <div className="mt-2 text-gray-400">
               {faq.answer}
             </div>
           )}
         </div>
       ))}
+      
+      {visibleFAQs < faqs.length && (
+        <button 
+          onClick={showMoreFAQs}
+          className="mt-4 w-full bg-gray-500 text-white py-2 rounded hover:bg-gray-600 transition-colors"
+        >
+          Show More FAQs
+        </button>
+      )}
     </div>
   );
 };

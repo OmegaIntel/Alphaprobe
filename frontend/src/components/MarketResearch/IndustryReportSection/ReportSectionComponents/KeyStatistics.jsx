@@ -1,64 +1,70 @@
-// components/ReportSections/KeyStatistics.js
+import React from "react";
+
+// Utility function to format numbers with suffixes
+const formatCurrency = (value) => {
+  if (value >= 1e9) return `$${(value / 1e9).toFixed(2)}B`;
+  if (value >= 1e6) return `$${(value / 1e6).toFixed(2)}M`;
+  if (value >= 1e3) return `$${(value / 1e3).toFixed(2)}K`;
+  return `$${value.toLocaleString()}`;
+};
 
 const KeyStatistics = ({ statistics }) => {
-    return (
-      <div className="key-statistics p-4 border rounded-lg bg-gray-50">
-        <h2 className="text-2xl font-bold mb-4">Key Statistics</h2>
-  
-        <div className="mb-2">
-          <strong>Profit:</strong> ${statistics.profit?.profit_dollars?.toLocaleString() || "No data"}
-        </div>
-        <div className="ml-4 text-sm">
-          <p>
-            Historical CAGR (2005-2024): {statistics.profit?.profit_cagr_historical?.profit_cagr_value || "No data"}%
-          </p>
-        </div>
-  
-        <div className="mb-2">
-          <strong>Profit Margins:</strong> {statistics.profit_margins?.profit_margins_percentage || "No data"}%
-        </div>
-        <div className="ml-4 text-sm">
-          <p>
-            Historical CAGR (2005-2024): {statistics.profit_margins?.profit_margins_cagr_historical?.profit_margins_cagr_value || "No data"}%
-          </p>
-        </div>
-  
-        <div className="mb-2">
-          <strong>Revenue:</strong> ${statistics.revenue?.revenue_dollars?.toLocaleString() || "No data"}
-        </div>
-        <div className="ml-4 text-sm">
-          <p>
-            Historical CAGR (2005-2024): {statistics.revenue?.revenue_cagr_historical?.revenue_cagr_value || "No data"}%
-          </p>
-          <p>
-            Projected CAGR (2024-2030): {statistics.revenue?.revenue_cagr_projected?.revenue_cagr_value || "No data"}%
-          </p>
-        </div>
-  
-        <div className="mb-2">
-          <strong>Enterprises:</strong> {statistics.enterprises || "No data"}
-        </div>
-        <div className="mb-2">
-          <strong>Establishments:</strong> {statistics.establishments || "No data"}
-        </div>
-        <div className="mb-2">
-          <strong>Employees:</strong> {statistics.employees || "No data"}
-        </div>
-        <div className="mb-2">
-          <strong>Wages:</strong> ${statistics.wages?.toLocaleString() || "No data"}
-        </div>
-        <div className="mb-2">
-          <strong>Industry Value Added:</strong> ${statistics.industry_value_added?.toLocaleString() || "No data"}
-        </div>
-        <div className="mb-2">
-          <strong>Imports:</strong> ${statistics.imports?.toLocaleString() || "No data"}
-        </div>
-        <div className="mb-2">
-          <strong>Exports:</strong> ${statistics.exports?.toLocaleString() || "No data"}
+  return (
+    <div className="rounded-lg p-4 shadow-md text-gray-300">
+      <div className="grid grid-cols-3 gap-5">
+
+      <div className="mb-4 w-full mx-2 p-3 rounded-lg bg-gray-300/20 ">
+        <h4 className="font-semibold text-lg">Profit</h4>
+        <div className="flex space-x-4">
+        <p>
+          Profit: <strong className="text-green-500">{formatCurrency(statistics.profit.profit_dollars)}</strong>
+        </p>
+        <p>
+          CAGR (2005-2024): <strong className="text-green-500">{statistics.profit.profit_cagr_historical.profit_cagr_value}%</strong>
+        </p>
         </div>
       </div>
-    );
-  };
-  
-  export default KeyStatistics;
-  
+
+      <div className="mb-4 w-full mx-2 p-3 rounded-lg bg-gray-300/20">
+        <h4 className="font-semibold">Profit Margins</h4>
+        <div className="flex space-x-4">
+        <p>
+          Profit Margin Percentage: <strong className="text-green-500">{statistics.profit_margins.profit_margins_percentage}%</strong>
+        </p>
+        <p>
+          CAGR (2005-2024): <strong className="text-green-500">{statistics.profit_margins.profit_margins_cagr_historical.profit_margins_cagr_value}%</strong>
+        </p>
+        </div>
+      </div>
+
+      <div className="mb-4 w-full mx-2 p-3 rounded-lg bg-gray-300/20">
+        <h4 className="font-semibold">Revenue</h4>
+        <p>
+          Revenue: <strong className="text-green-500">{formatCurrency(statistics.revenue.revenue_dollars)}</strong>
+        </p>
+        <p>
+          CAGR (2005-2024): <strong className="text-green-500">{statistics.revenue.revenue_cagr_historical.revenue_cagr_value}%</strong>
+        </p>
+        <p>
+          Projected CAGR (2024-2030): <strong className="text-green-500">{statistics.revenue.revenue_cagr_projected.revenue_cagr_value}%</strong>
+        </p>
+      </div>
+      </div>
+
+      <div className="mb-4">
+        <h4 className="font-semibold text-xl text-gray-400 my-10">Industry Overview</h4>
+        <div className="flex gap-5">
+        <p className="p-4 bg-gray-400/20 w-60 rounded-lg font-semibold">Enterprises: <strong  className="text-green-500">{statistics.enterprises}</strong></p>
+        <p className="p-4 bg-gray-400/20 w-60 rounded-lg font-semibold">Establishments: <strong className="text-green-500">{statistics.establishments}</strong></p>
+        <p className="p-4 bg-gray-400/20 w-60 rounded-lg font-semibold">Employees: <strong className="text-green-500">{statistics.employees}</strong></p>
+        <p className="p-4 bg-gray-400/20 w-60 rounded-lg font-semibold">Wages: <strong className="text-green-500">{formatCurrency(statistics.wages)}</strong></p>
+        <p className="p-4 bg-gray-400/20 w-60 rounded-lg font-semibold">Value Added: <strong className="text-green-500">{formatCurrency(statistics.industry_value_added)}</strong></p>
+        <p className="p-4 bg-gray-400/20 w-60 rounded-lg font-semibold">Imports: <strong className="text-green-500">{formatCurrency(statistics.imports)}</strong></p>
+        <p className="p-4 bg-gray-400/20 w-60 rounded-lg font-semibold">Exports: <strong className="text-green-500">{formatCurrency(statistics.exports)}</strong></p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default KeyStatistics;

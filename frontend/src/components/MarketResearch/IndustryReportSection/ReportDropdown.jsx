@@ -1,6 +1,14 @@
 import { useState } from "react";
 import FAQsComponent from "../../Faqs/FAQs";
 import KeyStatistics from "./ReportSectionComponents/KeyStatistics"; // Import KeyStatistics component
+import SimpleTextBox from "./ReportSectionComponents/SimpleTextBox";
+import ExternalDrivers from "./ReportSectionComponents/ExternalDrivers";
+import SupplyChain from "./ReportSectionComponents/SupplyChain";
+import SimpleList from "./ReportSectionComponents/SimpleList";
+import { ProductsAndServices } from "./ReportSectionComponents/SimpleAccordian";
+import RegulationsAndPolicies from "./ReportSectionComponents/RegulationNPolicies";
+import MarketSegmentation from "./ReportSectionComponents/MarketSegmentation";
+import MarketShareConcentration from "./ReportSectionComponents/MarketConcentration";
 
 // Utility function to format the headings
 const formatHeading = (heading) => {
@@ -12,6 +20,11 @@ const formatHeading = (heading) => {
 const ReportDropdown = ({ data }) => {
   const [openSections, setOpenSections] = useState({});
   const [openFAQs, setOpenFAQs] = useState(false);
+  const [showAllKeyTrends, setShowAllKeyTrends] = useState(false);
+  const [showAllCurr, setShowAllCurr] = useState(false);
+  const [openedPerformancePoints, setOpenedPerformancePoints] = useState([]);
+  const [showAllFut, setShowAllFut] = useState(false);
+  const [openedFut, setOpenedFut] = useState([]);
 
   // Toggle section open/close state
   const toggleSection = (key) => {
@@ -80,24 +93,6 @@ const ReportDropdown = ({ data }) => {
         <ul className="ml-6 list-disc">
           {Object.keys(contents).map((key, index) => {
             const currentKey = `${parentKey}-${index}`;
-
-            // Check if the key is "key_statistics" to render the KeyStatistics component
-            if (key === "key_statistics") {
-              return (
-                <div key={currentKey} className="bg-red-500">
-                  <button
-                    onClick={() => toggleSection(currentKey)}
-                    className="text-lg font-semibold text-white bg-gray-900 hover:bg-gray-950 px-4 py-2 w-full text-left focus:outline-none rounded-md"
-                  >
-                    {formatHeading(key)} {openSections[currentKey] ? "▲" : "▼"}
-                  </button>
-                  {openSections[currentKey] && (
-                    <KeyStatistics statistics={contents[key]} />
-                  )}
-                </div>
-              );
-            }
-
             return (
               <li key={currentKey} className="py-2">
                 {typeof contents[key] === "object" && contents[key] !== null ? (
@@ -139,20 +134,22 @@ const ReportDropdown = ({ data }) => {
           return (
             <div key={sectionKey} className="my-4">
               {keys.map((key) => {
+
                 if (key === "FAQs") {
                   return (
                     <div key={sectionKey}>
-                      <button
-                        onClick={toggleFAQs}
-                        className="text-xl font-semibold text-white bg-gray-900 hover:bg-gray-950 px-4 py-2 w-full text-left focus:outline-none rounded-md"
-                      >
-                        {formatHeading(key)} {openFAQs ? "▲" : "▼"}
-                      </button>
-                      {openFAQs && <FAQsComponent faqs={section[key]} />}
+                      <div
+                      key={sectionKey}
+                      className="p-4 bg-gray-600/30 rounded-xl my-10"
+                    >
+                      <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
+                        FAQs
+                      </p>
+                      <FAQsComponent faqs={section[key]} />
+                    </div>
                     </div>
                   );
                 }
-
                 if (key === "report_title" || key === "report_date") {
                   return (
                     <div
@@ -172,214 +169,126 @@ const ReportDropdown = ({ data }) => {
                     </div>
                   );
                 }
-
                 if (key === "executive_summary") {
                   return (
                     <div
                       key={sectionKey}
                       className="p-4 bg-gray-600/30 rounded-xl my-10"
                     >
-                      <p className="text-2xl my-5">Executive Summary</p>
-                      <h1 className="text-lg text-gray-300">{section[key]}</h1>
+                      <p className="text-2xl my-5 text-gray-400">
+                        Executive Summary
+                      </p>
+                      <h1 className="text-lg text-gray-400">{section[key]}</h1>
                     </div>
                   );
                 }
-
                 if (key === "industry_definition") {
                   return (
                     <div
                       key={sectionKey}
                       className="p-4 bg-gray-600/30 rounded-xl my-10"
                     >
-                      <p className="text-2xl my-5">Industry Defination</p>
-                      <h1 className="text-lg text-gray-300">{section[key]}</h1>
+                      <p className="text-xl my-5 text-gray-400">
+                        Industry Defination
+                      </p>
+                      <h1 className="text-lg text-gray-400">{section[key]}</h1>
                     </div>
                   );
                 }
-
                 if (key === "key_statistics") {
                   return (
                     <div
                       key={sectionKey}
                       className="p-4 bg-gray-600/30 rounded-xl my-10 shadow-md"
                     >
-                      <p className="text-2xl my-5 font-semibold text-gray-100">
+                      <p className="text-2xl my-5 font-semibold text-gray-400">
                         Key Statistics
                       </p>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-gray-300">
-                        {Object.entries(section[key]).map(
-                          ([statKey, statValue]) => {
-                            // Function to format values based on their key
-                            const formatValue = (value, key) => {
-                              if (typeof value === "number") {
-                                // Format as currency with suffix for specific keywords
-                                if (
-                                  [
-                                    "wages",
-                                    "industry_value_added",
-                                    "imports",
-                                    "exports",
-                                  ].includes(key)
-                                ) {
-                                  return `$${formatWithSuffix(value)}`;
-                                } else if (key.toLowerCase().includes("cagr")) {
-                                  return `${(value * 100).toFixed(2)}%`; // Format as percentage
-                                } else if (
-                                  key.toLowerCase().includes("year") ||
-                                  key.toLowerCase().includes("date")
-                                ) {
-                                  return value.toString(); // Return the year as a string
-                                } else {
-                                  return value.toLocaleString(); // Format as number
-                                }
-                              }
-                              return value; // Return non-number values as-is
-                            };
-
-                            // Function to format numbers with suffixes
-                            const formatWithSuffix = (num) => {
-                              if (num >= 1e12)
-                                return (num / 1e12).toFixed(1) + "T"; // Trillion
-                              if (num >= 1e9)
-                                return (num / 1e9).toFixed(1) + "B"; // Billion
-                              if (num >= 1e6)
-                                return (num / 1e6).toFixed(1) + "M"; // Million
-                              if (num >= 1e3)
-                                return (num / 1e3).toFixed(1) + "K"; // Thousand
-                              return num.toString(); // Return as is for smaller numbers
-                            };
-
-                            const isNestedObject =
-                              typeof statValue === "object" &&
-                              statValue !== null &&
-                              !Array.isArray(statValue);
-
-                            return (
-                              <div
-                                key={statKey}
-                                className="border border-gray-500 p-4 rounded-lg bg-gray-700 shadow-lg transition-transform transform "
-                              >
-                                <h2 className="text-xl font-semibold capitalize text-gray-200">
-                                  {statKey.replace(/_/g, " ")}
-                                </h2>
-                                {isNestedObject ? (
-                                  <div className="space-y-2 mt-2">
-                                    {Object.entries(statValue).map(
-                                      ([nestedKey, nestedValue]) => {
-                                        if (
-                                          typeof nestedValue === "object" &&
-                                          nestedValue !== null
-                                        ) {
-                                          return (
-                                            <div
-                                              key={nestedKey}
-                                              className="ml-4"
-                                            >
-                                              <h3 className="font-semibold capitalize mb-3 text-gray-300">
-                                                {nestedKey.replace(/_/g, " ")}
-                                              </h3>
-                                              <div className="flex flex-col space-y-2">
-                                                {Object.entries(
-                                                  nestedValue
-                                                ).map(
-                                                  ([innerKey, innerValue]) => (
-                                                    <button
-                                                      key={innerKey}
-                                                      className="w-full text-left bg-gray-600  text-gray-200 py-2 px-4 rounded-lg transition"
-                                                    >
-                                                      {innerKey.replace(
-                                                        /_/g,
-                                                        " "
-                                                      )}
-                                                      :{" "}
-                                                      <span className="font-medium text-gray-100">
-                                                        {formatValue(
-                                                          innerValue,
-                                                          innerKey
-                                                        )}
-                                                      </span>
-                                                    </button>
-                                                  )
-                                                )}
-                                              </div>
-                                            </div>
-                                          );
-                                        } else {
-                                          return (
-                                            <button
-                                              key={nestedKey}
-                                              className="w-full text-left bg-gray-600  text-gray-200 py-2 px-4 rounded-lg transition"
-                                            >
-                                              {nestedKey.replace(/_/g, " ")}:{" "}
-                                              <span className="font-medium text-gray-100">
-                                                {formatValue(
-                                                  nestedValue,
-                                                  nestedKey
-                                                )}
-                                              </span>
-                                            </button>
-                                          );
-                                        }
-                                      }
-                                    )}
-                                  </div>
-                                ) : (
-                                  <p className="text-gray-400">
-                                    {formatValue(statValue, statKey)}
-                                  </p>
-                                )}
-                              </div>
-                            );
-                          }
-                        )}
-                      </div>
+                      <KeyStatistics statistics={section[key]}/>
                     </div>
                   );
                 }
-                // Handle Array Types
                 if (key === "swot_analysis") {
                   return (
                     <div
                       key={sectionKey}
                       className="p-4 bg-gray-600/30 rounded-xl my-10"
                     >
-                      <p className="text-2xl my-5 font-semibold">
+                      <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
                         SWOT Analysis
                       </p>
-                      <div className="space-y-4 grid gap-10 grid-cols-2 p-5 items-start">
-                        <div>
-                          <h2 className="text-xl font-semibold">Strengths</h2>
-                          <ul className="list-disc list-inside text-gray-300">
+                      <div className="space-y-4 grid gap-10 grid-cols-2 p-5 px-12 items-start justify-center mx-20">
+                        <div className="h-96 w-80">
+                          <h2 className="text-xl font-semibold mb-10 text-gray-400">
+                            Strengths
+                          </h2>
+                          <ul className=" text-gray-400">
                             {section[key].strengths.map((strength, index) => (
-                              <li key={index}>{strength}</li>
+                              <div>
+                                <div className="flex space-y-1">
+                                  <div className="w-1 mr-1 mb-1 bg-green-400"></div>
+                                  <li key={index} className="mt-1">
+                                    {strength}
+                                  </li>
+                                </div>
+                                <div className="h-[1px] w-full bg-gray-500"></div>
+                              </div>
                             ))}
                           </ul>
                         </div>
-                        <div>
-                          <h2 className="text-xl font-semibold">Weaknesses</h2>
-                          <ul className="list-disc list-inside text-gray-300">
+                        <div className="h-96 w-80">
+                          <h2 className="text-xl font-semibold mb-10 text-gray-400">
+                            Weaknesses
+                          </h2>
+                          <ul className=" text-gray-400">
                             {section[key].weaknesses.map((weakness, index) => (
-                              <li key={index}>{weakness}</li>
+                              <div>
+                                <div className="flex space-y-1">
+                                  <div className="w-1 mr-1 mb-1 bg-orange-400"></div>
+                                  <li key={index} className="mt-1">
+                                    {weakness}
+                                  </li>
+                                </div>
+                                <div className="h-[1px] w-full bg-gray-500"></div>
+                              </div>
                             ))}
                           </ul>
                         </div>
-                        <div>
-                          <h2 className="text-xl font-semibold">
+                        <div className="h-96 w-80">
+                          <h2 className="text-xl font-semibold mb-10 text-gray-400">
                             Opportunities
                           </h2>
-                          <ul className="list-disc list-inside text-gray-300">
+                          <ul className=" text-gray-400">
                             {section[key].opportunities.map(
-                              (opportunity, index) => (
-                                <li key={index}>{opportunity}</li>
+                              (opportunities, index) => (
+                                <div>
+                                  <div className="flex space-y-1">
+                                    <div className="w-1 mr-1 mb-1 bg-blue-400"></div>
+                                    <li key={index} className="mt-1">
+                                      {opportunities}
+                                    </li>
+                                  </div>
+                                  <div className="h-[1px] w-full bg-gray-500"></div>
+                                </div>
                               )
                             )}
                           </ul>
                         </div>
-                        <div>
-                          <h2 className="text-xl font-semibold">Threats</h2>
-                          <ul className="list-disc list-inside text-gray-300">
-                            {section[key].threats.map((threat, index) => (
-                              <li key={index}>{threat}</li>
+                        <div className="h-96 w-80">
+                          <h2 className="text-xl font-semibold mb-10 text-gray-400">
+                            Threats
+                          </h2>
+                          <ul className=" text-gray-400">
+                            {section[key].threats.map((strength, index) => (
+                              <div>
+                                <div className="flex space-y-1">
+                                  <div className="w-1 mr-1 mb-1 bg-pink-400"></div>
+                                  <li key={index} className="mt-1">
+                                    {strength}
+                                  </li>
+                                </div>
+                                <div className="h-[1px] w-full bg-gray-500"></div>
+                              </div>
                             ))}
                           </ul>
                         </div>
@@ -387,97 +296,186 @@ const ReportDropdown = ({ data }) => {
                     </div>
                   );
                 }
-
                 if (key === "current_performance") {
+
+                  const displayedPerformancePoints = showAllCurr
+                    ? section[key]
+                    : section[key].slice(0, 4);
+
+                  const remainingPerformancePointsCount = section[key].length > 4
+                    ? section[key].length - 4
+                    : 0;
+
+                  // Toggle individual performance point
+                  const togglePerformancePoint = (index) => {
+                    setOpenedPerformancePoints(prev =>
+                      prev.includes(index)
+                        ? prev.filter(item => item !== index)
+                        : [...prev, index]
+                    );
+                  };
+
                   return (
                     <div
-                      key={sectionKey}
-                      className="p-4 bg-gray-600/30 rounded-xl my-10"
-                    >
-                      <p className="text-2xl my-5 font-semibold">
-                        Current Performance
-                      </p>
-                      <div className="space-y-4 grid gap-10 grid-cols-1 p-5 items-start">
-                        {section[key].map((performancePoint, index) => (
-                          <div
-                            key={index}
-                            className="border p-4 rounded-lg bg-gray-700"
-                          >
-                            <h2 className="text-xl font-semibold">
-                              {performancePoint.current_performance_point_title}
-                            </h2>
-                            <p className="text-gray-300 mt-3">
-                              {
-                                performancePoint.current_performance_point_description
-                              }
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+      key={sectionKey}
+      className="p-4 bg-gray-600/30 rounded-xl my-10"
+    >
+      <p className="text-xl text-gray-400 my-5 font-semibold">
+        Current Performance
+      </p>
+      <div className="space-y-2 grid gap-5 grid-cols-1 p-4 items-start">
+        {displayedPerformancePoints.map((performancePoint, index) => (
+          <div
+            key={index}
+            className=" p-2 rounded-lg bg-gray-700/30 cursor-pointer"
+            onClick={() => togglePerformancePoint(index)}
+          >
+            <h2 className="text-lg font-semibold text-gray-400">
+              {performancePoint.current_performance_point_title}
+            </h2>
+
+            {openedPerformancePoints.includes(index) && (
+              <p className="text-gray-400 mt-3 animate-fade-in">
+                {performancePoint.current_performance_point_description}
+              </p>
+            )}
+          </div>
+        ))}
+
+        {!showAllCurr && remainingPerformancePointsCount > 0 && (
+          <button
+            onClick={() => setShowAllCurr(true)}
+            className="mt-4 w-full text-center bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md"
+          >
+            Show {remainingPerformancePointsCount} More Performance Point{remainingPerformancePointsCount !== 1 ? 's' : ''}
+          </button>
+        )}
+
+        {showAllCurr && (
+          <button
+            onClick={() => setShowAllCurr(false)}
+            className="mt-4 w-full text-center bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md"
+          >
+            Show Less
+          </button>
+        )}
+      </div>
+    </div>
                   );
                 }
-
                 if (key === "future_outlook") {
+
+                  const displayedPerformancePoints = showAllFut
+                    ? section[key]
+                    : section[key].slice(0, 4);
+
+                  const remainingPerformancePointsCount = section[key].length > 4
+                    ? section[key].length - 4
+                    : 0;
+
+                  // Toggle individual performance point
+                  const togglePerformancePoint = (index) => {
+                    setOpenedFut(prev =>
+                      prev.includes(index)
+                        ? prev.filter(item => item !== index)
+                        : [...prev, index]
+                    );
+                  };
+
                   return (
                     <div
-                      key={sectionKey}
-                      className="p-4 bg-gray-600/30 rounded-xl my-10"
-                    >
-                      <p className="text-2xl my-5 font-semibold">
-                        Current Performance
-                      </p>
-                      <div className="space-y-4 grid gap-10 grid-cols-1 p-5 items-start">
-                        {section[key].map((performancePoint, index) => (
-                          <div
-                            key={index}
-                            className="border p-4 rounded-lg bg-gray-700"
-                          >
-                            <h2 className="text-xl font-semibold">
-                              {performancePoint.future_outlook_point_title}
-                            </h2>
-                            <p className="text-gray-300 mt-3">
-                              {
-                                performancePoint.future_outlook_point_description
-                              }
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+      key={sectionKey}
+      className="p-4 bg-gray-600/30 rounded-xl my-10"
+    >
+      <p className="text-xl text-gray-400 my-5 font-semibold">
+        Future Impact
+      </p>
+      <div className="space-y-2 grid gap-5 grid-cols-1 p-4 items-start">
+        {displayedPerformancePoints.map((performancePoint, index) => (
+          <div
+            key={index}
+            className=" p-2 rounded-lg bg-gray-700/30 cursor-pointer"
+            onClick={() => togglePerformancePoint(index)}
+          >
+            <h2 className="text-lg font-semibold text-gray-400">
+              {performancePoint.future_outlook_point_title}
+            </h2>
+
+            {openedFut.includes(index) && (
+              <p className="text-gray-400 mt-3 animate-fade-in">
+                {performancePoint.future_outlook_point_description}
+              </p>
+            )}
+          </div>
+        ))}
+
+        {!showAllFut && remainingPerformancePointsCount > 0 && (
+          <button
+            onClick={() => setShowAllFut(true)}
+            className="mt-4 w-full text-center bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md"
+          >
+            Show {remainingPerformancePointsCount} More Performance Point{remainingPerformancePointsCount !== 1 ? 's' : ''}
+          </button>
+        )}
+
+        {showAllFut && (
+          <button
+            onClick={() => setShowAllFut(false)}
+            className="mt-4 w-full text-center bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md"
+          >
+            Show Less
+          </button>
+        )}
+      </div>
+    </div>
                   );
                 }
-
                 if (key === "industry_impact") {
                   return (
                     <div
                       key={sectionKey}
                       className="p-4 bg-gray-600/30 rounded-xl my-10"
                     >
-                      <p className="text-2xl my-5 font-semibold">
+                      <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
                         Industry Impact
                       </p>
-                      <div className="space-y-4 grid gap-10 grid-cols-2 p-5 items-start">
-                        <div>
-                          <h2 className="text-xl font-semibold">
+                      <div className="space-y-4 grid gap-10 grid-cols-2 p-5 px-12 items-start justify-center mx-20">
+                        <div className="h-96 w-80">
+                          <h2 className="text-xl font-semibold mb-10 text-gray-400">
                             Negative Impact Factor
                           </h2>
-                          <ul className="list-disc list-inside text-gray-300">
+                          <ul className=" text-gray-400">
                             {section[key].negative_impact_factors.map(
                               (strength, index) => (
-                                <li key={index}>{strength}</li>
+                                <div>
+                                  <div className="flex space-y-1">
+                                    <div className="w-1 mr-1 mb-1 bg-red-400"></div>
+                                    <li key={index} className="mt-1">
+                                      {strength}
+                                    </li>
+                                  </div>
+                                  <div className="h-[1px] w-full bg-gray-500"></div>
+                                </div>
                               )
                             )}
                           </ul>
                         </div>
-                        <div>
-                          <h2 className="text-xl font-semibold">
+                        <div className="h-96 w-80">
+                          <h2 className="text-xl font-semibold mb-10 text-gray-400">
                             Positive Impact Factor
                           </h2>
-                          <ul className="list-disc list-inside text-gray-300">
+                          <ul className=" text-gray-400">
                             {section[key].positive_impact_factors.map(
                               (weakness, index) => (
-                                <li key={index}>{weakness}</li>
+                                <div>
+                                  <div className="flex space-y-1">
+                                    <div className="w-1 mr-1 mb-1 bg-blue-400"></div>
+                                    <li key={index} className="mt-1">
+                                      {weakness}
+                                    </li>
+                                  </div>
+                                  <div className="h-[1px] w-full bg-gray-500"></div>
+                                </div>
                               )
                             )}
                           </ul>
@@ -486,27 +484,139 @@ const ReportDropdown = ({ data }) => {
                     </div>
                   );
                 }
-
                 if (key === "key_trends") {
+
+                  const displayedTrends = showAllKeyTrends ? section[key] : section[key].slice(0, 4);
+                  const remainingTrendsCount = section[key].length - 4;
+
                   return (
                     <div
                       key={sectionKey}
                       className="p-4 bg-gray-600/30 rounded-xl my-10"
                     >
-                      <p className="text-2xl my-5 font-semibold">Key Trends</p>
-                      <div className="">
-                        <div>
-                          <ul className="list-disc list-inside space-y-4 text-gray-300">
-                            {section[key].map((strength, index) => (
-                              <li key={index}>{strength}</li>
-                            ))}
-                          </ul>
-                        </div>
+                      <p className="text-xl text-gray-400 my-5 font-semibold">Key Trends</p>
+                      <div>
+                        <ul className="list-disc list-inside space-y-4 text-gray-400 p-5">
+                          {displayedTrends.map((strength, index) => (
+                            <li key={index}>{strength}</li>
+                          ))}
+                        </ul>
+
+                        {!showAllKeyTrends && remainingTrendsCount > 0 && (
+                          <button
+                            onClick={() => setShowAllKeyTrends(true)}
+                            className="mt-4 w-full text-center bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md"
+                          >
+                            Show {remainingTrendsCount} More Trend{remainingTrendsCount !== 1 ? 's' : ''}
+                          </button>
+                        )}
+
+                        {showAllKeyTrends && (
+                          <button
+                            onClick={() => setShowAllKeyTrends(false)}
+                            className="mt-4 w-full text-center bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md"
+                          >
+                            Show Less
+                          </button>
+                        )}
                       </div>
                     </div>
                   );
                 }
-
+                if (key === "external_drivers") {
+                  return (
+                    <div
+                      key={sectionKey}
+                      className="p-4 bg-gray-600/30 rounded-xl my-10"
+                    >
+                      <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
+                        External Drivers
+                      </p>
+                      <div className="mx-20">
+                        <ExternalDrivers drivers={section[key]}/>
+                      </div>
+                    </div>
+                  );
+                }
+                if (key === "supply_chain") {
+                  return (
+                    <div
+                      key={sectionKey}
+                      className="p-4 bg-gray-600/30 rounded-xl my-10"
+                    >
+                      <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
+                        Supply Chain
+                      </p>
+                     <SupplyChain  supplyChain={section[key]}/>
+                 </div>
+                  );
+                }
+                if (key === "similar_industries") {
+                  return (
+                    <div
+                      key={sectionKey}
+                      className="p-4 bg-gray-600/30 rounded-xl my-10"
+                    >
+                      <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
+                       Similar Industries
+                      </p>
+                     <SimpleList industries={section[key]}/>
+                 </div>
+                  );
+                }
+                if (key === "related_international_industries") {
+                  return (
+                    <div
+                      key={sectionKey}
+                      className="p-4 bg-gray-600/30 rounded-xl my-10"
+                    >
+                      <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
+                       Related International Industries
+                      </p>
+                     <SimpleList industries={section[key]}/>
+                 </div>
+                  );
+                }
+                if (key === "products_and_services") {
+                  return (
+                    <div
+                      key={sectionKey}
+                      className="p-4 bg-gray-600/30 rounded-xl my-10"
+                    >
+                     <ProductsAndServices products={section[key]}/>
+                 </div>
+                  );
+                }
+                if (key === "regulations_and_policies") {
+                  return (
+                    <div
+                      key={sectionKey}
+                      className="p-4 bg-gray-600/30 rounded-xl my-10"
+                    >
+                     <RegulationsAndPolicies regulations={section[key]}/>
+                 </div>
+                  );
+                }
+                if (key === "market_segmentation") {
+                  return (
+                    <div
+                      key={sectionKey}
+                      className="p-4 bg-gray-600/30 rounded-xl my-10"
+                    >
+                     <MarketSegmentation marketSegmentation={section[key]}/>
+                 </div>
+                  );
+                }
+                if (key === "market_share_concentration") {
+                  return (
+                    <div
+                      key={sectionKey}
+                      className="p-4 bg-gray-600/30 rounded-xl my-10"
+                    >
+                     <MarketShareConcentration concentrationData={section[key]}/>
+                 </div>
+                  );
+                }
                 return (
                   <div key={`${sectionKey}-${key}`}>
                     {typeof section[key] === "object" &&
