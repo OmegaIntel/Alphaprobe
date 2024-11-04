@@ -1,68 +1,46 @@
 import React from "react";
+import TaskAltRoundedIcon from "@mui/icons-material/TaskAltRounded";
+import HighlightOffRoundedIcon from "@mui/icons-material/HighlightOffRounded";
 
-const SwotAnalysis = ({ data }) => {
-  // Guard clause for when data is not yet loaded
-  if (!data) {
-    return <p>No SWOT analysis data available.</p>; // Handle case where data is undefined
-  }
+const SWOTAnalysis = ({ swotAnalysis }) => {
+  if (!swotAnalysis) return null;
+
+  // Reusable function for rendering each SWOT category
+  const renderCategory = (title, items, IconComponent, iconColor) => (
+    <div className="h-96 w-[30rem] rounded-lg bg-gray-600/10 p-4">
+      <h2 className="text-xl font-semibold mb-10 text-gray-400">{title}</h2>
+      <ul className="text-gray-400">
+        {items.map((item, idx) => (
+          <div key={idx}>
+            <div className="flex space-y-1">
+              <div>
+                <IconComponent className={`${iconColor} mr-2`} />
+              </div>
+              <li className="mt-1">{item}</li>
+            </div>
+          </div>
+        ))}
+      </ul>
+    </div>
+  );
 
   return (
-    <div>
-      <h2>SWOT Analysis</h2>
-
-      {data.strengths ? (
-        <>
-          <h3>Strengths</h3>
-          <ul>
-            {data.strengths.map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ul>
-        </>
-      ) : (
-        <p>No strengths data available.</p>
-      )}
-
-      {data.weaknesses ? (
-        <>
-          <h3>Weaknesses</h3>
-          <ul>
-            {data.weaknesses.map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ul>
-        </>
-      ) : (
-        <p>No weaknesses data available.</p>
-      )}
-
-      {data.opportunities ? (
-        <>
-          <h3>Opportunities</h3>
-          <ul>
-            {data.opportunities.map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ul>
-        </>
-      ) : (
-        <p>No opportunities data available.</p>
-      )}
-
-      {data.threats ? (
-        <>
-          <h3>Threats</h3>
-          <ul>
-            {data.threats.map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ul>
-        </>
-      ) : (
-        <p>No threats data available.</p>
-      )}
+    <div className="p-4 bg-gray-600/30 rounded-xl">
+      <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
+        SWOT Analysis
+      </p>
+      <div className="space-y-4 grid gap-10 grid-cols-2 p-5 px-12 items-start justify-center mx-20">
+        {swotAnalysis.strengths &&
+          renderCategory("Strengths", swotAnalysis.strengths, TaskAltRoundedIcon, "text-green-400")}
+        {swotAnalysis.weaknesses &&
+          renderCategory("Weaknesses", swotAnalysis.weaknesses, HighlightOffRoundedIcon, "text-red-400")}
+        {swotAnalysis.opportunities &&
+          renderCategory("Opportunities", swotAnalysis.opportunities, TaskAltRoundedIcon, "text-green-400")}
+        {swotAnalysis.threats &&
+          renderCategory("Threats", swotAnalysis.threats, HighlightOffRoundedIcon, "text-red-400")}
+      </div>
     </div>
   );
 };
 
-export default SwotAnalysis;
+export default SWOTAnalysis;

@@ -2,13 +2,21 @@ import React from "react";
 import { Doughnut } from "react-chartjs-2";
 import "chart.js/auto";
 
-const MarketShareConcentration = ({ concentrationData }) => {
+const MarketShareConcentration = ({ concentrationData = {} }) => {
+  // Set default values for top_companies and concentration_points if undefined
+  const {
+    concentration_level = "N/A",
+    concentration_trend = "N/A",
+    concentration_points = [],
+    top_companies = [],
+  } = concentrationData;
+
   // Prepare data for the donut chart for top companies
   const chartData = {
-    labels: concentrationData.top_companies.map((company) => company.company_name),
+    labels: top_companies.map((company) => company.company_name),
     datasets: [
       {
-        data: concentrationData.top_companies.map((company) => company.company_percentage),
+        data: top_companies.map((company) => company.company_percentage),
         backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"],
         borderWidth: 0,
       },
@@ -21,10 +29,10 @@ const MarketShareConcentration = ({ concentrationData }) => {
 
       <div className="mb-6">
         <p>
-          <strong>Concentration Level:</strong> {concentrationData.concentration_level}
+          <strong>Concentration Level:</strong> {concentration_level}
         </p>
         <p>
-          <strong>Concentration Trend:</strong> {concentrationData.concentration_trend}
+          <strong>Concentration Trend:</strong> {concentration_trend}
         </p>
       </div>
 
@@ -34,7 +42,7 @@ const MarketShareConcentration = ({ concentrationData }) => {
         <div className="flex-1 space-y-4">
           <h4 className="text-lg font-semibold">Leading Companies</h4>
           <ul className="space-y-2 text-sm text-gray-300">
-            {concentrationData.top_companies.map((company, index) => (
+            {top_companies.map((company, index) => (
               <li key={index} className="flex justify-between border rounded-lg p-3 bg-gray-300/20">
                 <span>{company.company_name}</span>
                 <span className="font-semibold text-green-500">{company.company_percentage}%</span>
@@ -68,8 +76,8 @@ const MarketShareConcentration = ({ concentrationData }) => {
 
       {/* Concentration Points */}
       <ul className="space-y-4 text-sm text-gray-300">
-        {concentrationData.concentration_points.map((point, index) => (
-          <li key={index} className=" rounded-lg p-4 bg-gray-300/20">
+        {concentration_points.map((point, index) => (
+          <li key={index} className="rounded-lg p-4 bg-gray-300/20">
             <h4 className="text-lg font-semibold">{point.concentration_title}</h4>
             <p className="text-gray-200">{point.concentration_description}</p>
           </li>
