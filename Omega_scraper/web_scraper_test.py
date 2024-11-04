@@ -1,6 +1,6 @@
 import asyncio
 
-from web_scraper import find_url
+from web_scraper import find_company_url
 
 
 class TestFindURL:
@@ -8,7 +8,7 @@ class TestFindURL:
     company_name = "10X Engineered Materials"
 
     def runtest(self, site: str, correct: str):
-        result = asyncio.run(find_url(self.company_name, site))
+        result = asyncio.run(find_company_url(self.company_name, site))
         assert correct == result
 
     def test_owler(self):
@@ -25,4 +25,3 @@ class TestFindURL:
 
     def test_open_corporates(self):
         self.runtest('opencorporates.com', 'https://sources.opencorporates.com/bots/dk_xbrl_parser/e/c/7/51696536_amNsb3VkczovLzAzL2ZmLzllLzNlL2JjLzkwMjMtNGFkYi04MDA5LTJhZmM2ODNiZDhkZg.pdf')
-
