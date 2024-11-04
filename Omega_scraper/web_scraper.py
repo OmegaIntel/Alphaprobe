@@ -2,7 +2,9 @@ import urllib.parse
 from playwright.async_api import async_playwright
 
 
-async def find_url(company_name, site):
+async def find_url(company_name: str, site: str):
+    """Lookup company info page on the site using company_name and Google search."""
+
     term = urllib.parse.quote_plus(f"{company_name} site:{site}")
     url = f"https://www.google.com/search?q={term}"
 
