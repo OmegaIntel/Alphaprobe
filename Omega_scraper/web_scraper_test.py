@@ -12,7 +12,7 @@ class TestFindURL:
         result = asyncio.run(find_company_url(self.company_name, site))
         assert correct == result
 
-    @pytest.mark.xfail
+
     def test_owler(self):
         self.runtest('owler.com', 'https://www.owler.com/company/10xem')
 
