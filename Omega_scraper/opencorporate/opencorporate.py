@@ -98,6 +98,8 @@ def fetch_company_details(company_url: CompanyURL):
             browser.close()
             raise HTTPException(status_code=404, detail="Company details not found.")
 
+## uvicorn opencorporate:app --reload --host 0.0.0.0 --port 8501
+
 # import asyncio
 # import urllib.parse
 # from playwright.async_api import async_playwright

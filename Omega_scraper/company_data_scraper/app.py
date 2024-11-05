@@ -50,7 +50,7 @@ def extract_linkedin_url(text):
     pattern = r'https?://(?:www\.)?linkedin\.com/[^ ]*'
     match = re.search(pattern, text)
     if match:
-        url = match.group(0)
+        url = match.group(0) 
         # Ensure the URL ends with a '/'
         if not url.endswith('/'):
             url += '/'
