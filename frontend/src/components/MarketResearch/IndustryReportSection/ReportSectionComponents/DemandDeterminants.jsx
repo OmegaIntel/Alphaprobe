@@ -15,7 +15,7 @@ const DemandDeterminants = ({ demandDeterminants }) => {
         {demandDeterminants.map((determinant, index) => (
           <div
             key={index}
-            className="rounded-lg p-3 bg-gray-300/20 shadow-sm"
+            className="rounded-lg p-3 bg-gray-500/20 shadow-sm hover:bg-gray-400/20"
           >
             <div
               onClick={() => toggleAccordion(index)}

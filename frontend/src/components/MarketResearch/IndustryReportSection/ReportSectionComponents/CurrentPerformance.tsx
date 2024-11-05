@@ -8,14 +8,14 @@ const CurrentPerformanceComponent = ({ currentPerformance }) => {
   };
 
   return (
-    <div className="p-10 text-gray-400">
-      <h3 className="text-xl font-semibold mb-4">Insights</h3>
+    <div className="rounded-lg p-4 shadow-md text-gray-400">
+      <h3 className="text-xl font-semibold mb-4">Current Performance</h3>
 
       <div className="space-y-4">
         {currentPerformance.map((point, index) => (
           <div
             key={index}
-            className="border border-gray-600 rounded-lg p-4 shadow-md hover:shadow-lg hover:border-gray-500 transition duration-200"
+            className="rounded-lg p-3 bg-gray-300/20 shadow-sm"
           >
             <div
               onClick={() => toggleAccordion(index)}

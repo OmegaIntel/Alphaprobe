@@ -1,3 +1,241 @@
+import { useState } from "react";
+import FAQsComponent from "../../Faqs/FAQs";
+import KeyStatistics from "./ReportSectionComponents/KeyStatistics";
+import ExternalDrivers from "./ReportSectionComponents/ExternalDrivers";
+import SupplyChain from "./ReportSectionComponents/SupplyChain";
+import SimpleList from "./ReportSectionComponents/SimpleList";
+import { ProductsAndServices } from "./ReportSectionComponents/SimpleAccordian";
+import RegulationsAndPolicies from "./ReportSectionComponents/RegulationNPolicies";
+import MarketSegmentation from "./ReportSectionComponents/MarketSegmentation";
+import MarketShareConcentration from "./ReportSectionComponents/MarketConcentration";
+import TaskAltRoundedIcon from "@mui/icons-material/TaskAltRounded";
+import HighlightOffRoundedIcon from "@mui/icons-material/HighlightOffRounded";
+import IndustryDetail from "./ReportSectionComponents/SimpleList";
+import SWOTAnalysis from "./ReportSectionComponents/SWOTAnalysis";
+import DemandDeterminants from "./ReportSectionComponents/DemandDeterminants";
+import IndustryAssistance from "./ReportSectionComponents/IndustryAssistance";
+import TechnologicalChange from "./ReportSectionComponents/TechChange";
+import RevenueVolatility from "./ReportSectionComponents/RevenueVolatility";
+import CapitalIntensity from "./ReportSectionComponents/CapitalIntensitivity";
+import CostFactors from "./ReportSectionComponents/CostFactor";
+import KeyTrends from "./ReportSectionComponents/KeyTrends";
+import FutureOutlookComponent from "./ReportSectionComponents/FutureOutlook";
+import CurrentPerformanceComponent from "./ReportSectionComponents/CurrentPerformance";
+import BarriersToEntryComponent from "./ReportSectionComponents/BarriersToEntry";
+import ScorecardComponent from "./ReportSectionComponents/ScoreCard";
+import IndustryImpact from "./ReportSectionComponents/IndustryImpact";
+
+const ReportDropdown = ({ data }) => {
+  // Helper function to render the overview section
+  const renderOverviewSection = (section) => {
+    if (!section) return null;
+
+    return (
+      <div className="flex ">
+        <div className="bg-gray-600/30 rounded-xl p-6">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+            <h1 className="text-4xl text-gray-300">
+              {section.report_title || "No Title Available"}
+            </h1>
+          </div>
+
+          {section.industry_definition && (
+            <div>
+              <p className="text-lg text-gray-400">
+                {section.industry_definition}
+              </p>
+            </div>
+          )}
+          <div className="space-y-6">
+            {section.executive_summary && (
+              <div>
+                <p className="text-lg text-gray-400 mt-10">
+                  {section.executive_summary}
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+        <div className="">
+          {section.key_statistics && (
+            <div>
+              <KeyStatistics statistics={section.key_statistics} />
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  };
+
+  // Main render function with error handling
+  if (!data || !Array.isArray(data) || data.length === 0) {
+    return <div className="p-4 text-gray-400">No report data available.</div>;
+  }
+  return (
+    <div className="p-4">
+      {data.map((section, index) => (
+        <div key={index} className="space-y-8">
+          {/* Overview Section - Grouped components */}
+          {renderOverviewSection(section)}
+
+          <div className="flex space-x-2 w-full items-start">
+            <div className="w-[50rem]">
+              {section.industry_impact && (
+                <IndustryImpact industryImpact={section.industry_impact} />
+              )}
+            </div>
+            {section.metrics && (
+              <div className="">
+                <ScorecardComponent metrics={section.metrics} />
+              </div>
+            )}
+          </div>
+          {section.key_trends && (
+            <div className="p-4 bg-gray-600/30 rounded-xl">
+              <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
+                Industry Trends
+              </p>
+              <div className="mx-20">
+                <KeyTrends keyTrends={section.key_trends} />
+              </div>
+            </div>
+          )}
+
+          <div className="p-4 bg-gray-600/30 rounded-xl">
+            <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
+              Insights & Future Outlook
+            </p>
+
+            {section.current_performance && (
+              <div>
+                <CurrentPerformanceComponent
+                  currentPerformance={section.current_performance}
+                />
+              </div>
+            )}
+            {section.future_outlook && (
+              <div>
+                <FutureOutlookComponent
+                  futureOutlook={section.future_outlook}
+                />
+              </div>
+            )}
+          </div>
+
+          {/* {section.products_and_services && (
+            <div>
+              <ProductsAndServices products={section.products_and_services} />
+            </div>
+          )} */}
+
+          {section.demand_determinants && (
+            <div className="bg-gray-600/30 p-3 rounded-lg">
+              <DemandDeterminants
+                demandDeterminants={section.demand_determinants}
+              />
+            </div>
+          )}
+          {section.market_segmentation && (
+            <div className="p-4 bg-gray-600/30 rounded-xl">
+              <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
+                Market Segmentation
+              </p>
+              <MarketSegmentation
+                marketSegmentation={section.market_segmentation}
+              />
+            </div>
+          )}
+          {section.barriers_to_entry && (
+            <div>
+              <BarriersToEntryComponent
+                barriersToEntry={section.barriers_to_entry}
+              />
+            </div>
+          )}
+          {section.market_share_concentration && (
+            <div className="p-4 bg-gray-600/30 rounded-xl">
+              <MarketShareConcentration
+                concentrationData={section.market_share_concentration}
+              />
+            </div>
+          )}
+          {section.supply_chain && (
+            <div className="p-4 bg-gray-600/30 rounded-xl">
+              <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
+                Supply Chain
+              </p>
+              <SupplyChain supplyChain={section.supply_chain} />
+            </div>
+          )}
+
+          {/* Trends and Other things */}
+          <div>
+            {section.external_drivers && (
+              <div className="p-4 bg-gray-600/30 rounded-xl">
+                <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
+                  External Drivers
+                </p>
+                <div className="mx-20">
+                  <ExternalDrivers drivers={section.external_drivers} />
+                </div>
+              </div>
+            )}
+
+            {section.regulations_and_policies && (
+              <div className="p-4 bg-gray-600/30 rounded-xl">
+                <RegulationsAndPolicies
+                  regulations={section.regulations_and_policies}
+                />
+              </div>
+            )}
+            {section.industry_assistance && (
+              <div className="p-4 bg-gray-600/30 rounded-xl">
+                <IndustryAssistance
+                  industryAssistance={section.industry_assistance}
+                />
+              </div>
+            )}
+            {section.technological_change && (
+              <div className="p-4 bg-gray-600/30 rounded-xl">
+                <TechnologicalChange
+                  technologicalChange={section.technological_change}
+                />
+              </div>
+            )}
+            {section.revenue_volatility && (
+              <div className="p-4 bg-gray-600/30 rounded-xl">
+                <RevenueVolatility
+                  revenueVolatility={section.revenue_volatility}
+                />
+              </div>
+            )}
+            {section.capital_intensity && (
+              <div className="p-4 bg-gray-600/30 rounded-xl">
+                <CapitalIntensity
+                  capitalIntensity={section.capital_intensity}
+                />
+              </div>
+            )}
+          </div>
+          {section.swot_analysis && (
+            <SWOTAnalysis swotAnalysis={section.swot_analysis} />
+          )}
+          {section.FAQs && (
+            <div className="p-4 bg-gray-600/30 rounded-xl">
+              <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
+                FAQs
+              </p>
+              <FAQsComponent faqs={section.FAQs} />
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default ReportDropdown;
+
 // import { useState } from "react";
 // import FAQsComponent from "../../Faqs/FAQs";
 // import KeyStatistics from "./ReportSectionComponents/KeyStatistics"; // Import KeyStatistics component
@@ -652,209 +890,3 @@
 // };
 
 // export default ReportDropdown;
-
-import { useState } from "react";
-import FAQsComponent from "../../Faqs/FAQs";
-import KeyStatistics from "./ReportSectionComponents/KeyStatistics";
-import ExternalDrivers from "./ReportSectionComponents/ExternalDrivers";
-import SupplyChain from "./ReportSectionComponents/SupplyChain";
-import SimpleList from "./ReportSectionComponents/SimpleList";
-import { ProductsAndServices } from "./ReportSectionComponents/SimpleAccordian";
-import RegulationsAndPolicies from "./ReportSectionComponents/RegulationNPolicies";
-import MarketSegmentation from "./ReportSectionComponents/MarketSegmentation";
-import MarketShareConcentration from "./ReportSectionComponents/MarketConcentration";
-import TaskAltRoundedIcon from "@mui/icons-material/TaskAltRounded";
-import HighlightOffRoundedIcon from "@mui/icons-material/HighlightOffRounded";
-import IndustryDetail from "./ReportSectionComponents/SimpleList";
-import SWOTAnalysis from "./ReportSectionComponents/SWOTAnalysis";
-import DemandDeterminants from "./ReportSectionComponents/DemandDeterminants";
-import IndustryAssistance from "./ReportSectionComponents/IndustryAssistance";
-import TechnologicalChange from "./ReportSectionComponents/TechChange";
-import RevenueVolatility from "./ReportSectionComponents/RevenueVolatility";
-import CapitalIntensity from "./ReportSectionComponents/CapitalIntensitivity";
-import CostFactors from "./ReportSectionComponents/CostFactor";
-import KeyTrends from "./ReportSectionComponents/KeyTrends";
-import FutureOutlookComponent from "./ReportSectionComponents/FutureOutlook";
-import CurrentPerformanceComponent from "./ReportSectionComponents/CurrentPerformance";
-import BarriersToEntryComponent from "./ReportSectionComponents/BarriersToEntry";
-import ScorecardComponent from "./ReportSectionComponents/ScoreCard";
-
-
-const ReportDropdown = ({ data }) => {
-  const [openSections, setOpenSections] = useState({});
-  const [openFAQs, setOpenFAQs] = useState(false);
-  const [showAllKeyTrends, setShowAllKeyTrends] = useState(false);
-  const [showAllCurr, setShowAllCurr] = useState(false);
-  const [openedPerformancePoints, setOpenedPerformancePoints] = useState([]);
-  const [showAllFut, setShowAllFut] = useState(false);
-  const [openedFut, setOpenedFut] = useState([]);
-
-  // Helper function to render the overview section
-  const renderOverviewSection = (section) => {
-    if (!section) return null;
-
-    return (
-      <div className="flex ">
-        <div className="bg-gray-600/30 rounded-xl p-6">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
-            <h1 className="text-4xl text-gray-300">
-              {section.report_title || "No Title Available"}
-            </h1>
-          </div>
-
-          {section.industry_definition && (
-            <div>
-              <p className="text-lg text-gray-400">
-                {section.industry_definition}
-              </p>
-            </div>
-          )}
-          <div className="space-y-6">
-            {section.executive_summary && (
-              <div>
-                <p className="text-lg text-gray-400 mt-10">
-                  {section.executive_summary}
-                </p>
-              </div>
-            )}
-          </div>
-        </div>
-        <div className="">
-          {section.key_statistics && (
-            <div>
-              <KeyStatistics statistics={section.key_statistics} />
-            </div>
-          )}
-        </div>
-      </div>
-    );
-  };
-
-  // Main render function with error handling
-  if (!data || !Array.isArray(data) || data.length === 0) {
-    return <div className="p-4 text-gray-400">No report data available.</div>;
-  }
-
-  return (
-    <div className="p-4">
-      {data.map((section, index) => (
-        <div key={index} className="space-y-8">
-          {/* Overview Section - Grouped components */}
-          {renderOverviewSection(section)}
-
-          {section.swot_analysis && (
-            <SWOTAnalysis swotAnalysis={section.swot_analysis} />
-          )}
-          {section.external_drivers && (
-            <div className="p-4 bg-gray-600/30 rounded-xl">
-              <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
-                External Drivers
-              </p>
-              <div className="mx-20">
-                <ExternalDrivers drivers={section.external_drivers} />
-              </div>
-            </div>
-          )}
-          {section.supply_chain && (
-            <div className="p-4 bg-gray-600/30 rounded-xl">
-              <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
-                Supply Chain
-              </p>
-              <SupplyChain supplyChain={section.supply_chain} />
-            </div>
-          )}
-          {section.market_segmentation && (
-            <div className="p-4 bg-gray-600/30 rounded-xl">
-              <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
-                Market Segmentation
-              </p>
-              <MarketSegmentation
-                marketSegmentation={section.market_segmentation}
-              />
-            </div>
-          )}
-          {section.market_share_concentration && (
-            <div className="p-4 bg-gray-600/30 rounded-xl">
-              <MarketShareConcentration
-                concentrationData={section.market_share_concentration}
-              />
-            </div>
-          )}
-          {section.regulations_and_policies && (
-            <div className="p-4 bg-gray-600/30 rounded-xl">
-              <RegulationsAndPolicies
-                regulations={section.regulations_and_policies}
-              />
-            </div>
-          )}
-          {section.demand_determinants && (
-            <div className="bg-gray-400/20 p-3 rounded-lg"> 
-              <DemandDeterminants demandDeterminants={section.demand_determinants} />
-            </div>
-          )}
-          {section.industry_assistance && (
-            <div className="bg-gray-400/20 p-3 rounded-lg"> 
-              <IndustryAssistance industryAssistance={section.industry_assistance} />
-            </div>
-          )}
-          {section.technological_change && (
-            <div className="bg-gray-400/20 p-3 rounded-lg">
-              <TechnologicalChange technologicalChange={section.technological_change} />
-            </div>
-          )}
-          {section.revenue_volatility && (
-            <div className="bg-gray-400/20 p-3 rounded-lg">
-              <RevenueVolatility revenueVolatility={section.revenue_volatility} />
-            </div>
-          )}
-          {section.capital_intensity && (
-            <div className="bg-gray-400/20 p-3 rounded-lg">
-              <CapitalIntensity capitalIntensity={section.capital_intensity} />
-            </div>
-          )}
-          {section.future_outlook && (
-            <div>
-              <FutureOutlookComponent futureOutlook={section.future_outlook} />
-            </div>
-          )}
-      {section.current_performance && (
-        <div>
-          <CurrentPerformanceComponent currentPerformance={section.current_performance}/>
-        </div>
-      )}
-      {section.barriers_to_entry && (
-        <div>
-          <BarriersToEntryComponent barriersToEntry={section.barriers_to_entry}/>
-        </div>
-      )}
-      {section.matrics && (
-        <div>
-          <ScorecardComponent metrics={section.matrics} />
-        </div>
-      )}
-      
-          {/* {section.key_trends && (
-            <div className="bg-gray-400/20 p-3 rounded-lg">
-              <KeyTrends keyTrends={section.key_trends} />
-            </div>
-          )} */}
-          {/* {section.cost_factors && (
-            <div className="bg-gray-400/20 p-3 rounded-lg">
-              <CostFactors costFactors={section.cost_factors} />
-            </div>
-          )} */}
-          {section.FAQs && (
-            <div className="p-4 bg-gray-600/30 rounded-xl">
-              <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
-                FAQs
-              </p>
-              <FAQsComponent faqs={section.FAQs} />
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
-  );
-};
-
-export default ReportDropdown;

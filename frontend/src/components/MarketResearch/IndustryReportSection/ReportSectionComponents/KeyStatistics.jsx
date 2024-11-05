@@ -12,12 +12,12 @@ const KeyStatistics = ({ statistics }) => {
   return (
     <div className="rounded-lg p-4 shadow-md text-lg text-gray-300">
       <div className="w-72">
-        <div className="mb-4 w-full mx-2  rounded-lg flex bg-gray-300/20">
+        <div className="mb-4 w-full mx-2  rounded-lg flex bg-gray-500/20">
           <div className="w-2 h-14 bg-blue-500"></div>
           <div className="px-3">
-            <h4 className="font-semibold">Revenue</h4>
+            <h4 className="font-semibold text-gray-400">Revenue</h4>
             <p>
-              <strong className="text-green-500">
+              <strong className="text-gray-300">
                 {formatCurrency(statistics.revenue.revenue_dollars)}
               </strong>
             </p>
@@ -35,52 +35,38 @@ const KeyStatistics = ({ statistics }) => {
             </strong>
           </p> */}
         </div>
-        <div className="mb-4 w-full mx-2  rounded-lg flex bg-gray-300/20">
+        <div className="mb-4 w-full mx-2  rounded-lg flex bg-gray-500/20">
           <div className="w-2 h-14 bg-blue-500"></div>
           <div className="px-3" >
-            <p>
+            <p className="text-gray-400 flex flex-col">
               Historical CAGR (2005-2024):{" "}
-              <strong className="text-green-500">
+              <strong className="text-gray-300">
                 {statistics.revenue.revenue_cagr_historical.revenue_cagr_value}%
               </strong>
             </p>
           </div>
         </div>
-        <div className="mb-4 w-full mx-2 rounded-lg flex bg-gray-300/20">
+        <div className="mb-4 w-full mx-2 rounded-lg flex bg-gray-500/20">
         <div className="w-2 h-14 bg-blue-500">
 
         </div>
         <div className="px-3">
-          <p>
+          <p className="text-gray-400 flex flex-col">
             Projected CAGR (2024-2030):{" "}
-            <strong className="text-green-500">
+            <strong className="text-gray-300">
               {statistics.revenue.revenue_cagr_projected.revenue_cagr_value}%
             </strong>
           </p>
         </div>
         </div>
-
-        {/* <div className="mb-4 w-full mx-2 p-3 rounded-lg bg-gray-300/20 ">
-        <h4 className="font-semibold text-lg">Profit</h4>
-        <div className="flex space-x-4">
-        <p>
-          Profit: <strong className="text-green-500">{formatCurrency(statistics.profit.profit_dollars)}</strong>
-        </p>
-        <p>
-          CAGR (2005-2024): <strong className="text-green-500">{statistics.profit.profit_cagr_historical.profit_cagr_value}%</strong>
-        </p>
-        </div>
-      </div> */}
-
-        <div className="mb-4 w-full mx-2 rounded-lg flex bg-gray-300/20">
+        <div className="mb-4 w-full mx-2 rounded-lg flex bg-gray-500/20">
           {/* <h4 className="font-semibold">Profit Margins</h4> */}
           <div className="w-2 h-14 bg-blue-500">
-
           </div>
           <div className="px-3">
-            <p>
-              Profit Margin Percentage:{" "}
-              <strong className="text-green-500">
+            <p className="text-gray-400 flex flex-col">
+              Profit Margin {" "}
+              <strong className="text-gray-300">
                 {statistics.profit_margins.profit_margins_percentage}%
               </strong>
             </p>

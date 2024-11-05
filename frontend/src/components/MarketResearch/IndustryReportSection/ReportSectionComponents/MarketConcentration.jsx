@@ -12,12 +12,13 @@ const MarketShareConcentration = ({ concentrationData = {} }) => {
   } = concentrationData;
 
   // Prepare data for the donut chart for top companies
+  const colors = ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"];
   const chartData = {
     labels: top_companies.map((company) => company.company_name),
     datasets: [
       {
         data: top_companies.map((company) => company.company_percentage),
-        backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"],
+        backgroundColor: colors,
         borderWidth: 0,
       },
     ],
@@ -27,7 +28,7 @@ const MarketShareConcentration = ({ concentrationData = {} }) => {
     <div className="rounded-lg p-4 shadow-md text-gray-300">
       <h3 className="text-xl font-semibold mb-4">Market Share Concentration</h3>
 
-      <div className="mb-6">
+      <div className="mb-6 flex justify-between">
         <p>
           <strong>Concentration Level:</strong> {concentration_level}
         </p>
@@ -36,16 +37,38 @@ const MarketShareConcentration = ({ concentrationData = {} }) => {
         </p>
       </div>
 
+      {/* Concentration Points */}
+      <ul className="space-y-4 text-sm text-gray-300">
+        {concentration_points.map((point, index) => (
+          <li key={index} className="rounded-lg p-4 bg-gray-500/10 ">
+            <h4 className="text-lg font-semibold">
+              {point.concentration_title}
+            </h4>
+            <p className="text-gray-200">{point.concentration_description}</p>
+          </li>
+        ))}
+      </ul>
       {/* Leading Companies Section */}
-      <div className="flex flex-col sm:flex-row sm:space-x-8 items-start mb-6">
+      <div className="flex flex-col-reverse sm:flex-row sm:space-x-8 items-start my-6">
+       
         {/* Company List */}
         <div className="flex-1 space-y-4">
-          <h4 className="text-lg font-semibold">Leading Companies</h4>
+          <h4 className="text-lg font-semibold">Key Players</h4>
           <ul className="space-y-2 text-sm text-gray-300">
             {top_companies.map((company, index) => (
-              <li key={index} className="flex justify-between border rounded-lg p-3 bg-gray-300/20">
+              <li
+                key={index}
+                className="rounded-lg p-4 bg-gray-500/10 flex items-start space-x-2"
+              >
+                {/* Color Box */}
+                <span
+                  className="w-4 h-4 mr-2 rounded"
+                  style={{ backgroundColor: colors[index % colors.length] }} // Ensure it cycles if there are more companies than colors
+                ></span>
                 <span>{company.company_name}</span>
-                <span className="font-semibold text-green-500">{company.company_percentage}%</span>
+                {/* <span className="font-semibold text-green-500 ml-auto">
+                  {company.company_percentage}%
+                </span> */}
               </li>
             ))}
           </ul>
@@ -73,16 +96,6 @@ const MarketShareConcentration = ({ concentrationData = {} }) => {
           />
         </div>
       </div>
-
-      {/* Concentration Points */}
-      <ul className="space-y-4 text-sm text-gray-300">
-        {concentration_points.map((point, index) => (
-          <li key={index} className="rounded-lg p-4 bg-gray-300/20">
-            <h4 className="text-lg font-semibold">{point.concentration_title}</h4>
-            <p className="text-gray-200">{point.concentration_description}</p>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };
