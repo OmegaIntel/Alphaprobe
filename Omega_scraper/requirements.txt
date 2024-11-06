@@ -1,2 +1,8 @@
 playwright==1.48.0
 selenium==4.26.1
+fastapi==0.111.1
+fastapi-cli==0.0.5
+uvicorn==0.24.0.post1
+requests==2.32.3
+requests-cache==1.2.1
+requests-oauthlib==2.0.0
