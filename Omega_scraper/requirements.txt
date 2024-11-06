@@ -6,4 +6,5 @@ requests-file==2.1.0
 firecrawl==1.4.0
 Scrapy==2.11.2
 pyvirtualdisplay==3.0
-firecrawl-py
+pytest==8.3.3
+pytest-asyncio==0.24.0
