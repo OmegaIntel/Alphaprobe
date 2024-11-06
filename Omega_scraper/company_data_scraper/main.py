@@ -11,3 +11,5 @@ app.include_router(linkedin_service.router)
 app.include_router(crunchbase_service.router)
 app.include_router(owler_service.router)
 app.include_router(pitchbook_service.router)
+
+# uvicorn main:app --reload --host 0.0.0.0 --port 8401
