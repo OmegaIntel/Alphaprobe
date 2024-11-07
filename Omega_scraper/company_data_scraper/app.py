@@ -42,7 +42,7 @@ async def get_company_profile(request: CompanyRequest):
 
 @app.post("/crunchbase-company-profile/")
 async def fetch_crunchbase_url(request: CompanyRequest):
-    url = [request.company_url]
+    url = request.company_url
 
     # Scrape the extracted URL using Firecrawl
     response = firecrawl_app.scrape_url(url=url, params={
