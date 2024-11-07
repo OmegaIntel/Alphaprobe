@@ -19,5 +19,5 @@ def test2():
 def test_many():
     company_name = 'Vouched'
     result = get_company_info(company_name)
-    for k, v in result:
+    for k, v in result.items():
         print(f'{k}: {v}')

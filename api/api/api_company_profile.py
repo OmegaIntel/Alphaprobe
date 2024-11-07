@@ -57,7 +57,7 @@ def get_company_info(company_name: str) -> dict:
     company_names = [company_name for provider in ENDPOINTS]
     providers = list(ENDPOINTS.keys())
     with ThreadPoolExecutor(max_workers=4) as executor:
-        result = list(executor.map(get_company_provider_info, company_names, providers, timeout=10))
+        result = list(executor.map(get_company_provider_info, company_names, providers, timeout=40))
 
     prompt = f"""
 We are trying to extract from text certain attributes for a company called "{company_name}".

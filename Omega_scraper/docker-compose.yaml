@@ -12,4 +12,4 @@ services:
       - PYTHONUNBUFFERED=1
       - DOCKER_BUILDKIT=${DOCKER_BUILDKIT}
     command:
-      fastapi run --workers 16 --reload --port 8401 app.py
+      fastapi run --workers 16 --port 8401 app.py
