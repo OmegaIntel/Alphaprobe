@@ -1,16 +1,11 @@
-import { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import FAQsComponent from "../../Faqs/FAQs";
 import KeyStatistics from "./ReportSectionComponents/KeyStatistics";
 import ExternalDrivers from "./ReportSectionComponents/ExternalDrivers";
 import SupplyChain from "./ReportSectionComponents/SupplyChain";
-import SimpleList from "./ReportSectionComponents/SimpleList";
-import { ProductsAndServices } from "./ReportSectionComponents/SimpleAccordian";
 import RegulationsAndPolicies from "./ReportSectionComponents/RegulationNPolicies";
 import MarketSegmentation from "./ReportSectionComponents/MarketSegmentation";
 import MarketShareConcentration from "./ReportSectionComponents/MarketConcentration";
-import TaskAltRoundedIcon from "@mui/icons-material/TaskAltRounded";
-import HighlightOffRoundedIcon from "@mui/icons-material/HighlightOffRounded";
-import IndustryDetail from "./ReportSectionComponents/SimpleList";
 import SWOTAnalysis from "./ReportSectionComponents/SWOTAnalysis";
 import DemandDeterminants from "./ReportSectionComponents/DemandDeterminants";
 import IndustryAssistance from "./ReportSectionComponents/IndustryAssistance";
@@ -24,17 +19,18 @@ import CurrentPerformanceComponent from "./ReportSectionComponents/CurrentPerfor
 import BarriersToEntryComponent from "./ReportSectionComponents/BarriersToEntry";
 import ScorecardComponent from "./ReportSectionComponents/ScoreCard";
 import IndustryImpact from "./ReportSectionComponents/IndustryImpact";
+import RadarChartComponent from "./ReportSectionComponents/ScoreCardRadarChart";
 
-const ReportDropdown = ({ data }) => {
+const ReportDropdown = ({ data, sidebarSections }) => {
   // Helper function to render the overview section
   const renderOverviewSection = (section) => {
     if (!section) return null;
 
     return (
       <div className="flex ">
-        <div className="bg-gray-600/30 rounded-xl p-6">
+        <div className="bg-[#171717] border border-[#2e2e2e] rounded-xl p-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
-            <h1 className="text-4xl text-gray-300">
+            <h1 className="text-4xl text-white">
               {section.report_title || "No Title Available"}
             </h1>
           </div>
@@ -56,7 +52,7 @@ const ReportDropdown = ({ data }) => {
             )}
           </div>
         </div>
-        <div className="">
+        <div className="mx-5">
           {section.key_statistics && (
             <div>
               <KeyStatistics statistics={section.key_statistics} />
@@ -72,164 +68,177 @@ const ReportDropdown = ({ data }) => {
     return <div className="p-4 text-gray-400">No report data available.</div>;
   }
   return (
-    <div className="p-4">
-      {data.map((section, index) => (
-        <div key={index} className="space-y-8">
-          {/* Overview Section - Grouped components */}
-          {renderOverviewSection(section)}
+    <div className="flex">
+      <div className="p-4">
+        {data.map((section, index) => (
+          <div key={index} className="space-y-8">
+            {/* Overview Section - Grouped components */}
+            {renderOverviewSection(section)}
 
-          <div className="flex space-x-2 w-full items-start">
-            <div className="w-[50rem]">
-              {section.industry_impact && (
-                <IndustryImpact industryImpact={section.industry_impact} />
+            <div className="flex space-x-2 ">
+              <div className="flex bg-[#171717] md:3/5 xl:w-4/5 border border-[#2e2e2e] justify-between">
+                {section.industry_impact && (
+                  <IndustryImpact industryImpact={section.industry_impact} />
+                )}
+                {section.metrics && (
+                  <div className=" my-5 mx-10">
+                    <RadarChartComponent  metrics={section.metrics}/>
+                  </div>
+                )}
+              </div>
+              <div>
+                {section.metrics && (
+                  <div className="">
+                    <ScorecardComponent metrics={section.metrics} />
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {section.key_trends && (
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
+                <p className="text-xl mx-10 my-5 font-semibold text-white">
+                  Industry Trends
+                </p>
+                <div className="mx-20">
+                  <KeyTrends keyTrends={section.key_trends} />
+                </div>
+              </div>
+            )}
+
+            <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-xl">
+              <p className="text-xl mx-10 my-5 font-semibold text-white">
+                Insights & Future Outlook 
+              </p>
+              {section.current_performance && (
+                <div>
+                  <CurrentPerformanceComponent
+                    currentPerformance={section.current_performance}
+                  />
+                </div>
+              )}
+              {section.future_outlook && (
+                <div>
+                  <FutureOutlookComponent
+                    futureOutlook={section.future_outlook}
+                  />
+                </div>
               )}
             </div>
-            {section.metrics && (
-              <div className="">
-                <ScorecardComponent metrics={section.metrics} />
-              </div>
-            )}
-          </div>
-          {section.key_trends && (
-            <div className="p-4 bg-gray-600/30 rounded-xl">
-              <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
-                Industry Trends
-              </p>
-              <div className="mx-20">
-                <KeyTrends keyTrends={section.key_trends} />
-              </div>
-            </div>
-          )}
 
-          <div className="p-4 bg-gray-600/30 rounded-xl">
-            <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
-              Insights & Future Outlook
-            </p>
-
-            {section.current_performance && (
-              <div>
-                <CurrentPerformanceComponent
-                  currentPerformance={section.current_performance}
-                />
-              </div>
-            )}
-            {section.future_outlook && (
-              <div>
-                <FutureOutlookComponent
-                  futureOutlook={section.future_outlook}
-                />
-              </div>
-            )}
-          </div>
-
-          {/* {section.products_and_services && (
+            {/* {section.products_and_services && (
             <div>
               <ProductsAndServices products={section.products_and_services} />
             </div>
           )} */}
 
-          {section.demand_determinants && (
-            <div className="bg-gray-600/30 p-3 rounded-lg">
-              <DemandDeterminants
-                demandDeterminants={section.demand_determinants}
-              />
-            </div>
-          )}
-          {section.market_segmentation && (
-            <div className="p-4 bg-gray-600/30 rounded-xl">
-              <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
-                Market Segmentation
-              </p>
-              <MarketSegmentation
-                marketSegmentation={section.market_segmentation}
-              />
-            </div>
-          )}
-          {section.barriers_to_entry && (
+            {section.demand_determinants && (
+              <div className="bg-[#171717] border border-[#2e2e2e]  p-3 rounded-lg">
+                <DemandDeterminants
+                  demandDeterminants={section.demand_determinants}
+                />
+              </div>
+            )}
+
             <div>
-              <BarriersToEntryComponent
-                barriersToEntry={section.barriers_to_entry}
-              />
-            </div>
-          )}
-          {section.market_share_concentration && (
-            <div className="p-4 bg-gray-600/30 rounded-xl">
-              <MarketShareConcentration
-                concentrationData={section.market_share_concentration}
-              />
-            </div>
-          )}
-          {section.supply_chain && (
-            <div className="p-4 bg-gray-600/30 rounded-xl">
-              <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
-                Supply Chain
-              </p>
-              <SupplyChain supplyChain={section.supply_chain} />
-            </div>
-          )}
-
-          {/* Trends and Other things */}
-          <div>
-            {section.external_drivers && (
-              <div className="p-4 bg-gray-600/30 rounded-xl">
-                <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
-                  External Drivers
-                </p>
-                <div className="mx-20">
-                  <ExternalDrivers drivers={section.external_drivers} />
+              {section.market_segmentation && (
+                <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
+                  <p className="text-xl mx-10 my-5 font-semibold text-white">
+                    Market Segmentation
+                  </p>
+                  <MarketSegmentation
+                    marketSegmentation={section.market_segmentation}
+                  />
                 </div>
+              )}
+            </div>
+
+            {section.barriers_to_entry && (
+              <div>
+                <BarriersToEntryComponent
+                  barriersToEntry={section.barriers_to_entry}
+                />
+              </div>
+            )}
+            {section.market_share_concentration && (
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
+                <MarketShareConcentration
+                  concentrationData={section.market_share_concentration}
+                />
+              </div>
+            )}
+            {section.supply_chain && (
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
+                <p className="text-xl mx-10 my-5 font-semibold text-white">
+                  Supply Chain
+                </p>
+                <SupplyChain supplyChain={section.supply_chain} />
               </div>
             )}
 
-            {section.regulations_and_policies && (
-              <div className="p-4 bg-gray-600/30 rounded-xl">
-                <RegulationsAndPolicies
-                  regulations={section.regulations_and_policies}
-                />
-              </div>
+            {/* Trends and Other things */}
+            <div>
+              {section.external_drivers && (
+                <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
+                  <p className="text-xl mx-10 my-5 font-semibold text-white">
+                    External Drivers
+                  </p>
+                  <div className="mx-20">
+                    <ExternalDrivers drivers={section.external_drivers} />
+                  </div>
+                </div>
+              )}
+
+              {section.regulations_and_policies && (
+                <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
+                  <RegulationsAndPolicies
+                    regulations={section.regulations_and_policies}
+                  />
+                </div>
+              )}
+              {section.industry_assistance && (
+                <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
+                  <IndustryAssistance
+                    industryAssistance={section.industry_assistance}
+                  />
+                </div>
+              )}
+              {section.technological_change && (
+                <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
+                  <TechnologicalChange
+                    technologicalChange={section.technological_change}
+                  />
+                </div>
+              )}
+              {section.revenue_volatility && (
+                <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
+                  <RevenueVolatility
+                    revenueVolatility={section.revenue_volatility}
+                  />
+                </div>
+              )}
+              {section.capital_intensity && (
+                <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
+                  <CapitalIntensity
+                    capitalIntensity={section.capital_intensity}
+                  />
+                </div>
+              )}
+            </div>
+            {section.swot_analysis && (
+              <SWOTAnalysis swotAnalysis={section.swot_analysis} />
             )}
-            {section.industry_assistance && (
-              <div className="p-4 bg-gray-600/30 rounded-xl">
-                <IndustryAssistance
-                  industryAssistance={section.industry_assistance}
-                />
-              </div>
-            )}
-            {section.technological_change && (
-              <div className="p-4 bg-gray-600/30 rounded-xl">
-                <TechnologicalChange
-                  technologicalChange={section.technological_change}
-                />
-              </div>
-            )}
-            {section.revenue_volatility && (
-              <div className="p-4 bg-gray-600/30 rounded-xl">
-                <RevenueVolatility
-                  revenueVolatility={section.revenue_volatility}
-                />
-              </div>
-            )}
-            {section.capital_intensity && (
-              <div className="p-4 bg-gray-600/30 rounded-xl">
-                <CapitalIntensity
-                  capitalIntensity={section.capital_intensity}
-                />
+            {section.FAQs && (
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
+                <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
+                  FAQs
+                </p>
+                <FAQsComponent faqs={section.FAQs} />
               </div>
             )}
           </div>
-          {section.swot_analysis && (
-            <SWOTAnalysis swotAnalysis={section.swot_analysis} />
-          )}
-          {section.FAQs && (
-            <div className="p-4 bg-gray-600/30 rounded-xl">
-              <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
-                FAQs
-              </p>
-              <FAQsComponent faqs={section.FAQs} />
-            </div>
-          )}
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

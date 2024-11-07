@@ -12,7 +12,7 @@ const KeyStatistics = ({ statistics }) => {
   return (
     <div className="rounded-lg p-4 shadow-md text-lg text-gray-300">
       <div className="w-72">
-        <div className="mb-4 w-full mx-2  rounded-lg flex bg-gray-500/20">
+        <div className="mb-4 w-full mx-2  rounded-lg flex bg-[#0D0D0D]">
           <div className="w-2 h-14 bg-blue-500"></div>
           <div className="px-3">
             <h4 className="font-semibold text-gray-400">Revenue</h4>
@@ -35,31 +35,31 @@ const KeyStatistics = ({ statistics }) => {
             </strong>
           </p> */}
         </div>
-        <div className="mb-4 w-full mx-2  rounded-lg flex bg-gray-500/20">
+        <div className="mb-4 w-full mx-2  rounded-lg flex bg-[#0D0D0D]">
           <div className="w-2 h-14 bg-blue-500"></div>
           <div className="px-3" >
             <p className="text-gray-400 flex flex-col">
-              Historical CAGR (2005-2024):{" "}
+              Historical CAGR (2005-2024){" "}
               <strong className="text-gray-300">
                 {statistics.revenue.revenue_cagr_historical.revenue_cagr_value}%
               </strong>
             </p>
           </div>
         </div>
-        <div className="mb-4 w-full mx-2 rounded-lg flex bg-gray-500/20">
+        <div className="mb-4 w-full mx-2 rounded-lg flex bg-[#0D0D0D]">
         <div className="w-2 h-14 bg-blue-500">
 
         </div>
         <div className="px-3">
           <p className="text-gray-400 flex flex-col">
-            Projected CAGR (2024-2030):{" "}
+            Projected CAGR (2024-2030){" "}
             <strong className="text-gray-300">
               {statistics.revenue.revenue_cagr_projected.revenue_cagr_value}%
             </strong>
           </p>
         </div>
         </div>
-        <div className="mb-4 w-full mx-2 rounded-lg flex bg-gray-500/20">
+        <div className="mb-4 w-full mx-2 rounded-lg flex bg-[#0D0D0D]">
           {/* <h4 className="font-semibold">Profit Margins</h4> */}
           <div className="w-2 h-14 bg-blue-500">
           </div>

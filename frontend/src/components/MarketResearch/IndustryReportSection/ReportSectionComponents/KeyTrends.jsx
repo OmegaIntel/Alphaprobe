@@ -17,24 +17,26 @@ const KeyTrends = ({ keyTrends }) => {
 
   return (
     <div>
-      <div className="grid grid-cols-2 gap-6 text-gray-400">
+      <div className="gap-6 text-gray-400">
         {keyTrends.slice(0, visibleTrends).map((trend, index) => (
           <div
             key={index}
-            className="border border-gray-600 rounded-lg p-4 shadow-md hover:shadow-lg hover:border-gray-500 transition duration-200"
+            className=" mt-3 list-disc list-item shadow-md hover:shadow-lg  transition duration-200"
           >
-            <p className="text-gray-300 hover:text-white">{trend}</p>
+            <p className="text-gray-400 font-normal ">{trend}</p>
           </div>
         ))}
       </div>
 
       {keyTrends.length > initialVisibleTrends && (
+        <div className="flex justify-center">
         <button
           onClick={isExpanded ? showLess : showMore}
-          className="mt-4 w-full bg-gray-700 text-white py-2 rounded-md font-semibold hover:bg-gray-600 transition duration-200"
+          className="mt-12 mb-6 w-1/5 bg-[#1d2a41] text-white border-2 border-[#404040]  py-2 rounded-full font-medium hover:bg-gray-600 transition duration-200"
         >
           {isExpanded ? "Show Less" : "Show More"}
         </button>
+        </div>
       )}
     </div>
   );

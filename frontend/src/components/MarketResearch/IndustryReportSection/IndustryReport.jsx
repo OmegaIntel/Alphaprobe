@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import ReportDropdown from "./ReportDropdown"; // Adjust the import path if necessary
+import DownloadReport from "./DownloadReport";
 
 const YourComponent = () => {
   const industryState = useSelector((state) => state);
@@ -704,21 +705,29 @@ const YourComponent = () => {
     ]
   }
 
-  console.log("Summary state:", data.result);
+  const sidebarSections = [
+    { id: 0, name: 'Market Segmentation' },
+    { id: 1, name: 'Key Statistics' },
+    { id: 2, name: 'External Drivers' },
+    // Add more sections as needed
+  ];
+  
+ 
+  console.log("Summary state:", summaryData.result);
 
   return (
     <div className="mb-20 pb-10 rounded-lg">
       <div className="px-10 py-5">
         {summaryData && summaryData !== "Select an industry to view report" ? (
           <>
-            <ReportDropdown data={data.result} />
+            <ReportDropdown data={data.result} sidebarSections={sidebarSections} />
           </>
         ) : (
           <p>Loading data... Please select an industry.</p>
         )}
       </div>
       <div className="mt-4">
-        <button
+        {/* <button
           type="submit"
           className="bg-white hover:bg-[#151518] font-semibold hover:border-white my-10 mx-20 hover:border hover:text-white transition-all ease-out duration-300 text-[#151518] px-4 py-2 rounded"
           style={{ float: "right" }}
@@ -727,10 +736,12 @@ const YourComponent = () => {
           }
         >
           Download Report
-        </button>
+        </button> */}
+        {/* <DownloadReport /> */}
       </div>
     </div>
   );
 };
 
 export default YourComponent;
+

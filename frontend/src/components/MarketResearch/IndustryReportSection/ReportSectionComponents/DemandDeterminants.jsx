@@ -9,13 +9,13 @@ const DemandDeterminants = ({ demandDeterminants }) => {
 
   return (
     <div className="rounded-lg p-4 shadow-md text-gray-400">
-      <h3 className="text-xl font-semibold mb-4">Demand Determinants</h3>
+      <h3 className="text-xl font-semibold mb-4 text-white">Demand Determinants</h3>
 
       <div className="space-y-4">
         {demandDeterminants.map((determinant, index) => (
           <div
             key={index}
-            className="rounded-lg p-3 bg-gray-500/20 shadow-sm hover:bg-gray-400/20"
+            className="rounded-lg p-3 bg-gradient-to-b from-[#ffffff]/10 to-[#999999]/10 shadow-sm hover:bg-gray-400/20"
           >
             <div
               onClick={() => toggleAccordion(index)}

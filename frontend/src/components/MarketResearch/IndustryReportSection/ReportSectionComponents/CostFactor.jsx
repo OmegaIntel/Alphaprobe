@@ -15,7 +15,7 @@ const CostFactors = ({ costFactors }) => {
         {costFactors.map((factor, index) => (
           <div
             key={index}
-            className="rounded-lg p-3 bg-gray-300/20 shadow-sm"
+            className="rounded-lg p-3 bg-gradient-to-b from-[#ffffff]/10 to-[#999999]/10 shadow-sm"
           >
             <div
               onClick={() => toggleAccordion(index)}

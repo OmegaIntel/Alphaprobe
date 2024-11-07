@@ -16,12 +16,12 @@ const MarketSegmentation = ({ marketSegmentation }) => {
   };
 
   return (
-    <div className="rounded-lg p-4 shadow-md text-gray-300">
+    <div className="rounded-lg p-4  shadow-md text-gray-300">
       <div className="flex flex-col-reverse sm:flex-row sm:space-x-8 items-center">
         {/* Segment Details */}
         <ul className="space-y-4 text-sm text-gray-300 flex-1">
           {marketSegmentation.map((segment, index) => (
-            <li key={index} className="rounded-lg p-4 bg-gray-500/10 flex items-start space-x-2">
+            <li key={index} className="rounded-lg p-4 flex items-start space-x-2">
               {/* Color Indicator */}
               <span
                 className="w-4 h-6 "

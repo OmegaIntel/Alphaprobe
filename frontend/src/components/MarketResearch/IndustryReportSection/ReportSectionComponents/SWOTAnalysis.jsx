@@ -7,7 +7,7 @@ const SWOTAnalysis = ({ swotAnalysis }) => {
 
   // Reusable function for rendering each SWOT category
   const renderCategory = (title, items, IconComponent, iconColor) => (
-    <div className="h-96 w-[30rem] rounded-lg bg-gray-600/10 p-4">
+    <div className="h-96 w-[25rem] rounded-lg bg-[#0D0D0D] p-4">
       <h2 className="text-xl font-semibold mb-10 text-gray-400">{title}</h2>
       <ul className="text-gray-400">
         {items.map((item, idx) => (
@@ -25,8 +25,8 @@ const SWOTAnalysis = ({ swotAnalysis }) => {
   );
 
   return (
-    <div className="p-4 bg-gray-600/30 rounded-xl">
-      <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
+    <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
+      <p className="text-xl mx-10 my-5 font-semibold text-white">
         SWOT Analysis
       </p>
       <div className="space-y-4 grid gap-10 grid-cols-2 p-5 px-12 items-start justify-center mx-20">

@@ -8,8 +8,8 @@ const BarriersToEntryComponent = ({ barriersToEntry }) => {
   };
 
   return (
-    <div className="rounded-lg p-4 shadow-md text-gray-400 bg-gray-600/20">
-      <h3 className="text-xl font-semibold mb-4">Barriers to Entry</h3>
+    <div className="rounded-lg p-4 shadow-md text-gray-400 bg-[#171717] border border-[#2e2e2e] ">
+      <h3 className="text-xl font-semibold mb-4 text-white">Barriers to Entry</h3>
 
       <div className="mb-4 flex justify-between">
         <p className="text-lg">
@@ -25,7 +25,7 @@ const BarriersToEntryComponent = ({ barriersToEntry }) => {
       <div className="space-y-4">
         <h4 className="font-semibold text-lg mb-2">Barrier Points</h4>
         {barriersToEntry.barriers_points.map((point, index) => (
-          <div key={index} className="rounded-lg p-3 bg-gray-500/20 hover:bg-gray-400/20 shadow-sm">
+          <div key={index} className="rounded-lg p-3 bg-gradient-to-b from-[#ffffff]/10 to-[#999999]/10 hover:bg-gray-400/20 shadow-sm">
             <div
               onClick={() => toggleAccordion(index)}
               className="flex justify-between items-center cursor-pointer"
@@ -42,22 +42,22 @@ const BarriersToEntryComponent = ({ barriersToEntry }) => {
       </div>
 
       <div className="flex justify-around my-10">
-        <div className="mt-6 w-[30rem] bg-gray-700/30 p-3 rounded-lg">
+        <div className="mt-6 w-[30rem] bg-[#0D0D0D] p-3 rounded-lg">
           <h4 className="font-semibold text-xl mb-2">
             Factors Increasing Barriers
           </h4>
-          <ul className="list-disc ml-6 space-y-2 text-gray-300">
+          <ul className="list-disc ml-6 space-y-2 text-gray-300 p-2">
             {barriersToEntry.factors_increased_barrier.map((factor, index) => (
               <li key={index}>{factor}</li>
             ))}
           </ul>
         </div>
 
-        <div className="mt-6 w-[30rem] bg-gray-700/30 p-3 rounded-lg">
+        <div className="mt-6 w-[30rem] bg-[#0D0D0D] p-3 rounded-lg">
           <h4 className="font-semibold text-xl mb-2">
             Factors Decreasing Barriers
           </h4>
-          <ul className="list-disc ml-6 space-y-2 text-gray-300">
+          <ul className="list-disc ml-6 space-y-2 text-gray-300 p-2">
             {barriersToEntry.factors_decreased_barrier.map((factor, index) => (
               <li key={index}>{factor}</li>
             ))}

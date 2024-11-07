@@ -69,7 +69,7 @@ export const ThesisForm = ({ questions }) => {
         dispatch(setFormResponse(data)); // Dispatching data to update in store
 
         toast.success(
-          "Thesis generated successfully! Move to Market Research tab",
+          "Thesis generated successfully! Below the list of suggested Industries",
           {
             position: "top-right",
           }

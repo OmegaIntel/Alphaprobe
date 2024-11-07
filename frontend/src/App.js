@@ -30,13 +30,13 @@ const App = () => {
         <Route path="/guest/:id" element={<DocumentsWrapper />} />
         <Route
           path="/register"
-          element={isLoggedIn ? <Navigate to="/dashboard" /> : <Register />}
+          element={isLoggedIn ? <Navigate to="/projects" /> : <Register />}
         />
         <Route
           path="/login"
           element={
             isLoggedIn ? (
-              <Navigate to="/dashboard" />
+              <Navigate to="/projects" />
             ) : (
               <Login setToken={handleSetToken} />
             )

@@ -20,7 +20,7 @@ const FutureOutlookComponent = ({ futureOutlook }) => {
         {displayedPoints.map((point, index) => (
           <div
             key={index}
-            className="border border-gray-600 rounded-lg p-4 shadow-md hover:shadow-lg hover:border-gray-500 transition duration-200"
+            className="border border-gray-600 bg-gradient-to-b from-[#ffffff]/10 to-[#999999]/10 rounded-lg p-4 shadow-md hover:shadow-lg hover:border-gray-500 transition duration-200"
           >
             <div
               onClick={() => toggleAccordion(index)}
