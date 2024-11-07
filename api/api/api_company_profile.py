@@ -9,9 +9,11 @@ from typing import List, Dict
 import requests
 
 from search.url_lookup import lookup_company_url
+from llm_models.openai_gpt.llm_response import respond_to_prompt
 
-from dotenv import load_dotenv
-load_dotenv()
+
+# from dotenv import load_dotenv
+# load_dotenv()
 
 import logging
 logging.basicConfig(
@@ -50,13 +52,34 @@ def get_company_provider_info(company_name: str, provider: str) -> Dict:
     return response.text
 
 
-def get_company_info(company_name: str) -> Dict:
+def get_company_info(company_name: str) -> dict:
     """Get info from all providers"""
     company_names = [company_name for provider in ENDPOINTS]
     providers = list(ENDPOINTS.keys())
     with ThreadPoolExecutor(max_workers=4) as executor:
-        result = list(executor.map(get_company_provider_info, company_names, providers))
-    return result
+        result = list(executor.map(get_company_provider_info, company_names, providers, timeout=10))
+
+    prompt = f"""
+We are trying to extract from text certain attributes for a company called "{company_name}".
+You are first given a list of attributes to extract, in triple quotes.
+You are also given the text that was scraped from several web pages.
+Extract the values of the attributes for the company "{company_name}" in JSON format.
+If there are several potential values for an attribute, use the first value.
+If an attribute's value is not in the text, return Null for that attribute.
+The result should be JSON with attribute names as keys.
+
+'''
+{ATTRS}
+'''
+
+'''
+{result}
+'''
+
+"""
+    
+    processed = respond_to_prompt(prompt)
+    return processed
 
 
 class Industry(BaseModel):
