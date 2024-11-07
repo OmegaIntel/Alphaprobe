@@ -2,11 +2,12 @@ from search.url_lookup import lookup_company_url
 
 def test_vouched():
     name = 'Vouched'
-    # note: pitchbook does not have it
-    sites = ['linkedin.com', 'owler.com', 'crunchbase.com']
-    for site in sites:
-        assert name.lower() in lookup_company_url(name, site), f'{name.lower()} not found in {site}'
-
-    other_sites = ['pitchbook.com']
-    for site in other_sites:
-        assert lookup_company_url(name, site), f'Did not lookup {name} not found in {site}'
+    for site, expected in [
+        ('linkedin.com', 'https://www.linkedin.com/company/vouched'),
+        ('owler.com', 'https://www.owler.com/company/vouched'),
+        ('crunchbase.com', 'https://www.crunchbase.com/organization/vouched-0c75'),
+        ('pitchbook.com', 'https://pitchbook.com/profiles/company/264651-31'),
+    ]:
+        
+        result = lookup_company_url(name, site)
+        assert result == expected
