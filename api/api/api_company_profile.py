@@ -5,15 +5,11 @@ from pydantic import BaseModel
 import pandas as pd
 from concurrent.futures import ThreadPoolExecutor
 
-from typing import List, Dict
+from typing import Dict
 import requests
 
 from search.url_lookup import lookup_company_url
 from llm_models.openai_gpt.llm_response import respond_to_prompt
-
-
-# from dotenv import load_dotenv
-# load_dotenv()
 
 import logging
 logging.basicConfig(
@@ -52,7 +48,7 @@ def get_company_provider_info(company_name: str, provider: str) -> Dict:
     return response.text
 
 
-def get_company_info(company_name: str) -> dict:
+def get_company_info(company_name: str) -> Dict:
     """Get info from all providers"""
     company_names = [company_name for provider in ENDPOINTS]
     providers = list(ENDPOINTS.keys())
@@ -90,9 +86,15 @@ class DataModelIn(BaseModel):
 
 
 class DataModelOut(BaseModel):
-    result: List[Dict]
+    result: Dict
 
 
 company_profile_router = APIRouter()
 
-# @company_profile_router.post('/api/company-profile', response_model=DataModelOut)
+@company_profile_router.post('/api/company-profile', response_model=DataModelOut)
+async def company_profile(request: DataModelIn):
+    """Returns company profile based on several sources."""
+    data = request.data
+    company_name = data.company_name
+    profile = get_company_info(company_name)
+    return DataModelOut(result=profile)

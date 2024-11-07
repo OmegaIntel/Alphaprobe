@@ -1,3 +1,5 @@
+import json
+
 from api.api_company_profile import get_company_provider_info, get_company_info
 
 def test1():
@@ -19,5 +21,6 @@ def test2():
 def test_many():
     company_name = 'Vouched'
     result = get_company_info(company_name)
-    for k, v in result.items():
-        print(f'{k}: {v}')
+    print(json.dumps(result, indent=2))
+    # for k, v in result.items():
+    #     print(f'{k}: {v}')
