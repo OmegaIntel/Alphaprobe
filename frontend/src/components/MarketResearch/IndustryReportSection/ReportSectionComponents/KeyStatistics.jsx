@@ -22,18 +22,6 @@ const KeyStatistics = ({ statistics }) => {
               </strong>
             </p>
           </div>
-          {/* <p>
-            CAGR (2005-2024):{" "}
-            <strong className="text-green-500">
-              {statistics.revenue.revenue_cagr_historical.revenue_cagr_value}%
-            </strong>
-          </p> */}
-          {/* <p>
-            Projected CAGR (2024-2030):{" "}
-            <strong className="text-green-500">
-              {statistics.revenue.revenue_cagr_projected.revenue_cagr_value}%
-            </strong>
-          </p> */}
         </div>
         <div className="mb-4 w-full mx-2  rounded-lg flex bg-[#0D0D0D]">
           <div className="w-2 h-14 bg-blue-500"></div>

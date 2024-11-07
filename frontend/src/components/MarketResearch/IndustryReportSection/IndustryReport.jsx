@@ -720,7 +720,7 @@ const YourComponent = () => {
       <div className="px-10 py-5">
         {summaryData && summaryData !== "Select an industry to view report" ? (
           <>
-            <ReportDropdown data={data.result} sidebarSections={sidebarSections} />
+            <ReportDropdown data={summaryData.result} sidebarSections={sidebarSections} />
           </>
         ) : (
           <p>Loading data... Please select an industry.</p>
