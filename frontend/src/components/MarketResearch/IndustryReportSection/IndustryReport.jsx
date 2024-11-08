@@ -717,7 +717,7 @@ const YourComponent = () => {
 
   return (
     <div className="mb-20 pb-10 rounded-lg">
-      <div className="px-10 py-5">
+      {/* <div className="px-10 py-5">
         {summaryData && summaryData !== "Select an industry to view report" ? (
           <>
             <ReportDropdown data={summaryData.result} sidebarSections={sidebarSections} />
@@ -725,7 +725,8 @@ const YourComponent = () => {
         ) : (
           <p>Loading data... Please select an industry.</p>
         )}
-      </div>
+      </div> */}
+       <ReportDropdown data={data.result} sidebarSections={sidebarSections} />
       <div className="mt-4">
         {/* <button
           type="submit"

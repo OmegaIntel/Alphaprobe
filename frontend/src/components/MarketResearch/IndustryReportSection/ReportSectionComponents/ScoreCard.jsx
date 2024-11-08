@@ -29,7 +29,7 @@ const ScorecardComponent = ({ metrics }) => {
       {marketMetrics.map((aspect, index) => (
         <div
           key={index}
-          className="mb-6 border-[3px] rounded-md border-[#2b5ba2]"
+          className="-mb-4 border-[3px] rounded-md border-[#2b5ba2]"
         >
           <div className="overflow-auto">
             <h4 className="text-xl p-3 text-white font-semibold mb-2">

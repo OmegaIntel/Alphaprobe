@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useDispatch, useSelector } from "react-redux";
 import { setSelectedIndustries } from "../../../redux/selectedIndustriesSlice"; // Adjust the import path
 
 const ThesisSummaryCard = ({ thesisSummary, industries }) => {
   const dispatch = useDispatch();
-
   // Local state to manage selected industries
   const [selectedIndustries, setSelectedIndustrie] = useState({});
 
@@ -21,15 +22,21 @@ const ThesisSummaryCard = ({ thesisSummary, industries }) => {
     const formattedData = {
       selectedIndustries: Object.keys(selectedIndustries)
         .filter((code) => selectedIndustries[code]) // Filter selected industries
-        .map((code) => ({
-          industry_code: code,
-          industry_name: industries.find((ind) => ind.industry_code === code)
-            .industry_name, // Get name from industries array
-        })),
+        .map((code) => {
+          const industry = industries.find((ind) => ind.industry_code === code);
+          return {
+            industry_code: code,
+            industry_name: industry ? industry.industry_name : "Unknown Industry",
+          };
+        }),
     };
     dispatch(setSelectedIndustries(formattedData.selectedIndustries));
+    console.log("State update from thesis card", formattedData.selectedIndustries);
+    
+    // Show a toast message
+    toast.success("Industries updated successfully! Move to Market Research");
   };
-
+  
   return (
     <div className="bg-white bg-opacity-5 backdrop-blur-lg text-white rounded-lg shadow-md p-4 max-w-full my-10">
       {/* <h2 className="text-xl font-bold mb-2">Thesis Summary</h2>

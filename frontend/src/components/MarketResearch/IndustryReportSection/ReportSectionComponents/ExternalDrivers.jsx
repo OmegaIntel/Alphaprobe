@@ -25,13 +25,14 @@ const ExternalDrivers = ({ drivers }) => {
         {drivers.slice(0, visibleDrivers).map((driver, index) => (
           <div
             key={index}
-            className="border border-gray-600 bg-gradient-to-b from-[#ffffff]/10 to-[#999999]/10 rounded-lg p-4 shadow-md hover:shadow-lg hover:border-gray-500 transition duration-200"
+            className="border border-gray-600 bg-gradient-to-b from-[#ffffff]/10 to-[#999999]/10 rounded-2xl p-4 py-6  shadow-md hover:shadow-lg hover:border-gray-500 transition duration-200"
           >
             <h3
               onClick={toggleAll}
               className="text-lg font-bold mb-2 cursor-pointer hover:text-gray-200 transition-colors duration-200"
             >
               {driver.external_drivers_point_title}
+              {/* <span className="text-lg">{isExpanded === index ? "-" : "+"}</span> */}
             </h3>
             {isExpanded && (
               <>

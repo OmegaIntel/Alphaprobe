@@ -76,19 +76,19 @@ const ReportDropdown = ({ data, sidebarSections }) => {
             {renderOverviewSection(section)}
 
             <div className="flex space-x-2 ">
-              <div className="flex bg-[#171717] md:3/5 xl:w-4/5 border border-[#2e2e2e] justify-between">
+              <div className="flex bg-[#171717] md:3/5 xl:w-4/5 border rounded-xl border-[#2e2e2e] justify-between">
                 {section.industry_impact && (
                   <IndustryImpact industryImpact={section.industry_impact} />
                 )}
                 {section.metrics && (
-                  <div className=" my-5 mx-10">
+                  <div className=" mt-5 mx-10 -mb-10">
                     <RadarChartComponent  metrics={section.metrics}/>
                   </div>
                 )}
               </div>
               <div>
                 {section.metrics && (
-                  <div className="">
+                  <div className="h-full">
                     <ScorecardComponent metrics={section.metrics} />
                   </div>
                 )}
@@ -97,7 +97,7 @@ const ReportDropdown = ({ data, sidebarSections }) => {
 
             {section.key_trends && (
               <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
-                <p className="text-xl mx-10 my-5 font-semibold text-white">
+                <p className="text-2xl mx-10 my-5 font-semibold text-white">
                   Industry Trends
                 </p>
                 <div className="mx-20">
@@ -107,7 +107,7 @@ const ReportDropdown = ({ data, sidebarSections }) => {
             )}
 
             <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-xl">
-              <p className="text-xl mx-10 my-5 font-semibold text-white">
+              <p className="text-2xl mx-10 my-5 font-semibold text-white">
                 Insights & Future Outlook 
               </p>
               {section.current_performance && (
@@ -143,7 +143,7 @@ const ReportDropdown = ({ data, sidebarSections }) => {
             <div>
               {section.market_segmentation && (
                 <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
-                  <p className="text-xl mx-10 my-5 font-semibold text-white">
+                  <p className="text-2xl mx-10 my-5 font-semibold text-white">
                     Market Segmentation
                   </p>
                   <MarketSegmentation
@@ -180,7 +180,7 @@ const ReportDropdown = ({ data, sidebarSections }) => {
             <div>
               {section.external_drivers && (
                 <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
-                  <p className="text-xl mx-10 my-5 font-semibold text-white">
+                  <p className="text-2xl mx-10 my-5 font-semibold text-white">
                     External Drivers
                   </p>
                   <div className="mx-20">
@@ -190,35 +190,35 @@ const ReportDropdown = ({ data, sidebarSections }) => {
               )}
 
               {section.regulations_and_policies && (
-                <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
+                <div className="p-4 bg-[#171717] border border-[#2e2e2e] ">
                   <RegulationsAndPolicies
                     regulations={section.regulations_and_policies}
                   />
                 </div>
               )}
               {section.industry_assistance && (
-                <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
+                <div className="p-4 bg-[#171717] border border-[#2e2e2e] ">
                   <IndustryAssistance
                     industryAssistance={section.industry_assistance}
                   />
                 </div>
               )}
               {section.technological_change && (
-                <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
+                <div className="p-4 bg-[#171717] border border-[#2e2e2e]  ">
                   <TechnologicalChange
                     technologicalChange={section.technological_change}
                   />
                 </div>
               )}
               {section.revenue_volatility && (
-                <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
+                <div className="p-4 bg-[#171717] border border-[#2e2e2e]  ">
                   <RevenueVolatility
                     revenueVolatility={section.revenue_volatility}
                   />
                 </div>
               )}
               {section.capital_intensity && (
-                <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
+                <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-b-xl">
                   <CapitalIntensity
                     capitalIntensity={section.capital_intensity}
                   />
@@ -228,14 +228,14 @@ const ReportDropdown = ({ data, sidebarSections }) => {
             {section.swot_analysis && (
               <SWOTAnalysis swotAnalysis={section.swot_analysis} />
             )}
-            {section.FAQs && (
+            {/* {section.FAQs && (
               <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
                 <p className="text-xl mx-10 my-5 font-semibold text-gray-400">
                   FAQs
                 </p>
                 <FAQsComponent faqs={section.FAQs} />
               </div>
-            )}
+            )} */}
           </div>
         ))}
       </div>

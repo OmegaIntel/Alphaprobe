@@ -7,16 +7,16 @@ const SWOTAnalysis = ({ swotAnalysis }) => {
 
   // Reusable function for rendering each SWOT category
   const renderCategory = (title, items, IconComponent, iconColor) => (
-    <div className="h-96 w-[25rem] rounded-lg bg-[#0D0D0D] p-4">
-      <h2 className="text-xl font-semibold mb-10 text-gray-400">{title}</h2>
-      <ul className="text-gray-400">
+    <div className="h-96 w-full md:w-[25rem] rounded-lg border border-gray-600 bg-[#0D0D0D] pt-6 pl-10 flex flex-col">
+      <h2 className="text-xl font-semibold mb-10  text-[#e1e1e1]">{title}</h2>
+      <ul className="text-[#7a7a7a]">
         {items.map((item, idx) => (
           <div key={idx}>
-            <div className="flex space-y-1">
+            <div className="flex space-y-1 mt-3">
               <div>
                 <IconComponent className={`${iconColor} mr-2`} />
               </div>
-              <li className="mt-1">{item}</li>
+              <li className="">{item}</li>
             </div>
           </div>
         ))}
@@ -25,19 +25,19 @@ const SWOTAnalysis = ({ swotAnalysis }) => {
   );
 
   return (
-    <div className="p-4 bg-[#171717] border border-[#2e2e2e]  rounded-xl">
-      <p className="text-xl mx-10 my-5 font-semibold text-white">
+    <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-xl my-10">
+      <p className="text-2xl mx-10 my-5 mb-10 font-semibold text-white">
         SWOT Analysis
       </p>
-      <div className="space-y-4 grid gap-10 grid-cols-2 p-5 px-12 items-start justify-center mx-20">
+      <div className="grid gap-20 grid-cols-1 md:grid-cols-2 items-start justify-center mx-40 mt-16 mb-10">
         {swotAnalysis.strengths &&
-          renderCategory("Strengths", swotAnalysis.strengths, TaskAltRoundedIcon, "text-green-400")}
+          renderCategory("Strengths", swotAnalysis.strengths, TaskAltRoundedIcon, "text-green-500")}
         {swotAnalysis.weaknesses &&
-          renderCategory("Weaknesses", swotAnalysis.weaknesses, HighlightOffRoundedIcon, "text-red-400")}
+          renderCategory("Weaknesses", swotAnalysis.weaknesses, HighlightOffRoundedIcon, "text-red-500")}
         {swotAnalysis.opportunities &&
-          renderCategory("Opportunities", swotAnalysis.opportunities, TaskAltRoundedIcon, "text-green-400")}
+          renderCategory("Opportunities", swotAnalysis.opportunities, TaskAltRoundedIcon, "text-green-500")}
         {swotAnalysis.threats &&
-          renderCategory("Threats", swotAnalysis.threats, HighlightOffRoundedIcon, "text-red-400")}
+          renderCategory("Threats", swotAnalysis.threats, HighlightOffRoundedIcon, "text-red-500")}
       </div>
     </div>
   );

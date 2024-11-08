@@ -18,8 +18,39 @@ import ReportDropdown from "../../MarketResearch/IndustryReportSection/ReportDro
 import MarketResearchLayout from "../../MarketResearch/MarketResearchLayout";
 
 import CompanyInsightslayout from "../../CompanyInsights/CompanyInsightslayout";
+import SearchBox from "../../SearchBox/SearchBox";
 
 const { Option } = Select;
+
+
+const SearchBar = ({ placeholder }) => {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleInputChange = (event) => {
+    setSearchQuery(event.target.value);
+    // if (onSearch) {
+    //   onSearch(event.target.value);
+    // }
+  };
+
+  return (
+    <div className="flex items-center bg-gray-800 text-white rounded-lg shadow-md px-4 py-2 w-full max-w-md">
+      <input
+        type="text"
+        value={searchQuery}
+        onChange={handleInputChange}
+        className="bg-transparent w-full outline-none text-white placeholder-gray-400"
+        placeholder={placeholder || "Search..."}
+      />
+      <button
+        
+        className="text-gray-400 hover:text-white ml-3 focus:outline-none"
+      >
+        🔍
+      </button>
+    </div>
+  );
+};
 
 const Categories = () => {
   const [activeCategory, setActiveCategory] = useState("Investment Thesis");
@@ -136,8 +167,8 @@ const Categories = () => {
   return (
     <>
       <div className="flex flex-row flex-grow overflow-auto ">
-        <div className="w-[70%] flex flex-grow flex-col overflow-auto w-full">
-          <div className="flex items-center flex-col largeDesktop:flex-row pt-5 px-5 ml-1 gap-4">
+        <div className=" flex flex-grow flex-col overflow-auto w-full">
+          <div className="flex items-center flex-col justify-between largeDesktop:flex-row pt-5 px-5 ml-1 gap-4">
             <div className="flex laptop:gap-2 largeDesktop:gap-0">
               {categoryList.map((data, index) => (
                 <div
@@ -169,6 +200,10 @@ const Categories = () => {
                   </Select>
                 )}
             </div> */}
+            <div className="my-3">
+               <SearchBox section={activeCategory}/>
+               {/* <SearchBar placeholder={activeCategory}/> */}
+            </div>
           </div>
           {}
 
@@ -178,7 +213,7 @@ const Categories = () => {
             <FileUploadComponent />
           ) : activeCategory === "Investment Thesis" ? (
             <>
-              <div className="flex-grow overflow-y-auto bg-[#151518] ml-1 scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800">
+              <div className="flex-grow overflow-y-auto bg-[#0d0d0d] ml-1 scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800">
                 <div className="mt-10 p-3">
                   <ThesisForm questions={questions} />
                   <ThesisCardComponent />
@@ -201,8 +236,6 @@ const Categories = () => {
             <>
               <div className="flex-grow overflow-y-auto bg-[#0d0d0d] ml-1 scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800">
                 <div className="p-3">
-                  {/* <IndustryReport /> */}
-                  {/* <CompanyInsightLayout /> */}
                   <CompanyInsightslayout />
                 </div>
               </div>

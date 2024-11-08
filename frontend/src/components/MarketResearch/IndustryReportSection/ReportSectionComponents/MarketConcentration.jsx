@@ -26,36 +26,60 @@ const MarketShareConcentration = ({ concentrationData = {} }) => {
 
   return (
     <div className="rounded-lg p-4 shadow-md text-gray-300">
-      <h3 className="text-xl font-semibold mb-4 text-white">Market Share Concentration</h3>
+      <h3 className="text-2xl font-semibold mb-4 text-white">Market Share Concentration</h3>
 
       <div className="mb-6 flex justify-between my-10">
         <p>
-          <strong>Concentration Level:</strong> {concentration_level}
+          <strong className="text-[#e1e1e1]">Concentration Level:</strong> {concentration_level}
         </p>
         <p>
-          <strong>Concentration Trend:</strong> {concentration_trend}
+          <strong className="text-[#e1e1e1]">Concentration Trend:</strong> {concentration_trend}
         </p>
       </div>
 
       {/* Concentration Points */}
+      <div className="bg-[#1b1b1b] border border-[#2e2e2e] rounded-xl p-5">
+
       <ul className="space-y-4 text-sm text-gray-300">
         {concentration_points.map((point, index) => (
-          <li key={index} className="rounded-lg p-4 bg-gray-500/10 ">
+          <li key={index} className="p-4">
             <h4 className="text-lg font-semibold">
               {point.concentration_title}
             </h4>
-            <p className="text-gray-200">{point.concentration_description}</p>
+            <p className="text-[#a8a8a8]">{point.concentration_description}</p>
           </li>
         ))}
       </ul>
+      </div>
      <div className="mt-20 p-5">
 
-      <h4 className="text-lg font-semibold text-white">Key Players</h4>
+      <h4 className="text-2xl font-semibold text-white">Key Players</h4>
       {/* Leading Companies Section */}
-      <div className="flex flex-col-reverse sm:flex-row sm:space-x-8 items-start my-6">
-        
+      <div className="flex flex-col-reverse sm:flex-row sm:space-x-8 items-start my-6 pt-10 ">        
+          {/* Donut Chart */}
+          <div className="w-80 h-80 mt-10 sm:mt-0 mr-40 ">
+            <Doughnut
+              data={chartData}
+              options={{
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: "50%",
+                plugins: {
+                  tooltip: {
+                    callbacks: {
+                      label: (context) => `${context.label}: ${context.raw}%`,
+                    },
+                  },
+                  legend: {
+                    display: false, // Hide legend to keep the chart compact
+                  },
+                },
+              }}
+            />
+          </div>
+          
           {/* Company List */}
-          <div className="flex-1 space-y-4">
+          <div className="flex-1 space-y-4 bg-[#1b1b1b] border border-[#2e2e2e] rounded-xl p-5 ml-10">
             <ul className="space-y-2 text-sm text-gray-300">
               {top_companies.map((company, index) => (
                 <li
@@ -75,27 +99,7 @@ const MarketShareConcentration = ({ concentrationData = {} }) => {
               ))}
             </ul>
           </div>
-          {/* Donut Chart */}
-          <div className="w-80 h-80 mt-10 sm:mt-0">
-            <Doughnut
-              data={chartData}
-              options={{
-                responsive: true,
-                maintainAspectRatio: false,
-                cutout: "70%",
-                plugins: {
-                  tooltip: {
-                    callbacks: {
-                      label: (context) => `${context.label}: ${context.raw}%`,
-                    },
-                  },
-                  legend: {
-                    display: false, // Hide legend to keep the chart compact
-                  },
-                },
-              }}
-            />
-          </div>
+          
        
       </div>
      </div>

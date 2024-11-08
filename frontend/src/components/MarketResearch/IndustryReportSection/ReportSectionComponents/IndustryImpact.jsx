@@ -14,7 +14,7 @@ const IndustryImpact = ({ industryImpact }) => {
         <h4 className="text-lg font-semibold text-white">Positive</h4>
         <ul className="mt-2 space-y-2">
           {industryImpact.positive_impact_factors.map((factor, index) => (
-            <div className="flex space-x-3 items-center border border-green-500 rounded-lg px-3 w-96 bg-green-700/10">
+            <div className="flex space-x-3 items-center border border-green-500 rounded-lg px-3 w-[30rem] bg-green-700/10">
               <ThumbUpIcon className="text-green-400" />
               <li key={index} className="text-gray-300 rounded-md p-2">
                 {factor}
@@ -29,7 +29,7 @@ const IndustryImpact = ({ industryImpact }) => {
         <h4 className="text-lg font-semibold text-white">Negative </h4>
         <ul className="mt-2 space-y-2">
           {industryImpact.negative_impact_factors.map((factor, index) => (
-            <div className="flex space-x-3 items-center border border-red-500 rounded-lg px-3 w-96 bg-red-900/10">
+            <div className="flex space-x-3 items-center border border-red-500 rounded-lg px-3 w-[30rem] bg-red-900/10">
               <ThumbDownAltIcon className="text-red-400" />
               <li key={index} className="text-gray-300 rounded-md p-2">
                 {factor}
