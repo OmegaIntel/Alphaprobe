@@ -10,6 +10,6 @@ services:
       - .:/app
     environment:
       - PYTHONUNBUFFERED=1
-      - DOCKER_BUILDKIT=${DOCKER_BUILDKIT}
+      - DOCKER_BUILDKIT=1
     command:
       fastapi run --workers 16 --port 8401 app.py

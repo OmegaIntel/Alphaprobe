@@ -15,7 +15,7 @@ const data = {
     company_website: "https://www.vouched.id",
     company_employee_count: "N/A",
     company_linkedin_followers_count: 7388,
-    "company_ownership status": "Privately Held",
+    company_ownership_status: "Privately Held",
     company_investors: ["SpringRock Ventures", "BHG VC"],
     company_structure: "Private",
     company_crunchbase_ranking: "90,180",

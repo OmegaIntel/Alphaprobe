@@ -10,7 +10,7 @@ import { API_BASE_URL, token } from "../../../services";
 
 const IndustryHeader = () => {
   const dispatch = useDispatch(); // Initialize dispatch
-  const responseData = useSelector((state) => state.formResponse.data); // Get the response data from the store
+// Get the response data from the store
   const newRes = useSelector((state) => state.selectedIndustries);
   const [activeIndustry, setActiveIndustry] = useState(null); // State to track the active button
 
@@ -18,7 +18,7 @@ const IndustryHeader = () => {
   if (!newRes|| !newRes.value) return null;
 
     console.log("New Response Data",newRes.value)
-    console.log("Old Response Data",responseData.result)
+  
 
   // Function to handle API call
   const sendIndustryDataToApi = async (industryCode, industryName) => {
