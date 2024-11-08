@@ -10,15 +10,14 @@ import { API_BASE_URL, token } from "../../../services";
 
 const IndustryHeader = () => {
   const dispatch = useDispatch(); // Initialize dispatch
-// Get the response data from the store
+  // Get the response data from the store
   const newRes = useSelector((state) => state.selectedIndustries);
   const [activeIndustry, setActiveIndustry] = useState(null); // State to track the active button
 
   // Check if the responseData and its result are available
-  if (!newRes|| !newRes.value) return null;
+  if (!newRes || !newRes.value) return null;
 
-    console.log("New Response Data",newRes.value)
-  
+  console.log("New Response Data", newRes.value);
 
   // Function to handle API call
   const sendIndustryDataToApi = async (industryCode, industryName) => {
@@ -42,8 +41,10 @@ const IndustryHeader = () => {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-
+      console.log("rsponse", response);
       const data = await response.json();
+      console.log("Data type:", typeof data); // Should log "object" if data is an object
+      console.dir("Data:", data); // Logs the actual data
 
       if (data.result) {
         // Dispatch the actual data, not the action creator

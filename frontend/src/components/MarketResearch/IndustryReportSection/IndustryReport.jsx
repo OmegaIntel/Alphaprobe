@@ -1595,6 +1595,8 @@ const YourComponent = () => {
     ],
   };
 
+  // const parsedData = JSON.parse(summaryData);
+
   const sidebarSections = [
     { id: 0, name: "Market Segmentation" },
     { id: 1, name: "Key Statistics" },
@@ -1602,20 +1604,23 @@ const YourComponent = () => {
     // Add more sections as needed
   ];
 
-  console.log("Summary state:", summaryData.result);
+  console.log("Summary state:", summaryData);
+  
+  // Returns "[object Object]" for plain objects
+  // console.log("Summary state: parsed", parsedData);
 
   return (
     <div className="mb-20 pb-10 rounded-lg">
-      {/* <div className="px-10 py-5">
+      <div className="px-10 py-5">
         {summaryData && summaryData !== "Select an industry to view report" ? (
           <>
-            <ReportDropdown data={summaryData.result} sidebarSections={sidebarSections} />
+            <ReportDropdown data={summaryData.result}  />
           </>
         ) : (
           <p>Loading data... Please select an industry.</p>
         )}
-      </div> */}
-      <ReportDropdown data={data.result} />
+      </div>
+      {/* <ReportDropdown data={data.result} /> */}
       <div className="mt-4">
         {/* <button
           type="submit"
