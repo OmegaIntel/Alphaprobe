@@ -17,6 +17,7 @@ def run_test(industry_code: str, industry_name: str, min_entries: int):
     assert isinstance(result, DataModelOut)
     assert isinstance(result.result, list)
     assert len(result.result) >= min_entries
+    assert 'profit_margins' in result.result[0]['key_statistics']
 
 
 def test1():
