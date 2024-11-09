@@ -81,6 +81,13 @@ def add_metrics_ratings(flat_summary: Dict) -> Dict:
 
     for metric_name, metric_key in RATED_METRICS.items():
         val = extract_key_val_from_dict(flat_summary, metric_key)
+
+        # test that it's numeric
+        try:
+            float(val)
+        except:
+            continue
+
         rt = RATINGS_THRESHOLDS[RATINGS_THRESHOLDS[FIELD] == metric_name].copy()
         for dd in rt.to_dict(orient='records'):
             if dd['Lower'] <= val < dd['Upper']:
