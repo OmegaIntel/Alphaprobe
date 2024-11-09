@@ -31,6 +31,11 @@ def test3():
     run_test('324110', 'Petroleum Refineries', 1)
 
 
+def test4():
+    # was having problem with no data under profit except for profit margins.
+    run_test('623110', 'Nursing Care Facilities', 1)
+
+
 def test_summary_for_name1():
     name = 'Audio Production Studios in the US.pdf'
     result = summary_for_name(name)
