@@ -3,46 +3,72 @@ import { Doughnut } from "react-chartjs-2";
 import "chart.js/auto";
 
 const MarketSegmentation = ({ marketSegmentation }) => {
+  // Error handling: Check if marketSegmentation is valid and is an array
+  if (!Array.isArray(marketSegmentation)) {
+    return (
+      <div className="text-red-500 text-center">
+        <p>Error: Invalid market segmentation data</p>
+      </div>
+    );
+  }
+
+  // If marketSegmentation is empty
+  if (marketSegmentation.length === 0) {
+    return (
+      <div className="text-yellow-500 text-center">
+        <p>No data available for market segmentation.</p>
+      </div>
+    );
+  }
+
   // Prepare data for the single donut chart
   const chartData = {
     labels: marketSegmentation.map((segment) => segment.segment),
     datasets: [
       {
         data: marketSegmentation.map((segment) => segment.segment_percentage),
-        backgroundColor: ["#4CAF50", "#FF9800", "#2196F3", "#9C27B0" , "#64B5F6",  "#CE93D8",  "#388E3C",  "#F57C00",  "#1E88E5",  "#8E24AA"],
+        backgroundColor: [
+          "#4CAF50", "#FF9800", "#2196F3", "#9C27B0",
+          "#64B5F6", "#CE93D8", "#388E3C", "#F57C00", 
+          "#1E88E5", "#8E24AA"
+        ],
         borderWidth: 0.5,
       },
     ],
   };
 
+  // Error handling for missing or invalid data in marketSegmentation
+  const hasInvalidData = marketSegmentation.some(
+    (segment) => typeof segment.segment_percentage !== "number" || segment.segment_percentage < 0 || segment.segment_percentage > 100
+  );
+
+  if (hasInvalidData) {
+    return (
+      <div className="text-red-500 text-center">
+        <p>Error: One or more segments have invalid data (percentage must be a number between 0 and 100).</p>
+      </div>
+    );
+  }
+
   return (
-    <div className="rounded-lg p-4  shadow-md text-gray-300">
-      <div className="flex flex-col-reverse sm:flex-row sm:space-x-8 items-center ">
+    <div className="rounded-lg p-4 shadow-md text-gray-300">
+      <div className="flex flex-col-reverse sm:flex-row sm:space-x-8 items-center">
         {/* Segment Details */}
         <div className="bg-[#1b1b1b] border border-[#2e2e2e] rounded-xl p-5">
           <ul className="space-y-4 text-sm text-gray-300 flex-1">
             {marketSegmentation.map((segment, index) => (
-              <li
-                key={index}
-                className="rounded-lg p-4 flex items-start space-x-2"
-              >
+              <li key={index} className="rounded-lg p-4 flex items-start space-x-2">
                 {/* Color Indicator */}
                 <span
-                  className="w-4 h-6 "
+                  className="w-4 h-6"
                   style={{
-                    backgroundColor:
-                      chartData.datasets[0].backgroundColor[index],
+                    backgroundColor: chartData.datasets[0].backgroundColor[index],
                   }}
                 ></span>
                 {/* Segment Details */}
                 <div>
                   <h4 className="text-lg font-semibold">{segment.segment}</h4>
-                  <p className="text-[#a8a8a8] ">
-                    {segment.segment_description}
-                  </p>
-                  {/* <p className="mt-2 text-green-500 font-semibold">
-                  {segment.segment_percentage}% of Market
-                </p> */}
+                  <p className="text-[#a8a8a8]">{segment.segment_description}</p>
                 </div>
               </li>
             ))}

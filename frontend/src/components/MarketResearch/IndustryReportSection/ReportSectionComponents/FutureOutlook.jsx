@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const FutureOutlookComponent = ({ futureOutlook }) => {
+const FutureOutlookComponent = ({ futureOutlook = [] }) => { // Default to an empty array
   const [isExpanded, setIsExpanded] = useState(false);
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -14,13 +14,13 @@ const FutureOutlookComponent = ({ futureOutlook }) => {
 
   return (
     <div className="p-10 text-gray-400">
-      <h3 className="text-xl font-semibold mb-4 text-[#e1e1e1] ">Future Outlook</h3>
+      <h3 className="text-xl font-semibold mb-4 text-[#e1e1e1]">Future Outlook</h3>
 
       <div className="grid grid-cols-2 gap-12">
-        {displayedPoints.map((point, index) => (
+        {Array.isArray(displayedPoints) && displayedPoints.map((point, index) => (
           <div
             key={index}
-            className="border border-gray-600 bg-gradient-to-b from-[#ffffff]/10 to-[#999999]/10 rounded-2xl p-4 py-6  shadow-md hover:shadow-lg hover:border-gray-500 transition duration-200"
+            className="border border-gray-600 bg-gradient-to-b from-[#ffffff]/10 to-[#999999]/10 rounded-2xl p-4 py-6 shadow-md hover:shadow-lg hover:border-gray-500 transition duration-200"
           >
             <div
               onClick={() => toggleAccordion(index)}
@@ -48,6 +48,5 @@ const FutureOutlookComponent = ({ futureOutlook }) => {
     </div>
   );
 };
-
 
 export default FutureOutlookComponent;

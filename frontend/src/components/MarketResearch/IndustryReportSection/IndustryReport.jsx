@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import ReportDropdown from "./ReportDropdown"; // Adjust the import path if necessary
 
 const YourComponent = () => {
-  const industryState = useSelector((state) => state);
+
   const summaryData = useSelector((state) => state.industry.summaryData);
 
   // const data = {
