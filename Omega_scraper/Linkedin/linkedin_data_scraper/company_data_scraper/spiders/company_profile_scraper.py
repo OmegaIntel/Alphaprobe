@@ -2,7 +2,6 @@ import json
 import logging  # Import logging for detailed output
 import scrapy
 from typing import Any, Iterable
-from scrapy.http import Request, Response
 import re
 
 # Set up logging
