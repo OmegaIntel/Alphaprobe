@@ -9,7 +9,7 @@ const MarketSegmentation = ({ marketSegmentation }) => {
     datasets: [
       {
         data: marketSegmentation.map((segment) => segment.segment_percentage),
-        backgroundColor: ["#4CAF50", "#FF9800", "#2196F3", "#9C27B0"],
+        backgroundColor: ["#4CAF50", "#FF9800", "#2196F3", "#9C27B0" , "#64B5F6",  "#CE93D8",  "#388E3C",  "#F57C00",  "#1E88E5",  "#8E24AA"],
         borderWidth: 0.5,
       },
     ],

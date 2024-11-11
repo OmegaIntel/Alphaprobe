@@ -40,7 +40,7 @@ async def get_company_profile(request: CompanyRequest):
         raise HTTPException(status_code=500, detail=f"Failed to retrieve company profile data from {urls}")
 
 
-@app.post("/crunchbase-company-profile/")
+@app.post("/crunchbase-company-profile")
 async def fetch_crunchbase_url(request: CompanyRequest):
     url = request.company_url
 

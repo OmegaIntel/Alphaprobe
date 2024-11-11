@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React from "react";
 import FAQsComponent from "../../Faqs/FAQs";
 import KeyStatistics from "./ReportSectionComponents/KeyStatistics";
 import ExternalDrivers from "./ReportSectionComponents/ExternalDrivers";
@@ -36,58 +36,62 @@ const ReportDropdown = ({ data, sidebarSections }) => {
   // Helper function to render the overview section
   const renderOverviewSection = (section) => {
     if (!section) return null;
-
+  
     return (
-      <div className="flex mt-10">
-        <div className="bg-[#171717] border border-[#2e2e2e] rounded-xl p-6">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+      <div className="flex flex-col gap-8 mt-10 md:flex-row md:gap-12">
+        {/* Report Section */}
+        <div className="bg-[#171717] border border-[#2e2e2e] rounded-xl p-6 flex-1 w-full md:w-3/4 xl:w-3/4 2xl:w-3/4">
+          <div className="flex flex-col mb-6">
             {hasContent(section.report_title) && (
-              <h1 className="text-4xl text-white">
+              <h1 className="text-2xl md:text-2xl xl:text-2xl 2xl:text-2xl font-semibold text-white">
                 {section.report_title}
               </h1>
             )}
           </div>
-
+  
           {hasContent(section.industry_definition) && (
-            <div>
-              <p className="text-lg text-gray-400">
-                {section.industry_definition}
-              </p>
-            </div>
+            <p className="text-base md:text-lg xl:text-xl 2xl:text-lg text-gray-400">
+              {section.industry_definition}
+            </p>
           )}
-          
+  
           {hasContent(section.executive_summary) && (
-            <div>
-              <p className="text-lg text-gray-400 mt-10">
-                {section.executive_summary}
-              </p>
-            </div>
+            <p className="text-base md:text-lg xl:text-xl 2xl:text-lg text-gray-400 mt-10">
+              {section.executive_summary}
+            </p>
           )}
         </div>
+  
+        {/* Key Statistics Section */}
         {hasContent(section.key_statistics) && (
-          <div className="mx-5">
-            <KeyStatistics statistics={section.key_statistics} />
+          <div className="mx-2 w-full md:w-1/4 xl:w-1/4 2xl:w-1/4">
+            <div className="p-4 md:p-6 xl:p-4 2xl:p-4  rounded-xl">
+              <KeyStatistics statistics={section.key_statistics} />
+            </div>
           </div>
         )}
       </div>
     );
   };
-
+  
+  
+  
+  
   // Main render function with error handling
   if (!data) {
     return <div className="p-4 text-gray-400">No report data available.</div>;
   }
-  
+
   return (
-    <div className="flex">
-      <div className="p-4">
+    <div className="flex flex-col md:flex-row gap-10 p-4">
+      <div className="space-y-8 flex-1">
         {reportData.map((section, index) => (
-          <div key={index} className="space-y-8">
+          <div key={index}>
             {renderOverviewSection(section)}
 
             {(hasContent(section.industry_impact) || hasContent(section.metrics)) && (
-              <div className="flex space-x-2">
-                <div className="flex bg-[#171717] md:3/5 xl:w-4/5 border rounded-xl border-[#2e2e2e] justify-between">
+              <div className="flex flex-col md:flex-row gap-8">
+                <div className="flex bg-[#171717] md:w-3/5 xl:w-4/5 border rounded-xl border-[#2e2e2e] justify-between gap-8">
                   {hasContent(section.industry_impact) && (
                     <IndustryImpact industryImpact={section.industry_impact} />
                   )}
@@ -98,7 +102,7 @@ const ReportDropdown = ({ data, sidebarSections }) => {
                   )}
                 </div>
                 {hasContent(section.metrics) && (
-                  <div className="h-full">
+                  <div className="h-full gap-8">
                     <ScorecardComponent metrics={section.metrics} />
                   </div>
                 )}
@@ -106,7 +110,7 @@ const ReportDropdown = ({ data, sidebarSections }) => {
             )}
 
             {hasContent(section.key_trends) && (
-              <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-xl">
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-xl gap-8">
                 <p className="text-2xl mx-10 my-5 font-semibold text-white">
                   Industry Trends
                 </p>
@@ -117,9 +121,9 @@ const ReportDropdown = ({ data, sidebarSections }) => {
             )}
 
             {(hasContent(section.current_performance) || hasContent(section.future_outlook)) && (
-              <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-xl">
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-xl gap-8">
                 <p className="text-2xl mx-10 my-5 font-semibold text-white">
-                  Insights & Future Outlook 
+                  Insights & Future Outlook
                 </p>
                 {hasContent(section.current_performance) && (
                   <CurrentPerformanceComponent
@@ -135,7 +139,7 @@ const ReportDropdown = ({ data, sidebarSections }) => {
             )}
 
             {hasContent(section.demand_determinants) && (
-              <div className="bg-[#171717] border border-[#2e2e2e] p-3 rounded-lg">
+              <div className="bg-[#171717] border border-[#2e2e2e] p-3 rounded-lg gap-8">
                 <DemandDeterminants
                   demandDeterminants={section.demand_determinants}
                 />
@@ -143,7 +147,7 @@ const ReportDropdown = ({ data, sidebarSections }) => {
             )}
 
             {hasContent(section.market_segmentation) && (
-              <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-xl">
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-xl gap-8">
                 <p className="text-2xl mx-10 my-5 font-semibold text-white">
                   Market Segmentation
                 </p>
@@ -160,7 +164,7 @@ const ReportDropdown = ({ data, sidebarSections }) => {
             )}
 
             {hasContent(section.market_share_concentration) && (
-              <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-xl">
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-xl gap-8">
                 <MarketShareConcentration
                   concentrationData={section.market_share_concentration}
                 />
@@ -168,7 +172,7 @@ const ReportDropdown = ({ data, sidebarSections }) => {
             )}
 
             {hasContent(section.supply_chain) && (
-              <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-xl">
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-xl gap-8">
                 <p className="text-xl mx-10 my-5 font-semibold text-white">
                   Supply Chain
                 </p>
@@ -177,7 +181,7 @@ const ReportDropdown = ({ data, sidebarSections }) => {
             )}
 
             {hasContent(section.external_drivers) && (
-              <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-xl">
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-xl gap-8">
                 <p className="text-2xl mx-10 my-5 font-semibold text-white">
                   External Drivers
                 </p>
@@ -188,7 +192,7 @@ const ReportDropdown = ({ data, sidebarSections }) => {
             )}
 
             {hasContent(section.regulations_and_policies) && (
-              <div className="p-4 bg-[#171717] border border-[#2e2e2e]">
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] gap-8">
                 <RegulationsAndPolicies
                   regulations={section.regulations_and_policies}
                 />
@@ -196,7 +200,7 @@ const ReportDropdown = ({ data, sidebarSections }) => {
             )}
 
             {hasContent(section.industry_assistance) && (
-              <div className="p-4 bg-[#171717] border border-[#2e2e2e]">
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] gap-8">
                 <IndustryAssistance
                   industryAssistance={section.industry_assistance}
                 />
@@ -204,7 +208,7 @@ const ReportDropdown = ({ data, sidebarSections }) => {
             )}
 
             {hasContent(section.technological_change) && (
-              <div className="p-4 bg-[#171717] border border-[#2e2e2e]">
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] gap-8">
                 <TechnologicalChange
                   technologicalChange={section.technological_change}
                 />
@@ -212,7 +216,7 @@ const ReportDropdown = ({ data, sidebarSections }) => {
             )}
 
             {hasContent(section.revenue_volatility) && (
-              <div className="p-4 bg-[#171717] border border-[#2e2e2e]">
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] gap-8">
                 <RevenueVolatility
                   revenueVolatility={section.revenue_volatility}
                 />
@@ -220,15 +224,11 @@ const ReportDropdown = ({ data, sidebarSections }) => {
             )}
 
             {hasContent(section.capital_intensity) && (
-              <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-b-xl">
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] gap-8">
                 <CapitalIntensity
                   capitalIntensity={section.capital_intensity}
                 />
               </div>
-            )}
-
-            {hasContent(section.swot_analysis) && (
-              <SWOTAnalysis swotAnalysis={section.swot_analysis} />
             )}
           </div>
         ))}
