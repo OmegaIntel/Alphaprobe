@@ -6,6 +6,7 @@ with and without PDF file input.
 import boto3
 import os
 import json
+
 from typing import List, Dict
 
 from llm_models.aws_bedrock.templates.common import build_aws_template
@@ -135,9 +136,13 @@ def extract_basic_info(filename: str) -> dict:
     return result
 
 
-def matching_industry_names_codes_from_qa(qa: List[Dict[str, str]]) -> List[Dict[str, str]]:
-    """Return list of matching industries with their NAICS codes."""
+def matching_industry_names_codes_from_qa(qa: List[Dict[str, str]], restriction: list=[]) -> List[Dict[str, str]]:
+    """Return list of matching industries with their NAICS codes, restricted."""
+    # TODO: the restriction part does not help, unfortunately.
+    prompt=MATCHING_QA_TO_INDUSTRIES_PROMPT
+    if restriction:
+        prompt += f"""\n\nOnly recommend industries from the following list of NAICS codes: {restriction}\n"""
     llm_result = info_from_template_prompt(
-        template=INDUSTRIES_TEMPLATE, prompt=MATCHING_QA_TO_INDUSTRIES_PROMPT, data=qa)
+        template=INDUSTRIES_TEMPLATE, prompt=prompt, data=qa)
     # the outer key is the same as in the template.
     return llm_result.get('industry_name_code', [])

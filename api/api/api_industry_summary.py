@@ -11,20 +11,9 @@ import json
 
 from doc_parser.pdf_utils import doc_id
 from doc_parser.doc_utils import dict_from_summary_json, flatten_dict_once, extract_key_val_from_dict
+from api.data.data_access import ibis_industries
 
-
-import logging
-logging.basicConfig(
-    filename='summary.log',
-    encoding='utf-8',
-    filemode='a',
-    format="{asctime} - {levelname} - {message}",
-    style="{",
-    datefmt="%Y-%m-%d %H:%M:%S",
-    level=logging.INFO
-)
-
-loginfo = logging.info
+from common_logging import loginfo
 
 # for testability
 from dotenv import load_dotenv
@@ -34,11 +23,9 @@ S3_STORAGE_BUCKET = 'omega-intel-doc-storage'
 IBIS_SUMMARY_ROOT = 'Summaries/IBIS-reports'
 
 
-IBIS_MAP_FILENAME = 'api/data/IBIS NAICS Code mapping.csv'
-IBIS_REPORT_NAME = 'IBIS Report Name'
-NAICS_CODE = 'NAICS Code'
-IBIS_MAP = pd.read_csv(IBIS_MAP_FILENAME)
-IBIS_MAP[NAICS_CODE] = IBIS_MAP[NAICS_CODE].apply(str)
+# IBIS_MAP_FILENAME = 'api/data/IBIS NAICS Code mapping.csv'
+# IBIS_REPORT_NAME = 'IBIS Report Name'
+# NAICS_CODE = 'NAICS Code'
 
 MARKET_WEIGHTS = pd.read_csv('api/data/market-weights.csv')
 INVESTMENT_WEIGHTS = pd.read_csv('api/data/investment-weights.csv')
@@ -54,15 +41,18 @@ with open('api/data/rated-metrics.json') as f:
     RATED_METRICS = json.load(f)
 
 
-def ibis_industries(code: str, name: str) -> List[str]:
-    """Use primarily code. If not found, use heuristics."""
-    code = str(code)
-    rows = IBIS_MAP[IBIS_MAP[NAICS_CODE] == code].copy()
-    names = list(rows[IBIS_REPORT_NAME])
-    if names:
-        return names
-    loginfo(f"The industry code was not mapped into a report {code}")
-    return [name]
+def profits_fixup(dd: dict) -> dict:
+    """Fix up the issue with profits: if profit_margins is under profit, profit is erroneous, remove it."""
+    KS = 'key_statistics'
+    P = 'profit'
+    PM = 'profit_margins'
+    if KS in dd:
+        if P in dd[KS]:
+            if PM in dd[KS][P]:
+                dd[KS][PM] = dd[KS][P][PM].copy()
+                del dd[KS][P]
+                loginfo("Fixed up profit margins")
+    return dd
 
 
 def summary_for_name(name: str) -> Dict:
@@ -70,7 +60,9 @@ def summary_for_name(name: str) -> Dict:
     doc_path = f'{IBIS_SUMMARY_ROOT}/{doc_id(name)}/section_summaries.json'
     try:
         text = read_object_to_text(S3_STORAGE_BUCKET, doc_path)
-        return dict_from_summary_json(text)
+        out = dict_from_summary_json(text)
+        out = profits_fixup(out)
+        return out
     except:
         loginfo(f"The desired summary does not exist: {doc_path}")
         return {}
@@ -81,6 +73,13 @@ def add_metrics_ratings(flat_summary: Dict) -> Dict:
 
     for metric_name, metric_key in RATED_METRICS.items():
         val = extract_key_val_from_dict(flat_summary, metric_key)
+
+        # test that it's numeric
+        try:
+            float(val)
+        except:
+            continue
+
         rt = RATINGS_THRESHOLDS[RATINGS_THRESHOLDS[FIELD] == metric_name].copy()
         for dd in rt.to_dict(orient='records'):
             if dd['Lower'] <= val < dd['Upper']:

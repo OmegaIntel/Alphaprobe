@@ -18,7 +18,6 @@ class BingSearch(Retriever):
 
     def search(self, query: str):
         headers = {"Ocp-Apim-Subscription-Key": self.api_key}
-        print(f"searching internet for {query}")
         params = {"q": query, "textDecorations": True, "textFormat": "HTML"}
         response = requests.get(self.endpoint, headers=headers, params=params)
 

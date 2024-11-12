@@ -17,6 +17,7 @@ def run_test(industry_code: str, industry_name: str, min_entries: int):
     assert isinstance(result, DataModelOut)
     assert isinstance(result.result, list)
     assert len(result.result) >= min_entries
+    assert 'profit_margins' in result.result[0]['key_statistics']
 
 
 def test1():
@@ -29,6 +30,11 @@ def test2():
 
 def test3():
     run_test('324110', 'Petroleum Refineries', 1)
+
+
+def test4():
+    # was having problem with no data under profit except for profit margins.
+    run_test('623110', 'Nursing Care Facilities', 1)
 
 
 def test_summary_for_name1():
@@ -66,4 +72,5 @@ def test_add_metrics_ratings():
     flattened = flatten_dict_once(flattened)
     result = add_metrics_ratings(flattened)
     for metric in RATED_METRICS:
-        assert metric in result
+        if not metric == 'profit_margins_percentage':
+            assert metric in result

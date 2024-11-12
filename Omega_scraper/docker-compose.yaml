@@ -1,0 +1,15 @@
+services:
+
+  scraper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8401:8401"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+      - FIRECRAWL_API_KEY="fc-f0b5a990147f4ae88364925cd0dee335"
+    command:
+      fastapi run --workers 16 --port 8401 app.py

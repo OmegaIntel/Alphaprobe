@@ -62,3 +62,15 @@ http://localhost:8000/api/docs
     ```
     tail -f nohup.out
     ```
+
+1. Start the web scraper:
+    ```
+    cd Omega_scraper
+    docker compose down
+    nohup docker compose up --build &
+    ```
+
+1. See if there are any errors:
+    ```
+    tail -f nohup.out
+    ```
