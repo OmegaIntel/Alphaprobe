@@ -58,5 +58,6 @@ async def test_scrapy_crawl():
     
     # Optionally, validate some data
     assert company_data["company_name"] == "Tesla", "Company name mismatch"
-    assert company_data["linkedin_followers_count"] == 12087426, "Followers count mismatch"
     assert company_data["website"] == "https://www.tesla.com/careers", "Website URL mismatch"
+    assert company_data["headquarters"] == "Austin, Texas", "headquarters mismatch"
+    assert company_data["industry"] == "Motor Vehicle Manufacturing", "industry mismatch"

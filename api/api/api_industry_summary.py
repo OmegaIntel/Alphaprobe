@@ -11,20 +11,9 @@ import json
 
 from doc_parser.pdf_utils import doc_id
 from doc_parser.doc_utils import dict_from_summary_json, flatten_dict_once, extract_key_val_from_dict
+from api.data.data_access import ibis_industries
 
-
-import logging
-logging.basicConfig(
-    filename='summary.log',
-    encoding='utf-8',
-    filemode='a',
-    format="{asctime} - {levelname} - {message}",
-    style="{",
-    datefmt="%Y-%m-%d %H:%M:%S",
-    level=logging.INFO
-)
-
-loginfo = logging.info
+from common_logging import loginfo
 
 # for testability
 from dotenv import load_dotenv
@@ -34,11 +23,9 @@ S3_STORAGE_BUCKET = 'omega-intel-doc-storage'
 IBIS_SUMMARY_ROOT = 'Summaries/IBIS-reports'
 
 
-IBIS_MAP_FILENAME = 'api/data/IBIS NAICS Code mapping.csv'
-IBIS_REPORT_NAME = 'IBIS Report Name'
-NAICS_CODE = 'NAICS Code'
-IBIS_MAP = pd.read_csv(IBIS_MAP_FILENAME)
-IBIS_MAP[NAICS_CODE] = IBIS_MAP[NAICS_CODE].apply(str)
+# IBIS_MAP_FILENAME = 'api/data/IBIS NAICS Code mapping.csv'
+# IBIS_REPORT_NAME = 'IBIS Report Name'
+# NAICS_CODE = 'NAICS Code'
 
 MARKET_WEIGHTS = pd.read_csv('api/data/market-weights.csv')
 INVESTMENT_WEIGHTS = pd.read_csv('api/data/investment-weights.csv')
@@ -52,17 +39,6 @@ FIELD = 'JSON Field'
 
 with open('api/data/rated-metrics.json') as f:
     RATED_METRICS = json.load(f)
-
-
-def ibis_industries(code: str, name: str) -> List[str]:
-    """Use primarily code. If not found, use heuristics."""
-    code = str(code)
-    rows = IBIS_MAP[IBIS_MAP[NAICS_CODE] == code].copy()
-    names = list(rows[IBIS_REPORT_NAME])
-    if names:
-        return names
-    loginfo(f"The industry code was not mapped into a report {code}")
-    return [name]
 
 
 def profits_fixup(dd: dict) -> dict:
