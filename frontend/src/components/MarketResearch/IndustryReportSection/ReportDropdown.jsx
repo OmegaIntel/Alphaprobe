@@ -39,11 +39,7 @@ const ReportDropdown = ({ data, sidebarSections }) => {
     if (!section) return null;
 
 
-  // Main render function with error handling
-  if (!data || (Array.isArray(data) && data.length === 0)) {
-    return <div className="p-4 text-gray-400">No data available for this industry.</div>;
-  }
-
+ 
     return (
       <div className="flex flex-col gap-8 mt-10 md:flex-row md:gap-12">
         {/* Report Section */}
@@ -82,9 +78,11 @@ const ReportDropdown = ({ data, sidebarSections }) => {
   };
 
   // Main render function with error handling
-  if (!data) {
-    return <div className="p-4 text-gray-400">No report data available.</div>;
+  // Main render function with error handling
+  if (!data || (Array.isArray(data) && data.length === 0)) {
+    return <div className="p-4 text-gray-400">No data available for this industry.</div>;
   }
+
 
   return (
     <div className="flex flex-col md:flex-row gap-10 p-4">
