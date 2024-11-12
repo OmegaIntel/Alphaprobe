@@ -9,12 +9,15 @@ from selenium.webdriver.support import expected_conditions as EC
 from pyvirtualdisplay import Display
 from firecrawl import FirecrawlApp
 from uuid import uuid1
-from os import unlink
+from os import unlink, getenv
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = FastAPI()
 
 # Initialize Firecrawl App with API key
-firecrawl_app = FirecrawlApp(api_key='fc-f0b5a990147f4ae88364925cd0dee335')
+firecrawl_app = FirecrawlApp(api_key=getenv('FIRECRAWL_API_KEY'))
 
 class CompanyRequest(BaseModel):
     company_url: str
@@ -28,6 +31,7 @@ async def get_company_profile(request: CompanyRequest):
     TEMP_FILE = f"{uuid1()}.json"
 
     # Run the Scrapy crawler with URLs passed as arguments
+    # TODO: consider async
     subprocess.run(["scrapy", "crawl", "company_profile_scraper", "-a", f"urls={json.dumps(urls)}", "-O", TEMP_FILE])
 
     # Read and return the scraped data
@@ -57,14 +61,14 @@ async def fetch_crunchbase_url(request: CompanyRequest):
 
 # Function to fetch content with Selenium
 def fetch_content(url: str) -> dict:
-    display = Display(visible=0, size=(1024, 768))
-    display.start()
-
-    options = webdriver.FirefoxOptions()
-    options.add_argument("--headless")
-    driver = webdriver.Firefox(options=options)
-
     try:
+        display = Display(visible=0, size=(1024, 768))
+        display.start()
+
+        options = webdriver.FirefoxOptions()
+        options.add_argument("--headless")
+        driver = webdriver.Firefox(options=options)
+
         driver.get(url)
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
         page_content = driver.find_element(By.TAG_NAME, "body").text
@@ -88,5 +92,5 @@ async def fetch_company_info(request: CompanyRequest):
     return content
 
 
-# uvicorn app:app --workers 24 --reload --host 0.0.0.0 --port 8401
-# fastapi run --workers 16 --reload --port 8401 app.py
+# uvicorn app:app --workers 24 --host 0.0.0.0 --port 8401
+# fastapi run --workers 16 --port 8401 app.py
