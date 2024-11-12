@@ -21,6 +21,24 @@ const MarketShareConcentration = ({ concentrationData = {} }) => {
     (company) => company.company_percentage > 0 && company.company_percentage <= 100
   );
 
+  // Calculate the total percentage of the valid companies
+  const totalPercentage = validCompanies.reduce((sum, company) => sum + company.company_percentage, 0);
+
+  // Check if "Others" is already included in the data from the backend
+  const hasOthers = validCompanies.some(
+    (company) => company.company_name.toLowerCase() === "others"
+  );
+
+  // If total percentage is less than 100% and "Others" is not present from backend, add "Others" to make up the difference
+  if (totalPercentage < 100 && !hasOthers) {
+    validCompanies.push({
+      company_name: "Others",
+      company_percentage: 100 - totalPercentage,
+    });
+  }
+
+  // If total is already 100% or "Others" is present, we don't modify the data further
+
   // Prepare data for the donut chart
   const chartData = {
     labels: validCompanies.map((company) => company.company_name),

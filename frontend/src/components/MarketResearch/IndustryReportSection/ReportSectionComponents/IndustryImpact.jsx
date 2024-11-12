@@ -19,7 +19,7 @@ const IndustryImpact = ({ industryImpact }) => {
             positive_impact_factors.map((factor, index) => (
               <div
                 key={index}
-                className="flex space-x-3 items-center border border-green-500 rounded-lg px-3 w-full sm:w-[30rem] bg-green-700/10"
+                className="flex space-x-3 items-center border border-green-500 rounded-lg px-3 bg-green-700/10"
               >
                 <ThumbUpIcon className="text-green-400" />
                 <li className="text-gray-300 rounded-md p-2">{factor}</li>
@@ -41,7 +41,7 @@ const IndustryImpact = ({ industryImpact }) => {
             negative_impact_factors.map((factor, index) => (
               <div
                 key={index}
-                className="flex space-x-3 items-center border border-red-500 rounded-lg px-3 w-full sm:w-[30rem] bg-red-900/10"
+                className="flex space-x-3 items-center border border-red-500 rounded-lg px-3 w-96 bg-red-900/10"
               >
                 <ThumbDownAltIcon className="text-red-400" />
                 <li className="text-gray-300 rounded-md p-2">{factor}</li>

@@ -182,24 +182,7 @@ const Categories = () => {
                 </div>
               ))}
             </div>
-            {/* <div>
-              {activeCategory !== "Action Items" &&
-                activeCategory !== "Documents" && (
-                  <Select
-                    className="ml-2 largeDesktop:w-[170px] "
-                    value={selectedSubcategory}
-                    onChange={(value) => {
-                      setSelectedSubcategory(value);
-                    }}
-                  >
-                    {subCategoryList.map((subcategory) => (
-                      <Option key={subcategory} value={subcategory}>
-                        {subcategory}
-                      </Option>
-                    ))}
-                  </Select>
-                )}
-            </div> */}
+            
             <div className="my-3">
                <SearchBox section={activeCategory}/>
                {/* <SearchBar placeholder={activeCategory}/> */}
@@ -247,62 +230,7 @@ const Categories = () => {
             />
           )}
         </div>
-        {/* <div>
-          <CollapsibleSidebar />
-        </div> */}
-        {/* <div className="w-[30%] flex flex-col">
-          <div className="bg-black p-2 flex flex-row justify-between border-b border-gray-800">
-            <div>{progress}% complete</div>
-            <AddProgress
-              progress={progress}
-              setToggle={setToggle}
-              setProgress={setProgress}
-              name={name}
-            />
-          </div>
-          <div className="p-2 flex flex-row justify-between bg-black">
-            <MoreOutlined className=" cursor-pointer" />
-           
-          </div>
-          <div className="overflow-auto bg-black text-white space-y-4 p-4 flex flex-grow flex-col">
-            {todoTask && todoTask.length > 0 && (
-              <div>
-                <div className="font-semibold text-lg mb-2 border-b border-gray-600 pb-1">
-                  To Do
-                </div>
-                {todoTask?.map((data, index) => (
-                  <div key={index} className="bg-[#212126] rounded-lg p-2 mb-2">
-                    {data?.task}
-                  </div>
-                ))}
-              </div>
-            )}
-            {inprogress && inprogress.length > 0 && (
-              <div>
-                <div className="font-semibold text-lg mb-2 border-b border-gray-600 pb-1">
-                  In Progress
-                </div>
-                {inprogress?.map((data, index) => (
-                  <div key={index} className="bg-[#212126] rounded-lg p-2 mb-2">
-                    {data?.task}
-                  </div>
-                ))}
-              </div>
-            )}
-            {done && done.length > 0 && (
-              <div>
-                <div className="font-semibold text-lg mb-2 border-b border-gray-600 pb-1">
-                  Done
-                </div>
-                {done?.map((data, index) => (
-                  <div key={index} className="bg-[#212126] rounded-lg p-2 mb-2">
-                    {data?.task}
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        </div> */}
+       
       </div>
     </>
   );

@@ -21,25 +21,12 @@ const MarketSegmentation = ({ marketSegmentation }) => {
     );
   }
 
-  // Prepare data for the single donut chart
-  const chartData = {
-    labels: marketSegmentation.map((segment) => segment.segment),
-    datasets: [
-      {
-        data: marketSegmentation.map((segment) => segment.segment_percentage),
-        backgroundColor: [
-          "#4CAF50", "#FF9800", "#2196F3", "#9C27B0",
-          "#64B5F6", "#CE93D8", "#388E3C", "#F57C00", 
-          "#1E88E5", "#8E24AA"
-        ],
-        borderWidth: 0.5,
-      },
-    ],
-  };
-
   // Error handling for missing or invalid data in marketSegmentation
   const hasInvalidData = marketSegmentation.some(
-    (segment) => typeof segment.segment_percentage !== "number" || segment.segment_percentage < 0 || segment.segment_percentage > 100
+    (segment) =>
+      typeof segment.segment_percentage !== "number" ||
+      segment.segment_percentage < 0 ||
+      segment.segment_percentage > 100
   );
 
   if (hasInvalidData) {
@@ -50,13 +37,53 @@ const MarketSegmentation = ({ marketSegmentation }) => {
     );
   }
 
+  // Calculate the total percentage of provided segments
+  const totalPercentage = marketSegmentation.reduce(
+    (sum, segment) => sum + segment.segment_percentage,
+    0
+  );
+
+  // Check if "Others" is already included in the data
+  const hasOthers = marketSegmentation.some(
+    (segment) => segment.segment.toLowerCase() === "others"
+  );
+
+  // Add "Others" segment if total is less than 100% and "Others" is not already present
+  const updatedSegments =
+    totalPercentage < 100 && !hasOthers
+      ? [
+          ...marketSegmentation,
+          {
+            segment: "Others",
+            segment_percentage: 100 - totalPercentage,
+            segment_description: "Other market segments",
+          },
+        ]
+      : marketSegmentation;
+
+  // Prepare data for the donut chart
+  const chartData = {
+    labels: updatedSegments.map((segment) => segment.segment),
+    datasets: [
+      {
+        data: updatedSegments.map((segment) => segment.segment_percentage),
+        backgroundColor: [
+          "#4CAF50", "#FF9800", "#2196F3", "#9C27B0",
+          "#64B5F6", "#CE93D8", "#388E3C", "#F57C00", 
+          "#1E88E5", "#8E24AA"
+        ],
+        borderWidth: 0.5,
+      },
+    ],
+  };
+
   return (
-    <div className="rounded-lg p-4 shadow-md text-gray-300">
+    <div className="rounded-lg p-4 shadow-md text-gray-300 ">
       <div className="flex flex-col-reverse sm:flex-row sm:space-x-8 items-center">
         {/* Segment Details */}
         <div className="bg-[#1b1b1b] border border-[#2e2e2e] rounded-xl p-5">
           <ul className="space-y-4 text-sm text-gray-300 flex-1">
-            {marketSegmentation.map((segment, index) => (
+            {updatedSegments.map((segment, index) => (
               <li key={index} className="rounded-lg p-4 flex items-start space-x-2">
                 {/* Color Indicator */}
                 <span
@@ -85,7 +112,7 @@ const MarketSegmentation = ({ marketSegmentation }) => {
               plugins: {
                 tooltip: {
                   callbacks: {
-                    label: (context) => `${context.label}: ${context.raw}%`,
+                    label: (context) => `${context.label}: ${context.raw.toFixed(2)}%`,
                   },
                 },
                 legend: {

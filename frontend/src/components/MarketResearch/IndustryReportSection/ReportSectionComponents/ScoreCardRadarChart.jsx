@@ -52,7 +52,7 @@ const RadarChartComponent = ({ metrics }) => {
         grid: {
           circular: true, // Ensure the grid lines are circular
           color: "rgba(255, 255, 255, 0.2)", // Customize grid line color if needed
-          lineWidth: 3, // Increase this value to make the circle lines thicker
+          lineWidth: 2, // Increase this value to make the circle lines thicker
         },
         pointLabels: {
              // Ensures labels are displayed at each point around the chart
@@ -66,7 +66,7 @@ const RadarChartComponent = ({ metrics }) => {
   };
 
   return (
-    <div className="shadow-md w-[30rem] rounded-lg ">
+    <div className="shadow-md md::w-[25rem] rounded-lg ">
       <Radar data={data} options={options} />
     </div>
   );

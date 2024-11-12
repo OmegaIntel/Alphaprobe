@@ -31,7 +31,7 @@ const BarriersToEntryComponent = ({ barriersToEntry = {} }) => {
   };
 
   return (
-    <div className="rounded-lg p-4 shadow-md text-gray-400 bg-[#171717] border border-[#2e2e2e] px-10">
+    <div className="rounded-lg p-4 shadow-md text-gray-400 bg-[#171717] border border-[#2e2e2e] px-10 ">
       <h3 className="text-2xl font-semibold mb-4 text-white">
         Barriers to Entry
       </h3>

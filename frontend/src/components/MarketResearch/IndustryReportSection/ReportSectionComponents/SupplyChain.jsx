@@ -19,7 +19,10 @@ const TierSection = ({ title, items = [] }) => {
           ))}
         </ul>
       ) : (
-        <p>No {title} available.</p>
+        <div>
+
+          <p className="ml-10 space-y-2 text-[#7a7a7a] p-2">No {title} available.</p>
+        </div>
       )}
     </div>
   );
