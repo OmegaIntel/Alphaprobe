@@ -1,7 +1,10 @@
 """Tests for related industries functionality."""
 
 import pandas as pd
-from api.api_related_industries import industries_for_thesis, UserQR, IndustryCode, DataModelIn, DataModelOut
+from api.api_related_industries import (
+    industries_for_thesis, UserQR, IndustryCode,
+    DataModelIn, DataModelOut, IBIS_NAICS_CODES
+)
 import asyncio
 
 
@@ -22,6 +25,7 @@ def run_test(csv_name: str):
         assert isinstance(elt, IndustryCode)
         assert elt.industry_name
         assert elt.industry_code
+        assert elt.industry_code in IBIS_NAICS_CODES
 
     print(result.result)
 
