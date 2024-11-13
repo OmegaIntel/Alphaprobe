@@ -150,7 +150,12 @@ const CompanyDetailsComponent = ({ data }) => {
                   Locations:{" "}
                   {data.result.company_location_identifiers.join(", ")}
                 </li> */}
-
+                <li>
+                    <div>
+                      <p className="text-xl text-gray-400">Future Projectile:</p>
+                      <p className="text-xl text-gray-500">{data.result.company_future_projections}</p>
+                    </div>
+                  </li>
                   <li>
                     <div>
                       <p className="text-xl text-gray-400">Ownership Status:</p>
