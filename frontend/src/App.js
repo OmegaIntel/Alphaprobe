@@ -60,6 +60,14 @@ const App = () => {
           }
         ></Route>
         <Route
+          path="/projects"
+          element={
+            <ProtectedLayout setToken={handleSetToken} isLoggedIn={isLoggedIn}>
+              <Categories />
+            </ProtectedLayout>
+          }
+        ></Route>
+        <Route
           path="/projects/:id"
           element={
             <ProtectedLayout setToken={handleSetToken} isLoggedIn={isLoggedIn}>
