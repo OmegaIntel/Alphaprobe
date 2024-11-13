@@ -27,7 +27,7 @@ logging.basicConfig(
 
 loginfo = logging.info
 
-SCRAPER_URL = 'http://localhost:8401'
+SCRAPER_URL = 'http://localhost:8408'
 ENDPOINTS = {
     'linkedin.com': 'linkedin-company-profile',
     'crunchbase.com': 'crunchbase-company-profile',
