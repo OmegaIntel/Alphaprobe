@@ -5,11 +5,12 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8401:8401"
+      - 8401:8401
     volumes:
       - .:/app
     environment:
       - PYTHONUNBUFFERED=1
-      - FIRECRAWL_API_KEY="fc-f0b5a990147f4ae88364925cd0dee335"
+      - FIRECRAWL_API_KEY=fc-f0b5a990147f4ae88364925cd0dee335
     command:
-      fastapi run --workers 16 --port 8401 app.py
+      # uvicorn app:app --host 0.0.0.0 --port 8401 --reload
+      fastapi run --workers 4 --port 8401 app.py
