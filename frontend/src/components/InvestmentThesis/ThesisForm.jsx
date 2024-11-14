@@ -9,10 +9,10 @@ import "react-toastify/dist/ReactToastify.css";
 export const ThesisForm = ({ questions }) => {
   const [answers, setAnswers] = useState({});
   const [otherInputs, setOtherInputs] = useState({});
+  const [loading, setLoading] = useState(false); // New loading state
   const dispatch = useDispatch();
 
   const handleInputChange = (id, option) => {
-    // Set the selected option as the only selected value
     setAnswers({ ...answers, [id]: option });
   };
 
@@ -23,20 +23,18 @@ export const ThesisForm = ({ questions }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validation: Check if all fields are filled
     const missingFields = questions.filter((q) => {
-      // Check if the answer is filled for both text and select types
       return (
-        !answers[q.id] || (answers[q.id] === "Other" && !otherInputs[q.id]) // For "Other" input, also check for corresponding text
+        !answers[q.id] || (answers[q.id] === "Other" && !otherInputs[q.id])
       );
     });
 
     if (missingFields.length > 0) {
-      toast.error("Fill all the form field", {
-        position: "top-right",
-      });
+      toast.error("Fill all the form fields", { position: "top-right" });
       return;
     }
+
+    setLoading(true); // Start loading
 
     const formattedData = {
       data: questions.map((q) => ({
@@ -48,8 +46,6 @@ export const ThesisForm = ({ questions }) => {
       })),
     };
 
-    console.log("Formatted data to submit:", formattedData);
-
     fetch(`${API_BASE_URL}/api/industries-for-thesis`, {
       method: "POST",
       headers: {
@@ -59,20 +55,15 @@ export const ThesisForm = ({ questions }) => {
       body: JSON.stringify(formattedData),
     })
       .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
+        if (!response.ok) throw new Error("Network response was not ok");
         return response.json();
       })
       .then((data) => {
-        console.log("Success:", data); // Log the received data
-        dispatch(setFormResponse(data)); // Dispatching data to update in store
-
+        console.log("Success:", data);
+        dispatch(setFormResponse(data));
         toast.success(
-          "Thesis generated successfully! Move to Market Research tab",
-          {
-            position: "top-right",
-          }
+          "Thesis generated successfully! Below is the list of suggested Industries",
+          { position: "top-right" }
         );
       })
       .catch((error) => {
@@ -80,6 +71,9 @@ export const ThesisForm = ({ questions }) => {
         toast.error("There was an issue generating the thesis.", {
           position: "top-right",
         });
+      })
+      .finally(() => {
+        setLoading(false); // Stop loading
       });
 
     setAnswers({});
@@ -93,9 +87,8 @@ export const ThesisForm = ({ questions }) => {
         {questions.map((q, index) => (
           <div key={q.id} style={{ marginBottom: "20px" }}>
             <label>
-              <div className="flex ">
-                <span className="font-bold">{index + 1}. </span>{" "}
-                {/* Numbering */}
+              <div className="flex">
+                <span className="font-bold">{index + 1}. </span>
                 <p className="ml-3 text-lg font-semibold text-gray-300">
                   {q.question}
                 </p>
@@ -103,7 +96,7 @@ export const ThesisForm = ({ questions }) => {
               <br />
               {q.type === "text" && (
                 <input
-                  className="bg-[#151518] border-gray-500 p-2 rounded-lg border w-full xl:w-3/4 h-12" // Increased height
+                  className="bg-[#151518] border-gray-500 p-2 rounded-lg border w-full xl:w-3/4 h-12"
                   type="text"
                   value={answers[q.id] || ""}
                   onChange={(e) => handleInputChange(q.id, e.target.value)}
@@ -145,14 +138,16 @@ export const ThesisForm = ({ questions }) => {
                   </div>
                   {answers[q.id] === "Other" && (
                     <div style={{ marginTop: "10px" }}>
-                      <label className="ml-3 text-lg font-semibold text-gray-300">Other:</label>
+                      <label className="ml-3 text-lg font-semibold text-gray-300">
+                        Other:
+                      </label>
                       <input
                         type="text"
                         value={otherInputs[q.id] || ""}
                         onChange={(e) =>
                           handleOtherInputChange(q.id, e.target.value)
                         }
-                        className="bg-[#151518] border-gray-500 rounded-lg p-2 border w-full h-12 mt-1" // Increased height
+                        className="bg-[#151518] border-gray-500 rounded-lg p-2 border w-full h-12 mt-1"
                       />
                     </div>
                   )}
@@ -164,10 +159,18 @@ export const ThesisForm = ({ questions }) => {
         <div className="mt-4">
           <button
             type="submit"
-            className="bg-white hover:bg-[#151518] font-semibold hover:border-white my-10 mx-20 hover:border hover:text-white transition-all ease-out duration-300 text-[#151518] px-4 py-2 rounded"
-            style={{ float: "right" }}
+            disabled={loading}
+            className="bg-white hover:bg-[#151518] font-semibold hover:border-white my-10 mx-20 hover:border hover:text-white transition-all ease-out duration-300 text-[#151518] px-4 py-2 rounded flex items-center justify-center"
+            style={{ float: "right", minWidth: "150px" }}
           >
-            Generate Thesis
+            {loading ? (
+              <div className="flex items-center">
+               Loading...
+                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-gray-900 mx-2"></div>
+              </div>
+            ) : (
+              "Generate Thesis"
+            )}
           </button>
         </div>
       </form>

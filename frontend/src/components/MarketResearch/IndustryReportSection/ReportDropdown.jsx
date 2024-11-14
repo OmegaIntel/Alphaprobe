@@ -1,542 +1,248 @@
-import { useState } from "react";
+import React from "react";
 import FAQsComponent from "../../Faqs/FAQs";
-import KeyStatistics from "./ReportSectionComponents/KeyStatistics"; // Import KeyStatistics component
+import KeyStatistics from "./ReportSectionComponents/KeyStatistics";
+import ExternalDrivers from "./ReportSectionComponents/ExternalDrivers";
+import SupplyChain from "./ReportSectionComponents/SupplyChain";
+import RegulationsAndPolicies from "./ReportSectionComponents/RegulationNPolicies";
+import MarketSegmentation from "./ReportSectionComponents/MarketSegmentation";
+import MarketShareConcentration from "./ReportSectionComponents/MarketConcentration";
+import SWOTAnalysis from "./ReportSectionComponents/SWOTAnalysis";
+import DemandDeterminants from "./ReportSectionComponents/DemandDeterminants";
+import IndustryAssistance from "./ReportSectionComponents/IndustryAssistance";
+import TechnologicalChange from "./ReportSectionComponents/TechChange";
+import RevenueVolatility from "./ReportSectionComponents/RevenueVolatility";
+import CapitalIntensity from "./ReportSectionComponents/CapitalIntensitivity";
+import CostFactors from "./ReportSectionComponents/CostFactor";
+import KeyTrends from "./ReportSectionComponents/KeyTrends";
+import FutureOutlookComponent from "./ReportSectionComponents/FutureOutlook";
+import CurrentPerformanceComponent from "./ReportSectionComponents/CurrentPerformance";
+import BarriersToEntryComponent from "./ReportSectionComponents/BarriersToEntry";
+import ScorecardComponent from "./ReportSectionComponents/ScoreCard";
+import IndustryImpact from "./ReportSectionComponents/IndustryImpact";
+import RadarChartComponent from "./ReportSectionComponents/ScoreCardRadarChart";
 
-// Utility function to format the headings
-const formatHeading = (heading) => {
-  return heading
-    .replace(/_/g, " ")
-    .replace(/\b\w/g, (char) => char.toUpperCase());
-};
+const ReportDropdown = ({ data, sidebarSections }) => {
+  const reportData = Array.isArray(data) ? data : [data];
 
-const ReportDropdown = ({ data }) => {
-  const [openSections, setOpenSections] = useState({});
-  const [openFAQs, setOpenFAQs] = useState(false);
-
-  // Toggle section open/close state
-  const toggleSection = (key) => {
-    setOpenSections((prevState) => ({
-      ...prevState,
-      [key]: !prevState[key],
-    }));
-  };
-
-  // Toggle FAQs open/close state
-  const toggleFAQs = () => {
-    setOpenFAQs((prev) => !prev);
-  };
-
-  const renderContents = (contents, parentKey = "") => {
-    if (Array.isArray(contents)) {
-      return (
-        <ul className="ml-6 list-disc">
-          {contents.map((item, index) => {
-            const currentKey = `${parentKey}-${index}`;
-
-            if (typeof item === "object" && item !== null) {
-              const keys = Object.keys(item);
-              return (
-                <li key={currentKey} className="py-2">
-                  {keys.map((key) => (
-                    <div key={`${currentKey}-${key}`}>
-                      {typeof item[key] === "object" && item[key] !== null ? (
-                        <>
-                          <button
-                            onClick={() =>
-                              toggleSection(`${currentKey}-${key}`)
-                            }
-                            className="text-lg font-semibold focus:outline-none"
-                          >
-                            {formatHeading(key)}{" "}
-                            {openSections[`${currentKey}-${key}`] ? "▲" : "▼"}
-                          </button>
-                          {openSections[`${currentKey}-${key}`] &&
-                            renderContents(item[key], `${currentKey}-${key}`)}
-                        </>
-                      ) : (
-                        <span className="block py-1">
-                          <strong>{formatHeading(key)}: </strong>
-                          {item[key]?.toString() || "No data"}
-                        </span>
-                      )}
-                    </div>
-                  ))}
-                </li>
-              );
-            } else {
-              return (
-                <li key={currentKey} className="py-2">
-                  <span>{item?.toString() || "No data"}</span>
-                </li>
-              );
-            }
-          })}
-        </ul>
-      );
-    }
-
-    if (typeof contents === "object" && contents !== null) {
-      return (
-        <ul className="ml-6 list-disc">
-          {Object.keys(contents).map((key, index) => {
-            const currentKey = `${parentKey}-${index}`;
-
-            // Check if the key is "key_statistics" to render the KeyStatistics component
-            if (key === "key_statistics") {
-              return (
-                <div key={currentKey} className="bg-red-500">
-                  <button
-                    onClick={() => toggleSection(currentKey)}
-                    className="text-lg font-semibold text-white bg-gray-900 hover:bg-gray-950 px-4 py-2 w-full text-left focus:outline-none rounded-md"
-                  >
-                    {formatHeading(key)} {openSections[currentKey] ? "▲" : "▼"}
-                  </button>
-                  {openSections[currentKey] && (
-                    <KeyStatistics statistics={contents[key]} />
-                  )}
-                </div>
-              );
-            }
-
-            return (
-              <li key={currentKey} className="py-2">
-                {typeof contents[key] === "object" && contents[key] !== null ? (
-                  <>
-                    <button
-                      onClick={() => toggleSection(currentKey)}
-                      className="text-lg font-semibold focus:outline-none"
-                    >
-                      {formatHeading(key)}{" "}
-                      {openSections[currentKey] ? "▲" : "▼"}
-                    </button>
-                    {openSections[currentKey] &&
-                      renderContents(contents[key], currentKey)}
-                  </>
-                ) : (
-                  <span className="block py-1">
-                    <strong>{formatHeading(key)}: </strong>
-                    {contents[key]?.toString() || "No data"}
-                  </span>
-                )}
-              </li>
-            );
-          })}
-        </ul>
-      );
-    }
-
+  // Helper function to check if a field exists and has content
+  const hasContent = (field) => {
     return (
-      <span className="block py-1">{contents?.toString() || "No data"}</span>
+      field &&
+      ((typeof field === "string" && field.trim() !== "") ||
+        (Array.isArray(field) && field.length > 0) ||
+        (typeof field === "object" && Object.keys(field).length > 0))
     );
   };
 
-  return (
-    <div className="p-4 rounded-lg">
-      {data && data.length > 0 ? (
-        data.map((section, index) => {
-          const sectionKey = `section-${index}`;
-          const keys = Object.keys(section);
-          return (
-            <div key={sectionKey} className="my-4">
-              {keys.map((key) => {
-                if (key === "FAQs") {
-                  return (
-                    <div key={sectionKey}>
-                      <button
-                        onClick={toggleFAQs}
-                        className="text-xl font-semibold text-white bg-gray-900 hover:bg-gray-950 px-4 py-2 w-full text-left focus:outline-none rounded-md"
-                      >
-                        {formatHeading(key)} {openFAQs ? "▲" : "▼"}
-                      </button>
-                      {openFAQs && <FAQsComponent faqs={section[key]} />}
-                    </div>
-                  );
-                }
+  // Helper function to render the overview section
+  const renderOverviewSection = (section) => {
+    if (!section) return null;
+ 
+    return (
+      <div className="flex flex-col mt-10 md:flex-row md:gap-6">
+        {/* Report Section */}
+        <div className="bg-[#171717] border border-[#2e2e2e] rounded-xl p-6 w-11/12  ">
+          <div className="flex flex-col mb-6">
+            {hasContent(section.report_title) && (
+              <h1 className="text-2xl font-semibold text-white">
+                {section.report_title}
+              </h1>
+            )}
+          </div>
 
-                if (key === "report_title" || key === "report_date") {
-                  return (
-                    <div
-                      key={sectionKey}
-                      className="flex flex-row justify-between items-center"
-                    >
-                      {key === "report_title" && (
-                        <h1 className="text-4xl text-gray-300">
-                          {section[key]}
-                        </h1>
-                      )}
-                      {key === "report_date" && (
-                        <p className="text-xl text-gray-500 my-3">
-                          Date: {section[key]}
-                        </p>
-                      )}
-                    </div>
-                  );
-                }
+          {hasContent(section.industry_definition) && (
+            <p className="text-base md:text-xs xl:text-xl 2xl:text-lg text-gray-400">
+              {section.industry_definition}
+            </p>
+          )}
 
-                if (key === "executive_summary") {
-                  return (
-                    <div
-                      key={sectionKey}
-                      className="p-4 bg-gray-600/30 rounded-xl my-10"
-                    >
-                      <p className="text-2xl my-5">Executive Summary</p>
-                      <h1 className="text-lg text-gray-300">{section[key]}</h1>
-                    </div>
-                  );
-                }
+          {hasContent(section.executive_summary) && (
+            <p className="text-base md:text-xs xl:text-xl 2xl:text-lg text-gray-400 mt-10">
+              {section.executive_summary}
+            </p>
+          )}
+        </div>
 
-                if (key === "industry_definition") {
-                  return (
-                    <div
-                      key={sectionKey}
-                      className="p-4 bg-gray-600/30 rounded-xl my-10"
-                    >
-                      <p className="text-2xl my-5">Industry Defination</p>
-                      <h1 className="text-lg text-gray-300">{section[key]}</h1>
-                    </div>
-                  );
-                }
-
-                if (key === "key_statistics") {
-                  return (
-                    <div
-                      key={sectionKey}
-                      className="p-4 bg-gray-600/30 rounded-xl my-10 shadow-md"
-                    >
-                      <p className="text-2xl my-5 font-semibold text-gray-100">
-                        Key Statistics
-                      </p>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-gray-300">
-                        {Object.entries(section[key]).map(
-                          ([statKey, statValue]) => {
-                            // Function to format values based on their key
-                            const formatValue = (value, key) => {
-                              if (typeof value === "number") {
-                                // Format as currency with suffix for specific keywords
-                                if (
-                                  [
-                                    "wages",
-                                    "industry_value_added",
-                                    "imports",
-                                    "exports",
-                                  ].includes(key)
-                                ) {
-                                  return `$${formatWithSuffix(value)}`;
-                                } else if (key.toLowerCase().includes("cagr")) {
-                                  return `${(value * 100).toFixed(2)}%`; // Format as percentage
-                                } else if (
-                                  key.toLowerCase().includes("year") ||
-                                  key.toLowerCase().includes("date")
-                                ) {
-                                  return value.toString(); // Return the year as a string
-                                } else {
-                                  return value.toLocaleString(); // Format as number
-                                }
-                              }
-                              return value; // Return non-number values as-is
-                            };
-
-                            // Function to format numbers with suffixes
-                            const formatWithSuffix = (num) => {
-                              if (num >= 1e12)
-                                return (num / 1e12).toFixed(1) + "T"; // Trillion
-                              if (num >= 1e9)
-                                return (num / 1e9).toFixed(1) + "B"; // Billion
-                              if (num >= 1e6)
-                                return (num / 1e6).toFixed(1) + "M"; // Million
-                              if (num >= 1e3)
-                                return (num / 1e3).toFixed(1) + "K"; // Thousand
-                              return num.toString(); // Return as is for smaller numbers
-                            };
-
-                            const isNestedObject =
-                              typeof statValue === "object" &&
-                              statValue !== null &&
-                              !Array.isArray(statValue);
-
-                            return (
-                              <div
-                                key={statKey}
-                                className="border border-gray-500 p-4 rounded-lg bg-gray-700 shadow-lg transition-transform transform "
-                              >
-                                <h2 className="text-xl font-semibold capitalize text-gray-200">
-                                  {statKey.replace(/_/g, " ")}
-                                </h2>
-                                {isNestedObject ? (
-                                  <div className="space-y-2 mt-2">
-                                    {Object.entries(statValue).map(
-                                      ([nestedKey, nestedValue]) => {
-                                        if (
-                                          typeof nestedValue === "object" &&
-                                          nestedValue !== null
-                                        ) {
-                                          return (
-                                            <div
-                                              key={nestedKey}
-                                              className="ml-4"
-                                            >
-                                              <h3 className="font-semibold capitalize mb-3 text-gray-300">
-                                                {nestedKey.replace(/_/g, " ")}
-                                              </h3>
-                                              <div className="flex flex-col space-y-2">
-                                                {Object.entries(
-                                                  nestedValue
-                                                ).map(
-                                                  ([innerKey, innerValue]) => (
-                                                    <button
-                                                      key={innerKey}
-                                                      className="w-full text-left bg-gray-600  text-gray-200 py-2 px-4 rounded-lg transition"
-                                                    >
-                                                      {innerKey.replace(
-                                                        /_/g,
-                                                        " "
-                                                      )}
-                                                      :{" "}
-                                                      <span className="font-medium text-gray-100">
-                                                        {formatValue(
-                                                          innerValue,
-                                                          innerKey
-                                                        )}
-                                                      </span>
-                                                    </button>
-                                                  )
-                                                )}
-                                              </div>
-                                            </div>
-                                          );
-                                        } else {
-                                          return (
-                                            <button
-                                              key={nestedKey}
-                                              className="w-full text-left bg-gray-600  text-gray-200 py-2 px-4 rounded-lg transition"
-                                            >
-                                              {nestedKey.replace(/_/g, " ")}:{" "}
-                                              <span className="font-medium text-gray-100">
-                                                {formatValue(
-                                                  nestedValue,
-                                                  nestedKey
-                                                )}
-                                              </span>
-                                            </button>
-                                          );
-                                        }
-                                      }
-                                    )}
-                                  </div>
-                                ) : (
-                                  <p className="text-gray-400">
-                                    {formatValue(statValue, statKey)}
-                                  </p>
-                                )}
-                              </div>
-                            );
-                          }
-                        )}
-                      </div>
-                    </div>
-                  );
-                }
-                // Handle Array Types
-                if (key === "swot_analysis") {
-                  return (
-                    <div
-                      key={sectionKey}
-                      className="p-4 bg-gray-600/30 rounded-xl my-10"
-                    >
-                      <p className="text-2xl my-5 font-semibold">
-                        SWOT Analysis
-                      </p>
-                      <div className="space-y-4 grid gap-10 grid-cols-2 p-5 items-start">
-                        <div>
-                          <h2 className="text-xl font-semibold">Strengths</h2>
-                          <ul className="list-disc list-inside text-gray-300">
-                            {section[key].strengths.map((strength, index) => (
-                              <li key={index}>{strength}</li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div>
-                          <h2 className="text-xl font-semibold">Weaknesses</h2>
-                          <ul className="list-disc list-inside text-gray-300">
-                            {section[key].weaknesses.map((weakness, index) => (
-                              <li key={index}>{weakness}</li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div>
-                          <h2 className="text-xl font-semibold">
-                            Opportunities
-                          </h2>
-                          <ul className="list-disc list-inside text-gray-300">
-                            {section[key].opportunities.map(
-                              (opportunity, index) => (
-                                <li key={index}>{opportunity}</li>
-                              )
-                            )}
-                          </ul>
-                        </div>
-                        <div>
-                          <h2 className="text-xl font-semibold">Threats</h2>
-                          <ul className="list-disc list-inside text-gray-300">
-                            {section[key].threats.map((threat, index) => (
-                              <li key={index}>{threat}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                }
-
-                if (key === "current_performance") {
-                  return (
-                    <div
-                      key={sectionKey}
-                      className="p-4 bg-gray-600/30 rounded-xl my-10"
-                    >
-                      <p className="text-2xl my-5 font-semibold">
-                        Current Performance
-                      </p>
-                      <div className="space-y-4 grid gap-10 grid-cols-1 p-5 items-start">
-                        {section[key].map((performancePoint, index) => (
-                          <div
-                            key={index}
-                            className="border p-4 rounded-lg bg-gray-700"
-                          >
-                            <h2 className="text-xl font-semibold">
-                              {performancePoint.current_performance_point_title}
-                            </h2>
-                            <p className="text-gray-300 mt-3">
-                              {
-                                performancePoint.current_performance_point_description
-                              }
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  );
-                }
-
-                if (key === "future_outlook") {
-                  return (
-                    <div
-                      key={sectionKey}
-                      className="p-4 bg-gray-600/30 rounded-xl my-10"
-                    >
-                      <p className="text-2xl my-5 font-semibold">
-                        Current Performance
-                      </p>
-                      <div className="space-y-4 grid gap-10 grid-cols-1 p-5 items-start">
-                        {section[key].map((performancePoint, index) => (
-                          <div
-                            key={index}
-                            className="border p-4 rounded-lg bg-gray-700"
-                          >
-                            <h2 className="text-xl font-semibold">
-                              {performancePoint.future_outlook_point_title}
-                            </h2>
-                            <p className="text-gray-300 mt-3">
-                              {
-                                performancePoint.future_outlook_point_description
-                              }
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  );
-                }
-
-                if (key === "industry_impact") {
-                  return (
-                    <div
-                      key={sectionKey}
-                      className="p-4 bg-gray-600/30 rounded-xl my-10"
-                    >
-                      <p className="text-2xl my-5 font-semibold">
-                        Industry Impact
-                      </p>
-                      <div className="space-y-4 grid gap-10 grid-cols-2 p-5 items-start">
-                        <div>
-                          <h2 className="text-xl font-semibold">
-                            Negative Impact Factor
-                          </h2>
-                          <ul className="list-disc list-inside text-gray-300">
-                            {section[key].negative_impact_factors.map(
-                              (strength, index) => (
-                                <li key={index}>{strength}</li>
-                              )
-                            )}
-                          </ul>
-                        </div>
-                        <div>
-                          <h2 className="text-xl font-semibold">
-                            Positive Impact Factor
-                          </h2>
-                          <ul className="list-disc list-inside text-gray-300">
-                            {section[key].positive_impact_factors.map(
-                              (weakness, index) => (
-                                <li key={index}>{weakness}</li>
-                              )
-                            )}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                }
-
-                if (key === "key_trends") {
-                  return (
-                    <div
-                      key={sectionKey}
-                      className="p-4 bg-gray-600/30 rounded-xl my-10"
-                    >
-                      <p className="text-2xl my-5 font-semibold">Key Trends</p>
-                      <div className="">
-                        <div>
-                          <ul className="list-disc list-inside space-y-4 text-gray-300">
-                            {section[key].map((strength, index) => (
-                              <li key={index}>{strength}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                }
-
-                return (
-                  <div key={`${sectionKey}-${key}`}>
-                    {typeof section[key] === "object" &&
-                    section[key] !== null ? (
-                      <>
-                        <button
-                          onClick={() => toggleSection(`${sectionKey}-${key}`)}
-                          className="text-xl font-bold text-white bg-gray-900 hover:bg-gray-950 px-4 py-2 w-full text-left focus:outline-none my-1 rounded-md"
-                        >
-                          {formatHeading(key)}{" "}
-                          {openSections[`${sectionKey}-${key}`] ? "▲" : "▼"}
-                        </button>
-                        {openSections[`${sectionKey}-${key}`] &&
-                          renderContents(section[key], `${sectionKey}-${key}`)}
-                      </>
-                    ) : (
-                      <div className="py-5">
-                        <strong>{formatHeading(key)}: </strong>
-                        {section[key]?.toString() || "No data"}
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
+        {/* Key Statistics Section */}
+        {hasContent(section.key_statistics) && (
+          <div className="mx-2 ">
+            <div className=" md:p-6 xl:p-4 2xl:p-4 rounded-xl">
+              <KeyStatistics statistics={section.key_statistics} />
             </div>
-          );
-        })
-      ) : (
-        <p className="text-gray-500">No data available.</p>
-      )}
+          </div>
+        )}
+      </div>
+    );
+  };
+
+
+  // Main render function with error handling
+  if (!data || (Array.isArray(data) && data.length === 0)) {
+    return <div className="p-4 text-gray-400">No data available for this industry.</div>;
+  }
+
+
+  return (
+    <div className="p-4">
+      <div className="">
+        {reportData.map((section, index) => (
+          <div key={index} className="">
+            {renderOverviewSection(section)}
+            {(hasContent(section.industry_impact) ||
+              hasContent(section.metrics)) && (
+              <div className="flex flex-col md:flex-row gap-8 mt-4">
+                <div className="flex bg-[#171717] border rounded-xl border-[#2e2e2e] justify-between gap-8 ">
+                  {hasContent(section.industry_impact) && (
+                    <IndustryImpact industryImpact={section.industry_impact} />
+                  )}
+                  {hasContent(section.metrics) && (
+                    <div className="mt-5 mx-10 -mb-10">
+                      <RadarChartComponent metrics={section.metrics} />
+                    </div>
+                  )}
+                </div>
+                {hasContent(section.metrics) && (
+                  <div className="h-full gap-8">
+                    <ScorecardComponent metrics={section.metrics} />
+                  </div>
+                )}
+              </div>
+            )}
+
+            {hasContent(section.key_trends) && (
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-xl gap-8 mt-4">
+                <p className="text-2xl mx-10 my-5 font-semibold text-white">
+                  Industry Trends
+                </p>
+                <div className="mx-20">
+                  <KeyTrends keyTrends={section.key_trends} />
+                </div>
+              </div>
+            )}
+
+            {(hasContent(section.current_performance) ||
+              hasContent(section.future_outlook)) && (
+              <div className="p-4 bg-[#171717] border  border-[#2e2e2e] rounded-xl gap-8 mt-4">
+                <p className="text-2xl mx-10 my-5 font-semibold text-white">
+                  Insights & Future Outlook
+                </p>
+                {hasContent(section.current_performance) && (
+                  <CurrentPerformanceComponent
+                    currentPerformance={section.current_performance}
+                  />
+                )}
+                {hasContent(section.future_outlook) && (
+                  <FutureOutlookComponent
+                    futureOutlook={section.future_outlook}
+                  />
+                )}
+              </div>
+            )}
+
+            {hasContent(section.demand_determinants) && (
+              <div className="bg-[#171717] border border-[#2e2e2e] p-3 rounded-lg gap-8 mt-4">
+                <DemandDeterminants
+                  demandDeterminants={section.demand_determinants}
+                />
+              </div>
+            )}
+
+            {hasContent(section.market_segmentation) && (
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-xl gap-8 my-4">
+                <p className="text-2xl mx-10 my-5 font-semibold text-white">
+                  Market Segmentation
+                </p>
+                <MarketSegmentation
+                  marketSegmentation={section.market_segmentation}
+                />
+              </div>
+            )}
+
+            {hasContent(section.barriers_to_entry) && (
+              <BarriersToEntryComponent
+                barriersToEntry={section.barriers_to_entry}
+              />
+            )}
+
+            {hasContent(section.market_share_concentration) && (
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-xl gap-8 mt-4">
+                <MarketShareConcentration
+                  concentrationData={section.market_share_concentration}
+                />
+              </div>
+            )}
+
+            {hasContent(section.supply_chain) && (
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-xl gap-8 mt-4">
+                <p className="text-xl mx-10 my-5 font-semibold text-white">
+                  Supply Chain
+                </p>
+                <SupplyChain supplyChain={section.supply_chain} />
+              </div>
+            )}
+
+            {hasContent(section.external_drivers) && (
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] rounded-xl gap-8 mt-4">
+                <p className="text-2xl mx-10 my-5 font-semibold text-white">
+                  External Drivers
+                </p>
+                <div className="mx-20">
+                  <ExternalDrivers drivers={section.external_drivers} />
+                </div>
+              </div>
+            )}
+
+            {hasContent(section.regulations_and_policies) && (
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] gap-8 ">
+                <RegulationsAndPolicies
+                  regulations={section.regulations_and_policies}
+                />
+              </div>
+            )}
+
+            {hasContent(section.industry_assistance) && (
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] gap-8 ">
+                <IndustryAssistance
+                  industryAssistance={section.industry_assistance}
+                />
+              </div>
+            )}
+
+            {hasContent(section.technological_change) && (
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] gap-8 ">
+                <TechnologicalChange
+                  technologicalChange={section.technological_change}
+                />
+              </div>
+            )}
+
+            {hasContent(section.revenue_volatility) && (
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] gap-8 ">
+                <RevenueVolatility
+                  revenueVolatility={section.revenue_volatility}
+                />
+              </div>
+            )}
+            {/* {hasContent(section.cost_factors) && (
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] gap-8">
+                <CostFactors costFactors={section.cost_factors} />
+              </div>
+            )} */}
+            {hasContent(section.capital_intensity) && (
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] gap-8 ">
+                <CapitalIntensity
+                  capitalIntensity={section.capital_intensity}
+                />
+              </div>
+            )}
+            {hasContent(section.swot_analysis) && (
+              <div className="p-4 bg-[#171717] border border-[#2e2e2e] gap-8 mt-4 ">
+                <SWOTAnalysis swotAnalysis={section.swot_analysis} />
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,58 +1,127 @@
-import React, { useEffect, useState } from 'react';
-import ThesisSummaryCard from './ThesisSummaryCard';
+import React, { useEffect, useState } from "react";
+import ThesisSummaryCard from "./ThesisSummaryCard";
+import { useSelector } from "react-redux";
 
 const ThesisCardComponent = () => {
-  const [theses, setTheses] = useState([]);
+  const [industries, setIndustries] = useState([]);
   const [answers, setAnswers] = useState({});
 
-  const staticData = [
-    {
-      thesis_summary: "This thesis investigates the future trends in manufacturing industries, focusing on technological advancements and their impact on productivity and sustainability.",
-      suggested_industries: [
-        { industry_name: "Semiconductor and Related Device Manufacturing", industry_code: "334413" },
-        { industry_name: "Surgical and Medical Instrument Manufacturing", industry_code: "339112" },
-        { industry_name: "Pharmaceutical Preparation Manufacturing", industry_code: "325412" },
-        { industry_name: "Iron and Steel Mills", industry_code: "331110" },
-        { industry_name: "Petroleum Refineries", industry_code: "324110" }
-      ]
-    },
-    {
-      thesis_summary: "This thesis explores the role of AI in modern healthcare, examining its applications in diagnostics and patient management, with a focus on ethical considerations and patient outcomes.",
-      suggested_industries: [
-        { industry_name: "Healthcare Technology", industry_code: "621512" },
-        { industry_name: "Pharmaceutical Preparation Manufacturing", industry_code: "325412" },
-        { industry_name: "Data Analytics", industry_code: "541511" },
-        { industry_name: "Telemedicine Services", industry_code: "621111" },
-        { industry_name: "Medical Device Manufacturing", industry_code: "339113" }
-      ]
-    }
-  ];
+  const staticData = {
+    result: [
+      {
+        industry_name: "Software Publishers",
+        industry_code: "5112",
+      },
+      {
+        industry_name: "Data Processing, Hosting, and Related Services",
+        industry_code: "518",
+      },
+      {
+        industry_name: "Computer Systems Design and Related Services",
+        industry_code: "5415",
+      },
+      {
+        industry_name: "Management, Scientific, and Technical Consulting Services",
+        industry_code: "5416",
+      },
+      {
+        industry_name: "Scientific Research and Development Services",
+        industry_code: "5417",
+      },
+      {
+        industry_name: "Advertising, Public Relations, and Related Services",
+        industry_code: "5418",
+      },
+      {
+        industry_name: "Architectural, Engineering, and Related Services",
+        industry_code: "5413",
+      },
+      {
+        industry_name: "Legal Services",
+        industry_code: "5411",
+      },
+      {
+        industry_name: "Accounting, Tax Preparation, Bookkeeping, and Payroll Services",
+        industry_code: "5412",
+      },
+      {
+        industry_name: "Management of Companies and Enterprises",
+        industry_code: "55",
+      },
+    ],
+  };
+
+  const responseData = useSelector((state) => state.formResponse?.data);
+  console.log("Thesis card Response", responseData);
 
   useEffect(() => {
-    // Set state with static JSON data
-    setTheses(staticData);
-  }, []);
+    // Use static data if responseData is undefined or null
+    setIndustries(responseData?.result || staticData.result);
+  }, [responseData]);
 
-  const handleInputChange = (industryCode) => {
+  const handleInputChange = (industryCode, isSelected) => {
     setAnswers((prev) => ({
       ...prev,
-      [industryCode]: !prev[industryCode],
+      [industryCode]: isSelected,
     }));
   };
 
+ console.log("Check industry",industries);
+
   return (
     <div className="flex flex-col px-16 py-10 min-h-screen w-full space-y-10 bg-[#151518]">
-      {theses.map((thesis, index) => (
-        <ThesisSummaryCard 
-          key={index}
-          thesisSummary={thesis.thesis_summary} 
-          industries={thesis.suggested_industries} 
-          answers={answers} 
-          handleInputChange={handleInputChange} 
-        />
-      ))}
+      <ThesisSummaryCard
+        thesisSummary="This is the summary for the thesis."
+        industries={industries}
+        answers={answers}
+        handleInputChange={handleInputChange}
+      />
     </div>
   );
 };
 
 export default ThesisCardComponent;
+
+// import React, { useState } from 'react';
+// import { useSelector, useDispatch } from 'react-redux'; // Import your action for updating industries
+// import ThesisSummaryCard from './ThesisSummaryCard';
+// import { updateSelectedIndustries } from '../../../redux/formResponseSlice';
+
+// const ThesisCardComponent = () => {
+//   const dispatch = useDispatch();
+//   const [answers, setAnswers] = useState({});
+
+//   // Select industries from the Redux store, defaulting to an empty array if null or undefined
+//   const industries = useSelector((state) => state.formResponse.data?.result) || [];
+
+//   const handleInputChange = (industryCode) => {
+//     setAnswers((prev) => ({
+//       ...prev,
+//       [industryCode]: !prev[industryCode],
+//     }));
+
+//     // Find the selected industry by industry code
+//     const selectedIndustry = industries.find(
+//       (industry) => industry.industry_code === industryCode
+//     );
+
+//     if (selectedIndustry) {
+//       dispatch(updateSelectedIndustries(selectedIndustry));
+//     }
+//   };
+
+//   return (
+//     <div className="flex flex-col px-16 py-10 min-h-screen w-full space-y-10 bg-[#151518]">
+//       {industries.map((industry, index) => (
+//         <ThesisSummaryCard
+//           key={index}
+//           industries={industries}
+//           answers={answers}
+//           handleInputChange={handleInputChange}
+//         />
+//       ))}
+//     </div>
+//   );
+// };
+
+// export default ThesisCardComponent;
