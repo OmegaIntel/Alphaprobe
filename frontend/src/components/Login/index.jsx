@@ -31,7 +31,7 @@ const Login = ({ setToken }) => {
           description: "Your are loggedIn successfully",
         });
         const anchor = document.createElement("a");
-        anchor.href = "/dashboard";
+        anchor.href = "/projects";
         anchor.click();
       }
     } catch (error) {

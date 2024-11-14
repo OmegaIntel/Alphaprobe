@@ -17,4 +17,5 @@ RUN pip install -e .
 
 WORKDIR /app/company_data_scraper
 
-EXPOSE 8401
+# EXPOSE 8401
+EXPOSE 8008

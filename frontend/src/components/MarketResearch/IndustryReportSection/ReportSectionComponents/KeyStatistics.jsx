@@ -1,64 +1,73 @@
-// components/ReportSections/KeyStatistics.js
+import React from "react";
+
+// Utility function to format numbers with suffixes
+const formatCurrency = (value) => {
+  if (value >= 1e9) return `$${(value / 1e9).toFixed(2)}B`;
+  if (value >= 1e6) return `$${(value / 1e6).toFixed(2)}M`;
+  if (value >= 1e3) return `$${(value / 1e3).toFixed(2)}K`;
+  return `$${value.toLocaleString()}`;
+};
 
 const KeyStatistics = ({ statistics }) => {
-    return (
-      <div className="key-statistics p-4 border rounded-lg bg-gray-50">
-        <h2 className="text-2xl font-bold mb-4">Key Statistics</h2>
-  
-        <div className="mb-2">
-          <strong>Profit:</strong> ${statistics.profit?.profit_dollars?.toLocaleString() || "No data"}
+  return (
+    <div className="rounded-lg py-4 p shadow-md text-lg text-gray-300">
+      <div className="w-full">
+        {/* Revenue */}
+        <div className="mb-4 w-full mx-2 rounded-lg flex bg-[#0D0D0D]">
+          <div className="w-2 bg-blue-500"></div>
+          <div className="px-3">
+            <h4 className="font-semibold text-gray-400 text-base ">Revenue</h4>
+            <p>
+              <strong className="text-gray-300 text-sm sm:text-lg md:text-xl xl:text-lg">
+                {formatCurrency(statistics?.revenue?.revenue_dollars || 0)}
+              </strong>
+            </p>
+          </div>
         </div>
-        <div className="ml-4 text-sm">
-          <p>
-            Historical CAGR (2005-2024): {statistics.profit?.profit_cagr_historical?.profit_cagr_value || "No data"}%
-          </p>
+
+        {/* Historical CAGR */}
+        <div className="mb-4 w-full mx-2 rounded-lg flex bg-[#0D0D0D]">
+          <div className="w-2  bg-blue-500"></div>
+          <div className="px-3">
+            <p className="text-gray-400 flex flex-col text-base">
+              Historical CAGR (2005-2024){" "}
+              <strong className="text-gray-300 text-sm sm:text-base md:text-lg">
+                {statistics?.revenue?.revenue_cagr_historical?.revenue_cagr_value ?? "N/A"}%
+              </strong>
+            </p>
+          </div>
         </div>
-  
-        <div className="mb-2">
-          <strong>Profit Margins:</strong> {statistics.profit_margins?.profit_margins_percentage || "No data"}%
+
+        {/* Projected CAGR */}
+        <div className="mb-4 w-full mx-2 rounded-lg flex bg-[#0D0D0D]">
+          <div className="w-2 bg-blue-500"></div>
+          <div className="px-3">
+            <p className="text-gray-400 flex flex-col text-base">
+              Projected CAGR 
+              
+              (2024-2030){" "}
+              <strong className="text-gray-300 text-sm sm:text-base md:text-lg">
+                {statistics?.revenue?.revenue_cagr_projected?.revenue_cagr_value ?? "N/A"}%
+              </strong>
+            </p>
+          </div>
         </div>
-        <div className="ml-4 text-sm">
-          <p>
-            Historical CAGR (2005-2024): {statistics.profit_margins?.profit_margins_cagr_historical?.profit_margins_cagr_value || "No data"}%
-          </p>
-        </div>
-  
-        <div className="mb-2">
-          <strong>Revenue:</strong> ${statistics.revenue?.revenue_dollars?.toLocaleString() || "No data"}
-        </div>
-        <div className="ml-4 text-sm">
-          <p>
-            Historical CAGR (2005-2024): {statistics.revenue?.revenue_cagr_historical?.revenue_cagr_value || "No data"}%
-          </p>
-          <p>
-            Projected CAGR (2024-2030): {statistics.revenue?.revenue_cagr_projected?.revenue_cagr_value || "No data"}%
-          </p>
-        </div>
-  
-        <div className="mb-2">
-          <strong>Enterprises:</strong> {statistics.enterprises || "No data"}
-        </div>
-        <div className="mb-2">
-          <strong>Establishments:</strong> {statistics.establishments || "No data"}
-        </div>
-        <div className="mb-2">
-          <strong>Employees:</strong> {statistics.employees || "No data"}
-        </div>
-        <div className="mb-2">
-          <strong>Wages:</strong> ${statistics.wages?.toLocaleString() || "No data"}
-        </div>
-        <div className="mb-2">
-          <strong>Industry Value Added:</strong> ${statistics.industry_value_added?.toLocaleString() || "No data"}
-        </div>
-        <div className="mb-2">
-          <strong>Imports:</strong> ${statistics.imports?.toLocaleString() || "No data"}
-        </div>
-        <div className="mb-2">
-          <strong>Exports:</strong> ${statistics.exports?.toLocaleString() || "No data"}
+
+        {/* Profit Margin */}
+        <div className="mb-4 w-full mx-2 rounded-lg flex bg-[#0D0D0D]">
+          <div className="w-2  bg-blue-500"></div>
+          <div className="px-3">
+            <p className="text-gray-400 flex flex-col text-base">
+              Profit Margin{" "}
+              <strong className="text-gray-300 text-sm sm:text-base md:text-lg">
+                {statistics?.profit_margins?.profit_margins_percentage ?? "N/A"}%
+              </strong>
+            </p>
+          </div>
         </div>
       </div>
-    );
-  };
-  
-  export default KeyStatistics;
-  
+    </div>
+  );
+};
+
+export default KeyStatistics;
