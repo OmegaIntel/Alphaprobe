@@ -69,27 +69,35 @@ jobs:
           echo "LLAMA_CLOUD_API_KEY=${{ secrets.LLAMA_CLOUD_API_KEY }}"
           echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}"
           echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+          echo "REACT_APP_API_BASE_URL=${{ secrets.REACT_APP_API_BASE_URL }}"
         } >> .env
 
     - name: Set up Docker Compose
       run: sudo apt-get install docker-compose
 
     - name: Build and run Weaviate services
-      run: docker-compose -f docker-compose-weaviate.yaml up --build -d
+      run: docker-compose --env-file .env -f docker-compose-weaviate.yaml up --build -d
 
     - name: Build and run application services
       run: docker-compose --env-file .env -f docker-compose-application.yaml up --build -d
 
     - name: Wait for services to be healthy
       run: |
-        while ! curl -sSf http://localhost:8000/health; do
-          echo "Waiting for backend to be healthy..."
-          sleep 5
-        done
-        while ! curl -sSf http://localhost:3000; do
-          echo "Waiting for frontend to be healthy..."
-          sleep 5
-        done
+        echo "Waiting for backend to be healthy..."
+        sleep 30
+        if ! curl -sSf http://localhost:8000/health; then
+          echo "Backend is not healthy after waiting for 60 seconds."
+          exit 1
+        fi
+        echo "Backend is healthy!"
+
+        echo "Waiting for frontend to be healthy..."
+        sleep 30
+        if ! curl -sSf http://localhost:3000; then
+          echo "Frontend is not healthy after waiting for 60 seconds."
+          exit 1
+        fi
+        echo "Frontend is healthy!"
 
     - name: Run backend tests
       run: docker-compose -f docker-compose-application.yaml exec app pytest api/api/tests/dummy_test.py
