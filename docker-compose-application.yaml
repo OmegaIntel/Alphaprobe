@@ -61,5 +61,5 @@ services:
       - PYTHONUNBUFFERED=1
       - FIRECRAWL_API_KEY=fc-f0b5a990147f4ae88364925cd0dee335
     command:
-      uvicorn app:app --host 0.0.0.0 --port 8008 --reload
-      # fastapi run --workers 4 --reload --port 8401 app.py
+      # fastapi run --reload --port 8008 app.py   # for dev, with reload
+      fastapi run --workers 8 --port 8008 app.py  # for PROD, no reloads, several workers

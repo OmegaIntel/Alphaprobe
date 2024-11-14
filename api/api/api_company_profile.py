@@ -3,7 +3,7 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
 import pandas as pd
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, TimeoutError
 from datetime import timedelta
 
 from typing import Dict
@@ -13,21 +13,12 @@ from cachier import cachier
 
 from search.url_lookup import lookup_company_url, CACHE_FLUSH_WEEKS
 from llm_models.openai_gpt.llm_response import respond_to_prompt
+from common_logging import loginfo
 
-import logging
-logging.basicConfig(
-    filename='summary.log',
-    encoding='utf-8',
-    filemode='a',
-    format="{asctime} - {levelname} - {message}",
-    style="{",
-    datefmt="%Y-%m-%d %H:%M:%S",
-    level=logging.INFO
-)
 
-loginfo = logging.info
+SCRAPER_URL = 'http://scraper:8008' # the name is from Docker yaml
+TIMEOUT = 15    # seconds max exec time per scraper
 
-SCRAPER_URL = 'http://localhost:8408'
 ENDPOINTS = {
     'linkedin.com': 'linkedin-company-profile',
     'crunchbase.com': 'crunchbase-company-profile',
@@ -63,8 +54,21 @@ def get_company_info(company_name: str) -> Dict:
     """Get info from all providers, extracting attribute values."""
     company_names = [company_name for provider in ENDPOINTS]
     providers = list(ENDPOINTS.keys())
-    with ThreadPoolExecutor(max_workers=4) as executor:
-        result = list(executor.map(get_company_provider_info, company_names, providers, timeout=40))
+    try:
+        # try to do them in parallel, but with one failing all fail
+        with ThreadPoolExecutor(max_workers=len(ENDPOINTS)) as executor:
+            result = list(executor.map(get_company_provider_info, company_names, providers, timeout=TIMEOUT))
+            loginfo(f"One of the providers in {providers} timed out on {company_name}")
+    except TimeoutError:
+        result=[]
+        # execute them one a time watching for exception
+        for provider in providers:
+            try:
+                with ThreadPoolExecutor(max_workers=1) as executor:
+                    result += list(executor.map(get_company_provider_info, [company_name], [provider], timeout=TIMEOUT))
+            except TimeoutError:
+                loginfo(f"Provider {provider} timed out on {company_name}")
+
     result = '\n\n'.join(result)
 
     prompt = f"""
