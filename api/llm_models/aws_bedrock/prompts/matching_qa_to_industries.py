@@ -4,6 +4,8 @@ in investing into various industries.
 
 Come up with a list of 10 industries that match the person's investment interests.
 
+Suggest from only those industries whose NAICS codes are available and provided to you in the JSON file.
+
 Return the result in JSON format. Do not use non-JSON tags such as <property> or <UNKNOWN>.
 
 Be mindful of the person's preferences and only choose industries that reflect those preferences.
