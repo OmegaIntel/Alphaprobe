@@ -48,3 +48,18 @@ services:
     environment:
       - REACT_APP_API_BASE_URL=${REACT_APP_API_BASE_URL}
     command: [ "npm", "start" ]
+
+  scraper:
+    build:
+      context: ./Omega_scraper
+      dockerfile: ./Dockerfile
+    ports:
+      - 8008:8008
+    volumes:
+      - .:/Omega_scraper
+    environment:
+      - PYTHONUNBUFFERED=1
+      - FIRECRAWL_API_KEY=fc-f0b5a990147f4ae88364925cd0dee335
+    command:
+      # fastapi run --reload --port 8008 app.py   # for dev, with reload
+      fastapi run --workers 8 --port 8008 app.py  # for PROD, no reloads, several workers
