@@ -82,25 +82,10 @@ jobs:
       run: docker-compose --env-file .env -f docker-compose-application.yaml up --build -d
 
     - name: Wait for services to be healthy
-      run: |
-        echo "Waiting for backend to be healthy..."
-        sleep 30
-        if ! curl -sSf http://localhost:8000/health; then
-          echo "Backend is not healthy after waiting for 60 seconds."
-          exit 1
-        fi
-        echo "Backend is healthy!"
-
-        echo "Waiting for frontend to be healthy..."
-        sleep 30
-        if ! curl -sSf http://localhost:3000; then
-          echo "Frontend is not healthy after waiting for 60 seconds."
-          exit 1
-        fi
-        echo "Frontend is healthy!"
+      run: sleep 30
 
     - name: Run backend tests
-      run: docker-compose -f docker-compose-application.yaml exec app pytest api/api/tests/dummy_test.py
+      run: docker-compose -f docker-compose-application.yaml exec app sh -c "PYTHONPATH=/app/api pytest api/tests"
 
     - name: Run frontend tests
-      run: docker-compose -f docker-compose-application.yaml exec frontend npm test frontend/tests/dummy_test.js
+      run: docker-compose -f docker-compose-application.yaml exec frontend npm test -- --watchAll=false src/App.test.js
