@@ -40,17 +40,26 @@ async def industries_for_thesis(request: DataModelIn):
 
     # populate with the actual items that we have, less generic, generally.
     # TODO: merge it with the other function (ibis_industries)
-    out = []
+    prelim = []
     IC = 'industry_code'
     IN = 'industry_name'
     SET_IBIS_NAICS_CODES = set(IBIS_NAICS_CODES)
+
     for elt in result:
         if elt[IC] in SET_IBIS_NAICS_CODES:
-            out.append(elt)
+            prelim.append(elt)
         else:
             for code, industry in zip(IBIS_NAICS_CODES, IBIS_REPORT_NAMES):
                 if code.startswith(elt[IC]):
-                    out.append({IC: code, IN: industry})
+                    prelim.append({IC: code, IN: industry})
                     break
+
+    # remove duplicate codes
+    seen_codes = set()
+    out = []
+    for dd in prelim:
+        if dd[IC] not in seen_codes:
+            out.append(dd)
+            seen_codes.add(dd[IC])
 
     return DataModelOut(result=out)
