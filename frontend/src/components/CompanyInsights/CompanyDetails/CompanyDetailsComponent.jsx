@@ -12,20 +12,19 @@ const CompanyDetailsComponent = ({ data }) => {
           <div className="w-3/4 p-4 px-10 bg-[#171717] border border-[#2e2e2e] rounded-xl">
             <div className="flex justify-between">
               <h2 className="text-3xl font-bold text-white mb-4">
-                {data.result.company_name}
+                {data.result.company_name ?? "N/A"}
               </h2>
               <div className="flex space-x-3">
                 <div>
                   <a
-                    href={data.result.company_linkedin_url}
+                    href={data.result.company_linkedin_url ?? "#"}
                     className="text-blue-500"
                   >
                     <LinkedInIcon />
                   </a>
                 </div>
                 <div>
-                  {" "}
-                  <a href={data.result.company_website} className="">
+                  <a href={data.result.company_website ?? "#"} className="">
                     <LanguageIcon />
                   </a>
                 </div>
@@ -35,13 +34,13 @@ const CompanyDetailsComponent = ({ data }) => {
             <div className="mt-14 space-y-5 w-3/4">
               <p className="text-gray-400 text-xl font-semibold">About</p>
               <p className="text-gray-300/60 text-lg">
-                {data.result.company_about_us}
+                {data.result.company_about_us ?? "N/A"}
               </p>
             </div>
             <div className="my-10 space-y-5 w-3/4">
               <p className="text-gray-400 text-xl font-semibold">Description</p>
               <p className="text-gray-300/60 text-lg">
-                {data.result.company_description}
+                {data.result.company_description ?? "N/A"}
               </p>
             </div>
           </div>
@@ -106,7 +105,7 @@ const CompanyDetailsComponent = ({ data }) => {
                     <p className="text-gray-400 flex flex-col text-base">
                       LinkedIn Followers:
                       <strong className="text-gray-300 text-sm sm:text-base md:text-lg">
-                        {data.result.company_linkedin_followers_count.toLocaleString() ??
+                        {data.result.company_linkedin_followers_count?.toLocaleString() ??
                           "N/A"}
                       </strong>
                     </p>
@@ -128,7 +127,7 @@ const CompanyDetailsComponent = ({ data }) => {
                     <p className="text-gray-400 flex flex-col text-base">
                       Revenue:
                       <strong className="text-gray-300 text-sm sm:text-base md:text-lg">
-                        {data.result.company_revenue}
+                        {data.result.company_revenue ?? "N/A"}
                       </strong>
                     </p>
                   </div>
@@ -141,7 +140,7 @@ const CompanyDetailsComponent = ({ data }) => {
                     <p className="text-gray-400 flex flex-col text-base">
                       Gross Margin:
                       <strong className="text-gray-300 text-sm sm:text-base md:text-lg">
-                        {data.result.company_gross_margin || "N/A"}
+                        {data.result.company_gross_margin ?? "N/A"}
                       </strong>
                     </p>
                   </div>
@@ -154,7 +153,7 @@ const CompanyDetailsComponent = ({ data }) => {
                     <p className="text-gray-400 flex flex-col text-base">
                       Total Funding:
                       <strong className="text-gray-300 text-sm sm:text-base md:text-lg">
-                        {data.result.company_total_funding}
+                        {data.result.company_total_funding ?? "N/A"}
                       </strong>
                     </p>
                   </div>
@@ -167,7 +166,7 @@ const CompanyDetailsComponent = ({ data }) => {
                     <p className="text-gray-400 flex flex-col text-base">
                       Last Funding Date:
                       <strong className="text-gray-300 text-sm sm:text-base md:text-lg">
-                        {data.result.company_last_funding_date}
+                        {data.result.company_last_funding_date ?? "N/A"}
                       </strong>
                     </p>
                   </div>
@@ -180,7 +179,7 @@ const CompanyDetailsComponent = ({ data }) => {
                     <p className="text-gray-400 flex flex-col text-base">
                       Future Projections:
                       <strong className="text-gray-300 text-sm sm:text-base md:text-lg">
-                        {data.result.company_future_projections}
+                        {data.result.company_future_projections ?? "N/A"}
                       </strong>
                     </p>
                   </div>
@@ -195,17 +194,13 @@ const CompanyDetailsComponent = ({ data }) => {
               </h3>
               <div>
                 <ul className="space-y-5 mx-5">
-                  {/* <li>
-                  Locations:{" "}
-                  {data.result.company_location_identifiers.join(", ")}
-                </li> */}
                   <li>
                     <div>
                       <p className="text-lg text-gray-400">
                         Future Projectile:
                       </p>
                       <p className="text-base text-gray-500">
-                        {data.result.company_future_projections}
+                        {data.result.company_future_projections ?? "N/A"}
                       </p>
                     </div>
                   </li>
@@ -213,7 +208,7 @@ const CompanyDetailsComponent = ({ data }) => {
                     <div>
                       <p className="text-lg text-gray-400">Ownership Status:</p>
                       <p className="text-base text-gray-500">
-                        {data.result.company_ownership_status}
+                        {data.result.company_ownership_status ?? "N/A"}
                       </p>
                     </div>
                   </li>
@@ -221,17 +216,17 @@ const CompanyDetailsComponent = ({ data }) => {
                     <div>
                       <p className="text-lg text-gray-400"> Investors:</p>
                       <p className="text-base text-gray-500">
-                        {data.result.company_investors.join(", ")}
+                        {data.result.company_investors?.length > 0
+                          ? data.result.company_investors.join(", ")
+                          : "N/A"}
                       </p>
                     </div>
                   </li>
-                  {/* <li>Structure: {data.result.company_structure}</li> */}
-
                   <li>
                     <div>
                       <p className="text-lg text-gray-400"> Contact Email:</p>
                       <p className="text-base text-gray-500">
-                        {data.result.company_contact_email}
+                        {data.result.company_contact_email ?? "N/A"}
                       </p>
                     </div>
                   </li>
@@ -248,8 +243,12 @@ const CompanyDetailsComponent = ({ data }) => {
             <ul className="space-y-1 px-10">
               <li>
                 <div className="p-3 bg-[#1b1b1b] border border-[#2e2e2e] rounded-xl space-y-2">
-                  <p className="text-gray-300 font-medium">{data.result.company_product_name}</p>
-                  <p className="text-gray-400">{data.result.company_product_description}</p>
+                  <p className="text-gray-300 font-medium">
+                    {data.result.company_product_name ?? "N/A"}
+                  </p>
+                  <p className="text-gray-400">
+                    {data.result.company_product_description ?? "N/A"}
+                  </p>
                 </div>
               </li>
             </ul>
@@ -257,36 +256,27 @@ const CompanyDetailsComponent = ({ data }) => {
         </div>
 
         {/*Company Management Section*/}
-        <div className="bg-[#171717] border border-[#2e2e2e] p-5 w-fit">
+        {/* <div className="bg-[#171717] border border-[#2e2e2e] p-5 w-fit">
           <h3 className="text-lg font-medium mb-2">Company Leadership</h3>
           <ul className="space-y-1">
             <li className="flex space-x-3">
               <div>
                 <PersonIcon />
               </div>
-              <p>CEO: {data.result.company_ceo}</p>
+              <p>CEO: {data.result.company_ceo ?? "N/A"}</p>
             </li>
             <li className="flex space-x-3">
               <div>
                 <PersonIcon />
               </div>
-              <p> Founders: {data.result.company_founder.join(", ")}</p>
+              <p>
+                {" "}
+                Founders:{" "}
+                {data.result.company_founder?.length > 0
+                  ? data.result.company_founder.join(", ")
+                  : "N/A"}
+              </p>
             </li>
-          </ul>
-        </div>
-
-        {/* <div>
-          <h3 className="text-lg font-medium mb-2">Company Details</h3>
-          <ul className="space-y-1">
-            <li>
-              Locations: {data.result.company_location_identifiers.join(", ")}
-            </li>
-
-            <li>Ownership Status: {data.result.company_ownership_status}</li>
-            <li>Investors: {data.result.company_investors.join(", ")}</li>
-            <li>Structure: {data.result.company_structure}</li>
-
-            <li>Contact Email: {data.result.company_contact_email}</li>
           </ul>
         </div> */}
       </div>
