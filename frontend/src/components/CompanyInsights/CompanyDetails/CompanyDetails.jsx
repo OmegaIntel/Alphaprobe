@@ -1,5 +1,6 @@
 import React from "react";
 import CompanyDetailsComponent from "./CompanyDetailsComponent";
+import { useSelector } from "react-redux";
 
 const data = {
   result: {
@@ -37,8 +38,18 @@ const data = {
 };
 
 const CompanyDetails = () => {
+  // Accessing company insights data from Redux state with fallback to an empty object
+  // const data = useSelector((state) => state.companyInsights?.data || null);
+  // console.log("data from redux for insights", data);
+
+  // // Ensure that data is defined and has the expected structure
+  // if (!data) {
+  //   return <p>Search For Company...</p>;  // Fallback if no data or essential field is missing
+  // }
+
   return (
     <div>
+      {/* Render CompanyDetailsComponent when data is available */}
       <CompanyDetailsComponent data={data} />
     </div>
   );
