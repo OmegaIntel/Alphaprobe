@@ -85,7 +85,7 @@ jobs:
       run: sleep 30
 
     - name: Run backend tests
-      run: docker-compose -f docker-compose-application.yaml exec app sh -c "PYTHONPATH=/app/api pytest api/tests"
+      run: docker-compose -f docker-compose-application.yaml exec -T app sh -c "PYTHONPATH=/app/api pytest api/tests"
 
     - name: Run frontend tests
-      run: docker-compose -f docker-compose-application.yaml exec frontend npm test -- --watchAll=false src/App.test.js
+      run: docker-compose -f docker-compose-application.yaml exec -T frontend npm test -- --watchAll=false src/App.test.js
