@@ -10,31 +10,32 @@ from api.api_industry_summary import (
 )
 
 
-def run_test(industry_code: str, industry_name: str, min_entries: int):
+def run_test(industry_code: str, industry_name: str):
     data = DataModelIn(data=Industry(
         source='IBIS', industry_code=industry_code, industry_name=industry_name))
     result = asyncio.run(industry_summary_for_thesis(request=data))
     assert isinstance(result, DataModelOut)
     assert isinstance(result.result, list)
-    assert len(result.result) >= min_entries
+    assert len(result.result) == 1, f"Instead of 11, got {len(result.result)} entries"
     assert 'profit_margins' in result.result[0]['key_statistics']
 
 
 def test1():
-    run_test('333999', '3D Printer Manufacturing in the US', 1)
-
+    run_test('333999', '3D Printer Manufacturing in the US')
 
 def test2():
-    run_test('336999', 'ATV Manufacturing in the US', 1)
-
+    run_test('336999', 'ATV Manufacturing in the US')
 
 def test3():
-    run_test('324110', 'Petroleum Refineries', 1)
-
+    run_test('324110', 'Petroleum Refineries')
 
 def test4():
     # was having problem with no data under profit except for profit margins.
-    run_test('623110', 'Nursing Care Facilities', 1)
+    run_test('623110', 'Nursing Care Facilities')
+
+def test5():
+    # multiple reports per industry
+    run_test('517311', 'Wired Telecommunications Carriers')
 
 
 def test_summary_for_name1():
