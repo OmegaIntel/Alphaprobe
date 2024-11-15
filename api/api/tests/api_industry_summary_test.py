@@ -16,7 +16,7 @@ def run_test(industry_code: str, industry_name: str):
     result = asyncio.run(industry_summary_for_thesis(request=data))
     assert isinstance(result, DataModelOut)
     assert isinstance(result.result, list)
-    assert len(result.result) == 1, f"Instead of 11, got {len(result.result)} entries"
+    assert len(result.result) == 1, f"Instead of 1 entry, got {len(result.result)} entries"
     assert 'profit_margins' in result.result[0]['key_statistics']
 
 

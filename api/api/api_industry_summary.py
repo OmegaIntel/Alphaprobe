@@ -153,7 +153,7 @@ class DataModelOut(BaseModel):
 industry_summary_router = APIRouter()
 
 
-def sorted_summaries(summaries: List[Dict]):
+def sorted_summaries(summaries: List[Dict]) -> List[Dict]:
     """Use a few functions to sort the summaries."""
     # TODO: testing
 
@@ -175,10 +175,11 @@ def sorted_summaries(summaries: List[Dict]):
     for func in [use_profit_margins, use_value_added, use_employees, use_report_title, use_len]:
         try:
             result = sorted(summaries, key=func, reverse=True)
+            return result
         except:
             continue
 
-    return result
+    return summaries
 
 
 @industry_summary_router.post("/api/industry-summary", response_model=DataModelOut)
