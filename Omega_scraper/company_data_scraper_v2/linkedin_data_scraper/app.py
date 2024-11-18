@@ -12,13 +12,9 @@ from pyvirtualdisplay import Display
 # Initialize FastAPI application
 app = FastAPI()
 
-# Models
+# Single Model for Input Validation
 class URLInput(BaseModel):
-    """Schema for LinkedIn company profile endpoint input."""
-    url: str
-
-class URLRequest(BaseModel):
-    """Schema for PitchBook company profile endpoint input."""
+    """Schema for URL-based endpoints input."""
     url: str
 
 # Scrapy-related functions
@@ -123,18 +119,21 @@ async def linkedin_company_profile(input_data: URLInput):
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/pitchbook_company_profile/")
-def pitchbook_company_profile(request: URLRequest):
+def pitchbook_company_profile(input_data: URLInput):
     """
     Endpoint to fetch PitchBook company profile data using Selenium.
 
     Args:
-        request (URLRequest): URL for the company profile.
+        input_data (URLInput): URL for the company profile.
 
     Returns:
         dict: Webpage content or error message.
     """
-    result = fetch_content_with_selenium(request.url)
+    result = fetch_content_with_selenium(input_data.url)
 
     if "error" in result:
         raise HTTPException(status_code=500, detail=result["error"])
     return result
+
+
+# uvicorn app:app --host 0.0.0.0 --port 8500 --reload 

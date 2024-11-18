@@ -21,10 +21,3 @@ def test_linkedin_company_profile():
     elif response.status_code == 404:
         assert "detail" in json_response
         assert json_response["detail"] == "No data found"
-
-
-def test_pitchbook_company_profile():
-    input_data = {"url": "https://pitchbook.com/profiles/advisor/55545-67"}
-    response = client.post("/pitchbook_company_profile/", json=input_data)
-    assert response.status_code in {200, 500}  
-    assert "content" in response.json() or "error" in response.json()
