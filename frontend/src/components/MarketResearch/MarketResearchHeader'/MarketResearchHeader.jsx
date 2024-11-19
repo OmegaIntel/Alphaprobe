@@ -68,7 +68,7 @@ const IndustryHeader = () => {
   return (
     <>
       <header className="industry-header px-4 pt-4 bg-gray-900 text-white">
-        <h1 className="text-2xl font-bold">Industries</h1>
+        <h1 className="text-2xl font-bold">Industries check</h1>
 
         {/* Scrollable container */}
         <div className="mt-4 overflow-x-auto scrollbar-thin scrollbar-track-slate-950 whitespace-nowrap">

@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import { API_BASE_URL, token } from "../../services";
+import { useDispatch } from "react-redux";
+import {
+  fetchCompanyInsightStart,
+  fetchCompanyInsightSuccess,
+  fetchCompanyInsightFailure,
+} from "../../redux/companyInsightsSlice";
 
-const SearchBoxComponent = ({section}) => {
+const SearchBoxComponent = ({ section }) => {
   const [companyName, setCompanyName] = useState("");
-
+  const dispatch = useDispatch();
   const handleSearch = async (e) => {
     e.preventDefault();
+    dispatch(fetchCompanyInsightStart());
 
     // Prepare the payload
     const payload = {
@@ -26,13 +33,15 @@ const SearchBoxComponent = ({section}) => {
       });
 
       const result = await response.json();
-      console.log("Search payload".payload);
-      console.log("Response:", result);
+      console.log("Search payload",payload);
+      dispatch(fetchCompanyInsightSuccess(result));
+      console.log("Search Response:", result);
     } catch (error) {
+      dispatch(fetchCompanyInsightFailure(error.toString()));
       console.error("Error:", error);
     }
   };
- 
+
   return (
     <div className="search-bar">
       <form onSubmit={handleSearch}>
@@ -43,7 +52,10 @@ const SearchBoxComponent = ({section}) => {
           onChange={(e) => setCompanyName(e.target.value)}
           className="border border-[#2e2e2e] w-80 px-4 py-2 bg-[#0d0d0d]  text-[#7a7a7a] rounded-2xl"
         />
-        <button type="submit" className="ml-2 p-2 bg-[#fcfcfc] text-[#121212] rounded-xl w-32 h-10 hover:bg-[#121212] hover:text-[#fcfcfc] transition-all duration-200 ease-out">
+        <button
+          type="submit"
+          className="ml-2 p-2 bg-[#fcfcfc] text-[#121212] rounded-xl w-32 h-10 hover:bg-[#121212] hover:text-[#fcfcfc] transition-all duration-200 ease-out"
+        >
           Search
         </button>
       </form>
