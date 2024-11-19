@@ -19,6 +19,7 @@ import MarketResearchLayout from "../../MarketResearch/MarketResearchLayout";
 
 import CompanyInsightslayout from "../../CompanyInsights/CompanyInsightslayout";
 import SearchBox from "../../SearchBox/SearchBox";
+import DashboardLayout from "../../Dashboard/DashboardLayout";
 
 const { Option } = Select;
 
@@ -197,7 +198,7 @@ const Categories = () => {
           ) : activeCategory === "Investment Thesis" ? (
             <>
               <div className="flex-grow overflow-y-auto bg-[#0d0d0d] ml-1 scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800">
-                <div className="mt-10 p-3">
+                <div className="mt-10 p-3 h-full">
                   <ThesisForm questions={questions} />
                   <ThesisCardComponent />
                 </div>
@@ -223,7 +224,16 @@ const Categories = () => {
                 </div>
               </div>
             </>
-          ) : (
+          ) : activeCategory === "Dashboard" ? (
+            <>
+              <div className="flex-grow overflow-y-auto bg-[#0d0d0d] ml-1 scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800">
+                <div className="p-3">
+                  <DashboardLayout />
+                </div>
+              </div>
+            </>
+          ) :
+          (
             <ProjectDetails
               isActiveCategory={activeCategory}
               isActiveSubCategory={selectedSubcategory}
