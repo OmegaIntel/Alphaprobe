@@ -18,15 +18,20 @@ def run_test(csv_name: str):
         uqrs.append(UserQR(question=row['Question'], response=row['Answer']))
 
     result = asyncio.run(industries_for_thesis(request=DataModelIn(data=uqrs)))
+    
     assert isinstance(result, DataModelOut)
     assert isinstance(result.result, list)
     assert len(result.result) >= 5
+
+    codes = set()
     for elt in result.result:
         assert isinstance(elt, IndustryCode)
         assert elt.industry_name
         assert elt.industry_code
         assert elt.industry_code in IBIS_NAICS_CODES
+        codes.add(elt.industry_code)
 
+    assert len(result.result) == len(codes)
     print(result.result)
 
 

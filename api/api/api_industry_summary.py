@@ -153,6 +153,35 @@ class DataModelOut(BaseModel):
 industry_summary_router = APIRouter()
 
 
+def sorted_summaries(summaries: List[Dict]) -> List[Dict]:
+    """Use a few functions to sort the summaries."""
+    # TODO: testing
+
+    def use_profit_margins(summary: dict):
+        return summary['key_statistics']['profit_margins']
+
+    def use_value_added(summary: dict):
+        return summary['key_statistics']['industry_value_added']
+
+    def use_employees(summary: dict):
+        return summary['key_statistics']['employees']
+
+    def use_report_title(summary: dict):
+        return summary['report_title']
+    
+    def use_len(summary: dict):
+        return len(summary)
+    
+    for func in [use_profit_margins, use_value_added, use_employees, use_report_title, use_len]:
+        try:
+            result = sorted(summaries, key=func, reverse=True)
+            return result
+        except KeyError:
+            continue
+
+    return summaries
+
+
 @industry_summary_router.post("/api/industry-summary", response_model=DataModelOut)
 async def industry_summary_for_thesis(request: DataModelIn):
     """Returns industry summary based on the source (IBIS to start with)."""
@@ -170,4 +199,6 @@ async def industry_summary_for_thesis(request: DataModelIn):
         summary.update(metrics)
         summaries.append(summary)
 
+    # take the first of the sorted summaries.
+    summaries = sorted_summaries(summaries)[:1]
     return DataModelOut(result=summaries)
