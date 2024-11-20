@@ -19,6 +19,7 @@ import MarketResearchLayout from "../../MarketResearch/MarketResearchLayout";
 
 import CompanyInsightslayout from "../../CompanyInsights/CompanyInsightslayout";
 import SearchBox from "../../SearchBox/SearchBox";
+import DashboardLayout from "../../Dashboard/DashboardLayout";
 
 const { Option } = Select;
 
@@ -223,7 +224,16 @@ const Categories = () => {
                 </div>
               </div>
             </>
-          ) : (
+          ) : activeCategory === "Dashboard" ? (
+            <>
+              <div className="flex-grow overflow-y-auto bg-[#0d0d0d] ml-1 scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800">
+                <div className="p-3">
+                  <DashboardLayout active={activeCategory} setActive={setActiveCategory} />
+                </div>
+              </div>
+            </>
+          ) :
+          (
             <ProjectDetails
               isActiveCategory={activeCategory}
               isActiveSubCategory={selectedSubcategory}

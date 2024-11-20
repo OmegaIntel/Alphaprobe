@@ -47,7 +47,7 @@ const App = () => {
           path="/dashboard"
           element={
             <ProtectedLayout setToken={handleSetToken} isLoggedIn={isLoggedIn}>
-              <Dashboard />
+              <Categories />
             </ProtectedLayout>
           }
         />
