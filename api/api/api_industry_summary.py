@@ -176,7 +176,7 @@ def sorted_summaries(summaries: List[Dict]) -> List[Dict]:
         try:
             result = sorted(summaries, key=func, reverse=True)
             return result
-        except KeyError:
+        except (KeyError, TypeError):
             continue
 
     return summaries
