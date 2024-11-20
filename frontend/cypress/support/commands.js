@@ -23,3 +23,19 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+//import Papa from "papaparse";
+
+
+// Custom command to read and parse CSV
+Cypress.Commands.add("readCsv", (fileName) => {
+  cy.fixture(fileName).then((csvContent) => {
+    return new Promise((resolve) => {
+      const parsedData = Papa.parse(csvContent, {
+        header: true,
+        skipEmptyLines: true,
+      }).data;
+      resolve(parsedData);
+    });
+  });
+});
