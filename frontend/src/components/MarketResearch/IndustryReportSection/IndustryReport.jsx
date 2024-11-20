@@ -1617,7 +1617,7 @@ const YourComponent = () => {
             <ReportDropdown data={summaryData.result}  />
           </>
         ) : (
-          <p>Loading data... Please select an industry.</p>
+          <p>Please select an industry.</p>
         )}
       </div>
       {/* <ReportDropdown data={data.result} /> */}
