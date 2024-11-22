@@ -32,7 +32,7 @@ const ProtectedLayoutInner = ({ children, setToken, isLoggedIn, id }) => {
 
   return (
     <div className="App">
-      <Sidebar setToken={setToken} />
+      
       <div className="main-content with-sidebar">
         {/* <Navbar /> */}
         <UploadFilesModal />
