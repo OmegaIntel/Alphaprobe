@@ -1,10 +1,12 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker, declarative_base, Session
+from sqlalchemy.orm import sessionmaker, declarative_base
 from sqlalchemy import Column, Integer, String, Text, DateTime,text
 from datetime import datetime
 import os
 from dotenv import load_dotenv
 import pandas as pd
+import json
+
 
 # Load environment variables
 load_dotenv()
@@ -50,17 +52,24 @@ class ThesisSurvey(Base):
     thesis_industry_recommendations = Column(Text, nullable=False)
 
 
+def retrieve_theses_with_query(email_id):
+    """Retrieves theses with the given email ID.
 
-def retreive_theses_with_query(id, email_id):
-    query = f"SELECT * FROM thesis_surveys where id = {id} and email_id = '{email_id}';"
+    Args:
+        email_id (str): The email ID to filter by.
 
-# Execute the query
+    Returns:
+        list: A list of dictionaries, each representing a thesis.
+    """
+    query = "SELECT * FROM thesis_surveys WHERE email_id = :email_id"
+
     with engine.connect() as connection:
-        result = connection.execute(text(query))
+        result = connection.execute(text(query), {"email_id": email_id})
 
         df = pd.DataFrame(result.fetchall(), columns=result.keys())
 
-        return df.to_json(orient='records', lines=False)
+        # Convert the DataFrame to JSON and return it as a Python object
+        return json.loads(df.to_json(orient='records'))
 
 # Create database tables
 Base.metadata.create_all(bind=engine)

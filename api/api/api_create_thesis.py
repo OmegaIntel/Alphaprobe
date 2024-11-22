@@ -78,7 +78,7 @@ async def create_thesis_survey(request: ThesisSurveyRequest, db: Session = Depen
         # Add to session and commit
         db.add(thesis_survey)
         db.commit()
-
+        
         return {"message": "Thesis and survey data created successfully.", "thesis_id": thesis_id}
     except Exception as e:
         db.rollback()
