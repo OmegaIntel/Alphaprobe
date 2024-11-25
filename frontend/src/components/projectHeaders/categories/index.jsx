@@ -173,6 +173,7 @@ const Categories = () => {
             <div className="flex laptop:gap-2 largeDesktop:gap-0">
               {categoryList.map((data, index) => (
                 <div
+                  id={index}
                   className={`${
                     data === activeCategory && "bg-[#212126] rounded-lg"
                   } p-1 text-center desktop:p-2 cursor-pointer text-sm`}
