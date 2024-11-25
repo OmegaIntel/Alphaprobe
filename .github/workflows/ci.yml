@@ -1,0 +1,91 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - development
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v1
+
+    - name: Cache Docker layers
+      uses: actions/cache@v2
+      with:
+        path: /tmp/.buildx-cache
+        key: ${{ runner.os }}-buildx-${{ github.sha }}
+        restore-keys: |
+          ${{ runner.os }}-buildx-
+
+    - name: Create .env file
+      run: |
+        {
+          echo "QUERY_DEFAULTS_LIMIT=${{ secrets.QUERY_DEFAULTS_LIMIT }}"
+          echo "AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED=${{ secrets.AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED }}"
+          echo "PERSISTENCE_DATA_PATH=${{ secrets.PERSISTENCE_DATA_PATH }}"
+          echo "ENABLE_MODULES=${{ secrets.ENABLE_MODULES }}"
+          echo "CHAT_API_URL=${{ secrets.CHAT_API_URL }}"
+          echo "UPLOAD_API_URL=${{ secrets.UPLOAD_API_URL }}"
+          echo "REGISTER_COMPANY_API_URL=${{ secrets.REGISTER_COMPANY_API_URL }}"
+          echo "COMPANIES_API_URL=${{ secrets.COMPANIES_API_URL }}"
+          echo "STREAMLIT_DISABLE_ONBOARDING=${{ secrets.STREAMLIT_DISABLE_ONBOARDING }}"
+          echo "DATABASE_HOST=${{ secrets.DATABASE_HOST }}"
+          echo "DATABASE_USER_NAME=${{ secrets.DATABASE_USER_NAME }}"
+          echo "DATABASE_PASSWORD=${{ secrets.DATABASE_PASSWORD }}"
+          echo "DATABASE_NAME=${{ secrets.DATABASE_NAME }}"
+          echo "DATABASE_PORT=${{ secrets.DATABASE_PORT }}"
+          echo "OPENAI_MODEL_NAME=${{ secrets.OPENAI_MODEL_NAME }}"
+          echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}"
+          echo "BING_API_KEY=${{ secrets.BING_API_KEY }}"
+          echo "FMP_API_KEY=${{ secrets.FMP_API_KEY }}"
+          echo "POLYGON_API_KEY=${{ secrets.POLYGON_API_KEY }}"
+          echo "ALPHA_VANTAGE_API_KEY=${{ secrets.ALPHA_VANTAGE_API_KEY }}"
+          echo "TIINGO_API_KEY=${{ secrets.TIINGO_API_KEY }}"
+          echo "BRAINTRUST_API_KEY=${{ secrets.BRAINTRUST_API_KEY }}"
+          echo "ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}"
+          echo "SMTP_SERVER=${{ secrets.SMTP_SERVER }}"
+          echo "SMTP_PORT=${{ secrets.SMTP_PORT }}"
+          echo "SMTP_USERNAME=${{ secrets.SMTP_USERNAME }}"
+          echo "SMTP_PASSWORD=${{ secrets.SMTP_PASSWORD }}"
+          echo "SENDER_EMAIL=${{ secrets.SENDER_EMAIL }}"
+          echo "S3_BUCKET=${{ secrets.S3_BUCKET }}"
+          echo "S3_REGION=${{ secrets.S3_REGION }}"
+          echo "S3_ACCESS_KEY=${{ secrets.S3_ACCESS_KEY }}"
+          echo "S3_SECRET_KEY=${{ secrets.S3_SECRET_KEY }}"
+          echo "FRONTEND_URL=${{ secrets.FRONTEND_URL }}"
+          echo "CALENDLY_CLIENT_ID=${{ secrets.CALENDLY_CLIENT_ID }}"
+          echo "CALENDLY_CLIENT_SECRET=${{ secrets.CALENDLY_CLIENT_SECRET }}"
+          echo "REDIRECT_URI=${{ secrets.REDIRECT_URI }}"
+          echo "WEAVIATE_HOST=${{ secrets.WEAVIATE_HOST }}"
+          echo "LLAMA_CLOUD_API_KEY=${{ secrets.LLAMA_CLOUD_API_KEY }}"
+          echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}"
+          echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+          echo "REACT_APP_API_BASE_URL=${{ secrets.REACT_APP_API_BASE_URL }}"
+        } >> .env
+
+    - name: Set up Docker Compose
+      run: sudo apt-get install docker-compose
+
+    - name: Build and run Weaviate services
+      run: docker-compose --env-file .env -f docker-compose-weaviate.yaml up --build -d
+
+    - name: Build and run application services
+      run: docker-compose --env-file .env -f docker-compose-application.yaml up --build -d
+
+    - name: Wait for services to be healthy
+      run: sleep 30
+
+    - name: Run backend tests
+      run: docker-compose -f docker-compose-application.yaml exec -T app sh -c "PYTHONPATH=/app/api pytest api/tests"
+
+    - name: Run frontend tests
+      run: docker-compose -f docker-compose-application.yaml exec -T frontend npm test -- --watchAll=false src/App.test.js
