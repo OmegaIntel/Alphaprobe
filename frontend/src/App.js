@@ -30,13 +30,13 @@ const App = () => {
         <Route path="/guest/:id" element={<DocumentsWrapper />} />
         <Route
           path="/register"
-          element={isLoggedIn ? <Navigate to="/dashboard" /> : <Register />}
+          element={isLoggedIn ? <Navigate to="/projects" /> : <Register />}
         />
         <Route
           path="/login"
           element={
             isLoggedIn ? (
-              <Navigate to="/dashboard" />
+              <Navigate to="/projects" />
             ) : (
               <Login setToken={handleSetToken} />
             )
@@ -47,7 +47,7 @@ const App = () => {
           path="/dashboard"
           element={
             <ProtectedLayout setToken={handleSetToken} isLoggedIn={isLoggedIn}>
-              <Dashboard />
+              <Categories />
             </ProtectedLayout>
           }
         />
@@ -56,6 +56,14 @@ const App = () => {
           element={
             <ProtectedLayout setToken={handleSetToken} isLoggedIn={isLoggedIn}>
               <CreateDeal />
+            </ProtectedLayout>
+          }
+        ></Route>
+        <Route
+          path="/projects"
+          element={
+            <ProtectedLayout setToken={handleSetToken} isLoggedIn={isLoggedIn}>
+              <Categories />
             </ProtectedLayout>
           }
         ></Route>

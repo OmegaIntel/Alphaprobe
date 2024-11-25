@@ -1,22 +1,27 @@
 // src/components/IndustryHeader.js
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setSummaryData,setError,setLoading } from "../../../redux/industrySlice"; // Adjust the import path if necessary
+import {
+  setSummaryData,
+  setError,
+  setLoading,
+} from "../../../redux/industrySlice"; // Adjust the import path if necessary
 import { API_BASE_URL, token } from "../../../services";
 
 const IndustryHeader = () => {
-
   const dispatch = useDispatch(); // Initialize dispatch
-  const responseData = useSelector((state) => state.formResponse.data); // Get the response data from the store
+  // Get the response data from the store
+  const newRes = useSelector((state) => state.selectedIndustries);
   const [activeIndustry, setActiveIndustry] = useState(null); // State to track the active button
 
   // Check if the responseData and its result are available
-  if (!responseData || !responseData.result) return null;
+  if (!newRes || !newRes.value) return null;
+
+  console.log("New Response Data", newRes.value);
 
   // Function to handle API call
   const sendIndustryDataToApi = async (industryCode, industryName) => {
     dispatch(setLoading()); // Set loading state before API call
-    
     try {
       const response = await fetch(`${API_BASE_URL}/api/industry-summary`, {
         method: "POST",
@@ -36,9 +41,11 @@ const IndustryHeader = () => {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-
+      console.log("rsponse", response);
       const data = await response.json();
-      
+      console.log("Data type:", typeof data); // Should log "object" if data is an object
+      console.dir("Data:", data); // Logs the actual data
+
       if (data.result) {
         // Dispatch the actual data, not the action creator
         dispatch(setSummaryData(data));
@@ -61,12 +68,12 @@ const IndustryHeader = () => {
   return (
     <>
       <header className="industry-header px-4 pt-4 bg-gray-900 text-white">
-        <h1 className="text-2xl font-bold">Industries</h1>
+        <h1 className="text-2xl font-bold">Industries check</h1>
 
         {/* Scrollable container */}
         <div className="mt-4 overflow-x-auto scrollbar-thin scrollbar-track-slate-950 whitespace-nowrap">
           <div className="inline-flex space-x-4">
-            {responseData.result.map((industry) => (
+            {newRes.value.map((industry) => (
               <button
                 key={industry.industry_code}
                 className={`industry-button rounded-md transition-colors duration-300 
@@ -75,7 +82,7 @@ const IndustryHeader = () => {
                     ? "bg-gray-500" // Active button style
                     : "bg-gray-700 hover:bg-gray-600"
                 } 
-                w-1/3 h-12 flex-shrink-0`} // Fixed size for buttons
+                 h-12 `} // Fixed size for buttons
                 title={`${industry.industry_code} - ${industry.industry_name}`}
                 onClick={() =>
                   handleButtonClick(
