@@ -1,1639 +1,608 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import ReportDropdown from "./ReportDropdown"; // Adjust the import path if necessary
+import { DataRenderer } from "./DyanmicRender";
 
+const data = {
+  "report_title": "Industry Report: Abrasive and Sandpaper Manufacturing",
+  "report_date": "2023",
+  "key_statistics": {
+      "revenue": {
+          "revenue_dollars": 4004000000,
+          "revenue_cagr_historical": {
+              "begin_year": 2005,
+              "end_year": 2023,
+              "revenue_cagr_value": -2.54
+          },
+          "revenue_cagr_projected": {
+              "begin_year": 2023,
+              "end_year": 2029,
+              "revenue_cagr_value": 0.71
+          }
+      },
+      "profit": {
+          "profit_dollars": 80000000,
+          "profit_cagr_historical": {
+              "begin_year": 2005,
+              "end_year": 2023,
+              "profit_cagr_value": -8.48
+          },
+          "profit_cagr_projected": {
+              "begin_year": 2023,
+              "end_year": 2029,
+              "profit_cagr_value": null
+          }
+      },
+      "profit_margins": {
+          "profit_margins_percentage": 2,
+          "profit_margins_cagr_historical": {
+              "begin_year": 2005,
+              "end_year": 2023,
+              "profit_margins_cagr_value": -6.09
+          },
+          "profit_margins_cagr_projected": {
+              "begin_year": 2023,
+              "end_year": 2029,
+              "profit_margins_cagr_value": null
+          }
+      },
+      "industry_value_added": {
+          "industry_value_added_dollars": 986000000,
+          "industry_value_added_cagr_historical": {
+              "begin_year": 2005,
+              "end_year": 2023,
+              "industry_value_added_cagr_value": null
+          },
+          "industry_value_added_cagr_projected": {
+              "begin_year": 2023,
+              "end_year": 2029,
+              "industry_value_added_cagr_value": null
+          }
+      },
+      "employees": {
+          "employees_count": 12299,
+          "employees_cagr_historical": {
+              "begin_year": 2005,
+              "end_year": 2023,
+              "employees_cagr_value": null
+          },
+          "employees_cagr_projected": {
+              "begin_year": 2023,
+              "end_year": 2029,
+              "employees_cagr_value": null
+          }
+      },
+      "wages": {
+          "wages_dollars": 838000000,
+          "wages_cagr_historical": {
+              "begin_year": 2005,
+              "end_year": 2023,
+              "wages_cagr_value": null
+          },
+          "wages_cagr_projected": {
+              "begin_year": 2023,
+              "end_year": 2029,
+              "wages_cagr_value": null
+          }
+      },
+      "imports": {
+          "imports_dollars": 2254000000,
+          "imports_cagr_historical": {
+              "begin_year": 2005,
+              "end_year": 2023,
+              "imports_cagr_value": null
+          },
+          "imports_cagr_projected": {
+              "begin_year": 2023,
+              "end_year": 2029,
+              "imports_cagr_value": null
+          }
+      },
+      "exports": {
+          "exports_dollars": 1100000000,
+          "exports_cagr_historical": {
+              "begin_year": 2005,
+              "end_year": 2023,
+              "exports_cagr_value": null
+          },
+          "exports_cagr_projected": {
+              "begin_year": 2023,
+              "end_year": 2029,
+              "exports_cagr_value": null
+          }
+      }
+  },
+  "executive_summary": "The Abrasive and Sandpaper Manufacturing industry produces a diverse range of abrasive products used in various applications across the manufacturing, automotive, aerospace, telecommunications, construction, cleaning and maintenance markets. While demand from these markets grew, this growth has been negated by increased import competition, plummeting commodity prices and a slowing manufacturing sector. Also, in 2020, the COVID-19 pandemic contributed to falling demand from construction and industrial markets, as lockdowns and supply chain disruptions made industrial production difficult. However, as the pandemic passes and the economy begins to recover, pent-up demand for construction and manufacturing will surge in demand for industry products.",
+  "current_performance": [
+      {
+          "current_performance_point_title": "Mixed Feelings for the Downstream Market",
+          "current_performance_point_description": "Industry revenue has decreased as current macroeconomic conditions in the United States have slowed growth in downstream markets. Automotive manufacturers and the auto aftermarket, which provide vehicle repair and part replacement, are both major downstream markets for the industry that face a downfall during the pandemic. Rising construction has also helped boost abrasive demand, especially in the housing sector, which uses abrasives extensively. Demand for abrasive products has also been aided by increased shipments from fabricated metals, durable goods and consumer manufacturers, including the electrical equipment and appliances sector."
+      },
+      {
+          "current_performance_point_title": "Manufacturing Conditions Abroad are More Attractive",
+          "current_performance_point_description": "International trade is essential because of the universal need for industry products. The trade-weighted index, which measures the strength of the US dollar relative to its trading partners' currencies, has climbed. Fewer regulations and reduced wage costs also assist abrasive goods produced abroad. As a result, foreign-produced abrasives have been relatively less expensive for domestic downstream markets. This trend has limited potential revenue gains for companies."
+      },
+      {
+          "current_performance_point_title": "A Competitive Environment Limits Profit Growth",
+          "current_performance_point_description": "The industry is highly concentrated and is dominated by the 3M Company and the US divisions of several international conglomerates. As a result of this stable competitive environment and increased acquisition activity, the number of businesses has declined. Because of improving technology and companies attempting to combat declining profit, industry employment has grown. Industry consolidation, cost-cutting measures and the gradual adoption of labor-saving technologies have helped place downward pressure on employment."
+      }
+  ],
+  "future_outlook": [
+      {
+          "future_outlook_point_title": "Construction and Industrial Markets Expand",
+          "future_outlook_point_description": "Industry revenue will increase as investments into the building construction market expand, and industrial production continues to rise. Demand for abrasives in the building and construction market will face solid growth stemming from increased demand in the housing market and stable demand from heavy construction markets. Aggregate private investment, which includes spending by individuals and businesses on physical structures, equipment and software, will also grow. Improved production across the manufacturing sector will support demand for abrasive products. However, demand conditions will vary across key downstream markets."
+      },
+      {
+          "future_outlook_point_title": "Trade Conditions and Industry Trends",
+          "future_outlook_point_description": "As emerging economies expand their industrial capabilities and burgeoning middle classes in developing countries demand more durable goods, industry exports will begin to stabilize. A depreciating US dollar will bolster this trend compared with other currencies. Although, heightened overseas competition will limit opportunities abroad. Industry employment expands as more workers are required to satisfy enhanced demand from domestic and foreign downstream markets. Even with increased demand, high competition and relatively low average profit deter companies from entering the industry."
+      },
+      {
+          "future_outlook_point_title": "Steady Industry Profit as Competition Remains Fierce",
+          "future_outlook_point_description": "Industry profit will remain relatively stable while demand improves across major downstream markets. Multinational companies, like the 3M Company and Compagnie de Saint-Gobain SA, will continue to dominate the industry, as these companies benefit from both economies of scope and scale. Through large-scale procurement contracts, these companies can lower per-unit purchasing costs for inputs and operate more efficiently than their competitors. The continued penetration of less expensive imports into the US market will limit price flexibility among the major US manufacturers."
+      }
+  ],
+  "industry_definition": "Industry operators manufacture natural or synthetic abrasive products such as grinding wheels, coated or bonded materials, sandpaper and other abrasives. Abrasive products are made from a variety of raw materials, such as diamonds, garnet and silica sand; manufactured minerals, such as fused alumina and silicon carbide; super abrasives, such as synthetic diamond; and metal abrasives, such as steel shot, grit and sand.",
+  "industry_impact": {
+      "positive_impact_factors": [
+          "Capital Intensity Level low",
+          "Concentration Level low",
+          "Barriers To Entry Level high - increasing"
+      ],
+      "negative_impact_factors": [
+          "Life Cycle Stage decline",
+          "Industry Assistance Level low - steady",
+          "Globalization Level high - increasing"
+      ],
+      "mixed_impact_factors": []
+  },
+  "swot_analysis": {
+      "strengths": [
+          "High & Increasing Barriers to Entry",
+          "Low Customer Class Concentration",
+          "Low Capital Requirements"
+      ],
+      "weaknesses": [
+          "Low & Steady Level of Assistance",
+          "High Imports",
+          "Low Profit vs. Sector Average",
+          "High Product/Service Concentration",
+          "Low Revenue per Employee"
+      ],
+      "opportunities": [
+          "High Revenue Growth (2023-2028)",
+          "High Performance Drivers - Industrial production index"
+      ],
+      "threats": [
+          "Very Low Revenue Growth (2005-2023)",
+          "Low Revenue Growth (2018-2023)",
+          "Low Outlier Growth - New car sales"
+      ]
+  },
+  "key_trends": [
+      "Slow sales to automotive and construction customers have decreased revenue. The industry directly depends on the health of the domestic downstream industrial and construction market.",
+      "The industry has mitigated sharp revenue declines. Still, growth has been limited because of increasing import penetration and plummeting commodity prices.",
+      "The industry adheres to strict environmental regulations. These regulations include air emissions, wastewater discharges, toxic substances, and the handling and disposal of solid and hazardous wastes.",
+      "Demand for industry products increases in line with the industrial production index. The industry heavily depends on growth in demand from downstream manufacturing markets, like automotive, aerospace, electronics, bearing manufacturing and metal foundries.",
+      "Demand for industry products took a hit. Many projects in downstream markets were put on hold during the COVID-19 pandemic, which affected the level of demand for industry products.",
+      "The health of the industry is dependent on downstream markets. The industry derives revenue from a wide variety of downstream markets with the principal applications being in the heavy manufacturing and construction sectors.",
+      "Some manufacturing plants are situated close to local abrasive grain producers. Access to less-expensive imports may negate any advantage in locating close to abrasive grain producers.",
+      "This Great Lakes contains a high share industrial manufactuers. This heavy concentration of industrial activity corresponds with the concentration of demand for abrasives in the region's downstream automotive, ceramics, aerospace, mining and heavy industrial activity.",
+      "Producers compete on the bases of quality and product differentiation. These major companies leverage their acquired economies of scale and cultivate a strong reputation, giving them an edge over the average industry manufacturers.",
+      "Import penetration from low-labor cost countries competes with domestic abrasive production. The threat of import penetration raises the competitive intensity within the industry and cuts into manufacturers' revenue.",
+      "Increasing investment in sustainability across global production. 3M has continued to invest in accelerating its environmental goals to achieve carbon neutrality by 2050.",
+      "CSG joins US department of energy to help combat climate change. CSG has joined the US Department of Energy's Better Climate Challenge to reduce humanity's carbon footprint and save energy.",
+      "Profit has been stifled by volatile input prices and low demand. As the COVID-19 pandemic disrupted downstream markets like"
+  ],
+  "market_segmentation": [
+      {
+          "segment": "Manufacturing",
+          "segment_description": "Within the manufacturing sector, abrasives and super-abrasives, like a polycrystalline diamond (PCD) and polycrystalline boron nitride, are used in various manufacturing and tooling operations.",
+          "segment_percentage": 26.4
+      },
+      {
+          "segment": "Automotive and off-highway vehicle manufacture",
+          "segment_description": "One of the most critical manufacturing markets for the industry is automotive and off-road vehicle manufacturers, which use industry abrasives to grind automotive and engine components, including crankshafts, valves, gears, brake pads, fuel injection systems, and auto bodywork.",
+          "segment_percentage": 18.0
+      },
+      {
+          "segment": "Durable and consumer goods manufacture",
+          "segment_description": "Other industries that use abrasive products are: the fabricated metals and bearing industry, foundry operations, the telecommunication industry and the electronics industry.",
+          "segment_percentage": 17.0
+      },
+      {
+          "segment": "Fabricated metals, iron and steel manufacture",
+          "segment_description": "Other industries that use abrasive products are: the fabricated metals and bearing industry, foundry operations, the telecommunication industry and the electronics industry.",
+          "segment_percentage": 14.0
+      },
+      {
+          "segment": "Housing, nonresidential building and highway construction",
+          "segment_description": "The housing and nonresidential building market consumes large volumes of manufactured abrasives for cutting and finishing gypsum wallboard and timber, contributing to most of this segment's revenue. Construction services companies use industrial diamonds for stone and concrete cutting and in the road construction market.",
+          "segment_percentage": 13.6
+      },
+      {
+          "segment": "Electronics and telecommunications manufacture",
+          "segment_description": "Other industries that use abrasive products are: the fabricated metals and bearing industry, foundry operations, the telecommunication industry and the electronics industry.",
+          "segment_percentage": 6.9
+      },
+      {
+          "segment": "Mining, mineral production and stone cutting",
+          "segment_description": "Abrasives like industrial diamonds are used in high-performance core drilling for exploration mining and mining rocks like sandstone, limestone, soft granite, siltstone, claystone and shale.",
+          "segment_percentage": 4.1
+      }
+  ],
+  "products_and_services": [
+      {
+          "product_or_service": "Coated Abrasives",
+          "product_description": "Coated abrasive products are composed of backing, grain and a binder system. The main types of backings used are cloth and paper; alternatives are vulcanized fiber, non-woven webs, stitch-bonded fabrics and foils. The essential mineral types used for coated abrasives are aluminum oxide and silicon carbide. Zirconia alumina and micro-crystalline sintered aluminum oxide made through sol-gel technology have also become more critical in recent years.",
+          "product_percentage": 55.1
+      },
+      {
+          "product_or_service": "Bonded Abrasives",
+          "product_description": "Commonly used in grinding wheels, bonded abrasives are produced with vitrified and resin bonds using aluminum oxide, zirconia alumina, silicon carbide, microcrystalline aluminum oxide, and diamonds. Bonded abrasives are used in various industries for production, including aerospace, automotive, steel, tool and general machinery manufacturing.",
+          "product_percentage": 24.6
+      },
+      {
+          "product_or_service": "Metal Abrasives",
+          "product_description": "Metal abrasives include steel and iron grit, shot and sand. Shot and grit can be used as a blast cleaning medium to remove surface contamination on steel and foundry products. Shot imparts compressive strength to load-bearing metal parts used in jet engine turbines, automotive springs and heavy equipment crankshafts. Abrasive metals are also used as a cutting medium to process granite and marble blocks and for etching textured surfaces on metal to enhance bonding for paints, enamels, rubber or other coatings.",
+          "product_percentage": 14.8
+      },
+      {
+          "product_or_service": "Grain Abrasives",
+          "product_description": "There are three common types of abrasive grains in this segment. Aluminum oxide is primarily used for metal grinding and cutting grain. Silicon carbide is used for cutting concrete, grinding, and nonferrous metals. Aluminum zirconia is used for ferrous and stainless-steel cutting and grinding.",
+          "product_percentage": 5.5
+      }
+  ],
+  "supply_chain": {
+      "tier_1_suppliers": [],
+      "tier_2_suppliers": [
+          "Stone Mining in the US",
+          "Sand & Gravel Mining in the US"
+      ],
+      "tier_1_buyers": [
+          "Construction in the US",
+          "Carpenters in the US",
+          "Car & Automobile Manufacturing in the US"
+      ],
+      "tier_2_buyers": []
+  },
+  "demand_determinants": [
+      {
+          "determinant_title": "Manufacturing",
+          "determinant_description": "Within the manufacturing sector, abrasives and super-abrasives, like a polycrystalline diamond (PCD) and polycrystalline boron nitride, are used in various manufacturing and tooling operations."
+      },
+      {
+          "determinant_title": "Automotive and Off-Road Vehicle Manufacturers",
+          "determinant_description": "One of the most critical manufacturing markets for the industry is automotive and off-road vehicle manufacturers, which use industry abrasives to grind automotive and engine components, including crankshafts, valves, gears, brake pads, fuel injection systems, and auto bodywork."
+      },
+      {
+          "determinant_title": "Housing, Nonresidential Building and Highway Construction",
+          "determinant_description": "The housing and nonresidential building market consumes large volumes of manufactured abrasives for cutting and finishing gypsum wallboard and timber, contributing to most of this segment's revenue. Construction services companies use industrial diamonds for stone and concrete cutting and in the road construction market."
+      },
+      {
+          "determinant_title": "Mining, Mineral Production and Stone Cutting",
+          "determinant_description": "Abrasives like industrial diamonds are used in high-performance core drilling for exploration mining and mining rocks like sandstone, limestone, soft granite, siltstone, claystone and shale."
+      }
+  ],
+  "international_trade": {
+      "import_level": "High",
+      "import_trend": "Decreasing",
+      "export_level": "High",
+      "export_trend": "Decreasing",
+      "international_trade_points": [
+          {
+              "trade_title": "STRATEGIC TARIFFS LIMIT IMPORT PENETRATION",
+              "trade_description": "Tariffs have slowed the import of abrasive and sandpaper. Foreign manufacturers often leverage inexpensive production and labor to offset high transportation costs."
+          },
+          {
+              "trade_title": "A STRONG US DOLLAR MAKES FOREIGN GOODS LESS EXPENSIVE",
+              "trade_description": "Domestic purchasing power increased significantly following the pandemic, enabling inexpensive purchases of unfamiliar precast concrete."
+          },
+          {
+              "trade_title": "UNITED STATES-MEXICO-CANADA AGREEMENT (USMCA) DRIVES TRADE",
+              "trade_description": "Historically, the sale of excess products to Canada and Mexico has driven exports. These two countries are the most prominent international"
+          },
+          {
+              "trade_title": "Declining Exports Caused by the Global Pandemic",
+              "trade_description": "Declining exports are because of lower demand overseas and shipping disruptions caused by the COVID-19 pandemic. Germany accounts for a significant share of exports, as this nation contains a high percentage of automotive and other manufacturing markets which use abrasive and sandpaper products."
+          }
+      ]
+  },
+  "business_locations": [
+      {
+          "location": "The Great Lakes Region",
+          "location_description": "This region contains a high share of the nation's heavy industrial manufacturing.",
+          "percentage_establishments": 30.2,
+          "percentage_population": 14.9
+      },
+      {
+          "location": "Mid-Atlantic",
+          "location_description": "The Mid-Atlantic region maintains a high share of establishments because of its proximity to downstream markets, including automotive, furniture manufacturing, and metal foundries. Abrasive manufacturing plants are situated close to downstream manufacturers to limit transportation costs.",
+          "percentage_establishments": 13.6,
+          "percentage_population": 13.2
+      },
+      {
+          "location": "Southeast",
+          "location_description": "Minerals and wood pulp, two essential raw materials for producing abrasives and sandpaper, are abundant in the Southeast. The manufacturing sector is expanding in the Southeast, particularly in aerospace and a major automotive consumer of sandpaper and abrasives.",
+          "percentage_establishments": 19.5,
+          "percentage_population": 21.8
+      }
+  ],
+  "regulations_and_policies": {
+      "regulations_level": "Moderate",
+      "regulations_points": [
+          {
+              "regulation_title": "Environmental regulations",
+              "regulation_description": "Companies in the Abrasive and Sandpaper Manufacturing industry operate in a regulatory environment comparable to most other manufacturing industries. The industry is subject to environmental laws and regulations, including air emissions, wastewater discharges, toxic substances, and the handling and disposal of solid and hazardous wastes. The industry is also subject to numerous employment laws and occupational health and safety laws."
+          },
+          {
+              "regulation_title": "COVID-19 restrictions",
+              "regulation_description": "COVID-19 pandemic-related restrictions were detrimental to the industry because they caused significant slowdowns from key purchasing industries and slowed industry manufacturing. The limits put on international trade also affected industry performance."
+          }
+      ],
+      "regulations_trend": "Steady"
+  },
+  "barriers_to_entry": {
+      "barriers_level": "High",
+      "barriers_trend": "Increasing",
+      "barriers_points": [
+          {
+              "barrier_title": "Skilled workforce and advanced machinery required",
+              "barrier_description": "This industry requires highly skilled workers to operate complex machinery and produce quality products. New businesses might need help to secure a strong workforce with experience and advanced machinery to follow suit."
+          }
+      ],
+      "factors_increased_barrier": [
+          "Life Cycle Stage: decline",
+          "Globalization Level: high - increasing"
+      ],
+      "factors_decreased_barrier": [
+          "Capital Intensity Level: low",
+          "Concentration Level: low"
+      ]
+  },
+  "basis_of_competition": {
+      "basis_level": "Moderate",
+      "basis_trend": "Increasing",
+      "basis_points": [
+          {
+              "basis_title": "Quality and product differentiation",
+              "basis_description": "Producers compete on the bases of quality and product differentiation."
+          },
+          {
+              "basis_title": "Economies of scale and reputation",
+              "basis_description": "These major companies leverage their acquired economies of scale and cultivate a strong reputation, giving them an edge over the average industry manufacturers."
+          },
+          {
+              "basis_title": "Import competition",
+              "basis_description": "Import penetration from low-labor cost countries competes with domestic abrasive production. The threat of import penetration raises the competitive intensity within the industry and cuts into manufacturers' revenue."
+          }
+      ]
+  },
+  "market_share_concentration": {
+      "concentration_level": "Low",
+      "concentration_trend": "Steady",
+      "concentration_points": [
+          {
+              "concentration_title": "Economies of scale allow large companies to expand",
+              "concentration_description": "Bigger businesses benefit from economies of scale, which empowers them to deliver products at a lower cost for each unit than more modest contenders. Because of this, larger businesses can offer their products at lower prices, making it difficult for smaller companies to compete on price."
+          },
+          {
+              "concentration_title": "Securing distribution connections to supply goods efficiently",
+              "concentration_description": "To effectively reach customers, businesses need an extensive distribution network. Larger businesses can efficiently distribute their products by establishing nationwide distribution networks. Smaller businesses might not have the resources to build such networks, limiting their reach and ability to penetrate the market."
+          }
+      ],
+      "top_companies": [
+          {
+              "company_name": "3m Company",
+              "company_percentage": 15.3
+          },
+          {
+              "company_name": "Msc industrial direct co., inc.",
+              "company_percentage": 6.3
+          },
+          {
+              "company_name": "Compagnie De Saint-Gobain",
+              "company_percentage": 5.8
+          },
+          {
+              "company_name": "OTHERS",
+              "company_percentage": 72.5
+          }
+      ]
+  },
+  "cost_structure_breakdown": [
+      {
+          "cost_type": "Profit",
+          "cost_type_percentage": 2.0
+      },
+      {
+          "cost_type": "Wages",
+          "cost_type_percentage": 20.9
+      },
+      {
+          "cost_type": "Purchases",
+          "cost_type_percentage": 29.3
+      },
+      {
+          "cost_type": "Depreciation",
+          "cost_type_percentage": null
+      },
+      {
+          "cost_type": "Marketing",
+          "cost_type_percentage": null
+      },
+      {
+          "cost_type": "Rent",
+          "cost_type_percentage": null
+      },
+      {
+          "cost_type": "Utilities",
+          "cost_type_percentage": null
+      },
+      {
+          "cost_type": "Other",
+          "cost_type_percentage": null
+      }
+  ],
+  "cost_factors": [
+      {
+          "cost_factor_title": "Purchases are the industry's highest-cost component",
+          "cost_factor_description": "Purchases, which include all costs associated with raw material inputs in abrasive manufacturing, are the industry's highest-cost component."
+      },
+      {
+          "cost_factor_title": "Volatile raw material costs impact cost structure",
+          "cost_factor_description": "Volatile raw material costs significantly impact the industry's cost structure and have caused purchase costs to remain high."
+      },
+      {
+          "cost_factor_title": "Essential raw materials",
+          "cost_factor_description": "The essential raw materials in abrasive product manufacturing are natural minerals, aluminum oxides, diamonds, garnet, tripoli, pumice and silica sand."
+      }
+  ],
+  "capital_intensity": {
+      "capital_intensity_level": "Low",
+      "capital_intensity_trend": "Steady",
+      "capital_intensity_points": [
+          {
+              "capital_intensity_title": "Highly skilled workers required",
+              "capital_intensity_description": "This industry requires highly skilled workers to operate complex machinery and produce quality products."
+          },
+          {
+              "capital_intensity_title": "New businesses face challenges",
+              "capital_intensity_description": "New businesses might need help to secure a strong workforce with experience and advanced machinery to follow suit."
+          },
+          {
+              "capital_intensity_title": "Average rate of innovation and concentration",
+              "capital_intensity_description": "Both the rate of new innovation and the concentration are in line with the average across all industries."
+          },
+          {
+              "capital_intensity_title": "Diversified market segments",
+              "capital_intensity_description": "Major market segments for industry operators are relatively diversified."
+          }
+      ]
+  },
+  "revenue_volatility": {
+      "volatility_level": "Moderate",
+      "volatility_trend": "Steady",
+      "volatility_points": [
+          {
+              "volatility_title": "Construction markets drive volatility",
+              "volatility_description": "The industry is vulnerable to shifts in residential and commercial construction markets, as demonstrated during the pandemic."
+          },
+          {
+              "volatility_title": "Infrastructure projects provide stability",
+              "volatility_description": "Volatility is tempered by more stable demand from publicly funded infrastructure projects like bridges and highways."
+          },
+          {
+              "volatility_title": "Rising interest rates add uncertainty",
+              "volatility_description": "As interest rates rise, it becomes more difficult for individuals and businesses to finance new projects, limiting purchases of abrasive and sandpaper products."
+          }
+      ]
+  },
+  "technological_change": {
+      "technological_change_level": "Moderate",
+      "technological_change_trend": "Increasing",
+      "technological_change_points": [
+          {
+              "technological_change_title": "Coated abrasives becoming more popular",
+              "technological_change_description": "Coated abrasive products are composed of backing, grain and a binder system. The main types of backings used are cloth and paper; alternatives are vulcanized fiber, non-woven webs, stitch-bonded fabrics and foils. The essential mineral types used for coated abrasives are aluminum oxide and silicon carbide. Zirconia alumina and micro-crystalline sintered aluminum oxide made through sol-gel technology have also become more critical in recent years."
+          },
+          {
+              "technological_change_title": "Bonded abrasives fluctuate with downstream demand",
+              "technological_change_description": "Commonly used in grinding wheels, bonded abrasives are produced with vitrified and resin bonds using aluminum oxide, zirconia alumina, silicon carbide, microcrystalline aluminum oxide, and diamonds. Bonded abrasives are used in various industries for production, including aerospace, automotive, steel, tool and general machinery manufacturing."
+          },
+          {
+              "technological_change_title": "Grain abrasives losing attraction",
+              "technological_change_description": "Sales of this product type have fluctuated with US industrial output and manufacturing activity. There are three common types of abrasive grains in this segment: aluminum oxide for metal grinding and cutting, silicon carbide for cutting concrete and nonferrous metals, and aluminum zirconia for ferrous and stainless-steel cutting and grinding. This product segment's share of revenue has continuously declined."
+          },
+          {
+              "technological_change_title": "Metal abrasives have various uses",
+              "technological_change_description": "Metal abrasives include steel and iron grit, shot and sand. Shot and grit can be used as a blast cleaning medium to remove surface contamination on steel and foundry products. Shot imparts compressive strength to load-bearing metal parts used in jet engine turbines, automotive springs and heavy equipment crankshafts. Abrasive metals are also used as a cutting medium to process granite and marble blocks and for etching textured surfaces on metal to enhance bonding for paints, enamels, rubber or other coatings."
+          }
+      ]
+  },
+  "FAQs": [
+      {
+          "question": "How is your company impacted by rising imports from abroad?",
+          "answer": "Abrasive manufacturers are in constant competition with imported goods. Less-expensive abrasives from abroad can really cut into our revenue and margin."
+      },
+      {
+          "question": "Companies across the industry manufacture a range of products. Does your company produce a diversified range of products?",
+          "answer": "Abrasives are very diverse in function and purpose. Many manufacturers will offer a variety of products from regular sandpaper, to coated metal abrasives. They are made from many different minerals and used to service many markets."
+      },
+      {
+          "question": "Has your company explored acquisition opportunities in locations with well-established infrastructure networks?",
+          "answer": "Abrasive manufacturing is more or less dominated by 3M and Saint Gobain. They will often look to acquire smaller firms with established connections to key downstream markets. This helps them expand their market power."
+      },
+      {
+          "question": "Are your company's sales heavily dependent on the health of the housing market and auto manufacturing?",
+          "answer": "Abrasives are used across the manufacturing and construction processes of many industries, with two of the largest being housing and cars."
+      },
+      {
+          "question": "Has your company remained up to date on new technological advances within the industry?",
+          "answer": "It is key for any abrasive producer to stay up to date on every technological change within the industry. There is constant demand for products of higher quality, longer wearing, and faster acting."
+      },
+      {
+          "question": "How is your company leveraging new technology in its operations?",
+          "answer": "Some companies have been focusing on particle sizing. Advancements in particle sizing technology are enabling manufacturers to better control the shape, size and distribution of grains on abrasives."
+      },
+      {
+          "question": "Is your company adequately prepared to adjust to changing environmental standards?",
+          "answer": "Most companies are subject to environmental laws and regulations including those pertaining to air emissions, wastewater discharges, toxic substances, and the handling and disposal of solid and hazardous waste."
+      },
+      {
+          "question": "Have you had any regulations significantly impact operations?",
+          "answer": "Operators must adhere to rules set by the American National Standards Institute governing the methods for specification, sampling and testing abrasive grains, bonded abrasives, coated abrasives and super-abrasives."
+      },
+      {
+          "question": "How does your company compensate for the seasonality of cash flow?",
+          "answer": "Since industry products are utilized in construction, which is primarily conducted in summer months, operators rely on strong demand from indoor manufacturing makers, like cars, in colder months."
+      },
+      {
+          "question": "What percentage of your company's customers renew their contracts?",
+          "answer": "More than half of most abrasive manufacturers supply their goods to other manufacturers. It's integral to have strong relationships with downstream production markets, since they rely on industry goods."
+      },
+      {
+          "question": "How have you built your reputation? How can you improve your reputation?",
+          "answer": "A reputation for consistently supplying premium quality products is a hallmark of the successful players in all segments of this industry."
+      },
+      {
+          "question": "Has your company ventured into any growing niche markets? If yes, which markets? If not, which markets would be beneficial for your company to access?",
+          "answer": "Smaller industry players have successfully exploited niche markets, particularly for coated and super-abrasive uses in technology sectors, which have enabled them to compete with larger industry participants."
+      },
+      {
+          "question": "Do you undertake research and development (R&D) in-house? What has been your newest product development?",
+          "answer": "Successful industry operators continually develop new products to meet the changing demands of existing customers and to expand the application of abrasives into new markets (e.g. plastics, paper)."
+      },
+      {
+          "question": "How do you monitor fluctuations in new car sales? How can your company adapt when new car sales decline?",
+          "answer": "Industry products are used to grind and polish a wide range of car and engine components, including crankshafts, brake pads, fuel injection systems and bodywork. Therefore, an increase in the number of new vehicles purchased in the United States benefits abrasive manufacturers."
+      },
+      {
+          "question": "Which industry accounts for the highest demand for your company's products? How does your company respond to fluctuations in the value of construction?",
+          "answer": "Abrasive manufacturers are sensitive to fluctuations in demand from the construction market, particularly demand for coated abrasives in the residential and nonresidential building market and super-abrasives in the nonbuilding construction market."
+      },
+      {
+          "question": "Do you monitor the industrial production index? How do you plan to capitalize on an increase in the industrial production index?",
+          "answer": "The industry heavily depends on growth in demand from the downstream manufacturing markets. Demand for products produced by abrasive and sandpaper manufacturers increases in line with the industrial production index."
+      }
+  ]
+};
 const YourComponent = () => {
-
   const summaryData = useSelector((state) => state.industry.summaryData);
 
-  // const data = {
-  //   result: [
-  //     {
-  //       report_title: "ATV Manufacturing in the US",
-  //       report_date: "Aug 02, 2024",
-  //       key_statistics: {
-  //         profit: {
-  //           profit_dollars: 284000000,
-  //           profit_cagr_historical: {
-  //             begin_year: 2005,
-  //             end_year: 2024,
-  //             profit_cagr_value: 1.36,
-  //           },
-  //         },
-  //         profit_margins: {
-  //           profit_margins_percentage: 5.6,
-  //           profit_margins_cagr_historical: {
-  //             begin_year: 2005,
-  //             end_year: 2024,
-  //             profit_margins_cagr_value: 3.34,
-  //           },
-  //         },
-  //         revenue: {
-  //           revenue_dollars: 5078000000,
-  //           revenue_cagr_historical: {
-  //             begin_year: 2005,
-  //             end_year: 2024,
-  //             revenue_cagr_value: -1.91,
-  //           },
-  //           revenue_cagr_projected: {
-  //             begin_year: 2024,
-  //             end_year: 2030,
-  //             revenue_cagr_value: -0.71,
-  //           },
-  //         },
-  //         enterprises: 31,
-  //         establishments: 31,
-  //         employees: 1058,
-  //         wages: 69000000,
-  //         industry_value_added: 436000000,
-  //         imports: 2515000000,
-  //         exports: 155000000,
-  //       },
-  //       executive_summary:
-  //         "The ATV manufacturing industry has faced notable volatility in the current period. Revenue contracted at an expected CAGR of 2.7% to $5.1 billion through 2024, despite a 0.1% increase in 2024 where profit reached 5.6%. Manufacturers dealt with soaring input costs, supply chain disruptions, and surging import penetration following the pandemic and Russia's invasion of Ukraine. Demand will recover in the outlook period driven by stronger economic conditions and innovation in electric vehicles.",
-  //       current_performance: [
-  //         {
-  //           current_performance_point_title:
-  //             "Economic Uncertainty Has Caused Revenue to Contract",
-  //           current_performance_point_description:
-  //             "Severe economic uncertainty and climbing interest rates have threatened ATV manufacturers through most of the current period, limiting demand for new ATVs. Companies supplemented lackluster sales with demand for parts and repairs.",
-  //         },
-  //         {
-  //           current_performance_point_title:
-  //             "ATV Manufacturers Performed Well at the End of the Pandemic",
-  //           current_performance_point_description:
-  //             "The pandemic created growth opportunities in 2021 as consumers had stimulus money, leisure time, and interest in outdoor activities like off-roading, leading to first-time ATV buyers that manufacturers must convert to repeat customers.",
-  //         },
-  //         {
-  //           current_performance_point_title:
-  //             "Supply Chain Disruptions Pose a Major Threat",
-  //           current_performance_point_description:
-  //             "Manufacturers endured severe supply chain disruptions with skyrocketing input costs that larger companies could pass to buyers but smaller companies absorbed, reducing profit. Disruptions also influenced demand for electric ATVs.",
-  //         },
-  //         {
-  //           current_performance_point_title:
-  //             "Manufacturers Have Faced Uneven Trade Markets",
-  //           current_performance_point_description:
-  //             "Low-cost imports from Mexico and China have dominated generic ATV and parts markets, forcing many US manufacturers to shift to custom-built products. Unfavorable exchange rates exacerbated the trade imbalance.",
-  //         },
-  //       ],
-  //       future_outlook: [
-  //         {
-  //           future_outlook_point_title:
-  //             "Positive Economic Conditions Will Support Growth",
-  //           future_outlook_point_description:
-  //             "Normalizing interest rates, climbing consumer confidence, and greater access to credit will drive demand for discretionary ATV purchases and trade-ups to more expensive models in the outlook period.",
-  //         },
-  //         {
-  //           future_outlook_point_title:
-  //             "Tightening Regulations Will Spur Innovation",
-  //           future_outlook_point_description:
-  //             "Tightening safety and emissions regulations will force manufacturers to design more electric/hybrid ATVs with better safety features, leveraging government incentives to fund research and reduce costs.",
-  //         },
-  //         {
-  //           future_outlook_point_title:
-  //             "Commercial Uses for ATVs Will Increase",
-  //           future_outlook_point_description:
-  //             "While consumers have historically been the primary market, commercial and government demand is increasing, especially for agricultural and landscaping uses, encouraging more specialized ATV fleets.",
-  //         },
-  //         {
-  //           future_outlook_point_title:
-  //             "Manufacturers Will Take Steps to Reduce Supply Chain Volatility",
-  //           future_outlook_point_description:
-  //             "To mitigate risks and delays, manufacturers will consider nearshoring, local sourcing, and monitoring supply chains more closely to adhere to ESG initiatives, making resilient supply chains crucial for competitive advantage.",
-  //         },
-  //       ],
-  //       industry_definition:
-  //         "This industry manufactures all-terrain vehicles (ATVs) and their associated parts. ATVs are four-wheeled vehicles typically equipped with wide tires that...",
-  //       industry_impact: {
-  //         negative_impact_factors: [
-  //           "Low & Steady Level of Assistance",
-  //           "Medium Imports",
-  //           "Low Profit vs. Sector Average",
-  //           "High Capital Requirements",
-  //         ],
-  //         positive_impact_factors: [
-  //           "Low Customer Class Concentration",
-  //           "Low Product/Service Concentration",
-  //         ],
-  //       },
-  //       swot_analysis: {
-  //         strengths: [
-  //           "Low Customer Class Concentration",
-  //           "Low Product/Service Concentration",
-  //         ],
-  //         weaknesses: [
-  //           "Low & Steady Level of Assistance",
-  //           "Medium Imports",
-  //           "Low Profit vs. Sector Average",
-  //           "High Capital Requirements",
-  //         ],
-  //         opportunities: [
-  //           "High Revenue Growth (2019-2024)",
-  //           "High Revenue Growth (2024-2029)",
-  //         ],
-  //         threats: [
-  //           "Very Low Revenue Growth (2005-2024)",
-  //           "Low Outlier Growth",
-  //         ],
-  //       },
-  //       key_trends: [
-  //         "ATV manufacturers face stiff internal competition and import penetration. Price, design, quality and brand loyalty contribute to considerable competition among producers.",
-  //         "Manufacturers have dealt with significant competition from other leisure activities. While the pandemic limited most alternatives, lifting lockdown restrictions has enabled buyers to choose other entertainment options, like movies, travel and dining out.",
-  //         "Many companies have struggled to compete with imports from Mexico and China. Foreign manufacturers have leveraged lower wage costs, forcing domestic manufacturers to cut costs or specialize in various niches to differentiate.",
-  //         "ATV manufacturers dealt with severe economic uncertainty. Climbing interest rates, supply chain disruptions, low consumer confidence and high unemployment contributed to weak revenue through the current period.",
-  //         "Innovation will create new opportunities for manufacturers. Many buyers will adopt higher-end, electric-powered ATVs, revitalizing demand. Regulations will also encourage manufacturers to create safer and lower-emission ATVs.",
-  //       ],
-  //       external_drivers: [
-  //         {
-  //           driver_cagr_historical: {
-  //             begin_year: 1980,
-  //             driver_cagr_value: 1.83,
-  //             end_year: 2024,
-  //           },
-  //           driver_cagr_projected: {
-  //             begin_year: 2024,
-  //             driver_cagr_value: 4.03,
-  //             end_year: 2030,
-  //           },
-  //           external_drivers_point_description:
-  //             "Disposable income influences demand for new ATVs. Greater disposable income encourages consumers to purchase nondiscretionary recreation items, like ATVs, and trade up to more expensive brands. However, low disposable income may push consumers to shift to other, less expensive entertainment options.",
-  //           external_drivers_point_title: "Per Capita Disposable Income",
-  //         },
-  //         {
-  //           driver_cagr_historical: {
-  //             begin_year: 1980,
-  //             driver_cagr_value: 0.81,
-  //             end_year: 2024,
-  //           },
-  //           driver_cagr_projected: {
-  //             begin_year: 2024,
-  //             driver_cagr_value: 3.22,
-  //             end_year: 2030,
-  //           },
-  //           external_drivers_point_description:
-  //             "When consumer confidence is low, buyers generally postpone big-ticket purchases, including new vehicles. When consumer sentiment is high, individuals and businesses spend more and maintain lower savings. Higher economic confidence increases vehicle demand, encouraging leisure time and boosting all-terrain vehicle (ATV) demand. Strong consumer confidence creates opportunities for ATV manufacturers.",
-  //           external_drivers_point_title: "Consumer Confidence Index",
-  //         },
-  //         {
-  //           driver_cagr_historical: {
-  //             begin_year: 2003,
-  //             driver_cagr_value: 0.1,
-  //             end_year: 2024,
-  //           },
-  //           driver_cagr_projected: {
-  //             begin_year: 2024,
-  //             driver_cagr_value: 0.28,
-  //             end_year: 2030,
-  //           },
-  //           external_drivers_point_description:
-  //             "The number of hours consumers devote to leisure in a given year impacts ATV manufacturer performance. Falling leisure time hinders demand for ATVs, as consumers allocate less time to recreational activities. However, unemployment-related leisure time diminishes demand for ATVs since unemployed consumers are less willing to spend on recreation.",
-  //           external_drivers_point_title: "Time Spent on Leisure and Sports",
-  //         },
-  //         {
-  //           driver_cagr_historical: {
-  //             begin_year: 1980,
-  //             driver_cagr_value: -2.33,
-  //             end_year: 2024,
-  //           },
-  //           driver_cagr_projected: {
-  //             begin_year: 2024,
-  //             driver_cagr_value: -0.58,
-  //             end_year: 2030,
-  //           },
-  //           external_drivers_point_description:
-  //             "Treasury yields represent borrowing rates for consumers and businesses. Higher rates make borrowing more expensive, diminishing demand for big-ticket and discretionary purchases, like ATVs. Conversely, lower rates can convince consumers to purchase more expensive goods. Heightened demand at the retail level bolsters demand at the manufacturing level. Climbing yields pose a threat to the industry.",
-  //           external_drivers_point_title: "Yield on 10-Year Treasury Note",
-  //         },
-  //         {
-  //           driver_cagr_historical: {
-  //             begin_year: 1980,
-  //             driver_cagr_value: 0.52,
-  //             end_year: 2024,
-  //           },
-  //           driver_cagr_projected: {
-  //             begin_year: 2024,
-  //             driver_cagr_value: -2.43,
-  //             end_year: 2030,
-  //           },
-  //           external_drivers_point_description:
-  //             "The trade-weighted index measures the strength of the US dollar relative to the currencies of its trading partners. Since international trade remains an integral component of the industry, fluctuations in the value of the US dollar impact performance. As the US dollar depreciates relative to other currencies, exports become more affordable and desirable abroad.",
-  //           external_drivers_point_title: "Trade-Weighted Index",
-  //         },
-  //       ],
-  //       supply_chain: {
-  //         tier_1_buyers: [
-  //           "Motorcycle Dealership and Repair in the US",
-  //           "Recreational Vehicle Dealers in the US",
-  //           "Bicycle Dealership and Repair in the US",
-  //         ],
-  //         tier_1_suppliers: [
-  //           "Engine & Turbine Manufacturing in the US",
-  //           "Metal Stamping & Forging in the US",
-  //           "Structural Metal Product Manufacturing in the US",
-  //         ],
-  //         tier_2_buyers: [],
-  //         tier_2_suppliers: [],
-  //       },
-  //       similar_industries: [
-  //         "Sporting Goods Stores in the US",
-  //         "Department Stores in the US",
-  //         "Sporting Goods Wholesaling in the US",
-  //       ],
-  //       related_international_industries: [
-  //         "Car & Automobile Manufacturing in the US",
-  //         "Motorcycle, Bike & Parts Manufacturing in the US",
-  //         "ATV Rentals & Tour Services in the US",
-  //         "ATV, Golf Cart & Snowmobile Manufacturing in the US",
-  //         "Motorcycle Dealership and Repair in the US",
-  //       ],
-  //       products_and_services: [
-  //         {
-  //           product_description:
-  //             "General-use/utility ATVs, or UTVs, commonly have a large motor and short travel suspension. Buyers can customize these vehicles with a wide array of available accessories for work or labor-intensive recreational activities like hunting.",
-  //           product_or_service: "General Use/Utility ATVs",
-  //           product_percentage: 40.8,
-  //         },
-  //         {
-  //           product_description:
-  //             "Commonly referred to as SxS or Rhinos, SxS ATVs are multifunctional off-roading vehicles with multiple seating options. Many small, rural areas enable consumers to register their SxS as an on-highway vehicle, granting owners a multifunctional work and recreation vehicle.",
-  //           product_or_service: "Side-by-Side (SxS) ATVs",
-  //           product_percentage: 25.3,
-  //         },
-  //         {
-  //           product_description:
-  //             "The segment comprises vehicles with engines ranging from 250 cubic centimeters (cc) to 700cc. Sport/high-performance ATVs are lightweight and have increased suspensions to effectively handle large jumps, quick turns and rough terrain.",
-  //           product_or_service: "Sport/High-Performance ATV",
-  //           product_percentage: 25.5,
-  //         },
-  //         {
-  //           product_description:
-  //             "This segment comprises individual parts and accessories produced by manufacturers for their large selection of models. Many ATV owners also customize their vehicles using compatible parts and accessories",
-  //           product_or_service: "Parts and Accessories",
-  //           product_percentage: 8.4,
-  //         },
-  //       ],
-  //       demand_determinants: [
-  //         {
-  //           determinant_description:
-  //             "Disposable income influences demand for new ATVs. Greater disposable income encourages consumers to purchase nondiscretionary recreation items, like ATVs, and trade up to more expensive brands. However, low disposable income may push consumers to shift to other, less expensive entertainment options.",
-  //           determinant_title: "Disposable Income",
-  //         },
-  //       ],
-  //       market_segmentation: [
-  //         {
-  //           segment: "Recreational Activities",
-  //           segment_description:
-  //             "This market comprises consumers using ATVs for general recreation activities, like sports, off-roading or recreational hunting. This market also includes rental companies that purchase ATVs for recreational activities.",
-  //           segment_percentage: 40.6,
-  //         },
-  //         {
-  //           segment: "Agricultural work activities",
-  //           segment_description:
-  //             "ATVs for farm activities have superior load-bearing capabilities, making them more practical and able to cope better with various strenuous tasks. Downstream markets often use ATV attachments to cut grass, spread fertilizer, spray pesticides and other farm functions.",
-  //           segment_percentage: 24.7,
-  //         },
-  //         {
-  //           segment: "Other work activities",
-  //           segment_description:
-  //             "Other markets primarily comprise ad hoc work that requires site transportation, ranging from checking different gas pipelines to maintaining an estate. Landscaping businesses also require ATVs and UTVs.",
-  //           segment_percentage: 2.2,
-  //         },
-  //         {
-  //           segment: "Recreational hunting",
-  //           segment_description:
-  //             "Recreational hunting markets display more stable demand and stronger returns; these buyers often prefer higher-quality and more specialized products, generating robust revenue and mitigating volatility.",
-  //           segment_percentage: 32.5,
-  //         },
-  //       ],
-  //       international_trade: {
-  //         export_level: "Low",
-  //         export_trend: "Increasing",
-  //         import_level: "Moderate",
-  //         import_trend: "Increasing",
-  //         international_trade_points: [
-  //           {
-  //             trade_description:
-  //               "Mexican and Chinese manufacturers account for nearly 100.0% of all imported ATVs. These manufacturers have leveraged low production and wage costs to undercut domestic producers, contributing to rising import penetration.",
-  //             trade_title:
-  //               "Low-cost manufacturers have strong positions in domestic markets",
-  //           },
-  //           {
-  //             trade_description:
-  //               "The trade-weighted index (TWI) has increased through most of the current period, causing the US dollar to appreciate relative to key trading partners. A strong TWI gives domestic buyers more purchasing power abroad, making imports more appealing and affordable.",
-  //             trade_title:
-  //               "The dollar's appreciation has enabled import growth",
-  //           },
-  //           {
-  //             trade_description:
-  //               "Purchases of US-produced ATVs by Israel skyrocketed more than 13,000.0% in 2024 following the onset of the latest Israel-Hamas War. Armed forces often use ATVs as fast response vehicles to attacks.",
-  //             trade_title: "Exports to Israel surge in 2024",
-  //           },
-  //           {
-  //             trade_description:
-  //               "Exports account for less than 5.0% of total revenue for domestic ATV manufacturers, with exporters primarily supplementing Canadian markets. In general, proximity enables companies to leverage reduced shipping costs and quicker delivery times, making trade more efficient.",
-  //             trade_title: "Exports represent a small share of revenue",
-  //           },
-  //         ],
-  //       },
-  //       business_locations: [
-  //         {
-  //           location: "Southeast",
-  //           location_description:
-  //             "The Southeast boasts a favorable climate for year-round outdoor activities, boosting local demand for ATVs. The region is also one of the largest consumers of outdoor recreational activities, creating a robust consumer market. The Southeast also benefits from a well-established network of suppliers and a skilled workforce, both of which are critical for maintaining efficient production processes and reducing operational costs for ATV manufacturers.",
-  //           percentage_establishments: 10.5,
-  //           percentage_population: 19.1,
-  //         },
-  //         {
-  //           location: "Great Lakes",
-  //           location_description:
-  //             "The Great Lakes boasts a well-developed supply chain infrastructure, including access to raw materials, advanced manufacturing facilities and established logistics networks, which streamline the production process for ATV manufacturers. Being centrally located, the Great Lakes region offers ATV manufacturers easy access to major US and Canadian markets, reducing transportation costs and increasing distribution efficiency.",
-  //           percentage_establishments: 31.6,
-  //           percentage_population: 15.4,
-  //         },
-  //         {
-  //           location: "West Plains",
-  //           location_description: 101,
-  //           percentage_establishments: 10.5,
-  //           percentage_population: 17.6,
-  //         },
-  //         {
-  //           location: "Mid-Atlantic",
-  //           location_description: 101,
-  //           percentage_establishments: 15.8,
-  //           percentage_population: 13.1,
-  //         },
-  //         {
-  //           location: "Southwest",
-  //           location_description: 101,
-  //           percentage_establishments: 10.5,
-  //           percentage_population: 11.5,
-  //         },
-  //         {
-  //           location: "Rocky Mountains",
-  //           location_description: 101,
-  //           percentage_establishments: 5.3,
-  //           percentage_population: 6.8,
-  //         },
-  //         {
-  //           location: "New England",
-  //           location_description: 101,
-  //           percentage_establishments: 15.8,
-  //           percentage_population: 16.5,
-  //         },
-  //       ],
-  //       barriers_to_entry: {
-  //         barriers_level: "Moderate",
-  //         barriers_trend: "Steady",
-  //         barriers_points: [
-  //           {
-  //             barrier_title: "Life Cycle Stage",
-  //             barrier_description:
-  //               "The ATV manufacturing industry is in a mature life cycle stage.",
-  //           },
-  //           {
-  //             barrier_title: "Revenue Volatility Level",
-  //             barrier_description:
-  //               "The industry experiences high revenue volatility.",
-  //           },
-  //           {
-  //             barrier_title: "Capital Intensity Level",
-  //             barrier_description:
-  //               "ATV manufacturing requires high capital intensity.",
-  //           },
-  //           {
-  //             barrier_title: "Industry Assistance Level",
-  //             barrier_description:
-  //               "The industry receives low to steady levels of assistance.",
-  //           },
-  //         ],
-  //         factors_increased_barrier: [
-  //           "Life Cycle Stage: mature",
-  //           "Revenue Volatility Level: high",
-  //           "Capital Intensity Level: high",
-  //         ],
-  //         factors_decreased_barrier: [
-  //           "Manufacturers must comply with all federal motor vehicle safety standards from the NHTSA alongside emissions and noise standards set by the EPA.",
-  //           "Companies must also secure patents and ensure fair labor standards.",
-  //           "Manufacturers must invest significant capital on land, labor and machinery to compete on scale with larger, established manufacturers and invest in marketing campaigns to establish their brand.",
-  //         ],
-  //       },
-  //       basis_of_competition: {
-  //         basis_level: "Moderate",
-  //         basis_trend: "Increasing",
-  //         basis_points: [
-  //           {
-  //             basis_title: "Internal Competition",
-  //             basis_description:
-  //               "ATV manufacturers face stiff internal competition.",
-  //           },
-  //           {
-  //             basis_title: "Import Penetration",
-  //             basis_description:
-  //               "ATV manufacturers face competition from import penetration.",
-  //           },
-  //           {
-  //             basis_title: "Competitive Factors",
-  //             basis_description:
-  //               "Price, design, quality and brand loyalty contribute to considerable competition among producers.",
-  //           },
-  //         ],
-  //       },
-  //       market_share_concentration: {
-  //         concentration_level: "Moderate",
-  //         concentration_trend: "Steady",
-  //         concentration_points: [
-  //           {
-  //             concentration_title: "Leading Manufacturers",
-  //             concentration_description:
-  //               "Companies like Polaris, Honda, Deere and Textron have developed strong, stable positions in ATV manufacturing.",
-  //           },
-  //           {
-  //             concentration_title: "Advantages of Leading Manufacturers",
-  //             concentration_description:
-  //               "These companies can leverage economies of scale, connections with buyers and suppliers and strong reputations to outcompete adversaries and generate market share.",
-  //           },
-  //           {
-  //             concentration_title: "Niche Manufacturers",
-  //             concentration_description:
-  //               "Smaller, niche ATV manufacturers have carved out essential roles, often acting as subcontractors or producing parts and accessories.",
-  //           },
-  //         ],
-  //         top_companies: [
-  //           {
-  //             company_name: "Polaris Inc.",
-  //             company_percentage: 28.2,
-  //           },
-  //           {
-  //             company_name: "Deere & Co",
-  //             company_percentage: 9.4,
-  //           },
-  //           {
-  //             company_name: "Honda Motor Co Ltd",
-  //             company_percentage: 6.3,
-  //           },
-  //           {
-  //             company_name: "Textron Inc.",
-  //             company_percentage: 5.3,
-  //           },
-  //           {
-  //             company_name: "OTHERS",
-  //             company_percentage: 50.8,
-  //           },
-  //         ],
-  //       },
-  //       cost_structure_breakdown: [
-  //         {
-  //           cost_type: "Profit",
-  //           cost_type_percentage: 101,
-  //         },
-  //         {
-  //           cost_type: "Wages",
-  //           cost_type_percentage: 101,
-  //         },
-  //         {
-  //           cost_type: "Purchases",
-  //           cost_type_percentage: 101,
-  //         },
-  //         {
-  //           cost_type: "Depreciation",
-  //           cost_type_percentage: 101,
-  //         },
-  //         {
-  //           cost_type: "Marketing",
-  //           cost_type_percentage: 101,
-  //         },
-  //         {
-  //           cost_type: "Rent",
-  //           cost_type_percentage: 101,
-  //         },
-  //         {
-  //           cost_type: "Utilities",
-  //           cost_type_percentage: 101,
-  //         },
-  //         {
-  //           cost_type: "Other",
-  //           cost_type_percentage: 101,
-  //         },
-  //       ],
-  //       cost_factors: [
-  //         {
-  //           cost_factor_title: "Manufacturers Endure Supply Chain Disruptions",
-  //           cost_factor_description:
-  //             "Surging input prices following the pandemic and the Russian invasion of Ukraine have posed a major threat to purchasing costs for ATV manufacturers. For instance, surging crude oil prices have translated into elevated metal costs while semiconductor shortages have exacerbated long lead times and production shortfalls.",
-  //         },
-  //       ],
-  //       capital_intensity: {
-  //         capital_intensity_level: "High",
-  //         capital_intensity_points: [
-  //           {
-  //             capital_intensity_title: "CAPITAL EXPENSES",
-  //             capital_intensity_description:
-  //               "ATV manufacturing requires substantial capital resources for machinery and a highly skilled workforce to maintain production quality and efficiency. Companies regularly invest in research and development, contributing to higher capital and labor expenses.",
-  //           },
-  //         ],
-  //         capital_intensity_trend: "Unknown",
-  //       },
-  //       revenue_volatility: {
-  //         volatility_level: "High",
-  //         volatility_points: [
-  //           {
-  //             volatility_title:
-  //               "SUPPLY CHAIN DISRUPTIONS HAVE CREATED VOLATILITY",
-  //             volatility_description:
-  //               "ATV manufacturers have endured severe supply chain volatility following the pandemic and the Russian invasion of Ukraine. Crude oil prices have skyrocketed, contributing to elevated ferrous and nonferrous metal prices, higher plastic and rubber costs and major semiconductor shortages.",
-  //           },
-  //           {
-  //             volatility_title:
-  //               "CONSUMER SPENDING AND DISPOSABLE INCOME LEVELS CAN CREATE FLUCTUATIONS",
-  //             volatility_description:
-  //               "Given the recreational nature of ATVs and their sizeable price tags, consumer spending, interest rates and disposable income levels impact volatility. Consumers will shift to less expensive recreation options when disposable incomes fall and interest rates rise.",
-  //           },
-  //           {
-  //             volatility_title:
-  //               "OVERALL TRENDS IN SPORTS AND RECREATION IMPACT VOLATILITY",
-  //             volatility_description:
-  //               "Since ATVs are recreational vehicles for activities like hunting and racing, various factors like leisure time, population demographics and preferences for particular recreational activities impact volatility.",
-  //           },
-  //         ],
-  //         volatility_trend: "Unknown",
-  //       },
-  //       technological_change: {
-  //         technological_change_level: "Moderate",
-  //         technological_change_points: [
-  //           {
-  //             technological_change_title: "ELECTRIC AND HYBRID ATVs",
-  //             technological_change_description:
-  //               "Electric ATVs offer the benefits of lower noise pollution and emissions. Hybrid ATVs provide consumers with a greater range of travel and less carbon emissions without relying entirely on charging availability.",
-  //           },
-  //           {
-  //             technological_change_title: "IMPROVEMENTS IN SAFETY",
-  //             technological_change_description:
-  //               "ATV manufacturers constantly invest in research and development to improve the safety of their products. New safety features include systems to aid drivers in avoiding collisions and better braking and rollover protection systems.",
-  //           },
-  //         ],
-  //         technological_change_trend: "Unknown",
-  //       },
-  //       regulations_and_policies: {
-  //         regulations_level: "Moderate",
-  //         regulations_points: [
-  //           {
-  //             regulation_title: "REGISTRATION AND PERMITS",
-  //             regulation_description:
-  //               "Off-highway vehicles OHVs are regulated uniformly nationwide, but minor policy variances depend on the state. ATVs require appropriate registration and permits on public roads (35 states permit some form of public road use). In 2008, the Consumer Product Safety Improvement Act 2008 organized and federally mandated the labeling of ATVs as inappropriate for use on public roads.",
-  //           },
-  //           {
-  //             regulation_title: "ENVIRONMENTAL PROTECTION POLICIES",
-  //             regulation_description:
-  //               "ATVs are subject to certification by the EPA for compliance with applicable emissions and noise standards and by the State of California Air Resources Board (CARB) concerning CARB's more stringent emissions standards. ATVs have restricted access to national park areas because of concerns about pollution, damage to local flora and fauna and noise emissions. The EPA regulates the discharge, treatment, storage, disposal, investigation and remediation of certain materials, substances and wastes during manufacturing.",
-  //           },
-  //           {
-  //             regulation_title:
-  //               "THE NATIONAL HIGHWAY TRAFFIC SAFETY ADMINISTRATION (NHTSA) AND THE CONSUMER PRODUCT SAFETY COMMISSION (CPSC)",
-  //             regulation_description:
-  //               "All transportation machinery and equipment must comply with federal safety, fuel consumption and pollution control regulations. The NHTSA enforces these regulations, while the CPSC has federal oversight over product safety issues regarding ATVs, snowmobiles and off-road side-by-side vehicles. Since 1988, the CPSC has regulated safety standards for the industry. ATV manufacturers have become less profitable because of compliance costs.",
-  //           },
-  //           {
-  //             regulation_title:
-  //               "AMERICAN NATIONAL STANDARDS INSTITUTE (ANSI) GUIDELINES",
-  //             regulation_description:
-  //               "ANSI guidelines provide voluntary but widely-accepted safety standards for ATV design and performance. These cover aspects like stability, braking, and controls. While not legally binding, adherence to ANSI guidelines demonstrates a commitment to safety and helps in avoiding legal liabilities and enhancing consumer trust.",
-  //           },
-  //         ],
-  //         regulations_trend: "Steady",
-  //       },
-  //       industry_assistance: {
-  //         assistance_level: "Low",
-  //         assistance_points: [
-  //           {
-  //             assistance_title: "NATIONAL TRADE ASSOCIATIONS",
-  //             assistance_description:
-  //               "Organizations like the Specialty Vehicle Institute of America (SVIA) and the Specialty Equipment Market Association offer valuable resources, including market research, advocacy and networking opportunities. By partnering with such groups, ATV manufacturers can stay updated on industry trends, regulatory changes and best practices, helping them remain competitive.",
-  //           },
-  //           {
-  //             assistance_title: "LOCAL ASSOCIATIONS",
-  //             assistance_description:
-  //               "Local associations like the Wisconsin ATV Association, the North Country ATV Association and the Upstate ATV Association promote recreational activities",
-  //           },
-  //         ],
-  //         assistance_trend: "Steady",
-  //       },
-  //       FAQs: [
-  //         {
-  //           question:
-  //             "How is your company impacted by rising imports from abroad?",
-  //           answer:
-  //             "Rising imports have threatened revenue. Mexico is a prime external competitor.",
-  //         },
-  //         {
-  //           question:
-  //             "Does your company specialize in one corner of the market or produce a diversified range of products?",
-  //           answer:
-  //             "Most companies produce a variety of types of ATVs, like side-by-side, general and sport vehicles, alongside corresponding parts.",
-  //         },
-  //         {
-  //           question:
-  //             "Has your company been exposed to volatile input prices over the past few years?",
-  //           answer:
-  //             "Large increases in steel prices can slash profitability. Successful companies often pass costs onto buyers to limit fluctuations.",
-  //         },
-  //         {
-  //           question:
-  //             "Is your company investing heavily in R&D to meet changing consumer preferences?",
-  //           answer:
-  //             "Major companies work on tailoring their products to shifting consumer preferences. This trend includes customization and design.",
-  //         },
-  //         {
-  //           question:
-  //             "How is your company leveraging new technology in its operations?",
-  //           answer:
-  //             "Recent technological advancements have been in the areas of computer-aided design, computer-aided manufacturing and numerically controlled machine tools. The new generation of computer-based technologies is much more accurate than manually controlled techniques.",
-  //         },
-  //         {
-  //           question:
-  //             "Have you been able to reduce wage costs by automating operations over the past five years?",
-  //           answer:
-  //             "Labor unions have limited a company's ability to reduce wage costs. Labor unions fight against increased automation.",
-  //         },
-  //         {
-  //           question:
-  //             "What effect have international tariffs had on your ability to import and export products?",
-  //           answer:
-  //             "International tariffs on steel have increased purchasing costs, threatening long-term profit.",
-  //         },
-  //         {
-  //           question:
-  //             "How does your company stay ahead of regulations such as energy-efficiency standards?",
-  //           answer:
-  //             "ATVs are subject to certification by the US Environmental Protection Agency (EPA) for compliance with applicable emissions and noise standards and by the State of California Air Resources Board concerning the board's more stringent emissions standards.",
-  //         },
-  //         {
-  //           question:
-  //             "How has input price volatility of inputs altered profit?",
-  //           answer:
-  //             "Increases in the price of steel have hurt profit. Companies that successfully pass costs onto buyers have stronger returns.",
-  //         },
-  //         {
-  //           question:
-  //             "How does your company compensate for seasonality of cash flow?",
-  //           answer:
-  //             "ATV sales perform better in fair weather environments and seasons. Companies increase sales in winter times to countries and states experiencing warm weather. However, ATVs mitigate this to an extent due to their vehicles' off-road and all-terrain nature.",
-  //         },
-  //         {
-  //           question:
-  //             "How do you ensure compliance with federal, state and local regulations?",
-  //           answer:
-  //             "Must comply with government regulations. Manufacturers must be able to design and develop products that comply with legal standards. Products that fail to meet these criteria are barred from sale in the United States.",
-  //         },
-  //         {
-  //           question:
-  //             "What are some ways that your company provides after sales service?",
-  //           answer:
-  //             "Given the level of industry consolidation, manufacturers must be able to provide superior before and after-sales services. This practice promotes brand loyalty and encourages repeat customers.",
-  //         },
-  //         {
-  //           question: "How does your company keep track of market trends?",
-  //           answer:
-  //             "Understanding market trends is necessary to maintain stable revenue and profit streams. This research can identify new products that consumers demand and satisfy emerging trends before competitors.",
-  //         },
-  //         {
-  //           question:
-  //             "How do you track the trends in the yield of the 10-year treasury note? How do you mitigate changes in the value of the US dollar?",
-  //           answer:
-  //             "As interest rates fall, demand for ATVs trends upward as consumers can afford big-ticket purchases. Lower rates make borrowing easier.",
-  //         },
-  //         {
-  //           question:
-  //             "Does your company keep a close eye on fluctuations in consumer confidence? How do you mitigate changes in consumer confidence?",
-  //           answer:
-  //             "People will postpone big-ticket purchases when consumer confidence is low. When consumer sentiment is high, individuals and businesses tend to spend more. This trend increases demand for vehicles, encourages leisure time and boosts ATV demand.",
-  //         },
-  //         {
-  //           question:
-  //             "How closely do you monitor trends in per capita disposable income? How are you able to capitalize on increasing disposable income?",
-  //           answer:
-  //             "Disposable income significantly influences the purchase of new all-terrain vehicles (ATVs). An increase or decrease in disposable household income alters the ability of households to purchase ATVs. Higher disposable income makes consumers more likely to purchase discretionary items.",
-  //         },
-  //       ],
-  //       metrics: [
-  //         {
-  //           Aspect: "Market",
-  //           Scores: [
-  //             {
-  //               Category: "Exports",
-  //               Weight: 10,
-  //               Result: "Low",
-  //               Score: 1,
-  //               Total: 2,
-  //             },
-  //             {
-  //               Category: "Imports",
-  //               Weight: 15,
-  //               Result: "Moderate",
-  //               Score: 3,
-  //               Total: 9,
-  //             },
-  //             {
-  //               Category: "Basis of Competition",
-  //               Weight: 20,
-  //               Result: "Moderate",
-  //               Score: 3,
-  //               Total: 12,
-  //             },
-  //             {
-  //               Category: "Barriers to Entry",
-  //               Weight: 20,
-  //               Result: "Moderate",
-  //               Score: 3,
-  //               Total: 12,
-  //             },
-  //             {
-  //               Category: "Industry Assistance",
-  //               Weight: 15,
-  //               Result: "Low",
-  //               Score: 1,
-  //               Total: 3,
-  //             },
-  //             {
-  //               Category: "Market Share Concentration",
-  //               Weight: 20,
-  //               Result: "Moderate",
-  //               Score: 3,
-  //               Total: 12,
-  //             },
-  //           ],
-  //           Total: 50,
-  //         },
-  //         {
-  //           Aspect: "Investments",
-  //           Scores: [
-  //             {
-  //               Category: "Revenue Volatility",
-  //               Weight: 30,
-  //               Result: "High",
-  //               Score: 1,
-  //               Total: 6,
-  //             },
-  //             {
-  //               Category: "Regulation and Policy",
-  //               Weight: 20,
-  //               Result: "Moderate",
-  //               Score: 3,
-  //               Total: 12,
-  //             },
-  //             {
-  //               Category: "Capital Intensity",
-  //               Weight: 30,
-  //               Result: "High",
-  //               Score: 1,
-  //               Total: 6,
-  //             },
-  //             {
-  //               Category: "Technological Change Level",
-  //               Weight: 20,
-  //               Result: "Moderate",
-  //               Score: 3,
-  //               Total: 12,
-  //             },
-  //           ],
-  //           Total: 36,
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       report_title: "ATV Manufacturing in the US",
-  //       report_date: "Aug 02, 2024",
-  //       key_statistics: {
-  //         profit: {
-  //           profit_dollars: 284000000,
-  //           profit_cagr_historical: {
-  //             begin_year: 2005,
-  //             end_year: 2024,
-  //             profit_cagr_value: 1.36,
-  //           },
-  //         },
-  //         profit_margins: {
-  //           profit_margins_percentage: 5.6,
-  //           profit_margins_cagr_historical: {
-  //             begin_year: 2005,
-  //             end_year: 2024,
-  //             profit_margins_cagr_value: 3.34,
-  //           },
-  //         },
-  //         revenue: {
-  //           revenue_dollars: 5078000000,
-  //           revenue_cagr_historical: {
-  //             begin_year: 2005,
-  //             end_year: 2024,
-  //             revenue_cagr_value: -1.91,
-  //           },
-  //           revenue_cagr_projected: {
-  //             begin_year: 2024,
-  //             end_year: 2030,
-  //             revenue_cagr_value: -0.71,
-  //           },
-  //         },
-  //         enterprises: 31,
-  //         establishments: 31,
-  //         employees: 1058,
-  //         wages: 69000000,
-  //         industry_value_added: 436000000,
-  //         imports: 2515000000,
-  //         exports: 155000000,
-  //       },
-  //       executive_summary:
-  //         "The ATV manufacturing industry has faced notable volatility in the current period. Revenue contracted at an expected CAGR of 2.7% to $5.1 billion through 2024, despite a 0.1% increase in 2024 where profit reached 5.6%. Manufacturers dealt with soaring input costs, supply chain disruptions, and surging import penetration following the pandemic and Russia's invasion of Ukraine. Demand will recover in the outlook period driven by stronger economic conditions and innovation in electric vehicles.",
-  //       current_performance: [
-  //         {
-  //           current_performance_point_title:
-  //             "Economic Uncertainty Has Caused Revenue to Contract",
-  //           current_performance_point_description:
-  //             "Severe economic uncertainty and climbing interest rates have threatened ATV manufacturers through most of the current period, limiting demand for new ATVs. Companies supplemented lackluster sales with demand for parts and repairs.",
-  //         },
-  //         {
-  //           current_performance_point_title:
-  //             "ATV Manufacturers Performed Well at the End of the Pandemic",
-  //           current_performance_point_description:
-  //             "The pandemic created growth opportunities in 2021 as consumers had stimulus money, leisure time, and interest in outdoor activities like off-roading, leading to first-time ATV buyers that manufacturers must convert to repeat customers.",
-  //         },
-  //         {
-  //           current_performance_point_title:
-  //             "Supply Chain Disruptions Pose a Major Threat",
-  //           current_performance_point_description:
-  //             "Manufacturers endured severe supply chain disruptions with skyrocketing input costs that larger companies could pass to buyers but smaller companies absorbed, reducing profit. Disruptions also influenced demand for electric ATVs.",
-  //         },
-  //         {
-  //           current_performance_point_title:
-  //             "Manufacturers Have Faced Uneven Trade Markets",
-  //           current_performance_point_description:
-  //             "Low-cost imports from Mexico and China have dominated generic ATV and parts markets, forcing many US manufacturers to shift to custom-built products. Unfavorable exchange rates exacerbated the trade imbalance.",
-  //         },
-  //       ],
-  //       future_outlook: [
-  //         {
-  //           future_outlook_point_title:
-  //             "Positive Economic Conditions Will Support Growth",
-  //           future_outlook_point_description:
-  //             "Normalizing interest rates, climbing consumer confidence, and greater access to credit will drive demand for discretionary ATV purchases and trade-ups to more expensive models in the outlook period.",
-  //         },
-  //         {
-  //           future_outlook_point_title:
-  //             "Tightening Regulations Will Spur Innovation",
-  //           future_outlook_point_description:
-  //             "Tightening safety and emissions regulations will force manufacturers to design more electric/hybrid ATVs with better safety features, leveraging government incentives to fund research and reduce costs.",
-  //         },
-  //         {
-  //           future_outlook_point_title:
-  //             "Commercial Uses for ATVs Will Increase",
-  //           future_outlook_point_description:
-  //             "While consumers have historically been the primary market, commercial and government demand is increasing, especially for agricultural and landscaping uses, encouraging more specialized ATV fleets.",
-  //         },
-  //         {
-  //           future_outlook_point_title:
-  //             "Manufacturers Will Take Steps to Reduce Supply Chain Volatility",
-  //           future_outlook_point_description:
-  //             "To mitigate risks and delays, manufacturers will consider nearshoring, local sourcing, and monitoring supply chains more closely to adhere to ESG initiatives, making resilient supply chains crucial for competitive advantage.",
-  //         },
-  //       ],
-  //       industry_definition:
-  //         "This industry manufactures all-terrain vehicles (ATVs) and their associated parts. ATVs are four-wheeled vehicles typically equipped with wide tires that...",
-  //       industry_impact: {
-  //         negative_impact_factors: [
-  //           "Low & Steady Level of Assistance",
-  //           "Medium Imports",
-  //           "Low Profit vs. Sector Average",
-  //           "High Capital Requirements",
-  //         ],
-  //         positive_impact_factors: [
-  //           "Low Customer Class Concentration",
-  //           "Low Product/Service Concentration",
-  //         ],
-  //       },
-  //       swot_analysis: {
-  //         strengths: [
-  //           "Low Customer Class Concentration",
-  //           "Low Product/Service Concentration",
-  //         ],
-  //         weaknesses: [
-  //           "Low & Steady Level of Assistance",
-  //           "Medium Imports",
-  //           "Low Profit vs. Sector Average",
-  //           "High Capital Requirements",
-  //         ],
-  //         opportunities: [
-  //           "High Revenue Growth (2019-2024)",
-  //           "High Revenue Growth (2024-2029)",
-  //         ],
-  //         threats: [
-  //           "Very Low Revenue Growth (2005-2024)",
-  //           "Low Outlier Growth",
-  //         ],
-  //       },
-  //       key_trends: [
-  //         "ATV manufacturers face stiff internal competition and import penetration. Price, design, quality and brand loyalty contribute to considerable competition among producers.",
-  //         "Manufacturers have dealt with significant competition from other leisure activities. While the pandemic limited most alternatives, lifting lockdown restrictions has enabled buyers to choose other entertainment options, like movies, travel and dining out.",
-  //         "Many companies have struggled to compete with imports from Mexico and China. Foreign manufacturers have leveraged lower wage costs, forcing domestic manufacturers to cut costs or specialize in various niches to differentiate.",
-  //         "ATV manufacturers dealt with severe economic uncertainty. Climbing interest rates, supply chain disruptions, low consumer confidence and high unemployment contributed to weak revenue through the current period.",
-  //         "Innovation will create new opportunities for manufacturers. Many buyers will adopt higher-end, electric-powered ATVs, revitalizing demand. Regulations will also encourage manufacturers to create safer and lower-emission ATVs.",
-  //       ],
-  //       external_drivers: [
-  //         {
-  //           driver_cagr_historical: {
-  //             begin_year: 1980,
-  //             driver_cagr_value: 1.83,
-  //             end_year: 2024,
-  //           },
-  //           driver_cagr_projected: {
-  //             begin_year: 2024,
-  //             driver_cagr_value: 4.03,
-  //             end_year: 2030,
-  //           },
-  //           external_drivers_point_description:
-  //             "Disposable income influences demand for new ATVs. Greater disposable income encourages consumers to purchase nondiscretionary recreation items, like ATVs, and trade up to more expensive brands. However, low disposable income may push consumers to shift to other, less expensive entertainment options.",
-  //           external_drivers_point_title: "Per Capita Disposable Income",
-  //         },
-  //         {
-  //           driver_cagr_historical: {
-  //             begin_year: 1980,
-  //             driver_cagr_value: 0.81,
-  //             end_year: 2024,
-  //           },
-  //           driver_cagr_projected: {
-  //             begin_year: 2024,
-  //             driver_cagr_value: 3.22,
-  //             end_year: 2030,
-  //           },
-  //           external_drivers_point_description:
-  //             "When consumer confidence is low, buyers generally postpone big-ticket purchases, including new vehicles. When consumer sentiment is high, individuals and businesses spend more and maintain lower savings. Higher economic confidence increases vehicle demand, encouraging leisure time and boosting all-terrain vehicle (ATV) demand. Strong consumer confidence creates opportunities for ATV manufacturers.",
-  //           external_drivers_point_title: "Consumer Confidence Index",
-  //         },
-  //         {
-  //           driver_cagr_historical: {
-  //             begin_year: 2003,
-  //             driver_cagr_value: 0.1,
-  //             end_year: 2024,
-  //           },
-  //           driver_cagr_projected: {
-  //             begin_year: 2024,
-  //             driver_cagr_value: 0.28,
-  //             end_year: 2030,
-  //           },
-  //           external_drivers_point_description:
-  //             "The number of hours consumers devote to leisure in a given year impacts ATV manufacturer performance. Falling leisure time hinders demand for ATVs, as consumers allocate less time to recreational activities. However, unemployment-related leisure time diminishes demand for ATVs since unemployed consumers are less willing to spend on recreation.",
-  //           external_drivers_point_title: "Time Spent on Leisure and Sports",
-  //         },
-  //         {
-  //           driver_cagr_historical: {
-  //             begin_year: 1980,
-  //             driver_cagr_value: -2.33,
-  //             end_year: 2024,
-  //           },
-  //           driver_cagr_projected: {
-  //             begin_year: 2024,
-  //             driver_cagr_value: -0.58,
-  //             end_year: 2030,
-  //           },
-  //           external_drivers_point_description:
-  //             "Treasury yields represent borrowing rates for consumers and businesses. Higher rates make borrowing more expensive, diminishing demand for big-ticket and discretionary purchases, like ATVs. Conversely, lower rates can convince consumers to purchase more expensive goods. Heightened demand at the retail level bolsters demand at the manufacturing level. Climbing yields pose a threat to the industry.",
-  //           external_drivers_point_title: "Yield on 10-Year Treasury Note",
-  //         },
-  //         {
-  //           driver_cagr_historical: {
-  //             begin_year: 1980,
-  //             driver_cagr_value: 0.52,
-  //             end_year: 2024,
-  //           },
-  //           driver_cagr_projected: {
-  //             begin_year: 2024,
-  //             driver_cagr_value: -2.43,
-  //             end_year: 2030,
-  //           },
-  //           external_drivers_point_description:
-  //             "The trade-weighted index measures the strength of the US dollar relative to the currencies of its trading partners. Since international trade remains an integral component of the industry, fluctuations in the value of the US dollar impact performance. As the US dollar depreciates relative to other currencies, exports become more affordable and desirable abroad.",
-  //           external_drivers_point_title: "Trade-Weighted Index",
-  //         },
-  //       ],
-  //       supply_chain: {
-  //         tier_1_buyers: [
-  //           "Motorcycle Dealership and Repair in the US",
-  //           "Recreational Vehicle Dealers in the US",
-  //           "Bicycle Dealership and Repair in the US",
-  //         ],
-  //         tier_1_suppliers: [
-  //           "Engine & Turbine Manufacturing in the US",
-  //           "Metal Stamping & Forging in the US",
-  //           "Structural Metal Product Manufacturing in the US",
-  //         ],
-  //         tier_2_buyers: [],
-  //         tier_2_suppliers: [],
-  //       },
-  //       similar_industries: [
-  //         "Sporting Goods Stores in the US",
-  //         "Department Stores in the US",
-  //         "Sporting Goods Wholesaling in the US",
-  //       ],
-  //       related_international_industries: [
-  //         "Car & Automobile Manufacturing in the US",
-  //         "Motorcycle, Bike & Parts Manufacturing in the US",
-  //         "ATV Rentals & Tour Services in the US",
-  //         "ATV, Golf Cart & Snowmobile Manufacturing in the US",
-  //         "Motorcycle Dealership and Repair in the US",
-  //       ],
-  //       products_and_services: [
-  //         {
-  //           product_description:
-  //             "General-use/utility ATVs, or UTVs, commonly have a large motor and short travel suspension. Buyers can customize these vehicles with a wide array of available accessories for work or labor-intensive recreational activities like hunting.",
-  //           product_or_service: "General Use/Utility ATVs",
-  //           product_percentage: 40.8,
-  //         },
-  //         {
-  //           product_description:
-  //             "Commonly referred to as SxS or Rhinos, SxS ATVs are multifunctional off-roading vehicles with multiple seating options. Many small, rural areas enable consumers to register their SxS as an on-highway vehicle, granting owners a multifunctional work and recreation vehicle.",
-  //           product_or_service: "Side-by-Side (SxS) ATVs",
-  //           product_percentage: 25.3,
-  //         },
-  //         {
-  //           product_description:
-  //             "The segment comprises vehicles with engines ranging from 250 cubic centimeters (cc) to 700cc. Sport/high-performance ATVs are lightweight and have increased suspensions to effectively handle large jumps, quick turns and rough terrain.",
-  //           product_or_service: "Sport/High-Performance ATV",
-  //           product_percentage: 25.5,
-  //         },
-  //         {
-  //           product_description:
-  //             "This segment comprises individual parts and accessories produced by manufacturers for their large selection of models. Many ATV owners also customize their vehicles using compatible parts and accessories",
-  //           product_or_service: "Parts and Accessories",
-  //           product_percentage: 8.4,
-  //         },
-  //       ],
-  //       demand_determinants: [
-  //         {
-  //           determinant_description:
-  //             "Disposable income influences demand for new ATVs. Greater disposable income encourages consumers to purchase nondiscretionary recreation items, like ATVs, and trade up to more expensive brands. However, low disposable income may push consumers to shift to other, less expensive entertainment options.",
-  //           determinant_title: "Disposable Income",
-  //         },
-  //       ],
-  //       market_segmentation: [
-  //         {
-  //           segment: "Recreational Activities",
-  //           segment_description:
-  //             "This market comprises consumers using ATVs for general recreation activities, like sports, off-roading or recreational hunting. This market also includes rental companies that purchase ATVs for recreational activities.",
-  //           segment_percentage: 40.6,
-  //         },
-  //         {
-  //           segment: "Agricultural work activities",
-  //           segment_description:
-  //             "ATVs for farm activities have superior load-bearing capabilities, making them more practical and able to cope better with various strenuous tasks. Downstream markets often use ATV attachments to cut grass, spread fertilizer, spray pesticides and other farm functions.",
-  //           segment_percentage: 24.7,
-  //         },
-  //         {
-  //           segment: "Other work activities",
-  //           segment_description:
-  //             "Other markets primarily comprise ad hoc work that requires site transportation, ranging from checking different gas pipelines to maintaining an estate. Landscaping businesses also require ATVs and UTVs.",
-  //           segment_percentage: 2.2,
-  //         },
-  //         {
-  //           segment: "Recreational hunting",
-  //           segment_description:
-  //             "Recreational hunting markets display more stable demand and stronger returns; these buyers often prefer higher-quality and more specialized products, generating robust revenue and mitigating volatility.",
-  //           segment_percentage: 32.5,
-  //         },
-  //       ],
-  //       international_trade: {
-  //         export_level: "Low",
-  //         export_trend: "Increasing",
-  //         import_level: "Moderate",
-  //         import_trend: "Increasing",
-  //         international_trade_points: [
-  //           {
-  //             trade_description:
-  //               "Mexican and Chinese manufacturers account for nearly 100.0% of all imported ATVs. These manufacturers have leveraged low production and wage costs to undercut domestic producers, contributing to rising import penetration.",
-  //             trade_title:
-  //               "Low-cost manufacturers have strong positions in domestic markets",
-  //           },
-  //           {
-  //             trade_description:
-  //               "The trade-weighted index (TWI) has increased through most of the current period, causing the US dollar to appreciate relative to key trading partners. A strong TWI gives domestic buyers more purchasing power abroad, making imports more appealing and affordable.",
-  //             trade_title:
-  //               "The dollar's appreciation has enabled import growth",
-  //           },
-  //           {
-  //             trade_description:
-  //               "Purchases of US-produced ATVs by Israel skyrocketed more than 13,000.0% in 2024 following the onset of the latest Israel-Hamas War. Armed forces often use ATVs as fast response vehicles to attacks.",
-  //             trade_title: "Exports to Israel surge in 2024",
-  //           },
-  //           {
-  //             trade_description:
-  //               "Exports account for less than 5.0% of total revenue for domestic ATV manufacturers, with exporters primarily supplementing Canadian markets. In general, proximity enables companies to leverage reduced shipping costs and quicker delivery times, making trade more efficient.",
-  //             trade_title: "Exports represent a small share of revenue",
-  //           },
-  //         ],
-  //       },
-  //       business_locations: [
-  //         {
-  //           location: "Southeast",
-  //           location_description:
-  //             "The Southeast boasts a favorable climate for year-round outdoor activities, boosting local demand for ATVs. The region is also one of the largest consumers of outdoor recreational activities, creating a robust consumer market. The Southeast also benefits from a well-established network of suppliers and a skilled workforce, both of which are critical for maintaining efficient production processes and reducing operational costs for ATV manufacturers.",
-  //           percentage_establishments: 10.5,
-  //           percentage_population: 19.1,
-  //         },
-  //         {
-  //           location: "Great Lakes",
-  //           location_description:
-  //             "The Great Lakes boasts a well-developed supply chain infrastructure, including access to raw materials, advanced manufacturing facilities and established logistics networks, which streamline the production process for ATV manufacturers. Being centrally located, the Great Lakes region offers ATV manufacturers easy access to major US and Canadian markets, reducing transportation costs and increasing distribution efficiency.",
-  //           percentage_establishments: 31.6,
-  //           percentage_population: 15.4,
-  //         },
-  //         {
-  //           location: "West Plains",
-  //           location_description: 101,
-  //           percentage_establishments: 10.5,
-  //           percentage_population: 17.6,
-  //         },
-  //         {
-  //           location: "Mid-Atlantic",
-  //           location_description: 101,
-  //           percentage_establishments: 15.8,
-  //           percentage_population: 13.1,
-  //         },
-  //         {
-  //           location: "Southwest",
-  //           location_description: 101,
-  //           percentage_establishments: 10.5,
-  //           percentage_population: 11.5,
-  //         },
-  //         {
-  //           location: "Rocky Mountains",
-  //           location_description: 101,
-  //           percentage_establishments: 5.3,
-  //           percentage_population: 6.8,
-  //         },
-  //         {
-  //           location: "New England",
-  //           location_description: 101,
-  //           percentage_establishments: 15.8,
-  //           percentage_population: 16.5,
-  //         },
-  //       ],
-  //       barriers_to_entry: {
-  //         barriers_level: "Moderate",
-  //         barriers_trend: "Steady",
-  //         barriers_points: [
-  //           {
-  //             barrier_title: "Life Cycle Stage",
-  //             barrier_description:
-  //               "The ATV manufacturing industry is in a mature life cycle stage.",
-  //           },
-  //           {
-  //             barrier_title: "Revenue Volatility Level",
-  //             barrier_description:
-  //               "The industry experiences high revenue volatility.",
-  //           },
-  //           {
-  //             barrier_title: "Capital Intensity Level",
-  //             barrier_description:
-  //               "ATV manufacturing requires high capital intensity.",
-  //           },
-  //           {
-  //             barrier_title: "Industry Assistance Level",
-  //             barrier_description:
-  //               "The industry receives low to steady levels of assistance.",
-  //           },
-  //         ],
-  //         factors_increased_barrier: [
-  //           "Life Cycle Stage: mature",
-  //           "Revenue Volatility Level: high",
-  //           "Capital Intensity Level: high",
-  //         ],
-  //         factors_decreased_barrier: [
-  //           "Manufacturers must comply with all federal motor vehicle safety standards from the NHTSA alongside emissions and noise standards set by the EPA.",
-  //           "Companies must also secure patents and ensure fair labor standards.",
-  //           "Manufacturers must invest significant capital on land, labor and machinery to compete on scale with larger, established manufacturers and invest in marketing campaigns to establish their brand.",
-  //         ],
-  //       },
-  //       basis_of_competition: {
-  //         basis_level: "Moderate",
-  //         basis_trend: "Increasing",
-  //         basis_points: [
-  //           {
-  //             basis_title: "Internal Competition",
-  //             basis_description:
-  //               "ATV manufacturers face stiff internal competition.",
-  //           },
-  //           {
-  //             basis_title: "Import Penetration",
-  //             basis_description:
-  //               "ATV manufacturers face competition from import penetration.",
-  //           },
-  //           {
-  //             basis_title: "Competitive Factors",
-  //             basis_description:
-  //               "Price, design, quality and brand loyalty contribute to considerable competition among producers.",
-  //           },
-  //         ],
-  //       },
-  //       market_share_concentration: {
-  //         concentration_level: "Moderate",
-  //         concentration_trend: "Steady",
-  //         concentration_points: [
-  //           {
-  //             concentration_title: "Leading Manufacturers",
-  //             concentration_description:
-  //               "Companies like Polaris, Honda, Deere and Textron have developed strong, stable positions in ATV manufacturing.",
-  //           },
-  //           {
-  //             concentration_title: "Advantages of Leading Manufacturers",
-  //             concentration_description:
-  //               "These companies can leverage economies of scale, connections with buyers and suppliers and strong reputations to outcompete adversaries and generate market share.",
-  //           },
-  //           {
-  //             concentration_title: "Niche Manufacturers",
-  //             concentration_description:
-  //               "Smaller, niche ATV manufacturers have carved out essential roles, often acting as subcontractors or producing parts and accessories.",
-  //           },
-  //         ],
-  //         top_companies: [
-  //           {
-  //             company_name: "Polaris Inc.",
-  //             company_percentage: 28.2,
-  //           },
-  //           {
-  //             company_name: "Deere & Co",
-  //             company_percentage: 9.4,
-  //           },
-  //           {
-  //             company_name: "Honda Motor Co Ltd",
-  //             company_percentage: 6.3,
-  //           },
-  //           {
-  //             company_name: "Textron Inc.",
-  //             company_percentage: 5.3,
-  //           },
-  //           {
-  //             company_name: "OTHERS",
-  //             company_percentage: 50.8,
-  //           },
-  //         ],
-  //       },
-  //       cost_structure_breakdown: [
-  //         {
-  //           cost_type: "Profit",
-  //           cost_type_percentage: 101,
-  //         },
-  //         {
-  //           cost_type: "Wages",
-  //           cost_type_percentage: 101,
-  //         },
-  //         {
-  //           cost_type: "Purchases",
-  //           cost_type_percentage: 101,
-  //         },
-  //         {
-  //           cost_type: "Depreciation",
-  //           cost_type_percentage: 101,
-  //         },
-  //         {
-  //           cost_type: "Marketing",
-  //           cost_type_percentage: 101,
-  //         },
-  //         {
-  //           cost_type: "Rent",
-  //           cost_type_percentage: 101,
-  //         },
-  //         {
-  //           cost_type: "Utilities",
-  //           cost_type_percentage: 101,
-  //         },
-  //         {
-  //           cost_type: "Other",
-  //           cost_type_percentage: 101,
-  //         },
-  //       ],
-  //       cost_factors: [
-  //         {
-  //           cost_factor_title: "Manufacturers Endure Supply Chain Disruptions",
-  //           cost_factor_description:
-  //             "Surging input prices following the pandemic and the Russian invasion of Ukraine have posed a major threat to purchasing costs for ATV manufacturers. For instance, surging crude oil prices have translated into elevated metal costs while semiconductor shortages have exacerbated long lead times and production shortfalls.",
-  //         },
-  //       ],
-  //       capital_intensity: {
-  //         capital_intensity_level: "High",
-  //         capital_intensity_points: [
-  //           {
-  //             capital_intensity_title: "CAPITAL EXPENSES",
-  //             capital_intensity_description:
-  //               "ATV manufacturing requires substantial capital resources for machinery and a highly skilled workforce to maintain production quality and efficiency. Companies regularly invest in research and development, contributing to higher capital and labor expenses.",
-  //           },
-  //         ],
-  //         capital_intensity_trend: "Unknown",
-  //       },
-  //       revenue_volatility: {
-  //         volatility_level: "High",
-  //         volatility_points: [
-  //           {
-  //             volatility_title:
-  //               "SUPPLY CHAIN DISRUPTIONS HAVE CREATED VOLATILITY",
-  //             volatility_description:
-  //               "ATV manufacturers have endured severe supply chain volatility following the pandemic and the Russian invasion of Ukraine. Crude oil prices have skyrocketed, contributing to elevated ferrous and nonferrous metal prices, higher plastic and rubber costs and major semiconductor shortages.",
-  //           },
-  //           {
-  //             volatility_title:
-  //               "CONSUMER SPENDING AND DISPOSABLE INCOME LEVELS CAN CREATE FLUCTUATIONS",
-  //             volatility_description:
-  //               "Given the recreational nature of ATVs and their sizeable price tags, consumer spending, interest rates and disposable income levels impact volatility. Consumers will shift to less expensive recreation options when disposable incomes fall and interest rates rise.",
-  //           },
-  //           {
-  //             volatility_title:
-  //               "OVERALL TRENDS IN SPORTS AND RECREATION IMPACT VOLATILITY",
-  //             volatility_description:
-  //               "Since ATVs are recreational vehicles for activities like hunting and racing, various factors like leisure time, population demographics and preferences for particular recreational activities impact volatility.",
-  //           },
-  //         ],
-  //         volatility_trend: "Unknown",
-  //       },
-  //       technological_change: {
-  //         technological_change_level: "Moderate",
-  //         technological_change_points: [
-  //           {
-  //             technological_change_title: "ELECTRIC AND HYBRID ATVs",
-  //             technological_change_description:
-  //               "Electric ATVs offer the benefits of lower noise pollution and emissions. Hybrid ATVs provide consumers with a greater range of travel and less carbon emissions without relying entirely on charging availability.",
-  //           },
-  //           {
-  //             technological_change_title: "IMPROVEMENTS IN SAFETY",
-  //             technological_change_description:
-  //               "ATV manufacturers constantly invest in research and development to improve the safety of their products. New safety features include systems to aid drivers in avoiding collisions and better braking and rollover protection systems.",
-  //           },
-  //         ],
-  //         technological_change_trend: "Unknown",
-  //       },
-  //       regulations_and_policies: {
-  //         regulations_level: "Moderate",
-  //         regulations_points: [
-  //           {
-  //             regulation_title: "REGISTRATION AND PERMITS",
-  //             regulation_description:
-  //               "Off-highway vehicles OHVs are regulated uniformly nationwide, but minor policy variances depend on the state. ATVs require appropriate registration and permits on public roads (35 states permit some form of public road use). In 2008, the Consumer Product Safety Improvement Act 2008 organized and federally mandated the labeling of ATVs as inappropriate for use on public roads.",
-  //           },
-  //           {
-  //             regulation_title: "ENVIRONMENTAL PROTECTION POLICIES",
-  //             regulation_description:
-  //               "ATVs are subject to certification by the EPA for compliance with applicable emissions and noise standards and by the State of California Air Resources Board (CARB) concerning CARB's more stringent emissions standards. ATVs have restricted access to national park areas because of concerns about pollution, damage to local flora and fauna and noise emissions. The EPA regulates the discharge, treatment, storage, disposal, investigation and remediation of certain materials, substances and wastes during manufacturing.",
-  //           },
-  //           {
-  //             regulation_title:
-  //               "THE NATIONAL HIGHWAY TRAFFIC SAFETY ADMINISTRATION (NHTSA) AND THE CONSUMER PRODUCT SAFETY COMMISSION (CPSC)",
-  //             regulation_description:
-  //               "All transportation machinery and equipment must comply with federal safety, fuel consumption and pollution control regulations. The NHTSA enforces these regulations, while the CPSC has federal oversight over product safety issues regarding ATVs, snowmobiles and off-road side-by-side vehicles. Since 1988, the CPSC has regulated safety standards for the industry. ATV manufacturers have become less profitable because of compliance costs.",
-  //           },
-  //           {
-  //             regulation_title:
-  //               "AMERICAN NATIONAL STANDARDS INSTITUTE (ANSI) GUIDELINES",
-  //             regulation_description:
-  //               "ANSI guidelines provide voluntary but widely-accepted safety standards for ATV design and performance. These cover aspects like stability, braking, and controls. While not legally binding, adherence to ANSI guidelines demonstrates a commitment to safety and helps in avoiding legal liabilities and enhancing consumer trust.",
-  //           },
-  //         ],
-  //         regulations_trend: "Steady",
-  //       },
-  //       industry_assistance: {
-  //         assistance_level: "Low",
-  //         assistance_points: [
-  //           {
-  //             assistance_title: "NATIONAL TRADE ASSOCIATIONS",
-  //             assistance_description:
-  //               "Organizations like the Specialty Vehicle Institute of America (SVIA) and the Specialty Equipment Market Association offer valuable resources, including market research, advocacy and networking opportunities. By partnering with such groups, ATV manufacturers can stay updated on industry trends, regulatory changes and best practices, helping them remain competitive.",
-  //           },
-  //           {
-  //             assistance_title: "LOCAL ASSOCIATIONS",
-  //             assistance_description:
-  //               "Local associations like the Wisconsin ATV Association, the North Country ATV Association and the Upstate ATV Association promote recreational activities",
-  //           },
-  //         ],
-  //         assistance_trend: "Steady",
-  //       },
-  //       FAQs: [
-  //         {
-  //           question:
-  //             "How is your company impacted by rising imports from abroad?",
-  //           answer:
-  //             "Rising imports have threatened revenue. Mexico is a prime external competitor.",
-  //         },
-  //         {
-  //           question:
-  //             "Does your company specialize in one corner of the market or produce a diversified range of products?",
-  //           answer:
-  //             "Most companies produce a variety of types of ATVs, like side-by-side, general and sport vehicles, alongside corresponding parts.",
-  //         },
-  //         {
-  //           question:
-  //             "Has your company been exposed to volatile input prices over the past few years?",
-  //           answer:
-  //             "Large increases in steel prices can slash profitability. Successful companies often pass costs onto buyers to limit fluctuations.",
-  //         },
-  //         {
-  //           question:
-  //             "Is your company investing heavily in R&D to meet changing consumer preferences?",
-  //           answer:
-  //             "Major companies work on tailoring their products to shifting consumer preferences. This trend includes customization and design.",
-  //         },
-  //         {
-  //           question:
-  //             "How is your company leveraging new technology in its operations?",
-  //           answer:
-  //             "Recent technological advancements have been in the areas of computer-aided design, computer-aided manufacturing and numerically controlled machine tools. The new generation of computer-based technologies is much more accurate than manually controlled techniques.",
-  //         },
-  //         {
-  //           question:
-  //             "Have you been able to reduce wage costs by automating operations over the past five years?",
-  //           answer:
-  //             "Labor unions have limited a company's ability to reduce wage costs. Labor unions fight against increased automation.",
-  //         },
-  //         {
-  //           question:
-  //             "What effect have international tariffs had on your ability to import and export products?",
-  //           answer:
-  //             "International tariffs on steel have increased purchasing costs, threatening long-term profit.",
-  //         },
-  //         {
-  //           question:
-  //             "How does your company stay ahead of regulations such as energy-efficiency standards?",
-  //           answer:
-  //             "ATVs are subject to certification by the US Environmental Protection Agency (EPA) for compliance with applicable emissions and noise standards and by the State of California Air Resources Board concerning the board's more stringent emissions standards.",
-  //         },
-  //         {
-  //           question:
-  //             "How has input price volatility of inputs altered profit?",
-  //           answer:
-  //             "Increases in the price of steel have hurt profit. Companies that successfully pass costs onto buyers have stronger returns.",
-  //         },
-  //         {
-  //           question:
-  //             "How does your company compensate for seasonality of cash flow?",
-  //           answer:
-  //             "ATV sales perform better in fair weather environments and seasons. Companies increase sales in winter times to countries and states experiencing warm weather. However, ATVs mitigate this to an extent due to their vehicles' off-road and all-terrain nature.",
-  //         },
-  //         {
-  //           question:
-  //             "How do you ensure compliance with federal, state and local regulations?",
-  //           answer:
-  //             "Must comply with government regulations. Manufacturers must be able to design and develop products that comply with legal standards. Products that fail to meet these criteria are barred from sale in the United States.",
-  //         },
-  //         {
-  //           question:
-  //             "What are some ways that your company provides after sales service?",
-  //           answer:
-  //             "Given the level of industry consolidation, manufacturers must be able to provide superior before and after-sales services. This practice promotes brand loyalty and encourages repeat customers.",
-  //         },
-  //         {
-  //           question: "How does your company keep track of market trends?",
-  //           answer:
-  //             "Understanding market trends is necessary to maintain stable revenue and profit streams. This research can identify new products that consumers demand and satisfy emerging trends before competitors.",
-  //         },
-  //         {
-  //           question:
-  //             "How do you track the trends in the yield of the 10-year treasury note? How do you mitigate changes in the value of the US dollar?",
-  //           answer:
-  //             "As interest rates fall, demand for ATVs trends upward as consumers can afford big-ticket purchases. Lower rates make borrowing easier.",
-  //         },
-  //         {
-  //           question:
-  //             "Does your company keep a close eye on fluctuations in consumer confidence? How do you mitigate changes in consumer confidence?",
-  //           answer:
-  //             "People will postpone big-ticket purchases when consumer confidence is low. When consumer sentiment is high, individuals and businesses tend to spend more. This trend increases demand for vehicles, encourages leisure time and boosts ATV demand.",
-  //         },
-  //         {
-  //           question:
-  //             "How closely do you monitor trends in per capita disposable income? How are you able to capitalize on increasing disposable income?",
-  //           answer:
-  //             "Disposable income significantly influences the purchase of new all-terrain vehicles (ATVs). An increase or decrease in disposable household income alters the ability of households to purchase ATVs. Higher disposable income makes consumers more likely to purchase discretionary items.",
-  //         },
-  //       ],
-  //       metrics: [
-  //         {
-  //           Aspect: "Market",
-  //           Scores: [
-  //             {
-  //               Category: "Exports",
-  //               Weight: 10,
-  //               Result: "Low",
-  //               Score: 5,
-  //               Total: 2,
-  //             },
-  //             {
-  //               Category: "Imports",
-  //               Weight: 15,
-  //               Result: "Moderate",
-  //               Score: 3,
-  //               Total: 9,
-  //             },
-  //             {
-  //               Category: "Basis of Competition",
-  //               Weight: 20,
-  //               Result: "Moderate",
-  //               Score: 3,
-  //               Total: 12,
-  //             },
-  //             {
-  //               Category: "Barriers to Entry",
-  //               Weight: 20,
-  //               Result: "Moderate",
-  //               Score: 3,
-  //               Total: 12,
-  //             },
-  //             {
-  //               Category: "Industry Assistance",
-  //               Weight: 15,
-  //               Result: "Low",
-  //               Score: 1,
-  //               Total: 3,
-  //             },
-  //             {
-  //               Category: "Market Share Concentration",
-  //               Weight: 20,
-  //               Result: "Moderate",
-  //               Score: 3,
-  //               Total: 12,
-  //             },
-  //           ],
-  //           Total: 50,
-  //         },
-  //         {
-  //           Aspect: "Investments",
-  //           Scores: [
-  //             {
-  //               Category: "Revenue Volatility",
-  //               Weight: 30,
-  //               Result: "High",
-  //               Score: 1,
-  //               Total: 6,
-  //             },
-  //             {
-  //               Category: "Regulation and Policy",
-  //               Weight: 20,
-  //               Result: "Moderate",
-  //               Score: 3,
-  //               Total: 12,
-  //             },
-  //             {
-  //               Category: "Capital Intensity",
-  //               Weight: 30,
-  //               Result: "High",
-  //               Score: 1,
-  //               Total: 6,
-  //             },
-  //             {
-  //               Category: "Technological Change Level",
-  //               Weight: 20,
-  //               Result: "Moderate",
-  //               Score: 3,
-  //               Total: 12,
-  //             },
-  //           ],
-  //           Total: 36,
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // };
-
-  // const parsedData = JSON.parse(summaryData);
-
-  // const sidebarSections = [
-  //   { id: 0, name: "Market Segmentation" },
-  //   { id: 1, name: "Key Statistics" },
-  //   { id: 2, name: "External Drivers" },
-  //   // Add more sections as needed
-  // ];
-
-  console.log("Summary state:", summaryData);
-  
-  // Returns "[object Object]" for plain objects
-  // console.log("Summary state: parsed", parsedData);
-
+//summaryData.result
   return (
     <div className="mb-20 pb-10 rounded-lg">
       <div className="px-10 py-5">
         {summaryData && summaryData !== "Select an industry to view report" ? (
           <>
-            <ReportDropdown data={summaryData.result}  />
+            <ReportDropdown data={summaryData.result} />
+            {/* <DataRenderer data={data} /> */}
           </>
         ) : (
           <p>Please select an industry.</p>
         )}
       </div>
-      {/* <ReportDropdown data={data.result} /> */}
-      <div className="mt-4">
-        {/* <button
-          type="submit"
-          className="bg-white hover:bg-[#151518] font-semibold hover:border-white my-10 mx-20 hover:border hover:text-white transition-all ease-out duration-300 text-[#151518] px-4 py-2 rounded"
-          style={{ float: "right" }}
-          disabled={
-            !summaryData || summaryData === "Select an industry to view report"
-          }
-        >
-          Download Report
-        </button> */}
-        {/* <DownloadReport /> */}
-      </div>
+
     </div>
   );
 };

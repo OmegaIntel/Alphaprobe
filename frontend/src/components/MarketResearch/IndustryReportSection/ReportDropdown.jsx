@@ -39,7 +39,7 @@ const ReportDropdown = ({ data, sidebarSections }) => {
     if (!section) return null;
  
     return (
-      <div className="flex flex-col mt-10 md:flex-row md:gap-6">
+      <div className="flex flex-col md:flex-row md:gap-6">
         {/* Report Section */}
         <div className="bg-[#171717] border border-[#2e2e2e] rounded-xl p-6 w-11/12  ">
           <div className="flex flex-col mb-6">

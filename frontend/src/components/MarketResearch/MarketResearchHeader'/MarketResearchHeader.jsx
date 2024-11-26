@@ -1,27 +1,26 @@
-// src/components/IndustryHeader.js
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   setSummaryData,
   setError,
   setLoading,
-} from "../../../redux/industrySlice"; // Adjust the import path if necessary
+} from "../../../redux/industrySlice";
+import EditIcon from "@mui/icons-material/Edit";
+import DoneIcon from "@mui/icons-material/Done";
 import { API_BASE_URL, token } from "../../../services";
+import FuzzySearch from "../../SearchBox/FuzzySearch";
 
 const IndustryHeader = () => {
-  const dispatch = useDispatch(); // Initialize dispatch
-  // Get the response data from the store
-  const newRes = useSelector((state) => state.selectedIndustries);
-  const [activeIndustry, setActiveIndustry] = useState(null); // State to track the active button
+  const dispatch = useDispatch();
+  const formResponse = useSelector((state) => state.formResponse.data);
+  const [activeIndustry, setActiveIndustry] = useState(null);
+  const [isEditing, setIsEditing] = useState(false);
+  const [industries, setIndustries] = useState(formResponse?.result || []);
 
-  // Check if the responseData and its result are available
-  if (!newRes || !newRes.value) return null;
+  if (!formResponse || !formResponse.result) return null;
 
-  console.log("New Response Data", newRes.value);
-
-  // Function to handle API call
   const sendIndustryDataToApi = async (industryCode, industryName) => {
-    dispatch(setLoading()); // Set loading state before API call
+    dispatch(setLoading());
     try {
       const response = await fetch(`${API_BASE_URL}/api/industry-summary`, {
         method: "POST",
@@ -41,13 +40,9 @@ const IndustryHeader = () => {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-      console.log("rsponse", response);
-      const data = await response.json();
-      console.log("Data type:", typeof data); // Should log "object" if data is an object
-      console.dir("Data:", data); // Logs the actual data
 
+      const data = await response.json();
       if (data.result) {
-        // Dispatch the actual data, not the action creator
         dispatch(setSummaryData(data));
       } else {
         dispatch(setError("No result found in API response"));
@@ -57,49 +52,87 @@ const IndustryHeader = () => {
       dispatch(setError(error.message));
     }
   };
-  const handleButtonClick = (industryCode, industryName) => {
-    // Toggle the active industry button
-    setActiveIndustry((prev) => (prev === industryCode ? null : industryCode));
 
-    // Send industry code and name to the backend
+  const handleButtonClick = (industryCode, industryName) => {
+    setActiveIndustry((prev) => (prev === industryCode ? null : industryCode));
     sendIndustryDataToApi(industryCode, industryName);
   };
 
-  return (
-    <>
-      <header className="industry-header px-4 pt-4 bg-gray-900 text-white">
-        <h1 className="text-2xl font-bold">Industries check</h1>
+  const handleEditToggle = () => {
+    setIsEditing((prev) => !prev);
+  };
 
-        {/* Scrollable container */}
-        <div className="mt-4 overflow-x-auto scrollbar-thin scrollbar-track-slate-950 whitespace-nowrap">
-          <div className="inline-flex space-x-4">
-            {newRes.value.map((industry) => (
+  const handleRemoveIndustry = (industryCode) => {
+    setIndustries((prev) =>
+      prev.filter((industry) => industry.industry_code !== industryCode)
+    );
+  };
+ console.log(industries);
+  return (
+    <div className="h-screen flex flex-col">
+      {/* Header section */}
+      <div className="p-4 bg-[#09090A]">
+        <div>
+          <img src="/images/LogoCompany.png" alt="Company Logo" className="my-4"/>
+        </div>
+        
+        <div className="flex justify-between items-center my-2">
+          <h1 className="text-xl font-bold text-white">Industries</h1>
+          <button
+            className="text-white hover:text-gray-400"
+            title={isEditing ? "Done" : "Edit"}
+            onClick={handleEditToggle}
+          >
+            {isEditing ? <DoneIcon /> : <EditIcon />}
+          </button>
+        </div>
+        {isEditing && (
+          <div className="my-5">
+            <FuzzySearch section={"Search Industry"} industry={industries} />
+          </div>
+        )}
+      </div>
+
+      {/* Scrollable industry list */}
+      <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-slate-950">
+        <div className="p-3 flex flex-col space-y-4">
+          {industries.map((industry) => (
+            <div
+              key={industry.industry_code}
+              className={`flex items-center space-x-3 industry-button text-white rounded-md truncate transition-colors duration-300 
+              ${
+                activeIndustry === industry.industry_code
+                  ? "bg-[#252525]"
+                  : "bg-gray-950 hover:bg-[#252525]"
+              } 
+              h-12`}
+            >
               <button
-                key={industry.industry_code}
-                className={`industry-button rounded-md transition-colors duration-300 
-                ${
-                  activeIndustry === industry.industry_code
-                    ? "bg-gray-500" // Active button style
-                    : "bg-gray-700 hover:bg-gray-600"
-                } 
-                 h-12 `} // Fixed size for buttons
+                className="flex-1 text-left px-3 text-xs py-2 truncate"
                 title={`${industry.industry_code} - ${industry.industry_name}`}
                 onClick={() =>
                   handleButtonClick(
                     industry.industry_code,
                     industry.industry_name
                   )
-                } // Handle button click
+                }
               >
-                <p className="w-[40rem]">
-                  ({industry.industry_code}) - {industry.industry_name}
-                </p>
+                {industry.industry_name}
               </button>
-            ))}
-          </div>
+              {isEditing && (
+                <button
+                  className="text-red-500 hover:text-red-700 px-2"
+                  title="Remove"
+                  onClick={() => handleRemoveIndustry(industry.industry_code)}
+                >
+                  ➖
+                </button>
+              )}
+            </div>
+          ))}
         </div>
-      </header>
-    </>
+      </div>
+    </div>
   );
 };
 

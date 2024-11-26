@@ -54,7 +54,7 @@ const SearchBar = ({ placeholder }) => {
 };
 
 const Categories = () => {
-  const [activeCategory, setActiveCategory] = useState("Investment Thesis");
+  const [activeCategory, setActiveCategory] = useState("Dashboard");
   const [selectedSubcategory, setSelectedSubcategory] =
     useState("Current Workspace");
   const [progress, setProgress] = useState();
@@ -185,7 +185,8 @@ const Categories = () => {
             </div>
             
             <div className="my-3">
-               <SearchBox section={activeCategory}/>
+              {activeCategory === "Company Insights" && (<SearchBox section={activeCategory}/>)}
+               
                {/* <SearchBar placeholder={activeCategory}/> */}
             </div>
           </div>
@@ -200,7 +201,7 @@ const Categories = () => {
               <div className="flex-grow overflow-y-auto bg-[#0d0d0d] ml-1 scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800">
                 <div className="mt-10 p-3">
                   <ThesisForm questions={questions} />
-                  <ThesisCardComponent />
+                  {/* <ThesisCardComponent /> */}
                 </div>
               </div>
               <div className="flex-grow overflow-y-auto bg-[#151518] ml-1 scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800">
@@ -232,15 +233,15 @@ const Categories = () => {
                 </div>
               </div>
             </>
-          ) :
+          ) : 
           (
             <ProjectDetails
-              isActiveCategory={activeCategory}
+              isActiveCategory={activeCategory} 
               isActiveSubCategory={selectedSubcategory}
             />
           )}
         </div>
-       
+      
       </div>
     </>
   );
