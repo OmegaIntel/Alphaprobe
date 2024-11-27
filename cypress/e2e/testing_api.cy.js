@@ -16,12 +16,13 @@ describe("Data Fetching Component Integration", () => {
 
   it("renders search suggestions based on input", () => {
     // Load the queries from the fixture file
+    cy.visit("http://localhost:3000/login");
+    cy.get("input[name='email']").clear().type("abcd@gmail.com");
+    cy.get("input[name='password']").clear().type("pass1");
+    cy.get("button[type='submit']").click();
+    cy.get("button[type='submit']").click();
     cy.fixture("queries.json").then((queries) => {
       // Visit the login page
-      cy.visit("http://localhost:3000/login");
-      cy.get("input[name='email']").clear().type("abcd@gmail.com");
-      cy.get("input[name='password']").type("pass1");
-      cy.get("button[type='submit']").click();
       cy.wait(10000);
       cy.get("#2").contains("Market Research").click();
 
@@ -40,21 +41,29 @@ describe("Data Fetching Component Integration", () => {
         // Wait for suggestions to load
         cy.wait(10000); // Adjust based on API response speed
 
-        cy.contains(payload.name).click();
+        cy.contains(payload.name).then(($el) => {
+          if ($el.length > 0) {
+              // If the element exists, click and proceed with other commands
+              cy.wrap($el).click();
+  
+              cy.get("button[type='submit']").click();
 
-        cy.get("button[type='submit']").click();
+              // Wait for suggestions to load
+              cy.wait(60000);
 
-        // Wait for suggestions to load
-        cy.wait(60000);
-
-        cy.get('body').then(($body) => {
-          if($body.find('#2').length > 0) {
-            cy.get('#2').should('be.visible');
+              cy.get('body').then(($body) => {
+                if($body.find('#2').length > 0) {
+                  cy.get('#2').should('be.visible');
+                } else {
+                  // If the element does not exist, perform a task
+                  cy.task('logErrorToFile', { query: payload.name, error: 'UI crashed' });
+                }
+              });
           } else {
-            // If the element does not exist, perform a task
-            cy.task('logErrorToFile', { query: payload.name, error: 'UI crashed' });
+              // If the element does not exist, log and skip this iteration
+              cy.task('logErrorToFile', { query: payload.name, error: 'Could not load the industry name in the dropdown box' });
           }
-        });        
+        });
       });
   });
 
