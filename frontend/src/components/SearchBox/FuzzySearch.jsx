@@ -134,6 +134,7 @@ const FuzzySearch = ({ section, industry }) => {
         <div style={{ display: "inline-flex" }}>
           <input
             type="text"
+            name='fuzzySearch'
             value={queryRef.current}
             onChange={handleInputChange}
             placeholder={section}
