@@ -200,7 +200,7 @@ const Categories = () => {
             <>
               <div className="flex-grow overflow-y-auto bg-[#0d0d0d] ml-1 scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800">
                 <div className="mt-10 p-3">
-                  <ThesisForm questions={questions} />
+                  <ThesisForm questions={questions} setActiveIndustry={setActiveCategory} />
                   {/* <ThesisCardComponent /> */}
                 </div>
               </div>

@@ -6,7 +6,7 @@ import { toast, ToastContainer } from "react-toastify";
 import { API_BASE_URL } from "../../services";
 import "react-toastify/dist/ReactToastify.css";
 
-export const ThesisForm = ({ questions }) => {
+export const ThesisForm = ({ questions , setActiveIndustry }) => {
   const [answers, setAnswers] = useState({});
   const [otherInputs, setOtherInputs] = useState({});
   const [loading, setLoading] = useState(false);
@@ -81,6 +81,8 @@ export const ThesisForm = ({ questions }) => {
           { position: "top-right" }
         );
         setResetNavigation(true);
+        setActiveIndustry("Market Research");
+
       })
       .catch((error) => {
         console.error("Error:", error);

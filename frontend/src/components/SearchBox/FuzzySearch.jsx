@@ -43,7 +43,7 @@ const FuzzySearch = ({ section, industry }) => {
       industry_code: payload.data.industry_code,
       industry_name: payload.data.industry_name,
     }
-
+    industry.push(industryToAdd);
     try {
       // Send the request to the API
       const response = await fetch(`${API_BASE_URL}/api/industry-summary`, {
@@ -68,7 +68,7 @@ const FuzzySearch = ({ section, industry }) => {
       if (result.result) {
         // Dispatch the actual data, not the action creator
         dispatch(setSummaryData(result));
-        industry.push(industryToAdd);
+        
       } else {
         dispatch(setError("No result found in API response"));
       }

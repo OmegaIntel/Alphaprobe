@@ -27,6 +27,7 @@ const CapitalIntensity = ({ capitalIntensity = {} }) => {
         </p>
       </div>
 
+      <h4 className="font-semibold text-lg mb-2 text-[#e1e1e1]">Capital Intensity Points</h4>
       <div className="grid grid-cols-2 gap-12">
         {capitalIntensityPoints.map((point, index) => (
           <div
@@ -34,11 +35,15 @@ const CapitalIntensity = ({ capitalIntensity = {} }) => {
             className="border border-gray-600 bg-gradient-to-b from-[#ffffff]/10 to-[#999999]/10 rounded-2xl p-4 py-6 shadow-md hover:shadow-lg hover:border-gray-500 transition duration-200"
           >
             <div onClick={() => toggleAccordion(index)} className="flex justify-between items-center cursor-pointer">
-              <h4 className="text-lg text-[#b9bbbe] font-medium">{point.capital_intensity_title || "Untitled Point"}</h4>
+              <h4 className="text-lg text-[#b9bbbe] font-medium">
+                {point.capital_intensity_title || "Untitled Point"}
+              </h4>
               <span className="text-lg">{openIndex === index ? "-" : "+"}</span>
             </div>
             {openIndex === index && (
-              <p className="mt-2 font-normal text-[#a8a8a8]">{point.capital_intensity_description || "No description available."}</p>
+              <p className="mt-2 font-normal text-[#a8a8a8]">
+                {point.capital_intensity_description || "No description available."}
+              </p>
             )}
           </div>
         ))}
