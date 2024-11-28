@@ -7,6 +7,11 @@ import boto3
 import os
 import json
 
+import numpy as np
+import pandas as pd
+
+from openai import OpenAI
+
 from typing import List, Dict
 
 from llm_models.aws_bedrock.templates.common import build_aws_template
@@ -34,6 +39,8 @@ bedrock = boto3.client(
     aws_secret_access_key=aws_secret_access_key,
     region_name=AWS_REGION_NAME
 )
+
+OPENAI_CLIENT = OpenAI()
 
 
 def get_raw_pdf_part(filename: str) -> dict:
@@ -135,6 +142,57 @@ def extract_basic_info(filename: str) -> dict:
         result = info_from_template_prompt(template=BASIC_TEMPLATE, prompt=INFO_EXTRACTION_PROMPT, filename=pages_filename)
     return result
 
+def cosine_similarity(a: np.array, b: np.array) -> float:
+    """Compute cosine similarity between two vectors."""
+    norm_a = np.linalg.norm(a)
+    norm_b = np.linalg.norm(b)
+    if norm_a == 0 or norm_b == 0:
+        return 0.0
+    return np.dot(a, b) / (norm_a * norm_b)
+
+def get_embedding(text: str, model: str='text-embedding-3-small') -> np.array:
+    """Get the embedding for the text."""
+    try:
+        response = OPENAI_CLIENT.embeddings.create(input=[text], model=model)
+        return response.data[0].embedding
+    except Exception as e:
+        print(f"Error getting embedding: {e}")
+        return np.zeros(1536)  # Assuming the embedding size is 768
+
+def semantic_search(query: str, ibis_embeddings: pd.DataFrame, top_k: int=6) -> List[Dict[str, str]]:
+    """Perform a semantic search on the IBIS data."""
+    embedding = get_embedding(
+        query,
+        model="text-embedding-3-small"
+    )
+    # generate top k results based on the cosine similarity with query_embedding column of IBIS_EMBEDDINGS
+    ibis_embeddings['similarity'] = ibis_embeddings['query_embedding'].apply(
+        lambda x: cosine_similarity(x, embedding) if x is not None else 0.0
+    )
+
+    results = ibis_embeddings.sort_values('similarity', ascending=False).head(top_k)
+
+    # generate the list of dictionaries with keys industry_name and industry_code from results
+    return results.apply(
+        lambda x: {'industry_name': x['reportName'], 'industry_code': '0'},
+        axis=1
+    ).to_list()
+
+
+def generate_query_for_retieval(qa: List[Dict[str, str]]) -> str:
+    """Generate a query for the retrieval model."""
+    query = ""
+    for elt in qa:
+        query += f"{elt['answer']} "
+    return query
+
+def matching_industry_names_codes_from_qa_using_embeds(qa: List[Dict[str, str]], ibis_embeddings: pd.DataFrame) -> List[Dict[str, str]]:
+    """Return list of matching industries with their NAICS codes, restricted."""
+    user_query = generate_query_for_retieval(qa)
+    print("user_query", user_query)
+    results = semantic_search(user_query, ibis_embeddings)
+    print("results", results)
+    return results
 
 def matching_industry_names_codes_from_qa(qa: List[Dict[str, str]], restriction: list=[]) -> List[Dict[str, str]]:
     """Return list of matching industries with their NAICS codes, restricted."""
