@@ -6,6 +6,7 @@ with and without PDF file input.
 import boto3
 import os
 import json
+import scipy
 
 import numpy as np
 import pandas as pd
@@ -142,14 +143,6 @@ def extract_basic_info(filename: str) -> dict:
         result = info_from_template_prompt(template=BASIC_TEMPLATE, prompt=INFO_EXTRACTION_PROMPT, filename=pages_filename)
     return result
 
-def cosine_similarity(a: np.array, b: np.array) -> float:
-    """Compute cosine similarity between two vectors."""
-    norm_a = np.linalg.norm(a)
-    norm_b = np.linalg.norm(b)
-    if norm_a == 0 or norm_b == 0:
-        return 0.0
-    return np.dot(a, b) / (norm_a * norm_b)
-
 def get_embedding(text: str, model: str='text-embedding-3-small') -> np.array:
     """Get the embedding for the text."""
     try:
@@ -167,7 +160,7 @@ def semantic_search(query: str, ibis_embeddings: pd.DataFrame, top_k: int=6) -> 
     )
     # generate top k results based on the cosine similarity with query_embedding column of IBIS_EMBEDDINGS
     ibis_embeddings['similarity'] = ibis_embeddings['query_embedding'].apply(
-        lambda x: cosine_similarity(x, embedding) if x is not None else 0.0
+        lambda x: 1 - scipy.spatial.distance.cosine(x, embedding) if x is not None else 0.0
     )
 
     results = ibis_embeddings.sort_values('similarity', ascending=False).head(top_k)
