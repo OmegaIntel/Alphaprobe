@@ -1,11 +1,17 @@
 """Returns a list of related industries in response to UI request."""
+import json
+
+import pandas as pd
 
 from fastapi import APIRouter
 from pydantic import BaseModel
 from typing import List
 
-from llm_models.aws_bedrock.llm_response import matching_industry_names_codes_from_qa
+from llm_models.aws_bedrock.llm_response import matching_industry_names_codes_from_qa_using_embeds
 from api.data.data_access import IBIS_NAICS_CODES, IBIS_REPORT_NAMES, IBIS_MAP
+
+IBIS_EMBEDDINGS = pd.read_csv('api/data/ibis_embeddings.csv')
+IBIS_EMBEDDINGS["query_embedding"] = IBIS_EMBEDDINGS["query_embedding"].apply(lambda x: json.loads(x))
 
 
 class UserQR(BaseModel):
@@ -41,30 +47,6 @@ async def industries_for_thesis(request: DataModelIn):
         llm_input.append({'question': elt.question, 'answer': elt.response})
 
     # TODO: implement the industry code restriction part on this end.
-    result = matching_industry_names_codes_from_qa(llm_input)
+    result = matching_industry_names_codes_from_qa_using_embeds(llm_input, IBIS_EMBEDDINGS)
 
-    # populate with the actual items that we have, less generic, generally.
-    # TODO: merge it with the other function (ibis_industries)
-    prelim = []
-    IC = 'industry_code'
-    IN = 'industry_name'
-    SET_IBIS_NAICS_CODES = set(IBIS_NAICS_CODES)
-
-    for elt in result:
-        if elt[IC] in SET_IBIS_NAICS_CODES:
-            prelim.append(elt)
-        else:
-            for code, industry in zip(IBIS_NAICS_CODES, IBIS_REPORT_NAMES):
-                if code.startswith(elt[IC]):
-                    prelim.append({IC: code, IN: industry})
-                    break
-
-    # remove duplicate codes
-    seen_codes = set()
-    out = []
-    for dd in prelim:
-        if dd[IC] not in seen_codes:
-            out.append(dd)
-            seen_codes.add(dd[IC])
-
-    return DataModelOut(result=out)
+    return DataModelOut(result=result)
