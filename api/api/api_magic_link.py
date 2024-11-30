@@ -1,3 +1,4 @@
+"""
 import os
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, EmailStr
@@ -30,7 +31,7 @@ def send_magic_link_email(email: str, token: str, base_url: str, deal_name: str)
     subject = f"You have been invited to request documents for {deal_name}"
     
     html_content = f"""
-    <html>
+   """ <html>
     <body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
         <div style="max-width: 600px; margin: auto; background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
             <h2 style="color: #333;">You've been invited to request documents for {deal_name}</h2>
@@ -45,7 +46,7 @@ def send_magic_link_email(email: str, token: str, base_url: str, deal_name: str)
     </body>
     </html>
     """
-
+"""
     # Prepare the email message
     msg = EmailMessage()
     msg['Subject'] = subject
@@ -99,3 +100,5 @@ def get_deal_id(token: str, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Invalid token")
     
     return {"deal_id": request_doc.deal_id}
+
+"""

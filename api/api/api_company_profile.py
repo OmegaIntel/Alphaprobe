@@ -1,3 +1,4 @@
+
 """Returns company profile in response to UI request."""
 
 from fastapi import APIRouter
@@ -72,24 +73,34 @@ def get_company_info(company_name: str) -> Dict:
     result = '\n\n'.join(result)
 
     prompt = f"""
-You are trying to extract from text certain attributes for a company called "{company_name}".
-You are first given a list of attributes to extract, in triple quotes.
-You are also given the text that was scraped from several web pages.
-Extract the values of the attributes for the company "{company_name}" in JSON format.
-If there are several potential values for an attribute, use the first value.
-If an attribute's value is not in the text, return Null for that attribute.
-The result should be JSON with attribute names as keys.
 
+You are tasked with extracting structured information about a company named "{company_name}" from text scraped from multiple web pages. Follow these guidelines:
+
+1. Verify that the extracted information pertains specifically to "{company_name}". If the text mentions a different company or cannot be confidently associated with "{company_name}", ignore that text.
+
+2. You are given a list of attributes to extract, provided in triple quotes. Extract these attributes only for "{company_name}".
+
+3. If there are multiple potential values for an attribute from different sources:
+   - Use the most specific or detailed value if possible.
+   - If values are identical or similar, aggregate only once to avoid duplication.
+
+4. If an attribute's value is not present in the text, set its value to Null in the final output.
+
+5. The final output must be in valid JSON format with attribute names as keys.
+
+List of attributes to extract:
 '''
 {ATTRS}
 '''
 
+Text scraped from web pages:
 '''
 {result}
 '''
 
+Return the final structured data as JSON. Ensure only information about "{company_name}" is included.
 """
-    
+
     processed = respond_to_prompt(prompt)
     return processed
 

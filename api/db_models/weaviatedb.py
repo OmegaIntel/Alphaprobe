@@ -1,3 +1,5 @@
+
+"""
 import weaviate.classes.config as wc
 import weaviate
 from llmsherpa.readers import LayoutPDFReader
@@ -138,3 +140,4 @@ class WeaviateManager:
         except Exception as e:
             print(e)
             return False
+"""

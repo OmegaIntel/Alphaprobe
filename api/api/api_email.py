@@ -1,3 +1,6 @@
+
+"""
+
 from fastapi import APIRouter,HTTPException
 from pydantic import BaseModel
 import smtplib
@@ -58,3 +61,4 @@ def send_email_endpoint(email_data: EmailSchema):
         return {"message": "Email sent successfully"}
     else:
         raise HTTPException(status_code=500, detail="Failed to send email")
+"""

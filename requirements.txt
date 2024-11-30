@@ -17,7 +17,7 @@ openai==1.35.14
 tqdm==4.66.4
 streamlit==1.37.0
 werkzeug==3.0.3
-openbb==4.3.0
+#openbb==4.3.0
 jose==1.0.0
 pyjwt==2.8.0
 passlib==1.7.4
@@ -42,3 +42,4 @@ timeout-decorator==0.5.0
 
 rapidfuzz==3.10.1
 scipy==1.14.1
+beautifulsoup4==4.12.0
