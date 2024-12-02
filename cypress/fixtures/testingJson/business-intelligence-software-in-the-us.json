@@ -1,0 +1,507 @@
+{
+    "report_title": "Software in the US",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 36367000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2008,
+                "end_year": 2023,
+                "revenue_cagr_value": 7.32
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 3.62
+            }
+        },
+        "profit": {
+            "profit_dollars": 9456000000,
+            "profit_cagr_historical": {
+                "begin_year": 2008,
+                "end_year": 2023,
+                "profit_cagr_value": 8.62
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 26,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 1.82
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 23710000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2008,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 8.4
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 3.62
+            }
+        },
+        "employees": {
+            "employees_count": 71444,
+            "employees_cagr_historical": {
+                "begin_year": 2008,
+                "end_year": 2023,
+                "employees_cagr_value": 6.11
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 3.59
+            }
+        },
+        "wages": {
+            "wages_dollars": 13592000000,
+            "wages_cagr_historical": {
+                "begin_year": 2008,
+                "end_year": 2023,
+                "wages_cagr_value": 8.36
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 3.6
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "The industry has expanded, resulting from surging demand as online business becomes increasingly prevalent. Many business intelligence (BI) software products have become fundamental corporate operations and management tools, leading to an influx of private investment in software. The pandemic has expedited this dynamic, as the industry benefited from businesses increasing their reliance on cloud computing and on-premise management services.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Business intelligence software revenue growth",
+            "current_performance_point_description": "Business intelligence software revenue is expected to grow at a CAGR of 5.7% over the past five years to an estimated $36.4 billion in 2023, including a hike of 6.5% this year alone as profit settles at 26.0%."
+        },
+        {
+            "current_performance_point_title": "Acquisition activity",
+            "current_performance_point_description": "Companies like Tableau and Slack to strengthen market share. Tech giants like Google have followed suit by acquiring Looker, and companies such as Sisense and Periscope have merged. Industry enterprises have made numerous nonindustry-relevant acquisitions to diversify their portfolio and offer various products, placing particular emphasis on purchasing cloud technology and AI companies."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Projected revenue growth",
+            "future_outlook_point_description": "Business intelligence software revenue is projected to grow at a CAGR of 3.8% to an estimated $43.7 billion in 2028 as business software matures, with profit stagnating at 26.0%."
+        },
+        {
+            "future_outlook_point_title": "Small and mid-sized business adoption",
+            "future_outlook_point_description": "Small- and mid-sized businesses across various industries will increasingly adopt enterprise and analytics software, as products such as SaaS (software as a service) are tinkered to cater to the unique needs of these markets."
+        },
+        {
+            "future_outlook_point_title": "Technological advancements driving growth",
+            "future_outlook_point_description": "As technology such as cloud computing and artificial intelligence advance, industry products will develop in unison."
+        },
+        {
+            "future_outlook_point_title": "Rising wages pressuring profit",
+            "future_outlook_point_description": "As the industry grows more technical and competition intensifies, industry wages will be driven up, with enterprises seeking out more skilled labor to establish a competitive edge."
+        }
+    ],
+    "industry_definition": "Companies in this industry offer software that enables businesses to collect, analyze, transform and report data. Companies may also provide support services.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage: growth",
+            "Capital Intensity Level: low",
+            "Regulation Level: light - steady"
+        ],
+        "negative_impact_factors": [],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers",
+            "Private investment in computers and software"
+        ],
+        "threats": [
+            "Yield on 10-year Treasury note"
+        ]
+    },
+    "key_trends": [
+        "Market growth can be directly attributed to the increasingly prevalent adoption of cloud-based services and analytics across business sectors",
+        "The pandemic made companies prioritize cost efficiency and led many to adopt BI software and data visualization tools to optimize productivity",
+        "Despite a bevy of acquisitions, the number of industry enterprises has increased based on low barriers to entry",
+        "Small- and mid-sized businesses across various industries will increasingly adopt enterprise and analytics software",
+        "As technology such as cloud computing and artificial intelligence advance, industry products will develop in unison",
+        "As the industry grows more technical and competition intensifies, industry wages will be driven up, with enterprises seeking out skilled labor to establish a competitive edge",
+        "Industry enterprises have made numerous nonindustry-relevant acquisitions to diversify their portfolio and offer various products"
+    ],
+    "market_segmentation": [],
+    "products_and_services": [],
+    "supply_chain": {
+        "tier_1_suppliers": [],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [],
+    "international_trade": {
+        "import_level": null,
+        "import_trend": null,
+        "export_level": null,
+        "export_trend": null,
+        "international_trade_points": []
+    },
+    "business_locations": [],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [
+            {
+                "regulation_title": "California Consumer Privacy Act (CCPA)",
+                "regulation_description": "CCPA is a privacy law in California, United States, granting consumers certain data rights. It imposes obligations on businesses to inform consumers about data collection practices, allow consumers to opt out of data sharing, and provide mechanisms for data deletion upon request."
+            },
+            {
+                "regulation_title": "Health Insurance Portability and Accountability Act (HIPAA)",
+                "regulation_description": "HIPAA is a US regulation establishing data privacy and security requirements for protected health information (PHI). BI software providers serving healthcare organizations or handling PHI must comply with HIPAA rules."
+            },
+            {
+                "regulation_title": "Payment Card Industry Data Security Standard (PCI DSS)",
+                "regulation_description": "PCI DSS is a security standard for organizations handling payment card data. BI software providers that process or store payment card data must adhere to PCI DSS requirements."
+            },
+            {
+                "regulation_title": "International Traffic in Arms Regulations (ITAR)",
+                "regulation_description": "ITAR is a US regulation that controls the export and import of defense-related articles, services, and technical data. BI software providers serving defense or aerospace industries must comply with ITAR regulations."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Legal",
+                "barrier_description": "Any entrants must avoid copyrights and nondisclosure agreements held by incumbents, but no formal restrictions fundamentally hold back new software developers."
+            },
+            {
+                "barrier_title": "Start-up Costs",
+                "barrier_description": "Start-up costs range from tiny to enormous. Entrants must find an office space, hire labor, develop a differentiated product, and bring the product to market. One person can meet these challenges, but the most successful products frequently require teams of programmers to be paid for months before any income is made."
+            },
+            {
+                "barrier_title": "Differentiation",
+                "barrier_description": "Differentiation defines new entrants in software development for businesses. Customers will not switch from existing software without profit-generating reasons to sway management. Differentiations can be in the business features, connections to existing software, or ease of use."
+            },
+            {
+                "barrier_title": "Labor Intensity",
+                "barrier_description": "The limited pool of skilled software developers is a significant barrier to entry into this industry. Business intelligence vendors compete with all other software industries for the same pool of software engineering talent."
+            }
+        ],
+        "factors_increased_barrier": [
+            {
+                "factor": "Technology Change Level",
+                "level": "high"
+            }
+        ],
+        "factors_decreased_barrier": [
+            {
+                "factor": "Life Cycle Stage",
+                "level": "growth"
+            },
+            {
+                "factor": "Capital Intensity Level",
+                "level": "low"
+            },
+            {
+                "factor": "Regulation Level",
+                "level": "light - steady"
+            }
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Product Differentiation",
+                "basis_description": "BI software providers differentiate their products by offering unique features, capabilities, and user experiences. This can include advanced data visualization options, self-service analytics, natural language querying, AI-driven insights, integration with other tools and platforms, and support for specific data sources or industries. Providers aim to offer a superior product that meets the diverse needs of their target customers."
+            },
+            {
+                "basis_title": "Data Integration",
+                "basis_description": "The ability to seamlessly integrate with various data sources, databases, and systems is crucial for BI software providers. They compete by offering comprehensive data connectivity options, including support for structured and unstructured data, real-time data integration, cloud data sources, and APIs. The ability to easily access and analyze data from multiple sources gives providers an advantage."
+            },
+            {
+                "basis_title": "Data Handling Capabilities",
+                "basis_description": "BI software providers compete based on their ability to handle large volumes of data, support high user concurrency, and deliver fast query performance. Solutions that can efficiently process and analyze massive datasets, perform complex calculations, and provide quick response times are highly valued in the market."
+            },
+            {
+                "basis_title": "User Experience",
+                "basis_description": "BI software providers need user-friendly interfaces and intuitive workflows to gain a competitive edge. Providers invest in creating user-friendly dashboards, drag-and-drop functionality, interactive visualizations, guided analytics, and self-service capabilities. Simplifying the data exploration and analysis process enhances user adoption and satisfaction."
+            },
+            {
+                "basis_title": "Mobility and Cloud",
+                "basis_description": "With the increasing demand for anytime, anywhere access to data and analytics, BI software providers compete by offering mobile apps and cloud-based solutions. Providers that enable users to access and interact with data on mobile devices, collaborate in real time, and leverage cloud scalability have an advantage in the market."
+            },
+            {
+                "basis_title": "Customer Support and Services",
+                "basis_description": "BI software providers differentiate themselves through the quality of their customer support, training, and professional services. Providers that offer comprehensive support, timely assistance, training programs, and consulting services to help customers maximize the value of their BI solutions gain a competitive edge."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Medium",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Massive Software Companies Dominate",
+                "concentration_description": "The sheer sizes of Microsoft, IBM, and SAP exert a gravitational pull on the entire industry and beyond. Companies with more extensive product portfolios, both software and non-software products, can cross-sell items. Besides the product production power of the major developers, each holds a library of patents, ensuring that no minor player dares copy their income-generating features. Larger businesses tend to have more well-known software, which increases the chance that employees will know how to use the software; this decreases the training cost for client companies."
+            },
+            {
+                "concentration_title": "The BI Software Market is Dynamic and Constantly Evolving, Opening the Door for New Entrants",
+                "concentration_description": "Smaller vendors and emerging startups continue to enter the market, offering innovative solutions and targeting specific niches or industries. Cloud-based BI solutions and open-source options have also gained traction, providing alternatives to traditional proprietary software offerings."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Microsoft",
+                "company_percentage": 8.9
+            },
+            {
+                "company_name": "Salesforce.Com",
+                "company_percentage": 4.3
+            },
+            {
+                "company_name": "Qlik Technologies",
+                "company_percentage": 2.9
+            },
+            {
+                "company_name": "Sap Se",
+                "company_percentage": 2.9
+            },
+            {
+                "company_name": "Oracle",
+                "company_percentage": 2.6
+            },
+            {
+                "company_name": "International Business Machines",
+                "company_percentage": 2.6
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 75.7
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 37.4
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 2.1
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 1.9
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 3.6
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 1.7
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0.1
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 27.3
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Wages",
+            "cost_factor_description": "Wages make up the most significant cost for industry enterprises. Wage spending dominates business intelligence software development. Skilled coders are needed from day one to create features, troubleshoot bugs and create a user interface."
+        },
+        {
+            "cost_factor_title": "Purchases",
+            "cost_factor_description": "Purchases wane due to the intangible nature of the industry's products. Purchase costs remain extremely low, as practically no companies distribute software through physical channels."
+        },
+        {
+            "cost_factor_title": "Depreciation",
+            "cost_factor_description": "In 2023, depreciation costs are estimated to account for 1.9% of revenue, including the cost for physical assets and software not directly related to business intelligence services."
+        },
+        {
+            "cost_factor_title": "Marketing",
+            "cost_factor_description": "Total marketing costs are expected to reach 3.6% of revenue in 2023."
+        },
+        {
+            "cost_factor_title": "Rent",
+            "cost_factor_description": "In 2023, rental expenses were relatively minimal for business intelligence software companies and are estimated to account for 1.7% of revenue."
+        },
+        {
+            "cost_factor_title": "Utilities",
+            "cost_factor_description": "Due to the largely service-based nature of this industry, utility costs are estimated to account for 0.1% of revenue in 2023."
+        },
+        {
+            "cost_factor_title": "Other Costs",
+            "cost_factor_description": "Significant investment in market research drives up other costs. Market research is crucial for differentiating companies in the complex and aggressive business-to-business market. The rapid pace of technological change in this industry necessitates that companies allocate funds to research and development."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital intensity",
+                "capital_intensity_description": "Capital intensity in the Business Intelligence Software industry is low. In 2023, companies spend an estimated $0.05 on capital for every $1.00 spent on labor. Most industry enterprises require limited capital goods, such as computers and office space."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Pandemic impact",
+                "volatility_description": "The industry didn't succumb to the negative pressure of the pandemic and associated economic downturn. While the pandemic dramatically damaged business confidence, many markets still turned to industry services to help cut costs and optimize productivity."
+            },
+            {
+                "volatility_title": "Business cycles",
+                "volatility_description": "The industry ebbs and flows according to broader business cycles and the pace of technological advancements. The prominence of business-to-business sales in this industry makes it beholden to corporate profit levels."
+            },
+            {
+                "volatility_title": "Technological advancements",
+                "volatility_description": "Volatility due to business cycles is balanced out by long-term trends that favor the widespread adoption of technology. The industry is propelled by technological advancements with innovations in cloud computing and AI driving business intelligence software forward."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Self-service BI tools",
+                "technological_change_description": "Self-service BI tools have disrupted the traditional model of BI, empowering business users to perform data analysis and generate reports independently without heavy reliance on IT or data analysts."
+            },
+            {
+                "technological_change_title": "Cloud computing",
+                "technological_change_description": "Cloud computing has transformed the BI industry by offering scalable, flexible, and cost-effective solutions. Cloud-based BI platforms allow organizations to store and process large volumes of data in the cloud."
+            },
+            {
+                "technological_change_title": "Advanced analytics and machine learning",
+                "technological_change_description": "Integrating advanced analytics and machine learning techniques within BI software has disrupted the industry by enabling organizations to uncover deeper insights and drive predictive and prescriptive analytics."
+            },
+            {
+                "technological_change_title": "Natural language processing",
+                "technological_change_description": "NLP capabilities have transformed how users interact with BI software. NLP technology allows users to query data and generate reports using natural language commands or questions."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How has the shift towards conducting business online affected demand for your services?",
+            "answer": "The shift online has opened a new distribution channel for industry companies; the cloud. Through the cloud, customers can pay for services on a subscription basis and receive regular software updates. The percentage of business conducted online has consistently soared benefiting the industry."
+        },
+        {
+            "question": "Has technology (i.e. data storage and analytics) affected the type of customers you sell to?",
+            "answer": "Compared to costly one-time purchases, cloud-based solutions are marketable to a wider range of businesses, especially SMBs, as these subscription options enable customers to pay less upfront and develop stronger long-term relationships with developers."
+        },
+        {
+            "question": "Has your company been exposed to rising wages in recent years?",
+            "answer": "The industry as a whole has been exposed to rising wages over the past five years as demand for employees is extremely competitive. This industry encompasses some of the largest and cash-ready corporations, including Microsoft, IBM and Oracle, who all push wages up. Even in 2020, during the pandemic, industry wages increased."
+        },
+        {
+            "question": "Is your company strategically located in a region that acts to your benefit? Have you re-considered your location and remote-work offerings as a result of the pandemic?",
+            "answer": "To attract the best talent, companies traditionally look to the Silicon Valley area of California, as well as Seattle, New York City, Austin and Boston as major tech hubs. The pandemic caused a large increase in remote work in this industry and may have led to less emphasis on location in traditional tech hubs."
+        },
+        {
+            "question": "Has your company been able to keep current with changing digital interfaces? How regularly do you update your interfaces?",
+            "answer": "It is vital for software developers, especially smaller companies, to be aware of changing consumer preferences. The shift to the cloud is extremely important in this industry, as more customers demand the flexibility and affordability that only the cloud offers. SaaS distribution models have made frequent updates more common."
+        },
+        {
+            "question": "Has your company prepared adequately to address the increased security risks posed by digital data storage?",
+            "answer": "The cyberattacks on companies such as EquiFax, are among a number of high-profile cyberattacks in recent years. Developers of internet-hosted (cloud) software must ensure that customers' data, designs and technology are protected."
+        },
+        {
+            "question": "Have any recent regulatory changes significantly affected your operations?",
+            "answer": "Regulation plays a small role in the industry; given the highly fragmented nature of the industry, antitrust litigators generally do not scrutinize industry companies. The industry is anticipating increased federal scrutiny and potential regulation going forward."
+        },
+        {
+            "question": "Do you work with trade associations or other interest groups to advance your company's interests?",
+            "answer": "On a state and local level, there are a number of groups that are looking to promote software and technology jobs in their area."
+        },
+        {
+            "question": "Do you have any big projects that require capital financing on the horizon? Did you benefit from lower interest rates in 2020?",
+            "answer": "Capital requirements are small in this industry. However, new entrants will be challenged to find and fund the right employees, often the bedrock of any successful company. Interest rates were cut sharply in 2020, to stimulate the economy during the pandemic. This may have made financing cheaper to secure."
+        },
+        {
+            "question": "How does your company's profit compare with your main competitors'?",
+            "answer": "Profit remains high in this industry, carried by large and high-market share companies like Oracle, SAP and IBM. Salesforce, which commands a sizable share of the market."
+        },
+        {
+            "question": "How quickly do you integrate new technology into your offerings? How does your company keep up to date with the latest technology?",
+            "answer": "Software industries are subject to extremely quick technological advancement. Adopting new technologies faster than competitors provides companies with a Comparative Advantage."
+        },
+        {
+            "question": "How do you make sure your prices are attractive to clients? How do you balance price rates to stimulate demand? Was price-based competition heightened by the pandemic?",
+            "answer": "Products are priced on value rather than cost. The most successful enterprises in this industry are adept at crafting price structures that reflect the potential value of an enterprise solution to a customer rather than the cost of producing that software. The pandemic reduced corporate profit and consumer spending, which may have made competitive pricing more important. Flexible pricing models have become increasingly popular in the industry, as companies look to expand into new markets."
+        },
+        {
+            "question": "How have high interest rates affected your company in the past? What percentage of your products and services are bought on credit?",
+            "answer": "The level and movement of interest rates have a powerful influence on spending and investment decisions. When interest rates are high, it is more expensive for companies to raise capital and invest in operations, which includes purchases of enterprise software. Interest rates were lowered during the pandemic in 2020, in an effort to increase economic activity. In an effort to curb high inflation the Federal Reserve has consistently raised interest rates, partially dissuading industry investment."
+        },
+        {
+            "question": "How does a decline in corporate profit affect demand for your company? How do you mitigate this threat?",
+            "answer": "Enterprise software is a capital expenditure for businesses that helps management make more informed decisions. Companies tend to invest in software when corporate profit is high. Conversely, when profit is low, companies reduce their spending on new software. Corporate profit fell in 2020 amid the pandemic, which may have reduced demand for certain industry software products. The industry seeks to gain from recovering corporate profit as more businesses seek out business intelligence software."
+        },
+        {
+            "question": "Do you track private investment in computers and software? How do you capitalize on increasing private investment?",
+            "answer": "Organizations capitalize on increasing private investment in computers and software by making improvements to business analytics software and expanding the market they cater to. Private investment in computers and software fell in 2020 during the pandemic, hindering industry demand."
+        }
+    ]
+}

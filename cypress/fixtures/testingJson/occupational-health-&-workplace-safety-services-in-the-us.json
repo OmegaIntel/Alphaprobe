@@ -1,0 +1,557 @@
+{
+    "report_title": "Occupational Health & Workplace Safety Services in the US",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 11299000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 5.1
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.6
+            }
+        },
+        "profit": {
+            "profit_dollars": 960000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 6.9
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 8.5,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 1.8
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 6929000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 88780,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 5895000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "Occupational health and workplace safety specialists have performed well during the current period, but revenue has been volatile. The outbreak of COVID-19 in 2020 led to temporary shutdowns of key downstream markets, greatly reducing the number of employees and the need for occupational health and safety specialists. However, increased regulations resulting from OSHA's National Emphasis Program encouraged some downstream demand during the pandemic. As the economy reopened, commodity prices surged, leading to heightened mining and manufacturing output as companies sought to take advantage of the favorable price environment. Low interest rates led to booming residential construction activity and the need for occupational health and safety experts. This surge in demand from these downstream markets, compounded by increased productivity through technology, lowered wage costs and bolstered profit. Over the past couple of years, interest rate hikes led to slowdowns in various downstream markets and have hindered growth in 2023 and 2024.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Occupational Health and Safety Specialists Have Enjoyed Consistent Growth in Various Markets",
+            "current_performance_point_description": "Occupational health and safety specialists have experienced stable growth due to rising agricultural output. The sector's expansion has elevated demand for inspection services throughout the production process. From on-site quality control to overseeing exports, specialists are crucial in maintaining standards. Heightened demand from healthcare employers has also bolstered the sector."
+        },
+        {
+            "current_performance_point_title": "Growth in Key Downstream Markets Has Been Somewhat Volatile",
+            "current_performance_point_description": "The mining, construction and manufacturing sectors have been volatile recently, hiking and contracting their workforces during the current period."
+        },
+        {
+            "current_performance_point_title": "Profit and Nonemployer Participation Have Expanded",
+            "current_performance_point_description": "Surging mining, manufacturing and construction activity over much of the current period has led to profit expansion..."
+        },
+        {
+            "current_performance_point_title": "Providers Have Been Adapting to an Enhanced Focus on Mental Health and Well-Being",
+            "current_performance_point_description": "Some establishments provide services part-time or on a contract basis as consultants..."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Occupational Health and Safety Specialists Will Experience Mostly Positive Results in Downstream Markets",
+            "future_outlook_point_description": "Despite challenges related to high inflation, rising interest rates and recessionary fears, the US economy will perform quite well during the outlook period..."
+        },
+        {
+            "future_outlook_point_title": "Growth in Outsourcing Will Lead to Expansion",
+            "future_outlook_point_description": "Businesses and government entities will increasingly outsource specialists instead of maintaining an in-house staff..."
+        },
+        {
+            "future_outlook_point_title": "Profit Will Dip as Revenue Growth Slows",
+            "future_outlook_point_description": "Since there won't be economic volatility resulting from the pandemic, the associated recovery..."
+        },
+        {
+            "future_outlook_point_title": "Increasingly Technical Environment",
+            "future_outlook_point_description": "An increasingly technical environment, bolstering growth for occupational health and safety specialists..."
+        },
+        {
+            "future_outlook_point_title": "Providers Will Continue to Adjust to Remote and Hybrid Work Models",
+            "future_outlook_point_description": "The rise of remote work and hybrid work models is fundamentally changing the landscape of workplace safety..."
+        }
+    ],
+    "industry_definition": "Occupational health and workplace safety services companies offer advice and assistance to organizations...",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level low",
+            "Concentration Level low",
+            "Globalization Level low - increasing"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level low - steady",
+            "Competition Level high - increasing"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & steady level of assistance",
+            "High Competition",
+            "Low Profit vs. Sector Average"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2005-2024)",
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers"
+        ],
+        "threats": [
+            "Low Outlier Growth",
+            "Demand from construction"
+        ]
+    },
+    "key_trends": [
+        "Competition among occupational health and workplace safety specialists is stiff...",
+        "Specialty consultants are increasing competition...",
+        "Initial costs for entry can be expensive due to necessary certifications...",
+        "Activity in vital downstream markets spurred growth...",
+        "Mental health resources are becoming a workplace staple...",
+        "Flexible work arrangements are key to maintaining a healthy work-life balance...",
+        "Mounting outsourcing will lead to expansion..."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Energy and mining sector",
+            "segment_description": "Occupational health and workplace safety companies offer their services to surface and underground mining operations...",
+            "segment_percentage": 22.1
+        },
+        {
+            "segment": "Goods manufacturing",
+            "segment_description": "This market comprises employee safety, process management, certification and compliance consulting solutions...",
+            "segment_percentage": 19.7
+        },
+        {
+            "segment": "Chemical manufacturers",
+            "segment_description": "This market comprises employee safety, process management, certification and compliance consulting solutions...",
+            "segment_percentage": 16.6
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Other markets comprise the agricultural sector, medical and surgical hospitals and other healthcare environments...",
+            "segment_percentage": 20.5
+        },
+        {
+            "segment": "Construction sector",
+            "segment_description": "This market comprises services to construction companies, ensuring they follow building codes...",
+            "segment_percentage": 11.0
+        },
+        {
+            "segment": "Government",
+            "segment_description": "The industry provides services to government agencies that require training in workshops...",
+            "segment_percentage": 6.7
+        },
+        {
+            "segment": "Colleges, universities and nonprofit organizations",
+            "segment_description": "Occupational health and workplace safety companies provide some of their services to academic institutions...",
+            "segment_percentage": 2.9
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Implementation of Best Practices",
+            "product_description": "Best practice programs refer to initiatives, methodologies or frameworks...",
+            "product_percentage": 16.7
+        },
+        {
+            "product_or_service": "OSHA Compliance and Occupational Hazard Evaluation",
+            "product_description": "OSHA compliance and occupational hazard evaluation comprises services done by technicians...",
+            "product_percentage": 63.2
+        },
+        {
+            "product_or_service": "Safety and Health Training",
+            "product_description": "Technicians and specialists make health hazard information for chemical manufacturers...",
+            "product_percentage": 17.1
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "Technicians and specialists provide various miscellaneous services...",
+            "product_percentage": 3.0
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Computer & Packaged Software Wholesaling in the US",
+            "Laboratory Supply Wholesaling in the US",
+            "Computer Stores in the US"
+        ],
+        "tier_2_suppliers": [
+            "Office Supply Stores in the US",
+            "Commercial Leasing in the US",
+            "Health & Medical Insurance in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Number of Employees",
+            "determinant_description": "Occupational health and safety specialists provide services intended to reduce the risk of injury..."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast is the largest region of the United States by population...",
+            "percentage_establishments": 30.0,
+            "percentage_population": 35.0
+        },
+        {
+            "location": "West",
+            "location_description": "Most occupational health and safety specialists out west are in California...",
+            "percentage_establishments": 25.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region has a diverse and dense population...",
+            "percentage_establishments": 15.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "Most providers in the Southwest are located in Texas...",
+            "percentage_establishments": 10.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "Greater economic activity from various establishments...",
+            "percentage_establishments": 10.0,
+            "percentage_population": 9.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "The Rocky Mountains hold important sectors related to mining...",
+            "percentage_establishments": 4.0,
+            "percentage_population": 6.0
+        },
+        {
+            "location": "Plains",
+            "location_description": "The Plains region is vital for agricultural practices...",
+            "percentage_establishments": 4.0,
+            "percentage_population": 3.0
+        },
+        {
+            "location": "New England",
+            "location_description": "New England holds important educational and healthcare markets...",
+            "percentage_establishments": 2.0,
+            "percentage_population": 2.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Increasing",
+        "regulations_points": [
+            {
+                "regulation_title": "Occupational Safety and Health Administration (OSHA)",
+                "regulation_description": "OSHA ensures workplace safety by mandating employers to maintain hazard-free environments..."
+            },
+            {
+                "regulation_title": "Environmental Protection Agency (EPA)",
+                "regulation_description": "While primarily focused on environmental conservation, EPA regulations also impact workplace safety..."
+            },
+            {
+                "regulation_title": "Americans with Disabilities Act (ADA)",
+                "regulation_description": "ADA ensures equal opportunity for individuals with disabilities by requiring employers to provide reasonable accommodations..."
+            },
+            {
+                "regulation_title": "Federal, State and Local Regulations",
+                "regulation_description": "Federal, state and local governments issue regulations covering environmental and human safety..."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "mature"
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "low - steady"
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "high - increasing"
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Industry Assistance Level: low - steady",
+            "Competition Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - increasing"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Competition among occupational health and workplace safety specialists is stiff.",
+                "basis_description": "Companies must develop strong reputations by providing technical knowledge..."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "THE HIGH NUMBER OF NONEMPLOYERS KEEPS CONCENTRATION LOW",
+                "concentration_description": "While the primary barrier to entry is acquiring certifications..."
+            },
+            {
+                "concentration_title": "Many professionals in other industries have begun to offer their services part-time...",
+                "concentration_description": ""
+            },
+            {
+                "concentration_title": "OCCUPATIONAL HEALTH AND SAFETY SPECIALISTS PROVIDE A WIDE BREADTH OF SERVICES...",
+                "concentration_description": ""
+            },
+            {
+                "concentration_title": "Small occupational health and safety specialists can find success in offering specialized services...",
+                "concentration_description": ""
+            },
+            {
+                "concentration_title": "REGULATORY COMPLEXITY LIMITS MARKET DOMINATION",
+                "concentration_description": ""
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Regional Reporting Inc.",
+                "company_percentage": 0.7
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 99.3
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 9
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 27
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 18
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 7
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 6
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 3
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 19
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Wages are high for occupational health and safety specialists since workers are highly educated.",
+            "cost_factor_description": "For this reason, compensation comprises more than half of revenue."
+        },
+        {
+            "cost_factor_title": "Other costs include licensing fees, travel expenses...",
+            "cost_factor_description": "Miscellaneous expenses have remained relatively stable during the current period..."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_trend": "Unknown",
+        "capital_intensity_points": []
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_trend": "Unknown",
+        "volatility_points": [
+            {
+                "volatility_title": "The level of mining output impacts volatility",
+                "volatility_description": "The mining sector is one of the primary downstream markets..."
+            },
+            {
+                "volatility_title": "The amount of construction activity contributes to shifts in revenue",
+                "volatility_description": "Occupational health and safety specialists derive a decent chunk of their revenue from the construction sector..."
+            },
+            {
+                "volatility_title": "Fluctuations in Manufacturing Output Influence Volatility",
+                "volatility_description": "The manufacturing sector is one of the primary downstream markets..."
+            }
+        ]
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_trend": "Increasing",
+        "technological_change_points": [
+            {
+                "technological_change_title": "THE APPLICATION OF NEW COMPUTER SYSTEMS HELPS DIVERSIFY THE INDUSTRY'S SERVICES",
+                "technological_change_description": "Occupation health experts enjoy software and hardware capacity advances..."
+            },
+            {
+                "technological_change_title": "THE USE OF NEW LABORATORY AND TESTING EQUIPMENT BOOSTS ACCURACY",
+                "technological_change_description": "Occupational health and safety specialists use laboratory and testing equipment..."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "How have recent economic conditions influenced consumer demand for your company's services?",
+            "answer": "As economic conditions improve, businesses grow the size of their operations as well..."
+        },
+        {
+            "question": "Does your company offer a broad range of services or does it specialize in a singular, niche service?",
+            "answer": "Providers of health and safety services can either specialize in educating workers broad on occupational hazards..."
+        },
+        {
+            "question": "To what degree is your company's operations capital intensive?",
+            "answer": "Capital intensity for providers of workplace and health safety services is low since wage expenses are so high."
+        },
+        {
+            "question": "Are your company's purchase costs heavily influenced by commodity price fluctuations?",
+            "answer": "While commodity prices effects demand for workplace and health safety services..."
+        },
+        {
+            "question": "Have you minimized/reduced wage costs by automating your company's operations?",
+            "answer": "Health and workplace safety services must be provided by individuals to workers..."
+        },
+        {
+            "question": "Is your company looking to significantly expand its operations sometime in the near future?",
+            "answer": "The majority of health and workplace safety providers work alone, meaning operational expansion is not a large priority for them."
+        },
+        {
+            "question": "How do you recruit and retain employees? Do your staff undergo regular training?",
+            "answer": "Companies are labor-intensive and require appropriately skilled labor..."
+        },
+        {
+            "question": "What niches, if any, do you cater to? How can you diversify your product mix?",
+            "answer": "Employees who are able to develop a dominant position in a narrow niche market..."
+        },
+        {
+            "question": "How quickly can you adopt new technology? What are the associated costs?",
+            "answer": "Companies must be aware of the changing technological environments of clients..."
+        },
+        {
+            "question": "What nonregulation-based services can you pivot to in the event of deregulation? How will you keep demand high?",
+            "answer": "Demand for services is heavily reliant upon regulations..."
+        },
+        {
+            "question": "How much do you work with construction companies? Do you offer attractive bulk rates for larger operators?",
+            "answer": "Companies inspect construction sites for noise exposure and confined spaces..."
+        },
+        {
+            "question": "How many of your services are based on employee count? How can you upsell clients as they renegotiate to include more staff?",
+            "answer": "Companies provide services intended to reduce the risk of injury, mortality and sickness..."
+        }
+    ]
+}

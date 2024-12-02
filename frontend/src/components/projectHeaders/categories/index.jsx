@@ -199,7 +199,7 @@ const Categories = () => {
             <FileUploadComponent />
           ) : activeCategory === "Investment Thesis" ? (
             <>
-              <div className="flex-grow overflow-y-auto bg-[#0d0d0d] ml-1 scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800">
+              <div className="flex-grow overflow-y-auto bg-[#1C1C1C] ml-1 scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800">
                 <div className="mt-10 p-3">
                   <ThesisForm questions={questions} setActiveIndustry={setActiveCategory} />
                   {/* <ThesisCardComponent /> */}

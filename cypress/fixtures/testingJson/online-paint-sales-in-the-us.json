@@ -1,0 +1,433 @@
+{
+    "report_title": "Online Paint Sales in the US",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 8435000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": 3.73
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 2.03
+            }
+        },
+        "profit": {
+            "profit_dollars": 346000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 4.76
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 3.24
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.1,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 1.75
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 2.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1566000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 4.14
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 2.59
+            }
+        },
+        "employees": {
+            "employees_count": 35057,
+            "employees_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "employees_cagr_value": 5.53
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 3.33
+            }
+        },
+        "wages": {
+            "wages_dollars": 1161000000,
+            "wages_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "wages_cagr_value": 3.88
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 3.07
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "Online paint sellers' revenue has grown over much of the five years to 2023, as both construction activity and strengthening e-commerce sales pushed up demand for online paint products. Paint sales rely heavily on the overall housing market; therefore, as housing starts and private spending on home improvement swell, demand for online paint surged as well. Also, the shift toward e-commerce further boosted online paint sellers' revenue, as more and more consumers have become expansively comfortable with purchasing goods online.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "A Digital Transformation is Revolutionizing Online Paint Sales",
+            "current_performance_point_description": "E-commerce sales in the paint industry have seen expansion amid a boost in mobile internet connections. Retailers have launched innovative software applications to overcome the barrier of physical color matching, making online purchase of paint convenient."
+        },
+        {
+            "current_performance_point_title": "Over the five years to 2028, online paint sellers' revenue is forecast to boost at a CAGR of 2.2% to $9.4 billion.",
+            "current_performance_point_description": "As e-commerce sales and the percentage of services conducted online continue to swell, a strengthening number of traditional brick-and-mortar paint stores are anticipated to establish online platforms, contributing to the expanding number of industry enterprises. However, as more companies enter the industry, the already competitive nature will likely intensify, driving online paint sellers to continue to diversify their product lines by offering more color combinations and low chemical paints."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "There are emerging housing market trends that will benefit online paint sellers over the next five years",
+            "future_outlook_point_description": "The housing market is expected to grow over the next five years and more consumers will likely spend on home improvements. A boost in the number of households earning over $100,000 and expanding per capita disposable income are likely to drive this expansion. Online paint sellers will likely benefit alongside an expansion of the housing industry because of a boost in DIY projects and renovations."
+        },
+        {
+            "future_outlook_point_title": "Challenges and Opportunities for Online Paint Sellers Are Presented Amid Federal Reserve Rate Hikes",
+            "future_outlook_point_description": "Intense competition among online paint sellers is present, with these companies likely to enhance customer service, offer free shipping and expand product lines to attract and retain customers. The Federal Reserve's interest rate hikes could pose challenges for online paint sellers by making it more expensive to finance home purchases and renovations. However, it could also open opportunities for online platforms to provide budget-friendly options, which may boost online sales."
+        }
+    ],
+    "industry_definition": "This industry sells household paint over the internet to consumers and construction contractors. Sales include exterior paint, interior paint, stains and varnishes.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Increased online shopping trends"
+        ],
+        "negative_impact_factors": [
+            "Economic fluctuations",
+            "Competition"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Leading online presence",
+            "Strong supplier relationships"
+        ],
+        "weaknesses": [
+            "High competition",
+            "Reliance on e-commerce infrastructure"
+        ],
+        "opportunities": [
+            "Growth in DIY projects",
+            "Emerging technology for color matching"
+        ],
+        "threats": [
+            "Changes in consumer spending",
+            "Regulatory changes affecting online sales"
+        ]
+    },
+    "key_trends": [
+        "Increased emphasis on e-commerce for paint sales",
+        "Growing demand for DIY home improvement projects"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Professional consumers",
+            "segment_description": "Professionals like building contractors, heavy construction and special trade contractors contribute to most of the professional market segment.",
+            "segment_percentage": 51.5
+        },
+        {
+            "segment": "Households and DIY consumers",
+            "segment_description": "There's been a boost of DIY consumers buying paint and other related supplies online.",
+            "segment_percentage": 48.5
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "I N T E R I O R  P A I N T",
+            "product_description": "Interior paints offer various distinctive features including stain-resistant.",
+            "product_percentage": 42.6
+        },
+        {
+            "product_or_service": "E X T E R I O R  P A I N T",
+            "product_description": "Exterior paints are customized to endure different weather-related elements.",
+            "product_percentage": 25.0
+        },
+        {
+            "product_or_service": "S T A I N ,  V A R N I S H ,  S H E L L A C ,  A N D  O T H E R  P R O T E C T I V E  C O A T I N G S",
+            "product_description": "Used for particular purposes, including exterior wood protection.",
+            "product_percentage": 13.2
+        },
+        {
+            "product_or_service": "Painting Supplies",
+            "product_description": "Includes brushes and scrappers, as well as consumable materials.",
+            "product_percentage": 12.2
+        },
+        {
+            "product_or_service": "Painting Equipment",
+            "product_description": "Assists in the smooth application and pristine finish of paint jobs.",
+            "product_percentage": 7.0
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Paint Manufacturing in the US",
+            "Paint Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Interior Paint Sales Have Strengthened",
+            "determinant_description": "Interior paints account for the largest market share.",
+            "driver_cagr_historical": {
+                "begin_year": 2002,
+                "end_year": 2023,
+                "driver_cagr_value": 5.36
+            },
+            "driver_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "driver_cagr_value": 3.46
+            }
+        },
+        {
+            "determinant_title": "Demand From Painters",
+            "determinant_description": "Painters primarily engaged in exterior and interior painting.",
+            "driver_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "driver_cagr_value": 0.3
+            },
+            "driver_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "driver_cagr_value": 1.44
+            }
+        }
+    ],
+    "international_trade": {
+        "import_level": "low",
+        "import_trend": "steady",
+        "export_level": "low",
+        "export_trend": "steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "West",
+            "location_description": "The West region of the U.S. boasts the highest concentration of online paint sales industry establishments.",
+            "percentage_establishments": 24.0,
+            "percentage_population": 17.1
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region ranks second with 22.8% of online paint seller establishments.",
+            "percentage_establishments": 22.8,
+            "percentage_population": 25.8
+        },
+        {
+            "location": "Great Lakes",
+            "percentage_establishments": 16.0,
+            "percentage_population": 15.1
+        },
+        {
+            "location": "Mid-Atlantic",
+            "percentage_establishments": 14.0,
+            "percentage_population": 14.9
+        },
+        {
+            "location": "New England",
+            "percentage_establishments": 5.0,
+            "percentage_population": 4.5
+        },
+        {
+            "location": "Plains",
+            "percentage_establishments": 8.0,
+            "percentage_population": 6.8
+        },
+        {
+            "location": "Rocky Mountains",
+            "percentage_establishments": 9.0,
+            "percentage_population": 7.0
+        },
+        {
+            "location": "Southwest",
+            "percentage_establishments": 0.0,
+            "percentage_population": 13.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "Paint Manufacturing Regulations",
+                "regulation_description": "Paint manufacturers are under heavy regulation because of their responsibility in producing paint using safe compounds."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "Industry assistance level is low and steady."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Capital is crucial for online paint sellers."
+        ],
+        "factors_decreased_barrier": [
+            "Capital intensity level is low."
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Attracting customers",
+                "basis_description": "Online paint sellers attract customers by offering low prices and minimizing shipping costs."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "No company dominates the industry",
+                "concentration_description": "No single company that represents at least 5.0% of revenue."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Home Depot, Inc.",
+                "company_percentage": 10.1
+            },
+            {
+                "company_name": "Lowes Companies Inc.",
+                "company_percentage": 3.5
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 86.4
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 13.8
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 58.4
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases are the highest cost for online paint sellers",
+            "cost_factor_description": "While these costs have remained fairly consistent, they can vary depending on the size of the seller with larger companies."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Capital is crucial for online paint sellers",
+                "capital_intensity_description": "Necessary investments in servers, website designs, and payment systems."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "COVID-19 Impacts on Online Sales",
+                "volatility_description": "COVID-19 boosted DIY projects, leading to a surge in paint sales."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Features of Paint Products",
+                "technological_change_description": "Many different kinds of paint are available for various uses."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company specialize in one corner of the market or do you retail a diversified range of products?",
+            "answer": "Online paint sellers specialize in the online retailing of paint and related supplies."
+        },
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "Online paint sellers' performance is heavily impacted by the overall housing market."
+        }
+    ]
+}

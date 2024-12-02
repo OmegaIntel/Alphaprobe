@@ -1,0 +1,585 @@
+{
+    "report_title": "Industry Research: Laboratory Fume Hoods Manufacturing",
+    "report_date": "Sep 27, 2022",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 789000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "revenue_cagr_value": 0.6
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "revenue_cagr_value": 0.78
+            }
+        },
+        "profit": {
+            "profit_dollars": 42000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "profit_cagr_value": null
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5.3,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "profit_margins_cagr_value": 1.98
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 262000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 3995,
+            "employees_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 214000000,
+            "wages_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": 361000000,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": 107000000,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "The Laboratory Fume Hoods Manufacturing industry manufactures ventilation devices that are designed to limit exposure to hazardous or noxious fumes, vapors or dusts. As the economy expanded through early 2020, fume hood manufacturers experienced increased demand for industry products. However, the industry contracted in 2020 as a result of the COVID-19 (coronavirus) pandemic, which hampered global demand and reduced trade flows, on which the industry relies. Exports to declined 13.0% in 2020 as a result of the coronavirus pandemic, undermining the industry and resulting in a revenue decline of during the year. The industry has recovered since 2021, with revenue rising steadily including a projected to rise 5.2%. As a result of these trends, IBISWorld expects industry revenue to increase at an annualized rate of 2.0% to $789.2 million over the five years to 2022.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Revenue growth over five years to 2022",
+            "current_performance_point_description": "The Laboratory Fume Hoods Manufacturing industry has experienced mixed results over the five years to 2022. Revenue is expected to rise at an annualized rate of 2.0% to $789.2 million over the period, driven by renewed domestic demand as pandemic restrictions lifted, strong global demand, and rising commodity prices pushing up selling prices. However, the industry contracted in 2020 due to the COVID-19 pandemic hampering demand and trade flows."
+        },
+        {
+            "current_performance_point_title": "R&D spending trends",
+            "current_performance_point_description": "R&D spending is tied to corporate revenue and the economy. As revenue expanded through early 2020, businesses increased R&D funding. However, R&D declined in 2020 as industry revenue contracted. Overall, total R&D expenditure is expected to rise at an annualized 1.9% over five years to 2022, driven by the private sector as its share of total R&D spending has grown to around 90%."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Revenue projected to grow 0.8% annually to 2027",
+            "future_outlook_point_description": "Over the five years to 2027, industry revenue is projected to recover from the coronavirus pandemic, increasing at an annualized 0.8% to $823.1 million. Growth will be supported by rising exports, particularly to Asia, and increasing domestic demand as R&D expenditure expands."
+        },
+        {
+            "future_outlook_point_title": "Profit margins to recover modestly",
+            "future_outlook_point_description": "Although demand is expected to increase, rising competition will likely place pressure on profit during the outlook period. The average industry profit margin is projected to recover some value, rising to 5.7% by 2027 from lows in 2020."
+        }
+    ],
+    "industry_definition": "This industry includes establishments operating within the United States that manufacture fume hoods, which are ventilation devices designed to limit exposure to hazardous or noxious fumes, vapors or dusts.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Revenue Volatility: low",
+            "Capital Intensity: low"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level: low - increasing",
+            "Regulation Level: heavy - increasing",
+            "Competition Level: high - increasing"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low & Increasing Level of Assistance",
+            "Low Customer Class Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "High Competition",
+            "Low Profit vs. Sector Average",
+            "High Product/Service Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2022-2027)",
+            "High Performance Drivers",
+            "Research and development expenditure"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2022)",
+            "Low Revenue Growth (2017-2022)",
+            "Low Outlier Growth",
+            "Total health expenditure"
+        ]
+    },
+    "key_trends": [
+        "Medicare spending is expected to increase due to the increasing age of US population",
+        "Many domestic manufacturers are setting up manufacturing operations in Mexico",
+        "IBISWorld expects multiple industry exits in 2020, despite some companies with fixed contracts benefiting from falling raw material costs",
+        "Public spending growth is projected to accelerate due to baby boomers becoming eligible for Medicare",
+        "Big pharmaceutical companies have begun outsourcing their research operations to India",
+        "With more resources and technologies available, larger companies can service clients from a wide range of industries",
+        "As revenue has expanded over the past five years, businesses have increased funding for research to develop new products"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Private nonmedical laboratories and facilities",
+            "segment_description": "Laboratories, research and development (R&D) facilities and manufacturing facilities that are operated by private organizations for purposes other than medical research provide the largest share of industry revenue at 30.1% in 2022.",
+            "segment_percentage": 30.1
+        },
+        {
+            "segment": "Educational institutions",
+            "segment_description": "Educational institutions, including universities and primary and secondary schools, comprise the second-largest market for industry revenue, estimated at 25.8% of industry revenue in 2022.",
+            "segment_percentage": null
+        },
+        {
+            "segment": "Private medical laboratories",
+            "segment_description": "Private medical laboratories supply an additional 20.8% of industry revenue in 2022. This market segment primarily includes companies that are involved in healthcare and pharmaceutical research and the production of related products (e.g. medications).",
+            "segment_percentage": 20.8
+        },
+        {
+            "segment": "Exports",
+            "segment_description": "Exports are expected to account for an estimated 13.6% of industry revenue in 2022.",
+            "segment_percentage": 13.6
+        },
+        {
+            "segment": "Government facilities",
+            "segment_description": "Government facilities, excluding educational and medical facilities, account for the remaining 9.7% of industry revenue in 2022.",
+            "segment_percentage": 9.7
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Benchtop Fume Hoods",
+            "product_description": "Benchtop fume hoods are the most common variety of fume hood produced by the industry.",
+            "product_percentage": 50.3
+        },
+        {
+            "product_or_service": "Floor-Mounted Fume Hoods",
+            "product_description": null,
+            "product_percentage": 8.7
+        },
+        {
+            "product_or_service": "Canopy Fume Hoods",
+            "product_description": null,
+            "product_percentage": 6.0
+        },
+        {
+            "product_or_service": "Custom Fume Hoods",
+            "product_description": "Custom-designed fume hoods are customer-specific products that require input and design specifications.",
+            "product_percentage": 27.4
+        },
+        {
+            "product_or_service": "Other Fume Hoods",
+            "product_description": "Other fume hoods and fume hood products include similar ventilation devices such as snorkels, glove boxes and clean benches.",
+            "product_percentage": 7.6
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Metal Pipe & Tube Manufacturing in the US",
+            "Aluminum Manufacturing in the US",
+            "Valve Manufacturing in the US",
+            "Electrical Equipment Manufacturing in the US"
+        ],
+        "tier_2_suppliers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Research and Development Activity",
+            "determinant_description": "Total R&D spending is tied to total corporate revenue; as a result, it moves closely with the overall economy. As revenue tightens during a recession, businesses tend to cut back on funding research to develop new products. During times of economic expansion, increased revenue is often invested back into businesses."
+        },
+        {
+            "determinant_title": "Technology and Medical Demand",
+            "determinant_description": "The advent of new technology can boost demand for research and development, particularly when it involves a variety of new product and service possibilities."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Moderate",
+        "import_trend": "Decreasing",
+        "export_level": "Moderate",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports",
+                "trade_description": "During the current period, China and Mexico represented strong import growth into the Laboratory Fume Hoods Manufacturing industry. The increasing trend of manufacturing activities being relocated to cost-competitive regions in the Asia-Pacific, such as China, has driven growth in imports over the past few years."
+            },
+            {
+                "trade_title": "Exports",
+                "trade_description": "The total value of exports is expected to decrease at an annualized rate of 8.0% to $74.2 million over the five years to 2020. Exports have been impeded by the strengthening of the US dollar against other major currencies, which has moderated foreign demand for US goods."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region has the highest percentage of both establishments (around 30%) and population (around 20%).",
+            "percentage_establishments": 30.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "Plains",
+            "location_description": "The Plains region has the second-highest percentage of establishments (around 15%).",
+            "percentage_establishments": 15.0,
+            "percentage_population": 101
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": null,
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region has the second-highest percentage of population (around 15%).",
+            "percentage_establishments": 101,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "West",
+            "location_description": null,
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Southwest",
+            "location_description": null,
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "New England",
+            "location_description": null,
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Rocky M",
+            "location_description": "The Rocky M region has the lowest percentage of both establishments and population (around 5% each).",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "Environmental regulations",
+                "regulation_description": "The industry is influenced by federal, state and local environmental laws and regulations such as the Clean Air Act, Clean Water Act, and others governing environmental matters."
+            },
+            {
+                "regulation_title": "Appliance efficiency regulations",
+                "regulation_description": "Companies are subject to appliance efficiency regulations under the National Appliance Energy Conservation Act and state regulations concerning energy efficiency of products."
+            },
+            {
+                "regulation_title": "Workplace safety regulations",
+                "regulation_description": "Regulations set by the Occupational Safety & Health Administration (OSHA) regarding workplace safety support demand for fume hoods as employers must comply."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Capital requirements",
+                "barrier_description": "The industry has moderate barriers due to the capital requirements for starting a new business."
+            },
+            {
+                "barrier_title": "Regulations",
+                "barrier_description": "Several regulations govern the proper operation of fume hoods that manufacturers must adhere to."
+            },
+            {
+                "barrier_title": "Competition level",
+                "barrier_description": "The industry endures a moderate level of competition with around 66 domestic companies and growing import competition."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Industry Assistance Level: low - increasing",
+            "Regulation Level: heavy - increasing",
+            "Competition Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Revenue Volatility Level: low",
+            "Capital Intensity Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Price is a major competitive factor",
+                "basis_description": "Price is one of the most important competitive factors; the majority of industry products are relatively expensive, but prices may vary depending on customer needs."
+            },
+            {
+                "basis_title": "Product quality is significant",
+                "basis_description": "The product's quality is a significant factor for companies since the industry provides safety products where proper ventilation is integral for generating repeat sales."
+            },
+            {
+                "basis_title": "Product diversity is important",
+                "basis_description": "Product diversity is another important competitive factor as operators must offer a range of fume hoods to various downstream industries."
+            },
+            {
+                "basis_title": "Timeliness and service are key",
+                "basis_description": "Timeliness and speed of delivery and after-sales service are integral for generating repeat sales."
+            },
+            {
+                "basis_title": "Location and proximity matter",
+                "basis_description": "The location of a manufacturing facility and its proximity to key customers is important for meeting delivery deadlines and reducing transportation costs."
+            },
+            {
+                "basis_title": "Technological innovation provides advantage",
+                "basis_description": "Companies that develop new products with better ventilation, safety features or new materials can more effectively compete. Patents incentivize R&D investment."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Medium",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Top 4 companies account for nearly 50% revenue",
+                "concentration_description": "The top four companies account for nearly 50.0% of industry revenue in 2022."
+            },
+            {
+                "concentration_title": "Largest player is Hamilton Scientific",
+                "concentration_description": "The industry's largest player, Hamilton Scientific, is expected to generate more than a quarter of all industry revenue during the current year."
+            },
+            {
+                "concentration_title": "Concentration increasing due to M&A",
+                "concentration_description": "Market share concentration among the top four players has increased slowly as major companies pursue mergers and acquisitions."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Hamilton Laboratory Solutions LLC",
+                "company_percentage": 23.1
+            },
+            {
+                "company_name": "Labconco",
+                "company_percentage": 6.8
+            },
+            {
+                "company_name": "Kewaunee Scientific Corp",
+                "company_percentage": 5.3
+            },
+            {
+                "company_name": "The Baker Company, Inc.",
+                "company_percentage": 2.6
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 27.1
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 43.4
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0.8
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0.3
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0.8
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0.8
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 11.8
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Resource prices",
+            "cost_factor_description": "The cost structure is driven by the price of resources used in production, such as steel and plastic."
+        },
+        {
+            "cost_factor_title": "Purchases costs",
+            "cost_factor_description": "Year-to-year purchases costs account for about one-half of all spending for industry players."
+        },
+        {
+            "cost_factor_title": "Industry concentration",
+            "cost_factor_description": "The industry has a medium level of concentration, with only Hamilton Scientific LLC controlling a substantial share of the market, estimated at nearly 30.0%."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital expenditure",
+                "capital_intensity_description": "High initial capital costs are associated with the construction and development of specialized plants and machinery. Total capital expenditures are expected to amount to $6.3 million in 2022, increasing slightly over the past five years as operators made new investments as the industry grew."
+            },
+            {
+                "capital_intensity_title": "Low rate of new patents",
+                "capital_intensity_description": "The industry is experiencing a low level of both the rate of new patents and the concentration of patents in the industry."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Low",
+        "volatility_points": [
+            {
+                "volatility_title": "Cyclical manufacturing demand",
+                "volatility_description": "Industry market demand from manufacturing customers can be highly volatile and cyclical."
+            },
+            {
+                "volatility_title": "Stable healthcare and education demand",
+                "volatility_description": "Volatility is lessened by more stable demand from healthcare facilities, research laboratories and educational institutions that must comply with regulations."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Product innovation",
+                "technological_change_description": "Manufacturers undertake investment to reconfigure products to become more innovative and comply with changing customer needs."
+            },
+            {
+                "technological_change_title": "Manufacturing technology",
+                "technological_change_description": "The industry uses advanced manufacturing technologies like computer numerically controlled machinery, controls technology, computer-aided design and computational fluid dynamics."
+            },
+            {
+                "technological_change_title": "Environmental technology",
+                "technological_change_description": "R&D expenditure is related to developing alternative ventilators with less environmental impact, as well as airflow, acoustics and micro-electronic control technologies."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company affected by rising imports?",
+            "answer": "Rising imports have weighed heavily on laboratory fume hood manufacturers, which has created price-based competition for domestic companies."
+        },
+        {
+            "question": "Have exports offered an opportunity for your company?",
+            "answer": "With the value of the dollar expected to depreciate in the coming years, there is a window of opportunity for domestic manufacturers to increase their revenue through exports."
+        },
+        {
+            "question": "Has your company explored acquisition opportunities in areas with well-established infrastructure?",
+            "answer": "Consolidation in this industry is trending, with the industry's largest players acquiring smaller companies in order to boost the efficiency of their processes."
+        },
+        {
+            "question": "Have you looked into setting up manufacturing facilities in lower-wage regions of the country?",
+            "answer": "Laboratory fume hood manufacturers have looked to set up manufacturing facilities in lower-wage regions of the country to boost profit margins and efficiency."
+        },
+        {
+            "question": "Is your company investing in technology to establish a competitive edge?",
+            "answer": "Laboratory fume hood manufacturers are investing in new technologies to provide high-value added products for consumers."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation over the past five years?",
+            "answer": "Laboratory fume hood manufacturers have tried to reduce wage costs through more efficient processes, including automation of manual labor tasks."
+        },
+        {
+            "question": "Have any regulatory expenses significantly impacted profitability recently?",
+            "answer": "Regulations have led laboratory fume hood manufacturers to replace some lower-cost inputs with more expensive, energy-efficient inputs, which has marginally affect profitability."
+        },
+        {
+            "question": "How does your company stay ahead of regulations, such as energy-efficiency standards?",
+            "answer": "Laboratory fume hood manufacturers are challenged by appliance-efficiency regulations. They stay ahead by following the regulations set forth, principally by the US Environmental Protection Agency."
+        },
+        {
+            "question": "How do your company's profit margins compare to your main competitors'?",
+            "answer": "The industry's largest players have the highest profit margins, as a result of increased efficiency."
+        },
+        {
+            "question": "How has input price volatility affected profit margins over the past 12 months?",
+            "answer": "Profit margins have increased over the past 12 months, as a result of declining input prices."
+        },
+        {
+            "question": "What markets do you target? Is your demand concentrated in any one market? How can you diversify your client base?",
+            "answer": "A company's client and geographic diversity can mitigate the effects of fluctuations in market demand."
+        },
+        {
+            "question": "Do you have access to high-quality inputs? If not, how can you obtain access to such supplies?",
+            "answer": "A disruption in material supplies can have an adverse effect on a company's ability to meet its commitments."
+        },
+        {
+            "question": "Do you offer a diverse range of services? Do you cater any specific market with the services you offer?",
+            "answer": "Due to the diverse range of fume hood systems available to customers, operators within this industry must have the flexibility to manufacture a range of models and sizes to suit customer requirements."
+        },
+        {
+            "question": "Do you expect major changes in demand with fluctuations in corporate profit? How do you stimulate demand when corporate profit levels are low?",
+            "answer": "Research and development spending is often one of the first spending cuts a company will make when profit contracts; therefore, decreased corporate profit typically results in reduced demand for laboratory fume hoods."
+        },
+        {
+            "question": "Do you monitor the trade-weighted index? How can you take advantage when the trade-weighted index decreases?",
+            "answer": "When the US dollar depreciates, US manufacturers, such as laboratory fume hood manufacturers, benefit because domestic products become relatively less expensive for foreign countries and imports become relatively more expensive."
+        },
+        {
+            "question": "What research are you performing? Does your company have plans to dedicate more resources toward R&D?",
+            "answer": "High levels of R&D expenditure increase the likelihood that businesses will purchase laboratory fume hoods."
+        }
+    ]
+}

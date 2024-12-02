@@ -1,0 +1,553 @@
+{
+    "report_title": "Formal Wear & Costume Rental in the US",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 670000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "revenue_cagr_value": -4.78
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "revenue_cagr_value": -1.25
+            }
+        },
+        "profit": {
+            "profit_dollars": null,
+            "profit_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "profit_cagr_value": null
+            },
+            "profit_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": null,
+            "profit_margins_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "profit_margins_cagr_value": null
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 250000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": -4.74
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": -1.65
+            }
+        },
+        "employees": {
+            "employees_count": 4856,
+            "employees_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 160000000,
+            "wages_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "The formal wear and costume rental industry has weakened in recent years due to stagnation in the rental customer base of adults aged 20 to 64, rising external competition, and falling marriage rates. Rising household incomes also allow consumers to purchase formalwear instead of renting. The COVID-19 pandemic severely impacted rental services as health regulations forced closures and event cancellations. Industry revenue decreased at a 4.9% CAGR to $691.4 million over the past five years, including a 5.3% decrease in 2023.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Trend Toward Sustainable Fashion Has Bolstered the Need for Rental Services",
+            "current_performance_point_description": "Environmentally conscious consumers have called for recycling garments and reducing waste from garment production, benefiting industry growth. Millennials are less interested in ownership and prefer a 'one and done' outfit for occasions."
+        },
+        {
+            "current_performance_point_title": "Marriage Rates Falling Spells Doom for Rental Services",
+            "current_performance_point_description": "The number of adults that have never been married has reached record levels, driven by young adults aged 25 to 34 not marrying. When the marriage rate is high, the need for formalwear rentals increases for weddings."
+        },
+        {
+            "current_performance_point_title": "Consumer Preferences Lean Towards Online Renting",
+            "current_performance_point_description": "Online rental services have been a major challenge for physical rental services. The pandemic caused a shift to online as physical stores closed, and many consumers preferred the convenience after reopening."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Falling Marriage Rates Continue to Have a Negative Effect",
+            "future_outlook_point_description": "As marriages continue to fall and unmarried cohabitation grows, the need for formal wear will slump. The shift in wedding destination preferences to less formal venues also reduces demand."
+        },
+        {
+            "future_outlook_point_title": "Competition from Online Businesses Will Stay Strong",
+            "future_outlook_point_description": "Younger generations are highly computer literate and will demand more internet-based services as they age. Online rental provides convenience that consumers are willing to pay a premium for."
+        },
+        {
+            "future_outlook_point_title": "Industry Structure Will Begin to Shift",
+            "future_outlook_point_description": "Many traditional rental services will exit due to competition. However, online companies are opening physical stores to enable fittings and returns. Large urban services with loyal customers will still thrive."
+        }
+    ],
+    "industry_definition": "Establishments in this industry primarily rent attire such as formal wear, costumes and other clothing to end consumers. This industry does not include companies that primarily sell these items, nor does it include Internet-based companies. This industry also does not include companies that primarily launder and supply uniforms and work apparel.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Concentration Level: low",
+            "Regulation Level: none - steady",
+            "Technology Change Level: low",
+            "Globalization Level: low - steady"
+        ],
+        "negative_impact_factors": [
+            "Life Cycle Stage: decline",
+            "Revenue Volatility Level: high",
+            "Industry Assistance Level: none - steady",
+            "Barriers To Entry Level: low - steady",
+            "Competition Level: high - increasing"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry",
+            "None & Steady Level of Assistance",
+            "High Competition",
+            "Decline Life Cycle Stage",
+            "High Volatility",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration",
+            "Low Revenue per Employee",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)"
+        ],
+        "threats": []
+    },
+    "key_trends": [
+        "Companies compete based on price, brand offerings, range of outfits, location, reputation and customer service. Establishments with a large stock of high-end designer options and low-cost brands will attract a large pool of customers from different income demographics.",
+        "External competition comes from online-based formal wear and costume renters. Online renters are on the rise due to their lower overhead costs as they do not incur expenses on renting brick-and-mortar storefronts.",
+        "Younger generations are getting married less frequently than older generations. When the marriage rate is high, demand for formalwear rentals typically increases, as weddings often have dress codes that require formal attire.",
+        "Competition from online businesses is strong. Younger generations are highly computer literate and will demand more of their services to be internet-based as they age.",
+        "This industry is dominated by small-scale companies. Tailored Brands is the only company in this industry with a sizeable market share."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Consumers Aged 25 to 54",
+            "segment_description": "As this customer segment generally comprises working adults, a higher level of disposable income enables them to spend extra dollars on purchasing apparel instead of renting. These consumers can afford to rent more-expensive clothes, bolstering their segment. This segment has fallen as fewer adults in this age bracket are getting married.",
+            "segment_percentage": 62.4
+        },
+        {
+            "segment": "Consumers aged 55 and older",
+            "segment_description": "Older consumers, above the age of 55 offer a steady source of revenue for rental companies. In recent years, demand from this segment has increased due to demographic shifts, with more baby boomers crossing the age threshold into this category while still demanding formal attire. Moreover, consumers in this age bracket are less likely to be computer-literate, causing them to rent formalwear at brick-and-mortar locations instead of using online rental services.",
+            "segment_percentage": 33.3
+        },
+        {
+            "segment": "Consumers under the age of 25",
+            "segment_description": "Most consumers in this range rely on rental services for school-related occasions like proms, Halloween parties or graduation ceremonies. Older consumers in this age range attend formal events like formal birthday parties and weddings, while younger consumers need formal wear for communions, Bar and Bat Mitzvahs and other religious events. Low-cost imported apparel has diverted money away from rental services and toward formal wear purchases. As the average age of first marriage in the United States has risen, fewer consumers in this age demographic are demanding formal wear and wedding gown rentals for weddings.",
+            "segment_percentage": 4.3
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Men's Formal Wear, Costumes and Accessories Rental",
+            "product_description": null,
+            "product_percentage": 66.6
+        },
+        {
+            "product_or_service": "Women's Formal Wear, Costumes and Accessories Rental",
+            "product_description": null,
+            "product_percentage": 25.5
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": null,
+            "product_percentage": 3.5
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Piece Goods, Notions & Other Apparel Wholesaling in the US",
+            "Women's & Children's Apparel Wholesaling in the US",
+            "Men's & Boys' Apparel Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Men's & Boys' Apparel Manufacturing in the US",
+            "Women's, Girls' and Infants' Apparel Manufacturing in the US",
+            "Costume & Team Uniform Manufacturing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "The number of marriages in the United States",
+            "determinant_description": "The number of marriages in the United States contributes to demand for rental tuxedos, bridal and formal wear. When the marriage rate is low, consumers have fewer occasions to rent tuxedos, which decreases industry demand. The marriage rate is expected to decline in 2023, posing a potential threat to the industry."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": null,
+            "percentage_establishments": 38.9,
+            "percentage_population": 38.1
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": null,
+            "percentage_establishments": 14.4,
+            "percentage_population": 15.1
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": null,
+            "percentage_establishments": 13.9,
+            "percentage_population": 13.4
+        },
+        {
+            "location": "West",
+            "location_description": null,
+            "percentage_establishments": 12.3,
+            "percentage_population": 13.8
+        },
+        {
+            "location": "Southwest",
+            "location_description": null,
+            "percentage_establishments": 7.5,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "Plains",
+            "location_description": null,
+            "percentage_establishments": 6.6,
+            "percentage_population": 6.8
+        },
+        {
+            "location": "New England",
+            "location_description": null,
+            "percentage_establishments": 4.5,
+            "percentage_population": 4.5
+        },
+        {
+            "location": "Rocky M",
+            "location_description": null,
+            "percentage_establishments": 1.9,
+            "percentage_population": 2.4
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "None",
+        "regulations_points": [
+            {
+                "regulation_title": "Fair Labor Standards Act",
+                "regulation_description": "The Fair Labor Standards Act (FLSA) requires companies to following minimum wage, overtime and other working condition standards. Rental companies are also required to follow individual state labor laws."
+            },
+            {
+                "regulation_title": "Americans With Disabilities Act of 1990",
+                "regulation_description": "The Americans with Disabilities Act of 1990, as amended, generally requires that stores be accessible to customers with disabilities."
+            },
+            {
+                "regulation_title": "US Customs and Border Patrol",
+                "regulation_description": "Companies within the industry are subject to US customs duties for imported suits, accessories, fabrics and materials."
+            },
+            {
+                "regulation_title": "Safety Requirements",
+                "regulation_description": "Companies must comply with hygiene and safety rules. In specific, all clothes must be washed before they can be rented out to customers."
+            },
+            {
+                "regulation_title": "COVID-19",
+                "regulation_description": "Amid the COVID-19 outbreak, many state governments imposed the closure of nonessential businesses order to prevent the spread of the virus."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is in the decline stage, which increases barriers to entry."
+            },
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "The industry has high revenue volatility, which increases barriers to entry."
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "There is no industry assistance, which is steady and increases barriers to entry."
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "There is high and increasing competition, which increases barriers to entry."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: decline",
+            "Revenue Volatility Level: high",
+            "Competition Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Concentration Level: low",
+            "Regulation Level: none - steady",
+            "Technology Change Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Basis of Competition",
+                "basis_description": "Companies compete based on price, brand offerings, range of outfits, location, reputation and customer service."
+            },
+            {
+                "basis_title": "External Competition",
+                "basis_description": "Online-based formal wear and costume renters are on the rise due to lower overhead costs."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Market Share Concentration",
+                "concentration_description": "Concentration is moderate due to low barriers of entry."
+            },
+            {
+                "concentration_title": "Industry Fragmentation",
+                "concentration_description": "The industry is highly fragmented with only one player accounting for more than 5% market share."
+            },
+            {
+                "concentration_title": "Companies Exiting",
+                "concentration_description": "Many companies are exiting the industry due to low profit levels and external e-commerce competitors."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Tailored Brands Inc.",
+                "company_percentage": 24.7
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 7.5
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 7.9
+        },
+        {
+            "cost_type": "Other costs",
+            "cost_type_percentage": 43.9
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 24.0
+        },
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 5.8
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Depreciation is Fueled by Fast Fashion",
+            "cost_factor_description": "Depreciation costs are expected to account for 7.5% of revenue in 2023. As clothing follows fashion trends and seasons, clothes from past seasons are relatively less favored by customers and, thus, harder to rent out, increasing depreciation expenses."
+        },
+        {
+            "cost_factor_title": "Purchase Costs Have Been Mitigated by Cheaper Imports",
+            "cost_factor_description": "Purchases are expected to account for 7.9% of revenue in 2023. In recent years, companies have benefited from an influx of low-cost imports from other countries, which have kept purchase costs from rapidly expanding."
+        },
+        {
+            "cost_factor_title": "Maintenance and Cleaning Repairs Add Up",
+            "cost_factor_description": "Other costs are expected to account for 43.9% of revenue in 2023. Companies are responsible for cleaning and repairing the apparel that they lease before renting them to a new customer."
+        },
+        {
+            "cost_factor_title": "Wage Costs Fall as Layoffs Occur to Save Profit",
+            "cost_factor_description": "Wages are expected to account for 24.0% of revenue in 2023. The industry is fairly labor-intensive, as customer service is crucial at rental establishments and there is little use for machinery, tools or automation."
+        },
+        {
+            "cost_factor_title": "Changing Preferences Sink Profit",
+            "cost_factor_description": "In 2023, profit is expected to account for 5.8% of revenue, down from 7.5% in 2018. Profit has dwindled as consumers have shifted toward online rental companies."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "CAPITAL INTENSITY",
+                "capital_intensity_description": "Finding knowledgeable employees is also considered a hurdle for new operators, as industry entrants may seek to join retail cooperatives or specialist networks, which require an upfront cost."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Fluctuations in Consumer Spending Power Affect the Industry",
+                "volatility_description": "In general, formal wear and costume purchases are costly, which encourages shoppers to rent these outfits instead of buying them. Shoppers with deeper pockets are more likely to opt to buy apparel."
+            },
+            {
+                "volatility_title": "Rentable Formal Wear is in the Highest Demand During the Wedding Season",
+                "volatility_description": "Marriage season is typically in June through October. As the marriage rate increases, demand for industry services typically rises as well. However, in recent years, couples have shifted their preferences to wedding locations."
+            },
+            {
+                "volatility_title": "Online-Based Formal Wear Rental Companies Have Increased Competition",
+                "volatility_description": "Many online-based formal wear rental companies have cropped up, directly competing with companies in this industry. These online-based businesses incur lower overhead costs."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "THIS INDUSTRY IS RELATIVELY TRADITIONAL AND HAS NOT EXPERIENCED SIGNIFICANT DISRUPTIVE INNOVATION",
+                "technological_change_description": "This is due in part to the fact that the rental model itself is already an innovative solution for consumers who need formal wear or costumes for special occasions but may not want to purchase expensive items they will only wear once or twice."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "Demand for the Formal Wear and Costume Rental industry",
+            "answer": "Demand depends on consumers' disposable incomes, the price of apparel and the number and frequency of social events. When economic growth is slow, more consumers may opt to rent rather than buy costumes and formal wear, positively impacting the industry."
+        },
+        {
+            "question": "Industry assistance",
+            "answer": "The industry receives no assistance or steady assistance."
+        },
+        {
+            "question": "International Formalwear Association (IFA)",
+            "answer": "The IFA is a trade association that provides information on formal wear to consumers. It supports tuxedo renters with a shop locator, measurement system, and rental tips."
+        },
+        {
+            "question": "National Costumers Association (NCA)",
+            "answer": "The NCA is a trade association for the costume rental and party goods industry, providing resources, education and networking for members."
+        },
+        {
+            "question": "Adapting to millennials' preference for renting",
+            "answer": "Industry players keeping up with the latest fashion trends are likely to attract millennial shoppers who prefer renting over ownership."
+        },
+        {
+            "question": "Expansion through acquisitions",
+            "answer": "While most companies cater to local markets, many have expanded through mergers and acquisitions to grow their consumer base."
+        },
+        {
+            "question": "Coping with rising wage costs",
+            "answer": "The average wage has increased as brick-and-mortar stores aim to provide superior customer service to differentiate from online competition."
+        },
+        {
+            "question": "Leveraging online platforms",
+            "answer": "Displaying merchandise online allows customers to decide before visiting, reducing consultation time with employees and increasing efficiency. Operators are enhancing online presence and automation."
+        },
+        {
+            "question": "Cutting wage costs through automation",
+            "answer": "Most players have invested in skilled employees to offer value-added experiences, rather than automating to cut wage costs."
+        },
+        {
+            "question": "Regulatory expenses impacting profitability",
+            "answer": "Most states require general business licenses with associated fees. Additional permits/licenses may be needed for specific services like alterations, each with its own fees."
+        },
+        {
+            "question": "Working with trade associations",
+            "answer": "Players joining the IFA benefit from increased customer exposure through the IFA's tuxedo shop locator, measurement system and rental tips."
+        },
+        {
+            "question": "Profit margins compared to competitors",
+            "answer": "101"
+        },
+        {
+            "question": "Ongoing financing challenges",
+            "answer": "The declining marriage rate poses a threat as consumers need rentable formal wear for weddings. Low-cost imports enable consumers to buy rather than rent."
+        },
+        {
+            "question": "Maintaining stock levels and adopting new technology",
+            "answer": "During peak demand, successful operators efficiently manage stock and returns to maximize usage and rental turnover."
+        },
+        {
+            "question": "Leveraging economies of scale",
+            "answer": "Making large volume purchases at bulk prices enables companies to minimize average cost per unit and maintain higher profit margins."
+        },
+        {
+            "question": "Location and customer relations",
+            "answer": "Customers choose the geographically closest store, so operators benefit from setting up in populous areas. Developing good customer service relationships gains repeat business."
+        },
+        {
+            "question": "Adapting to decreasing marriage rate",
+            "answer": "The decreasing marriage rate in the US contributes to lower demand for rental tuxedos, bridal and formal wear, so operators may need to target other markets."
+        },
+        {
+            "question": "Competing with low-cost imports",
+            "answer": "Import penetration measures domestic demand captured by imports. An increase in low-cost imports enables consumers to purchase formal wear instead of renting."
+        },
+        {
+            "question": "Tracking disposable income levels",
+            "answer": "Increases in personal disposable income enable more discretionary formal wear and costume rentals, but may also push some consumers to buy instead of rent."
+        }
+    ]
+}

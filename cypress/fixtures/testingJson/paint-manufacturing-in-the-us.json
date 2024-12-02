@@ -1,0 +1,582 @@
+{
+    "report_title": "Paint Manufacturing Industry Report",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 33656000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": -0.27
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.62
+            }
+        },
+        "profit": {
+            "profit_dollars": 3029000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 3.68
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 2.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 9.0,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 3.96
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 3.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 6289000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 2.5
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 2.5
+            }
+        },
+        "employees": {
+            "employees_count": 38705,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 1.5
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 1.2
+            }
+        },
+        "wages": {
+            "wages_dollars": 2813000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 2.8
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 2.5
+            }
+        },
+        "imports": {
+            "imports_dollars": 1621000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 3.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 2.5
+            }
+        },
+        "exports": {
+            "exports_dollars": 3457000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 3.5
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 2.2
+            }
+        }
+    },
+    "executive_summary": "The Paint Manufacturing industry provides protective and decorative finishes for a variety of downstream markets. Paint manufacturers primarily supply the Construction sector with coatings for houses and commercial buildings; the industry also supplies the Manufacturing sector with paint for products such as cars, boats, consumer goods and more. In recent years, paint and coatings manufacturing has grown despite challenges from volatile interest rates and crude oil price increases. Low interest rates in the immediate aftermath of the pandemic spurred on new construction while industrial customers capitalized on improved supply chains and customer demand to ramp up production. Industry revenue has grown at a CAGR of 1.1% and is expected to reach a total of $33.7 billion in 2024 as revenue rises by an estimated 0.7%.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Industry expansion followed growth in construction and manufacturing",
+            "current_performance_point_description": "US Paint Manufacturing industry revenue growth between 2019 and 2021 was largely driven by an increase in demand for residential construction and home improvement spending, fueled by low interest rates and increased per capita disposable income."
+        },
+        {
+            "current_performance_point_title": "Demand for new construction in 2021 bled into revenue growth for 2022",
+            "current_performance_point_description": "Demand for new construction in 2021 bled into revenue growth for Paint Manufacturing for 2022 in the form of previously planned construction projects, continuing revenue increases even as construction demand began to dip in 2022 and 2023. After hitting a low point in 2020 due to pandemic-related supply chain issues and depressed customer demand, industrial activity has experienced four consecutive years of growth between 2020 and 2024."
+        },
+        {
+            "current_performance_point_title": "Interest Rate Hikes Have Tempered Revenue Growth",
+            "current_performance_point_description": "In 2022 and 2023, the Federal Reserve increased interest rates in an effort to reduce rising inflation. The heightened cost of capital stifled previously growing demand for paint from the residential construction industry in 2023."
+        },
+        {
+            "current_performance_point_title": "Rising costs and improved efficiency have raised profit",
+            "current_performance_point_description": "The pandemic caused major disruptions to the industrial supply chain, but its recovery since then has provided substantial profit growth for paint and coatings manufacturers."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Manufacturing and trade will drive growth",
+            "future_outlook_point_description": "In the coming years, as industrial production continues with slow but steady growth, the Paint Manufacturing industry in the US will benefit from increased demand from the manufacturing sector."
+        },
+        {
+            "future_outlook_point_title": "Deflated interest rates will spur demand from construction",
+            "future_outlook_point_description": "As inflation and in turn interest rates decline, the pressure on residential and nonresidential construction markets will lessen."
+        },
+        {
+            "future_outlook_point_title": "Profit and consolidation are set to rise",
+            "future_outlook_point_description": "As oil prices fall from their current elevated state over the coming years, paint and coatings manufacturing costs will drop."
+        }
+    ],
+    "industry_definition": "The Paint Manufacturing industry manufactures various paints, timber finishes and other surface coating products to decorate and protect surfaces against wear, weather and corrosion.",
+    "industry_impact": {
+        "positive_impact_factors": [],
+        "negative_impact_factors": [
+            "Industry Assistance Level low - steady",
+            "Concentration Level high"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High Revenue per Employee"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "Medium Imports",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers - Industrial production index"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth - Value of construction"
+        ]
+    },
+    "key_trends": [
+        "The industry is dominated by a few giants, but there's room for niche players.",
+        "Paint manufacturing is a costly, capital-intensive business.",
+        "Increased construction and industrial activity drove the paint manufacturing industry's revenue growth.",
+        "Oil prices and profitability: Oil prices have caused revenue and profit volatility for paint manufacturers.",
+        "Sherwin-Williams leads the industry.",
+        "PPG Industries claims the second-largest share of the paint manufacturing industry.",
+        "Most paint and coating manufacturing regulation concerns the industry's environmental impact.",
+        "Demand for paint is primarily driven by industrial activity and new construction.",
+        "Profit margins in the paint industry are on the rise.",
+        "The Great Lakes region is the industry's powerhouse.",
+        "The Southeast is a major contributor to Paint Manufacturing.",
+        "Demand for architectural coatings is cyclical.",
+        "Wholesalers lead the market and benefit from industrial activity."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Retail",
+            "segment_description": "The retail segment includes large home center retailers that sell a variety of goods.",
+            "segment_percentage": 25.3
+        },
+        {
+            "segment": "Wholesale",
+            "segment_description": "The largest market segment, wholesalers, purchase large quantities of paint from manufacturers.",
+            "segment_percentage": 71.4
+        },
+        {
+            "segment": "Businesses for end use",
+            "segment_description": "Other markets for the paint manufacturing industry in the US include governmental bodies and professional painters.",
+            "segment_percentage": 0.2
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Other markets for the paint manufacturing industry in the US.",
+            "segment_percentage": 3.1
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Architectural Coatings",
+            "product_description": "This category consists of household paints.",
+            "product_percentage": 49.2
+        },
+        {
+            "product_or_service": "Industrial Coatings",
+            "product_description": "Industrial coatings are specifically formulated coatings.",
+            "product_percentage": 13.3
+        },
+        {
+            "product_or_service": "Special-Purpose Coatings",
+            "product_description": "Special-purpose coatings include applications where durability is a primary concern.",
+            "product_percentage": 25.2
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "Miscellaneous paint and coatings offerings.",
+            "product_percentage": 12.3
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Plastic & Resin Manufacturing in the US",
+            "Dye & Pigment Manufacturing in the US",
+            "Ink Manufacturing in the US",
+            "Inorganic Chemical Manufacturing in the US",
+            "Organic Chemical Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Oil & Gas Pipeline Construction in the US",
+            "Oil Drilling & Gas Extraction in the US",
+            "Mineral & Phosphate Mining in the US",
+            "Metal Tank Manufacturing in the US",
+            "Power Tools & Other General Purpose Machinery Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Paint Wholesaling in the US",
+            "Paint Stores in the US"
+        ],
+        "tier_2_buyers": [
+            "Commercial Building Construction in the US",
+            "Apartment & Condominium Construction in the US",
+            "Industrial Building Construction in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Industrial Production Index",
+            "determinant_description": "The level of activity in key manufacturing industries is a primary demand determinant for the Paint Manufacturing industry."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Moderate",
+        "import_trend": "Increasing",
+        "export_level": "Moderate",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports have increased since COVID-19 pandemic lows",
+                "trade_description": "After a sharp drop in demand during the COVID-19 pandemic, imports have since returned to pre-pandemic levels."
+            },
+            {
+                "trade_title": "Canada and Mexico are the leading sources of imports",
+                "trade_description": "As a typically high-volume, low-value product, paint is not ideal as an object of international trade."
+            },
+            {
+                "trade_title": "Exports have been on the rise despite an expensive US dollar",
+                "trade_description": "An appreciating US dollar has limited otherwise upward export growth."
+            },
+            {
+                "trade_title": "North America dominates the export market",
+                "trade_description": "As with imports, Canada and Mexico are the industry's primary export markets."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region has the greatest share of industry establishments.",
+            "percentage_establishments": 37.5,
+            "percentage_population": 15.3
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region has the second-largest share of industry establishments.",
+            "percentage_establishments": 23.8,
+            "percentage_population": 21.8
+        },
+        {
+            "location": "West",
+            "location_description": "As the region is the nation's most populous.",
+            "percentage_establishments": 11.9,
+            "percentage_population": 23.5
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 9.5,
+            "percentage_population": 13.4
+        },
+        {
+            "location": "Southwest",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 7.1,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "Plains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5.4,
+            "percentage_population": 6.8
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 2.4,
+            "percentage_population": 4.3
+        },
+        {
+            "location": "Rocky Mountain",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 2.4,
+            "percentage_population": 3.4
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "THE CLEAN AIR ACT (CAA)",
+                "regulation_description": "The CAA regulations include National Emission Standards for Hazardous Air Pollutants for miscellaneous coatings-manufacturing processes."
+            },
+            {
+                "regulation_title": "THE TOXIC SUBSTANCES CONTROL ACT (TSCA)",
+                "regulation_description": "Administered by the EPA, the TSCA requires paint manufacturers to report, test and manage the chemicals they use."
+            },
+            {
+                "regulation_title": "THE CLEAN WATER ACT (CWA)",
+                "regulation_description": "The CWA regulates the discharge of pollutants; paint manufacturers that release byproducts into waters require a permit."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Capital-intensive business",
+                "barrier_description": "Paint manufacturing is a costly, capital-intensive business."
+            },
+            {
+                "barrier_title": "Legal barriers",
+                "barrier_description": "Regulations around safe production practices create legal barriers to entry."
+            },
+            {
+                "barrier_title": "High start-up costs",
+                "barrier_description": "Start-up costs can be high as paint manufacturing is a capital-intensive process."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Industry Assistance Level: low - steady",
+            "Concentration Level: high"
+        ],
+        "factors_decreased_barrier": []
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Industry dominated by a few giants",
+                "basis_description": "The industry is dominated by a few giants, but there's room for niche players."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "High",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Four companies earn majority revenue",
+                "concentration_description": "FOUR COMPANIES EARN THE MAJORITY OF INDUSTRY REVENUE"
+            },
+            {
+                "concentration_title": "Consolidation on the rise",
+                "concentration_description": "Revenue consolidation has been on the rise."
+            },
+            {
+                "concentration_title": "Many smaller manufacturers",
+                "concentration_description": "Beyond a Few Large Companies, the Industry has Many Smaller Manufacturers"
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Sherwin Williams Co",
+                "company_percentage": 55.6
+            },
+            {
+                "company_name": "Ppg Industries, Inc.",
+                "company_percentage": 18.9
+            },
+            {
+                "company_name": "Axalta Coating Systems Ltd.",
+                "company_percentage": 5.6
+            },
+            {
+                "company_name": "Akzo Nobel Nv",
+                "company_percentage": 4
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 15.9
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Oil Prices Have Risen",
+            "cost_factor_description": "Changing oil prices impact the industry's purchase costs."
+        },
+        {
+            "cost_factor_title": "Global struggles impact oil supply and prices",
+            "cost_factor_description": "Global struggles have impacted the supply and price of oil."
+        },
+        {
+            "cost_factor_title": "Wages remain a significant cost",
+            "cost_factor_description": "Wages overall have remained a large cost for these businesses."
+        },
+        {
+            "cost_factor_title": "Paint innovations and rising prices support profit growth",
+            "cost_factor_description": "Paint manufacturers have seen significant profit growth in the current period."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "CAPITAL EXPENSES",
+                "capital_intensity_description": "Paint Manufacturers face high capital intensity."
+            }
+        ],
+        "capital_intensity_trend": "<UNKNOWN>"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Industry Demand is Sensitive to Construction and Manufacturing Activity",
+                "volatility_description": "The industry is still sensitive to economic downturns and declines in key sectors."
+            },
+            {
+                "volatility_title": "INPUT PRICE VOLATILITY LEADS TO INDUSTRY REVENUE VOLATILITY",
+                "volatility_description": "The price of input materials for paint production can lead to higher volatility in revenue."
+            }
+        ],
+        "volatility_trend": "<UNKNOWN>"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "ARCHITECTURAL COATINGS CONTINUOUSLY EVOLVE",
+                "technological_change_description": "Increased environmental regulation has forced manufacturers to develop more eco-friendly products."
+            },
+            {
+                "technological_change_title": "Antimicrobial Paint Provides Safer Spaces",
+                "technological_change_description": "An innovation spurred by the COVID-19 pandemic."
+            }
+        ],
+        "technological_change_trend": "<UNKNOWN>"
+    },
+    "FAQs": [
+        {
+            "question": "How have imports from low-wage countries like China and Mexico impacted your operations?",
+            "answer": "Due to the depreciating dollar, exports from low-wage countries are increasingly prevalent for most companies."
+        },
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "Sales for companies in the Paint Manufacturing industry are dependent on both the US Construction and Industrial Production industries."
+        },
+        {
+            "question": "Is your company investing heavily in R&D to meet changing consumer preferences?",
+            "answer": "Companies in the Paint Manufacturing industry spend a significant portion of their budgets innovating products."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "In the Paint Manufacturing industry, profit margins are susceptible to fluctuations due to volatile input and raw material costs."
+        },
+        {
+            "question": "What steps does your company take to ensure that it is safeguarding proprietary information?",
+            "answer": "Most companies in the Paint Industry safeguard their chemical formulas as well as processes."
+        },
+        {
+            "question": "How is your company leveraging new technology in its operations?",
+            "answer": "Most companies in the Paint Manufacturing industry are developing new processes."
+        },
+        {
+            "question": "Is your company adequately prepared to adjust to changing environmental standards?",
+            "answer": "Companies in the Paint Manufacturing industry invest a significant amount of capital in research and development."
+        },
+        {
+            "question": "What challenges does your company experience with financing its ongoing operations?",
+            "answer": "To continually produce new products, more money needs to be used."
+        },
+        {
+            "question": "How has price volatility of inputs affected profit margins over the past 12 months?",
+            "answer": "Input prices are incredibly volatile for companies in the Paint Manufacturing Industry."
+        },
+        {
+            "question": "Which niches, if any, do you cater to? How can you diversify your product mix?",
+            "answer": "Operators must develop and innovate products continuously."
+        },
+        {
+            "question": "What measures do you have in place to reduce operational costs? Are you considering any new cost-saving measures?",
+            "answer": "Volatility in crude oil prices has generally caused profit to decline."
+        },
+        {
+            "question": "Do you manufacture any branded products? How do you promote your products and services?",
+            "answer": "Manufacturers must develop brand and product innovation."
+        },
+        {
+            "question": "Do you monitor changes in the trade-weighted index? How much of your revenue is derived from exports?",
+            "answer": "As the TWI increases, so will the price of industry exports."
+        },
+        {
+            "question": "Do you track the industrial production index? How have you fared in the past when industrial production was low?",
+            "answer": "The industrial production index acts as a proxy for the level of industrial demand."
+        },
+        {
+            "question": "How much of your paint is used in new buildings? Do you have contracts with key building suppliers or big name-brand stores?",
+            "answer": "New construction, both industrial and professional, is a key market for both exterior and interior architectural paint."
+        }
+    ]
+}

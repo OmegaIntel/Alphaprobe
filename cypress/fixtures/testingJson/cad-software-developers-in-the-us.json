@@ -1,0 +1,372 @@
+{
+    "report_title": "CAD Software Developers Industry Report",
+    "report_date": "2021",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 4816000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2002,
+                "end_year": 2021,
+                "revenue_cagr_value": 2.54
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "revenue_cagr_value": 4.87
+            }
+        },
+        "profit": {
+            "profit_dollars": 1695000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "profit_cagr_value": 6.35
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 35.2,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "profit_margins_cagr_value": 3.16
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 3648000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2002,
+                "end_year": 2021,
+                "industry_value_added_cagr_value": 4.7
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "industry_value_added_cagr_value": 4.98
+            }
+        },
+        "employees": {
+            "employees_count": 10389,
+            "employees_cagr_historical": {
+                "begin_year": 2002,
+                "end_year": 2021,
+                "employees_cagr_value": 2.64
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "employees_cagr_value": 6.92
+            }
+        },
+        "wages": {
+            "wages_dollars": 1868000000,
+            "wages_cagr_historical": {
+                "begin_year": 2002,
+                "end_year": 2021,
+                "wages_cagr_value": 4.13
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "wages_cagr_value": 6.51
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Over the five years to 2021, the CAD Software Developers industry has experienced continued growth in downstream demand, leading industry revenue to grow an annualized 6.7% to $4.8 billion in 2021. Overall, industry revenue is forecast to increase 12.8% in 2021 alone due to heightened investment by businesses in technology amid a broad-based economic recovery.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "CONTINUED GROWTH",
+            "current_performance_point_description": "Over the five years to 2021, the CAD Software Developers industry has experienced continued growth in downstream demand, leading industry revenue to grow an annualized 6.7% to $4.8 billion in 2021. Overall, industry revenue is forecast to increase 12.8% in 2021 alone due to heightened investment by businesses in technology amid a broad-based economic recovery."
+        },
+        {
+            "current_performance_point_title": "RELEVANT TECHNOLOGIES",
+            "current_performance_point_description": "Some of the technologies driving further integration of CAD software into downstream markets include cloud technologies, generative design, internet of things (IoT) and 3D printing. Cloud technologies have also proven to be valuable to many industry operators amid the COVID-19 (coronavirus) pandemic and remote work arrangements."
+        },
+        {
+            "current_performance_point_title": "DOWNSTREAM DEMAND",
+            "current_performance_point_description": "Over the past five years, the composition of demand for CAD software has shifted slightly. Increasingly, computer-aided manufacturing (CAM) software has been integrated with CAD software, further enmeshing design and manufacturing processes."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Favorable Operating Environment",
+            "future_outlook_point_description": "Over the five years to 2026, the CAD Software Developers industry's revenue is forecast to grow, rising an annualized 5.0% to $6.1 billion. As the overall economy grows, increases in industrial and manufacturing output, construction activity and demand for engineering services will likely drive demand for industry products."
+        },
+        {
+            "future_outlook_point_title": "Tech Improvements",
+            "future_outlook_point_description": "Specific technology changes and implementations that are anticipated to affect industry demand include the further adoption of 3D printing and increased use of business information modeling (BIM) files. As 3D printing becomes more widespread and therefore cheaper, more users of CAD software will likely use it to assist in prototyping and demonstrating product designs to clients and other stakeholders, driving further demand for 3D printing and solid modeling functionality in CAD software."
+        }
+    ],
+    "industry_definition": "This industry develops software for computer-aided design (CAD). CAD, which is also known as computer-aided design and drafting (CADD), involves using computer technology for the process of design and design-documentation. Computer-aided drafting involves drafting with a computer. CADD software, or environments, provides the user with input tools to streamline design, drafting, documentation and manufacturing processes.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage: growth",
+            "Capital Intensity Level: low",
+            "Regulation Level: light - steady"
+        ],
+        "mixed_impact_factors": [
+            "Revenue Volatility Level: medium",
+            "Barriers To Entry Level: medium - steady",
+            "Globalization Level: medium - increasing"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level: none - steady",
+            "Concentration Level: high",
+            "Technology Change Level: high"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "The industry's product offerings are evolving"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2016-2021)",
+            "High Revenue Growth (2021-2026)",
+            "High Performance Drivers",
+            "Private investment in computers and software"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2021)",
+            "Low Outlier Growth",
+            "Percentage of business conducted online"
+        ]
+    },
+    "key_trends": [
+        "The CAD Software Developers industry has experienced continued growth in downstream demand, leading industry revenue to grow",
+        "Cloud technologies have proven to be valuable to many industry operators amid the coronavirus pandemic and remote work arrangements",
+        "Computer-aided manufacturing (CAM) software has been integrated with CAD software, further enmeshing design and manufacturing processes",
+        "Increases in industrial and manufacturing output, construction activity and demand for engineering services will likely drive demand for industry products",
+        "Due to opportunities related to evolving technologies in the CAD space, new operators are expected to enter the industry, leading to reduced market share concentration",
+        "Specific technology changes and implementations that are anticipated to affect industry demand include the further adoption of 3D printing and increased use of BIM files"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Construction and architecture",
+            "segment_description": null,
+            "segment_percentage": 46.7
+        },
+        {
+            "segment": "Manufacturing, industrial a",
+            "segment_description": null,
+            "segment_percentage": 28.0
+        },
+        {
+            "segment": "Other",
+            "segment_description": null,
+            "segment_percentage": 25.3
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Solid Modeling CAD Software",
+            "product_description": null,
+            "product_percentage": 39.8
+        },
+        {
+            "product_or_service": "2D CAD Software",
+            "product_description": null,
+            "product_percentage": 21.3
+        },
+        {
+            "product_or_service": "3D CAD Software",
+            "product_description": null,
+            "product_percentage": 38.9
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Software Publishing in the US",
+            "Computer Manufacturing in the US",
+            "Computer Peripheral Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Database, Storage & Backup Software",
+            "Publishing in the US",
+            "Audio & Video Equipment Manufacturing in the US",
+            "Electrical Equipment Manufacturing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [],
+    "international_trade": {
+        "import_level": "101",
+        "import_trend": "101",
+        "export_level": "101",
+        "export_trend": "101",
+        "international_trade_points": []
+    },
+    "business_locations": [],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "none - steady"
+            },
+            {
+                "barrier_title": "Concentration Level",
+                "barrier_description": "high"
+            },
+            {
+                "barrier_title": "Technology Change Level",
+                "barrier_description": "high"
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "high - increasing"
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage - growth",
+            "Capital Intensity Level - low",
+            "Regulation Level - light - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "HIGH competition",
+                "basis_description": "HIGH competition"
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "High",
+        "concentration_trend": "Unknown",
+        "concentration_points": [],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 35.2
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 38.8
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": null
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Wages are industry operators' single largest expense",
+            "cost_factor_description": "Wages are industry operators' single largest expense because sourcing highly skilled developers that have expertise in CAD software is a main competitive"
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_trend": "Steady",
+        "capital_intensity_points": []
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_trend": "Unknown",
+        "technological_change_points": [
+            {
+                "technological_change_title": "High technology change",
+                "technological_change_description": "High technology change"
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "What is the capital intensity of this industry?",
+            "answer": "LOW capital intensity"
+        },
+        {
+            "question": "What is the rate of technology change in this industry?",
+            "answer": "High technology change"
+        },
+        {
+            "question": "What is the revenue volatility of this industry?",
+            "answer": "MEDIUM revenue volatility"
+        },
+        {
+            "question": "What is the level and trend of regulation in this industry?",
+            "answer": "LIGHT regulation STEADY regulation"
+        },
+        {
+            "question": "What is the level and trend of industry assistance in this industry?",
+            "answer": "NONE assistance STEADY assistance"
+        }
+    ]
+}

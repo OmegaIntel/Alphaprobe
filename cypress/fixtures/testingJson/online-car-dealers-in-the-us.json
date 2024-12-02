@@ -1,0 +1,541 @@
+{
+    "report_title": "Industry Report on Online Car Dealers",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 50898000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 4.69
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 2.83
+            }
+        },
+        "profit": {
+            "profit_dollars": 153000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 3.12
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 2.5
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 0.3,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -1.5
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 1.1
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 3639000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 2.8
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 1.9
+            }
+        },
+        "employees": {
+            "employees_count": 43778,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 2.5
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 2.0
+            }
+        },
+        "wages": {
+            "wages_dollars": 3377000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 2.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 1.5
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The Online Car Dealers industry flourished alongside the unique conditions associated with COVID-19, which boosted e-commerce sales across multiple industries. Lockdown restrictions limited access to in-person dealerships, forcing sales primarily online. Companies must strive to retain and convert first-time buyers into long-term, repeat sales. In many cases, online car sales are gaining favor among consumers that value convenience and efficiency. As more physical dealers incorporate online operations, competition has intensified as consumers can easily compare prices and features across websites.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Pandemic Encouraged E-Commerce Growth",
+            "current_performance_point_description": "The pandemic and related lockdown restrictions forced many businesses to close or take operations online. As a result, many brick-and-mortar dealerships operated at a limited capacity with social distancing guidelines, receiving lukewarm demand from consumers. The pandemic created unprecedented opportunities for online retailers, given lockdown restrictions."
+        },
+        {
+            "current_performance_point_title": "Supply Chain Volatility Disrupted the Industry",
+            "current_performance_point_description": "The pandemic and the Russian invasion of Ukraine have contributed to severe supply chain disruptions. Metal and crude oil prices skyrocketed, translating into higher new car prices. Similarly, semiconductor shortages slammed car manufacturing, leading to long lead times, car shortages and skyrocketing prices. Many dealers turned to used cars to replenish inventories; this trend led to similar used car shortages, forcing dealers to unilaterally raise costs to recoup losses from elevated purchasing costs."
+        },
+        {
+            "current_performance_point_title": "Climbing Interest Rates Have Limited Growth",
+            "current_performance_point_description": "Despite strong growth at the start of the current period, ballooning inflation has led to climbing interest rates and eroding consumer confidence. Economic uncertainty has discouraged consumers from making big-ticket purchasing, reducing demand for new and used cars."
+        },
+        {
+            "current_performance_point_title": "Companies Have Faced Mounting Competition",
+            "current_performance_point_description": "The shift to e-commerce during the pandemic has precipitated rapid entry from start-ups, brick-and-mortar dealers and other third-party sellers, contributing to a rapidly intensifying competitive environment. Similarly, competition from in-person dealers has revitalized as lockdown restrictions ease. Buyers, especially older consumers, will flock to traditional dealers, siphoning some demand from online stores."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Rebounding Economic Conditions Will Precipitate Strong Growth",
+            "future_outlook_point_description": "Online car dealers will benefit from rebounding consumer confidence, stronger disposable income and normalizing interest rates through the outlook period."
+        },
+        {
+            "future_outlook_point_title": "Dealers Will Rely On Online Wholesale Auctions",
+            "future_outlook_point_description": "Dealers will increasingly rely on online wholesale car auctions to source and reallocate inventories. Online auctions will enable these companies to access a wider market and use real-time data to determine optimal bidding prices. In fact, McKinsey reports that dealers can improve returns by 2.0% by using online wholesale auctions to source used vehicles."
+        },
+        {
+            "future_outlook_point_title": "Outlook Period",
+            "future_outlook_point_description": "Stronger conditions will encourage consumers to buy newer and more expensive vehicles, like electric vehicles, particularly SUV electrics. While this trend will buoy demand for new car dealers, stronger economic conditions may erode demand for used cars, slashing demand for online dealers primarily operating in second-hand markets. Even so, the flexibility of online dealers helps most companies mitigate this threat."
+        }
+    ],
+    "industry_definition": "This industry retails automobiles online to consumers and businesses and provides services to aid in the purchase of automobiles. Automobiles include passenger cars, trucks and sports utility vehicles (SUVs). Some players offer their customers trade-in, car financing and car selling services. This industry does not include classified websites that feature reviews, guides, photos and advertisements of new and used vehicles for sale.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage: growth",
+            "Capital Intensity Level: low",
+            "Concentration Level: low"
+        ],
+        "negative_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Capital Requirements",
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Performance Drivers",
+            "Number of broadband connections",
+            "High Revenue Growth (2005-2024)",
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)"
+        ],
+        "threats": [
+            "Low Outlier Growth",
+            "Consumer confidence index"
+        ]
+    },
+    "key_trends": [
+        "Price competition has intensified as more dealers integrate online services. Consumers can leverage numerous options for purchasing a car online, forcing dealers to lower their prices.",
+        "Online car dealers can't fully replace the physical experience",
+        "A new car shortage prompted a surge in used car sales",
+        "Online car dealers are innovating to compete with brick-and-mortar dealerships",
+        "Improving economic conditions will support demand for new cars",
+        "Consumer interest in e-commerce has supported explosive growth for online car dealers",
+        "Next-day delivery helps online car dealers grow their consumer base",
+        "Dealers face extensive regulations regarding advertising, labeling and resale",
+        "Online car dealers don't benefit from significant direct government assistance",
+        "Major supply chain disruptions created profit and purchasing cost volatility for online car dealers",
+        "Robust expansion has precipitated extensive wage growth",
+        "Online car dealers have more flexibility with their locations than physical dealers",
+        "Consumers flocked to used cars amid a new car shortage"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Subprime and Deep Subprime Customers",
+            "segment_description": "This market includes subprime customers (those with a VantageScore between 501 and 600) and deep subprime customers (those with a score of less than 500). Subprime buyers are more likely to purchase used vehicles or opt for repairs.",
+            "segment_percentage": 14.2
+        },
+        {
+            "segment": "Prime and Near-Prime Customers",
+            "segment_description": "This market includes consumers with prime credit ratings (a VantageScore between 661 and 780) and near-prime ratings (a VantageScore between 601 and 660). Expanding financial stability and literacy have encouraged more drivers with prime and near-prime credit scores to purchase new and used vehicles.",
+            "segment_percentage": 63
+        },
+        {
+            "segment": "Super-Prime Customers",
+            "segment_description": "This market includes super-prime customers (credit scores of 781 or higher). Super-prime customers have a strong history of on-time payments and use a low share of credit available to them. These buyers are least likely to finance used car purchases, with only approximately 45.0% taking loans according to Experian.",
+            "segment_percentage": 22.8
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "New Vehicle Sales",
+            "product_description": "This segment includes the sale of new vehicles. In general, SUVs and crossovers (CUVs) have grown more popular, overtaking demand for sedans, midsize vehicles and other automobiles.",
+            "product_percentage": 44.3
+        },
+        {
+            "product_or_service": "Used Vehicle Sales",
+            "product_description": "The used car segment includes all passenger vehicles, including automobiles and light trucks. This segment includes sport-utility vehicles, vans, trucks, compacts, small cars and luxury or sport vehicles. Used vehicles are typically less expensive, attracting lower-income buyers and consumers with lower credit scores.",
+            "product_percentage": 33.5
+        },
+        {
+            "product_or_service": "Parts and Repair Services",
+            "product_description": "This segment includes revenue from selling parts and performing repair services, including wheel realignment, fluid replacement and more substantial mechanical repairs. Parts and services performed well during the pandemic as consumers prioritized repairs over major purchases.",
+            "product_percentage": 17.7
+        },
+        {
+            "product_or_service": "Vehicle Leases",
+            "product_description": "This segment includes fixed-term leases on vehicles. Leases enable consumers to rent a car or truck for anywhere between three and five years for a lower monthly payment than purchasing agreements. Some companies also enable individuals to purchase cars upon lease expiration.",
+            "product_percentage": 3.9
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "This segment includes revenue from financing and insurance services. Online car dealers frequently serve customers with average and poor credit that are often denied affordable interest rates on loans from mainstream financial institutions.",
+            "product_percentage": 0.6
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Car & Automobile Manufacturing in the US",
+            "SUV & Light Truck Manufacturing in the US",
+            "Automobile Wholesaling in the US",
+            "Auto Parts Stores in the US"
+        ],
+        "tier_2_suppliers": [
+            "Auto Mechanics in the US",
+            "Car Body Shops in the US"
+        ],
+        "tier_1_buyers": [
+            "Used Car Dealers in the US",
+            "Car Rental in the US"
+        ],
+        "tier_2_buyers": [
+            "Taxi & Limousine Services in the US",
+            "Ride-Sharing Services in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Consumer Confidence Index",
+            "determinant_description": "The Consumer Confidence Index measures consumers' perceptions of the economy according to factors like income levels, household debt, unemployment and inflation. Strong consumer confidence elevates online car sales since new and used vehicles are highly discretionary purchases. Very high confidence will encourage new car purchases, rather than used purchases. Rebounding consumer confidence will create opportunities for online car dealers."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "The Southeast",
+            "location_description": "The Southeast has more than a quarter of the US population and some of the highest vehicle ownership rates. Most cities in the Southeast also lack accessible public transportation, making cars essential.",
+            "percentage_establishments": 27.3,
+            "percentage_population": 27.9
+        },
+        {
+            "location": "The Great Lakes",
+            "location_description": "As a major manufacturing region, the Great Lakes region houses many of the most prominent auto manufacturers and a higher proportion of the automotive supply chain compared with the region's population. Many online vehicle dealers own storage and procurement facilities near upstream producers to lower transportation costs and develop positive relationships with automobile manufacturers. The region's strong transportation network also helps online dealers distribute vehicles.",
+            "percentage_establishments": 16.4,
+            "percentage_population": 15.1
+        },
+        {
+            "location": "The Mid-Atlantic",
+            "location_description": "Despite having some of the lowest vehicle ownership rates and most accessible public transportation in the country, the Mid-Atlantic's well-connected highway systems facilitate the easy transport of vehicles. The region's large population also provides a significant labor and customer pool. Similarly, the Mid-Atlantic displays relative affluence, encouraging more frequent and expensive vehicle purchases.",
+            "percentage_establishments": 14.5,
+            "percentage_population": 13.4
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_trend": "Increasing",
+        "regulations_points": [
+            {
+                "regulation_title": "LICENSES AND PERMITS",
+                "regulation_description": "Car dealers must obtain various licenses and permits, including dealer, service, sales and finance licenses and permits issued by state and local authorities. New car dealers are subject to state-enacted franchise laws, which govern the relationship between vehicle manufacturers and new car dealers. Dealers must renew franchise and state licensing agreements annually."
+            },
+            {
+                "regulation_title": "THE USED CAR RULE",
+                "regulation_description": "The Federal Trade Commission established the Used Car Rule in 1985, requiring used car dealers to display a Buyers Guide on any for-sale car. The guide must state if the dealer offers a warranty and the terms and conditions of said warranty."
+            },
+            {
+                "regulation_title": "LEMON LAWS",
+                "regulation_description": "\"Lemon\" refers to a vehicle that's defective or unreliable. Lemon laws vary by state but generally provide legal remedies to drivers who've purchased faulty vehicles. Under the laws, dealers must offer vehicle warranties and attempt to repair any defect covered under warranty."
+            },
+            {
+                "regulation_title": "RED FLAGS RULE",
+                "regulation_description": "The Federal Trade Commission enforces the Red Flags Rule and requires new car dealers to establish identity theft prevention programs and train all employees to comply. Identity thefts resulting from noncompliance expose dealers to additional liability."
+            },
+            {
+                "regulation_title": "OTHER FTC REGULATIONS",
+                "regulation_description": "The CARS Rule prohibits misrepresentations about advertising information. It requires dealers to clearly disclose the offering price. The CARS Rule also makes it illegal to charge consumers for add-ons that don't provide a benefit. The FTC also has authority over car dealers from the Dodd-Frank Act to protect consumers from false or misleading advertising."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Legal",
+                "barrier_description": "Online car dealers must comply with federal consumer protection laws, like the Used Car Rule and Lemon Laws. Companies must also obtain various licenses and permits that often vary by state."
+            },
+            {
+                "barrier_title": "Start-up Costs",
+                "barrier_description": "Online dealers encounter significant costs associated with establishing connections with suppliers and buying a fleet of cars, trucks and SUVs for resale. Brick-and-mortar dealers adding online services face lower costs and can leverage existing infrastructure and systems to succeed."
+            },
+            {
+                "barrier_title": "Differentiation",
+                "barrier_description": "Companies must offer strong inventory diversity, competitive pricing and superior after-sales services, like warranty agreements, to differentiate from competitors."
+            },
+            {
+                "barrier_title": "Labor Expenses",
+                "barrier_description": "Online car dealers must secure skilled labor for technical and distribution roles, like software development, cybersecurity and inventory management. Many companies struggle to attract and retain workers from a limited labor pool."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Industry Assistance Level low - steady",
+            "Competition Level high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage growth",
+            "Capital Intensity Level low",
+            "Concentration Level low",
+            "Globalization Level low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Price competition",
+                "basis_description": "Price competition has intensified as more dealers integrate online services. Consumers can leverage numerous options for purchasing a car online, forcing dealers to lower their prices."
+            },
+            {
+                "basis_title": "Physical experience",
+                "basis_description": "Online car dealers can't fully replace the physical experience. Many drivers like to peruse cars in person, negotiate with salespeople and test drive a vehicle before making a purchase, making it difficult for online dealers to differentiate from in-person competition."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Dedicated Online Vendors Gain Market Share",
+                "concentration_description": "Carvana, the largest online car dealer, has focused exclusively on online operations, forgoing funding for brick-and-mortar dealerships. A surge in e-commerce activity amid the pandemic expedited Carvana's success, enabling the company to reach nearly 20.0% of the addressable market."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Carvana Co.",
+                "company_percentage": 17.1
+            },
+            {
+                "company_name": "Autonation, Inc.",
+                "company_percentage": 1.5
+            },
+            {
+                "company_name": "Carmax, Inc.",
+                "company_percentage": 1.3
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 80.1
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0.0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 10.0
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 60.0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0.0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 10.0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0.0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0.0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 20.0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchase costs are the largest expense for online car dealers",
+            "cost_factor_description": "Purchase costs are the largest expense for online car dealers; companies regularly purchase new and used cars from wholesalers, manufacturers, other retailers and consumer trade-ins. New car dealers face higher purchasing costs compared with used dealers."
+        },
+        {
+            "cost_factor_title": "Major supply chain disruptions have led to purchase cost volatility",
+            "cost_factor_description": "Major supply chain disruptions have led to purchase cost volatility through the current period. Car manufacturers endured severe semiconductor shortages."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_trend": "Unknown",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LABOR EXPENSES",
+                "capital_intensity_description": "Online car dealers must secure skilled labor for technical and distribution roles, like software development, cybersecurity and inventory management. Many companies struggle to attract and retain workers from a limited labor pool."
+            }
+        ]
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_trend": "Unknown",
+        "volatility_points": [
+            {
+                "volatility_title": "COVID-19 FUELED ONLINE SALES",
+                "volatility_description": "Lockdown restrictions contributed to weak demand for in-person car dealerships; in general, e-commerce sales skyrocketed during the pandemic as consumers expressed unease surrounding in-person shopping. This increase permeated through car dealerships, leading to torrid growth in online car sales."
+            },
+            {
+                "volatility_title": "Consumers Flocked to Used Cars as New Car Production Faltered",
+                "volatility_description": "A semiconductor shortage slowed the global production of new vehicles in 2020 and 2021. Empty new car lots, stimulus checks and a stronger economic outlook in 2021 encouraged drivers to invest in new and used vehicles. The sudden surge in demand caused used car sales to skyrocket to historic figures in 2021. Even so, surging inflation and weakening consumer confidence in 2022 and 2023 have counteracted strong growth, adding to volatility through the current period."
+            },
+            {
+                "volatility_title": "Regulatory Changes Add to Volatility",
+                "volatility_description": "Stricter emissions regulations can force dealers to adjust their inventory to focus on more eco-friendly cars. This adaptation period can lead to sunk inventory costs and inconsistent revenue as demand shifts. Variations in import tariffs can impact the cost of foreign vehicles dramatically, especially given the popularity of German and Japanese car brands. Higher tariffs lead to increased prices, potentially reducing sales volumes and causing revenue volatility."
+            }
+        ]
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_trend": "Increasing",
+        "technological_change_points": [
+            {
+                "technological_change_title": "VIRTUAL SHOWROOMS REPLACE THE NEED FOR PHYSICAL VISITS",
+                "technological_change_description": "Brick-and-mortar establishments have a clear advantage with physical showrooms, enabling buyers to peruse cars in person. Virtual showrooms enable customers to do this from the comfort of their homes, providing the convenience and scrutiny drivers want. Virtual showrooms are immersive and interactive, enabling customers to customize and visualize vehicles. Many companies may use VR and AR technology to improve upon virtual showrooms."
+            },
+            {
+                "technological_change_title": "AT-HOME TEST DRIVES GIVE ONLINE DEALERS A COMPETITIVE EDGE",
+                "technological_change_description": "COVID-19 revealed the necessity for test drives without sending consumers to a physical dealership. Many online dealerships now offer at-home test drives to compete with brick-and-mortar dealerships, delivering a sample vehicle to residences for an afternoon or weekend. Dealers may also partner with rental car companies to enable consumers to do local test drives. These options make online dealerships more attractive to the average consumer."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "Does your company specialize in one corner of the market or do you retail a diversified range of products?",
+            "answer": "Companies commonly sell all types of vehicles at their dealerships and online instead of focusing or specializing in one corner of the market. Having a wide product portfolio helps support profit and increase demand."
+        },
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "When the US economy is strong, disposable income levels increase, which bolsters demand for big-ticket items, namely new vehicles. Conversely, when the US economy is doing poorly, disposable income levels and consumer confidence decrease, hampering demand for new vehicles."
+        },
+        {
+            "question": "Have rising input costs negatively affected your company's ability to sell its products?",
+            "answer": "When input costs, like the price of steel, increase, automakers often pass these rising costs to downstream consumers, including online car dealers. Consequently, higher input costs at the manufacturing level oftentimes cause the price of vehicles at the retail level to rise."
+        },
+        {
+            "question": "Has your company explored acquisition opportunities in order to expand its reach and reduce its overhead expenses?",
+            "answer": "Companies are always looking to grow operations through acquisitions. Larger companies acquire smaller, less profitable dealerships to expand their market presence and product portfolios."
+        },
+        {
+            "question": "Does your company use Point-of-sale (POS) systems to track inventory in order to ensure that it is able to keep its most popular products in stock?",
+            "answer": "Companies typically use POS systems in order to track inventory quickly and efficiently, especially since most of the company's operations are online."
+        },
+        {
+            "question": "Have you been able to reduce wage costs by automating operations over the past five years?",
+            "answer": "Companies have invested in POS systems to lessen the need for employees and reduce wage costs. Companies also automate other processes. Since many companies work strictly online, financing, inventory, payments and other administrative services are online."
+        },
+        {
+            "question": "Have you had any regulatory expenses that have significantly impacted profitability recently?",
+            "answer": "Most regulatory expenses in the auto sector are considered at the manufacturing level when automakers invest in new equipment to adhere to electronic, automated vehicle needs."
+        },
+        {
+            "question": "What does your company do to ensure that it is compliant with new consumer regulations?",
+            "answer": "Dealerships update their product portfolios to adhere to regulatory standards, such as EPA standards. Companies update to have an increasing number of fuel-efficient vehicles."
+        },
+        {
+            "question": "Does your company help consumers finance the purchase of your products?",
+            "answer": "Companies help consumers finance vehicles online via their website. Financing is determined based on credit, is estimated online and can be approved online to expedite the purchasing process."
+        },
+        {
+            "question": "How has price volatility of inputs affected profit over the past 12 months?",
+            "answer": "Dealers commonly face shifting vehicle costs based on upstream input costs. Most dealers will create markups based off inventory costs."
+        },
+        {
+            "question": "How quickly can new technology be adopted? Does your company keep up to date with the latest technology? What are the associated costs?",
+            "answer": "Online dealers must keep abreast with ever-changing software systems, internet speeds and sales security systems that can improve their operations."
+        },
+        {
+            "question": "How do you reward the loyalty of repeat customers? What steps can you take to increase the quality of your after-Sales Service?",
+            "answer": "Companies need access to reliable maintenance facilities to service warranty agreements and offer higher levels of customer service over competitors."
+        },
+        {
+            "question": "How do you maintain optimum stock levels? Which products frequently sell out, and which products are in least demand?",
+            "answer": "Ensuring that adequate stock controls are in place helps reduce inventory costs and increase stock returns."
+        },
+        {
+            "question": "How have you managed periods of fluctuating household debt in the past?",
+            "answer": "While many online car dealers offer zero-percent financing and other incentives, high debt can still be an obstacle for consumers looking to purchase a car."
+        },
+        {
+            "question": "How significantly does consumer confidence affect product demand? What do you do during times of low consumer confidence?",
+            "answer": "When consumers are confident in the economy, they are more inclined to make large purchases, namely a vehicle purchase. Companies may offer financing options when consumer confidence declines."
+        },
+        {
+            "question": "Does demand for your products increase when vehicle fleet size improves? Does a large fleet necessarily result in increased customers?",
+            "answer": "The average fleet age is a good indicator of demand for car replacements."
+        }
+    ]
+}

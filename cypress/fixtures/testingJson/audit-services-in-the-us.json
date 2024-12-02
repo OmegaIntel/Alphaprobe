@@ -1,0 +1,568 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 46318000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 4.06
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.64
+            }
+        },
+        "profit": {
+            "profit_dollars": 7828000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 4.56
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 3.5
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 16.9,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 1.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 26538000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 3.5
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 2.0
+            }
+        },
+        "employees": {
+            "employees_count": 196029,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 2.3
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 1.5
+            }
+        },
+        "wages": {
+            "wages_dollars": 18109000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 2.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 1.8
+            }
+        },
+        "imports": {
+            "imports_dollars": 5000000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 3.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 1.2
+            }
+        },
+        "exports": {
+            "exports_dollars": 3500000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 2.5
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 1.0
+            }
+        }
+    },
+    "executive_summary": "Auditors provide assessments for financial statements, including income statements, balance sheets, cash flows and retained earnings. Auditors apply professional skepticism and judgement when gathering and evaluating evidence through a combination of testing the company's internal controls, tracing the amounts and disclosures included in the financial statements to the company's supporting books and records and obtaining external third-party documentation.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The COVID-19 Pandemic Interrupted Demand",
+            "current_performance_point_description": "In 2020, due to the spread of COVID-19, many businesses closed and the number of initial public offerings was delayed. At the same time, as companies' demand and revenue took a hit, the US Securities and Exchange Commission (SEC) issued an extension for companies that had deadlines between March 1 and April 30 2020."
+        },
+        {
+            "current_performance_point_title": "The Industry is Cyclical",
+            "current_performance_point_description": "The Audit Services industry is defined by strong countercyclical demand. When a company declares bankruptcy, audit providers jump in to dissect financial statements and ensure compliance with federal regulations. The complexity of corporate financial statements in 2020 following numerous closures and acquisitions also triggered a larger number of mandatory audits."
+        },
+        {
+            "current_performance_point_title": "Revenue Growth has Led to Consolidation",
+            "current_performance_point_description": "Revenue from auditing has grown substantially as price competition among auditors ebbed and corporations opted for stable, long-term auditing relationships. Rising demand from federal, state and local governments has also boosted revenue. Mergers and acquisitions have increased, as businesses have been able to obtain better financing when the credit markets stabilized."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Macroeconomic Climate",
+            "future_outlook_point_description": "The industry is beholden to the ebb and flow of the business world. As international tensions rise, businesses will need to employ auditors to ensure compliance with sanctions and increased regulations. Similarly, rising demand from government bodies will aid revenue growth."
+        },
+        {
+            "future_outlook_point_title": "Industry Consolidation Will Likely Slow",
+            "future_outlook_point_description": "Consolidation in the industry is expected to slow as the surge from the pandemic wears off. Still, the number of auditors is expected to shrink as larger companies continue to acquire smaller ones."
+        },
+        {
+            "future_outlook_point_title": "Economic Growth Is Expected To Drive Revenue",
+            "future_outlook_point_description": "The industry is expected to benefit from an increase in the number of businesses through the end of 2028. New companies are forecast to open operations, thus generating higher demand for accounting services. Small accounting businesses are expected to benefit most from more United States businesses because local operators provide services to smaller organizations. Still, the environment surrounding IPO activity is expected to weaken moving forward after two IPO-rich years, hampering larger auditors somewhat."
+        }
+    ],
+    "industry_definition": "This industry comprises accountants that are certified to audit the accounting records of public and private organizations and to attest to compliance with generally accepted accounting practices.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity: low",
+            "Concentration: low",
+            "Technology Change: low",
+            "Globalization: low - steady"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility: high",
+            "Industry Assistance: low - steady",
+            "Barriers To Entry: low - increasing",
+            "Competition: high - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Increasing Barriers to Entry",
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "High Volatility"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers",
+            "Number of employees"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Initial public offerings"
+        ]
+    },
+    "key_trends": [
+        "Auditors compete with one another for local business. Due to the relatively low barriers to entry, auditors contend for business from local companies.",
+        "Larger companies cannot replace an audit with another service. Audits are generally part of an agreement when they are registered with the US Securities and Exchange Commission.",
+        "Smaller companies and private businesses may submit a full audit with a financial review. Still, it varies from company to company in addition to the state in which it operates.",
+        "The COVID-19 pandemic and the following cessation of economic activity interrupted demand. In the years since, demand has returned as business activity resumed.",
+        "Consolidation will likely continue through the end of 2028. The Big Four companies in the industry are expected to maintain and expand their market share by absorbing smaller, specialized auditors.",
+        "Auditors must be licensed certified public accountants (CPAs). CPAs must complete an examination to be licensed.",
+        "Wages are the main expense for auditors. Auditing is a specialized skill that requires certification and training.",
+        "Business centers are natural breeding grounds for the industry.",
+        "Specialized and general audits are the two main services provided by auditors.",
+        "Corporations are the main clients of the industry. Corporations have a vested interest in keeping their records accountable, lest they be investigated by the federal government."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Corporate Clients",
+            "segment_description": "Corporate clients use industry companies for auditing and consulting services, including work on initial public offerings (IPOs) and mergers and acquisitions (M&As). Companies in this sector typically outsource auditing work to ensure there is no conflict of interest and that all transactions are in accordance with legislative measures and Securities and Exchange Commission (SEC) regulations. Larger clients in the financial services sector are required to provide a high level of transparency, thus audits and financial statement services are consistently in demand by these clients.",
+            "segment_percentage": 101.0
+        },
+        {
+            "segment": "Technology, Media and Telecommunications",
+            "segment_description": "Technology, media and telecommunications (TMT) have increased as a share of revenue as the rise of digital and social media have grown in line with mobile internet connections. Due to the novel and complex nature of this industry, demand has increased significantly.",
+            "segment_percentage": 16.5
+        },
+        {
+            "segment": "Industrial and Infrastructure",
+            "segment_description": "The industrial and infrastructure sectors represent a rising segment of revenue as rapidly fluctuating oil prices and outsourcing overseas through the end of 2023 have increased the complexity of auditing operations.",
+            "segment_percentage": 17.6
+        },
+        {
+            "segment": "Retail and Consumer",
+            "segment_description": "Retail and consumer companies represent a significant proportion of revenue. These clients use auditors to focus on the main functions and processes for all transactions made during the business year. Accordingly, this segment has grown with the overall economy, but has since slowed due to the coronavirus pandemic. Corporations have been increasingly scrutinized about their taxation compliance, driving demand for auditors.",
+            "segment_percentage": 17.5
+        },
+        {
+            "segment": "Public and Government",
+            "segment_description": "Demand from government agencies is dominated by the Big Four accounting companies and typically includes outsourcing audit measures for department spending and other programs. Government agencies have declined as a proportion of revenue during the five-year period due to weakened government spending following the economic recession and coronavirus-related bailout spending.",
+            "segment_percentage": 11.3
+        },
+        {
+            "segment": "Healthcare",
+            "segment_description": "The healthcare segment comprises a small but significant portion of industry revenue.",
+            "segment_percentage": 4.1
+        },
+        {
+            "segment": "Private Equity",
+            "segment_description": "The private equity segment makes up a minor share of industry revenue.",
+            "segment_percentage": 3.1
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Financial Auditing for Small-Sized Businesses (0-20 Employees)",
+            "product_description": "Financial auditing services for small businesses with 0-20 employees.",
+            "product_percentage": 3.6
+        },
+        {
+            "product_or_service": "Financial Auditing for Medium-Sized Businesses (20-500 Employees)",
+            "product_description": "Financial auditing services for medium-sized businesses with 20-500 employees.",
+            "product_percentage": 10.9
+        },
+        {
+            "product_or_service": "Financial Auditing for Large-Sized Businesses (500+ Employees)",
+            "product_description": "Financial auditing services for large businesses with over 500 employees.",
+            "product_percentage": 27.8
+        },
+        {
+            "product_or_service": "Specialized Financial Auditing",
+            "product_description": "Specialized financial auditing services examining specific areas within an organization's activities.",
+            "product_percentage": 18.7
+        },
+        {
+            "product_or_service": "Other Financial Assurance and Statement Review Services",
+            "product_description": "Other assurance services including compliance with standards, statement reviews, and agreed-upon procedures engagements.",
+            "product_percentage": 39.0
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Computer & Packaged Software Wholesaling in the US",
+            "Furniture Stores in the US",
+            "Office Stationery Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Operating Systems & Productivity Software Publishing in the US",
+            "Commercial Leasing in the US",
+            "Business Analytics & Enterprise Software Publishing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": [
+            "Real Estate and Rental and Leasing in the US",
+            "Manufacturing in the US",
+            "Finance and Insurance in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Percentage of Business Conducted Online",
+            "determinant_description": "As the economy shifts to digital, auditing companies are more easily able to automate routine auditing procedures and take on more clients in the same time to earn more revenue. In addition, online businesses represent a fast-growing segment in the economy, whose financials are often more important and more atypical to audit."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast is a major hub for business development.",
+            "percentage_establishments": 8.0,
+            "percentage_population": 19.0
+        },
+        {
+            "location": "West",
+            "location_description": "The West is the second-largest region for auditors.",
+            "percentage_establishments": 22.0,
+            "percentage_population": 24.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic is the third-largest region for the industry.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 15.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_trend": "Increasing",
+        "regulations_points": [
+            {
+                "regulation_title": "CPA EXAMINATION",
+                "regulation_description": "To be designated a certified public accountant (CPA) and become licensed to join the industry, an individual must pass the Uniform CPA Examination."
+            },
+            {
+                "regulation_title": "STATE REGULATION",
+                "regulation_description": "Some states require further education and experience for an individual to be considered a CPA."
+            },
+            {
+                "regulation_title": "ENRON'S COLLAPSE BRED NEW REGULATIONS",
+                "regulation_description": "Regulation of this industry increased following inquiries by the Securities and Exchange Commission (SEC) and Congress into the financial collapse of Enron Corporation."
+            },
+            {
+                "regulation_title": "COVID-19 INCREASED REGULATIONS",
+                "regulation_description": "As the accounting industry is highly service-based, with in-person interactions adding value to most client experiences, travel bans and lockdowns limited expansion to new clients during this period."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The audit industry is mature."
+            },
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "The industry has high revenue volatility."
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "The industry has low and steady assistance level."
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "The industry has high and steady competition level."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Revenue Volatility Level: high",
+            "Industry Assistance Level: low - steady",
+            "Competition Level: high - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Technology Change Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Local Competition",
+                "basis_description": "Auditors compete with one another for local business due to relatively low barriers to entry."
+            },
+            {
+                "basis_title": "Mandatory Audits",
+                "basis_description": "Larger companies cannot replace an audit as it is part of agreements when registered with the US Securities and Exchange Commission."
+            },
+            {
+                "basis_title": "Varying Requirements",
+                "basis_description": "Smaller companies and private businesses may submit financial reviews instead of full audits, varying by company and state."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Low Concentration",
+                "concentration_description": "There is low concentration in the industry despite high merger and acquisition activity."
+            },
+            {
+                "concentration_title": "Small Firm Prevalence",
+                "concentration_description": "A plethora of small companies ensures a perpetually diverse industry due to strong local demand and low start-up costs."
+            },
+            {
+                "concentration_title": "Nonemployer Majority",
+                "concentration_description": "The vast majority of auditors are nonemployers with fewer than 10 workers."
+            },
+            {
+                "concentration_title": "Big Four Share",
+                "concentration_description": "The Big Four accounting firms (PWC, EY, Deloitte and KPMG) comprise a large share of industry revenue."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Deloitte Touche Tohmatsu",
+                "company_percentage": 18
+            },
+            {
+                "company_name": "KPMG International Limited",
+                "company_percentage": 9.1
+            },
+            {
+                "company_name": "EY",
+                "company_percentage": 6.1
+            },
+            {
+                "company_name": "Pricewaterhousecoopers Llp",
+                "company_percentage": 5.6
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 61.2
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 16.9
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 39.1
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 3.1
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 2.5
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 4.0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 2.0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 5.0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Wages are the Most Significant Cost",
+            "cost_factor_description": "Wages are the industry's largest cost, comprising an estimated 39.1% of industry revenue in 2023."
+        },
+        {
+            "cost_factor_title": "Profit has begun to stabilize",
+            "cost_factor_description": "The average profit for auditors is high, representing an estimated 16.9% of revenue in 2023."
+        },
+        {
+            "cost_factor_title": "Purchases are low, but steady",
+            "cost_factor_description": "Purchases are expected to account for just over 3% of industry revenue in 2023."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LABOR/CAPITAL INTENSITY",
+                "capital_intensity_description": "Individuals can practice alone as a nonemployer if they obtain the proper formal qualifications or training."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "THE INDUSTRY IS SUBJECT TO BUSINESS CYCLES",
+                "volatility_description": "Revenue in this industry is sensitive to shifts in the business cycle for most of its services and demand generally moves in line with overall economic conditions."
+            },
+            {
+                "volatility_title": "THE INDUSTRY HAS ENDURED LIGHT VOLATILITY",
+                "volatility_description": "Growth in the number of businesses operating domestically has caused some fluctuations in revenue growth through the end of 2023."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "TECHNOLOGY AND MODERNIZATION",
+                "technological_change_description": "Auditors have adopted modern technology to streamline the audit process. Digitization of historic financial records has aided auditors in tracking legacy data."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company specialize in one corner of the market or provide a broad range of accounting services?",
+            "answer": "Auditing companies frequently offer many services, including audit and assurance services, tax preparation, consulting assistance and restructuring services."
+        },
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "The health of the US economy is important for this industry, which relies on economic growth and an changing number of new businesses."
+        },
+        {
+            "question": "Is your company investing heavily in R&D to meet changing consumer preferences?",
+            "answer": "R&D investment has been crucial for accounts to stay at the forefront of accounting software and cloud computing."
+        },
+        {
+            "question": "Has your company explored acquisition opportunities in locations with well-established metropolitan areas?",
+            "answer": "The industry's largest operators tend to be located in major metropolitan cities to service major organizations."
+        },
+        {
+            "question": "What steps does your company take to ensure that it is safeguarding proprietary information?",
+            "answer": "Proprietary technologies enable companies to earn recognition or financially benefit from what they invent or create."
+        },
+        {
+            "question": "How does your company stay ahead of regulations such as the Sarbanes-Oxley Act?",
+            "answer": "Regulation of accounting firms increased following inquiries by the Securities and Exchange Commission."
+        },
+        {
+            "question": "What is your company doing to improve profit?",
+            "answer": "The average industry profit margin for auditing professionals is high."
+        },
+        {
+            "question": "How does your company compensate for seasonality of cash flow?",
+            "answer": "Cash flow for this industry is seasonal to a significant degree."
+        },
+        {
+            "question": "Do you select employees for hire based on their customer service skills?",
+            "answer": "Maintenance of excellent client relations is vital to success."
+        },
+        {
+            "question": "Are you known for your reliability and performance?",
+            "answer": "Delivering services on time is essential."
+        },
+        {
+            "question": "What qualifications must your staff have?",
+            "answer": "An appropriately qualified and trained staff is essential to carrying out the complicated services provided by accounting firms."
+        },
+        {
+            "question": "How has volatility in the corporate sector hurt your business?",
+            "answer": "A rise in corporate profit generally increases the number of businesses that are able to undertake investments."
+        },
+        {
+            "question": "How does an increase in government consumption and investment affect your company?",
+            "answer": "Increases in government investment increases demand for independent government contractors."
+        },
+        {
+            "question": "How does a rising number of businesses affect demand for your company?",
+            "answer": "An increase in the number of employing businesses precipitates increased demand for accounting services."
+        }
+    ]
+}

@@ -1,0 +1,527 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 12444000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": -5.47
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": -1.1
+            }
+        },
+        "profit": {
+            "profit_dollars": 809000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 0.66
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 6.5,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 6.48
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 2225000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": -4.52
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": -1.2
+            }
+        },
+        "employees": {
+            "employees_count": 56805,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": -4.47
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": -1.6
+            }
+        },
+        "wages": {
+            "wages_dollars": 1334000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": -6.07
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": -1.5
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "Office supply stores have continued to experience challenges over the past five years. Traditional office supply stores have long been under pressure from the changing digital landscape and fierce external competition. The changing nature of how information is presented, consumed and spread has led to declining demand for many of the industry's core products. Moreover, industry operators have contended with strong pressure from discount stores, supercenters and warehouse clubs.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Digitization Has Pressured Growth",
+            "current_performance_point_description": "The increased digitalization of the economy and a change in the way information is displayed, consumed and spread has led to declining demand for many of the industry's core products, such as pens, paper, toner and print and copy services."
+        },
+        {
+            "current_performance_point_title": "External Competition Has Increased",
+            "current_performance_point_description": "Over the past decade, dedicated brick-and-mortar office supply stores have lost favor with consumers. While businesses still regularly purchase from the industry's larger chain stores, such as Staples Inc. and the ODP Corporation, consumers have found it more convenient and affordable to purchase office and school supplies from discount stores, warehouse clubs and supercenters."
+        },
+        {
+            "current_performance_point_title": "Restructuring Due To Declines",
+            "current_performance_point_description": "In response to falling revenue, many industry operators have merged, been acquired or even exited the industry entirely."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Households Will Decrease Their Demand",
+            "future_outlook_point_description": "While some of the industry's fundamentals are expected to improve as the economy remains strong, corporate clients and household shoppers are anticipated to continue moving away from traditional office products as the economy digitalizes and telecommuting becomes even more mainstream."
+        },
+        {
+            "future_outlook_point_title": "External Competition Will Force Price Reductions",
+            "future_outlook_point_description": "External competitors, such as discount department stores, warehouse clubs and supercenters, have continued to usurp market share from operators by offering lower prices for comparable products."
+        },
+        {
+            "future_outlook_point_title": "Increasing In-Store Services To Compete",
+            "future_outlook_point_description": "Increasing internet penetration is also expected to lead to higher competition from e-commerce websites. In response, many operators will likely shift focus toward online divisions and alternative business models for physical stores."
+        }
+    ],
+    "industry_definition": "This industry includes establishments that primarily sell stationery, school supplies and office supplies. Stores may also sell a combination of new computers, office equipment, furniture and supplies. This industry does not include general merchandisers or electronic retailers.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Revenue Volatility Level: low",
+            "Capital Intensity Level: low",
+            "Globalization Level: low - increasing"
+        ],
+        "negative_impact_factors": [
+            "Life Cycle Stage: decline",
+            "Industry Assistance Level: low - steady"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "Decline Life Cycle Stage",
+            "High Customer Class Concentration",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Outlier Growth",
+            "High Revenue Growth (2023-2028)",
+            "Consumer spending"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Performance Drivers",
+            "Price of computers and peripheral equipment"
+        ]
+    },
+    "key_trends": [
+        "Digitization has contributed to consistent declines as there is less demand for core industry products.",
+        "The industry is in the declining phase of its life cycle. Consistent revenue declines are expected to continue through the outlook period.",
+        "Office supply stores must adhere to common labor laws, but are not subject to many industry-specific regulations.",
+        "Industry associations are the main form of assistance received by office supply stores.",
+        "Households have declined as a market segment as consumers have shifted to shopping at other large retailers with similar products.",
+        "Digitization has decreased demand for many traditional office supplies.",
+        "The population of a state or region is a key component for choosing a location since a larger population expands the potential customer base. The Southeast and West regions are the most popular for office supply stores to locate.",
+        "The industry is dominated by a few major players, which has created challenging conditions for small stores.",
+        "External competition has increased from warehouses and supercenters and other large retailers.",
+        "ODP and Staples dominate the industry and both benefit from economies of scale and brand recognition.",
+        "Smaller companies must offer niche products or specialized services to compete with the larger stores.",
+        "Cost structures for office supply stores vary between office supply stores depending on the size and scope of the company."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Businesses for end use",
+            "segment_description": "This segment includes businesses for end use in their own operation, not for resale or production.",
+            "segment_percentage": 57.4
+        },
+        {
+            "segment": "Households and individuals",
+            "segment_description": "This segment includes households and individuals and is the second-largest market segment.",
+            "segment_percentage": 10
+        },
+        {
+            "segment": "Hospitality and tourism industries",
+            "segment_description": "This segment includes restaurants, hotels, food services and contract feeding.",
+            "segment_percentage": 9.4
+        },
+        {
+            "segment": "Governments",
+            "segment_description": "This segment includes federal, state and local governments.",
+            "segment_percentage": 7.4
+        },
+        {
+            "segment": "Industrial users",
+            "segment_description": "This segment includes manufacturing and mining industrial users for use as input goods in production.",
+            "segment_percentage": 5.8
+        },
+        {
+            "segment": "Wholesalers and distributors for resale",
+            "segment_description": "Wholesalers may purchase from industry operators to meet their own short-term consumer demands.",
+            "segment_percentage": 4.9
+        },
+        {
+            "segment": "Other",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 4.4
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Miscellaneous Merchandise",
+            "product_description": "This segment includes a broad range of non-core products, including greeting cards, hobby and craft supplies, home furniture, briefcases, soft drinks and snacks.",
+            "product_percentage": 31.5
+        },
+        {
+            "product_or_service": "Computers and Computer Equipment",
+            "product_description": "This segment includes computers and peripheral equipment, communications equipment, computer software and other related computer equipment.",
+            "product_percentage": 22.4
+        },
+        {
+            "product_or_service": "Office and School Supplies",
+            "product_description": "This segment includes office and school supplies, which also includes packaging and packing materials and supplies and other general industry and miscellaneous materials and supplies.",
+            "product_percentage": 16.2
+        },
+        {
+            "product_or_service": "Office Equipment and Furniture",
+            "product_description": "This segment includes office equipment and office furniture, not including computers.",
+            "product_percentage": 15.2
+        },
+        {
+            "product_or_service": "Other Products and Services",
+            "product_description": "Other products and services offered by industry operators include technology services, such as tech support and cloud software, textbook rental and recycling, among others.",
+            "product_percentage": 7.5
+        },
+        {
+            "product_or_service": "Printing Services",
+            "product_description": "This segment includes printing services, which include traditional copy and print services.",
+            "product_percentage": 7.2
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Sanitary Paper Product Manufacturing in the US",
+            "Office Stationery Manufacturing in the US",
+            "Office Furniture Manufacturing in the US"
+        ],
+        "tier_2_suppliers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Miscellaneous Merchandise Experiences Strong External Competition",
+            "determinant_description": "This segment includes a broad range of non-core products, including greeting cards, hobby and craft supplies, home furniture, briefcases, soft drinks and snacks."
+        },
+        {
+            "determinant_title": "Households Have Demanded More Office Equipment and Furniture",
+            "determinant_description": "This segment includes office equipment and office furniture, not including computers."
+        },
+        {
+            "determinant_title": "Computers and Computer Equipment Remain in High Demand",
+            "determinant_description": "This segment includes computers and peripheral equipment, communications equipment, computer software and other related computer equipment."
+        },
+        {
+            "determinant_title": "Office and School Supplies Have Decreased Because of Digitization",
+            "determinant_description": "This segment includes office and school supplies, which also includes packaging and packing materials and supplies and other general industry and miscellaneous materials and supplies."
+        },
+        {
+            "determinant_title": "Printing Services Have Decreased as More Business is Conducted Online",
+            "determinant_description": "This segment includes printing services, which include traditional copy and print services."
+        },
+        {
+            "determinant_title": "Stores Have Expanded Services to Remain Relevant",
+            "determinant_description": "Other products and services offered by industry operators include technology services."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region of the US has the greatest number of office supply stores in 2023.",
+            "percentage_establishments": 40,
+            "percentage_population": 30
+        },
+        {
+            "location": "West",
+            "location_description": "The West is the second-largest region by establishment, in line with its share of the US population.",
+            "percentage_establishments": 20,
+            "percentage_population": 10
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region has the third-largest concentration of office supply stores in 2023.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [
+            {
+                "regulation_title": "The Fair Labor Standards Act",
+                "regulation_description": "The Fair Labor Standards Act (FLSA) contains the details for the federal minimum wage."
+            },
+            {
+                "regulation_title": "Labor Laws",
+                "regulation_description": "The FLSA covers minors' wages, when and how long they may work."
+            },
+            {
+                "regulation_title": "The Occupational Safety and Health Administration",
+                "regulation_description": "OSHA works to promote safe and healthful working environments."
+            },
+            {
+                "regulation_title": "Antitrust Regulations",
+                "regulation_description": "Regulate against monopolies, price fixing and ensure fair competition."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "Life Cycle Stage: decline"
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "Industry Assistance Level: low - steady"
+            },
+            {
+                "barrier_title": "Concentration Level",
+                "barrier_description": "Concentration Level: high"
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            {
+                "factor": "Revenue Volatility Level: low"
+            },
+            {
+                "factor": "Capital Intensity Level: low"
+            },
+            {
+                "factor": "Globalization Level: low - increasing"
+            }
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Office supply stores are labor intensive",
+                "basis_description": "Office supply stores must provide excellent customer service."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "High",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Industry dominated by few major players",
+                "concentration_description": "The industry is dominated by a few major players."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Staples Inc.",
+                "company_percentage": 39.2
+            },
+            {
+                "company_name": "The ODP Corporation",
+                "company_percentage": 29
+            },
+            {
+                "company_name": "Acco Brands Corporation",
+                "company_percentage": 4.4
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 26.6
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 49.4
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases are the largest expense",
+            "cost_factor_description": "Purchases are the largest expense, representing 49.4% of industry revenue."
+        },
+        {
+            "cost_factor_title": "Wages Have Decreased to Cut Costs",
+            "cost_factor_description": "Employee compensation is the second-largest single expense."
+        },
+        {
+            "cost_factor_title": "Economies of Scale Support High Profit",
+            "cost_factor_description": "Profit varies among industry operators depending on the size of the operation."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital intensity",
+                "capital_intensity_description": "Office supply stores are labor intensive."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Low",
+        "volatility_points": [
+            {
+                "volatility_title": "Low revenue volatility",
+                "volatility_description": "Revenue volatility in the Office Supply Stores industry has been moderate."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Office and School Supplies Have Decreased Because of Digitization",
+                "technological_change_description": "This segment includes office and school supplies."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "Are your customers heavily price-conscious?",
+            "answer": "Products are subject to high levels of competition and substitution which allows clients to be price-conscious for product selection."
+        },
+        {
+            "question": "How has your business adapted to the growth of online sales over the past five years?",
+            "answer": "Providing incentives to purchase in-store may grow brick-and-mortar revenue."
+        },
+        {
+            "question": "Has your company explored acquisition opportunities in order to expand reach and reduce overhead expenses?",
+            "answer": "Consolidation is always prevalent, expanding into new products and services will establish new revenue streams."
+        },
+        {
+            "question": "Has your company considered locating in urban environments?",
+            "answer": "Urban environments offer a diverse client base that may be more susceptible to brick-and-mortar services."
+        },
+        {
+            "question": "Does your company use point-of-sale (POS) systems to ensure that the most popular products are kept in stock?",
+            "answer": "Point-of-sale systems have enabled more accurate tracking of product and reduced labor costs."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation over the past five years?",
+            "answer": "Physical labor is a key part of success, allowing for differentials in service compared to competitors."
+        },
+        {
+            "question": "Have any regulations significantly impacted profitability recently?",
+            "answer": "High concentration has prohibited some mergers and acquisitions to prevent monopolies."
+        },
+        {
+            "question": "Is your company prepared to mitigate rising wage costs associated with increased minimum wage laws?",
+            "answer": "Minimum wages in various states are rising."
+        },
+        {
+            "question": "How do your company's profit margins compare to your main competitors'?",
+            "answer": "The average industry profit margin comprises an estimated 6.5% of revenue in 2023."
+        },
+        {
+            "question": "How does your company compensate for cash flow seasonality?",
+            "answer": "Business streams are steady throughout the year."
+        },
+        {
+            "question": "How do you train employees? What do you look for in candidates when hiring?",
+            "answer": "Capable staff with clear knowledge of the office supplies industry is important."
+        },
+        {
+            "question": "What is your historical performance in meeting consumer expectations? Which products do you regularly keep in stock?",
+            "answer": "Consumers are more likely to return if popular office supplies and stationery items are readily available."
+        },
+        {
+            "question": "Is your company dominant in any particular regional markets? Are you located in convenient locations for customers?",
+            "answer": "Outlets need to be situated in locations that are convenient for customers."
+        },
+        {
+            "question": "How does your company differentiate itself from its online competition?",
+            "answer": "Office supply stores compete with comparable products offered by online retailers."
+        },
+        {
+            "question": "Do you expect major changes in demand as a result of rising corporate profit?",
+            "answer": "Business activity typically increases during times of high corporate profit."
+        },
+        {
+            "question": "How has your company coped with low or high per capita disposable income?",
+            "answer": "When disposable income is rising, consumers will have more money to spend on industry products."
+        }
+    ]
+}

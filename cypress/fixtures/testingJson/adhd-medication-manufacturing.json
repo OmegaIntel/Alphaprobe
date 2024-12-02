@@ -1,0 +1,536 @@
+{
+    "report_title": "ADHD Medication Manufacturing",
+    "report_date": "2022",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 10459000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "revenue_cagr_value": 4.15
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "revenue_cagr_value": 2.45
+            }
+        },
+        "profit": {
+            "profit_dollars": 795000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "profit_cagr_value": 5.71
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "profit_cagr_value": 0.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 7.6,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "profit_margins_cagr_value": 1.5
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "profit_margins_cagr_value": 0.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 2042000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "industry_value_added_cagr_value": 0.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "industry_value_added_cagr_value": 0.0
+            }
+        },
+        "employees": {
+            "employees_count": 10112,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "employees_cagr_value": 4.14
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "employees_cagr_value": 1.39
+            }
+        },
+        "wages": {
+            "wages_dollars": 1007000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "wages_cagr_value": 4.48
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "wages_cagr_value": 1.6
+            }
+        },
+        "imports": {
+            "imports_dollars": 7448000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "imports_cagr_value": 8.94
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "imports_cagr_value": 1.08
+            }
+        },
+        "exports": {
+            "exports_dollars": 3358000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "exports_cagr_value": 0.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "exports_cagr_value": 0.0
+            }
+        }
+    },
+    "executive_summary": "Operators in the ADHD Medication Manufacturing industry manufacture medications that treat attention deficit disorder (ADD) and attention deficit hyperactivity disorder (ADHD). While this industry achieved consistent growth in recent decades, as diagnoses and prescription volumes increased, recent declines in ADHD drug spending have stifled revenue during the current period. While ADHD remains one of the most commonly diagnosed neurodevelopmental conditions for children in the United States, increased scrutiny on overprescribing have tapered industry-specific health spending. Additionally, increased competition in the form of generic medications and imported products have amplified decline in the domestic industry. Overall, IBISWorld expects total industry revenue to decrease at an annualized rate of 1.5% to $10.5 billion in 2022. Moreover, the prevalence of generic products has highly intensified price-based competition, constraining industry profit.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Industry Overview",
+            "current_performance_point_description": "Operators within the ADHD Medication Manufacturing industry are primarily engaged in the research, development, production and commercializing of brand-name and generic pharmaceuticals used to treat neurological disorders. These medications are primarily used to treat conditions such as Attention Deficit Disorder (ADD) and Attention Deficit Hyperactivity Disorder (ADHD). According to the Center for Disease Control and Prevention (CDC), both ADD and ADHD are among the most common neurodevelopmental disorders in childhood and conditions often continue into adulthood."
+        },
+        {
+            "current_performance_point_title": "Industry Growth",
+            "current_performance_point_description": "The industry has sustained growth in recent decades, evidenced by its position as one of the top therapeutic prescription classes dispensed in the United States. Specifically, according to the IQVIA, a global healthcare research institute formerly known as Quintiles IMS Health Inc., ADHD drugs are included in the top 20 global therapeutic classes, which collectively account for over 40.0% of global pharmaceutical spending."
+        },
+        {
+            "current_performance_point_title": "Revenue Projection for 2022",
+            "current_performance_point_description": "As the broader economy recovers from the pandemic, increased health expenditure, employment and insurance coverage is forecast to further drive revenue growth. As a result, industry revenue is projected to rise 0.5% in 2022 alone."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Revenue Forecast 2022-2027",
+            "future_outlook_point_description": "Over the coming five years, industry revenue is forecast to rebound, increasing at an annualized rate of 2.4% to reach $11.8 billion. As the broader economy recovers from the pandemic, increased health expenditure, employment and insurance coverage is forecast to further drive revenue growth. Additionally, the adult market will continue to grow as adult usage of ADHD medications increases."
+        },
+        {
+            "future_outlook_point_title": "Growth Constraints",
+            "future_outlook_point_description": "However, growth will be limited as more brand name drugs lose patent exclusivity, enabling more generic drugs to inundate the market and thus intensify price-based competition."
+        },
+        {
+            "future_outlook_point_title": "Profit Forecast",
+            "future_outlook_point_description": "Profit, measured as earnings before interest and taxes, is expected to increase marginally, accounting for 7.9% in 2027, up from 7.6% in 2022 as larger manufacturers experience lower per unit costs and benefit from the uptick in ADHD drug usage rates."
+        }
+    ],
+    "industry_definition": "Operators in this industry manufacture medications that treat people with attention deficits, such as attention deficit disorder (ADD) and attention deficit hyperactivity disorder (ADHD).",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Concentration Level is low",
+            "Barriers To Entry Level is high - steady"
+        ],
+        "negative_impact_factors": [
+            "Regulation Level is heavy - steady",
+            "Technology Change Level is high",
+            "Competition Level is high - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage is mature",
+            "Revenue Volatility Level is medium",
+            "Capital Intensity Level is medium",
+            "Industry Assistance Level is medium - steady",
+            "Globalization Level is medium - increasing"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "High Profit vs. Sector Average"
+        ],
+        "weaknesses": [
+            "High Competition",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2022-2027)",
+            "High Performance Drivers",
+            "Federal funding for Medicare and Medicaid"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2022)",
+            "Low Revenue Growth (2017-2022)",
+            "Low Outlier Growth",
+            "Trade-weighted index"
+        ]
+    },
+    "key_trends": [
+        "The number of individuals with private health insurance coverage is also expected to decrease",
+        "Increased encroachment on domestic operators remains one of the largest contributors to industry decline during the five-year period",
+        "The end of the ADHD drug shortage favorably affected international trade",
+        "The number of industry enterprises is expected to increase as continued price-based competition forces smaller-scale operators to exit the industry",
+        "Generic ADHD medications are likely to become more popular as more options are developed and as healthcare cost-control measures intensify",
+        "As more adults are diagnosed with ADHD, the market size for ADHD medications will expand",
+        "As the national unemployment rate continues to recover post-pandemic, private insurance coverage is anticipated to follow suit"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Adults aged 20 and older",
+            "segment_description": "Adults aged 20 and older make up an estimated 47.1% of the total market for ADHD medications in 2022. This segment's share has grown considerably in recent years, especially among women aged 26-34 who are more likely to seek treatment as adults. However, the COVID-19 pandemic temporarily reduced the available number of adult consumers due to increased unemployment and loss of employer-sponsored health coverage.",
+            "segment_percentage": 47.1
+        },
+        {
+            "segment": "Children aged 10-19",
+            "segment_description": "Children aged 10 to 19 make up 38.7% of total revenue in 2022. This market segment has grown over the past five years as the domestic population has aged.",
+            "segment_percentage": 38.7
+        },
+        {
+            "segment": "Children aged 10 and younger",
+            "segment_description": "In 2022, children aged 10 and younger account for 14.2% of total revenue. On average, children are diagnosed with ADHD at age 7. This market segment is expected to remain stable over the next five years.",
+            "segment_percentage": 14.2
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Amphetamine and dextroamphetamine medications",
+            "product_description": "Medications using amphetamines like Adderall account for an estimated 54.8% of industry revenue in 2022. This segment's share has decreased slightly due to concerns over long-term effects, especially on pediatric patients.",
+            "product_percentage": 54.8
+        },
+        {
+            "product_or_service": "Methylphenidate and dexmethylphenidate medications",
+            "product_description": "Medications like Concerta, Ritalin and Focalin account for 18.5% of revenue in 2022. This segment's share has fallen as more generic versions hit the market.",
+            "product_percentage": 18.5
+        },
+        {
+            "product_or_service": "Lisdexamfetamine medications",
+            "product_description": "Lisdexamfetamine medications like Vyvanse are expected to generate 23.4% of revenue in 2022. This long-acting stimulant has grown in popularity, though debate over pricing and patent expiration may offset future growth.",
+            "product_percentage": 23.4
+        },
+        {
+            "product_or_service": "Atomoxetine and guanfacine medications",
+            "product_description": "These non-stimulant medications like Strattera and Intuniv account for an estimated 3.3% of industry revenue in 2022. They are marketed as having less abuse potential compared to stimulants.",
+            "product_percentage": 3.3
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Inorganic Chemical Manufacturing in the US",
+            "Organic Chemical Manufacturing in the US",
+            "Soap & Cleaning Compound Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Medical Instrument & Supply Manufacturing in the US",
+            "Biotechnology in the US",
+            "Laboratory Supply Wholesaling in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": [
+            "Pharmacies & Drug Stores in the US",
+            "Mental Health & Substance Abuse Clinics in the US",
+            "Hospitals in the US",
+            "Psychiatric Hospitals in the US",
+            "Residential Intellectual Disability Facilities in the US",
+            "Drug, Cosmetic & Toiletry Wholesaling in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Medical Factors",
+            "determinant_description": "Demand for the ADHD Medication Manufacturing industry is primarily linked to the volume of ADHD diagnoses within the domestic population. As the incidence of ADHD increases, demand for ADHD treatment, including medication, also generally increases. While children have typically account for the largest industry market segment, adults also account for a large share of industry revenue. Similarly, as pediatric ADHD patients age, these individuals may still require some form of treatment, typically at lower dosages. Still, the propensity for older individuals to receive medication makes childhood diagnoses a proxy for future demand."
+        },
+        {
+            "determinant_title": "Economic Drivers",
+            "determinant_description": "Aside from prescription volumes, diagnoses and public perception; industry demand is also directly affected by economic drivers such as the affordability of these products and trade dynamics. For instance, monthly prescriptions for brand-name ADHD medications can total more than $1,000 in total costs. Thus, individuals often seek assistance through insurance plans, government health programs, such as Medicare or simply pay these expenses out of pocket. As a result, industry demand is also influenced by trends in total health expenditure, the number of individuals covered by private insurance plans and federal funding for Medicare and Medicaid."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Increasing",
+        "export_level": "High",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports",
+                "trade_description": "The industry is highly competitive and domestic operators compete with international substitutes. Imports are expected to satisfy 51.2% of domestic demand in 2022, up from 41.5% in 2017. The main import partners are Ireland, China, Switzerland and Germany."
+            },
+            {
+                "trade_title": "Exports",
+                "trade_description": "While skewed toward imports, the industry still generates 32.1% of revenue from exports in 2022, up from 23.2% in 2017. Exports are influenced by the Trade-Weighted Index - as the dollar value increases, exports decline as US goods become more expensive internationally."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "West",
+            "location_description": "The West region of the United States represents one of the most populous areas in the country, accounting for an estimated 17.1% of the total population in 2022. As a result, an estimated 22.2% of industry establishments are located within this region.",
+            "percentage_establishments": 22.2,
+            "percentage_population": 17.1
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region of the United States represents one of the most populous areas in the country, accounting for an estimated 15.2% of the total population in 2022. As a result, an estimated 17.3% of industry establishments are located within this region.",
+            "percentage_establishments": 17.3,
+            "percentage_population": 15.2
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region represents the third-highest concentration of industry activity. Overall, this region is expected to account for 17.4% of total industry establishments. Similarly, this region is forecast to represent 25.8% of the domestic population. Within the Southeast, Florida represents the third-largest single state contributor to industry activity, accounting for an estimated 5.7% of industry establishments, in line with the estimated 6.5% of the domestic population within the state.",
+            "percentage_establishments": 17.4,
+            "percentage_population": 25.8
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region represents the fourth-highest concentration of industry activity. Overall, this region is expected to account for 10.5% of total industry establishments. Similarly, this region is forecast to represent 14.3% of the domestic population.",
+            "percentage_establishments": 10.5,
+            "percentage_population": 14.3
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "DEA controlled substances",
+                "regulation_description": "ADHD stimulants classified as Schedule II controlled substances by DEA, with quotas on manufacturing."
+            },
+            {
+                "regulation_title": "FDA oversight",
+                "regulation_description": "All products subject to FDA regulation on manufacturing, marketing, labeling."
+            },
+            {
+                "regulation_title": "COVID-19 regulations",
+                "regulation_description": "Varying state and local regulations implemented due to pandemic, limiting facility operations."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "High capital and labor investment",
+                "barrier_description": "Pharmaceutical manufacturing requires a high degree of both capital and labor investment, along with research and development (R&D) costs can be significantly high, with a considerable lag time before the fruits of this labor are realized in the form of profit."
+            },
+            {
+                "barrier_title": "High regulation level",
+                "barrier_description": "This industry also experiences a high degree of government regulation, posing an additional barrier to entry for potential ADHD medication manufacturers, as producers must be able to afford the costs of compliance with federal oversight."
+            },
+            {
+                "barrier_title": "Patent protection and brand value",
+                "barrier_description": "Patent protection and the value of brand names also pose a significant barrier to entry for this industry. Market-leading brand name ADHD medications such as Adderall and Ritalin have become household names in recent decades and the generic sales of these drugs dominate the US market."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Regulation Level: heavy - steady",
+            "Technology Change Level: high",
+            "Competition Level: high - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Concentration Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Product development",
+                "basis_description": "New product development is likely the single most important basis of competition within the ADHD Medication Manufacturing industry. Producers that can be first to FDA approval (and thus, first to market) with a new ADHD treatment will experience both patent protection from competition and the allure of offering the latest pharmaceutical advancement."
+            },
+            {
+                "basis_title": "Marketing and popularity",
+                "basis_description": "Manufacturers also compete on the basis of the popularity of products, which is closely linked to patent protection and product development. The first drug on the market gains significant name recognition."
+            },
+            {
+                "basis_title": "Price",
+                "basis_description": "Price is also a basis of industry competition, as insurers and patients paying out of pocket will likely gravitate toward generics and less-expensive brand name drugs."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Low",
+        "concentration_points": [],
+        "top_companies": [
+            {
+                "company_name": "Shire PLC",
+                "company_percentage": 20.7
+            },
+            {
+                "company_name": "Eli Lilly And Company",
+                "company_percentage": 0.3
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 7.6
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 9.6
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 25.7
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 2.3
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0.9
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0.5
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0.6
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 52.8
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Wages",
+            "cost_factor_description": "The manufacturing process requires diverse employee base for production, testing, quality control and R&D positions."
+        },
+        {
+            "cost_factor_title": "Purchases",
+            "cost_factor_description": "Purchase costs include controlled substances like amphetamines and APIs, subject to DEA quotas to prevent oversupply."
+        },
+        {
+            "cost_factor_title": "Other costs",
+            "cost_factor_description": "Includes insurance, legal fees, professional services. Significant legal compliance costs due to FDA regulations."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Capital expenditures",
+                "capital_intensity_description": "For every $1 spent on labor, $0.24 is spent on capital expenditures in 2022, up from $0.23 in 2017."
+            },
+            {
+                "capital_intensity_title": "Facilities and equipment",
+                "capital_intensity_description": "Operators invest in manufacturing facilities compliant with FDA regulations and equipment for clinical trials."
+            }
+        ],
+        "capital_intensity_trend": "Increasing"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Demographic factors",
+                "volatility_description": "Demand influenced by demographics, as most ADHD prescriptions are for ages 10-19."
+            },
+            {
+                "volatility_title": "Healthcare expenditure",
+                "volatility_description": "Revenue growth dictated by broader healthcare expenditure on prescription drugs."
+            },
+            {
+                "volatility_title": "International trade",
+                "volatility_description": "As a manufacturing industry, revenue can fluctuate with changes in US dollar value."
+            },
+            {
+                "volatility_title": "Public opinion",
+                "volatility_description": "Prescription volumes affected by public opinion on ADHD diagnoses and overprescribing."
+            },
+            {
+                "volatility_title": "Generic competition",
+                "volatility_description": "Expiration of key patents led to increased generic competition and volatility."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Product development",
+                "technological_change_description": "Operators invest in R&D to develop new drugs and replicate off-patent compounds."
+            },
+            {
+                "technological_change_title": "Delivery systems",
+                "technological_change_description": "New delivery systems like extended-release and chewable tablets are developed."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company specialize in only neuroscience pharmaceuticals or a range of ADHD therapies?",
+            "answer": "Selling a broad line of products allows for consumers to choose a brand based on their personal needs."
+        },
+        {
+            "question": "What percent of revenue is devoted to advertising?",
+            "answer": "On average, marketing accounts for less than one percent of revenue."
+        },
+        {
+            "question": "Has your company explored acquisition opportunities in locations with well-established infrastructure networks?",
+            "answer": "Companies benefit from locating close to transportation networks to move products."
+        },
+        {
+            "question": "Expiring patent protection and the threat of generics can pose significant financial challenges. What is your company doing to prepare?",
+            "answer": "Investing in generic lines, in addition to brand names, will balance out any large shift in consumer preferences and bolster long term profitability."
+        },
+        {
+            "question": "Does your company use SAP software systems to optimize all aspects of manufacturing, sales, inventory and distribution channels?",
+            "answer": "SAP systems allow companies to access real-time information, improve reliability and take advantage of global product traceability."
+        },
+        {
+            "question": "What steps does your company take to ensure that it is safeguarding proprietary information?",
+            "answer": "Proprietary technologies enable companies to earn recognition or financially benefit from what they invent or create."
+        },
+        {
+            "question": "Have you had any regulatory expenses that have significantly impacted profitability recently?",
+            "answer": "Companies have learned to navigate changing regulations to stem profitability declines, especially in a rapidly changing healthcare environment."
+        },
+        {
+            "question": "How does your company ensure all relevant health and safety requirements are met?",
+            "answer": "Companies must meet a range of federal safety requirements for their products."
+        },
+        {
+            "question": "How do your company's profit margins compare to the industry average?",
+            "answer": "On average, profit margins in this industry are between 5.0% to 10.0%."
+        },
+        {
+            "question": "What is your company doing to improve profit margins?",
+            "answer": "Investing in brand name and generic versions of the same drug improves long term profitability."
+        },
+        {
+            "question": "Do you have the ability to react quickly to changing regulations? How have recent regulation changes affected your company?",
+            "answer": "Fast adjustments made to changing regulations."
+        },
+        {
+            "question": "Do you manufacture any branded products? How do you promote your products and services? How can you improve this process?",
+            "answer": "Establishment of brand names such as Ritalin and Adderall are household names; companies who are able to use or license these brands, or develop new well-known brands of their own, will gain market share."
+        },
+        {
+            "question": "Does your company have a reputation for prompt and efficient services? If not, how can you improve?",
+            "answer": "Supply contracts in place for key inputs ensure consistent access to ADHD medication inputs and keep the appropriate supply of drugs on the market."
+        }
+    ]
+}

@@ -1,0 +1,594 @@
+{
+    "report_title": "Industry Report on Online Shoe Sales",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 44072000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 10.71
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 4.88
+            }
+        },
+        "profit": {
+            "profit_dollars": 2909000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 22.27
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 5.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 6.6,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 10.44
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 5.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 5735000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 9.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 4.0
+            }
+        },
+        "employees": {
+            "employees_count": 426795,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 4.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 3.0
+            }
+        },
+        "wages": {
+            "wages_dollars": 2528000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 3.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 2.5
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2024 currency.\n\nThe Online Shoe Sales industry has experienced significant growth over the past five years. This growth has been driven primarily by the increasing popularity of e-commerce, as consumers seek the convenience of online shopping. Traditional brick-and-mortar retailers entering the online realm have further expanded the market. The industry's revenue has hiked at a CAGR of 8.3% over the past five years and is expected to total $44.1 billion in 2024 when revenue will hike by an estimated 4.8%.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Direct-to-Consumer Trend Grows as Shoppers Favor Brand Websites",
+            "current_performance_point_description": "More consumers are skipping traditional retail channels and buying directly from brand websites. This change is driven by the promise of better prices, exclusive products and personalized experiences that traditional retailers often can't match."
+        },
+        {
+            "current_performance_point_title": "Free Return Policies Driving Online Shoe Sales",
+            "current_performance_point_description": "Favorable return policies by numerous online shoe retailers over the last five years have encouraged more consumers to embrace online shoe shopping. These return policies have significantly reduced the fear associated with making incorrect purchases, thereby fostering a more confident purchasing behavior."
+        },
+        {
+            "current_performance_point_title": "The Boom of Athleisure Has Seen Increased Sales",
+            "current_performance_point_description": "Athletic shoes have seen a considerable surge in popularity in the past five years, primarily because of the boost in the athleisure trend, including the fusion of athletic wear into everyday fashion, which has become a major driver in the shoe industry."
+        },
+        {
+            "current_performance_point_title": "Consumer-Friendly Online Shopping Features Have Spurred Growth",
+            "current_performance_point_description": "Numerous changes have made online shopping much more user-friendly, significantly contributing to the growth in online shoe sales. Customers can easily access a variety of platforms to compare prices, read thorough product reviews and browse enormous catalogs of merchandise from the comfort of their homes."
+        },
+        {
+            "current_performance_point_title": "Mobile Shopping Apps Are On The Hike",
+            "current_performance_point_description": "Technological advances have brought with them the expansion of mobile shopping apps, a trend that has noticeably shaped the online retail industry over the past five years."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Increasing Competition Will Boost Focus on Consumer Satisfaction",
+            "future_outlook_point_description": "As competition in the online shoe retail sector intensifies with new e-stores entering in the coming years, businesses will be compelled to elevate their product offerings and services."
+        },
+        {
+            "future_outlook_point_title": "Evolving Marketing Strategies Will Dominate the Online Retail Landscape",
+            "future_outlook_point_description": "To attract potential customers, retailers must stay on top of emerging marketing trends. Search Engine Optimization (SEO) will be critical for attracting organic traffic and increasing visibility."
+        },
+        {
+            "future_outlook_point_title": "Discount Online Retailers Will See a Surge in Popularity",
+            "future_outlook_point_description": "Over the next five years, off-price retail sites like 6pm.com that provide value deals will attract more consumers. Even with a boost in discretionary income, shoppers will be driven by the value these sites offer."
+        },
+        {
+            "future_outlook_point_title": "Mobile Shopping Will Continue to Boost Traffic and Conversion Rates",
+            "future_outlook_point_description": "With the steady boost in smartphone usage, mobile e-commerce will become an increasingly important player in the online shoe retail landscape. The flexibility and convenience offered by smartphone shopping will drive more consumers to use these platforms for footwear purchases."
+        }
+    ],
+    "industry_definition": "This industry retails shoes for men, women and children via the internet. Industry goods are typically purchased from domestic or international manufacturers and wholesalers and then sold to the public online.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Growth Life Cycle Stage",
+            "Low Concentration Level",
+            "Low - Increasing Globalization Level"
+        ],
+        "negative_impact_factors": [
+            "Low - Steady Industry Assistance Level",
+            "High Technology Change Level",
+            "Low - Steady Barriers To Entry Level",
+            "High - Increasing Competition Level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry",
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "Very High Revenue Growth (2005-2024)",
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "Per capita disposable income"
+        ],
+        "threats": [
+            "Low Outlier Growth"
+        ]
+    },
+    "key_trends": [
+        "Price and product selection are the main competitive strategies for online shoe retailers. Since consumers can easily compare online retailers, offering competitive pricing or unique and quality products is key to success.",
+        "Brick-and-mortar shoe stores and department stores offer similar products. These retailers compete with online shoe retailers mainly through in-person customer service.",
+        "Favorable return policies fuel online shoe sales. By reducing the fear of incorrect purchases, these policies, user-friendly online features, swift return processes and the boost of mobile shopping apps have significantly enhanced consumer confidence, propelling online sales.",
+        "Intensified competition boosts consumer satisfaction focus. As the competition in the online shoe retail sector increases, businesses will need to prioritize consumer satisfaction and offer superior quality, competitive pricing, and excellent after-sales services to retain customers."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Under 25 years old",
+            "segment_description": "Consumers in this segment have limited income and are more likely to search for the least costly shoe option, limiting potential revenue from this demographic.",
+            "segment_percentage": 12.4
+        },
+        {
+            "segment": "25-34 years old",
+            "segment_description": "Consumers in this demographic commonly have children. Consequently, they regularly purchase additional footwear for their youngsters, considerably boosting demand from this sector and making it a significant market segment to target.",
+            "segment_percentage": 12.1
+        },
+        {
+            "segment": "35-44 years old",
+            "segment_description": "Consumers in this demographic commonly have children. Consequently, they regularly purchase additional footwear for their youngsters, considerably boosting demand from this sector and making it a significant market segment to target.",
+            "segment_percentage": 21.3
+        },
+        {
+            "segment": "45-54 years old",
+            "segment_description": "Consumers in this segment have higher disposable incomes, which allows them to purchase more costly shoes, supporting demand from this segment.",
+            "segment_percentage": 16.1
+        },
+        {
+            "segment": "55-64 years old",
+            "segment_description": "Consumers in this segment have higher disposable incomes, which allows them to purchase more costly shoes, supporting demand from this segment.",
+            "segment_percentage": 14.1
+        },
+        {
+            "segment": "65 years and older",
+            "segment_description": "Consumers in this segment are not as heavily swayed by the shifting trends in fashion as their younger counterparts, placing a higher value on comfort over style; this partially tempers demand from this demographic.",
+            "segment_percentage": 24.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Women's Dress Shoes and Casual Footwear",
+            "product_description": "This segment includes men's and women's dress and casual shoes. Dress shoes include formal and work shoes, like high heels, loafers, flats and oxfords. Casual footwear includes boots, slip-ons, boat shoes and sandals.",
+            "product_percentage": 27.0
+        },
+        {
+            "product_or_service": "Men's Dress Shoes and Casual Footwear",
+            "product_description": "This segment includes men's and women's dress and casual shoes. Dress shoes include formal and work shoes, like high heels, loafers, flats and oxfords. Casual footwear includes boots, slip-ons, boat shoes and sandals.",
+            "product_percentage": 11.4
+        },
+        {
+            "product_or_service": "Children's Shoes",
+            "product_description": "This segment encompasses all dress, casual and athletic footwear made in children's sizes. Given the frequent need for children's shoe replacements, its revenue share has remained steadfast.",
+            "product_percentage": 13.2
+        },
+        {
+            "product_or_service": "Men's Athletic Shoes",
+            "product_description": "This segment includes men's and women's athletic shoes. This category includes casual sneakers, running shoes, walking shoes, hiking boots and other sport-specific shoes.",
+            "product_percentage": 22.2
+        },
+        {
+            "product_or_service": "Women's Athletic Shoes",
+            "product_description": "This segment includes men's and women's athletic shoes. This category includes casual sneakers, running shoes, walking shoes, hiking boots and other sport-specific shoes.",
+            "product_percentage": 10.7
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "This segment encompasses a variety of footwear-related goods like comfortable slippers, durable shoelaces, high-quality shoe polish, supportive insoles and versatile socks, among other related products.",
+            "product_percentage": 15.5
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Shoe & Footwear Manufacturing in the US",
+            "Footwear Wholesaling in the US",
+            "Sporting Goods Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Rubber Product Manufacturing in the US",
+            "Cardboard Box & Container Manufacturing in the US",
+            "Leather Tanning & Finishing in the US",
+            "Synthetic Fiber Manufacturing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Increased per capita disposable income",
+            "determinant_description": "Higher disposable income means consumers possess greater purchasing power, prompting increased expenditure on non-essential items, including fashion footwear."
+        },
+        {
+            "determinant_title": "Athleisure trends",
+            "determinant_description": "As consumers increasingly wear athletic shoes for fashion and function, demand for the athletic shoe segment has increased, specifically among women."
+        },
+        {
+            "determinant_title": "Consumers aged 25 to 44",
+            "determinant_description": "This demographic commonly has children, so they regularly purchase additional footwear for their youngsters, boosting demand."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "The West",
+            "location_description": "Proximity to ports, high incomes and active lifestyles make the area a strategic location for online shoe retailers.",
+            "percentage_establishments": 35.0,
+            "percentage_population": 25.0
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast is home to the largest percentage of the US population, offering online shoe retailers a vast potential customer base to tap into, thus making it an ideal location for their establishment.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region, including highly walkable cities like New York and Philadelphia, is renowned for its high population density. This vast populace constitutes a significant market for online shoe sales, increasing the potential customer base and boosting sales and profitability.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": null,
+            "percentage_establishments": 10.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": null,
+            "percentage_establishments": 10.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": null,
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Plains",
+            "location_description": null,
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "New England",
+            "location_description": null,
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [
+            {
+                "regulation_title": "Data protection laws",
+                "regulation_description": "Online retailers must comply with data protection laws like GDPR and CCPA, maintaining transparency about collecting, storing and using personal data."
+            },
+            {
+                "regulation_title": "Fair Labor Standards Act (FLSA)",
+                "regulation_description": "The FLSA covers regulations for minimum wage, child labor laws, wages for minors, and work conditions."
+            },
+            {
+                "regulation_title": "Streamlined Sales and Use Tax Agreement (SSUTA)",
+                "regulation_description": "The SSUTA dictates that online retailers must collect sales tax from customers in states that have ratified the agreement, even if the business has no physical presence there."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Legal",
+                "barrier_description": "Potential entrants to the Online Shoe Sales industry may face legal challenges related to cybersecurity laws, privacy regulations, copyright issues and labor and safety laws."
+            },
+            {
+                "barrier_title": "Start-up Costs",
+                "barrier_description": "Although costs are limited, necessary investments in website development, marketing and storage space could form financial barriers for new entrants."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage: growth",
+            "Concentration Level: low",
+            "Globalization Level: low - increasing"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Price and product selection",
+                "basis_description": "Price and product selection are the main competitive strategies for online shoe retailers. Since consumers can easily compare online retailers, offering competitive pricing or unique and quality products is key to success."
+            },
+            {
+                "basis_title": "Brick-and-mortar competition",
+                "basis_description": "Brick-and-mortar shoe stores and department stores offer similar products. These retailers compete with online shoe retailers mainly through in-person customer service."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Larger Retailers Have A Competitive Advantage",
+                "concentration_description": "Larger online retailers leverage economies of scale to save on operational costs, allowing for competitive pricing; this attracts a larger customer base, boosting their market share. Established retailers also invest significantly in online operations, enhancing user experience and increasing sales, leading to a larger share of industry revenue."
+            },
+            {
+                "concentration_title": "Online Price Comparison and Market Entry Barriers Impact Market Share Concentration",
+                "concentration_description": "The ease of online price comparison among customers influences market share concentration; this causes smaller retailers to adjust prices competitively or offer unique products to attract customers. Low barriers to entry allow smaller companies to frequently enter the industry, diversifying the market and diluting the concentration of market share among established companies."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Amazon.Com, Inc.",
+                "company_percentage": 19.3
+            },
+            {
+                "company_name": "Nike, Inc.",
+                "company_percentage": 6.9
+            },
+            {
+                "company_name": "Foot Locker, Inc.",
+                "company_percentage": 2.9
+            },
+            {
+                "company_name": "Macy's, Inc.",
+                "company_percentage": 1.9
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 68.9
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 60
+        },
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 15
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 2.5
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 2.5
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Volatile material prices",
+            "cost_factor_description": "The price of shoe-making materials like leather and rubber has experienced volatility because of various factors, including trade disputes, tariffs and global market conditions."
+        },
+        {
+            "cost_factor_title": "Lack of direct substitutes",
+            "cost_factor_description": "Despite the fluctuating production costs because of volatile materials prices, online shoe retailers continue to benefit from the absence of direct shoe substitutes."
+        },
+        {
+            "cost_factor_title": "Economies of scale",
+            "cost_factor_description": "The acceleration of consumer demand for online shopping has supported profit over the past five years by enabling online retailers to benefit from economies of scale through streamlining sales and customer support activities."
+        },
+        {
+            "cost_factor_title": "Technology adoption",
+            "cost_factor_description": "The addition of inventory management software and secure payment technology has also enabled the Online Shoe Sales industry to widen profit by decreasing labor costs."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Labor Expenses",
+                "capital_intensity_description": "The initial labor costs are substantial and often occur before a website's launch, as higher-paid engineers and web developers are required to develop the website."
+            },
+            {
+                "capital_intensity_title": "Capital Expenses",
+                "capital_intensity_description": "The text does not provide details on capital expenses."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Fashion trends and seasons",
+                "volatility_description": "Rapidly changing fashion trends and seasonal variations significantly impact online shoe sales, causing revenue to fluctuate as consumer preferences shift."
+            },
+            {
+                "volatility_title": "Economic factors",
+                "volatility_description": "The state of the economy and shifts in currency values can greatly influence consumers' purchasing power and international sales, leading to volatility in revenue."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Virtual Fitting Technology",
+                "technological_change_description": "Major footwear companies like Nike and Adidas are pioneering digital fitting solutions using Augmented Reality (AR) and 3D modeling on their online platforms."
+            },
+            {
+                "technological_change_title": "Subscription Models and AI",
+                "technological_change_description": "Online shoe retailers like JustFab and ShoeDazzle use subscription-based models to offer personalized recommendations using AI to predict customer preferences."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "What is the role of the National Retail Federation (NRF) in the online shoe sales industry?",
+            "answer": "The NRF plays an instrumental role in bolstering online shoe sales. Its functions include extensive market research to identify crucial trends in consumer behavior and designing effective retail strategies. They offer educational and training programs on e-commerce best practices and advocate for government policies that favor online retail. Alongside, NRF provides critical IT services tailored to enhance online operations and bolster cybersecurity in the face of escalating digital threats."
+        },
+        {
+            "question": "How does the American Apparel and Footwear Association (AAFA) support the online shoe sales industry?",
+            "answer": "The American Apparel and Footwear Association (AAFA) promotes online shoe sales by enhancing members' competitiveness in the digital market. It mitigates regulatory, legal, commercial, political and trade constraints, fostering a prosperous online sales environment. It supports member companies with industry insights, trending analysis and navigational help regarding regulations, improving their productivity and profitability."
+        },
+        {
+            "question": "What types of footwear products are sold by online retailers in this industry?",
+            "answer": "This industry retails shoes for men, women and children via the internet. Industry retailers often use a diversified range of footwear products, including dress and casual footwear, athletic footwear and children's footwear."
+        },
+        {
+            "question": "How does the health of the US economy impact sales in the online shoe sales industry?",
+            "answer": "Fluctuations in personal disposable income impact customer demand for shoes. When personal income increases, individuals have more means and inclination to purchase discretionary items like shoes."
+        },
+        {
+            "question": "What are the typical labor requirements for companies in the online shoe sales industry?",
+            "answer": "Industry labor costs are incurred through the need to hire staff to fulfill orders placed by consumers online. Typically, a high level of education or training is not required and for larger companies, packers often work in flexible and part-time shifts."
+        },
+        {
+            "question": "What are the typical investment requirements for companies in this industry?",
+            "answer": "Investment requirements for companies include warehouse space, computer equipment and warehouse staff. Industry companies typically spend more on wages than they do on equipment, as the value of fixtures needed to run the business is marginal compared with labor requirements."
+        },
+        {
+            "question": "How do companies in this industry use data analytics?",
+            "answer": "Industry companies have increased the use of data analytics to learn more about participating consumers. By gaining a better understanding of consumer preferences, companies can now tailor their product offerings to match their customers' needs."
+        },
+        {
+            "question": "How can point-of-sale (POS) systems and inventory data help companies in this industry?",
+            "answer": "Companies should be aware of new POS technologies, including the new blockchain technology, that can improve inventory operations. Companies should also collect and analyze selling data in order to have a better understanding of how to order inventory."
+        },
+        {
+            "question": "What regulatory changes have impacted profitability in the online shoe sales industry?",
+            "answer": "The most important legislation affecting the Online Shoe Sales industry has been the Streamlined Sales and Use Tax Agreement. This move toward tax collection poses a devastating threat to the industry, as it would eliminate one of the major cost-saving advantages of operating online."
+        },
+        {
+            "question": "How do changes in tariffs affect companies in this industry?",
+            "answer": "A change in the tariff rate of a particular good will alter where the good is purchased from and also alter the purchase price. A drop in tariffs for computer parts may result in falling purchasing costs, which can be passed onto consumers at the retail level as lower prices."
+        },
+        {
+            "question": "What financing challenges do companies in this industry face?",
+            "answer": "Companies should look to leasing equipment and warehouse space if financing proves challenging."
+        },
+        {
+            "question": "How has the increasing acceptance of online shopping affected profit in this industry?",
+            "answer": "The acceleration of consumer demand for products sold through the Internet has led profit to widen over the past five years. This has enabled industry companies to benefit from economies of scale through streamlining sales and customer support activities."
+        },
+        {
+            "question": "What stock control measures are important for companies in this industry?",
+            "answer": "Companies need to be able to control stock on hand to ensure that they have an adequate amount of popular items."
+        },
+        {
+            "question": "How can companies improve word-of-mouth recommendations in this industry?",
+            "answer": "Ever-changing software systems, internet speeds and personal information security systems require companies to continually update their business to keep pace with recent technology."
+        },
+        {
+            "question": "Does the industry provide after-sales service and generate revenue from accessory sales?",
+            "answer": "Operators should provide superior after-sales service, including offering refunds or exchanges and establishing new shopping platforms along with evolving technology."
+        },
+        {
+            "question": "How does competition affect revenue trends and customer purchasing behavior?",
+            "answer": "This industry directly competes with offline retail industries, particularly brick-and-mortar shoe stores, department stores and big-box retailers. When consumers choose to purchase shoes in physical locations rather than online, industry revenue is negatively affected."
+        },
+        {
+            "question": "How do trends in broadband connections and technology impact this industry?",
+            "answer": "The industry is driven by internet usage. When the number of broadband connections increases, demand for the industry's products and services grows as well because more Americans have easier access to online retailers. Fluctuations in personal disposable income impact customer demand for shoes. When personal income increases, individuals have more means and inclination to purchase discretionary items like shoes."
+        }
+    ]
+}

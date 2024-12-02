@@ -1,0 +1,591 @@
+{
+    "report_title": "Online Automotive Parts & Accessories Sales in the US",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 11959000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "revenue_cagr_value": 11.8
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "revenue_cagr_value": 3.28
+            }
+        },
+        "profit": {
+            "profit_dollars": 1172000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 13.24
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "profit_cagr_value": 3.28
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 9.8,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 1.79
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 3.28
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 4132000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 11.25
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 3.28
+            }
+        },
+        "employees": {
+            "employees_count": 42785,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 2.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "employees_cagr_value": 3.28
+            }
+        },
+        "wages": {
+            "wages_dollars": 3752000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 5.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "wages_cagr_value": 3.28
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2024 currency. Online automotive parts and accessories retailers have reaped robust growth through the current period, particularly as consumers accept online shopping models. As a result, many traditional brick-and-mortar retailers have invested in omnichannel sales systems that take advantage of their distribution infrastructure. Traditional auto parts retailers with online shopping experiences have been able to fend off fully e-commerce-based companies. Specialization in auto parts and the ability to order online and pick up merchandise in-store have enabled auto parts retailers to capture a growing share of online purchases. Overall, revenue has climbed at an expected CAGR of 5.8% to $6.4 billion through the current period, including a 2.2% jump in 2024, where profit reached 9.8%",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Weak Driving Activity Hurt the Industry in 2020",
+            "current_performance_point_description": "Online auto parts and accessories retailers, like most retailers, struggled amid the start of the pandemic in 2020. Weak consumer confidence and surging unemployment discouraged spending on all nonessential items, cutting revenue from the industry's various nonessential and discretionary segments. Pandemic-related lockdown restrictions added to unfavorable conditions in 2020. Driving activity plummeted as nonessential businesses, including offices, restaurants and most leisure options, closed or operated at reduced capacities."
+        },
+        {
+            "current_performance_point_title": "While the pandemic has ended, conditions have not fully normalized",
+            "current_performance_point_description": "Volatile conditions contributed to inventory oversupply, forcing companies to absorb sunk costs and hold onto inventories for longer. These shortcomings have encouraged companies to adopt just-in-time delivery systems, exert greater control over supply chains and open up new markets to quickly sell off excess inventories."
+        },
+        {
+            "current_performance_point_title": "E-COMMERCE ALTERNATIVES SKYROCKETED AMID THE PANDEMIC",
+            "current_performance_point_description": "E-commerce sales surged in 2020 and 2021, supporting the industry's recovery following the pandemic. Given lockdown restrictions, the pandemic created unprecedented opportunities for online retailers. In fact, most brick-and-mortar retailers transitioned to online sales during this period, contributing to rapid establishment proliferation."
+        },
+        {
+            "current_performance_point_title": "Regardless, many consumers still prefer brick-and-mortar auto parts stores.",
+            "current_performance_point_description": "In-person alternatives can offer support and expertise that online stores can't match. As a result, online retailers tend to serve a different, more knowledgeable consumer demographic compared with brick-and-mortar stores."
+        },
+        {
+            "current_performance_point_title": "I N V E N T O R Y  C O S T S  S O A R E D  D U R I N G  T H E  C U R R E N T  P E R I O D",
+            "current_performance_point_description": "The pandemic and the Russian invasion of Ukraine have introduced unprecedented logistical challenges for the automotive sector, leading to massive supply chain shortages. Auto parts manufacturers have passed ballooning ferrous and nonferrous metal, chemical and electronics prices onto buyers."
+        },
+        {
+            "current_performance_point_title": "PENT-UP DEMAND FOR TRAVEL HAS SUPPORTED GROWTH",
+            "current_performance_point_description": "Consumers have expressed pent-up demand for driving and travel activity following the pandemic, especially as federal, state and local governments lift various lockdown restrictions. This trend has contributed to surging motor vehicle registrations and vehicle miles."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "STRONG ECONOMIC CONDITIONS WILL SUPPORT GROWTH",
+            "future_outlook_point_description": "Rebounding consumer confidence, per capita disposable income, spending and corporate profit will translate into strong demand across consumer and commercial markets through the outlook period."
+        },
+        {
+            "future_outlook_point_title": "Upstream Innovation Will Dictate Consumer Demand",
+            "future_outlook_point_description": "Passenger cars and trucks will grow more complex, particularly with the introduction of electric and hybrid models. This trend will make it more expensive, challenging, time-consuming and tedious for consumers to perform routine car maintenance."
+        },
+        {
+            "future_outlook_point_title": "DIY ACTIVITY WILL CREATE DEMAND FOR DISCONTINUED AUTO PARTS",
+            "future_outlook_point_description": "Classic, vintage and antique cars generate a major source of demand for used car parts. Parts manufacturers often stop making components for outdated models, forcing consumers to rely on various aftermarkets."
+        },
+        {
+            "future_outlook_point_title": "INCREASED ONLINE ACTIVITY WILL SPUR GROWTH",
+            "future_outlook_point_description": "Consumers will express a greater willingness to purchase auto parts, accessories and equipment online compared with the current period. In general, most consumers have widely accepted e-commerce, highlighted by steadily expanding e-commerce sales projections."
+        }
+    ],
+    "industry_definition": "This industry retails automotive parts and accessories online, excluding tires. Automotive parts are used to replace worn parts, enhance the performance of a vehicle or maintain a vehicle's condition.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Product/Service Concentration"
+        ],
+        "negative_impact_factors": [
+            "High Revenue Volatility Level",
+            "High Technology Change Level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "Medium & Decreasing Barriers to Entry",
+            "Low & Steady Level of Assistance",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "Very High Revenue Growth (2005-2024)",
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "E-commerce sales"
+        ],
+        "threats": [
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Per capita disposable income"
+        ]
+    },
+    "key_trends": [
+        "Online retailers have faced extensive competition. Some consumers prefer brick-and-mortar stores and salesperson knowledge, limiting",
+        "Online retailers can differentiate with superior delivery services, strong pricing and diverse inventories. Many companies also operate in various niches, offering unique or discontinued parts.",
+        "Online auto parts and accessories stores have benefited from favorable conditions through the current period. Pent-up demand for travel alongside car shortages have pushed buyers to parts and repairs.",
+        "The pandemic led to rapid e-commerce proliferation. Many brick-and-mortar stores developed an online presence to adapt to a rapidly changing retail environment.",
+        "Niche do-it-yourself (DIY) repair trends will support the industry's growth. Increasing classic car ownership, online tutorials and greater affordability will support consumer markets, despite more complex new cars.",
+        "Leading retailers in this industry also often have physical retail locations. These companies have started to expand into online marketplaces; branding, reputations and existing retail infrastructure give these companies a competitive edge online.",
+        "Most companies struggle to garner dominant market shares. Some retailers may emerge as consumers grow more willing to purchase parts online.",
+        "Online automotive parts and accessories stores must adhere to various taxation, marketing and safety regulations. Companies are not subject to many industry-specific regulations.",
+        "Online automotive parts and accessories stores do not receive any industry-specific government assistance. Some companies may be eligible for various small business programs or other government spending initiatives.",
+        "Volatile ferrous and nonferrous metal prices led to higher inventory costs for most stores. Companies that successfully mitigated supply chain disruptions and passed costs onto buyers maintained strong profit.",
+        "Online retailers remain dependent on skilled labor. Companies need workers to manage inventories, shipping, websites and other essential tasks. Cybersecurity is also a critical expense for online retailers.",
+        "Regions without extensive rail infrastructure demand the most from auto parts retailers. Sprawling cities with lots of commuters attract strong demand for parts and repairs.",
+        "Establishment trends follow the US population. While companies don't have physical storefronts, most retailers have distribution and storage facilities near major population centers."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Wholesalers and retailers",
+            "segment_description": "Commercial Markets Make Up the Majority of Demand",
+            "segment_percentage": 9.5
+        },
+        {
+            "segment": "Individuals",
+            "segment_description": "Individual Consumers are Mostly DIY Customers",
+            "segment_percentage": 46.5
+        },
+        {
+            "segment": "Repair shops",
+            "segment_description": "",
+            "segment_percentage": 36.1
+        },
+        {
+            "segment": "Other",
+            "segment_description": "",
+            "segment_percentage": 7.9
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Replacement Parts",
+            "product_description": "Replacement Parts Have Remained a Stable Portion of Revenue",
+            "product_percentage": 69.3
+        },
+        {
+            "product_or_service": "Performance Parts",
+            "product_description": "Performance Parts Appeal to a Limited Market",
+            "product_percentage": 12.4
+        },
+        {
+            "product_or_service": "Maintenance Parts",
+            "product_description": "Maintenance Parts and Accessories Have Grown as Share of Revenue",
+            "product_percentage": 15.8
+        },
+        {
+            "product_or_service": "Accessories",
+            "product_description": "Performance Parts and Accessories Have Declined as Share of Revenue",
+            "product_percentage": 2.5
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Auto Parts Manufacturing in the US",
+            "Automobile Engine & Parts Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Battery Manufacturing in the US",
+            "Auto Parts Wholesaling in the US",
+            "Auto Parts Stores in the US"
+        ],
+        "tier_1_buyers": [
+            "Auto Mechanics in the US",
+            "Car Body Shops in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "E-commerce Growth",
+            "determinant_description": "The percentage of total retail sales conducted through e-commerce platforms closely relates to this industry's growth."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "The Southeast",
+            "location_description": "The Southeast's High Population Attracts Retailers",
+            "percentage_establishments": 29.2,
+            "percentage_population": 38.1
+        },
+        {
+            "location": "West",
+            "location_description": "Sprawling Cities in the West Necessitate Cars for Commutes",
+            "percentage_establishments": 16.5,
+            "percentage_population": 23.5
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "Auto Manufacturing Infrastructure Supports Growth in the Great Lakes",
+            "percentage_establishments": 14.7,
+            "percentage_population": 14.9
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "",
+            "percentage_establishments": 13.5,
+            "percentage_population": 13.2
+        },
+        {
+            "location": "Southwest",
+            "location_description": "",
+            "percentage_establishments": 11.2,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "Plains",
+            "location_description": "",
+            "percentage_establishments": 7.2,
+            "percentage_population": 6.8
+        },
+        {
+            "location": "New England",
+            "location_description": "",
+            "percentage_establishments": 4.7,
+            "percentage_population": 4.4
+        },
+        {
+            "location": "Rocky Mountain",
+            "location_description": "",
+            "percentage_establishments": 3.0,
+            "percentage_population": 3.6
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "THE STREAMLINED SALES AND USE TAX AGREEMENT",
+                "regulation_description": "Companies must abide by the Streamlined Sales and Use Tax Agreement organized by the Streamlined Sales Tax Governing Board. The Agreement minimizes costs and administrative burdens on retailers that collect sales tax across multiple states, including online auto parts retailers. Many states have passed legislation to conform to the Agreement in recent years. Currently, 44 states require online retailers to collect sales tax nationwide."
+            },
+            {
+                "regulation_title": "CONSUMER PROTECTION LAWS",
+                "regulation_description": "Retailers must adhere to a wide range of consumer protection laws. These laws include marketing and advertising compliance, cybersecurity and payment protection, sustainability commitments and other consumer protection laws. Retailers must properly display product specifications and cannot knowingly mislead buyers. Lemon laws may also apply to vehicle parts."
+            },
+            {
+                "regulation_title": "STATE REGULATIONS",
+                "regulation_description": "Various states have their own consumer protection laws that may impose additional requirements on online automotive parts sellers. These laws can cover aspects like return policies, restocking fees, and dispute resolutions. Online sales tax laws require sellers to collect and remit sales tax for purchases. Regulations vary by state, mandating proper registration with state tax agencies and meticulous tax collection practices."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Decreasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Revenue Volatility",
+                "barrier_description": "Revenue volatility is a factor for increased barriers to entry."
+            },
+            {
+                "barrier_title": "Technology Change",
+                "barrier_description": "Technology change is a factor for increased barriers to entry."
+            },
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is in the growth life cycle stage, a factor for decreased barriers."
+            },
+            {
+                "barrier_title": "Capital Intensity",
+                "barrier_description": "The industry has low capital intensity, decreasing barriers to entry."
+            },
+            {
+                "barrier_title": "Concentration",
+                "barrier_description": "The industry has low concentration, decreasing barriers to entry."
+            },
+            {
+                "barrier_title": "Globalization",
+                "barrier_description": "Globalization is low to steady, decreasing barriers to entry."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Revenue Volatility",
+            "Technology Change"
+        ],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage",
+            "Capital Intensity",
+            "Concentration",
+            "Globalization is low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Online vs Brick-and-Mortar",
+                "basis_description": "Some consumers prefer brick-and-mortar stores and salesperson knowledge, limiting demand for online retailers."
+            },
+            {
+                "basis_title": "Differentiation Factors",
+                "basis_description": "Online retailers can differentiate with superior delivery, pricing and diverse inventories."
+            },
+            {
+                "basis_title": "Niche Markets",
+                "basis_description": "Many companies operate in niche markets, offering unique or discontinued parts."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Few Large Companies",
+                "concentration_description": "There are a few large companies that compete on a wide range of products."
+            },
+            {
+                "concentration_title": "Niche Companies",
+                "concentration_description": "Many smaller companies often play a limited role, competing in niche markets."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "O'reilly Automotive, Inc.",
+                "company_percentage": 3.2
+            },
+            {
+                "company_name": "Advance Auto Parts, Inc.",
+                "company_percentage": 2.7
+            },
+            {
+                "company_name": "Autozone Inc.",
+                "company_percentage": 1.9
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 9
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 0
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 60
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases are the Industry's Primary Expense",
+            "cost_factor_description": "Online retailers commonly source their products from US or international automotive parts wholesalers and distributors. However, some larger companies may carry supply contracts directly with the original equipment manufacturer (OEM) of automotive parts."
+        },
+        {
+            "cost_factor_title": "Wages Have Claimed an Increasing Share of Revenue",
+            "cost_factor_description": "Despite being based online, online retailers rely heavily on skilled labor to procure inventories, manage sales, design websites and operate or monitor software, programs and other automated systems. Companies often hire part-time or low-wage labor to handle distribution and inventory management systems at associated warehouses or storage facilities."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LABOR EXPENSES",
+                "capital_intensity_description": "Online stores often hire software engineers and other computer-related professionals to manage websites, point-of-sale systems and other programs pertinent to online operations. Companies also hire workers to handle inventories and other miscellaneous tasks."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Overall Macroeconomic Health Impacts Volatility",
+                "volatility_description": "Online auto parts stores rely on a strong macroeconomic climate to generate sales. Weak spending and discretionary incomes discourage consumers from making discretionary purchases, encouraging them to only spend on necessary items."
+            },
+            {
+                "volatility_title": "The Industry's Essential Nature Limits Volatility",
+                "volatility_description": "Since critical parts and maintenance products are essential to a vehicle's operational capacity, auto parts stores can weather economic downturns. In fact, the industry has displayed robust growth over the past decade as consumers increasingly opt for e-commerce options."
+            },
+            {
+                "volatility_title": "New Technologies May Introduce Volatility",
+                "volatility_description": "Rapid tech changes demand constant updates to online platforms, which can be costly and complex. Keeping up with the latest e-commerce features and integrations involves significant investment in both time and resources. Older platforms may become obsolete quickly, leading to increased maintenance costs and potential revenue losses during transitions."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "ADAPTING TO UPSTREAM CHANGES",
+                "technological_change_description": "Online automotive parts and accessories retailers must adapt to changes in vehicle and parts technology. In particular, companies have started to stock parts for electric and hybrid vehicles alongside parts for combustion vehicles."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company specialize in one corner of the market or do you retail a diversified range of products?",
+            "answer": "Companies sell a wide variety of automotive parts, including new and used critical parts, maintenance parts, performance parts and accessories."
+        },
+        {
+            "question": "How has your business adapted to the growth of online sales over the past five years?",
+            "answer": "Companies in this industry benefit greatly from the growth of online sales as this specific industry only takes into account online companies, whether they operate exclusively online or an e-commerce platform for a brick-and-mortar company."
+        },
+        {
+            "question": "What steps do you take to retain talented employees with specialized knowledge?",
+            "answer": "Industry employees often possess a background in cars and strong knowledge of auto parts as customer service is an important basis of competition between operators."
+        },
+        {
+            "question": "Has your company explored acquisition opportunities in order to expand reach and reduce overhead expenses?",
+            "answer": "Large brick-and-mortar automotive part retailers continue to look to smaller, online-only companies to expand their platform in this industry."
+        },
+        {
+            "question": "Does your company use point-of-sale (POS) systems to ensure the most popular products are kept in stock?",
+            "answer": "Industry operators have introduced computer scanning cash registers, aiding retailers in controlling and recording merchandising, distribution, sales and stock markdowns via POS systems."
+        },
+        {
+            "question": "How does your company utilize new technology, like RFID tags?",
+            "answer": "RFID provides industry retailers with real-time inventory information, helping to reduce shrinking problems and improving operational efficiency. Their declining costs have enabled them to be more easily accessible to smaller specialty retailers."
+        },
+        {
+            "question": "Have any regulatory expenses significantly impacted profitability recently?",
+            "answer": "Operators are threatened by the possibility regulation which would allow states to require online retailers to collect a sales tax at the time of transaction."
+        },
+        {
+            "question": "What does your company do to remain compliant with new consumer regulations?",
+            "answer": "Companies work with internal and external groups, as well as local and state government organizations, to ensure they remain compliant with new regulations."
+        },
+        {
+            "question": "How do your company's profit margins compare to your main competitors?",
+            "answer": "Profit margins have increased due to the growing use and popularity of online retailers, as wider internet availability has fostered greater demand for internet-based shopping."
+        },
+        {
+            "question": "Does your company help consumers finance their purchases?",
+            "answer": "Due to the relatively low cost of industry products, consumers are often required to pay in-full at the time of purchase. Operators may help finance purchases or struggle with customers paying on time."
+        },
+        {
+            "question": "What do you do to promote loyalty and to keep your customers returning for follow-up visits? Do you offer special discounts or a premium experience?",
+            "answer": "Industry operators must aim to create loyal customers who will become repeat users while also attracting new, unique website visitors."
+        },
+        {
+            "question": "How quickly can new technology be adopted? What are the associated costs?",
+            "answer": "Companies must keep abreast with ever-changing software systems, internet speeds and sales security systems that can improve their operations."
+        },
+        {
+            "question": "Do you have a good reputation for product variety? How knowledgeable is your staff about the breadth of your offerings?",
+            "answer": "Online automotive parts and accessories sales companies should offer a wide variety of products to meet all customer repair and alteration needs and to compete against brick and mortar parts shops."
+        },
+        {
+            "question": "Do you find revenue trends to be in line with the total vehicle miles? Can you focus on product segments not dependent on car wear and tear?",
+            "answer": "As drivers use their vehicles more, wear on components increases. In turn, the likelihood of parts failing and needing replacement increases, benefiting industry operators."
+        },
+        {
+            "question": "Do you expect major changes in demand as a result of rising disposable income levels? How do you stimulate demand when disposable income is low?",
+            "answer": "An increase in household disposable income boosts demand for motor vehicles, positively affecting online sales of related parts and accessories."
+        },
+        {
+            "question": "How has your company been affected by fluctuations in the percentage of total online sales? How do you plan to take advantage of this opportunity?",
+            "answer": "The percentage of total retail sales conducted through e-commerce platforms is closely related to this industry's growth. As this percentage increases, online auto parts sales increase faster than the overall market for parts."
+        }
+    ]
+}

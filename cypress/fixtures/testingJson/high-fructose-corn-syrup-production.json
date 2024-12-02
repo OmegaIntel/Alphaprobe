@@ -1,0 +1,522 @@
+{
+    "report_title": "High Fructose Corn Syrup Production Industry Report",
+    "report_date": "2022",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 4300000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2017,
+                "end_year": 2022,
+                "revenue_cagr_value": 1.7
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2027,
+                "revenue_cagr_value": -1.5
+            }
+        },
+        "profit": {
+            "profit_dollars": 101,
+            "profit_cagr_historical": {
+                "begin_year": 2017,
+                "end_year": 2022,
+                "profit_cagr_value": 101
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2027,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 3.9,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2017,
+                "end_year": 2022,
+                "profit_margins_cagr_value": 101
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2027,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 101,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2017,
+                "end_year": 2022,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2027,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 2680,
+            "employees_cagr_historical": {
+                "begin_year": 2017,
+                "end_year": 2022,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2027,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 276000000,
+            "wages_cagr_historical": {
+                "begin_year": 2017,
+                "end_year": 2022,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2027,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 27200000,
+            "imports_cagr_historical": {
+                "begin_year": 2017,
+                "end_year": 2022,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2027,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 498700000,
+            "exports_cagr_historical": {
+                "begin_year": 2017,
+                "end_year": 2022,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2027,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The High Fructose Corn Syrup Production industry has increased over the five years to 2022. High fructose corn syrup (HFCS) is a sweetener made from milled corn that undergoes enzymatic changes to convert glucose into fructose. The resulting syrup is then used as an input in downstream food and beverage production industries, predominantly in soft drinks and processed foods. Overall, industry revenue is anticipated to increase an annualized 1.7% during the period, reaching $4.3 billion in 2022. However, revenue is anticipated to decline of 1.5% in 2022 alone.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Revenue Growth",
+            "current_performance_point_description": "Over the five years to 2022, revenue for the High Fructose Corn Syrup Production industry is estimated to rise an annualized 1.7% to $4.3 billion. However, the industry does experience some threats such as growing health-consciousness among consumers, and the Ukrainian conflict that had begun in 2022."
+        },
+        {
+            "current_performance_point_title": "The Ukrainian Conflict",
+            "current_performance_point_description": "On 24 February 2022, Ukraine was invaded by Russia. This forced many corn producers to leave Ukraine. Corn is an important part of the process for making high fructose corn syrup. Since Ukraine is one of the largest exporters of corn, this conflict has affected production toward the end of the period."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "The Ukrainian Conflict",
+            "future_outlook_point_description": "The invasion in Ukraine is expected to negatively affect the industry over the five years to 2027. Corn is a very important part of the process for making HFCS and Ukraine is one of the largest exporters of corn. Since corn production there is decreasing, it is having an effect on the global supply of corn."
+        },
+        {
+            "future_outlook_point_title": "Continued Reduction in Sugar Intake",
+            "future_outlook_point_description": "Over the next five years, the High Fructose Corn Syrup Production industry will be weighed down significantly by an increasing awareness among consumers of the negative health effects of sugar consumption in excess."
+        },
+        {
+            "future_outlook_point_title": "Industry Intertwined with Sugar Production",
+            "future_outlook_point_description": "Demand for HFCS will also continue to be linked to its price, particularly as it relates to the price of sugar. Historically, the low cost of HFCS in comparison with sugar has made it a popular choice among food and beverage manufacturers."
+        }
+    ],
+    "industry_definition": "Operators in this industry manufacture high fructose corn syrup (HFCS), a sweetener made from milled corn, which is used as a major input for downstream food production of items such as soft drinks, baked goods and syrups.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Regulation Level: light - steady",
+            "Technology Change Level: low",
+            "Barriers To Entry Level: medium"
+        ],
+        "negative_impact_factors": [
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration",
+            "High Capital Requirements"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Increasing Barriers to Entry",
+            "Low Volatility",
+            "Low Imports"
+        ],
+        "weaknesses": [
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2022-2027)"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2022)",
+            "Low Revenue Growth (2017-2022)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Per capita soft drink consumption"
+        ]
+    },
+    "key_trends": [
+        "A general decline in per capita soft drink consumption has slowed industry growth",
+        "Production of high fructose corn syrup has declined to align with demand",
+        "In line with rising industry revenue, industry participation has grown",
+        "The industry will be weighed down by increasing awareness of the negative health effects of sugar",
+        "Demand for HFCS will also continue to be linked to its price, particularly as it relates to the price of sugar",
+        "International trade will remain low and volatile"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Beverage manufacturers",
+            "segment_description": "HFCS is a popular low-cost sweetener for beverage producers, but some have shifted away from HFCS due to health concerns.",
+            "segment_percentage": 46.9
+        },
+        {
+            "segment": "Processed food manufacturers",
+            "segment_description": "HFCS is used to sweeten various processed foods.",
+            "segment_percentage": 15.8
+        },
+        {
+            "segment": "Exports",
+            "segment_description": "Exports have decreased slightly in the past 5 years, with 75% going to Mexico and 16.7% to Canada due to trade agreements.",
+            "segment_percentage": 11.5
+        },
+        {
+            "segment": "Cereal and bakery food producers",
+            "segment_description": "HFCS is used to sweeten cereal and baked goods.",
+            "segment_percentage": 10.0
+        },
+        {
+            "segment": "Multiple-use food manufacturers",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 8.6
+        },
+        {
+            "segment": "Dairy product producers",
+            "segment_description": "HFCS is used as a sweetener in dairy products.",
+            "segment_percentage": 6.5
+        },
+        {
+            "segment": "Confectionery producers",
+            "segment_description": "HFCS is used to sweeten confectionery products.",
+            "segment_percentage": 0.7
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "HFCS-55 (55.0% Fructose, 45.0% Glucose)",
+            "product_description": "HFCS-55 is composed of 55.0% fructose, 42.0% glucose and 3.0% other sugars/polysaccharides. 90.0% of HFCS-55 in the US is sold to beverage manufacturers.",
+            "product_percentage": 70.1
+        },
+        {
+            "product_or_service": "HFCS-42 (42.0% Fructose, 53.0% Glucose)",
+            "product_description": "HFCS-42 is composed of 42.0% fructose, 53.0% glucose and 5.0% other sugars/polysaccharides. Used by processed food, cereal, baked goods, dairy and confectionery manufacturers.",
+            "product_percentage": 28.5
+        },
+        {
+            "product_or_service": "HFCS with Higher Fructose Content",
+            "product_description": "HFCS-90 is mostly used to produce HFCS-55 and rarely sold as its own product. Other high fructose syrups are manufactured infrequently for niche products.",
+            "product_percentage": 1.4
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Corn Farming in the US",
+            "Corn, Wheat & Soybean Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [],
+        "tier_2_buyers": [
+            "Cereal Production in the US",
+            "Candy Production in the US",
+            "Snack Food Production in the US",
+            "Syrup & Flavoring Production in the US",
+            "Soda Production in the US",
+            "Juice Production in the US",
+            "Cookie, Cracker & Pasta Production in the US",
+            "Bread Production in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Downstream Demand",
+            "determinant_description": "The largest demand for HFCS is from beverage manufacturers, accounting for over half of US demand. Demand also comes from bread, cereal, dairy and sweets producers."
+        },
+        {
+            "determinant_title": "Sweetener Substitutes",
+            "determinant_description": "HFCS competes with sugar, honey and artificial sweeteners based on price, taste and nutrition. Health concerns about HFCS have driven consumers to favor sugar."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Decreasing",
+        "export_level": "Medium",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports",
+                "trade_description": "Imports are low and decreasing. Major import sources are Canada (41.7%), Turkey (24.5%), Israel (8.9%) and Pakistan (10.0%) due to trade agreements and foreign investment."
+            },
+            {
+                "trade_title": "Exports",
+                "trade_description": "Exports are medium and decreasing. Major export destinations are Mexico (75%) and Canada (16.7%) due to proximity and trade agreements like USMCA."
+            },
+            {
+                "trade_title": "Ukraine Conflict Impact",
+                "trade_description": "The Ukraine conflict is expected to negatively affect world trade by disrupting supply chains and increasing input costs for corn and wheat."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Plains",
+            "location_description": "The Plains region accounts for 46.1% of establishments due to its corn production, with Iowa alone having 12.2% of establishments.",
+            "percentage_establishments": 46.1,
+            "percentage_population": 101
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region has 24.3% of establishments due to its prime location and waterways, with Illinois having 13.1% of establishments.",
+            "percentage_establishments": 24.3,
+            "percentage_population": 101
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [
+            {
+                "regulation_title": "Food and Drug Administration",
+                "regulation_description": "The Food and Drug Administration (FDA) is a public health agency that operates within the Department of Human Health and Services. The FDA provides scientific expertise to the food sector, maintains food safety for Americans and enforces food laws through site inspections and legal sanctions."
+            },
+            {
+                "regulation_title": "State and Local Governments",
+                "regulation_description": "Generally, state and local governments oversee food safety within their specific jurisdictions. In carrying out this role, such governments work with federal agencies to implement food safety standards within their borders."
+            },
+            {
+                "regulation_title": "Environmental Protection Agency",
+                "regulation_description": "The Environmental Protection Agency is a federal agency responsible for addressing environmental issues and enforcing environmental protection laws."
+            },
+            {
+                "regulation_title": "COVID-19",
+                "regulation_description": "According to the CDC, there is no evidence that livestock, crops or products that may be handled by workers involved in production agriculture are sources of the COVID-19 (coronavirus) pandemic."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Capital Requirements",
+                "barrier_description": "Capital investments are needed to purchase machinery and equipment in addition to the cost to purchase or rent facilities."
+            },
+            {
+                "barrier_title": "Supply Contracts",
+                "barrier_description": "Securing supply contracts with upstream suppliers of corn as well as downstream demand markets presents a significant barrier."
+            },
+            {
+                "barrier_title": "Established Competitors",
+                "barrier_description": "The well-entrenched position of the leading processors in the industry presents a significant barrier to success for prospective entrants."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature"
+        ],
+        "factors_decreased_barrier": [
+            "Regulation Level: light - steady",
+            "Technology Change Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Internal Competition",
+                "basis_description": "Competition among industry operators is moderate. Operators compete to secure supply contracts with downstream customers in beverage and food manufacturing industries."
+            },
+            {
+                "basis_title": "External Competition",
+                "basis_description": "External competition for HFCS producers lies within available substitutes."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Medium",
+        "concentration_trend": "Increased",
+        "concentration_points": [
+            {
+                "concentration_title": "Economies of Scale",
+                "concentration_description": "High fructose corn syrup (HFCS) production requires specialized labor and machinery which can often be too expensive for small companies."
+            },
+            {
+                "concentration_title": "Top Company Market Share",
+                "concentration_description": "In 2022, the top four operators in the industry account for a little more than 45.0% of total industry revenue."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "ARCHER-DANIELS-MIDLAND CO",
+                "company_percentage": 18.4
+            },
+            {
+                "company_name": "Cargill, Incorporated",
+                "company_percentage": 11.8
+            },
+            {
+                "company_name": "Tate & Lyle PLC",
+                "company_percentage": 6.2
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 3.9
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 12.3
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 68.2
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 2.4
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 1.5
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 1.1
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 2.8
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 7.8
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Profit",
+            "cost_factor_description": "In 2022, profit (measured as earnings before interest and taxes) is expected to make up 3.9% of industry revenue."
+        },
+        {
+            "cost_factor_title": "Wages",
+            "cost_factor_description": "Wages are expected to comprise 6.4% of industry revenue in 2022."
+        },
+        {
+            "cost_factor_title": "Purchases",
+            "cost_factor_description": "Purchases are anticipated to make up the largest expenditure for the industry, with 72.1% of total revenue."
+        },
+        {
+            "cost_factor_title": "Depreciation",
+            "cost_factor_description": "Depreciation is expected to make up 1.9% of industry revenue."
+        },
+        {
+            "cost_factor_title": "Marketing",
+            "cost_factor_description": "Marketing expenses are expected to account for 0.1% of total industry revenue in 2022."
+        },
+        {
+            "cost_factor_title": "Rent",
+            "cost_factor_description": "Rent is expected to account for 0.3% of total industry revenue in 2022."
+        },
+        {
+            "cost_factor_title": "Utilities",
+            "cost_factor_description": "Utilities are expected to account for 1.7% of total industry revenue in 2022."
+        },
+        {
+            "cost_factor_title": "Other Costs",
+            "cost_factor_description": "Other expenses are expected to account for 13.6% of total industry revenue in 2022."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Capital expenditures",
+                "capital_intensity_description": "Capital expenditures primarily include manufacturing production lines."
+            },
+            {
+                "capital_intensity_title": "Labor costs",
+                "capital_intensity_description": "Labor costs are also relatively low; wages make up an estimated 6.4% of industry revenue in 2022."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Revenue fluctuations",
+                "volatility_description": "Overall, industry revenue has declined by as much as 9.1% in 2017."
+            },
+            {
+                "volatility_title": "Demand factors",
+                "volatility_description": "A rise in the number of health-conscious consumers is expected to limit demand for products with sweeteners."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Production process",
+                "technological_change_description": "The production of high fructose corn syrup involves milling corn."
+            },
+            {
+                "technological_change_title": "Process refinements",
+                "technological_change_description": "While the core methodology remains unchanged, businesses continue to refine production processes."
+            },
+            {
+                "technological_change_title": "E-commerce adoption",
+                "technological_change_description": "The industry's adoption of new technology currently includes computerized systems for e-commerce."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "How have imports from low-wage countries like China and Mexico impacted your operations?",
+            "answer": "The United States imports very little high fructose corn syrup (HFCS). More than half of imported HFCS comes from Canada."
+        },
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "Corn is the most important input that has experienced severe price fluctuations over the past five years."
+        },
+        {
+            "question": "Is your company located near important suppliers?",
+            "answer": "Successful companies secure contracts with suppliers of key inputs, especially corn, to reduce supply volatility."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation over the past five years?",
+            "answer": "Automation is important in order to maintain high and consistent levels of production on a daily basis."
+        }
+    ]
+}

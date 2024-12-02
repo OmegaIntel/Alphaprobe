@@ -1,0 +1,626 @@
+{
+    "report_title": "Agribusiness Industry Report",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 101,
+            "revenue_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "revenue_cagr_value": 101
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 101,
+                "end_year": 101,
+                "revenue_cagr_value": 101
+            }
+        },
+        "profit": {
+            "profit_dollars": 101,
+            "profit_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "profit_cagr_value": 101
+            },
+            "profit_cagr_projected": {
+                "begin_year": 101,
+                "end_year": 101,
+                "profit_cagr_value": 101
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 101,
+            "profit_margins_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "profit_margins_cagr_value": 101
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 101,
+                "end_year": 101,
+                "profit_margins_cagr_value": 101
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 101,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "industry_value_added_cagr_value": 101
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 101,
+                "end_year": 101,
+                "industry_value_added_cagr_value": 101
+            }
+        },
+        "employees": {
+            "employees_count": 101,
+            "employees_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "employees_cagr_value": 101
+            },
+            "employees_cagr_projected": {
+                "begin_year": 101,
+                "end_year": 101,
+                "employees_cagr_value": 101
+            }
+        },
+        "wages": {
+            "wages_dollars": 101,
+            "wages_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "wages_cagr_value": 101
+            },
+            "wages_cagr_projected": {
+                "begin_year": 101,
+                "end_year": 101,
+                "wages_cagr_value": 101
+            }
+        },
+        "imports": {
+            "imports_dollars": 101,
+            "imports_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "imports_cagr_value": 101
+            },
+            "imports_cagr_projected": {
+                "begin_year": 101,
+                "end_year": 101,
+                "imports_cagr_value": 101
+            }
+        },
+        "exports": {
+            "exports_dollars": 101,
+            "exports_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "exports_cagr_value": 101
+            },
+            "exports_cagr_projected": {
+                "begin_year": 101,
+                "end_year": 101,
+                "exports_cagr_value": 101
+            }
+        }
+    },
+    "executive_summary": "During the outlook period, demand for US dollars will decline, causing the value of the dollar to fall. Since the plunging dollar will make domestically made goods seem cheaper to foreigners, exports will surge, boosting revenue for agribusinesses. Biofuels are made through fermenting crops that are high in starch into ethanol, which can then be used to power cars and heat homes. Biofuels have become increasingly popular as concerns regarding climate change have caused consumers to stray away from fuels that produce lots of greenhouse gas emissions. As demand for biofuels will increase, so will the need for agricultural products, causing revenue for agribusinesses to rise.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Exports Buoy the Industry",
+            "current_performance_point_description": "During the outlook period, demand for US dollars will decline, causing the value of the dollar to fall. Since the plunging dollar will make domestically made goods seem cheaper to foreigners, exports will surge, boosting revenue for agribusinesses."
+        },
+        {
+            "current_performance_point_title": "Biofuels Provide New Sources of Revenue",
+            "current_performance_point_description": "Biofuels are made through fermenting crops that are high in starch into ethanol, which can then be used to power cars and heat homes. Biofuels have become increasingly popular as concerns regarding climate change have caused consumers to stray away from fuels that produce lots of greenhouse gas emissions. As demand for biofuels will increase, so will the need for agricultural products, causing revenue for agribusinesses to rise."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Industry Life Cycle",
+            "future_outlook_point_description": "Agribusiness will grow at a slightly lower rate than GDP, but the industry is still mature as agriculture, food processing and produce wholesaling are integral to the functioning of the US economy. IVA is growing at a slower rate than GDP. Product groups are clearly segmented and well-defined. Major markets are firmly established, with limited swings occurring on a yearly basis between segments."
+        },
+        {
+            "future_outlook_point_title": "Market Saturation",
+            "future_outlook_point_description": "Since many farms in the United States are individually or family owned, consumers have a host of companies to buy from. Businesses in rural areas often have a loyal customer base, so diversity isn't as significant there."
+        },
+        {
+            "future_outlook_point_title": "Innovation",
+            "future_outlook_point_description": "Operators have begun to use genetic modification (GM) to protect crops and reduce the need for pesticides, improving crop yields but also causing agricultural prices to drop."
+        },
+        {
+            "future_outlook_point_title": "Consolidation",
+            "future_outlook_point_description": "The nature of farming in the United States makes agribusiness quite fragmented, but increasing costs and the incidence of contract farming has resulted in a modest rise in consolidation."
+        },
+        {
+            "future_outlook_point_title": "Technology and Systems",
+            "future_outlook_point_description": "New technology has affected agribusiness in recent years, ranging from drones that are used to monitor crops, inventory control mechanisms for wholesaling and robots that help with the manufacturing of tractors and other farm products."
+        }
+    ],
+    "industry_definition": "The Agribusiness industry includes businesses that directly engage in or directly benefit from agricultural activities. Businesses in this industry may produce agricultural commodities, buy agricultural produce or supply goods and services to farms and the industry. This industry focuses on the food supply chain up to the point of retail sale.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Industry Assistance Level: high - steady",
+            "Concentration Level: low"
+        ],
+        "negative_impact_factors": [
+            "Regulation Level: heavy - steady"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Volatility",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "High Revenue per Employee"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry",
+            "Medium & Decreasing Level of Assistance",
+            "Medium Imports",
+            "Low Profit vs. Sector Average",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "Population"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Low Revenue Growth (2023-2028)",
+            "Low Performance Drivers",
+            "Trade-weighted index"
+        ]
+    },
+    "key_trends": [
+        "Trade tensions with China have limited revenue growth",
+        "The recovery from the pandemic resulted in a surge in revenue",
+        "The significant appreciation of the US dollar has made US agricultural products less competitive",
+        "Profit will remain steady",
+        "Exports will be strengthened by the appreciating US dollar",
+        "Demand for agricultural products will remain strong"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Internal agribusiness, excluding farmers",
+            "segment_description": "Internal markets encompass the operations between wholesalers and farmers, as farmers produce crops for wholesalers to transport, while wholesalers sell farm equipment to farmers. Amid the recovery from COVID-19, demand for foodstuffs displayed a surge while international markets also picked up, resulting in increased activity for internal markets, so this segment grew as a percentage of revenue during the current period.",
+            "segment_percentage": 41.3
+        },
+        {
+            "segment": "Supermarkets, convenience grocery stores",
+            "segment_description": "Supermarkets and convenience stores are the primary purchasers of processed foods, so they're a fundamental part of agribusiness. Since consumers need to eat, supermarkets have the ability to pass on higher prices, so rising inflation has caused revenue from large food chains to increase during the current period. Consolidation should enable these stores to keep their prices higher, so this segment will also perform well in the future.",
+            "segment_percentage": 24.4
+        },
+        {
+            "segment": "Farms and direct farming activities",
+            "segment_description": "Farms themselves are also a major market for agribusiness, and the pandemic recovery has also caused spending on them to increase as a percentage of revenue in recent years.",
+            "segment_percentage": 17.5
+        },
+        {
+            "segment": "Food service industries",
+            "segment_description": "The food service industry includes restaurants and food retails that buy fresh foods, prepare them and sell them to consumers. COVID-19 caused demand for eating at restaurants to plunge. While the recovery has resulted in better business for food retailers and restaurants, some health-conscious individuals are still avoiding big spaces to avoid the chance of catching a disease, so spending from this segment as a percentage of revenue has declined during the current period.",
+            "segment_percentage": 16.8
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Products & Services",
+            "product_description": null,
+            "product_percentage": 27.1
+        },
+        {
+            "product_or_service": "Crop and Livestock",
+            "product_description": null,
+            "product_percentage": 26.1
+        },
+        {
+            "product_or_service": "Food Production",
+            "product_description": "Packaged foods generate major revenue for these processors, as it requires lots of labor, resulting in food makers being able to sell them at high prices to wholesalers. During COVID-19, packaged foods were in style as people refrained from leaving their homes, but have become less important as consumers want to save money and eat healthier by purchasing groceries instead, causing food manufacturing as a percentage of revenue to decline during the current period.",
+            "product_percentage": 101
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Agriculture, Forestry, Fishing and Hunting in the US",
+            "Manufacturing in the US",
+            "Wholesale Trade in the US"
+        ],
+        "tier_2_suppliers": [
+            "Fence Construction in the US",
+            "Commercial Building Construction in the US",
+            "Utilities in the US"
+        ],
+        "tier_1_buyers": [
+            "Agribusiness in the US",
+            "Convenience Stores in the US"
+        ],
+        "tier_2_buyers": [
+            "Retail Trade in the US",
+            "Wholesale Trade in the US",
+            "Supermarkets & Grocery Stores in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Consumer demand drives the industry",
+            "determinant_description": "Demand for products produced by agribusinesses is wide-ranging, varied and primarily consumer driven. Consumers are the end users, so household incomes play a large part in demand for the industry, flowing through to expenditure in all aspects of agribusiness."
+        },
+        {
+            "determinant_title": "Commodity prices affect consumer behavior",
+            "determinant_description": "The price of agricultural commodities also has an effect on consumer wants. Adverse climatic conditions can cause some farming sectors to have poor yields in a given year, reducing the supply of that commodity and increasing the price. This price increase can then be passed on to consumers that react by switching to less expensive products. In the case of food, consumers may substitute this product with another food item or imported goods, which are"
+        },
+        {
+            "determinant_title": "Exchange rates impact exports",
+            "determinant_description": "Current exchange rates determine demand for some aspects of the industry. Reliance on exports for some segments, including livestock production support and fertilizers, means that the value of the US dollar against global currencies can affect demand for various agribusiness products. When the dollar depreciates, it's more attractive for international buyers to source their goods from the United States."
+        },
+        {
+            "determinant_title": "Weather conditions are crucial",
+            "determinant_description": "Weather plays a pivotal role in the scarcity of agricultural commodities and can influence prices on global and local markets. Favorable weather conditions facilitate greater yields in crops and greater availability of feed at lower costs for animals and herds. Certain weather conditions can increase demand for specific segments of the agriculture industry. High rainfall can also increase demand for such farm supplies as fertilizer, pesticides and crop support services. Drought conditions can lead to higher demand for agricultural consultants to gain the most efficiency from fewer resources."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Moderate",
+        "import_trend": "Steady",
+        "export_level": "Moderate",
+        "export_trend": "Steady",
+        "international_trade_points": [
+            {
+                "trade_title": "REDUCING TRADE BARRIERS CAUSES IMPORTS TO SURGE",
+                "trade_description": "In 2020, the United States-Mexico-Canada Agreement (USMCA) was signed, which improved trade networks between the three North American countries. Since Canada and Mexico produce a variety of products, this agreement enables agribusinesses to import certain key materials at lower prices, causing imports to soar."
+            },
+            {
+                "trade_title": "The Pandemic Produced Volatility for Import Markets",
+                "trade_description": "- COVID-19 caused everyone to stay home, so consumers spent less on discretionary materials, resulting in declining imports.\n- The recovery created a massive boost in spending, increasing demand for imports.\n- Disrupted supply chains have constrained the ability of agribusinesses to take in goods from other countries somewhat."
+            },
+            {
+                "trade_title": "Tensions with China Threaten Exports",
+                "trade_description": "In the beginning of the current period, the Trump administration initiated a trade war by raising tariffs, which caused China to retaliate by increasing their tariffs on US soybean imports to 25.0%. Chinese consumers didn't want to pay the higher price for American soybeans, so exports for the agribusiness industry tanked."
+            },
+            {
+                "trade_title": "The Dollar Remains a Big Challenge",
+                "trade_description": "- Agribusinesses rely on the value of the US dollar being low, as foreigners will view American goods as being cheap, resulting in higher exports.\n- Following COVID-19, demand for US dollars surged, resulting in a major increase in its value and a fall in exports, disrupting the industry."
+            },
+            {
+                "trade_title": "Government Aid Provides a Modest Lifeline",
+                "trade_description": "Since the pandemic created major disruptions in many markets, agribusinesses received subsidies from the government to stay afloat. Federal aid enabled farmers to reduce their prices, which helped exports stay afloat somewhat."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region includes many large states like Florida, Georgia, North Carolina and Tennessee, so it's the region with the largest population in the United States.",
+            "percentage_establishments": 30.0,
+            "percentage_population": 30.0
+        },
+        {
+            "location": "West",
+            "location_description": "The West region, specifically California, is home to the central valley, where much of the climate is characterized as Mediterranean. The weather in this region permits many fruits and vegetables to be grown. Since fruits and vegetables are a staple in the diet of most Americans, agribusinesses have a reason to be located near the farmers of these goods. The West also contains a high population, so the retail sector is significant there as well.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region contains some of the largest cities in the country, such as New York, Philadelphia, Washington, DC and Boston. Since these cities are geographically near each other, the region has the nation's highest population density. The close grouping of so many people enable supermarkets, grocery stores and other retailers to exist in large numbers in the Mid-Atlantic, so Agribusiness has a major presence there.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region is home to cities like Chicago, Detroit and Cleveland, which are home to major manufacturing industries. Naturally, the prominence of manufacturing encourages food processors to locate in this region, as they can gain expertise on production processes by being near other forms of tenured producers.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "N/A",
+            "percentage_establishments": 10.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Plains",
+            "location_description": "The Plains region is known for the farming of major foodstuffs, such as corn, wheat and soybeans. Since farming is important for the industry, the region contains a greater share of agribusinesses compared to its share of the US population.",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "New England",
+            "location_description": "N/A",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Rocky M",
+            "location_description": "N/A",
+            "percentage_establishments": 5.0,
+            "percentage_population": 10.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "United States Department of Agriculture (USDA) Regulations",
+                "regulation_description": "The USDA regulates the standards for the quality of vegetables, meat, poultry, eggs and other produce in the United States. The organization inspects these products during all parts of the production process, especially food processing and food distribution."
+            },
+            {
+                "regulation_title": "Rules Imposed by the Food and Drug Administration (FDA)",
+                "regulation_description": "The FDA provides scientific expertise into the food sector, maintains food safety and enforces food laws through inspections. The organization also places labeling requirements on agribusinesses through the Federal Food, Drug and Cosmetic Act."
+            },
+            {
+                "regulation_title": "Drones",
+                "regulation_description": "The Federal Aviation Administration (FAA) regulates drone use for commercial operators using part 107 rules. Operators must also be of a certain age, be physically and mentally fit to fly a drone and pass a test relating to how drones operate."
+            },
+            {
+                "regulation_title": "Environmental Protection Agency (EPA) Regulations",
+                "regulation_description": "The EPA regulates the release of hazardous wastes into the environment. These can apply to agribusinesses because farmers can release hazardous fertilizers into the surrounding environment and food processors can do the same with the plastics and chemicals they produce."
+            },
+            {
+                "regulation_title": "Other regulations",
+                "regulation_description": "Agribusinesses are subject to a host of laws that affect many sectors, such as the agricultural marketing act that regulates grains and marketing orders that maintain quality standards for fruits and vegetables."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Legal",
+                "barrier_description": "Since the industry encompasses so many sectors, operators have legal constraints. Some states require individuals to obtain a license before becoming a manufacturer or wholesaler, although getting one of these is fairly easy. Farmers don't have to get a license, but their industry is heavily regulated and subsidized. Food processors are also regulated to ensure the selling of safe goods."
+            },
+            {
+                "barrier_title": "Start-up Costs",
+                "barrier_description": "Start-up costs also vary by sector. They tend to be the highest for manufacturers and the lowest for service providers. Manufacturers must buy expensive machinery and warehouses before engaging in operations, while service providers only need an office, some computers and software and a few workers. Farmers need land, workers, barns and modest farm equipment. Wholesalers need warehouses and possibly vehicles if they plan to transport materials themselves."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Regulation Level: heavy - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Industry Assistance Level: high - steady",
+            "Concentration Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Price competition",
+                "basis_description": "The main point of competition in this industry is price. At the farm level, operators are price takers, with world markets setting prices in many cases. Beyond the farm level, price competition has more flexibility and is used to compete directly within segments to gain additional sales."
+            },
+            {
+                "basis_title": "Corporatization and vertical integration",
+                "basis_description": "The corporatization and vertical integration of agribusiness have played an important role in the competitive environment. Large corporations use their size to purchase farming operations, processors and wholesaling operations to vertically integrate their businesses and retain a higher portion of profit along the way."
+            },
+            {
+                "basis_title": "Production costs",
+                "basis_description": "Production costs across the industry are another method for agribusinesses to compete with each other. The minimization of these costs increases profit. The main form of production cost control is in the use of contractual arrangements for the supply of goods and services."
+            },
+            {
+                "basis_title": "Brand recognition and reputation",
+                "basis_description": "Brand recognition and reputation are also used across the industry to increase demand for goods and services in agribusiness. Beyond the farm level of the supply chain, larger companies use this strategy to generate loyalty among consumers for particular products."
+            },
+            {
+                "basis_title": "Product Quality",
+                "basis_description": "Similar to reputation and brand recognition, the quality of the industry's products is another point of competition among operators. Quality is an important factor for farmers to aspire to, particularly those seeking to export their commodities overseas."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "The diverse farming industry keeps agribusiness fragmented",
+                "concentration_description": "Farming is the base of agribusiness since it's how the industry gets its main inputs. Farms in the United States aren't consolidated, as many individual and family businesses serve specific areas. The fragmentation of farming leads to a fractured agribusiness industry, although there's slightly more consolidation as food processing and wholesaling are more concentrated."
+            },
+            {
+                "concentration_title": "Contract farming has made corporations more prevalent",
+                "concentration_description": "Under contract farming, large businesses enter into contracts with small farmers to operate the land they own. The businesses pay farmers a base salary and give bonuses based on crop performance. Many small farmers decide to take these offers because it's safer. Since these small farms are becoming part of these large companies, consolidation has been increasing."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Tyson Foods, Inc.",
+                "company_percentage": 1.2
+            },
+            {
+                "company_name": "Nestle SA",
+                "company_percentage": 0.8
+            },
+            {
+                "company_name": "U.S. Foods Holding Corp.",
+                "company_percentage": 0.8
+            },
+            {
+                "company_name": "Bunge Limited",
+                "company_percentage": 0.3
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 4.9
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 10.1
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 62.8
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Profit has held up well despite recent economic challenges",
+            "cost_factor_description": "In 2023, profit is forecast to comprise 4.9% of revenue. Profit has remained very steady during the current period, despite disruptions from COVID-19, rapid inflation and disrupted supply chains."
+        },
+        {
+            "cost_factor_title": "Rising inflation causes wages to decline",
+            "cost_factor_description": "Wages will comprise 10.1% of revenue in 2023. Labor costs represent an important component of revenue for agribusinesses, since farming and services need many workers."
+        },
+        {
+            "cost_factor_title": "Purchases stay flat despite rising prices",
+            "cost_factor_description": "In 2023, purchase costs will make up 62.8% of revenue. These costs include many different things, such as farm equipment, crops, fertilizer, machinery used for food processing and other materials."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Medium capital intensity",
+                "capital_intensity_description": "Agribusiness in the United States exhibits a medium level of capital intensity. For every $1.00 spent on labor, an agribusiness will spend $0.15 on capital."
+            },
+            {
+                "capital_intensity_title": "Ease of entry and rate of entry are moderate",
+                "capital_intensity_description": "Both the ease of entry and the rate of entry in the industry are moderate. While these factors do not significantly add to the threat of disruptive potential, they do not detract from it either."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "The necessity of agricultural products keeps revenue anchored",
+                "volatility_description": "Agribusinesses always maintain some level of stable demand because food is a necessity. COVID-19, inflation, rising interest rates and trade disruptions have caused revenue to fluctuate, but volatility remains muted since the need for food always gives the industry a stream of revenue."
+            },
+            {
+                "volatility_title": "Prices are key to the success of the industry",
+                "volatility_description": "Companies in the agribusiness, such as farmers, need prices to be at a level where selling their products are profitable. Prices that are too low make the value of sales smaller, while extremely high prices can discourage consumers from purchasing the industry's products, causing revenue to fall."
+            },
+            {
+                "volatility_title": "Weather has a big influence on agriculture in the United States",
+                "volatility_description": "Weather conditions are extremely important in maintaining a sufficient level of agricultural output. Storms, droughts, tornadoes and other extreme events can disrupt crops and reduce their yields, resulting in a sharp drop in revenue for agribusinesses."
+            },
+            {
+                "volatility_title": "Trade creates volatility for agribusinesses",
+                "volatility_description": "Many types of foodstuffs used in agribusiness are imported from abroad, and domestic growers get lots of their revenue through exporting produce. Exchange rates and trade laws can alter imports and exports drastically, impacting the industry."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Technological disruption",
+                "technological_change_description": "Agribusinesses face technological disruption via the introduction of genetically modified (GM) seeds. Currently, GM seeds serve as a form of technological disruption, as they are causing end stocks and yields per acre to rise too quickly."
+            },
+            {
+                "technological_change_title": "Meatless meats",
+                "technological_change_description": "Livestock segments within the industry are experiencing a degree of technological disruption via the advent of new meatless meats. Large-scale retailers, such as Burger King, have launched meatless patties in a variety of stores to test the market, while KFC has released meatless nuggets."
+            },
+            {
+                "technological_change_title": "Medium technology change",
+                "technological_change_description": "Agribusinesses display some technological progress. The basics of farming, particularly on smaller family farms, have not changed significantly in many years. Farmers still use changing technology through the use of modern equipment, including advanced biotechnology and genetic modification, fertilizers and pesticides and drones."
+            },
+            {
+                "technological_change_title": "Genetic modification (GM)",
+                "technological_change_description": "Genetic modification (GM) has had a profound influence on the industry and on direct farming operations across the country. GM technology has increased the efficiency of farming practices by introducing enhancements, such as pest-resistant produce, faster growing crops, higher yielding crops and drought-resistant produce."
+            },
+            {
+                "technological_change_title": "Biofuels",
+                "technological_change_description": "Another result of emerging technology has been the increase in the use of agricultural commodities for the production of biofuels. Biofuels have significant implications for agriculture and agribusiness across the globe, and have the potential to influence the decision-making processes for rural communities and the global food system."
+            },
+            {
+                "technological_change_title": "Drones",
+                "technological_change_description": "Drones provide the opportunity to survey and monitor large swaths of land without actually traversing it. Drones can be used as crop monitors and variable input administers. This provides the opportunity for major labor cost saving and a reduction in wasted or malformed harvests, boosting product quality and increasing reliability of production schedules."
+            },
+            {
+                "technological_change_title": "Technology change",
+                "technological_change_description": "Different rates of technological change affect various segments of the industry. Inventory control mechanisms for agricultural wholesaling are becoming increasingly automated, reducing the labor intensity of stock control. Computer-aided manufacturing using robots is commonplace in the manufacture of tractors and machinery."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "Do your sales depend on the overall health of the US economy?",
+            "answer": "Demand for foodstuffs tends to be stable and sales are more dependent on disposable income levels. Consumers will trade down for inferior products during tough economic times and trade up for higher-margin produce and packaged goods during favorable economic conditions."
+        },
+        {
+            "question": "Has your company been exposed to excess revenue volatility?",
+            "answer": "Diversified agribusiness producers exhibit lower degrees of revenue volatility, aiding profitability. Undiversified producers will be more subject to output price fluctuations, hindering profitability."
+        },
+        {
+            "question": "Is your company located in proximity to key buying and selling markets?",
+            "answer": "Agricultural producers located closer to key selling markets will face lower transportation costs and higher profitability. Agribusiness food producers located in proximity to key input suppliers will exhibit lower purchase costs and higher profitability."
+        },
+        {
+            "question": "How is your company leveraging the latest technologies?",
+            "answer": "Crop yields can be improved and stabilized via automated technology such as drones and crop monitors, making for more reliable harvests. Food processors leveraging the latest technologies will exhibit higher operating efficiency and higher profitability. Drones can be used to monitor crops at a fraction of the cost, increasing operational efficiencies."
+        },
+        {
+            "question": "How does your company ensure all occupational health and safety requirements are upheld?",
+            "answer": "Compliant agribusinesses will likely display lower insurance premiums and costs, boosting profitability. Noncompliant agribusinesses will likely be subject to insurance cost increases, undercutting profitability."
+        },
+        {
+            "question": "How does your profit margin compare to those of your biggest competitors?",
+            "answer": "Food processors that adopt the latest technologies will exhibit higher operating efficiencies. Agricultural producers that enter into long-term supply contracts will face lower revenue volatility and higher profitability."
+        },
+        {
+            "question": "Has your company had any difficulty financing current operations?",
+            "answer": "Agricultural producers that enter into long-term supply contracts will have more stable revenue, enduring price declines better and experiencing less profit volatility. Agricultural producers will often produce at a loss, which is then made up for via government subsidies."
+        },
+        {
+            "question": "Do you receive any grants from the federal government?",
+            "answer": "Many farming industries receive grants from the federal government through a variety of programs. These grants improve financial performance for farmers, which compounds through the Agribusiness industry as these funds."
+        },
+        {
+            "question": "Have you considered switching to more politically supported crops?",
+            "answer": "Many farming industries receive grants from the federal government through a variety of programs. These grants improve financial performance for farmers, which compounds through the Agribusiness industry as these funds."
+        },
+        {
+            "question": "What technological innovations have you introduced or employed in recent years? What are the associated costs?",
+            "answer": "Access to up-to-date technology is important throughout the Agribusiness industry. Advanced technology, such as GM seeds, enables farmers to produce more and enhance profitability."
+        },
+        {
+            "question": "What control do you have over how your products are marketed to consumers? Can you easily change your crops to cater to consumer demand?",
+            "answer": "The industry's ability to adapt its products and services to suit market conditions is key to the profitability of its farms. Produce in higher demand from consumers will generate higher profit for farmers and beyond the farm gate."
+        },
+        {
+            "question": "Do you monitor the agricultural price index? How do you prepare yourself for low agricultural prices?",
+            "answer": "Higher prices of products can also have a negative effect if producers have difficulty passing on these prices to downstream buyers. Since this is a supply-side industry, price increases will reflect growing scarcity or rising costs of production, both of which can only be partially passed onto customers without limiting demand."
+        },
+        {
+            "question": "How does the growth of the US population affect demand for your services? Does your revenue trend in line with population growth?",
+            "answer": "Over the long term, demand for food and the goods and services of agribusiness is determined by the total population in the United States. Food is part of a fixed caloric diet. Total calorie needs will be determined by the level of the population."
+        },
+        {
+            "question": "Do you monitor the trade-weighted index? Has your company been affected by import penetration?",
+            "answer": "Exchange rate levels affect the price competitiveness of US agricultural exports. An appreciation of the US dollar raises the price of domestic crops in international markets, eroding the industry's price competitiveness. Poor trade relations with China and a pullback in international trade resulting from COVID-19 have also hampered exports."
+        }
+    ]
+}

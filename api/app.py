@@ -13,12 +13,12 @@ from api.api_knowledgebase import knowledge_base_router
 from api.api_checklist import checklist_base_router
 from api.api_file_upload import upload_file_router
 from api.api_email import Email_router
-from api.api_chat_session import chat_router
+# from api.api_chat_session import chat_router
 from api.api_collaboration import collaboration_router
 from api.api_temp_chat import temp_chat_router
 from api.api_calendly import calendly_router
 from api.api_news import new_router
-from api.api_magic_link import magic_link_router
+# from api.api_magic_link import magic_link_router
 from api.api_related_industries import related_industries_router
 from api.api_industry_summary import industry_summary_router
 from api.api_company_profile import company_profile_router
@@ -51,12 +51,12 @@ app.include_router(knowledge_base_router)
 app.include_router(checklist_base_router)
 app.include_router(upload_file_router)
 app.include_router(Email_router)
-app.include_router(chat_router)
+# app.include_router(chat_router)
 app.include_router(collaboration_router)
 app.include_router(temp_chat_router)
 app.include_router(calendly_router)
 app.include_router(new_router)
-app.include_router(magic_link_router)
+# app.include_router(magic_link_router)
 app.include_router(related_industries_router)
 app.include_router(industry_summary_router)
 app.include_router(company_profile_router)

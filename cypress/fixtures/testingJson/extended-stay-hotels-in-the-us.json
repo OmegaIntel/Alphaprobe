@@ -1,0 +1,559 @@
+{
+    "report_title": "Extended Stay Hotel Industry Report",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 19379000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 2.92
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 2.97
+            }
+        },
+        "profit": {
+            "profit_dollars": 4651000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 4.62
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 24,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 1.65
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 9761000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 2.71
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 2.92
+            }
+        },
+        "employees": {
+            "employees_count": 150677,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 3436000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0.86
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 3.21
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "The extended stay hotels industry, due to ongoing economic scenarios and the COVID-19 pandemic, has experienced minor growth over the past five years. With increased corporate profits and consumer expenditure, industry revenue rose at an estimated annualized 0.1%, reaching $19.4 billion over the five years to 2024. This includes a disruption in 2020 with a halt in international travel and a slump in consumer spending attributable to the pandemic. Nonetheless, a strong pre-pandemic recovery and an anticipated surge in leisure travel demand project a promising outlook for the industry, with projected revenue increase of 3.4% in 2024.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Demand from Traveling Nurses and Long-Term Workers Boosts Extended Stay Hotel Industry",
+            "current_performance_point_description": "Throughout the COVID-19 pandemic, the extended stay hotel sector has seen its occupancy rates fare better than the national average. In 2020, these hotels maintained an average occupancy of roughly 60%, outperforming the national average by almost 16%. A key driver of this resilience has been the demand from traveling nurses and other key workers needing long-term accommodation. With quarantining requirements and increased healthcare needs, these professionals have been turning to extended stay hotels for their accommodation needs."
+        },
+        {
+            "current_performance_point_title": "Investors Bank on Extended Stay Hotels",
+            "current_performance_point_description": "Large-scale investors such as Blackstone and Starwood Capital have shown increased interest in the extended stay hotel industry."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Niche Extended Stay Hotels Emerge",
+            "future_outlook_point_description": "Investment surge in extended stay properties is clearing the path for niche luxury extended stay hotels, which don their suites with superior amenities. These include services like Amazon lockers for deliveries, a free laundry service, a fitness center, a library, a shared working space, and a playroom. The trend exhibits a growing demand among today's modern workforce."
+        },
+        {
+            "future_outlook_point_title": "DIGITAL NOMADISM BOOST EXTENDED STAY HOTEL PERFORMANCE",
+            "future_outlook_point_description": "The COVID-19 pandemic has created a shift towards a location-independent, technologically-facilitated lifestyle, that allows individuals to work and travel simultaneously. This is driving a significant increase in the number of 'anywhere workers', a term derived from a recent survey by Lonely Planet. This modern digital nomad prefers extended stay hotels because they offer a combination of work and travel free to create lasting memories."
+        },
+        {
+            "future_outlook_point_title": "LEISURE TRAVELERS AND REMOTE WORK POLICIES SHAPE THE INDUSTRY",
+            "future_outlook_point_description": "The advent and adoption of remote work policies is another factor contributing to this industry dynamic. As several companies continue to embrace hybrid work environments, the need for business travel drastically drops. This decline is mirrored by the decreasing enthusiasm for business travel and fiscal prudence within corporations, a behavior projected to persist over the next five years."
+        }
+    ],
+    "industry_definition": "This industry comprises establishments that primarily provide short- to long-term lodging in facilities known as extended stay hotels.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage: growth",
+            "Concentration Level: low",
+            "Globalization Level: low - steady"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level: very high",
+            "Capital Intensity Level: high",
+            "Industry Assistance Level: low - increasing",
+            "Competition Level: high - increasing"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low & Increasing Level of Assistance",
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "High Profit vs. Sector Average"
+        ],
+        "weaknesses": [
+            "Low Product/Service Concentration",
+            "High Competition",
+            "High Volatility",
+            "High Customer Class Concentration",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Domestic trips by US residents"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Consumer confidence index"
+        ]
+    },
+    "key_trends": [
+        "Extra services can make an extended stay hotel stand out. Offering a unique experience creates a lure to the hotel, allowing it to grow in popularity.",
+        "New accommodation options keep rising. New services, like Airbnb and VRBO, continue to grow in popularity as an alternative to traditional accommodation facilities.",
+        "Extended stay hotels have outperformed the accommodations sector. This is because of the industry's diverse range of guests.",
+        "Investment in extended stay hotels has skyrocketed",
+        "Membership programs create customer loyalty",
+        "There has been a recent surge in investing in extended stay hotels",
+        "Government investment in local tourism benefits hotels",
+        "Travel activity slows down amid economic uncertainty",
+        "Investment in training and onboarding is high",
+        "Large hotel chains enjoy higher profit, resulting from economies of scale",
+        "The Southeast is a prime vacation spot",
+        "Tourism thrives across California"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Pent-up Demand and Increased Leisure Travel Surge",
+            "segment_description": "The extended stay hotel industry primarily caters to leisure travelers; individuals who travel for enjoyment, rest, or recreational purposes. With broader economic factors such as disposable income and oil and gas prices influencing discretionary travel expenditure, leisure travel has seen substantial growth over the past decade.",
+            "segment_percentage": 34.3
+        },
+        {
+            "segment": "Pandemic-Induced Changes Reshape Extended Stay Hotels",
+            "segment_description": "The extended stay hotel industry primarily serves clientele undertaking travel for business-related matters. These include attending meetings, conferences, or training sessions, visiting sites, or meeting with clients, partners, or suppliers, and exploring new business opportunities across regions or countries.",
+            "segment_percentage": 65.7
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Shifts in Travel Patterns Drive Demand for One to Six Nights Stay",
+            "product_description": "The extended-stay hotel industry caters primarily to individuals traveling for leisure, both domestically and internationally. This sector of the hospitality industry specifically focuses on guests who need accommodations for periods between one to six nights.",
+            "product_percentage": 33
+        },
+        {
+            "product_or_service": "Shrinking Business Travel Impacts Demand for Seven to 29 Nights Stay",
+            "product_description": "The extended stay hostel industry segment accommodates those booking stays of seven to 29 nights, catering primarily to business and leisure travelers. These customers often encompass individuals on longer trips exploring new regions or business travelers, typically in sales or executive roles, who average a 15-day booking.",
+            "product_percentage": 21
+        },
+        {
+            "product_or_service": "There Has Been a Decline in Demand from Businesses Travelers Staying More Than 30 Nights",
+            "product_description": "The main driver for the extended stay sector of the hospitality industry is traditionally business travel, with professionals such as managers and consultants often needing accommodation that stretches beyond 30 nights for project-related stays.",
+            "product_percentage": 46
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Restaurant & Hotel Equipment Wholesaling in the US",
+            "Furniture Wholesaling in the US",
+            "TV & Appliance Wholesaling in the US",
+            "Computer & Packaged Software Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Computer Manufacturing in the US",
+            "Egg & Poultry Wholesaling in the US",
+            "Beer Wholesaling in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Trends in domestic travel",
+            "determinant_description": "Trends in domestic travel, especially business travel, and total nights spent away from home directly affect demand for accommodation. As the number of trips made by US citizens rises, demand for extended stay hotels rises, while the inverse is also true. A rise in the number of domestic trips by US residents represents a potential opportunity for extended stay hotels."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "A Large Population and Lower Operating Costs Result in Many Extended Stay Hotels Locating in the Southeast",
+            "location_description": "The Southeast is home to many large corporations and industries, particularly in technology, healthcare, and finance. These industries often require employees to travel for extended periods, creating a demand for extended stay accommodations. The Southeastern US generally has a lower cost of living than other regions. This can make it an attractive location for extended stay hotels, as building and operating hotels in the area may be less expensive.",
+            "percentage_establishments": 28.1,
+            "percentage_population": 21.1
+        },
+        {
+            "location": "The West Benefits From Its Status As a Popular Tourist Destination",
+            "location_description": "The West is also a popular tourist destination, with attractions like national parks, ski resorts and cultural landmarks drawing millions of visitors annually. Many visitors may prefer the comfort and convenience of extended stay accommodations. The Western US is home to many large corporations and industries, particularly in technology, entertainment and energy sectors. These industries often require employees to travel for extended periods, creating a demand for extended stay accommodations.",
+            "percentage_establishments": 16.2,
+            "percentage_population": 23.4
+        },
+        {
+            "location": "Proximity to Mexico and the Energy Industry Draw Extended Stay Hotels to the Southwest",
+            "location_description": "The Southwest shares a border with Mexico, which can create demand for extended stay accommodations from travelers conducting business in Mexico or visiting family and friends. The Southwest has several energy-rich areas, including the Permian Basin in Texas. The general energy industry often requires workers to travel for extended periods, creating a need for extended stay accommodations.",
+            "percentage_establishments": 13.5,
+            "percentage_population": 11.5
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "BUILDING CODES AND ZONING LAWS",
+                "regulation_description": "Extended stay hotels are subject to building codes and zoning laws at the local level, which govern issues like the size, layout and location of the property."
+            },
+            {
+                "regulation_title": "HEALTH AND SAFETY REGULATIONS",
+                "regulation_description": "Extended stay hotels must meet health and safety regulations at the federal, state and local levels, which may include fire safety, sanitation and food handling standards."
+            },
+            {
+                "regulation_title": "EMPLOYMENT LAWS",
+                "regulation_description": "Extended stay hotels must comply with federal and state employment laws, including minimum wage, overtime and antidiscrimination laws."
+            },
+            {
+                "regulation_title": "TAXATION LAWS",
+                "regulation_description": "Extended stay hotels are subject to state and local taxation laws, including sales, occupancy and business taxes."
+            },
+            {
+                "regulation_title": "CONSUMER PROTECTION LAWS",
+                "regulation_description": "Extended stay hotels must comply with consumer protection laws, like truth-in-advertising laws and laws related to pricing and refunds."
+            },
+            {
+                "regulation_title": "ADA REGULATIONS",
+                "regulation_description": "Extended stay hotels are subject to the Americans with Disabilities Act (ADA), which requires providing accessible accommodations and facilities for guests with disabilities."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Revenue Volatility",
+                "barrier_description": "Revenue volatility is very high."
+            },
+            {
+                "barrier_title": "Capital Intensity",
+                "barrier_description": "Capital intensity is high."
+            },
+            {
+                "barrier_title": "Industry Assistance",
+                "barrier_description": "Industry assistance is low but increasing."
+            },
+            {
+                "barrier_title": "Competition",
+                "barrier_description": "Competition is high and increasing."
+            },
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is in the growth life cycle stage."
+            },
+            {
+                "barrier_title": "Concentration",
+                "barrier_description": "Market concentration is low."
+            },
+            {
+                "barrier_title": "Globalization",
+                "barrier_description": "Globalization is low but steady."
+            },
+            {
+                "barrier_title": "Legal Requirements",
+                "barrier_description": "Most states and localities require hotels to obtain various licenses and permits to operate legally."
+            },
+            {
+                "barrier_title": "Start-up Costs",
+                "barrier_description": "Building or renovating a hotel typically involves various costs, including architectural design, construction materials, labor and building permits."
+            },
+            {
+                "barrier_title": "Differentiation",
+                "barrier_description": "Extended stay hotels typically offer larger suites with separate living areas, which provide more space and privacy than a traditional hotel room."
+            },
+            {
+                "barrier_title": "Capital Expenses",
+                "barrier_description": "Extended stay hotels often require more capital investment than traditional hotels because of their additional amenities and services like fully equipped kitchens."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Revenue Volatility",
+            "Capital Intensity",
+            "Competition"
+        ],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage",
+            "Concentration",
+            "Globalization"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Extra services can make an extended stay hotel stand out",
+                "basis_description": "Offering a unique experience creates a lure to the hotel, allowing it to grow in popularity."
+            },
+            {
+                "basis_title": "New accommodation options keep rising",
+                "basis_description": "New services, like Airbnb and VRBO, continue to grow in popularity as an alternative to traditional accommodation facilities."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Franchises are popular",
+                "concentration_description": "Some extended stay hotel chains offer franchise models that allow independent hotel owners to operate under a more prominent brand name."
+            },
+            {
+                "concentration_title": "Regional and local competition is high, limiting concentration",
+                "concentration_description": "While some of the larger extended stay hotel chains have a national presence, many independent and smaller hotels operate in specific regions or markets. This can create a more competitive landscape at the regional level."
+            },
+            {
+                "concentration_title": "Local demand factors",
+                "concentration_description": "Extended stay hotels are heavily influenced by local demand, with factors like local job growth, business travel and tourism playing a role in determining the success of individual hotels."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Marriott International Inc.",
+                "company_percentage": 7.1
+            },
+            {
+                "company_name": "Extended Stay America, Inc.",
+                "company_percentage": 5.9
+            },
+            {
+                "company_name": "Hilton Worldwide Holdings Inc.",
+                "company_percentage": 3.2
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 83.0
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other Costs",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Rising Purchase Costs Potentially Eroding Profit",
+            "cost_factor_description": "Purchase expenses represent a substantial proportion of industry revenue for extended stay hotels. The need to consistently update and enhance room amenities, such as TVs, beds, chairs, and desks, is driving up these costs. In addition to providing residential amenities, many of these hotels offer in-room meal and liquor services or host multiple dining establishments. This adds gastronomy-related purchases to their expense list, thereby exacerbating the overall expenditure."
+        },
+        {
+            "cost_factor_title": "Rising Staff Turnover Inflates Wage Costs",
+            "cost_factor_description": "High staff turnover rates in the hotel industry incur hidden costs, predominantly impacting wages. Despite the minimal skill requirements for many positions, frequent recruitment and training of new employees significantly inflate wage-related expenses. The industry's reliance on part-time and casual labor intensifies this trend, as the regular interchange of staff necessitates continuous onboarding and offboarding processes."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Capital expenses",
+                "capital_intensity_description": "Extended stay hotels often require more capital investment than traditional hotels because of their additional amenities and services like fully equipped kitchens, larger suites and on-site laundry facilities."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "LONGER STAYS MODERATE REVENUE VOLATILITY",
+                "volatility_description": "Extended stay hotels are designed to accommodate guests who stay longer, typically a week or more. This means that these hotels have a more stable and predictable occupancy rate, as guests are less likely to check in and out on a daily basis."
+            },
+            {
+                "volatility_title": "A DIVERSE CUSTOMER BASE REDUCES VOLATILITY",
+                "volatility_description": "Extended stay hotels typically cater to diverse customers, including business travelers, relocation clients and families. This diversification helps to reduce their reliance on any particular customer segment, making their revenue stream more stable."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Smart rooms give hotels an edge",
+                "technological_change_description": "One innovation in the extended stay hotels industry is using smart rooms, equipped with the latest technology to improve the guest experience. These rooms typically have features like voice-activated assistants, smart thermostats and digital entertainment systems. Additionally, some hotels have implemented smart check-in and keyless entry systems, allowing guests to bypass the front desk and access their rooms with their mobile devices."
+            },
+            {
+                "technological_change_title": "Guests increasingly value shared spaces",
+                "technological_change_description": "Another innovation in the extended stay hotels industry is the trend toward creating shared spaces that encourage social interaction among guests. Many extended stay hotels have added communal areas like outdoor patios, game rooms and coworking spaces to provide guests with opportunities to connect. Some hotels have also begun offering social events like happy hours and movie nights to foster a sense of community among their guests."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "Are your company's sales affected by seasonality?",
+            "answer": "The summer season is the busiest season for travel in the United States and operators often rely on busy summer seasons to carry them through the year."
+        },
+        {
+            "question": "Does your company leverage free social media platforms, such as Facebook, Twitter and others, to inform and attract new customers?",
+            "answer": "Establishing a direct line of communication to consumers enhances brand loyalty and participation. Moreover, social media use has increased during the coronavirus pandemic and consequently, operators who use social media are likely to benefit from this trend."
+        },
+        {
+            "question": "Has your company explored acquisition opportunities to expand your market share?",
+            "answer": "Increasing scale can enhance consumer access to company establishments and give an edge over the competition by lowering overall costs. Moreover, favorable investment conditions in recent years have resulted in increased investment in extended stay hotel properties."
+        },
+        {
+            "question": "How does your company provide ancillary services to diversify revenue streams?",
+            "answer": "Operators that anchor a destination bar or restaurant in industry establishments are able to diversify revenue streams and increase demand. Moreover, as consumers seek to limit exposure to the coronavirus, they may be likely to stay in establishments where they prepare their own food, benefiting industry operators which almost always offer an in-suite kitchen."
+        },
+        {
+            "question": "Does your establishment offer complimentary Wi-Fi to customers?",
+            "answer": "Complimentary amenities is a significant factor for consumers when choosing to stay in an industry establishment. Complimentary Wi-Fi offerings have become commonplace in the industry."
+        },
+        {
+            "question": "Does your company leverage mobile booking applications to streamline the booking process?",
+            "answer": "Capitalizing on the rise of Wi-Fi and mobile internet connections increases ease of access to company services."
+        },
+        {
+            "question": "Is your company subject to any franchising laws?",
+            "answer": "Franchise laws vary between states and can place limitations on where establishments can locate and how they can compete."
+        },
+        {
+            "question": "Is your business subject to varying state laws pertaining to the sale of certain items, such as liquor?",
+            "answer": "Many industry establishments anchor restaurants and bars within their establishments. Therefore, compliance with all municipal, state and federal liquor licensing is crucial."
+        },
+        {
+            "question": "How does your company's inventory turnover compare to major competitors?",
+            "answer": "101"
+        },
+        {
+            "question": "How does your company compensate for seasonality of cash flow?",
+            "answer": "Hotels experiencing low occupancy during off seasons can increase promotional output or offer ancillary services in order to diversify revenue. Many operators have offered discounted stays during the coronavirus pandemic to boost cash flow. Moreover, operators have increasingly offered no penalty for cancellations or changes to reservations during the pandemic to encourage consumers to book stays."
+        },
+        {
+            "question": "How do you attract and retain skilled employees? How do you reward staff who perform well?",
+            "answer": "Access to multiskilled and well-trained staff is vital to success in the industry. Amid labor shortages in 2021 operators have boosted wages and offered enhanced benefits in an effort to retain and attract skilled employees."
+        },
+        {
+            "question": "Are you currently or have plans to join a franchising chain? How could being part of franchise chain benefit your business?",
+            "answer": "There are many benefits to being part of a chain or franchised group, namely brand recognition, national marketing and quality control."
+        },
+        {
+            "question": "How quickly can new technology be adopted? Does your company keep up to date with the latest technology?",
+            "answer": "Successful industry operators need to be able to quickly adopt new technology for the purpose of information, promotions, bookings and reservations. Online reservation systems have become increasingly essential throughout the industry, as consumers increasingly book trips via the internet."
+        },
+        {
+            "question": "What proportion of your total revenue comes from domestic travelers? What nearby attractions or destinations draw in travelers?",
+            "answer": "Trends in domestic travel, especially business travel, and the total nights spent away from home directly affect demand for accommodation. As the number of trips made by US citizens rises, demand for extended stay hotels increases."
+        },
+        {
+            "question": "Do you monitor the Consumer Confidence Index? How can you adapt as the Consumer Confidence Index declines amid growing economic uncertainty?",
+            "answer": "Trends in consumer sentiment affect consumers' discretionary expenditure, current travel habits, and their propensity to plan or take a trip in the future. When consumers are optimistic about their current and future financial prospects, they are likelier to take a trip that involves extended stay hotels."
+        },
+        {
+            "question": "In what ways will your business benefit from increases in consumer spending? How closely are changes in consumer spending tied to revenue growth?",
+            "answer": "Consumer spending levels have a direct effect on travel demand. When consumers are spending more overall, they are more likely to spend some of their money on travel and accommodations."
+        }
+    ]
+}

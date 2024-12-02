@@ -1,0 +1,539 @@
+{
+    "report_title": "Engine Radiator Manufacturing Industry Report",
+    "report_date": "2020",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 1600000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2015,
+                "end_year": 2020,
+                "revenue_cagr_value": -6.1
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2020,
+                "end_year": 2026,
+                "revenue_cagr_value": 3.16
+            }
+        },
+        "profit": {
+            "profit_dollars": null,
+            "profit_cagr_historical": {
+                "begin_year": 2015,
+                "end_year": 2020,
+                "profit_cagr_value": null
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2020,
+                "end_year": 2026,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 1.6,
+            "profit_margins_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "profit_margins_cagr_value": null
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": null,
+            "industry_value_added_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 3794,
+            "employees_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2020,
+                "end_year": 2026,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 191000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2020,
+                "wages_cagr_value": -2.24
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2020,
+                "end_year": 2026,
+                "wages_cagr_value": 2.7
+            }
+        },
+        "imports": {
+            "imports_dollars": 685000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2020,
+                "imports_cagr_value": -5.6
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2020,
+                "end_year": 2026,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2020 currency. The Engine Radiator Manufacturing industry consists of companies that design and assemble radiators for motor vehicles. Downstream markets mainly include third-party manufacturers that sell radiators to large in addition to retailers and mechanics. However, this industry does not include parts that are manufactured and installed into vehicles within a single location because there is no transaction to count toward revenue. Over the five years to 2020, the industry has struggled financially. Imports from low wage countries such as China and Mexico have continued to pose a threat for domestic companies, while fluctuations in material costs have contributed to revenue volatility. Companies in this industry primarily sell to large car manufacturers, so industry demand is closely linked with demand for new cars. For this reason, declining new car sales have hurt industry demand over the past five years.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Revenue Trends",
+            "current_performance_point_description": "The number of new cars sold in a given year is closely related to the strength of the overall economy. When disposable income levels are high, people are more willing to make large purchases. Additionally, when unemployment is low, people are more likely to purchase new cars because they can be more certain that they are able to make consistent payments. However, in 2020, the COVID-19 (coronavirus) pandemic is likely to hurt demand for new cars."
+        },
+        {
+            "current_performance_point_title": "International Trade",
+            "current_performance_point_description": "In addition to the strength of the domestic economy, trade policy and practices have had a significant effect on industry performance over the past five years. During most of the period, imports from low wage countries such as Mexico and China have been on the rise. However, recent trade policies have resulted in declining levels of imports."
+        },
+        {
+            "current_performance_point_title": "Industry Structure",
+            "current_performance_point_description": "Despite recent declines in import competition, domestic manufacturers have still struggled to maintain strong profit during the period. While the pandemic is expected to hurt profit due to low demand and shortages of materials, profit had declined over most of the past five years. Competition from large automakers has grown in recent years, and prior to the ratification of USMCA, foreign manufacturers had been threatening domestic operations."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Revenue Growth",
+            "future_outlook_point_description": "Despite difficulty over the five years to 2020, the Engine Radiator Manufacturing industry is anticipated to return to growth over the five years to 2025. The COVID-19 (coronavirus) pandemic has significantly limited demand for new cars, thus causing industry revenue to plummet. However, as the pandemic passes and the economy begins to recover, new car sales are expected to quickly bounce back."
+        },
+        {
+            "future_outlook_point_title": "International Trade",
+            "future_outlook_point_description": "While the domestic industry is expected to recover over the next five years, international trade levels are likely to remain low. This is largely due to the limitations placed by the United States-Mexico-Canada Agreement (USMCA), which encourages US automakers to purchase primarily US-made auto parts. According to the agreement, by 2023, 75.0% of parts used in automobile manufacturing in the United States are expected to be US-made. As this rule goes into effect, imports are expected to continue declining."
+        },
+        {
+            "future_outlook_point_title": "Industry Operators",
+            "future_outlook_point_description": "Despite rising revenue and decreased competition from overseas, companies that exited the industry in 2020 are not likely to return over the next five years. Instead, the industry is expected to continue consolidating as competition from large automakers continues to loom over the industry. This competition, as well as rising input costs, is likely to keep profit from rising significantly over the next five years."
+        }
+    ],
+    "industry_definition": "This industry manufactures engine radiators that are primarily used in motor vehicles. Radiators are used to cool the internal combustion engine by pumping liquid coolant. A radiator is typically connected to the engine and cylinder head of a vehicle.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Concentration Level is low",
+            "Regulation Level is light and steady",
+            "Technology Change Level is low"
+        ],
+        "negative_impact_factors": [
+            "Life Cycle Stage is decline",
+            "Revenue Volatility Level is high",
+            "Industry Assistance Level is low and steady"
+        ],
+        "mixed_impact_factors": [
+            "Capital Intensity Level is medium",
+            "Barriers To Entry Level is medium and steady",
+            "Globalization Level is medium and decreasing",
+            "Competition Level is medium and steady"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Medium Imports"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "Decline Life Cycle Stage",
+            "High Volatility",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2020-2025)",
+            "High Performance Drivers",
+            "Trade-weighted index"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2020)",
+            "Low Revenue Growth (2015-2020)",
+            "Low Outlier Growth",
+            "New car sales"
+        ]
+    },
+    "key_trends": [
+        "The price of plastic materials has declined over much of the past five years",
+        "Recent trade policies have resulted in declining levels of imports and exports",
+        "Domestic manufacturers have struggled to maintain strong profit during the period",
+        "As the economy begins to recover, new car sales are expected to quickly bounce back"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Automakers",
+            "segment_description": "Operators in the Engine Radiator Manufacturers industry primarily sell parts directly to automakers. Typically, these parts are custom designed on a contract basis. While some automakers manufacture their own radiators and other engine parts, industry companies often operate as original equipment manufacturers (OEMs) and produce parts on a contract basis. In 2020, automakers are expected to account for 62.6% of industry revenue.",
+            "segment_percentage": 62.6
+        },
+        {
+            "segment": "Exports",
+            "segment_description": "Typically, exports account for a moderate share of industry revenue. Industry companies primarily sell to automakers in Mexico and Canada because the United States-Mexico-Canada Agreement (USMCA) keeps trade barriers relatively low for North American companies. However, over the five years to 2020, exports have declined as a share of revenue.",
+            "segment_percentage": 15.9
+        },
+        {
+            "segment": "Auto parts retailers",
+            "segment_description": "While most engine radiators are sold directly to automakers, a significant portion are sold to auto parts retailers and consumers.",
+            "segment_percentage": 12.8
+        },
+        {
+            "segment": "Aftermarket supplies and engine rebuilds",
+            "segment_description": "While most engine radiators are sold directly to automakers, a significant portion are sold to auto parts retailers and consumers.",
+            "segment_percentage": 8.7
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Aluminum Down-Flow Radiators",
+            "product_description": "",
+            "product_percentage": 23.3
+        },
+        {
+            "product_or_service": "Aluminum Cross-Flow Radiators",
+            "product_description": "",
+            "product_percentage": 54.4
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Plastics Wholesaling in the US",
+            "Metal Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Plastic & Resin Manufacturing in the US",
+            "Aluminum Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Auto Parts Wholesaling in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "",
+            "determinant_description": "Demand for products produced in the Engine Radiator Manufacturing industry is largely determined by the same factors that determine demand for automobiles. While a small portion of engine radiator revenue comes from mechanics and engine rebuilds, most industry parts are sold for use in new vehicles. Typically, new vehicles sales move in tandem with the overall economy. When disposable income levels rise, so do new car sales. Meanwhile, rising interest rates or unemployment rates can significantly limit new car sales. Additionally, due to the industry's high level of globalization, trade policy can also effect industry demand."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Medium",
+        "import_trend": "Decreasing",
+        "export_level": "Medium",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "IMPORTS",
+                "trade_description": "medium and decreasing"
+            },
+            {
+                "trade_title": "EXPORTS",
+                "trade_description": "medium and decreasing"
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes Region",
+            "location_description": "The provided content contains a bar chart showing the percentage distribution of establishments and population across different regions in the Engine Radiator Manufacturing industry. The chart reveals that the Great Lakes region has the highest concentration of industry establishments at 30.1%, while accounting for only 14.4% of the population.",
+            "percentage_establishments": 30.1,
+            "percentage_population": 14.4
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [
+            {
+                "regulation_title": "Safety standards for engine parts",
+                "regulation_description": "Radiators must meet certain safety standards that apply to all parts of engines."
+            },
+            {
+                "regulation_title": "State car inspections support industry",
+                "regulation_description": "Additionally, the need for state car inspections supports the industry because damage to an engine radiator would prevent a vehicle from passing most inspections."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Niche nature of industry makes it difficult for new companies",
+                "barrier_description": "The niche nature of the industry can make it difficult for new companies to establish themselves since manufacturing a specialty product"
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: decline",
+            "Revenue Volatility Level: high",
+            "Industry Assistance Level: low - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Concentration Level: low",
+            "Regulation Level: light - steady",
+            "Technology Change Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Companies compete based on price, product quality and ability to produce customized parts",
+                "basis_description": "Companies in the Engine Radiator Manufacturing industry compete based on price, product quality and the ability to produce customized parts. Industry manufacturers typically sell to other automobile manufacturers that are trying to produce the best vehicles at the most efficient prices."
+            },
+            {
+                "basis_title": "Price plays an important role for auto makers when purchasing engine radiators",
+                "basis_description": "For this reason, price plays an important role for auto makers when purchasing engine radiators."
+            },
+            {
+                "basis_title": "Ability to adjust radiator designs and produce large orders is important",
+                "basis_description": "Additionally, industry manufacturers often work on a contract basis, in which they produce large numbers of custom radiators for an auto manufacturer. The ability to adjust radiator designs and produce fill large orders can be an important competitive factor for industry companies."
+            },
+            {
+                "basis_title": "Product quality is important for auto makers to produce higher quality vehicles",
+                "basis_description": "Meanwhile, the quality of industry products plays an important role in industry competition because while cost is important for automobile manufacturers, auto makers also benefit from producing higher quality vehicles."
+            },
+            {
+                "basis_title": "External competition from automakers producing their own radiators",
+                "basis_description": "Additionally, the industry experiences external competition from automakers that produce their own radiators, cutting out industry operators for the production of automobiles entirely."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "No company accounts for more than 5.0% of industry revenue in 2020",
+                "concentration_description": "As a result, no companies in this industry account for more than 5.0% of industry revenue in 2020."
+            },
+            {
+                "concentration_title": "Concentration expected to rise as number of companies declines",
+                "concentration_description": "However, over the five years to 2025, concentration is expected to rise as the number of companies continues to decline."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Griffin Thermal Products",
+                "company_percentage": 4.3
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 95.7
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 1.6
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 12.2
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 67.2
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 2.9
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0.1
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0.6
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0.8
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 14.6
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Profit affected by commodity prices",
+            "cost_factor_description": "Profit is largely affected by changes in commodity prices. While increases in input costs are often passed on to consumers, industry manufacturers must absorb some degree of the increased costs."
+        },
+        {
+            "cost_factor_title": "Profit affected by demand changes",
+            "cost_factor_description": "Unexpected declines in demand for automobiles can result in profit declines as manufacturers lose their market."
+        },
+        {
+            "cost_factor_title": "COVID-19 impact on profit",
+            "cost_factor_description": "In 2020, the COVID-19 (coronavirus) pandemic is expected to result in a significant decline in average profit as the economic downturn contributes to diminished demand for automobiles."
+        },
+        {
+            "cost_factor_title": "Labor costs for machinery operation",
+            "cost_factor_description": "While purchases are the most significant cost for the industry, workers are needed to operate machinery and monitor production for quality control."
+        },
+        {
+            "cost_factor_title": "Increased automation requires skilled labor",
+            "cost_factor_description": "Additionally, the industry has increased automation throughout its history; however, skilled employees have been needed to operate advancing equipment."
+        },
+        {
+            "cost_factor_title": "Purchase costs for materials",
+            "cost_factor_description": "The most significant purchase costs include the price of aluminum and plastic, as these are the primary materials used in engine radiators."
+        },
+        {
+            "cost_factor_title": "Purchase costs for premanufactured parts",
+            "cost_factor_description": "Additionally, some radiators use premanufactured parts including fans and pumps."
+        },
+        {
+            "cost_factor_title": "Depreciation for equipment updates",
+            "cost_factor_description": "Engine radiators are crucial parts of automobile engines that need to be made precisely and cautiously. For this reason, equipment must be frequently updated and repaired."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Automation reduces labor costs",
+                "capital_intensity_description": "Labor accounts for a relatively small share of industry revenue because, similar to many auto parts manufacturing industries, the industry engages in automation."
+            },
+            {
+                "capital_intensity_title": "Commodity prices determine costs",
+                "capital_intensity_description": "Additionally, a significant portion of the industry's costs are determined by commodity prices and purchase costs."
+            },
+            {
+                "capital_intensity_title": "Equipment maintenance costs",
+                "capital_intensity_description": "To maintain quality standards, engine radiator manufacturers must frequently repair and replace equipment."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Commodity price changes",
+                "volatility_description": "Industry revenue is largely determined by commodity prices and automobile production output. Most engine radiators are made using aluminum and plastic, so if the price of either of these materials increases, revenue is likely to grow as price increases are passed on to consumers."
+            },
+            {
+                "volatility_title": "COVID-19 impact on revenue",
+                "volatility_description": "Additionally, in 2020, the COVID-19 (coronavirus) pandemic has resulted in significant declines in manufacturing output and new car sales."
+            }
+        ],
+        "volatility_trend": "Increasing"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Advances in smart technology and cooling systems",
+                "technological_change_description": "Advances in smart technology and cooling systems could disrupt the Engine Radiator Manufacturing industry. While no advances have recently disrupted the industry, companies have made efforts to produce more efficient and less costly radiators."
+            },
+            {
+                "technological_change_title": "Coolant technology advances",
+                "technological_change_description": "Additionally, coolant technology has advanced over time, and a significant change in coolants could require radiator manufacturers to make design changes."
+            },
+            {
+                "technological_change_title": "Low rate of new patents",
+                "technological_change_description": "The industry is experiencing a low level of both the rate of new patents and the concentration of patents in the industry."
+            },
+            {
+                "technological_change_title": "Barriers to entry limit disruption",
+                "technological_change_description": "There are both significant barriers to entry and a low rate of new entrants in this industry. This combination of factors dampens the threat of innovative players disrupting the industry structure."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company impacted by rising imports from abroad?",
+            "answer": "Import competition has been limited by restrictive trade policies."
+        },
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "Industry revenue is largely determined by the number of new cars sold."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "Plastic and aluminum are the two biggest inputs for engine radiators."
+        },
+        {
+            "question": "Has your company located in proximity to its key downstream distributors to reduce shipping costs?",
+            "answer": "Companies can benefit from operating close to major automakers."
+        },
+        {
+            "question": "How is your company leveraging new technology in its operations?",
+            "answer": "Companies can invest in R&D to find ways to increase efficiency."
+        },
+        {
+            "question": "Have you been able to reduce wage costs by automating operations over the past five years?",
+            "answer": "Labor costs have been on the decline over the past five years."
+        },
+        {
+            "question": "Have you had any regulatory expenses that have significantly impacted profitability recently?",
+            "answer": "Regulation has not affected the industry as much as other auto parts manufacturing industries."
+        },
+        {
+            "question": "How does your company ensure all health and safety requirements are met?",
+            "answer": "Companies must ensure that radiators can properly cool engines to avoid breakdowns."
+        },
+        {
+            "question": "How does your company's profit compare with your main competitors'?",
+            "answer": "Industry profit has declined over the past five years."
+        },
+        {
+            "question": "How frequently does your company purchase new equipment?",
+            "answer": "Radiator manufacturers need specialized equipment that needs to be frequently repaired and maintained."
+        },
+        {
+            "question": "Do you have locations close to key markets? Do you plan to move locations or open new ones that are in proximity to key markets?",
+            "answer": "While location is not crucial, it is helpful for industry companies to operate near downstream buyers."
+        },
+        {
+            "question": "Do you require any additional training for potential employees? What kind of training is required for your business?",
+            "answer": "Companies must have an expertise in engine radiators because they are a specialty part."
+        },
+        {
+            "question": "Are you able to quickly adjust to new environmental requirements? What past requirements were you able to adjust to quickly?",
+            "answer": "Automobile parts manufacturers are subject to significant environmental regulations."
+        },
+        {
+            "question": "Do you have many sales to automotive companies? How do you plan to mitigate the threat of declining car sales?",
+            "answer": "When the number of new cars sold increases, demand for industry products rises."
+        },
+        {
+            "question": "How does a rise in the trade-weighted index affect your company? How do you plan to mitigate the threat of an increase in the TWI?",
+            "answer": "When the dollar appreciates, US goods become relatively more expensive in other countries, thus driving down demand for exports."
+        },
+        {
+            "question": "How do changes in plastic prices affect your margins? Are you able to pass on cost increases to your buyers?",
+            "answer": "When material prices increase, industry companies are likely to pass increased costs on to customers, supporting revenue growth."
+        }
+    ]
+}

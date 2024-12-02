@@ -1,0 +1,560 @@
+{
+    "report_title": "Remanufacturing in the US",
+    "report_date": "Aug 17, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 7135000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": -0.67
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 0.48
+            }
+        },
+        "profit": {
+            "profit_dollars": 364000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 0.74
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5.1,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 1.42
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1270000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0.0
+            }
+        },
+        "employees": {
+            "employees_count": 13787,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 0.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0.0
+            }
+        },
+        "wages": {
+            "wages_dollars": 874000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0.0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 0.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 0.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0.0
+            }
+        }
+    },
+    "executive_summary": "Auto parts remanufacturers have endured volatile conditions through the current period. Demand for remanufactured parts runs countercyclical to the economy; buyers often trade up to new parts and replace vehicles when the economy improves. Despite this trend, remanufacturers struggled amid the pandemic. Although economic conditions plummeted, stay-at-home orders discouraged driving activity, limiting demand for replacement parts. Conversely, revenue surged as local, state and federal governments lifted lockdowns, contributing to torrid pent-up demand for driving and travel. This trend added to strong demand for remanufactured parts, especially amid lingering economic uncertainty. Regardless, companies have been unable to recover to pre-pandemic levels. Overall, revenue waned at an expected CAGR of 2.1% through the current period, including a 0.4% drop in 2024, where profit settled at 5.1%. Remanufacturers faced major supply chain uncertainty following the pandemic and the Russian invasion of Ukraine, contributing to volatile profit. Climbing metal and electronic component costs forced many remanufacturers to absorb higher costs, though leading remanufacturers were able to leverage strong reputations and supply chain connections to mitigate input volatility. Companies have also invested in new technology to reduce long-term costs, leading to elevated capital expenses. Many remanufacturers have also invested in automation, diagnostic systems and supply chain management systems to gain a competitive edge and salvage profit. Improving economic conditions will pressure auto parts remanufacturers through the outlook period. Improving consumer confidence, disposable income and corporate profit will encourage buyers to trade up to new parts or replace vehicles altogether. Upstream innovation will also alter the industry's outlook. New vehicles have longer lifespans, diminishing demand for repairs and remanufactured parts, even as the average vehicle age in the US climbs. Similarly, electric and hybrid vehicles have different components than internal combustion engine vehicles, forcing remanufacturers to adapt new technologies and manufacturing processes. However, some remanufacturers may lean on evolving and expanding demand for classic and vintage cars, supplying second-hand parts for hobbyists and collectors. Overall, revenue will rebound at an expected CAGR of 0.5% through the outlook period, where profit will reach 5.1%.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Pent-up Demand for Travel Has Supported Growth",
+            "current_performance_point_description": "Most households and individuals expressed robust demand for driving and travel as federal, state and local governments lifted lockdown restrictions following the pandemic. In particular, increasing total vehicle miles and motor vehicle registrations highlighted pent-up demand. Swelling driving activity, coupled with lingering economic uncertainty and climbing interest rates encouraged consumers to seek repairs and used vehicles rather than new cars, supporting demand for remanufactured parts."
+        },
+        {
+            "current_performance_point_title": "Recession Can Discourage Driving and Road Trips",
+            "current_performance_point_description": "Recession can discourage consumers from driving and taking road trips altogether, unilaterally slashing demand for repairs and parts. This trend can limit demand from most key markets, like repair shops and auto parts retailers. As a result, the pandemic and related lockdown restrictions eliminated a key source of demand for both new and used motor vehicle parts."
+        },
+        {
+            "current_performance_point_title": "Supply Chain Disruptions Have Created Volatility",
+            "current_performance_point_description": "The automotive manufacturing sector has faced severe supply chain uncertainty following the pandemic and the Russian invasion of Ukraine. In particular, skyrocketing metal and electronic component prices contributed to elevated purchasing costs and diminished returns. In general, used car parts grew more expensive, though leading remanufacturers were able to leverage strong connections with buyers and suppliers to reduce supply chain volatility and pass added costs onto buyers."
+        },
+        {
+            "current_performance_point_title": "Remanufacturers Face Intense Competition From Substitutes",
+            "current_performance_point_description": "Remanufactured auto parts have historically offered buyers a low-cost, high-quality alternative to new OEM and aftermarket motor vehicle parts, making them suitable alternatives for cost-sensitive buyers. However, low-cost imports, particularly from China and Mexico, have threatened the industry's niche. These imports have largely been able to challenge used and remanufactured products, offering competitive prices and comparable quality."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Strong Economic Conditions Will Limit Revenue Growth",
+            "future_outlook_point_description": "Since demand for remanufactured parts is largely countercyclical, rebounding economic conditions, highlighted by robust consumer confidence, disposable income and corporate profit growth, will encourage buyers to trade up to new parts and vehicles, diminishing demand for remanufacturers. Even so, continued growth in motor vehicle registrations and total vehicle miles will support long-term demand for remanufactured parts and repairs."
+        },
+        {
+            "future_outlook_point_title": "Vehicle Innovations Will Shift Demand",
+            "future_outlook_point_description": "Electric, hybrid and semi-autonomous vehicles represent major disruptors to motor vehicle supply chains, leading to rapid innovation among parts manufacturers. Companies have introduced a wide range of electronics, brakes, transmissions and other systems to support EVs. Changing consumer preferences will force remanufacturers to adapt and prioritize EV parts, particularly components for electric drivetrains."
+        },
+        {
+            "future_outlook_point_title": "Remanufacturers Will Integrate New Technology To Cut Costs",
+            "future_outlook_point_description": "Remanufacturers will continue to update internal technologies to streamline production, cut costs and make purchasing or ordering parts easier for buyers. For example, many companies will automate to reduce labor expenses and streamline production. Similarly, many companies will use various diagnostic tools to assess parts and improve quality control."
+        },
+        {
+            "future_outlook_point_title": "Interest In Classic Cars Will Support Demand For Remanufactured Parts",
+            "future_outlook_point_description": "Classic, vintage and antique cars generate a major source of demand for remanufactured car parts. Part manufacturers often stop making components for outdated models, forcing consumers to rely on used parts wholesalers and remanufacturers instead. Classic car markets have displayed strong growth and underlying population trends suggest ample opportunities through the outlook period."
+        }
+    ],
+    "industry_definition": "Auto parts remanufacturing includes companies that rebuild, reassemble and refurbish motor vehicle parts. Remanufacturers acquire disassembled, used components and combine several pieces to reassemble or remanufacture parts. Companies can operate as stand-alone enterprises or as part of a larger retailer, services garage or original equipment manufacturer.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Concentration Level low",
+            "Globalization Level low - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage mature"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level low - increasing"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low & Increasing Level of Assistance",
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "Low Profit vs. Sector Average",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "Average age of vehicle fleet"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Per capita disposable income"
+        ]
+    },
+    "key_trends": [
+        "Providing consistent quality can help remanufacturers improve their reputation. The variability of remanufactured parts raises consumer concerns, making consistent quality critical to success.",
+        "Auto parts remanufacturers face a wide range of substitutes. New parts from domestic and foreign manufacturers provide direct competition. Low-cost imports have especially threatened the industry's low-cost niche."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Repair shops",
+            "segment_description": "Auto parts remanufacturers primarily sell to repair shops. Many larger repair shops and franchises have direct purchasing contracts with remanufacturers to cut costs and gain access to rare and discontinued parts.",
+            "segment_percentage": 45.5
+        },
+        {
+            "segment": "Wholesalers and retailers",
+            "segment_description": "Used car parts wholesalers often purchase parts from remanufacturers. Many larger retailers also have contracts with remanufacturers to reduce costs.",
+            "segment_percentage": 25.9
+        },
+        {
+            "segment": "Households",
+            "segment_description": "An increasing interest in do-it-yourself (DIY) activity has raised demand from households, especially given the accessibility of comprehensive YouTube car repair tutorials.",
+            "segment_percentage": 9.6
+        },
+        {
+            "segment": "Other",
+            "segment_description": "This segment includes various corporate buyers, like farming markets, manufacturers and other businesses for end use, that operate in-house motor vehicle repair shops.",
+            "segment_percentage": 20.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Remanufactured Electrical System Parts",
+            "product_description": "Lighting and wiring systems, information and safety systems, cranking motors and spark plugs, alternators, harnesses, generators, regulators and other cable sets.",
+            "product_percentage": 16.3
+        },
+        {
+            "product_or_service": "Remanufactured Brake and Clutch System Parts",
+            "product_percentage": 5.9
+        },
+        {
+            "product_or_service": "Remanufactured Transmissions and Associated Parts",
+            "product_percentage": 25.4
+        },
+        {
+            "product_or_service": "Other Remanufactured Parts",
+            "product_description": "A wide range of other motor vehicle parts and accessories, like HVAC systems, filters, exhaust and airbags.",
+            "product_percentage": 42.9
+        },
+        {
+            "product_or_service": "Remanufactured Steering and Suspension Parts",
+            "product_description": "Steering wheels, columns, gearboxes, shock absorbers, tie rod ends, idler arms, control arms and other suspension products.",
+            "product_percentage": 9.5
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Inorganic Chemical Manufacturing in the US",
+            "Auto Parts Stores in the US",
+            "Iron & Steel Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Screw, Nut & Bolt Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Car & Automobile Manufacturing in the US",
+            "SUV & Light Truck Manufacturing in the US",
+            "Truck & Bus Manufacturing in the US"
+        ],
+        "tier_2_buyers": [
+            "Auto Parts Wholesaling in the US",
+            "Auto Parts Stores in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Per Capita Disposable Income",
+            "determinant_description": "Per capita disposable income determines an individual's ability to purchase goods or services, including car parts."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "Most auto parts remanufacturers operate in the Great Lakes region, the historic home of US auto production. This region has a large portion key buyers, like repair shops.",
+            "percentage_establishments": 38.0,
+            "percentage_population": 27.0
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region has the second-highest concentration of auto parts remanufacturers.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 21.0
+        },
+        {
+            "location": "West",
+            "location_description": "The West, especially California, has a robust automotive market driven by a vast population and high vehicle ownership rates.",
+            "percentage_establishments": 14.0,
+            "percentage_population": 23.0
+        },
+        {
+            "location": "Southwest",
+            "percentage_establishments": 9.0,
+            "percentage_population": 11.0
+        },
+        {
+            "location": "Plains",
+            "percentage_establishments": 8.0,
+            "percentage_population": 7.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "percentage_establishments": 7.0,
+            "percentage_population": 13.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "percentage_establishments": 5.0,
+            "percentage_population": 4.0
+        },
+        {
+            "location": "New England",
+            "percentage_establishments": 4.0,
+            "percentage_population": 5.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "Federal Trade Commission Regulations",
+                "regulation_description": "Remanufacturers are subject to the Federal Trade Commission's Guides for the Rebuilt, Reconditioned and Other Used Automobile Parts."
+            },
+            {
+                "regulation_title": "Functional Safety Requirements",
+                "regulation_description": "Remanufacturers may need to adhere to a series of function safety and Automotive Safety Integrity Levels (ASIL)."
+            },
+            {
+                "regulation_title": "Safety Standards",
+                "regulation_description": "The National Highway Traffic Safety Administration (NHTSA) sets and enforces safety standards for vehicles and components, including steering and suspension systems."
+            },
+            {
+                "regulation_title": "CAFE Standards",
+                "regulation_description": "CAFE encourages increased fuel economy for cars and light trucks to reduce energy consumption."
+            },
+            {
+                "regulation_title": "EPA Standards",
+                "regulation_description": "National Ambient Air Quality Standards (NAAQS) are set by the Environmental Protection Agency (EPA) and specify the maximum amount of particulate matter in the air."
+            },
+            {
+                "regulation_title": "WORKER SAFETY STANDARDS",
+                "regulation_description": "The Occupational Safety and Health Administration (OSHA) sets and enforces workplace safety standards."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "Life Cycle Stage: mature"
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "Industry Assistance Level: low - increasing"
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature"
+        ],
+        "factors_decreased_barrier": [
+            "Concentration Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Providing consistent quality",
+                "basis_description": "Providing consistent quality can help remanufacturers improve their reputation."
+            },
+            {
+                "basis_title": "Wide range of substitutes",
+                "basis_description": "Auto parts remanufacturers face a wide range of substitutes."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Large remanufacturers dominant",
+                "concentration_description": "Large remanufacturers like BorgWarner and Denso hold dominant positions in the auto parts remanufacturing industry."
+            },
+            {
+                "concentration_title": "Most remanufacturers serve ancillary roles",
+                "concentration_description": "The majority of auto parts remanufacturers rely on relationships with local auto repair shops to generate steady revenue."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Borgwarner Inc.",
+                "company_percentage": 20
+            },
+            {
+                "company_name": "Denso Corp.",
+                "company_percentage": 4.4
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 75.6
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Remanufacturers Primarily Purchase Used Parts",
+            "cost_factor_description": "Remanufacturers primarily purchase used parts from wholesalers, repair shops, junkyards and other suppliers."
+        },
+        {
+            "cost_factor_title": "Volatile supply chains following the pandemic and the Russian invasion of Ukraine",
+            "cost_factor_description": "Volatile supply chains following the pandemic and the Russian invasion of Ukraine rippled through automotive markets."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Capital Expenses",
+                "capital_intensity_description": "The production of remanufactured automobile parts requires significant capital investment."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Remanufacturers Display Countercyclical Growth",
+                "volatility_description": "Buyers more commonly purchase less expensive remanufactured parts rather than new motor vehicle parts when economic conditions sour."
+            },
+            {
+                "volatility_title": "Economic Downturns and Recessions",
+                "volatility_description": "However, economic downturns and recessions can lead to diminished driving and travel activity."
+            },
+            {
+                "volatility_title": "Supply Chain Disruptions Can Threaten Stability",
+                "volatility_description": "While manufacturers primarily purchase used parts from various aftermarkets, companies often require metals."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Upstream Innovation Will Dictate Products",
+                "technological_change_description": "Innovation in auto parts remanufacturing reflects changes in various new parts manufacturing industries."
+            },
+            {
+                "technological_change_title": "New Tools Will Improve Diagnostic Capabilities",
+                "technological_change_description": "Innovations in diagnostic tools allow for more accurate testing of used parts."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "Sales are commonly counter-cyclical to the US economy as remanufactured parts are less expensive than new auto parts."
+        },
+        {
+            "question": "Does your company specialize in one corner of the market or produce a diversified range of products?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "Have you looked into setting up manufacturing facilities in lower wage regions of the country?",
+            "answer": "Companies have outsourced manufacturing to countries with less expensive labor and fewer regulations."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "Volatile prices pose a major threat to remanufacturers."
+        },
+        {
+            "question": "Have you been able to reduce wage costs by automating operations over the past five years?",
+            "answer": "Companies often require skilled labor, making automation difficult."
+        },
+        {
+            "question": "How does your company invest in technology, such as 3D printing, to establish a competitive edge over your competitors?",
+            "answer": "Companies must invest in newer re-manufacturing processes for newer, more complex equipment to stay competitive."
+        },
+        {
+            "question": "What effect have international tariffs had on your ability to import and export products?",
+            "answer": "Remanufactured auto parts are subject to the newly enacted sets of tariffs on Chinese imports."
+        },
+        {
+            "question": "Have you had any regulatory expenses that have significantly impacted profitability recently?",
+            "answer": "The largest regulatory expenses come from EPA standards on recovered materials."
+        },
+        {
+            "question": "How has input price volatility impacted profit?",
+            "answer": "Sharp price increases contribute to higher purchasing costs and limited profit."
+        },
+        {
+            "question": "How does your company's profit margins compare to your main competitors?",
+            "answer": "Smaller companies struggle to generate comparable profit."
+        },
+        {
+            "question": "How do you maximize capacity utilization? Do you experience volatile levels of demand? If so, how does that affect revenue?",
+            "answer": "Remanufacturers must closely monitor investments into capital equipment."
+        },
+        {
+            "question": "How does your company attract local support? How can your company receive better recommendations?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "What is the range of products your company offers?",
+            "answer": "Successful companies can offer a range of remanufacturing services for a variety of remanufactured auto parts."
+        },
+        {
+            "question": "What support services do you offer users of your products?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "How closely do you monitor trends in per capita disposable income? Do you offer products for consumers with a wide range of disposable income?",
+            "answer": "Per capita disposable income determines an individual's ability to purchase goods or services."
+        },
+        {
+            "question": "How do fluctuating oil prices affect your company? Is there greater demand for your products when oil prices decrease? How can you capitalize on this?",
+            "answer": "When gas prices are high, consumers tend to seek newer cars."
+        },
+        {
+            "question": "How does the average age of the vehicle fleet affect your company? If the average age is high, does it lead to higher demand for company services?",
+            "answer": "As vehicles depreciate over time, buyers must update and replace components."
+        }
+    ]
+}

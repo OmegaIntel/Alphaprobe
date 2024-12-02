@@ -1,0 +1,498 @@
+{
+    "report_title": "Car Rental in the US",
+    "report_date": "Unknown",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 58475000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "revenue_cagr_value": 1.91
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.61
+            }
+        },
+        "profit": {
+            "profit_dollars": 101,
+            "profit_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "profit_cagr_value": 101
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "profit_cagr_value": 101
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 1.01e-06,
+            "profit_margins_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "profit_margins_cagr_value": 101
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 101
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 25086000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 127534,
+            "employees_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 4617000000,
+            "wages_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 101,
+            "imports_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "imports_cagr_value": 101
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "imports_cagr_value": 101
+            }
+        },
+        "exports": {
+            "exports_dollars": 101,
+            "exports_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "exports_cagr_value": 101
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "exports_cagr_value": 101
+            }
+        }
+    },
+    "executive_summary": "The car rental services industry fluctuated during the period. Stay-at-home orders during the pandemic prevented traveling, decimating the market. As vaccinations spread, restrictions lifted, leading to an influx of leisure and business travel. While operators recovered, inflationary concerns constrained additional growth. Revenue grew at a 1.8% CAGR to $57.65 billion over the past five years, including 4.5% in 2023. Average profit increased from 2020 lows. New car prices made renting cost-effective. Car sharing became popular. Public transportation, ride-sharing, and taxis remain substitutes but car rental is less expensive and more efficient. Strategic partnerships will help expand customer base and personalize services. Adopting technology to streamline rental process is critical. Revenue will grow at a 1.6% CAGR to $83.1 billion by 2028.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The pandemic sends shockwaves to travelers",
+            "current_performance_point_description": "Stay-at-home orders and plummeting usage decimated car rental services during the pandemic. Airline travel stopped, decimating airport and leisure rentals. Business rentals fell as companies switched to remote work. Many rental companies sold off fleets to stay afloat. Major player Hertz filed for bankruptcy."
+        },
+        {
+            "current_performance_point_title": "Vaccinations and pent-up plans lead to a resurgence",
+            "current_performance_point_description": "Rapid vaccination rollout established domestic and international travel, benefiting car rental services. Consumers traveled to make up for lost time, causing an influx of leisure rentals. More employees traveled for meetings, using car rentals. However, many held off traveling due to inflation concerns."
+        },
+        {
+            "current_performance_point_title": "Car rental is more cost-effective",
+            "current_performance_point_description": "Rising vehicle prices made car rentals more attractive as short-term rentals equate to less responsibility and costs like maintenance and insurance for customers. Car sharing also grew as an alternative in urban areas where owning a car is a luxury."
+        },
+        {
+            "current_performance_point_title": "Electric vehicles are the next big thing",
+            "current_performance_point_description": "Car rental companies are expanding EV fleets as they grow in popularity for being environmentally friendly. Major players like Hertz, Avis and Enterprise are increasing EV numbers. Biden's push and tax incentives urge consumers towards EVs. Rentals can help transition from classic to electric cars."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "External competition remains a challenge",
+            "future_outlook_point_description": "Ride-sharing services and taxis continue pressuring car rentals as many prefer being driven and their convenience. However, for multiple trips over longer periods, car rental is more cost-effective. Public transit in cities is cheaper but less reliable."
+        },
+        {
+            "future_outlook_point_title": "Tourism is set to continue growing",
+            "future_outlook_point_description": "As pandemic effects subside and air travel reaches pre-pandemic levels, tourism will continue growing. Easier access via mobile apps and discounts bundling hotels/flights will help retain customers preferring convenience over multi-step rental processes."
+        },
+        {
+            "future_outlook_point_title": "Continuing strategic partnerships will be key",
+            "future_outlook_point_description": "Consolidation will slow as domestic services expand overseas. Partnerships with hotels, tourist spots and travel sites will provide personalized service and one-stop shops. Food delivery services may offer driver rental discounts."
+        },
+        {
+            "future_outlook_point_title": "Diversifying fleets can attract customer groups",
+            "future_outlook_point_description": "Having versatile fleets will help adapt to trends. Luxury cars provide stable revenue from business/events. EVs will grow with government incentives and manufacturing deals. Rentals can test EVs for unsure consumers."
+        }
+    ],
+    "industry_definition": "Operators rent or lease passenger cars to customers. Car rentals typically last a short time (30 days or fewer) while leasing agreements last longer (12 months or more). This industry excludes the rental or leasing of cars with drivers or trucks.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low concentration level",
+            "low - increasing globalization level"
+        ],
+        "negative_impact_factors": [
+            "high revenue volatility level",
+            "high capital intensity level",
+            "low - increasing industry assistance level",
+            "high - increasing competition level"
+        ],
+        "mixed_impact_factors": [
+            "mature life cycle stage"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low & Increasing Level of Assistance",
+            "Low Imports",
+            "High Revenue per Employee"
+        ],
+        "weaknesses": [
+            "High Competition",
+            "High Volatility",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers",
+            "Domestic trips by US residents"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Corporate profit"
+        ]
+    },
+    "key_trends": [
+        "The rise in popularity of ride-share apps has directly threatened car rental services. Ride-sharing makes accessing a ride simple with a mobile device.",
+        "Car rental companies have begun renting electric vehicles to differentiate themselves from competitors. Electric vehicles are an option for consumers who want to ride while being sustainable.",
+        "Car rentals have skyrocketed as travel picked back up following mass vaccination efforts. Consumers are taking trips that they held off because of the pandemic.",
+        "Car rental companies have continued to electrify their vehicle fleets. This shift is driven by the increasing popularity of electric vehicles in response to mounting environmental concerns.",
+        "Hertz's partnership with Tesla to increase the number of electric vehicles in their fleet has sent shockwaves throughout the industry.",
+        "Enterprise is working with Microsoft to bring connected car technology to Enterprise's car rental fleets.",
+        "Lower tariffs on imported vehicles have led to lower purchasing costs. Trade relationships with Mexico and Canada provide companies with easier access to cars.",
+        "Specific states have implemented regulations to remove the use of loss damage waivers. Customers can disclose the time of the damage to have their insurance cover the damages."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Airport customers",
+            "segment_description": "Customers traveling to and from airports account for more than half of Car Rental's revenue. Travel restrictions being lifted following COVID-19 led to a surge of domestic and international travelers. Most consumers and businesses find it more cost-effective to rent a car when traveling long distances. Many airlines partner with certain rental companies, giving consumers additional savings when booking.",
+            "segment_percentage": 51.0
+        },
+        {
+            "segment": "Off-airport customers",
+            "segment_description": "Off-airport customers rent cars outside of the airport. Vehicles are picked up from a branch or designated location, making it easy for customers to get their cars and go. Many customers who live in a specific region but do not have access to a vehicle will rent directly from a car rental place.",
+            "segment_percentage": 22.9
+        },
+        {
+            "segment": "Car leasing",
+            "segment_description": "Car leasing allows consumers to enter a longer-term lease to rent a vehicle. This option is more popular and cost-effective for customers who need a vehicle for an extended period. Car leasing is used significantly among business travelers who temporarily relocate to certain cities. In these instances, renting is more efficient than calling ride-shares or taxis.",
+            "segment_percentage": 23.9
+        },
+        {
+            "segment": "Car sharing",
+            "segment_description": "Car-sharing clients rent vehicles from another owner directly through a rental car company. The owners are responsible for repairs and maintenance, but customers can choose an insurance plan when renting. Car-sharing has grown in popularity and locations can be accessed at airports or city centers. It is also popular among college students since it is more cost-effective than using their own vehicle.",
+            "segment_percentage": 2.2
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Leisure Car Rental",
+            "product_description": "Leisure rentals represent customers who rent a car for personal use and account for almost half of car rental revenue. Tourists and travelers alike use this service to save money. Increasing travel activity following the pandemic has spiked leisure car rentals. While companies face external competition from ride-sharing services, most travelers who stay for an extended period of time prefer renting a car.",
+            "product_percentage": 46.0
+        },
+        {
+            "product_or_service": "Business Car Rental",
+            "product_description": "Business car rentals provide exclusive services for both small and large businesses. Many car renters customize rentals and accommodations based on their client's needs. Remote working has led to a modest decline in business customers. Even so, many companies are urging employees to return to the office, pushing up the need for business rentals.",
+            "product_percentage": 21.6
+        },
+        {
+            "product_or_service": "Car Leasing",
+            "product_description": "Car leasing requires an upfront fee and a fixed monthly payment to use a car for 12 months or more. Car rental services do not participate in leasing cars to purchase or lease to own. Leasing has slowly lost its popularity as rentals become increasingly popular.",
+            "product_percentage": 24.4
+        },
+        {
+            "product_or_service": "Car Sharing",
+            "product_description": "Car-sharing services are another service offered. While not as popular, it has been growing through the years as it is popular among university students who live on or near a campus building.",
+            "product_percentage": 2.2
+        },
+        {
+            "product_or_service": "Other Sales and Services",
+            "product_description": "Car rental services generate a small amount of revenue through other means. The sale of gas, GPS rentals, loss or collision damage waivers and liability insurance are included.",
+            "product_percentage": 5.8
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Automobile Wholesaling in the US",
+            "Car Body Shops in the US",
+            "Auto Mechanics in the US"
+        ],
+        "tier_2_suppliers": [
+            "Car & Automobile Manufacturing in the US",
+            "SUV & Light Truck Manufacturing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Domestic Trips by US Residents",
+            "determinant_description": "An increase in domestic trips by US residents, whether for business or leisure, leads to more car rental usage which represents a potential opportunity for the industry. Domestic trips have continued to grow at a steady growth over the period every year except 2020 as health and safety regulations halted travel."
+        }
+    ],
+    "international_trade": {
+        "import_level": "low",
+        "import_trend": "steady",
+        "export_level": "low",
+        "export_trend": "steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The majority of car rental companies operate in the Southeast. Popular tourist spots like Orlando and Miami attract customers who want to save money by not relying on car-share services.",
+            "percentage_establishments": 27.8,
+            "percentage_population": 21.8
+        },
+        {
+            "location": "West",
+            "location_description": "Being close to the Los Angeles International Airport helps generate revenue from tourists and business workers. California is a popular destination that has US and foreign residents going in and out of the state every day.",
+            "percentage_establishments": 18.9,
+            "percentage_population": 23.5
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "Newark International Airport, LaGuardia Airport and John F. Kennedy International Airport are three of the most popular airports located near New York City, one of the most prominent tourist destinations in the country.",
+            "percentage_establishments": 15.6,
+            "percentage_population": 15.2
+        },
+        {
+            "location": "Southwest",
+            "location_description": "Information Not Available",
+            "percentage_establishments": 11.1,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "Information Not Available",
+            "percentage_establishments": 10.0,
+            "percentage_population": 14.9
+        },
+        {
+            "location": "Plains",
+            "location_description": "Information Not Available",
+            "percentage_establishments": 8.9,
+            "percentage_population": 6.8
+        },
+        {
+            "location": "New England",
+            "location_description": "Information Not Available",
+            "percentage_establishments": 4.4,
+            "percentage_population": 4.5
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "Information Not Available",
+            "percentage_establishments": 3.3,
+            "percentage_population": 1.8
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "Disabilities",
+                "regulation_description": "Car rental companies offer special accommodations for disabled customers."
+            },
+            {
+                "regulation_title": "Customer Privacy",
+                "regulation_description": "Companies are limited in using data they collect from customers to ensure data privacy and protection."
+            },
+            {
+                "regulation_title": "Loss Damage Waivers",
+                "regulation_description": "Car rental companies generate revenue through loss damage waivers, which relieve customers from financial responsibility if the vehicle is damaged anytime during the rental period."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The car rental industry is mature."
+            },
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "The revenue volatility level is high."
+            },
+            {
+                "barrier_title": "Capital Intensity Level",
+                "barrier_description": "The capital intensity level is high."
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "The industry assistance level is low but increasing."
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "The competition level is high and increasing."
+            }
+        ],
+        "factors_decreased_barrier": [
+            "The concentration level is low.",
+            "The globalization level is low but increasing."
+        ],
+        "factors_increased_barrier": []
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Rise in popularity of ride-share apps",
+                "basis_description": "The rise in popularity of ride-share apps has directly threatened car rental services."
+            },
+            {
+                "basis_title": "Renting electric vehicles",
+                "basis_description": "Car rental companies have begun renting electric vehicles to differentiate themselves from competitors."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Consolidation is prevalent",
+                "concentration_description": "Larger car rental companies have expanded their domestic footprint through acquisitions."
+            },
+            {
+                "concentration_title": "Larger companies have an advantage",
+                "concentration_description": "Larger, established companies have access to substantial marketing budgets and enormous fleet sizes."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Enterprise Holdings Inc.",
+                "company_percentage": 17.2
+            },
+            {
+                "company_name": "Avis Budget Group, Inc.",
+                "company_percentage": 11.4
+            },
+            {
+                "company_name": "Hertz Global Holdings, inc.",
+                "company_percentage": 10.3
+            },
+            {
+                "company_name": "Wheels, Inc.",
+                "company_percentage": 0.2
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 1
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 25.1
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "A Multitude of Different Skillsets is Necessary",
+            "cost_factor_description": "Wages are the second-largest expense for car renters."
+        },
+        {
+            "cost_factor_title": "Significant Capital Investments are Necessary",
+            "cost_factor_description": "Depreciation accounts for over a quarter of revenue, making it the largest expense for car rental companies."
+        },
+        {
+            "cost_factor_title": "Labor Expenses",
+            "cost_factor_description": "Labor is necessary to help maintain, oversee and repair fleets and rental services."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_trend": "Unknown",
+        "volatility_points": [
+            {
+                "volatility_title": "The pandemic affected consumers from multiple angles",
+                "volatility_description": "COVID-19 stay-at-home orders prevented traveling."
+            },
+            {
+                "volatility_title": "Post-Covid-19 Leads to a Resurgence",
+                "volatility_description": "After mass vaccination efforts, both domestic and international travel skyrocketed."
+            }
+        ]
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_trend": "Unknown",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Strategic partnerships offer unique benefits",
+                "technological_change_description": "Partnerships with established companies in different industries allow for a more diverse customer base."
+            },
+            {
+                "technological_change_title": "Technological upgrades streamline the rental process",
+                "technological_change_description": "Improving websites and mobile apps enhances customer experience."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "Does your company lease primarily to consumers or businesses?",
+            "answer": "Car rental agencies rent and lease cars to both consumers and businesses."
+        },
+        {
+            "question": "What, if any, portions of your business experience increased demand during periods of slow economic growth?",
+            "answer": "The industry's success is largely dependent on the health of the US economy."
+        },
+        {
+            "question": "Has your company explored acquisition opportunities in locations with well-established, dynamic commercial markets?",
+            "answer": "Car rental agencies primarily locate in areas with large population concentrations."
+        },
+        {
+            "question": "Industry operators can benefit substantially through successful branding. How much does your company spend on advertising annually? Do you know how this compares to your competitors?",
+            "answer": "While many of the industry's smaller companies spend relatively little on advertising."
+        },
+        {
+            "question": "Industry operators have been pushing their online presence by letting customers book vehicles via their websites and mobile applications. How has your company leveraged online platforms to reduce reliance on in-house personnel?",
+            "answer": "Operators have sought to add value in an increasingly competitive market."
+        }
+    ]
+}

@@ -1,0 +1,501 @@
+{
+    "report_title": "Ethanol Fuel Production in the US",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 33584000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 6.6
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "revenue_cagr_value": -0.78
+            }
+        },
+        "profit": {
+            "profit_dollars": 2351000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 2.78
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2024,
+                "profit_cagr_value": 0.24
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 7.0,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": -3.58
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 4.29
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 4221000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 3.88
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": -0.52
+            }
+        },
+        "employees": {
+            "employees_count": 9195,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 6.86
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "employees_cagr_value": -1.37
+            }
+        },
+        "wages": {
+            "wages_dollars": 622000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 6.19
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "wages_cagr_value": -1.01
+            }
+        },
+        "imports": {
+            "imports_dollars": 255000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": -2.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "imports_cagr_value": -1.39
+            }
+        },
+        "exports": {
+            "exports_dollars": 2821000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 19.26
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "exports_cagr_value": -0.23
+            }
+        }
+    },
+    "executive_summary": "The Ethanol Fuel Production industry consists of companies that concentrate on producing nonpotable ethanol, or ethyl alcohol, for use as motor fuel. Products are primarily used as a biofuel additive for gasoline. According to the United States Department of Energy, more than 98.0% of gas in the United States contains some ethanol. Ethanol fuel is a domestically produced alternative to traditional fuel, generally made from corn. The dry-milling process, which composes most ethanol plants in the US, involves converting corn to flour and fermenting it to form ethanol. This makes operations highly sensitive to commodity prices, such as the world price of crude oil and corn.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Market Growth Driven by Increased Demand and Investment",
+            "current_performance_point_description": "The ethanol fuel production industry has seen consistent growth driven largely by increased demand for alternative energy sources. Many governments have implemented policies and regulations favoring biofuels to reduce greenhouse gas emissions. This regulatory support has encouraged investors to pour more resources into ethanol production. With the growing emphasis on sustainability, consumers are also becoming more inclined towards ethanol. Expanding infrastructure and technological advancements have bolstered production capabilities."
+        },
+        {
+            "current_performance_point_title": "Commodity Prices Affect Industry Performance",
+            "current_performance_point_description": "Because of the importance of ethanol fuel to the market for gasoline, industry revenue is highly dependent on the world price of crude oil. Similarly, over 90.0% of ethanol produced in the US is produced using starch from corn grain, which makes the industry highly sensitive to the price of corn. When commodity prices are higher, the price of ethanol increases, which expands industry revenue."
+        },
+        {
+            "current_performance_point_title": "The United States Increases Its Ethanol Production Capacity To Become A Global Leader",
+            "current_performance_point_description": "According to the Energy Information Administration (EIA), the United States produces more than half the world's ethanol. Because of this, exports have become substantially more important for industry revenue. Exports have grown strongly over the past five years, both in value and as a revenue share."
+        },
+        {
+            "current_performance_point_title": "Upstream Corn Farmers Benefit From Government Policies",
+            "current_performance_point_description": "The current iteration of the Farm Bill was passed in 2018 and brought price floors and annual revenue minimums for upstream corn farmers. The Farm Bill is renewed every five years and in November 2023, congress extended the act for another year."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "The Ethanol Fuel Production Industry Will Slightly Contract Over The Next Five Years",
+            "future_outlook_point_description": "This contraction can be attributed to overall declines in commodity prices over the outlook period. Much of the current growth was because of rapidly rising commodity prices, especially in 2021. Despite profit rising over the outlook period, price competition among producers and falling input prices will mitigate this growth."
+        },
+        {
+            "future_outlook_point_title": "Commodity Prices Dictate Revenue",
+            "future_outlook_point_description": "The industry will remain highly commoditized over the next five years. Dry mills are significantly more cost-effective because of their lower capital cost requirements, so they will remain much more popular as a means of ethanol fuel production."
+        },
+        {
+            "future_outlook_point_title": "Trade Conditions Will Remain Healthy",
+            "future_outlook_point_description": "The United States will continue to dominate global ethanol fuel production. However, much like revenue, the value of ethanol fuel exports is set to remain relatively steady over the outlook period because of falling commodity prices. Still, it will expand as a share of revenue."
+        },
+        {
+            "future_outlook_point_title": "Industry Profitability",
+            "future_outlook_point_description": "Along with a healthy international market, industry profitability stands to benefit. However, greater competition from international producers, such as Brazil, could limit industry profit. Additionally, significant declines in the price of crude oil and ethanol could potentially hinder industry profit over the next five years."
+        },
+        {
+            "future_outlook_point_title": "Farm Bill Changes Will Influence the Industry's Supply Chain",
+            "future_outlook_point_description": "The Farm Bill, which provides subsidies for upstream corn farmers, is due to get a revision later in 2024 that will determine the level of government assistance to the industry's supply chain in 2025 and beyond."
+        }
+    ],
+    "industry_definition": "Operators in this industry produce ethanol fuel. This industry concentrates on non-potable ethanol (ethyl alcohol) that is used as a motor fuel, mainly as a biofuel additive for gasoline.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Industry Assistance Level",
+            "Concentration Level"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level",
+            "Capital Intensity Level"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Increasing Barriers to Entry",
+            "High & Increasing Level of Assistance",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "Very high Volatility",
+            "High Customer Class Concentration",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2005-2023)",
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Domestic corn production"
+        ],
+        "threats": [
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Price of corn"
+        ]
+    },
+    "key_trends": [
+        "Pricing is a differentiating factor in this industry for ethanol products and raw material inputs. Securing affordable raw material supply contracts enables manufacturers to offer more accessible pricing options downstream.",
+        "While import competition is scarce, substitute products such as eco-friendly electric vehicles threaten the industry. As consumers grow more environmentally conscious, this sentiment will influence buying patterns, driving businesses away from the industry.",
+        "Inflation in the price of oil and corn has led to the ripple effect of ethanol growing more expensive, enabling industry manufacturers to achieve robust revenue growth. Industry profitability has expanded with revenue growth and higher selling prices.",
+        "A substantial drop in crude oil prices caused the industry to struggle significantly."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Commercial sector",
+            "segment_description": "Ethanol fuel is commercially used in laboratories for research and development as it is a great catalyst.",
+            "segment_percentage": 2.7
+        },
+        {
+            "segment": "Industrial sector",
+            "segment_description": "Ethanol can be used in the pharmaceutical, cosmetics, solvents, food and chemical industries.",
+            "segment_percentage": 1.7
+        },
+        {
+            "segment": "Light duty vehicles with short wheel bases",
+            "segment_description": "Light-duty vehicles with short well bases, which include passenger vehicles, account for the largest portion of revenue.",
+            "segment_percentage": 66.8
+        },
+        {
+            "segment": "Light duty vehicles with long wheel bases",
+            "segment_description": "Light-duty vehicles with long well bases, which include vans and sports utility vehicles, account for the second-largest.",
+            "segment_percentage": 20.5
+        },
+        {
+            "segment": "Motorcycles",
+            "segment_description": "Motorcycles account for a minority share of revenue.",
+            "segment_percentage": 3.3
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Transportation, including light-duty vehicles with short and long wheelbases, accounts for over 90.0% of industry revenue.",
+            "segment_percentage": 5.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "E10 and E15 Fuels",
+            "product_description": "E10 is a low-level blend composed of 10.0% ethanol and 90.0% gasoline.",
+            "product_percentage": 61.3
+        },
+        {
+            "product_or_service": "E85",
+            "product_description": "E85, or flex fuel, refers to high-level ethanol-gasoline blends containing between 51.0% and 83.0% ethanol.",
+            "product_percentage": 35.8
+        },
+        {
+            "product_or_service": "E25 and Other Blends",
+            "product_description": "New blends like E25 have been introduced and approved for all BMW auto models.",
+            "product_percentage": 2.9
+        }
+    ],
+    "supply_chain": {
+        "tier_1_buyers": [
+            "Refined Petroleum Pipeline Transportation in the US",
+            "Inorganic Chemical Manufacturing in the US",
+            "Gasoline & Petroleum Wholesaling in the US"
+        ],
+        "tier_1_suppliers": [
+            "Flour Milling in the US",
+            "Sugar Processing in the US",
+            "Corn Farming in the US"
+        ],
+        "tier_2_buyers": [
+            "Fuel Dealers in the US"
+        ],
+        "tier_2_suppliers": [
+            "Fertilizer Manufacturing in the US",
+            "Pesticide Manufacturing in the US",
+            "Sugarcane Harvesting in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Price of Corn",
+            "determinant_description": "The price received by US corn growers, as reported by the US Department of Agriculture, determines the price of corn."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Increasing",
+        "export_level": "Moderate",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports find difficulty establishing a strong foothold domestically",
+                "trade_description": "Industry imports are less significant. Import penetration has sharply dropped over the past five years."
+            },
+            {
+                "trade_title": "Brazil dominates the import market",
+                "trade_description": "Brazil, expected to account for a large share of imports in 2024."
+            },
+            {
+                "trade_title": "The US is a top ethanol producer",
+                "trade_description": "The US alone is responsible for more than half of the world's ethanol."
+            },
+            {
+                "trade_title": "Increased demand for ethanol fuel in foreign markets",
+                "trade_description": "Many countries implement regulations and incentives to promote biofuels."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "",
+            "percentage_establishments": 38.0,
+            "percentage_population": 22.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "",
+            "percentage_establishments": 24.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Plains",
+            "location_description": "",
+            "percentage_establishments": 12.0,
+            "percentage_population": 7.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "",
+            "percentage_establishments": 8.0,
+            "percentage_population": 11.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "",
+            "percentage_establishments": 7.0,
+            "percentage_population": 13.0
+        },
+        {
+            "location": "West",
+            "location_description": "",
+            "percentage_establishments": 6.0,
+            "percentage_population": 23.0
+        },
+        {
+            "location": "New England",
+            "location_description": "",
+            "percentage_establishments": 3.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "",
+            "percentage_establishments": 2.0,
+            "percentage_population": 4.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "Renewable Fuels Standard (RFS) Prior to 2022",
+                "regulation_description": "In 2005, the first RFS became law as part of the United States' energy policy."
+            },
+            {
+                "regulation_title": "Current Renewable Fuels Standard (RFS)",
+                "regulation_description": "The new RFS states that only 15.0 billion gallons of production should be produced from corn grain and others."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is mature."
+            }
+        ],
+        "factors_increased_barrier": [
+            "mature",
+            "very high",
+            "high"
+        ],
+        "factors_decreased_barrier": [
+            "high - increasing",
+            "low",
+            "low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Pricing is a differentiating factor in this industry for ethanol products and raw material inputs",
+                "basis_description": "Securing affordable raw material supply contracts enables manufacturers to offer more accessible pricing options downstream."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Efficient ethanol production demands a significant scale",
+                "concentration_description": "Substantial investments in infrastructure and technology."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Green Plains Inc.",
+                "company_percentage": 6.3
+            },
+            {
+                "company_name": "Archer-Daniels-Midland Co",
+                "company_percentage": 5.3
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 88.3
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Labor Intensity Remains Low",
+            "cost_factor_description": "Wages as a share of revenue have decreased over the past five years."
+        },
+        {
+            "cost_factor_title": "Purchases Dominate the Industry's Cost Structure",
+            "cost_factor_description": "Purchase costs account for the industry's most significant expense."
+        },
+        {
+            "cost_factor_title": "Profitability Ebbs and Flows in Line with Commodity Prices and Revenue",
+            "cost_factor_description": "Profit as a share of revenue has increased over the past five years."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Capital Expenses",
+                "capital_intensity_description": "Efficient processing techniques are essential for ethanol fuel manufacturers."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Ethanol Production Heavily Influenced by Raw Material Costs",
+                "volatility_description": "Corn is the primary feedstock for ethanol production."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Product Lines Adapt to Growing Environmental Sentiment",
+                "technological_change_description": "The Advanced Research Projects Agency-Energy (ARPA-E) was established within the US Department of Energy."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "What are the main factors of competition between industry operators to consider when marketing your company's products?",
+            "answer": "Many of the industry's products are homogeneous."
+        },
+        {
+            "question": "Have your sales been affected by changes in petroleum refining in the US?",
+            "answer": "The majority of industry sales are attributable to petroleum refiners."
+        }
+    ]
+}

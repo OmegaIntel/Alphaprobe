@@ -1,0 +1,584 @@
+{
+    "report_title": "Industry Report on Perfume Manufacturing",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 4817000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 0.25
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 2.3
+            }
+        },
+        "profit": {
+            "profit_dollars": 487000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 0.52
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 10.1,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 0.27
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1302000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 10489,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 738000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 4599000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 1577000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "Many consumers consider perfumes to be a premium product. Because of this, changes in disposable income and consumer confidence directly impact perfume sales. During the initial stages of the pandemic, consumers were highly uncertain about the economy's future, pushing many to lower discretionary spending and harming perfume sales. Although multiple rounds of stimulus checks led to rising demand in 2021, the heightened inflation and elevated interest rates resulted in further revenue drops. Although increasing disposable income and lower inflationary pressure have allowed revenue to expand, it remains below pre-pandemic levels. Revenue has been falling at an estimated CAGR of 2.2% to $4.8 billion through 2029, including a 1.0% rise that year alone.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Perfumes are largely considered to be a discretionary",
+            "current_performance_point_description": "While many US-based brands, like Marc Jacobs and Calvin Klein, produce popular prestige fragrances, many shoppers associate perfumes manufactured in Europe with high-quality perfumes. A strengthening US dollar in recent years has made imported products comparatively more affordable for domestic buyers, boosting demand for international brands like Chanel and Burberry. Although a strong dollar usually harms export activity, the growing popularity of domestic brands like Glossier has enabled exports to grow as a revenue share, supporting domestic producers."
+        },
+        {
+            "current_performance_point_title": "Favorable economic conditions expected to boost sales",
+            "current_performance_point_description": "Favorable economic conditions, like growing disposable income and rising consumer confidence, are expected to boost perfume sales. Significant investments in e-commerce and research and development will continue to attract new customers, contributing to revenue and profit growth over the coming years. Similarly, the expected depreciation of the US dollar will enable domestic producers to become more competitive globally, boosting exports. However, European fragrances, particularly those from France, will continue to pose a significant threat to domestic manufacturers."
+        },
+        {
+            "current_performance_point_title": "Discretionary purchase impacted by macroeconomic conditions",
+            "current_performance_point_description": "Many consumers consider perfumes to be a discretionary purchase. Because of this perception, new perfume sales are directly impacted by changes in macroeconomic conditions, including disposable income, consumer confidence, unemployment and the strength of the dollar. During the initial stage of the pandemic, consumer uncertainty jumped, as most consumers were uncertain about the future of the economy. During this time, social distancing regulations and stay-at-home orders lowered the need to wear perfumes, negatively impacting sales."
+        },
+        {
+            "current_performance_point_title": "Manufacturers face stiff competition from international brands",
+            "current_performance_point_description": "Most fragrance wearers own multiple perfumes. Fashion-conscious and trendsetting consumers purchase perfume more frequently to ensure their fragrances are appropriate for the event or occasion they are attending. US consumers have demanded more perfumes from international brands, like Chanel and Burberry, while fewer international consumers have sought US-made goods. An appreciating US dollar in recent years has enabled imported products to strengthen in the domestic market as a strong dollar makes imported products comparatively more affordable for domestic buyers."
+        },
+        {
+            "current_performance_point_title": "Fragrance producers focus on sustainability",
+            "current_performance_point_description": "There's been a shift toward natural and sustainable ingredients impacting perfume production in recent years. Consumers have become more conscious of the environmental and health impacts of synthetic materials, encouraging producers to use natural ingredients. Growing scrutiny of synthetic chemicals has pushed manufacturers to innovate and invest in natural alternatives. This shift supports long-term sustainability but often comes at a higher cost, influencing pricing strategies."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "The economic recovery will support demand for perfumes",
+            "future_outlook_point_description": "Improving economic conditions will boost demand for discretionary or luxury products, such as perfumes and fragrances. As inflation cools and disposable income rises, consumers will grow confident about the future of the economy, supporting perfume sales. The value of the US dollar is expected to depreciate over the coming years, enabling domestic producers to become more competitive globally. A weaker dollar makes US-produced fragrances comparatively more affordable to foreign buyers, allowing the exports to grow and somewhat muting demand for imported fragrances."
+        },
+        {
+            "future_outlook_point_title": "Innovation will be crucial over the coming years",
+            "future_outlook_point_description": "Research and development will remain crucial in developing innovative fragrances that appeal to customers using innovative ingredients and technologies. Perfumers can more avidly market their individually packaged base scents and ingredients to consumer-facing retailers to provide custom options to consumers. This strategy offers both an experience and a product, enabling manufacturers to charge higher prices."
+        },
+        {
+            "future_outlook_point_title": "Building a brand identity enables producers to attract new customers",
+            "future_outlook_point_description": "Consumers are increasingly favoring brands that align with their environmental and ethical beliefs. Because of this, manufacturers must focus on building a brand that matches consumers' expectations, particularly those that promote vegan and cruelty-free practices. Concerns about carbon footprints will encourage manufacturers to find new eco-friendly resources, develop new products and introduce new packaging. The increased production of organic and all-natural fragrance products will continue as manufacturers attempt to set themselves apart."
+        },
+        {
+            "future_outlook_point_title": "Changing consumer preferences create growth opportunities",
+            "future_outlook_point_description": "Consumers have been changing how they wear perfumes, with many preferring to layer them rather than wearing a unique, signature scent. This change in consumer preferences pushes buyers to buy more fragrances to experiment with. This trend and the growing demand for customized scents will continue to push manufacturers to invest in new product development and make new formulas that are buildable. On the other hand, some manufacturers will opt to make the shopping experience more immersive, allowing consumers to smell various fragrances and make their own personal scent."
+        }
+    ],
+    "industry_definition": "Companies in this industry manufacture men's and women's perfumes and fragrances. Perfume is a mixture of fragrant essential oils and aroma compounds, fixatives and solvents used to give the human body a pleasant scent.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level",
+            "Globalization Level",
+            "Competition Level",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High Profit vs. Sector Average"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "High Volatility",
+            "High Imports",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers",
+            "Per capita disposable income"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Demand from department stores"
+        ]
+    },
+    "key_trends": [
+        "Large manufacturers are well-known among consumers. Their long-standing market presence grants them economies of scale and scope, creating significant barriers for new entrants.",
+        "Investing in research and development is essential for manufacturers to stay competitive. It drives new product development, which helps reach new audiences and retain customers, ultimately boosting sales.",
+        "European brands satisfy more than half of domestic demand. France's historical and central role in the perfume industry significantly contributes to this dominance.",
+        "The expected weakening of the US dollar will benefit domestic producers. This trend, coupled with growing e-commerce and social media use, will enhance the global competitiveness of domestic fragrances and boost exports."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Women",
+            "segment_description": "Women tend to buy Eau de Parfum, Eau de Toilette, body creams, perfume compacts and body spray that tends to be lighter, sweeter and often found in floral scents. Historically, perfumes have been largely developed with women in mind and marketing campaigns tend to target the female audience more heavily.",
+            "segment_percentage": 54.3
+        },
+        {
+            "segment": "Men",
+            "segment_description": "Men buy Eau de Parfum, Eau de Toilette and, in some cases, body creams. Men's scents are often intense, rich, woody, earthy and aromatic. Perfume companies are increasingly aiming to get men to purchase more fragrances, leading to more intense marketing campaigns.",
+            "segment_percentage": 26.9
+        },
+        {
+            "segment": "Unisex",
+            "segment_description": "Unisex fragrance uses neutral notes like fruits and wood to perfectly balance scents. These fragrances have become increasingly popular among consumers as they appeal to the two largest markets. Unisex perfumes now account for a significant portion of revenue.",
+            "segment_percentage": 18.8
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Extrait de Parfum",
+            "product_description": "Extrait de Parfum, or pure perfume, has the highest fragrance concentration, containing anywhere from 15.0% to 40.0% fragrance and lasting between six to eight hours on the skin.",
+            "product_percentage": 3.2
+        },
+        {
+            "product_or_service": "Eau de Parfum",
+            "product_description": "EDP has the second-largest concentration of fragrance after extrait de parfum. EDP's fragrance concentration varies between 15.0% and 20.0%. EDP lasts between four to five hours on average and often maintains its scent for the duration of an event, making it the most popular product category in the industry.",
+            "product_percentage": 39.6
+        },
+        {
+            "product_or_service": "Eau de Toilette",
+            "product_description": "Eau de Toilette (EDT) is a fragrance with a concentration higher than Eau de Cologne but lower than Eau de Parfum. EDT's concentration varies between 5.0% and 15.0% and typically lasts two to three hours. Due to its comparatively lower price, EDT is highly popular among consumers.",
+            "product_percentage": 13.8
+        },
+        {
+            "product_or_service": "Eau de Cologne",
+            "product_description": "Eau de Cologne refers to recipes that use herb and citrus notes with little anchoring with base notes. EDCs often come in larger bottles as more of the fragrance needs to be used. Eau de Cologne has a relatively low fragrance concentration, ranging between 2.0% and 4.0% and a high alcohol concentration, making it less suitable for consumers with sensitive skin.",
+            "product_percentage": 13.3
+        },
+        {
+            "product_or_service": "Body Spray",
+            "product_description": "Body spray is a light mixture of scent, alcohol and water. Its primary purpose is light spritzing on a warm day. Because of this, some body sprays include glycerin designed to moisturize dry skin. While body sprays have a low fragrance concentration, they don't contain much alcohol, making them suitable for people with sensitive skin.",
+            "product_percentage": 12.7
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "Products in this segment include perfume compacts, body lotions, hair mists, gift sets and other items. Demand for other products jumps during the holidays, as gift sets, body lotions and mists make good gifts.",
+            "product_percentage": 17.4
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Inorganic Chemical Manufacturing in the US",
+            "Organic Chemical Manufacturing in the US",
+            "Glass Product Manufacturing in the US",
+            "Cardboard Box & Container Manufacturing in the US",
+            "Janitorial Services in the US",
+            "Utilities in the US"
+        ],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [
+            "Pharmacies & Drug Stores in the US",
+            "Beauty, Cosmetics & Fragrance Stores in the US",
+            "Department Stores in the US"
+        ],
+        "tier_2_buyers": [
+            "Health Stores in the US",
+            "Drug, Cosmetic & Toiletry Wholesaling in the US",
+            "Warehouse Clubs & Supercenters in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Per Capita Disposable Income",
+            "determinant_description": "Per capita disposable income represents consumers' ability and willingness to spend on discretionary items. Since most consumers consider perfumes a non-necessity, rising disposable income enables consumers to make more discretionary purchases, translating to higher perfume sales."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Increasing",
+        "export_level": "High",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Many Consumers Prefer Imported Fragrances",
+                "trade_description": "Perfumes produced in Europe are considered higher quality than domestically produced fragrances. Since many of these products are well-known international brands, consumers have set preferences that favor foreign producers."
+            },
+            {
+                "trade_title": "Importers Benefit From a Strong US Dollar",
+                "trade_description": "The US dollar has appreciated significantly in recent years, making imported products comparatively more affordable to domestic buyers and causing imports to satisfy a larger share of domestic demand."
+            },
+            {
+                "trade_title": "Popular US-Based Companies Enable Exports to Strengthen",
+                "trade_description": "Although the value of exports has been growing, the recent appreciation of the US dollar has placed downward pressure on domestic perfume sales overseas. The growing popularity of domestic brands, such as Glossier, has enabled exports to account for a larger share of revenue."
+            },
+            {
+                "trade_title": "The United States-Mexico-Canada Agreement (USMCA) Drives Trade Activity",
+                "trade_description": "Domestic manufacturers benefit from the trade agreement with Mexico and Canada, as the geographic proximity and fewer trade regulations make for favorable trade conditions. Canada and Mexico alone account for more than 20.0% of exports."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "West",
+            "location_description": "California hosts nearly one-quarter of all domestic perfume and fragrance manufacturers. Its large population and trend-setting metropolitan areas make it an attractive location. Proximity to downstream markets allows companies to save on transportation costs. Being based in the West also offers manufacturers easier access to key export markets, such as Australia.",
+            "percentage_establishments": 38.5,
+            "percentage_population": 23.1
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "Major beauty brands are concentrated in large metropolitan cities within the region, supporting a robust network of manufacturers. This urban concentration is driven by the high population and demand in cities like New York. The Mid-Atlantic region is strategically positioned near upstream chemical producers, benefiting from reduced transportation costs for raw materials.",
+            "percentage_establishments": 12.3,
+            "percentage_population": 15.2
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast is the most populated region in the United States, with major cities like Atlanta and Miami. These cities offer manufacturers access to a significant consumer base and logistical advantages. Florida has many shipping ports that facilitate efficient export and import operations. The Southeast has the largest concentration of ethyl alcohol producers.",
+            "percentage_establishments": 11.5,
+            "percentage_population": 21.8
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "Not Provided",
+            "percentage_establishments": 11.5,
+            "percentage_population": 14.9
+        },
+        {
+            "location": "Southwest",
+            "location_description": "Not Provided",
+            "percentage_establishments": 11.5,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "Not Provided",
+            "percentage_establishments": 7.7,
+            "percentage_population": 7.1
+        },
+        {
+            "location": "New England",
+            "location_description": "Not Provided",
+            "percentage_establishments": 7.0,
+            "percentage_population": 6.4
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "FOOD AND DRUG ADMINISTRATION",
+                "regulation_description": "The Food and Drug Administration (FDA) enforces laws on product manufacturing, labeling and marketing. The agency evaluates fragrance ingredients for skin irritation, sensitization and systemic toxicity, ensuring that the quantities of fragrance materials used don't pose health risks."
+            },
+            {
+                "regulation_title": "RESEARCH INSTITUTE FOR FRAGRANCE MATERIALS",
+                "regulation_description": "The Research Institute for Fragrance Materials (RIFM) conducts extensive toxicity, allergy and phototoxicity testing on raw materials. Results are then submitted to the International Fragrance Association (IFRA) to ensure compliance with legislation."
+            },
+            {
+                "regulation_title": "OCCUPATIONAL SAFETY AND HEALTH ADMINISTRATION",
+                "regulation_description": "The Occupational Safety and Health Administration (OSHA) regulates workplace safety and worker health for fragrance manufacturers. These regulations include guidelines for break and meal times, noise levels and dust. Compliance is essential to prevent health issues among workers."
+            },
+            {
+                "regulation_title": "Fair Packaging and Labeling Act (FPLA)",
+                "regulation_description": "The Fair Packaging and Labeling Act (FPLA) mandates that U.S.-based perfume manufacturers provide accurate product labels. They must clearly state the perfume's content, producer and quantity. This transparent labeling helps consumers make informed choices and prevents deceptive practices."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Life cycle stage",
+                "barrier_description": "The industry is in a mature life cycle stage."
+            },
+            {
+                "barrier_title": "Industry assistance level",
+                "barrier_description": "The level of industry assistance is low and steady."
+            }
+        ],
+        "factors_decreased_barrier": [
+            "The capital intensity level is low."
+        ],
+        "factors_increased_barrier": []
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Large manufacturers have long-standing market presence",
+                "basis_description": "Large manufacturers are well-known among consumers. Their long-standing market presence grants them economies of scale and scope, creating significant barriers for new entrants."
+            },
+            {
+                "basis_title": "Research and development is essential",
+                "basis_description": "Investing in research and development is essential for manufacturers to stay competitive. It drives new product development, which helps reach new audiences and retain customers, ultimately boosting sales."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Well-established manufacturers dominate",
+                "concentration_description": "Well-established manufacturers with strong brand recognition capture the market."
+            },
+            {
+                "concentration_title": "Top 3 companies capture close to 50% revenue",
+                "concentration_description": "The largest fragrance producers, L'Oreal, Coty and Estee Lauder, generate close to 50.0% of revenue."
+            },
+            {
+                "concentration_title": "Brand loyalty favors large producers",
+                "concentration_description": "Significant brand loyalty favoring these brands enables them to hold on to a significant share of the market."
+            },
+            {
+                "concentration_title": "Economies of scale and supplier agreements",
+                "concentration_description": "These large producers have reached economies of scale and developed favorable agreements with upstream suppliers, enabling them to maintain low operating costs and a large profit margin."
+            },
+            {
+                "concentration_title": "Consumers seeking unique scents",
+                "concentration_description": "This trend began to reverse as consumers looked for unique scents."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Coty Inc.",
+                "company_percentage": 19.1
+            },
+            {
+                "company_name": "Loreal",
+                "company_percentage": 16.1
+            },
+            {
+                "company_name": "Estee Lauder Companies Inc.",
+                "company_percentage": 9.6
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 17.5
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 55
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 2.5
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 7.5
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 2.5
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 2.5
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 2.5
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Manufacturers Rely Skilled Employees to Develop New Products",
+            "cost_factor_description": "Perfume manufacturers must hire highly skilled workers, including developers, quality control personnel, administrative staff, marketing professionals, production workers and management. Because fragrance producers are consistently developing new products, they must hire trained scientists, driving wage expenses higher."
+        },
+        {
+            "cost_factor_title": "Purchases are the Largest Expense Category in the Industry",
+            "cost_factor_description": "Manufacturers purchase a broad range of inputs, including natural ingredients such as flowers, grasses, spices, fruit, wood and roots. Perfume producers also purchase products like alcohol and other synthetic chemicals to recreate scents and create unique fragrances. Volatile input prices have pushed purchase expenses to grow as a share of revenue."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LABOR EXPENSES",
+                "capital_intensity_description": "Fragrance manufacturers must invest heavily in research and development capabilities to develop high-quality ingredients and scents. For this, producers must hire highly skilled workers with a background in chemistry and experience with fragrances."
+            },
+            {
+                "capital_intensity_title": "CAPITAL EXPENSES",
+                "capital_intensity_description": "<UNKNOWN>"
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "DISCRETIONARY PRODUCTS SUFFER THE MOST",
+                "volatility_description": "Many consumers consider perfumes to be highly discretionary. As a result, perfume sales take a hit when disposable income, consumer spending and consumer confidence weaken."
+            },
+            {
+                "volatility_title": "During the pandemic's peak",
+                "volatility_description": "During the pandemic's peak, stay-at-home orders and social distancing requirements discouraged consumers from wearing perfume, as there were fewer events to attend and daily activities were mainly limited to home. This trend resulted in drastic losses in 2020."
+            },
+            {
+                "volatility_title": "Manufacturers Face Significant Input Price Volatility",
+                "volatility_description": "Manufacturers alternate between natural and synthetic ingredients to recreate scents and create unique fragrances. However, more recently, manufacturers have increasingly used synthetic ingredients to prevent getting bad batches and produce standardized fragrances. Prices for inputs like oil and alcohol have risen significantly amid pent-up demand, supply chain disruptions and other international conflicts, contributing to higher purchasing costs."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "TESTERS OF DIGITAL FRAGRANCES",
+                "technological_change_description": "Declining demand for magazines and print media has prevented perfume samples from reaching consumers as many manufacturers leveraged these avenues to market their new scents. More recently, manufacturers have been experimenting with digital fragrance sampling to allow customers to test and experience fragrances in an innovative way."
+            },
+            {
+                "technological_change_title": "PRODUCING SUSTAINABLE, ECO-FRIENDLY AND CLIMATE-CONSCIOUS LIFESTYLE PRODUCTS GROWS",
+                "technological_change_description": "Many US consumers favor brands that carry eco-friendly and climate-conscious products when buying new fragrances. Similarly, consumers are more likely to stay away from brands that test on animals. This trend is particularly prominent among younger buyers. To become more environmentally friendly, companies like Coty have been experimenting with carbon-captured ethanol for the production of fragrances."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "What are some key organizations that assist perfume manufacturers?",
+            "answer": "The Personal Care Products Council and the American Society of Perfumers are two key organizations that assist perfume manufacturers. The Personal Care Products Council provides safety information, insights on ingredients, testing and regulation to help ensure product safety and compliance. The American Society of Perfumers promotes professional conduct, provides development opportunities, fosters innovation, connects manufacturers with market insights, and facilitates networking."
+        },
+        {
+            "question": "How do rising imports affect domestic perfume companies?",
+            "answer": "Since European-made perfumes are often considered more luxurious than US-made ones, growth in imports represents a significant threat to the domestic perfume industry."
+        },
+        {
+            "question": "Are perfume sales dependent on the health of the US economy?",
+            "answer": "Yes, fragrances are largely considered discretionary products, so demand is linked to factors like consumer spending, disposable income and consumer confidence, which are tied to the health of the economy."
+        },
+        {
+            "question": "Do perfume manufacturers look to set up in lower-wage regions?",
+            "answer": "Yes, manufacturers often set operations in low-wage regions of the country, and some have even moved manufacturing facilities overseas where wage regulations are less stringent."
+        },
+        {
+            "question": "Is R&D important for meeting changing consumer preferences?",
+            "answer": "Yes, research and development is important as some consumers view perfumes as a fashion statement and change their scent preferences based on what is popular across major fashion platforms."
+        },
+        {
+            "question": "Has the industry been able to reduce wage costs through automation?",
+            "answer": "Fragrance manufacturing is highly automated for mass production, but many small producers are unable to automate processes due to small scales. So while large manufacturers have likely reduced wage costs, smaller ones may not have benefited as much from automation."
+        },
+        {
+            "question": "How is new technology impacting perfume manufacturing?",
+            "answer": "Technology has remained relatively unchanged in this longstanding industry. Manufacturers are increasingly focusing more on sustainability issues related to perfume manufacturing."
+        },
+        {
+            "question": "How do companies stay compliant with regulations?",
+            "answer": "Several industry associations exist to help perfume and cosmetic manufacturers remain compliant with regulations like energy-efficiency standards and environmental standards. Many large manufacturers also have dedicated compliance teams."
+        },
+        {
+            "question": "How do profit margins compare for large vs small manufacturers?",
+            "answer": "Large manufacturers that have achieved economies of scale benefit from lower per-unit production costs, enabling higher profit margins. Smaller manufacturers must allocate a larger percentage of revenue toward operating costs, making them less profitable."
+        },
+        {
+            "question": "How often is new equipment purchased in this industry?",
+            "answer": "The industry is highly automated, so new technology and equipment is purchased as existing equipment wears out."
+        },
+        {
+            "question": "What are some key points about premium perfume products?",
+            "answer": "Extrait de Parfum, or pure perfume, is one of the most expensive and heavily concentrated product lines offered by manufacturers. However, due to the higher prices, these premium products are significantly less popular among consumers. French-based brands are often associated with higher quality perfumes due to France's historical importance in perfumery."
+        },
+        {
+            "question": "How do companies improve brand visibility and market products?",
+            "answer": "High brand visibility is important for increasing perfume sales. Manufacturers often partner with celebrities and rely on brand licensing from fashion/beauty brands. They market across TV, billboards, social media, e-commerce channels and digital marketing. Partnerships and sponsorships are also very common for marketing perfumes."
+        },
+        {
+            "question": "How important are department store sales for perfume companies?",
+            "answer": "Department stores account for a significant share of perfume revenue. When consumers shop more at department stores, these stores purchase more perfumes from manufacturers, increasing their revenue."
+        },
+        {
+            "question": "How does disposable income affect demand for perfumes?",
+            "answer": "Perfumes are discretionary products, so when disposable income increases, consumers spend more on perfumes and vice versa. Demand for the most expensive perfumes like Extrait de Parfum is most impacted when disposable income declines. Demand may also drop during economic uncertainty even if income stays unchanged."
+        },
+        {
+            "question": "How can domestic companies compete with less expensive foreign products?",
+            "answer": "As the trade-weighted index appreciates, US-made fragrances become more expensive internationally while foreign perfumes become relatively less expensive domestically. However, demand for certain brands depends on marketing efforts - manufacturers that invest heavily in marketing often have less price-sensitive clients."
+        }
+    ]
+}

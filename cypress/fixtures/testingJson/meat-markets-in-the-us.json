@@ -1,0 +1,537 @@
+{
+    "report_title": "Meat Markets Industry Report",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 11291000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 1.29
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 0.84
+            }
+        },
+        "profit": {
+            "profit_dollars": 440000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 3.07
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 3.9,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 1.76
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 2039000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0.0
+            }
+        },
+        "employees": {
+            "employees_count": 48828,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 0.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0.0
+            }
+        },
+        "wages": {
+            "wages_dollars": 1427000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0.0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0.0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0.0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0.0
+            }
+        }
+    },
+    "executive_summary": "Over the past five years, the Meat Markets industry has endured heightened competition from traditional and nontraditional retailers, while health consciousness has turned some consumers off from meat altogether. Health concerns have also encouraged consumers to opt for specialty meat products over conventional, mass-retailed products. Organic, grass-fed and custom cuts are just some of the products that have boosted foot traffic to meat markets during the period. With the swelling popularity of ethnic food, more consumers are seeking uncommon cuts of meat, including oxtail, lamb ribs and top-blade steak, which are often difficult to find in supermarkets or wholesale clubs. Amid shifting consumer preferences, revenue for meat",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The meat markets is estimated to strengthen at a CAGR of 3.0% to reach an expected $11.3 billion over the past five years",
+            "current_performance_point_description": "although revenue is anticipated to drop 0.3% in 2024 alone."
+        },
+        {
+            "current_performance_point_title": "COVID-19 Inflated Consumer Interest in Meat Markets",
+            "current_performance_point_description": "COVID-19 inflated meat market sales to a historical high as consumers sought locally sourced and quality ingredients to cook their meals at home. The pandemic accelerated a trend toward health consciousness, which has had differing effects on meat market sales. Plant-based alternatives that mimic the taste and texture of meat are becoming more popular as consumers seek to expand their palates and consume less red meat for both health and environmental purposes. Still, meat remains a staple in the American diet and consumers have increasingly turned to butchers and delicatessens for organic, sustainable and high-quality meats. Rising disposable income has also supported demand for these high-margin meat products."
+        },
+        {
+            "current_performance_point_title": "Competition from alternative meat retailers",
+            "current_performance_point_description": "Competition from alternative meat retailers, like supermarkets and online grocery delivery services, has intensified over the past five years and will continue expanding over the next five. Larger retailers will capitalize on their scale to offer lower prices, weakening meat markets' pricing power. Profit will struggle to expand in a more competitive environment. Demand for value-added meat products from butchers and delicatessens will persist, contributing to marginal growth for meat markets. Over the next five years, revenue is expected to inch up at a CAGR of 0.8%, reaching an estimated $11.8 billion in 2029."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Butchers will target high-income consumers",
+            "future_outlook_point_description": "Sluggish growth in per capita meat consumption will push butchers and delicatessens to concentrate more on high-margin meat products like gourmet sausages, dry-aged steaks and specialty smoked meats to maintain profit. High-income consumers are increasingly willing to pay a premium for quality meat products. They value ethically sourced and sustainable produce, reflecting their commitment to environmental responsibility and animal welfare."
+        },
+        {
+            "future_outlook_point_title": "Health consciousness will threaten meat consumption",
+            "future_outlook_point_description": "As health consciousness swells, consumers increasingly move away from red meat, pork and chicken. Many of these individuals prefer consuming fish and vegetarian alternatives, often viewed as healthier options. While some consumers will lessen or halt their meat consumption, others will seek leaner and organic meat products. This will prompt some meat markets to offer more variety, including organic and leaner options, to help cater to these consumers."
+        }
+    ],
+    "industry_definition": "The Meat Markets industry comprises butcher shops and delicatessens that primarily retail fresh, frozen and cured meats and poultry products to households, other retailers and food service companies. These outlets may also purvey a variety of specialized products like homemade sausages, marinated meats or gourmet cuts.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low Capital Intensity Level",
+            "low Concentration Level",
+            "low - steady Globalization Level"
+        ],
+        "negative_impact_factors": [
+            "low - steady Industry Assistance Level",
+            "high - steady Competition Level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "Per capita meat consumption"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth"
+        ]
+    },
+    "key_trends": [
+        "Competition from big-box retailers is climbing. As companies like Walmart and Target have expanded into groceries, butchers and delicatessens struggle to keep up with these stores' low prices.",
+        "Meat markets sell specialty meat products to differentiate themselves. A rise in health and environmental consciousness has boosted demand for grass-fed, organic and specialty meat products.",
+        "Value-added meat products are driving growth for butchers and delicatessens. A growing immigrant community and an expansion of time-poor consumers are prompting meat markets to offer more premarinated, preseasoned and uncommon cuts of meat.",
+        "COVID-19 shifted consumer preferences to locally-sourced meat. Health concerns amid the pandemic boosted demand for high-quality, organic and fresh meat products. The pandemic also prompted consumers to support local businesses.",
+        "The Meat Markets industry has no major companies. Most butchers and delicatessens are small, independent and privately-owned enterprises with only one storefront.",
+        "Meat markets don't receive direct assistance but benefit from government assistance to upstream suppliers. Subsidies for cattle ranchers lower the purchase cost of meat for butchers and delicatessens.",
+        "Per capita meat consumption is still strengthening despite the expanding popularity of meat alternatives. Many meat products remain a staple of the American diet."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Households and individual consumers",
+            "segment_description": "This market includes households and individual consumers of all income levels.",
+            "segment_percentage": 85.1
+        },
+        {
+            "segment": "Restaurants and food services",
+            "segment_description": "This market encompasses various segments like chain restaurants, single-location restaurants, hotels and food services.",
+            "segment_percentage": 4.7
+        },
+        {
+            "segment": "Retailers and wholesalers",
+            "segment_description": "This market includes other retailers and wholesalers, like all-natural grocery stores and ethnic food stores, that buy meat products for resale.",
+            "segment_percentage": 8.3
+        },
+        {
+            "segment": "Other",
+            "segment_description": "This market includes farmers who raise livestock, government entities that regulate food standards and various businesses like processing companies that use meat products as key ingredients.",
+            "segment_percentage": 1.9
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Beef",
+            "product_description": "This segment includes the sales of beef products.",
+            "product_percentage": 21.5
+        },
+        {
+            "product_or_service": "Chicken",
+            "product_description": "This segment includes sales of chicken products.",
+            "product_percentage": 21.1
+        },
+        {
+            "product_or_service": "Turkey",
+            "product_description": "This segment includes sales of turkey products.",
+            "product_percentage": 3.9
+        },
+        {
+            "product_or_service": "Pork",
+            "product_description": "This segment includes sales of pork products.",
+            "product_percentage": 10.6
+        },
+        {
+            "product_or_service": "Other Meats",
+            "product_description": "This segment includes sales of lamb, veal and exotic meats like bison and venison.",
+            "product_percentage": 26.4
+        },
+        {
+            "product_or_service": "Other Products",
+            "product_description": "This segment includes sales from all other products, including dairy products, fresh produce, baked goods, dry goods, beverages and kitchenware.",
+            "product_percentage": 16.5
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Dairy Product Production in the US",
+            "Meat, Beef & Poultry Processing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Beef Cattle Production in the US",
+            "Dairy Farms in the US"
+        ],
+        "tier_1_buyers": [
+            "Specialty Food Stores in the US",
+            "Supermarkets & Grocery Stores in the US",
+            "Beef & Pork Wholesaling in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Per capita meat consumption",
+            "determinant_description": "Per capita meat consumption represents the total retail weight of red and white meat that the average American consumes in one year."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "Meat markets typically settle in major population hubs in the Mid-Atlantic, like New York City and Philadelphia, where they have an extensive consumer base. The diverse melting pot of cultures in Mid-Atlantic cities, especially New York City, influences the food industry significantly.",
+            "percentage_establishments": 27.8,
+            "percentage_population": 15.2
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast is home to several farms and ranches that raise livestock, providing meat markets with access to a reliable and diverse meat supply. By locating near upstream suppliers in the Southeast, meat markets can cut down on lengthy transportation routes, which reduces costs significantly.",
+            "percentage_establishments": 22.4,
+            "percentage_population": 19.6
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "Butchers heavily rely on dairy producers in the Great Lakes region as it's a significant hub for dairy production. Being situated near suppliers allows these businesses to significantly lower transportation costs, reducing overall operational expenses.",
+            "percentage_establishments": 16.3,
+            "percentage_population": 15.3
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "Country of Origin Labeling (COOL)",
+                "regulation_description": "The COOL law requires meat retailers to provide consumers with the national origin of certain food products, though it was repealed for beef and pork in 2016."
+            },
+            {
+                "regulation_title": "Nutrition Labeling",
+                "regulation_description": "Regulations require most individual packages of major meat cuts to display nutrition information, and meat is given grades based on criteria like tenderness and yield."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "mature"
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "low - steady"
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "high - steady"
+            },
+            {
+                "barrier_title": "Capital Intensity Level",
+                "barrier_description": "low"
+            },
+            {
+                "barrier_title": "Concentration Level",
+                "barrier_description": "low"
+            },
+            {
+                "barrier_title": "Globalization Level",
+                "barrier_description": "low - steady"
+            },
+            {
+                "barrier_title": "LEGAL",
+                "barrier_description": "Meat markets are required to adhere to numerous health and food safety regulations regarding meat processing. These encompass proper handling, storage and appropriate product labeling."
+            },
+            {
+                "barrier_title": "START-UP COSTS",
+                "barrier_description": "New entrants may be constrained by initial capital purchases, like cash registers, scales and cold storage units, required to open a meat market. Butchers usually rent space to keep overhead costs low."
+            },
+            {
+                "barrier_title": "DIFFERENTIATION",
+                "barrier_description": "Most markets stock similar meat and poultry products, making it difficult for new entrants to differentiate themselves from established markets. Still, new entrants can target niche markets by offering organic and less common cuts of meat."
+            },
+            {
+                "barrier_title": "LABOR EXPENSES",
+                "barrier_description": "The Meat Markets industry is labor-intensive, requiring skilled workers to cut and prepare meat. Finding qualified and experienced staff is relatively easy in populated areas."
+            }
+        ],
+        "factors_increased_barrier": [
+            "mature",
+            "low - steady",
+            "high - steady"
+        ],
+        "factors_decreased_barrier": [
+            "low",
+            "low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Competition from big-box retailers is climbing",
+                "basis_description": "As companies like Walmart and Target have expanded into groceries, butchers and delicatessens struggle to keep up with these stores' low prices."
+            },
+            {
+                "basis_title": "Meat markets sell specialty meat products to differentiate themselves",
+                "basis_description": "A rise in health and environmental consciousness has boosted demand for grass-fed, organic and specialty meat products."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "The Small Scale of Meat Markets Appeals to Consumers",
+                "concentration_description": "Meat markets set themselves apart from external competition like supermarkets and grocery stores by sourcing their meat from local farmers, thereby ensuring quality and offering a personalized, small-scale customer service experience."
+            },
+            {
+                "concentration_title": "Many butchers and delicatessens are choosing to remain small-scale",
+                "concentration_description": "This strategy appeals to health- and environmentally-conscious consumers who prefer supporting businesses using sustainable practices and offering quality, locally sourced products."
+            },
+            {
+                "concentration_title": "Meat Markets Expand Operations Through Franchising",
+                "concentration_description": "Several owner-operated meat markets have chosen to open franchises in recent years. This approach is made to widen their geographic reach, attract a broader customer base and significantly reduce operating costs by streamlining processes."
+            },
+            {
+                "concentration_title": "The growth of franchising has boosted market share concentration",
+                "concentration_description": "making competition fiercer. However, the Meat Markets industry remains fragmented because of the presence of numerous small, independent businesses."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "OTHER COMPANIES",
+                "company_percentage": 100
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Supplier Contracts Keep Purchase Costs Stable",
+            "cost_factor_description": "Meat markets establish favorable contracts with upstream suppliers to minimize volatility in purchase costs, which have remained a steady revenue share over the past five years despite volatile upstream conditions."
+        },
+        {
+            "cost_factor_title": "Meat Markets Incur Substantial Wage Costs",
+            "cost_factor_description": "Operating a meat market is labor-intensive, keeping wage costs consistently high due to the need for expert butchers, customer service and regular maintenance of equipment and sanitation. Wage costs have remained robust due to inflated demand and prioritizing retaining skilled staff."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_trend": "Steady",
+        "capital_intensity_points": []
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_trend": "Steady",
+        "volatility_points": [
+            {
+                "volatility_title": "COVID-19 Boosted At-Home Meals",
+                "volatility_description": "The closures of restaurants amid the pandemic forced consumers to cook more meals at home, leading to a surge in demand and sales for meat markets. However, once restaurants reopened, meat markets lost much of the heightened demand."
+            },
+            {
+                "volatility_title": "Meat Recalls Keep Consumers Out of Meat Markets",
+                "volatility_description": "Outbreaks of diseases or recalls of meat for reasons like undeclared allergens can steer consumers away from meat markets, causing financial losses and damaging reputations."
+            },
+            {
+                "volatility_title": "Staple Items Prevent Extreme Fluctuations",
+                "volatility_description": "Since meat is a staple of the average American diet, butcher shop sales remain relatively stable, though shifting consumer trends towards plant-based diets pose new challenges."
+            }
+        ]
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_trend": "Increasing",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Value-Added Products Keep Consumers Coming Back",
+                "technological_change_description": "Premarinated and preseasoned meats are gaining popularity as on-the-go consumers increasingly crave quality and convenience."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "Does your company produce a diversified range of products?",
+            "answer": "Butchers that diversify product offerings elevate their brands and solidify their reputation in the marketplace. Butchers will offer niche goods or organic meats to match trends."
+        },
+        {
+            "question": "How does your marketing strategy differ from other competitors?",
+            "answer": "Establishing a strong reputation and creating brand loyalty are important for meat market participants. Operators must prove they have the highest quality meats and the best service around."
+        },
+        {
+            "question": "How has your company been exposed to volatile input costs?",
+            "answer": "Meat markets have been exposed to volatile input costs because of fluctuating prices of key inputs like feed grain, labor and energy. Also, sudden changes in supply and demand, as well as unpredictable events like disease outbreaks or extreme weather, can greatly impact input costs."
+        },
+        {
+            "question": "Is your company located close to important suppliers?",
+            "answer": "Companies locally source their products. An organic, local strategy is good for operators and their customers."
+        },
+        {
+            "question": "How is your company leveraging new technology?",
+            "answer": "Operators have utilized the internet to advertise and sell products locally."
+        },
+        {
+            "question": "Have you been able to reduce wage costs by automating operations?",
+            "answer": "The industry is very labor intensive. Robots cannot do the work of industry operators and employee knowledge is valuable."
+        },
+        {
+            "question": "Is your company exposed to regulation?",
+            "answer": "Operators are inspected biannually and must comply with USDA and FDA regulations. They also have to label our products."
+        },
+        {
+            "question": "How does your company ensure all health and safety regulations are met?",
+            "answer": "Employees go through rigorous training to comply with requirements."
+        },
+        {
+            "question": "How does the price volatility of inputs impact profit?",
+            "answer": "While drops in red meat prices typically help profit, it has also hurt overall revenue. It's harder for operators to charge consumers more for their goods."
+        },
+        {
+            "question": "How does your company compensate for the seasonality of cashflow?",
+            "answer": "Seasonality of cashflow is not extremely important for operators in the industry. Each season provides a stable demand for operators."
+        },
+        {
+            "question": "What qualifications must your employees have? Do you offer competitive wages?",
+            "answer": "Consumers are more likely to frequent a store with a reputation for having experienced and knowledgeable staff."
+        },
+        {
+            "question": "Do you have a strong reputation among customers? How could you boost word-of-mouth recommendations?",
+            "answer": "A majority of meat markets are independent, one-store operations that rely on a history of good service and word-of-mouth marketing to attain and retain customers."
+        },
+        {
+            "question": "How do you maintain optimum stock levels? Are you able to ensure your products are as fresh as possible?",
+            "answer": "Retailers must maintain adequate stock levels and ensure top-selling meat products are available on demand. Furthermore, the perishable nature of industry products requires relatively quick sales."
+        },
+        {
+            "question": "How can you capitalize on increased per capita meat consumption? Do you offer niche and value-added products?",
+            "answer": "Generally, per capita meat consumption most closely reflects industry performance. An increase in demand for overall meat products will increase industry sales, whereas a decrease in consumption will reduce sales."
+        },
+        {
+            "question": "How has consumer demand for red meat changed in recent years? How do fluctuating prices for red meat affect your company's sales?",
+            "answer": "Beef and pork products comprise the largest share of industry revenue. Therefore, prices of red meat strongly drive operators' revenue stream. In the same way as poultry prices, higher prices of red meat generally translate to increased industry revenue."
+        },
+        {
+            "question": "How has rising seafood consumption affected your business? What can you do to offset consumer demand for protein alternatives?",
+            "answer": "As the popularity of this substitute grows, fewer consumers are expected to purchase meat."
+        }
+    ]
+}

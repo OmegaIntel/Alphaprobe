@@ -1,0 +1,628 @@
+{
+    "report_title": "US Distillery Industry Report",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 18150000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "revenue_cagr_value": 4.46
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.85
+            }
+        },
+        "profit": {
+            "profit_dollars": 1942000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": -1.5
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 10.7,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -5.4
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 4295000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 23718,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 1769000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 9788000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 2316000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The US Distillery industry has experienced significant growth in recent years, fueled by evolving consumer tastes and innovative marketing strategies. Distilleries have tapped into the growing demand for craft and artisanal spirits, using their unique products to capture a substantial portion of the market. This sector has also thrived on the premiumization trend, with consumers willing to spend more on quality and authenticity. However, the industry faces challenges such as fluctuating regulations and economic uncertainties, adding to its dynamic and sometimes volatile nature.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Shifting Preferences Lead to a Rise in Premiumization",
+            "current_performance_point_description": "Over the past five years, the spirits industry has seen a pronounced premiumization trend driven by a consumer preference shift toward higher-quality products. This has resulted in increased sales of higher-margin spirits and market resilience."
+        },
+        {
+            "current_performance_point_title": "Craft Distilleries Flood the Market",
+            "current_performance_point_description": "Drinkers willing to pay a premium for higher-margin spirits are increasingly drawn to craft liquors from small, independently owned distilleries, reflecting a broader consumer shift toward alternative and premium beverages."
+        },
+        {
+            "current_performance_point_title": "Eco-Friendly Spirits Lead Industry Transformation",
+            "current_performance_point_description": "There's a growing emphasis on sustainable production practices in the spirits industry. Distilleries are increasingly sourcing organic ingredients and implementing measures to reduce their carbon footprints, responding to consumer demand for eco-conscious products."
+        },
+        {
+            "current_performance_point_title": "Regulatory Shifts Reshape Distillery Operations",
+            "current_performance_point_description": "Fluctuating tariffs on imported spirits and raw materials have significantly impacted pricing and supply chains, causing operational challenges for distilleries as they navigate cost swell and supply uncertainties."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "EXPANDING CONSUMER CONFIDENCE WILL SUPPORT LIQUOR SALES",
+            "future_outlook_point_description": "Consumer appreciation for the quality and production processes of distilled spirits has steadily risen and shows no signs of slowing down as distillers continue to broaden their premium product lines to meet demand."
+        },
+        {
+            "future_outlook_point_title": "SPIRITS INNOVATIONS WILL OPEN NEW MARKETS",
+            "future_outlook_point_description": "The country's drinking-age population is expected to outpace general population growth over the next five years. Distilleries will likely alter their product mixes to enhance the selection of milder ready-to-drink (RTD) beverages, capitalizing on the gain in legal drinkers."
+        },
+        {
+            "future_outlook_point_title": "I M P O R T P E N E T R A T I O N W I L L S L O W A S T H E U S D O L L A R I S S E T T O F A L L",
+            "future_outlook_point_description": "An anticipated devaluation of the US dollar will reverse the previous period's restrictive import trends, making foreign spirits relatively more expensive than domestically produced liquors. This could shift consumer preference toward homegrown brands."
+        },
+        {
+            "future_outlook_point_title": "B I G B R A N D S S E T T O B O O M W H I L E S M A L L D I S T I L L E R I E S S T R U G G L E",
+            "future_outlook_point_description": "A growing disparity between the profits of large global distilleries and small regional ones is expected to become more pronounced in the coming years."
+        }
+    ],
+    "industry_definition": "This industry consists of operators engaged in distilling spirits (i.e. not beer or wine). Operators' three main activities are engaged in distilling potable liquors (except brandies), blending liquors and mixing liquors with other ingredients. These spirits are then bottled and sold primarily to liquor wholesalers, as well as to other retail stores.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage: growth",
+            "Concentration Level: low",
+            "Technology Change Level: low"
+        ],
+        "negative_impact_factors": [
+            "Barriers To Entry Level: high - steady",
+            "Capital Intensity Level: high",
+            "Industry Assistance Level: low - steady",
+            "Competition Level: high - steady"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "Growth Life Cycle Stage",
+            "High Profit vs. Sector Average",
+            "Low Product/Service Concentration",
+            "High Revenue per Employee"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "High Imports",
+            "High Customer Class Concentration",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "Per capita disposable income"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Per capita expenditure on alcohol"
+        ]
+    },
+    "key_trends": [
+        "Branding is crucial in a saturated market. Distilleries have dedicated substantial resources to creating a brand appealing to their target markets.",
+        "Distilleries struggle to compete with wine and beer's lower price points. Other alcoholic beverages offer similar benefits for younger consumers with less disposable income.",
+        "Consumer preferences lean towards high-quality, locally sourced liquor. Craft distilleries are expanding rapidly and are meeting this demand by introducing unique flavor profiles to attract a varied clientele.",
+        "Domestic distillers struggle to compete with imports. Consumers who perceive foreign-made spirits as higher quality are drawn to imported brands.",
+        "Major distilleries are strategically investing in expansion. Beam Suntory's 2020 investment in a ready-to-drink cocktail brand serves as an example of this trend.",
+        "Diversified product portfolios keep distilleries in the lead. In 2022, Diageo opened a new canning facility to expand its line of canned cocktail products.",
+        "The three-tier system continues to limit distilleries' power by prohibiting vertical integration. In control states, the government manages the distribution and sometimes the retail of spirits.",
+        "SBA loans provide low-interest financing to distilleries. This financial aid allows distilleries to expand operations, boost production."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Retail and liquor stores",
+            "segment_description": "Retail and liquor stores encompass businesses that sell alcoholic beverages directly to consumers, including specialty liquor shops and large retail chains. Shifts towards premium and craft spirits boost demand for unique and high-quality products from distilleries, encouraging innovation and diversity in offerings. Evolving state and federal regulations on alcohol sales impact how distilleries distribute their products, influencing market strategies and operational logistics. The rise of online alcohol sales expands the market reach for distilleries, necessitating robust digital marketing and efficient distribution channels to meet consumer demand.",
+            "segment_percentage": 48.6
+        },
+        {
+            "segment": "Food-service establishments",
+            "segment_description": "Restaurants, bars, cafes and catering services serve customers food and beverages. The rising popularity of craft cocktails boosts demand for unique, high-quality spirits from distilleries. Consumers' preference for local and artisan products drives food-service establishments to stock regional craft spirits. Expanding beverage menus with signature cocktails increases demand for specialized distillery products.",
+            "segment_percentage": 15.0
+        },
+        {
+            "segment": "Wholesalers",
+            "segment_description": "Intermediaries that purchase in bulk from manufacturers and sell to retailers, including liquor stores and food-service establishments. Changes in consumer preferences for craft and premium spirits drive wholesalers to source more diverse products, boosting orders for innovative distilleries. Wholesalers expanding their networks provide distilleries with broader market access, enhancing brand visibility and sales opportunities. Price competition among wholesalers affects distillery margins, prompting efficient production and cost management strategies.",
+            "segment_percentage": 33.9
+        },
+        {
+            "segment": "Consumers and other",
+            "segment_description": "This segment includes households and consumers who purchase spirits. Although the three-tier system prevents distilleries from selling directly to consumers, this segment represents the downstream market. Consumer demand for distilled spirits is growing alongside the availability of craft liquors and canned cocktails. These alternative beverages align with shifting preferences for variety and versatility.",
+            "segment_percentage": 2.5
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Vodka",
+            "product_description": "Vodka is a clear distilled spirit made from water, ethanol and grains or potatoes. Vodka is the most popular spirit in terms of volume. The bulk of vodka consumption occurs within the lower-end value segment since vodka is often diluted to make cocktails or mixed drinks. As canned cocktails have swept the nation, vodka sales have flourished since many RTD beverages are made with a vodka base.",
+            "product_percentage": 19.4
+        },
+        {
+            "product_or_service": "Gin",
+            "product_description": "Gin, crafted from juniper berries and RTD (Ready-to-Drink) cocktails. According to DISCUS, US sales of canned cocktails surged from $351.0 million in 2019 to $1.6 billion in 2021. Younger drinkers increasingly opt for RTD cocktails at social gatherings, drawn by the convenience and variety they offer.",
+            "product_percentage": 2.9
+        },
+        {
+            "product_or_service": "Whiskey",
+            "product_description": "Whiskey includes bourbon, corn, malt, rye and wheat whiskeys. Depending on the source, bourbon whiskey emanated from Louisiana or Kentucky, with Kentucky now producing most of the world's bourbon. The spirit's history in the US has made it distilleries' most popular liquor. Premiumization has also propped up whiskey over the past five years, as high-end and super-premium whiskeys represent a disproportionately large share of total whiskey sales.",
+            "product_percentage": 35.8
+        },
+        {
+            "product_or_service": "RTD Cocktails",
+            "product_description": "Growth in RTD cocktails is exploding. Other spirits include gin, crafted from juniper berries and RTD (Ready-to-Drink) cocktails. According to DISCUS, US sales of canned cocktails surged from $351.0 million in 2019 to $1.6 billion in 2021. Younger drinkers increasingly opt for RTD cocktails at social gatherings, drawn by the convenience and variety they offer.",
+            "product_percentage": 8.1
+        },
+        {
+            "product_or_service": "Rum",
+            "product_description": "Rum is made from sugarcane byproducts, like molasses or sugarcane juice. Rum is another liquor traditionally produced outside of the US in the Caribbean and Latin America but has become a popular spirit in the United States. Rum has been overshadowed in recent years by tequila and vodka, the bases for ready-to-drink cocktails. Flavor-infused rums have become popular as consumers crave more variety in their spirits.",
+            "product_percentage": 6.6
+        },
+        {
+            "product_or_service": "Cordials",
+            "product_description": "Cordials, or liqueurs, are sweetened distilled spirits often flavored with nuts, fruits, herbs and spices. Cordials are often used in cocktails or consumed as an aperitif or shooter. The most popular cordials include Southern Comfort, Jagermeister and Cointreau. The fundamental nature of liqueurs provides the segment with relative stability since many cocktail recipes require specific cordials. Since a single drink requires a minimal volume of liqueur, cordials comprise a small share of distilleries' sales.",
+            "product_percentage": 8.1
+        },
+        {
+            "product_or_service": "Tequila",
+            "product_description": "Tequila is a distilled liquor made from the blue agave plant. Historically, tequila has been most commonly produced in the area surrounding Tequila, Mexico, though domestic distilleries have increasingly taken on the production of this spirit. Tequila has experienced a substantial gain in popularity as advertising for the spirit has boosted consumer sentiment. The fastest-growing brands of tequila include Camerena, 1800 and El Jimador. Tequila sales have also benefited from the hike in canned cocktails, with brands like Cutwater and JuneShine being among the most popular.",
+            "product_percentage": 8.0
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Wheat, Barley & Sorghum Farming in the US",
+            "Corn Farming in the US",
+            "Glass Product Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Sand & Gravel Mining in the US",
+            "Water Supply & Irrigation Systems in the US",
+            "Farm Supplies Wholesaling in the US"
+        ],
+        "tier_1_buyers": [
+            "Supermarkets & Grocery Stores in the US",
+            "Wine & Spirits Wholesaling in the US",
+            "Beer, Wine & Liquor Stores in the US"
+        ],
+        "tier_2_buyers": [
+            "Bars & Nightclubs in the US",
+            "Chain Restaurants in the US",
+            "Single Location Full-Service Restaurants in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Per Capita Expenditure on Alcohol",
+            "determinant_description": "The adverse effects of excess alcohol consumption have been increasingly publicized in recent years despite society historically being tolerant of moderate alcohol consumption. While there is concern over the impact of excessive drinking, regular alcohol consumption is still a social norm, and overall alcohol consumption trends are steady. Declines in per capita expenditure on alcohol pose a potential threat to the industry."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Increasing",
+        "export_level": "Moderate",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Luxury branding elevates foreign products' appeal",
+                "trade_description": "Spirits are often imported from countries with a production history, like tequila from Mexico and scotch from Scotland. These foreign-dominated liquors impede domestic distilleries' sales. The premiumization trend has aided imports since consumers often perceive imported alcohol as higher quality than domestically produced spirits. Many foreign brands have built significant brand loyalty, increasing consumers' willingness to pay higher prices for their preferred brand."
+            },
+            {
+                "trade_title": "An inflated US dollar exacerbates import penetration",
+                "trade_description": "The value of the US dollar relative to the currencies of key trading partners has consistently increased, exerting significant pressure on domestic distilleries. A stronger US dollar results in higher domestic spirits prices than imported liquor. Consequently, consumers often turn to foreign brands in search of high-quality spirits at more affordable prices, challenging local producers in the market."
+            },
+            {
+                "trade_title": "Bourbon is the leading product in export markets",
+                "trade_description": "The US is renowned for its bourbons, which originated in the Southeast region and make up more than half of all whiskey by volume the United States exports each year. Global bourbon demand has risen over the past decade, but retaliatory tariffs have dampened the spirit's popularity. Since bourbon is distinctly American, countries levied tariff hikes from the former administration specifically targeted bourbon with their retaliatory tariffs."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The birthplace of American bourbon props up the Southeast. Louisiana and Kentucky claim to be the birthplaces of bourbon, an American barrel-aged whiskey. The Kentucky Distillers' Association states that most of the world's bourbon comes from Kentucky. The state's blue limestone and fertile soil attract bourbon producers, and its seasonal changes aid the aging process in breathable oak barrels. The Southeast's growing population has led to the rise of new distilleries offering unique variations of spirits. As younger generations move to the South, more distilleries will likely establish regional operations.",
+            "percentage_establishments": 28.9,
+            "percentage_population": 19.1
+        },
+        {
+            "location": "West",
+            "location_description": "Balmy weather in the West attracts distilleries. California, Oregon and Washington have become popular hubs for niche distilleries. California's temperate climate fosters a culture of social gatherings, while Oregon and Washington are at the forefront of the craft alcohol movement. Craft beer gained traction in the Pacific Northwest due to the region's significant hop production, a crucial component in brewing. With the craft beer boom leveling off, craft spirits are experiencing a surge in popularity.",
+            "percentage_establishments": 16.2,
+            "percentage_population": 23.5
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Empire State brings distilleries to the Mid-Atlantic. With its large and diverse population, New York City has become an appealing location for distillery operations, making New York the second most prominent state for distilleries in the United States. The oldest official distillery in the country, Laird and Company, is located in New Jersey. Established in 1780 with the issuance of the first liquor license, this historic distillery continues to serve spirits drinkers.",
+            "percentage_establishments": 14.3,
+            "percentage_population": 15.2
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 9.5,
+            "percentage_population": 6.9
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 9.2,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 8.6,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "Plains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 7.6,
+            "percentage_population": 4.8
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5.7,
+            "percentage_population": 4.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "Open and Control States",
+                "regulation_description": "Across the United States, alcohol regulation falls into two categories: open states and control states. In open states, distilleries can sell spirits, wine and beer directly to independent distributors. In contrast, control states see the government manage the distribution and, in some cases, the retail of spirits. Seventeen states currently function under this controlled system. In these states, distilleries face restricted market access, as their products are confined to state-owned liquor store shelves."
+            },
+            {
+                "regulation_title": "Liquor License",
+                "regulation_description": "In the spirits-producing industry, obtaining a license is mandatory. This process includes a comprehensive background check to ensure that distillery facilities meet safety standards and are thoroughly secured. This rigorous procedure helps regulate production, providing a controlled environment. Safety protocols aim to prevent unlawful activities and maintain the integrity and quality of the spirits produced."
+            },
+            {
+                "regulation_title": "The United States Alcohol and Tobacco Tax and Trade Bureau (TTB)",
+                "regulation_description": "The Alcohol and Tobacco Tax and Trade Bureau (TTB) oversees the taxation and regulation of distilleries at the federal level. It governs packaging and advertising standards to ensure compliance and appropriateness. The TTB collaborates with the Food and Drug Administration (FDA) to enforce food additives and colorings guidelines. These measures maintain industry standards, deter counterfeit products and protect consumers from potential harm, fostering a reliable and safe alcohol industry."
+            },
+            {
+                "regulation_title": "THE BUREAU OF ALCOHOL, TOBACCO, FIREARMS AND EXPLOSIVES (ATF)",
+                "regulation_description": "Before 2003, the Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF) managed many functions now overseen by the Alcohol and Tobacco Tax and Trade Bureau (TTB). The TTB was established to separate tax collection and regulatory duties from criminal enforcement. Currently, the ATF focuses on addressing illegal activities in the alcohol industry, particularly preventing and pursuing alcohol smuggling."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Capital Intensity Level",
+                "barrier_description": "high"
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "low - steady"
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "high - steady"
+            },
+            {
+                "barrier_title": "Legal",
+                "barrier_description": "Producers must establish positive relationships with wholesalers who prefer large brands offering diversified product portfolios. New entrants often struggle to find distributors, as many prominent distilleries have already secured these partnerships."
+            },
+            {
+                "barrier_title": "Start-up Costs",
+                "barrier_description": "The lengthy interval between the start of production and the availability of the final product delays the establishment of cash flows. New entrants unwilling to compromise on product quality require substantial initial investments."
+            },
+            {
+                "barrier_title": "Differentiation",
+                "barrier_description": "Major corporations allocate significant funds for marketing efforts, whereas emerging businesses often lack the financial resources to compete at the same level."
+            },
+            {
+                "barrier_title": "Capital Expenses",
+                "barrier_description": "Achieving economies of scale in liquor production requires substantial equipment, which new entrants may be unable to afford."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage",
+            "growth",
+            "Concentration Level",
+            "low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Branding",
+                "basis_description": "Branding is crucial in a saturated market. Distilleries have dedicated substantial resources to creating a brand appealing to their target markets."
+            },
+            {
+                "basis_title": "Pricing",
+                "basis_description": "Distilleries struggle to compete with wine and beer's lower price points."
+            },
+            {
+                "basis_title": "Alternatives",
+                "basis_description": "Other alcoholic beverages offer similar benefits for younger consumers with less disposable income."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Specialized Distilleries Counterbalance Industry Consolidation Trends",
+                "concentration_description": "While the largest distilleries have expanded through mergers and acquisitions over the past five years, small-scale producers have emerged to meet shifting preferences for specialized beverages."
+            },
+            {
+                "concentration_title": "Top Distilleries Reallocate Market Share",
+                "concentration_description": "Prominent distilleries trade brands to strategically reallocate resources based on shifting consumer preferences."
+            },
+            {
+                "concentration_title": "Large-Scale Distilleries Have The Advantage",
+                "concentration_description": "Size advantages in the distilleries industry help keep market share concentration steady, ensuring a balanced competitive landscape and allowing for adaptive responses to consumer trends."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Brown-Forman Corporation",
+                "company_percentage": 10.3
+            },
+            {
+                "company_name": "Diageo Plc",
+                "company_percentage": 8.7
+            },
+            {
+                "company_name": "Sazerac Company, Inc.",
+                "company_percentage": 3.2
+            },
+            {
+                "company_name": "Beam Suntory Inc.",
+                "company_percentage": 3.0
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 74.9
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Premium Purchases Ensure Quality Production",
+            "cost_factor_description": "Raw materials, such as grains, yeast and water, are primary purchases and constitute a significant cost factor for distilleries. Packaging materials, including bottles, labels and caps, also significantly impact purchase costs. Equipment and machinery for distillation, aging and bottling require substantial initial investments and ongoing maintenance expenses. Also, energy costs for running distillation processes and climate control in aging warehouses add to the financial outlay. Efficient management of these costs is critical for maintaining profitability and ensuring the quality and consistency of the final product. Regular evaluation of supply chain and operational efficiencies can help mitigate these expenses."
+        },
+        {
+            "cost_factor_title": "Effective Marketing Drives Brand Success",
+            "cost_factor_description": "Effective marketing strategies are crucial for brand recognition and driving sales in the competitive spirits market. Marketing expenses include advertising campaigns, social media promotions and sponsorships to enhance brand visibility. Collaborations with distributors and retailers often require marketing investments to secure shelf space and promotions. Tasting events, trade shows, and other promotional activities are essential marketing expenses for attracting and engaging consumers. These efforts help build a loyal customer base and foster brand loyalty, ultimately contributing to increased sales and market share. Continuous innovation in marketing approaches is necessary to stay ahead in the evolving market landscape."
+        },
+        {
+            "cost_factor_title": "Competitive Wages Impact Production Quality",
+            "cost_factor_description": "Competitive wages are essential to attract and retain talent, directly impacting production quality. Labor costs also include benefits and overtime pay, contributing to the overall wage expenses. As distilleries expand, administrative and sales staff wages add to the financial outlay, increasing operational costs. Efficient labor resource management is critical to maintaining profitability and ensuring the smooth functioning of the distillery."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "High capital intensity",
+                "capital_intensity_description": "Capital expenses required for achieving economies of scale in liquor production are substantial, which may be unaffordable for new entrants."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Market Fluctuations in Consumer Preferences",
+                "volatility_description": "Consumer tastes shift rapidly, with trends like craft spirits and premium products rising and falling in popularity, impacting sales unpredictably. Economic downturns or booms influence disposable income, influencing consumers' spending on luxury items like specialty spirits. Seasonal demand spikes, such as holidays or special events, create inconsistent sales patterns and challenge inventory and production planning. Competition from new entrants and existing brands launching innovative products can quickly alter market dynamics, affecting established distilleries' market share and revenue."
+            },
+            {
+                "volatility_title": "Regulatory and Taxation Changes Cause Volatility",
+                "volatility_description": "Frequent changes in alcohol taxation rates at federal and state levels can suddenly inflate costs, impacting pricing strategies and profit. New production, labeling and distribution regulations can require costly adjustments, disrupting operations and financial stability. Trade policies and tariffs on imported raw materials or exported spirits can fluctuate, affecting cost structures and market access. Compliance with evolving health and safety standards can necessitate significant investments, diverting funds from other business areas and creating financial uncertainty."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Distilleries create new flavors through canned cocktails",
+                "technological_change_description": "Ready-to-drink (RTD) alcoholic beverages have expanded rapidly over the past five years. Canned spirits offer a convenient way for consumers to enjoy pre-mixed drinks with various flavors. Large and small distillers have released new canned cocktail lines to capitalize on this booming trend, catering to the growing demand for ease and variety in alcoholic beverages."
+            },
+            {
+                "technological_change_title": "Craft spirits provide an opportunity for small-scale distilleries",
+                "technological_change_description": "Following the craft beer boom, craft spirits are rising among younger drinkers. New craft distilleries have emerged over the past five years, offering locally distilled spirits and innovative flavor profiles. These craft distilleries compete with industry giants by appealing to local consumers who seek authentic, unique brands and distinctive drinking experiences."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "Does your distillery specialize in producing one variety of spirits or do you offer a diverse line of products?",
+            "answer": "The average distillery focuses on producing one or two types of spirits, given the cost, equipment and space needed to make various types of spirits. However, the industry's largest distilleries generally specialize in or are well-known for a particular spirit while producing a variety of lesser-known spirits. While most distilleries focus on one or two spirits, most offer products at a range of price points to ensure demand remains stable despite shifts in the economic landscape."
+        },
+        {
+            "question": "How do distilleries market themselves to help themselves stand out from competitors like wineries and breweries?",
+            "answer": "Distilleries showcase the unique process of distillation, emphasizing craftsmanship, quality of ingredients and maturation time for spirits, which differs substantially from wine or beer production. Distilleries often create experiential marketing through distillery tours, tasting sessions and pairing dinners to build connections with consumers, offering them a behind-the-scenes look into the spirit-making process."
+        },
+        {
+            "question": "How do distilleries navigate through volatile input costs?",
+            "answer": "Distilleries often hedge against unpredictable costs by buying a year's worth of grains or other ingredients in advance, locking in prices to control expenses. They can also adapt their product lines, favoring products with less expensive inputs when costs increase suddenly."
+        },
+        {
+            "question": "Has your distillery explored relocating establishments to areas of the country with lower wages and operational costs?",
+            "answer": "Most distilleries choose their establishment locations based on proximity to upstream suppliers and downstream markets. However, many distilleries, particularly larger ones, have opted to offshore in an attempt to reduce wage and operational costs."
+        },
+        {
+            "question": "Has your distillery been able to reduce wage costs through any forms of automation in the distilling process?",
+            "answer": "Many distilleries have introduced mass production processes that require fewer physical employees; however, because of the perceived lower quality of products produced by this method, it's often reserved for less expensive, lower quality spirits. Still, for many value brands that compete based on price, mass production reduces the average and marginal costs in production, improves profit and allows distilleries to keep selling prices low, enticing consumers."
+        },
+        {
+            "question": "How has your company kept its distilling processes and other proprietary information safeguarded?",
+            "answer": "Enforcing intellectual property regulations is critical to protecting and leveraging a company's competitive edge."
+        },
+        {
+            "question": "What regulations must distilleries abide by?",
+            "answer": "Distilleries must comply with local, state and federal laws related to licensing, production, packaging, taxation and sales, including obtaining permits from agencies like the Alcohol and Tobacco Tax and Trade Bureau (TTB). They must also adhere to stringent health and safety regulations, like maintaining sanitary practices, properly handling and storing raw materials and hazardous substances and ensuring employee safety."
+        },
+        {
+            "question": "Do you work with trade associations or other interest groups to advance your company's interests?",
+            "answer": "The Distilled Spirits Council of the United States is the leading industry association promoting distilleries. The American Distilling Institute promotes and defends craft distillers."
+        },
+        {
+            "question": "How do your company's returns amid economic downturns compare with your major competitors?",
+            "answer": "Profit varies significantly across the industry, depending on an operator's spirit of focus, size and distribution channels, with large global operators typically producing higher returns compared with smaller counterparts. Often, larger distilleries produce various products with varying price points, enticing consumers with low-priced options during periods of economic downturn."
+        },
+        {
+            "question": "How do rising wage costs impact your distillery's performance?",
+            "answer": "Though wages account for a relatively small share of revenue, distilleries have increasingly competed based on the perceived quality of their products, resulting in many distilleries hiring highly-skilled employees, who command higher wages, to ensure top-quality products. Swelling wage costs typically place negative pressure on profit."
+        },
+        {
+            "question": "What is your main outlet for promoting your new and established brands? Do marketing expenses account for a high share of your company's revenue?",
+            "answer": "Marketing, especially brand positioning, is essential to success in local and international markets. The intense competition among brands necessitates large expenditures on advertising and promotion."
+        },
+        {
+            "question": "Have you leveraged economies of scale to keep operational costs low? How could you better leverage economies of scale to favor your operations?",
+            "answer": "Mass production reduces average and marginal costs, thereby improving profitability. The Distilleries industry is highly concentrated. The top distilleries keep a tight hold on their positioning because of brand loyalty and economies of scale, allowing them to keep operational costs low and try new brands and products for lower cost and risk than smaller distilleries."
+        },
+        {
+            "question": "Do you have contracts with reliable input providers?",
+            "answer": "Success is highly dependent on ensuring adequate quantities of raw materials. Distilleries typically establish contracts with reliable suppliers for key ingredients, like grains or fruits, to ensure product quality and consistency. They also make agreements with manufacturers for essential supplies like barrels for aging spirits, yeast and fuel for production."
+        },
+        {
+            "question": "Impact of Changes in Alcohol Expenditure",
+            "answer": "A boost in alcohol expenditure can boost distilleries' production, leading to higher profit. A drop in alcohol expenditure might result in reduced production, potential layoffs and potential financial strain for distilleries. During periods of economic downturn, it isn't uncommon for expenditure on alcohol to strengthen, as many consumers find the effects of alcoholic beverages to be enticing during periods of distress."
+        },
+        {
+            "question": "Trade-weighted Index and Tariffs",
+            "answer": "The trade-weighted index (TWI) measures the value of the US dollar compared with its major trading partners. A boost in the TWI represents a heightened value of the US dollar, resulting in exported products becoming relatively more expensive for foreign markets and imports becoming relatively more affordable for domestic consumers. Tariff hikes, particularly for bourbon, typically depress export sales."
+        },
+        {
+            "question": "How do excise taxes on distilled spirits impact your company's ability to turn a profit? How do you keep track of changes in excise tax for distilled spirits?",
+            "answer": "Excise taxes are levied on specific industry products by the state and the federal government. When excise taxes expand, distilleries raise the selling price of their products, risking losing consumers and declining revenue. Conversely, distilleries typically encounter lower returns if they try to stabilize selling prices and not pass along excise tax costs."
+        }
+    ]
+}

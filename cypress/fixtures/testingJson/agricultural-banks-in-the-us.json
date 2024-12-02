@@ -1,0 +1,534 @@
+{
+    "report_title": "Agricultural Banks in the US",
+    "report_date": "Jan 04, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 20498000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": -0.97
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": -0.57
+            }
+        },
+        "profit": {
+            "profit_dollars": 1599000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 4.24
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 7.8,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 5.26
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 8945000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": -0.53
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 78570,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 7156000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": -1.16
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": -0.81
+            }
+        },
+        "imports": {
+            "imports_dollars": 101,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 101,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The industry had a strong run of year-over-year growth through the end of 2023 until the pandemic onset. Normally, a distressed agricultural sector would increase industry revenue, but near-zero interest rates and government aid reduced farmers' demand for loans. This caused revenue decline in 2020 and tepid 2021 growth. Overall, industry revenue shrank at a CAGR of 1.1% to $20.5 billion by end-2023, including expected 8.1% growth in 2023 as stimulus dwindles.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Agricultural Woes Push Farmers to Seek Short-Term Loans",
+            "current_performance_point_description": "Cash-poor farmers turned to short-term loans from agricultural banks to cover expenses as commodity prices were volatile in the last five years. Strong fiscal support lowered loan demand in 2020 and 2021. Rising interest rates will make some farmers hesitant to take out expensive debt."
+        },
+        {
+            "current_performance_point_title": "Agricultural Banks Raise Capital Reserves to Minimize Volatility",
+            "current_performance_point_description": "To minimize loan default risk and other agricultural sector factors, agricultural banks are increasing equity capital from stock and retained earnings. Higher interest rates let banks earn more from savings, helping prepare for shocks."
+        },
+        {
+            "current_performance_point_title": "Interest Rates Experienced Fluctuation in the Last Five Years",
+            "current_performance_point_description": "The Fed brought rates to historic lows in 2020 for the pandemic, spurring farmers to take out more inexpensive loans. But in 2022, the Fed hiked rates to control inflation, decreasing total loan demand but allowing banks to earn more interest on fewer loans."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "External Competition Will Be a Bigger Problem Moving Forward",
+            "future_outlook_point_description": "Larger commercial banks and savings institutions will likely continue using their size and scope to attract deposits away from agricultural banks. Fintech and online banking companies will become a bigger threat to agricultural and traditional banks."
+        },
+        {
+            "future_outlook_point_title": "High Interest Rates Will Continue to Have Mixed Results for Agricultural Banks",
+            "future_outlook_point_description": "The Fed is determined to raise rates to stop high inflation. As rates rise, loan demand will decrease as cash-poor farmers can't afford higher interest payments. But banks will benefit from higher returns on fewer loans and earn more interest on savings."
+        },
+        {
+            "future_outlook_point_title": "Agricultural Banks Will Need to Hasten Their Shift Online",
+            "future_outlook_point_description": "Agricultural banks need to speed up digitizing banking services to avoid losing more ground to competitors. Given risks, they will invest heavily in cybersecurity in coming years."
+        }
+    ],
+    "industry_definition": "Operators in this industry specialize in lending to the agricultural sector. More specifically, banks in this industry dedicate at least 18.3% of their total loans to agriculture.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level low",
+            "Globalization Level low - steady"
+        ],
+        "negative_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "Aggregate household debt"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Yield on 10-year Treasury note"
+        ]
+    },
+    "key_trends": [
+        "Short-term loans have propped up the industry in times of economic strife. The pandemic resulted in a boom in these types of loans.",
+        "The Fed and Interest Rate Hikes",
+        "Heavy Regulation",
+        "Farmers and Agricultural Loans",
+        "Competition",
+        "Profit Trends",
+        "Wages are the largest expense for agricultural banks",
+        "Supply Chain"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Grain farmers",
+            "segment_description": "Grain producers represent the Agricultural Banks industry's largest market. Grain farmers grow crops such as wheat, corn, barley, rye, flax and oats. According to the 2022 Agricultural Lender Survey, the majority of grain farmers are concentrated in the Plains and corn belt regions which are represented by the Dakotas, Nebraska, Iowa, Montana and Kansas.",
+            "segment_percentage": 55.0
+        },
+        {
+            "segment": "Cattle ranchers",
+            "segment_description": "Cattle ranchers represent the Agricultural Banks industry's second-largest market. Given the high operating costs associated with cattle ranching, cattle ranchers often turn to agricultural banks to finance land, livestock and homestead purchases. The majority of beef cattle operations are located in the West and Plains regions according to the 2022 Agricultural Lender Survey.",
+            "segment_percentage": 22.0
+        },
+        {
+            "segment": "Dairy operations",
+            "segment_description": "Dairy operations represent this industry's third-largest market. Dairy operations consist of milk, cheese, butter and cream production. According to the 2022 Agricultural Lender Survey, the majority of dairy operation lending is concentrated in the corn belt and West regions.",
+            "segment_percentage": 9.0
+        },
+        {
+            "segment": "Poultry and swine ranches",
+            "segment_description": "",
+            "segment_percentage": 5.0
+        },
+        {
+            "segment": "Fruit, nut and vegetable producers",
+            "segment_description": "",
+            "segment_percentage": 5.0
+        },
+        {
+            "segment": "Other",
+            "segment_description": "",
+            "segment_percentage": 4.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Farm Real Estate Loans",
+            "product_description": "Farm real estate loans represent the Agricultural Banks industry's primary service. Similar to a traditional mortgage, farm real estate loans are used to finance the purchase of farmland and homesteads. Agricultural banks specialize in farm real estate loans due to the comprehensive due diligence required in purchasing farmland.",
+            "product_percentage": 40.7
+        },
+        {
+            "product_or_service": "Production and Intermediate-Term Loans",
+            "product_description": "Production and intermediate-term loans represent a core service offered by the Agricultural Banks industry. Production loans are typically representative of loans on farm machinery and equipment and other operating expenses. Given the volatility of agricultural prices, some agricultural producers will struggle to cover their costs of production for the growing season due to low prices received for their output. In turn, agricultural producers turn to agricultural banks for short- to intermediate-term loans to cover operational costs.",
+            "product_percentage": 32.3
+        },
+        {
+            "product_or_service": "Agribusiness Loans",
+            "product_description": "Agribusiness loans are loans made to agricultural-related businesses. The number of agribusiness loans has fallen sharply amid the pandemic.",
+            "product_percentage": 20.9
+        },
+        {
+            "product_or_service": "Rural Infrastructure Loans",
+            "product_description": "Rural infrastructure primarily includes roadways and utilities and is conducive to agricultural output. Lending for rural infrastructure projects has fallen through the end of 2023.",
+            "product_percentage": 5.1
+        },
+        {
+            "product_or_service": "Rural Residential Real Estate Loans",
+            "product_description": "",
+            "product_percentage": 0.6
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "",
+            "product_percentage": 0.4
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Computer Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Copier & Office Equipment Wholesaling in the US",
+            "Computer & Packaged Software Wholesaling in the US",
+            "Office Stationery Wholesaling in the US",
+            "Internet Service Providers in the US",
+            "Wired Telecommunications Carriers in the US"
+        ],
+        "tier_1_buyers": [
+            "Agriculture, Forestry, Fishing and Hunting in the US"
+        ],
+        "tier_2_buyers": [
+            "Land Leasing in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Prime Rate",
+            "determinant_description": "In 2023, interest income is anticipated to account for more than 95.0% of total industry revenue for agricultural banks. While increases in interest rates cause the cost of borrowing to rise, the prevailing macroeconomic climate plays a more important role in determining demand for loans. Consequently, higher rates tend to boost industry interest income, despite fewer borrowers. The prime rate is expected to rise in 2023."
+        },
+        {
+            "determinant_title": "Agricultural Price Index",
+            "determinant_description": "Agricultural banks specialize in providing farmland and farm production loans to the agricultural sector. Consequently, economic trends involving the agricultural sector, including the agricultural price index, significantly influence demand for industry services. The agricultural price index is expected to decrease in 2023."
+        },
+        {
+            "determinant_title": "Aggregate Household Debt",
+            "determinant_description": "In addition to interest income from agricultural loans, industry operators also garner revenue from nonfarm consumers and businesses. Consequently, rising levels of aggregate household debt generally correlate to increasing demand for the industry's mortgages, home equity loans, auto loans and other personal loans. Aggregate household debt is expected to increase in 2023, presenting an opportunity to the industry."
+        },
+        {
+            "determinant_title": "Yield on 10-Year Treasury Note",
+            "determinant_description": "Treasury bills are the US government's means for borrowing money and are generally considered to be very safe investments. The yield is analogous to the current interest rate demanded by the market to hold this debt for 10 years. The yield on 10-year treasury notes is expected to rise in 2023, constraining disposable income and posing a potential threat to the industry."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes lead the way. The region includes Illinois, which is home to Chicago, arguably the second-largest financial hub in the United States. Wisconsin has more dairy farms than any other state. Milk is an important agricultural commodity that can be consumed after pasteurization or used to produce dairy products like butter, cheese and yogurt.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Southwest",
+            "location_description": "The Southwest holds steady. Favorable tax laws in states like Texas incentivize industry expansion of financial institutions, particularly for smaller companies looking to break through within the market. Laredo, TX and Houston-Galveston, TX are two of the leading districts of exportation for agricultural products in the Southwest.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Plains",
+            "location_description": "The Plains round out the industry. Iowa, Nebraska, Minnesota and Kansas are among the 10 leading states, in terms of cash receipts, within the Agricultural sector. While other regions have banks with a multitude of specializations, agricultural banks are the most prominent in the Plains region because of their relatively high demand.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 10.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "Federal Reserve System",
+                "regulation_description": "The Federal Reserve is the federal supervisor and regulator for all US banks and bank holding companies, including financial holding companies formed under the authority of the Gramm-Leach-Bliley Act of 1999, and of state-"
+            },
+            {
+                "regulation_title": "Bank Holding Company Act",
+                "regulation_description": "Under the Bank Holding Company Act, a corporation or similar organization must obtain the Federal Reserve's approval before forming a bank holding company through the acquisition of one or more banks in the United States."
+            },
+            {
+                "regulation_title": "Bank Merger Act",
+                "regulation_description": "The Bank Merger Act requires that all proposals involving the merger of insured depository institutions be acted on by the appropriate federal banking agency."
+            },
+            {
+                "regulation_title": "Change in Bank Control Act",
+                "regulation_description": "The Change in Bank Control Act requires persons seeking control of a US bank or bank holding company to obtain approval from the appropriate federal banking agency before completing the transaction."
+            },
+            {
+                "regulation_title": "International Banking Act",
+                "regulation_description": "The International Banking Act, as amended by the Foreign Bank Supervision Enhancement Act of 1991, requires foreign banks to obtain Federal Reserve approval before establishing branches, agencies, commercial-lending company subsidiaries or representative offices in the United States."
+            },
+            {
+                "regulation_title": "The Dodd-Frank Wall Street Reform and Consumer Protection Act (Dodd-Frank)",
+                "regulation_description": "Signed into law in 2010, the Dodd-Frank Act implements financial regulatory reform on nearly every aspect of the financial services sector."
+            },
+            {
+                "regulation_title": "The Economic Growth, Regulatory Relief and Consumer Protection Act",
+                "regulation_description": "Signed into law in May 2018, the Economic Growth, Regulatory Relief, and Consumer Protection Act (the Regulatory Relief Act) serves to mitigate certain compliance measures enacted by Dodd-Frank."
+            },
+            {
+                "regulation_title": "Current Expected Credit Losses Accounting Standard",
+                "regulation_description": "The Current Expected Credit Losses (CECL) accounting standard will require banks to post expected loan losses up front on their financial statements."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Life cycle stage",
+                "barrier_description": "Life Cycle Stage: decline"
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: decline"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Competition from commercial banks",
+                "basis_description": "Commercial banks are the largest competition agricultural banks face. Commercial banks like Wells Fargo are better funded and have the benefit of being household names."
+            },
+            {
+                "basis_title": "Competition based on size",
+                "basis_description": "Banks compete based on size. Larger banks butt heads over larger contracts, while smaller ones compete locally for small loans."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Medium market share concentration",
+                "concentration_description": "The industry has a medium level of market share concentration"
+            },
+            {
+                "concentration_title": "Top 4 banks account for over 60% revenue",
+                "concentration_description": "The four largest banks are estimated to account for over 60.0% of total industry revenue in 2023."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Federal Farm Credit Banks Funding Corporation",
+                "company_percentage": 48.7
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 51.3
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 34.9
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 1.9
+        },
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 7.8
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Legal services, litigation costs and restructuring expenses",
+            "cost_factor_description": "Other noninterest expenses include legal services, litigation costs and restructuring expenses."
+        },
+        {
+            "cost_factor_title": "Selling, general and administration expenses",
+            "cost_factor_description": "Other costs include selling, general and administration expenses, which include the costs of support functions, and research and development initiatives."
+        },
+        {
+            "cost_factor_title": "Purchased noncapital equipment, software and other materials",
+            "cost_factor_description": "Purchased noncapital equipment, software and other materials are anticipated to account for 1.9% of total industry revenue."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Labor is the largest cost",
+                "capital_intensity_description": "Labor is the largest cost for prospective agricultural banks. Banks employ various financial experts specializing in loans and account management."
+            },
+            {
+                "capital_intensity_title": "Concentrated major markets",
+                "capital_intensity_description": "The major markets for this industry are highly concentrated, which implies that the market has a focus on key customer segments."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Affected by economic conditions",
+                "volatility_description": "The industry is heavily affected by uncertain economic conditions"
+            },
+            {
+                "volatility_title": "Fluctuations from interest rates and commodity prices",
+                "volatility_description": "Industry revenue fluctuations are predominately caused by changes in domestic interest rates and commodity prices."
+            },
+            {
+                "volatility_title": "Interest income volatility",
+                "volatility_description": "The industry's revenue from interest income has displayed a much higher level of volatility compared with noninterest income."
+            }
+        ],
+        "volatility_trend": "Decreasing"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "How do you emphasize the value of your company's services?",
+            "answer": "By providing financial advisory services along with the extension of loans. Agricultural banks facilitate farm profitability through lines of credit."
+        },
+        {
+            "question": "How diversified are your product offerings compared with those of your competitors?",
+            "answer": "Larger banks typically offer a greater variety of loan products. Varying rates on lines of credit are a major competitive factor for agricultural banks."
+        },
+        {
+            "question": "Is your company exposed to fintech competitors?",
+            "answer": "No. Fintech is more concerned with personal and commercial finance."
+        },
+        {
+            "question": "Are your operations spread across the country or are they more concentrated in a certain geographic location?",
+            "answer": "Agricultural banks are spread among agricultural regions."
+        },
+        {
+            "question": "To what extent are your processes automated? How much do you plan on investing in automation over the coming years?",
+            "answer": "Given the tried and true methods used for agricultural banking, automation does not provide much value-added benefit, considering its cost and risks. Agricultural banks are unlikely to invest in automation over the coming years."
+        },
+        {
+            "question": "How do you stay up to date with software and technology trends?",
+            "answer": "Sales reps call these banks to inform them about their products. Management hear about trends through their networks."
+        },
+        {
+            "question": "How do you expect the proposed changes to Dodd-Frank might affect your business?",
+            "answer": "The changes to Dodd-Frank will help larger agricultural banks. Banks with over $50.0 billion in assets will benefit from decreased regulatory oversight."
+        },
+        {
+            "question": "How have the increased capital requirements under Basel III affected your operations?",
+            "answer": "Ag banks have increased their capital reserves. Ag banks are retaining a greater portion of their earnings."
+        },
+        {
+            "question": "How do your profit margins compare with those of your competitors?",
+            "answer": "Profit margins are relatively uniform across ag banks. Services have low differentiation among banks."
+        },
+        {
+            "question": "To what extent are you affected by hard and soft pricing cycles?",
+            "answer": "Ag banks are affected by agricultural price fluctuations. Ag banks use counter-cyclical diversification to mitigate such risk."
+        },
+        {
+            "question": "Are you located in a densely populated area? How close are you to your nearest competitors?",
+            "answer": "A strong branch presence throughout the rural United States makes it easier and more appealing for agricultural customers to conduct business with a particular bank."
+        },
+        {
+            "question": "How do you keep track of the company's expenditures? What costs can you cut back on?",
+            "answer": "Operators require interest rate, credit and operational risk management processes. They must maintain a rigorous and conservative risk management approach because customer perceptions of credit-worthiness are crucial to generate new business."
+        },
+        {
+            "question": "How quickly can new technology be adopted? Does your company keep up to date with the latest technology?",
+            "answer": "Agricultural banks must keep pace with the technological developments of other banking institutions to compete and maintain their customer bases."
+        },
+        {
+            "question": "What type of businesses compete with your company?",
+            "answer": "Externally, agricultural banks largely compete with other lending institutions, including commercial banks and savings and loan institutions."
+        },
+        {
+            "question": "Do you monitor levels of household debt? How are you planning to capitalize on rising debt levels this coming year?",
+            "answer": "Rising levels of aggregate household debt generally correlate to increasing demand for the industry's mortgages, home equity loans, auto loans and other personal loans."
+        },
+        {
+            "question": "Do you keep track of the prime rate? Has your company monitored trends in loan demand?",
+            "answer": "While increases in interest rates cause the cost of borrowing to rise, the prevailing macroeconomic climate plays a more important role in determining demand for loans. Consequently, higher rates tend to boost industry interest income."
+        }
+    ]
+}

@@ -1,0 +1,326 @@
+{
+    "report_title": "Online Residential Home Sale Listings in the US",
+    "report_date": "Aug 29, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 1823000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 1.35
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "revenue_cagr_value": 0.78
+            }
+        },
+        "profit": {
+            "profit_dollars": 101,
+            "profit_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "profit_cagr_value": 101
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2030,
+                "end_year": 2035,
+                "profit_cagr_value": 101
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 101,
+            "profit_margins_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "profit_margins_cagr_value": 101
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2030,
+                "end_year": 2035,
+                "profit_margins_cagr_value": 101
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1337000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0.5
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 0.5
+            }
+        },
+        "employees": {
+            "employees_count": 3959,
+            "employees_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "employees_cagr_value": 0.02
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "employees_cagr_value": 0.03
+            }
+        },
+        "wages": {
+            "wages_dollars": 455000000,
+            "wages_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "wages_cagr_value": 0.01
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "wages_cagr_value": 0.01
+            }
+        },
+        "imports": {
+            "imports_dollars": 101,
+            "imports_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "imports_cagr_value": 0.01
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "imports_cagr_value": 0.02
+            }
+        },
+        "exports": {
+            "exports_dollars": 101,
+            "exports_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "exports_cagr_value": 0.01
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "exports_cagr_value": 0.02
+            }
+        }
+    },
+    "executive_summary": "Online residential home listing companies manage a virtual marketplace, providing services connecting residential home sellers to buyers. Through 2023, online listing services have performed exceedingly well, as residential home sales have increased due to solid homeownership rates due to favorable mortgage rates in the early part of the period and a scorching hot housing market in the latter part.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "A COPYCAT LIKE NO OTHER",
+            "current_performance_point_description": "Industry performance will be closely tied to residential real estate market movements and trends. As the house price index increases and house demand falls, online listings' revenue follows. For example, amid strong demand for residential real estate during COVID-19, property owners listed their homes for sale via industry platforms to capitalize on rising home prices, propelling industry revenue upward."
+        },
+        {
+            "current_performance_point_title": "NETWORK EFFECTS SPUR CONSOLIDATION AND LOW BARRIERS SPARK ENTRY",
+            "current_performance_point_description": "Significant industry players like Zillow Group Inc. (Zillow) have actively made strategic acquisitions to bolster product offerings and expand geographic reach. Zillow owns some of the most recognizable home and apartment listing brands (Trulia, StreetEasy), and these acquisitions produce network effects."
+        },
+        {
+            "current_performance_point_title": "Competition's Bite May Originate From Unexpected Sources",
+            "current_performance_point_description": "While platforms target tech-savvy home buyers for future growth, other platforms could make inroads."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Expanding Features Keep Buyers Online and Sellers Selling",
+            "future_outlook_point_description": "During the height of COVID-19, mobile applications and desktop websites offered digital tours and online floorplans, keeping people safe."
+        },
+        {
+            "future_outlook_point_title": "There's No Place Like Online",
+            "future_outlook_point_description": "The house price index is expected to continue to climb, indicating a slower housing market."
+        },
+        {
+            "future_outlook_point_title": "Entry Can Lead to Further Concentration",
+            "future_outlook_point_description": "The low cost of entry spurs many to enter with new online services or as a niche provider."
+        }
+    ],
+    "industry_definition": "This industry provides internet listings and search functions for residential properties that are for sale.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage - growth",
+            "Concentration Level - low",
+            "Globalization Level - low - steady"
+        ],
+        "negative_impact_factors": [
+            "Capital Intensity Level - high",
+            "Industry Assistance Level - none - steady",
+            "Technology Change Level - high",
+            "Barriers To Entry Level - low - increasing",
+            "Competition Level - high - increasing"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "Low & Increasing Barriers to Entry",
+            "None & Steady Level of Assistance",
+            "High Competition",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Percentage of business conducted online"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "30-year conventional mortgage rate"
+        ]
+    },
+    "key_trends": [
+        "Competition takes on a Davis versus Goliath dynamic.",
+        "Prices remain competitive due to potential competition.",
+        "COVID-19 solidifies the value of online services."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Millennials and Generation Z",
+            "segment_description": "This segment accounts for 38.0% of the market.",
+            "segment_percentage": 38.0
+        },
+        {
+            "segment": "Adults aged 40 to 49",
+            "segment_description": "Adults aged 40 to 49 account for 22.0% of users.",
+            "segment_percentage": 22.0
+        },
+        {
+            "segment": "Adults aged 50 and older",
+            "segment_description": "Older adults represent the largest segment at 40.0%.",
+            "segment_percentage": 40.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Single-Family Houses, Detached (1 to 10 units)",
+            "product_description": "The single-family housing market is estimated to account for a combined 76.5% of listings.",
+            "product_percentage": 43.5
+        },
+        {
+            "product_or_service": "Single-Family Houses, Detached (more than 11 units)",
+            "product_description": "Video capability becomes critical for online multifamily listings.",
+            "product_percentage": 33.0
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Software Publishing in the US",
+            "Computer Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [
+            "Apartment Rental in the US"
+        ],
+        "tier_2_buyers": [
+            "Real Estate Sales & Brokerage in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "House Price Index",
+            "determinant_description": "The house price index measures the value of homes and residential real estate in the United States."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "West",
+            "location_description": "The distribution of locations approximates the distribution of the US population.",
+            "percentage_establishments": 28.0,
+            "percentage_population": 23.0
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Great Lakes and Southeast have fewer locations relative to their populations share.",
+            "percentage_establishments": 14.0,
+            "percentage_population": 19.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Increasing",
+        "barriers_points": [],
+        "factors_increased_barrier": [
+            "Capital Intensity",
+            "Technology Change",
+            "Competition"
+        ],
+        "factors_decreased_barrier": []
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": []
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 15.0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0.8
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 24.9
+        },
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 33.4
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Wages and purchase costs drive revenue volatility",
+            "cost_factor_description": "To compete in the online marketplace, costs are incurred to adopt state-of-the-art technology."
+        },
+        {
+            "cost_factor_title": "Economic factors and shocks kick revenue down and upwards",
+            "cost_factor_description": "Housing demand performance during the COVID-19 was uncharacteristically changeable."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Increasing"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": []
+}

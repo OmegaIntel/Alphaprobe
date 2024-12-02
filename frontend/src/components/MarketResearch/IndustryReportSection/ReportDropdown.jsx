@@ -21,7 +21,7 @@ import ScorecardComponent from "./ReportSectionComponents/ScoreCard";
 import IndustryImpact from "./ReportSectionComponents/IndustryImpact";
 import RadarChartComponent from "./ReportSectionComponents/ScoreCardRadarChart";
 
-const ReportDropdown = ({ data, sidebarSections }) => {
+const ReportDropdown = ({ data}) => {
   const reportData = Array.isArray(data) ? data : [data];
 
   // Helper function to check if a field exists and has content

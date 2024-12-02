@@ -1,0 +1,494 @@
+{
+    "report_title": "Industry Research: Agriculture, Forestry, Fishing and Hunting in the US",
+    "report_date": "Jan 04, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 531954000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": 1.9
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "revenue_cagr_value": -0.05
+            }
+        },
+        "profit": {
+            "profit_dollars": 146819000000,
+            "profit_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "profit_cagr_value": 2.43
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 27.6,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0.52
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 229602000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 3673208,
+            "employees_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "employees_cagr_value": 0.01
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 43244000000,
+            "wages_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 85837000000,
+            "imports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 85710000000,
+            "exports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The US agriculture industry has been transforming due to technological advancements, legal shifts, market volatility, and environmental pressures. Precision agriculture enabled by digital tools has increased efficiency and profitability, with revenue growing at 3.6% CAGR to $532 billion from 2018-2023. Legal changes like allowing double cropping aim to boost domestic production. However, sustainability issues like chemical impact, labor conditions, and animal welfare need addressing. While initially expensive, sustainability aligns with societal expectations and climate resilience. Despite pandemic-driven financial gains, inflation and supply chain risks may cause revenue to fall 0.3% to $524.3 billion by 2028, though profitability remains robust.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Post-pandemic prices drive revenue and profit growth",
+            "current_performance_point_description": "Labor shortages and shutdowns during COVID-19 led to agricultural goods shortage, causing prices to surge in 2021 due to pent-up demand. While supply disruptions raised costs, higher prices boosted profit, preventing farm exits during the pandemic."
+        },
+        {
+            "current_performance_point_title": "Healthy eating trends for organic crops and ethical meats",
+            "current_performance_point_description": "Growing demand for organic produce, grass-fed beef, free-range eggs etc. has created opportunities for high-margin products. Small farms selling locally avoid middlemen, reducing costs. However, organic crops require more labor."
+        },
+        {
+            "current_performance_point_title": "Climate change instigates wilder weather, raising insurance",
+            "current_performance_point_description": "Extreme weather like hurricanes, droughts, wildfires has increased due to climate change, devastating crops. The federal government provides subsidies through the Farm Bill to reduce volatility, but insurers aim to raise rates as risk increases."
+        },
+        {
+            "current_performance_point_title": "Farmland prices threaten new entrants, family farmers",
+            "current_performance_point_description": "Rising farmland prices due to investors cashing in on crop/land value hikes have increased operating costs for small farms renting land. This creates a barrier for new businesses while longstanding farms are less impacted."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Normalizing prices will diminish revenue",
+            "future_outlook_point_description": "As supply chains stabilize post-pandemic, the crop surplus will cause prices to fall from heightened levels, reducing sector revenue despite consistent demand. Meat prices may remain high due to growing international demand."
+        },
+        {
+            "future_outlook_point_title": "Farm Bill renegotiation to continue fighting volatility",
+            "future_outlook_point_description": "The 2023 extension to the 2018 Farm Bill provides subsidies to assist farms. The next full renegotiation in 2024 is expected to include further subsidies for land purchases and economic disasters to reduce volatility."
+        },
+        {
+            "future_outlook_point_title": "Tension with China threatens export growth",
+            "future_outlook_point_description": "China aims to find alternatives to US crop imports for animal feed to reduce dependency. If China's agricultural imports decline, it will significantly threaten US crop exports and sector revenue amid tenuous economic relations."
+        },
+        {
+            "future_outlook_point_title": "Sustainability will continue to influence agriculture",
+            "future_outlook_point_description": "Growing climate change concerns are increasing demand for organic, local and sustainable produce. While less efficient, higher organic prices motivate farms to embrace these practices. Meat alternatives may threaten livestock production."
+        }
+    ],
+    "industry_definition": "This sector includes farms primarily growing crops or raising livestock, as well as forestry, agricultural support services, and companies providing land for hunting and fishing.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Industry Assistance Level: high - steady",
+            "Concentration Level: low",
+            "Barriers To Entry Level: high - increasing"
+        ],
+        "negative_impact_factors": [
+            "Capital Intensity Level: high",
+            "Competition Level: high - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration"
+        ],
+        "weaknesses": [
+            "High Product/Service Concentration",
+            "Low Revenue per Employee",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Performance Drivers: Price of feed"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Low Revenue Growth (2023-2028)",
+            "Per capita meat consumption"
+        ]
+    },
+    "key_trends": [
+        "Crop prices surged immediately following the pandemic allowing farms to cash in and generate greater revenue.",
+        "Healthy eating trends have helped revenue and profit growth.",
+        "Grassfed beef and organic crops are high margin products that bring in higher revenue.",
+        "Agricultural prices are rising, but as supply chains normalize, crop prices will begin to fall over the next five years.",
+        "Farm subsidies help reduce volatility by providing assistance if crop prices fall below a certain point.",
+        "Heightened prices benefit businesses from nearly all segments of the sector including food crop growers, livestock producers and industrial crop producers.",
+        "Health trends support revenue and innovation with sector businesses focusing on high value crops and livestock.",
+        "Climate and farmland determine location for some parts of the sector because many crops have specific location needs.",
+        "Farms benefit from proximity to markets because having food processors and ports close by reduces shipping costs.",
+        "Imports represent the greatest source of competition because some crops can only be grown in certain climates.",
+        "Agricultural substitutes can't be substituted, because nearly all food is produced using crops or livestock.",
+        "Tyson controls a major portion of meat production, but due to the company's ownership structure Tyson does not operate farms directly."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Food processors",
+            "segment_description": "",
+            "segment_percentage": 33.0
+        },
+        {
+            "segment": "Farms",
+            "segment_description": "",
+            "segment_percentage": 23.8
+        },
+        {
+            "segment": "Exports",
+            "segment_description": "",
+            "segment_percentage": 17.7
+        },
+        {
+            "segment": "Grocery stores and markets",
+            "segment_description": "",
+            "segment_percentage": 8.6
+        },
+        {
+            "segment": "Construction and manufacturing",
+            "segment_description": "",
+            "segment_percentage": 7.4
+        },
+        {
+            "segment": "Other",
+            "segment_description": "",
+            "segment_percentage": 6.2
+        },
+        {
+            "segment": "Wholesalers",
+            "segment_description": "",
+            "segment_percentage": 3.3
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Animals and Animal Products",
+            "product_description": "",
+            "product_percentage": 46.4
+        },
+        {
+            "product_or_service": "Crops",
+            "product_description": "",
+            "product_percentage": 44.0
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "",
+            "product_percentage": 9.6
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Agriculture, Forestry, Fishing and Hunting in the US",
+            "Utilities in the US",
+            "Construction in the US"
+        ],
+        "tier_2_suppliers": [
+            "Manufacturing in the US",
+            "Wholesale Trade in the US"
+        ],
+        "tier_1_buyers": [
+            "Manufacturing in the US",
+            "Wholesale Trade in the US",
+            "Retail Trade in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Healthy Eating Index",
+            "determinant_description": "The healthy eating index measures the degree to which people's diets comply with a standard diet set by the US Department of Agriculture (USDA). It typically serves as a proxy for demand for vegetables and fresh crops, but also affects demand for meat negatively as the USDA's target diet favors lean meat over red meat and contains limited amounts of meat."
+        },
+        {
+            "determinant_title": "Consumer Preferences",
+            "determinant_description": "Demand for Agriculture, Forestry, Fishing and Hunting sector products and services is determined by consumer preferences."
+        },
+        {
+            "determinant_title": "Legislation",
+            "determinant_description": "Demand for Agriculture, Forestry, Fishing and Hunting sector products and services is determined by legislation."
+        },
+        {
+            "determinant_title": "Weather",
+            "determinant_description": "Demand for Agriculture, Forestry, Fishing and Hunting sector products and services is determined by weather."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Moderate",
+        "import_trend": "Increasing",
+        "export_level": "Moderate",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "US as Net Exporter",
+                "trade_description": "The agriculture sector is one of the only areas where the US is a net exporter because of its large amounts of farmland and federal support for crop growers."
+            },
+            {
+                "trade_title": "Agricultural Imports Recover Post-Pandemic",
+                "trade_description": "The US relies on imports for limits in the domestic capacity for agriculture. Imports have risen as agriculture prices increase and other countries reestablish their agriculture sectors after initial pandemic disruptions."
+            },
+            {
+                "trade_title": "Domestic Production Meets US Needs",
+                "trade_description": "While the US imports crops and livestock from a wide variety of countries, the majority of imports come from Mexico and Canada under trade agreements that protect US farm interests."
+            },
+            {
+                "trade_title": "Export Growth Amid Disruptions",
+                "trade_description": "During the COVID-19 pandemic, the value of US agricultural exports surged as other countries struggled to meet global demand. Export growth has slowed as conditions normalize."
+            },
+            {
+                "trade_title": "China as Major Export Destination",
+                "trade_description": "China continues to be the largest export destination for US food crops like corn, soybeans and wheat, which are used for animal feed in China's livestock industries."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "West and Southeast",
+            "location_description": "Highly populated regions like the West and the Southeast are home to the largest shares of sector establishments because these regions provide proximity to food processors and manufacturers as well as port access for exports.",
+            "percentage_establishments": 20.0,
+            "percentage_population": 30.0
+        },
+        {
+            "location": "Plains",
+            "location_description": "The Plains region has the most available farmland, making it suitable for growing field crops and raising livestock that need open spaces.",
+            "percentage_establishments": 35.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "Great Lakes, Mid-Atlantic, New England, Rocky Mountains",
+            "location_description": "These regions have a more balanced distribution of population and agricultural establishments.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 10.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "US DEPARTMENT OF AGRICULTURE",
+                "regulation_description": "The USDA oversees the regulation of most animal-based agriculture operations in the US. This includes setting meat price limits, inspecting meat quality and regulating food safety for the highly perishable foods it oversees. The USDA's purview is limited to meat and animal products, excluding most fish and whole eggs."
+            },
+            {
+                "regulation_title": "THE ENVIRONMENTAL PROTECTION AGENCY",
+                "regulation_description": "The EPA is charged with guiding the use of agriculture chemicals and pesticides to ensure minimal environmental damage and safeguard consumers."
+            },
+            {
+                "regulation_title": "THE FOOD AND DRUG ADMINISTRATION",
+                "regulation_description": "The FDA regulates most of the food products consumed in the United States."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The Agriculture sector is mature, increasing barriers to entry."
+            }
+        ],
+        "factors_increased_barrier": [
+            "mature"
+        ],
+        "factors_decreased_barrier": [
+            "high - steady industry assistance level"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Imports",
+                "basis_description": "Imports represent the greatest source of competition because some crops can only be grown in certain climates."
+            },
+            {
+                "basis_title": "Agricultural substitutes",
+                "basis_description": "Agricultural substitutes can't be substituted, because nearly all food is produced using crops or livestock."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Family farms account for most crop growing and livestock raising",
+                "concentration_description": "While large companies get involved in the Agriculture sector, most farms are small independent establishments."
+            },
+            {
+                "concentration_title": "Supply chain structure hides concentration",
+                "concentration_description": "Large companies like Tyson don't directly participate in livestock farming, but remain major players in the sector."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Tyson Foods, Inc.",
+                "company_percentage": 6.7
+            },
+            {
+                "company_name": "Cargill, Incorporated",
+                "company_percentage": 2.2
+            },
+            {
+                "company_name": "Bayer Corp",
+                "company_percentage": 0.7
+            },
+            {
+                "company_name": "Syngenta Ag",
+                "company_percentage": 0.1
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 90.3
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 30
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 40
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 50
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 60
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 70
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Family Labor Keeps Wages Low",
+            "cost_factor_description": "A majority of farms in the US are independent nonemployer establishments."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "High capital intensity",
+                "capital_intensity_description": "The Agriculture sector has become increasingly capital intense as farm equipment has advanced."
+            }
+        ],
+        "capital_intensity_trend": "Increasing"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Severe Weather and Natural Disasters Make Crop Yields Unpredictable",
+                "volatility_description": "Droughts, floods, storms and wildfires can all quickly disrupt crop yields."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "The Agriculture, Forestry, Hunting and Fishing sector has not contended with any prominent technological disruptions.",
+                "technological_change_description": "While new technologies have changed how some companies conduct business, these advances have not affected the structure of the overall sector."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "With such an uncertain business environment as a result of the COVID-19 (coronavirus) pandemic, how does your company hedge against potential downturns in core-market activity?",
+            "answer": "Farms that diversify their end customers will exhibit more stable revenue."
+        }
+    ]
+}

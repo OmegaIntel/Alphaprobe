@@ -1,0 +1,573 @@
+{
+    "report_title": "Music Streaming Services in the US",
+    "report_date": "2024-09-02T12:45:00",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 17683000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": 37.62
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 3.7
+            }
+        },
+        "profit": {
+            "profit_dollars": 1220000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 39.6
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 3.7
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 6.9,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0.0
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 3.7
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 8041000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 5.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 3.2
+            }
+        },
+        "employees": {
+            "employees_count": 46980,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 1.5
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 1.2
+            }
+        },
+        "wages": {
+            "wages_dollars": 6421000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 3.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 2.5
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 4.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 3.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 4.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 3.0
+            }
+        }
+    },
+    "executive_summary": "The Music Streaming Services industry has become one of the fastest growing domestic industries over the past decade. Music streaming holds its roots in the introduction of the MP3 file, which was released in the late 1990s. While these websites have come and gone, consumer demand for digital music access has persisted. This demand spurred innovation in the early 2000s and 2010s, leading to the creation of major competing enterprises that characterize the industry today. These brands have benefited from first-to-market access, enabling them to build a significant user base in a short period of time. Still, competition has intensified in recent years, driven by substantial revenue growth since the industry's conception.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Consumers Disposable Income Rose Amid The Pandemic",
+            "current_performance_point_description": "Consumer spending on music streaming is discretionary, meaning that a rise in per capita disposable income will benefit the industry. During the COVID-19 pandemic, per capita disposable income rose, benefitting the industry along with the disappearance of other forms of entertainment. A decline in per capita disposable income contributed to a decline in music streaming revenue in 2022."
+        },
+        {
+            "current_performance_point_title": "Competition Between Platforms Has Persisted in Recent Years",
+            "current_performance_point_description": "Competition in the music streaming business is tight between a handful of platforms, led by Spotify and Apple Music. Google and Amazon have been able to gain market share in recent years; smaller companies, like Soundcloud or Tidal, have had more trouble gaining market share. Tight competition between platforms has kept profit margins tight in recent years."
+        },
+        {
+            "current_performance_point_title": "The Decline of Ad-Based Services",
+            "current_performance_point_description": "Free to use, ad-based music services have seen a declining share of industry revenue in recent years. A narrative around music streaming when the industry began was that free services would convert customers from pirated music who could then be converted to paying customers."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "The App for Everything Versus The App for One Thing",
+            "future_outlook_point_description": "Different services have looked to grow their business by expanding their offerings; Spotify has expanded into podcasts, video and audiobooks while Google has expanded YouTube from video into music. Apple music has taken a different tact than other platforms by creating a dedicated app for classical music. If platforms can expand the types of media they offer, they could grow their customer base and share of industry revenue."
+        },
+        {
+            "future_outlook_point_title": "Consumer Demand Could Reach Saturation",
+            "future_outlook_point_description": "While music streaming has seen years of strong growth, the industry faces the possibility of reaching market saturation, slowing growth. The number of mobile internet connections, which is driver of growth for the music streaming industry, has begun to run into the issue of market saturation."
+        },
+        {
+            "future_outlook_point_title": "TikTok Music Could Reshape The Music Streaming Space",
+            "future_outlook_point_description": "TikTok, a video-based social media platform, has rapidly become the arbiter of popular music in recent years. TikTok's parent company, ByteDance, currently has music streaming platforms available outside the US. ByteDance is set to launch TikTok Music in the US; the service has the potential to reshape the industry as TikTok already dominates music discovery."
+        }
+    ],
+    "industry_definition": "Companies in this industry provide infrastructure for customers to listen to music via the internet. Music streaming services generate revenue through ad-support and paid subscription music services.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage: growth",
+            "Capital Intensity Level: low",
+            "Barriers To Entry Level: high - increasing"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level: high",
+            "Industry Assistance Level: low - steady"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High &amp; Increasing Barriers to Entry",
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low &amp; Steady Level of Assistance",
+            "High Competition",
+            "Low Profit vs. Sector Average"
+        ],
+        "opportunities": [
+            "Very High Revenue Growth (2005-2023)",
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Per capita disposable income"
+        ],
+        "threats": [
+            "Number of mobile internet connections"
+        ]
+    },
+    "key_trends": [
+        "The industry is dominated by a handful of companies. These companies compete for audience largely on the basis of quality.",
+        "Music streaming services face external competition from direct purchases of digital and physical formats of music. Revenue from streaming has outcompeted this competition in recent years.",
+        "Four players dominate the industry. Spotify and Apple Music are the largest, while Amazon and Google have gained market share.",
+        "The music streaming industry saw growth amid the COVID-19 pandemic. Growth in per capita disposable income during this period has contributed to this growth.",
+        "The industry is led by Spotify. The company has long music streaming's forerunner.",
+        "Apple Music is the industry's second-largest music streaming platform. While the platform launched after Spotify, Apple was able to quickly narrow the gap in revenue between the two.",
+        "The industry is heavily regulated. Most of these regulations are concerned with protecting intellectual property rights.",
+        "The Recording Industry Association of America provides the industry with assistance. Music streaming has become the recording industry's single largest source of revenue.",
+        "Profit for the industry is volatile. Major players have operated at a loss, but recent strong revenue growth has translated to profit growth."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Consumers aged 13 to 17",
+            "segment_description": "This segment accounts for consumers aged 13 to 17. This segment of younger consumers is fairly saturated, as members of this cohort are more likely to be technologically adept early adopters. This segment is the least likely to pay for the industry's premium services.",
+            "segment_percentage": 8.5
+        },
+        {
+            "segment": "Consumers aged 18 to 24",
+            "segment_description": "This segment accounts for consumers aged 18 to 24. This segment of younger consumers is fairly saturated, as members of this cohort are more likely to be technologically adept early adopters. This segment is the least likely to pay for the industry's premium services.",
+            "segment_percentage": 16.0
+        },
+        {
+            "segment": "Consumers aged 25 to 34",
+            "segment_description": "This segment accounts for consumers aged 25 to 34. Consumers in this segment tend to stream and have family packages. Some in this segment may opt for more expensive and higher quality subscription access, as consumers in this group typically have higher disposable incomes are more able to spend on entertainment.",
+            "segment_percentage": 24.0
+        },
+        {
+            "segment": "Consumers aged 35 to 44",
+            "segment_description": "No data provided",
+            "segment_percentage": 0
+        },
+        {
+            "segment": "Consumers aged 45 to 54",
+            "segment_description": "This segment accounts for consumers aged 45 to 54. This segment's share of revenue has risen as consumers in this cohort have become increasingly technologically adept, and industry services have become ubiquitous.",
+            "segment_percentage": 14.5
+        },
+        {
+            "segment": "Consumers aged 55 and older",
+            "segment_description": "This segment accounts for consumers aged 55 and older. This segment represents perhaps the largest potential market for streaming services, as older adults are typically late adopters of new technology and are also able to spend more on expensive industry services due to higher disposable income levels.",
+            "segment_percentage": 15.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Subscription Streaming",
+            "product_description": "Subscription streaming services, represent the largest share of industry revenue.",
+            "product_percentage": 77.2
+        },
+        {
+            "product_or_service": "Ad-Supported On-Demand Streaming",
+            "product_description": "Ad-supported on-demand streaming services provide similar access to music libraries, both and free and fee options, and are supported via paid advertisements.",
+            "product_percentage": 22.8
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Music Streaming Services in the US"
+        ],
+        "tier_2_suppliers": [
+            "Music Publishing in the US",
+            "Audio Production Studios in the US",
+            "Radio Broadcasting in the US",
+            "Software Publishing in the US",
+            "Computer Manufacturing in the US",
+            "Computer Peripheral Manufacturing in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Number of Mobile Internet Connections",
+            "determinant_description": "The number of mobile connections represents the total number of broadband internet capable devices, including laptops, smartphones and handsets, among others. Music streaming services are most often accessed through smartphones and other mobile devices."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "West",
+            "location_description": "The West accounts for the largest share of industry establishments at 38.9%, significantly higher than its population share of 23.1%. The industry's primary output is access to music, but its technologically-intensive nature results in a locational footprint similar to the Internet Publishing and Broadcasting industry.",
+            "percentage_establishments": 38.9,
+            "percentage_population": 23.1
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast includes major technological hubs such as Austin. However, this region's share of establishments is significantly below that of its population share.",
+            "percentage_establishments": 16.2,
+            "percentage_population": 21.8
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The industry has a small geographic footprint throughout the rest of the country. For example, Spotify's American headquarters are in New York City.",
+            "percentage_establishments": 13.5,
+            "percentage_population": 15.2
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "",
+            "percentage_establishments": 11.8,
+            "percentage_population": 14.9
+        },
+        {
+            "location": "Southwest",
+            "location_description": "",
+            "percentage_establishments": 8.9,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "",
+            "percentage_establishments": 5.5,
+            "percentage_population": 7.0
+        },
+        {
+            "location": "New England",
+            "location_description": "",
+            "percentage_establishments": 5.2,
+            "percentage_population": 6.5
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "Digital Music Laws",
+                "regulation_description": "The Digital Performance Right in Sound Recordings Act of 1995 permits copyright owners of sound recordings the right to authorize certain digital transmissions of their works. Amended as the Digital Millennium Copyright Act (DCMA) in 1998, the DCMA now covers cable and satellite digital audio services, webmasters and future forms of digital transmission. The act prohibits the manufacture and distribution of services designed for the sole purpose of undermining technology used to protect copyrighted works."
+            },
+            {
+                "regulation_title": "The No Electronic Theft Act (NET Act)",
+                "regulation_description": "The No Electronic Theft Law permits individuals suspected of sound recording infringements to be criminally prosecuted even where no monetary profit or commercial gain is derived from the activity."
+            },
+            {
+                "regulation_title": "Privacy Regulations",
+                "regulation_description": "Privacy regulations have increasingly entered into force in light of greater public concern. In the European Union, industry operators are subject to the General Data Protection Regulation, implemented in 2018. The regulations limits companies' ability to process and track user data. While regulations in the United States are less stringent, operators are also subject to the laws of individual states such as California's Online Privacy Protection Act."
+            },
+            {
+                "regulation_title": "The Music Modernization Act (MMA)",
+                "regulation_description": "The Music Modernization Act (MMA), approved by Congress in October 2018, is composed of three collective acts that each highlight a different aspect of the music industry. This act establishes a nonprofit agency that maintains a database of all owners of mechanical licenses and negotiates royalty rates from streaming services, provides copyright protection until 2067 for songs written before February 1972 and sets public domain entry dates for old"
+            },
+            {
+                "regulation_title": "THE PROTECT LAWFUL STREAMING ACT",
+                "regulation_description": "Congress passed the Protect Lawful Streaming Act in December 2020, which made it a felony for anyone to willfully and for commercial or financial gain publicly provide a digital transmission of pirated material."
+            },
+            {
+                "regulation_title": "THE COPYRIGHT ROYALTY BOARD SETS NEW STANDARDS",
+                "regulation_description": "New standards for per track and per minute royalty payments were rolled out by the Copyright Royalty board on December 30, 2022. These standards include digital streams and physical sales rates and were adjusted primarily to keep up with inflation."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Revenue Volatility",
+                "barrier_description": "Revenue volatility is high."
+            },
+            {
+                "barrier_title": "Industry Assistance",
+                "barrier_description": "Industry assistance is low and steady."
+            },
+            {
+                "barrier_title": "Concentration",
+                "barrier_description": "Concentration is high."
+            },
+            {
+                "barrier_title": "Technology Change",
+                "barrier_description": "Technology change is high."
+            },
+            {
+                "barrier_title": "Globalization",
+                "barrier_description": "Globalization is high and increasing."
+            },
+            {
+                "barrier_title": "Competition",
+                "barrier_description": "Competition is high and increasing."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Revenue Volatility",
+            "Concentration",
+            "Technology Change",
+            "Globalization",
+            "Competition"
+        ],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage",
+            "Capital Intensity"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Quality",
+                "basis_description": "The industry is dominated by a handful of companies that compete for audience largely on the basis of quality."
+            },
+            {
+                "basis_title": "External Competition",
+                "basis_description": "Music streaming services face external competition from direct purchases of digital and physical music formats, but revenue from streaming has outcompeted this in recent years."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "High",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Four Companies Dominate",
+                "concentration_description": "The industry is highly concentrated with four companies dominating - Spotify, Apple Music, Sirius XM Radio, and Amazon."
+            },
+            {
+                "concentration_title": "High Barriers to Entry",
+                "concentration_description": "The high concentration is explained by the high barriers to market entry that limit new entrants, despite rapid industry growth. Entry requires extensive investments in technical infrastructure and licensed content."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Spotify Technology S.A.",
+                "company_percentage": 33
+            },
+            {
+                "company_name": "Alphabet Inc.",
+                "company_percentage": 21.2
+            },
+            {
+                "company_name": "Sirius Xm Radio Inc.",
+                "company_percentage": 13.3
+            },
+            {
+                "company_name": "Amazon.Com, Inc.",
+                "company_percentage": 6
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 36.3
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 6.6
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchase Costs Include the Cost of IT Infrastructure",
+            "cost_factor_description": "Purchase costs account for an estimated 6.6% of revenue in 2023. Purchase costs are generally associated with internet connectivity charges, which represent fees paid to telecommunications companies for bandwidth."
+        },
+        {
+            "cost_factor_title": "Wages are the Industry's Main Expense",
+            "cost_factor_description": "Employee compensation represents the most significant expense category for the industry. Wage expenses capture an estimated 36.3% of average revenue in 2023."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_trend": "Unknown",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital intensity",
+                "capital_intensity_description": "The visual showing capital intensity appears to be a graph or chart, but I cannot interpret it accurately without seeing the actual image. However, based on the heading \"Low capital intensity\", I can infer that the graph likely shows that the music streaming industry has relatively low capital requirements compared to other industries."
+            }
+        ]
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_trend": "Unknown",
+        "volatility_points": []
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_trend": "Increasing",
+        "technological_change_points": [
+            {
+                "technological_change_title": "MUSIC DISCOVERY IS A FRONT OF COMPETITION",
+                "technological_change_description": "Quality of music discovery products are a major front of competition between music streaming competition, so it sees consistent innovation. Spotify has incorporated AI technology to improve music recommendations for customers."
+            },
+            {
+                "technological_change_title": "HIGH FIDELITY STREAMING HAS ARRIVED",
+                "technological_change_description": "Apple Music and Amazon Music Unlimited have added lossless audio to its platform. Audio quality was previously a major edge physical and digital music purchases had over streaming. Spotify announced plans to launch a lossless audio in the past, but these plans may have changed."
+            },
+            {
+                "technological_change_title": "SPECIALIZATION OR BROADENING OF SERVICES",
+                "technological_change_description": "Apple recently launched Apple Music Classical, which is a separate app included in the cost of Apple Music specialized for classical music fans. Spotify has sought to expand the functionality of its app, investing in podcasts, audiobooks and redesigning to more closely resemble TikTok."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "What is SoundExchange and how does it relate to the music industry?",
+            "answer": "SoundExchange is a nonprofit organization that collects and distributes royalties to producers and audio technicians involved in the making of songs."
+        },
+        {
+            "question": "What is the Protect Lawful Streaming Act?",
+            "answer": "The Protect Lawful Streaming Act, passed by Congress in December 2020, made it a felony for anyone to willfully and for commercial or financial gain publicly provide a digital transmission of pirated material."
+        },
+        {
+            "question": "What new standards were set by the Copyright Royalty Board?",
+            "answer": "On December 30, 2022, the Copyright Royalty Board rolled out new standards for per track and per minute royalty payments, including digital streams and physical sales rates, adjusted primarily to keep up with inflation."
+        },
+        {
+            "question": "What assistance does the Recording Industry Association of America (RIAA) provide?",
+            "answer": "The RIAA, a trade organization representing the recording industry in the US, provides broad assistance to operators, particularly regarding piracy issues associated with the growth of the legal streaming market."
+        },
+        {
+            "question": "What marketing strategies do companies in this industry employ?",
+            "answer": "Companies market services using strategies such as promotional membership fees or exclusive contracts with established artists."
+        },
+        {
+            "question": "How does a company's age affect its marketing and advertisement expenditure?",
+            "answer": "Newer companies tend to expend more on marketing and advertisement to expand their user base. On average, operators allocate more than 4.0% of revenue toward marketing."
+        },
+        {
+            "question": "What revenue models do companies in this industry employ?",
+            "answer": "Companies generate revenue primarily through paid subscriptions or ad-supported subscriptions, tending to rely mainly on one of these subscription categories for most of their revenue."
+        },
+        {
+            "question": "Do companies in this industry seek acquisitions or get acquired?",
+            "answer": "Companies that can specialize in a particular product or service can be acquired by larger enterprises and assimilated into their business, as exemplified by expansion into podcasts and audiobooks."
+        },
+        {
+            "question": "How much do companies invest in research and development (R&D)?",
+            "answer": "Product development is a key basis of competition since streaming services are fundamentally substitutes besides content, so companies invest in R&D."
+        },
+        {
+            "question": "Do companies' services work across multiple platforms?",
+            "answer": "The largest competing enterprises have developed versions of their services that work on both mobile devices like smartphones and non-mobile devices like personal computers and smart TVs."
+        },
+        {
+            "question": "How do companies ensure compliance with regulations?",
+            "answer": "Copyright laws for licensed music represent a major area of regulatory focus, so companies maintain compliance teams, especially larger enterprises."
+        },
+        {
+            "question": "How much do companies allocate toward employee compensation?",
+            "answer": "Attracting and retaining highly skilled software engineers is crucial for product development, so companies allocate revenue toward competitive compensation."
+        },
+        {
+            "question": "How do companies' profit margins compare to industry benchmarks?",
+            "answer": "Company-specific profit margins above or below industry benchmarks typically imply pricing power or weakness. New companies tend to generate operating losses for many years."
+        },
+        {
+            "question": "How regularly do companies invest in R&D and adopt new technology?",
+            "answer": "The largest competitors invest heavily in R&D. Adopting new technology is key for retaining user bases, so successful developers ensure best practices like bug tracking and stability testing."
+        },
+        {
+            "question": "How do companies promote their products and allocate revenue to marketing?",
+            "answer": "Product promotion is key for expanding user bases. New companies tend to invest more in advertisement, allocating higher percentages of revenue to marketing."
+        },
+        {
+            "question": "How dependent are companies on mobile internet usage?",
+            "answer": "The number of mobile internet connections is becoming saturated in the US, so many large enterprises are seeking international users for growth."
+        },
+        {
+            "question": "How will rising disposable income impact service offerings?",
+            "answer": "Higher per capita disposable income reflects consumers' ability to purchase paid subscriptions, so companies may offer premium products as income rises."
+        },
+        {
+            "question": "How much revenue comes from advertisements?",
+            "answer": 0
+        },
+        {
+            "question": "How has the pandemic affected ad revenue?",
+            "answer": "Fluctuations in national advertising expenditure will affect revenue for operators that rely primarily on ad-supported subscriptions."
+        }
+    ]
+}

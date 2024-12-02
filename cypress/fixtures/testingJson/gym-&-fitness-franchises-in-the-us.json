@@ -1,0 +1,544 @@
+{
+    "report_title": "Gym & Fitness Franchises in the US",
+    "report_date": "Feb 17, 2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 7206000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": 5.99
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.04
+            }
+        },
+        "profit": {
+            "profit_dollars": 915000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 8.36
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 2.2
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 12.7,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 2.12
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 2.1
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 3302000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 5.15
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 1.32
+            }
+        },
+        "employees": {
+            "employees_count": 162845,
+            "employees_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "employees_cagr_value": 4.72
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 2.24
+            }
+        },
+        "wages": {
+            "wages_dollars": 1875000000,
+            "wages_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "wages_cagr_value": 4.06
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 2.0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The Gym and Fitness Franchises industry operates franchised fitness establishments that benefit from branding, marketing and administrative support from franchise leaders. The industry has experienced robust gains due to growing membership levels and a more health-conscious population. However, a steep revenue decline in 2020 amid the COVID-19 pandemic has partially depressed overall growth. Nonetheless, industry revenue has increased at a CAGR of 0.9% to $7.2 billion over the past five years. As the pandemic subsides and the population returns to everyday life routines, industry revenue will grow 2.6% in 2023 alone.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Revenue growth over past 5 years",
+            "current_performance_point_description": "Revenue has grown at a CAGR of 0.9% to $7.2 billion over the past five years, including 2.6% in 2023 alone, when profit will reach 12.7%."
+        },
+        {
+            "current_performance_point_title": "COVID-19 impact",
+            "current_performance_point_description": "Since gyms were required by law to temporarily close establishments during the height of the pandemic, memberships were frozen, and companies lost revenue."
+        },
+        {
+            "current_performance_point_title": "Health consciousness",
+            "current_performance_point_description": "Obesity has taken center stage in public discourse and encouraged health consciousness. Demand for gyms has increased as more individuals aim to make active, healthy lifestyle choices."
+        },
+        {
+            "current_performance_point_title": "Budget gyms popularity",
+            "current_performance_point_description": "Budget gyms have grown in popularity as consumers seek membership costs that avoid initiation fees and lengthy membership commitments."
+        },
+        {
+            "current_performance_point_title": "Franchisee cost synergies",
+            "current_performance_point_description": "Franchises have benefited from franchisors' cost synergies such as economies of scale in advertising and equipment purchases."
+        },
+        {
+            "current_performance_point_title": "Technology lowering costs",
+            "current_performance_point_description": "The proliferation of technology has lowered franchise start-up costs."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Revenue growth projection",
+            "future_outlook_point_description": "Revenue will grow at a CAGR of 1.1% to $7.6 billion over the five years to 2028, when profit will fall to 12.1%."
+        },
+        {
+            "future_outlook_point_title": "Healthy lifestyle trend",
+            "future_outlook_point_description": "A burgeoning active population will likely lead to an increasingly healthy lifestyle, benefiting franchises that appeal to time-strapped consumers."
+        },
+        {
+            "future_outlook_point_title": "Alternative workout methods",
+            "future_outlook_point_description": "Industry expansion may be hindered as consumers shift toward alternative methods of working out like at-home workouts and online classes."
+        },
+        {
+            "future_outlook_point_title": "Technology integration",
+            "future_outlook_point_description": "More companies will experiment with how new technology can affect membership sales and customer satisfaction, such as fitness-centric technology and wearables."
+        }
+    ],
+    "industry_definition": "This industry operates franchised fitness establishments and gyms. Franchisees receive branding, marketing, administrative support and training.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage - growth",
+            "Regulation Level - light - increasing"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level - low - increasing",
+            "Concentration Level - high",
+            "Competition Level - high - increasing"
+        ],
+        "mixed_impact_factors": [
+            "Revenue Volatility Level - medium",
+            "Capital Intensity Level - medium",
+            "Technology Change Level - medium",
+            "Barriers To Entry Level - medium - increasing",
+            "Globalization Level - medium - increasing"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low & Increasing Level of Assistance",
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration"
+        ],
+        "weaknesses": [
+            "High Competition",
+            "High Product/Service Concentration",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2005-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Participation in sports"
+        ],
+        "threats": [
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Yield on 10-year Treasury note"
+        ]
+    },
+    "key_trends": [
+        "Since gyms were required to temporarily close establishments during the height of the pandemic, companies lost revenue.",
+        "Gym and fitness franchises have increasingly expanded service offerings to attract a growing pool of consumers.",
+        "The proliferation of technology has lowered franchise start-up costs, which has benefited the industry.",
+        "Industry revenue expansion will likely be restrained by potential losses stemming from gym closures.",
+        "The proliferation of technology will assist franchises in tailoring health regimens.",
+        "Employment figures are expected to increase and operators hire to fill demand for new locations.",
+        "Contained start-up costs has led to increased industry participation during the period."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Individuals aged 18 to 34",
+            "segment_description": "Consumers in this segment are interested in keeping fit, as appearing physically attractive is often a priority for these young consumers.",
+            "segment_percentage": 27.5
+        },
+        {
+            "segment": "Individuals aged 35 to 49",
+            "segment_description": "Consumers in this age range tend to have sufficient disposable income to spend on high-end gyms and discretionary services, such as personal training.",
+            "segment_percentage": 25.2
+        },
+        {
+            "segment": "Individuals under 18",
+            "segment_description": "Demand from individuals under 18 have been growing due to the rising childhood obesity and declining physical activity among children and adolescents.",
+            "segment_percentage": 21.9
+        },
+        {
+            "segment": "Individuals aged 50 and above",
+            "segment_description": "Baby boomers have made up a larger share of the industry's revenue as gyms offer training programs specific to senior fitness.",
+            "segment_percentage": 25.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "MEMBERSHIP",
+            "product_percentage": 65.7,
+            "product_description": "Membership fees account for the largest share of industry revenue."
+        },
+        {
+            "product_or_service": "PERSONAL TRAINERS",
+            "product_percentage": 12.4,
+            "product_description": "Demand for personal trainers increases as consumers need personalized attention."
+        },
+        {
+            "product_or_service": "GUEST ADMISSION",
+            "product_percentage": 3.2,
+            "product_description": "Guest admission fees contribute to industry revenue."
+        },
+        {
+            "product_or_service": "MEALS AND BEVERAGES",
+            "product_percentage": 6.0,
+            "product_description": "Some gyms and fitness centers offer meals and beverages."
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Sporting Goods Wholesaling in the US",
+            "TV & Appliance Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Gym & Exercise Equipment Manufacturing in the US",
+            "Athletic & Sporting Goods Manufacturing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": [
+            "Consumers in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Willingness to Spend and Economic Conditions",
+            "determinant_description": "Willingness to spend on the industry's services is influenced by economic conditions and uncertainty. During recessionary periods, such as the COVID-19 pandemic, gym services are typically in lower demand."
+        },
+        {
+            "determinant_title": "Investing Environment and Franchise Fees",
+            "determinant_description": "The investing environment also influences demand for franchises. As interest rates rise, the investing environment becomes less favorable for franchises that typically require loans to invest in establishments and equipment."
+        },
+        {
+            "determinant_title": "Leisure Time and Health Trends",
+            "determinant_description": "Leisure time availability also influences demand, with time-poor consumers generally finding it difficult to use franchise facilities. Health and fitness awareness also affect demand for the industry's services."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": [
+            {
+                "trade_title": "Service-oriented industry",
+                "trade_description": "The Gym and Fitness Franchises industry is service-oriented and does not engage in international trade."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region dominates in terms of the percentage of establishments in the Gym and Fitness Franchises industry, due to factors like favorable weather and a significant population.",
+            "percentage_establishments": 35.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "West",
+            "location_description": "The West region has a high percentage of establishments due to its sizeable population and consistently warm weather, which is favorable for gyms and fitness centers.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 25.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region captures a large number of gyms, mainly as consumers prefer being a short distance away from their fitness center.",
+            "percentage_establishments": 12.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "Although the Great Lakes region has a less favorable climate, large population hubs in states like Illinois helped this region secure a decent size of gym franchises.",
+            "percentage_establishments": 5.0,
+            "percentage_population": 6.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "The Southwest region's most significant advantage is its favorable weather, but there are few highly concentrated population areas, causing this region to capture a lower share of industry establishments.",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "New England",
+            "location_description": "New England captures a much lower percentage of industry establishments due to poor climate conditions and consistently cold weather.",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Plains",
+            "location_description": "The Plains region captures a lower percentage of industry establishments.",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "The Rocky Mountains region captures a lower percentage of industry establishments, as unfavorable geographies discourage industry growth.",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_trend": "Increasing",
+        "regulations_points": [
+            {
+                "regulation_title": "Consumer protection, contractual regulatory guidelines",
+                "regulation_description": "State and provincial statutes and regulations relevant to the Gym, Health and Fitness Clubs industry have been enacted or proposed across the United States. Typically, these statutes and regulations prescribe certain forms and regulate the terms and provisions of membership contracts, including giving members the right to cancel the contract and requiring an escrow for funds received from preopening sales or the posting of a bond or proof of financial responsibility."
+            },
+            {
+                "regulation_title": "Membership regulations",
+                "regulation_description": "Operators in the industry are subject to numerous other types of federal, state and provincial regulations governing the sale, financing and collection of memberships, including both the Truth-in-Lending Act and Regulation Z, in addition to state and provincial laws governing the collection of debts."
+            },
+            {
+                "regulation_title": "Federal Advertising Regulations",
+                "regulation_description": "Advertising of nutritional products is subject to regulation by one or more federal agencies, including the Food and Drug Administration (FDA) and the Federal Trade Commission (FTC)."
+            },
+            {
+                "regulation_title": "COVID-19 Regulations",
+                "regulation_description": "Amid the COVID-19 (coronavirus) outbreak, many state governments have imposed a closure of nonessential businesses order to prevent the spread of the virus."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Medium",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Legal barriers are low",
+                "barrier_description": "There are few legal barriers within the industry. New entrants enter the industry by signing franchise agreements with gyms with well-known brands and strong market positions."
+            },
+            {
+                "barrier_title": "Start-up costs are moderate",
+                "barrier_description": "Adequate financing is crucial for a franchisee to meet its obligation to the franchisor and to remain operative."
+            },
+            {
+                "barrier_title": "Differentiation is possible",
+                "barrier_description": "The rise of smaller franchises suggests that new, innovative business models that meet changing demand, such as 24-hour facilities, could prove successful against larger chains."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Industry Assistance Level: low - increasing",
+            "Concentration Level: high",
+            "Competition Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage: growth",
+            "Regulation Level: light - increasing"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Services and activities",
+                "basis_description": "Gym and fitness franchises compete with one another on available services and recreational activities, price, location and reputation."
+            },
+            {
+                "basis_title": "Capacity and equipment",
+                "basis_description": "To remain competitive, a franchise unit must achieve capacity to meet demand among its patrons and provide state-of-the-art exercise equipment and machines."
+            },
+            {
+                "basis_title": "Additional offerings",
+                "basis_description": "Offering additional recreational activities, such as dance classes and yoga sessions, will also increase the competitiveness of a given franchise unit by expanding its customer base and appeal."
+            },
+            {
+                "basis_title": "Pricing and promotions",
+                "basis_description": "Price continues to be an important point of competition, and industry operators that offer promotional memberships or low initiation fees are poised to attract first-time customers."
+            },
+            {
+                "basis_title": "Marketing and outreach",
+                "basis_description": "To differentiate themselves from their competitors, industry operators must invest heavily in promotional campaigns, outreach efforts and marketing."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "High",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Top companies dominate",
+                "concentration_description": "Franchise units from the top four companies generate over 80.0% of the industry's total revenue."
+            },
+            {
+                "concentration_title": "Concentration increased",
+                "concentration_description": "Industry concentration increased as certain franchises experienced rapid, double-digit growth."
+            },
+            {
+                "concentration_title": "High fragmentation limits new entrants",
+                "concentration_description": "The industry is highly fragmented due to a demand overlap; there are limited opportunities for new entrants to make their mark."
+            },
+            {
+                "concentration_title": "Similarities create complex landscape",
+                "concentration_description": "The similarities of services offered among gyms and fitness centers and high competition within local markets create a complex landscape for newcomers."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "ANYTIME FITNESS LLC",
+                "company_percentage": 17.9
+            },
+            {
+                "company_name": "PFIP LLC",
+                "company_percentage": 11.7
+            },
+            {
+                "company_name": "Orangetheory Fitness",
+                "company_percentage": 9.9
+            },
+            {
+                "company_name": "Snap Fitness",
+                "company_percentage": 5.4
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 35
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 25
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 3
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 2
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 2
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Franchise Fees Represent a Significant Expense for Gym Franchises",
+            "cost_factor_description": "Franchise fees include royalties, licensing payments to franchisors, and any start-up investment costs."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_trend": "Unknown",
+        "capital_intensity_points": []
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "The industry revenue exhibits a moderate-to-high volatility level",
+                "volatility_description": "While there are varying degrees of gym membership rates across franchises, which increase revenue volatility."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_trend": "Unknown",
+        "technological_change_points": [
+            {
+                "technological_change_title": "The Gym and Fitness Franchises industry is being affected by technological disruption",
+                "technological_change_description": "The Gym and Fitness Franchises industry is being affected by technological disruption in the form of at-home fitness services."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "How well does your company market to consumers with limited leisure time?",
+            "answer": "Operators are increasingly marketing to consumers with limited leisure time with personal training sessions and 24-hour access to the gym."
+        },
+        {
+            "question": "Does seasonality affect sales for the products and services your company offers?",
+            "answer": "Industry demand is generally highest in the first quarter of the year, as consumers often join gyms as part of a new year's resolution."
+        },
+        {
+            "question": "If your company benefits from population density, are you located in high traffic areas to increase your exposure?",
+            "answer": "Industry operators benefit from locating in highly populated areas, since consumers often are not willing to travel long distances to exercise."
+        },
+        {
+            "question": "Are your products and services well-rounded, to mitigate sudden changes in demand?",
+            "answer": "Industry operators look to mitigate changes in demand by making consumers sign 12- to 24-month contracts."
+        },
+        {
+            "question": "Has your company explored lowering wage costs through part-time labor and automation via point-of-sale systems?",
+            "answer": "Industry operators have successful lowered wages through automation by introducing amenities such as fob-scanning entrances."
+        }
+    ]
+}

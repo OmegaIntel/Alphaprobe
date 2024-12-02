@@ -1,0 +1,283 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 7586000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 5.47
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "revenue_cagr_value": 2.63
+            }
+        },
+        "profit": {
+            "profit_dollars": 516000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 1.81
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "profit_cagr_value": 1.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 6.8,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -3.47
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0.5
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 3755000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 3.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 1.5
+            }
+        },
+        "employees": {
+            "employees_count": 14380,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 3.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "employees_cagr_value": 1.0
+            }
+        },
+        "wages": {
+            "wages_dollars": 3104000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 2.5
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "wages_cagr_value": 1.2
+            }
+        },
+        "imports": {
+            "imports_dollars": 1000000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 1.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "imports_cagr_value": 0.5
+            }
+        },
+        "exports": {
+            "exports_dollars": 1250000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 2.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "exports_cagr_value": 1.0
+            }
+        }
+    },
+    "executive_summary": "The industry gives consumers eyes and ears into the increasingly digital world of personal finance. Finance has continued to grow by integrating with financial institutions, offering highly personalized advice, and negotiating with companies to reduce bills. While the greater economy experienced a temporary setback during COVID, financial software revenue grew, driven by people rushing to create budgets and get finances in order. Financial software revenue has grown at a CAGR of 2.3% to $7.6 billion in 2024, including an increase of 1.6% in that year alone. Meanwhile, profit has fallen due to advances in product offerings by the largest technology companies and a growing number of competitors offering advice.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Economic Health Determines Industry Health",
+            "current_performance_point_description": "Economic conditions have been recovering lately, with per capita disposable income expanding lately, giving consumers more chances to invest safely and secure their remaining wealth."
+        },
+        {
+            "current_performance_point_title": "Finance software revenue is forecast to grow",
+            "current_performance_point_description": "Finance software revenue is forecast to grow at a CAGR of 2.6% to $8.6 billion in 2029."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Regulations about and Risks of Cybersecurity Breaches Rise",
+            "future_outlook_point_description": "Cybersecurity will continue to be of rising importance to financial companies due to the highly sensitive nature of the information they handle."
+        },
+        {
+            "future_outlook_point_title": "Economic Rebounds Will Help This Industry Recover",
+            "future_outlook_point_description": "Swift economic recovery in the period ahead, as inflation will eventually fade, will strengthen this industry."
+        }
+    ],
+    "industry_definition": "Companies in this industry create personal finance management software. Products are aimed at helping users manage disparate financial holdings.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low Capital Intensity Level",
+            "low Concentration Level"
+        ],
+        "mixed_impact_factors": [
+            "mature Life Cycle Stage"
+        ],
+        "negative_impact_factors": [
+            "high Technology Change Level",
+            "high Competition Level"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "High Competition",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth"
+        ],
+        "threats": [
+            "External competition"
+        ]
+    },
+    "key_trends": [
+        "Large software companies benefit from transforming global business.",
+        "Colleges and education systems will focus on the most established software."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Users 18 to 34 years old",
+            "segment_description": "Users between 18 and 34 years old are the primary financial software demographic.",
+            "segment_percentage": 55.4
+        },
+        {
+            "segment": "Users 35 to 54 years old",
+            "segment_description": "Users between 35 and 54 years old are an essential demographic for financial applications.",
+            "segment_percentage": 34.7
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Bank Reconciliation and Transaction Tracking",
+            "product_description": "Bank reconciliation software connects with a user's financial accounts.",
+            "product_percentage": 33.3
+        },
+        {
+            "product_or_service": "Budgeting",
+            "product_description": "While bank reconciliation software manages a users' past financial activity, budgeting tools optimize money in the future.",
+            "product_percentage": 15.2
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Securities",
+            "Brokering in the US"
+        ],
+        "tier_2_suppliers": [
+            "Computer Manufacturing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Per capita disposable income",
+            "determinant_description": "Per capita disposable income directly influences industry activity."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "West",
+            "location_description": "The West has been a hotbed of trade and software innovation for years.",
+            "percentage_establishments": 38,
+            "percentage_population": 32
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_trend": "Increasing",
+        "regulations_points": []
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Decreasing",
+        "barriers_points": [],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage: mature"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": []
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 30
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 25
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Other Costs Are Legal, Research, and One-off Expenses",
+            "cost_factor_description": "Other costs include professional fees, courier services, travel expenses."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_trend": "Unknown",
+        "capital_intensity_points": []
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_trend": "Unknown",
+        "volatility_points": []
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_trend": "Increasing",
+        "technological_change_points": []
+    },
+    "FAQs": [
+        {
+            "question": "How reliant is your company on advertising revenue?",
+            "answer": "Companies in this industry have several revenue models."
+        }
+    ]
+}

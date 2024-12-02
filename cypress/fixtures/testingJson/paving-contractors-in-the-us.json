@@ -1,0 +1,530 @@
+{
+    "report_title": "Industry Report on Paving Contractors",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 23139000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": 1.37
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.33
+            }
+        },
+        "profit": {
+            "profit_dollars": 1573000000,
+            "profit_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "profit_cagr_value": 2.42
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 2.5
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 6.8,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 1.03
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 1.2
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 8929000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 1.5
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 1.7
+            }
+        },
+        "employees": {
+            "employees_count": 210338,
+            "employees_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "employees_cagr_value": 1.4
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 1.3
+            }
+        },
+        "wages": {
+            "wages_dollars": 6980000000,
+            "wages_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "wages_cagr_value": 1.2
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 1.4
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The Paving Contractors industry has recently benefited from broad economic improvements, including rising per capita disposable income and relatively low unemployment. Due to the pandemic, nonresidential construction activity was disrupted amid health restrictions. Simultaneously residential construction flourished as homeowners took advantage of time for home improvement. This dynamic has partially reversed as high interest rates have dissuaded residential construction investment, while nonresidential construction has experienced a resurgence. Industry revenue fell at a CAGR 1.0% to $23.1 billion in 2023, with profit reaching 6.8%.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Pandemic Disrupts Non-Residential Construction Markets and Cripples Demand",
+            "current_performance_point_description": "The lockdown majorly affected construction industries as sites had to be abandoned, leading to a drastic decrease in value of private nonresidential construction. Declines in consumer spending and corporate profit hindered revenue gains for paving contractors."
+        },
+        {
+            "current_performance_point_title": "Fluctuating Interest Rates Exert Influence Over Housing Markets",
+            "current_performance_point_description": "Low interest rates during the pandemic encouraged investments in the housing market through low borrowing costs, boosting demand for paving contractors from residential construction. Recent interest rate hikes have reversed this dynamic, dampening the housing market."
+        },
+        {
+            "current_performance_point_title": "Commercial Demand Supercedes Residential Market",
+            "current_performance_point_description": "Nonresidential construction projects like parking lots rely on business activity. As restrictions eased, corporate profit rejuvenated and delayed nonresidential projects resumed, benefiting paving contractors with sustained recovery in this segment."
+        },
+        {
+            "current_performance_point_title": "Private Spending on Home Improvements Supports Industry Growth",
+            "current_performance_point_description": "Despite volatility in residential and nonresidential markets, private spending on home improvement has buoyed the industry amid changing conditions."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Demand from Residential Markets Slows",
+            "future_outlook_point_description": "As the Federal Reserve raises interest rates to combat inflation, the housing market will continue suffering. Homeowners will be less likely to reinvest into home improvement, stymying demand for paving contractors."
+        },
+        {
+            "future_outlook_point_title": "Organic Expansion in Nonresidential Markets",
+            "future_outlook_point_description": "The value of private nonresidential construction and number of businesses will resume healthy growth from improving macroeconomic conditions, benefiting consumer spending and demand for paving contractors."
+        },
+        {
+            "future_outlook_point_title": "High-end Driveways Provide Solace for Struggling Paving Contractors",
+            "future_outlook_point_description": "As economic conditions strengthen, cost will be less of a deterrent for homeowners choosing higher-end paving materials like stones over asphalt. This shift to costlier materials can improve revenue for industry participants."
+        },
+        {
+            "future_outlook_point_title": "Increased Home Value",
+            "future_outlook_point_description": "Some realtors suggest adding paving stones or non-asphalt materials to driveways may increase a home's value."
+        }
+    ],
+    "industry_definition": "This industry comprises establishments that specialize in paving residential and commercial driveways and parking areas. Establishments typically use asphalt, concrete or brick. Excluded are operators that pave streets and highways, which are part of the Road and Highway Construction industry.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Low Capital Intensity Level"
+        ],
+        "negative_impact_factors": [
+            "Decline Life Cycle Stage",
+            "Low - steady Industry Assistance Level",
+            "Low - steady Barriers To Entry Level",
+            "High - increasing Competition Level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "High Profit vs. Sector Average"
+        ],
+        "weaknesses": [
+            "Low &amp; Steady Barriers to Entry",
+            "Low &amp; Steady Level of Assistance",
+            "High Competition",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "Value of private nonresidential construction"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "30-year conventional mortgage rate"
+        ]
+    },
+    "key_trends": [
+        "After suffering during the pandemic, non-residential construction activity has resumed due to surges in corporate profit, propelling demand for paving contractors as delayed projects come to fruition.",
+        "What was once an accommodative lending environment has shifted as high interests plague residential markets, dissuading investments in residential construction and hurting paving contractor business.",
+        "The number of housing starts has declined amid high interest rates dissuading residential construction investment, translating into dampened demand for paving contractors' services as homeowners are reluctant to spend on home improvement.",
+        "As corporate profit recovered from the pandemic, the value of non-residential construction inclined with more business activity, sustaining paving contractor services through an influx of renewed demand as delayed projects resumed.",
+        "Asphalt has declined in popularity as consumers shift to concrete and pavers for improved durability and aesthetics, coinciding with increased disposable income enabling upgrades over inexpensive asphalt.",
+        "Rising disposable income and corporate profit have supported maintenance services like sealcoating and striping, allowing paving contractors to bypass macroeconomic volatility.",
+        "Areas with high housing density like Florida provide high volumes of residential business for local paving contractors.",
+        "While asphalt paving is largely generic causing intense price competition, higher-end paving with bricks/concrete involves more quality and reputation factors.",
+        "The paving contractor industry is highly fragmented with mostly small local operators due to the service nature of the business and low market concentration."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Single-family homes",
+            "segment_description": "Single-family homes makes up a large portion of industry business, with revenue being highly correlated to the housing market. As houses are built, the services of pavers are needed to install driveways.",
+            "segment_percentage": 65.2
+        },
+        {
+            "segment": "Multifamily residences",
+            "segment_description": "Apartment buildings typically pave parking areas with either concrete or asphalt, as these are the most affordable options.",
+            "segment_percentage": 22.1
+        },
+        {
+            "segment": "Commercial",
+            "segment_description": "The value of nonresidential construction declined significantly in 2020 and 2021 due to the pandemic, which led to revenue falls as paving contractors suspended their operations.",
+            "segment_percentage": 12.7
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Paving",
+            "product_description": "The core service provided by the industry, focusing on installation and maintenance of driveways.",
+            "product_percentage": 44.9
+        },
+        {
+            "product_or_service": "Seal Coating",
+            "product_description": "Protective coating applied to asphalt surfaces to prevent damage.",
+            "product_percentage": 18.1
+        },
+        {
+            "product_or_service": "Repair",
+            "product_description": "Services for fixing damages to existing paved areas.",
+            "product_percentage": 13.8
+        },
+        {
+            "product_or_service": "Striping",
+            "product_description": "Painting lines on pavements to guide traffic and parking.",
+            "product_percentage": 13.1
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [],
+        "tier_2_suppliers": [
+            "Heavy Equipment Rental in the US",
+            "Construction &amp; Mining Equipment Wholesaling in the US",
+            "Stone, Concrete &amp; Clay Wholesaling in the US"
+        ],
+        "tier_1_buyers": [
+            "Asphalt Manufacturing in the US",
+            "Cement Manufacturing in the US",
+            "Clay Brick &amp; Product Manufacturing in the US",
+            "Home Builders in the US",
+            "Commercial Building Construction in the US",
+            "Real Estate and Rental and Leasing in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "CONSUMERS SHIFT FROM PRIORITIZING AFFORDABILITY TO QUALITY",
+            "determinant_description": "The paving of driveways and parking areas for both residential and commercial customers is largely done using asphalt. This type of driveway has grown in popularity over the decades because of its affordability."
+        },
+        {
+            "determinant_title": "Concrete is the second-most popular choice for driveways",
+            "determinant_description": "Paving contractors use concrete in both the commercial and residential housing market. Concrete is a mix of aggregate, sand and cement that, when hardened, provides a durable surface."
+        },
+        {
+            "determinant_title": "PAVING CONTRACTORS BEGIN TO OFFER OTHER MATERIALS TO BOOST REVENUE",
+            "determinant_description": "Other types of material used for paving include clay, bricks, stone and other types of tile."
+        },
+        {
+            "determinant_title": "Sealcoating and Striping Services Continue to Support Contractors",
+            "determinant_description": "Paving contractors also provide sealcoating services. Sealcoating is the act of applying a coating to primarily asphalt pavements to fix and prevent cracks."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast as the most populous region in the United States by extension accounts for the most paving contractor establishments.",
+            "percentage_establishments": 30.0,
+            "percentage_population": 30.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "The Rocky Mountains and New England regions account for the smallest percentages of establishments.",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "New England",
+            "location_description": "Same as Rocky Mountains.",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "State Based Regulations and Building Standards",
+                "regulation_description": "Establishments must abide by rules and regulations concerning building standards, pollution controls, state-based energy compliance."
+            },
+            {
+                "regulation_title": "Licenses and Certifications",
+                "regulation_description": "Most states require that paving contractors be licensed within the state that they operate in."
+            },
+            {
+                "regulation_title": "OHSA Standards",
+                "regulation_description": "The US Occupational Health & Safety Administration (OHSA) enforces standards for the construction sector."
+            },
+            {
+                "regulation_title": "Environmental Protection Agency",
+                "regulation_description": "Industry operators are further subject to environmental and safety standards set by the Environmental Protection Agency (EPA)."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Paving driveways with clay bricks is done to improve the aesthetic appearance of the house."
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Price, quality and timeliness are key factors",
+                "basis_description": "Most paving contractors serve local markets and compete on price, quality and timeliness."
+            },
+            {
+                "basis_title": "Quality and reputation important for high-end paving",
+                "basis_description": "Consumers in this segment are usually less concerned with price and more concerned with quality and workmanship."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_points": [
+            {
+                "concentration_title": "Non-employers make up a larger share",
+                "concentration_description": "The Paving Contractors industry has a relatively low level of market share concentration."
+            },
+            {
+                "concentration_title": "Fragmented enterprises service local markets",
+                "concentration_description": "The overwhelming majority of industry enterprises are nonemploying organizations."
+            },
+            {
+                "concentration_title": "Low concentration due to local service nature",
+                "concentration_description": "The low market share concentration can be traced back to the fact that most industry participants operate on a local level."
+            }
+        ],
+        "concentration_trend": "Steady",
+        "top_companies": [
+            {
+                "company_name": "Kokosing Construction Company, Inc.",
+                "company_percentage": 0.7
+            },
+            {
+                "company_name": "Allan Myers, Inc.",
+                "company_percentage": 0.4
+            },
+            {
+                "company_name": "Clark Construction Group, Llc",
+                "company_percentage": 0.3
+            },
+            {
+                "company_name": "PJ Dick Inc.",
+                "company_percentage": 0.3
+            },
+            {
+                "company_name": "Rose Paving LLC",
+                "company_percentage": 0.1
+            },
+            {
+                "company_name": "Asphalt Contractors Inc.",
+                "company_percentage": 0.1
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 6.8
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 30.2
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 38.8
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "The Growing Popularity of Higher Quality Products Adds to Paving Contractor Costs",
+            "cost_factor_description": "As higher quality products have grown in popularity, purchased costs for paving contractors have grown."
+        },
+        {
+            "cost_factor_title": "The Necessity for Manual Labor Only Grows More Intense",
+            "cost_factor_description": "The growing popularity of higher quality paving work requires more skilled labor as these methods are labor intensive."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital intensity",
+                "capital_intensity_description": "Paving driveways with clay bricks is done to improve the aesthetic appearance."
+            },
+            {
+                "capital_intensity_title": "Low rate of new patent technologies",
+                "capital_intensity_description": "The rate of new patent technologies entering the industry is low."
+            },
+            {
+                "capital_intensity_title": "High concentration of technologies",
+                "capital_intensity_description": "The concentration of technologies is high in this industry."
+            },
+            {
+                "capital_intensity_title": "Highly concentrated major markets",
+                "capital_intensity_description": "The major markets for this industry are highly concentrated."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Revenue ebbs and flows based on changes in the value of nonresidential construction",
+                "volatility_description": "With demand from this significant market crippled, the potential for revenue gains for paving contractors was stymied."
+            },
+            {
+                "volatility_title": "Shifts in the Housing Market Lead to Revenue Fluctuations",
+                "volatility_description": "In 2022, the Federal Reserve committed to consistently raising interest rates to combat high inflation."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Consumers Shift from Prioritizing Affordability to Quality",
+                "technological_change_description": "The paving of driveways and parking areas for both residential and commercial customers is largely done using asphalt."
+            },
+            {
+                "technological_change_title": "Concrete",
+                "technological_change_description": "Concrete is the second-most popular choice for driveways, paving contractors use concrete in both commercial and residential markets."
+            },
+            {
+                "technological_change_title": "Paving Contractors Begin to Offer Other Materials to Boost Revenue",
+                "technological_change_description": "Other types of material used for paving include clay, bricks, stone and other types of tile."
+            },
+            {
+                "technological_change_title": "Sealcoating and Striping Services Continue to Support Contractors",
+                "technological_change_description": "Paving contractors also provide sealcoating services."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company primarily work with residential or non-residential construction markets?",
+            "answer": "Pavers mostly work in the residential market, but over 50.0% of revenue is made in the nonresidential market."
+        },
+        {
+            "question": "Can you easily switch between these markets?",
+            "answer": "A switch between the two markets requires scale."
+        },
+        {
+            "question": "How does your company adapt when the levels of residential and nonresidential construction activity diverge?",
+            "answer": "Given the large number of nonemployers, subcontractors can switch from one market to another."
+        },
+        {
+            "question": "Have the rising prices of key construction inputs significantly affected profit margins in recent years?",
+            "answer": "Declines in crude oil prices have lowered the input costs for asphalt, which has helped hedge against other input price increases."
+        },
+        {
+            "question": "Does your company make use of subcontractors to save on wage costs? Roughly, what percent of revenue is consumed by wages?",
+            "answer": "The industry uses subcontractors to save on wage costs."
+        },
+        {
+            "question": "Investment in new technology is usually fairly low among builders and contractors. How much does your company invest in new equipment annually?",
+            "answer": "Most companies spend less than 2.0% of their revenue on capital investments."
+        },
+        {
+            "question": "In light of increasing wage costs, has your company considered using new technologies to increase productivity or reduce total employment?",
+            "answer": "Labor is very important to the industry, and technology change is fairly low."
+        },
+        {
+            "question": "How does your company ensure all health and safety requirements are met on and off the construction site?",
+            "answer": "Companies follow international standards for construction and federal and local health codes."
+        },
+        {
+            "question": "Do you work with local or national trade associations to advance your company's interests?",
+            "answer": "The NAPA and ICPI are national trade associations that represent the paving industry's interests."
+        },
+        {
+            "question": "How does your company address seasonal fluctuations in workload?",
+            "answer": "Diversification in projects helps to limit seasonal fluctuations in some markets."
+        }
+    ]
+}

@@ -1,0 +1,557 @@
+{
+    "report_title": "Mexican Restaurants Industry Report",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 96432000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 5.09
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 2.46
+            }
+        },
+        "profit": {
+            "profit_dollars": 4918000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 5.78
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 2.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5.1,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 0.66
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 1.5
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 32656000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 4.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 1.8
+            }
+        },
+        "employees": {
+            "employees_count": 963454,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 2.5
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 2.0
+            }
+        },
+        "wages": {
+            "wages_dollars": 25111000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 3.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 2.0
+            }
+        },
+        "imports": {
+            "imports_dollars": 1000000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 1.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0.5
+            }
+        },
+        "exports": {
+            "exports_dollars": 1000000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 1.2
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0.6
+            }
+        }
+    },
+    "executive_summary": "The Mexican restaurant sector has seen robust growth over the past five years, spurred by several promising trends. These include the mainstream adoption of Mexican food in the American diet, primarily a result of a rising Hispanic immigrant population that has bolstered demand and supply. In addition, adaptations of Mexican cuisine, such as Tex-Mex, have surged in popularity, largely thanks to major chains such as Taco Bell.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "HISPANIC POPULATION GROWTH PROPELS MEXICAN CUISINE INTO MAINSTREAM AMERICA",
+            "current_performance_point_description": "The United States is currently witnessing a surge in the popularity of Mexican-style food, placing it firmly in the mainstream of the American diet. As reported by the Tortilla Industry Association, tortillas have achieved second in popularity among bread types in the United States, only surpassed by white bread."
+        },
+        {
+            "current_performance_point_title": "INCREASING EXTERNAL COMPETITION IMPACTS INDUSTRY GROWTH",
+            "current_performance_point_description": "Food corporations are capitalizing on the rising popularity of Mexican cuisine, contributing to the heightened performance of the Mexican restaurant industry. Taco Bell, for example, has created a significant franchise revolving around taco dishes."
+        },
+        {
+            "current_performance_point_title": "MANY INGREDIENTS USED IN MEXICAN COOKING CAN BE SUBJECT TO PRICE VOLATILITY",
+            "current_performance_point_description": "Although some key ingredients in Mexican cuisine saw a decrease in price pre-pandemic, challenges in the supply chain have led to an overall increase in food costs. This has impacted the margin potential and pricing strategies in Mexican restaurants."
+        },
+        {
+            "current_performance_point_title": "ALCOHOL DELIVERY LAW REFORMS FUEL SUCCESS OF MEXICAN RESTAURANTS",
+            "current_performance_point_description": "From the prohibition era, regulations have gradually eased on alcohol delivery, though some states and regions still maintain restrictions, particularly for cross-border shipping."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "RISING FOOD COSTS PUT PRESSURE ON PROFITABILITY",
+            "future_outlook_point_description": "Mexican restaurants face components of financial stress due to the unpredictable nature of food prices. This uncertainty is intensified by factors such as sustained drought or interruptions in the supply chain, causing inflated costs."
+        },
+        {
+            "future_outlook_point_title": "FAST-CASUAL MEXICAN RESTAURANTS GAINING GROUND ON FULL-SERVICE DINING",
+            "future_outlook_point_description": "Consumers are increasingly prioritizing speed of service, which is benefiting fast-casual restaurants that deliver high-quality meals quickly. Despite delivering superior ingredients compared to standard fast food, fast-casual establishments like Chipotle, Qdoba Mexican Eats, and Moe's Southwest Grill offer lower prices than full-service restaurants, ensuring value for money."
+        },
+        {
+            "future_outlook_point_title": "BROADENING DEMOGRAPHICS AND VALUE OPTIONS FUEL INDUSTRY GROWTH",
+            "future_outlook_point_description": "The Mexican restaurant industry is not only courting its traditional Hispanic and urban consumer groups but also finding favor with a broader demographic. This can be attributed to shifting tastes and an increased interest in global cuisine from non-ethnic majorities."
+        },
+        {
+            "future_outlook_point_title": "TECH ENHANCEMENTS LEADS THE INDUSTRY TRANSFORMATION",
+            "future_outlook_point_description": "The landscape of the Mexican restaurant industry is undergoing a significant transformation powered by technology. To keep pace with a digitally-inclined consumer base, restaurants leverage social media platforms and smartphone applications."
+        }
+    ],
+    "industry_definition": "This industry is composed of restaurants that primarily serve Mexican-style, including Tex-Mex, food to patrons. It encompasses single-location, chain and franchised enterprises, as well as full-service and fast-food operators. These restaurants also sell alcoholic and other beverages. However, street and food truck vendors are excluded from the industry.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Growth Life Cycle Stage",
+            "Low Capital Intensity Level",
+            "Low Concentration Level",
+            "Low Technology Change Level"
+        ],
+        "negative_impact_factors": [
+            "High Revenue Volatility Level",
+            "Low Industry Assistance Level",
+            "Low Barriers To Entry Level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry",
+            "Low & Steady Level of Assistance",
+            "High Volatility",
+            "Low Profit vs. Sector Average"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2005-2023)",
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers - Consumer spending"
+        ],
+        "threats": [
+            "Low Outlier Growth",
+            "Consumer confidence index"
+        ]
+    },
+    "key_trends": [
+        "Franchise agreements can lower operational costs and minimize some risks, especially for inexperienced persons entering the industry. Therefore, major chains have expanded their franchisee-owned locations, capturing more customer demand.",
+        "There is significant competition among restaurants to obtain suitable sites, which has increased the cost of many prime sites. Generally, rent can vary between establishments, with quick-service locations paying less because their square footage is smaller than sit-down restaurants.",
+        "Immigration growth fuels Mexican restaurants' popularity. The increasing immigrant population has led to the expansion and establishment of these eateries in unlikely places. Their affordability, compared to other ethnic food, makes them a prime choice for consumers.",
+        "As American household incomes improve, spending at restaurants will likely grow. Mexican restaurants will likely benefit from greater foot traffic and higher average checks.",
+        "Low barriers to entry allow new restaurants to enter the market with ease. Further, due to the industry's highly fragmented nature, only one company accounts for more than 5.0% of market share.",
+        "A provision of the US Affordable Care Act requires that restaurant chains with over 20 locations post the food's calorie content. New research finds that menu items introduced after calorie labeling contained about 25.0% fewer calories on average than dishes introduced before labeling.",
+        "If the restaurant serves alcohol, there are additional regulations to follow. These laws can dictate everything from how and when alcohol can be served to how it must be stored and who can handle it.",
+        "Due to the high number of franchised businesses, franchise royalties and other fees can account for a significant proportion of industry revenue. This cost will rise further in coming years.",
+        "Due to the labor-intense nature of this industry, most enterprises experience high wage and purchase costs. Food prices have been volatile over the past five years.",
+        "Concentration is higher in or near areas with higher household income. Specifically, income levels are the prime determinant of the propensity to dine out at Mexican restaurants.",
+        "A factor influencing establishment location is the concentration of a region's immigrant population, specifically immigrants with Latin American roots. Therefore, many Mexican restaurants concentrate in Texas and California."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Low-income households",
+            "segment_description": "The market primarily comprises low-income households in the two lowest quintiles of income, particularly price-sensitive.",
+            "segment_percentage": 23.4
+        },
+        {
+            "segment": "Third-lowest quintile of incomes",
+            "segment_description": "The middle-income market, comprising households in the third and fourth income quintiles, shows a consistent demand pattern in the Mexican restaurant industry.",
+            "segment_percentage": 18.4
+        },
+        {
+            "segment": "Highest quintile of incomes",
+            "segment_description": "Those within the highest income quintile largely dominate the market for fine Mexican dining.",
+            "segment_percentage": 34.3
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Family Style",
+            "product_description": "The majority of the industry's establishments are full-service restaurants, offering table service where food and beverages are served by a trained waitstaff to seated customers.",
+            "product_percentage": 47.9
+        },
+        {
+            "product_or_service": "Quick Service",
+            "product_description": "The Mexican restaurants industry largely consists of limited-service restaurants such as Taco Bell.",
+            "product_percentage": 24.8
+        },
+        {
+            "product_or_service": "Fast Casual",
+            "product_description": "Fast-casual chains have emerged as primary growth drivers, differentiating themselves with higher-quality food.",
+            "product_percentage": 17.8
+        },
+        {
+            "product_or_service": "Delivery and Take-away",
+            "product_description": "This segment focuses on providing delivery and take-out options to consumers.",
+            "product_percentage": 0.4
+        },
+        {
+            "product_or_service": "Casual Dining",
+            "product_description": "Casual dining establishments offer relaxed atmospheres and moderately priced meals.",
+            "product_percentage": 42.4
+        },
+        {
+            "product_or_service": "Upscale Dining",
+            "product_description": "Demand for upscale Mexican dining is driven by increasing disposable income.",
+            "product_percentage": 1.7
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Frozen Food Wholesaling in the US",
+            "Dairy Wholesaling in the US",
+            "Fruit & Vegetable Wholesaling in the US",
+            "Fish & Seafood Wholesaling in the US",
+            "Egg & Poultry Wholesaling in the US",
+            "Beef & Pork Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Seafood Preparation in the US",
+            "Meat, Beef & Poultry Processing in the US",
+            "Dairy Product Production in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Consumer Spending",
+            "determinant_description": "When consumers' spending is robust, they often splurge more on dining out."
+        },
+        {
+            "determinant_title": "Consumer Confidence Index",
+            "determinant_description": "When patrons adopt a gloomier economic outlook, they typically curtail non-essential spending."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "Within this region, Florida comprises 5.9% of all locations.",
+            "percentage_establishments": 30,
+            "percentage_population": 35
+        },
+        {
+            "location": "West",
+            "location_description": "California boasts the most significant share of Mexican restaurants in the country.",
+            "percentage_establishments": 20,
+            "percentage_population": 25
+        },
+        {
+            "location": "Southwest",
+            "location_description": "States such as Texas are known for adapting Mexican cuisine into a style known as Tex-Mex.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "US Food and Drug Administration's (FDA)",
+                "regulation_description": "The FDA's Model Food Code sets standards for food handling."
+            },
+            {
+                "regulation_title": "Minimum wages",
+                "regulation_description": "The industry employs a high number of young and low-skilled workers."
+            },
+            {
+                "regulation_title": "The Affordable Care Act",
+                "regulation_description": "Employers with 50 or more employees must provide healthcare coverage."
+            },
+            {
+                "regulation_title": "Smoking bans",
+                "regulation_description": "Many states ban smoking in restaurants and bars."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "High."
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "Low - steady."
+            },
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "Growth."
+            },
+            {
+                "barrier_title": "Capital Intensity Level",
+                "barrier_description": "Low."
+            },
+            {
+                "barrier_title": "Concentration Level",
+                "barrier_description": "Low."
+            },
+            {
+                "barrier_title": "Technology Change Level",
+                "barrier_description": "Low."
+            },
+            {
+                "barrier_title": "Globalization Level",
+                "barrier_description": "Low - steady."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Industry regulation and licensing do not create insurmountable barriers."
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Franchise agreements",
+                "basis_description": "Franchise agreements can lower operational costs."
+            },
+            {
+                "basis_title": "Site competition",
+                "basis_description": "There is significant competition among restaurants for suitable locations."
+            },
+            {
+                "basis_title": "Differentiation",
+                "basis_description": "New restaurants must offer innovative menus to attract customers."
+            },
+            {
+                "basis_title": "Labor Expenses",
+                "basis_description": "Labor intensity is high due to the dependence on labor input."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Industry concentration",
+                "concentration_description": "The industry is subject to a low level of concentration."
+            },
+            {
+                "concentration_title": "Top players' market share",
+                "concentration_description": "The top four players account for less than 20.0% of market share."
+            },
+            {
+                "concentration_title": "Industry fragmentation",
+                "concentration_description": "The industry remains dominated by small, independent restaurants."
+            },
+            {
+                "concentration_title": "Competition and profit pressure",
+                "concentration_description": "Fierce competition leads to pressured profit."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Chipotle Mexican Grill, Inc.",
+                "company_percentage": 8.5
+            },
+            {
+                "company_name": "Other Companies Sub-Brand: Chipotle",
+                "company_percentage": 91.5
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Mexican cartels seized control of avocado supply chains",
+            "cost_factor_description": "Leading to skyrocketing prices."
+        },
+        {
+            "cost_factor_title": "California's enduring drought",
+            "cost_factor_description": "Inflating produce prices."
+        },
+        {
+            "cost_factor_title": "Growing demand for fresh, local, and organic produce",
+            "cost_factor_description": "Further increases input prices."
+        },
+        {
+            "cost_factor_title": "Rising ingredient costs like red meat and poultry",
+            "cost_factor_description": "Leads to increased purchase costs."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "The industry is labor-intensive",
+                "capital_intensity_description": "Heavily depends on direct labor input."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "The industry depends on consumer tastes",
+                "volatility_description": "Changes can directly affect industry revenue."
+            },
+            {
+                "volatility_title": "Menu diversity helps mitigate volatility",
+                "volatility_description": "Helps control total industry revenue volatility."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "The COVID-19 pandemic led more restaurants to increase their online presence",
+                "technological_change_description": "Development of online ordering systems."
+            },
+            {
+                "technological_change_title": "Tex-Mex has grown in popularity",
+                "technological_change_description": "More foodies seek innovative offerings."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How does your company market deals on e-commerce sites?",
+            "answer": "Promotional offerings increase brand loyalty and consumer frequency."
+        },
+        {
+            "question": "How do review sites impact sales?",
+            "answer": "Positive reviews through superior customer service increase foot traffic."
+        },
+        {
+            "question": "Has your company explored acquisition opportunities?",
+            "answer": "Acquisitions can help expand market share."
+        },
+        {
+            "question": "Is your company located in high traffic areas?",
+            "answer": "High-density locations ensure steady demand."
+        },
+        {
+            "question": "Does your company leverage mobile booking applications?",
+            "answer": "Online ordering experiences reduce lead times."
+        },
+        {
+            "question": "What point-of-sale systems does your company use?",
+            "answer": "Automation reduces reliance on labor."
+        },
+        {
+            "question": "What measures does your company take to ensure compliance with food safety laws?",
+            "answer": "Regulations on product safety vary between municipalities."
+        },
+        {
+            "question": "Is your company compliant with varying labor regulations?",
+            "answer": "Subject to minimum wage and employee benefits regulations."
+        },
+        {
+            "question": "How does your company's inventory turnover rate compare?",
+            "answer": "Supply-chain efficiency is crucial for maintaining a competitive edge."
+        },
+        {
+            "question": "How does your company's profit margins compare?",
+            "answer": "Lower profit margins suggest supply chain inefficiencies."
+        },
+        {
+            "question": "What measures do you have to reduce operational costs?",
+            "answer": "Cost control is vital in low-margin industries."
+        },
+        {
+            "question": "Are you part of a national chain?",
+            "answer": "Franchising provides necessary support to owners."
+        }
+    ]
+}

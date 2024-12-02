@@ -1,0 +1,592 @@
+{
+    "report_title": "Clinical Trial Support Services in the US",
+    "report_date": "Apr 29, 2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 4026000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 7.37
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 5.13
+            }
+        },
+        "profit": {
+            "profit_dollars": 338000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 9.71
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 8.4,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 2.18
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 2881000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 14604,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 2480000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "The Clinical Trial Support Services industry provides preclinical trial preparation work and tracks and records results and data, as well as preparing information for regulatory submission and data storage. An increasing volume of clinical trials in the United States and abroad has driven demand for clinical trial support services. The associate growth in research and development spending is expected to lift revenue at a CAGR 6.3% to $4.0 billion over the five years to 2023.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Revenue growth",
+            "current_performance_point_description": "Revenue for the industry is expected to increase at a CAGR of 6.3% to $4.0 billion over the five years to 2023, including 4.1% in 2023, when profit will reach 8.4%."
+        },
+        {
+            "current_performance_point_title": "Increasing number of clinical trials",
+            "current_performance_point_description": "The number of clinical trials conducted worldwide increased an a CAGR of 19.1% between 2017 and 2022 (latest data available) according to data from the US National Library of Medicine."
+        },
+        {
+            "current_performance_point_title": "Outsourcing for efficiency",
+            "current_performance_point_description": "Companies provide clients conducting clinical trials with the opportunity to outsource certain activities to accelerate the development process and time to market as well as minimize risk."
+        },
+        {
+            "current_performance_point_title": "Industry consolidation",
+            "current_performance_point_description": "Growing demand for clinical trial support service providers evidences a broader trend toward increased outsourcing along the entire development life cycle, driving industry consolidation."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Continued outsourcing trend",
+            "future_outlook_point_description": "Outsourcing services along the development life cycle is anticipated to continue as more companies recognize the efficiency gained by using clinical trial support services."
+        },
+        {
+            "future_outlook_point_title": "Increasing R&D spending",
+            "future_outlook_point_description": "Demand will continue to rely on the level of research and development activity, the number of registered clinical trials and whether those conducting clinical trials decide to outsource operational functions."
+        },
+        {
+            "future_outlook_point_title": "Rising industry participation",
+            "future_outlook_point_description": "Continued growth in demand for industry products will continue to catalyze the entrance of new companies."
+        },
+        {
+            "future_outlook_point_title": "Ongoing consolidation",
+            "future_outlook_point_description": "As more clients engage in outsourcing throughout the entire development process, the industry will continue to consolidate."
+        }
+    ],
+    "industry_definition": "Companies in this industry provide medical clinical trial services. Typically, industry operators provide preclinical trial preparation work, track and record results and prepare data for regulatory submission and data storage.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage - growth",
+            "Capital Intensity Level - low",
+            "Industry Assistance Level - high - increasing",
+            "Concentration Level - low",
+            "Globalization Level - low - increasing"
+        ],
+        "negative_impact_factors": [
+            "Regulation Level"
+        ],
+        "mixed_impact_factors": [
+            "Revenue Volatility Level - medium",
+            "Technology Change Level - medium",
+            "Barriers To Entry Level - medium - steady",
+            "Competition Level - medium - steady"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Increasing Level of Assistance",
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "Very High Revenue Growth (2005-2023)",
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Research and development expenditure"
+        ],
+        "threats": [
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Number of people with private health insurance"
+        ]
+    },
+    "key_trends": [
+        "By leveraging industry services, clients can accelerate the development process and minimize risk",
+        "Clients are outsourcing more clinical development activities to a smaller number of operators",
+        "Strong demand for industry services is anticipated to limit price competition",
+        "Pharmaceutical developers will accelerate their investment in research and development",
+        "The trend of outsourcing services along the development life cycle will continue",
+        "Continued growth in demand will spur the entrance of new industry operators",
+        "Increased expenditure on medical research and development has driven growth in the number of clinical trials"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Biopharmaceutical companies",
+            "segment_description": "Biopharmaceutical companies account for a majority of demand from all businesses. Outsourcing enables them to complete projects faster and at lower cost.",
+            "segment_percentage": 53.1
+        },
+        {
+            "segment": "Federal government",
+            "segment_description": "The government funds clinical trials to improve health standards and discover new treatments. Most funding comes from the National Institutes of Health.",
+            "segment_percentage": 21.9
+        },
+        {
+            "segment": "Medical technology companies",
+            "segment_description": "Medical technology companies, including medical device manufacturers, account for a comparatively smaller share of business demand.",
+            "segment_percentage": 9.5
+        },
+        {
+            "segment": "Universities",
+            "segment_description": "Funding from universities typically stems from joint clinical trials conducted by academics requiring support services.",
+            "segment_percentage": 5.0
+        },
+        {
+            "segment": "All other businesses",
+            "segment_description": "This segment includes private foundations, independent research institutes, independent hospitals, voluntary health associations and professional societies.",
+            "segment_percentage": 4.6
+        },
+        {
+            "segment": "All other sources of funding",
+            "segment_description": "This segment includes private foundations, independent research institutes, independent hospitals, voluntary health associations and professional societies.",
+            "segment_percentage": 4.6
+        },
+        {
+            "segment": "State and local governments",
+            "segment_description": "State and local governments provide some funding for clinical trials.",
+            "segment_percentage": 1.0
+        },
+        {
+            "segment": "Healthcare services companies",
+            "segment_description": "Healthcare services companies represent a very small portion of demand.",
+            "segment_percentage": 0.3
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Support Services for Drug Clinical Trials",
+            "product_description": "Services supporting clinical trials for drugs and biologics sponsored by pharmaceutical companies.",
+            "product_percentage": 32.7
+        },
+        {
+            "product_or_service": "Support Services for Behavioral Interventional Studies",
+            "product_description": "Services supporting interventional studies evaluating behavioral interventions like diet or lifestyle changes.",
+            "product_percentage": 20.2
+        },
+        {
+            "product_or_service": "Support Services for Medical Device Interventional Studies",
+            "product_description": "Services supporting interventional studies evaluating new medical devices.",
+            "product_percentage": 6.3
+        },
+        {
+            "product_or_service": "Support Services for Surgical Procedure Interventional Studies",
+            "product_description": "Services supporting interventional studies evaluating new surgical procedures.",
+            "product_percentage": 7.9
+        },
+        {
+            "product_or_service": "Support Services for Observational Studies",
+            "product_description": "Services supporting observational studies that observe participants without specific interventions.",
+            "product_percentage": 21.9
+        },
+        {
+            "product_or_service": "All Other Types",
+            "product_description": "All other types of clinical trial support services.",
+            "product_percentage": 11.0
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Medical Instrument & Supply Manufacturing in the US",
+            "Computer Stores in the US"
+        ],
+        "tier_2_suppliers": [
+            "Chemical Product Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Brand Name Pharmaceutical Manufacturing in the US",
+            "Medical Device Manufacturing in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Companies' willingness to outsource",
+            "determinant_description": "Demand for the Clinical Trial Support Services industry is dependent on companies' willingness to outsource these services."
+        },
+        {
+            "determinant_title": "Cost of drug and device development",
+            "determinant_description": "The cost of developing new drugs and medical devices has increased significantly, driving companies to outsource clinical trial support to control costs."
+        },
+        {
+            "determinant_title": "Research and development spending",
+            "determinant_description": "Total research and development spending by medical and healthcare companies plays a significant role in determining the number of clinical trials conducted, driving demand for support services."
+        },
+        {
+            "determinant_title": "Demographic and socioeconomic factors",
+            "determinant_description": "Increased life expectancy, aging population, and rise in age-related illnesses increase demand for new drugs and devices, driving clinical trials."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "The West",
+            "location_description": "The industry is highly concentrated in the western region of the United States. California alone accounts for a fifth of all establishments, owing to the presence of key downstream customers in academia.",
+            "percentage_establishments": 35.0,
+            "percentage_population": 35.0
+        },
+        {
+            "location": "The Southeast",
+            "location_description": "The Southeast is the second-most significant region for this industry; pharmaceutical manufacturers, a major market for this industry, have high establishment concentrations in this region.",
+            "percentage_establishments": 25.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "The Mid-Atlantic",
+            "location_description": "The Mid-Atlantic is the third-most significant region for this industry; pharmaceutical manufacturers, a major market for this industry, have high establishment concentrations in this region.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 15.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "The Department of Health and Human Services",
+                "regulation_description": "Many divisions of the Department of Health and Human Services are involved in the process of scientific research and development. Because of the massive market for healthcare products and their potential side effects, the Food and Drug Administration (FDA) provides risk assessment, consumer behavior studies and efficacy evaluations. The Agency for Healthcare Research and Quality (AHRQ) is responsible for the development of guidelines and standardization."
+            },
+            {
+                "regulation_title": "HIPAA",
+                "regulation_description": "Standards issued by the Health Insurance Portability and Accountability Act (HIPAA) are also relevant to enterprises involved in clinical trials. As a result, companies undertaking the trial process must comply with federally mandated standards on issues such as the privacy and security with regard to a subject's health information."
+            },
+            {
+                "regulation_title": "Occupational Safety and Health Administration",
+                "regulation_description": "The Occupational Safety and Health Administration (OSHA) is tasked with ensuring safe and healthy working conditions through the establishment of standards and by providing training, outreach, education and assistance."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Regulation Level",
+                "barrier_description": "Heavy and increasing regulation is a barrier to entry."
+            },
+            {
+                "barrier_title": "Start-up Costs",
+                "barrier_description": "Research facilities with state-of-the-art equipment and skilled staff are costly for new entrants."
+            },
+            {
+                "barrier_title": "Differentiation",
+                "barrier_description": "Companies must differentiate themselves from Contract Research Organizations (CROs) which provide full clinical trial services."
+            },
+            {
+                "barrier_title": "Legal",
+                "barrier_description": "Patents on intellectual property and brand recognition of large companies limit competition."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Heavy and increasing regulation"
+        ],
+        "factors_decreased_barrier": [
+            "Growth life cycle stage",
+            "Low capital intensity",
+            "High and increasing industry assistance",
+            "Low concentration",
+            "Low but increasing globalization"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Internal Competition",
+                "basis_description": "Internal competition based on price, quality, range of services like speed of trial prep, accuracy of results tracking."
+            },
+            {
+                "basis_title": "External Competition",
+                "basis_description": "External competition from clients' internal R&D departments performing trials themselves."
+            },
+            {
+                "basis_title": "Technology",
+                "basis_description": "Companies with proprietary or advanced technology to better perform and track trials have an advantage."
+            },
+            {
+                "basis_title": "Brand Loyalty",
+                "basis_description": "Ability to bring innovations to market first boosts name recognition and brand loyalty."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Wide Range of Subjects",
+                "concentration_description": "The wide range of clinical trial subjects lowers concentration as companies specialize in subsegments."
+            },
+            {
+                "concentration_title": "Barriers to Entry",
+                "concentration_description": "Moderate barriers to entry and talent sourcing difficulty maintain some concentration."
+            },
+            {
+                "concentration_title": "Client Consolidation",
+                "concentration_description": "Clients consolidating activities with fewer providers increases concentration."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "IQVIA HOLDINGS INC.",
+                "company_percentage": 19
+            },
+            {
+                "company_name": "Syneos Health, Inc.",
+                "company_percentage": 12.5
+            },
+            {
+                "company_name": "PAREXEL INTERNATIONAL CORP",
+                "company_percentage": 9.7
+            },
+            {
+                "company_name": "QUEST DIAGNOSTICS INC.",
+                "company_percentage": 3
+            },
+            {
+                "company_name": "Laboratory Corporation of America Holdings",
+                "company_percentage": 1.5
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 8.4
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 61.6
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 3.7
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 1.6
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0.9
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 1.9
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0.3
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 21.7
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "WAGES REPRESENT THE LARGEST SHARE OF REVENUE",
+            "cost_factor_description": "Wage costs are forecast to account for 61.6% of revenue in 2023. Wage costs are significant because of the high levels of education needed to conduct feasibility assessments, provide institutional review board presentations, understand and file regulatory notices and record data in an efficient and meaningful manner. Wage costs are also connected to sales commissions, and the industry is in a high-growth phase, with companies pushing sales and trying to increase market share."
+        },
+        {
+            "cost_factor_title": "PURCHASES COSTS ARE SECONDARY",
+            "cost_factor_description": "Purchase costs are expected to account for 3.7% of revenue in 2023. Companies require software, computer systems and medical and pharmaceutical research studies to conduct feasibility studies and develop IRB presentations. Spending on research allows companies to understand shifting regulatory landscapes and produce stronger study preparations."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LOW capital intensity",
+                "capital_intensity_description": "The Clinical Trial Support Services industry is characterized by a low level of capital intensity. In 2023, for every dollar spent on labor, the industry is expected to invest only $0.03 in capital equipment due to its service-based nature. Industry services are highly value-added and involve few inputs. Companies typically only require basic administrative and document preparation tools such as computers, phones and software. The industry has not changed in nature and therefore its capital intensity has remained stable."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Medium revenue volatility",
+                "volatility_description": "Growth is typically steady. The industry exists in a unique middle ground between healthcare and scientific. As a result, demand is influenced by a variety of factors including total health expenditure, domestic clinical trial volumes and economy-wide research and development expenditure."
+            },
+            {
+                "volatility_title": "The COVID-19 Pandemic",
+                "volatility_description": "Increased focus on healthcare and the continued development of COVID-19 treatment and prevention will create a steady growth opportunity. While the pandemic has been a source of growth, industry revenue volatility is expected to remain low."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "CLINICAL TRIAL MANAGEMENT SYSTEMS (CTMS)",
+                "technological_change_description": "The degree of technological change in the Clinical Trial Support Services industry is moderate. Industry services, which include preclinical trial preparation work, result tracking and recording and data preparation."
+            },
+            {
+                "technological_change_title": "Downstream Technological Change",
+                "technological_change_description": "The rapid pace of technological change in the pharmaceutical and medical device industries has indirectly created demand for industry services. Pharmacogenomics, the study of how an individual's genetic inheritance affects the body's response to drugs, could provide consumers with access to more powerful medicines that are better able to treat illnesses within the limitations of the patient's genetic profile. Likewise, exploration into the functions of each human gene has facilitated the commercial shift away from diagnostics and toward the development of a new generation of therapeutics. Since new drugs, therapies, surgical procedures and medical devices require clinical trials and regulatory approval before they are brought to market, technological innovation in downstream industries has increased demand for the industry's clinical trial support services."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How have economic changes influenced consumer demand for your services?",
+            "answer": "Overall demand for the Clinical Trial Support Services industry has increased as medical and health R&D expenditure has grown. The primary source of R&D are businesses, which have benefited from increased corporate profit over the last five years. Companies also benefit from significant government funding for clinical trials."
+        },
+        {
+            "question": "Has shifting client preferences presented an opportunity/threat to your company's growth prospects?",
+            "answer": "Shifting client preferences towards outsourcing more activities along the drug development life cycle has posed an opportunity for industry operators, as it increases demand for clinical trial support services."
+        },
+        {
+            "question": "Has your company pursued merger and acquisition strategies to gain market share and improve efficiencies?",
+            "answer": "Industry operators have engaged more acquisition and merger activity over the period. Increased outsourcing of clinical research activities has motivated industry operators to acquire new companies in order to expand their services offerings and function as a one-stop-shop for clients."
+        },
+        {
+            "question": "What is your company's most significant operational expense?",
+            "answer": "Wage costs are the industry's most significant expense. Industry operators rely primarily on individuals who are skilled in statistical analysis, who understand clinical trial operations and the regulatory environment of drug development."
+        },
+        {
+            "question": "Has investment in new technologies increased your company's competitiveness?",
+            "answer": "Investment in enterprise software that makes the data collection and analysis process more efficient enables companies to provide services faster. This significantly increases their competitive advantage since most companies compete on their ability to speed up the drug development process."
+        },
+        {
+            "question": "How does your company safeguard its propriety information/processes?",
+            "answer": "Operators in this industry must safeguard data and results to ensure that data protected by patents is not released. In addition, drug developers are not permitted to see trial data until it is released by the FDA, so industry operators must keep this information confidential."
+        },
+        {
+            "question": "What are the toughest regulatory requirements that your company experiences?",
+            "answer": "Industry operators must comply with an increasingly complicated market approval process and regulations established by the FDA. Industry operators must ensure that all clinical trial support services are done in a manner compliant with FDA requirements."
+        },
+        {
+            "question": "Over the past five years, has the regulatory environment changed significantly, or has it remained relatively stable?",
+            "answer": "The regulatory environment has increased in complexity over the last five years which has driven demand for clinical trial support services, who specialize in navigating the market approval drug development regulatory environment."
+        },
+        {
+            "question": "How does your company's profit margin compare with those of your main competitors?",
+            "answer": "On average, profit margins for the industry are estimated to be 9.6%. However this varies significantly between operators. For example, major player IQVIA's profit margins are estimated at more than 20.0%."
+        },
+        {
+            "question": "What ongoing financial challenges does your company face?",
+            "answer": "Most companies in this industry are experiencing a growing backlog of service projects, which has helped drive growth in revenue over the current period."
+        },
+        {
+            "question": "How quickly can new technology be adopted? Does your company keep up to date with the latest technology?",
+            "answer": "This industry is subject to changes in technology related to the provision of clinical research and data management. Adopting new technologies faster than competitors offers companies a competitive advantage."
+        },
+        {
+            "question": "How do you attract and retain qualified staff? What qualifications must your staff have?",
+            "answer": "Employees in this industry are highly knowledgeable with expertise in software, medical terminology and the clinical trial process. Attracting and keeping highly skilled software developers is a key to continued success in this industry."
+        },
+        {
+            "question": "Do you monitor changes in government regulations? Have you had any issues with government regulations in the past?",
+            "answer": "Operators in this industry prepare data for regulatory submission, which is subject to extensive government oversight. Ensuring timely compliance with government regulations is essential to attracting and retaining clients."
+        },
+        {
+            "question": "Do you expect major changes in demand as the prime rate changes?",
+            "answer": "A higher interest rate is prohibitive to investment in research and clinical trials, as a higher cost of borrowing may prevent financing, causing industry revenue to contract."
+        },
+        {
+            "question": "Does the level of private health insurance coverage drive demand for your services?",
+            "answer": "An increase in the number of people with private health insurance increases demand for medical treatments, devices and brand name pharmaceuticals, thus driving overall healthcare spending."
+        },
+        {
+            "question": "Do you track the level of medical and health research and development expenditure?",
+            "answer": "An increase in R&D activity creates demand for clinical trials and support services, increasing industry revenue."
+        }
+    ]
+}

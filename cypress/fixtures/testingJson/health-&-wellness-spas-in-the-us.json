@@ -1,0 +1,282 @@
+{
+    "report_title": "Spas in the US",
+    "report_date": "May 08, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 21529000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 2.14
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 2.3
+            }
+        },
+        "profit": {
+            "profit_dollars": 2088000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 3.16
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 1.99
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 9.7,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 1.01
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 2.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 17938000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 4.8
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 2.08
+            }
+        },
+        "employees": {
+            "employees_count": 368255,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 1.5
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 1.7
+            }
+        },
+        "wages": {
+            "wages_dollars": 15297000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 5.56
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 1.99
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The Health and Wellness Spas industry has endured slight decline over the five years to 2023. The industry includes a variety of health and wellness facilities like day spas, spa resorts, hotel spas, and medical spas. Most spa services, like massages and other bodywork services, are discretionary. As a result, industry performance is tied to fluctuations in consumer disposable income and confidence.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Health and Wellness Spas Have Largely Rebounded From COVID-19",
+            "current_performance_point_description": "Americans made 181.0 million spa visits in 2022."
+        },
+        {
+            "current_performance_point_title": "Spas Benefit From Revenge Travel",
+            "current_performance_point_description": "After forgoing traveling in 2020, many travelers seek wellness destinations."
+        },
+        {
+            "current_performance_point_title": "Labor Issues Plague the Health and Wellness Spas Industry",
+            "current_performance_point_description": "The 2022 ISPA U.S. Spa Industry Study estimates that there are 45,000 job vacancies across the spa industry."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Technology Will Play an Increasingly Important Role",
+            "future_outlook_point_description": "More spas will offer touchless therapies."
+        },
+        {
+            "future_outlook_point_title": "New Offerings Will Help Spas Garner New Clientele",
+            "future_outlook_point_description": "Mental wellness services will continue to grow."
+        },
+        {
+            "future_outlook_point_title": "Medical Spas Will Rise in Popularity",
+            "future_outlook_point_description": "Growth in per capita disposable income will drive demand for medical spas services."
+        }
+    ],
+    "industry_definition": "Companies in this industry offer spa services, such as massages, facials and body treatments.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Low capital intensity level",
+            "Low concentration level",
+            "Low technology change level"
+        ],
+        "negative_impact_factors": [
+            "High revenue volatility level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Capital Requirements",
+            "Low Imports"
+        ],
+        "weaknesses": [
+            "High Competition",
+            "Very High Volatility"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)"
+        ]
+    },
+    "key_trends": [
+        "Clients develop strong loyalties.",
+        "Spas are offering more services to cater to consumers with varying budgets."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Adult women under 65",
+            "segment_description": "Because of the emphasis on female health and beauty.",
+            "segment_percentage": 41.8
+        },
+        {
+            "segment": "Adult men under 65",
+            "segment_description": "Males have become a target demographic for spas.",
+            "segment_percentage": 29.0
+        },
+        {
+            "segment": "Seniors",
+            "segment_description": "Seniors are an expanding market for the industry.",
+            "segment_percentage": 18.9
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Massage and Bodywork Treatments",
+            "product_description": "Massage and bodywork encompass many treatments.",
+            "product_percentage": 54.2
+        },
+        {
+            "product_or_service": "Skincare Treatments",
+            "product_description": "Skincare treatments comprise cleansing and moisturizing.",
+            "product_percentage": 12.8
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Health & Wellness Spas in the US"
+        ],
+        "tier_2_suppliers": [
+            "Commercial Leasing in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Per Capita Disposable Income",
+            "determinant_description": "Health and Wellness Spas industry revenue growth positively correlates with per capita disposable income trends."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region has a growing population.",
+            "percentage_establishments": 31.4,
+            "percentage_population": 21.4
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "Advertising and consumer protection laws",
+                "regulation_description": "The Federal Trade Commission (FTC) can take legal action if a spa's ads are misleading."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": []
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": []
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [],
+    "cost_factors": [],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "Are your sales reliant on the overall health of the US economy?",
+            "answer": "When per capita disposable income rises, consumers have more money to spend on discretionary services."
+        },
+        {
+            "question": "What percent of revenue do you spend on advertising?",
+            "answer": "Typically, the average spa spends about 0.5% of its revenue on marketing and advertising."
+        }
+    ]
+}

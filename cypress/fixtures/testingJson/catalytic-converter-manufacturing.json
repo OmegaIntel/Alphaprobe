@@ -1,0 +1,530 @@
+{
+    "report_title": "Industry Research: Catalytic Converter Manufacturing",
+    "report_date": "Aug 16, 2021",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 8014000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2002,
+                "end_year": 2021,
+                "revenue_cagr_value": 2.47
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "revenue_cagr_value": 2.19
+            }
+        },
+        "profit": {
+            "profit_dollars": 473000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "profit_cagr_value": 6.65
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5.9,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "profit_margins_cagr_value": 2.62
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1670000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2002,
+                "end_year": 2021,
+                "industry_value_added_cagr_value": 1.99
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "industry_value_added_cagr_value": 2.65
+            }
+        },
+        "employees": {
+            "employees_count": 20517,
+            "employees_cagr_historical": {
+                "begin_year": 2002,
+                "end_year": 2021,
+                "employees_cagr_value": 1.55
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "employees_cagr_value": 2.4
+            }
+        },
+        "wages": {
+            "wages_dollars": 1024000000,
+            "wages_cagr_historical": {
+                "begin_year": 2002,
+                "end_year": 2021,
+                "wages_cagr_value": 1.06
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "wages_cagr_value": 2.58
+            }
+        },
+        "imports": {
+            "imports_dollars": 2646000000,
+            "imports_cagr_historical": {
+                "begin_year": 2002,
+                "end_year": 2021,
+                "imports_cagr_value": 9.53
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "imports_cagr_value": 5.2
+            }
+        },
+        "exports": {
+            "exports_dollars": 739000000,
+            "exports_cagr_historical": {
+                "begin_year": 2002,
+                "end_year": 2021,
+                "exports_cagr_value": 8.56
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "exports_cagr_value": 8.31
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2021 currency. The Catalytic Converter Manufacturing industry produces devices containing a catalyst for converting pollutant gases in vehicle exhaust systems; therefore, demand for industry products is closely tied to demand for automobiles as well as to regulatory standards. More stringent emissions standards and increasing demand for replacement and aftermarket catalytic converters helped sustain demand over the past five years. However, the industry experienced significant headwinds during the COVID-19 (coronavirus) pandemic, as a global decline in demand caused oil prices to contract and stay at home orders in the United States resulted in most consumers remaining homebound. Nevertheless, industry revenue is expected to increase at an annualized rate of 1.9% reaching $8.0 billion in 2021, including projected growth of 7.1% in 2021 as it rebounds from a two-year slump.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Catalytic Converter Manufacturing industry manufactures vehicle emission control devices",
+            "current_performance_point_description": "The Catalytic Converter Manufacturing industry manufactures vehicle emission control devices that convert exhaust gas pollutants into less toxic products. Over the past decade, a growing environmental consciousness among consumers and policy makers has sought means of reducing the overall carbon footprint. As a result, enhanced regulations and standards surrounding vehicle emissions has taken hold."
+        },
+        {
+            "current_performance_point_title": "Industry revenue growth over past 5 years",
+            "current_performance_point_description": "Over the five years to 2021, the catalytic converter manufacturing industry has experienced sustained growth, with revenue rising marginally at an annualized rate of 1.9% reaching $8.0 billion in 2021. However, the industry experienced significant headwinds during the COVID-19 pandemic."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Expected revenue growth over next 5 years",
+            "future_outlook_point_description": "Over the next five years, catalytic converter manufacturers will continue to grow. Continuous preparations by automakers to meet 2020 standards and the affirmation by the current administration to meet Corporate Average Fuel Economy (CAFE) standards will benefit demand for industry products. As a result, over the five years to 2026, industry revenue is expected to increase at an annualized rate of 2.2%, reaching $8.9 billion."
+        },
+        {
+            "future_outlook_point_title": "Potential impact of electric vehicles",
+            "future_outlook_point_description": "Moving forward, the success of electric vehicles may potentially diminish demand for catalytic converters, as electric vehicles do not produce emissions. Nevertheless, electric vehicles are not expected to overtake gasoline fueled automobiles for the foreseeable future."
+        },
+        {
+            "future_outlook_point_title": "Increasing production capacity",
+            "future_outlook_point_description": "Increasing demand and shifting regulations will put pressure on industry operators to increase their own production capacity. Thus, companies are expected to increase the number of facilities and employees to keep up with continued demand."
+        }
+    ],
+    "industry_definition": "This industry manufactures catalytic converters that are used in internal combustion engines. These converters remove toxic exhaust emissions.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Concentration Level: low"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level: low - increasing",
+            "Regulation Level: heavy - increasing",
+            "Technology Change Level: high"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature",
+            "Revenue Volatility Level: medium",
+            "Capital Intensity Level: medium",
+            "Barriers To Entry Level: medium - increasing",
+            "Globalization Level: medium - increasing",
+            "Competition Level: medium - steady"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low & Increasing Level of Assistance"
+        ],
+        "weaknesses": [
+            "Medium Imports",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2016-2021)",
+            "High Revenue Growth (2021-2026)",
+            "High Performance Drivers",
+            "Trade-weighted index"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2021)",
+            "Low Outlier Growth",
+            "Demand from car and automobile manufacturing"
+        ]
+    },
+    "key_trends": [
+        "Regulatory trends have also historically driven demand for catalytic converters",
+        "Growth in the automotive sector has resulted in a wider labor pool available for industry operators",
+        "Imports have decreased, due in part to the recently falling value of the US dollar"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "OEMs",
+            "segment_description": "The majority of industry revenue (85.3%) is derived from sales contracts with automotive original equipment manufacturers (OEMs).",
+            "segment_percentage": 85.3
+        },
+        {
+            "segment": "Light-duty vehicle manufacturers",
+            "segment_percentage": 72.6
+        },
+        {
+            "segment": "Commercial truck and off-highway",
+            "segment_percentage": 12.7
+        },
+        {
+            "segment": "Exports",
+            "segment_percentage": 9.2
+        },
+        {
+            "segment": "Aftermarket",
+            "segment_description": "The industry also sales much of its goods to the aftermarket for catalytic converters.",
+            "segment_percentage": 5.5
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Two-way Oxidation Catalytic Converter",
+            "product_description": "Used for reducing the pollutants in the exhaust gases of gasoline engines.",
+            "product_percentage": 19.6
+        },
+        {
+            "product_or_service": "Three-Way Oxidation Reduction Catalytic Converter",
+            "product_description": "Used for reducing nitrogen oxides emissions alongside unburned hydrocarbons.",
+            "product_percentage": 55.4
+        },
+        {
+            "product_or_service": "Diesel Oxidation Catalyst",
+            "product_description": "A device employed for controlling diesel exhaust emissions.",
+            "product_percentage": 25.0
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Clay Brick & Product Manufacturing in the US",
+            "Furniture Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Auto Parts Stores in the US",
+            "Inorganic Chemical Manufacturing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": [
+            "Truck & Bus Manufacturing in the US",
+            "Wholesale Trade in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Determinants of Demand for New Vehicle Production",
+            "determinant_description": "Determinants of demand for new vehicle production depend on various upstream and downstream factors."
+        },
+        {
+            "determinant_title": "The auto parts aftermarket",
+            "determinant_description": "The auto parts aftermarket is a major revenue segment stream for catalytic converter manufacturers."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Moderate",
+        "import_trend": "Steady",
+        "export_level": "Moderate",
+        "export_trend": "Steady",
+        "international_trade_points": [
+            {
+                "trade_title": "IMPORTS",
+                "trade_description": "In 2021, imports of fully assembled catalytic converters will amount to an estimated $2.6 billion and account for 26.7% of domestic demand."
+            },
+            {
+                "trade_title": "EXPORTS",
+                "trade_description": "Meanwhile, exports are expected to amount to $738.8 billion accounting for 9.2% of industry venue in 2021."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "The region with the highest concentration of industry establishments (30.9%) is the Great Lakes, owing to the location of the big three major domestic automakers in the region: General Motors, Ford and Chrysler.",
+            "percentage_establishments": 30.9,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Southeast",
+            "location_description": "There are also substantial establishments located in the Southeast region (24.1%), where Honda and Toyota have assembly plants.",
+            "percentage_establishments": 24.1,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "West",
+            "location_description": "In the West (17.7% of industry establishments), California holds 13.0% of total establishments, primarily because of its importance to Asian automotive assemblers that ship their products overseas.",
+            "percentage_establishments": 17.7,
+            "percentage_population": 23.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "EPA emissions regulations",
+                "regulation_description": "The Environmental Protection Agency (EPA) sets stringent emissions and fuel efficiency regulations for automakers and catalytic converter manufacturers."
+            },
+            {
+                "regulation_title": "State regulations by CARB and NY DEC",
+                "regulation_description": "Organizations like California Air Resources Board (CARB) and the New York State Department of Environmental Conservation set tough standards for emissions."
+            },
+            {
+                "regulation_title": "EPA requirements for manufacturers",
+                "regulation_description": "EPA requires manufacturers to meet durability, performance and labeling standards, maintain records, and conduct vehicle testing."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "mature"
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "low - increasing"
+            },
+            {
+                "barrier_title": "Regulation Level",
+                "barrier_description": "heavy - increasing"
+            },
+            {
+                "barrier_title": "Technology Change Level",
+                "barrier_description": "high"
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Industry Assistance Level: low - increasing",
+            "Regulation Level: heavy - increasing",
+            "Technology Change Level: high"
+        ],
+        "factors_decreased_barrier": [
+            "Concentration Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Basis of Competition",
+                "basis_description": "Catalytic converter manufacturers compete on the basis of price, production volume, product quality and timeliness."
+            },
+            {
+                "basis_title": "Larger Manufacturers",
+                "basis_description": "Larger catalytic converter manufacturers, such as major company Tenneco, collaboration with their customers, vehicle manufacturers."
+            },
+            {
+                "basis_title": "Automaker Assistance",
+                "basis_description": "Automakers often offer engineering expertise and supply contracts for manufacturers when developing new automobile components."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Low Concentration",
+                "concentration_description": "The Catalytic Converter Manufacturing industry is characterized by a low level of concentration."
+            },
+            {
+                "concentration_title": "Top 4 Companies Share",
+                "concentration_description": "Combined, the top 4 companies in the industry hold less than 10.0% of total market share."
+            },
+            {
+                "concentration_title": "Market Segments",
+                "concentration_description": "Companies choose to operate within particular market segments."
+            }
+        ],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 6.0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 12.2
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 68.1
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 2.3
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0.1
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0.5
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0.8
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 10.1
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Volatile input prices",
+            "cost_factor_description": "Volatile prices of inputs such as steel and precious metals like platinum, palladium and rhodium impact purchase costs."
+        },
+        {
+            "cost_factor_title": "Regulatory and environmental demands",
+            "cost_factor_description": "Increased regulatory and environmental demands on the auto industry lead to higher wage costs as more technologically advanced catalytic converters are required."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Moderate level of capital intensity",
+                "capital_intensity_description": "The industry has a moderate level of capital intensity, typical for the automotive sector. For every dollar spent on labor in 2021, industry operators are expected to invest $0.17 on capital expenses."
+            },
+            {
+                "capital_intensity_title": "Stringent regulations raise costs",
+                "capital_intensity_description": "Due to stringent regulations, many operators develop two different product lines, one for California and New York and one for the remaining 48 states, which raises manufacturing costs."
+            }
+        ],
+        "capital_intensity_trend": "Decreasing"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Cyclical consumer spending trends",
+                "volatility_description": "Demand is highly dependent on light vehicle sales, which trend with changes in consumer sentiment and income."
+            },
+            {
+                "volatility_title": "Swings in exports",
+                "volatility_description": "Swings in exports strongly contribute to overall industry revenue volatility."
+            },
+            {
+                "volatility_title": "Impact of COVID-19 pandemic",
+                "volatility_description": "The COVID-19 pandemic is expected to significantly impact revenue in 2020 due to the decline in oil prices."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Rapid product and process innovations",
+                "technological_change_description": "The industry exhibits rapid technological changes in products and production techniques to reduce emissions and improve air quality."
+            },
+            {
+                "technological_change_title": "Precious metal usage optimization",
+                "technological_change_description": "Operators aim to use expensive precious metals like platinum as effectively as possible to reduce costs."
+            },
+            {
+                "technological_change_title": "Nanocatalyst technology",
+                "technological_change_description": "Innovations like Mazda's single-nanocatalyst technology have enhanced thermal durability and low temperature performance."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company impacted by rising imports from abroad?",
+            "answer": "Imports from low-wage countries constantly impact domestic operator. However, imports do not have such a heavy impact on operations as imported catalytic converters are typically of lower quality."
+        },
+        {
+            "question": "Does your company specialize in one corner of the market or produce a diversified range of products?",
+            "answer": "The average company in the industry has shifted manufacturing operations to focus on high-end converters. The majority of catalytic converters go to original equipment manufacturers and aftermarket consumers."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "Changes in the price of key metals such as aluminum and steel have hurt the profitability of the average industry company over the past few years. Recently imposed tariffs on these metals may make these prices rise even more in the coming years."
+        },
+        {
+            "question": "Has your company located in proximity to its key downstream distributors to reduce shipping costs?",
+            "answer": "Many major industry companies locate in areas close to the major auto manufacturing companies in the country. These are the major downstream markets industry products. For example, many industry establishments are located in Michigan near the major US car company headquarters."
+        },
+        {
+            "question": "How is your company leveraging new technology, in its operations?",
+            "answer": "Hybrid vehicles represent a threat to operators as they have severely diminished or no emissions. Companies typically use automation as a way to decrease dependence on manufacturing employees."
+        },
+        {
+            "question": "Have you been able to reduce wage costs by automating operations over the past five years?",
+            "answer": "Labor costs in this industry are slightly inflated due to the prevalence of unionization in the industry workforce. Still, companies have exhibited leaner and more automated manufacturing styles, which have been further supported by new labor contracts that have somewhat limited wages."
+        },
+        {
+            "question": "How does your company ensure all health and safety requirements are met?",
+            "answer": "Regulations for auto parts makers are collectively known as Federal Motor Vehicle Safety Standards (FMVSS). Catalytic converter manufacturers also adhere to regulations regarding emissions standards."
+        },
+        {
+            "question": "What effect have international tariffs had on your ability to import and export products?",
+            "answer": "Recently imposed tariffs on steel and aluminum may drastically change international trade for industry companies."
+        },
+        {
+            "question": "What percentage of your company's customers renew their contracts?",
+            "answer": "Most major industry companies have long-term, specialized relationships with major US automakers. Companies tend to tailor produce auto parts for the automaker they supply. This usually ensures consistent contract renewal."
+        },
+        {
+            "question": "How has price volatility of inputs affected profit margins over the past 12 months?",
+            "answer": "Volatile purchase costs impact profit margins negatively."
+        },
+        {
+            "question": "Do you have access to the latest available and most efficient technology and techniques? Is your technical expertise to a world standard?",
+            "answer": "Access to technology is important to keep up with the requirements of automakers and to reduce price."
+        },
+        {
+            "question": "How do you monitor changing consumer preferences and government regulations? What is your budget for innovating new products?",
+            "answer": "Environmental requirements are a critical factor affecting the future of the industry. Regulations are becoming more stringent where emissions are concerned."
+        },
+        {
+            "question": "What measures do you have in place to reduce operational costs? Are you considering any new cost-saving measures?",
+            "answer": "Pressure from assemblers to reduce prices will require effective cost controls."
+        },
+        {
+            "question": "Do you monitor changes in the TWI? How has the value of the US dollar affected your company?",
+            "answer": "Industry operators participate in a competitive and globalized market. The trade-weighted index (TWI) measures the strength of the US dollar relative to the currencies of its major trading partners."
+        },
+        {
+            "question": "Do you monitor the average age of the vehicle fleet? What proportion of your market involves repair work on older vehicles?",
+            "answer": "Catalytic converters typically have a finite lifespan and the longer a vehicle is on the road, the more likely a new catalytic converter will be needed so the vehicle can meet emissions standards and pass smog tests."
+        },
+        {
+            "question": "How does increased demand for vehicles affect your business?",
+            "answer": "Catalytic converters are necessary equipment inputs in new automobile production. Thus, demand for industry products is closely tied to demand in the Car and Automobile Manufacturing industry."
+        }
+    ]
+}

@@ -1,0 +1,562 @@
+{
+    "report_title": "Industrial and Commercial Fan & Blower Manufacturing",
+    "report_date": "Aug 16, 2021",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 5957000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2003,
+                "end_year": 2021,
+                "revenue_cagr_value": 0.23
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "revenue_cagr_value": 2.44
+            }
+        },
+        "profit": {
+            "profit_dollars": 304000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "profit_cagr_value": 0.43
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5.1,
+            "profit_margins_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "profit_margins_cagr_value": 0
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1640000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 23315,
+            "employees_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 1253000000,
+            "wages_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 3811000000,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 1320000000,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2021 currency.\n\nThe past five years have been challenging for the Industrial and Commercial Fan and Blower Manufacturing industry. Companies in this industry manufacture fans, blowers and other air ventilation equipment for industrial, commercial and aerospace settings. Therefore, industry demand is supported by growth in the manufacturing, construction and utilities sectors. After experiencing inflated growth prior to the current period due to the manufacturing sector's rapid recovery following the recession, industry revenue has declined. As recovery has slowed and the economy has reached prerecession levels, revenue has weakened throughout the manufacturing sector.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Industry Revenue Trend",
+            "current_performance_point_description": "Overall, as investment in construction and manufacturing have struggled, as a result, industry revenue is expected to decline at an annualized rate of 2.2% to $6.0 billion over the five years to 2021, with a 2.1% increase in 2021 alone."
+        },
+        {
+            "current_performance_point_title": "Construction",
+            "current_performance_point_description": "One of the greatest drivers of the Industrial and Commercial Fan and Blower Manufacturing industry is the value of private nonresidential construction. Industry products are often needed in factories and manufacturing facilities to control the quality of goods produced in these facilities."
+        },
+        {
+            "current_performance_point_title": "Downstream Demand",
+            "current_performance_point_description": "Aside from fluctuations in nonresidential construction, the industry has also been influenced by the performance of downstream service providers and consumers. Industrial fans and blowers are commonly used as a component in heating and cooling equipment."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Rising Demand",
+            "future_outlook_point_description": "Over the next five years, investment in manufacturing is expected to recover after a slump from the COVID-19 (coronavirus) pandemic. The value of private nonresidential construction, which measures the cost of building nonresidential structures such as factories and manufacturing facilities, is projected to rise over the five years to 2026."
+        },
+        {
+            "future_outlook_point_title": "Company Deterrents",
+            "future_outlook_point_description": "As the industry and its downstream industries experience revenue growth, its number of operators is projected to grow as well, albeit more modestly. Over the five years to 2026, the number of industry enterprises is expected to rise at an annualized rate of 0.7% to 404 companies."
+        },
+        {
+            "future_outlook_point_title": "International Trade",
+            "future_outlook_point_description": "Over the next five years, import competition is expected to continue to threaten industry operators. Developing manufacturing sectors overseas are expected to drive the presence of imports in the industry. Over the five years to 2026, the total value of industry imports is expected to rise an annualized 1.9% to $4.2 billion."
+        }
+    ],
+    "industry_definition": "This industry manufactures a variety of air ventilation and circulation equipment such as attic fans, blowers and exhaust fans for use in industrial, commercial and aerospace settings.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low"
+        ],
+        "negative_impact_factors": [],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature",
+            "Revenue Volatility Level: medium",
+            "Industry Assistance Level: medium - steady",
+            "Regulation Level: medium - steady",
+            "Technology Change Level: medium",
+            "Barriers To Entry Level: medium - steady",
+            "Globalization Level: medium - increasing",
+            "Competition Level: medium - increasing"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Customer Class Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "High Imports",
+            "Low Profit vs. Sector Average",
+            "High Product/Service Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2021-2026)",
+            "High Performance Drivers",
+            "Trade-weighted index"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2021)",
+            "Low Revenue Growth (2016-2021)",
+            "Low Outlier Growth",
+            "Value of private nonresidential construction"
+        ]
+    },
+    "key_trends": [
+        "Industry products are often needed in factories and manufacturing facilities",
+        "Heaters, air conditioners and refrigerators all use fans and blowers for temperature control",
+        "Growth in the manufacturing sectors of other countries has increased import competition",
+        "Investment in manufacturing is expected to recover from a slump",
+        "The industry's relatively low profit margins are a primary deterrent for potential entrants",
+        "While imports are expected to grow, the total value of exports is also expected to rise"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Heating and air-conditioning equipment manufacturers",
+            "segment_description": "The largest market as fans and blowers are key inputs for air-conditioning and heating equipment used in construction.",
+            "segment_percentage": 26.8
+        },
+        {
+            "segment": "Exports",
+            "segment_description": "While exports have been declining as a share of revenue due to currency appreciation, they still accounted for 22.2% in 2021.",
+            "segment_percentage": 22.2
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Various other manufacturers use industry products to control facility environments and reduce pollution.",
+            "segment_percentage": 15.5
+        },
+        {
+            "segment": "Transit",
+            "segment_description": "Transit industries like subways use fans, blowers and air purifiers to control temperature, move air and limit pollution.",
+            "segment_percentage": 13.6
+        },
+        {
+            "segment": "Semiconductor manufacturers",
+            "segment_description": "Semiconductor manufacturing requires highly regulated environments, so they use air purifiers, fans and blowers.",
+            "segment_percentage": 13.1
+        },
+        {
+            "segment": "Computer manufacturers",
+            "segment_description": "Computer manufacturers use precise equipment that needs clean environments maintained by industry products.",
+            "segment_percentage": 8.8
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Air Purification Fans and Blowers",
+            "product_description": "Air purification fans and blowers used for industrial gas cleaning systems and incoming air.",
+            "product_percentage": 49.8
+        },
+        {
+            "product_or_service": "Power Roof Ventilators and Parts",
+            "product_description": "Power roof ventilators and parts used to remove hot or humid air from attics.",
+            "product_percentage": 6
+        },
+        {
+            "product_or_service": "Centrifugal Fans and Blowers",
+            "product_description": "Centrifugal fans and blowers used in heating, air-conditioning, gas ventilation and pollution control systems.",
+            "product_percentage": 26.6
+        },
+        {
+            "product_or_service": "Parts and Accessories for Fans and Blowers",
+            "product_description": "Parts and accessories for commercial fans, blowers and air purification equipment like motors, valves, pumps, vanes and lubricants.",
+            "product_percentage": 16.1
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Iron & Steel Manufacturing in the US",
+            "Wire & Spring Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Engine & Turbine Manufacturing in the US",
+            "Screw, Nut & Bolt Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Manufacturing in the US",
+            "Construction in the US"
+        ],
+        "tier_2_buyers": [
+            "Mining in the US",
+            "Utilities in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Residential and Commercial Construction Markets",
+            "determinant_description": "The industry is leveraged to residential and commercial construction markets as new buildings require installation of fan and blower systems."
+        },
+        {
+            "determinant_title": "Remodeling and Replacement Markets",
+            "determinant_description": "Replacement sales are driven by age of equipment, repair vs replacement costs, and demand for more energy efficient models."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Increasing",
+        "export_level": "Moderate",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Rising Imports",
+                "trade_description": "Imports accounted for 45.1% of domestic demand in 2021, up from 32.8% in 2016, with most imports coming from China."
+            },
+            {
+                "trade_title": "Declining Exports",
+                "trade_description": "Exports fell as a share of revenue over the past 5 years due to currency appreciation, but declined at a slower 0.9% annual rate."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region has the highest concentration of industry establishments at 27.4%, more than its share of population.",
+            "percentage_establishments": 27.4,
+            "percentage_population": 101
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region has 24.2% of establishments, less than its share of the population which is the highest.",
+            "percentage_establishments": 24.2,
+            "percentage_population": 101
+        },
+        {
+            "location": "West",
+            "location_description": "The West region accounts for 13.5% of industry establishments.",
+            "percentage_establishments": 13.5,
+            "percentage_population": 101
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "Environmental Regulations",
+                "regulation_description": "Federal, state, local and international laws and regulations concerning the environment, most notably appliance-efficiency regulations, form the primary regulatory hurdles for the Industrial and Commercial Fan and Blower Manufacturing industry."
+            },
+            {
+                "regulation_title": "DOE Appliance Regulations",
+                "regulation_description": "The US Department of Energy's (DOE) Appliance and Equipment Standards Program is currently developing an efficiency regulation for commercial and industrial fans and blowers."
+            },
+            {
+                "regulation_title": "Rulemaking for Industry Standards",
+                "regulation_description": "DOE is currently undertaking a rulemaking to consider new energy conservation standards for commercial and industrial fans and blowers."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Brand Recognition",
+                "barrier_description": "Customers are aware of the brand names of key components, giving larger manufacturers more pricing power."
+            },
+            {
+                "barrier_title": "Capital Requirements",
+                "barrier_description": "There is a moderate level of capital investment required to operate in the industry for specialized plants and machinery."
+            },
+            {
+                "barrier_title": "Commodity Inputs",
+                "barrier_description": "Key commodity inputs like steel, aluminum, copper are necessary and supply disruptions can threaten operations."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: Mature"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: Low",
+            "Concentration Level: Low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Brand loyalty",
+                "basis_description": "There is a high degree of brand loyalty in this industry, as customers associate quality with certain brand names."
+            },
+            {
+                "basis_title": "Pricing competition",
+                "basis_description": "Competition in the industry is also heavily determined by pricing."
+            },
+            {
+                "basis_title": "Economies of scale",
+                "basis_description": "Smaller industry participants have trouble competing with the economies of scale and scope exhibited by the industry's major players."
+            },
+            {
+                "basis_title": "Product innovation",
+                "basis_description": "Introducing new or improved product designs and lines at different price points is a key way of maintaining and increasing product and market share."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Low top player share",
+                "concentration_description": "The top three companies are expected to account for just slightly more than 15.4% of total industry revenue."
+            },
+            {
+                "concentration_title": "Many small and medium businesses",
+                "concentration_description": "According to data from the US Census Bureau's County Business Patterns report, just over half of all locations employ fewer than 20 employees."
+            },
+            {
+                "concentration_title": "Large companies affect employment",
+                "concentration_description": "A high proportion of industry establishments employ more than 500 workers, indicating major companies affect the employment composition."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Ametek",
+                "company_percentage": 14.1
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 85.9
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 5.1
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 48.6
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 1.4
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0.2
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0.7
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0.6
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases",
+            "cost_factor_description": "Purchases account for an estimated 48.6% of total industry revenue in 2021. The industry purchases a broad range of materials including steel, copper tubing, aluminum, ferrous and nonferrous castings, clays, motors and electronics."
+        },
+        {
+            "cost_factor_title": "Depreciation",
+            "cost_factor_description": "Depreciation for buildings, machinery, equipment and computers is expected to account for 1.4% of industry revenue in 2021. Steady depreciation costs over the past decade reflect investments in automation machinery that reduces the need for human labor."
+        },
+        {
+            "cost_factor_title": "Marketing",
+            "cost_factor_description": "In 2021, marketing cost is expected to account for 0.2% of industry revenue. The industry has low marketing costs, because the industry provides a niche product."
+        },
+        {
+            "cost_factor_title": "Rent",
+            "cost_factor_description": "In 2021, rent cost is estimated to be 0.7%. Rent is not a significant cost for the industry, because the location of industry establishments is not important, so companies can operate in low cost areas."
+        },
+        {
+            "cost_factor_title": "Utilities",
+            "cost_factor_description": "Utility expenses in the industry are moderate, representing an estimated 0.6% of revenue as manufacturers operate large facilities with machinery constantly expending fuel and electricity."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low Level of Capital Intensity",
+                "capital_intensity_description": "In 2021, for every dollar spent on labor, $0.07 is spent on capital. While industry operators require significant capital equipment to manufacture industry products, this equipment does not need to be replaced often."
+            },
+            {
+                "capital_intensity_title": "Higher Initial Costs",
+                "capital_intensity_description": "Therefore, the initial capital costs are higher than the annual capital costs. In addition, wage costs for industry operators are high, as employers have increased wages over the past five years to stay competitive."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Moderate Level of Revenue Volatility",
+                "volatility_description": "The Industrial and Commercial Fan and Blower Manufacturing industry has exhibited a moderate level of revenue volatility over the past five years. Fluctuations in input costs have contributed to changes in the price of industry products, which determines revenue."
+            },
+            {
+                "volatility_title": "Influence of Construction Declines",
+                "volatility_description": "In addition, declines in the value of nonresidential construction in 2015 and 2016 have resulted in revenue declines."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Potential Threat from Disruption",
+                "technological_change_description": "While the Industrial and Commercial Fan and Blower Manufacturing industry has yet to experience any significant technological disruption, the industry could be threatened over the next five years."
+            },
+            {
+                "technological_change_title": "Emerging Bladeless Fan Technology",
+                "technological_change_description": "Air multipliers, often called bladeless fans, have become increasingly popular for home use. Dyson has quickly innovated fans and blowers used in vacuum cleaners, hand dryers and home fans."
+            },
+            {
+                "technological_change_title": "Innovation and Cost Factors",
+                "technological_change_description": "Technological advancement mainly concerns two areas: manufacturing operations and product development. Costs are kept relatively high because manufacturers' activities and technologies are often redesigned in response to changes in inputs and outputs."
+            },
+            {
+                "technological_change_title": "Research and Development",
+                "technological_change_description": "Another important part of companies' growth strategies is investing in research and new product development."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company affected by rising imports from abroad?",
+            "answer": "Imports account for a significant portion of domestic demand for industrial and commercial fans and blowers."
+        },
+        {
+            "question": "Does your company specialize in one corner of the market or produce a diversified range of products?",
+            "answer": "Many large companies in the industry are highly diversified."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "Industry costs are considerably affected by the price of steel."
+        },
+        {
+            "question": "Have you looked into setting up manufacturing facilities in lower wage regions of the country?",
+            "answer": "The industry is highly concentrated in the Great Lakes region."
+        },
+        {
+            "question": "How is your company leveraging new technology such as RFDI tags in its operations?",
+            "answer": "Many manufacturers have been able to reduce costs through new technology."
+        },
+        {
+            "question": "Have you been able to reduce wage costs by automating operations over the past five years?",
+            "answer": "Wage costs have remained relatively low over the past five years, partially due to automation."
+        },
+        {
+            "question": "How does your company stay ahead of regulations such as energy-efficiency standards?",
+            "answer": "Manufacturers often purchase new equipment to stay ahead of regulations."
+        },
+        {
+            "question": "What effect have international tariffs had on your ability to import and export products?",
+            "answer": "The Chinese Steel tariff has increased input costs for industry companies."
+        },
+        {
+            "question": "How do your company's profit margins compare to those of your main competitors?",
+            "answer": "Profit margins have been on the decline for most industry companies."
+        },
+        {
+            "question": "How frequently does your company purchase new equipment?",
+            "answer": "Manufacturers must update equipment to comply with new regulations."
+        },
+        {
+            "question": "What products do you offer that appeal to environmentally conscious consumers?",
+            "answer": "In light of concerns over environmentally damaging processes, many operators compete on their ability to accommodate environmentally friendly goods and services."
+        },
+        {
+            "question": "How hard is it to promote your company through word-of-mouth recommendations?",
+            "answer": "Successful companies are able to establish strong connections between their brands and perceptions of quality and reliability."
+        },
+        {
+            "question": "Have the necessary raw materials for your production processes been in healthy supply?",
+            "answer": "A disruption in raw material supplies adversely affects a company's ability to meet its production commitments."
+        },
+        {
+            "question": "How has the appreciation of the US dollar affected your business?",
+            "answer": "As the value of the dollar rises, domestic goods become relatively more expensive in foreign markets, causing demand for industry products to fall overseas."
+        }
+    ]
+}

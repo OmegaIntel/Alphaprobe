@@ -1,0 +1,551 @@
+{
+    "report_title": "Machine Shop Services in the US",
+    "report_date": "Jul 14, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 40425000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": -1.04
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.66
+            }
+        },
+        "profit": {
+            "profit_dollars": 2143000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": -0.84
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5.3,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 0.2
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 16465000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 192465,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 12804000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The Machine Shop Services industry slumped in recent years, impacted by challenges like the COVID-19 pandemic in 2020 and accompanying economic volatility marked by heightened inflation. Revenue has depressed at a CAGR of 3.0% through the end of 2024 to an estimated $40.4 billion, including an expected 3.0% drop in 2024 alone. This downturn is partly because of volatility in steel and aluminum prices, driven by production halts in 2020 and ongoing post-pandemic supply chain issues, which have increased production costs across the industry.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "VOLATILE INPUT PRICES HARM SERVICE PROVIDERS' REVENUE",
+            "current_performance_point_description": "The Machine Shops Services industry relies heavily on the stability of input prices, particularly for materials like steel and aluminum, to maintain profitability and industry growth."
+        },
+        {
+            "current_performance_point_title": "A STRONG RELATIONSHIP WITH MANUFACTURERS BENEFITS THE INDUSTRY",
+            "current_performance_point_description": "The industry's revenue largely depends on the performance of downstream manufacturers. Strong performance in the manufacturing sector generally translates to better revenue for machine shops."
+        },
+        {
+            "current_performance_point_title": "DIVERSIFICATION OF THE CONSUMER BASE ENHANCES STABILITY",
+            "current_performance_point_description": "Diversifying the industry's consumer base helps machine shops mitigate revenue loss from fluctuations in key markets. Adverse economic conditions highlight the importance of having varied revenue streams."
+        },
+        {
+            "current_performance_point_title": "RAPID TECHNOLOGICAL DEVELOPMENT ENHANCES NEED FOR QUALITY MACHINE SHOP SERVICES",
+            "current_performance_point_description": "With the American economy undergoing a significant transformation in terms of technological innovation, many operators have enjoyed higher demand."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Sharp Plunge in Input Prices Will Harm Revenue Growth",
+            "future_outlook_point_description": "The industry's profitability hinges on high raw materials prices like steel and aluminum. Recent volatilities saw prices soar post-pandemic, only to plunge, affecting short-term revenue outlooks."
+        },
+        {
+            "future_outlook_point_title": "Slower Downstream Demand is a Bad Sign for the Industry",
+            "future_outlook_point_description": "The industry relies heavily on consistent demand from downstream markets to sustain revenue growth. Any decrease in these markets can negatively impact machine shop revenues."
+        },
+        {
+            "future_outlook_point_title": "Resiliency in Production and Investment Will Stabilize the Industry",
+            "future_outlook_point_description": "One of the silver linings for the industry is the strong private investment trends and domestic industrial production, two key metrics that have been integral in industry success."
+        },
+        {
+            "future_outlook_point_title": "Tech Advancement Creates Optimism for Machine Shops",
+            "future_outlook_point_description": "A factor that could be influential in stabilizing industry growth is technological acceleration in fields like medicine and automobiles, with new technology requiring a higher input of professional crafting and quality service from operators."
+        },
+        {
+            "future_outlook_point_title": "THE INFRASTRUCTURE INVESTMENT AND JOBS ACT (IIJA)",
+            "future_outlook_point_description": "The IIJA is a massive spending bill aimed at revitalizing infrastructure nationwide. Projects will require extensive machinery to complete and, once done, will ease transportation strains for the industry and its peripheral markets."
+        }
+    ],
+    "industry_definition": "The Machine Shop Services industry cuts raw materials into specified shapes and sizes using tools such as lathes, milling machines, grinders and drill presses. Almost all forms of metal product fabrication involve machining and manufacturers may also machine plastic and composite materials.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - increasing"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level: low - steady",
+            "Barriers To Entry Level: low - steady",
+            "Competition Level: high - steady"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Product/Service Concentration",
+            "Low Capital Requirements",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry",
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers",
+            "Demand from car and automobile manufacturing"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Price of steel"
+        ]
+    },
+    "key_trends": [
+        "High industry fragmentation ensures that only some companies control a large market segment. The local nature of machine shops creates many small shops that operate with few employees.",
+        "A diverse set of services offered enhances industry competition. The push for machine shops to capture consumers depends on providing high-level services in specific product areas.",
+        "Volatile commodity prices harm service providers. Since machine shops rely on growing input costs that can be passed onto consumers, the inconsistent steel and aluminum prices harmed revenue.",
+        "Rising interest rates poised to curtail growth for machine shops. With the Federal Reserve continuing to maintain heightened interest rates to combat inflation, it will dampen downstream demand and influence clients' abilities to procure operators' services.",
+        "The IIJA will provide ample opportunity for industry growth. Machine shops can rely on robust demand from metal fabricating and industrial machinery manufacturing markets to boost production and meet project demands.",
+        "No company owns more than a 5.0% share of the market. The industry is highly competitive and lacks any clear leader in the market, with many companies competing over different consumer niches."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Automotive, transportation and off-highway vehicle markets",
+            "segment_description": "The automotive, transportation and off-highway vehicle market includes revenue generated from producing metal parts for vehicles like cars and trucks and larger modes of transportation like trains and ships.",
+            "segment_percentage": 16.9
+        },
+        {
+            "segment": "Fabricated metal product markets",
+            "segment_description": "This market segment comprises work on metal goods that transforms them into intermediate or end products for consumer use. Examples include cutlery, heating boilers and metal forgers.",
+            "segment_percentage": 3
+        },
+        {
+            "segment": "Airline markets",
+            "segment_description": "The airlines market segment incorporates machine shop services for crafting airplane parts. Military jets and commercial airline manufacturers are examples of two critical clients for machine shops.",
+            "segment_percentage": 7.7
+        },
+        {
+            "segment": "Medical markets",
+            "segment_description": "The medical markets segment is composed of services to produce metal components for medical devices, technology in use at medical offices and other medical equipment.",
+            "segment_percentage": 2.9
+        },
+        {
+            "segment": "Other markets",
+            "segment_description": "Some additional sources of revenue for machine shops include parts for consumer appliances, sports goods equipment and alternative energy sources.",
+            "segment_percentage": 15.3
+        },
+        {
+            "segment": "Electronics and telecommunications markets",
+            "segment_description": "This market segment comprises services for electronic components like semiconductors and telecommunication equipment like computers and satellites.",
+            "segment_percentage": 3.3
+        },
+        {
+            "segment": "Industrial machinery and equipment markets (including components)",
+            "segment_description": "This market segment comprises servicing for heavy machinery and parts like engines, metalworking and packaging. The materials used to refine these products vary and are not limited to metal.",
+            "segment_percentage": 20.7
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Machine Centers",
+            "product_description": "Machine centers generate revenue from milling techniques to manipulate raw metals. Milling machines enable shops to cut a piece of metal in different directions along a flat surface.",
+            "product_percentage": 42.4
+        },
+        {
+            "product_or_service": "Turning Centers and Lathes",
+            "product_description": "This segment is composed of revenue generated from cutting round objects or symmetrical objects on an axis using lathes. It faced a slight uptick in growth over the past five years due to consistent consumer demand.",
+            "product_percentage": 12.3
+        },
+        {
+            "product_or_service": "Grinding",
+            "product_description": "This segment includes revenue from grinding, a finishing process that removes unnecessary material from metal pieces using abrasive wheels. It has continued to grow due to demand for high quality finished products.",
+            "product_percentage": 11.3
+        },
+        {
+            "product_or_service": "EDM and ECM",
+            "product_description": "This segment uses electrical discharge machining (EDM) and electrochemical machining (ECM) for precise cuts. It has grown due to technological advancements enabling more efficient and precise machining.",
+            "product_percentage": 4.9
+        },
+        {
+            "product_or_service": "Drills",
+            "product_description": "This segment includes revenue from drilling services. It has faced challenges due to higher interest rates and inflationary pressures affecting clients' ability to procure drilling services.",
+            "product_percentage": 10.2
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "This includes nontraditional machining techniques and metal heat treatment using technology instead of manual processes. It has expanded as shops prioritize maximizing service efficiency.",
+            "product_percentage": 18.9
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Aluminum Manufacturing in the US",
+            "Copper Rolling, Drawing & Extruding in the US",
+            "Ferrous Metal Foundry Products in the US",
+            "Metal Stamping & Forging in the US",
+            "Metalworking Machinery Manufacturing in the US",
+            "Metal Pipe & Tube Manufacturing in the US",
+            "Screw, Nut & Bolt Manufacturing in the US",
+            "Tool & Hardware Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [
+            "Construction Machinery Manufacturing in the US",
+            "Metal Stamping & Forging in the US",
+            "Mining, Oil & Gas Machinery Manufacturing in the US"
+        ],
+        "tier_2_buyers": [
+            "Screw, Nut & Bolt Manufacturing in the US",
+            "Tractors & Agricultural Machinery Manufacturing in the US",
+            "Engine & Turbine Manufacturing in the US",
+            "Wind Turbine Manufacturing in the US",
+            "Power Tools & Other General Purpose Machinery Manufacturing in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Industrial Production Index",
+            "determinant_description": "The industrial production index measures the output from the mining, manufacturing, electric and gas industries. When this index increases, demand for the industry's machine shop services increases, as this represents larger output among industrial producers and a more frequent need of operators' services. Conversely, any notable declines in the index are a sign of sluggish economic output and can damage demand for machine shop services."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": [
+            {
+                "trade_title": "International Trade",
+                "trade_description": "The machine shop services industry has low and steady imports and exports."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "With machine shops maintaining a strong relationship with the manufacturing industry, it is no surprise to see the Great Lakes retain the top spot for industry establishments.",
+            "percentage_establishments": 18.2,
+            "percentage_population": 15.1
+        },
+        {
+            "location": "Southeast",
+            "location_description": "Machine shops favor not only areas of large manufacturing sectors but also locations where warm weather and robust population centers can provide a consistent consumer base on the local level. In the Southeast, the industry gets these factors, as growing population centers in areas like Florida have enabled many industry shops to service customers at the local level and diversify their target base beyond larger clients.",
+            "percentage_establishments": 17.6,
+            "percentage_population": 21.8
+        },
+        {
+            "location": "West",
+            "location_description": "As a region with a mixture of good weather, strong local economies and serviceable population centers in states like California, the West secured a strong position in capturing machine shops. Large sectors like defense and automobile manufacturing have provided machine shops with diverse clients that appeal to their core products while maintaining consistent operating costs.",
+            "percentage_establishments": 14.5,
+            "percentage_population": 13.4
+        },
+        {
+            "location": "Southwest",
+            "location_description": "The Southwest, which has seen steady growth over the past five years, attracted many unique industries from defense and medical sectors in states like Texas, fueling machine shop growth as well. Compact geography also benefits industry establishments, as lower shipping costs enable stronger profitability for machine shops while improving customer relations.",
+            "percentage_establishments": 11.9,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "As the Mid-Atlantic has a diverse geography and population centers in areas like New York, machine shops will be interested in conducting business there. The higher cost of business and lower manufacturing presence creates less appeal for industry growth, as machine shops rely on manufacturing industries to help fuel growth.",
+            "percentage_establishments": 11.6,
+            "percentage_population": 13.3
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [
+            {
+                "regulation_title": "ENVIRONMENTAL REGULATIONS",
+                "regulation_description": "Machine Shops Services industry facilities are subject to environmental regulations concerning waste disposal. The Clean Air Act (1990) requires compliance with air quality standards regulated by the Environmental Protection Agency (EPA) to establish and enforce limits on the emission of pollutants. The Clean Water Act (1972) regulates the discharge of pollutants into surface water and establishes a system of minimum national efficiency standards on an industry-by-industry basis."
+            },
+            {
+                "regulation_title": "LABOR LAWS",
+                "regulation_description": "Machine shops are also subject to various nonenvironmental regulations focusing on employee well-being. These include occupational health and safety, wages, overtime and other employment-related regulations involving state and federal governments. Social distancing and mask mandates were also implemented during the COVID-19 pandemic. Additional voluntary standards are important to machine shops since downstream companies view them as an assurance of quality and consistency in all phases of company operations and manufacturing."
+            },
+            {
+                "regulation_title": "THE CYBERSECURITY MATURITY MODEL CERTIFICATION (CMMC)",
+                "regulation_description": "CMMC is a framework the US Department of Defense (DoD) established to enhance cybersecurity practices across the defense industrial base (DIB). Given the increasing frequency and sophistication of cyber threats, the CMMC aims to protect sensitive information within the defense sector's supply chain, particularly Controlled Unclassified Information (CUI). Machine shops specializing in DoD contracts or as part of the defense supply chain must achieve the appropriate level of CMMC certification."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "mature"
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "low - steady"
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "high - steady"
+            },
+            {
+                "barrier_title": "LEGAL",
+                "barrier_description": "There are few legal barriers for new entrants into the industry. Most rules and regulations focus on adherence to labor laws for workers and environmental laws for local regions."
+            },
+            {
+                "barrier_title": "START-UP COSTS",
+                "barrier_description": "Any new entrant into the industry faces some notable start-up costs, like acquiring the necessary machinery for the machine shop and hiring the required number of people to run daily operations."
+            },
+            {
+                "barrier_title": "DIFFERENTIATION",
+                "barrier_description": "There is a high level of competition within the industry since many machine shops compete for a similar niche of consumers. The industry needs to be more cohesive and localized, ensuring no company can take over a major share of the market."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage mature",
+            "Industry Assistance Level low - steady",
+            "Competition Level high - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level low",
+            "Concentration Level low",
+            "Globalization Level low - increasing"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "High competition",
+                "basis_description": "High industry fragmentation ensures that only some companies control a large market segment. The local nature of machine shops creates many small shops that operate with few employees."
+            },
+            {
+                "basis_title": "Steady competition",
+                "basis_description": "A diverse set of services offered enhances industry competition. The push for machine shops to capture consumers depends on providing high-level services in specific product areas."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "A DIVERSE CUSTOMER BASE CREATES MULTIPLE STREAMS OF DEMAND FOR MACHINE SHOPS",
+                "concentration_description": "As machine shops service different downstream markets, it creates a pattern of fragmentation and provides opportunities for new entrants to capture unique demand streams."
+            },
+            {
+                "concentration_title": "THE LOCALIZED NATURE OF BUSINESS DIVERSIFIES INTERNAL COMPETITION",
+                "concentration_description": "The industry's prevalence of small shops that are local to the regions they serve enhances competition and decreases market concentration for any one company."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "BTM Company LLC",
+                "company_percentage": 0.1
+            },
+            {
+                "company_name": "Karlee Company",
+                "company_percentage": 0.1
+            },
+            {
+                "company_name": "3d Medical",
+                "company_percentage": 0.1
+            },
+            {
+                "company_name": "Major Tool & Machine Inc.",
+                "company_percentage": 0.1
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 99.6
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Ot",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "RAW GOODS REMAIN AN OBSTACLE TO INDUSTRY GROWTH",
+            "cost_factor_description": "One of the core components of any successful machine shop is the availability of various goods like screws, bolts and other metal components essential in transforming raw goods."
+        },
+        {
+            "cost_factor_title": "CONSISTENT LABOR DEMAND MAINTAINS HIGH WAGE COSTS",
+            "cost_factor_description": "With machine shops requiring a steady hand that operates the machinery itself, wage costs have consistently remained a thorn in the industry's quest for maximizing profit."
+        },
+        {
+            "cost_factor_title": "Volatile Input Prices Trickle Down to Industry Profit",
+            "cost_factor_description": "The dependence on consistently higher prices of goods like steel and aluminum that enabled machine shops to pass those costs down to consumers took its toll, as sharp price declines following the COVID-19 pandemic resulted in a lower profit for the industry."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Labor Expenses",
+                "capital_intensity_description": "The Machine Shop Services industry endures low capital costs. Short-term costs are higher when acquiring the necessary machinery, but in the long run, most industry costs focus on wages for qualified employees and maintenance of current machinery."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "MACHINE SHOPS ARE PRONE TO MODERATE VOLATILITY, AS ECONOMIC CONDITIONS ARE CORE FACTORS",
+                "volatility_description": "Since the industry is dependent on a consistent stream of demand from consumers, any large-scale events like the COVID-19 pandemic will affect the industry's stability."
+            },
+            {
+                "volatility_title": "DEPENDENCE ON RISING INPUT PRICES ADDS TO THE UNCERTAINTY OF MACHINE SHOPS' GROWTH",
+                "volatility_description": "If the prices of raw goods do not grow, industry shops are at risk and may endure wild swings in revenue."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Capital Expenses",
+                "technological_change_description": "Moderate technology change"
+            },
+            {
+                "technological_change_title": "The Development of New Technologies Improves",
+                "technological_change_description": "The acceleration of technological development has benefited machine shops, including new material cutting technology like laser and water jet machinery improving the production process."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How has your company been affected by import competition?",
+            "answer": "Although the USITC does not provide information on trade for this industry, the industry still faces pressure from abroad."
+        },
+        {
+            "question": "How heavily are your company's sales dependent on the health of the US economy?",
+            "answer": "The industry's major markets indicate that this industry performs best in a period of macroeconomic growth."
+        }
+    ]
+}

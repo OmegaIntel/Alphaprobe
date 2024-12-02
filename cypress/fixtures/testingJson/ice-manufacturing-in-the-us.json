@@ -1,0 +1,542 @@
+{
+    "report_title": "Ice Manufacturing Industry Report",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 1146000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": -0.11
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.56
+            }
+        },
+        "profit": {
+            "profit_dollars": 38000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": -1.49
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0.1
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 3.3,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -1.38
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0.2
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 416000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0.5
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0.8
+            }
+        },
+        "employees": {
+            "employees_count": 4308,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 1.1
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0.9
+            }
+        },
+        "wages": {
+            "wages_dollars": 327000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 1.5
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 1.3
+            }
+        },
+        "imports": {
+            "imports_dollars": 225000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 0.7
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0.5
+            }
+        },
+        "exports": {
+            "exports_dollars": 100000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 0.4
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0.6
+            }
+        }
+    },
+    "executive_summary": "Ice manufacturers are navigating a challenging period marked by significant shifts in consumer behavior and market demand. Traditionally reliant on retail markets for revenue, ice manufacturers have confronted reduced demand as consumers and small businesses turn to advanced refrigeration solutions and personal freezers, lessening the need for manufactured ice. This trend is further compounded by a consistent decline in soft drink consumption, a key ice usage market driven by health concerns linked to regular soft drink intake. Despite these hurdles, ice producers are actively diversifying their offerings to adapt to changing market conditions. Revenue has been expanding at a CAGR of 1.0% and is expected to reach $1.1 billion in 2024, when it will climb 0.3%.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Producers Struggle to Reestablish the Status Quo, Limiting Revenue",
+            "current_performance_point_description": "Ice manufacturers serve a range of downstream markets but retail channels represent the largest source of revenue. These markets primarily sell ice to downstream consumers and small businesses. However, such buyers are increasingly finding alternative products and cooling means, reducing the need for traditionally manufactured ice."
+        },
+        {
+            "current_performance_point_title": "Diversified Product Offering Bolsters Appeal of Certain Packaged Ice Products",
+            "current_performance_point_description": "Although ice manufacturers operate in a niche part of the Manufacturing sector (IBISWorld report 31-33), their capability to sell a variety of ice products for different customers at the commercial and consumer levels helped revenue growth."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Steadier Economic Growth Will Bolster Manufactured Ice Sales",
+            "future_outlook_point_description": "Macroeconomic conditions will improve over the next five years and endure less volatility than during the current reporting period. Ice producers benefit from positive economic conditions since most markets can acquire ice from alternative sources or use other methods for cooling purposes."
+        },
+        {
+            "future_outlook_point_title": "SUSTAINED HEALTHY-LIVING EFFORTS BY CONSUMERS WILL STIFLE EXPANSION",
+            "future_outlook_point_description": "An emphasis on healthy eating and living will persist in the coming years, with consumers continually seeking ways, big and small, to lead a healthier lifestyle. Eliminating regular soft drink consumption will remain a popular option among many."
+        },
+        {
+            "future_outlook_point_title": "GROWING COMPETITION IN FOREIGN MARKETS IS SET TO INFLUENCE MANUFACTURERS' CORE MARKETS",
+            "future_outlook_point_description": "With ice manufacturers benefiting from steady domestic demand for their products, the anticipated fall of the US dollar over the next five years may significantly influence their core customer base."
+        }
+    ],
+    "industry_definition": "Ice manufacturers primarily manufacture ice. Companies in the industry freeze water into varying forms of block and cubed ice to be sold in bags. This industry does not include the production of dry ice.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Technology Change Level: low"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level: low - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "Low &amp; Steady Level of Assistance",
+            "Medium Imports",
+            "Low Profit vs. Sector Average"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Per capita disposable income"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Per capita soft drink consumption"
+        ]
+    },
+    "key_trends": [
+        "Maintaining a consumer-friendly price point enhances internal competition. Ice manufacturers that sell their products at competitive market prices create an incentive for new customers to purchase their goods and provides a competitive edge for the manufacturer.",
+        "Expansion of refrigeration technology exacerbates external competition. The development of newer, more efficient refrigerated storage facilities creates a unique competitor, particularly for ice manufacturers with commercial customers.",
+        "Traditional revenue streams are weakening. Consumers and small businesses increasingly opt for alternative cooling solutions and reduce soft drink consumption. This shift has forced manufacturers to reassess their key markets and operating strategies.",
+        "Steady economic growth and rising disposable income will present a potential opportunity. However, a less reliable consumer market will necessitate adjustments, driving manufacturers to target larger and more stable commercial customers to offset risks associated with materials and production costs."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Supermarkets and mass merchants",
+            "segment_description": "Supermarkets, mass merchants, convenience stores, gas stations, liquor stores and other similar establishments represent key examples of retail markets for ice manufacturers.",
+            "segment_percentage": 40.4
+        },
+        {
+            "segment": "Convenience, gas station and liquor stores",
+            "segment_description": "Supermarkets, mass merchants, convenience stores, gas stations, liquor stores and other similar establishments represent key examples of retail markets for ice manufacturers.",
+            "segment_percentage": 29.9
+        },
+        {
+            "segment": "Distributors",
+            "segment_description": "This market segment represents third-party distribution companies. Ice producers often use distributors as the connection point between production and end consumers, which can range from retail establishments to event spaces and restaurants. Since ice is highly susceptible to changes in temperature, specialized distribution methods are required for transporting it long distances, helping the distributor market segment maintain a relatively steady share of the revenue.",
+            "segment_percentage": 13.2
+        },
+        {
+            "segment": "Other markets",
+            "segment_description": "Other key markets for ice producers include value retailers, event spaces, food service establishments, bars and restaurants, and agricultural buyers. Most manufacturers serve at least a few other markets but the specific channels often vary between producers. As substitutes siphon sales from more traditional consumer-facing markets, ice producers are increasingly targeting other market segments that have historically accounted for a smaller share of revenue.",
+            "segment_percentage": 16.5
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Cube Ice",
+            "product_description": "Ice cubes are between 15.0 and 35.0 millimeters in size and are very popular at consumer-heavy establishments, such as bars and restaurants. Manufacturers also sell and rent ice machines that produce ice cubes. Gas stations and convenience stores have driven sales of cube ice in recent years, as they remain a highly popular market for consumers and small businesses in need of large quantities of ice.",
+            "product_percentage": 33.5
+        },
+        {
+            "product_or_service": "Flake Ice",
+            "product_description": "Flake ice is created by pouring water into a refrigerated drum at a 20-degree",
+            "product_percentage": 15.2
+        },
+        {
+            "product_or_service": "Tube Ice",
+            "product_description": "Tube ice is also characterized as cylinder ice, which is made by freezing water inside chilled metal cylinders and using hot gas to release the ice after freezing. The ice is then dropped into a vat and broken via a spinning breaker bar. Tube ice's low production costs have proved advantageous in recent years, as producers have leveraged the lower price tag with price-conscious markets. Small businesses and commercial clients looking to protect their capital have aided in the segment's expansion.",
+            "product_percentage": 24.9
+        },
+        {
+            "product_or_service": "Plate Ice",
+            "product_description": "Plate ice is formed using refrigerated plates made of steel or aluminum. Water is poured over the plates until it freezes. Then, hot gas is applied to loosen the ice into chunks or nuggets. Block ice, or \"can ice,\" is created by filling large cans with refrigerated brine. Many commercial businesses use plate ice to help maintain cold temperatures for drinks or food. Transportation companies and companies engaged in long-distance sales are the primary users of block ice, with demand tied to broader economic activity.",
+            "product_percentage": 11.7
+        },
+        {
+            "product_or_service": "Block Ice",
+            "product_description": "Block ice, or \"can ice,\" is created by filling large cans with refrigerated brine. Many commercial businesses use plate ice to help maintain cold temperatures for drinks or food. Transportation companies and companies engaged in long-distance sales are the primary users of block ice, with demand tied to broader economic activity.",
+            "product_percentage": 14.7
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Water Supply & Irrigation Systems in the US"
+        ],
+        "tier_2_suppliers": [
+            "Local Freight Trucking in the US",
+            "Plastic Products Miscellaneous Manufacturing in the US",
+            "Printing in the US"
+        ],
+        "tier_1_buyers": [
+            "Grocery Wholesaling in the US",
+            "Supermarkets & Grocery Stores in the US",
+            "Convenience Stores in the US",
+            "Bars & Nightclubs in the US"
+        ],
+        "tier_2_buyers": [
+            "Refrigerated Storage in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Per Capita Soft Drink Consumption",
+            "determinant_description": "Per capita soft drink consumption represents the amount of carbonated soft drinks consumed by the average US consumer annually. Ice is commonly served with soft drinks, and many consumers opt to chill soft drinks using ice rather than cooling them through refrigeration. Expanding soft drink consumption presents a potential opportunity for ice manufacturers, as sales of ice often hike in tandem."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Moderate",
+        "import_trend": "Decreasing",
+        "export_level": "Moderate",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Continued Appreciation of US Dollar Strength Strengthens Appeal of Imports, Despite Global Trade Volatility",
+                "trade_description": "Trade trends are susceptible to changes in the US dollar's value, represented by the Trade-Weighted Index (TWI). Despite some annual fluctuation, the dollar appreciated in value in recent years, giving domestic buyers greater power in purchasing imported ice. Imported ice values are still susceptible to volatile swings, which were prominent during the pandemic. However, growth has normalized in recent years and ultimately increased since 2019, benefitting from some substantial booms."
+            },
+            {
+                "trade_title": "High Input Prices for Plastic Materials and Resin Encourage Larger Rate of Import Penetration",
+                "trade_description": "Since ice manufacturers are dependent on plastic materials and resin for the production of plastic bags to store the ice, monitoring the price of plastic materials influences a manufacturer's operating costs. Ice as a commodity takes a lot of effort to maintain within a cold environment, which makes the quality of packaging a crucial factor for lowering operating costs via higher import penetration."
+            },
+            {
+                "trade_title": "Producers Struggle to Effectively Rebound From Pandemic-Induce Lows",
+                "trade_description": "Historically, ice exports have accounted for a minimal share of revenue, as the logistics of transporting ice across great distances has been a major deterrent for producers. However, over the past decade, producers have made concerted efforts to find untapped markets, establishing facilities strategically to reduce limitations and generate another revenue channel. Efforts to enhance export businesses largely succeeded. At its peak in 2020, exports account for over one-tenth of the average producers' annual sales. However, the positive trend quickly changed course with the advent of the pandemic and its detrimental impact on supply channels."
+            },
+            {
+                "trade_title": "Expansion of Free Trade Opportunities Establishes Favorable Trade Conditions",
+                "trade_description": "Since the largest exports among ice manufacturers include Canada and Mexico, their demand for manufactured ice has been bolstered by trade-friendly policies, such as the United States-Mexico-Canada Agreement (USMCA). The proximity of these countries relative to the United States also makes it easier to ship ice to these destinations, particularly as the shipping process is primarily the most difficult for manufacturers. In 2024, the two countries combined are estimated to account for nearly half of all domestic ice exports."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "Since ice demand is primarily influenced by population density and the surrounding climate, the Southeast creates a variety of opportunities for new establishments. In states like Florida, the presence of large metropolitan centers and a consistently warm climate provides a diverse set of opportunities for establishments in the region.",
+            "percentage_establishments": 35.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "West",
+            "location_description": "The West continues to be a popular destination for establishments due to the year-round warm weather, which exacerbates ice demand. In states like California, there is a consistent demand for ice manufacturers as consumers and businesses alike deal with hot weather year-round.",
+            "percentage_establishments": 20.0,
+            "percentage_population": 25.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "Although the Southwest lacks major metropolitan centers, ice manufacturers are in constant demand since the region has a significantly hotter climate compared with other regions. In states like Texas, a growing suburban presence and large geographic outlay creates a unique opportunity for ice manufacturers.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes remains a popular establishment hotspot due to a booming population and compact geography that creates large driving distances. In states like Illinois, the presence of metropolitan centers creates a diverse customer base for establishments.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "Ice manufacturers continue to be incentivized in the Mid-Atlantic due to a mixture of metropolitan centers and compact geography that makes transporting ice profitable and easy. In states like New York, a booming population presence creates a robust market for ice across personal consumers and commercial customers alike.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 10.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "Food Safety Modernization Act",
+                "regulation_description": "The Food Safety Modernization Act (FSMA) requires ice manufacturers to develop comprehensive food safety plans. For instance, an ice production plant must consistently monitor for contaminants like Listeria. It's crucial to trace every batch to ensure consumer safety."
+            },
+            {
+                "regulation_title": "Good Manufacturing Practices",
+                "regulation_description": "Good Manufacturing Practices (GMPs) are overseen by the FDA and mandate stringent operational standards that ice producers must follow. For example, producers must ensure equipment is sanitized and free of rust. Employees must wear appropriate clothing and follow hygiene practices, reducing the risk of contamination."
+            },
+            {
+                "regulation_title": "State and Local Regulations",
+                "regulation_description": "State and local health departments often have additional requirements for ice manufacturing plants. More localized regulations can vary significantly. For instance, in Massachusetts, ice producers must follow state-mandated water testing protocols to ensure purity."
+            },
+            {
+                "regulation_title": "Environmental Protection Agency",
+                "regulation_description": "The Environmental Protection Agency (EPA) regulates wastewater discharge from ice manufacturing facilities. Ice producers using significant amounts of water must often secure permits outlining how they treat and manage waste."
+            },
+            {
+                "regulation_title": "Environmental Impact and Regulations",
+                "regulation_description": "Protecting local water sources and maintaining the balance of ecosystems surrounding the manufacturing facility is important in ice manufacturing."
+            },
+            {
+                "regulation_title": "Occupational Safety and Health Administration",
+                "regulation_description": "The Occupational Safety and Health Administration (OSHA) sets workplace safety standards designed to protect employees in ice manufacturing plants. Producers must ensure that their staff is adequately trained to handle industrial ice machines, provide proper ventilation in the facility and supply protective gear such as gloves and eye protection."
+            },
+            {
+                "regulation_title": "Certified Water Testing",
+                "regulation_description": "Regular water source testing for contaminants is a critical requirement in ice manufacturing. For example, in New York, the Department of Environmental Conservation mandates that ice producers use certified labs to test for microbial and chemical contamination."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Legal",
+                "barrier_description": "Ice manufacturers face some legal barriers. Most regulations focus on federal compliance with the Food and Drug Administration (FDA), with other legal guidance targeting safety and quality guidelines when producing and manufacturing ice products."
+            },
+            {
+                "barrier_title": "START-UP COSTS",
+                "barrier_description": "New entrants face significant start-up costs. Most of the capital allocated by manufacturers is used to procure the machinery needed to produce ice on a mass scale, with other costs focused on securing distribution channels and transport for ice delivery."
+            },
+            {
+                "barrier_title": "DIFFERENTIATION",
+                "barrier_description": "Ice manufacturers have limited differentiation in their product stream. New entrants can differentiate themselves from their competition by offering a niche ice product to a specific downstream market, which may secure a steady revenue stream."
+            },
+            {
+                "barrier_title": "LABOR EXPENSES",
+                "barrier_description": "Although capital intensity is initially high, ice manufacturing continues to be primarily labor intensive. New entrants require raw labor to ensure adequate operation of the ice facility, with additional tasks including processing and delivery of ice product orders."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Industry Assistance Level: low - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Technology Change Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Maintaining a consumer-friendly price point enhances internal competition",
+                "basis_description": "Ice manufacturers that sell their products at competitive market prices create an incentive for new customers to purchase their goods and provides a competitive edge for the manufacturer."
+            },
+            {
+                "basis_title": "Expansion of refrigeration technology exacerbates external competition",
+                "basis_description": "The development of newer, more efficient refrigerated storage facilities creates a unique competitor, particularly for ice manufacturers with commercial customers."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Decreasing",
+        "concentration_points": [
+            {
+                "concentration_title": "A CUMBERSOME TRANSPORTATION PROCESS ENCOURAGES LOCALIZED EXPANSION",
+                "concentration_description": "The unique nature of ice products makes substantial geographic expansion costly and difficult. Ice manufacturers struggle to maintain product concentration stabilizes in the wake of substantial declines."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Arctic Glacier Inc.",
+                "company_percentage": 26.3
+            },
+            {
+                "company_name": "Reddy Ice Holdings Inc.",
+                "company_percentage": 19.3
+            },
+            {
+                "company_name": "Home City Ice Company Inc.",
+                "company_percentage": 9.1
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 45.4
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 10.0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 25.0
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 20.0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 10.0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 10.0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 10.0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 10.0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchase Costs Vary and Are Tied to Volatile Commodities",
+            "cost_factor_description": "Ice manufacturers contend with notable purchase costs, one of the largest operating expenses. Water is a key input, of course, but plastic materials are equally necessary for packaging and distribution. The latter's price is closely tied to oil prices, which are highly volatile."
+        },
+        {
+            "cost_factor_title": "Producers Allocate More Revenue Toward Wages as Salaries Soar",
+            "cost_factor_description": "Ice manufacturers consistently require a steadily available workforce to process orders, mold ice into the necessary shape for their customers and deliver these goods to their destination. Unlike other manufacturers, ice producers are less able to implement employee-replacing automated systems."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LABOR EXPENSES",
+                "capital_intensity_description": "Although capital intensity is initially high, ice manufacturing continues to be primarily labor intensive. New entrants require raw labor to ensure adequate operation of the ice facility, with additional tasks including processing and delivery of ice product orders."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Inherently volatile key input prices imbue ice sales with modest instability",
+                "volatility_description": "Ice manufacturing requires few inputs but those it requires are crucial, namely water and plastic materials for packaging and distribution. Since plastic prices are closely tied to crude oil prices, some pricing volatility is inherent."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "ACCELERATION OF ICE MACHINE TECHNOLOGY ENHANCES Quality and Hygiene of Ice Products",
+                "technological_change_description": "Since the individual ice itself lacks any unique innovative qualities, most innovation has been focused on the production process itself. The advancement of technology has enabled ice manufacturers to develop more energy-efficient, cleaner and time-saving ice machines that can fulfill customer demand while honoring the quality of the product."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company affected by rising imports?",
+            "answer": "Imports account for a relatively small share of domestic demand. However, companies must be vigilant in keeping prices competitive with overseas producers."
+        },
+        {
+            "question": "Does your company specialize in a niche or do you produce a diversified range of products?",
+            "answer": "Due to the nature of the industry, successful operators offer a range of ice forms. Almost all operators offer the same ice forms, with some offering ancillary services such as ice sculptures."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "Aside from water, which does not prove to be an expensive input, operators main input cost comes in the form of plastic bags. The prices of plastic materials and resin have been volatile causing profit to contract."
+        },
+        {
+            "question": "Have you looked into setting up manufacturing facilities in lower-wage regions of the country?",
+            "answer": "Ice manufacturers must locate their establishments strategically, as ice can be expensive to transport. Due to the nature of ice, trucks must be well insulated and kept at a very low temperature to ensure the ice does not melt en route."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation over the past five years?",
+            "answer": "Most industry operators have attempted to reduce wage costs by implementing various forms of automation in the manufacturing process. However, as employment figures decline, industry wages grow."
+        },
+        {
+            "question": "How is your company leveraging new technologies?",
+            "answer": "The technology required to manufacture ice has endured much change. However, some manufacturers have begun using more eco-friendly trucks for transporting their products."
+        },
+        {
+            "question": "How does your company stay ahead of regulations, such as energy-efficiency standards?",
+            "answer": "The International Packaged Ice Association, one of the largest industry associations, provides members with up-to-date information on the latest changes and implementations in relevant regulations."
+        },
+        {
+            "question": "How have international tariffs impacted your ability to import and export products?",
+            "answer": "Ice products are not currently affected by any imports. However, few operators participate in international trade."
+        },
+        {
+            "question": "How do your company's profit margins compare to your major competitors?",
+            "answer": "The Ice Manufacturing industry historically has posted low profit margins. Even larger operators have difficulty posting higher margins; thus, many operators participate in other industries, such as beverage production."
+        },
+        {
+            "question": "How has input volatility affected profit margins over the past 12 months?",
+            "answer": "When plastic materials and resin prices are volatile, operators have difficulty securing stable purchasing contracts with suppliers. As a result, operators cannot price their products as competitively and experiences lower returns."
+        },
+        {
+            "question": "How do you maintain product quality? Do you have systems in place to keep standards high and continually updating?",
+            "answer": "Strong managerial and logistical control of distribution networks enable ice manufacturers to gain retailer shelf space and reach the maximum number of customers."
+        },
+        {
+            "question": "Do you monitor the trade-weighted index? How have fluctuations in the value of the US dollar affected demand for your products?",
+            "answer": "International trade represents a significant portion of revenue for ice manufacturers. As the dollar's value strengthens, ice products will become relatively costlier for foreign trade partners to purchase and import."
+        },
+        {
+            "question": "What proportion of your sales are to grocery stores and supermarkets? How do you compensate for declines in demand from this segment?",
+            "answer": "Supermarkets and grocery stores represent the most common sales channels for ice manufacturers. US consumers purchase packaged ice from grocery stores, convenience stores and gas stations, all of which receive shipments of frozen ice from grocery wholesalers."
+        },
+        {
+            "question": "Do you expect major changes in demand as a result of rising disposable income levels?",
+            "answer": "Consumer demand for packaged ice is highly elastic; individuals trying to limit spending are likely to substitute purchases of packaged ice with ice that has been made in home refrigerators."
+        }
+    ]
+}

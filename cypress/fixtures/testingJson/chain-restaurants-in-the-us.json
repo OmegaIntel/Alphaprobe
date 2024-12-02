@@ -1,0 +1,559 @@
+{
+    "report_title": "Chain Restaurants in the US",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 227562000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 3.49
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.77
+            }
+        },
+        "profit": {
+            "profit_dollars": 14336000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 5.85
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 5.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 6.3,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 2.29
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 2.7
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 90497000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 3.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 1.5
+            }
+        },
+        "employees": {
+            "employees_count": 2304137,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 1.8
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 1.5
+            }
+        },
+        "wages": {
+            "wages_dollars": 71355000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 3.2
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 1.1
+            }
+        },
+        "imports": {
+            "imports_dollars": 1000000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 2.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 1.2
+            }
+        },
+        "exports": {
+            "exports_dollars": 500000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 1.5
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 1.0
+            }
+        }
+    },
+    "executive_summary": "Restaurants have swallowed economic catastrophe, surging recovery and record inflation in the past few years as they continue to serve the public's appetite. Before the pandemic, per capita disposable income increased and unemployment reached record lows, giving rise to more lavish spending on sit-down meals.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Chains Survive Covid-19 with Relatively Minimal Losses",
+            "current_performance_point_description": "In early 2020, chain restaurant operations halted nearly overnight due to the pandemic; in the initial panic, many estimates predicted 20.0% to 50.0% of all restaurants would close, with chains faring better than their independent competitors."
+        },
+        {
+            "current_performance_point_title": "Service Quality Becomes Key for Sit-Down Chains",
+            "current_performance_point_description": "While demand for dining out may originate from a desire for convenience or a disdain for cleaning up after a meal at home, consumers frequently prefer quality meals over convenience."
+        },
+        {
+            "current_performance_point_title": "Diners View Diets as Part of Their Lifestyle",
+            "current_performance_point_description": "More consumers practice veganism, keto, paleo, allergen-free and other diets that fit their lifestyles. Therefore, health and meeting alternative diets have become a focus of many chains' strategies."
+        },
+        {
+            "current_performance_point_title": "Satiation in the Chain Restaurant Space",
+            "current_performance_point_description": "Over the past few years, many large chain restaurants have undergone increased merger and acquisition activity, divesting and acquiring brands to focus on some connected core experiences."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "CHAINS SUFFERED FROM BOTH COVID-19 AND INFLATION",
+            "future_outlook_point_description": "While the restaurant industry has fully recovered from the pandemic, this hides the pain many chain operators are experiencing with inflation and recession concerns."
+        },
+        {
+            "future_outlook_point_title": "TECHNOLOGIES ENHANCE EMPLOYEE PERFORMANCE AND EFFICIENCY",
+            "future_outlook_point_description": "Most restaurants already leverage digital technology to handle repetitive consumer interaction and management tasks: handhelds help servers collect orders and accept payment, while kitchen screens direct cooks to any dish alterations and preparation time."
+        },
+        {
+            "future_outlook_point_title": "Labor Struggles Continue to Persist",
+            "future_outlook_point_description": "Burnout, labor recruitment, high turnover, lack of benefits, long hours and customer battles were issues for restaurant labor teams even before the pandemic."
+        },
+        {
+            "future_outlook_point_title": "Chains Pivot on International Expansions",
+            "future_outlook_point_description": "Consolidations will continue with smaller, struggling restauranteurs will be acquired by more powerful chains or purchased and reinvented by private equity groups seeking cash flow at high risk while other investment strategies fall short."
+        }
+    ],
+    "industry_definition": "The industry consists of chain and franchised restaurants of five or more establishments that provide food services to patrons that order, are served",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level: very high",
+            "Competition Level: high - increasing"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "High Revenue per Employee",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Medium & Decreasing Level of Assistance",
+            "High Competition",
+            "Very high Volatility",
+            "Low Profit vs. Sector Average",
+            "High Product/Service Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers: Consumer spending"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth: National unemployment rate"
+        ]
+    },
+    "key_trends": [
+        "Chain restaurants have successfully surpassed pre-pandemic revenue figures but are struggling to keep diners coming during high inflation. Numerous chains have raised prices or reduced portion sizes to be financially stable.",
+        "The franchise model drives many decisions in the chain restaurant ecosystem. Local managers handle daily operations while the franchise owner negotiates prices, collects franchise fees and unifies marketing efforts.",
+        "Successful chains manage hiring restrictions, compensation and wage laws before they become an issue for franchises. OSHA and the National Restaurant Association provide resources for food service contractors.",
+        "Restaurant assistance were available during the COVID-19 pandemic. However, many chains also performed excellently, negating the need or qualification for financial assistance.",
+        "American food dominates the chain market",
+        "Wealthier consumers unsurprisingly consume a disproportionate number of chain restaurant meals. Still, price-focused chains can still draw many price-sensitive customers.",
+        "Chain restaurants are frequently located in regions where the local concentrates",
+        "Suburban environments are the most hospitable locations for chain establishments",
+        "Chain restaurants have more than five locations",
+        "Acquisitions in the chain restaurant frequently involve primarily managerial changes and not restaurant re-theming.",
+        "Restaurants compete with various food alternatives",
+        "Chains differentiate themselves by providing consistency across locations with more complex menu items.",
+        "The industry's largest management companies each hold a portfolio of chains",
+        "A change in the availability or price of one input is unlikely to sink the portfolio either.",
+        "Chains seldom associate with their company's broader portfolio as an intentional part of their branding",
+        "Instead, chains, especially franchise owners, lean into a full-service restaurant's local, hometown feel.",
+        "Rising expectations surrounding worker pay and compensation drive up wage costs for restaurant chains",
+        "Pending legislation will likely force employers to compensate workers for their full salary."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Households Earning Over $100,000 Splurge on Sit-Down Meals",
+            "segment_description": "Over half of chain restaurant income came from consumers in the two highest income brackets of households earning over $100,000 and $200,000 annually.",
+            "segment_percentage": 52
+        },
+        {
+            "segment": "Households Earning $30,000 to $99,999 Limiting Food Expenses",
+            "segment_description": "The two middle-income consumer classes earning between $30,000 and $99,999 represent a quarter of chain demand, showing how vital the middle-class consumer is to the overall performance.",
+            "segment_percentage": 28.8
+        },
+        {
+            "segment": "Households Earning Less Than $30,000 Spend Least on the Industry",
+            "segment_description": "Those in the lowest income bracket, making less than $30,000, must make significant sacrifices to afford meals away from home, even in an improving economic climate.",
+            "segment_percentage": 8.1
+        },
+        {
+            "segment": "Government and Businesses Buy Food for Employees",
+            "segment_description": "Companies and legally recognized entities contribute to chain restaurant revenue through interviews, business meetings, business trips and corporate dinners.",
+            "segment_percentage": 11.2
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "American Restaurants in Australia, China, UK, Canada, New Zealand, Ireland",
+            "product_description": "Varied Menus",
+            "product_percentage": 45.8
+        },
+        {
+            "product_or_service": "Varied Menus",
+            "product_description": "Chains that offer options representing traditional American cuisines, including burgers, steaks, salads, fries and sugar-centered desserts, perform extraordinarily well.",
+            "product_percentage": 29.5
+        },
+        {
+            "product_or_service": "Italian/Pizza",
+            "product_description": "Italian-American cuisine represents a spectrum of variations on traditional Italian food, with recipes modified under the massive influence of United States culture on Italian immigrants over the past two centuries.",
+            "product_percentage": 11.5
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "Establishments that specialize in Chinese, Thai and Mexican cuisine are included in the other category, as are specialty sit-down chains that focus on a single menu item like barbeque, baked goods or island-inspired food.",
+            "product_percentage": 6.9
+        },
+        {
+            "product_or_service": "Seafood",
+            "product_description": "A growing number of chain restaurants have successfully specialized in seafood menus, stretching from fish to lobster.",
+            "product_percentage": 6.3
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Wineries in the US",
+            "Frozen Food Production in the US",
+            "Animal Food Production in the US",
+            "Dairy Product Production in the US",
+            "Meat, Beef & Poultry Processing in the US",
+            "Seafood Preparation in the US",
+            "Bread Production in the US",
+            "Beer Wholesaling in the US",
+            "Egg & Poultry Wholesaling in the US",
+            "Frozen Food Wholesaling in the US",
+            "Fish & Seafood Wholesaling in the US",
+            "Beef & Pork Wholesaling in the US",
+            "Fruit & Vegetable Wholesaling in the US",
+            "Restaurant & Hotel Equipment Wholesaling in the US",
+            "Wine & Spirits Wholesaling in the US",
+            "Dairy Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Breweries in the US",
+            "Soda Production in the US",
+            "Coffee Production in the US",
+            "Major Household Appliance Manufacturing in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "American Chains Appeal to the Broadest Market",
+            "determinant_description": "Chains that offer options representing traditional American cuisines, including burgers, steaks, salads, fries and sugar-centered desserts, perform extraordinarily well."
+        },
+        {
+            "determinant_title": "Varied Menus Target Diverse Groups",
+            "determinant_description": "Varied menu establishments simultaneously offer burgers, tacos, wings, pizza, seafood and more, catering to families with a variety of tastes."
+        },
+        {
+            "determinant_title": "Italian-American Food is Affordable",
+            "determinant_description": "Italian-American cuisine represents a spectrum of variations on traditional Italian food, with recipes modified under the massive influence of United States culture on Italian immigrants over the past two centuries."
+        },
+        {
+            "determinant_title": "Italian-American Cuisine",
+            "determinant_description": "The Second World War brought Italian-American cuisine into prominence and prestige in the United States, a position that it has held ever since."
+        },
+        {
+            "determinant_title": "Seafood Caters to Affluent Diners",
+            "determinant_description": "A growing number of chain restaurants have successfully specialized in seafood menus, stretching from fish to lobster."
+        },
+        {
+            "determinant_title": "Various Ethnic Cuisines are Gaining in Popularity",
+            "determinant_description": "Establishments that specialize in Chinese, Thai and Mexican cuisine are included in the other category, as are specialty sit-down chains that focus on a single menu item like barbeque, baked goods or island-inspired food."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region of the United States has the most significant percentage of the United States population; people here are also more likely to own the vehicles necessary to drive to chain locations. Florida contains a disproportionate amount of the region's chain locations, as restauranteurs capitalize on the high-spending tourist and well-off retiree markets.",
+            "percentage_establishments": 45.0,
+            "percentage_population": 35.0
+        },
+        {
+            "location": "West",
+            "location_description": "The West region has the second-largest concentration of chain restaurant establishments; California represents many of all chain restaurant business locations as the most populous state in the region by far. The region is also a popular destination for domestic and international travelers from Asia and Oceania, which drives chain restaurant demand from an additional consumer segment.",
+            "percentage_establishments": 20.0,
+            "percentage_population": 30.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region contains many of the nation's large cities: New York City, Philadelphia, Washington, DC. Each of these cities also has expansive public transportation systems; chains accessible by public transportation require less space for parking lots and attract a broader subset of city dwellers. The diversity of cultures in major cities provides a rich expanse for chain restauranteurs to establish locations, especially those that focus on more niche client groups.",
+            "percentage_establishments": 25.0,
+            "percentage_population": 25.0
+        },
+        {
+            "location": "New England",
+            "location_description": "Despite representing only a fraction of the United States population, New England maintains a 25.0% higher per-capita concentration of chain restaurant establishments than the nation at large. This density leverages the region's high average income: nearly every state has an average income higher than the national average of $65,000. While Boston is the region's only metropolis, people drive long distances to taste the region's seafood and slurp up clam chowder.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 10.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "FOOD SAFETY AND STANDARDS GROW TIGHTER, ESPECIALLY FOR CHAINS",
+                "regulation_description": "The chain restaurant is subject to laws and regulations relating to the preparation and sale of food, including restrictions regarding product safety, nutritional content and menu labeling."
+            },
+            {
+                "regulation_title": "TIPPING BATTLE ERUPTS DURING RESTAURANT EMPLOYEE HIRING ROLLERCOASTER",
+                "regulation_description": "The chain restaurant employs many young and low-skilled workers at hourly rates and, therefore, is subject to minimum wage and employee benefits regulations."
+            },
+            {
+                "regulation_title": "SMOKING BANS CLEAR THE AIR INSIDE MOST RESTAURANTS",
+                "regulation_description": "Smoking laws are typically enforced at the state level, as the United States Congress has not attempted to enact any nationwide federal smoking ban."
+            },
+            {
+                "regulation_title": "FRANCHISING DISCLOSURE LAWS",
+                "regulation_description": "A large proportion of chain restaurant establishments are operated under franchise agreements. There are both federal and state laws governing franchising that vary from state to state."
+            },
+            {
+                "regulation_title": "THE BATTLE FOR \"STREETERIES\"",
+                "regulation_description": "The tens of thousands of hastily built, on-street dining sheds that comply with COVID distancing requirements are conditionally permanent in many major cities, bringing additional space and revenue opportunities to restaurants and food contractors."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Labor and food safety hurdles",
+                "barrier_description": "Finding enough labor to prepare and serve food safely is a significant hurdle. Safe food preparation is not extensive or expensive, but bringing many new staff members up to speed can take resources a new business is unlikely to have extra of. Franchises skirt this problem by integrating themselves with national hiring initiatives."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Revenue Volatility Level: very high",
+            "Competition Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Chain restaurants have more than five locations",
+                "basis_description": "Chain restaurants have more than five locations. Acquisitions in the chain restaurant frequently involve primarily managerial changes and not restaurant re-theming."
+            },
+            {
+                "basis_title": "Compete with various food alternatives",
+                "basis_description": "Restaurants compete with various food alternatives, including home cooking, fast food, fast casual and independent restaurants. Chains differentiate themselves by providing consistency across locations with more complex menu items."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Low concentration despite chains' large footprints",
+                "concentration_description": "To be considered for this report, a restaurant chain must have at least five independent locations; this requirement heavily weights the market towards larger players and higher concentration. While independent restaurants fight for sub-percentage shares of total income, chains' national presences enable more significant revenue potential. Still, even the most prominent chains capture small percentages of the market, as consumers desire various restaurants to meet changing tastes."
+            },
+            {
+                "concentration_title": "Average company size grows with franchise interest",
+                "concentration_description": "Franchised businesses can expand faster than their owner-operated counterparts by parallelizing new openings. Chain management may incentivize the creation of new locations with sub-par fundamental demand to bring in more franchise fees."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Darden Restaurants Inc.",
+                "company_percentage": 3.9
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 30
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 5
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Franchise fees dominate other costs",
+            "cost_factor_description": "Restauranteurs in this chain restaurant are subject to various other costs, including franchise fees, administrative costs and kitchen cleaning services."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Finding enough labor to prepare and serve food safely is a significant hurdle",
+                "capital_intensity_description": "Safe food preparation is not extensive or expensive, but bringing many new staff members up to speed can take resources a new business is unlikely to have extra of."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Large Sizes and Broad Tastes Stabilize Revenue",
+                "volatility_description": "While these chains remain popular, restauranteurs have had to fight the growth in the American market as those restaurants tend to cater to a broader clientele of United States citizens."
+            },
+            {
+                "volatility_title": "Chaos at Ports Spoils Chain Restaurant Stability",
+                "volatility_description": "The United States imports almost a sixth of its global food supply; when experiencing delayed food shipping, many restaurants have to absorb the cost of the delayed or spoiled food product."
+            },
+            {
+                "volatility_title": "VOLATILITY SKYROCKETED DURING THE PANDEMIC",
+                "volatility_description": "The pandemic created the single-largest drop in year-to-year revenue in the chain restaurant industry's history when stay-at-home mandates, social distancing orders and cratering consumer confidence all combined."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "The industry is experiencing a low level of both the rate of new patents and the concentration of patents in the industry",
+                "technological_change_description": "This creates an environment where the threat of new technologies driving disruption is low."
+            },
+            {
+                "technological_change_title": "Major market segments for industry operators are relatively diversified",
+                "technological_change_description": "The spread of market segments suggests that there are limited entry points other than those already served by incumbent operators."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "How does your company market deals on e-commerce sites to generate new customers?",
+            "answer": "Promotional offerings and exposure to consumers can increase brand loyalty and frequency of patronization."
+        },
+        {
+            "question": "How do review sites impact sales and how is your team trained to respond to customer complaints?",
+            "answer": "Generating positive reviews through superior customer service can help increase foot traffic and pique the interest of first-time consumers. Ensuring customer complaints are dealt with professionally and expediently is more important than ever, as several negative reviews may turn a potential customer to visit a competitor."
+        },
+        {
+            "question": "Is your company located in high-traffic areas to increase visibility?",
+            "answer": "Locating in high density areas ensures a steady stream of demand for industry operators. In addition to vehicle traffic, operators and franchisees should consider pedestrian activity, convenience to offices, and transit proximity when selecting a location for both customers' and employees' benefit."
+        },
+        {
+            "question": "Does your company leverage mobile booking applications to streamline the booking process?",
+            "answer": "Developing an online ordering experience could lure a larger amount of customers and help lower overall lead times. Creating a custom mobile application may take a higher up-front investment than partnering with a delivery app, but may give your restaurant an exclusive feel and more detailed customer insights."
+        },
+        {
+            "question": "What point-of-sale systems does your company use to reduce labor costs?",
+            "answer": "Automating point-of-sale systems either entirely or for a fraction of transactions minimizes reliance on labor. Customers visiting full-service restaurants are often more interested in human interaction. Make sure any labor-reducing technology does not get in the way of human connection with customers."
+        },
+        {
+            "question": "What measures does your company take to ensure all employees are compliant with food handling and safety laws?",
+            "answer": "Regulations regarding product safety, nutritional content and menu labeling vary between municipalities. Food safety laws have changed significantly in the past five years. Make sure to check local, state and national regulations frequently to ensure compliance, and consider anticipating future regulations with current improvements."
+        },
+        {
+            "question": "Is your company compliant with the varying labor regulations across states?",
+            "answer": "The industry employs many workers at hourly rates and, therefore, is subject to minimum wage and employee benefits regulations. Labor laws have changed significantly in the past two years. Check local, state and national regulations frequently to ensure compliance."
+        },
+        {
+            "question": "How does your company's inventory turnover rate compare to your major competitors?",
+            "answer": "Supply-chain efficiency is crucial to maintaining a competitive edge over others. Changing parts of your menu seasonally to lower ingredient costs and waste has the added benefit of drawing repeat customers back in."
+        },
+        {
+            "question": "How do your company's profit margins compare to your main competitors'?",
+            "answer": "Achieving lower profit margins amid heightened competition suggests that inefficiencies may exist in a company's supply chain in relation to its major competitors. Changing your restaurant to fit a market niche may induce demand and draw customers in from competing establishments."
+        },
+        {
+            "question": "How do you maintain optimum stock levels and what factors affect demand and stock levels?",
+            "answer": "Controlling orders, stock and food waste, which are major cost areas, can improve profit."
+        },
+        {
+            "question": "How quickly do you adopt new technology and what are the associated costs?",
+            "answer": "A shift to delivery-focused eateries has allowed operators of new and existing establishments to lease out unused kitchen capacity to diversify income while not affecting dine-in customers. Smaller chains are now building out their own mobile applications and digital payment systems to increase satisfaction, especially among younger diners."
+        },
+        {
+            "question": "How do you attract and retain skilled employees and are there channels for promotion and career development within your company?",
+            "answer": "Access to suitably skilled and trained staff is required to meet peak customer demand periods. Since the food service industry experiences high turnover of many workers, optimizations such as efficient interviews, frequent pay schedules and expedited training are of larger importance."
+        },
+        {
+            "question": "How are your establishments promoting available employee positions and have your locations implemented any labor-saving technologies?",
+            "answer": "National unemployment rate. Minimum wages and employee benefits have slowly been increased across many service sectors to draw employees back. Addressing employee concerns about health (both mental and physical) has also been demonstrated to attract new employees, especially younger workers. If you have available resources, investing in labor saving technology will help insulate costs from changes in wage spending."
+        },
+        {
+            "question": "Do you target wealthy consumers and business clients with money to spend and do you plan to pivot to target a different demographic?",
+            "answer": "Full-service restaurants typically draw their customers from higher-income households. Changing your establishment's decor and menu to attract a clientele on the higher end of your region's income spectrum will likely bring in more revenue while lowering costs."
+        },
+        {
+            "question": "How have your establishments positioned themselves to maximize opportunistic dining near population centers, office parks, interstate exits, or transit stops?",
+            "answer": "Consumers are less likely to make special trips to chain restaurants due to the high cost of vehicle ownership and fuel prices. As motor vehicle registration growth plateaus in the next decade and consumer sentiment favors walking, biking, and public transit, chain restaurants must be located in optimal areas to entice these consumers to enter."
+        }
+    ]
+}

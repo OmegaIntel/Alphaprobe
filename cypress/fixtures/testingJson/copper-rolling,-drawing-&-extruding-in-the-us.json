@@ -1,0 +1,639 @@
+{
+    "report_title": "Copper Rolling, Drawing & Extruding in the US",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 33978000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 1.8
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 2.23
+            }
+        },
+        "profit": {
+            "profit_dollars": 1563000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 1.91
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.6,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 0.12
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 3719000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 22595,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 1681000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": 5550000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": 3423000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "The copper rolling, drawing and extruding industry sells copper products in varying volumes based on the global price of copper, with revenue generally moving in line with its market price. Optimistic economic conditions caused revenue to grow as residential construction activity and the electrical transmission market expanded. High inflation and higher interest rates have since cooled residential building markets. The nonresidential construction market has struggled to bounce back from pandemic-related losses. However, serving various markets protects copper processors from adverse changes in demand. Revenue is expected to grow at a CAGR of 4.8% to $34.0 billion through the end of 2024, with a 1.5% decline forecast during the current year.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Price Volatility Supports Performance",
+            "current_performance_point_description": "The price of copper skyrocketed during the early stages of the pandemic, following growing demand for copper from the manufacturing markets. Russia's invasion of Ukraine led to higher prices, as the country is a major copper supplier. Lower copper supply at a global level led to supply chain disruptions, raising copper prices. Copper prices peaked in 2022. During this period, demand for manufactured products was high, enabling copper companies to pass down costs to consumers and supporting industry performance."
+        },
+        {
+            "current_performance_point_title": "An Appreciating Dollar Harms Exports",
+            "current_performance_point_description": "Rising interest rates aided the appreciation of the US dollar, which makes domestically produced copper comparatively more expensive abroad. A strong dollar also makes imports more affordable for domestic consumers, encouraging buyers to buy copper from foreign companies. There is a high demand for copper products from various industries. Companies aiming to reduce purchase costs will be more inclined to import these inputs. The global demand for US copper products spiked in 2021, resulting in higher exports. However, this trend reversed quickly due to growing economic uncertainty, harming domestic producers."
+        },
+        {
+            "current_performance_point_title": "Fluctuating Demand from the Construction Market",
+            "current_performance_point_description": "The construction market generates significant revenue as construction companies use copper throughout a project, including for heating, pipes."
+        },
+        {
+            "current_performance_point_title": "Downstream Demand Changes Enable Other Product Segments to Grow",
+            "current_performance_point_description": "Consumer product sales rely heavily on the economy's health, as consumers commonly increase discretionary spending during economic prosperity. Following the initial stage of the pandemic, consumers benefited from higher levels of disposable income, boosting the sales of consumer goods, automobiles, and other manufactured products. Automobile sales have experienced some volatility over recent years, a trend that was enhanced by supply chain disruptions and falling consumer confidence. The telecommunications market has moved away from using copper and switched to more efficient optic fiber cable, harming copper wire sales."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Downstream Demand Varies Across Markets",
+            "future_outlook_point_description": "The Federal Reserve has announced its intention to continue raising interest rates, discouraging real estate activity and other big-ticket purchases. Although consumer confidence is likely to recover and surpass pre-pandemic levels, stubborn inflation can limit disposable income growth, harming demand from the construction, consumer products, and transportation markets. Housing starts will increase as disposable income expands, although it will be at a slower rate than before the pandemic, causing revenue to slow down."
+        },
+        {
+            "future_outlook_point_title": "Downstream Demand Changes Enable Other Product Segments to Grow",
+            "future_outlook_point_description": "Demand from the nonresidential construction market struggled following the pandemic. Social distancing regulations forced many workers to work from home and many businesses to shut down, negatively impacting new construction projects. The residential sector benefited from low interest rates and high disposable income. These factors led to significant growth in housing starts, boosting copper sales."
+        },
+        {
+            "future_outlook_point_title": "Government Initiatives Support the Copper Industry",
+            "future_outlook_point_description": "The growing use of temperature-sensing and monitoring applications will boost demand for sophisticated copper-based sensors manufactured by copper processors. Demand for electrical transmission products will remain high as the CHIPS Act encourages the domestic production of semiconductors and components of technological devices, for which copper is a main input. The Bipartisan Infrastructure Act will boost demand for copper through various projects, including investing in renewable energy sources, improving communication infrastructure, and replacing outdated pipes. The US Environmental Protection Agency's endorsement of copper as a surface antimicrobial agent boosts copper-plated equipment sales from various markets, including healthcare, food service, and hospitality."
+        },
+        {
+            "future_outlook_point_title": "A Stabilizing US Dollar Supports Domestic Producers",
+            "future_outlook_point_description": "- The value of the dollar is expected to fall as international economic conditions improve. - A depreciating dollar will lower the price of domestic copper products, boosting exports and encouraging domestic consumption. - An appreciating dollar also raises the price of foreign copper products, pushing buyers away from imported copper products."
+        },
+        {
+            "future_outlook_point_title": "Copper Prices are Expected to Remain Volatile",
+            "future_outlook_point_description": "- Slowed demand for copper products from downstream markets will lead to the falling price of copper, harming revenue. - Copper is becoming an increasingly popular commodity. Experts argue that a copper shortage will likely affect the global economy soon, possibly causing copper prices to increase."
+        }
+    ],
+    "industry_definition": "Companies in this industry purchase refined and scrap copper to produce a range of fabricated products, such as wire, sheet, tubes, pipes, strips, and bars, through rolling, drawing, and extruding processes. This industry does not include companies that primarily smelt and refine copper or manufacture wire products from purchased wire.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Concentration Level low",
+            "Barriers To Entry Level high - steady"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level high",
+            "Competition Level high - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage mature"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "High Revenue per Employee"
+        ],
+        "weaknesses": [
+            "High Competition",
+            "High Volatility",
+            "Medium Imports",
+            "Low Profit vs. Sector Average",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "Value of utilities construction"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "World price of copper"
+        ]
+    },
+    "key_trends": [
+        "Internal competition is based on price and delivery time. This has incentivized copper companies to focus on serving niche markets and developing value-added products with fewer substitutes.",
+        "A strong US dollar enhances external competition by lowering the price of imported copper products. By making imported copper more affordable, buyers are discouraged from buying from domestic producers.",
+        "Rises in the price of copper lead to higher revenue Copper processors successfully pass down costs to buyers, boosting sales and supporting rapid revenue growth.",
+        "The construction sector struggled amid the pandemic However, strong demand from the electrical transmission market leads to revenue growth.",
+        "Consolidation trends are common among larger companies Major copper processors focus on expanding their product offerings by acquiring companies that already offer other products.",
+        "Wieland Group opens a copper recycling facility Wieland North America will melt and repurpose copper and copper-alloy scrap to develop new copper products.",
+        "The CHIPS Act will create a steady demand for copper products The US government boosts copper wire sales by supporting the production and use of domestic semiconductors.",
+        "The Bipartisan Infrastructure Act supports copper consumption The US government will boost demand for copper wire, tubes, and plates by building new and maintaining existing infrastructure.",
+        "Purchase expenses fall as a share of revenue amid strong performance Although the price of copper has risen, strong revenue growth enabled purchase costs to account for a smaller share of revenue.",
+        "Strong demand for copper products raises wage costs Copper sales skyrocketed in 2021, forcing processors to hire more workers to meet the growing demand.",
+        "Copper processors base operations near copper refiners This enables processors to keep transportation costs low and develop strong relationships with key suppliers."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Construction",
+            "segment_description": "The construction segment includes residential, commercial and infrastructure-related construction industries. All these markets use copper-based building wire (i.e. insulated electrical wire).",
+            "segment_percentage": 27.0
+        },
+        {
+            "segment": "Electrical transmission and telecommunications",
+            "segment_description": "Electrical wiring outside buildings, transferring high-current power and signal-level data, represents a significant copper wire market. Heavy-duty electrical equipment manufacturers buy copper to produce transformers, switchgears, generators, industrial circuit breakers and industrial controls.",
+            "segment_percentage": 25.0
+        },
+        {
+            "segment": "Transport equipment manufacturing",
+            "segment_description": "Copper's high electrical conductivity makes copper products especially useful in electronic and electric applications, particularly in manufacturing automotive junction boxes, ignition and alternator systems, temperature and tire pressure sensors, and lighting and entertainment systems.",
+            "segment_percentage": 15.0
+        },
+        {
+            "segment": "Consumer products and other manufacturing",
+            "segment_description": "This segment includes manufacturers of consumer electronics and appliances such as TVs, refrigerators, ovens, stoves, water heaters, laundry machines, fans and shipments of brass and other copper alloys used to produce munition (ordnance markets), coinage and utensils.",
+            "segment_percentage": 22.0
+        },
+        {
+            "segment": "Industrial equipment and machinery",
+            "segment_description": "This market includes manufacturers of heavy industrial equipment and machinery, such as evaporators, filters, transformers, cooling towers and heat exchangers used by other manufacturers.",
+            "segment_percentage": 11.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Electrical and Communications Wire and Cable",
+            "product_description": null,
+            "product_percentage": 30.4
+        },
+        {
+            "product_or_service": "Nonelectric Copper Wire",
+            "product_description": null,
+            "product_percentage": 3.9
+        },
+        {
+            "product_or_service": "Magnet Wire",
+            "product_description": null,
+            "product_percentage": 2.4
+        },
+        {
+            "product_or_service": "Copper Rods, Bars and Other Shapes",
+            "product_description": null,
+            "product_percentage": 29.7
+        },
+        {
+            "product_or_service": "Copper Sheet, Strips and Plates",
+            "product_description": null,
+            "product_percentage": 7.7
+        },
+        {
+            "product_or_service": "Copper Pipes and Other Tubular Products",
+            "product_description": null,
+            "product_percentage": 6.6
+        },
+        {
+            "product_or_service": "Secondary Smelting, Refining and Alloying",
+            "product_description": null,
+            "product_percentage": 10.5
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": null,
+            "product_percentage": 8.8
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Industrial Machinery & Equipment Wholesaling in the US",
+            "Nonferrous Metal Refining in the US",
+            "Industrial Supplies Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Copper, Nickel, Lead & Zinc Mining in the US",
+            "Utilities in the US",
+            "Metalworking Machinery Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Construction in the US",
+            "Wire & Cable Manufacturing in the US",
+            "Power Conversion Equipment Manufacturing in the US"
+        ],
+        "tier_2_buyers": [
+            "Major Household Appliance Manufacturing in the US",
+            "Electric Power Transmission in the US",
+            "Plumbers in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "The world price of copper",
+            "determinant_description": "The world price of copper moves in response to global supply and demand trends. Price increases result in greater returns for manufacturers and make purchased copper more costly to process. Copper producers cannot always easily pass down price increases to customers, hindering profit. Conversely,"
+        },
+        {
+            "determinant_title": "MULTIPLE INDUSTRIES RELY ON COPPER WIRE",
+            "determinant_description": "Drawn wire products, the most popular copper product, is widely used in electrical transmission, electromagnetic equipment (e.g. motors and generators), electronic equipment (e.g. appliances and computers) and telecommunications. Automobile manufacturers purchase copper wiring in the form of magnet wire to produce electromagnetic equipment, such as electric motors."
+        },
+        {
+            "determinant_title": "COPPER PIPES AND OTHER TUBULAR PRODUCTS",
+            "determinant_description": "Copper pipes can be used to move water or waste within commercial buildings and homes. However, construction companies have opted to substitute copper pipes with plastic, concrete or carbon, lowering copper pipes sales."
+        },
+        {
+            "determinant_title": "SECONDARY SMELTING, REFINING AND ALLOYING",
+            "determinant_description": "Other products include the further processing of copper alloys, such as brass and bronze, copper plating, and the vertically integrated manufacture of fabricated copper products, such as valves and fittings."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Moderate",
+        "import_trend": "Increasing",
+        "export_level": "Moderate",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "United States-Mexico-Canada Agreement (USCMA)",
+                "trade_description": "The USMCA limits trade barriers between the United States, Mexico and Canada"
+            },
+            {
+                "trade_title": "Strong US Dollar Supports Import Penetration",
+                "trade_description": "Over recent years, the dollar has become comparatively more valuable than the currencies of major trade partners, making imports more affordable for domestic consumers."
+            },
+            {
+                "trade_title": "Exports Benefit From The USMCA",
+                "trade_description": "Mexico and Canada are the two largest export destinations for copper products. Copper processors benefit from proximity to these markets, lowering transportation costs."
+            },
+            {
+                "trade_title": "AN APPRECIATING DOLLAR HARMS EXPORTS",
+                "trade_description": "Various international conflicts, alongside the pandemic's effects on the global economy, have strengthened the US dollar."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "Strong construction activity in the highly populated Southeast and Mid-Atlantic lures copper companies to the region, resulting in lower transportation costs and supporting performance.",
+            "percentage_establishments": 10.2,
+            "percentage_population": 19.1
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes is a major manufacturing hub with strong demand for copper. By basing operations in the region, copper producers can improve their relationships with major buyers, possibly leading to long-term contracts.",
+            "percentage_establishments": 22.4,
+            "percentage_population": 15.3
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "Copper processors can reduce operating costs by basing operations near major copper refiners. Many copper refineries are based in the Mid-Atlantic and the Great Lakes, as there is strong downstream demand for these products in the area.",
+            "percentage_establishments": 16.3,
+            "percentage_population": 13.5
+        },
+        {
+            "location": "New England",
+            "location_description": "The region has significant construction activities.",
+            "percentage_establishments": 3.1,
+            "percentage_population": 4.8
+        },
+        {
+            "location": "Southwest",
+            "location_description": "Producers benefit from remaining near trade ports, as it gives them easy access to foreign markets and enables them to reduce domestic transportation costs.",
+            "percentage_establishments": 9.2,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "West",
+            "location_description": "Copper companies using imported copper as a main input lower costs by setting operations near ports. Many companies set operations in the West, giving producers easy access to the Mexican and Asian markets.",
+            "percentage_establishments": 16.3,
+            "percentage_population": 23.5
+        },
+        {
+            "location": "Plains",
+            "location_description": "The region is developing a range of manufacturing facilities.",
+            "percentage_establishments": 6.1,
+            "percentage_population": 4.8
+        },
+        {
+            "location": "Rocky Mountain",
+            "location_description": "The region has high copper production activities.",
+            "percentage_establishments": 16.3,
+            "percentage_population": 7.4
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [
+            {
+                "regulation_title": "THE CLEAN WATER ACT AND THE RESOURCE CONSERVATION AND RECOVERY ACT",
+                "regulation_description": "Manufacturers must follow procedures for water and solid waste discharge and airborne pollution emissions."
+            },
+            {
+                "regulation_title": "THE CLEAN AIR ACT",
+                "regulation_description": "Limits air pollutants including carbon monoxide, particulates, nitrogen oxides, volatile organic compounds and lead."
+            },
+            {
+                "regulation_title": "COMPREHENSIVE ENVIRONMENTAL RESPONSE, COMPENSATION AND LIABILITY ACT",
+                "regulation_description": "Controls the release and remediation of hazardous substances and regulates other pollutant releases."
+            },
+            {
+                "regulation_title": "OCCUPATIONAL SAFETY AND HEALTH ACT",
+                "regulation_description": "Manufacturers must ensure worker safety through noise, dust standards and proper machinery training."
+            },
+            {
+                "regulation_title": "ZONING AND PERMIT REQUIREMENTS",
+                "regulation_description": "Processors must meet local zoning requirements and obtain environmental permits subject to modification, renewal and revocation."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The copper processing industry is mature."
+            },
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "The industry experiences high revenue volatility."
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "Competition within the industry is high and steady."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            {
+                "factor": "The industry has a low market concentration level."
+            }
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Unknown",
+        "basis_points": [
+            {
+                "basis_title": "Price and Delivery Time",
+                "basis_description": "Competition is high based on price and delivery time."
+            },
+            {
+                "basis_title": "Niche Markets and Value-Added Products",
+                "basis_description": "Copper companies focus on serving niche markets and developing value-added products with fewer substitutes."
+            },
+            {
+                "basis_title": "US Dollar Strength",
+                "basis_description": "A strong US dollar enhances external competition by lowering the price of imported copper products."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Diversified Downstream Markets",
+                "concentration_description": "Copper processors serve various downstream markets like construction, transportation, and electronics, preventing large market shares."
+            },
+            {
+                "concentration_title": "Consolidation Trends",
+                "concentration_description": "Copper processors commonly acquire other companies to expand product offerings and serve more downstream markets efficiently."
+            },
+            {
+                "concentration_title": "High Demand for Copper Products",
+                "concentration_description": "Strong demand from downstream markets in 2021 led to many new companies entering, preventing larger shares."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Southwire Co",
+                "company_percentage": 9.3
+            },
+            {
+                "company_name": "Global Brass And Copper Holdings, Inc.",
+                "company_percentage": 5.9
+            },
+            {
+                "company_name": "Mueller Industries, Inc.",
+                "company_percentage": 4.9
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 79.9
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 4.6
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 4.9
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 75.5
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Price Volatility Impacts Purchase Costs",
+            "cost_factor_description": "Copper faced high price volatility during the pandemic, enabling processors to pass down price increases to buyers. As the economy recovered, demand expanded, protecting processors from input price increases and enabling purchase costs as a share of revenue to fall."
+        },
+        {
+            "cost_factor_title": "Wage Costs Expand Due to Growing Demand",
+            "cost_factor_description": "The industry is increasingly automated, reducing wage expenses. But in 2021, companies hired more workers and raised wages to meet heightened demand for copper products, though wages still shrank as a share of revenue."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "CAPITAL EXPENSES",
+                "capital_intensity_description": "The industry relies on heavy equipment and machinery to heat, cut, and manipulate raw materials. Although skilled workers are needed to operate machinery, the average processor relies heavily on machinery."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "FLUCTUATIONS IN COPPER PRICES IMPACT REVENUE",
+                "volatility_description": "Changes in copper prices directly impact processors, as copper is the principal input with no direct substitutes. Processors aim to pass down costs to buyers during high demand when buyers are willing to pay more."
+            },
+            {
+                "volatility_title": "CHANGES IN DEMAND FOR DOWNSTREAM MARKETS",
+                "volatility_description": "Falling demand for downstream markets like construction and electrical machinery reduces demand for copper products, lowering revenue. Residential construction expanded in 2021 but worsening economic conditions are discouraging big-ticket purchases."
+            },
+            {
+                "volatility_title": "CHANGES IN TRADE CONDITIONS IMPACT DEMAND FOR COPPER",
+                "volatility_description": "An appreciating dollar harms domestic processors by making US copper more expensive. Foreign infrastructure projects expand domestic demand when the dollar is lower."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "VALUE-ADDED PRODUCTS",
+                "technological_change_description": "To differentiate from competitors, copper companies began serving niche markets and offering value-added products like lead-free brass fixtures, copper-plated equipment, and copper computer chips that are more efficient and safer."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company impacted by rising imports from abroad?",
+            "answer": "Imports are often extremely price-competitive since foreign producers have lower costs. Still, domestic producers aim to compete on quality instead of price."
+        },
+        {
+            "question": "Does your company specialize in one corner of the market or produce a diversified range of products?",
+            "answer": "As a result of the diversity of downstream markets, it may make sense for a company to produce products designed for a specific market. Companies in this industry still tend to focus on specific products, as this industry covers a wide variety of products for an even wider variety of purposes, making it hard to effectively manufacture products for many or all of the possible purposes."
+        },
+        {
+            "question": "Is your company investing heavily in R&D to meet changing consumer preferences?",
+            "answer": "Investment in research and development is not very high in this industry. The industry is not producing new types of products, though the use of technology is ever-increasing to cut expenses."
+        },
+        {
+            "question": "Have you looked into setting up manufacturing facilities in lower wage regions of the country?",
+            "answer": "Globalization in this industry is high. The USMCA increases trade of copper products between the United States, Mexico, and Canada."
+        },
+        {
+            "question": "How is your company leveraging new technology, such as [example: RFDI tags, etc.], in its operations?",
+            "answer": "Similar to other manufacturing industries, new technology could help streamline and better protect the logistics process, including the delivery of products to customers."
+        },
+        {
+            "question": "Have you been able to reduce wage costs by automating operations over the past five years?",
+            "answer": "Industries across the manufacturing sector look to technology companies to assist in implementing robotic technology to mitigate wage expenses."
+        },
+        {
+            "question": "Have you had any regulatory expenses that have significantly impacted profitability recently?",
+            "answer": "Regulation does not play a significant role in this industry. Any regulation that has been implemented has seldom affected companies' bottom line."
+        },
+        {
+            "question": "How does your company ensure all health and safety requirements are met?",
+            "answer": "While there are no specific health and safety requirements for this industry, the manufacturing sector as a whole has requirements set by OSHA and other government organizations."
+        },
+        {
+            "question": "Do you have any big projects requiring that require capital financing on the horizon?",
+            "answer": "Companies with large projects should look to financing over the short term if interest rates are favorable to save money."
+        },
+        {
+            "question": "How has price volatility of inputs affected profit margins over the past 12 months?",
+            "answer": "The price of copper is a main driver of industry revenue. Copper prices are extremely volatile, which affects both industry revenue and profit."
+        },
+        {
+            "question": "Do you have secure contracts with trustworthy suppliers? Have you had any issues securing or keeping contracts?",
+            "answer": "Secure sources of raw material supplies enable companies to properly plan their output levels and input costs."
+        },
+        {
+            "question": "Do you have access to the latest available and most efficient technology and techniques?",
+            "answer": "Investment in cost-lowering technology boosts a company's productivity and its ability to compete."
+        },
+        {
+            "question": "Have you been able to pass on cost increases to customers?",
+            "answer": "Since raw copper is the single-largest purchase item, the ability to pass on costs is important to maintain profitability and competitiveness."
+        },
+        {
+            "question": "Does your company participate in trade? When the value of the US dollar is high, how does your company mitigate the threat of low-cost exports?",
+            "answer": "As the value of the dollar falls, it bolsters the purchasing power of foreign buyers of industry products while resulting in higher relative import prices. When the trade-weighted index increases, import competition increases and industry exports are less competitive in the global market."
+        },
+        {
+            "question": "Do you supply to automobile manufacturers? Do you have strong and established relationships with manufacturers?",
+            "answer": "Copper is an essential input for various components of automobiles, including motors, radiators, bearings, and brakes. As consumer demand for cars rises, automakers increase production and purchase more copper inputs. Therefore, a growing automotive industry benefits the industry."
+        },
+        {
+            "question": "What percentage of your revenue is generated from the residential construction sector?",
+            "answer": "Higher levels of residential construction activity raise demand for copper wiring, plumbing, brass hardware, and other copper alloy products."
+        }
+    ]
+}

@@ -1,0 +1,554 @@
+{
+    "report_title": "Electronic Access Control System Manufacturing in the US",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 3696000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 1.58
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.44
+            }
+        },
+        "profit": {
+            "profit_dollars": 207000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 1.79
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 1.5
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5.6,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0.0
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 1.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1121000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 2.5
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 2.8
+            }
+        },
+        "employees": {
+            "employees_count": 22173,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 1.2
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 1.5
+            }
+        },
+        "wages": {
+            "wages_dollars": 854000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 1.25
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 1.4
+            }
+        },
+        "imports": {
+            "imports_dollars": 3423000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 2.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 1.5
+            }
+        },
+        "exports": {
+            "exports_dollars": 998000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 1.75
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 1.3
+            }
+        }
+    },
+    "executive_summary": "The Electronic Access Control System Manufacturing industry produces smart cards, fingerprint scanners, biometric systems, and other access control systems, including keypads. The industry has recently been affected by volatile downstream markets, the effects of import penetration, and the outbreak of the pandemic. As a result, industry revenue has been declining at an annualized rate of 4.4% over the past five years and is expected to reach $3.7 billion in 2023, although this conceals significant year-to-year volatility. Industry profit has similarly fallen due to lower demand and high competition from foreign manufacturers, with profitability overall waning to 5.6%. Industry revenue is poised to undergo course correction in 2023, inclining 1.2% as macroeconomic conditions improve.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Pandemic Had a Profound Effect on Industry Revenue, Driven Largely by Declines in Nonresidential Construction and Corporate Profit",
+            "current_performance_point_description": "Commercial construction markets represent a majority of industry revenue and any fluctuations in the value of nonresidential construction have a direct effect on this industry."
+        },
+        {
+            "current_performance_point_title": "Demand for Electronic Access Control Systems is Volatile",
+            "current_performance_point_description": "Residential consumers represent an emerging important consumer channel for the industry."
+        },
+        {
+            "current_performance_point_title": "Domestic Products Struggle on the Global Stage",
+            "current_performance_point_description": "Import penetration on domestic demand is a key point of influence for this industry."
+        },
+        {
+            "current_performance_point_title": "Manufacturers Shift Priorities to Adapt to a Changing Landscape",
+            "current_performance_point_description": "Companies in this industry are experiencing competition from domestic industries specializing in the security market."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Downstream Markets Are Expected To Expand",
+            "future_outlook_point_description": "The industry is expected to benefit from an increase in overall business activity as the economy recovers from the COVID-19 pandemic."
+        },
+        {
+            "future_outlook_point_title": "Favorable International Trade Trends Will Likely Benefit The Industry",
+            "future_outlook_point_description": "The depreciation of the US dollar will likely benefit this industry."
+        },
+        {
+            "future_outlook_point_title": "Technological Progress Pushes Demand Higher",
+            "future_outlook_point_description": "Discovering new technologies is essential to the success of this industry."
+        },
+        {
+            "future_outlook_point_title": "Rising Industry Participation and Stagnating Profit is Expected Over the Next Five Years",
+            "future_outlook_point_description": "Increasing demand from advanced biometric systems will likely require manufacturers to expand their research and development centers."
+        }
+    ],
+    "industry_definition": "Companies in this industry manufacture electronic access control systems, including card-based (proximity cards and smart cards), audio-based.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level: high",
+            "Industry Assistance Level: low - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Imports",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers: Corporate profit"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth: Crime rate"
+        ]
+    },
+    "key_trends": [
+        "Growing external competition from low-cost imports continues to threaten domestic markets.",
+        "Reputation is a crucial point of differentiation.",
+        "The pandemic siphoned demand from commercial markets due to office vacancies.",
+        "Import penetration has increased."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Commercial market",
+            "segment_description": "The commercial market accounts for an estimated 58.7% of revenue.",
+            "segment_percentage": 58.7
+        },
+        {
+            "segment": "Private property market",
+            "segment_description": "The private property market accounts for an estimated 19.9% of industry revenue.",
+            "segment_percentage": 19.9
+        },
+        {
+            "segment": "Government market",
+            "segment_description": "The government market accounts for an estimated 19.1% of industry revenue.",
+            "segment_percentage": 19.1
+        },
+        {
+            "segment": "Other",
+            "segment_description": "",
+            "segment_percentage": 2.3
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Card-based systems",
+            "product_description": "Card-based systems dominate the industry.",
+            "product_percentage": 54.5
+        },
+        {
+            "product_or_service": "Biometric systems",
+            "product_description": "Demand for biometric systems has been actively growing.",
+            "product_percentage": 26.8
+        },
+        {
+            "product_or_service": "Keypad, audio and other systems",
+            "product_description": "An estimated 18.7% of industry revenue is generated by audio, keypad and other systems.",
+            "product_percentage": 18.7
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Plastics & Rubber Manufacturing in the US",
+            "Machinery Manufacturing in the US",
+            "Semiconductor & Circuit Manufacturing in the US",
+            "Electrical Equipment Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Circuit Board & Electronic Component Manufacturing in the US",
+            "Laminated Plastics Manufacturing in the US",
+            "Screw, Nut & Bolt Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Construction in the US",
+            "Manufacturing in the US",
+            "Security Services in the US"
+        ],
+        "tier_2_buyers": [
+            "Accommodation and Food Services in the US",
+            "Hotels & Motels in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Corporate profit",
+            "determinant_description": "Corporate profit influences a business' ability to expand."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Decreasing",
+        "export_level": "High",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports ramp up competition",
+                "trade_description": "Imports of electronic access control systems have mounted."
+            },
+            {
+                "trade_title": "Import destinations shift",
+                "trade_description": "In 2023, Mexico and China are slated to command the largest share of industry imports."
+            },
+            {
+                "trade_title": "Exports depressed by appreciating dollar",
+                "trade_description": "The value of exports in the industry has declined."
+            },
+            {
+                "trade_title": "Exports depleted by pandemic woes",
+                "trade_description": "Amid the pandemic, industry exports were depleted."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "West",
+            "location_description": "The West accounts for the most prominent portion of industry establishments.",
+            "percentage_establishments": 30.0,
+            "percentage_population": 23.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic is home to a significant share of industry establishments.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Southeast",
+            "location_description": "An estimated 20% of industry establishments are located in the Southeast.",
+            "percentage_establishments": 20.0,
+            "percentage_population": 19.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [
+            {
+                "regulation_title": "FCC regulations",
+                "regulation_description": "Industry manufacturers must comply with FCC regulations."
+            },
+            {
+                "regulation_title": "SEC compliance",
+                "regulation_description": "Industry manufacturers must also comply with regulations regarding conflict minerals."
+            },
+            {
+                "regulation_title": "COVID-19 guidelines",
+                "regulation_description": "Policies to reduce the spread of the disease have been introduced."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is in a mature life cycle stage."
+            },
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "The industry has a high level of revenue volatility."
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "The industry has a low and steady level of assistance."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Revenue Volatility Level: high",
+            "Industry Assistance Level: low - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Growing external competition",
+                "basis_description": "The competition is intensifying due to growing external competition."
+            },
+            {
+                "basis_title": "Reputation and quality",
+                "basis_description": "Reputation is a crucial differentiating factor in this industry."
+            },
+            {
+                "basis_title": "Niche markets",
+                "basis_description": "Manufacturers can also cater to niche markets."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Prominent manufacturers are rare",
+                "concentration_description": "The top manufacturers will hold a combined share of less than 20.0%."
+            },
+            {
+                "concentration_title": "Honeywell International dominates",
+                "concentration_description": "Only Honeywell International commands a significant market share."
+            },
+            {
+                "concentration_title": "Small enterprises specialize",
+                "concentration_description": "Small enterprises typically specialize in manufacturing products for a niche area."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Honeywell International Inc.",
+                "company_percentage": 15.4
+            },
+            {
+                "company_name": "Identiv, Inc.",
+                "company_percentage": 0.8
+            },
+            {
+                "company_name": "Carrier Global Corporation",
+                "company_percentage": 0
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Materials",
+            "cost_type_percentage": 36.3
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 23.1
+        },
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 5.6
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 7.0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 5.0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Materials cost",
+            "cost_factor_description": "The cost of materials represents the largest expense."
+        },
+        {
+            "cost_factor_title": "Semiconductor supply disruptions",
+            "cost_factor_description": "The price and supply of semiconductors has been significantly disrupted."
+        },
+        {
+            "cost_factor_title": "CHIPS Act",
+            "cost_factor_description": "The recently enacted CHIPS act could benefit the industry."
+        },
+        {
+            "cost_factor_title": "Wage costs",
+            "cost_factor_description": "Employee compensation is the second-largest expense."
+        },
+        {
+            "cost_factor_title": "Increasing labor costs",
+            "cost_factor_description": "Labor costs account for an estimated 23.1% of revenue."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital requirements",
+                "capital_intensity_description": "The capital intensity for the industry is low."
+            },
+            {
+                "capital_intensity_title": "Outsourcing production",
+                "capital_intensity_description": "Manufacturers can outsource production to low-wage countries."
+            },
+            {
+                "capital_intensity_title": "High-end product investment",
+                "capital_intensity_description": "Manufacturers specializing in high-end products must invest heavily."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "COVID-19 impact",
+                "volatility_description": "The pandemic amplified the industry's downward trend."
+            },
+            {
+                "volatility_title": "Declining construction demand",
+                "volatility_description": "A decline in the value of private nonresidential construction resulted in decreased demand."
+            },
+            {
+                "volatility_title": "Industry recovery",
+                "volatility_description": "The industry should benefit from increased device connectivity."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Mobile device integration",
+                "technological_change_description": "Smartphones will be a major area of technological innovation."
+            },
+            {
+                "technological_change_title": "Catering to market needs",
+                "technological_change_description": "As the number of businesses rises, demand for advanced products will increase."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company impacted by rising imports from abroad?",
+            "answer": "Imports represents an external threat to the industry."
+        },
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "The largest market for companies in this industry are businesses."
+        },
+        {
+            "question": "Has your company located in proximity to its key downstream distributors to reduce shipping costs?",
+            "answer": "Companies are located in regions of the country with key downstream markets."
+        },
+        {
+            "question": "Is your company investing heavily in R&D to meet changing consumer preferences?",
+            "answer": "Companies typically spend heavily on R&D."
+        },
+        {
+            "question": "Have you been able to reduce wage costs by automating operations over the past five years?",
+            "answer": "This industry still requires highly skilled labor."
+        },
+        {
+            "question": "How does your company invest in technology, such as 3D printing, to establish a competitive edge over your competitors?",
+            "answer": "Companies are focusing more on higher-margin products."
+        },
+        {
+            "question": "How does your company stay ahead of regulations such as energy-efficiency standards?",
+            "answer": "Companies must carefully inspect their products."
+        },
+        {
+            "question": "Do you work with trade associations or other interest groups to advance your company's interests?",
+            "answer": "The Smart Card Alliance represents manufacturers."
+        },
+        {
+            "question": "How frequently does your company purchase new equipment?",
+            "answer": "Purchases are a large expense for companies in this industry."
+        },
+        {
+            "question": "How does your company's profit margins compare to your main competitors?",
+            "answer": "Larger companies typically have more robust profit margins."
+        },
+        {
+            "question": "How quickly can new technology be adopted? Does your company keep up to date with the latest technology?",
+            "answer": "Industry operators have to keep up with evolving technologies."
+        },
+        {
+            "question": "Are you able to leverage economies of scale? What is your budget for expanding operations? How would automating operations affect your company?",
+            "answer": "By manufacturing on a large scale, companies can lower their costs."
+        },
+        {
+            "question": "Do you have a strong reputation among customers? Are you known for your reliability?",
+            "answer": "Companies need to maintain a high level of confidentiality."
+        }
+    ]
+}

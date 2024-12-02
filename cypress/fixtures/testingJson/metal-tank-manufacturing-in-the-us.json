@@ -1,0 +1,570 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 9798000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 0.67
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": -0.13
+            }
+        },
+        "profit": {
+            "profit_dollars": 235000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": -4.48
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 2.4,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -5.11
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 2644000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 30757,
+            "employees_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 2199000000,
+            "wages_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": 2190000000,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": 1161000000,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2024 currency. The COVID-19 pandemic severely crippled the metal tank manufacturing industry. Revenue plummeted an expected 16.0% in 2020 alone as manufacturers were forced to halt all activity. The industry returned to slight growth in 2021 and 2022, though this was short lived as revenue shrank again in 2023 as overall manufacturing activity slowed. Revenue is forecast to have dropped at a CAGR of 5.5% to $9.3 billion through the end of 2024, including an expected depression of 9.8% in 2024 alone.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "COVID-19 and its aftermath have depressed downstream demand",
+            "current_performance_point_description": "The metal tank manufacturing industry serves a variety of downstream markets across the manufacturing, healthcare and food & beverage sectors. Still, this did little to cushion revenue loss during the height of the pandemic in 2020. The dairy farms industry is a significant additional market for industrial items. Companies in this industry invest in machinery for milk processing, refrigeration and storage. Milk prices have significantly fluctuated as the supply chain recovers from the COVID-19 pandemic."
+        },
+        {
+            "current_performance_point_title": "Metal tank manufacturers leverage superior quality to mitigate import penetration",
+            "current_performance_point_description": "Several US-based metal tank producers have maintained a production advantage over rivals from abroad thanks to their success in creating specialized products to fulfill the needs of the petroleum industry. US manufacturers can provide field-erecting services and custom-fabricated metal tanks and vessels that international competitors can't. Also, many other nations lack the resources to build the required facilities and infrastructure despite abundant natural resource deposits."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Industrial Manufacturing Markets are Expected to Continue Expanding",
+            "future_outlook_point_description": "Markets for industrial production are anticipated to keep growing. As liquidity returns to the international financial markets, this element will reflect the gradual recovery of private capital investment as well as the cyclical upswing in building electric power infrastructure. There will likely be a rise in the need for metal tanks in the petrochemical industry. Demand from chemical and plastic manufacturers will expand as chemical consumption by clients in the construction and packaging industries grows."
+        },
+        {
+            "future_outlook_point_title": "Food and Agriculture Markets are Expected to Expand",
+            "future_outlook_point_description": "An expected expansion of the Agriculture, Forestry, Fishing and Hunting sector will marginally expand its need for metal tanks. The consumption of dairy products in the country is expected to keep marginally rising. Losses in per capita fluid milk consumption will be partially offset by population increase and consistent per capita consumption of cheese, yogurt and other dairy products."
+        },
+        {
+            "future_outlook_point_title": "Domestic Manufacturers Will Grapple With",
+            "future_outlook_point_description": "Manufacturers will likely continue to face long-term challenges from globalization, industry consolidation and slowing economic growth in some emerging regions. Downstream demand will likely remain depressed as interest rates rise and fluctuating steel prices. Domestic businesses have battled against escalating import competition, and many have outsourced production to countries with lower labor costs. This trend is expected to continue as large overseas manufacturing enterprises welcome additional foreign investment at the expense of US production."
+        }
+    ],
+    "industry_definition": "Operators in this industry manufacture tanks, vessels and other containers by cutting, forming and joining heavy-gauge metals. Industry products include acetylene cylinders, cryogenic tanks, farm storage tanks, fermentation tanks, gas storage tanks, liquefied petroleum gas cylinders, oil storage tanks, septic tanks, storage tanks, water tanks and vats. Industry operators may also provide valued-added services such as installation and product design.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level low",
+            "Concentration Level low"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level high",
+            "Industry Assistance Level low - steady",
+            "Barriers To Entry Level low - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage mature"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry",
+            "Low & Steady Level of Assistance",
+            "High Volatility",
+            "Medium Imports",
+            "Low Profit vs. Sector Average",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "Industrial production index"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Low Performance Drivers"
+        ]
+    },
+    "key_trends": [
+        "There's a moderate risk of new competitors entering the industry from unrelated business sectors. Existing manufacturers will face increased competition if new businesses do enter the market.",
+        "Most manufacturers tend to face similar fluctuations in the cost of inputs. This means that the changing costs of production impact all manufacturers more or less equally.",
+        "The industry gets the bulk of its product sales in the industrial manufacturing, agricultural and dairy markets. The industry is dependent on the performance of these downstream markets for consistent demand.",
+        "Pricing has become a critical factor in business competition due to the standardization of some items. Consequentially, import penetration has risen while export earnings have fallen.",
+        "Manufacturers have invested in streamlining production and boosting output. They have begun collaborating with suppliers of specialized machinery to research innovative, long-term solutions to address growing production challenges.",
+        "Low market share concentration exists in the metal tank manufacturing industry. With the top four companies accounting for 17.0% of total revenue, the industry primarily comprises small businesses.",
+        "The industry's significant manufacturers are big companies with large portfolios. These companies primarily sustain their market share through merger and acquisition activity.",
+        "The regulation of the operators' production of tanks and cylinders, as well as their own manufacturing procedures, is a concern for the industry. Regulation largely deals with environmental issues such as garbage disposal, leaks, and spills.",
+        "The primary organization that advocates on behalf of companies in the industry is the Steel Tank Institute/Steel Plate Fabricators Association (STI/SPFA). Industry sources claim that STI/SPFA members produce close to 80.0% of the nation's capacity for shop-fabricated atmospheric steel storage tanks."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Industrial manufacturers",
+            "segment_description": "Metal tanks are used by industrial enterprises to store fuel and other raw materials to maintain a stable supply chain.",
+            "segment_percentage": 26.4
+        },
+        {
+            "segment": "Biomedical manufacturers",
+            "segment_description": "Tanks for biological liquids and gases, as well as storage products for farmers, are included in this sector.",
+            "segment_percentage": 19
+        },
+        {
+            "segment": "Repair services",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 30.4
+        },
+        {
+            "segment": "Petrochemical manufacturers",
+            "segment_description": "Given the rising cost of raw materials, petrochemical producers found it impossible to pass all of the cost of crude oil onto consumers and worked to raise productivity using industry products.",
+            "segment_percentage": 24.2
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Gas Cylinders and Storage Tanks",
+            "product_description": "Gas cylinders are typically made of steel for durability and resilience. They undergo an annealing process to enhance strength and durability.",
+            "product_percentage": 10.2
+        },
+        {
+            "product_or_service": "Field Erected Metal Tanks",
+            "product_description": "Field-erected metal tank manufacturing involves producing and assembling large, often custom-built, metal storage tanks directly on the customer's site.",
+            "product_percentage": 20.8
+        },
+        {
+            "product_or_service": "Ferrous and Nonferrous Metal Storage Tanks",
+            "product_description": "<UNKNOWN>",
+            "product_percentage": 25.4
+        },
+        {
+            "product_or_service": "Pressure Tanks",
+            "product_description": "Pressure tanks undergo an extensive manufacturing and testing process to ensure durability. They have a wide range of practical uses.",
+            "product_percentage": 23.2
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "All other products include custom-made metal tanks for specialized use and parts for maintaining and repairing existing metal tanks.",
+            "product_percentage": 20.4
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Metal Pipe & Tube Manufacturing in the US",
+            "Steel Rolling & Drawing in the US",
+            "Aluminum Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Petrochemical Manufacturing in the US",
+            "Copper Rolling, Drawing & Extruding in the US",
+            "Nonferrous Metal Refining in the US"
+        ],
+        "tier_1_buyers": [
+            "Heavy Engineering",
+            "Construction in the US",
+            "Dairy Product Production in the US",
+            "Petroleum Refining in the US"
+        ],
+        "tier_2_buyers": [
+            "Specialized Storage & Warehousing in the US",
+            "Oxygen & Hydrogen Gas Manufacturing in the US",
+            "Farm Product Storage & Warehousing in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Petrochemical Manufacturers Use Industry Products",
+            "determinant_description": "Given the rising cost of raw materials, petrochemical producers found it impossible to pass all of the cost of crude oil onto consumers and worked to raise productivity. In an effort to minimize surplus capacity, numerous operators shut down more expensive units, although they also implemented efficiency and profitability initiatives. These new initiatives required switching from more antiquated, ineffective technology to more modern ones supplied by the metal tank industry."
+        },
+        {
+            "determinant_title": "Typically, Industrial Manufacturing Has Significant Equipment Investment",
+            "determinant_description": "To create more with less labor and more product for less money, machinery is used. Metal tanks are used by industrial enterprises to store fuel and other raw materials to maintain a stable supply chain. A company's earnings may alter dramatically if there are significant variations in fuel prices and availability. On-site storage is kept as a defense against these interferences."
+        },
+        {
+            "determinant_title": "A Sizable Cash Stream is Being Generated via Biomedical Production and Exports",
+            "determinant_description": "Tanks for biological liquids and gases, as well as storage products for farmers, are included in this sector. Metal tank manufacturers sell equipment for processing food and beverages, producing industrial heat transfer equipment, producing biopharmaceuticals, purifying water, producing thermal energy storage devices and producing commercial refrigeration."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Moderate",
+        "import_trend": "Decreasing",
+        "export_level": "Moderate",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "China is the largest exporter of metal tanks to the US",
+                "trade_description": "China is the single-largest exporter of metal tanks to the US. Chinese manufacturers benefit from low labor costs, abundant raw materials and government subsidies to support domestic production. Deteriorating international relations have hampered imports from China. While China still makes up the bulk of imported goods, the ongoing trade war has loosened the country's grip on trade with the US."
+            },
+            {
+                "trade_title": "USMCA trade partners provide healthy competition",
+                "trade_description": "Mexico and Canada's participation in the United States-Mexico-Canada Agreement (USMCA) ensures steady import/export activity between the three countries. The free trade agreement replaced the North American Free Trade Agreement (NAFTA) established during the Clinton administration."
+            },
+            {
+                "trade_title": "The Industry Trades Heavily with USMCA Participants",
+                "trade_description": "Manufacturing hubs in the US, like the Great Lakes region and California, ensures steady import activity."
+            },
+            {
+                "trade_title": "Canada is the single-largest importer of metal tanks manufactured in the US.",
+                "trade_description": "Canada's proximity to the Great Lakes region, where most manufacturers are located, ensures consistently high trade with the country."
+            },
+            {
+                "trade_title": "Brazil's Manufacturing Sector Fuels Demand",
+                "trade_description": "Brazil's expansive manufacturing sector, which makes up an estimated 11.0% of the country's GDP, requires high-quality metal tanks for various uses, particularly in petroleum production and storage. Despite extensive import substitution industrialization (ISI) policies, Brazil's domestic production has yet to meet the quality or volume of US exports."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Texas",
+            "location_description": "Texas is the second-largest economy in the nation and a major oil producer. Metal tank manufacturers flock to the region to be close to this crucial downstream market.",
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        },
+        {
+            "location": "Southeast region",
+            "location_description": "The Southeast region has high concentrations of metal tank manufacturers due to closeness to essential manufacturing hubs and population centers.",
+            "percentage_establishments": 15,
+            "percentage_population": 20
+        },
+        {
+            "location": "Southwest region",
+            "location_description": "The Southwest region has high concentrations of metal tank manufacturers due to closeness to essential manufacturing hubs and population centers.",
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        },
+        {
+            "location": "Great Lakes region",
+            "location_description": "The Great Lakes region has the highest concentrations of metal tank manufacturers due to closeness to essential manufacturing hubs and population centers.",
+            "percentage_establishments": 20,
+            "percentage_population": 15
+        },
+        {
+            "location": "Ohio",
+            "location_description": "Ohio became a national leader in the production of machine tools, steel and oil refinement, driving demand for metal tanks.",
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "THE ENVIRONMENTAL PROTECTION AGENCY",
+                "regulation_description": "Chemicals used in the metal tank manufacturing process, like nitrogen oxides and sulfur, are harmful to the environment. Manufacturers must adhere to strict guidelines set by the Environmental Protection Agency (EPA) regarding pollutants and emissions standards or face severe penalties or even foreclosure."
+            },
+            {
+                "regulation_title": "INDUSTRY SELF-REGULATION",
+                "regulation_description": "NFPA 30 (Flammable and Combustible Liquids Code) and NFPA 58 (Liquefied Petroleum Gas Code) set standards for the safe storage and handling of flammable and combustible liquids, often influencing metal tank design and installation requirements. Also, the American Society of Mechanical Engineers (ASME) Boiler and Pressure Vessel Code sets rules for the design, fabrication, inspection and testing of metal tanks that store pressurized materials."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is mature."
+            },
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "The revenue volatility level is high."
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "The industry assistance level is low and steady."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "The capital intensity level is low.",
+            "The concentration level is low."
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Legal",
+                "basis_description": "Entry into the business has been limited by tight safety and production standards, since following the protocol raises its cost structures."
+            },
+            {
+                "basis_title": "Differentiation",
+                "basis_description": "Physical size and technical features help the industry in the US stand out from the competition."
+            },
+            {
+                "basis_title": "Start-up Costs",
+                "basis_description": "Delivery and pick-up fees, which change depending on location, quantity, and size, are included in the start-up costs for a metal tank construction business."
+            },
+            {
+                "basis_title": "Labor Expenses",
+                "basis_description": "The biggest obstacle is the requirement to develop technical expertise and a skillset within an organization."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Low concentration",
+                "concentration_description": "The market share concentration in the industry is moderate. The top four corporations only account for a small portion of total income and the industry is made up primarily of small businesses."
+            },
+            {
+                "concentration_title": "Concentration is anticipated to rise",
+                "concentration_description": "Industry producers invest in particular market niches in an effort to increase profitability. This trend will also be aided by actions like acquiring complementary technology and moving manufacturing between regions to take advantage of regional advantages."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Worthington Industries, Inc.",
+                "company_percentage": 10.7
+            },
+            {
+                "company_name": "Caldwell Tanks Inc.",
+                "company_percentage": 2.9
+            },
+            {
+                "company_name": "Chart Industries, Inc.",
+                "company_percentage": 2.8
+            },
+            {
+                "company_name": "Worley Limited",
+                "company_percentage": 2.3
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 81.3
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases make up the majority of a company's expense structure",
+            "cost_factor_description": "A wide range of materials are needed for the production of metal tank goods and components. Along with iron and steel, which are the main elements used in the industry, these materials also include aluminum, copper and brass."
+        },
+        {
+            "cost_factor_title": "Industry participants are typically not overly reliant on a single or small number of suppliers",
+            "cost_factor_description": "Industry participants are typically not overly reliant on a single or small number of suppliers because they have various sources of supply for all of their primary needs."
+        },
+        {
+            "cost_factor_title": "Costs incurred by manufacturers frequently alter in tandem with shifts in the availability and cost of raw materials",
+            "cost_factor_description": "Costs incurred by manufacturers frequently alter in tandem with shifts in the availability and cost of raw materials. Raw material shortages and price fluctuations are caused by things like political stability in exporting countries."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "THE METAL TANK MANUFACTURING BUSINESS HAS SEEN A LOT OF REVENUE TURBULENCE",
+                "volatility_description": "The levels of manufacturing and industrial production, both of which tend to exhibit medium to high levels of volatility, impact the need for metal tanks. The cost of raw materials, such as steel, which also tends to be moderately volatile, greatly impacts industry revenue."
+            },
+            {
+                "volatility_title": "THE INDUSTRY IS VERY VULNERABLE TO ECONOMIC DOWNTURNS",
+                "volatility_description": "Due to the ongoing trade war, elevated levels of uncertainty throughout the world and slower global growth, it is anticipated that the US economy would weaken. The industry has fluctuated because of declines in essential sectors and the substantial profit generated by the construction sector."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "LATEST CONTROL SYSTEM",
+                "technological_change_description": "Modern control systems are used by almost all companies and the products they produce to improve every aspect of product performance. Also, computer-aided design (CAD), computer-aided manufacturing and numerically controlled machine equipment have all benefited from technological improvements."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company impacted by rising imports from abroad?",
+            "answer": "Rising levels of imports from abroad could have a negative impact on the industry."
+        },
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "Yes, industry sales is generally tied to larger macroeconomic events in the US and world. For example, the price of steel is a key factor in industry performance, as this plays a role in determining selling prices."
+        },
+        {
+            "question": "Is your company investing heavily in R&D to meet changing consumer preferences?",
+            "answer": "The industry is mature and new technological advancements are rare. While companies can improve efficiency by using robotic technology, products and services are generally the same now as they were a decade ago."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "The price of steel is a key driver to industry performance. The price of steel can fluctuate wildly."
+        },
+        {
+            "question": "Have you been able to reduce wage costs by automating operations over the past five years?",
+            "answer": "Robotic technology is growing in prominence in manufacturing industries. Companies may use robots in place of human labor, which decreases wage expenses while increasing productivity."
+        },
+        {
+            "question": "How is your company leveraging new technology in its operations?",
+            "answer": "Companies should make use of new technology to improve logistical functions and efficiency. For example, the blockchain could help with increasing the visibility and transparency of products in the shipping process."
+        },
+        {
+            "question": "What effect have international tariffs had on your ability to import and export products?",
+            "answer": "Tariffs on imported steel play a role in this industry. Steel is a main purchase for industry companies, so tariffs push steel prices up, raising purchase costs for the industry."
+        },
+        {
+            "question": "Have you had any regulatory expenses that have significantly impacted profitability recently?",
+            "answer": "Regulation has had little role in industry profitability. The level of industry profit is generally dictated by key expenses, including wages and purchases."
+        },
+        {
+            "question": "Do you have any big projects requiring that require capital financing on the horizon?",
+            "answer": "While depreciation is low, large capital financing is required for new major projects. High interest rates make it more expensive to undertake new projects."
+        },
+        {
+            "question": "How has price volatility of inputs affected profit margins over the past 12 months?",
+            "answer": "The price of steel, which is a key input, endured significant volatility. This affects profit, which is generally influenced by rises in purchase prices, specifically steel."
+        },
+        {
+            "question": "Do you offer a diverse range of products? Do you cater any specific market with the products and services you offer?",
+            "answer": "A key success factor in this industry is the ability to provide customized products and services to clients. By providing more customized products, businesses attract greater demand from more varied industries, which boosts revenue performance. New technologies such as 3D printing will increase the ability of companies to customize their products."
+        },
+        {
+            "question": "Does the company provide after-sales advice to its customers? Does the company generate revenue through accessory or add-on sales?",
+            "answer": "Superior customer service in this industry is an important success factor because all tank products have maintenance requirements."
+        },
+        {
+            "question": "What markets do you target? How can you diversify your client base?",
+            "answer": "Diversity of product and market segments lead to a diverse range of downstream customers, all in need of different products and services. This increases revenue performance by diversifying the source of profit. Diversity of product and market segments also allows companies to better weather negative economic shocks."
+        },
+        {
+            "question": "How do you plan to capitalize on this opportunity? Has your company been affected by volatile steel prices in the past?",
+            "answer": "As the price of steel increases, industry revenue increases, as it enables operators to raise selling prices on their products."
+        },
+        {
+            "question": "What proportion of revenue do you derive from your customers in the dairy industries? How will you respond to falling dairy consumption?",
+            "answer": "When the need for dairy products grows, demand for metal tanks and metal tank manufacturing also rises."
+        },
+        {
+            "question": "Do you track trends in the trade-weighted index? How much is your company's revenue affected by the fluctuation in demand for exports?",
+            "answer": "When the value of the US dollar declines, exports become more attractive to foreign countries and imports become more expensive for US consumers."
+        }
+    ]
+}

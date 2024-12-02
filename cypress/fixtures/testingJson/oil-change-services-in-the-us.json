@@ -1,0 +1,558 @@
+{
+    "report_title": "Oil Change Services in the US",
+    "report_date": "Feb 29, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 10757000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 1.34
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.38
+            }
+        },
+        "profit": {
+            "profit_dollars": 1646000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 3.8
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 15.3,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 2.43
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 4853000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 72996,
+            "employees_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 2940000000,
+            "wages_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Despite changes in driving patterns or economic fluctuations, demand for critical and non-discretionary auto maintenance tasks, including oil changes, remains consistent. Revenue has climbed at an expected CAGR of 5.5% to $12.0 billion through the current period, including a 2.3% jump in 2024, where profit will reach 15.3%. Changes in crude oil prices also impacted oil change services. Higher oil prices contribute to purchasing costs, threatening profit. The rise of electric vehicles (EVs) poses a major threat to the oil change industry.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Oil Change Services Benefit From Accelerating Demand",
+            "current_performance_point_description": "Multiple factors supported demand for regular auto maintenance, including oil changes, through the current period. Drivers in the United States rely heavily on vehicles for everyday commutes. This trend, combined with rising vehicle miles and growing consumer spending, has supported recurring and higher spending on a breadth of auto maintenance tasks."
+        },
+        {
+            "current_performance_point_title": "Oil Change Services Exhibited Resilience During the Pandemic",
+            "current_performance_point_description": "The non-discretionary nature of oil change services insulates it from economic downturns, like during the pandemic. Consumers might wait longer between changes or use conventional oil rather than synthetic oil, but putting off oil changes for too long can lead to permanent engine and vehicle damage."
+        },
+        {
+            "current_performance_point_title": "Oil Change Service Providers Endured Volatility",
+            "current_performance_point_description": "Labor shortages across the economy have driven unprecedented wage growth for auto servicers. Rising costs for automotive services have offset the higher wage costs, causing profit to stagnate. Historically volatile crude oil prices also impacted consumer driving behaviors and purchase costs."
+        },
+        {
+            "current_performance_point_title": "Synthetic Oil Products Overtake Conventional Oil",
+            "current_performance_point_description": "Semi-synthetic and fully synthetic oils have become popular alternatives to conventional oils for most consumers. Oil change services have increasingly offered and recommended these services, leading to higher purchasing and, by extension, service costs."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "The Economy's Post-Pandemic Recovery Will Support Demand",
+            "future_outlook_point_description": "Normalizing conditions following the pandemic will support steady growth for oil change services. Higher travel rates and employees returning to offices will also drive total vehicle miles, supporting demand for auto maintenance services."
+        },
+        {
+            "future_outlook_point_title": "An Evolving Automotive Sector Creates Challenges",
+            "future_outlook_point_description": "Anticipated disruptions across the broader automotive sector will have material effects on oil change services. Declining EV production costs and high government support will make electric vehicles more accessible, posing a major threat as EVs don't require oil changes."
+        },
+        {
+            "future_outlook_point_title": "Competition From Major Retailers Pressures Profit",
+            "future_outlook_point_description": "Price-based competition from large chains and external competitors will accelerate through the outlook period. Major retailers and warehouse companies sometimes offer oil changes alongside other auto services, siphoning demand from independent oil change services."
+        },
+        {
+            "future_outlook_point_title": "Upstream Manufacturers Will Make Vehicles With Fewer Maintenance Requirements",
+            "future_outlook_point_description": "Vehicle manufacturers will increasingly focus on lowering maintenance requirements and increasing technology present within cars. Longer maintenance intervals between oil changes directly reduce demand for oil change services."
+        }
+    ],
+    "industry_definition": "Industry operators change motor oil, lubricate the chassis of automotive vehicles and provide other automotive repair and maintenance services, such as tire rotations and liquid flushes. Unlike auto mechanics, companies in this industry do not provide mechanical and electrical repair and maintenance.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level low",
+            "Concentration Level low",
+            "Technology Change Level low"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level low - increasing",
+            "Competition Level high - increasing"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low & Increasing Level of Assistance",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Product/Service Concentration",
+            "High Revenue per Employee",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry",
+            "High Competition",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers - Total vehicle miles"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth"
+        ]
+    },
+    "key_trends": [
+        "Oil change services showed resilience to economic ups and downs.",
+        "Service providers have displayed notable revenue stability despite decreased vehicle miles from the COVID-19 pandemic.",
+        "Climate change concerns are driving increased purchases of electric vehicles. Growing EV adoption will reduce demand for oil change services.",
+        "Complying with environmental regulations is essential for oil change services. Companies face fines for failing to meet environmental and workplace safety standards.",
+        "Oil change services don't receive any direct assistance at the federal or state level. Various trade organizations advocate for oil change service providers' best interests.",
+        "Synthetic oil is becoming standard in new vehicles. While conventional oil won't become obsolete, it is mostly relegated to older car models.",
+        "Semi-synthetic oil changes are the most popular option for car owners. Semi-synthetic offers car owners better quality over conventional and a lower price than full synthetic.",
+        "Oil change services predominantly exist in urban areas. The presence of high populations in the Southeast and the West attracts more of these services.",
+        "Seasonal effects in some regions push car owners toward more regular auto maintenance. Car owners experiencing long, cold winters in the Great Lakes will service cars more regularly.",
+        "Companies in local markets primarily rely on word-of-mouth recommendations to attract new clients. Fair pricing and quality service generate stronger referrals.",
+        "Competition is high for oil change services in saturated local markets. High saturation enables consumers to readily switch between competitors.",
+        "The oil change services industry is highly fragmented. No single company holds more than a 5% market share due to consumers' preference for independent shops and minimal barriers to entry.",
+        "Regular auto maintenance is vital for all vehicles. The industry's non-discretionary nature creates steady profit growth despite climbing wage costs and high competition."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Consumers aged 25 to 64",
+            "segment_description": "Consumers aged 25 to 64 are the industry's largest market. This demographic has more financial stability to purchase or lease cars compared with consumers under 25. Similarly, this age group drives more than those over 65. Consumers in this demographic rely heavily on vehicles for everyday commutes. Frequent driving raises total vehicle miles, supporting demand for frequent oil change services.",
+            "segment_percentage": 51.1
+        },
+        {
+            "segment": "Consumers aged 65 and older",
+            "segment_description": "Consumers 65 and older are less reliant on cars than their younger cohort, limiting demand for oil change services. This age group is less dependent on cars for commutes to school or work, which limits vehicle miles. Consumers on the higher end of this age group often reduce driving due to health ailments or physical limitations. Driving may be limited to shorter distances or daylight hours. Oil changes are based on total vehicle mileage, reducing demand for oil changes.",
+            "segment_percentage": 28.5
+        },
+        {
+            "segment": "Businesses and farms",
+            "segment_description": "Businesses have fleets of trucks or cars used daily for transportation or delivery. These vehicles have high wear and tear due to frequent use, increasing the need for oil changes. Farms also have a large number of trucks and other vehicles that require maintenance.",
+            "segment_percentage": 12.3
+        },
+        {
+            "segment": "Consumers under 25",
+            "segment_description": "Lower car ownership rates among this age demographic limit demand for oil change services. College and high school students, in particular, are less likely to own cars. Consumers in this demographic have a lower level of disposable income.",
+            "segment_percentage": 5.2
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Every car owner, whether individual or corporate, requires consistent oil change services to maintain the performance and longevity of their vehicles.",
+            "segment_percentage": 2.9
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Semi-Synthetic Oil Changes",
+            "product_description": "Semi-synthetic oils are a blend of mineral oil and full synthetic oil. Semi-synthetic oil changes are a popular option for drivers since this oil offers many of the advantages and protections of full synthetic oil without the high cost.",
+            "product_percentage": 32.4
+        },
+        {
+            "product_or_service": "Conventional Oil Changes",
+            "product_description": "Conventional oil is crude oil that is refined until it has the correct properties to lubricate an engine.",
+            "product_percentage": 26.8
+        },
+        {
+            "product_or_service": "Full Synthetic Oil Changes",
+            "product_description": "Full synthetic oils are the purest type of synthetic oils. A full synthetic oil changes enhances the performance of a vehicle.",
+            "product_percentage": 24.1
+        },
+        {
+            "product_or_service": "High-Mileage Oil Changes",
+            "product_description": "Low-cost Conventional Oil Changes Remain a Popular Choice",
+            "product_percentage": 6.8
+        },
+        {
+            "product_or_service": "Diesel Oil Changes",
+            "product_description": null,
+            "product_percentage": 5.1
+        },
+        {
+            "product_or_service": "Maintenance Services",
+            "product_description": "Other services available include oil changes for diesel engines, transmission flushes, wiper blade replacements and tire rotations.",
+            "product_percentage": 4.8
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Auto Parts Wholesaling in the US",
+            "Gasoline & Petroleum Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Lubricant Oil Manufacturing in the US",
+            "Tire Manufacturing in the US",
+            "Automobile Engine & Parts Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Local Freight Trucking in the US",
+            "Long-Distance Freight Trucking in the US",
+            "Scheduled and Charter Bus Services in the US",
+            "Taxi & Limousine Services in the US",
+            "Public School Bus Services in the US",
+            "Car Rental in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Demand for general oil changes",
+            "determinant_description": "Demand for general oil changes is insulated from economic fluctuations."
+        }
+    ],
+    "international_trade": {
+        "import_level": "low",
+        "import_trend": "steady",
+        "export_level": "low",
+        "export_trend": "steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "More than one-quarter of the nation's population resides in the Southeast region.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "West",
+            "location_description": "The large population in the West also elicits a high proportion of establishments; the region's high population provides oil change servicers access to more car owners.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region accounts for the third-largest share of establishments. This region is highly populated.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Increasing",
+        "regulations_points": [
+            {
+                "regulation_title": "Environmental Protection Agency",
+                "regulation_description": "The EPA mandates oil management standards through a set of good housekeeping requirements outlining proper usage, storage, disposal and clean-up protocols."
+            },
+            {
+                "regulation_title": "Magnuson-Moss Warranty Act",
+                "regulation_description": "The Magnuson-Moss Warranty Act protects consumers to service automobiles at chosen mechanical shops without risking warranty violation."
+            },
+            {
+                "regulation_title": "COVID-19 REGULATIONS",
+                "regulation_description": "Health and safety guidelines were established in 2020 amid the COVID-19 pandemic."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Low capital intensity",
+                "barrier_description": "Oil changes are a manual process and can't be substituted with automation, requiring low capital investment."
+            },
+            {
+                "barrier_title": "Low concentration",
+                "barrier_description": "The market has low concentration with many local players, making it easy for new entrants."
+            },
+            {
+                "barrier_title": "Low technology change",
+                "barrier_description": "The technology for oil changes has remained relatively unchanged."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Industry assistance level is low but increasing",
+            "Competition level is high and increasing"
+        ],
+        "factors_decreased_barrier": []
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Word-of-mouth recommendations",
+                "basis_description": "Companies rely on word-of-mouth recommendations to attract new clients in local markets."
+            },
+            {
+                "basis_title": "Fair pricing and quality service",
+                "basis_description": "Fair pricing and quality service generate stronger referrals and are key to competition."
+            },
+            {
+                "basis_title": "High saturation",
+                "basis_description": "High saturation in local markets enables consumers to readily switch between competitors."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Low barriers to entry",
+                "concentration_description": "Low barriers to entry create competition as new companies can operate freely."
+            },
+            {
+                "concentration_title": "National brands hold small share",
+                "concentration_description": "Some national brands hold small market shares despite brand recognition."
+            },
+            {
+                "concentration_title": "Consumers prefer local shops",
+                "concentration_description": "Consumers have historically preferred local, independent shops for auto maintenance."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Valvoline Inc.",
+                "company_percentage": 0.5
+            },
+            {
+                "company_name": "Royal Dutch Shell Plc",
+                "company_percentage": 0.4
+            },
+            {
+                "company_name": "Chevron Corp",
+                "company_percentage": 0.1
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "FLUCTUATIONS IN CRUDE OIL PRICES IMPACT FINAL PURCHASE COSTS",
+            "cost_factor_description": "Fluctuations in crude oil prices can influence the price of motor oil."
+        },
+        {
+            "cost_factor_title": "LABOR SHORTAGES PRESSURE OIL CHANGE PROVIDERS TO RAISE WAGES",
+            "cost_factor_description": "Wages are the largest expense for oil changers."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_trend": "Steady",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Human labor is essential for oil changes and auto maintenance",
+                "capital_intensity_description": "Oil changes are a manual process and can't be substituted with automation."
+            },
+            {
+                "capital_intensity_title": "The industry is experiencing a low level of both the rate of new patents and the concentration of patents in the industry",
+                "capital_intensity_description": "This creates an environment where the threat of new technologies driving disruption is low."
+            }
+        ]
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_trend": "Steady",
+        "volatility_points": [
+            {
+                "volatility_title": "Oil Changes are an Essential Auto Maintenance Service",
+                "volatility_description": "Oil change services are largely nondiscretionary."
+            },
+            {
+                "volatility_title": "Reliance on Vehicles for Everyday Activities Limits Volatility",
+                "volatility_description": "Higher gasoline costs can dent demand for oil change services."
+            }
+        ]
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_trend": "Steady",
+        "technological_change_points": [
+            {
+                "technological_change_title": "LOW-COST CONVENTIONAL OIL CHANGES REMAIN A POPULAR CHOICE",
+                "technological_change_description": "Conventional oil changes are the most affordable."
+            },
+            {
+                "technological_change_title": "CAR OWNERS SEE THE MOST BANG FOR THEIR BUCK WITH SEMI-SYNTHETIC OIL CHANGES",
+                "technological_change_description": "Semi-synthetic oils are a blend of mineral oil and full synthetic oil."
+            },
+            {
+                "technological_change_title": "High Price Tag of Full Synthetic Oil Changes Limits Demand",
+                "technological_change_description": "The cost of a full synthetic oil change can be more than double that of a conventional change."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "Are your company's sales reliant on the overall health of the US economy (i.e. consumer spending and per capita disposable income)?",
+            "answer": "When disposable income improves, consumers are more likely to invest in professional oil changes services opposed to DIY oil changes."
+        },
+        {
+            "question": "Does your company offer a referral rewards program to attract new customers?",
+            "answer": "Many companies offer referral rewards programs to attract and retain customers."
+        },
+        {
+            "question": "How does your company competitively price your services?",
+            "answer": "Companies have to competitively price services due to high competition and also offer additive services in order to set themselves apart from other operators."
+        },
+        {
+            "question": "Is your company conveniently located in high-traffic areas to maximize visibility?",
+            "answer": "Companies often times are located in areas of high traffic and population to reach as many customers as possible."
+        },
+        {
+            "question": "How does your company leverage social media platforms, such as Facebook, Twitter and Yelp, to establish a stronger market presence?",
+            "answer": "Companies rely on social media platforms and reviews to attract more customers and widen its market."
+        },
+        {
+            "question": "Advanced point-of-sale systems improved the efficiency of sales and inventory management. Is your company investing in new technology to improve internal processes?",
+            "answer": "Companies are investing in new technologies to reduce labor and improve internal processes."
+        },
+        {
+            "question": "Have you had any regulatory expenses that have significantly impacted profitability recently?",
+            "answer": "Companies must ensure proper waste disposal and follow standard workplace regulations."
+        },
+        {
+            "question": "How does your company stay ahead of regulations such as energy-efficiency standards?",
+            "answer": "Regulations are mostly regarding the disposal of hazardous waste and other products."
+        },
+        {
+            "question": "How does your company's profit margins compare to your main competitors?",
+            "answer": "Larger companies often fare better because of their brand."
+        },
+        {
+            "question": "How do you keep operating costs down while still providing high levels of service?",
+            "answer": "Companies keep operation costs down by automating services that do not require manual labor."
+        },
+        {
+            "question": "Do you have a strong reputation among customers? Are you known for your reliability and performance?",
+            "answer": "Having a good reputation will put a company ahead of its competition."
+        },
+        {
+            "question": "Are you part of a national chain? How can you make your company national?",
+            "answer": "Enterprises that can franchise operations often gain a larger customer base."
+        },
+        {
+            "question": "Where is your business located? Do your locations experience heavy traffic?",
+            "answer": "Companies that focus on customer service will secure repeat customers."
+        },
+        {
+            "question": "When the price of oil increases, how heavily is your demand impacted? Do you offer budget services as driving becomes more expensive?",
+            "answer": "Fluctuations in the price of gasoline can adjust consumers' driving behaviors."
+        },
+        {
+            "question": "How does your company attract more business during tight income conditions? Conversely, what add-on services do you offer for income-flush customers?",
+            "answer": "Lower disposable income results in an increase in the number of consumers putting off maintenance services."
+        },
+        {
+            "question": "Does your company track the number of vehicles registered in a year? How do you attract consumers with newly purchased vehicles?",
+            "answer": "Growth in registrations expands the size of the industry's market."
+        }
+    ]
+}

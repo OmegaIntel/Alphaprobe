@@ -1,0 +1,609 @@
+{
+    "report_title": "Animal Food Production in the US",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 75196000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 2.07
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.01
+            }
+        },
+        "profit": {
+            "profit_dollars": 2707000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 1.24
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 3.6,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -0.81
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 8416000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 61538,
+            "employees_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 4439000000,
+            "wages_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": 2626000000,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": 4892000000,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "The Animal Food Production industry primarily serves households and agricultural industries. Pet food sales follow macroeconomic conditions, while farming industries rely on animals as revenue sources and are more likely to pay premium prices. Rising pet ownership during the pandemic benefitted producers, and expanded disposable income enabled higher pet spending despite easing pet numbers post-pandemic. However, spiking input costs like corn and soybeans led to higher selling prices. Over the past five years, revenue grew at a 2.0% CAGR and is expected to reach $75.2 billion in 2024, dipping 1.2%.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Pandemic Resulted in a Surge in Pet Ownership, Causing Lasting Benefits for Producers",
+            "current_performance_point_description": "Pet ownership spiked during the pandemic's peak as many were restricted to their homes for extended periods. Per capita disposable income grew at the same time, enabling consumers to adopt pets and feed them premium pet food. As lockdowns eased, pet numbers contracted but at a slower rate than the previous growth. Demand for luxury pet products increased as pets became more humanized."
+        },
+        {
+            "current_performance_point_title": "Volatile Input Costs Weaken Profit Considerably",
+            "current_performance_point_description": "Animal food producers rely on inputs like corn, soybeans and oilseeds, making them susceptible to price fluctuations from extreme weather. Severe droughts in 2020-2021 reduced crop yields and caused prices to spike, tumbling profit as producers struggled to pass costs to buyers. Volatile input prices make supply chain management difficult and can slow revenue growth."
+        },
+        {
+            "current_performance_point_title": "Exports Display Steady Growth Despite the Appreciating US Dollar",
+            "current_performance_point_description": "Despite the rising US dollar value making domestic goods more costly for foreign markets, animal food exports experienced steady growth. The US became a major exporter to countries like Canada, Mexico and China due to easing restrictions. China emerged as a major export destination, with the US becoming the top animal food exporter to China."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Pet Ownership Will Rise as Lifespans Increase",
+            "future_outlook_point_description": "Improved veterinary care means pets live longer, translating to more pets and higher demand for pet food. Consumers marrying later often seek pet companionship. Cat and dog adoptions will expand steadily as disposable income and confidence enable non-owners to become owners. Rising pet ownership will drive demand for pet food."
+        },
+        {
+            "future_outlook_point_title": "Export Growth is Set to Slow Alongside Imports",
+            "future_outlook_point_description": "A depreciating dollar will make US goods less expensive globally, incentivizing foreign markets to purchase US animal food. Livestock farming is expected to ramp up in emerging countries, driving demand for US feed. However, growth is unlikely to match earlier periods as emerging market demand stabilizes, but exports will expand as a share of revenue while imports weaken."
+        },
+        {
+            "future_outlook_point_title": "Unfavorable Operational Costs Will Prohibit Profit Expansion",
+            "future_outlook_point_description": "Rising input costs, especially grains, will increase pressure on producers as passing costs becomes difficult. High competition will force many to absorb costs to maintain sales. Climate change effects are predicted to worsen, causing growing conditions to decline further, lowering yields and raising prices."
+        }
+    ],
+    "industry_definition": "Operators in the Animal Food Production industry produce food for livestock and pets by processing raw ingredients. The products are then packaged and sold to cattle ranches, dairy farms, other animal production farms, grocery wholesalers and retailers.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "high - steady Industry Assistance Level",
+            "low Concentration Level",
+            "low - steady Globalization Level"
+        ],
+        "negative_impact_factors": [
+            "decline Life Cycle Stage",
+            "high Technology Change Level",
+            "high - steady Competition Level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Level of Assistance",
+            "Low Volatility",
+            "Low Imports",
+            "Low Product/Service Concentration",
+            "High Revenue per Employee"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry",
+            "High Competition",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "Number of pets (cats and dogs)"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Trade-weighted index"
+        ]
+    },
+    "key_trends": [
+        "Rising pet ownership has boosted revenue, but volatile input prices have tempered profit. Few producers can effectively pass along price hikes to downstream buyers, causing profit to atrophy.",
+        "Improved foreign relations pave the way for steady export growth. Exports have been expanding at a steady pace, as countries like China ease restrictions on many US-made goods, including animal food products.",
+        "Animal food producers are heavily regulated, with the FDA closely monitoring product quality and marketing. Producers need to comply with laws regarding nutrition, too.",
+        "Environmental regulation ups processing costs, and animal food producers must comply with EPA guidelines or face heavy fines. These regulations mostly focus on how producers dispose of their waste.",
+        "Pet food fluctuates with dietary fads and disposable income. Pets are increasingly being seen as part of the family, and pet parents have accordingly become more concerned with nutritional value.",
+        "Demand for grass-fed beef has increased revenue. Health-concerned consumers are looking for more organic beef, and many buyers have become increasingly skeptical of the use of genetically-modified organisms in cattle farming."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "General line and supermarket wholesalers",
+            "segment_description": "General goods and supermarket wholesalers typically have relationships with larger, national retail chains, enabling producers to get their products wider distribution but typically resulting in a lesser return than selling directly to retailers.",
+            "segment_percentage": 54.5
+        },
+        {
+            "segment": "Pet stores",
+            "segment_description": "Animal feed manufacturers don't need to go through a wholesaler to get into many pet stores, since these chains often have dedicated staff to securing products directly from manufacturers. Pet stores represent a unique opportunity for smaller and specialty producers, in particular, as larger, more generalized retailers are typically unable to carry the same breadth of products. Selling the pet stores directly typically produces a large profit for producers, but the decline in the number of pet stores has caused the segment to shrink as a share of revenue.",
+            "segment_percentage": 22.8
+        },
+        {
+            "segment": "Farm supplies wholesalers",
+            "segment_description": "Most producers opt to use external farm supply wholesalers to reach end farming markets. Farmers raising cattle, poultry and swine rely on animal feed products to feed their animals and meet caloric yield goals.",
+            "segment_percentage": 22.7
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Dog Food",
+            "product_description": "Dog and cat food includes wet, dry and mixed varieties of foods intended for household dogs and cats but excludes specialty varieties like prescription foods or fresh meals.",
+            "product_percentage": 39.3
+        },
+        {
+            "product_or_service": "Cat Food",
+            "product_description": "The given content appears to be a pie chart or a visual representation showing the percentage breakdown of different categories in animal food production in the US.",
+            "product_percentage": 24.3
+        },
+        {
+            "product_or_service": "Poultry Feeds",
+            "product_description": "Poultry feeds are made up of mostly grains for chickens, turkeys, ducks, geese and other domestic birds.",
+            "product_percentage": 17.7
+        },
+        {
+            "product_or_service": "Pig Feeds",
+            "product_description": "Commercially raised pigs are typically fed diets containing high amounts of energy, protein, amino acids, vitamins and minerals.",
+            "product_percentage": 8.6
+        },
+        {
+            "product_or_service": "Other Animal Foods",
+            "product_description": "",
+            "product_percentage": 7.6
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Corn, Wheat & Soybean Wholesaling in the US",
+            "Refrigeration Equipment Wholesaling in the US",
+            "Industrial Machinery & Equipment Wholesaling in the US"
+        ],
+        "tier_1_buyers": [
+            "Pet Stores in the US",
+            "Farm Supplies Wholesaling in the US",
+            "Grocery Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Vegetable Farming in the US",
+            "Hay & Crop Farming in the US",
+            "Wheat, Barley & Sorghum Farming in the US",
+            "Corn Farming in the US",
+            "Oilseed Farming in the US",
+            "Soybean Farming in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Number of Pets (Cats and Dogs)",
+            "determinant_description": "This driver measures the number of household pets--specifically, dogs and cats--owned by consumers in a given year. Producers generate substantial revenue from sales to consumer-facing retailers, so fluctuations in pet ownership can swiftly impact operations."
+        },
+        {
+            "determinant_title": "Price of Corn",
+            "determinant_description": "Corn is a popular ingredient in many animal food products, particularly farm animal feed."
+        },
+        {
+            "determinant_title": "Per Capita Disposable Income",
+            "determinant_description": "Per capita disposable income determines an individual's ability to purchase goods or services."
+        },
+        {
+            "determinant_title": "Price of Poultry Meat",
+            "determinant_description": "Animal food producers typically use a range of meats in their products, but poultry seems to be the most common."
+        },
+        {
+            "determinant_title": "Trade-Weighted Index",
+            "determinant_description": "The trade-weighted index (TWI) measures the value of the US dollar compared with its major trading partners' currencies."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Increasing",
+        "export_level": "Moderate",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports Exhibit Overall Growth but Greater Volatility",
+                "trade_description": "Imports have historically performed fairly well with domestic markets, but have typically exhibited gradual gains."
+            },
+            {
+                "trade_title": "Stiff Regulations and Strong Domestic Brands Keep Imports in Check",
+                "trade_description": "Due to the nature of animal food products, nearly all related imports must adhere to FDA regulations."
+            },
+            {
+                "trade_title": "Exported Animal Food Products Experience Steady Growth",
+                "trade_description": "Domestic producers market a range of products, ranging from processed animal feed to household pet food."
+            },
+            {
+                "trade_title": "The Value of the US Dollar has been Rising Over the Past Five Years",
+                "trade_description": "The value of the US dollar has been rising over the past five years, giving foreign markets less buying power with domestic producers."
+            },
+            {
+                "trade_title": "Mexico and China Emerge as the Fastest Growing Animal Food Export Destinations",
+                "trade_description": "Mexico and China, in particular, have boomed as export destinations."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region is popular as a result of its proximity to grain and flour mills and major consumer markets in Chicago, Detroit and Cleveland.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "New England",
+            "location_description": "",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Plains",
+            "location_description": "Despite only containing little of the population, the Plains region contains nearly one-quarter of US establishments.",
+            "percentage_establishments": 0,
+            "percentage_population": 10
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Southeast",
+            "location_description": "Almost one-quarter of animal food manufacturing facilities are located in the Southeast.",
+            "percentage_establishments": 20,
+            "percentage_population": 30
+        },
+        {
+            "location": "Southwest",
+            "location_description": "",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "West",
+            "location_description": "",
+            "percentage_establishments": 40,
+            "percentage_population": 0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "The FDA Regulates Quality and Marketing",
+                "regulation_description": "The Food and Drug Administration (FDA) have continually tightened the rules about labeling and advertising."
+            },
+            {
+                "regulation_title": "ENVIRONMENTAL AND POLLUTION REGULATIONS AFFECT PROCESSING",
+                "regulation_description": "The Environmental Protection Agency (EPA) and state governments enforce policies to manage how food processors manage their waste."
+            },
+            {
+                "regulation_title": "SANITATION IS NONNEGOTIABLE",
+                "regulation_description": "The US Department of Agriculture maintains strict standards that govern the quality and safety of all vegetables, meat, poultry and eggs manufactured in the country."
+            },
+            {
+                "regulation_title": "CANADA UPS QUALITY STANDARDS AND MAKES IMPORTING EVEN EASIER",
+                "regulation_description": "Canada is the number one importer of US animal food products."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is in the decline life cycle stage."
+            },
+            {
+                "barrier_title": "Technology Change Level",
+                "barrier_description": "<UNKNOWN>"
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: decline"
+        ],
+        "factors_decreased_barrier": [
+            "Industry Assistance Level: high - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Pet food prices",
+                "basis_description": "Pet food prices are paramount, but only for inexpensive products."
+            },
+            {
+                "basis_title": "Wholesaler pricing",
+                "basis_description": "Wholesalers make animal feed pricing less competitive."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Historically Low Market Share Concentration is Inching Upwards",
+                "concentration_description": "Historically, the range of needs from downstream markets, like farms compared with households, has kept concentration fairly low."
+            },
+            {
+                "concentration_title": "Acquisition Activity is on the Rise",
+                "concentration_description": "The average animal food producer experiences relatively slim profit."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Mars Inc.",
+                "company_percentage": 10.7
+            },
+            {
+                "company_name": "Nestle Sa",
+                "company_percentage": 9.6
+            },
+            {
+                "company_name": "Cargill, Incorporated",
+                "company_percentage": 8.8
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 70.9
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 30
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 18
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 8
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 6
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 4
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 4
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "PURCHASE COSTS REMAIN HIGHEST AND TICK UPWARD",
+            "cost_factor_description": "Animal food production requires a slew of inputs."
+        },
+        {
+            "cost_factor_title": "PROFIT TUMBLES AMID MOUNTING INPUT COSTS",
+            "cost_factor_description": "Profit varies wildly between the largest animal food producers and the average manufacturer."
+        },
+        {
+            "cost_factor_title": "WAGES REMAIN LOW BUT AN INFLUX OF SMALLER PRODUCERS BOOST THE SEGMENT'S SHARE OF REVENUE",
+            "cost_factor_description": "Wages have historically accounted for a low share of revenue."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Those seeking to enter the industry will need to have the capital to purchase land and materials to begin the production process",
+                "capital_intensity_description": "Those seeking to enter the industry will need to have the capital to purchase land and materials to begin the production process."
+            },
+            {
+                "capital_intensity_title": "The rate of new patent technologies entering the industry is low",
+                "capital_intensity_description": "The rate of new patent technologies entering the industry is low."
+            },
+            {
+                "capital_intensity_title": "The major markets for this industry are highly concentrated",
+                "capital_intensity_description": "The major markets for this industry are highly concentrated."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Changes in Commodity Values Shift Revenue",
+                "volatility_description": "Corn, wheat, oilseeds, soybeans and feed grains are all key inputs for animal food manufacturers."
+            },
+            {
+                "volatility_title": "More Money in Pet Owners' Pockets Increases Revenue",
+                "volatility_description": "When consumers are more confident in the economy and have more disposable income."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "SURGES IN PET OWNERSHIP DURING THE PANDEMIC LEAVES A LASTING IMPACT ON DOG AND CAT FOOD SALES",
+                "technological_change_description": "Dog and cat food includes wet, dry and mixed varieties."
+            },
+            {
+                "technological_change_title": "POULTRY FEEDS FLUCTUATE WITH SEASONS",
+                "technological_change_description": "Poultry feeds are made up of mostly grains for chickens, turkeys, ducks, geese and other domestic birds."
+            },
+            {
+                "technological_change_title": "CATTLE FEED VARIES DEPENDING ON THE END PRODUCT",
+                "technological_change_description": "Cattle feed varies depending on the farm and intended use."
+            },
+            {
+                "technological_change_title": "RISING COSTS CAUSE PIG FEEDS TO EXPAND AS A SEGMENT",
+                "technological_change_description": "Commercially raised pigs are typically fed diets."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "Do your sales depend on the overall health of the US economy?",
+            "answer": "Sales of animal feed are most closely tied to movements in pet ownership, per capita disposable income and per capita meat consumption."
+        },
+        {
+            "question": "Has your company been subject to high revenue volatility?",
+            "answer": "Manufacturers that enter into long-term input supply contracts will exhibit reduced purchase costs, higher profitability and less volatility."
+        },
+        {
+            "question": "Is your company located in proximity to key buying and selling markets?",
+            "answer": "Manufacturers that source their inputs from nearby producers will exhibit lower purchase costs, boosting profitability."
+        },
+        {
+            "question": "Have your sales been impacted by low-cost imports?",
+            "answer": "Some major players are foreign-owned producers of pet food, however, the US is a net exporter of animal feeds."
+        },
+        {
+            "question": "Has your company been able to reduce wage costs via automation?",
+            "answer": "Manufacturers that automate tasks can redirect labor resources to more efficient tasks."
+        },
+        {
+            "question": "How is your company leveraging the latest technologies?",
+            "answer": "Manufacturers that leverage the latest technologies will exhibit higher operational efficiencies, boosting profitability."
+        },
+        {
+            "question": "How does your company ensure all occupational safety standards are upheld?",
+            "answer": "Manufacturers with a reputation for safety will exhibit lower insurance costs and premiums."
+        },
+        {
+            "question": "Is your company prepared to meet shifting environmental regulations?",
+            "answer": "Compliant manufacturers may be favored by the public, boosting sales."
+        },
+        {
+            "question": "How does your company's profit margin compare to those of your competitors?",
+            "answer": "Manufacturers can increase profitability by engaging in supply chain management of inputs."
+        },
+        {
+            "question": "Does your company face any challenges in financing ongoing operations?",
+            "answer": "The volatility of input prices can eat away at profit or drastically reduce year over year revenue."
+        },
+        {
+            "question": "How much of your production is devoted to premium products?",
+            "answer": "Industry producers that manufacture products that specifically target animal health demand a premium."
+        },
+        {
+            "question": "What quality control processes do you have in effect?",
+            "answer": "Purchasing agricultural inputs from healthy yields will ensure maximized end-product quality."
+        },
+        {
+            "question": "Do you monitor changing regulations?",
+            "answer": "The industry must comply with the constantly changing USDA regulations regarding health and safety."
+        },
+        {
+            "question": "Does your company monitor fluctuations in the price of oilseeds?",
+            "answer": "Rising oilseed prices increase the cost of industry products, which can result in an increase in industry revenue."
+        },
+        {
+            "question": "Do you monitor disposable income levels?",
+            "answer": "Consumer household income is expected to increase."
+        },
+        {
+            "question": "How much of your company's business targets individual pet owners?",
+            "answer": "The number of US households that own a cat or dog has grown over the past five years."
+        }
+    ]
+}

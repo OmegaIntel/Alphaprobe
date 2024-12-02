@@ -1,0 +1,490 @@
+{
+    "report_title": "Medical Equipment Repair and Maintenance Services in the US",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 10840000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 2.33
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 2.13
+            }
+        },
+        "profit": {
+            "profit_dollars": 694000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 2.4
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 2.13
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 6.4,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0.09
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0.05
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 4892000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 2.5
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 2.2
+            }
+        },
+        "employees": {
+            "employees_count": 65607,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 2.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 1.8
+            }
+        },
+        "wages": {
+            "wages_dollars": 4050000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 2.3
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 1.8
+            }
+        },
+        "imports": {
+            "imports_dollars": 101,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 2.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 1.5
+            }
+        },
+        "exports": {
+            "exports_dollars": 101,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 1.8
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 1.7
+            }
+        }
+    },
+    "executive_summary": "Rising healthcare expenditures, aided by an aging population, have translated into higher medical equipment utilization in recent years. As healthcare providers deliver more treatments to more patients, the frequency and volume of medical repairs have increased. Yet, restrictions on repairs by original equipment manufacturers (OEMs) and the COVID-19 pandemic have limited growth.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Higher Healthcare Utilization Benefits Medical Equipment Repair Providers",
+            "current_performance_point_description": "Rising healthcare expenditures, aided by an aging population and rising spending on healthcare per person, have translated into higher medical equipment utilization in recent years."
+        },
+        {
+            "current_performance_point_title": "The COVID-19 Pandemic Created Challenges for Repair Providers",
+            "current_performance_point_description": "Cancellations of elective health procedures following the pandemic sharply dropped how often medical equipment required repairs, particularly in 2020. This led to a rebound in more recent years as people underwent previously put off procedures."
+        },
+        {
+            "current_performance_point_title": "Tech Advances Can't Offset Rising Wages",
+            "current_performance_point_description": "Labor market trends and workforce shortages are pressuring industry operators to increase employee wages. This has put pressure on industry profit margins."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Rising health expenditures will increase the frequency of repairs",
+            "future_outlook_point_description": "Rising healthcare expenditure stemming from an aging population will expand the volume and frequency at which healthcare providers, mainly hospitals, require repair and maintenance. Older individuals typically have more health issues and therefore spend more on healthcare."
+        },
+        {
+            "future_outlook_point_title": "RIGHT-TO-REPAIR ACTS COULD TRANSFORM THE COMPETITIVE LANDSCAPE",
+            "future_outlook_point_description": "Proposed right-to-repair legislation will influence the environment surrounding medical equipment repairs. Proposed legislation would make medical equipment original equipment manufacturers (OEMs) provide diagnostic information, parts, tools and software available to independent repair providers."
+        },
+        {
+            "future_outlook_point_title": "TECH ADVANCES WILL STREAMLINE THE REPAIR PROCESS",
+            "future_outlook_point_description": "Predictive maintenance, which uses data and analytics to predict when a device will likely require maintenance, will allow repair technicians to make repairs before equipment fails, providing steady demand in the coming years."
+        }
+    ],
+    "industry_definition": "Operators in this industry repair and maintain precision electrical medical equipment and devices. Repairs performed at the expense of a manufacturer (recalls, warranties) aren't included in this industry.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level low",
+            "Concentration Level low",
+            "Globalization Level low - steady"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level low - steady",
+            "Competition Level high - steady"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Number of people with private health insurance"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Total health expenditure"
+        ]
+    },
+    "key_trends": [
+        "Right-to-repair acts could remove barriers set by OEMs. Potential legislation would grant independent equipment repair providers access to the same tools, parts and knowledge as manufacturers, transforming the competitive environment.",
+        "Fluctuating patient volumes are challenging medical equipment repair providers. A slowdown in health spending in 2023 dents the recovery providers made as patient volumes rebounded from the pandemic in 2021.",
+        "The FDA tightly controls medical device repairs. Independent repair contractors face stringent regulatory oversight since medical devices directly impact public health.",
+        "Right to Repair legislation will influence independent medical device repair companies. Concerns about including medical devices in Right to Repair acts could stunt growth as healthcare consumption rises.",
+        "Hospitals rely on complex, sophisticated medical equipment more than any other healthcare provider. Outsourcing repairs allows hospitals to maintain their inventory, reduce downtime and ensure compliance.",
+        "Corrective maintenance is the primary service provided by medical equipment repair technicians. Healthcare providers rely on repair technicians to reduce downtime when equipment malfunctions."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Hospitals",
+            "segment_description": "Accounted for in this segment, hospitals include freestanding hospitals and large hospital systems. Hospitals are the largest outsourcer of medical equipment repairs and maintenance.",
+            "segment_percentage": 69.1
+        },
+        {
+            "segment": "Medical laboratories",
+            "segment_description": "A medical laboratory performs clinical tests to diagnose and screen patients for diseases. Medical labs outsource equipment repairs to a repair technician as an efficient and cost-effective way to reduce downtime.",
+            "segment_percentage": 7.7
+        },
+        {
+            "segment": "Residential facilities (retirement communities, assisted living, mental health centers, skilled nursing facilities)",
+            "segment_description": "Patient care at a residential facility relies more on labor than sophisticated medical equipment, keeping the need for repairs and maintenance to a minimum.",
+            "segment_percentage": 6.3
+        },
+        {
+            "segment": "Physicians' offices",
+            "segment_description": "Physicians' offices include primary care practices, specialist physicians and dentists. Physicians' offices have lower volumes of medical equipment to maintain and repair, lowering their need to outsource repairs and maintenance.",
+            "segment_percentage": 5.4
+        },
+        {
+            "segment": "Outpatient care centers",
+            "segment_description": "Outpatient centers refer to ambulatory care centers, outpatient clinics or same-day surgery centers. Growing popularity of outpatient centers is increasing the wear and tear on their medical equipment, leading these healthcare providers to outsource more repairs and maintenance.",
+            "segment_percentage": 5.2
+        },
+        {
+            "segment": "Other",
+            "segment_description": "N/A",
+            "segment_percentage": 3.8
+        },
+        {
+            "segment": "Medical equipment rental providers",
+            "segment_description": "Medical equipment rental providers outsource repairs and maintenance to ensure their equipment is functioning properly.",
+            "segment_percentage": 2.5
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Corrective Maintenance",
+            "product_description": "Corrective maintenance is unscheduled repairs to resolve a breakdown or component failure. Rising healthcare expenditures have translated into higher medical equipment utilization in recent years \u2013 leading to more frequent equipment breakdowns.",
+            "product_percentage": 57.0
+        },
+        {
+            "product_or_service": "Operational Maintenance",
+            "product_description": "Operational maintenance includes maintenance activities performed during the operational use of medical equipment, while preventive maintenance focuses on planned, proactive measures to limit equipment failures and extend the equipment's lifespan.",
+            "product_percentage": 28.7
+        },
+        {
+            "product_or_service": "Preventative Maintenance",
+            "product_description": "Operational and preventive maintenance is scheduled, so the need for these services is closely linked to the volume of medical equipment at healthcare facilities.",
+            "product_percentage": 14.3
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [],
+        "tier_2_suppliers": [
+            "/ibisworld/reportkey/1/764",
+            "/ibisworld/reportkey/1/881"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Healthcare Utilization",
+            "determinant_description": "An unprecedented strain on healthcare providers during COVID-19 temporarily increased their need for operational and preventive maintenance. Hospitals needed their inventory of ventilators, patient monitors and other critical care devices to function properly to treat COVID-19 patients effectively."
+        }
+    ],
+    "international_trade": {
+        "import_level": "low",
+        "import_trend": "steady",
+        "export_level": "low",
+        "export_trend": "steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "More than one-quarter of the US population resides in the Southeast. As a population hub, this area has many healthcare providers to address its population's needs. Access to downstream customers and large employee pools make this region attractive to medical equipment repairers. Florida has the largest number of establishments within the region \u2013 an outcome of the state's population size and robust healthcare consumption.",
+            "percentage_establishments": 24.3,
+            "percentage_population": 21.8
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic's share of medical equipment repair companies mirrors its population share. Pennsylvania and New York contribute substantially to the share of establishments in this region, as these states rank in the top five regarding healthcare spending. Densely populated metro areas in New Jersey and New York influence the number of establishments in the state. According to the BLS, New Jersey is the top-paying state for medical equipment repairers.",
+            "percentage_establishments": 14.3,
+            "percentage_population": 15.2
+        },
+        {
+            "location": "West",
+            "location_description": "The West's share of establishments aligns with its share of the US population. Yet, California's population skews this region's share of repair companies. California has the most medical equipment repair and maintenance companies in the US. Since California's personal healthcare spending is the highest in the US, repair companies benefit from more opportunities in this state. According to the BLS, California has the highest employment level of medical equipment repairers in the US.",
+            "percentage_establishments": 7.9,
+            "percentage_population": 8.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "Food and Drug Administration oversight",
+                "regulation_description": "The FDA oversees servicing of medical devices. Repair companies must register and comply with same stringent regulations as manufacturers."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Increasing",
+        "barriers_points": [],
+        "factors_increased_barrier": [
+            "Industry Assistance Level - low - steady",
+            "Competition Level - high - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level - low",
+            "Concentration Level - low",
+            "Globalization Level - low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Medical device OEMs limit independent repair",
+                "basis_description": "Medical device original equipment manufacturers limit independent repair technicians. Medical device repair companies struggle to build market share against OEMs who can control access to tech, software and necessary parts."
+            },
+            {
+                "basis_title": "No standardization allows specialization",
+                "basis_description": "Medical equipment isn't standardized. Without any standardization in the repair process, repair technicians can differentiate by specializing in specific or complex equipment."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Fragmentation in health sector",
+                "concentration_description": "Medical device repairs are required by healthcare providers ranging from large health organizations and major hospital systems to independent physicians offices. Fragmentation in downstream buyers supports fragmentation among independent repair technicians."
+            },
+            {
+                "concentration_title": "No standardization leads to fragmentation",
+                "concentration_description": "Medical devices aren't standardized. Without standardization in the repair process, it's difficult for a single repair company to gain the expertise to repair all types of devices."
+            },
+            {
+                "concentration_title": "OEM restrictions strain independent technicians",
+                "concentration_description": "Original equipment manufacturers (OEMs) of medical devices can restrict independent repair technicians' access to proprietary technology, parts and knowledge necessary to repair some medical devices. OEMs can offer warranties to healthcare providers purchasing medical devices. In some instances, the warranty can be voided if a provider receives third-party repairs."
+            }
+        ],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 7.1
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 33.7
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 8.6
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 10.0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 5.0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Raw material costs",
+            "cost_factor_description": "Raw materials are the main factor affecting purchase costs. Upstream suppliers charge higher prices for raw materials and transportation."
+        },
+        {
+            "cost_factor_title": "Labor costs",
+            "cost_factor_description": "Wages account for an estimated 33.7% of revenue in 2023. Labor market trends influence what repair companies pay technicians."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Repair and maintenance services are labor-intensive",
+                "capital_intensity_description": "Repair and maintenance services are labor-intensive even as medical devices become increasingly software-driven."
+            },
+            {
+                "capital_intensity_title": "Software-enabled medical devices help streamline repairs",
+                "capital_intensity_description": "Software-enabled medical devices and diagnostic equipment do help technicians streamline the repair process."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Essential role in healthcare limits volatility",
+                "volatility_description": "Hospitals rely on functioning equipment for critical care, limiting volatility. No substitutes when equipment malfunctions."
+            },
+            {
+                "volatility_title": "COVID-19 pandemic introduced volatility",
+                "volatility_description": "Hospitals needed ventilators/monitors repaired during COVID-19. But deterred procedures reduced repairs overall."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Corrective maintenance is primary service",
+                "technological_change_description": "Corrective (unscheduled) repairs for breakdowns/failures are the main service due to rising healthcare utilization."
+            },
+            {
+                "technological_change_title": "Outsourcing preventive maintenance based on equipment volume",
+                "technological_change_description": "Preventive maintenance demand linked to volume of equipment at healthcare facilities."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "Are your company's sales reliant on the overall health of the US economy (i.e. consumer spending and per capita disposable income)?",
+            "answer": "Repair services typically perform well during times of slow economic growth"
+        },
+        {
+            "question": "What percent of revenue is assigned to advertising?",
+            "answer": "Advertising is not a crucial industry cost, because a majority of operators are also manufacturers"
+        },
+        {
+            "question": "How does your company respond to fluctuations in demand?",
+            "answer": "Demand can be impacted by customers ability to pay for new equipment"
+        },
+        {
+            "question": "How does your company manage operating expenses to ensure maximum profitability?",
+            "answer": "Operators have looked to cut costs through automation"
+        },
+        {
+            "question": "Is your company leveraging new technology, such as mobile phone applications, to streamline booking and communication with clients?",
+            "answer": "Companies can use online platforms to schedule repairs digitally"
+        },
+        {
+            "question": "Is your company investing in new technology to improve internal processes?",
+            "answer": "Repair services are labor intense, so automation is limited"
+        },
+        {
+            "question": "How does your company ensure all health and safety requirements are met?",
+            "answer": "Medical equipment maintenance includes making sure equipment meets regulatory standards"
+        },
+        {
+            "question": "How does your company stay ahead of regulations such as energy-efficiency standards?",
+            "answer": "Operators must ensure the equipment they repair complies with healthcare regulations"
+        },
+        {
+            "question": "How do you keep operating costs down while still providing high levels of service?",
+            "answer": "While the industry is labor intense, companies have looked for any areas where automation can be introduced"
+        },
+        {
+            "question": "How does your company's profit margins compare to your main competitors?",
+            "answer": "Profit margins have declined for industry companies over the past five years"
+        },
+        {
+            "question": "How do you ensure that all staff are thoroughly knowledgeable about the products? Has it been easy to retain more knowledgeable staff?",
+            "answer": "Operators with a good technical knowledge of the product will be able to more efficiently diagnose and solve repair issues."
+        },
+        {
+            "question": "How do you attract and retain qualified staff? Does your staff undergo constant training?",
+            "answer": "The highly technical type of machinery being serviced and heavy regulatory scrutiny demands a skilled workforce."
+        },
+        {
+            "question": "What is your prior success rate with repair work? Do you rely more on word-of-mouth or marketing to expand your clientele?",
+            "answer": "Companies with a high prior success rate are able to better market their services using historical performance"
+        },
+        {
+            "question": "How do you advertise your repair services when the price of new medical equipment is lower? How do your margins correlate with new device costs?",
+            "answer": "As the price of plastic rises, so does the price of new medical equipment. Demand for industry services rises when it becomes more expensive to purchase new equipment."
+        },
+        {
+            "question": "Do you specialize in computerized or smart medical devices? Does your staff have the requisite skills to repair these devices?",
+            "answer": "As healthcare investment rises, healthcare providers are more likely to purchase new equipment, which will need to be maintained. Providers are more likely to repair higher quality equipment rather than replace it."
+        },
+        {
+            "question": "How has healthcare reform affected demand for your services? How can you capitalize on falling insurance coverage?",
+            "answer": "As demand for healthcare rises, medical equipment gets more use and is more likely to break down, driving demand for industry services."
+        }
+    ]
+}

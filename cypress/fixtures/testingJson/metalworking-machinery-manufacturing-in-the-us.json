@@ -1,0 +1,624 @@
+{
+    "report_title": "Industry Report on Metalworking Machinery Manufacturing",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 36682000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": -0.66
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.25
+            }
+        },
+        "profit": {
+            "profit_dollars": 1614000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": -1.32
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 1.25
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.4,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -0.67
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 1.25
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 12360000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 132967,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 9550000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 16823000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 5949000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The Metalworking Machinery Manufacturing industry produces power-operated tools and machine accessories for finishing or shaping metal parts. Manufacturers develop products used by motor vehicle parts manufacturers. The pandemic significantly hurt metalwork manufacturing, as business closures and supply chain disruptions took a toll on manufacturers. Revenue has inched downward at a CAGR of 0.6% over the past five years and is expected to total $36.7 billion in 2024. Profit has dropped over the past five years because of volatile input costs. The industry is vulnerable to affordable imports and competition has undermined domestic manufacturers. Exports as a percentage of revenue have declined as the dollar's value has increased, bolstering competition from imports. Improving macroeconomic conditions will enable the industry to recover. Revenue is expected to expand at a CAGR of 1.2% to $38.9 billion over the five years to 2029.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Volatility in the World Price of Steel Spills Over",
+            "current_performance_point_description": "The world price of steel exhibits volatility, impacting industry operations. Higher steel prices elevate revenue but inhibit profit growth. Many companies secure forward contracts to minimize volatility impact."
+        },
+        {
+            "current_performance_point_title": "Downstream Demand for Metalworking Machinery Wavers",
+            "current_performance_point_description": "The economic slowdown impacted demand from mining and manufacturing sectors like automotive. Aviation manufacturing demand grew after the pandemic. Construction demand fluctuated due to restrictions."
+        },
+        {
+            "current_performance_point_title": "Shifting Global Activity Influence Performance",
+            "current_performance_point_description": "The appreciating US dollar supported import penetration. Industrialization in emerging markets supported demand for mineral resources and metalworking machinery. Mining investment rebounded after the pandemic."
+        },
+        {
+            "current_performance_point_title": "Metalworking Machinery Demand Influenced by Automotive",
+            "current_performance_point_description": "Metalworking machinery like CNC machines are used in automotive and aerospace manufacturing. Automotive manufacturing demand in North America contracted, weakening demand for metalworking machinery."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Private Investment to Stabilize",
+            "future_outlook_point_description": "Better business conditions will encourage investment in new metalworking tools. Rising manufacturing capital expenditure will boost demand. Mining and defense sectors will provide steady demand."
+        },
+        {
+            "future_outlook_point_title": "Automakers Struggles Pump the Brakes on Revenue",
+            "future_outlook_point_description": "Sluggish new car sales will siphon away demand from metalworking machinery manufacturers, though EV production will provide some demand."
+        },
+        {
+            "future_outlook_point_title": "Exports Increase in Value Propelling Manufacturers",
+            "future_outlook_point_description": "A depreciating US dollar will support exports' share of revenue. Increased tariffs will constrain imports. Demand from Mexico and mining investment will drive exports."
+        },
+        {
+            "future_outlook_point_title": "Commodity Prices Volatile, Decreasing Participation",
+            "future_outlook_point_description": "Volatile commodity prices make it difficult for smaller manufacturers. Large companies can better handle volatility, while smaller ones may exit the industry."
+        }
+    ],
+    "industry_definition": "Companies in this industry primarily manufacture power-operated tools that are used for finishing or shaping metal parts, which are then used to manufacture other machines. Industry products include wire drawing and fabricating machines, metal cutting tools, special dies and coil handling equipment.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low",
+            "Industry Assistance Level: high - steady",
+            "Concentration Level: low"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature"
+        ],
+        "negative_impact_factors": [
+            "Globalization Level: high"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Level of Assistance",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "High Competition",
+            "High Imports",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers: Industrial production index"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Private investment in metalworking machinery"
+        ]
+    },
+    "key_trends": [
+        "The industry's fragmented nature stems from diverse downstream market needs, allowing companies to specialize.",
+        "Japanese imports declined as domestic manufacturers regained market share. US exports grew, aided by USMCA.",
+        "The 2021 steel price surge and subsequent decline impacted manufacturers' revenue.",
+        "Demand declined due to disruptions in construction and automotive markets, but is recovering.",
+        "Hyundai Motor Group has over 5% market share and strong growth, while Japan leads globally.",
+        "Haas Automation capitalizes on China's machine tool market with advanced VMCs.",
+        "The decline in steel prices after the 2021 surge may boost profit by decreasing production costs.",
+        "Private investment in metalworking rebounded, driven by increased demand and technological advancements.",
+        "Volatile steel prices contributed to declining profit over the past five years as a key production cost.",
+        "Demand for skilled labor is crucial, but temporary staffing manages wage costs at the expense of workforce stability.",
+        "The Great Lakes region's automotive manufacturing hubs enhance strategic positioning.",
+        "Industrial centers in the West, like California, provide proximity to trade ports, boosting growth.",
+        "Supply chain disruptions weakened construction and automotive demand, but normalization signals recovery."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Machine shops",
+            "segment_description": "Machine shops, also known as tool and die shops, employ skilled technicians known as machinists. Machinists use this industry's products to fabricate metal shapes, molds and consumer goods from raw inputs, like steel, aluminum or other alloys.",
+            "segment_percentage": 68.7
+        },
+        {
+            "segment": "Automakers",
+            "segment_description": "The automotive sector uses metalworking machinery to manufacture metal chassis and build vehicles. US automotive production has suffered overall as a byproduct of the pandemic but has increased in 2023 after emerging from all the financial difficulties and restructuring.",
+            "segment_percentage": 20.3
+        },
+        {
+            "segment": "Other markets",
+            "segment_description": "The construction sector uses metalworking machinery to produce heavy machinery and fabricate metal frameworks for walls and concrete bases. Mining industries use various metalworking tools to fabricate metal structures for mine-specific jobs. The oil and gas sector uses metalworking machinery to fabricate metal into structures supporting drill heads and manufacturing pipelines.",
+            "segment_percentage": 11.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "SPECIAL TOOLS, DIES, JIGS AND FIXTURES",
+            "product_description": "Manufacturers of these products are typically small companies contracted by metal- and plastic-casting companies. Major casters include motor vehicle and parts manufacturers, so demand for these products has waned in line with the automotive industry's struggles.",
+            "product_percentage": 27.0
+        },
+        {
+            "product_or_service": "METAL-CUTTING AND MACHINE-FORMING MACHINERY",
+            "product_description": "The wide variety of expensive and necessary machinery commonly sold from this segment helps it command a significant share of metalworking machinery manufacturing revenue.",
+            "product_percentage": 25.7
+        },
+        {
+            "product_or_service": "INDUSTRIAL MOLDS",
+            "product_description": "Downstream markets sometimes require special molds to mass-produce goods. Unlike die sets and jigs, industrial molds have a limited life because changing product specifications will require a new mold.",
+            "product_percentage": 20.3
+        },
+        {
+            "product_or_service": "CUTTING TOOL AND MACHINE TOOL ACCESSORIES",
+            "product_description": "The cutting tools and machine tool accessories segment includes metalworking attachments, bits, inserts, tips, drills and shanks for use in various machining centers and mills. This product's demand increases and decreases according to mining markets and commodity prices.",
+            "product_percentage": 16.0
+        },
+        {
+            "product_or_service": "ROLLING MILL MACHINERY AND OTHER PRODUCTS",
+            "product_description": "Rolling mills include machinery that rolls hot or cold metals into tubes and other shapes. Rolling mills are most commonly used in the automotive industry.",
+            "product_percentage": 11.0
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Screw, Nut & Bolt Manufacturing in the US",
+            "Ball Bearing Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Aluminum Manufacturing in the US",
+            "Iron & Steel Manufacturing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": [
+            "Metal Pipe & Tube Manufacturing in the US",
+            "Machine Shop Services in the US",
+            "Steel Rolling & Drawing in the US",
+            "Construction Machinery Manufacturing in the US",
+            "Car & Automobile Manufacturing in the US",
+            "SUV & Light Truck Manufacturing in the US",
+            "Wire & Spring Manufacturing in the US",
+            "Metal Plating & Treating in the US",
+            "Valve Manufacturing in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Industrial Production Index",
+            "determinant_description": "The industrial production index measures the output from mining, manufacturing, electric and gas industries. Metalworking machinery is a vital capital input for many downstream industries in these sectors."
+        },
+        {
+            "determinant_title": "Private Investment in Metalworking Machinery",
+            "determinant_description": "Trends in private investment in metalworking machinery impact movements in industry revenue. Higher private expenditure on metalworking machinery leads to greater demand for metal parts provided by the industry."
+        },
+        {
+            "determinant_title": "Trade-Weighted Index",
+            "determinant_description": "The trade-weighted index (TWI) measures the value of the US dollar relative to the currencies of its largest trading partners. Since the industry maintains a high level of international trade, volatility in the TWI exposes the sector to trade risk."
+        },
+        {
+            "determinant_title": "World Price of Steel",
+            "determinant_description": "Steel is a crucial input in the production of metalworking machinery. The price of steel can significantly affect the performance of the companies that produce this machinery, as rising steel prices can limit profit margin growth."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Moderate",
+        "import_trend": "Decreasing",
+        "export_level": "Moderate",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Domestic Markets Remain at Threat of Import Penetration From Japanese Products",
+                "trade_description": "The Japanese are the world's largest producer of machining tools, with companies like Makino, Nachi-Fujikoshi and Fanuc leading the way. Due to the local electronics industries, the advanced technologies available in Japan's supply chain help Japanese manufacturers produce superior products with the latest advancements."
+            },
+            {
+                "trade_title": "The USMCA Enables Mexico and Canada to Become Prime Export Destinations",
+                "trade_description": "Mexico, Canada and China represent key export markets for metalworking machinery made in the United States. Mexico and Canada benefit from shared borders with the United States, which facilitate shipping and provide efficiency for both sides of the supply chain through lower costs and reduced transport times."
+            },
+            {
+                "trade_title": "Exports Shrink Amid Supply Chain Disruptions",
+                "trade_description": "Exports fell early on as the pandemic significantly disrupted trade at all levels. Despite a momentary return to growth in 2021, export revenue has not reached prepandemic levels."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region boasts the highest concentration of domestic metalworking machinery manufacturers, benefiting from its strategic location near major automobile manufacturers. Also, its proximity to Canada, the industry's second-largest export destination, enhances its dominance in metalworking machinery production and distribution.",
+            "percentage_establishments": 25.6,
+            "percentage_population": 15.1
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region's booming population has spurred significant growth in metalworking machinery manufacturing. This increased demand is closely tied to the thriving construction markets, which rely heavily on advanced machinery, providing manufacturers with consistent and ample business opportunities.",
+            "percentage_establishments": 22.4,
+            "percentage_population": 21.6
+        },
+        {
+            "location": "West",
+            "location_description": "The West region, notably California, hosts many metalworking machinery manufacturers because of its extensive industrial hubs. California's large population and diverse range of major downstream industries, such as aerospace, electronics and automotive, create a favorable environment for these manufacturers to thrive and grow.",
+            "percentage_establishments": 15.2,
+            "percentage_population": 23.5
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 12.8,
+            "percentage_population": 13.2
+        },
+        {
+            "location": "Plains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 9.6,
+            "percentage_population": 6.8
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 6.4,
+            "percentage_population": 4.6
+        },
+        {
+            "location": "Southwest",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 4.8,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "Rocky M",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 3.2,
+            "percentage_population": 3.7
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "OCCUPATIONAL SAFETY AND HEALTH ADMINISTRATION (OSHA) STANDARDS",
+                "regulation_description": "OSHA sets stringent safety standards to protect metalworking machinery manufacturing industry workers. Regulations cover machinery safeguarding, proper use of personal protective equipment (PPE) and hazard communication. Companies must conduct regular safety training, maintain clear records of workplace injuries and ensure all equipment meets OSHA compliance to minimize risks associated with high-speed machinery and hazardous substances."
+            },
+            {
+                "regulation_title": "ENVIRONMENTAL PROTECTION AGENCY (EPA) REGULATIONS",
+                "regulation_description": "The EPA enforces regulations to control emissions and waste disposal in the metalworking machinery manufacturing sector. Factories must adhere to the Clean Air and Clean Water Act requirements, monitoring and reducing pollutants like volatile organic compounds (VOCs) and heavy metals. Companies must implement waste management practices, obtain necessary permits and report pollutant levels to ensure environmental protection."
+            },
+            {
+                "regulation_title": "INTERNATIONAL TRAFFIC IN ARMS REGULATIONS (ITAR)",
+                "regulation_description": "ITAR controls the export of defense-related articles and services, including specific metalworking machinery used in defense applications. Manufacturers must register with the Directorate of Defense Trade Controls (DDTC), ensure compliance with export licensing requirements and safeguard technical data from unauthorized foreign access. Compliance with ITAR helps protect national security by regulating sensitive technology and equipment distribution."
+            },
+            {
+                "regulation_title": "FEDERAL TRADE COMMISSION (FTC) COMPLIANCE",
+                "regulation_description": "The FTC enforces regulations that prevent deceptive or unfair business practices in the metalworking machinery manufacturing industry. This includes accurate labeling, truthful advertising and transparent and honest product information. Manufacturers must ensure that all claims related to their machinery's performance, efficiency and safety are substantiated, helping protect consumers and promote fair competition in the market."
+            },
+            {
+                "regulation_title": "ENERGY POLICY AND CONSERVATION ACT (EPCA)",
+                "regulation_description": "Under the EPCA, manufacturers of metalworking machinery are required to comply with energy efficiency standards. This includes adhering to guidelines for energy labeling and ensuring that machinery meets minimum efficiency requirements. Companies must also test and certify their products' energy consumption, provide transparent information to consumers and contribute to reducing overall energy use in the industry."
+            },
+            {
+                "regulation_title": "CONSUMER PRODUCT SAFETY IMPROVEMENT ACT (CPSIA)",
+                "regulation_description": "The CPSIA mandates that manufacturers of metalworking machinery comply with safety standards to prevent the sale of dangerous or defective products. This includes proper testing and certification and issuing General Certificates of Conformity (GCC) indicating compliance with safety regulations. Manufacturers must also report any defects or safety hazards that could pose user risks, ensuring heightened consumer protection and product reliability."
+            },
+            {
+                "regulation_title": "DEPARTMENT OF TRANSPORTATION (DOT) REGULATIONS",
+                "regulation_description": "The DOT oversees the safe transportation of hazardous materials in the metalworking machinery industry. Compliance with Hazardous Materials Regulations (HMR) is required for the shipping, handling and packaging substances like industrial solvents and lubricants. Companies must train"
+            },
+            {
+                "regulation_title": "Export Administration Regulations (EAR)",
+                "regulation_description": "Administered by the Bureau of Industry and Security (BIS), EAR governs the export of dual-use items, including certain types of metalworking machinery. Manufacturers must ensure that their products do not fall into the hands of entities that may use them for threatening purposes. Companies must apply for the proper export licenses, adhere to usage restrictions and maintain meticulous records to ensure compliance and national security."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is mature."
+            },
+            {
+                "barrier_title": "Globalization Level",
+                "barrier_description": "The globalization level is high and steady."
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "The competition level is high and increasing."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            {
+                "factor": "The capital intensity level is low."
+            },
+            {
+                "factor": "The industry assistance level is high and steady."
+            },
+            {
+                "factor": "The concentration level is low."
+            }
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Fragmented nature",
+                "basis_description": "The industry's fragmented nature stems from the diverse needs of various downstream markets. Companies of different sizes find success by catering to these unique demands, allowing them to specialize in narrow, highly focused market segments."
+            },
+            {
+                "basis_title": "Imports and exports",
+                "basis_description": "Japanese imports, once dominant, have declined as domestic manufacturers regain market share. US exports, bolstered by the USMCA, have grown significantly, allowing US companies to better compete both domestically and internationally against low-cost alternatives."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Downstream demand",
+                "concentration_description": "Downstream demand from unique markets helps companies carve out a niche."
+            },
+            {
+                "concentration_title": "International trade",
+                "concentration_description": "The value and volume of international trade dictate the extent of companies' participation in the market."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Hyundai Motor Group",
+                "company_percentage": 7.8
+            },
+            {
+                "company_name": "Haas Automation Inc.",
+                "company_percentage": 3.1
+            },
+            {
+                "company_name": "Fives Landis Ltd",
+                "company_percentage": 1.9
+            },
+            {
+                "company_name": "United Grinding Group Ag",
+                "company_percentage": 1.6
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 85.6
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Volatile Steel Prices Have Led to Higher Purchase Costs",
+            "cost_factor_description": "Purchases as a share of revenue have increased over the past five years. Purchases consistently account for the largest portion of an average metalworking manufacturing company's revenue. Raw materials used to manufacture machining tools include ore concentrates, steel, iron and secondary materials containing tungsten, tantalum, titanium, niobium and cobalt. Many of these materials may be supplied by sources outside the United States. The raw materials market is highly cyclical and pricing and supply can be volatile at times due to natural disasters, general economic and political conditions, labor costs, competition, import duties, tariffs and currency exchange rates."
+        },
+        {
+            "cost_factor_title": "SKILLED LABOR IS VITAL",
+            "cost_factor_description": "Wages as a share if revenue have decreased over the past five years. Most wage and salary costs in manufacturing are incurred by hiring workers for positions that require technical skills to operate machinery. As metalworking machinery manufacturers compete based on quality, hiring skilled labor takes chief priority, contributing to a lack of significant wage volatility. An increase in temporary staff can help keep long-term wage costs down. After the downturn, companies needed to maintain profitability as manufacturers encountered decreased demand and foreign competition."
+        },
+        {
+            "cost_factor_title": "RISING PURCHASE COSTS HAMPERS PROFIT",
+            "cost_factor_description": "Profit as a share of revenue has decreased over the past five years. Many metalwork machinery manufacturers cut costs during the turbulent conditions brought on by the COVID-19 pandemic to buoy profit. Despite wages dropping, the need for skilled labor is unavoidable and cost-cutting measures can only take manufacturers so far before it negatively impacts their service. Volatile swings in commodity prices, such as steel, have dictated the pace of industry profit. After spiking in price in 2021, the world price of steel has consistently declined, making inputs more affordable, but prices remain heightened overall."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Capital Expenses",
+                "capital_intensity_description": "Most capital expenditures in the industry focus on acquiring and upgrading machinery. Increasing price pressure from imports drives the need for greater production efficiencies, leading to industry consolidation and significant technological advancements to remain competitive in the global market."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "SHIFTING INPUT PRICES AND INVESTMENT ACTIVITY REFLECT THE VOLATILITY OF METALWORKING MACHINERY MANUFACTURING",
+                "volatility_description": "Metalworking machinery manufacturing growth was highest in 2021 in unison with increases in private investment in metalworking machinery and dramatic spikes in the price of steel. The most significant decline in industry revenue was in 2020 amid volatile production and disruptions during the pandemic. Work stoppages depleted several of the industry's most crucial downstream markets, specifically the nonresidential construction and automotive markets. These industries' recoveries have varied in length and intensity, adding to their volatility."
+            },
+            {
+                "volatility_title": "THE HEALTH OF DOWNSTREAM MARKETS INFLUENCES METALWORKING MACHINERY PERFORMANCE",
+                "volatility_description": "Downstream manufacturing, mining and construction markets are highly cyclical, with activity tending to follow general conditions in the global economy. Likewise, markets for raw materials operate cyclically and factors as varied as natural disasters and labor costs can send prices for raw materials up or down unexpectedly. Exchange rates also contribute to industry volatility, affecting the relative competitiveness of exports and imports. A high level of trade, especially in imports, makes exchange rates an essential factor in profitability for industry companies."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Companies Begin Integrating Computer Aided Processes to Optimize Workflow",
+                "technological_change_description": "The significant technological developments in the Metalworking Machinery Manufacturing industry have been adopting and integrating computer-aided design (CAD), computer-aided manufacturing (CAM) and numerically controlled machine tools. Larger companies in the industry tend to have CAD facilities and lease CAM to contract toolmakers. In manufacturing dies and molds, new-generation computer-based technologies include programs using CAD/CAM tools on a computer and programmed into numerically controlled milling machines. The dies produced in this manner are accurate and reduce time and labor costs."
+            },
+            {
+                "technological_change_title": "Manufacturers Invest Heavily in Research and Development to Develop New Technologies and Differentiate Themselves from Competition",
+                "technological_change_description": "New technologies, like ultrasonic machinery, can manufacture alternative materials, such as nonferrous and precious metals, ceramics and tungsten carbide. The increasingly computerized production process allows employees to generate more revenue while producing higher-quality products. According to their annual reports, the largest companies in the Metalworking Machinery Manufacturing industry increasingly outlay significant resources."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company affected by rising imports?",
+            "answer": "Imports play an important role in satisfying domestic demand in the industry. Increased import penetration due to an appreciating US dollar can hurt domestic industry revenue."
+        },
+        {
+            "question": "How have imports from low-wage countries like China and Mexico impacted your operations?",
+            "answer": "Large operators in the industry have facilities primarily in China and Mexico to save on costs."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "Volatile prices of steel can hinder industry profit."
+        },
+        {
+            "question": "Have you looked into setting up manufacturing facilities in lower-wage regions of the country?",
+            "answer": "Operators import parts and other full machinery from abroad as it is cheaper to manufacture."
+        },
+        {
+            "question": "Do you use SAP software systems to optimize all aspects of your company's manufacturing, sales, inventory and distribution channels?",
+            "answer": "Technology has remained relatively steady in the industry over the past five years."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation over the past five years?",
+            "answer": "Skilled labor remains vital despite increased automation."
+        },
+        {
+            "question": "Have any regulatory expenses significantly impacted profitability recently?",
+            "answer": "Regulation has remained relatively steady in the industry over the past five years."
+        },
+        {
+            "question": "Is your company adequately prepared to comply with new environmental standards?",
+            "answer": "Environmental regulations are getting more stringent in the industry."
+        },
+        {
+            "question": "How do your company's profit margins compare to your main competitors'?",
+            "answer": 101
+        },
+        {
+            "question": "How has input price volatility affected profit margins over the past 12 months?",
+            "answer": "Volatile input prices affect both revenue and profitability."
+        },
+        {
+            "question": "Are you up to date on the industry's best and most effective technologies? How much of your budget do you allocate for potential integration of these features?",
+            "answer": "Access to the latest available and most efficient technology and techniques."
+        },
+        {
+            "question": "Is your company dominant in any particular regional markets? How can you expand the geographical scope of this dominance?",
+            "answer": "Metalworking machinery manufacturers benefit from being close to their main downstream markets, such as in the Great Lakes region of the United States, where there is a high concentration of automobile manufacturers."
+        },
+        {
+            "question": "How do you maintain strong contacts with a disparate customer base? Can you serve them better by expanding your scope or zeroing in on core markets?",
+            "answer": "There is a distinct advantage in cultivating and maintaining strong customer relationships in a highly fragmented market because customers are spread across several industries."
+        },
+        {
+            "question": "When the price of steel increases, how much of the added cost are you able to pass on to customers without dampening demand? Will profit gains from falling prices be enough to offset revenue loss?",
+            "answer": "Steel is a major input in the production of metalworking machinery and rising prices can limit profit margin growth."
+        },
+        {
+            "question": "How much of your revenue is generated from export markets? How have you shored up revenue as the dollar has appreciated?",
+            "answer": "The trade-weighted index (TWI) measures the value of the US dollar relative to the currencies of its largest trading partners. An appreciating dollar hurts revenue as products become less affordable to a global market."
+        },
+        {
+            "question": "In which industries do your customers primarily operate? How can you better serve this specific market segment?",
+            "answer": "The industrial production index measures the output from mining, manufacturing, electric and gas industries. Another large segment that this industry serves is the automobile manufacturing industry."
+        }
+    ]
+}

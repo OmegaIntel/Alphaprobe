@@ -1,0 +1,603 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 23379000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 2.09
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.81
+            }
+        },
+        "profit": {
+            "profit_dollars": 471200000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 2.69
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 1.5
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 14.2,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 2.69
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 1.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 11650000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 3.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 2.5
+            }
+        },
+        "employees": {
+            "employees_count": 165526,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 1.5
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 1.2
+            }
+        },
+        "wages": {
+            "wages_dollars": 7856000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 2.8
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 2.0
+            }
+        },
+        "imports": {
+            "imports_dollars": 10000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 2.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 1.5
+            }
+        },
+        "exports": {
+            "exports_dollars": 5000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 1.8
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 1.5
+            }
+        }
+    },
+    "executive_summary": "An aging population, rising awareness of eye health and growing incomes have driven growth for optometrists. Optometrists are essential in addressing the medical needs of the rising number of adults 65 and older with a higher prevalence of age-related eye disease. Aside from this, optometrists benefit from a stable patient base, as nearly three-quarters of the US population uses a form of corrective eyewear. Rising incomes have facilitated access to optometrists as larger incomes allow patients to cover out-of-pocket costs since public and private insurance payers often limit vision benefits.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Steady downstream demand creates stability",
+            "current_performance_point_description": "Nearly three-quarters of the adult US population uses corrective eyewear. These consumers require annual eye exams, corrective eyewear and occasional therapeutic eye care services, providing a stable base of patients for optometry practices despite economic fluctuations or changes in consumer spending."
+        },
+        {
+            "current_performance_point_title": "Vision Benefits Gain Popularity",
+            "current_performance_point_description": "Employees' growing interest in vision benefits has prompted more employers to offer vision care as an add-on to private health insurance plans. According to Vision Monday, vision care plans increased between 2017 and 2022. Broader vision care coverage facilitates access to optometrists, encouraging patients to seek care."
+        },
+        {
+            "current_performance_point_title": "COVID-19 Hastens Market Disruption",
+            "current_performance_point_description": "- Practice closures following the pandemic temporarily shut down optometry practices, leading revenue to fall for the first time in more than 20 years in 2020. - Many optometrist practices accelerated telehealth capabilities during the pandemic to mitigate losses, but the nature of optometry limits how well virtual visits can replace in-person care. - Optometry practices confronted long backlogs of care as patients fulfilled pent-up demand for eye care following vaccine availability. Recovering patient volumes and healthcare expenditures offset the pandemic-related drop in 2021."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Demographic trends will shape the optometry field",
+            "future_outlook_point_description": "Optometrists will benefit from an aging population, rising incomes and recovering healthcare spending post-COVID. According to Modern Optometry, the US population will need 20.0 million more eye exams in 2025 compared with 2015, equating to 3.4 million additional exams per year. Driving this increase will be the aging baby boomer population."
+        },
+        {
+            "future_outlook_point_title": "Optometry practices will differentiate through tech advances",
+            "future_outlook_point_description": "One of the most substantial sources of competition for optometrists will be the expanding popularity of online eyewear retailers. Despite online retailers' cost savings and convenience, evolving artificial intelligence and augmented Reality tools will enhance at-home try-on options and improve virtual eye exams."
+        },
+        {
+            "future_outlook_point_title": "Rising costs will pressure optometry practices",
+            "future_outlook_point_description": "High retirement rates meeting few new optometry residents will contribute to optometrist shortages. Low wages, burnout and a high turnover rate will continue to strain the supply of nonclinical staff. Staffing shortages will be a primary driver of accelerating operating costs, constraining profit growth."
+        },
+        {
+            "future_outlook_point_title": "More independent practices will be involved in consolidation",
+            "future_outlook_point_description": "The traditional landscape of optometry will adjust as consolidation ramps up. Independent practices will remain a mainstay, but larger practices employing several optometrists will gain traction as competition from online retailers and superstores expands. Recent optometry graduates will be inclined to join multi-practitioner groups versus starting a solo practice."
+        }
+    ],
+    "industry_definition": "The Optometrists industry includes practitioners with a Doctor of Optometry (OD) degree. ODs examine, diagnose, treat and manage diseases, injuries and disorders of the eye and associated structures. Optometrists can prescribe and sell eyeglasses, contact lenses and vision therapy.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low Capital Intensity Level",
+            "low Concentration Level",
+            "low - steady Globalization Level"
+        ],
+        "negative_impact_factors": [
+            "mature Life Cycle Stage",
+            "High Customer Class Concentration",
+            "Low Revenue per Employee"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "High Customer Class Concentration",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Federal funding for Medicare and Medicaid"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Total health expenditure"
+        ]
+    },
+    "key_trends": [
+        "The growing popularity of online eyewear retailers shifts the competitive landscape. Major online retailers have siphoned away eyewear and contact lens sales previously made at an optometrist.",
+        "Independent practices are the status quo. Small, local practices characterize optometry, creating tense competition in saturated local markets.",
+        "COVID-19 accelerated disruption in the optometry field. Mounting competition from online eyewear retailers picked up during the pandemic, spurring consolidation activity.",
+        "Greater medical needs for an aging population translate to higher demand for optometrists. Optometrists have a growing base of patients aged 65 and older seeking preventative exams and treatment for age-related eye diseases.",
+        "Independent eye care providers are the status quo in optometry. Small practices catering to local markets comprise most of this market, preventing any single company from developing a substantial market share.",
+        "Private equity investment is accelerating consolidation activity. Private equity provides financial resources for optometry practices to acquire and merge with other practices, creating larger, more competitive ones.",
+        "State boards determine the scope of optometry. Varying regulations and requirements between states change exactly how optometrists can operate across the United States.",
+        "Optometrists received more than $2.1 billion in COVID-19 relief between 2020 and 2021. Relief packages were essential to help optometry practices recover from COVID-related hardships and financial woes.",
+        "Mounting competition mutes profit growth. The availability of affordable eyewear online has limited in-person eyewear sales at optometrists, suppressing profit in recent years.",
+        "Higher operating costs stem from pandemic-related labor shortages. Shortages of nonclinical support staff across the healthcare sector have driven up wage expenses."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Out-of-pocket payments",
+            "segment_description": "Out-of-pocket costs include deductibles, coinsurance, copayments for covered services and payments for eye care not covered by insurance. Out-of-pocket spending is the largest revenue source for optometrists since nearly half of US adults don't have a vision insurance plan.",
+            "segment_percentage": 47
+        },
+        {
+            "segment": "Reimbursements from private healthcare providers",
+            "segment_description": "Reimbursements from private healthcare providers are paid to optometrists to cover the expense of the service or product provided to the patient. Vision benefits determine patient access to optometrists.",
+            "segment_percentage": 35.6
+        },
+        {
+            "segment": "Reimbursements from Medicare and Medicaid",
+            "segment_description": "Reimbursements from Medicare and Medicaid are paid to optometrists to cover the expense of the service or product provided to the patient. Fewer individuals receive vision benefits through Medicare and Medicaid than private insurance plans due to coverage restrictions.",
+            "segment_percentage": 8.8
+        },
+        {
+            "segment": "Other revenue sources",
+            "segment_description": "Additional revenue opportunities like contributions, gifts, grants and investment income are limited for optometrists.",
+            "segment_percentage": 8.6
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Providing Medical Eyecare",
+            "product_description": "Providing medical eye care services including treatment for glaucoma, dry eyes, ocular allergies, infections, cataracts and other eye ailments.",
+            "product_percentage": 7
+        },
+        {
+            "product_or_service": "Providing Eye Exams",
+            "product_description": "Providing comprehensive eye exams to evaluate a patient's vision and check for eye diseases.",
+            "product_percentage": 28
+        },
+        {
+            "product_or_service": "Sales of Prescription Eyewear",
+            "product_description": "Sales of prescription eyewear including eyeglass frames fitted with corrective lenses prescribed by an optometrist.",
+            "product_percentage": 37
+        },
+        {
+            "product_or_service": "Sales of Contact Lenses",
+            "product_description": "Sales of contact lenses directly to patients who prefer these thin lenses over glasses for everyday use.",
+            "product_percentage": 17
+        },
+        {
+            "product_or_service": "Providing Miscellaneous Eyecare Services",
+            "product_description": "Providing miscellaneous eye care services not covered in the other categories.",
+            "product_percentage": 11
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Glasses & Contacts Wholesaling in the US",
+            "Medical Supplies Wholesaling in the US",
+            "Drug, Cosmetic & Toiletry Wholesaling in the US",
+            "Commercial Leasing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Medical Instrument & Supply Manufacturing in the US",
+            "Glasses & Contact Lens Manufacturing in the US",
+            "Medical Device Manufacturing in the US",
+            "Generic Pharmaceutical Manufacturing in the US",
+            "Commercial Building Construction in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Vision Benefits from Private Health Insurance",
+            "determinant_description": "Vision benefits are a standard offering with private health insurance plans provided by employers. More people with private health insurance support access to optometrists for eye exams, contact lenses and prescription eyewear. Federal law requires private health plans to provide vision benefits for all children aged 18 and under."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region leads with 27.3% of optometry establishments, closely following the population distribution of 27.1% in this region. Florida has the highest proportion of practices due to its large population and high percentage of senior citizens.",
+            "percentage_establishments": 27.3,
+            "percentage_population": 27.1
+        },
+        {
+            "location": "West",
+            "location_description": "The large population in the West region also supports a high proportion of 16.2% of industry establishments, compared to 16.4% of the population. California has the most optometry practices in the region and country due to its large population.",
+            "percentage_establishments": 16.2,
+            "percentage_population": 16.4
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The distribution of optometry establishments at 15.1% closely matches the population percentage of 15.0% in the Great Lakes region.",
+            "percentage_establishments": 15.1,
+            "percentage_population": 15
+        },
+        {
+            "location": "Southwest",
+            "location_description": "The percentage of optometry establishments at 11.5% matches the population percentage of 11.5% in the Southwest region.",
+            "percentage_establishments": 11.5,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "While the Mid-Atlantic region has 13.4% of the population, it has a slightly lower 11.4% of optometry establishments.",
+            "percentage_establishments": 11.4,
+            "percentage_population": 13.4
+        },
+        {
+            "location": "Plains",
+            "location_description": "The Plains region has 9.7% of optometry establishments compared to 7.0% of the population, indicating relatively better access to optometrists in this less populated area.",
+            "percentage_establishments": 9.7,
+            "percentage_population": 7
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "The Rocky Mountains region has 5.4% of optometry establishments compared to 5.8% of the population.",
+            "percentage_establishments": 5.4,
+            "percentage_population": 5.8
+        },
+        {
+            "location": "New England",
+            "location_description": "New England has 3.4% of optometry establishments compared to 3.8% of the population in this region.",
+            "percentage_establishments": 3.4,
+            "percentage_population": 3.8
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "The Health Insurance Portability and Accountability Act",
+                "regulation_description": "All optometry practices must comply with the Health Insurance Portability and Accountability (HIPAA). HIPAA compliance focuses on patient confidentiality, security and availability when any medical facility creates, receives, maintains or sends protected health information."
+            },
+            {
+                "regulation_title": "Licensing Requirements",
+                "regulation_description": "Any optometrist practicing in the United States must have state licensure. State boards of optometry are the regulating bodies for optometrists. Each state board has a different set of regulations and requirements that optometrists are required to meet. The American Board of Optometry offers board certification to optometrists across the country."
+            },
+            {
+                "regulation_title": "Fairness to Contact Lens Consumers Act",
+                "regulation_description": "The Fairness to Contact Lens Consumers Act (FCLA) mandates that eye care practitioners provide patients with a copy of their contact lens prescriptions immediately upon completing a contact lens fitting. The act also states that sellers must receive copies of prescriptions or verify the information in the customers' prescriptions with the prescribing ECP beforehand."
+            },
+            {
+                "regulation_title": "Unilateral Pricing Policies",
+                "regulation_description": "Unilateral Pricing Policies (UPPs) establish minimum selling prices on specific contact lenses. This legislation prohibits any US retailer from offering discounted prices or sales that would create net pricing below the established manufacturer minimum price. UPPs protect brick-and-mortar retailers from competition."
+            },
+            {
+                "regulation_title": "Eye Surgery Regulations",
+                "regulation_description": "State legislatures determine which procedures optometrists can and cannot perform. Most states bar optometrists from performing surgeries; the field of ophthalmology covers eye surgeries. A few states allow optometrists to conduct laser treatments, with even fewer permitting minor procedures. Optometrists in a few other states have sought to expand the scope of the practice, yet efforts have gone abated."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is mature, indicating moderate barriers to entry."
+            },
+            {
+                "barrier_title": "Legal",
+                "barrier_description": "Educational prerequisites; licensing requirements; and federal, state and local regulations are intensive legal barriers for optometrists."
+            },
+            {
+                "barrier_title": "Start-up Costs",
+                "barrier_description": "The cost of establishing a new optometry practice is substantial. Recent optometry graduates burdened with student debt could find it challenging to balance these costs."
+            },
+            {
+                "barrier_title": "Differentiation",
+                "barrier_description": "A lack of differentiation supports new entrants, although optometrists hoping to open an independent practice may need help in highly saturated areas with established practices."
+            }
+        ],
+        "factors_increased_barrier": [
+            "The industry is mature."
+        ],
+        "factors_decreased_barrier": [
+            "The capital intensity level is low, decreasing barriers.",
+            "The concentration level is low, decreasing barriers.",
+            "The globalization level is low and steady, decreasing barriers."
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Growing popularity of online eyewear retailers shifts competitive landscape",
+                "basis_description": "The growing popularity of online eyewear retailers shifts the competitive landscape. Major online retailers have siphoned away eyewear and contact lens sales previously made at an optometrist."
+            },
+            {
+                "basis_title": "Independent practices are the status quo",
+                "basis_description": "Independent practices are the status quo. Small, local practices characterize optometry, creating tense competition in saturated local markets."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "No company holds a meaningful share",
+                "concentration_description": "No company holds a meaningful share of the market."
+            },
+            {
+                "concentration_title": "Independent practices characterize the market",
+                "concentration_description": "Independent optometry practices characterize the market. Independent practices offering highly personalized care to local markets have long been the gold standard in eye care."
+            },
+            {
+                "concentration_title": "Patient preference allows small practices to operate",
+                "concentration_description": "Patient preference for these small, local practices has allowed these companies to continue operating despite broader disruption, maintaining a low level of concentration in the optometry field."
+            },
+            {
+                "concentration_title": "Private equity consolidation is ramping up",
+                "concentration_description": "Private equity firms have accelerated consolidation among practices, leading to fewer private optometry practices."
+            },
+            {
+                "concentration_title": "Competition from online and retail providers",
+                "concentration_description": "Competition from online eyewear retailers and retail healthcare providers has also altered the optometry landscape."
+            },
+            {
+                "concentration_title": "Major brands are vertically integrated",
+                "concentration_description": "Major eyewear brands such as EssilorLuxottica are vertically integrated."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Texas Eye Institute",
+                "company_percentage": 0.1
+            },
+            {
+                "company_name": "Hill Country Vision Center",
+                "company_percentage": 0
+            },
+            {
+                "company_name": "Eye Site Texas",
+                "company_percentage": 0
+            },
+            {
+                "company_name": "Texas State Optical Champions",
+                "company_percentage": 0
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 99.9
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 40
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 60
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 80
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Oth",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "High Wage Costs May Lead to Lower Depreciation Costs",
+            "cost_factor_description": "Reliance on innovative tech in optometry has risen, yet depreciation expenses have dropped in recent years. Expanding wage expenses may offset the higher capital requirements, keeping depreciation low. Rising investment in software, like telemedicine platforms, can also temper depreciation. Amortization covers the loss of value of intangible assets like software instead."
+        },
+        {
+            "cost_factor_title": "Staffing Shortages Across Healthcare Inflate Wages",
+            "cost_factor_description": "Wages are the most significant expense for optometry practices. Wages vary based on employment setting. A significant share of companies are sole practitioners or partner practitioners; these individuals may receive payment through profit distributions versus payroll. According to the Bureau of Labor Statistics, self-employed optometrists in individual, partnerships and group practice garner higher incomes than those in other settings. COVID-induced labor shortages and external employment trends have recently driven wages up for nonclinical support staff."
+        },
+        {
+            "cost_factor_title": "Profit Struggles as Competition Mounts",
+            "cost_factor_description": "Mounting competition from online eyewear retailers and COVID-related disruption has suppressed profit growth. Online eyewear retailers offer affordable frames, lenses and contacts alongside virtual eye exams, pushing patients away from optometrists. Rising wages for optometrists and nonclinical support staff have also constrained profit growth."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Labor Expenses",
+                "capital_intensity_description": "Labor requirements exceed capital outlays for optometrists."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "COVID-19 CREATES RECORD VOLATILITY",
+                "volatility_description": "COVID-19 introduced an unprecedented level of volatility into the optometry field. Volatility peaked between 2020 and 2021. While health concerns and lockdowns closed practices for most of 2020, deferred eye care created long backlogs of appointments in 2021, creating financial and operational challenges for practices."
+            },
+            {
+                "volatility_title": "EYE CARE GUIDELINES FOSTER LOW VOLATILITY",
+                "volatility_description": "The American Optometric Association (AOA) recommends that adults and children get an eye exam at least every two years. Most prescriptions expire after two years, pushing patients to optometrists for eye exams if they need to order new contacts or glasses."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Retinal Imaging Advances Provide Early Detection for Diseases",
+                "technological_change_description": "Eye diseases and visual impairments have become more prevalent, a result of an aging population and extensive use of screens. To address this, new evolutions of retinal exams are available at optometry practices."
+            },
+            {
+                "technological_change_title": "New Innovations Are Introduced Each Year",
+                "technological_change_description": "New eye care treatments continue to be introduced into optometry. Since these developments provide improved clinical outcomes for patients, optometrists need to stay on top of these advancements."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "What does your service mix look like? What service(s) accounts for the largest share(s) of revenue for you company?",
+            "answer": "Optometrists offer a variety of services and procedures, including vision tests, prescribing and selling corrective eyewear, detecting abnormalities and prescribing certain medications."
+        },
+        {
+            "question": "How do you advertise your office? How much does your practice spend on marketing? What sort of promotions have you had particular success with recently?",
+            "answer": "Advertising on Yelp, Zoc Doc and other review sites can help increase visibility to potential new patients. Typically, marketing expenses account for less than 2.0% of revenue for the standard optometry office."
+        },
+        {
+            "question": "How can you encourage visits from individuals who lack health insurance? Do you have pricing plans that attempt to make your services more affordable to those without insurance?",
+            "answer": "Providing financing options for individuals without health insurance makes services more feasible."
+        },
+        {
+            "question": "How do you manage operating expenses to ensure maximum profitability?",
+            "answer": "Ensuring your office meets or remains below the average cost structure benchmarks is one method to help control costs."
+        },
+        {
+            "question": "Is your company investing in new technology to improve internal processes?",
+            "answer": "Zoc Doc and other electronic health platforms allow patients to communicate and schedule appointments with ease."
+        },
+        {
+            "question": "Has your company explored offering telehealth services to improve efficiency and patient accessibility? What are the challenges to adopting telehealth within optometry?",
+            "answer": "Telehealth is an emerging branch of medicine that is especially beneficial to reaching rural populations."
+        },
+        {
+            "question": "Has increasing federal funding for Medicare and Medicaid expanded your client base?",
+            "answer": "Rising federal funding gives elderly patients access to healthcare coverage for ocular health services."
+        },
+        {
+            "question": "Is your company adequately prepared to adjust to intensifying regulations?",
+            "answer": "Uncertainty surrounding federal health care reform is a major concern for many optometrists."
+        },
+        {
+            "question": "Has your company looked into financing options for low-income individuals and/or families?",
+            "answer": "Providing payment plans or financing options enables your office to extend to a wider range of patients and their families."
+        },
+        {
+            "question": "How does your company's profit compare to your competitors'?",
+            "answer": "Optometry offices generate relatively high levels of revenue. Optometrists are highly trained professionals who command high prices for their services."
+        },
+        {
+            "question": "How often do you purchase new specialized equipment?",
+            "answer": "It is imperative that optometrists have access to updated optometric equipment to perform necessary eye tests on clients."
+        },
+        {
+            "question": "Have you ever experienced a shortage or trouble acquiring the necessary equipment?",
+            "answer": "Access to updated optometric equipment is essential."
+        },
+        {
+            "question": "Is your company dominant in any particular regional markets? What range does your company have in terms of viable operating area?",
+            "answer": "Optometrists benefit from practicing in prominent areas with a large volume of passing traffic and near optical dispensing outlets or other healthcare."
+        },
+        {
+            "question": "How does your company view customer service? What do you do to monitor your customer experience?",
+            "answer": "Good patient relations are essential to obtain a loyal customer base."
+        },
+        {
+            "question": "What portion of your customers are adults aged 65 and older? Have you experienced an increase in demand from this age cohort?",
+            "answer": "With adults aged 65 and older accounting for one-fifth of industry revenue, demand for optometry services rises as this age segment expands."
+        },
+        {
+            "question": "What portion of your patients are covered by private health insurance? Do you accept patients covered under Medicaid or Medicare?",
+            "answer": "Private health insurance coverage reduces the out-of-pocket costs and increases demand for vision services."
+        },
+        {
+            "question": "Do you feel your revenue has moved in line with trends in total health expenditure?",
+            "answer": "Total health expenditure measures total public and private spending on healthcare, including vision care from optometrists. When total health expenditure increases, industry revenue grows as well."
+        }
+    ]
+}

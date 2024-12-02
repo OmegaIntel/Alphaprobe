@@ -1,0 +1,476 @@
+{
+    "report_title": "Antique Stores Industry Report",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 4477000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "revenue_cagr_value": 11.29
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.46
+            }
+        },
+        "profit": {
+            "profit_dollars": 354000000,
+            "profit_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "profit_cagr_value": 12.6
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 7.9,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 1.2
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1269000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 45192,
+            "employees_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 865000000,
+            "wages_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "While initially challenging, the past five years have been lucrative for antique stores. The onset of COVID-19 halted essential foot traffic and brought a drop in revenue, but these challenges were offset by the following year's gains. The roll-out of vaccines and the relaxation of social distancing guidelines released pent-up demand, reigniting the industry's growth as both old and new antique enthusiasts could return to stores. Sustainability concerns and trending interior design styles have continued to fuel interest in antiques, and significant price hikes have created robust gains in industry revenue year after year.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Revenue leaped as the pandemic subsided",
+            "current_performance_point_description": "The onset of COVID-19 brought an abrupt downturn for antique stores as stay-at-home orders and social distancing guidelines suspended foot traffic at storefronts. Shopping for antiques has historically been a tangible, in-person experience, so antique stores couldn't reach previous revenue figures in 2020. Antique stores benefitted from a surge in revenue in 2021 as vaccines rolled out and pent-up demand was released."
+        },
+        {
+            "current_performance_point_title": "Spiking revenue made the industry's fixed costs more affordable, boosting profit",
+            "current_performance_point_description": "Since much of this growth came from price hikes, wage costs haven't substantially climbed, and profit has remained high."
+        },
+        {
+            "current_performance_point_title": "Demand for antiques is on the rise",
+            "current_performance_point_description": "Sustainability concerns have pushed up interest in antiques among many demographics. Consumers are worried about the impact of continued manufacturing activity and are looking to minimize their carbon footprints."
+        },
+        {
+            "current_performance_point_title": "Antique stores are adapting to the digital age",
+            "current_performance_point_description": "E-commerce has ramped up since 2019, especially through the COVID-19 pandemic."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Consumers' Discretionary Budgets Are Set to Expand",
+            "future_outlook_point_description": "Antiques aren't essential purchases, so the industry relies on consumers having solid spending power."
+        },
+        {
+            "future_outlook_point_title": "Online Sales Will Continue to Threaten the Industry",
+            "future_outlook_point_description": "Rising consumer spending is expected to help antique stores achieve growth, but online competitors are expected to capture a significant share of demand."
+        }
+    ],
+    "industry_definition": "Antique stores sell works of art, furniture and other collectibles that are at least 100 years old.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level low",
+            "Concentration Level low",
+            "Technology Change Level low",
+            "Globalization Level low - steady"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level high",
+            "Industry Assistance Level low - steady",
+            "Barriers To Entry Level low - steady"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low Profit vs. Sector Average"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers - Consumer spending"
+        ],
+        "threats": [
+            "Percentage of business conducted online"
+        ]
+    },
+    "key_trends": [
+        "Returning foot traffic brought surging revenue for antique stores.",
+        "Online competitors are threatening the industry's success.",
+        "There is little government assistance.",
+        "Private organizations help antique stores stay up-to-date with consumer preferences."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Consumers aged 35 to 54",
+            "segment_description": "Established in their careers, consumers aged 35 to 54 leverage their solid disposable incomes to seek antiques for prestige, refinement and status symbols.",
+            "segment_percentage": 41.6
+        },
+        {
+            "segment": "Consumers aged 55 and above",
+            "segment_description": "Consumers 55 and older account for nearly a third of the industry's revenue.",
+            "segment_percentage": 31.9
+        },
+        {
+            "segment": "Consumers aged 25 to 34",
+            "segment_description": "As consumers aged 25 to 34 settle into stable careers, they enjoy rising disposable income.",
+            "segment_percentage": 16.4
+        },
+        {
+            "segment": "Consumers aged 18 to 25",
+            "segment_description": "Consumers between 18 and 25 account for the smallest share of industry revenue because they have lower disposable income.",
+            "segment_percentage": 10.1
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Paintings and Prints",
+            "product_description": "Antique stores sell original artworks or limited edition prints from various periods.",
+            "product_percentage": 31.5
+        },
+        {
+            "product_or_service": "Jewelry and Watches",
+            "product_description": "Consumers visiting antique stores can browse their collections of vintage rings, necklaces, bracelets and timepieces.",
+            "product_percentage": 21.9
+        },
+        {
+            "product_or_service": "Fine Furniture",
+            "product_description": "Antique stores offer a wide range of furniture.",
+            "product_percentage": 20.1
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "Stamps, ceramics, coins, medals and other products are less popular with consumers.",
+            "product_percentage": 11.3
+        },
+        {
+            "product_or_service": "Silverware",
+            "product_description": "Antique tea sets, cutlery and decorative silver pieces are collectible and elegant products.",
+            "product_percentage": 9
+        },
+        {
+            "product_or_service": "Asian Art",
+            "product_description": "Artworks, artifacts and antiques from various Asian cultures remain popular with consumers.",
+            "product_percentage": 6.2
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [],
+        "tier_2_suppliers": [
+            "E-Commerce & Online Auctions in the US",
+            "Online Antiques & Collectibles Sales in the US",
+            "Auction Houses in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Older adults are a larger market for antique stores.",
+            "determinant_description": "These consumers seek antiques to remember older times."
+        },
+        {
+            "determinant_title": "The industry has low to moderate barriers to entry.",
+            "determinant_description": "Securing the knowledge and inventory required to open an antique store can be time-consuming and expensive."
+        },
+        {
+            "determinant_title": "Demand is localized, so fragmentation is high.",
+            "determinant_description": "Consumers won't travel far to visit an antique store."
+        },
+        {
+            "determinant_title": "Buyer power incites price-based competition.",
+            "determinant_description": "Consumers can shop at an array of retailers."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region has around 25% of the industry's establishments.",
+            "percentage_establishments": 25,
+            "percentage_population": 20
+        },
+        {
+            "location": "West",
+            "location_description": "The West region has around 20% of the industry's establishments.",
+            "percentage_establishments": 20,
+            "percentage_population": 25
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region has around 15% of the industry's establishments.",
+            "percentage_establishments": 15,
+            "percentage_population": 15
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region has around 15% of the industry's establishments.",
+            "percentage_establishments": 15,
+            "percentage_population": 13
+        },
+        {
+            "location": "Southwest",
+            "location_description": "The Southwest region has around 10% of the industry's establishments.",
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        },
+        {
+            "location": "Plains",
+            "location_description": "The Plains region has around 5% of the industry's establishments.",
+            "percentage_establishments": 5,
+            "percentage_population": 7
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "The Rocky Mountains region has around 5% of the industry's establishments.",
+            "percentage_establishments": 5,
+            "percentage_population": 5
+        },
+        {
+            "location": "New England",
+            "location_description": "The New England region has around 5% of the industry's establishments.",
+            "percentage_establishments": 5,
+            "percentage_population": 5
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Factors for Increased Barriers",
+                "barrier_description": "Revenue Volatility Level: high. Industry Assistance Level: low - steady."
+            },
+            {
+                "barrier_title": "Factors for Decreased Barriers",
+                "barrier_description": "Capital Intensity Level: low. Concentration Level: low. Technology Change Level: low."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Revenue Volatility Level: high",
+            "Industry Assistance Level: low - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Technology Change Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Low to moderate barriers to entry",
+                "basis_description": "Securing the knowledge and inventory required to open an antique store can be time-consuming and expensive."
+            },
+            {
+                "basis_title": "Localized demand and high fragmentation",
+                "basis_description": "Consumers won't travel far to visit an antique store."
+            },
+            {
+                "basis_title": "Price-based competition due to buyer power",
+                "basis_description": "Consumers can shop at an array of retailers."
+            },
+            {
+                "basis_title": "Threat from online platforms and other retailers",
+                "basis_description": "Consumers can access several substitutes."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other Costs",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases are the Industry's Number-One Expense",
+            "cost_factor_description": "Purchases are the single-largest expense for antique stores."
+        },
+        {
+            "cost_factor_title": "Fine Furniture Comes With Premium Prices",
+            "cost_factor_description": "Antique stores offer a wide range of furniture."
+        },
+        {
+            "cost_factor_title": "Younger consumers are more and more looking to antique stores to buy furniture that will last a lifetime",
+            "cost_factor_description": "This trend slows when disposable income drops."
+        },
+        {
+            "cost_factor_title": "Wood furniture is seeing a resurgence in popularity",
+            "cost_factor_description": "Antique stores with a solid catalog of vintage wooden tables and chairs are finding success."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_trend": "Steady",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital intensity",
+                "capital_intensity_description": "The industry is experiencing a low level of both the rate of new patents and the concentration of patents in the industry."
+            },
+            {
+                "capital_intensity_title": "Low technology change",
+                "capital_intensity_description": "The major markets for this industry are highly concentrated."
+            }
+        ]
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Fluctuating discretionary budgets can bring volatility",
+                "volatility_description": "Antique stores provide a discretionary service."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_trend": "Steady",
+        "technological_change_points": []
+    },
+    "FAQs": [
+        {
+            "question": "What is the key data shown in the document?",
+            "answer": "The document provides projected data for the US antique stores industry from 2010 to 2030."
+        },
+        {
+            "question": "What are some key insights from the data?",
+            "answer": "Revenue is projected to grow steadily from 2010 to 2030."
+        },
+        {
+            "question": "What does the data show about revenue volatility?",
+            "answer": "The document mentions that antique stores provide a discretionary service, so consumer purchases can fluctuate."
+        },
+        {
+            "question": "What does the document say about regulation and industry assistance?",
+            "answer": "The document does not provide any specific details about regulation or industry assistance."
+        }
+    ]
+}

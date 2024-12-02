@@ -1,0 +1,551 @@
+{
+    "report_title": "Performers & Creative Artists in the US",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 57427,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "revenue_cagr_value": 2.44
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "revenue_cagr_value": -0.17
+            }
+        },
+        "profit": {
+            "profit_dollars": 101,
+            "profit_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "profit_cagr_value": 101
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 19.6,
+            "profit_margins_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "profit_margins_cagr_value": 3.09
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 36314,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 2.44
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 1229475,
+            "employees_cagr_historical": {
+                "begin_year": 2017,
+                "end_year": 2022,
+                "employees_cagr_value": 2.5
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2027,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 23873,
+            "wages_cagr_historical": {
+                "begin_year": 2017,
+                "end_year": 2022,
+                "wages_cagr_value": 2.5
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2027,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2017,
+                "end_year": 2022,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2027,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2017,
+                "end_year": 2022,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2027,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "Performers and creative artists include independent artists, freelance and bestselling writers, stage and A-list actors and painters, in addition to a dozen other artistic professions. Over 95.0% of working artists don't employ any workers since revenue in this field can be difficult to come by. The top artists are the ones whose work is highly coveted and revered, and famous authors and actors are capable of earning millions of dollars annually. Favorable economic conditions persisted for the majority of the five years to 2023, but the outbreak of COVID-19 stifled industry activity in 2020 significantly. Revenue ultimately grew at a CAGR of 0.7% to $57.4 billion in 2024, including a growth of 0.8% that year alone.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Direct economic activity ensued at the start of the pandemic and consumer spending contracted",
+            "current_performance_point_description": "Since spending on arts is often regarded as nonessential and discretionary in nature, artists are sensitive to changes in economic conditions. Rising per capita disposable income levels coincide with consumer discretionary spending on nonessential art, entertainment and recreation purchases. The market for art was strong until it was upended in 2020, when COVID-19 spread globally, shuttering businesses temporarily. Nationwide health mandates prohibited large public gatherings in the US, forcing many outlets for artists, including art exhibitions, live performances and events and film and TV productions, to close for the foreseeable future."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Government Funding for the Arts Will Decline",
+            "future_outlook_point_description": "The US Congress is anticipated to reduce the amount of federal funding for the creative arts moving forward, significantly limiting the number of grants available to working artists."
+        },
+        {
+            "future_outlook_point_title": "More Artists Are Expected to Turn to Alternative Funding Methods",
+            "future_outlook_point_description": "Digital media will make it easier and less expensive for artists to market and disseminate their experiences and products to attract a much wider audience."
+        },
+        {
+            "future_outlook_point_title": "An increase in an artist's presence online is a major boon for crowdfunding methods",
+            "future_outlook_point_description": "As individuals enjoy engaging with and contributing directly to artists they support. As per capita disposable incomes rise and unemployment falls, individuals may be more inclined to participate in crowdfunded projects, so they can feel as though they are a part of a creative project."
+        },
+        {
+            "future_outlook_point_title": "ROOM TO ENTER AND COMPETITION CONTINUES",
+            "future_outlook_point_description": "Competition between artists of different types, genres and mediums is limited, except in the broad sense of competing for patrons' time and capital. The high value placed on originality in this industry means there will always be room for new entrants with innovative concepts. The growth in popularity and interconnectedness of online platforms encourages new artists to find their audience."
+        }
+    ],
+    "industry_definition": "The Performers and Creative Artists industry consists of independent or freelance artists, writers and performers that create artistic or cultural works or productions, in addition to individuals that provide the technical expertise necessary for these works. This industry includes celebrities that receive a fee for product endorsement and public appearances or speeches. This industry does not include musical artists (IBISWorld report 71113) or graphic design artists (54143).",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low Capital Intensity Level",
+            "low Concentration Level",
+            "low Technology Change Level",
+            "low - steady Globalization Level"
+        ],
+        "negative_impact_factors": [
+            "decline Life Cycle Stage",
+            "low - steady Barriers To Entry Level",
+            "high - steady Competition Level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry",
+            "High Competition",
+            "High Volatility",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "Federal funding for creative arts"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Revenue Growth (2019-2024)",
+            "Low Outlier Growth",
+            "Low Revenue Growth (2024-2029)",
+            "Low Performance Drivers"
+        ]
+    },
+    "key_trends": [
+        "The industry incorporates a wide range of artistic endeavors and genres delivered via various media platforms. These artists commonly work independently or freelance, rather than being employed in an artistic capacity for another industry full-time.",
+        "Types of artists include painters and other visual artists, novelists and freelance journalists, dancers and choreographers, models, freelance photographers, actors, directors and other technical professions related to film and TV production.",
+        "Unions, guilds and associations play an important role within the industry, providing support and representation for its members. Some unions representing artists in the industry include SAG-AFTRA, the Actors Equity Association, the Entertainment Community Fund, the American Guild of Variety Artists and the Directors Guild of America (DGA).",
+        "The National Endowment for the Arts manages federal funding and provides financial support to artists in the form of grants. In December 2022, President Biden passed a $207.0 million budget supporting the NEA - an increase of $27.0 million from the previous fiscal year.",
+        "The industry's primary market is consumers, which can be divided by age group. Consumers of different age groups are likely to attend different types of performances or exhibitions based on preferences.",
+        "Demand for live performers and scenic painters fell during the period as a result of COVID-19. Nationwide health mandates limited public gatherings and impeded film and TV production as well as live performances and events.",
+        "Though artists live and work across the country, the concentration of performers and creative artists is highly skewed toward specific states. California and New York account for 61.8% of total establishments.",
+        "The ease of accessing content via the internet has made this industry less dependent on location. Performers and artists are now able to distribute their work from anywhere with a high-speed internet connection.",
+        "There are many artists working in the industry competing for limited spots. Artists don't have to compete with everyone in the industry, because there are many levels and variety in the genre and medium of art.",
+        "An artist's success is dependent on getting noticed and holding the attention of an audience. There are constantly new entrants in this industry attempting to draw attention to themselves."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Consumers aged 35 to 54",
+            "segment_description": "People in this age group have similar tastes to that of their younger counterparts but a greater level of disposable income. These consumers still have the burden of student loans and rent expenses cutting into what income they are willing to spend on entertainment. Since these consumers are largely already tasked with making rent, mortgage and student loan payments, they are likely to limit nonessential purchases to safely meet foremost obligations during times of economic distress.",
+            "segment_percentage": 25.7
+        },
+        {
+            "segment": "Consumers aged 24 and younger",
+            "segment_description": "Teens and young adults have less disposable income compared with older individuals. Since they have fewer financial responsibilities than older consumers, a larger portion of their budgets are reserved for entertainment and cultural spending. Younger audiences have largely driven the rise in popularity of electronic dance music, which has made disk jockeying an increasingly lucrative occupation.",
+            "segment_percentage": 15
+        },
+        {
+            "segment": "Consumers aged 65 and older",
+            "segment_description": "Consumers in this age group have entered retirement and enjoy the most leisure time of the any other consumer group. Retirees live on fixed incomes that may not have as much room for spending on discretionary arts and cultural events and exhibitions. In 2020 and 2021, health concerns amid the coronavirus pandemic were the primary inhibitor of this segment's share of revenue.",
+            "segment_percentage": 15
+        },
+        {
+            "segment": "Consumers aged 55 to 64",
+            "segment_description": "This age group mainly comprises parents with children that are entering early or middle adulthood. These consumers tend to have a high level of disposable income to spend on discretionary purchases. Offloading expenses associated with their children should enable this aging demographic to consume more entertainment provided by the industry. Consumers in this age range held off on attending live performances as they initially returned after lockdowns to protect the health of themselves and their families.",
+            "segment_percentage": 17.4
+        },
+        {
+            "segment": "Consumers aged 25 to 34",
+            "segment_description": "This age group is the most likely to access entertainment through alternative means, by streaming music and video from the internet. Exposure to social media is much higher for this group, making them a prime target for marketing campaigns on social media platforms.",
+            "segment_percentage": 15
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Intellectual Property Licensing and Contracting",
+            "product_description": "Intellectual property licensing and contract work was largely unaffected by the pandemic, as the work is usually done in a remote setting, in contrast to the other segments. Many artists in this segment are independent writers, including copy or advertising writers not working full-time for a company, journalists and reporters, biographers, novelists, songwriters who don't perform, playwrights and screenwriters. Newspapers and other media outlets may off full-time writers in an effort to cut costs. Many artists that are now freelancers started off writing full-time for a company until they were let go.",
+            "product_percentage": 35.3
+        },
+        {
+            "product_or_service": "Film and TV",
+            "product_description": "This segment includes actors that perform in film and TV on a contractual or freelance basis. The majority of actors do not work full-time in this profession and often hold other jobs to supplement their income, leading annual incomes to vary greatly. Most acting projects are short-term, with movies typically filmed over the course of a few months. Actors that are able to break into high-paying film or TV roles typically earn much more than the median wage, but very few individuals reach this level.",
+            "product_percentage": 34.2
+        },
+        {
+            "product_or_service": "Live Performances and Events",
+            "product_description": "This segment includes dancers not retained with salaries from troupes or other organizations (e.g. ballet companies). Independent dancers typically also work as choreographers or teachers to supplement their incomes while not touring or performing. Comedians are also part of this segment. Similar to actors, comedians train and rehearse for individual shows, though they typically write their own material. These types of performers benefit greatly from digital media, especially YouTube, where they can post content to a global audience. Exposure gained from digital media content can lead to live performances and other marketing opportunities for operators to generate income.",
+            "product_percentage": 12.1
+        },
+        {
+            "product_or_service": "Art Sales",
+            "product_description": "This segment includes painters, sculptors, independent cartoonists, animators and artists that work in other visual media and sell their work outright without licensing. Very few artists produce and sell their own work frequently enough to earn a living exclusively through art. Specialized artists, like scenic painters working on the set design team for film, TV and theatrical productions, typically have steadier work. Intermediaries like art dealers play an important role in building relationships between artists and collectors to facilitate the sale of an artistic production.",
+            "product_percentage": 6.6
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "Other services in the industry include payments made to celebrities for endorsing products, making public appearances or giving speeches. Moving forward, celebrities that have a large presence on Instagram and similar social media platforms could make increasingly more money for marketing services.",
+            "product_percentage": 11.8
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Computer & Packaged Software Wholesaling in the US",
+            "Electrical Equipment Wholesaling in the US",
+            "Paper Wholesaling in the US",
+            "Commercial Leasing in the US"
+        ],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [
+            "Concert & Event Promotion in the US",
+            "Colleges & Universities in the US",
+            "Fabric, Craft & Sewing Supplies Stores in the US",
+            "Intellectual Property Licensing in the US",
+            "Camera Stores in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Consumer Spending",
+            "determinant_description": "Consumer spending on entertainment and cultural events is a major determinant of demand for this industry. When economic conditions are poor and disposable income levels decline, consumers tend to cut back on discretionary purchases like attending concerts, plays or art exhibitions."
+        },
+        {
+            "determinant_title": "Leisure Time",
+            "determinant_description": "The amount of leisure time available to consumers affects demand for industry services. As work hours increase, demand for entertainment declines as consumers have less free time. Conversely, more vacation time enables greater consumption of entertainment."
+        },
+        {
+            "determinant_title": "Demographic Trends",
+            "determinant_description": "Demographic shifts in the age distribution and ethnic diversity of the population can influence demand patterns. For example, the industry has benefited from the rising popularity of Latin music genres like reggaeton among younger Hispanic consumers."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Western Region",
+            "location_description": "With 49.6% of all industry locations, California has the largest concentration of industry venues, exceeding its 11.9% share of the US population. Los Angeles is home to the largest and best-known film and TV production studios. Hollywood attracts more actors, directors and similar professions than any other city. Other cities in the region, including San Francisco, Portland and Seattle boast supportive and active arts scenes. Concentration in California will decline moving forward, as the internet enables artists to reach a national audience regardless of geographic location.",
+            "percentage_establishments": 35.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The region accounts for 12.3% of revenue, largely driven by its 25.8% share of the US population, the highest in the nation. Though it is a distant third to California and New York, Florida is home to 4.8% of establishments.",
+            "percentage_establishments": 20.0,
+            "percentage_population": 25.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The state of New York is home to 12.2% of industry establishments and 6.1% of the US population. New York City is an arts and entertainment stronghold. It is the live theater capital of the US and offers many longstanding cultural programs and institutions that fund and support artists.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "",
+            "percentage_establishments": 15.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "New England",
+            "location_description": "",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Plains",
+            "location_description": "",
+            "percentage_establishments": 5.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "",
+            "percentage_establishments": 5.0,
+            "percentage_population": 10.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [
+            {
+                "regulation_title": "Intellectual Property Rights and Licensing Agreements",
+                "regulation_description": "Many writers license publishing companies to distribute their work, receiving a fixed payout or royalties from each sale in return. Under copyright law, creators of artistic works are guaranteed the exclusive right to reproduce, distribute, perform, adapt and publicly display their works."
+            },
+            {
+                "regulation_title": "Federal and State Labor Regulations",
+                "regulation_description": "The Screen Actors Guild-American Federation of Television and Radio Artists' Government Affairs and Public Policy Department partners with other related unions to oversee legislative activity and lobby for the interests of the media and entertainment industry."
+            },
+            {
+                "regulation_title": "Special Effects Safety Regulations",
+                "regulation_description": "Special effect technicians must know the ins and outs of how basic effect machineries like haze machines, compressed air cannons, and rigging systems operate. These basic devices have minimal regulation governing their use but need to be operated by professionals."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life cycle stage",
+                "barrier_description": "decline"
+            },
+            {
+                "barrier_title": "Competition level",
+                "barrier_description": "high - steady"
+            }
+        ],
+        "factors_increased_barrier": [
+            "decline"
+        ],
+        "factors_decreased_barrier": [
+            "low capital intensity level",
+            "low concentration level",
+            "low technology change level",
+            "low - steady globalization level"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Many artists competing for limited spots",
+                "basis_description": "There are many artists working in the industry competing for limited spots. Artists don't have to compete with everyone in the industry, because there are many levels and variety in the genre and medium of art."
+            },
+            {
+                "basis_title": "Success depends on getting noticed",
+                "basis_description": "An artist's success is dependent on getting noticed and holding the attention of an audience."
+            },
+            {
+                "basis_title": "Constant new entrants",
+                "basis_description": "There are constantly new entrants in this industry attempting to draw attention to themselves."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Many nonemployers and small teams",
+                "concentration_description": "Out of all artists and performers, over 95.0% operate with no paid employees. Of the enterprises with employees, over 90.0% are forecast to have fewer than five workers."
+            },
+            {
+                "concentration_title": "Many types of niches and levels",
+                "concentration_description": "Even though many individual artists (e.g. A-list actors and bestselling authors) make millions of dollars annually, none individually hold a market share greater than 1.0%. There is a wide variety of niches in the industry, and the low barriers to entry make it so there is a lot of space for new artists to enter."
+            }
+        ],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 25
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 25
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 25
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 25
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 25
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 25
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 25
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 25
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases vary widely depending on the kind of art being created",
+            "cost_factor_description": "Purchases costs are minimal, but have grown over the last few years. Materials needed for an artist's work can range from little more than a computer, as is the case for most writers, to materials such as paints, brushes, canvases and other goods required by painters and visual artists."
+        },
+        {
+            "cost_factor_title": "Many artists take part in workshops or other trainings",
+            "cost_factor_description": "Many artists take part in workshops or other trainings to refine their skills and techniques."
+        },
+        {
+            "cost_factor_title": "Purchases can also include travel expenses",
+            "cost_factor_description": "Purchases can also include travel expenses, like plane tickets and gasoline, incurred when artists tour or relocate for a project."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Very few artists are successful enough to support themselves financially with consistent work",
+                "capital_intensity_description": "Very few artists are successful enough to support themselves financially with consistent work, forcing many artists to find supplemental employment in other industries. In order to make an income through their art artists must dedicate their time."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Consumer Behavior is Influenced by Access to Disposable Income",
+                "volatility_description": "Entertainment is a nonessential expenditure, so many consumers may cut spending in this area when there is economic strain. Individuals who are uncertain about their financial future often decide to limit nonessential expenditures, including purchases of different forms of entertainment."
+            },
+            {
+                "volatility_title": "All-Encompassing Economic Conditions Impact the Industry",
+                "volatility_description": "Many artists have experienced growth coinciding with the continued economic expansion and historically low unemployment that resulted in greater consumer spending. Though live performances were suspended in 2020 in response to the outbreak of COVID-19 and the accompanying public health policies, they have since returned to normal."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Low technology change",
+                "technological_change_description": "Low levels of innovation limit the threat to incumbent operators from new technologies disrupting their operations. However, a low rate of growth in technology can also create exposure for incumbents as the trajectory of innovation in other markets could lead to unforeseen competitive disadvantages."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "Do demographic changes have an effect on company sales?",
+            "answer": "Different age demographics consume different types of art and entertainment. Accordingly, companies need to be mindful of the age demographic in their area, so they are catering to their needs appropriately."
+        },
+        {
+            "question": "How much does your company rely on successful advertising to differentiate yourself from the competition?",
+            "answer": "Effective advertisement is key to the success of industry performers and artists. It is imperative that companies properly market upcoming acts to drive interest and make potential customers aware of the entertainment."
+        },
+        {
+            "question": "How well rounded are your products and services so as to mitigate sudden changes in demand?",
+            "answer": "Typically, a performer specializes in one particular art form that they have studied for an extended period of time."
+        },
+        {
+            "question": "If your company benefits from population density, are you located in high traffic areas to increase your exposure?",
+            "answer": "Most companies in the creative field are concentrated in highly populated areas like Los Angeles and New York to provide entertainment to a larger audience."
+        },
+        {
+            "question": "What has your company done to update facilities in order to enhance the consumer experience?",
+            "answer": "Very little has been done in the classic sense of updating facilities. Artists generally rely on none or very little equipment to make their art form."
+        },
+        {
+            "question": "Have you established a strong internet presence through social media platforms in order to capture a larger audience?",
+            "answer": "Companies have increasingly taken advantage of social media to market their talents at a lower cost, while also reaching a larger audience. The coronavirus is expected to accelerate this trend."
+        },
+        {
+            "question": "Do you offer membership agreements, tickets or passes that may be subject to state or federal regulation?",
+            "answer": "Industry associations such as the Screen Actors Guild are vitally important for actors to receive work. Similar association help drive demand for the services of other types of performers."
+        },
+        {
+            "question": "How frequently does your company require federal and state funding?",
+            "answer": "Federal and state funding is important to artists, as the government's demand for art and entertainment makes up a meaningful portion of demand for artistic services."
+        },
+        {
+            "question": "Do you develop off-season demand through alternative products and services in order to maintain a steady cash flow during slower seasons?",
+            "answer": "Demand for artistic services varies depending on the art form and the area they are catering to. Additionally, wages are low in the industry, leading most individuals to supplement their income through other forms of work."
+        },
+        {
+            "question": "Does your company have to purchase new equipment on an annual basis?",
+            "answer": "Artists infrequently need to purchase equipment and often use the same easel for years. Most expenses for creative artists fall into items that need to be repurchased more often (paint, canvases, dance shoes, etc.)."
+        },
+        {
+            "question": "What is your level of recognition in the local community? How do you generate local support? Do you receive sponsors or donations?",
+            "answer": "A high level of local support will attract private sector sponsors and public-sector donations."
+        },
+        {
+            "question": "How do you boost your profile? Do you focus on creating art that is mainstream? What are your promotional strategies?",
+            "answer": "A high profile attracts media interest in the output of an artist, writer or performer, which can raise demand for his or her work."
+        },
+        {
+            "question": "What are the sources of your revenue? Is it possible for you to produce value-added merchandise? What value-added services do you offer?",
+            "answer": "Companies may choose to tour various locations to reach customers from various geographic regions."
+        },
+        {
+            "question": "How have decreases in federal funding affected your business? Have you received any money from the government?",
+            "answer": "Federal programs like the National Endowment for the Arts (NEA) offer competitive grants to artists across a wide spectrum of media and genres. In 2023, federal funding for creative arts is expected to increase."
+        },
+        {
+            "question": "Have you noticed fluctuations in viewership as disposable income has increased? How can you capitalize on growth?",
+            "answer": "Fluctuations in household disposable income affect customer demand for entertainment."
+        },
+        {
+            "question": "How do you plan to convince consumers to spend leisure time consuming your work? How can you advertise to specific audiences to increase demand?",
+            "answer": "The more leisure time people have available, the more they will attend shows, read books and consume work of the performers and creative artists."
+        }
+    ]
+}

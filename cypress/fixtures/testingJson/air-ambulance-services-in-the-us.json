@@ -1,0 +1,513 @@
+{
+    "report_title": "Air Ambulance Services in the US",
+    "report_date": "Feb 15, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 4934000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 2.96
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.72
+            }
+        },
+        "profit": {
+            "profit_dollars": 479000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 5.1
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 9.7,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 2.08
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 3067000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 46902,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 2375000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The Air Ambulance Services industry comprises air medical transports, including helicopters and fixed-winged aircrafts specifically outfitted to transport ill or injured people. The industry has experienced growing demand due to an aging population, hospital and healthcare provider consolidation and deteriorating access to adequate healthcare in rural areas.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Aging Population Has Bolstered Demand for Services",
+            "current_performance_point_description": "Demand for air ambulance providers is price inelastic, meaning that factors other than price determine overall demand for industry services. The number of adults aged 65 and older has increased at a much faster pace compared with growth in children, adolescents and younger adults. The use of emergency medical services (EMS) increases with age; therefore, strong growth in the number of adults aged 65 and older is contributing to demand growth."
+        },
+        {
+            "current_performance_point_title": "The Industry's Expanding Landscape Has Been Driven By Hospital Consolidation",
+            "current_performance_point_description": "The federal Airline Deregulation Act (ADA) that was passed in 1978 deregulated the US airline industry by removing US federal government control over fares, routes and the market entry of new airlines. Consequently, the removal of barriers under this act enabled industry growth. Consolidation among hospital providers has driven down the number of specialty care facilities and emergency departments. This has made it more likely that patients need to be transferred between healthcare facilities to access an appropriate level of care."
+        },
+        {
+            "current_performance_point_title": "Legislative Scrutiny Has Increased As A Result Of High-Costs",
+            "current_performance_point_description": "Like other healthcare sectors, the Air Ambulance Services industry has attracted notable attention from private equity firms. This and other reasons have also subjected the industry to increased regulatory scrutiny in the period. Large bills sent to patients and a lack of transparency have increasingly drawn the industry to the attention of legislators. No pricing limits, high fixed costs and a high level of competition have dramatically raised prices over the past decade."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Continued Aging Will Propel Growth",
+            "future_outlook_point_description": "Demand for air ambulance services is anticipated to continue growing with the aging of the US population. The number of adults aged 65 and older is anticipated to grow quickly as the baby boomer generation reaches this age group. As people age, they are more likely to make use of emergency services, including air ambulance services, contributing to demand growth for air ambulance services."
+        },
+        {
+            "future_outlook_point_title": "Hospital Consolidation Will Remain Ever-Present, Raising The Need For Air Transport Services",
+            "future_outlook_point_description": "The consolidation of hospitals and other healthcare providers will continue to reduce the number of specialty facilities and emergency departments due to merger and acquisition-related reorganizations and closures. This increases the likelihood that patients will have to travel farther distances to receive the care they need, contributing to demand for air ambulance services."
+        },
+        {
+            "future_outlook_point_title": "Greater Competition Will Drive Prices",
+            "future_outlook_point_description": "Contending with high fixed costs, an oversaturated market and no price caps, industry operators have historically driven revenue growth through rate increases. Continued growth in industry participation in an already saturated market is anticipated to continue driving price increases."
+        }
+    ],
+    "industry_definition": "This industry provides air transportation and critical care services to patients. These services are often provided during a medical emergency, but they are not restricted to emergencies. The vehicles are equipped with lifesaving equipment operated by medically trained personnel.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low Capital Intensity Level",
+            "high - steady Barriers To Entry Level",
+            "low - steady Globalization Level"
+        ],
+        "negative_impact_factors": [
+            "high - steady Competition Level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "Growth Life Cycle Stage",
+            "Low Volatility",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "High Competition",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "Number of adults aged 65 and older"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Number of people with private health insurance"
+        ]
+    },
+    "key_trends": [
+        "The industry has experienced growing demand due to an aging population. As people age, they are more likely to require Emergency Medical Transport Services, including air ambulance services.",
+        "The closure of rural medical facilities drives demand for air ambulances. With fewer local treatment options, patients are more likely to find themselves.",
+        "The Federal Aviation Administration regulates the operation of all aircraft, including air ambulances. Rules for services providers have also tightened under the voluntary accreditation system offered by the Commission on Air Medical Transportation Systems.",
+        "Medicare and Medicaid pay for a significant share of air ambulance services. These programs determine the range of services that are offered by industry companies.",
+        "Air ambulances are typically classified into two main categories: Rotary-wing aircrafts and Fixed-wing aircrafts.",
+        "Service providers generate revenue from: Private insurance, Medicare, Medicaid, Out-of-pocket customer payments."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Private Insurance",
+            "segment_description": "Patients with private health insurance on average constitute 32.0% of total transports, but account for a larger 71.1% share of total industry revenue due to higher reimbursement rates and ability to balance bill.",
+            "segment_percentage": 71.1
+        },
+        {
+            "segment": "Medicare",
+            "segment_description": "Medicare is a federal health insurance program for people aged 65 and older, certain younger people with disabilities and people with end-stage renal disease. Patients with Medicare coverage account for 35.0% of total transports and 21.2% of industry revenue.",
+            "segment_percentage": 21.2
+        },
+        {
+            "segment": "Medicaid",
+            "segment_description": "Medicaid is a federal and state program that provides healthcare to low-income individuals and families. It accounts for a smaller 7.3% share of industry revenue compared to Medicare.",
+            "segment_percentage": 7.3
+        },
+        {
+            "segment": "Self-payers",
+            "segment_description": "Self-pay constitutes patients who are not covered by insurance and are required to pay the full price of their air ambulance ride, which can be very high.",
+            "segment_percentage": 0.3
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Medical Transport Using Rotary-Wing Aircraft",
+            "product_description": "Rotary-wing (RW) ambulances generate lift by wings, called rotary wings or rotor blades, that revolve around a mast. These are commonly called helicopters. Air medical services by rotary-wing aircraft are typically used for short-distance transport between the accident or patient site, and a hospital.",
+            "product_percentage": 55.2
+        },
+        {
+            "product_or_service": "Mixed Rotary-Wing and Fixed-Wing Services",
+            "product_description": "Some air ambulance providers offer both rotary-wing and fixed-wing services.",
+            "product_percentage": 28
+        },
+        {
+            "product_or_service": "Medical Transport Using Fixed-Wing Aircraft",
+            "product_description": "Fixed-wing (FW) aircrafts, also known as airplanes, have wings that use forward airspeed to generate lift. FW ambulances, depending on the aircraft, may rely on propellers for shorter trips and jet engines for long-distance travel. Since they are larger, FW air ambulances typically carry a larger medical staff and more medical equipment than RW ambulances. Although they are not as versatile as helicopter ambulances, fixed-wing aircrafts are capable of crossing longer distances; these services are often used by patients that require transport across countries and oceans.",
+            "product_percentage": 16.8
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Gasoline & Petroleum Wholesaling in the US",
+            "Medical Supplies Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Aircraft, Engine & Parts Manufacturing in the US",
+            "Machinery Maintenance & Heavy Equipment Repair Services in the US"
+        ],
+        "tier_1_buyers": [
+            "Hospitals in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Private Insurance Coverage",
+            "determinant_description": "Typically, private insurance companies reimburse at higher rates and permit balance billing, which is not permitted under Medicare and Medicaid. As a result, air ambulance providers typically generate a higher revenue per patient for those with commercial insurance coverage."
+        },
+        {
+            "determinant_title": "Medicare and Medicaid Reimbursement Rates",
+            "determinant_description": "Medicare and Medicaid cover air ambulance services, but typically reimburse at lower rates than private health insurance companies. An increase in the number of patients with such coverage has the potential to put downward pressure on revenue."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region accounts for the largest share of total industry establishments. This is in line with the region's share of the country's population. Florida, which is included in this region, holds more than 7.0% of total establishments, contributing significantly to the region's concentration.",
+            "percentage_establishments": 27.5,
+            "percentage_population": 38.1
+        },
+        {
+            "location": "West",
+            "location_description": "The West is the second largest region. This is expected given that the region is also the second largest by population size. California accounts for nearly 10.0% of total industry establishments and 12.0% of the country's population.",
+            "percentage_establishments": 26.1,
+            "percentage_population": 23.9
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "FEDERAL AVIATION ADMINISTRATION",
+                "regulation_description": "The Federal Aviation Administration regulates aircraft operations, including dispatch and tracking of aircraft and internal communication. There is an accreditation system offered by the Commission on Air Medical Transportation Systems (CAMTS). Accreditation from CAMTS is voluntary, but an increasing number of states have made it a regulatory requirement for all in-state service providers."
+            },
+            {
+                "regulation_title": "OTHER REGULATORY BODIES",
+                "regulation_description": "All present doctors must have a medical license granted by the relevant state body. All nurses on air ambulance have state nursing credentials and many have additional credentialing such as Certified Flight Nurse (CFN) or Critical Care Registered Nurse (CCRN). Flight paramedics are also extensively certified either through the Flight Paramedic-Certified (FP-C) program or the Critical Care Emergency Medical Transport Program (CCEMPT)."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "The industry is highly competitive, although large providers dominate the market."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Labor costs are high due to the need for trained staff to provide medical care and operate air ambulances. The industry requires highly skilled pilots, medical staff, paramedics and emergency medical technicians."
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Competition Level",
+                "basis_description": "The industry is highly competitive, although large providers dominate the market."
+            },
+            {
+                "basis_title": "In-house Competition",
+                "basis_description": "The industry competes with in-house air ambulance services. Some medical institutions operate their own air ambulances."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Large Companies Leverage Contracts and Financing",
+                "concentration_description": "Dominant companies are able to secure their regional presence though multiyear contracts with hospital systems."
+            },
+            {
+                "concentration_title": "Credibility for Additional Contracts",
+                "concentration_description": "Longer flight and performance records gives these enterprises the credibility necessary to secure additional hospital and institutional contracts, thereby expanding their market presence."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Air Methods Corp",
+                "company_percentage": 25.3
+            },
+            {
+                "company_name": "Global Medical Response, Inc.",
+                "company_percentage": 14.1
+            },
+            {
+                "company_name": "Phi Inc.",
+                "company_percentage": 4.9
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 55.7
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 48.1
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 7.6
+        },
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 9.7
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Wages are high given the labor-intensive nature of air evacuation",
+            "cost_factor_description": "Wage costs are forecast to account for 48.1% of revenue in 2023."
+        },
+        {
+            "cost_factor_title": "Fuel costs are a sizable share of purchase costs",
+            "cost_factor_description": "Purchase costs are expected to account for 7.6% of revenue in 2023."
+        },
+        {
+            "cost_factor_title": "Purchases",
+            "cost_factor_description": "Purchases vary and include costs related to aircraft maintenance, operations and repair, as well as the costs of materials used to care for patients being transported."
+        },
+        {
+            "cost_factor_title": "Profit Margins Are Heavily Influenced By Reimbursement Rates",
+            "cost_factor_description": "Profit is expected to account for 9.7% of revenue in 2023."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Labor costs are high",
+                "capital_intensity_description": "Labor costs are high due to the need for trained staff to provide medical care and operate air ambulances."
+            },
+            {
+                "capital_intensity_title": "Low rate of new patents and patent concentration",
+                "capital_intensity_description": "The industry is experiencing a low level of both the rate of new patents and the concentration of patents in the industry."
+            },
+            {
+                "capital_intensity_title": "Diversified market segments",
+                "capital_intensity_description": "Major market segments for industry operators are relatively diversified."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Air ambulance services are regularly in need",
+                "volatility_description": "Demand for air ambulance services that can quickly transport patients across vast distances is steady."
+            },
+            {
+                "volatility_title": "The aging population can help control reimbursement rates",
+                "volatility_description": "Reimbursement rates from Medicare and Medicaid and the number of individuals that qualify for federal healthcare plans, primarily determine revenue volatility."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Medical Transport Using Rotary-Wing Aircraft",
+                "technological_change_description": "Medical transport using rotary-wing aircraft accounts for more than half of all services."
+            },
+            {
+                "technological_change_title": "Medical Transport Using Fixed-Wing Aircraft",
+                "technological_change_description": "Medical transport using fixed-wing aircraft accounts for a smaller share of revenue."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "Has increased access to health insurance offered opportunities for your company?",
+            "answer": "As insurance coverage has grown, more people have been able to afford to go in air ambulances"
+        },
+        {
+            "question": "How does your company target key potential markets?",
+            "answer": "Air ambulance companies operate in remote areas where it is difficult for traditional ambulances to operate."
+        },
+        {
+            "question": "Is your company geographically positioned in communities where there is a strong need?",
+            "answer": "Most air ambulances operate in under served areas."
+        },
+        {
+            "question": "How does an increase in certain age groups affect your company's performance?",
+            "answer": "As people age their risk of needing an ambulance increases, growing industry demand."
+        },
+        {
+            "question": "Is your company keeping up-to-date with the latest technology?",
+            "answer": "It is crucial for air ambulances to have the latest technology, because patients are typically in critical condition when they need an air ambulance."
+        },
+        {
+            "question": "Is your company investing in new technology to improve internal processes?",
+            "answer": "By maintaining record keeping systems, air ambulances can more efficiently transfer patient data to hospitals."
+        },
+        {
+            "question": "Is your company adequately prepared to adjust to intensifying regulations?",
+            "answer": "Regulations to ensure higher safety standards and quality will impact costs."
+        },
+        {
+            "question": "How does your company keep up with varying regulations across states?",
+            "answer": "Many air ambulances operate across state lines, so they need to follow regulations for multiple states."
+        },
+        {
+            "question": "How do you keep operating costs down while still providing high levels of service?",
+            "answer": "Air ambulances must keep costs low to maintain profit and be able to serve more patients."
+        },
+        {
+            "question": "How frequently does your company have to replace its equipment?",
+            "answer": "Air ambulances must upgrade equipment often to offer the highest quality services."
+        },
+        {
+            "question": "What is the recruiting process for your employees? What kind of training are employees required to undertake?",
+            "answer": "Industry operators need to hire and retain skilled pilots and other aircraft operators as well as certified doctors, nurses, paramedics and transport therapists."
+        },
+        {
+            "question": "How quickly can you adapt to changing regulations?",
+            "answer": "Industry operators are heavily reliant on federal and state regulations concerning aviation, medical treatment and service coverage; to succeed, they must be responsive to changes in any of the above."
+        },
+        {
+            "question": "How quickly can new technology be adopted? Does your company keep up to date with the latest technology?",
+            "answer": "Industry operators must stay up to date with developments in aviation technology and in critical medical care provision."
+        },
+        {
+            "question": "What are the associated costs?",
+            "answer": "Industry operators must be able to secure a fleet of aircraft, aircraft equipment and medical equipment as well as spare parts for all of the above, at all times."
+        },
+        {
+            "question": "What percentage of your patients are covered by private health insurance? Are you able to negotiate favorable reimbursement rates?",
+            "answer": "Private medical insurance reimbursements account for a significant portion of industry revenue."
+        },
+        {
+            "question": "How able are you to pass the cost of fuel increases on to customers? How do you account for the volatility of fuel prices in your strategic planning?",
+            "answer": "Fuel costs are significant operating costs, so the availability, supply and cost of fuel can have a material effect on operating profit."
+        },
+        {
+            "question": "What percentage of your patients are covered by federal insurance? How do the reimbursement rates of these programs compare to private companies?",
+            "answer": "As federal funding for Medicare and Medicaid increases, industry revenue and profitability rise."
+        }
+    ]
+}

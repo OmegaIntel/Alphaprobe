@@ -1,0 +1,608 @@
+{
+    "report_title": "Outdoor Furniture Manufacturing in the US",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 1750000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": -3.66
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.2
+            }
+        },
+        "profit": {
+            "profit_dollars": 44000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": -1.99
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 2.5,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 1.74
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 398000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": -3.63
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0.29
+            }
+        },
+        "employees": {
+            "employees_count": 5904,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": -5.5
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": -0.31
+            }
+        },
+        "wages": {
+            "wages_dollars": 333000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": -3.77
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": -0.01
+            }
+        },
+        "imports": {
+            "imports_dollars": 2993000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": -1.6
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": -0.62
+            }
+        },
+        "exports": {
+            "exports_dollars": 76000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": -1.63
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 1.85
+            }
+        }
+    },
+    "executive_summary": "Outdoor furniture producers have endured significant volatility in recent years. Since households are the largest market for outdoor furniture, demand typically rises with improved disposable income and greater housing starts. However, heightened macroeconomic uncertainty and significant competition from imported products pushed demand for domestic outdoor furniture down despite the economy reopening in 2021. Similarly, manufacturers have endured significant input price volatility, particularly impacting steel, wood, and plastic prices. Manufacturers' inability to pass down cost increases to buyers places downward pressure on profit, discouraging domestic production. These trends have caused demand for new outdoor furniture to shrink at an estimated CAGR of 6.8% to $1.7 billion through the end of 2024, including a 5.3% drop that year alone.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Health of the Residential Sector Drives Outdoor Furniture Sales",
+            "current_performance_point_description": "The residential construction sector has endured significant volatility in recent years, largely contributing to the drastic losses manufacturers face. Although residential construction benefited from near-zero interest rates, heightened macroeconomic uncertainty discouraged consumers from making large discretionary purchases like outdoor furniture."
+        },
+        {
+            "current_performance_point_title": "Growing Import Penetration Threatens Demand for Domestic Outdoor Furniture",
+            "current_performance_point_description": "Work-from-home trends led to a renewed focus on outdoor living spaces. Homeowners invested more in their outdoor spaces to create comfortable and functional areas for relaxation and socializing. However, significant import penetration prevented these trends from boosting domestic sales."
+        },
+        {
+            "current_performance_point_title": "Producers Tailor Their Offerings to Align With Changing Consumer Preferences to Remain Competitive",
+            "current_performance_point_description": "Domestic manufacturers have found their footing in the domestic market by focusing on high-quality pieces and serving niche markets. However, demand for these products is significantly lower than that of generic, more affordable imported pieces, contributing to revenue losses."
+        },
+        {
+            "current_performance_point_title": "Input Price Volatility Contributes to Weaker Demand",
+            "current_performance_point_description": "Pent-up demand for manufactured goods and significant supply chain disruptions have contributed to significant input price volatility, particularly."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "The Ongoing Economic Recovery Will Create Growth Opportunities",
+            "future_outlook_point_description": "Improving macroeconomic conditions, including recovering consumer confidence and rising per capita disposable income, will create growth opportunities for manufacturers as consumers resume discretionary spending, supporting outdoor furniture sales and resulting in revenue gains. If international conflicts, like the Ukraine-Russia War and the ongoing conflict in the Middle East, are resolved, supply chain disruptions are set to improve. This will allow input prices, including steel, plastic, and wood, to stabilize and lower producers' operating costs, supporting domestic producers."
+        },
+        {
+            "future_outlook_point_title": "Competition With Imports Will Remain Intense",
+            "future_outlook_point_description": "Outdoor furniture manufacturers looking to compete with imports will have to focus on offering high-quality products that are durable, long-lasting and appeal to consumers. This can help differentiate their products from competitors and attract customers who pay a premium for better quality."
+        },
+        {
+            "future_outlook_point_title": "A RECOVERING RESIDENTIAL MARKET RESULTS IN GAINS",
+            "future_outlook_point_description": "Elevated interest rates squeeze many potential homeowners out of the market. As a result, consumers are less likely to purchase outdoor furniture for rental apartments or homes, limiting demand for manufacturers."
+        },
+        {
+            "future_outlook_point_title": "THE REMAINING MANUFACTURERS WILL NEED TO INNOVATE TO SURVIVE",
+            "future_outlook_point_description": "Producers are set to invest more resources using innovative materials and adopting automated processes, making them less reliant on human labor and enhancing operational efficiencies. These investments will push down labor expenses, making producers slightly more profitable."
+        }
+    ],
+    "industry_definition": "This industry manufactures outdoor furniture, such as lawn and patio chairs, picnic tables, and patio umbrellas. Outdoor furniture can be made of various materials, including metal, wood, and plastic. Items are designed to be placed outside the home. Furniture designed specifically for camping is excluded from this industry.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Technology Change Level: low"
+        ],
+        "negative_impact_factors": [
+            "Life Cycle Stage: Decline"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "Decline Life Cycle Stage"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "Price of steel"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Housing starts"
+        ]
+    },
+    "key_trends": [
+        "Competition within the industry stems from price, quality, product design, and distribution networks. Since consumers are becoming increasingly price-sensitive, price is the most significant component of competition for outdoor furniture manufacturers.",
+        "Competition is particularly intense from foreign manufacturers in China and Vietnam. These countries have lower labor costs and economies of scale in producing generic goods, including furniture.",
+        "Outdoor furniture manufacturers deal with intense competition from imports. Although demand for outdoor furniture has risen recently, most of it was met by imported outdoor furniture.",
+        "A growing interest in environmentally friendly products boosts demand for outdoor furniture made from recycled materials and sustainable wood. Manufacturers must differentiate from imports and there's a perception that US furniture is higher quality and more reliable than imported products.",
+        "Only one company, Ashley Furniture, has amassed more than 5.0% of the market. According to its website, Ashley Furniture offers a variety of outdoor furniture products made in the USA, including outdoor seating, dining sets, and umbrellas.",
+        "Other companies provide services on a local level. Domestic manufacturers struggle to scale up operations as heightened import penetration prevents domestic producers from capturing a larger market share.",
+        "Several associations support manufacturers. These associations provide outdoor furniture manufacturers with information on current trends and advocate for legislative reform.",
+        "Outdoor furniture manufacturers must comply with various federal, state, and local laws. These laws and regulations relate to protecting the environment and workers' health.",
+        "Changes in downstream demand, supply chain disruptions, and multiple international conflicts contribute to input price volatility.",
+        "Since consumers are increasingly price-sensitive, higher steel, wood and plastic prices negatively impact manufacturers.",
+        "Manufacturers become less profitable amid lower demand and rising operating costs. Significant price-based competition, rising purchase costs, and consumer preferences favoring imported products placed downward pressure on profit.",
+        "Business-friendly tax policies and regulatory environments can make it more attractive for outdoor furniture manufacturers to operate in a region. The Southeast, in particular, is known for its business-friendly climate.",
+        "Many benefits draw manufacturers to California, including its climate, entrepreneurial spirit, and large population. However, the state has stringent environmental regulations which must be followed, contributing to higher operating costs.",
+        "Metal outdoor furniture is often considered an investment because of its longevity. It can last for many years, making it a cost-effective option in the long run and the most popular product segment.",
+        "Most plastic furniture is generic and competes based on price. This trend stresses the advantage of low-cost manufacturers from"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Home furnishing stores",
+            "segment_description": "Retailers include mass merchandisers, department stores, warehouse clubs, and home furnishing stores. They are the most common form for downstream consumers to buy new furniture.",
+            "segment_percentage": 25.1
+        },
+        {
+            "segment": "Department stores and warehouse clubs",
+            "segment_description": "Retailers include mass merchandisers, department stores, warehouse clubs, and home furnishing stores. They are the most common form for downstream consumers to buy new furniture.",
+            "segment_percentage": 27.3
+        },
+        {
+            "segment": "Other retailers",
+            "segment_description": "Retailers include mass merchandisers, department stores, warehouse clubs, and home furnishing stores. They are the most common form for downstream consumers to buy new furniture.",
+            "segment_percentage": 15.3
+        },
+        {
+            "segment": "Independent wholesalers",
+            "segment_description": "Wholesalers purchase outdoor furniture in bulk from manufacturers and resell them to retailers, other wholesalers, and directly to business and government customers for final use.",
+            "segment_percentage": 24.4
+        },
+        {
+            "segment": "Businesses",
+            "segment_description": "Other markets for outdoor furniture include businesses, like restaurants, that may purchase pieces for their patios and other outdoor furniture for use in their operations.",
+            "segment_percentage": 3.9
+        },
+        {
+            "segment": "Other",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 4.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "UPHOLSTERED WOOD OUTDOOR FURNITURE",
+            "product_description": "While varieties differ, most wood outdoor furniture requires maintenance to last outdoors. Many consumers treat their wood furniture with weatherproof sealers, oils and stains.",
+            "product_percentage": 1.5
+        },
+        {
+            "product_or_service": "NON-UPHOLSTERED WOOD OUTDOOR FURNITURE",
+            "product_description": "The most popular woods used are jarrah, kwila, pine, redwood, roble, teak, rattan, oak, and white cedar.",
+            "product_percentage": 30.5
+        },
+        {
+            "product_or_service": "METAL OUTDOOR FURNITURE",
+            "product_description": "Metal outdoor furniture comes in various types, including aluminum, stainless steel and wrought iron. These pieces are known for their durability and resistance to the elements, as metal can withstand harsh weather conditions and are less likely to fade, chip or rust than other materials.",
+            "product_percentage": 51.8
+        },
+        {
+            "product_or_service": "Plastic and Other Outdoor Furniture",
+            "product_description": "Products in this segment include plastic and upholstered pieces. Plastic outdoor furniture is often made from polypropylene or polyethylene, while upholstered pieces leverage a broad range of materials.",
+            "product_percentage": 16.2
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Iron & Steel Manufacturing in the US",
+            "Sawmills & Wood Production in the US",
+            "Plastic & Resin Manufacturing in the US",
+            "Hardware Manufacturing in the US",
+            "Adhesive Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Electric Power Transmission in the US",
+            "Industrial Machinery & Equipment Wholesaling in the US"
+        ],
+        "tier_1_buyers": [
+            "Furniture Stores in the US",
+            "Furniture Wholesaling in the US"
+        ],
+        "tier_2_buyers": [
+            "Home Improvement Stores in the US",
+            "Department Stores in the US",
+            "Warehouse Clubs & Supercenters in the US",
+            "E-Commerce & Online Auctions in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Import Penetration",
+            "determinant_description": "The outdoor furniture manufacturing industry faces challenges from rising import penetration, driven by lower-priced imports and consumer cost-consciousness, despite imported goods being perceived as lower quality."
+        },
+        {
+            "determinant_title": "Demographic Shifts",
+            "determinant_description": "Demographic shifts like urbanization and changing lifestyle preferences also influence demand."
+        },
+        {
+            "determinant_title": "Housing Starts",
+            "determinant_description": "Housing starts measure the number of new privately owned housing units started annually, including both single and multi-unit developments. This metric directly impacts outdoor furniture manufacturing because consumers typically buy outdoor furniture to furnish the backyards of their new homes."
+        },
+        {
+            "determinant_title": "Disposable Income",
+            "determinant_description": "Household disposable income directly impacts the outdoor furniture manufacturing industry as it's a discretionary purchase. When disposable income drops, consumers tend to delay buying new furniture, opting instead to repair existing pieces or purchase second-hand items."
+        },
+        {
+            "determinant_title": "Price of Steel",
+            "determinant_description": "The price of steel significantly influences outdoor furniture manufacturing because of its role as a primary input. Higher steel prices raise production costs, squeezing profitability if not passed on to consumers."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Decreasing",
+        "export_level": "Low",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Imported Outdoor Furniture is Often More Affordable",
+                "trade_description": "Global economic instability has driven consumers to buy more affordable pieces or postpone the purchase altogether, driving consumers to buy more furniture from countries like China, Vietnam, and Taiwan, as they are often more affordable."
+            },
+            {
+                "trade_title": "Lower production costs in countries like China, Vietnam, and Taiwan",
+                "trade_description": "Lower production costs in countries like China, Vietnam, and Taiwan, often in the form of fewer labor and environmental protections, have given importers cost advantages in producing outdoor furniture."
+            },
+            {
+                "trade_title": "China is the dominant producer of outdoor furniture",
+                "trade_description": "China is the world's most populous country and has a large pool of skilled labor. Access to this scale of production allows Chinese manufacturers to make large quantities of outdoor furniture and sell them at highly competitive prices."
+            },
+            {
+                "trade_title": "Canada and Mexico are the destination for most exports",
+                "trade_description": "The geographical proximity between the United States, Canada, and Mexico has made them the largest destination for domestically produced outdoor furniture."
+            },
+            {
+                "trade_title": "Canada and Mexico benefit from the United States-Mexico-Canada Agreement",
+                "trade_description": "Canada and Mexico benefit from the United States-Mexico-Canada Agreement, which facilitates trade among the countries through fewer trade barriers and favorable conditions for products manufactured domestically."
+            },
+            {
+                "trade_title": "A Global Economic Slowdown Has Lessened Demand for Outdoor Furniture",
+                "trade_description": "Heightened economic uncertainty globally, including elevated inflation and supply chain disruptions, has weakened demand for discretionary products like outdoor furniture, pushing consumers to buy more affordable pieces or postpone the purchase altogether."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast is rich in natural resources, such as timber, which is commonly used in outdoor furniture production. Business-friendly regulatory environments in many Southeastern states also attract more manufacturers to operate here.",
+            "percentage_establishments": 35.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region is densely populated, hosting major metropolitan areas like New York City, Philadelphia, and Washington, DC. Manufacturers find this market attractive as they can easily reach customers and cut transportation costs.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 12.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "West",
+            "location_description": "As the most populous state in the U.S., California provides a large and diverse consumer market. Manufacturers can easily reach customers and minimize transportation costs.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 10.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Plains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 8.0,
+            "percentage_population": 15.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "Consumer Product Safety Commission (CPSC)",
+                "regulation_description": "The Consumer Product Safety Commission (CPSC) regulations significantly impact outdoor furniture manufacturers by mandating strict stability, durability, and safety labeling standards."
+            },
+            {
+                "regulation_title": "Environmental Protection Agency (EPA)",
+                "regulation_description": "The EPA oversees the safety of outdoor furniture by regulating the use of harmful chemicals and materials. They set standards for substances like lead, cadmium, and phthalates to protect human health and the environment."
+            },
+            {
+                "regulation_title": "Occupational Safety and Health Administration (OSHA)",
+                "regulation_description": "OSHA significantly impacts outdoor furniture manufacturers in the U.S. by establishing safety standards for machinery, tools, and overall workplace conditions."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is in the decline stage, increasing barriers."
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "Low and steady industry assistance level."
+            },
+            {
+                "barrier_title": "Globalization Level",
+                "barrier_description": "High and increasing globalization level."
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "High and increasing competition level."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: decline",
+            "Globalization Level: high - increasing",
+            "Competition Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Technology Change Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Price",
+                "basis_description": "Price is the most significant component of competition for outdoor furniture manufacturers as consumers are becoming increasingly price-sensitive."
+            },
+            {
+                "basis_title": "Quality",
+                "basis_description": "Competition within the industry stems from quality."
+            },
+            {
+                "basis_title": "Product Design",
+                "basis_description": "Competition within the industry stems from product design."
+            },
+            {
+                "basis_title": "Distribution Networks",
+                "basis_description": "Competition within the industry stems from distribution networks."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Regionalization",
+                "concentration_description": "Regionalization limits concentration in the outdoor furniture manufacturing industry as most manufacturers are smaller and seek to serve specific regions, leading to geographic fragmentation."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Ashley Furniture Industries, Inc.",
+                "company_percentage": 16.7
+            },
+            {
+                "company_name": "Landscape Forms, Inc.",
+                "company_percentage": 3.9
+            },
+            {
+                "company_name": "Dumor Inc.",
+                "company_percentage": 0.4
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 79
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 30
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 40
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 3
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 2
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Manufacturers aim to lower labor costs to remain price competitive",
+            "cost_factor_description": "Manufacturers have focused on reducing labor costs to remain price-competitive with imports. However, the industry remains labor-intensive as domestic producers focus on quality to differentiate themselves from low-cost foreign manufacturers."
+        },
+        {
+            "cost_factor_title": "Purchase costs fluctuate because of input price volatility",
+            "cost_factor_description": "Raw materials include lumber, veneers, plywood, fiberboard, particle board, steel, hardware, adhesives, finishing materials, glass, mirrored glass, fabrics, leathers, metals, stone, synthetics and upholstered filling material (e.g., synthetic fibers, foam padding and polyurethane cushioning)."
+        },
+        {
+            "cost_factor_title": "Other Operating Costs are Rising",
+            "cost_factor_description": "Other costs include computer hardware and software, communication services, repairs and maintenance and waste removal. Large producers also take on research and development activities regarding wood lacquers, polishes, paint, and coatings."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Labor Expenses",
+                "capital_intensity_description": "New entrants must find sufficient skilled workers for operations, unlike large manufacturers with automated facilities that require less skilled labor."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Outdoor Furniture Sales are Influenced by Economic Factors",
+                "volatility_description": "Consumer demand has been volatile due to unfavorable macroeconomic conditions, including elevated inflation and heightened unemployment. These conditions strain per capita disposable income, a key determinant of new furniture sales."
+            },
+            {
+                "volatility_title": "Volatile Raw Material Prices Impact Manufacturers",
+                "volatility_description": "Outdoor furniture manufacturers depend on materials such as wood, metal, and plastic. Fluctuating prices for these inputs can significantly impact production costs and the final price of furniture."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Weather-Resistant Materials Are Crucial to Increase Durability",
+                "technological_change_description": "Weather-resistant materials are essential to enhancing the durability of outdoor furniture. Protecting furniture from environmental factors remains a significant challenge for manufacturers."
+            },
+            {
+                "technological_change_title": "Integrating Technology Helps Attract Consumers",
+                "technological_change_description": "Integrating technology into outdoor furniture increases functionality and convenience. Some outdoor sofas now feature built-in USB chargers and LED lighting."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company impacted by rising imports from abroad?",
+            "answer": "Foreign-made furniture, particularly from China, has rapidly gained popularity among US consumers, lowering sales for the average US manufacturer."
+        },
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "Demand for outdoor furniture is highly cyclical, moving in line with the real estate market since consumers often purchase furniture when changing residences."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "Input prices have fluctuated for all segments of the industry over the past five years, with volatility in the price of steel, wood, and plastic."
+        },
+        {
+            "question": "Is your company located close to important suppliers?",
+            "answer": "Locating in an existing manufacturing hub can ease a company's access to raw materials and hardware used in the production of outdoor furniture."
+        },
+        {
+            "question": "Have you been able to reduce wage costs by automating operations over the past five years?",
+            "answer": "Wage costs in the industry have declined on average, but it remains reliant on labor for a number of design and assembly functions."
+        },
+        {
+            "question": "How does your company invest in technology, such as 3D printing, to establish a competitive edge over your competitors?",
+            "answer": "Most technological development in the industry is aimed at boosting efficiency and competing on cost rather than introducing drastically different furniture designs."
+        },
+        {
+            "question": "How does your company stay ahead of regulations such as energy-efficiency standards?",
+            "answer": "The industry is now very energy-intensive, which limits the impact of environmental regulations applied elsewhere in the manufacturing sector."
+        },
+        {
+            "question": "How does your company ensure all health and safety requirements are met?",
+            "answer": "As a manufacturing industry, outdoor furniture manufacturers must ensure they are in compliance with occupational safety and health regulations, which present substantial liabilities."
+        },
+        {
+            "question": "How does your company's profit margins compare to your main competitors'?",
+            "answer": "On average, the industry's profit is relatively low due to intense foreign competition."
+        },
+        {
+            "question": "How does your company compensate for seasonality of cash flow?",
+            "answer": "Outdoor furniture is frequently purchased in the summer, making the industry much more seasonal than other furniture manufacturing segments."
+        }
+    ]
+}

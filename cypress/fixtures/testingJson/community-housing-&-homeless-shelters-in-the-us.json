@@ -1,0 +1,519 @@
+{
+    "report_title": "Community Housing & Homeless Shelters in the US",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 19554000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 2.13
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": -0.4
+            }
+        },
+        "profit": {
+            "profit_dollars": 1251000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": -0.9
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 6.4,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": -2.17
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 8619000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 155984,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 6899000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "According to the 2022 Annual Homeless Assessment Report (HUD), on any night in 2022, there were 582,500 persons experiencing homelessness. Six in 10 people sought shelter, but four in 10 were unsheltered. The Community Housing and Homeless Shelters industry comprises small establishments providing shelter, generating revenue from government and charitable sources. As homelessness increases, industry revenue will increase if the homeless seek housing services over unsheltered alternatives. COVID-19 shocked employment, housing prices and poverty rates, leading to housing instability and government action, fostering industry-wide revenue growth at a CAGR of 3.1% to $19.6 billion over the five years to 2023. But revenue reversed in 2023 alone, with a decline of 3.2% as federal funding, the",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Countercyclical Impacts and Nonprofit Status Lead to Increased Revenue",
+            "current_performance_point_description": "When unemployment is high, the poverty rate increases, and housing and rental rates skyrocket. These economic trends put pressure on housing affordability leading to homelessness and increases in those requiring services. Through 2023, these economic indicators grew along with industry revenue. Establishments directly benefit from economic downturns since their revenue source is not tied to market forces but flows mostly from government funds for social services that grew through 2023."
+        },
+        {
+            "current_performance_point_title": "GOVERNMENT FUNDING PUT A BRAKE ON COVID-19'S IMPACT",
+            "current_performance_point_description": "COVID-19's impact caused the unemployment rate to skyrocket by an estimated 120.4%. Unlike most shocks that increase homelessness, the government's response to the fallout helped and hurt the industry. The American Rescue Plan (ARP) provided needed resources for individuals to remain at home by increasing unemployment benefits, providing stimulus checks and restricting evictions, stemming the need for services. But the government also provided needed resources for housing and homelessness."
+        },
+        {
+            "current_performance_point_title": "GRANT COMPETITION CHALLENGES UTILIZATION",
+            "current_performance_point_description": "Service providers engage in grant and fundraising competition for revenue. Since most establishments are nonprofit, new providers will enter based on the availability of funding in the area rather than expected profit. States and local governments with aggressive policies and large budgets to fund homelessness will draw providers and can handle housing emergencies, while underfunded locations will see shortfalls."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "ECONOMIC AND DEMOGRAPHIC VARIABLES WORKING AT ODDS",
+            "future_outlook_point_description": "Expected decreases in the unemployment rate, poverty rate, and housing price index will work to decrease the need for services reducing potential revenue."
+        }
+    ],
+    "industry_definition": "This industry provides a variety of community housing services, including short-term emergency shelter for victims of domestic violence, sexual assault or child abuse; temporary residential shelter for the homeless, runaway youths and parents and families caught in medical crises;",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low Capital Intensity Level",
+            "high - steady Industry Assistance Level",
+            "low Concentration Level",
+            "low Technology Change Level",
+            "low - steady Globalization Level",
+            "low - steady Competition Level"
+        ],
+        "negative_impact_factors": [
+            "low - steady Barriers To Entry Level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High &amp; Steady Level of Assistance",
+            "Low Competition",
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low &amp; Steady Barriers to Entry",
+            "Low Profit vs. Sector Average",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "National unemployment rate"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Federal funding for social services"
+        ]
+    },
+    "key_trends": [
+        "Nonprofit status supports industry fragmentation. Dependence on various governments' funding and the competition for grants keep establishments small, entry slow, and the industry fragmented.",
+        "COVID-19 highlighted the federal government's significance. The government's funding and policies to stop homelessness while providing support services for the homeless during the crisis was quick and effective.",
+        "Numerous charities and government programs support revenue growth. Along with city, state and federal government grants and funding, there is significant support from charities and organizations to help the homeless and temporarily displaced find shelter.",
+        "The face of housing the homeless could change. Consistent government funding for natural disasters and innovations in alternative accommodation could change the look of temporary housing services and even spread to permanent homeless solutions.",
+        "Services support a diverse customer base with varying situational needs. Homeless shelters and community housing meet the needs of families, youth, and adults with immediate, short-term, or permanent solutions.",
+        "Some establishments provide services for niche communities. Some shelters offer services for veterans, youth or families, while others focus on specific ethnic or racial groups, LBGTQ+ individuals, or the chronically homeless.",
+        "Establishments cluster in states with dense urban populations. The Mid-Atlantic and West have the two states with the most significant percentage of establishments (New York, Los Angeles, San Diego, and San Jose).",
+        "Establishment locations are not necessarily proportional to population. Establishments locate where needs are most pressing, in regions with unemployment and high cost of living, and where governments prioritize and have budgets to support services.",
+        "Small and nonprofit organizational form prevails. Community-based needs create a fragmented market for services.",
+        "Competition on multiple fronts inhibits entry. Establishments meet stiff price competition for labor and purchases while must endure substantial grant and fundraising competition for funding.",
+        "Companies are small and diverse. There are no major companies as needs for services are spread out geographically and in the types of services provided.",
+        "Services are most needed where expenses are higher. Many of the states with the highest rates of homelessness have the highest"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "THE HOMELESS HAVE THE GREATEST NEED",
+            "segment_description": "Homeless individuals and families account for an estimated 68.2% market share for services in the industry. Most are only temporarily homeless, soon finding housing and a way to stabilize their income. The most common reason for an episode of homelessness for a family or individual is the inability to pay for housing.",
+            "segment_percentage": 68.2
+        },
+        {
+            "segment": "LOW-INCOME INDIVIDUALS AND FAMILIES REQUIRE A THIRD OF THE SERVICES",
+            "segment_description": "Low-income individuals account for an estimated 31.8% of the market for community housing services. Most of the programs offered by HUD, including public housing and rental assistance programs, are only available to applicants with incomes substantially lower than the local area's median income. HUD operates three major rental assistance programs that collectively provide rental subsidies to an estimated 4.5 million households.",
+            "segment_percentage": 31.8
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Permanent Supportive Housing",
+            "product_description": "Permanent supportive housing (PSH) accounts for 39.2% of community housing and homeless shelter beds.",
+            "product_percentage": 39.2
+        },
+        {
+            "product_or_service": "Temporary and Emergency Shelters",
+            "product_description": "Emergency shelters for victims of domestic violence, sexual assault, or child abuse and runaway youths and families displaced because of medical crises account for 32.0% of total community housing and shelter beds.",
+            "product_percentage": 32.0
+        },
+        {
+            "product_or_service": "Construction and Repairs",
+            "product_description": "Construction and repairs related to community housing services.",
+            "product_percentage": 14.3
+        },
+        {
+            "product_or_service": "Transitional Housing",
+            "product_description": "Transitional housing for low-income individuals and families is the step between emergency and permanent housing.",
+            "product_percentage": 8.9
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": null,
+            "product_percentage": 5.6
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Apartment & Condominium Construction in the US",
+            "Agriculture, Forestry, Fishing and Hunting in the US",
+            "Donations, Grants & Endowment in the US"
+        ],
+        "tier_2_suppliers": [
+            "Real Estate and Rental and Leasing in the US",
+            "Grocery Wholesaling in the US"
+        ],
+        "tier_1_buyers": [
+            "Adoption & Child Welfare Services in the US",
+            "Civic, Social & Youth Organizations in the US",
+            "Family Counseling & Crisis Intervention Services in the US",
+            "Natural Disaster & Emergency Relief Services in the US",
+            "Elderly & Disabled Services in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Permanent Supportive Housing is the Largest Service Segment",
+            "determinant_description": "According to the 2021 Annual Homeless Assessment Report (AHAR), permanent supportive housing (PSH) accounts for 39.2% of community housing and homeless shelter beds. The Supportive Housing Program, sponsored by the Department of Housing and Urban Development (HUD), is designed to enable homeless persons to live independently and successfully transition from homelessness. The trend to permanent supportive housing is on the rise, as it is viewed as an effective solution to homelessness and is in more demand."
+        },
+        {
+            "determinant_title": "Temporary and Emergency Shelters Service Ebbs and Flows",
+            "determinant_description": "According to the 2021 AHAR, emergency shelters for victims of domestic violence, sexual assault, or child abuse and runaway youths and families displaced because of medical crises account for 32.0% of total community housing and shelter beds. Often, these emergency shelters are specifically for women and children and provide 24-hour staffing and crisis services, including counseling, domestic violence education, support groups, and addiction recovery facilities. This segment is prone to sudden increases and decreases in market share, primarily when contending with events that cause considerable displacement or impoverishment."
+        },
+        {
+            "determinant_title": "THE TEMPORARY AND EMERGENCY SHELTERS SEGMENT HAS BEEN INCREASING",
+            "determinant_description": "Transitional housing represents a small segment of sheltering services. Transitional housing for low-income individuals and families is the step between emergency and permanent housing. Transitional housing units are typically single rooms or apartments in a residence that provides supportive services, with the demand for these services growing."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "THE MID-ATLANTIC LEADS BY MANY METRICS",
+            "location_description": "The Mid-Atlantic has the second-highest ratio of establishments to population. New England is the region with the highest ratio of establishments to population.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "The Housing and Community Development Act (1974)",
+                "regulation_description": "This act created the Community Development Block Grant (CDBG) program. The CDBG merged seven categorical programs into a block of flexible community development funds distributed each year through a formula that considers population and measures of distress, including poverty, age of housing, housing overcrowding and growth lag."
+            },
+            {
+                "regulation_title": "The McKinney-Vento Homeless Assistance Act (1987)",
+                "regulation_description": "This act was charged with organizing federally funded programs to assist the homeless population; these programs included emergency shelter, transitional housing, job training, healthcare, education, and in some instances, permanent housing. The McKinney-Vento act outlines the primary source of funding that the Department of Housing and Urban Development (HUD) provides for homeless and housing assistance."
+            },
+            {
+                "regulation_title": "The Americans with Disabilities Act (1990) or Title II",
+                "regulation_description": "This act prohibits discrimination based on disability in programs, services and activities provided or made available by public entities. HUD enforces Title II regarding state and local public housing, housing assistance and housing referrals."
+            },
+            {
+                "regulation_title": "THE FEDERAL HOUSING ENTERPRISES FINANCIAL SAFETY AND SOUNDNESS ACT (1992)",
+                "regulation_description": "This act established the current regulatory structure for government-sponsored enterprises."
+            },
+            {
+                "regulation_title": "THE QUALITY HOUSING AND WORK RESPONSIBILITY ACT (1998)",
+                "regulation_description": "The act's multiple goals included protecting access to housing assistance for the poorest families, raising performance standards for public housing agencies, rewarding high performance, and transforming the public housing stock through new policies and procedures for demolition, replacement, and mixed-finance projects."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [],
+        "factors_increased_barrier": [
+            "Capital Intensity Level low",
+            "Industry Assistance Level high - steady"
+        ],
+        "factors_decreased_barrier": []
+    },
+    "basis_of_competition": {
+        "basis_level": "Low",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Small and nonprofit organizational form prevails",
+                "basis_description": "Small and nonprofit organizational form prevails. Community-based needs create a fragmented market for services."
+            },
+            {
+                "basis_title": "Competition on multiple fronts inhibits entry",
+                "basis_description": "Competition on multiple fronts inhibits entry. Establishments meet stiff price competition for labor and purchases while must endure substantial grant and fundraising competition for funding."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Needs-driven services foster fragmentation",
+                "concentration_description": "Since funding and donations will depend on community needs, the location and extent of services are needs driven. Populated communities may require more assistance and smaller communities will need less."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "the four largest establishments",
+                "company_percentage": 7.4
+            },
+            {
+                "company_name": "the eight largest",
+                "company_percentage": 10.0
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 6.4
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 35.3
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 5.5
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 4.4
+        },
+        {
+            "cost_type": "Property maintenance and rental assistance programs",
+            "cost_type_percentage": 44.4
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases expense will depend on the location and services mix",
+            "cost_factor_description": "Purchases expense will depend on the location and services mix. Prices will vary depending on location, urban or rural."
+        },
+        {
+            "cost_factor_title": "Urban providers will contend with higher wages",
+            "cost_factor_description": "Urban providers will contend with higher wages. Taking the second largest share of revenue, urban providers will see a more significant share of revenue spent on wage costs since they will be in highly competitive labor markets."
+        },
+        {
+            "cost_factor_title": "This industry relies heavily on volunteer labor",
+            "cost_factor_description": "This industry relies heavily on volunteer labor; however, running a shelter often requires round-the-clock staffing, which keeps the industry labor-intensive and the cost share of wages high."
+        },
+        {
+            "cost_factor_title": "Nearly Half of Revenue is Consumed by Rent and Rental Assistance",
+            "cost_factor_description": "Direct rent payments (not including rental assistance) and land costs account for 4.4% of industry revenue, and property maintenance and rental assistance programs account for 44.4% of industry revenue in 2023."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_trend": "Steady",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "As a labor-intensive enterprise, entrants will have high wage costs",
+                "capital_intensity_description": "As a labor-intensive enterprise, entrants will have high wage costs to provide all the various services (e.g., managers, counselors, maintenance, security, cleaning, and kitchen staff) and may have minimum wage and labor laws to consider."
+            },
+            {
+                "capital_intensity_title": "Low levels of innovation limit the threat to incumbent operators",
+                "capital_intensity_description": "Low levels of innovation limit the threat to incumbent operators from new technologies disrupting their operations."
+            },
+            {
+                "capital_intensity_title": "Major market segments for industry operators are relatively diversified",
+                "capital_intensity_description": "Major market segments for industry operators are relatively diversified. The spread of market segments suggests that there are limited entry points other than those already served by incumbent operators."
+            }
+        ]
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "EMPLOYMENT AND ENVIRONMENTAL SHOCKS AMPLIFY VOLATILITY AND BOOST REVENUE",
+                "volatility_description": "Sudden, unexpected catastrophic events like COVID-19 or significant regional disruptive weather events can displace or impoverish vast numbers of people and cause transient, substantial increases in revenue."
+            },
+            {
+                "volatility_title": "Government Actions Can Mitigate Volatility Since They Can Reduce or Increase Revenue",
+                "volatility_description": "A significant increase in revenue in 2020, brought on by increased COVID-19 funding from local governments, mitigated unemployment's expected impact on homelessness and revenue. However, continued funding by the government for programs keeps revenue steady and volatility at bay."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_trend": "Steady",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Low technology change",
+                "technological_change_description": "Low levels of innovation limit the threat to incumbent operators from new technologies disrupting their operations. However, a low rate of growth in technology can also create exposure for incumbents as the trajectory of innovation in other markets could lead to unforeseen competitive disadvantages."
+            },
+            {
+                "technological_change_title": "Permanent Supportive Housing is the Largest Service Segment",
+                "technological_change_description": "According to the 2021 Annual Homeless Assessment Report (AHAR), permanent supportive housing (PSH) accounts for 39.2% of community housing and homeless shelter beds. The Supportive Housing Program, sponsored by the Department of Housing and Urban Development (HUD), is designed to enable homeless persons to live independently and successfully transition from homelessness. The trend to permanent supportive housing is on the rise, as it is viewed as an effective solution to homelessness and is in more demand."
+            },
+            {
+                "technological_change_title": "TEMPORARY AND EMERGENCY SHELTERS SERVICE EBBS AND FLOWS",
+                "technological_change_description": "According to the 2021 AHAR, emergency shelters for victims of domestic violence, sexual assault, or child abuse and runaway youths and families displaced because of medical crises account for 32.0% of total community housing and shelter beds. Often, these emergency shelters are specifically for women and children and provide 24-hour staffing and crisis services, including counseling, domestic violence education, support groups, and addiction recovery facilities. This segment is prone to sudden increases and decreases in market share, primarily when contending with events that cause considerable displacement or impoverishment."
+            },
+            {
+                "technological_change_title": "THE TEMPORARY AND EMERGENCY SHELTERS SEGMENT HAS BEEN INCREASING",
+                "technological_change_description": "Transitional housing represents a small segment of sheltering services. Transitional housing for low-income individuals and families is the step between emergency and permanent housing. Transitional housing units are typically single rooms or apartments in a residence that provides supportive services, with the demand for these services growing."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "How had COVID-19 affected business?",
+            "answer": "Community housing faces no real external competition, but demand is affected by economic trends."
+        },
+        {
+            "question": "Does your company use digital marketing platforms to reach the wider community?",
+            "answer": "Homeless shelters must be sure that people are aware of their establishments."
+        },
+        {
+            "question": "Is your company geographically positioned in communities where there is a strong need?",
+            "answer": "Homeless shelters are needed in areas with large homeless populations."
+        },
+        {
+            "question": "How has the rapid rise in the unemployment rate during COVID-19 affect demand?",
+            "answer": "There is less need for community housing when the economy and employment are strong."
+        },
+        {
+            "question": "Is your company investing in new technology to improve internal processes?",
+            "answer": "Homeless shelters can use digital record-keeping software to more efficiently track data."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automated scheduling tools?",
+            "answer": "Some supply management programs can be automated to reduce the need for labor."
+        },
+        {
+            "question": "Has your facility been able to receive additional funding from the government?",
+            "answer": "Community housing is regulated by the Department of Housing and Urban Development (HUD)."
+        },
+        {
+            "question": "How did your facility change operations to account for COVID-19 restrictions?",
+            "answer": "Homeless shelters must ensure that all people staying in their facilities are safe."
+        },
+        {
+            "question": "How do you keep operating costs down while still providing high levels of service?",
+            "answer": "Homeless shelters must reduce costs given reduced HUD funding."
+        },
+        {
+            "question": "Has your profitability been impacted by changes in funding for social services?",
+            "answer": "HUD had its budget cut in 2020."
+        },
+        {
+            "question": "Does the organization rely on membership fees, contributions, donations, or fundraisers? What can you do to increase your revenue levels?",
+            "answer": "Long-term planning for housing assistance programs requires access to secure revenue."
+        },
+        {
+            "question": "Do you maximize efficiency in the running of your operations? Do you integrate and coordinate resources to minimize administration costs?",
+            "answer": "The community-housing network is more efficient if resources are coordinated and integrated to improve logistics and administration."
+        },
+        {
+            "question": "How does your coverage compare with that of your competitors? Are there some areas in which it is harder to provide service?",
+            "answer": "Community housing services need to be provided in a range of diverse locations to meet the needs of local communities."
+        },
+        {
+            "question": "How much do you rely on federal funding? Do you have a plan in place for when federal funding is very low?",
+            "answer": "The majority of industry revenue comes from the federal, state and local government-funded homeless and housing assistance programs. In 2021, federal funding for social services is expected to decline."
+        },
+        {
+            "question": "Do you monitor unemployment rates to plan accordingly? How will falling unemployment hurt your company?",
+            "answer": "A rise in the national unemployment rate will increase demand for community housing services. In 2021, the unemployment rate is expected to decline."
+        },
+        {
+            "question": "Is your service aimed mainly at households in the lowest income group? How can you prepare for periods of increasing or decreasing poverty rates?",
+            "answer": "A rise in the poverty rate increases the number of individuals seeking community housing and shelter services, increasing demand for the industry. In 2021, the poverty rate is expected to increase."
+        }
+    ]
+}

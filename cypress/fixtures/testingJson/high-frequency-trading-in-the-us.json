@@ -1,0 +1,573 @@
+{
+    "report_title": "Trading in the US",
+    "report_date": "May 21, 2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 5742000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": -9.28
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 4.18
+            }
+        },
+        "profit": {
+            "profit_dollars": 1298000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": -9.56
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 22.6,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0.52
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 3236000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 4079,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 1901000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "High-frequency trading consists of companies that trade large numbers of orders of financial securities in fractions of a second using quantitative trading algorithms. High-frequency trading is a subset of quantitative investing, which employs algorithms that analyze financial data to conduct trades. This industry is growing over the long term because advancements in technology have enabled investors to trade at faster rates than ever.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Financial Markets Benefited From The Strong Economy Pre-COVID",
+            "current_performance_point_description": "In the years immediately preceding the pandemic, GDP growth was strong, resulting in low unemployment and rapid wage growth. Since consumers had high incomes, they invested heavily in the stock market, causing stock indices such as the S&P 500 to soar. Strong financial markets resulted in massive trading, boosting demand for the industry's services and increasing revenue."
+        },
+        {
+            "current_performance_point_title": "Revenue and Profit Forecast",
+            "current_performance_point_description": "Overall, revenue for high-frequency traders has been increasing at a CAGR of 3.4% during the current period, and is expected to reach $5.7 billion in 2023. Revenue is expected to fall 3.3% in that 2023 specifically. The industry will continue to perform well into the near future."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Steady Income Growth Will Likely Raise Access To Credit",
+            "future_outlook_point_description": "Despite challenges from high inflation, rising interest rates and recessionary fears, GDP growth is expected to grow steadily during the outlook period, fostering income growth. As incomes rise, consumers will become more reputable borrowers, so banks will increase their access to credit. Since consumers can borrow more heavily, their total consumption will increase, enabling them to invest in the stock market more, boosting demand for high-frequency trading and fomenting revenue growth."
+        },
+        {
+            "future_outlook_point_title": "High-Frequency Trading Is Expected To Become More Enhanced As Software Gets Better",
+            "future_outlook_point_description": "Steady income growth and intense competition will likely cause financial institutions to invest in computers and software. More investment in computers and software will enhance algorithms and improve computer speeds, boosting the efficiency of high-frequency trading. As high-frequency trading improves, more investors will flock to it, raising revenue."
+        },
+        {
+            "future_outlook_point_title": "The Lack Of Uncertainty Will Likely Reduce Downstream Demand",
+            "future_outlook_point_description": "Since growth in incomes and stock prices will be relatively stable, investor uncertainty will remain flat. Flat investor uncertainty won't lead to a surge in trades, so a significant source of downstream demand won't exist for high-frequency traders, posing a potential threat to the industry."
+        }
+    ],
+    "industry_definition": "The High Frequency Trading industry comprises financial securities trading firms and individual broker-dealers that use high-speed market data and sophisticated analytics software to identify temporal supply and demand.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage: growth",
+            "Capital Intensity Level: low",
+            "Barriers To Entry Level: high - steady"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level: high",
+            "Industry Assistance Level: low - increasing",
+            "Technology Change Level: high",
+            "Competition Level: high - steady"
+        ],
+        "mixed_impact_factors": [
+            "Concentration Level: medium",
+            "Regulation Level: medium - increasing",
+            "Globalization Level: medium - increasing"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "Low & Increasing Level of Assistance",
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "High Competition",
+            "High Volatility",
+            "Low Profit vs. Sector Average"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Private investment in computers and software"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Investor uncertainty"
+        ]
+    },
+    "key_trends": [
+        "Since investor uncertainty increased, the volume of trades rose, so demand for high-frequency trading surged",
+        "Consumers had more funds to use on investing in the stock market, raising spending on high-frequency trading",
+        "Higher rates have increased the yield on government bonds",
+        "GDP growth is expected to grow steadily during the outlook period, fostering income growth",
+        "Steady income growth and intense competition will likely cause financial institutions to invest in computers and software",
+        "Since growth in incomes and stock prices will be relatively stable, investor uncertainty will remain flat",
+        "High wage growth encouraged consumers to invest in financial markets in the years preceding the pandemic, boosting industry demand"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Proprietary traders",
+            "segment_description": "Proprietary traders are independent companies that use in-house capital to engage in high-frequency trading to generate revenue. These companies use computer speed to make a profit off of the spread between the bid and ask prices on various securities.",
+            "segment_percentage": 29.3
+        },
+        {
+            "segment": "Asset managers, banks, and government entities",
+            "segment_description": "Asset managers help investors grow their portfolios by helping them choose the correct equities, bonds and other financial instruments to invest in. These managers have increasingly engaged in high-frequency trading to maximize efficiency. Banks and government institutions have portfolios, so they use high-frequency trading also.",
+            "segment_percentage": 27.9
+        },
+        {
+            "segment": "Broker-dealers",
+            "segment_description": "Broker-dealers are companies that offer traditional trading services on a commission basis. These dealers have trading desks that execute high-frequency trades, so their activity represents slightly more than one-fifth of revenue.",
+            "segment_percentage": 21.2
+        },
+        {
+            "segment": "Hedge funds",
+            "segment_description": "Hedge funds are pooled investment vehicles privately organized and administered by professional investment managers. These funds generate revenue through several different assets (e.g., stocks, bonds, derivatives, insurance). Since it's grown in popularity, hedge and mutual funds have increasingly used high-frequency trading to boost investment opportunities.",
+            "segment_percentage": 12.7
+        },
+        {
+            "segment": "Mutual funds",
+            "segment_description": "Mutual funds are similar to hedge funds, except they only trade in publicly traded securities (e.g., stocks and bonds). Since it's grown in popularity, hedge and mutual funds have increasingly used high-frequency trading to boost investment opportunities.",
+            "segment_percentage": 9.9
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Market Making",
+            "product_description": "Market makers are individual participants or companies part of an exchange that buy and sell securities for their own account. They provide liquidity to financial markets by doing this.",
+            "product_percentage": 51.4
+        },
+        {
+            "product_or_service": "Execution Services",
+            "product_description": "Execution services are defined as the revenue generated from commission fees earned on performing client transactions. Stockbrokers, hedge funds and mutual funds often engage in execution services.",
+            "product_percentage": 40.2
+        },
+        {
+            "product_or_service": "Portfolio Optimization",
+            "product_description": "Portfolio optimization refers to determining the optimal capital allocation across a portfolio's assets. Most funds allocate capital to minimize downside risk and maximize upside potential.",
+            "product_percentage": 8.4
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Internet Service Providers in the US",
+            "Business Analytics & Enterprise Software Publishing in the US",
+            "Wired Telecommunications Carriers in the US",
+            "Stock & Commodity Exchanges in the US"
+        ],
+        "tier_2_suppliers": [
+            "Communication Equipment Manufacturing in the US",
+            "Computer Manufacturing in the US",
+            "Telecommunication Networking Equipment Manufacturing in the US",
+            "Utilities in the US"
+        ],
+        "tier_1_buyers": [
+            "Portfolio Management in the US",
+            "Investment Banking & Securities Intermediation in the US",
+            "Venture Capital & Principal Trading in the US",
+            "Securities Brokering in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Investment",
+            "determinant_description": "Announced changes in Federal Reserve policy rates can influence investor sentiment regarding sustained economic health, and these events enable many high-frequency traders to capitalize on intraday movements."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": [
+            {
+                "trade_title": "Low international trade",
+                "trade_description": "While high-frequency traders buy and sell financial securities across global markets, the service-oriented nature of high-frequency trading prevents international trade. While some companies may service international clients, the revenue generated from this practice falls isn't from the United States, so it's not included in this report."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The New York metropolitan area is home to the nation's largest stock exchanges, investment banks and private equity firms. Since investors at these institutions are the most likely to engage in high-frequency trading, more than half of the industry's establishments are located in this region.",
+            "percentage_establishments": 30,
+            "percentage_population": 15
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region contains the city of Chicago, the nation's third-largest city known for its exchanges. The Chicago Stock Exchange and CME Group Inc. operate in this city. Since stock exchanges are a major source of downstream demand for high-frequency traders, the industry has a significant presence in this region.",
+            "percentage_establishments": 20,
+            "percentage_population": 20
+        },
+        {
+            "location": "West",
+            "location_description": "The West is home to big technology companies such as Meta, Alphabet and Amazon. These companies are quick to adapt new practices and seek to find innovative ways to manage their portfolios, so they engage in lots of high-frequency trading.",
+            "percentage_establishments": 15,
+            "percentage_population": 20
+        },
+        {
+            "location": "Plains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 10,
+            "percentage_population": 5
+        },
+        {
+            "location": "Southwest",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 10,
+            "percentage_population": 15
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5,
+            "percentage_population": 5
+        },
+        {
+            "location": "Southeast",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 10,
+            "percentage_population": 20
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Increasing",
+        "regulations_points": [
+            {
+                "regulation_title": "Wider Regulatory Bodies",
+                "regulation_description": "Since high-frequency trading is part of the broader financial system, it's subject to rules set by existing regulatory organizations. Companies often follow rules set by self-regulating organizations, such as the Financial Industry Regulatory Authority (FINRA). High-frequency traders that engage in US equity and options marketing making are regulated by the United States Securities and Exchange Commission (SEC). If they trade other derivative instruments (e.g., commodities), they're subject to rules set by the Commodity Futures Trading Commission (CFTC)."
+            },
+            {
+                "regulation_title": "Securities Exchange Act of 1934",
+                "regulation_description": "This law bans some HFT practices that are deemed manipulative. This includes spoofing, which happens when a trader places large orders on an asset without the intention to execute it, creating artificial demand for it. Layering is also banned, which is when a trader inputs and then cancels market orders without the intention to execute, shifting stock prices."
+            },
+            {
+                "regulation_title": "Transparency Requirements",
+                "regulation_description": "Regulators often force high-frequency traders to disclose information about trading activity, such as the use of algorithms and the specific strategies used."
+            },
+            {
+                "regulation_title": "Dodd-Frank Wall Street Reform and Consumer Protection Act of 2010",
+                "regulation_description": "This law forces banks to maintain a minimum level of capital. To contend with the higher level of capital, portfolio managers have changed governing structures and raised compliance costs. Since portfolio managers are significant buyers of high-frequency trades, this law reduces activity for the industry because of higher compliance costs."
+            },
+            {
+                "regulation_title": "Pandemic-Era Rules",
+                "regulation_description": "To ensure the virus didn't spread, governments forced high-frequency traders to enforce social distancing and mask-wearing laws if they still chose to operate in person."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "Revenue volatility level is high."
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "Industry assistance level is low but increasing."
+            },
+            {
+                "barrier_title": "Technology Change Level",
+                "barrier_description": "Technology change level is high."
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "Competition level is high but steady."
+            },
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "Life cycle stage is growth."
+            },
+            {
+                "barrier_title": "Capital Intensity Level",
+                "barrier_description": "Capital intensity level is low."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Revenue Volatility Level: high",
+            "Industry Assistance Level: low - increasing",
+            "Technology Change Level: high",
+            "Competition Level: high - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage: growth",
+            "Capital Intensity Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Technology and Labor",
+                "basis_description": "Technology represents the primary competitive basis for competition since company performance is dictated by the speed and accuracy of computer systems and trading models. The most common metric used to illustrate a competitive technological edge is reducing latency time between trades. Latency is broadly defined as the duration of a process from beginning to end. In this case, it's the moment a stock price appears and the moment it's either purchased or sold. High-frequency trading enterprises generate revenue through disparity in the bid and ask prices for financial securities. Traders that effectively reduce latency time can evaluate price movements and exploit this disparity to make a small profit on each trade. The recent introduction of new methods, such as machine learning and artificial intelligence (AI), has enabled many high-frequency traders to perform these tasks in milliseconds. Companies generally compete to maintain a cutting edge on computing hardware and models."
+            },
+            {
+                "basis_title": "Scope and Geographic Location",
+                "basis_description": "The scope of a company's trading activity can help it hedge its investments and minimize risk. The most prominent companies in the industry trade in various markets, including public equities, fixed income, currency and commodity exchanges, among others. Diversity in asset classes can reduce overall risk on an enterprise's portfolio, benefiting revenue generated from proprietary trading. Highly diversified players can attract various customers to earn revenue through trade execution commissions, underlining the competitive edge. Traders also compete on geographic location, since proximity to security exchanges can effectively reduce latency times and bolster performance. As a result, larger industry operators typically sustain operations in various geographic locations in accordance with relevant exchanges. For small-scale enterprises, competition for control over a local market is critical for sustainable growth."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Medium",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "High barriers to entry keep the industry consolidated",
+                "concentration_description": "It's challenging to set up a high-frequency trading business, as there are massive start-up costs, such as capital required to start trading, computer software and wages for highly skilled workers. Since barriers to entry are high, fewer individuals become high-frequency traders, raising market share concentration."
+            },
+            {
+                "concentration_title": "The volatile nature of high-frequency trading prevents some entry",
+                "concentration_description": "Since revenue for this industry is strongly influenced by financial markets and investor uncertainty, sales are naturally volatile. Most potential entrants don't want to risk losing significant revenue when starting their business, so they don't become traders. The lack of competitors enables established players to be dominant in this industry."
+            },
+            {
+                "concentration_title": "Recent acquisitions have rocked high-frequency traders",
+                "concentration_description": "Large players such as Virtu Financial LLC and Citadel Securities LLC have been acquiring smaller companies in recent years, demonstrated by the declining number of establishments and enterprises during the current period. More acquisitions have enabled significant players to become even more domineering over the industry."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Virtu Financial LLC",
+                "company_percentage": 44.1
+            },
+            {
+                "company_name": "Citadel Securities LLC",
+                "company_percentage": 41.5
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 22.6
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 33.1
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 2.0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0.6
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0.9
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 2.2
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0.1
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 38.5
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Higher input costs cause purchases to rise",
+            "cost_factor_description": "In 2023, purchase costs are forecast to make up 2.0% of revenue. Purchases include computers, computer servers, software and other technology used for daily operations. As inflation has surged in recent years, the costs of these inputs have increased, causing purchase costs' revenue share to creep upward during the current period."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_trend": "Unknown",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital intensity",
+                "capital_intensity_description": "The High-Frequency Trading industry has a low level of capital intensity. In 2023, for every $1.00 spent on labor costs, companies in this industry are expected to spend $0.02 on capital expenditures. Although this industry relies on extensive high-speed telecommunications networks to maximize the speed of trading, most of this infrastructure is not owned outright by the companies themselves and isn't included in this industry's depreciation costs."
+            },
+            {
+                "capital_intensity_title": "Technological Disruption",
+                "capital_intensity_description": "The High Frequency Trading industry has existed for decades, and technological disruptions are commonplace. The introduction of computers represents was most significant disruption to the industry in the past. Innovation in data analytics, artificial intelligence (AI) and machine learning has continued to shift the industry landscape, forcing companies to adopt and develop new methods to stay competitive."
+            }
+        ]
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_trend": "Unknown",
+        "volatility_points": [
+            {
+                "volatility_title": "Financial Markets Foster Significant Volatility",
+                "volatility_description": "The value of stock indices such as the S&P 500 represents the level of activity in financial markets. As these indices rise, demand for high-frequency trading will increase. When they fall, revenue will also perform poorly."
+            },
+            {
+                "volatility_title": "Interest Rates Reduce Volatility in the Market",
+                "volatility_description": "As interest rates increase, yields on bonds surge. Since bonds are safer than equities, more investment into them reduces market volatility. Investors don't shift assets as much, reducing demand for the industry's services. Interest rates have ebbed and flowed during the current period. They plunged during COVID-19 and have soared in recent years, creating excess volatility for high-frequency traders."
+            }
+        ]
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_trend": "Increasing",
+        "technological_change_points": [
+            {
+                "technological_change_title": "High Technology Change",
+                "technological_change_description": "Technology and technological innovation are cornerstones of the continued development of the High-Frequency Trading industry. The crux of performance for most high-frequency traders is the ability to secure bid and ask prices on securities faster than anyone else, enabling quick profit on the initial spread of these two data points. While in past decades this was a rudimentary process, the introduction of computers and the continued expansion of financial market access to retail consumers has increased focus on building processing speed."
+            },
+            {
+                "technological_change_title": "Artificial Intelligence and Machine Learning",
+                "technological_change_description": "More recent innovations in this space have been the implementation of Artificial Intelligence and Machine Learning into building high-frequency trading algorithms. One commonly used model is the support-vector machine (SVM). SVM models synthesize input data to determine a decision boundary between two data points, also known as classification. For high-frequency trading, information such as trading volume, price changes and correlation with relative indices can help a model determine whether a particular security's price will increase or decrease."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "How do you emphasize the value of your company's services?",
+            "answer": "Companies in this industry target clients looking for outperformance of financial markets on their investments."
+        },
+        {
+            "question": "How has the shift toward conducting business online affected demand for your services?",
+            "answer": "This industry is very technologically oriented, which enables it to integrate an increased amount of online business transactions reasonably seamlessly."
+        },
+        {
+            "question": "What is your company doing to reduce costs?",
+            "answer": "Companies in this industry have engaged in consolidation activity and implemented more advanced trading algorithms to reduce labor costs."
+        },
+        {
+            "question": "What international operations do you conduct and how could benefit from increasing your international reach?",
+            "answer": "Companies in this industry trade securities in financial markets throughout the world."
+        },
+        {
+            "question": "What new IT and data systems have you invested into in recent years?",
+            "answer": "High-frequency traders have invested heavily in IT and data systems to process larger amounts of data and to help conduct faster trades."
+        },
+        {
+            "question": "To what extent are your processes automated and how do you plan on investing in automation over the coming years?",
+            "answer": "More advanced trading algorithms have enabled the industry to operate with a smaller labor force."
+        },
+        {
+            "question": "How have the increased capital requirements under Basel III affected operations?",
+            "answer": "Basel III has increased the capital holding requirements for high-frequency traders, in line with the financial sector overall."
+        },
+        {
+            "question": "How do you expect the proposed changes to Dodd-Frank to effect your business?",
+            "answer": "Dodd-Frank was the first piece of federal legislation to acknowledge the existence of high-frequency trading, setting some limited regulation on the industry and directing the SEC to further study it."
+        },
+        {
+            "question": "Do you have enough capital reserved to be able to invest in new technology/software as soon as it becomes available?",
+            "answer": "Investing in new technology and software is a key expense for traders seeking to maximize the speed of their trades and gain a competitive edge."
+        },
+        {
+            "question": "How does your profit margin compare to those of your competitors?",
+            "answer": "Profit has increased as higher market volatility has increased the average profitability per transaction."
+        },
+        {
+            "question": "How does your company go about managing various kinds of risk? How effective are these techniques? What could be improved?",
+            "answer": "Risk management forms a primary motivation for the trading decisions made on a daily basis. Effectively hedging trades to minimize losses and maximize gains is a key to success. Working in equity markets is inherently risky, as stocks fluctuate often."
+        },
+        {
+            "question": "How hard is it to promote your company by word-of-mouth recommendations? How can you improve your company to receive better word-of-mouth recommendations? How many of your clients were referred to you by a satisfied client?",
+            "answer": "The Securities and Exchange Commission is taking an increasing interest in high-frequency trading, demanding more transparency about the industry's daily operations. Negotiating with regulators can help firms maintain their independence. The risk of entering the industry produces high concentration. This makes it more challenging to gain business through word-of-mouth recommendations."
+        },
+        {
+            "question": "How quickly can new technology be adopted? Does your company keep up to date with the latest technology? What are the associated costs?",
+            "answer": "The industry relies on internet technologies to minimize latencies, while computer software is needed to execute trades. Adopting the latest of both helps firms compete. Adopting new technology is necessary to leg-up competitors and make high-frequency trading more efficient."
+        },
+        {
+            "question": "How do the regulations that apply to your company affect your performance? What regulations are expected in the future and how will they affect your company? How will your competitors be affected by the regulations? How do you keep your company up to date?",
+            "answer": "Investor uncertainty is an indicator of stock market volatility. More volatility on exchanges makes more money available for high-frequency traders because they generate revenue and profit through very fast-paced purchases and sales. In 2020, investor uncertainty is expected to decline sharply, representing a potential threat to the industry. To reduce market volatility, the federal government often imposes new regulations on the financial industry."
+        },
+        {
+            "question": "How do you keep track of investor confidence levels? How do you use this information? How does a high uncertainty level directly affect your company? How do you offset low revenue in times of high uncertainty? How often have you changed exchange fees over?",
+            "answer": "Investor uncertainty is an indicator of stock market volatility. More volatility on exchanges makes more money available for high-frequency traders because they generate revenue and profit through very fast-paced purchases and sales. This driver is expected to decrease during 2013. High uncertainty often increases the volume of trades, as investors are jittery about their current assets. This often benefits the industry."
+        },
+        {
+            "question": "What are some indicators that interest rates are going up and bond prices are falling?",
+            "answer": "Higher yields on bonds reduce revenue for high-frequency traders, as equity markets are a substitute for bond markets."
+        }
+    ]
+}

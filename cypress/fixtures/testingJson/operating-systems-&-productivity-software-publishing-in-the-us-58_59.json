@@ -1,0 +1,315 @@
+{
+    "report_title": "Industry Report",
+    "report_date": "2023-10-01",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 101,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2019,
+                "revenue_cagr_value": 0
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2020,
+                "end_year": 2025,
+                "revenue_cagr_value": 0
+            }
+        },
+        "profit": {
+            "profit_dollars": 101,
+            "profit_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2019,
+                "profit_cagr_value": 0
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2020,
+                "end_year": 2025,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 101,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2019,
+                "profit_margins_cagr_value": 0
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2020,
+                "end_year": 2025,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 101,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2019,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2020,
+                "end_year": 2025,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 101,
+            "employees_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2019,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2020,
+                "end_year": 2025,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 101,
+            "wages_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2019,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2020,
+                "end_year": 2025,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 101,
+            "imports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2019,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2020,
+                "end_year": 2025,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 101,
+            "exports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2019,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2020,
+                "end_year": 2025,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "No executive summary provided.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Employee Performance",
+            "current_performance_point_description": "The employee count is strong at 101."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Market Growth",
+            "future_outlook_point_description": "Growth is expected in the market in the coming years."
+        }
+    ],
+    "industry_definition": "No industry definition provided.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Strong workforce",
+            "Stable demand"
+        ],
+        "negative_impact_factors": [
+            "High import competition"
+        ],
+        "mixed_impact_factors": [
+            "Fluctuating wage costs"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Established companies",
+            "Market experience"
+        ],
+        "weaknesses": [
+            "Limited innovation"
+        ],
+        "opportunities": [
+            "Expanding market"
+        ],
+        "threats": [
+            "Economic downturns"
+        ]
+    },
+    "key_trends": [
+        "Increased automation",
+        "Sustainability focus"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Small Enterprises",
+            "segment_description": "Small companies hold a significant market share.",
+            "segment_percentage": 50.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Consulting",
+            "product_description": "Advisory services for businesses.",
+            "product_percentage": 40.0
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Supplier A",
+            "Supplier B"
+        ],
+        "tier_2_suppliers": [
+            "Supplier C",
+            "Supplier D"
+        ],
+        "tier_1_buyers": [
+            "Buyer A",
+            "Buyer B"
+        ],
+        "tier_2_buyers": [
+            "Buyer C",
+            "Buyer D"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Economic Growth",
+            "determinant_description": "Economic growth drives demand for products."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Steady",
+        "export_level": "Moderate",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Trade Balance",
+                "trade_description": "The trade balance has been fluctuating."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Unknown",
+            "location_description": "No information provided on business locations in the given text.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Unknown",
+        "regulations_points": [
+            {
+                "regulation_title": "General Compliance",
+                "regulation_description": "Compliance with industry standards is essential."
+            }
+        ],
+        "regulations_trend": "Unknown"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "<UNKNOWN>",
+        "barriers_trend": "<UNKNOWN>",
+        "barriers_points": [],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": []
+    },
+    "basis_of_competition": {
+        "basis_level": "<UNKNOWN>",
+        "basis_trend": "<UNKNOWN>",
+        "basis_points": []
+    },
+    "market_share_concentration": {
+        "concentration_level": "<UNKNOWN>",
+        "concentration_trend": "<UNKNOWN>",
+        "concentration_points": [],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Imports/Demand",
+            "cost_type_percentage": 558.0
+        },
+        {
+            "cost_type": "Wages/Revenue",
+            "cost_type_percentage": 196410.0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "High import penetration",
+            "cost_factor_description": "The imports/demand ratio is very high."
+        },
+        {
+            "cost_factor_title": "Significant labor costs",
+            "cost_factor_description": "Wages account for a large portion of revenue."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Unknown",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Low",
+        "volatility_points": [
+            {
+                "volatility_title": "Stable revenue per employee",
+                "volatility_description": "Revenue per employee is stable."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Unknown",
+        "technological_change_trend": "Unknown",
+        "technological_change_points": []
+    },
+    "FAQs": [
+        {
+            "question": "What are the key ratios shown in the table?",
+            "answer": "The key ratios shown are IVA/REVENUE %, IMPORTS/DEMAND %, EXPORTS/REVENUE %, REVENUE/EMPLOYEE $'000, WAGES/REVENUE %, EMPLOYEES/ESTABLISHMENT, and WAGES/EMPLOYEE $."
+        },
+        {
+            "question": "What years are covered in the data?",
+            "answer": "The data covers the years from 2004 to 2019."
+        },
+        {
+            "question": "What is the highest value for IVA/REVENUE % in the data?",
+            "answer": "The highest value for IVA/REVENUE % is 57 in 2007."
+        },
+        {
+            "question": "What is the highest value for IMPORTS/DEMAND % in the data?",
+            "answer": "The highest value for IMPORTS/DEMAND % is 592 in 2011."
+        },
+        {
+            "question": "What is the highest value for EXPORTS/REVENUE % in the data?",
+            "answer": "The highest value for EXPORTS/REVENUE % is 37 in 2017 and 2018."
+        },
+        {
+            "question": "What is the highest value for REVENUE/EMPLOYEE $'000 in the data?",
+            "answer": "The highest value for REVENUE/EMPLOYEE $'000 is 17 in 2019."
+        },
+        {
+            "question": "What is the highest value for WAGES/REVENUE % in the data?",
+            "answer": "The highest value for WAGES/REVENUE % is 196,410 in 2019."
+        },
+        {
+            "question": "What values are missing for EMPLOYEES/ESTABLISHMENT and WAGES/EMPLOYEE $?",
+            "answer": "The values for EMPLOYEES/ESTABLISHMENT and WAGES/EMPLOYEE $ are missing for all years in the data."
+        }
+    ]
+}

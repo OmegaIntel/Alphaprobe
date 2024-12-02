@@ -1,0 +1,531 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "Sep 27, 2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 15452000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 1.03
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.33
+            }
+        },
+        "profit": {
+            "profit_dollars": 2349000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 3.59
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 5.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 15.2,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 2.53
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 3.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 3903000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 4.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 4.5
+            }
+        },
+        "employees": {
+            "employees_count": 14855,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 2.5
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 3.0
+            }
+        },
+        "wages": {
+            "wages_dollars": 1150000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 2.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 2.5
+            }
+        },
+        "imports": {
+            "imports_dollars": 1212000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 3.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 2.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 1508000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 1.5
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 2.5
+            }
+        }
+    },
+    "executive_summary": "Over the past five years, dry pet food producers have faced declining revenue, despite a spike in the total number of pets in the US as consumers sought companionship amid COVID-19 lockdowns. Supply issues for the industry's inputs made domestic production more expensive and encouraged overseas competitors to significantly boost their export volumes to US markets, bringing massive year-over-year increases in imports and intensified competition between producers.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Price Competition Pushed Down Revenue",
+            "current_performance_point_description": "Severe drought hit much of the US in 2020 and 2021, limiting the nation's supply of oilseeds, soybeans, corn and other crops elevating the cost of the industry's main inputs. Overseas competitors were able to capitalize on this opportunity, undercutting the industry's prices and capturing domestic demand. Imports jumped double-digits every year except 2019 since 2018, heightening competition and forcing producers to drop their prices."
+        },
+        {
+            "current_performance_point_title": "Consumers Sought Pets Amid COVID-19 Lockdowns",
+            "current_performance_point_description": "The onset of the COVID-19 pandemic left many consumers at home with more free time and less contact with their friends, leading many to seek companionship through pets. The total number of pets surged in 2020 and 2021, offsetting slight declines before and after the pandemic. More pets in the US means more mouths to feed and expanding demand for pet products, including dry pet food."
+        },
+        {
+            "current_performance_point_title": "Pet Owners Are Moving to Premium Recipes",
+            "current_performance_point_description": "Pet owners are increasingly viewing their pets as part of the family, a trend commonly known as \"pet humanization\". Pet humanization encourages owners to look to higher-quality food for their pets, bolstering demand for the industry's most expensive, highest-margin products. This trend reduces demand from consumers for dry cat food, though, as experts are more and more recommending wet food as the superior option for cats because of it has fewer carbohydrates and helps cats stay hydrated."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Demand Will Continue Expanding",
+            "future_outlook_point_description": "The number of pets in the US is set to steadily rise over the next five years, driven partially by improving veterinary healthcare that extends the lives of older pets. As the total number of pets rises, demand for dry pet foods climbs as pet food is a necessity for pet owners. The humanization of family pets will continue to become more commonplace over the five years to 2028, bringing revenue growth."
+        },
+        {
+            "future_outlook_point_title": "Saturation Will Slow the Entrance of New Producers",
+            "future_outlook_point_description": "Following significant growth in the total number of dry pet food producers over the past five years, growth in the total number of establishments is set to grow at a more muted pace through the end of 2028. While demand for dry pet food is still expanding, the industry is approaching market saturation. As the number of total producers in the industry grows to the limits of current demand, price competition will put pressure on smaller producers."
+        },
+        {
+            "future_outlook_point_title": "High Value-Added Will Keep Profit High",
+            "future_outlook_point_description": "Dry pet food producers use specialized machinery and skilled labor to transform raw crops into essential, nutritious pet food, a process that adds significant value to the industry\u2019s products. The industry is dominated by five large corporations that collectively account for nearly two-thirds of all dry pet food production, and these producers take advantage of their strong contracts with key retailers and wholesalers to keep prices well above operating costs."
+        }
+    ],
+    "industry_definition": "The Dry Pet Food Production industry manufactures dry dog and cat foods, which are generally grain- and oilseed-based.",
+    "industry_impact": {
+        "positive_impact_factors": [],
+        "negative_impact_factors": [
+            "Capital Intensity Level high",
+            "Industry Assistance Level low - steady",
+            "Competition Level high - increasing"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "Medium Imports",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "Agricultural price index"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth"
+        ]
+    },
+    "key_trends": [
+        "Low Performance Drivers"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Pet stores",
+            "segment_description": "Specialized pet stores like PetSmart and PETCO purchase large quantities of dry pet food directly from producers to sell to pet owners through their retail outlets.",
+            "segment_percentage": 44.1
+        },
+        {
+            "segment": "Grocery wholesalers",
+            "segment_description": "Wholesalers purchase pet food products in bulk and distribute to pet stores, supermarkets and other retailers.",
+            "segment_percentage": 2.0
+        },
+        {
+            "segment": "Online pet food retailers and online sales",
+            "segment_description": "Online pet retailers buy dry pet food from the industry's producers for resale to consumers. This segment also includes sales from producers that host online platforms where consumers can buy directly from them.",
+            "segment_percentage": 14.6
+        },
+        {
+            "segment": "Supermarkets and convenience stores",
+            "segment_description": "Big-box stores, supermarkets, gas stations and other convenience stores also buy dry pet food to stock their shelves for pet owners shopping at their stores.",
+            "segment_percentage": 14.3
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Specialty Dry Pet Food",
+            "product_description": "Specialty dry pet food includes natural and organic dry food for cats or dogs, as well as grain-free and raw pet food.",
+            "product_percentage": 57.9
+        },
+        {
+            "product_or_service": "Dry Dog Food",
+            "product_description": "Dry dog food is the top-selling product for producers.",
+            "product_percentage": 27.3
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [],
+        "tier_2_suppliers": [
+            "Vegetable Farming in the US",
+            "Beef Cattle Production in the US",
+            "Chicken & Turkey Meat Production in the US"
+        ],
+        "tier_1_buyers": [
+            "Supermarkets & Grocery Stores in the US",
+            "Soft Drink, Baked Goods & Other Grocery Wholesaling in the US",
+            "Grocery Wholesaling in the US"
+        ],
+        "tier_2_buyers": [
+            "Utilities in the US",
+            "Flour Milling in the US",
+            "Seasoning, Sauce and Condiment Production in the US",
+            "Paper Bag & Disposable Plastic Product Wholesaling in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Dry Dog Food is Popular but Declining",
+            "determinant_description": "Because dogs are the most popular pet in the US, dry dog food is the top-selling product for producers. Dry dog food's share of revenue has declined over the past five years, though, as rising concern over a link between preservatives and animal nutrition has caused health-conscious pet owners to turn to alternative dog foods or the industry's specialized products."
+        },
+        {
+            "determinant_title": "Consumers are Buying Less Dry Cat Food",
+            "determinant_description": "Dry cat food is the smallest revenue stream for the industry's producers, as cats are a less popular pet than dogs and consume significantly smaller amounts of food. This segment is sinking as a share of revenue as a growing consensus among experts that wet food better promotes cat health encourages consumers to swap to the industry's substitutes."
+        }
+    ],
+    "international_trade": {
+        "import_level": "moderate",
+        "import_trend": "increasing",
+        "export_level": "moderate",
+        "export_trend": "increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports Have Boomed Despite Challenges",
+                "trade_description": "Imports of dry pet food have climbed double-digits every year over the past five years except in 2019. Spiking demand amid a jump in pet ownership through the COVID-19 pandemic encouraged overseas competitors to up their export volumes to the US market."
+            },
+            {
+                "trade_title": "FDA Oversight Lessens Import Competition",
+                "trade_description": "The FDA's Food Ingredient Safety Program oversees the manufacturing, distribution and labeling of dry pet food produced in both the US and abroad. Because overseas competitors also need to meet the FDA's standards, they're less able to leverage more relaxed labor laws and quality regulations to undercut the prices of US dry pet food producers."
+            },
+            {
+                "trade_title": "Exports to China are Beginning to Skyrocket",
+                "trade_description": "While Canada's proximity to US producers makes the nation the largest market for exports, China is rapidly boosting its consumption of US-made dry pet food. Exports of dry pet food more than tripled from 2021 to 2022 and are set to double in 2023."
+            },
+            {
+                "trade_title": "A DECLINING DOLLAR VALUE WILL PROMOTE EXPORTS",
+                "trade_description": "The value of the US dollar in relation to the currencies of major trading partners is set to sink through the end of 2028, indicated by the declining trade-weighted index (TWI). This makes US goods affordable both domestically and abroad, promoting export growth and lessening competition from imports."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region has a lower concentration of establishments relative to its population share.",
+            "percentage_establishments": 8.1,
+            "percentage_population": 14.5
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region has a higher concentration of establishments compared to its population share.",
+            "percentage_establishments": 16.3,
+            "percentage_population": 13.1
+        },
+        {
+            "location": "New England",
+            "location_description": "The New England region has a lower concentration of establishments relative to its population share.",
+            "percentage_establishments": 4.5,
+            "percentage_population": 4.7
+        },
+        {
+            "location": "Plains",
+            "location_description": "The Plains region has more dry pet food producers than any other region, as the agricultural sector's heavy presence in the area gives pet food companies access to cheaper input costs.",
+            "percentage_establishments": 6.3,
+            "percentage_population": 6.8
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "The Rocky Mountains region has a lower concentration of establishments relative to its population share.",
+            "percentage_establishments": 4.5,
+            "percentage_population": 7.4
+        },
+        {
+            "location": "Southeast",
+            "location_description": "Over a quarter of the nation's population is in the Southeast region, so there are many pets that need food from the industry's producers. By locating near consumer markets, dry pet food producers can offer lower prices through cheaper delivery costs.",
+            "percentage_establishments": 25.2,
+            "percentage_population": 21.8
+        },
+        {
+            "location": "Southwest",
+            "location_description": "The Southwest region has a higher concentration of establishments compared to its population share.",
+            "percentage_establishments": 16.3,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "West",
+            "location_description": "The West is the second-most-popular region for dry pet food manufacturers, as the presence of ports in California, Oregon and Washington allows producers to better trade with Asian buyers and suppliers. The high population in the West translates to a higher number of pets, which makes the region a large market for dry pet food.",
+            "percentage_establishments": 18.9,
+            "percentage_population": 20.2
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "FDA Oversight",
+                "regulation_description": "The Food and Drug Administration (FDA) oversees the manufacturing and distribution of dry pet food through the Food Ingredient Safety Program to ensure the safety of all products."
+            },
+            {
+                "regulation_title": "AAFCO Standards",
+                "regulation_description": "While the Association of American Feed Control Officials doesn't have legal authority to enforce its standards, the guidelines and model regulations the organization creates are often written into law by states."
+            },
+            {
+                "regulation_title": "Environmental Regulations",
+                "regulation_description": "The Environmental Protection Agency and state governments enforce environmental standards regarding all food processing, including dry pet food production."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Capital intensity",
+                "barrier_description": "Dry pet food products sell at a low price point, so continual reinvestment in machinery in an effort to grow an economy of scale is important for growth. This process is very capital-intensive, though."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Capital Intensity Level: high",
+            "Competition Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Industry Assistance Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Brand loyalty",
+                "basis_description": "Pet owners are loyal to one brand. Because it's not good for pets to regularly change pet food brands, consumers will stay with one pet food product through small price hikes."
+            },
+            {
+                "basis_title": "Quality preference",
+                "basis_description": "Some consumers are looking for quality. While it's helpful for dry pet food producers to maintain products in all price ranges, pet humanization is pushing consumer preference toward premium products that sell at higher price points."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Consolidation among major producers",
+                "concentration_description": "Nearly three-quarters of the industry is controlled by the top five companies, which leverage their extensive economies of scale to boost profit. Major companies have been using their high profit to buy out smaller competitors, expanding their market share and lifting the industry's consolidation."
+            },
+            {
+                "concentration_title": "Niche markets emerge",
+                "concentration_description": "Rising demand for all-natural brands of pet food is creating greater room for specialized players, like organic and natural dry pet food producers, to join the industry. Despite industry consolidation, this demand opens up opportunities for smaller businesses to thrive. These niche producers offer a variety of new options to pet owners, expanding and diversifying the market for dry pet food."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Nestle Sa",
+                "company_percentage": 29.4
+            },
+            {
+                "company_name": "Mars Inc.",
+                "company_percentage": 9.5
+            },
+            {
+                "company_name": "J.M. Smucker Co",
+                "company_percentage": 8.7
+            },
+            {
+                "company_name": "Colgate-Palmolive",
+                "company_percentage": 10.1
+            },
+            {
+                "company_name": "Diamond Pet Company",
+                "company_percentage": 10.1
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 39.4
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 15.2
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 7.4
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 2.6
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 10.1
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 10.1
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 10.1
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 10.1
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 10.1
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "High value-added keeps profit high",
+            "cost_factor_description": "Manufacturers employ considerable resources and costs in terms of capital, technology and branding that translate into high wholesale and retail prices that are eventually passed on to consumers."
+        },
+        {
+            "cost_factor_title": "Wages expenditures are rising as revenue slumps",
+            "cost_factor_description": "There has been a high number of new entrants to the industry over the past five years, bringing in new employees. Meanwhile, a slump in revenue has lifted wages as a share of revenue."
+        },
+        {
+            "cost_factor_title": "Depreciable Assets Boost Efficiency",
+            "cost_factor_description": "Dry pet food companies invest in extensive transportation networks and specialized machinery for grinding, mixing, extruding, drying and packaging their products."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "High capital intensity",
+                "capital_intensity_description": "Dry pet food products sell at a low price point, so continual reinvestment in machinery in an effort to grow an economy of scale is important for growth. This process is very capital-intensive, though."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "COVID-19 heightened volatility",
+                "volatility_description": "While the industry typically enjoys low to moderate revenue fluctuations from year to year, the onset of the COVID-19 pandemic brought uncharacteristic volatility for dry pet food producers."
+            },
+            {
+                "volatility_title": "Pet food prices are tied to commodities",
+                "volatility_description": "Dry pet food producers buy corn, wheat, soybeans, oilseeds, feed grains and meat products to manufacture their products. The price of agricultural commodities can be volatile as adverse weather sometimes severely cuts supply."
+            }
+        ],
+        "volatility_trend": "Increasing"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company specialize in a niche or do you produce a diversified range of products?",
+            "answer": "Some companies in the industry have specialized in premium products to differentiate from competitors and justify higher selling prices."
+        },
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "Macroeconomic conditions, such as consumer confidence and disposable income, influence demand for industry products, as they are key determinants of consumers' propensity to spend on industry products."
+        },
+        {
+            "question": "Have you looked into setting up manufacturing facilities in lower-wage regions of the country?",
+            "answer": "The industry's labor costs are expected to account for an expected 6.7% of revenue in 2020. To minimize production costs and bolster margins, industry companies have opted to increasingly automate production or transfer operations to areas where labor costs are low."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "Agricultural products, primarily meat and grains, are key inputs in the production of pet food. Fluctuations in these input prices can have a significant effect on the production costs of dry pet food. The Pet Food Institute (PFI) also works to provide pet nutrition research for the industry and guide government policy in line with the industry's goals."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation over the past five years?",
+            "answer": "By investing more in capital machinery and equipment, industry operators have managed to minimize their demand for labor, preserving their margins."
+        },
+        {
+            "question": "Is your company investing in technology to establish a competitive edge?",
+            "answer": "Through the increased implementation of capital and equipment, many industry operators have been able to develop products that tend to be of higher quality than alternatives produced by their competitors."
+        },
+        {
+            "question": "Do you work with trade associations or other interest groups to advance your company's interests?",
+            "answer": "The Pet Food Institute (PFI) provides pet nutrition research, public education and policy lobbying. The PFI claims to represent 98.0% of all domestic pet food manufacturers."
+        },
+        {
+            "question": "How have regulations impacted your ability to manufacture your products?",
+            "answer": "The Food and Drug Administration (FDA) regulates pet food production through the Federal Food, Drug and Cosmetic Act (FFDCA). One such regulation requires industry products must be produced under sanitary conditions, contain no harmful substances and have truthful labels."
+        },
+        {
+            "question": "How do your company's profit margins compare to your main competitors'?",
+            "answer": "Companies face high pressure from downstream buyers to lower selling prices. However, companies that specialize in premium products have benefited from favorable demand conditions, boosting both revenue and profitability."
+        },
+        {
+            "question": "How often does your company purchase new equipment?",
+            "answer": "IBISWorld estimates that a typical company in this industry spends $0.34 on capital equipment for each dollar spent on labor in 2020."
+        },
+        {
+            "question": "What quality control processes do you have in effect? Is your company known for the quality of its products?",
+            "answer": "Product quality and safety determines the credibility and reputation of a manufacturer. Eliminating or reducing aberrations and anomalies will help ensure repeat customers and brand loyalty."
+        },
+        {
+            "question": "Do you have contracts with key suppliers? What kind of inputs are required for your products?",
+            "answer": "Purchasing agricultural inputs from healthy yields will ensure maximized end-product quality. Long-term contracts with growers can help ensure access to such inputs."
+        },
+        {
+            "question": "How much of your production is devoted to premium products? Do you spend on marketing to position your products as top-quality?",
+            "answer": "Value-added products include those that increase animal health or address specific conditions of an animal's life cycle. Consumers are usually willing to pay more for such premium products."
+        }
+    ]
+}
