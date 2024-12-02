@@ -1,0 +1,518 @@
+{
+    "report_title": "Aircraft Maintenance, Repair and Overhaul Services Industry Report",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 101,
+            "revenue_cagr_historical": {
+                "begin_year": 2020,
+                "end_year": 2023,
+                "revenue_cagr_value": 0.05
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "revenue_cagr_value": 0.03
+            }
+        },
+        "profit": {
+            "profit_dollars": 101,
+            "profit_cagr_historical": {
+                "begin_year": 2020,
+                "end_year": 2023,
+                "profit_cagr_value": 0.04
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "profit_cagr_value": 0.02
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 10,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2020,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0.05
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "profit_margins_cagr_value": 0.03
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 101,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2020,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 0.045
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "industry_value_added_cagr_value": 0.025
+            }
+        },
+        "employees": {
+            "employees_count": 101,
+            "employees_cagr_historical": {
+                "begin_year": 2020,
+                "end_year": 2023,
+                "employees_cagr_value": 0.02
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "employees_cagr_value": 0.015
+            }
+        },
+        "wages": {
+            "wages_dollars": 101,
+            "wages_cagr_historical": {
+                "begin_year": 2020,
+                "end_year": 2023,
+                "wages_cagr_value": 0.03
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "wages_cagr_value": 0.02
+            }
+        },
+        "imports": {
+            "imports_dollars": 101,
+            "imports_cagr_historical": {
+                "begin_year": 2020,
+                "end_year": 2023,
+                "imports_cagr_value": 0.01
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "imports_cagr_value": 0.015
+            }
+        },
+        "exports": {
+            "exports_dollars": 101,
+            "exports_cagr_historical": {
+                "begin_year": 2020,
+                "end_year": 2023,
+                "exports_cagr_value": 0.02
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "exports_cagr_value": 0.01
+            }
+        }
+    },
+    "executive_summary": "Continued Uncertainty in the Global Economy Will Influence International Travel Activity",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Aircraft maintenance, repair and overhaul services will have to monitor the latest developments across global economies",
+            "current_performance_point_description": "as this will impact aircraft activity and influence consumers' rate of travel abroad."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "The adverse effects of geopolitical issues",
+            "future_outlook_point_description": "will also impact travel activity, especially as disputes over Taiwan and tariffs might escalate."
+        },
+        {
+            "future_outlook_point_title": "Factors like the evolving relationship between the US and China",
+            "future_outlook_point_description": "may affect global travel trends."
+        }
+    ],
+    "industry_definition": "Companies in this industry provide support services to air transportation operators, such as aircraft inspection and testing, ferrying aircraft between departure gates and taxiways, aircraft maintenance and repair and aircraft and parts overhaul.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level low",
+            "Concentration Level low",
+            "Globalization Level low - steady"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level low - steady",
+            "Competition Level high - increasing"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "High Revenue per Employee",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "Low Profit vs. Sector Average"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers - Domestic trips by US residents"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth - Per capita disposable income"
+        ]
+    },
+    "key_trends": [
+        "Handling MRO activities in-house puts airlines in the driver's seat.",
+        "New entrants in the MRO industry face tough legal hurdles and mounting start-up costs.",
+        "Inflation is biting into the MRO industry's profit.",
+        "Growth in air travel will drive the need for MRO services."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Air transport",
+            "segment_description": "The air transport market is composed of revenue generated from the sales of MRO services on commercial and private aircraft.",
+            "segment_percentage": 43
+        },
+        {
+            "segment": "Department of Defense",
+            "segment_description": "Revenue generated from the sales of MRO services to contractors at the Department of Defense (DOD).",
+            "segment_percentage": 35
+        },
+        {
+            "segment": "Helicopter operators",
+            "segment_description": "Revenue generated from the sales of MRO services to helicopter companies.",
+            "segment_percentage": 13
+        },
+        {
+            "segment": "Business and general",
+            "segment_description": "Revenue generated from the sales of MRO services to private aircraft owned by individuals.",
+            "segment_percentage": 9
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Airframe MRO",
+            "product_description": "The maintenance, repair, and overhaul of the aircraft's fuselage, wings, and other structural components.",
+            "product_percentage": 44.1
+        },
+        {
+            "product_or_service": "Engine MRO",
+            "product_description": "The maintenance, repair, and overhaul of aircraft engines.",
+            "product_percentage": 19.4
+        },
+        {
+            "product_or_service": "Component MRO",
+            "product_description": "The maintenance, repair, and overhaul of various aircraft components.",
+            "product_percentage": 13.3
+        },
+        {
+            "product_or_service": "Line Maintenance",
+            "product_description": "Routine maintenance and minor repairs performed on aircraft.",
+            "product_percentage": 13.3
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Wiring Device Manufacturing in the US",
+            "Hose & Belt Manufacturing in the US",
+            "Pump & Compressor Manufacturing in the US",
+            "Tire Manufacturing in the US",
+            "Aircraft, Engine & Parts Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Petroleum Refining in the US",
+            "Oil Drilling & Gas Extraction in the US"
+        ],
+        "tier_1_buyers": [
+            "Freight Packing & Logistics Services in the US",
+            "Charter Flights in the US",
+            "Aircraft, Engine & Parts Manufacturing in the US",
+            "Domestic Airlines in the US",
+            "International Airlines in the US"
+        ],
+        "tier_2_buyers": [
+            "Airport Operations in the US",
+            "Transportation and Warehousing in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Consistent need for aircraft safety",
+            "determinant_description": "Maintenance on engines is crucial for safety."
+        },
+        {
+            "determinant_title": "Changing aircraft needs",
+            "determinant_description": "Frequency of air travel impacts service demand."
+        },
+        {
+            "determinant_title": "Industry changes",
+            "determinant_description": "Replacement of outgoing employees is challenging."
+        },
+        {
+            "determinant_title": "Rebounds in travel activity",
+            "determinant_description": "This segment's activity correlates with air travel frequency."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "High travel volumes make this an attractive MRO location.",
+            "percentage_establishments": 38.5,
+            "percentage_population": 21.8
+        },
+        {
+            "location": "West",
+            "location_description": "Large travel hubs like Los Angeles enhance MRO services.",
+            "percentage_establishments": 16.9,
+            "percentage_population": 23.5
+        },
+        {
+            "location": "Southwest",
+            "location_description": "Texas offers vast land and lower density beneficial for MRO.",
+            "percentage_establishments": 11.5,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "Sizable area drives the need for MRO services.",
+            "percentage_establishments": 10.8,
+            "percentage_population": 14.9
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "Smaller industry presence in this region.",
+            "percentage_establishments": 9.2,
+            "percentage_population": 13.3
+        },
+        {
+            "location": "Plains",
+            "location_description": "Smaller industry presence in this region.",
+            "percentage_establishments": 6.9,
+            "percentage_population": 6.8
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "Smaller industry presence in this region.",
+            "percentage_establishments": 6.2,
+            "percentage_population": 8.2
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "FAA REGULATIONS AND STANDARDS",
+                "regulation_description": "Rules on maintenance and safety enforced by the FAA."
+            },
+            {
+                "regulation_title": "CERTIFICATION REQUIREMENTS",
+                "regulation_description": "FAA certification required for servicing specified equipment."
+            },
+            {
+                "regulation_title": "INTERNATIONAL SAFETY STANDARDS",
+                "regulation_description": "Compliance with international safety norms required."
+            },
+            {
+                "regulation_title": "NTSB GUIDELINES AND STANDARDS",
+                "regulation_description": "Procedures mandated for inspections and modifications."
+            },
+            {
+                "regulation_title": "ENVIRONMENTAL GUIDELINES AND REGULATIONS",
+                "regulation_description": "Adherence to EPA regulations on hazardous substances."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Legal barriers",
+                "barrier_description": "Numerous regulations complicate efforts for new entrants."
+            },
+            {
+                "barrier_title": "Start-up costs",
+                "barrier_description": "High start-up costs hinder new market entrants."
+            },
+            {
+                "barrier_title": "Differentiation challenges",
+                "barrier_description": "High fragmentation complicates service differentiation."
+            },
+            {
+                "barrier_title": "Labor expenses",
+                "barrier_description": "High reliance on skilled workers increases wage costs."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Industry Assistance Level: low - steady",
+            "Competition Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Handling MRO activities in-house",
+                "basis_description": "Airlines gain control and improve coordination on maintenance."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "High fragmentation of core customers",
+                "concentration_description": "Servicing diverse customer base fuels industry competition."
+            },
+            {
+                "concentration_title": "Increased competition from in-house and OEM services",
+                "concentration_description": "Competition from airlines and OEMs intensifies prices."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "AAR Corp",
+                "company_percentage": 5.1
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 94.9
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 30
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 25
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 5
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Volatility in Commodity Prices Fuels Consistently High Purchase Costs",
+            "cost_factor_description": "Core expenditures rely on various parts needed for maintenance."
+        },
+        {
+            "cost_factor_title": "A Steady Stream of Insurance and Legal Fees Fuel Consistent Administrative Costs",
+            "cost_factor_description": "Administrative costs include insurance and legal services necessary for operation."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Labor Expenses",
+                "capital_intensity_description": "Labor-intensive industry contributing to high wage costs."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Boosts and bumps from economic cycles",
+                "volatility_description": "Economic conditions directly affect spending on MRO services."
+            },
+            {
+                "volatility_title": "Technological advancements keep the industry in flux",
+                "volatility_description": "Innovations impact maintenance frequency and requirements."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Emphasis on Computer Systems Improves the Accuracy of Component MRO",
+                "technological_change_description": "Advancements in computer systems enhance maintenance accuracy."
+            },
+            {
+                "technological_change_title": "The Addition of Mobile Apps Heightens Transparency Among Consumers and Adds Details to MRO Services",
+                "technological_change_description": "Mobile technologies increase service transparency."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "How do you demonstrate your competitive edge to potential clients in this highly specialized industry?",
+            "answer": "Clear demonstration of capabilities is crucial for winning contracts."
+        },
+        {
+            "question": "How do you bridge any communication gaps between your technical staff and potential clients during your sales process?",
+            "answer": "Effective communication is key for client trust and understanding."
+        },
+        {
+            "question": "Has your company been exposed to volatile crude oil prices?",
+            "answer": "Sensitivity to jet fuel prices can impact industry demand."
+        },
+        {
+            "question": "How does your company's profit margin compare to industry-average figures?",
+            "answer": "Company-specific profit figures indicate pricing power."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation?",
+            "answer": "Increased automation does not significantly benefit the industry."
+        },
+        {
+            "question": "What steps do you take to safeguard your company's proprietary information?",
+            "answer": "Raising security measures for sensitive data is essential."
+        },
+        {
+            "question": "How does your company ensure all health and safety requirements are met?",
+            "answer": "Compliance with safety regulations is critical in operations."
+        },
+        {
+            "question": "What percentage of your customers renew their contracts?",
+            "answer": "Broad estimate is around 90% contract renewal rates."
+        },
+        {
+            "question": "How do you account for fluctuations in crude oil prices?",
+            "answer": "Futures contracts help stabilize costs associated with fuel."
+        }
+    ]
+}

@@ -1,0 +1,403 @@
+{
+    "report_title": "Learning Management Software in the US",
+    "report_date": "2022",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 1095000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "revenue_cagr_value": 6.04
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "revenue_cagr_value": 4.53
+            }
+        },
+        "profit": {
+            "profit_dollars": 10000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "profit_cagr_value": -5.59
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 0.9,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "profit_margins_cagr_value": -10.98
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 451000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "industry_value_added_cagr_value": 6.53
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "industry_value_added_cagr_value": 5.13
+            }
+        },
+        "employees": {
+            "employees_count": 2114,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "employees_cagr_value": 5.65
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "employees_cagr_value": 5.24
+            }
+        },
+        "wages": {
+            "wages_dollars": 422000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "wages_cagr_value": 7.63
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "wages_cagr_value": 5.09
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "Companies in the Learning Management Software industry offer software to track and manage online learning to assist in meeting objectives. Furthermore, operators in this industry may also offer online learning courses.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Over the five years to 2022",
+            "current_performance_point_description": "Over the five years to 2022, internet usage has risen significantly, illustrated by a 21.2% annualized growth in internet traffic volume. Further, an increasing number of households with computers also supported industry growth as more learners are able to access industry software."
+        },
+        {
+            "current_performance_point_title": "COVID-19 (Coronavirus) Effects",
+            "current_performance_point_description": "The coronavirus outbreak that occurred in early 2020 had an asymmetrical effect on this industry. The shift towards remote learning amid the pandemic significantly increased demand for learning management software."
+        },
+        {
+            "current_performance_point_title": "Technology Boosts Industry Growth",
+            "current_performance_point_description": "According to the EdWeek Research Center survey, 52.0% of 1,000 surveyed educators answered that the learning management system made teaching easier."
+        },
+        {
+            "current_performance_point_title": "Downstream Customer Base Shrinks",
+            "current_performance_point_description": "Industry demand is highly dependent on its downstream customer base, primarily comprising K-12 students and college students."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Over the five years to 2027",
+            "future_outlook_point_description": "Over the five years to 2027, industry demand is expected to continue rising due to a recovery in the number of college students."
+        },
+        {
+            "future_outlook_point_title": "Transition away from distance learning",
+            "future_outlook_point_description": "Nonetheless, many schools and universities still heavily rely on learning management systems to deliver instructions and manage academic materials."
+        },
+        {
+            "future_outlook_point_title": "Internet traffic volume",
+            "future_outlook_point_description": "Internet traffic volume is projected to continue supporting industry growth."
+        },
+        {
+            "future_outlook_point_title": "New Revenue Stream",
+            "future_outlook_point_description": "Industries are expected to expand their service offerings to international markets."
+        }
+    ],
+    "industry_definition": "Companies in this industry offer software to track and manage online learning to assist in meeting objectives. Operators in this industry may also offer online learning courses.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage: growth",
+            "Revenue Volatility Level: low",
+            "Capital Intensity Level: low",
+            "Regulation Level: light - steady"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level: low - steady",
+            "Concentration Level: high",
+            "Technology Change Level: high - increasing",
+            "Globalization Level: high - increasing"
+        ],
+        "mixed_impact_factors": [
+            "Barriers To Entry Level: medium - increasing",
+            "Competition Level: medium - increasing"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Customer Class Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low Profit vs. Sector Average",
+            "High Product/Service Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2005-2022)",
+            "High Revenue Growth (2017-2022)",
+            "High Revenue Growth (2022-2027)",
+            "High Performance Drivers: Number of college students"
+        ],
+        "threats": [
+            "Low Outlier Growth",
+            "Government funding for universities"
+        ]
+    },
+    "key_trends": [
+        "Impact of COVID-19",
+        "The price of computers has fallen steadily since their invention due to the highly competitive nature of circuit manufacturing and computer manufacturing",
+        "Due to growing revenue, new players have consistently joined the industry"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Universities and colleges",
+            "segment_description": "Institutional clients represent the largest downstream market for this industry.",
+            "segment_percentage": 37.5
+        },
+        {
+            "segment": "Households",
+            "segment_description": "Consumers make up 26.2% of Learning Management Software industry revenue in 2022.",
+            "segment_percentage": 26.2
+        },
+        {
+            "segment": "K-12 schools",
+            "segment_description": "Demand from K-12 schools stagnated over the same period.",
+            "segment_percentage": 10.5
+        },
+        {
+            "segment": "Government",
+            "segment_description": "Demand from businesses has increased, primarily due to businesses' higher need to upskill their employees.",
+            "segment_percentage": 10.1
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Cloud-based subscription model",
+            "product_description": "This model lets users gain access to learning management software directly on a web portal.",
+            "product_percentage": 62.2
+        },
+        {
+            "product_or_service": "On-premise subscription model",
+            "product_description": "On-premise models are highly customizable.",
+            "product_percentage": 27.5
+        },
+        {
+            "product_or_service": "Professional services and other",
+            "product_description": "This segment represents revenue generated from customer training and consulting activities.",
+            "product_percentage": 10.3
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Design, Editing & Rendering Software Publishing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Operating Systems & Productivity Software Publishing in the US",
+            "Computer Peripheral Manufacturing in the US",
+            "Computer Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Educational Services in the US"
+        ],
+        "tier_2_buyers": [
+            "Consumers in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Number of students",
+            "determinant_description": "Demand for operators in the Learning Management Software industry is heavily influenced by several factors."
+        },
+        {
+            "determinant_title": "Government funding",
+            "determinant_description": "Colleges use industry software to effectively assign, manage and assess students' work."
+        },
+        {
+            "determinant_title": "Private investment in computers and software",
+            "determinant_description": "An increase in private investment in computers and software indirectly implies that more clients are willing to purchase industry software."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "West",
+            "location_description": "The West region has a significantly higher share of industry establishments.",
+            "percentage_establishments": 30.8,
+            "percentage_population": 17.1
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region also has a slightly higher percentage of establishments.",
+            "percentage_establishments": 18.4,
+            "percentage_population": 16.3
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "Federal employment laws",
+                "regulation_description": "The industry follows federal regulations on proper treatment of employees."
+            },
+            {
+                "regulation_title": "Copyright laws",
+                "regulation_description": "The industry is subject to federal copyright laws protecting proprietary technology."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Patents and Market Share",
+                "barrier_description": "The main barriers are the patents and dominant market share that major industry operators currently own."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Industry Assistance Level: low - steady",
+            "Concentration Level: high",
+            "Technology Change Level: high",
+            "Globalization Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage: growth",
+            "Revenue Volatility Level: low",
+            "Capital Intensity Level: low",
+            "Regulation Level: light - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Internal Competition",
+                "basis_description": "Learning Management Software industry operators compete with each other based on prices, product range, product quality and after-sales service."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "High",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Top Players Dominate",
+                "concentration_description": "The top four leading companies account for over 70.0% of industry revenue in 2022."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Class Technologies Inc.",
+                "company_percentage": 101
+            },
+            {
+                "company_name": "Instructure Holdings Inc.",
+                "company_percentage": 101
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 1.0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 38.5
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 3.6
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Wage costs",
+            "cost_factor_description": "Wage costs account for 38.5% of revenue in 2022 due to need for skilled software developers."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital requirements",
+                "capital_intensity_description": "The industry has fairly low capital requirements."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Low",
+        "volatility_points": [
+            {
+                "volatility_title": "Consistent demand growth",
+                "volatility_description": "Over the five years to 2022, revenue increased consistently every year."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Cloud computing",
+                "technological_change_description": "Software has transitioned from physical distribution to downloadable and cloud-based, accessible over the internet."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How has the shift towards conducting business online affected demand for your services?",
+            "answer": "The shift online has tremendously benefited the industry."
+        }
+    ]
+}

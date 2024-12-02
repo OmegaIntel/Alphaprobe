@@ -1,0 +1,564 @@
+{
+    "report_title": "Pawn Shops in the US",
+    "report_date": "9/5/2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 3560000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": -1.17
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": -0.6
+            }
+        },
+        "profit": {
+            "profit_dollars": 484000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": -2.48
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 13.6,
+            "profit_margins_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "profit_margins_cagr_value": null
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1858000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 35643,
+            "employees_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 1345000000,
+            "wages_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "The Pawn Shops industry has performed poorly through the end of 2023. Prior to 2020, strong performance in the broader economy reduced demand for pawn loans from low-income consumers that experienced improvements in their financial positions. Consumers who fall below the poverty line represent the primary source of demand for pawn loans and when their number is reduced, pawn loan demand declines. While merchandise sales grew in line with rising consumers, the COVID-19 pandemic prompted large-scale fiscal programs by the federal government in 2020 and 2021, resulting in lower demand for pawn loans by low-income consumers who lost their jobs or experienced reduced incomes otherwise. Also, reducing consumer spending in 2020 reduced demand for merchandise sales. Industry revenue has been shrinking at an annualized rate of 0.3% over the past five years and is expected to total $3.6 billion in 2023 when revenue will sink an estimated 4.9%.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Pawn shops' revenue has been shrinking",
+            "current_performance_point_description": "Pawn shops' revenue has been shrinking at an annualized rate of 0.3% over the past five years - including an estimated 4.9% sink in the current year - and is expected to total $3.6 billion in 2023, with profit set to reach 13.6%."
+        },
+        {
+            "current_performance_point_title": "Demand for Retail Merchandise Sales and Pawn Loans",
+            "current_performance_point_description": "The Pawn Shops industry generates revenue through two channels: interest made through collateralized loans and retail sales of used items. Demand for retail merchandise sales tends to be more pro-cyclical, in line with overall consumer spending and per capita disposable income. Demand for pawn loans is more countercyclical, with some wrinkles."
+        },
+        {
+            "current_performance_point_title": "COVID-19 negatively affected pawn shops",
+            "current_performance_point_description": "When COVID-19 hit, rather than a pawn loan finance-driven dash-for-cash by consumers, households found themselves flush with cash from various economic stimulus packages. Measures included enhanced unemployment benefits, one-time stimulus checks to households and the Paycheck Protection Program (PPP), which provided forgivable loans to small and medium businesses to cover payroll and other operating expenses. Consumers essentially did not find themselves in need of short-term liquidity secured through collateralized borrowing."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Pawn shops' revenue is expected to dip",
+            "future_outlook_point_description": "Pawn shops' revenue is expected to dip at an annualized rate of 0.4% to $3.5 billion over the five years to 2028, when profit is estimated to climb to 13.9% in 2028."
+        },
+        {
+            "future_outlook_point_title": "Improving economic conditions will hurt demand",
+            "future_outlook_point_description": "The economy's return to growth will facilitate a steady improvement in household financial conditions, increasing consumers' ability to meet their expenses without the assistance of pawn loans."
+        },
+        {
+            "future_outlook_point_title": "Low-income households will keep pawn shops afloat",
+            "future_outlook_point_description": "While the recovering economy will deplete demand from the middle class and some low-income consumers, many will continue relying on pawn loan services. Many low-income consumers use pawn loans as an integral component of their financial lifestyle, relying on them to bridge gaps in liquidity between paychecks and other sources of income."
+        },
+        {
+            "future_outlook_point_title": "Depleting savings will drive pawn shop loans",
+            "future_outlook_point_description": "As enhanced unemployment insurance ends and consumers deplete the savings they built with stimulus checks in 2020 and 2021, many will return to pawn loans as a source of liquidity, driving some growth in pawn loan origination."
+        }
+    ],
+    "industry_definition": "Companies in this industry offer secured loans to individuals, who then provide items of personal property as collateral. These companies also retail used goods that are often acquired from unpaid loans or purchased directly from consumers.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low",
+            "Technology Change Level: low",
+            "Globalization Level: low - steady"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level: low - steady",
+            "Regulation Level: heavy - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature",
+            "Revenue Volatility Level: medium",
+            "Concentration Level: medium",
+            "Barriers To Entry Level: medium - steady",
+            "Competition Level: medium - steady"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & steady Level of Assistance",
+            "Low Profit vs. Sector Average"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "Poverty rate"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Access to credit"
+        ]
+    },
+    "key_trends": [
+        "The industry generates the majority of its revenue through interest made through collateralized loans and retail sales of used items",
+        "Demand for certain merchandise from pawn shops, such as guns, gold, consumer electronics and guitars, spiked in 2020",
+        "Pawn shops have gained acceptance through reality TV shows centered on pawnbrokers' dealings"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Generation X",
+            "segment_description": "Generation X spends more of its disposable income purchasing household goods as they have moved into peak earning years and raising families. Consumers with low annual incomes turn to pawnbrokers for short-term loans or to directly sell goods, typically for on-hand cash used for monthly expenses.",
+            "segment_percentage": 30.1
+        },
+        {
+            "segment": "Millennials and Gen Z",
+            "segment_description": "Given the age of consumers in this demographic, individuals typically earn low average annual salaries. Accordingly, many young consumers interested in purchasing high-quality goods at discounted prices frequent pawn shops to buy consumer electronics, jewelry and other merchandise. Moreover, amid COVID-19, these age groups experienced the most significant increase in unemployment, leading them to use pawn shops as a source of liquidity more than other age demographics.",
+            "segment_percentage": 29.3
+        },
+        {
+            "segment": "Baby boomers",
+            "segment_description": "Baby boomers have remained one of the wealthiest generations in history, and as a result, they have not relied heavily on pawn shops for loans. They continue to represent a significant share of demand for retailed pawn goods, leading them to continue to account for most industry revenue. As more baby boomers have moved into retirement and curtailed spending, this segment has declined as a share of industry revenue.",
+            "segment_percentage": 29.0
+        },
+        {
+            "segment": "Individuals aged 75 and older",
+            "segment_description": "While individuals in this segment typically do not pawn their goods to pawn shops, they continue to represent a source of demand for retailed industry merchandise. Retirees often live on tighter budgets than in their peak earning years, and consequently, they may prefer to buy used goods at a pawn shop rather than more expensive, new goods.",
+            "segment_percentage": 11.6
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Secured Loans",
+            "product_description": "Pawn loans are secured on many categories of consumer goods, ranging from jewelry to electronics. Demand for secured loans typically moves countercyclically as consumers tap pawn loans as a source of cash when economic conditions tighten and disposable incomes decline.",
+            "product_percentage": 45.3
+        },
+        {
+            "product_or_service": "Merchandise Sales",
+            "product_description": "When a consumer does not redeem the item that they used as collateral to secure a loan from a pawn broker, the latter will sell the item to recoup the cost of the loan at a markup, creating another revenue channel for the shop. Also, pawn shops sell goods that they purchase directly from consumers, which represent a greater share of overall pawn shop merchandise sales.",
+            "product_percentage": 51.9
+        },
+        {
+            "product_or_service": "Other Sales",
+            "product_description": "Pawnbrokers generate sales from other activities including lending fees and service charges and jewelry scrapping sales. Pawnbrokers often wholesale jewelry that is no longer of value to refineries to be melted down.",
+            "product_percentage": 2.8
+        }
+    ],
+    "supply_chain": {
+        "tier_1_buyers": [
+            "Consumers in the US"
+        ],
+        "tier_1_suppliers": [
+            "Consumers in the US"
+        ],
+        "tier_2_buyers": [],
+        "tier_2_suppliers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Economic Conditions",
+            "determinant_description": "Demand for the Pawn Shops industry is susceptible to broader economic conditions, regulation and the business cycle. The industry is countercyclical, with consumers turning in more significant numbers to tap pawn loans as a form of liquidity during periods of economic duress."
+        },
+        {
+            "determinant_title": "Unemployment Rate",
+            "determinant_description": "For instance, when the national unemployment rate is high, many consumers are short on income and use their goods as collateral to obtain cash to pay for bills and other immediate personal expenses in the hope that they will soon find another source of income to repay the loan."
+        },
+        {
+            "determinant_title": "Per Capita Disposable Income",
+            "determinant_description": "Along with the national unemployment rate, per capita disposable income influences industry revenue. With lower disposable income, many consumers turn to pawn shops for short-term loans, especially if they have incomes below the poverty line and have difficulty qualifying for loans or lines of credit from traditional financial institutions like banks."
+        },
+        {
+            "determinant_title": "Cost of Alternative Funding Sources",
+            "determinant_description": "The cost of alternative funding sources also influences demand for pawn loans. Pawn shops compete with quick loan providers like credit card issuers offering revolving credit and consumer lending services providing payday loans. Pawn loans are in higher demand when credit markets are tight, consumer lending standards are high and the unemployment rate is rising."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region of the US accounts for the largest share of pawn shops. Similar to most retail industries, the spread of pawn shops follows the population. The Southeast is the largest region by population, making it a strategic location for this business. The Southeast also has the lowest average per capita personal income level in the United States. Since pawn shops target lower-income households, many stores are concentrated in this region.",
+            "percentage_establishments": 35.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "The region with the second-highest density of industry establishments is the Southwest region. According to the US Census Bureau, states like Texas, New Mexico and Arizona have average family income levels below the national average. The average household income of a pawn shop customer is $29,000 a year, so these states present lucrative markets for pawn shops.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "West",
+            "location_description": "The region's share of pawn shops is slightly lower than its share of the population, indicating that there will be fewer establishments per capita relative to the national average. Per capita disposable income levels are higher in this area, minimizing the need for pawn shops as industry products are vastly inferior goods.",
+            "percentage_establishments": 12.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": null,
+            "percentage_establishments": 10.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Plains",
+            "location_description": null,
+            "percentage_establishments": 10.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": null,
+            "percentage_establishments": 8.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": null,
+            "percentage_establishments": 5.0,
+            "percentage_population": 7.0
+        },
+        {
+            "location": "New England",
+            "location_description": null,
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "Lending Regulations",
+                "regulation_description": "Since pawn shops engage in secured lending to consumers, establishments are subject to federal laws designated for nondepository credit intermediation. These federal laws include the Patriot Act, Truth-in-Lending."
+            },
+            {
+                "regulation_title": "Bank Secrecy Act and other Internal Revenue Service regulations",
+                "regulation_description": "States regulate the minimum and maximum term of a pawn loan, the content and format of the pawn ticket and the length of time after a loan defaults that a pawn-lending location must hold a pawned item before disposing of it."
+            },
+            {
+                "regulation_title": "Firearm Regulations",
+                "regulation_description": "Pawn shops that deal in firearms are regulated by the Bureau of Alcohol, Tobacco, Firearms and Explosives, which requires each pawn-lending establishment that sells guns to keep a permanent written record of all receipts and dispositions of firearms."
+            },
+            {
+                "regulation_title": "COVID-19",
+                "regulation_description": "Amid the COVID-19 pandemic, pawn shops were affected by social distancing measures that reduced foot traffic in industrial establishments and contributed to the decline in industry revenue in 2020. While businesses could not switch to a remote work model, they did implement enhanced sanitation and mask-wearing processes to reduce the risk of spreading the virus in 2020 and 2021."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Medium",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is mature, which increases barriers to entry."
+            },
+            {
+                "barrier_title": "Capital Intensity Level",
+                "barrier_description": "The industry has a low capital intensity level, decreasing barriers to entry."
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "The industry has a low and steady level of assistance, which does not significantly impact barriers."
+            },
+            {
+                "barrier_title": "Regulation Level",
+                "barrier_description": "The industry faces heavy but steady regulation, increasing barriers to entry."
+            },
+            {
+                "barrier_title": "Technology Change Level",
+                "barrier_description": "The industry has a low level of technology change, decreasing barriers to entry."
+            },
+            {
+                "barrier_title": "Globalization Level",
+                "barrier_description": "The industry has a low and steady level of globalization, decreasing barriers to entry."
+            }
+        ],
+        "factors_increased_barrier": [
+            "The industry is mature."
+        ],
+        "factors_decreased_barrier": [
+            "The industry has a low capital intensity level.",
+            "The industry has a low level of technology change.",
+            "The industry has a low level of globalization."
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Internal Competition",
+                "basis_description": "Competition involves price, loan fees, flexibility of loans, reputation, and skilled appraisers."
+            },
+            {
+                "basis_title": "External Competition",
+                "basis_description": "Pawn shops compete with other credit providers like banks, credit card issuers, and consumer lending establishments on lending terms, interest rates, and repayment flexibility. They also compete with sub-prime lenders by offering secured loans at lower interest rates."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Medium",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Top Companies Increase Acquisition Rates",
+                "concentration_description": "Major companies have gained market share through ongoing acquisition activity, such as First Cash Inc. acquiring Cash America International Inc. in 2016."
+            },
+            {
+                "concentration_title": "Low Barriers to Entry Encourage More Companies to Enter the Industry",
+                "concentration_description": "Low barriers to entry, particularly low initial investment requirements, have enabled smaller businesses to succeed in the industry, contributing to fragmentation. However, some smaller companies have exited due to recent revenue contraction."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "First Cash Corp",
+                "company_percentage": 30.1
+            },
+            {
+                "company_name": "EZCORP, INC.",
+                "company_percentage": 21.5
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 37.8
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 1.6
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0.8
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 2.0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 1.5
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0.2
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 42.6
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Wages remain high as workers are compensated for their knowledge",
+            "cost_factor_description": "Wages are the highest individual cost for this industry, accounting for an estimated 37.8% of revenue in 2023. Stores average about five employees per establishment. Employees stock shelves, operate cash registers, organize store displays and provide customer service. At least one worker at each store must evaluate items to determine their worth when providing pawn loans or purchasing goods from consumers directly. Due to the essential nature of this function for an operator's success, wage costs tend to remain high for the industry."
+        },
+        {
+            "cost_factor_title": "Pawn shops struggle to keep an adequate stock of inventory",
+            "cost_factor_description": "Purchases account for an estimated 1.6% of industry revenue in 2023. In addition to providing loans, pawn shops buy goods directly from customers who want to sell off their expensive used goods. High purchasing costs are typical for an industry that retails goods because it is essential for stores to have a sufficient quantity and range of stock on hand. Pawn shops' inventories of goods retained from delinquent pawn loans are often insufficient for businesses to carry an adequate stock of retail merchandise. Therefore, they must frequently purchase goods from consumers outright."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LOW capital intensity",
+                "capital_intensity_description": "The Pawn Shops industry exhibits a low level of capital intensity. For every $1.00 spent on labor, the industry is expected to spend only $0.02 on capital in 2023. Capital expenditures are related to fixtures and fittings, cash registers and point-of-sale (POS) systems. Businesses also invest in expensive security systems to protect their merchandise and collateralized items from theft. The industry requires computers and software to keep track of loan agreements, which are also depreciable items."
+            },
+            {
+                "capital_intensity_title": "The industry does not invest in significantly expensive capital assets but is highly labor-intensive.",
+                "capital_intensity_description": "Employees participate in stocking shelves and in providing customer service. Most importantly, the industry is labor intensive because at least one staff member must be able to determine the value of goods brought in by customers. Skilled employees are required to appraise jewelry and electronics, among other merchandise. Accurately appraise the collateral value to avoid losses for pawn shops as borrowers default on pawn loans and shops are stuck with less valuable inventory than the face value of the loan it secured."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Countercyclical Benefits Limit Volatility",
+                "volatility_description": "Fluctuations in consumer confidence, unemployment and per capita disposable income influence consumer spending on pawn shop products. Since pawn shops retail relatively low-price items, sales usually are more robust in periods of economic contraction, as dropping household income."
+            },
+            {
+                "volatility_title": "Revenue Fluctuates With The Price Of Commodities And Other Products",
+                "volatility_description": "Multiple factors, including gold prices, influence revenue fluctuations. Pawnbrokers incorporate the current price of gold when determining the value of gold jewelry used as security for pawn loans; when gold prices are high, clients are paid more for their gold jewelry items. Similarly, the price of other items often used as collateral, like TVs, coins, consumer electronics and other jewelry, may impact industry revenue in this way."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "TECHNOLOGICAL DISRUPTION",
+                "technological_change_description": "Businesses in the Pawn Shops industry are minimally susceptible to technology disruptions. Shops offer lending and appraising services, which are highly labor-intensive. However, a growing presence of used goods e-"
+            },
+            {
+                "technological_change_title": "Low technology change",
+                "technological_change_description": "Most technological improvements in the Pawn Shops industry have enabled better operations and inventory management. These improvements include computer-scanning cash registers and automated inventory equipment. Technology at checkout has led to computerized point of sale (POS) equipment, which controls and records merchandising, distribution, sales and stock markdowns. Moreover, technological developments in consumer goods may affect demand and market value for certain electronics the industry sells, like video game consoles."
+            },
+            {
+                "technological_change_title": "With losses incurred due to theft, retailers employ security and loss prevention advancements.",
+                "technological_change_description": "These technologies include closed-circuit TV cameras and signature-capture technology used at POS terminals for credit card transactions. Security is essential for this industry since shops sell."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "How has the shift toward conducting business online affected demand for your services?",
+            "answer": "Many companies are now expanding operations to online platforms. This trend has helped to keep industry demand from falling too sharply amid the COVID-19 (coronavirus) pandemic and associated social distancing measures."
+        },
+        {
+            "question": "What media channels are you using to attract consumers and investors, if any?",
+            "answer": "There are many pawnbroker television shows now including Pawn Stars and Hardcore Pawn."
+        },
+        {
+            "question": "What international operations do you conduct, and how could you benefit from increasing your international reach?",
+            "answer": "Many pawnbrokers have international operations. First Cash has operations in the US and Latin America."
+        },
+        {
+            "question": "Has your company considered moving headquarters to a less expensive geographic area?",
+            "answer": "Companies are already located in low-income neighborhoods with low rent costs. States that allow pawn shops to charge higher interest rates on pawn loans, such as Texas, are also attractive destinations for industry establishments."
+        },
+        {
+            "question": "To what extent are your processes automated? How much do you plan on investing in automation over the coming years?",
+            "answer": "Inventory, point-of-sale among other systems are automated. However, pawn shops need to have one skilled employee to value and appraise items in the store."
+        },
+        {
+            "question": "How have you taken advantage of rising online and mobile penetration into the financial services industry?",
+            "answer": "Companies like First Cash Inc. have added online inventory browsing and ordering services. Companies that offer these services have tended to fare better than their competitors amid the coronavirus pandemic and associated social distancing measures."
+        },
+        {
+            "question": "How have the increased capital requirements under Basel III affected your operations?",
+            "answer": "Pawnbrokers generally have not been affected by these changes."
+        },
+        {
+            "question": "How do you expect proposed changes to legislation will affect your company?",
+            "answer": "Pawnbrokers are subject to heavy regulations. Changes to legislation will affect the day-to-day operations of pawnbrokers in the region or municipality the legislation was changed."
+        },
+        {
+            "question": "To what extent are you affected by hard and soft pricing cycles?",
+            "answer": "This industry is countercyclical. When consumers have easy access and are able to pursue long-term loans with large financial institutions, they will not go to pawnbrokers to purchase second-hand goods. As the economy recovers from the coronavirus pandemic, industry operators may be threatened by rising wages and increasing access to credit for low-income consumers."
+        },
+        {
+            "question": "How do your profit margins compare to those of your competitors?",
+            "answer": "Profit margins are high for pawnbrokers due to the high interest rates they charge on loans. Brokers typically loan small sums to customers in exchange for collateral. Due to lower demand for pawn loans amid the coronavirus pandemic and government provision of liquidity to households, industry profit has declined."
+        },
+        {
+            "question": "How do you arrange your store? Do you hire employees that specifically focus on the layout of your store?",
+            "answer": "Arranging used items in attractive ways will entice consumers to purchase more products. Amid the COVID-19 (coronavirus) pandemic, many industry operators have adopted social distancing protocols and enhanced sanitation measures, including wiping down surfaces frequently and occupancy limits."
+        },
+        {
+            "question": "How do you control inventory? Do you purchase items that will sell quickly? What is your process for buying and selling items?",
+            "answer": "Operators will benefit from controlling inventory by only purchasing items that will sell and leave room for items gained from customers' lost collateral. Demand for certain items amid the coronavirus pandemic, such as consumer electronics and guns, increased due to stay-at-home orders and social distancing measures. Demand for other items may increase now that social distancing measures are abating."
+        },
+        {
+            "question": "Do you have the appropriate licenses for conducting business? How have you upheld regulatory standards in the past?",
+            "answer": "It is increasingly important for pawnbrokers to have the necessary licenses to conduct business. Licensed pawnbrokers need to provide further evidence that they are upholding regulatory standards. Industry operators also gravitate toward states that allow them to charge higher interest rates to clients, such as Texas."
+        },
+        {
+            "question": "Do you track changes in the poverty rate? As the poverty rate declines, are you able to reach a broader section of the market?",
+            "answer": "This industry mainly attracts low-income households (i.e. those below the poverty line) that have limited income or credit scores that are too low to obtain loans from traditional financial institutions."
+        },
+        {
+            "question": "How can you maintain consumer confidence in a fluctuating economy? How does the Consumer Confidence Index affect your company?",
+            "answer": "While some consumers may pawn items with the intent to sell, many redeem their items. Consequently, consumers are less likely to pawn their items when they are uncertain about the economy and their ability to purchase items back. This factor may assist industry operators somewhat as the economy recovers from the coronavirus pandemic and consumers regain confidence in their ability to repay pawn loans."
+        }
+    ]
+}

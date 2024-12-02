@@ -1,0 +1,420 @@
+{
+    "report_title": "Construction Machinery Rentals in the US",
+    "report_date": "May 24, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 34882000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 2.92
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.61
+            }
+        },
+        "profit": {
+            "profit_dollars": 6279000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 3.74
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 1.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 18,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 0.79
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 1.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 17501000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 2.5
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 1.5
+            }
+        },
+        "employees": {
+            "employees_count": 63160,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 2.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 1.5
+            }
+        },
+        "wages": {
+            "wages_dollars": 5814000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 2.2
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 1.5
+            }
+        },
+        "imports": {
+            "imports_dollars": 0.0,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 0.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0.0,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 0.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0.0
+            }
+        }
+    },
+    "executive_summary": "Construction machinery lessors play a crucial role by leasing heavy construction and transportation equipment to support downstream construction markets. The advantages of renting are particularly beneficial for contractors as it alleviates them from bearing the burdens of depreciation and maintenance costs, ultimately contributing to increased revenue for lessors. The appeal of renting is heightened because many contractors lack adequate space to store machinery. While the pandemic caused slumps among commercial and industrial markets, low-interest rates spurred an uptick in residential projects, providing a cushion for lessors. As the pandemic waned, interest rates spiked as inflationary concerns crept up, weakening residential construction. Even so, this prompted industrial and commercial sectors to resume projects that were held off. Overall, revenue for ...",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Economic Uncertainty Causes Shakeups in Downstream Markets",
+            "current_performance_point_description": "Despite the pandemic-induced slowdown in construction activity within the industrial and commercial sectors, the residential sector emerged as a notable bright spot..."
+        },
+        {
+            "current_performance_point_title": "Making the Transition with Technology",
+            "current_performance_point_description": "Lessors are integrating technology into their operations to enhance efficiency and cut costs..."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "GOVERNMENT FUNDING CONTINUES TO BE A BRIGHT SPOT",
+            "future_outlook_point_description": "The Bipartisan Infrastructure Law will continue to provide funding..."
+        },
+        {
+            "future_outlook_point_title": "A STABLE ECONOMY LEADS TO CONSISTENT GROWTH",
+            "future_outlook_point_description": "After a period of volatility..."
+        }
+    ],
+    "industry_definition": "Operators in this industry offer construction vehicles and equipment for rental.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Concentration Level: low",
+            "Technology Change Level: low",
+            "Globalization Level: low - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature"
+        ],
+        "negative_impact_factors": [
+            "Capital Intensity Level: high",
+            "Industry Assistance Level: low - steady",
+            "Barriers To Entry Level: low - steady"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [],
+        "weaknesses": [
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers",
+            "Value of construction"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Yield on 10-year Treasury note"
+        ]
+    },
+    "key_trends": [
+        "The rental industry has low barriers to entry, encouraging competition.",
+        "Buyers have more leverage in negotiations..."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Industrial and heavy construction",
+            "segment_description": "The industrial sector includes...",
+            "segment_percentage": 52.6
+        },
+        {
+            "segment": "Commercial construction",
+            "segment_description": "Commercial construction includes buildings...",
+            "segment_percentage": 42.2
+        },
+        {
+            "segment": "Residential construction",
+            "segment_description": "Residential construction includes...",
+            "segment_percentage": 5.2
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Earth Moving Rentals",
+            "product_description": "Earth moving equipment includes bulldozers...",
+            "product_percentage": 57.8
+        },
+        {
+            "product_or_service": "Material Transportation Rentals",
+            "product_description": "Material transportation equipment includes cranes...",
+            "product_percentage": 11.6
+        },
+        {
+            "product_or_service": "Road and Highways Rentals",
+            "product_description": "Road construction equipment encompasses...",
+            "product_percentage": 30.6
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Tractors & Agricultural Machinery Manufacturing in the US",
+            "Construction Machinery Manufacturing in the US",
+            "Mining, Oil & Gas Machinery Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Aluminum Manufacturing in the US",
+            "Structural Metal Product Manufacturing in the US",
+            "Wire & Spring Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Industrial Building Construction in the US",
+            "Commercial Building Construction in the US",
+            "Road & Highway Construction in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Nonresidential Construction",
+            "determinant_description": "Companies constructing..."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Northeast",
+            "location_description": "The Northeast region has 8 business locations.",
+            "percentage_establishments": 2.6,
+            "percentage_population": 4.9
+        },
+        {
+            "location": "Midwest",
+            "location_description": "The Midwest region has 25 business locations.",
+            "percentage_establishments": 20.7,
+            "percentage_population": 21.7
+        },
+        {
+            "location": "West",
+            "location_description": "The West region has 24 business locations.",
+            "percentage_establishments": 22.5,
+            "percentage_population": 23.5
+        },
+        {
+            "location": "South",
+            "location_description": "The South region has 9 business locations.",
+            "percentage_establishments": 39.5,
+            "percentage_population": 38.6
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The rental industry is mature."
+            },
+            {
+                "barrier_title": "Capital Intensity Level",
+                "barrier_description": "The rental industry has high capital intensity level."
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "The rental industry has low to steady industry assistance level."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Capital Intensity Level: high"
+        ],
+        "factors_decreased_barrier": [
+            "Concentration Level: low",
+            "Technology Change Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Low barriers to entry",
+                "basis_description": "The rental industry has low barriers to entry, encouraging competition."
+            },
+            {
+                "basis_title": "Buyer leverage",
+                "basis_description": "Buyers have more leverage in negotiations as most lessors adhere to competitive pricing."
+            },
+            {
+                "basis_title": "Equipment currency",
+                "basis_description": "Lessors must ensure their equipment is current or risk losing potential clients."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Stable",
+        "concentration_points": [
+            {
+                "concentration_title": "Low barriers allow new entrants",
+                "concentration_description": "Concentration remains low amid lessors as low barriers allow new companies to enter the industry."
+            },
+            {
+                "concentration_title": "Slight increase due to consolidation",
+                "concentration_description": "Even so, it has slightly crept upward as consolidation occurs in the industry."
+            }
+        ],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 30
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 40
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 50
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 60
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 70
+        },
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 80
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 90
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Profit is Dependent on Available Products",
+            "cost_factor_description": "Profit varies depending on the size of lessors and the types of products rented..."
+        },
+        {
+            "cost_factor_title": "Employees are Essential to Keep Services Running Smoothly",
+            "cost_factor_description": "Companies require alert employees to operate rental centers..."
+        },
+        {
+            "cost_factor_title": "Maintaining Construction Equipment is Costly",
+            "cost_factor_description": "Lessors require a stock of materials..."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "THE COST OF BORROWING CAN DETER CUSTOMERS",
+                "volatility_description": "Interest rates can swing revenue drastically..."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "ONLINE RENTAL PLATFORMS",
+                "technological_change_description": "Many lessors are implementing user-friendly online platforms..."
+            },
+            {
+                "technological_change_title": "PREDICTIVE MAINTENANCE",
+                "technological_change_description": "Companies can use predictive analysis..."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "What is the regulation and policy situation?",
+            "answer": "LOW regulation, STEADY regulation"
+        },
+        {
+            "question": "What is the industry assistance situation?",
+            "answer": "LOW assistance, STEADY assistance"
+        }
+    ]
+}

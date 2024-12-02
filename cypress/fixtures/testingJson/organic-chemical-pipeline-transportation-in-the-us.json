@@ -1,0 +1,544 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 428000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": -2.18
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": -1.47
+            }
+        },
+        "profit": {
+            "profit_dollars": 112000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": -2.6
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": -1.5
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 26.2,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 238000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": -1.5
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 2.0
+            }
+        },
+        "employees": {
+            "employees_count": 372,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": -2.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 0.5
+            }
+        },
+        "wages": {
+            "wages_dollars": 54000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 1.2
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 1.5
+            }
+        },
+        "imports": {
+            "imports_dollars": 10000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": -0.5
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 0.3
+            }
+        },
+        "exports": {
+            "exports_dollars": 15000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": -0.2
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 0.4
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2023 currency.\n\nThe Organic Chemical Pipeline Transportation industry transports various industrial and organic chemicals via pipeline. Revenue is dictated by pipeline throughput and fees charged to customers for transportation services. Carbon dioxide (CO2) transportation is the industry's largest service segment; it is commonly used to enhance well flow in oilfields. The use of natural gas accounts for more than 60.0% of all enhanced oil recovery production (EOR) in the United States. Industry services are also required to transport various chemicals to many other industrial producers; however, energy markets have an unequivocal influence on the industry. Revenue has declined although US energy production soared and oilfields required more CO2 for EOR, it was subdued by uninspired energy prices. Demand from energy producers and most other industrial companies has also been hampered by the global economic lockdown in response to the COVID-19 pandemic.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "THE COVID-19 PANDEMIC HAS CAUSED DISRUPTIONS IN SUPPLY CHAINS AND REDUCED DEMAND",
+            "current_performance_point_description": "- Pandemic-induced lockdowns and restrictions have led to a decline in demand for various petrochemical products such as plastics, synthetic fibers and solvents. - The pandemic has caused supply chain disruptions, including transportation disruptions, labor shortages and production shutdowns, which have affected the overall operations of the industry. - Additionally, the COVID-19 pandemic has resulted in a decrease in oil prices, which has affected demand from the oil drilling and gas extraction segment. This has had severe consequences as the oil drilling and gas extraction sector is the single largest market for this industry."
+        },
+        {
+            "current_performance_point_title": "STRICTER ENERGY REGULATIONS INCREASE OPERATIONAL COSTS",
+            "current_performance_point_description": "Stricter energy regulations have increased compliance costs as companies need to invest in new technologies and processes to ensure compliance. Stricter environmental-focused regulations have also led to greater investment in alternative fuels and renewable energy sources, impacting demand and slightly increasing competition."
+        },
+        {
+            "current_performance_point_title": "BOOMING OIL PRODUCTION HAS ENCOURAGED NEW ENTRANTS",
+            "current_performance_point_description": "The vast majority of organic chemical pipelines in the United States is controlled by a small number of companies. This is due to the significant cost of constructing new pipelines, most major companies expand operations through acquisition. However, booming oil production has spurred new entrants into the industry to satisfy climbing CO2 demand for use as an EOR method. New entrants and existing companies have also been aided by the improving level of access to credit as this industry is highly capital-intensive."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "DECLINING DEMAND FROM OIL DRILLING AND GAS EXTRACTION IS EXPECTED TO HAMPER REVENUE",
+            "future_outlook_point_description": "The industry heavily relies on demand for organic chemicals, which are used in the production of various petrochemical products such as plastics, synthetic fibers and solvents."
+        },
+        {
+            "future_outlook_point_title": "A decrease in demand from oil drilling and gas extraction",
+            "future_outlook_point_description": "A decrease in demand from oil drilling and gas extraction may lead to a decrease in the production of these petrochemical products and, therefore, lower demand for the transportation of organic chemicals via pipelines. This is partially attributable to the current push on reducing emissions from the oil and gas sector. Furthermore, declining oilfield and depletion rates will contribute to further decreases in demand for oil and gas."
+        },
+        {
+            "future_outlook_point_title": "INDUSTRIAL PRODUCTION AND FERTILIZER MANUFACTURES ARE THE SHINING LIGHT",
+            "future_outlook_point_description": "In the coming years, the industrial production index, which tracks US industrial output, will steadily grow. Metal product manufacturers and chemical manufacturers will continue to improve output, boosting industrial hydrogen, ammonia and industrial gas consumption. Also, demand from fertilizer manufacturing will grow steadily in the coming years. Fertilizer manufacturers are a major consumer of ammonia, which is transported in large quantities through pipelines."
+        },
+        {
+            "future_outlook_point_title": "CYBERSECURITY IS MORE CRITICAL THAN EVER FOR PIPELINES",
+            "future_outlook_point_description": "US energy infrastructure is a major target for cybercriminals. Pipelines are susceptible to attack from numerous angles. The two technologies most at risk are a pipeline's information technology and its operational technology. Companies will emphasize cybersecurity measures to prevent proprietary information from being leaked."
+        }
+    ],
+    "industry_definition": "Operators in this industry provide pipeline transportation services for chemical products such as carbon dioxide and ammonia. Pipeline operators that transport crude oil, refined petroleum products, natural gas and natural gas liquids are excluded from this industry.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Concentration Level low",
+            "Barriers To Entry Level high - steady",
+            "Globalization Level low - steady"
+        ],
+        "negative_impact_factors": [
+            "Capital Intensity Level high",
+            "Industry Assistance Level low - steady",
+            "High Product/Service Concentration",
+            "High Capital Requirements"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage mature"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "High Revenue per Employee"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Volatility",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers - Industrial production index"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth - Oil and natural gas price index"
+        ]
+    },
+    "key_trends": [
+        "There are only a few major pipeline operators. Very few companies have the resources to maintain and operate a pipeline.",
+        "Major companies expand operations through acquisitions. However, booming oil production has spurred new entrants into the industry to satisfy climbing CO2 demand for use as an EOR method."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Oil and gas extractors",
+            "segment_description": "In 2023, oil and gas extractors account for more than two-thirds of industry revenue. While this market is responsible for generating the majority of industry revenue, demand from fossil fuel extractors stumbled in 2020 due to the onset of the COVID-19 pandemic. Lower personal and business travel contributed to plunging energy demand and oil producers were forced to reduce production as the aggregate oil surplus soared.",
+            "segment_percentage": 78.0
+        },
+        {
+            "segment": "Chemical, agricultural and industrial product manufacturers",
+            "segment_description": "CO2, ammonia, hydrogen and other industrial gases and chemicals have a variety of applications in industrial manufacturing processes. Ammonia can be used to manufacture fertilizer, explosives and other chemical products. Hydrogen can be used in various metal treating applications, in oil refining and also as a feedstock for ammonia and methanol production. As industrial production expands, demand for industry services from industrial and agricultural product manufacturers will grow.",
+            "segment_percentage": 21.1
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Carbon Dioxide Transportation",
+            "product_description": "Pipelines provide the most economical method for transporting large quantities of this naturally occurring chemical compound over land. The majority of demand for CO2 transportation is derived from oil and gas producers since they use the chemical to increase well production.",
+            "product_percentage": 79.2
+        },
+        {
+            "product_or_service": "Ammonia Transportation",
+            "product_description": "Ammonia is used to manufacture nitrogen fertilizer, explosives, various pharmaceuticals and other chemical products. Ammonia is flammable and toxic to the environment, with the potential to cause significant damage to humans and animals.",
+            "product_percentage": 16.2
+        },
+        {
+            "product_or_service": "Other Transportation",
+            "product_description": "Other industry services include the transportation of various minerals, gases and chemicals such as hydrogen, helium or coal. Coal slurry pipelines use a slurry of water and pulverized coal to transport coal from a mine to a power generating station.",
+            "product_percentage": 4.6
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Oil & Gas Pipeline Construction in the US",
+            "Electric Power Transmission in the US",
+            "Lubricant Oil Manufacturing in the US",
+            "Organic Chemical Manufacturing in the US",
+            "Metal Pipe & Tube Manufacturing in the US",
+            "Oil Drilling & Gas Extraction in the US",
+            "Utilities in the US"
+        ],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [
+            "Utilities in the US",
+            "Manufacturing in the US",
+            "Oil Drilling & Gas Extraction in the US",
+            "Agriculture, Forestry, Fishing and Hunting in the US",
+            "Petrochemical Manufacturing in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Industrial Production Index",
+            "determinant_description": "Industry operators transport a variety of industrial gases and organic chemicals through pipelines, many of which are used during the manufacturing process. As a result, a high level of industrial output bolsters demand pipeline transportation. In 2023, the industrial production index will likely increase, representing a potential opportunity for the industry."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "West",
+            "location_description": "The West region has 10% of establishments but 25% of the population.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 25.0
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region has 5% of establishments and 20% of the population.",
+            "percentage_establishments": 5.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "Plains",
+            "location_description": "The Plains region has 5% of establishments and 5% of the population.",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "The Southwest region has 10% of establishments and 10% of the population. This region is home to major natural CO2 reservoirs like the McElmo Dome, Bravo Dome and Sheep Mountain. Most US CO2 pipelines converge in Denver City, TX which is the world's largest CO2 hub.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region has 20% of establishments and 15% of the population.",
+            "percentage_establishments": 20.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "The Rocky Mountains region has 5% of establishments and 5% of the population.",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region has 15% of establishments and 15% of the population.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "New England",
+            "location_description": "The New England region has the highest 30% of establishments but only 5% of the population. The Jackson Dome in central Mississippi carries the CO2 supply for the Southeast region.",
+            "percentage_establishments": 30.0,
+            "percentage_population": 5.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "EPA AND OPS REGULATIONS",
+                "regulation_description": "The US Environmental Protection Agency assists the FERC and state authorities in determining if the environmental aspects of a pipeline development project meet acceptable guidelines. The US Department of Transportation's Office of Pipeline Safety (OPS) governs the safety standards, procedures and development/expansion of any pipeline system in the US."
+            },
+            {
+                "regulation_title": "THE PIPELINE AND HAZARDOUS MATERIALS SAFETY ADMINISTRATION (PHMSA)",
+                "regulation_description": "CO2 and ammonia pipelines are regulated by the DOT's Pipeline and Hazardous Materials Safety Administration. PHMSA is responsible for Regulating and Assessing the Safe and Environmental Movement of Hazardous Materials"
+            },
+            {
+                "regulation_title": "Local, State and Federal Permits",
+                "regulation_description": "Prior to construction, a pipeline company must obtain numerous local, state and federal permits and clearances. These relate to land, air, water, vegetation and wildlife, in addition to the interests of the general public."
+            },
+            {
+                "regulation_title": "The Surface Transportation Board (STB)",
+                "regulation_description": "As part of the US Department of Transportation, the STB has jurisdiction over interstate pipeline transportation of ammonia. The STB is responsible for the regulation of pipeline transportation rates for commodities other than water, gas or oil."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Mature life cycle stage",
+                "barrier_description": "The industry is in a mature life cycle stage."
+            },
+            {
+                "barrier_title": "High capital intensity",
+                "barrier_description": "The industry has a high level of capital intensity."
+            }
+        ],
+        "factors_increased_barrier": [
+            "The industry is in a mature life cycle stage.",
+            "The industry has a high level of capital intensity."
+        ],
+        "factors_decreased_barrier": [
+            "The industry has a low level of concentration.",
+            "The industry has a low to steady level of globalization."
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Few major pipeline operators",
+                "basis_description": "There are only a few major pipeline operators."
+            },
+            {
+                "basis_title": "Resources required to operate pipelines",
+                "basis_description": "Very few companies have the resources to maintain and operate a pipeline."
+            },
+            {
+                "basis_title": "Expansion through acquisitions",
+                "basis_description": "Major companies expand operations through acquisitions."
+            },
+            {
+                "basis_title": "New entrants due to oil production boom",
+                "basis_description": "However, booming oil production has spurred new entrants into the industry to satisfy climbing CO2 demand for use as an EOR method."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Few companies operate",
+                "concentration_description": "Very few companies operate in this industry."
+            },
+            {
+                "concentration_title": "20 companies estimated in 2023",
+                "concentration_description": "Only 20 companies are estimated to operate in 2023 due to the significant capital investment necessary to establish and operate pipelines."
+            },
+            {
+                "concentration_title": "Top 4 operate majority of pipelines",
+                "concentration_description": "These few companies control all organic chemical pipelines in the United States, with the top four operating the majority of pipelines."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Kinder Morgan Energy Partners LP",
+                "company_percentage": 25.2
+            },
+            {
+                "company_name": "Denbury Inc.",
+                "company_percentage": 8.3
+            },
+            {
+                "company_name": "Magellan Midstream Partners, L.P.",
+                "company_percentage": 66.5
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "OTHER COSTS ACCOUNT FOR A SIGNIFICANT PORTION OF REVENUE",
+            "cost_factor_description": "Other costs include repair and maintenance, insurance, outsourced professional services and general administration."
+        },
+        {
+            "cost_factor_title": "Repair and maintenance costs are quite high",
+            "cost_factor_description": "Repair and maintenance costs are quite high for industry operators because pipelines need to be in constant repair to ensure safe operating conditions. Due to the corrosive nature and high pressures of some transported products, this is extremely difficult."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "High capital intensity",
+                "capital_intensity_description": "This industry is highly capital intensive, with the industry mostly consisting of buying, operating and maintaining physical infrastructure. This presents a barrier to entry."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Moderate revenue volatility",
+                "volatility_description": "Traditionally, this industry has experienced a low-to-moderate level of volatility"
+            },
+            {
+                "volatility_title": "The COVID-19 pandemic caused significant disruptions",
+                "volatility_description": "The COVID-19 pandemic led to a decline in demand for organic chemicals, as many industries reduced production and operations. Supply chain disruptions caused delays in the delivery of organic chemicals, leading to increased uncertainty in revenue forecasting."
+            },
+            {
+                "volatility_title": "Crude Oil Price Trends Also Affect This Industry",
+                "volatility_description": "Crude oil is an essential commodity used in various ways across the country. During the pandemic, oil prices fell drastically, resulting in less transportation. An economic recovery led to prices booming and transportation becoming more prevalent."
+            }
+        ],
+        "volatility_trend": "Increasing"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Different ancillary systems improve operations",
+                "technological_change_description": "Carbon capture, utilisation, and storage (CCUS) technologies allow for the capture and reuse of carbon dioxide emissions from industrial processes. This can reduce the environmental impact of these processes. Other systems such as advanced sensors and data analytics tools can help prevent leakage accidents and protect the environment."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "How does your company handle changes in industrial activity?",
+            "answer": "Changes in industrial activity affect demand for CO2 transpiration and therefore the industry's largest product."
+        },
+        {
+            "question": "Does your company specialize in one corner of the market or do you provide a diversified range of services?",
+            "answer": "Most major players transport only a few types of liquids and gases across its pipeline network."
+        },
+        {
+            "question": "Has your company been exposed to volatile crude oil prices over the past few years?",
+            "answer": "Volatile crude oil prices can negatively affect revenue for operators in the industry as downstream producers react to changing commodity prices."
+        },
+        {
+            "question": "How are you ensuring your organic chemical pipelines' safe and efficient operation?",
+            "answer": "Smooth and safe operations are essential due to the hazardous nature of organic chemicals. Minimizing the risk of leaks or accidents is crucial to protect your company reputation and the environment. Regulations and government watchdogs also try to ensure operations are safe."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation?",
+            "answer": "Wage costs increase periodically for operators in the industry when new pipeline construction is in full swing."
+        },
+        {
+            "question": "How do you use technology to monitor and manage the integrity of your pipelines?",
+            "answer": "Advancements in technology can boost efficiency and safety. For instance, predictive analytics for pipeline corrosion can prevent unforeseen pipeline failures and hazardous leaks."
+        },
+        {
+            "question": "Have any regulatory expenses significantly impacted profitability recently?",
+            "answer": "Regulation has remained relatively steady in the industry over the past five years."
+        },
+        {
+            "question": "How does your company stay ahead of regulations such as energy-efficiency standards?",
+            "answer": "Successful companies must ensure pipelines meet environmental standards. Operators must consider changing environmental policy with recent administration changes."
+        },
+        {
+            "question": "How do you financially plan for infrastructure maintenance and enhancement in this capital-intensive industry?",
+            "answer": "Extensive capital is required for pipeline maintenance and upgrades. Having efficient financial planning can mitigate financial risk and ensure continuous operation."
+        },
+        {
+            "question": "How are you managing the impact of volatile chemical pricing on your financial performance?",
+            "answer": "The fluctuation in organic chemical prices can significantly impact profitability. Strategies might include diversification of transported chemicals, or cost management measures to maintain financial stability."
+        },
+        {
+            "question": "Do you operate near optimum capacity? Are you seeking to expand your operations in the near future?",
+            "answer": "The high fixed cost nature of pipelines means that additional throughput adds considerably more to revenue than to costs."
+        },
+        {
+            "question": "Have you been able to successfully negotiate with the Surface Transportation Board? How can you improve your relationship with regulators?",
+            "answer": "The high level of regulation prevailing in the industry requires companies to be skilled in dealing with regulatory authorities."
+        },
+        {
+            "question": "How does your organization generate revenue? How do you respond to fluctuations in demand?",
+            "answer": "The high capital cost associated with constructing pipelines means that contracts need to be in place prior to pipeline construction. Long-term contracts with customers provide industry operators with security. Securing favorable contracts can also help stabilize operating costs for the industry."
+        },
+        {
+            "question": "World price of crude oil",
+            "answer": "Industry operators transport carbon dioxide to oil fields to enhance crude oil extraction rates. Transportation rates are often tied to crude oil prices. When crude oil prices are high, downstream crude oil extractors pay higher transportation rates to industry operators."
+        },
+        {
+            "question": "Industrial production index",
+            "answer": "Industry operators transport a variety of industrial gases and chemicals through pipelines, many of which are used during manufacturing. Shifts in the industrial production index that go unaccounted for in business processes can prevent a massive roadblock to operations."
+        },
+        {
+            "question": "Demand from oil drilling and gas extraction",
+            "answer": "Upstream oil and gas extraction companies extract and market natural gas and crude oil. Industry operators transport carbon dioxide and other chemicals to oil fields to enhance oil well flow rates. The industry is highly susceptible to fluctuations in demand from this key market."
+        }
+    ]
+}

@@ -1,0 +1,589 @@
+{
+    "report_title": "Car Body Shops in the US",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 67916000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 1.53
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.28
+            }
+        },
+        "profit": {
+            "profit_dollars": 101,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 3.82
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 3.82
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 7.8,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 2.26
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 2.26
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 24457000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 2.26
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 2.26
+            }
+        },
+        "employees": {
+            "employees_count": 347645,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 1.5
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 1.5
+            }
+        },
+        "wages": {
+            "wages_dollars": 18108000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 2.3
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 2.3
+            }
+        },
+        "imports": {
+            "imports_dollars": 101,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 1.2
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 1.2
+            }
+        },
+        "exports": {
+            "exports_dollars": 101,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 1.2
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 1.2
+            }
+        }
+    },
+    "executive_summary": "Car body shops repair and customize motor vehicle interiors and bodies. Companies have benefited from pent-up demand for travel and driving alongside mass returns to in-person work. These trends have spurred driving activity, highlighted by more vehicle miles and motor vehicle registrations. Similarly, rebounding economic conditions have encouraged buyers to purchase more discretionary services, like painting, detailing and upholstery. However, climbing inflation has added to volatility through the current period. Elevated interest rates have made cars more expensive, encouraging consumers to repair aging vehicles rather than replace them, supporting demand. Even so, inflationary fears have discouraged discretionary spending, especially among lower earners, siphoning demand for nonessential services.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Companies Have Faced Fierce Competition",
+            "current_performance_point_description": "Car body shops have endured mounting competition, particularly as larger companies and franchises capture customers from less visible competitors. Successful companies have leveraged brand reputations and visibility. These companies can offer better prices and promotional offers, pressuring smaller, independent companies and nonemployers."
+        },
+        {
+            "current_performance_point_title": "The auto repair sector has faced notable labor shortages",
+            "current_performance_point_description": "The auto repair sector has faced notable labor shortages. Companies have struggled to hire and retain skilled technicians, forcing them to raise wages following the pandemic. This trend will persist through the outlook period."
+        },
+        {
+            "current_performance_point_title": "Revenue and profit growth through the outlook period",
+            "current_performance_point_description": "The economy's recovery will create greater stability for car body shops through the outlook period. Overall, revenue will climb at an expected CAGR of 1.3% to $72.4 billion through the outlook period, where profit will reach 7.9%."
+        },
+        {
+            "current_performance_point_title": "Cost structure volatility in the current period",
+            "current_performance_point_description": "Car body shapes have faced significant cost structure volatility through the current period. Overall, revenue has expanded at an expected CAGR of 2.3% to $67.9 billion through the current period, despite a 0.3% drop in 2024, where profit reached 7.8%."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Improving economic conditions will support growth",
+            "future_outlook_point_description": "Robust economic growth will enable more consumers to purchase new vehicles, leading to steady growth in motor vehicle registrations. With more vehicles on the road, demand for car body shop services, particularly repair, maintenance and inspection services, will proportionally increase. Similarly, disposable incomes, consumer confidence and vehicle usage will swell as workers transition from remote and hybrid work to in-person environments, giving consumers more discretionary income to spend on nonessential car body shop services."
+        },
+        {
+            "future_outlook_point_title": "Companies will integrate new technologies",
+            "future_outlook_point_description": "Car body shops will implement a wide range of new technologies to improve internal efficiency and consumer experiences. For example, shops will use digital price estimation and quotation methods to enhance precision in cost calculations and boost transparency in billing. Online customer reviews and feedback will be crucial in managing the company's reputation and attracting prospective clients. Companies will need to carefully cultivate online presences to build a strong reputation rather than rely entirely on word-of-mouth advertising."
+        },
+        {
+            "future_outlook_point_title": "Labor shortages will pose a threat to car body shops",
+            "future_outlook_point_description": "According to the National Automobile Dealers Association, the auto repair and care sector faces an annual shortage of more than 37,000 automobile technicians. Retirement rates have outstripped service tech graduation rates, highlighting a mounting, long-term workforce issue. Car body shops will need to compete for a dwindling labor supply while trying to expand operations to cater to increased driving and travel demand. Companies will compete with other repair shops, dealers and similar industries to attract and retain workers."
+        },
+        {
+            "future_outlook_point_title": "Electric vehicles will alter repair landscapes",
+            "future_outlook_point_description": "Declining EV production costs and strong government support through subsidies, tax breaks, charging infrastructure and spending programs will encourage more consumers to purchase electric vehicles. Electric vehicles are often more complex than combustion-engine vehicles, leading to more expensive and labor-intensive repairs. Car body shops offering EV services may gain a competitive advantage as the market shifts. Companies may need to purchase new diagnostic tools and invest in EV-specific training programs, adding to costs. Regardless, these EV services will generate higher returns, contributing to strong profit growth through the outlook period."
+        }
+    ],
+    "industry_definition": "This industry provides repair and customization work to the interior and body of passenger cars, trucks, vans and trailers. Some industry operators specialize in specific auto repairs. For example, paint shops specialize in post-collision paint jobs, while automotive glass shops replace, repair and tint windows. Restoration shops, which typically represent a niche market, restore classic and antique cars.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Low Capital Intensity",
+            "Low Concentration",
+            "Low Technology Change",
+            "Low - Steady Globalization"
+        ],
+        "negative_impact_factors": [
+            "Low - Steady Industry Assistance Level",
+            "High Competition"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "High Revenue per Employee",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "Low Profit vs. Sector Average",
+            "High Product/Service Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers - Number of motor vehicle registrations"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Consumer confidence index"
+        ]
+    },
+    "key_trends": [
+        "Car body shops can differentiate through superior services and competitive pricing. Companies that can offer competitive prices, higher-quality services and timeliness will retain customers.",
+        "Car body shops largely compete in local markets",
+        "Pent-up demand for travel and driving created ample opportunities",
+        "Car body shops have adopted new technologies to adapt to changing consumer preferences",
+        "Companies have struggled to accrue significant market share",
+        "Smaller, independent companies and nonemployers dominate the industry's landscape",
+        "I-Car provides workers with the appropriate training to enter the industry",
+        "Car body shops receive limited support from federal, state and local governments",
+        "Car body shops heavily rely on skilled labor",
+        "Car body shops reaped strong returns through the current period",
+        "Supply chain disruptions have posed a threat to car body shops."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Businesses",
+            "segment_description": "Businesses enlist the services of car body shops for the repair and personalization of their automotive fleets. Personalization services include work on the exteriors of company cars with logos, decals, advertising or other messages. This segment has grown as companies seek ways to differentiate themselves to drive sales; customization of fleets helps the companies get closer to that goal.",
+            "segment_percentage": 20.4
+        },
+        {
+            "segment": "Lowest income household bracket",
+            "segment_description": "People in this income bracket rarely use car body shops for discretionary services. These buyers often only purchase essential services, like windshield repairs, yearly inspections and other safety repairs. This market is more likely to shop around, opting for aftermarket parts rather than original equipment manufacturer (OEM) parts to lower the overall cost of repairs. Low-income consumers rarely purchase value-added, higher-margin services, like custom detailing, paint jobs or re-upholstery.",
+            "segment_percentage": 18.4
+        },
+        {
+            "segment": "Middle income household",
+            "segment_description": "Customers in this bracket have deeper pockets and are more likely to perform repairs on an as-needed basis, nonessential or otherwise. This market often capitalizes more on paint jobs and re-upholstery services to maintain the cosmetic integrity of their vehicle. This segment has been crucial to car body shops since middle-class consumers make up a large percentage of the US economy. Increasing incomes and greater spending have contributed to this market's stable growth.",
+            "segment_percentage": 20.0
+        },
+        {
+            "segment": "Highest income household bracket",
+            "segment_description": "These people possess the most discretionary income, so they don't postpone repairs and maintenance work for their vehicles and are able to spend lavishly on value-added services, like custom paint jobs and detailing services. This market is also most likely to drive vehicles that require OEM parts instead of aftermarket parts to do repairs, which results in higher revenue for shops. This segment has remained steady amid rebounding economic conditions; consumers are increasingly capitalizing on upholstery, paint jobs and custom detailing.",
+            "segment_percentage": 25.4
+        },
+        {
+            "segment": "Other",
+            "segment_description": "This segment includes nonprofit vehicles, police departments, emergency service vehicles and other government vehicles. This market represents a small source of revenue for most car body shops. Local governments often negotiate with local auto body shops to service their police vehicles. These arrangements often lead to quicker repair times and lower costs for police precincts, benefiting public budgets and overall efficiency.",
+            "segment_percentage": 3.4
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Body Repair Services",
+            "product_description": "Body repair services include repairing bent vehicle bodies, removing dents and replacing damaged metal and plastic parts. Companies often require or purchase prefabricated metal parts, welding equipment and labor for these tasks. Fixing auto body damage is costly and labor intensive, enabling car body shops to charge premiums for parts, labor and time.",
+            "product_percentage": 60.9
+        },
+        {
+            "product_or_service": "Painting Services",
+            "product_description": "Painting services include full-body paintwork or partial repainting, like touchups due to scratches or dents in a vehicle's body. This process requires sanding and cleaning the car before applying acrylic paint. Custom paint jobs generate larger returns. Greater disposable income and climbing consumer confidence have created demand for these discretionary services, especially following the pandemic. Even so, rampant inflation has discouraged some consumers from spending on new paint jobs.",
+            "product_percentage": 14.6
+        },
+        {
+            "product_or_service": "Glass Replacement and Repair",
+            "product_description": "Glass replacement and repair services include fixing chips, replacing and tinting windshields and other automotive glass, like door windows and rear window glass. Specialized windshield repair companies often handle demand for this segment. Since damaged windshields are a safety hazard, consumers can't delay repairs even during periods of weak income growth, providing a stable income source for car body shops. Even so, this segment faces intense competition from dedicated mobile windshield repair companies like Safelite.",
+            "product_percentage": 16.4
+        },
+        {
+            "product_or_service": "Upholstery",
+            "product_description": "Upholstery includes repairing and replacing the material of the car's interior, like the seats and steering wheel. Consumers infrequently replace a vehicle's interior; individuals only replace a car's interior if the owner prefers a different style or material or if the current material has become noticeably damaged.",
+            "product_percentage": 2.4
+        },
+        {
+            "product_or_service": "Merchandise Sales",
+            "product_description": "Merchandise sales include automotive parts and supplies like tires and lights. This segment makes up a small fraction of the revenue since most accessories are relatively inexpensive. Most of these items are discretionary purchases, often considered luxury or nonessential goods. This means consumers decide to buy them based on personal preference and the level of disposable income. If disposable income is high, spending on these items increases accordingly.",
+            "product_percentage": 2.7
+        },
+        {
+            "product_or_service": "Detailing and Body Conversion Services",
+            "product_description": "Detailing and body conversion services include minimal touch-ups to the interior and exterior of the car. Since detailing is purely cosmetic and in no way affects the operation of a vehicle, it declines as a share of industry revenue during economic downturns.",
+            "product_percentage": 1.5
+        },
+        {
+            "product_or_service": "Other Services",
+            "product_description": "Other services offered by car body shops include cleaning, emission testing and other miscellaneous services. Emission testing for vehicles is a requirement for legal operation in many places. This process ensures that cars are not releasing too much harmful environmental pollution. The need for emission testing doesn't fluctuate with economic cycles, as it remains a steady regulatory requirement irrespective of the economy's state.",
+            "product_percentage": 1.5
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Automobile Interior Manufacturing in the US",
+            "Used Car Parts Wholesaling in the US",
+            "Tire Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Automobile Metal Stamping in the US",
+            "Automobile Engine & Parts Manufacturing in the US",
+            "Automobile Transmission Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Car Rental in the US",
+            "Used Car Dealers in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Per capita disposable income",
+            "determinant_description": "Per capita disposable income levels heavily impact demand for car body shops since most services are discretionary. When per capita disposable income declines, consumers are less likely to spend on nonessential repairs"
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast has seen significant population growth and urbanization, leading to more vehicles on the road. This higher vehicle density naturally increases the incidence of accidents and the need for repair services, supporting a larger number of car body shops. The region also accounts for the most significant proportion of car dealerships and total passenger vehicles in use, which leads to more visits to car body shops.",
+            "percentage_establishments": 28.1,
+            "percentage_population": 19.1
+        },
+        {
+            "location": "West",
+            "location_description": "High population densities in Western states, including California and the prevalence of urban areas result in more vehicles on the road and heavy traffic congestion, increasing demand for car body repair services. The West's unique weather conditions can cause extensive vehicle damage, creating a consistent need for car body shops. Urbanization and harsh weather conditions increase the likelihood of accidents, creating a constant market for car body repair services.",
+            "percentage_establishments": 16.3,
+            "percentage_population": 23.5
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "This region's concentration can be partly explained by the region's industrial clustering, with General Motors Company, Ford Motor Company and other major car manufacturers located in Michigan. This close location facilitates effective logistical support networks for other businesses, especially those involved in repair and maintenance services. It enables efficient resource sharing, speedy service delivery and streamlined operations.",
+            "percentage_establishments": 14.2,
+            "percentage_population": 15.3
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "Federal Motor Vehicle Safety Standard No. 126",
+                "regulation_description": "This regulation requires electronic stability control systems in passenger cars, multipurpose passenger vehicles, trucks and buses."
+            },
+            {
+                "regulation_title": "California Code of Regulations",
+                "regulation_description": "This regulation governs the registration and regulation of repair body shops; the quality of reuse crash parts, the repair procedures that are undertaken and repair equipment that should be used for repair jobs; the type and quality of raw materials used (paints and solvents); workplace safety; advertising; and the disposal of hazardous waste."
+            },
+            {
+                "regulation_title": "THE ENVIRONMENTAL PROTECTION AGENCY (EPA)",
+                "regulation_description": "Regulations introduced by the EPA require that spray activities be performed in a booth with an exhaust filter that removes 98.0% or more of hazardous air pollutants when the spray coating contains a targeted dangerous air pollutant."
+            },
+            {
+                "regulation_title": "OCCUPATIONAL SAFETY AND HEALTH ASSOCIATION (OSHA)",
+                "regulation_description": "Painters in body shops are exposed to many chemical hazards from paints and solvents, while mechanics are exposed to dust from sanding, metal fumes from welding, intense noise, oil and grease spills and other physical hazards. This is why OSHA has established specific workplace safety standards for car body shops and 25 states have enacted additional measures to enforce safety regulations."
+            },
+            {
+                "regulation_title": "INSURANCE REQUIREMENTS",
+                "regulation_description": "Car body shops must carry adequate insurance coverage to protect against various risks, including liability, worker's compensation, and property damage."
+            },
+            {
+                "regulation_title": "STATE LICENSING REGULATIONS",
+                "regulation_description": "Many states require car body shops to obtain specific licenses to operate legally. This often involves passing inspections, adhering to specific state standards, and sometimes completing educational courses."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_points": [
+            {
+                "barrier_title": "Life cycle stage",
+                "barrier_description": "The car body shop industry is mature."
+            },
+            {
+                "barrier_title": "Industry assistance level",
+                "barrier_description": "The level of industry assistance is low and steady."
+            },
+            {
+                "barrier_title": "Competition level",
+                "barrier_description": "The competition level is high and steady."
+            },
+            {
+                "barrier_title": "Capital intensity level",
+                "barrier_description": "The capital intensity level is low, which decreases barriers to entry."
+            },
+            {
+                "barrier_title": "Concentration level",
+                "barrier_description": "The concentration level is low, which decreases barriers to entry."
+            },
+            {
+                "barrier_title": "Technology change level",
+                "barrier_description": "The technology change level is low, which decreases barriers to entry."
+            },
+            {
+                "barrier_title": "Globalization level",
+                "barrier_description": "The globalization level is low and steady, which decreases barriers to entry."
+            }
+        ],
+        "barriers_trend": "Steady",
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Low capital intensity level",
+            "Low concentration level",
+            "Low technology change level",
+            "Low globalization level"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Superior services and competitive pricing",
+                "basis_description": "Car body shops can differentiate through superior services and competitive pricing. Companies that can offer competitive prices, higher-quality services and timeliness will retain customers."
+            },
+            {
+                "basis_title": "Local competition",
+                "basis_description": "Car body shops largely compete in local markets. The industry's low concentration and high market saturation mean that few companies have established national reputations."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Many options for customers",
+                "concentration_description": "Customers have many options to choose from"
+            },
+            {
+                "concentration_title": "Role of small businesses",
+                "concentration_description": "Nonemployers and small businesses play a vital role in the industry. These smaller entities often operate independently, contributing to the industry's growing diversity and competitive atmosphere."
+            },
+            {
+                "concentration_title": "Low barriers encourage new businesses",
+                "concentration_description": "Low barriers to entry encourage new business. Numerous niche companies, like painting services, require minimal capital to launch, leading to a proliferation of these businesses and increasing competition."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "The Boyd Group Inc.",
+                "company_percentage": 4.2
+            },
+            {
+                "company_name": "Driven Brands, Inc.",
+                "company_percentage": 2.1
+            },
+            {
+                "company_name": "Caliber Collision Center",
+                "company_percentage": 2
+            },
+            {
+                "company_name": "Service King",
+                "company_percentage": 1.7
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 40
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 25
+        },
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 10
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Companies Purchase a Wide Range of Inputs",
+            "cost_factor_description": "Car body shops purchase a wide range of items, including car parts, paint, abrasives, adhesives, metal panels, upholstery materials, cleaning equipment and waxing agents, among many others."
+        },
+        {
+            "cost_factor_title": "Purchase costs represent a notably volatile portion of total costs",
+            "cost_factor_description": "Major supply chain disruptions following the pandemic and the Russian invasion of Ukraine made it difficult for shops to gather necessary car parts and other inputs."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_trend": "Unknown",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LABOR EXPENSES",
+                "capital_intensity_description": "Although some capital is required to start a car body shop, services mainly depend on workers to repair, clean or paint vehicles. Highly skilled technicians are necessary for operating complex machinery."
+            }
+        ]
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_trend": "Unknown",
+        "volatility_points": [
+            {
+                "volatility_title": "Many car body shops have long-term relationships",
+                "volatility_description": "According to Body Shop Business, more than half of all car body shops have direct repair program agreements with insurance companies and 57.0% of sales are insurance referrals, which generates a stable portion of revenue each year."
+            },
+            {
+                "volatility_title": "More Income Means Better Care for Vehicles",
+                "volatility_description": "Stronger economic conditions and increased disposable income make consumers more willing to spend on discretionary services, like paint jobs, detailing and other minor repairs to keep cars looking new."
+            },
+            {
+                "volatility_title": "The pandemic and rampant inflation have counteracted strong pent-up demand",
+                "volatility_description": "The pandemic and rampant inflation have counteracted strong pent-up demand for driving and travel, contributing to notable volatility through the current period."
+            }
+        ]
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_trend": "Steady",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Companies upgrade tools as vehicle technology progresses",
+                "technological_change_description": "Vehicle repair shops must adopt new machines and tools to operate on new vehicles with more advanced mechanics. Even so, car body shops primarily work on vehicle exteriors and don't need to worry about vehicle electronics."
+            },
+            {
+                "technological_change_title": "Augmented reality innovates auto repair",
+                "technological_change_description": "AR technology gives technicians real-time repair guidance by overlaying instructions and diagrams directly onto vehicles. Enhanced accuracy in complex repair jobs reduces the margin of error thanks to AR."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "How do economic downturns impact sales?",
+            "answer": "Many of the services offered by car body shops are cosmetic and discretionary purchases. Demand often falters as economic conditions sour."
+        },
+        {
+            "question": "What industry assistance is available?",
+            "answer": "I-CAR established an education foundation with resources to aid recruiting and training in the collision repair industry. Other trade associations like ASA and SCRS offer training, advocacy, networking and discounts."
+        },
+        {
+            "question": "How does your company handle marketing?",
+            "answer": "The average body shop allocates a relatively small portion of revenue toward marketing expenses. Most companies operate locally and rely on word-of-mouth recommendations."
+        },
+        {
+            "question": "How do you plan the location of new establishments?",
+            "answer": "Most companies operate in areas with a high concentration of population and in easily accessible locations. High-populated states like California, Texas, Florida and New York account for the highest shares."
+        },
+        {
+            "question": "Does your company offer ancillary services during economic downturns?",
+            "answer": "Many companies offer glass repair and replacement services. These services are nondiscretionary."
+        },
+        {
+            "question": "How has your company leveraged social media for marketing?",
+            "answer": "Though marketing expenses are fairly low for independent car body shops, many shops use social media platforms to expand their reach."
+        },
+        {
+            "question": "How has your company adapted to changes in automobile manufacturing?",
+            "answer": "Companies must keep up with the quickly changing automobile manufacturing industry and constantly changing safety and electronic features."
+        },
+        {
+            "question": "How has your company stayed abreast of regulatory changes?",
+            "answer": "Most companies receive assistance with regulatory changes from trade associations like the National Auto Body Council, Automotive Body Repair News and I-Car."
+        },
+        {
+            "question": "How has your company remained in line with paint regulations?",
+            "answer": "Automobile painting companies that manufacture their own paints are subject to many federal, state and local environmental regulations. OSHA has established specific workplace safety standards for car body shops."
+        },
+        {
+            "question": "How does your company manage profit?",
+            "answer": "Size and scope often dictate profit. Companies with strong local market positions and reputations attract greater demand and generate strong profit. More complex vehicles have created demand for more skilled labor, contributing to higher wage costs."
+        },
+        {
+            "question": "How have you mitigated rising operational costs?",
+            "answer": "Companies face exposure to changing costs. Higher purchasing costs and rising labor expenses are major threats to consistent profit growth. Similarly, changing economic conditions can prevent growth."
+        },
+        {
+            "question": "How does your company ensure positive customer relations?",
+            "answer": "Maintaining excellent customer relations can lead to repeat demand for services and referrals from loyal customers. This feature is crucial to sustaining and generating new business in a competitive market."
+        },
+        {
+            "question": "Is your company affiliated with a trade organization?",
+            "answer": "Trade associations and organizations are vital, relaying important and timely information regarding regulatory and policy changes. Given the high capital value of their vehicles, customers prefer to choose an endorsed service provider."
+        },
+        {
+            "question": "How have you mitigated cost increases?",
+            "answer": "Managing costs is important, particularly in the painting segment. Many painters stock multiple brands to prevent shortages. More successful businesses have centralized purchasing in the office, reducing duplication."
+        },
+        {
+            "question": "How do economic slowdowns impact demand?",
+            "answer": "An increased number of vehicles on the road leads to more potential for accidents and a bigger pool of potential customers for body shops. People often carpool or drive less during economic downturns, limiting demand."
+        },
+        {
+            "question": "How do motor vehicle registrations impact demand?",
+            "answer": "Higher motor vehicle registrations contribute to greater demand for car body shops. More vehicles on the road equate to more potential customers."
+        },
+        {
+            "question": "How does your company adjust to disposable income fluctuations?",
+            "answer": "Per capita disposable income levels heavily influence this industry, as many services are discretionary purchases. Companies frequently offer discounts and promotions for returning customers."
+        }
+    ]
+}

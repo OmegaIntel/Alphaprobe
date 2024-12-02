@@ -1,0 +1,501 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 926000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2003,
+                "end_year": 2023,
+                "revenue_cagr_value": -0.74
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 0.44
+            }
+        },
+        "profit": {
+            "profit_dollars": 99000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": -1.04
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 0.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 10.7,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": -0.0
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 476000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2018,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 0.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "industry_value_added_cagr_value": 0.0
+            }
+        },
+        "employees": {
+            "employees_count": 1934,
+            "employees_cagr_historical": {
+                "begin_year": 2000,
+                "end_year": 2023,
+                "employees_cagr_value": 0.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 0.0
+            }
+        },
+        "wages": {
+            "wages_dollars": 208000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 0.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 0.0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2018,
+                "end_year": 2023,
+                "imports_cagr_value": 0.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "imports_cagr_value": 0.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2018,
+                "end_year": 2023,
+                "exports_cagr_value": 0.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "exports_cagr_value": 0.0
+            }
+        }
+    },
+    "executive_summary": "The biomass power industry has declined over the past five years. External competition from natural gas and alternative renewable energy sources hindered revenue throughout the period. However, most states have enacted renewable portfolio standards (RPSs), which require local utilities to generate electricity from renewable power as a percentage of their total energy portfolio. In addition, new production tax credits (PTC) were implemented, limiting revenue declines over the past five years. Over the past five years, revenue has slumped at a CAGR of 3.5% to $925.5 million, including an expected 0.2% decrease in 2023. Profit is expected to lag to 10.7% of revenue in 2023 from 17.3% in 2018.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The industry's performance and landscape depend on the availability of tax credits",
+            "current_performance_point_description": "For the past couple of decades, the industry's financial performance has depended on the availability of tax credits and the level of government regulation surrounding downstream energy use."
+        },
+        {
+            "current_performance_point_title": "Government legislation affects the industry and has helped to limit revenue declines",
+            "current_performance_point_description": "The industry has been affected by legislation and regulations designed to benefit the industry. The federal production tax credit (PTC) gave biomass power-generation companies an income tax credit of 2.6 cents per kilowatt-hour (kWh) of energy produced for five years. This credit reduced the cost of transmitting energy from biomass power plants, limiting falling demand and profit. Government assistance over the past five years helped limit declines in industry employment."
+        },
+        {
+            "current_performance_point_title": "The industry encounters mixed feelings over emissions",
+            "current_performance_point_description": "Over the past five years, state environmental protection agencies have started to crack down on biomass power plants concerning emissions."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Positive trends will increase industry demand and revenue",
+            "future_outlook_point_description": "The ongoing push for renewable energy will increase demand for biomass power over the next five years. As the economy fully recovers from the effects of the pandemic, electricity consumption rates from households, manufacturers and industrial producers are all expected to increase, benefitting the industry. Demand for biomass power will rise in tandem with general electricity demand as operators seek to diversify energy sources and green electricity becomes a greater focus for the United States."
+        },
+        {
+            "future_outlook_point_title": "State funding will spark rising demand for biomass power",
+            "future_outlook_point_description": "Over the next five years to 2028, more states are expected to introduce ambitious renewable energy targets with specific requirements for biomass power. Washington, DC, Puerto Rico and 38 states have mandated renewable portfolio standards (RPS) and more are expected to do so during the period. Utility companies are anticipated to work to meet these goals, thereby providing more opportunities for biomass power operators to put biomass plants on the map. As the mandated RPS goals approach the deadline, more utilities will scramble to meet the target."
+        },
+        {
+            "future_outlook_point_title": "Positive trends and the advancement of biomass power technology will limit declines in profitability",
+            "future_outlook_point_description": "Operators will continue to compete with traditional energy sources (coal and natural gas). The world price of steaming coal and natural gas are expected to decline over the next five years, increasing competition for biomass power operators. Existing biomass power producers are expected to consolidate, creating larger players that can exploit economies of scale. This, in turn, will reduce variable costs and increase the number of long-term contracts with downstream energy providers. The advancement of biomass power technology is forecast to improve biomass combustion capture percentages. These trends will limit profit declines over the next five years to 2028."
+        }
+    ],
+    "industry_definition": "Enterprises in this industry operate electricity-generating facilities using biomass (e.g., agricultural byproducts, landfill gas and biogenic municipal waste). Establishments primarily engaged in operating trash disposal incinerators that also generate electricity are classified in the Waste Treatment and Disposal Services industry (IBISWorld 56221).",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "high - steady Industry Assistance Level",
+            "low Concentration Level",
+            "high - increasing Barriers To Entry Level",
+            "low - steady Globalization Level"
+        ],
+        "negative_impact_factors": [
+            "high Capital Intensity Level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Increasing Barriers to Entry",
+            "High & Steady Level of Assistance",
+            "Low Volatility",
+            "Low Imports",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Price of electric power"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers"
+        ]
+    },
+    "key_trends": [
+        "Operators must minimize the cost of electricity production to turn a profit and remain in operation. Internal competition will intensify as traditional power generation companies expand their energy portfolio offerings.",
+        "External competition comes from other industries in the energy sector. Operators compete with other renewable energy industries and some fossil fuel industries.",
+        "Government legislation affects the industry. Government incentives include the federal production tax credit (PTC) and the renewable portfolio standards (RPSs).",
+        "Positive trends will boost demand and revenue over the next five years. The increasing push for renewable energy will benefit the industry.",
+        "The industry experiences a low level of concentration. Low concentration is due to the few facilities producing substantial electrical output.",
+        "The two largest operators in the industry do not have a significant share of total industry revenue. Any significant change in market share concentration in the industry will likely occur from a major merger or acquisition.",
+        "Operators must adhere to environmental regulations. These environmental regulations include the Clean Air Act and Clean Water Act.",
+        "The industry receives assistance from energy incentive programs. These incentive programs include government assistance, tax credits, and renewable energy rebates."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Industrial Users",
+            "segment_description": "Industrial users account for the largest share of the biomass power market, estimated at roughly two-thirds of industry revenue. This large proportion remains relatively steady. Biomass is popular in the paper, chemical and food processing industries. Industrial companies in these industries often use the biomass they produce in their operations to generate electricity, heat and steam that it uses on-site.",
+            "segment_percentage": 67.6
+        },
+        {
+            "segment": "Electric Power Utility",
+            "segment_description": "Some of the largest biomass power projects sell their generated power to utility companies. The electrical power utility market is estimated to account for over one-quarter of total industry revenue. Many states have renewable portfolio standards, which require utilities within that state to sell renewable energy as a part of their product offering.",
+            "segment_percentage": 27.9
+        },
+        {
+            "segment": "Commercial",
+            "segment_description": "The commercial market is the smallest for biomass power. However, this segment is likely to expand over the next five years to 2028 as biomass plants become more efficient and can reach high energy capacities. Many commercial businesses are looking to source their energy from renewable sources to maintain a positive image with the public and reduce their environmental effect.",
+            "segment_percentage": 4.5
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Direct-fired Production",
+            "product_description": "Most biomass power plants are direct-fired systems; in 2023, roughly one-half of biomass energy is estimated to be produced at direct-fired power plants.",
+            "product_percentage": 50.2
+        },
+        {
+            "product_or_service": "Cofiring Production",
+            "product_description": "Cofiring involves using biomass for a portion of the coal in an existing power plant boiler but otherwise operates similarly to direct-fired systems.",
+            "product_percentage": 38.7
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Corn Farming in the US",
+            "Heavy Engineering Construction in the US",
+            "Sugar Processing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Sawmills & Wood Production in the US",
+            "Boiler & Heat Exchanger Manufacturing in the US",
+            "Engine & Turbine Manufacturing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": [
+            "Waste Collection Services in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Rising demand for electricity",
+            "determinant_description": "Rising demand for electricity often results in higher demand for electricity from biomass power plants. This, in turn, stimulates the construction of new plants, increased output from existing plants and industry expansion."
+        },
+        {
+            "determinant_title": "Electric power consumption",
+            "determinant_description": "However, electric power consumption is expected to decrease in 2023, posing a potential threat to the industry."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region has the largest concentration of operators and accounts for over one-quarter of industry establishments. The number of establishments in the Great Lakes region is significant due to the advantage of the forests and potential wood waste in the region.",
+            "percentage_establishments": 27.5,
+            "percentage_population": 15.1
+        },
+        {
+            "location": "West",
+            "location_description": "The West region accounts for the second-largest concentration of industry establishments, accounting for roughly one-quarter of establishments. The West is the fourth-most populous region of the United States. Businesses congregate in major population centers such as Los Angeles, San Francisco and Seattle. California is home to the largest concentration of establishments. California is a likely destination for biomass power producers because of the dense forests in its northern region and the surrounding states.",
+            "percentage_establishments": 12.5,
+            "percentage_population": 23.5
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region accounts for the third-largest concentration of industry enterprises. The Southeast is the single-most populous region in the United States. Major operators Progress Energy and Southern Company call the region home, helping boost industry establishments' share in the region. North Carolina, where Progress Energy is located, accounts for the fifth-largest concentration of industry establishments.",
+            "percentage_establishments": 12.5,
+            "percentage_population": 19.5
+        },
+        {
+            "location": "New England",
+            "location_description": "The New England region has a small share of establishments but offers a significant market due to its energy demands.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 4.9
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region is a key market area for biomass power due to its population density.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 13.3
+        },
+        {
+            "location": "Southwest",
+            "location_description": "The Southwest region is gradually adapting to biomass power due to shifts in energy policies.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "Plains",
+            "location_description": "The Plains region benefits from the agricultural output that supports biomass production.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 6.6
+        },
+        {
+            "location": "Rocky M",
+            "location_description": "The Rocky Mountain region is seeing increasing usage of biomass energy sources.",
+            "percentage_establishments": 7.5,
+            "percentage_population": 5.6
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "Renewable Targets",
+                "regulation_description": "There are 38 states and the District of Columbia that currently have renewable portfolio standards (RPS) that require electric providers to gradually increase the amount of renewable, typically nonhydroelectric, energy sources in their power supplies. Twenty of these states have committed to 100.0% clean electricity by 2050. New emission standards the Environmental Protection Agency set forth require that all biomass-based diesel must meet 50.0% lifecycle greenhouse gas reduction."
+            },
+            {
+                "regulation_title": "Environmental Regulation",
+                "regulation_description": "Federal, state and local environmental laws extensively regulate the industry. Federal laws, like the Clean Air Act and Clean Water Act and their state counterparts, govern discharges of pollutants into the air and water. Other federal, state and local laws comprehensively govern the generation, transportation, storage, treatment and disposal of solid and hazardous waste (often used as fuel for biomass energy production) and regulate the storage and handling of chemicals and petroleum products."
+            },
+            {
+                "regulation_title": "Energy Regulations",
+                "regulation_description": "The Federal Energy Regulatory Commission (FERC) regulates the transmission and wholesale of electricity in interstate commerce under the authority of the Federal Power Act (FPA). The FPA gives FERC exclusive rate-making jurisdiction over the wholesale of electricity and transmission of electricity in interstate commerce."
+            },
+            {
+                "regulation_title": "Federal Power Act",
+                "regulation_description": "The Federal Power Act, among other exceptions, regulates the owners of facilities used for the wholesale of electricity or transmission of electricity in interstate commerce as public utilities."
+            },
+            {
+                "regulation_title": "COVID-19",
+                "regulation_description": "As the pandemic began to spread through the United States in 2020, almost every state passed some form of stay-at-home law and the closure of nonessential businesses. States have since lifted these restrictions amid mass vaccination and an economic recovery."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The biomass power industry is mature."
+            },
+            {
+                "barrier_title": "Capital Intensity Level",
+                "barrier_description": "The biomass power industry has a high capital intensity level."
+            }
+        ],
+        "factors_decreased_barrier": [
+            "Industry Assistance Level: high - steady",
+            "Concentration Level: low",
+            "Globalization Level: low - steady"
+        ],
+        "factors_increased_barrier": []
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Cost Minimization",
+                "basis_description": "Operators must minimize the cost of electricity production to turn a profit and remain in operation."
+            },
+            {
+                "basis_title": "Internal Competition",
+                "basis_description": "Internal competition will intensify as traditional power generation companies expand their energy portfolio offerings."
+            },
+            {
+                "basis_title": "External Competition",
+                "basis_description": "External competition comes from other industries in the energy sector, including other renewable energy industries and some fossil fuel industries."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Few Large Facilities",
+                "concentration_description": "The lack of concentration is partly because few facilities can produce a substantial electrical output."
+            },
+            {
+                "concentration_title": "Low Prices",
+                "concentration_description": "Many operators produce biomass power because of the relative ease of the necessary fuel and equipment, but it often sells for such low prices that few companies invest heavily in biomass."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Progress Energy",
+                "company_percentage": 5.3
+            },
+            {
+                "company_name": "Covanta Holding Corp",
+                "company_percentage": 4.4
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 10.7
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 22.5
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 29.6
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 18.2
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchase Costs Jump and Include Input Costs and Replacement Costs for Generators and Turbines",
+            "cost_factor_description": "Purchase costs are expected to account for 29.6% of revenue in 2023, up from 22.3% in 2018. Common biomass power inputs include wood chips, nut shells, sewage sludge, olive pips, bone meal, leather waste, animal litter, coal, old tires, bagasse, oil sludge, energy crops, oil seed rape husks, rice and corn husks, packaging waste and chicken waste."
+        },
+        {
+            "cost_factor_title": "Profit slumps due to the pandemic and rising lumber costs",
+            "cost_factor_description": "Profit, measured as earnings before interest and taxes, will account for an estimated 10.7% of revenue in 2023, down from 17.3% in 2018."
+        },
+        {
+            "cost_factor_title": "Depreciation declines but remains a significant expense for operators",
+            "cost_factor_description": "Depreciation is expected to account for 18.2% of revenue in 2023, down from 24.3% in 2018."
+        },
+        {
+            "cost_factor_title": "WAGES CLIMB AS HIGHLY SKILLED EMPLOYEES ARE NEEDED AS PLANTS EXPAND AND EXPERIMENT",
+            "cost_factor_description": "Wages are expected to account for 22.5% of revenue in 2023, up from 17.7% in 2018."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "The industry has exhibited a moderate level of revenue volatility over the past five years",
+                "volatility_description": "The industry participates in a relatively stable market with low but steady demand and price growth."
+            },
+            {
+                "volatility_title": "A Slight Decline in Energy Consumption and the Pandemic Contribute to Revenue Volatility",
+                "volatility_description": "Industry revenue has fallen every year over the past five years, despite the rapid technological advancement."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "OPERATORS SEEK TO INCREASE EFFICIENCY IN PRODUCTION",
+                "technological_change_description": "Operators seek to increase efficiency. Innovations regarding biomass technologies can reduce emissions and increase efficiency."
+            },
+            {
+                "technological_change_title": "Operators Improve the Quality of the Main Technology for Biomass Power",
+                "technological_change_description": "Some studies have found that biomass power producers generate more emissions than previously thought."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company depend on federal investments or incentives?",
+            "answer": "Companies in this industry greatly benefit from federal production tax credits."
+        },
+        {
+            "question": "Have volatile input prices changed the energy sources your company uses to generate electricity over the past few years?",
+            "answer": "Companies regularly switch between different plant materials based on their prices."
+        },
+        {
+            "question": "Does your company invest in R&D to keep pace with the latest generation and transmission technologies?",
+            "answer": "R&D efforts from companies in this industry are focused on making energy production and transmission more efficient."
+        },
+        {
+            "question": "Is your company located near its main suppliers?",
+            "answer": "Many companies strategically locate near major crop growing or lumber harvesting areas."
+        },
+        {
+            "question": "Is your company investing in new technology, such as smart meters, to become more efficient and gain a competitive edge?",
+            "answer": "Technological development in this industry is focused on making production and transmission of the industry's electricity more efficient."
+        },
+        {
+            "question": "How has your company been affected by the growth of electricity generated by other renewable resources, such as wind and solar?",
+            "answer": "The rise of wind and solar plants poses a potential long-term threat to this industry."
+        },
+        {
+            "question": "How do tax credits affect demand? If tax credits are not available, what other ways do you bring in revenue?",
+            "answer": "Tax credits make biomass-power projects more affordable for biomass-power generation enterprises to execute."
+        }
+    ]
+}

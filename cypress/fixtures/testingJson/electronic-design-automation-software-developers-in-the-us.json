@@ -1,0 +1,477 @@
+{
+    "report_title": "Industry Report: Electronic Design Automation Software Developers",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 13387000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": 9.0
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 3.63
+            }
+        },
+        "profit": {
+            "profit_dollars": 2088000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 9.41
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 3.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 15.6,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0.22
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 2.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 10339000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 5.5
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 2.5
+            }
+        },
+        "employees": {
+            "employees_count": 50170,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 2.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 1.5
+            }
+        },
+        "wages": {
+            "wages_dollars": 8004000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 4.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 3.5
+            }
+        },
+        "imports": {
+            "imports_dollars": 2500000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 1.5
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 3.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 2000000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 2.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 2.5
+            }
+        }
+    },
+    "executive_summary": "The field of Electronic Design Automation (EDA) software is fundamental to the creation and advancement of microchips, which are indispensable in a wide range of consumer and business applications incorporating different electronic devices. As the advancement in microchip technology has progressed over the five years to 2023, the need for specialized software for research into innovative designs and for reducing costs in the overall chip design procedure has grown significantly. Consequently, the EDA Software industry has expanded, increasing at a CAGR of 9.5% to $13.4 billion over the five years to 2023, including an increase of 2.7% in 2023 alone. Heightened investment in computers and software by businesses, changes in semiconductor technology and shifts in aggregate consumer electronics demand are all responsible. In addition, the negative influence COVID-19 had on this field was not felt in 2020 or 2021; instead, a profit surge was observed as chip demand expanded.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Continued Churn of Technology Generates Low-Volatility Revenue for EDA Developers",
+            "current_performance_point_description": "EDA developers generate revenue through software license fees, maintenance revenue and payments for engineering assistance and training services. Long-term software licenses have provided a more stable revenue flow and reduced volatility for the industry."
+        },
+        {
+            "current_performance_point_title": "Developing new integrated circuits (ICs) and systems-on-a-chip (SoCs) for electronics are crucial for developer income.",
+            "current_performance_point_description": "EDA software demand has been driven by private investment growth in computers and software and the continuous development of new technology products. Despite the recent price increase of semiconductors due to supply chain issues and pandemic effects, design software demand has remained stable and is expected to maintain its growth trajectory once supply chains adjust."
+        },
+        {
+            "current_performance_point_title": "OUTSOURCING RESEARCH TO START-UPS HAS BECOME COMMONPLACE IN EDA SOFTWARE",
+            "current_performance_point_description": "Operators are increasingly expanding operations and technical capacity, often by acquiring smaller companies with value-added software features. These acquisitions help to increase technical expertise, expand the product portfolio and grow the customer base, improving profitability."
+        },
+        {
+            "current_performance_point_title": "EDA DEVELOPERS STRUGGLE TO KEEP UP WITH THE DOUBLING DEMANDS OF MOORE'S LAW",
+            "current_performance_point_description": "Moore's law indicates that microchip and circuit technology, especially in smartphones and internet-enabled devices, develops rapidly. Despite physical limitations to transistor numbers on chips, chip design continues to improve efficiency, often aided by artificial intelligence algorithms. Industry operators constantly innovate through acquisition or in-house research and development to keep pace with technological advances."
+        },
+        {
+            "current_performance_point_title": "Semiconductor trends",
+            "current_performance_point_description": "Semiconductor trends have moved from custom designs to integrating predesigned software and hardware, often in System on a Chip (SoC) structures, which are harder to produce. EDA software developers have adopted features that integrate front-end and back-end processes in chip design due to the growing complexity and need for efficiency and speed. The ongoing development of new semiconductor designs has kept industry demand stable."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Chips on the Go",
+            "future_outlook_point_description": "- Broadband-enabled mobile devices are forecast to increase demand for advanced microchips over the next five years. - A significant shift in the IT sector towards cloud computing and cloud-based software may increase demand for EDA software needed for mobile devices and cloud servers' chip design. - The growth rate for mobile internet connections is expected to slow due to market saturation, reducing EDA developers' revenue growth. - Short product life cycles of mobile devices could stimulate demand for EDA software as new models will be continuously developed and introduced. - The expansion of cloud technology is anticipated to continue persistently, expanding EDA software's mobile and server hardware use."
+        },
+        {
+            "future_outlook_point_title": "Vehicles Drive EDA Software Growth Forward",
+            "future_outlook_point_description": "- Computerization in automobiles, enabled by EDA software, is projected to advance, incorporating more technology-driven features such as self-driving and electric cars. - As pandemic-related chip shortages subside, automakers will continue to purchase innovative semiconductors, driving demand for novel."
+        },
+        {
+            "future_outlook_point_title": "EDA Software Remains Heavily Merger-Focused",
+            "future_outlook_point_description": "Mergers and acquisitions will continue as EDA companies attempt to increase their user base and add proprietary features while trying to reduce research and development expenditures. As the cost of semiconductors decreases, it will become easier for new players to enter the market and for producing companies to start designing processors internally. A potential threat is the development of electronic design software by large technology companies, which could reduce demand for industry-led designs and associated software."
+        }
+    ],
+    "industry_definition": "This industry develops electronic design automation software, which is used primarily for designing electronic components, such as printed circuit boards and integrated circuits.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage - growth",
+            "Capital Intensity Level - low"
+        ],
+        "negative_impact_factors": [
+            "Technology Change Level - high"
+        ],
+        "mixed_impact_factors": [
+            "Revenue Volatility Level - medium",
+            "Industry Assistance Level - none",
+            "Concentration Level - medium - increasing",
+            "Regulation Level - medium",
+            "Barriers To Entry Level - medium - steady",
+            "Globalization Level - medium - decreasing",
+            "Competition Level - medium - steady"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Medium & Increasing Level of Assistance",
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [],
+        "opportunities": [
+            "Very High Revenue Growth (2005-2023)",
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Private investment in computers and software"
+        ],
+        "threats": [
+            "Low Outlier Growth",
+            "Low Performance Drivers - Demand from semiconductor and circuit manufacturing"
+        ]
+    },
+    "key_trends": [
+        "The ongoing development of new semiconductor designs has kept industry demand stable",
+        "Despite consolidation, the number of industry enterprises has increased",
+        "Industry operators continuously add new features to their software to keep pace with technological changes",
+        "The proliferation of cloud technology is expected to continue",
+        "Technological innovations will likely result in demand for novel semiconductor designs",
+        "Microchip companies are expected to increasingly include software solutions"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Communications",
+            "segment_description": "The communications market includes clients such as internet service providers, as reported in IBISWorld report 51711c, Wireless Telecommunications Carriers (51721), and Voice over Internet Protocol (VoIP) operators (51711e), among others; these industries are critical to connecting people around the world through various technologies. A key driver for this market segment's demand comes from the necessity to meet new design specifications for 5G technology, low-earth satellite.",
+            "segment_percentage": 39.0
+        },
+        {
+            "segment": "CPUs, GPUs and memory manufacturers",
+            "segment_description": "Computer chip manufacturers are the second-largest downstream users of EDA technology in 2023. They comprise the manufacturing of core chips for personal computers, such as CPUs, GPUs and memory components, in addition to servers, supercomputers, smart handheld devices and mobile systems on a chip (SOCs). The popularity of cloud technology in recent years has dramatically heightened demand from this segment since the same core computer components in home devices also power cloud servers with few fundamental changes. Amid COVID-19, remote work arrangements have increased the need for cloud computing infrastructure, bolstering segment demand.",
+            "segment_percentage": 34.2
+        },
+        {
+            "segment": "Automotive",
+            "segment_description": "Automobile use is growing as a core market for computer chips, with an average vehicle requiring more than a thousand computer chips. Vehicle electrification, safety and driver assistance and connectivity all require additional, frequently custom components designed in EDA software. Recently, auto manufacturing has been disrupted as a result of global semiconductor shortages and abnormal demand patterns during COVID. Nonetheless, the use of EDA software for designing novel types of chips for use in automobiles has continued relatively uninterrupted, keeping demand for industry software from this segment stable.",
+            "segment_percentage": 9.4
+        },
+        {
+            "segment": "Industrial",
+            "segment_description": "Semiconductors are used in applications such as solar panels, manufacturing machinery and equipment, trains, planes and space vehicles. Several industry operators, including Cadence Design Systems, maintain a vertical specialization in defense and aerospace contracts. Government spending on EDA technology may also be related to space vehicles and confidential satellite technologies, in addition to grid-scale energy and other infrastructure.",
+            "segment_percentage": 9.2
+        },
+        {
+            "segment": "Computer manufacturers",
+            "segment_description": "The manufacturing of supplemental semiconductors for use in consumer electronics is closely tied to the core component market but meets a very different need. Consumer electronics is a broad category encompassing any device that is not a core processing component (CPU, GPU or random-access memory) but possesses semiconductor components. While comprising a broad range of devices, semiconductor designs for such devices tend to be relatively simpler than for other product segments. As a result, less intensive EDA technology is needed to design chips for these devices, and software for this market must be easier to pick up and learn.",
+            "segment_percentage": 8.2
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Verification Software",
+            "product_description": "Verification Software Prevents Accidental Mistakes in Circuit Design",
+            "product_percentage": 17.7
+        },
+        {
+            "product_or_service": "Design Software",
+            "product_description": "Design Software Visualizes Basic Electronic Components and Their Interactions Together",
+            "product_percentage": 37.7
+        },
+        {
+            "product_or_service": "Simulation Software",
+            "product_description": "Simulation Software Predicts Processing Power, Heat Output, and Other Circuit Characteristics",
+            "product_percentage": 34.9
+        },
+        {
+            "product_or_service": "Manufacturing Preparation Software",
+            "product_description": "Manufacturing Preparation Software Developers Need Intimate Knowledge of Silicon Hardware and Software",
+            "product_percentage": 9.7
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [
+            "Computer Manufacturing in the US",
+            "Computer Peripheral Manufacturing in the US",
+            "Intellectual Property Licensing in the US"
+        ],
+        "tier_2_buyers": [
+            "Semiconductor & Circuit Manufacturing in the US",
+            "Circuit Board & Electronic Component Manufacturing in the US",
+            "Manufacturing in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Electronic design automation (EDA) software constitutes a type of capital expenditure for circuit manufacturers.",
+            "determinant_description": "As a result, demand for EDA software is strongly driven by the level and direction of activity in the Semiconductor and Circuit Manufacturing industry. Sales and upgrade licenses for EDA software rise according to growth in demand for circuits."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": [
+            {
+                "trade_title": "International trade within the Electronic Design Automation (EDA) Software Developers industry",
+                "trade_description": "International trade within the Electronic Design Automation (EDA) Software Developers industry is highly understated."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "West",
+            "location_description": "By far the most densely populated in terms of industry establishments, California boasts an attractive climate and some of the best universities in the world, including Stanford and the California Institute of Technology.",
+            "percentage_establishments": 38.0,
+            "percentage_population": 27.0
+        },
+        {
+            "location": "Southeast",
+            "location_description": "Texas houses the third-highest concentration of industry establishments in the United States.",
+            "percentage_establishments": 12.0,
+            "percentage_population": 21.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "EDA companies located in the Mid-Atlantic also have a more direct influence over the critical regulatory sphere in Washington, DC.",
+            "percentage_establishments": 14.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Great Lakes",
+            "percentage_establishments": 10.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Southwest",
+            "percentage_establishments": 8.0,
+            "percentage_population": 11.0
+        },
+        {
+            "location": "New England",
+            "location_description": "New York, the state with the second-highest concentration of industry establishments.",
+            "percentage_establishments": 8.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "percentage_establishments": 10.0,
+            "percentage_population": 6.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "EDA SOFTWARE EXPORT BANS",
+                "regulation_description": "As the United States continues to view foreign chip production as a threat to its national security."
+            },
+            {
+                "regulation_title": "INTELLECTUAL PROPERTY POLICY",
+                "regulation_description": "The most relevant regulations for this industry are those that govern intellectual property."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Medium",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Technology Change Level",
+                "barrier_description": "high"
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage",
+            "Capital Intensity Level"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "The Electronic Design Automation Software Developers industry competes on cost, performance, ease of use, functionality, availability and the ease with which it can be integrated into existing semiconductor production systems.",
+                "basis_description": "Unlike commodity-based industries, the initial price of electronic design automation software is not a significant determinant of product competitiveness."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "The Electronic Design Automation (EDA) Software Developers industry exhibits a high level of market share concentration.",
+                "concentration_description": "These companies are so concentrated that they control more than one-third of all EDA sales worldwide."
+            },
+            {
+                "concentration_title": "Many New EDA Players Design Themselves to be Ideal Acquisition Targets",
+                "concentration_description": "Instead of researching new ideas, the industry's major players have kept pace by continuously acquiring smaller companies."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Synopsys, Inc.",
+                "company_percentage": 18.7
+            },
+            {
+                "company_name": "Cadence Design Systems, Inc.",
+                "company_percentage": 12.0
+            },
+            {
+                "company_name": "Mentor Graphics",
+                "company_percentage": 3.7
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 15.6
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 59.8
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 1.4
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 1.8
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 2.4
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 1.1
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0.1
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Research, Development, and Intellectual Property Remain Expensive",
+            "cost_factor_description": "Industry operators must greatly protect their intellectual property and invest heavily in research and development."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital intensity",
+                "capital_intensity_description": "The Electronic Design Automation Software Developers industry exhibits low capital intensity, primarily because of enormous investments in trained employees."
+            },
+            {
+                "capital_intensity_title": "Labor Costs",
+                "capital_intensity_description": "Developing software requires highly skilled programmers, as software platforms are only as advanced as the employees that create them."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "MULTIYEAR DEVELOPMENT TIMELINES DIMINISH VOLATILITY",
+                "volatility_description": "For semiconductor and chip design companies, producing a single integrated circuit can take months or years."
+            },
+            {
+                "volatility_title": "HIGH TRAINING AND INTEGRATION COSTS FOR BUYERS PUSH VOLATILITY DOWN",
+                "volatility_description": "EDA software is some of the world's most advanced and complex software, as it deals with manufacturing on the cutting edge of modern physics."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "High Technology Change",
+                "technological_change_description": "Technology change in the Electronic Design Automation (EDA) Software Developers industry is high due to constant software development and updates."
+            },
+            {
+                "technological_change_title": "Developers release frequent updates",
+                "technological_change_description": "Developers release frequent updates to clients to always make available the latest features and software efficiency improvements in a timely manner."
+            },
+            {
+                "technological_change_title": "External technologies affecting this industry",
+                "technological_change_description": "External technologies affecting this industry include the increasing adoption of cloud-based software delivery."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How has the increasing prevalence of illegal downloading affected your company's sales?",
+            "answer": "Illegal downloading of software is not a major concern for industry operators."
+        },
+        {
+            "question": "How has the shift toward conducting business online affected demand for your services?",
+            "answer": "The shift to SaaS, software as a service, has helped provide more up-to-date services for clients."
+        }
+    ]
+}

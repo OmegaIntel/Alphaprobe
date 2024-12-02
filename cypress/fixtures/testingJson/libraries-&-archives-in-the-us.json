@@ -1,0 +1,428 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 2482000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": -0.96
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": -2.12
+            }
+        },
+        "profit": {
+            "profit_dollars": 84000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": -4.93
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 3.4,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -4.01
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1022000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": -1.53
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 21851,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": -1.75
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 908000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": -1.01
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Libraries have a long and storied history, dating back thousands of years to the legendary Library of Alexandria. Even in today's digital age, they act as vital public institutions that provide free access to costly information and resources, contributing significantly to community development and literacy. Since library benefits are distributed as externalities across the community, funding for libraries primarily comes from local government sources, such as property taxes. However, budgets are often under pressure due to shifting priorities. Libraries have sought alternative funding sources like grants, donations and partnerships with private entities. Despite diverse funding, libraries struggle with underutilization and competition from substitutes.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "the past five years, industry revenue growth has wavered",
+            "current_performance_point_description": "dipping at a CAGR of 2.1% to a total of $2.5 billion in 2024, with inflation burning any excess profit down to 3.4% and revenue falling 3.0% in the most recent twelve months."
+        },
+        {
+            "current_performance_point_title": "Libraries serve a diverse market",
+            "current_performance_point_description": "including students, researchers, entrepreneurs and the general public, disproportionately benefitting financially challenged communities. They offer services beyond book lending, like access to digital resources, educational programs and community events."
+        },
+        {
+            "current_performance_point_title": "Cultural shifts toward rapid digital information consumption",
+            "current_performance_point_description": "pose challenges and opportunities for libraries."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Libraries Continue to Suffer From Waning and Uneven Demand",
+            "future_outlook_point_description": "- Libraries and archives industry growth may be limited by reduced government funding, compounded by local governments being required to balance their budget and make more aggressive cuts."
+        },
+        {
+            "future_outlook_point_title": "The Digital Library Continues to Grow, Challenged by DRM and Qualified Staff Shortages",
+            "future_outlook_point_description": "- Libraries are incorporating database management systems and digital catalogs to streamline research processes and reduce operating costs."
+        },
+        {
+            "future_outlook_point_title": "FEDERAL FUNDING CONTINUES TO HIT SPEED BUMPS, SO LIBRARIES ARE EXPANDING TO PAID SERVICES",
+            "future_outlook_point_description": "The future of the Library Services and Technology Act (LSTA), the sole source of federal funding for industry establishments, remains uncertain."
+        }
+    ],
+    "industry_definition": "Industry establishments provide library or archiving services, maintaining collections of documents for informational, research, educational or recreational needs. Libraries store historical documents, photographs, maps, audio material and audiovisual material, and make them accessible to the public. This industry includes both public and private libraries, but excludes university libraries, corporate libraries and establishments that do not primarily provide library services.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low",
+            "Industry Assistance Level: high - steady",
+            "Globalization Level: low - steady"
+        ],
+        "negative_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Level of Assistance",
+            "Low Imports",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "Federal funding for creative arts"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Low Revenue Growth (2024-2029)",
+            "Low Performance Drivers",
+            "Number of K-12 students"
+        ]
+    },
+    "key_trends": [
+        "Libraries face competition based on location, accessibility, service range, cost efficiency and customer service.",
+        "Library Patrons and Community Engagement",
+        "Digital Information and Intellectual Property",
+        "Impact of the Pandemic",
+        "Navigating Challenges",
+        "Role of Large Libraries",
+        "Digital rights pose challenges for libraries",
+        "Federal support for libraries is precarious",
+        "Libraries invest heavily in their collections",
+        "Staff wages are a significant expense",
+        "Profitability isn't a primary goal",
+        "Libraries are located across the United States, and their distribution reflects that of the general population",
+        "Mid-Atlantic library systems are educational powerhouses"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Children (Ages 0 to 14)",
+            "segment_description": "Libraries Provide Low-Cost, Community-Centered Education for All Children",
+            "segment_percentage": 52.9
+        },
+        {
+            "segment": "Young Adult (Ages 15 to 24)",
+            "segment_description": "Young Adults are Driving Library Change and Introducing New Programs Such as Makerspaces",
+            "segment_percentage": 10.1
+        },
+        {
+            "segment": "Adult (Ages 25+)",
+            "segment_description": "Adults Use Libraries for Career Advancement, Turning Online for Recreational Reading",
+            "segment_percentage": 37.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Print Material Borrowing and Access",
+            "product_description": "Library Services and Print Material Borrowing Make the Core Service Offered by Libraries",
+            "product_percentage": 44.4
+        },
+        {
+            "product_or_service": "Access to Computers and Digital Databases",
+            "product_description": "DIGITAL LIBRARY PLATFORMS CONTINUE GROWING, THOUGH NOT AS SPEEDILY AS MANY BELIEVE",
+            "product_percentage": 39.2
+        },
+        {
+            "product_or_service": "Archival Institution and Other Services",
+            "product_description": "ARCHIVAL SERVICES AND SUPPLEMENTARY OFFERINGS GROW RAPIDLY",
+            "product_percentage": 16.4
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Book, Magazine & Newspaper Wholesaling in the US",
+            "Magazine & Periodical Publishing in the US",
+            "Book Publishing in the US"
+        ],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [
+            "Database & Directory Publishing in the US",
+            "Janitorial Services in the US",
+            "Internet Service Providers in the US",
+            "Database, Storage & Backup Software Publishing in the US"
+        ],
+        "tier_2_buyers": [
+            "Educational Services in the US",
+            "Law Firms in the US",
+            "Market Research in the US",
+            "Scientific Research & Development in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Local and State Government Funding",
+            "determinant_description": "Local and state governments provide more than 90.0% of funding for public libraries. When local and state government investments increase, more funding is allocated to public libraries, which results in revenue growth. Conversely, local and state budget shortfalls can lower funding for public libraries, causing revenue to contract."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "THE LARGEST LIBRARY SYSTEMS IN THE WORLD ARE HEADQUARTERED IN THE DENSE MID-ATLANTIC CITIES",
+            "percentage_establishments": 15.2,
+            "percentage_population": 13.4
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "Great Lakes Libraries Focus More on Industry and Research Than Other Sectors",
+            "percentage_establishments": 19.5,
+            "percentage_population": 15.1
+        },
+        {
+            "location": "West",
+            "location_description": "Western Libraries Are Often Newer Than Their Eastern Counterparts and Offer More Technological Services",
+            "percentage_establishments": 9.3,
+            "percentage_population": 23.5
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_trend": "Increasing",
+        "regulations_points": [
+            {
+                "regulation_title": "STATE-LEVEL REGULATIONS ON LIBRARIES",
+                "regulation_description": "Libraries and archives are primarily regulated at the state level, with each state having its requirements and regulations."
+            },
+            {
+                "regulation_title": "COPYRIGHT REGULATIONS",
+                "regulation_description": "Digital media presents challenges for libraries, particularly in copyright compliance."
+            },
+            {
+                "regulation_title": "DIGITAL MILLENNIUM COPYRIGHT ACT (DMCA)",
+                "regulation_description": "Libraries and archives face significant challenges under the DMCA's framework for managing digital rights and copyright protections."
+            },
+            {
+                "regulation_title": "The Museum and Library Services Act (MSLA)",
+                "regulation_description": "The 1996 Museum and Library Services Act (MSLA) replaced the Library Services and Construction Act of 1953, shifting focus from library construction to technology infrastructure."
+            },
+            {
+                "regulation_title": "First Amendment Rights and Book Bans",
+                "regulation_description": "The American Library Association (ALA) staunchly advocates for libraries to uphold First Amendment rights, ensuring that no materials are excluded based on origin, background, or viewpoints."
+            },
+            {
+                "regulation_title": "The Children's Internet Protection Act (CIPA)",
+                "regulation_description": "The Children's Internet Protection Act (CIPA), enacted in 2003, requires libraries receiving federal funding to use internet filters to protect children from harmful online content."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Legal",
+                "barrier_description": "Regulations about reproducing copyrighted content bind new libraries, but libraries are subject to relatively few prohibitive regulations."
+            },
+            {
+                "barrier_title": "Start-up Costs",
+                "barrier_description": "Libraries must purchase books to lend, digital resources and specialized equipment, but these start-up costs are frequently mitigated by government grants."
+            },
+            {
+                "barrier_title": "Differentiation",
+                "barrier_description": "Differentiation is most difficult for libraries, as larger libraries already have the most unique books to be loaned out."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Industry Assistance Level: high - steady",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Libraries face competition based on location, accessibility, service range, cost efficiency and customer service.",
+                "basis_description": "Some libraries specialize in specific collections for a competitive edge."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Stable",
+        "concentration_points": [
+            {
+                "concentration_title": "SINCE THEY ARE AVAILABLE TO THE ENTIRE PUBLIC, LIBRARIES ARE OMNIPRESENT",
+                "concentration_description": "Public libraries are distributed across the United States, providing free access to information for all Americans."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Library of Congress",
+                "company_percentage": 49
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 51
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Buying New Titles and Technology Systems Helps Libraries Keep Pace with Competitors",
+            "cost_factor_description": "Libraries allocate significant portions of their revenue to collection development."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_trend": "Unknown",
+        "volatility_points": []
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_trend": "Increasing",
+        "technological_change_points": []
+    },
+    "FAQs": [
+        {
+            "question": "How have changes in consumers' electronic usage habits changed your operations?",
+            "answer": "Consumers are increasingly using digital platforms and services."
+        },
+        {
+            "question": "How has the presence of illegal downloading affected your company's sales?",
+            "answer": "Illegal downloading of books, textbooks and other informational publications has caused foot traffic to dwindle at libraries and archives."
+        },
+        {
+            "question": "Has your company been exposed to rising wages in recent years?",
+            "answer": "Wages have decreased over the past five years, mainly from private libraries."
+        }
+    ]
+}

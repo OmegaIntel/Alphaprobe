@@ -1,0 +1,601 @@
+{
+    "report_title": "Auto Parts Manufacturing Industry Report",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 69237000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": 0.19
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 2.52
+            }
+        },
+        "profit": {
+            "profit_dollars": 3531000000,
+            "profit_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "profit_cagr_value": 1.62
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "profit_cagr_value": 2.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5.1,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 1.42
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 2.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 13459000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 1.5
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 1.8
+            }
+        },
+        "employees": {
+            "employees_count": 143896,
+            "employees_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "employees_cagr_value": 1.1
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "employees_cagr_value": 1.5
+            }
+        },
+        "wages": {
+            "wages_dollars": 8266000000,
+            "wages_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "wages_cagr_value": 1.3
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "wages_cagr_value": 1.6
+            }
+        },
+        "imports": {
+            "imports_dollars": 48136000000,
+            "imports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "imports_cagr_value": 3.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "imports_cagr_value": 3.5
+            }
+        },
+        "exports": {
+            "exports_dollars": 18263000000,
+            "exports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "exports_cagr_value": 2.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "exports_cagr_value": 2.5
+            }
+        }
+    },
+    "executive_summary": "Auto parts manufacturers build miscellaneous parts and equipment, including exhaust systems, airbags, heating, ventilation, air conditioning systems (HVAC) and filtration devices. Manufacturers faced significant challenges during the COVID-19 pandemic when social distancing significantly reduced travel and weakened the manufacturing sector, causing revenue to contract. As more people drive following mass vaccination, the need for vehicle repairs resulting from more traveling has spiked.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Climbing Interest Rates Threaten Auto Parts Manufacturers",
+            "current_performance_point_description": "The US Federal Reserve has raised interest rates significantly through 2022 and 2023 to combat stifling inflation across the US economy. Borrowing costs have skyrocketed, decimating consumer confidence, especially among lower-income consumers."
+        },
+        {
+            "current_performance_point_title": "Auto Parts Manufacturers Have Increasingly Moved Production Offshore",
+            "current_performance_point_description": "Like downstream automakers, auto parts manufacturers have taken advantage of laxer environmental and labor regulations to cut production costs. Many parts producers have moved production to Mexico and China to remain near key buyers."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Downstream Innovation Will Provide New Opportunities",
+            "future_outlook_point_description": "Automakers have added many advanced features to vehicles, including filtration systems to limit pathogens and allergens and new airbags that cushion the head better on impact. The increasing prominence of electric and autonomous vehicles will also create demand for a host of niche, highly advanced auto parts."
+        },
+        {
+            "future_outlook_point_title": "Improving Economic Conditions Will Support Growth",
+            "future_outlook_point_description": "Despite severe economic challenges through the current period, including COVID-19, rampant inflation, climbing interest rates and recessionary fears, companies will benefit from rebounding economic conditions and rosy consumer confidence through the outlook period."
+        },
+        {
+            "future_outlook_point_title": "Consumers Will Replace Aging Vehicles",
+            "future_outlook_point_description": "Households and individuals regularly replace aging vehicles with newer, more sustainable and efficient cars. Existing cars have also lasted longer than previous iterations, decreasing replacement rates. Demand for aftermarket parts will strengthen as the existing vehicle fleet in the United States ages."
+        },
+        {
+            "future_outlook_point_title": "Auto Parts Manufacturers Benefit From Robust Export Markets",
+            "future_outlook_point_description": "The US dollar will weaken significantly through the outlook period, making domestically produced goods less expensive in global trade markets and protecting manufacturers from import penetration. The shift to electric and autonomous vehicles will also stimulate demand for auto parts from the US."
+        }
+    ],
+    "industry_definition": "Companies in this industry manufacture and rebuild various motor vehicle parts and accessories. These parts include airbags, air conditioners, catalytic converters, exhaust systems, mufflers and resonators, radiators, radiator cores and wheels. Engines, tires, brakes, steering systems, interiors, suspensions, transmissions and automotive electronics are not included in the industry.",
+    "industry_impact": {
+        "positive_impact_factors": [],
+        "negative_impact_factors": [
+            "Life Cycle Stage: decline",
+            "Industry Assistance Level: low - steady",
+            "Globalization Level: high - steady",
+            "Competition Level: high - steady"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High Revenue Growth (2023-2028)",
+            "Industrial production index"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "High Imports",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration",
+            "Low Revenue per Employee",
+            "High Capital Requirements"
+        ],
+        "opportunities": [],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Prime rate"
+        ]
+    },
+    "key_trends": [
+        "Auto parts manufacturers struggled amid the pandemic as car sales plummeted.",
+        "Strong economic conditions will enable manufacturers to recover through the outlook period.",
+        "Innovation will create opportunities for auto parts producers through the outlook period. Manufacturers benefit from new markets geared toward increased sustainability, safety and electric and autonomous vehicles.",
+        "Manufacturers must adhere to environmental standards to limit emissions. Recent regulations have altered CAFE standards.",
+        "Exhaust systems are a key aspect of most vehicles. Increasing electric vehicle production will threaten exhaust system producers.",
+        "The Great Lakes region is home to major automakers. Auto parts manufacturers make most of their revenue from contracts with large vehicle manufacturers.",
+        "Companies tend to specialize to improve market penetration and reputation. This trend causes fragmentation, leading to low market share concentration.",
+        "Companies have increasingly faced price competition from low-cost importers. Domestic manufacturers have increasingly prioritized value-added products and after-sale services to secure contracts."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Automakers",
+            "segment_description": "Automakers generate the majority of revenue for auto parts manufacturers by establishing long-term contracts. Most automakers have contracts with multiple parts producers for different pieces of equipment. Many companies have also established internal parts manufacturing divisions, like Hyundai and Toyota.",
+            "segment_percentage": 51.0
+        },
+        {
+            "segment": "Wholesalers and distributors",
+            "segment_description": "Many smaller auto parts manufacturers rely on wholesalers and distributors to store and ship orders between original equipment manufacturers and automakers, acting as intermediaries and reaping surcharges.",
+            "segment_percentage": 34.5
+        },
+        {
+            "segment": "Aftermarkets",
+            "segment_description": "Auto parts manufacturers sell products like wheels and aesthetic parts to retailers, repair shops, wholesalers, businesses and consumers so they can repair used cars. These products lack the original equipment manufacturer branding but often have the same, if not identical, quality.",
+            "segment_percentage": 13.2
+        },
+        {
+            "segment": "Other",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 1.3
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Other Auto Parts",
+            "product_description": "Products included in the \"other\" category consist of motor vehicle axles, motor vehicle convertible tops, windshield washer fluid, shock absorbers, steering wheels, electrical components and similar products.",
+            "product_percentage": 52.5
+        },
+        {
+            "product_or_service": "Exhaust Systems",
+            "product_description": "Auto parts manufacturers sell exhaust systems to automakers and aftermarket buyers. Automakers use exhaust systems to vent toxic byproducts from engine combustion to keep passengers safe.",
+            "product_percentage": 21.4
+        },
+        {
+            "product_or_service": "Filters for Combustion Engines",
+            "product_description": "Buyers use filters in internal combustion engines to keep the air and cabin in a car clean and ensure the fuel systems aren't contaminated. Filters are necessary for all vehicles, leading to stable demand.",
+            "product_percentage": 11.4
+        },
+        {
+            "product_or_service": "Airbag Systems",
+            "product_description": "Automakers use airbags to protect a vehicle's occupants from potential collisions. The prices of airbag components, like nylon, don't face drastic fluctuations, so spending on these materials depends on car and truck production levels.",
+            "product_percentage": 4.8
+        },
+        {
+            "product_or_service": "HVAC Systems",
+            "product_description": "HVAC systems include air conditioning, heating and ventilation systems in cabin cars. Many automakers have competed to create better HVAC systems to attract more consumers. In particular, luxury automakers have advertised superior cabin temperature systems, leading to elevated demand.",
+            "product_percentage": 9.9
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Textile Mills in the US",
+            "Paint Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Iron & Steel Manufacturing in the US",
+            "Aluminum Manufacturing in the US",
+            "Screw, Nut & Bolt Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Molybdenum & Metal Ore Mining in the US",
+            "Copper, Nickel, Lead & Zinc Mining in the US",
+            "Inorganic Chemical Manufacturing in the US"
+        ],
+        "tier_2_buyers": [
+            "Car Body Shops in the US",
+            "Auto Mechanics in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Industrial Production Index",
+            "determinant_description": "The Industrial Production Index (IPI) measures the combined output from several key production industries in the US, including mining, manufacturing, electric and gas industries. During COVID-19, the IPI experienced its sharpest decline in more than a decade. A more robust IPI signals more favorable conditions for auto parts manufacturers."
+        },
+        {
+            "determinant_title": "Average Age of Vehicle Fleet",
+            "determinant_description": "The average age of US vehicles influences auto part sales, mostly in aftermarket, like repair and retail. As vehicles age, the average automobile will have more damage, increasing the need for auto parts."
+        },
+        {
+            "determinant_title": "Price of New Cars",
+            "determinant_description": "Car prices play a vital role in determining demand for auto parts. Since auto parts manufacturers heavily rely on downstream demand, vehicle prices have an enormous influence on the industry. Higher new car sales directly correlate to stronger demand for original equipment from automakers."
+        },
+        {
+            "determinant_title": "Consumer Confidence Index",
+            "determinant_description": "The consumer confidence index (CCI) is an economic indicator that measures the strength of the US economy from the point of view of consumers. Strong consumer confidence encourages consumers to purchase new cars instead of repairing current vehicles, supporting demand from automakers rather than aftermarkets."
+        },
+        {
+            "determinant_title": "Trade-Weighted Index",
+            "determinant_description": "The trade-weighted index (TWI) measures the value of the US dollar against the value of other foreign currencies to help determine if the United States will import or export more goods during a given time period. A stronger TWI leads to inexpensive imports, encouraging a trade deficit. The TWI's volatility has threatened auto parts manufacturers."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Increasing",
+        "export_level": "High",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Trade Conflicts Limit China's Impact",
+                "trade_description": "The Trump administration levied tariffs on nearly $350.0 billion of Chinese goods during the late 2010s, including most steel products, notably auto parts. Many manufacturers have also fled China after the government's weak stance regarding foreign patent protection."
+            },
+            {
+                "trade_title": "Major Car Manufacturers Move Production Offshore",
+                "trade_description": "Many downstream automakers have moved to Mexico and China, encouraging parts manufacturers to follow. These companies reap lax labor and environmental regulations to produce less expensive products and outcompete US manufacturers, leading to rising imports."
+            },
+            {
+                "trade_title": "The United States-Mexico-Canada Agreement (USMCA) Drives Trade",
+                "trade_description": "The USMCA makes trade between Canada and Mexico easier by reducing or eliminating tariffs on most manufactured goods. Mexico and Canada represent the two leading export destinations and import producers."
+            },
+            {
+                "trade_title": "The Dollar's Growth Threatens Export Markets",
+                "trade_description": "The value of the US dollar, measured by the trade-weighted index, has significantly increased through the outlook period, causing domestic products to grow more expensive in foreign markets."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region is a manufacturing powerhouse, home to the majority of domestic automakers. Most companies are in this region to negotiate contracts with automakers.",
+            "percentage_establishments": 35.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Southeast",
+            "location_description": "Many foreign car manufacturers have set up shop in the Southeast region of the United States, where lots of space and weak unions enable these companies to build their products effectively. Companies in this region also benefit from easy access to well-established trade routes with Mexico through the Gulf of Mexico.",
+            "percentage_establishments": 20.0,
+            "percentage_population": 25.0
+        },
+        {
+            "location": "West",
+            "location_description": "California's affluence has led to more new car purchases and lower vehicle fleet ages. Many companies have moved to tap into the state's growing market. Companies also leverage the state's major trading ports, giving manufacturers access to trade networks with the producers of Japanese car companies.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 20.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "The National Highway Traffic Safety Administration (NHTSA) Regulations",
+                "regulation_description": "The NHTSA issues regulations called Federal Motor Vehicle Safety Standards (FMVSS). Examples of these regulations include mandating new air brakes in tractor trucks so they can stop more quickly and new rules on booster seats for children. Many of these regulations impact auto parts, so manufacturers must alter their business practices to adhere to these rules."
+            },
+            {
+                "regulation_title": "Environmental Protection Agency (EPA) Regulations",
+                "regulation_description": "National Ambient Air Quality Standards (NAAQS) are set by the Environmental Protection Agency (EPA) and they specify the maximum amount of particulate matter that can be in the air. The Clean Air Act enables the EPA to set the level of particulate matter that's appropriate in the atmosphere. Auto parts manufacturers must ensure that products, including exhaust systems, meet EPA standards."
+            },
+            {
+                "regulation_title": "Corporate Average Fuel Economy (CAFE) Standards",
+                "regulation_description": "CAFE encourages increased fuel economy for cars and light trucks to reduce energy consumption. The federal government uses CAFE to limit air pollution and combat climate change by reducing greenhouse gas emissions. The Biden administration plans to increase CAFE standards through 2026 to fight global warming."
+            },
+            {
+                "regulation_title": "Pandemic-Era Regulations",
+                "regulation_description": "At the start of COVID-19, state governments implemented social distancing regulations and mask requirements. Auto parts manufacturers had to apply these rules to their plants. Many companies also mandated that employees receive the COVID-19 vaccine before returning on-site."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Life cycle stage",
+                "barrier_description": "The industry is in the decline stage of its life cycle."
+            },
+            {
+                "barrier_title": "Low industry assistance level",
+                "barrier_description": "The level of industry assistance is low and steady."
+            },
+            {
+                "barrier_title": "High globalization level",
+                "barrier_description": "The level of globalization in the industry is high and steady."
+            },
+            {
+                "barrier_title": "High competition level",
+                "barrier_description": "The level of competition in the industry is high and steady."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Low market share concentration level"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Companies specialize to improve market penetration and reputation",
+                "basis_description": "Companies tend to specialize to improve market penetration and reputation. This trend causes fragmentation, leading to low market share concentration."
+            },
+            {
+                "basis_title": "Price competition from low-cost importers",
+                "basis_description": "Companies have increasingly faced price competition from low-cost importers."
+            },
+            {
+                "basis_title": "Focus on value-added products and services",
+                "basis_description": "Domestic manufacturers have increasingly prioritized value-added products and after-sale services to secure contracts."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Specialization limits concentration",
+                "concentration_description": "Auto parts manufacturers often prioritize producing a specific product, as increased specialization enables major companies to maximize profit. Most companies rely on original equipment manufacturer (OEM) contracts."
+            },
+            {
+                "concentration_title": "Manufacturers move production offshore",
+                "concentration_description": "The volume of the domestic auto parts manufacturing industry has fallen in recent decades as lower wages in other countries have enticed companies to move their production to low-wage countries, like Mexico and China, alongside developing economies."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Denso Corp.",
+                "company_percentage": 7.4
+            },
+            {
+                "company_name": "Robert Bosch GmbH",
+                "company_percentage": 2.5
+            },
+            {
+                "company_name": "Grupo Antolin-Irausa SA",
+                "company_percentage": 1.5
+            },
+            {
+                "company_name": "Martin Sprocket & Gear, Inc.",
+                "company_percentage": 0.5
+            },
+            {
+                "company_name": "Faurecia",
+                "company_percentage": 0.5
+            },
+            {
+                "company_name": "Car Sound Exhaust System, Inc.",
+                "company_percentage": 0.2
+            },
+            {
+                "company_name": "Accuride Corp",
+                "company_percentage": 0.1
+            },
+            {
+                "company_name": "Maxon Lift Corporation",
+                "company_percentage": 0.1
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 86.6
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 20.0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 15.0
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 40.0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 10.0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 5.0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases are the largest expense for auto parts manufacturers.",
+            "cost_factor_description": "Companies rely on raw materials and unfinished goods, like steel, semiconductors, nylon and other commodities, to create airbags, electrical components and car bodies."
+        },
+        {
+            "cost_factor_title": "Climbing steel prices pressured manufacturers",
+            "cost_factor_description": "Supply chain disruptions permeated manufacturing capacity, especially within steel and semiconductor markets."
+        },
+        {
+            "cost_factor_title": "Most companies manage long-term contracts with suppliers",
+            "cost_factor_description": "Limiting price fluctuations."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Automation, equipment and plant costs remain significant capital expenses for manufacturers.",
+                "capital_intensity_description": "Companies also invest heavily in skilled labor for research."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Consumer confidence and spending determine how many cars consumers purchase",
+                "volatility_description": "Determining sales for automakers. Lower consumer confidence constrains demand from automakers but supports demand from aftermarkets, specifically repair shops."
+            },
+            {
+                "volatility_title": "Climbing prime rates and falling interest rates pose major threats to volatility.",
+                "volatility_description": "Auto loans are more expensive and consumers are unwilling to make major purchases. Even so, pent-up demand for travel and a return to work has encouraged many consumers to purchase new cars regardless."
+            },
+            {
+                "volatility_title": "Supply chain disruptions add to volatility",
+                "volatility_description": "Auto parts manufacturers rely on raw inputs, like steel and aluminum, alongside semi-finished goods, like semiconductors, filters and nylons, to create auto parts for automakers and aftermarkets. Supply chain disruptions during the pandemic led to significant price shocks."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Electric Vehicle Production Threatens Exhaust Systems",
+                "technological_change_description": "Auto parts manufacturers sell exhaust systems to automakers and aftermarket buyers. Automakers use exhaust systems to vent toxic byproducts from engine combustion to keep passengers safe. Electric vehicles don't require exhaust systems since they don't create any emissions or exhaust gases. Federal programs have encouraged companies to prioritize electrical vehicle production, posing a major threat to the exhaust system segment."
+            },
+            {
+                "technological_change_title": "Spending on Filters Rises and Falls with Their Prices",
+                "technological_change_description": "Buyers use filters in internal combustion engines to keep the air and cabin in a car clean and ensure the fuel systems aren't contaminated. Filters are necessary for all vehicles, leading to stable demand. Even electric vehicles use filters extensively, particularly to maintain proper cabin airflow. However, EVs don't have internal combustion engines, constraining demand for filters as more consumers shift to electric vehicles."
+            },
+            {
+                "technological_change_title": "Airbags Are Essential in All Vehicles",
+                "technological_change_description": "Automakers use airbags to protect a vehicle's occupant from a potential collision. The prices airbag components, like nylon, don't face drastic fluctuations, so spending on these materials depends on car and truck usage. Airbags are highly nondiscretionary, creating steady demand. Faulty airbags can severely damage a buyer's reputation, creating an extreme emphasis on quality and safety. Federal organizations extensively test airbags."
+            },
+            {
+                "technological_change_title": "Luxury Car Manufacturers Prioritize Advanced HVAC Systems",
+                "technological_change_description": "HVAC systems include air conditioning, heating and ventilation systems in cabin cars. Many automakers have competed to create better HVAC systems to attract more consumers. In particular, luxury automakers have advertised superior cabin temperature systems, leading to elevated demand. Companies have targeted HVAC systems to create more fuel-efficient cars. More effective air conditioners, for example, use less power, enabling cars to run for longer and helping automakers hit fuel efficiency goals."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company impacted by rising imports from abroad?",
+            "answer": "Imports from low-wage countries constantly impact the average auto parts manufacturer. Imports account for nearly half of domestic demand. When imports rise, it takes away from the potential revenue auto parts manufacturers can generate."
+        },
+        {
+            "question": "Does your company specialize in one corner of the market or produce a diversified range of products?",
+            "answer": "The average company in the industry has shifted manufacturing operations to focus on high-end auto parts. Some companies focus on heating, ventilation and air-conditioning (HVAC) systems, exhaust systems, airbags, radiators and more. Some specialize, while others produce a variety of parts."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "Recent rises in key metals like aluminum and steel have hurt the profitability of the average company in the past few years. Recently imposed tariffs on these metals have put more upward pressure on their prices."
+        },
+        {
+            "question": "Has your company located in areas close to its key downstream distributors to reduce shipping costs?",
+            "answer": "Many companies are located in areas close to the major auto manufacturing companies in the United States. For example, nearly 12.0% of establishments are located in Michigan near the three major US car company headquarters."
+        },
+        {
+            "question": "How is your company leveraging new technology in its operations?",
+            "answer": "While autonomous cars are decades away, the components that make the technology possible are being integrated into current vehicles. Increasing connectivity in modern cars has provided an outlet for manufacturers to produce increasingly complex pieces that interact with other parts of the car."
+        },
+        {
+            "question": "Have you been able to reduce wage costs by automating operations during the current period?",
+            "answer": "Labor costs in this industry are slightly inflated due to the prevalence of unionization in the industry workforce. Still, companies have exhibited leaner and more automated manufacturing styles, which have been further supported by new labor contracts that have somewhat limited wages."
+        },
+        {
+            "question": "How does your company ensure all health and safety requirements are met?",
+            "answer": "Regulations for auto parts makers are collectively known as Federal Motor Vehicle Safety Standards (FMVSS). FMVSS regulations mandate standards in crash avoidance, crashworthiness, and post-crash standards."
+        },
+        {
+            "question": "What effect have international tariffs had on your ability to import and export products?",
+            "answer": "Recently imposed tariffs on steel and aluminum may drastically change international trade for auto parts manufacturers."
+        },
+        {
+            "question": "How has your company dealt with elevated energy prices in recent months?",
+            "answer": "Companies in this industry rely heavily on downstream demand from car purchases and usage. When energy prices are high, it will reduce revenue for most auto parts manufacturers."
+        },
+        {
+            "question": "What percentage of your company's customers renew their contracts?",
+            "answer": "Most major companies have long-term, specialized relationships with major US automakers. Companies tend to tailor auto parts for the automaker they supply. This often ensures consistent contract renewal."
+        },
+        {
+            "question": "Are your products priced competitively? How much of your production is outsourced? Can you outsource further to better your prices?",
+            "answer": "Successful auto parts manufacturers can benefit from outsourcing production of low value-added products to offer competitive prices."
+        },
+        {
+            "question": "How much time is invested in research and development? How has research and development influenced your products and supply contracts?",
+            "answer": "Large players need to invest in research and development to improve their products and secure supply contracts. The industry is highly competitive."
+        },
+        {
+            "question": "Do you operate near optimum capacity? If not, what changes can you make to do so? How has your current level of capacity utilization affected profit margins?",
+            "answer": "Successful companies must operate near optimum capacity to remain profitable. Operators also need to continually align production capacity to the production level of automakers."
+        },
+        {
+            "question": "How often do you monitor exchange rates to prepare for possible increases or decreases in demand? How can you take advantage when the trade-weighted index decreases?",
+            "answer": "When the US dollar is relatively weak, domestically produced auto parts become more affordable than foreign-made auto parts. The effects of exchange rates are often mitigated by long-term supply contracts between automakers and large auto parts manufacturers. The US dollar will weaken against foreign currencies in the coming years, resulting in a favorable environment for manufacturers that rely on exports to fuel revenue."
+        },
+        {
+            "question": "Do you monitor the oil and natural gas price index?",
+            "answer": "As the price of oil declines, so does the price of gasoline, and consumers are more willing to purchase large SUVs and light trucks. As gas prices decline, consumers tend to feel relatively better off financially."
+        },
+        {
+            "question": "How does demand for your products fluctuate when motor vehicle production increases or decreases? How can you adapt when new car sales decline?",
+            "answer": "The majority of auto parts are manufactured to be used in cars and light trucks, so higher car sales will increase the need for automotive parts. New car sales typically grow and contract with the economy as a whole."
+        }
+    ]
+}

@@ -1,0 +1,586 @@
+{
+    "report_title": "Newsprint Manufacturing in the US",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 440000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2000,
+                "end_year": 2023,
+                "revenue_cagr_value": 101
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "revenue_cagr_value": 101
+            }
+        },
+        "profit": {
+            "profit_dollars": 20000000,
+            "profit_cagr_historical": {
+                "begin_year": 2013,
+                "end_year": 2023,
+                "profit_cagr_value": -14.99
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "profit_cagr_value": -14.99
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.5,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2013,
+                "end_year": 2023,
+                "profit_margins_cagr_value": -1.24
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "profit_margins_cagr_value": -1.24
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 126000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2000,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 101
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 101
+            }
+        },
+        "employees": {
+            "employees_count": 101,
+            "employees_cagr_historical": {
+                "begin_year": 2000,
+                "end_year": 2023,
+                "employees_cagr_value": 101
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "employees_cagr_value": 101
+            }
+        },
+        "wages": {
+            "wages_dollars": 101,
+            "wages_cagr_historical": {
+                "begin_year": 2000,
+                "end_year": 2023,
+                "wages_cagr_value": 101
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "wages_cagr_value": 101
+            }
+        },
+        "imports": {
+            "imports_dollars": 101,
+            "imports_cagr_historical": {
+                "begin_year": 2000,
+                "end_year": 2023,
+                "imports_cagr_value": 101
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "imports_cagr_value": 101
+            }
+        },
+        "exports": {
+            "exports_dollars": 101,
+            "exports_cagr_historical": {
+                "begin_year": 2000,
+                "end_year": 2023,
+                "exports_cagr_value": 101
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "exports_cagr_value": 101
+            }
+        }
+    },
+    "executive_summary": "The industry produces newsprint, a type of paper packaged in long rolls for use in printing presses. Newspapers and advertisements are most commonly printed on newsprint paper, which is primarily composed of wood pulp. The shift to digital platforms has significantly affected the newsprint industry, with demand for traditional print media plummeting and COVID-19 accelerating the push toward digitalization. Trade tensions and tariffs, notably between the US and Canada, have impacted the industry, increasing costs and affecting imported newsprint availability, causing uncertainty for future operations. Alongside these challenges, companies have had to navigate supply chain disruptions and form flexible strategies amid global unpredictability. Ultimately, industry revenue will contract at a CAGR of 10.9% to $439.8 million over the five years to 2023, including a decline of 0.6% in 2023 alone. Similarly, profit will shrink to 4.5% in 2023, down from 5.4% in 2018.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The shift of readers to digital platforms",
+            "current_performance_point_description": "The shift of readers to digital platforms has impacted the demand for traditional print media."
+        },
+        {
+            "current_performance_point_title": "Plant closures and capacity reductions",
+            "current_performance_point_description": "The industry has seen plant closures and capacity reductions due to decreased newsprint demand."
+        },
+        {
+            "current_performance_point_title": "Adapting operations",
+            "current_performance_point_description": "Companies adapted by optimizing production processes and investing in digital solutions."
+        },
+        {
+            "current_performance_point_title": "COVID-19 impact",
+            "current_performance_point_description": "The COVID-19 pandemic further accelerated the shift to digital media, intensifying the trend."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Adopting sustainability and circular economy",
+            "future_outlook_point_description": "Increasing consumer demand for sustainability is set to reshape the newsprint industry, pressuring manufacturers to adopt greener practices. Reduction in energy consumption, waste management, and stringent recycling initiatives will become key factors in the production process. The circular economy model, advocating for the significant use of recycled fibers, is expected to become commonplace in newsprint manufacturing. Firms will strategically align with eco-friendly ethos in response to market dynamics influenced by consumers' environmental consciousness."
+        },
+        {
+            "future_outlook_point_title": "Navigating supply chain and trade challenges",
+            "future_outlook_point_description": "Manufacturers will need robust supply chain strategies to mitigate global disruptions. Diversifying raw material sources and localizing supply chains may become critical. To lessen the impact of global trade unpredictability, the companies may consider local or regional alternatives for materials sourcing. Adapting distribution and logistics strategies will be critical to maintaining a consistent customer supply amid fluctuating trade conditions."
+        },
+        {
+            "future_outlook_point_title": "Using data to transform operations",
+            "future_outlook_point_description": "Manufacturers are setting their sights on digital technologies as tools to enhance efficiency and cut operating costs. Data analytics powers decision-making processes, providing crucial insights for optimizing production processes and enabling effective supply chain management. Predictive maintenance and real-time monitoring will be leveraged to minimize downtime and improve overall operational efficiency. The digital revolution empowers companies to make data-driven decisions and adapt swiftly to shifting market trends and dynamics."
+        }
+    ],
+    "industry_definition": "This industry produces newsprint, which is a type of paper that is packaged in long rolls for use in printing presses. Newspapers and advertisements are most commonly printed on newsprint paper, which is primarily composed of wood pulp.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low capital intensity level",
+            "low concentration level"
+        ],
+        "negative_impact_factors": [
+            "decline life cycle stage",
+            "very high revenue volatility level",
+            "high globalization level - steady",
+            "high competition level - increasing"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "High Competition",
+            "Decline Life Cycle Stage",
+            "High Volatility",
+            "High Imports",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers - Price of paper"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth"
+        ]
+    },
+    "key_trends": [
+        "Digitalization impacts newsprint demand. The rapid shift towards digital media, enhanced by the COVID-19 pandemic, has led to decreased newsprint demand and the adoption of digital solutions in the industry.",
+        "Sustainability is a key focus in the newsprint industry. Environmental concerns are driving manufacturers towards more eco-friendly production methods and the adoption of sustainable forestry, potentially determining the industry's future trajectory.",
+        "Strict regulations can affect the industry by limiting the supply of materials. High compliance requirements increase operating costs for manufacturers.",
+        "Many environmental protection regulations are put in place to ensure responsible manufacturing practices. These regulations are aimed at reducing air, water and noise pollution.",
+        "Since recycled paper is less expensive, the percentage of newsprint that's almost completely recycled has grown. The proportion of newsprint that isn't recycled has plunged because of regulations by local governments.",
+        "End users comprise a large share of revenue because newspapers like to have a direct relationship with the newsprint manufacturers they buy from. Wholesalers are also significant, as purchasing from these distributors is cost-effective for publications.",
+        "The Southeast has a significant share of establishments because of its high population. More people mean more spending on print."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "End users",
+            "segment_description": "End users include newspapers such as the New York Times, the Wall Street Journal and small publications that purchase newsprint directly from manufacturers. These papers comprise nearly half of revenue. End-users' proportion of revenue is much higher among newsprint manufacturers compared with other paper makers, as many prominent newspapers like to have a direct connection with manufacturers to ensure they're getting the best product.",
+            "segment_percentage": 46.8
+        },
+        {
+            "segment": "Brokers and merchants (wholesalers)",
+            "segment_description": "Brokers and wholesalers serve as the middleman between newsprint manufacturers and publications. Since wholesalers are specialized in transporting goods from one place to another, many newspapers use wholesalers to get their newsprint. New forms of online ordering and order tracking software systems have made it increasingly cost-effective for larger customers to buy directly from manufacturers, bypassing the wholesaler. Despite increasing pressure on brokers and wholesalers, their revenue share has increased during the current period as the pandemic recovery boosted demand for distributors.",
+            "segment_percentage": 101
+        },
+        {
+            "segment": "Print and publishers",
+            "segment_description": "Print publishers include publication printers that act as intermediaries between manufacturers and end users. Printers source newsprint from manufacturers, convert and print it and then sell the finished product to newspapers. Large newspapers like maintaining direct relationships with manufacturers, so print publishers comprise a relatively small revenue share. Lower spending on print advertising has reduced the amount of paper newspaper publishers need to operate, so demand for print publishers has fallen during the current period.",
+            "segment_percentage": 12.2
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "40% TO 80% RECYCLED NEWSPRINT",
+            "product_description": "Newspaper publishers are encouraged and often forced by governments to use recycled paper. Newspapers tend to contain many pages, so it's not in the public interest for publishers to cut down countless trees to give subscribers the news, encouraging recycling. Manufacturers derive nearly two-thirds of revenue from newsprint that's 40.0% to 75.0% recycled, as prominent publications such as the Washington Post and the Los Angeles Times use more than half recycled paper. These large publishers haven't changed the percentage of their newsprint that's recycled, so this segment's revenue share has held steady during the current period.",
+            "product_percentage": 63.7
+        },
+        {
+            "product_or_service": "Up to 40% Recycled Newsprint",
+            "product_description": "Since many states have laws forcing publications to recycle their paper, manufacturers derive less than one-tenth of their revenue from newsprint that's less than 40.0% recycled. State and local governments have forced publications to recycle a greater percentage of their paper, causing the amount of newsprint that isn't recycled to fall and this segment's revenue share to decline during the current period.",
+            "product_percentage": 28.2
+        },
+        {
+            "product_or_service": "More Than 80% Recycled Newsprint",
+            "product_description": "Since recycled paper is less costly than virgin paper, many publications have started to only use recycled newsprint, as declining subscriptions have constrained budgets. As completely recycled paper becomes completely adopted, the share of revenue from newsprint that's more than 75.0% recycled has increased during the current period.",
+            "product_percentage": 8.1
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Timber Services in the US",
+            "Logging in the US",
+            "Wood Pulp Mills in the US",
+            "Inorganic Chemical Manufacturing in the US",
+            "Organic Chemical Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Paper Mills in the US",
+            "Industrial Machinery & Equipment Wholesaling in the US"
+        ],
+        "tier_1_buyers": [
+            "Newspaper Publishing in the US",
+            "Printing in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Environmental Regulations Driving Sustainability",
+            "determinant_description": "With many countries embracing stringent environmental policies, there's a growing preference for sustainably produced newsprint in the international market. US newsprint producers may need to align their production processes to meet these sustainability standards and environmental rules to stay competitive and keep export opportunities alive."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Decreasing",
+        "export_level": "Moderate",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Domestic Decline in Newsprint Manufacturing",
+                "trade_description": "The US newsprint manufacturing industry is dealing with obstacles such as plant shutdowns and capacity reductions due to decreased demand. This domestic production cutback may lead to an increased need for imported newsprint, primarily for special grades not produced domestically. Still, Canada accounts for an estimated 98.5% of imported paper products in 2023."
+            },
+            {
+                "trade_title": "Influence of International Trade Relations",
+                "trade_description": "Trade politics and tariffs between the United States and significant newsprint-exporting nations like Canada can directly impact the cost and availability of imported newsprint. Trade disagreements and levies can potentially disrupt the import of newsprint and alter pricing structures, thereby impacting the cost framework for United States publishers and printers."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region is home to big states such as Florida, Georgia, Virginia and North Carolina, which makes the region populated. Since the area contains many people, there's a high penetration of businesses, individuals and organizations, creating demand for print news. Newsprint makers want to be located near their customers, so half of the nation's manufacturers exist in the Southeast to capture the region's revenue streams. The Southeast also contains many woodlands, so the industry's suppliers (e.g., paper mills) have a big presence in the region.",
+            "percentage_establishments": 29.1,
+            "percentage_population": 21.5
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "Many paper mills exist in the Great Lakes region since these states are close to large Canadian timber stocks. Paper mills also need fresh water for cleaning and cooling machines, giving them another reason to move up to the Great Lakes. Since paper mills are major upstream suppliers for newsprint manufacturers, some establishments are located in this region to make it easier to access raw materials.",
+            "percentage_establishments": 10.2,
+            "percentage_population": 15.1
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The nation's largest publications, such as the New York Times, the Wall Street Journal and the Washington Post, are in the Mid-Atlantic. Since these papers need lots of newsprint to distribute their publications, some manufacturers set up shop in the Mid-Atlantic region to gain access to their demand.",
+            "percentage_establishments": 16.5,
+            "percentage_population": 15.2
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "CLEAN WATER ACT AND RESOURCE CONSERVATION AND RECOVERY ACT",
+                "regulation_description": "Newsprint manufacturers must adhere to protocols pertaining to the appropriate disposal of liquid and solid waste to maintain clean and healthy waters, as paper manufacturing can create waste. These rules contribute to individual producers' administrative and environmental requirements, which may increase production costs and reduce productivity."
+            },
+            {
+                "regulation_title": "Safe Drinking Water Act and Clean Air Act",
+                "regulation_description": "The Safe Drinking Water Act requires that any dumping of spent water will impose minimal polluting effects on local aquifers and won't have any significant effect on local drinking water. The Clean Air Act is designed to protect the country's air from the damaging effect of smog and vaporized pollutants by limiting air pollutants such as carbon monoxide, nitrous oxides, sulfur oxides and other particulate matter. The industry must follow these regulations since the newsprint manufacturing process often creates water and air pollution."
+            },
+            {
+                "regulation_title": "Recycling Rules",
+                "regulation_description": "Some state and local governments mandate recycling and waste reduction measures, encouraging the use of recycled paper and forcing manufacturers to curb waste significantly. Many of the nation's large papers have used recycled paper in much of their newsprint."
+            },
+            {
+                "regulation_title": "Chemical Handling",
+                "regulation_description": "Since newsprint manufacturers handle dangerous chemicals, they must adhere to rules mandating how these substances are stored, managed and disposed of safely."
+            },
+            {
+                "regulation_title": "Occupational Safety and Health Administration (OSHA)",
+                "regulation_description": "OSHA is a federal agency that enforces safety and health legislation in the United States. The agency ensures that workers are paid a minimum wage and are adequately trained when operating in an unsafe environment. They also require manufacturers to offer their employees generous workers' compensation when injured."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is in the decline stage."
+            },
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "Revenue volatility is very high in this industry."
+            },
+            {
+                "barrier_title": "Globalization Level",
+                "barrier_description": "The industry has a high level of globalization which is steady."
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "Competition level is high and increasing in the industry."
+            }
+        ],
+        "factors_decreased_barrier": [
+            "The capital intensity level is low in this industry.",
+            "The market concentration level is low in this industry."
+        ],
+        "factors_increased_barrier": []
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Unknown",
+        "basis_points": [
+            {
+                "basis_title": "Competition among manufacturers",
+                "basis_description": "Competition among newsprint manufacturers is high because the number of enterprises is low. Companies compete on price, quality and relationships with major newspapers."
+            },
+            {
+                "basis_title": "Substitutes",
+                "basis_description": "Substitutes for newsprint include digital subscriptions to newspapers, podcasts, websites and social media."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Industry's long-term decline",
+                "concentration_description": "The industry's long-term decline has raised consolidation as demand for physical newspapers declined, reducing the need for newsprint."
+            },
+            {
+                "concentration_title": "Modest barriers to entry",
+                "concentration_description": "Modest barriers to entry hinder fragmentation somewhat, boosting consolidation in the industry."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Packaging Corp Of America",
+                "company_percentage": 17.5
+            },
+            {
+                "company_name": "Resolute Forest Products Inc.",
+                "company_percentage": 10.6
+            },
+            {
+                "company_name": "Domtar Corp",
+                "company_percentage": 9.9
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 61.9
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 4.5
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 21.9
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 62.7
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Essential purchases such as raw materials",
+            "cost_factor_description": "Essential purchases such as raw materials (wood pulp and chemicals) and energy resources (electricity and natural gas) significantly shape the cost structure in newsprint manufacturing."
+        },
+        {
+            "cost_factor_title": "Newsprint manufactures need to be conscious of market price fluctuations",
+            "cost_factor_description": "Newsprint manufactures need to be conscious of market price fluctuations and supply chain issues, particularly for wood pulp, a primary raw material."
+        },
+        {
+            "cost_factor_title": "Energy efficiency could be a gamechanger",
+            "cost_factor_description": "Energy efficiency could be a gamechanger in managing costs, given the impact of electricity and natural gas expenses on the overall cost structure."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Wages in this industry are high",
+                "capital_intensity_description": "Wages in this industry are high because manufacturers need skilled workers such as machine operators and maintenance technicians, to streamline the newsprint-making process. While there are some capital costs, wages' high revenue share makes labor intensity much more significant for this industry."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "THE DIGITAL DISRUPTION",
+                "volatility_description": "The shift from print to digital media has reduced the demand for newsprint as newspapers and magazines face declining readership. This change induces revenue instability for newsprint manufacturers due to the rapid and unpredictable rate at which digital media replaces print media."
+            },
+            {
+                "volatility_title": "RAW MATERIAL FLUCTUATIONS AND ITS IMPACT ON THE INDUSTRY",
+                "volatility_description": "The cost of raw materials, such as wood pulp, energy, and chemicals, significantly impacts the production cost of newsprint. Supply chain disruptions, environmental regulations and changing market conditions can influence the availability and cost of these materials, which pose challenges to the manufacturers' adaptation. Such fluctuations can cause newsprint price volatility and profitability issues for manufacturers."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Many manufacturers use recycled paper",
+                "technological_change_description": "Newspaper publishers are encouraged and often forced by governments to use recycled paper. Newspapers tend to contain many pages, so it's not in the public interest for publishers to cut down countless trees to give subscribers the news, encouraging recycling."
+            },
+            {
+                "technological_change_title": "SMALLER PUBLISHERS ARE BEING PENALIZED FOR NOT RECYCLING THEIR NEWSPRINT",
+                "technological_change_description": "Since many states have laws forcing publications to recycle their paper, manufacturers derive less than one-tenth of their revenue from newsprint that's less than 40.0% recycled. State and local governments have forced publications to recycle a greater percentage of their paper, causing the amount of newsprint that isn't recycled to fall and this segment's revenue share to decline during the current period."
+            },
+            {
+                "technological_change_title": "MORE NEWSPAPERS ARE RECYCLING THEIR NEWSPRINT TO SAVE MONEY",
+                "technological_change_description": "Since recycled paper is less costly than virgin paper, many publications have started to only use recycled newsprint, as declining subscriptions have constrained budgets. As completely recycled paper becomes completely adopted, the share of revenue from newsprint that's more than 75.0% recycled has increased during the current period."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company impacted by rising imports from abroad?",
+            "answer": "Low-priced imports contribute to intensifying price-based competition."
+        },
+        {
+            "question": "How has the coronavirus pandemic affected import competition?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "Producing inelastic goods (those resistant to disposable income fluctuations) can benefit paper product companies."
+        },
+        {
+            "question": "How has your company's performance been affected by the coronavirus pandemic?",
+            "answer": "Economic declines during the COVID-19 pandemic pressured the industry."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "The world price of wood pulp has been volatile in recent years, ultimately decreasing over the five years to 2023."
+        },
+        {
+            "question": "Has your company explored acquisition opportunities in locations with well-established infrastructure networks?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "Has your company explored acquisitions to expand product offerings?",
+            "answer": "As acquisition activity has grown among paper product companies, exploring such opportunities has become a necessity. Diversifying product lines can boost market share."
+        },
+        {
+            "question": "How does your company invest in technology, such as 3D printing, to establish a competitive edge over your competitors?",
+            "answer": "Investment in technology can make the production process more efficient and increase profit long-term."
+        },
+        {
+            "question": "Have you been able to reduce wage costs by automating operations over the past five years?",
+            "answer": "Automating operations reduces costs overall, spurring profit margin growth for paper product companies. Over the past five years, however, operational synergies from automation have been offset by input price volatility."
+        },
+        {
+            "question": "How does your company stay ahead of regulations such as energy-efficiency standards?",
+            "answer": "Reducing emissions is vital for any paper product company moving forward since consumers are looking for sustainable products. As a manufacturing industry, operators must comply with the Environmental Protection Agency's regulations."
+        },
+        {
+            "question": "Is your company adequately prepared to adjust to changing environmental standards?",
+            "answer": "Being able to quickly pivot based on regulations can benefit newsprint manufacturers."
+        },
+        {
+            "question": "How has the shift from plastic affected demand for your company's paper products?",
+            "answer": "As consumers have avoided plastic products, demand for some paper products has increased."
+        },
+        {
+            "question": "How has price volatility of inputs affected profit margins over the past 12 months?",
+            "answer": "Wood prices have rapidly grown over the past five years, lowering the average industry profit margin. The average industry profit margin is expected to be 4.5% in 2023."
+        },
+        {
+            "question": "How has the pandemic affected profitability?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "What are the benefits of renewing supply contracts?",
+            "answer": "Contract renewal is a great way of insuring against short-term revenue volatility for paper product companies."
+        },
+        {
+            "question": "Has your company contended with any significant disruptions in the supply chain during the pandemic?",
+            "answer": "Established supply contracts protected some operators from volatility during the coronavirus pandemic. Amid the COVID-19 pandemic, operators contended with supply chain disruptions that limited the restocking of retailers' shelves."
+        },
+        {
+            "question": "How do you maintain relationships with producers?",
+            "answer": "A close association with a major paper mill or paperboard producer that can supply large volumes of quality paper is crucial to success in this industry."
+        },
+        {
+            "question": "How do you ensure you are getting the best deals in terms of supply?",
+            "answer": "Companies with strong relationships with suppliers were able to more efficiently meet demand."
+        },
+        {
+            "question": "Have you invested heavily in automation?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "What affect does automation have on your profit?",
+            "answer": "Installation of modern technology to improve plant efficiency and reduce costs will not only give a producer a financial advantage but also a marketing advantage through the use of clean technology."
+        },
+        {
+            "question": "Who is your largest customer?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "How do you maintain good relations with key customers?",
+            "answer": "Having large customers on the books for bulk orders ensures that manufacturing plants produce at near maximum capacity. Maintaining a strong relationship with key customers reduced revenue volatility."
+        },
+        {
+            "question": "Do you have fixed, long-term contracts with wood pulp suppliers?",
+            "answer": "Major industry companies typically have supply contracts to minimize the transfer of input price hikes."
+        },
+        {
+            "question": "Are you able to absorb any increases in input costs?",
+            "answer": "Companies both absorb and pass down input price hikes. Input price hikes, however, hurt the average industry profit margin. The world price of wood pulp is expected to increase over the five years to 2023."
+        },
+        {
+            "question": "Do you monitor the percentage of services conducted online?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "How does the percentage of services conducted online affect your business?",
+            "answer": "The widespread use of online media has resulted in a net reduction in newsprints. The outbreak of the coronavirus in 2020 and associated stay-at-home measures exacerbated the negative impacts of internet proliferation on the industry."
+        },
+        {
+            "question": "Is your company involved in international trade?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "What impact does the trade-weighted index have on your company?",
+            "answer": "When the value of US dollar is high, the industry typically suffers as imports penetrate the sector. Imports are expected to satisfy 64.2% of domestic demand in 2023."
+        }
+    ]
+}

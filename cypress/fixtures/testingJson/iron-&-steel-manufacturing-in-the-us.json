@@ -1,0 +1,645 @@
+{
+    "report_title": "Iron and Steel Manufacturing Industry Report",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 139560000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 0.47
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.36
+            }
+        },
+        "profit": {
+            "profit_dollars": 10746000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": -0.85
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 7.7,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -1.31
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 23030000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0.5
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0.5
+            }
+        },
+        "employees": {
+            "employees_count": 80713,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 0.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0.0
+            }
+        },
+        "wages": {
+            "wages_dollars": 8806000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0.0
+            }
+        },
+        "imports": {
+            "imports_dollars": 39573000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 0.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 15383000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 0.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0.0
+            }
+        }
+    },
+    "executive_summary": "The iron and steel manufacturing industry has grown at a CAGR of 4.9% to an estimated $139.6 billion in 2024, driven primarily by commodity price increases, with production volumes experiencing mixed trends. Prices for iron and steel have historically exhibited high volatility. Factors such as growing demand from developing economies, disruptions in supply chains due to COVID-19 and geopolitical tensions, notably the Russian-Ukraine conflict, have contributed to this volatility. Production volumes were bolstered by construction sector activity early in the period but later declined due to lower demand from commercial property and housing sectors, driven by rising mortgage rates and pandemic-related impacts.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Industry growth driven by higher prices",
+            "current_performance_point_description": "Industry growth has been driven primarily by higher price, with production volumes experiencing mixed trends. Products are made mainly from iron and steel scrap, which trend with iron ore and raw steel prices. Prices have increased due to factors like growing demand from developing economies, supply chain disruptions from COVID-19 and the Russia-Ukraine war. Production volumes grew early due to construction activity but declined later from lower commercial and housing demand."
+        },
+        {
+            "current_performance_point_title": "Tariffs reduced foreign competition",
+            "current_performance_point_description": "Additional tariffs on imported steel, including tariffs on Russia's steel, have contributed to lower competition from foreign iron and steel product manufacturers. Despite the stronger US dollar, imports' share of domestic demand has declined, partly driven by steel tariffs introduced by the US in 2018. The US and EU are negotiating to address excess capacity and emissions in the sectors."
+        },
+        {
+            "current_performance_point_title": "Soft demand expected in 2024",
+            "current_performance_point_description": "Demand for iron and steel products is expected to remain soft in 2024, due to sluggish manufacturing activity and softness in the US economy. Growth potential will be offset by challenges in international markets like China's real estate sector. As a result, profit is expected to decline in 2024."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "China's housing market impact",
+            "future_outlook_point_description": "Structural challenges facing China's housing market are expected to curtail real estate investments until 2026, despite some compensatory measures in 2024. This will contribute to lower projected global prices for iron and steel in the coming years."
+        },
+        {
+            "future_outlook_point_title": "Domestic economy normalization",
+            "future_outlook_point_description": "The domestic economy is projected to normalize early in the outlook period, with additional growth coming from infrastructure projects, contributing to higher domestic demand for industry products. However, price pressures will continue to pressure revenue growth in the near term."
+        },
+        {
+            "future_outlook_point_title": "Mexico's auto sector growth",
+            "future_outlook_point_description": "The expanding auto manufacturing sector in Mexico is projected to fuel continued growth in demand, leading to an increase in the steel and iron manufacturing industry in the United States."
+        },
+        {
+            "future_outlook_point_title": "Growing demand for green steel",
+            "future_outlook_point_description": "Growing demand for green steel, produced using low-carbon or carbon-neutral processes, is expected to exceed the available supply as industries and governments set ambitious targets to reduce carbon emissions."
+        }
+    ],
+    "industry_definition": "Companies in this industry manufacture pig iron, steel and ferroalloys. Pig iron is often manufactured in a blast furnace or via newer direct-reduction methods. Steel may be manufactured in basic oxygen furnaces (newly made steel) or electric arc furnaces (recycled steel). This industry also includes operators that manufacture basic steel shapes such as bars, plates, rods, sheets, strips and wire or form pipes and tubes from steel they have produced.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "high - steady Industry Assistance Level",
+            "high - steady Barriers To Entry Level"
+        ],
+        "negative_impact_factors": [
+            "very high Revenue Volatility Level",
+            "high Capital Intensity Level",
+            "high - steady Competition Level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "High & Steady Level of Assistance",
+            "High Profit vs. Sector Average",
+            "Low Product/Service Concentration",
+            "High Revenue per Employee"
+        ],
+        "weaknesses": [
+            "High Competition",
+            "Very high Volatility",
+            "Medium Imports",
+            "High Customer Class Concentration",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "Industrial production index"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Low Performance Drivers: World price of steel"
+        ]
+    },
+    "key_trends": [
+        "Companies focus on improving operational efficiency and cost management to remain competitive in the industry, optimizing production processes and minimizing expenses.",
+        "Companies strategically manage their supply chain to ensure a steady flow of raw materials, reduce lead times and enhance operational effectiveness.",
+        "Rising commodity prices, such as iron ore and raw steel, significantly influence current performance and revenue growth.",
+        "Pandemic-induced volatility in the construction sector has caused fluctuations in production volumes of iron and steel products.",
+        "Additional tariffs on imported steel introduce a competitive advantage for domestic manufacturers.",
+        "Projected depreciation of the US dollar may enhance export competitiveness for American steel products.",
+        "Anticipated acquisition of US Steel by Nucor could significantly alter market concentration.",
+        "Industry is heavily unionized, influencing labor relations and costs.",
+        "Environmental regulations significantly affect operational costs for manufacturers.",
+        "Tariffs on imported steel aim to boost domestic production."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Construction",
+            "segment_description": "Construction markets, which include residential, commercial and infrastructure construction, account for nearly half of total industry revenue.",
+            "segment_percentage": 46.0
+        },
+        {
+            "segment": "Automotive",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 26.0
+        },
+        {
+            "segment": "Other markets",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 3.0
+        },
+        {
+            "segment": "Machinery manufacturers",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 8.0
+        },
+        {
+            "segment": "Container",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 3.0
+        },
+        {
+            "segment": "Defense",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 3.0
+        },
+        {
+            "segment": "Energy",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 6.0
+        },
+        {
+            "segment": "Appliance",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 5.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Hot-rolled Sheets and Strips",
+            "product_description": "Hot-rolled sheets are primarily used in applications where dimensional tolerances and surface finish are less critical. They are commonly employed in structural components for buildings, bridges and infrastructure and in manufacturing railroad tracks, pipes and agricultural equipment.",
+            "product_percentage": 33.4
+        },
+        {
+            "product_or_service": "Cold-rolled Sheets and Strips",
+            "product_description": "Cold-rolled sheets undergo additional processing steps, resulting in tighter tolerances, smoother surface finishes and enhanced flatness. These characteristics make cold-rolled sheets ideal for applications requiring precise dimensions and superior surface quality.",
+            "product_percentage": 21.0
+        },
+        {
+            "product_or_service": "Hot-rolled Bars and Shapes",
+            "product_description": "Hot-rolled bars are produced at high temperatures and are characterized by their rough surface texture and rounded edges. They are commonly used in structural applications, including construction, infrastructure and industrial machinery.",
+            "product_percentage": 21.3
+        },
+        {
+            "product_or_service": "Cold-finished Bars and Shapes",
+            "product_description": "Cold-finished bars undergo additional processing steps to achieve tighter dimensional tolerances, smoother surface finishes and improved mechanical properties. Cold-finished bars are generally less common than hot-rolled bars regarding overall production volume.",
+            "product_percentage": 1.5
+        },
+        {
+            "product_or_service": "Steel Ingots and Semifinished Shapes",
+            "product_description": "Steel ingots are large, semi-finished castings produced by pouring molten steel into molds and allowing them to solidify.",
+            "product_percentage": 9.2
+        },
+        {
+            "product_or_service": "Tubular Products",
+            "product_description": "<UNKNOWN>",
+            "product_percentage": 13.2
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "<UNKNOWN>",
+            "product_percentage": 0.4
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Iron Ore Mining in the US",
+            "Copper, Nickel, Lead & Zinc Mining in the US",
+            "Industrial Machinery & Equipment Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Coal Mining in the US",
+            "Metalworking Machinery Manufacturing in the US",
+            "Utilities in the US"
+        ],
+        "tier_1_buyers": [
+            "Metal Pipe & Tube Manufacturing in the US",
+            "Steel Rolling & Drawing in the US",
+            "Metal Stamping & Forging in the US"
+        ],
+        "tier_2_buyers": [
+            "Construction in the US",
+            "Car & Automobile Manufacturing in the US",
+            "Metalworking Machinery Manufacturing in the US",
+            "Tractors & Agricultural Machinery Manufacturing in the US",
+            "Construction Machinery Manufacturing in the US",
+            "Mining, Oil & Gas Machinery Manufacturing in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "World Price of Steel",
+            "determinant_description": "The world price of steel directly influences the selling price of steel products produced by companies in the industry."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Moderate",
+        "import_trend": "Increasing",
+        "export_level": "Moderate",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Section 232 Tariffs Have Contributed to Lower Competition From Imported Steel",
+                "trade_description": "In 2018, the US government imposed Section 232 tariffs on steel and aluminum imports."
+            },
+            {
+                "trade_title": "The US Government Has Implemented Substantial Tariffs on Imports From Russia, Reducing Russia's Share of Imports to Nearly Zero",
+                "trade_description": "In 2021, imports from Russia accounted for approximately 7% of industry imports."
+            },
+            {
+                "trade_title": "Mexico Outpaced Canada as a Major Foreign Market; Both Remain Key Export Destinations for Over 70% of Industry Exports",
+                "trade_description": "Facilitated trade between the three countries by reducing trade barriers and tariffs."
+            },
+            {
+                "trade_title": "Growth in Demand From Foreign Markets is Expected to Contribute to Projected Industry Growth",
+                "trade_description": "Over the next five years, the value of exports is expected to grow faster than domestic revenue growth."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes holds the most significant number of manufacturers in the United States, concentrating primarily in Ohio.",
+            "percentage_establishments": 18.2,
+            "percentage_population": 15.1
+        },
+        {
+            "location": "Southeast",
+            "location_description": "Manufacturers in the Southeast benefit from easy access to iron ore mining and pig iron production.",
+            "percentage_establishments": 17.5,
+            "percentage_population": 21.5
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "Home to Pennsylvania, the Mid-Atlantic is a known region for manufacturing.",
+            "percentage_establishments": 15.3,
+            "percentage_population": 14.9
+        },
+        {
+            "location": "Southwest",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 14.2,
+            "percentage_population": 12.1
+        },
+        {
+            "location": "West",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 13.3,
+            "percentage_population": 13.2
+        },
+        {
+            "location": "Plains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 9.2,
+            "percentage_population": 6.6
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 6.6,
+            "percentage_population": 4.7
+        },
+        {
+            "location": "Rocky M",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5.7,
+            "percentage_population": 11.9
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Increasing",
+        "regulations_points": [
+            {
+                "regulation_title": "CLEAN AIR ACT (CAA)",
+                "regulation_description": "The Clean Air Act establishes emission standards for pollutants released from iron and steel plants."
+            },
+            {
+                "regulation_title": "CLEAN WATER ACT",
+                "regulation_description": "The Clean Water Act oversees the release of pollutants into water sources from iron and steel manufacturing sites."
+            },
+            {
+                "regulation_title": "RESOURCE CONSERVATION AND RECOVERY ACT",
+                "regulation_description": "The Resource Conservation and Recovery Act sets guidelines for the secure handling and disposal of hazardous waste."
+            },
+            {
+                "regulation_title": "Comprehensive Environmental Response, Compensation and Liability Act",
+                "regulation_description": "Regulates the handling and remediation of hazardous substances."
+            },
+            {
+                "regulation_title": "Occupational Safety and Health Act",
+                "regulation_description": "Regulations play a critical role in setting safety standards for workers in iron and steel plants."
+            },
+            {
+                "regulation_title": "United States-Mexico-Canada Agreement (USMCA)",
+                "regulation_description": "This agreement promotes trade among the involved countries while benefiting domestic manufacturers."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is mature, making it difficult for new entrants."
+            },
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "Revenue volatility in the industry is very high."
+            },
+            {
+                "barrier_title": "Capital Intensity Level",
+                "barrier_description": "The industry has high capital intensity requirements."
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "Competition in the industry is high and steady."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Mature industry life cycle stage",
+            "Very high revenue volatility",
+            "High capital intensity requirements",
+            "High and steady competition level"
+        ],
+        "factors_decreased_barrier": [
+            "High and steady level of industry assistance"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Operational Efficiency and Cost Management",
+                "basis_description": "Companies focus on improving operational efficiency and cost management to remain competitive."
+            },
+            {
+                "basis_title": "Supply Chain Management",
+                "basis_description": "Companies strategically manage their supply chain to ensure steady raw material flow and operational effectiveness."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Industry Dominated by Major Companies",
+                "concentration_description": "The industry continues to be heavily dominated by a few major companies."
+            },
+            {
+                "concentration_title": "Historical Advantages",
+                "concentration_description": "Many steel and iron manufacturing hubs have developed over decades or centuries."
+            },
+            {
+                "concentration_title": "Economies of Scale",
+                "concentration_description": "Larger companies can achieve economies of scale."
+            },
+            {
+                "concentration_title": "Potential Acquisition Impact",
+                "concentration_description": "The anticipated acquisition of US Steel may lead to a significant increase in industry concentration."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Nucor Corporation",
+                "company_percentage": 19.9
+            },
+            {
+                "company_name": "Cleveland-Cliffs Inc.",
+                "company_percentage": 13.8
+            },
+            {
+                "company_name": "United States Steel Corp",
+                "company_percentage": 8.8
+            },
+            {
+                "company_name": "Steel Dynamics, Inc.",
+                "company_percentage": 8.0
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 48.7
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "PURCHASE COSTS REFLECT VOLATILE COMMODITIES, SUCH AS IRON AND STEEL",
+            "cost_factor_description": "Purchases include iron and steel scrap as well as other materials. Generally, purchase costs tend to fluctuate with changes in the price of iron ore."
+        },
+        {
+            "cost_factor_title": "THE INDUSTRY INCURS HIGH COST OF COMPLIANCE DRIVEN BY THE COMPLEXITY OF REGULATIONS",
+            "cost_factor_description": "Steel and iron manufacturing facilities are subject to strict environmental regulations aimed at reducing pollution."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "CAPITAL EXPENSES",
+                "capital_intensity_description": "Capital expenses, as a share of revenue, are slightly higher in the Iron and Steel Manufacturing industry."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "REVENUE VOLATILITY IS DRIVEN LARGELY BY VOLATILITY IN COMMODITY PRICES",
+                "volatility_description": "Fluctuations in the prices of iron ore significantly impact the revenue."
+            },
+            {
+                "volatility_title": "GEOPOLITICAL EVENTS, REGULATIONS, AND CURRENCY EXCHANGE RATES MAY IMPACT DEMAND",
+                "volatility_description": "Geopolitical events and regulatory decisions can influence demand for iron and steel products."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "New alloys with enhanced strength and durability properties",
+                "technological_change_description": "High-strength steel alloys are engineered for superior strength and toughness."
+            },
+            {
+                "technological_change_title": "Advanced steel production techniques",
+                "technological_change_description": "Electric arc furnaces use electric arcs to melt scrap steel, offering energy savings."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company impacted by rising imports from abroad?",
+            "answer": "In line with the manufacturing sector, companies in this industry face intense competition from abroad."
+        },
+        {
+            "question": "Have export opportunities offered an opportunity for your company?",
+            "answer": "Government administrations have made manufacturing a priority. Export-friendly tariffs will help boost industry revenue."
+        },
+        {
+            "question": "Has your company located in proximity to its key downstream distributors to reduce shipping costs?",
+            "answer": "There is no central location for industry companies to be located, as key buyers include the nonresidential construction and utility industries."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "Steel is a key input for industry companies, causing steel prices to play a major role in industry revenue and profit."
+        },
+        {
+            "question": "Have you been able to reduce wage costs by automating operations over the past five years?",
+            "answer": "Companies should look to increase efficiency and decrease wage expense by implementing new technology."
+        },
+        {
+            "question": "How is your company leveraging new technology, particularly Electric Arc Furnaces, in its operations?",
+            "answer": "The reduced material and labor costs associated with Electric Arc Furnace technology should allow operators to decrease variable costs."
+        },
+        {
+            "question": "Do you work with steel production interest groups or other interest groups to advance your company's interests?",
+            "answer": "Industry interest groups can assist operators by supporting legislation on the national, state and regional level."
+        },
+        {
+            "question": "What effect have international tariffs had on your ability to import and export products?",
+            "answer": "Tariffs on foreign-made steel boost the domestic industry, contributing to companies' ability to raise prices."
+        },
+        {
+            "question": "Do you have any big projects requiring capital financing on the horizon?",
+            "answer": "While interest rates are low and revenue is high, companies should consider expansion if able to."
+        },
+        {
+            "question": "How has price volatility of inputs affected profit margins over the past 12 months?",
+            "answer": "The price of steel is a key driver of performance, as its price has major effects on the industry."
+        },
+        {
+            "question": "Do you have contracts in place with manufacturers? How can these relationships be strengthened?",
+            "answer": "Output is sold under contract. Industry players that incorporate long-term sales contracts are better able to maintain stable demand."
+        },
+        {
+            "question": "What are your current product differentiation strategies? How do your strategies compare with those of your competitors?",
+            "answer": "The production and sale of value-added products provides domestic manufacturers with a competitive advantage."
+        },
+        {
+            "question": "How do you monitor changing environmental laws? Have you had compliance issues in the past?",
+            "answer": "Operators must be able to meet environmental laws and regulations to successfully operate plants."
+        },
+        {
+            "question": "Do you keep track of the TWI? How do you take advantage of a decreasing TWI?",
+            "answer": "Industry operators have increasingly relied on exports for revenue growth as international demand for steel rises."
+        },
+        {
+            "question": "Which industry accounts for the highest demand for your company's products? How much does the value of construction influence your company?",
+            "answer": "Demand for steel is highly dependent on the level of activity in the nonresidential construction sector."
+        },
+        {
+            "question": "How does the world price of steel affect demand for your company's products? Are you able to pass on input cost increases?",
+            "answer": "The world price of steel shifts in response to global supply and demand for steel and its inputs."
+        }
+    ]
+}

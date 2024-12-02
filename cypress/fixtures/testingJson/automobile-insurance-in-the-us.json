@@ -1,0 +1,366 @@
+{
+    "report_title": "Automobile Insurance in the US",
+    "report_date": "Jun 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 364900000,
+            "revenue_cagr_historical": {
+                "begin_year": 2019,
+                "end_year": 2024,
+                "revenue_cagr_value": -0.5
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.2
+            }
+        },
+        "profit": {
+            "profit_dollars": 44200000,
+            "profit_cagr_historical": {
+                "begin_year": 2019,
+                "end_year": 2024,
+                "profit_cagr_value": -0.9
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 12.1,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2019,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -0.2
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 0,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 269000,
+            "employees_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 31800000,
+            "wages_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The Automobile Insurance industry provides individuals and businesses with various lines of insurance needed to operate an automobile legally and invests a portion of underwritten premiums in financial instruments. The industry has experienced rising premium prices as operators have contended with higher claims volumes because of renewed traffic activity and higher costs to repair or replace a vehicle. Despite premium growth during most of the period, dropping consumer confidence and investment income in 2020 because of the pandemic pressured insurance providers. Overall, revenue has been falling at a CAGR of 0.5% to $364.9 billion over the past five years, including an expected jump of 0.8% in 2024. While industry product segments typically do not fluctuate as a share of revenue on a year-to-year basis, individual lines of insurance can outpace the larger market. For example, plans for commercial entities outpaced personal auto policies as commercial automotive usage increased in the years following the pandemic. Yearly fluctuations in each line of auto insurance's portion of industry premiums are expected to continue as 'pay as you drive' pricing schemes, which provide quotes based on consumer-specific driving habits, grow in popularity. The industry is expected to continue experiencing a hardening price cycle over the next five years as profit is expected to remain high. During a hardening price cycle, insurers focus on shoring up their financial positions and increasing premium rates. High interest rates and an improving economic landscape are expected to benefit investment conditions for auto insurers. Overall, revenue is forecast to grow at a CAGR of 1.2% to $387.5 billion over the five years to 2029.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Operators seek to gain online dominance",
+            "current_performance_point_description": "Insurers operating online can invest heavily in marketing campaigns and reduce spending on wages for sales."
+        },
+        {
+            "current_performance_point_title": "Motor vehicle registrations impact demand",
+            "current_performance_point_description": "When motor vehicle registrations increase, operators benefit from more policies offered. High-interest rates will discourage consumers from purchasing new cars, which require higher premiums than used cars."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Motor vehicle registrations to jump",
+            "future_outlook_point_description": "Operators are expected to benefit from a rising number of motor vehicle registrations over the next five years. A climb in motor vehicle registrations will drive demand for automobile insurance."
+        },
+        {
+            "future_outlook_point_title": "Investment conditions to benefit operators",
+            "future_outlook_point_description": "Investment activity is expected to continue driving industry growth. High-interest rates typically mean strong investment returns since bond investors purchase their securities at lower prices."
+        }
+    ],
+    "industry_definition": "The Automobile Insurance industry provides individuals and businesses with various lines of insurance needed to operate an automobile legally and invests a portion of underwritten premiums in financial instruments.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Number of motor vehicle registrations",
+            "Number of vehicle accidents",
+            "Per capita disposable income",
+            "Total vehicle miles"
+        ],
+        "negative_impact_factors": [
+            "Threat of Natural Disaster"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "Growth Life Cycle Stage",
+            "Low Volatility",
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "Low Profit vs. Sector Average"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "Number of motor vehicle registrations"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Threat of Natural Disaster"
+        ]
+    },
+    "key_trends": [
+        "Operators seek to gain online dominance through heavy marketing and reduced wage costs",
+        "Motor vehicle registrations and high interest rates impact demand for policies and investment income",
+        "Rising use of 'pay as you drive' pricing schemes based on driving habits",
+        "Increasing use of technology like AI for data analysis, underwriting and risk assessment"
+    ],
+    "market_segmentation": [],
+    "products_and_services": [],
+    "supply_chain": {
+        "tier_1_suppliers": [],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Operate in a highly visible location",
+            "determinant_description": "A highly visible location enhances brand awareness and accessibility, making it easier for customers to locate offices. As a result, this leads to increased policy sign-ups and customer engagement."
+        },
+        {
+            "determinant_title": "Ensure accessibility to consumers and end-users",
+            "determinant_description": "Accessibility ensures that potential and current clients can access a company's services, enhancing customer satisfaction and retention rates. This is crucial for sustained business and expanding market share."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Unknown",
+        "import_trend": "Unknown",
+        "export_level": "Unknown",
+        "export_trend": "Unknown",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Ohio",
+            "location_description": "Ohio is the state with the largest concentration of establishments in the country.",
+            "percentage_establishments": 9.5,
+            "percentage_population": 101
+        },
+        {
+            "location": "Florida",
+            "location_description": null,
+            "percentage_establishments": 8.2,
+            "percentage_population": 101
+        },
+        {
+            "location": "California",
+            "location_description": null,
+            "percentage_establishments": 7.6,
+            "percentage_population": 101
+        },
+        {
+            "location": "Texas",
+            "location_description": null,
+            "percentage_establishments": 6.5,
+            "percentage_population": 101
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Legal barriers",
+                "barrier_description": "New entrants must conform to stringent state and federal legislation to initiate auto insurance operations. They must apply for a Certificate of Authority to supply insurance products to begin operating as auto insurers."
+            },
+            {
+                "barrier_title": "Start-up costs",
+                "barrier_description": "The most significant barrier to entry for the industry is obtaining sufficient start-up capital to underwrite a diverse portfolio of policies."
+            },
+            {
+                "barrier_title": "Differentiation barriers",
+                "barrier_description": "The auto insurance market is highly competitive, with brand recognition representing a crucial variable for a company's growth strategy. The market is also competitive across product lines, with most consumers willing to purchase various insurance products from one company."
+            },
+            {
+                "barrier_title": "Labor expenses",
+                "barrier_description": "Automobile insurers rely on labor significantly. The industry requires skilled underwriters and customer service representatives to gain a competitive advantage through customer satisfaction."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Larger companies seek to expand concentration by acquiring smaller insurers",
+            "Rising premiums resulting from elevated costs to repair and replace vehicles have contributed to some minor operators being acquired by larger companies that can offer lower premiums in bundles"
+        ],
+        "factors_decreased_barrier": [
+            "Having a cost-effective distribution system is important for insurers to overcome barriers to entry. This tends to involve the use of agents and brokers, banks and a targeted online presence."
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Price competition",
+                "basis_description": "Price is the primary form of competition in the industry. The price of automobile insurance represents the value perceptions of consumers and businesses."
+            },
+            {
+                "basis_title": "Service quality",
+                "basis_description": "Insurers differentiate themselves based on the quality of service provided. Insurers must have staff with knowledge and experience so customers can receive the best advice."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Consolidation and acquisitions",
+                "concentration_description": "Larger companies seek to expand concentration by acquiring smaller insurers. Concentration has marginally increased, which has caused continued consolidation of insurance companies within the industry and the broader insurance sector."
+            },
+            {
+                "concentration_title": "Growth of major players",
+                "concentration_description": "The sharp growth of GEICO and Progressive Corporation has contributed to increased concentration, while industry enterprise growth has been limited."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Progressive Corp",
+                "company_percentage": 12.4
+            },
+            {
+                "company_name": "State Farm Mutual Automobile Insurance Co",
+                "company_percentage": 12.1
+            },
+            {
+                "company_name": "Berkshire Hathaway Inc.",
+                "company_percentage": 11.2
+            },
+            {
+                "company_name": "Allstate Corp",
+                "company_percentage": 7.2
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 8.7
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Wage expenses have climbed over the past five years as skilled labor is required",
+            "cost_factor_description": "Operators rely extensively on actuaries, underwriters and claims investigators; this dependence on skilled labor explains the industry's relatively high average wage. Despite investment expenditure and a mounting reliance on online platforms, wage expenses have outpaced revenue growth as insurers require skilled underwriters and customer service representatives."
+        },
+        {
+            "cost_factor_title": "Miscellaneous costs remain the most significant expense for the industry",
+            "cost_factor_description": "Miscellaneous costs have fallen but will represent slightly more than two-thirds of industry revenue. Miscellaneous costs are the largest industry expense. Loss and loss adjustment expenses refer to insurance companies' claims liabilities or the benefits they pay out to policyholders. This expense is the single largest cost for vehicle insurance companies. Costs include incurred losses, defense and cost containment expenses incurred and adjusting and other expenses incurred. Companies mitigate the risk of substantial loss and loss adjustment expenses by charging significant premiums for high-risk customers (like drivers under the age of 30) and by diversifying into various insurance industries."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Profit slumps as concerns of an economic recession lead to investors seeking safer investments",
+                "volatility_description": "Profit, measured as earnings before interest and taxes, has fallen slightly over the past five years. Rising wage expenses have cut into industry profit margins. Underwriting profit and net investment income are crucial indicators of the industry's average profit margin. Operators' increased underwriting standards partially contributed to the decrease in the combined ratio. Insurers have benefited from rising interest rates, as investments in fixed-income securities, to which operators allocate the largest portion of invested assets, yield more as interest rates rise. Continuing concerns about economic recession may lead investors to seek safer investments, hindering profit overall."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "What is the document about?",
+            "answer": "The document appears to be a report titled 'IBISWorld | Automobile Insurance in the US Jun 2024' containing financial benchmarks, ratios, and key statistics for the automobile insurance industry in the United States."
+        },
+        {
+            "question": "What are some key financial metrics covered?",
+            "answer": "The report covers metrics such as profit margin, average wage, cost structure, revenue, expenses, assets, liabilities, liquidity ratios, coverage ratios, leverage ratios, operating ratios, and cash flow ratios over various time periods."
+        },
+        {
+            "question": "What data is provided on industry costs and trends?",
+            "answer": "The report discusses trends impacting industry costs, such as the impact of economic recession concerns on profits, the dependence on skilled labor driving up wage expenses, and miscellaneous costs being the largest expense."
+        },
+        {
+            "question": "What key ratio data is included?",
+            "answer": "The report includes tables with data on industry multiples, tax structure, income statement ratios, liquidity ratios, coverage ratios, leverage ratios, operating ratios, and cash flow ratios over different time periods."
+        },
+        {
+            "question": "Is there any data on key statistics like revenue per employee?",
+            "answer": "Yes, the report includes a table with key statistics such as revenue per employee, revenue per enterprise, employees per establishment, average wage, wages as a percentage of revenue, and IVA/revenue percentage from 2004 to 2030."
+        }
+    ]
+}

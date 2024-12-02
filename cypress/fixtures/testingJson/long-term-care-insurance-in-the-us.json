@@ -1,0 +1,542 @@
+{
+    "report_title": "Long Term Care Insurance in the US",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 35191000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 1.18
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 3.16
+            }
+        },
+        "profit": {
+            "profit_dollars": 3343000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 4.09
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 2.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 9.5,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 2.88
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 2.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 5272000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 2.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 2.0
+            }
+        },
+        "employees": {
+            "employees_count": 15334,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 2.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 2.0
+            }
+        },
+        "wages": {
+            "wages_dollars": 1677000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 2.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 2.0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "As the population ages, senior care services have continued to expand in importance and therefore, demand for the Long Term Care Insurance industry has increased. The industry comprises companies that provide insurance policies that help pay for the care provided in nursing homes, assisted living facilities, adult day care centers and in-home senior care services. This industry typically benefits from steady demand because Medicare and private health insurance companies often do not cover these services. The most vital driver of this industry has been a growing elderly population.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Revenue has been growing at a CAGR of 1.1% over the past five years",
+            "current_performance_point_description": "Revenue has been growing at a CAGR of 1.1% over the past five years, including an estimated 5.2% jump in the current year, and is expected to total $35.2 billion in 2023, with profit set to reach 9.5%."
+        },
+        {
+            "current_performance_point_title": "As the Elderly Population Expands, Demand for Long Term Care Insurance Accelerates",
+            "current_performance_point_description": "The senior population has rapidly grown as the baby boomer generation reaches retirement age. The number of adults aged 65 and older is expected to increase along with the overall population. This represents an immediate opportunity for the industry because people typically do not purchase long-term care insurance until they are approaching retirement."
+        },
+        {
+            "current_performance_point_title": "The Rising Competition Encourages Companies to Consolidate",
+            "current_performance_point_description": "While demand for long-term care has grown, competition from the federal and certain state governments has challenged the industry. In response to this competition, many industry companies have moved toward consolidation."
+        },
+        {
+            "current_performance_point_title": "COVID-19 Highlighted Issues in Healthcare Systems",
+            "current_performance_point_description": "In 2020, insurance companies were disrupted slightly by the pandemic as revenue fell due to rising unemployment. The pandemic highlighted issues in the senior care system, prompting more people to consider long-term care insurance."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "A Growing Population and Better Healthcare Will Boost Industry Revenue",
+            "future_outlook_point_description": "The number of adults aged 65 and older will expand as the baby boomer generation reaches retirement age and medicine and healthcare improve. As the population grows, demand for nursing homes and long-term care insurance will continue increasing."
+        },
+        {
+            "future_outlook_point_title": "The Industry Recovers as Demand Returns to Pre-Pandemic Levels",
+            "future_outlook_point_description": "The industry has begun to encounter a surge in demand following the pandemic as people are motivated to reduce risk and ensure they can live comfortably after retiring. Consumers approaching retirement age will be primarily motivated to protect themselves financially."
+        },
+        {
+            "future_outlook_point_title": "External Competition May Pose a Potential Threat to the Growth of the Industry",
+            "future_outlook_point_description": "As more people reach retirement age and flaws in elder care have been highlighted, there have been calls for better government support for seniors which may take the form of more extensive government options for long-term care insurance, potentially reducing demand for industry companies."
+        }
+    ],
+    "industry_definition": "This industry underwrites (i.e. assuming the risk and assigning premiums) long-term care insurance policies, used to fund care in nursing homes and assisted living facilities.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "growth life cycle stage",
+            "low revenue volatility level",
+            "low concentration level",
+            "high barriers to entry level",
+            "low globalization level"
+        ],
+        "negative_impact_factors": [
+            "low industry assistance level",
+            "heavy regulation level",
+            "high competition level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "Low Profit vs. Sector Average",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "Number of adults aged 65 and older"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Federal funding for Medicare and Medicaid"
+        ]
+    },
+    "key_trends": [
+        "The senior population has been rapidly growing as the baby boomer generation reaches retirement age",
+        "The industry has been challenged by competition from the federal and certain state governments",
+        "The pandemic has highlighted issues in the senior care system, affecting the industry",
+        "Due to a growing population, demand for nursing homes is expected to continue reaching new heights",
+        "A rush to acquire long-term care insurance is likely to lead to rising premium prices",
+        "Increasing external competition may pose a potential threat to industry growth",
+        "Surging demand is likely to result in premium increases, and therefore, profit growth"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Individuals between 55 and 65 years old",
+            "segment_description": "",
+            "segment_percentage": 55
+        },
+        {
+            "segment": "Individuals younger than 55 years old",
+            "segment_description": "",
+            "segment_percentage": 27
+        },
+        {
+            "segment": "Individuals older than 65 years old",
+            "segment_description": "",
+            "segment_percentage": 18
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Group Policies",
+            "product_description": "",
+            "product_percentage": 66.7
+        },
+        {
+            "product_or_service": "Individual Policies",
+            "product_description": "",
+            "product_percentage": 32.9
+        },
+        {
+            "product_or_service": "Credit and Other Policies",
+            "product_description": "",
+            "product_percentage": 0.4
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Commercial Leasing in the US",
+            "Wired Telecommunications Carriers in the US",
+            "Internet Service Providers in the US"
+        ],
+        "tier_2_suppliers": [
+            "Computer Peripheral Manufacturing in the US",
+            "Telecommunication Networking Equipment Manufacturing in the US",
+            "Communication Equipment Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Professional, Scientific and Technical Services in the US",
+            "Finance and Insurance in the US",
+            "Information in the US",
+            "Consumers in the US",
+            "Public Administration in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Health Conditions",
+            "determinant_description": "Health conditions also impact demand for industry services. The healthier individuals expect to be moving into old age, the less appealing the industry's insurance policies may be to individuals."
+        },
+        {
+            "determinant_title": "Disposable Income",
+            "determinant_description": "Demand is also highly affected by per capita disposable incomes. Long-term care provision is expensive, and many can only afford it by draining their retirement nest egg relatively rapidly."
+        },
+        {
+            "determinant_title": "Alternative options for long-term care insurance",
+            "determinant_description": "Also, alternative options for long-term care insurance or provision impact demand for the industry's insurance policies."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The high concentration of businesses is because of the significant population levels in the region. When compared to other regions, the Southeast has a higher proportion of older people.",
+            "percentage_establishments": 29.1,
+            "percentage_population": 21.6
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "Insurance companies tend to be in areas with a higher concentration of the financial services sector, like New York, New Jersey and Pennsylvania.",
+            "percentage_establishments": 18.2,
+            "percentage_population": 15.1
+        },
+        {
+            "location": "West",
+            "location_description": "The progressive and health-conscious culture of the West is well-known for its strong emphasis on longevity and overall well-being.",
+            "percentage_establishments": 10.9,
+            "percentage_population": 23.5
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "The National Association of Insurance Commissioners (NAIC)",
+                "regulation_description": "The industry is subject to regulation at both the federal and state levels, in addition to being regulated by the National Association of Insurance Commissioners (NAIC). The NAIC can stipulate nationwide standards for reserve requirements; risk-based capital standards; risk management; corporate governance; restrictions on a company's ability to pay dividends; and the codification of insurance-specific accounting principles for reporting and compliance."
+            },
+            {
+                "regulation_title": "The Securities and Exchange Commission (SEC)",
+                "regulation_description": "The industry is also heavily regulated by the Securities and Exchange Commission (SEC) and has been affected by the Dodd-Frank Wall Street Reform and Consumer Protection Act (Dodd-Frank). As insurers heavily use derivatives to hedge risks associated with their insurance operations, funding and investment portfolios, Dodd-Frank has substantially affected the industry."
+            },
+            {
+                "regulation_title": "COVID-19",
+                "regulation_description": "Amid the COVID-19 pandemic in 2020, the Coronavirus Aid, Relief and Economic Security (CARES) Act was passed to assist businesses and households through the difficult economic circumstances associated with the pandemic and attendant social distancing measures. While specific components of the legislation affected lenders' forbearance policies, long-term care insurance providers were more directly affected by state-level legislators."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Regulatory requirements",
+                "barrier_description": "Businesses must adhere to significant levels of regulation to conduct insurance business. For example, companies must adhere to risk-based capital requirements, reserve requirements and reporting and accounting stipulations."
+            },
+            {
+                "barrier_title": "Start-up costs and distribution network",
+                "barrier_description": "New entrants require upfront capital to run operations. After accumulating sufficient wealth, new entrants must build an extensive distribution network. Larger organizations have more leverage in negotiations related to healthcare costs than their smaller competitors."
+            },
+            {
+                "barrier_title": "Pricing competition and economies of scale",
+                "barrier_description": "This industry is very competitive in pricing. New companies must focus on achieving economies of scale to offer comparable prices. Competitive pricing by industry incumbents can make it difficult for new entrants to win customers."
+            },
+            {
+                "barrier_title": "Skilled labor requirements",
+                "barrier_description": "Companies must hire highly skilled staff with extensive actuarial skills, which poses another barrier to entry as it may be challenging to locate and acquire such employees."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Industry Assistance Level: low - steady",
+            "Regulation Level: heavy - steady",
+            "Competition Level: high - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage: growth",
+            "Revenue Volatility Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Internal competition based on price, quality, benefits and customization",
+                "basis_description": "Competition within the industry is primarily based on price, quality of service, benefits and customization. While premiums for industry services are high, the costs associated with long-term care are complicated for most consumers to afford. Therefore, industry policies are valuable to consumers who use their benefits."
+            },
+            {
+                "basis_title": "Tailored policies for individual preferences",
+                "basis_description": "Companies also compete on how tailored their policies are to individual consumer preferences and needs. For instance, many companies permit consumers to purchase riders to their policies that increase benefits, such as riders that scale maximum benefits payouts with the inflation rate."
+            },
+            {
+                "basis_title": "Investment portfolio performance and actuarial practices",
+                "basis_description": "Industry companies compete on the performance of their investment portfolios, which generate a notable share of income by reinvesting premiums, in addition to their liquidity management and loss mitigation practices. As a result, companies with the best actuarial practices are likely to be the most profitable and best able to withstand low probability, concentrated risks associated with their underwriting."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Few competitors but no dominant player",
+                "concentration_description": "The industry market remains stable as there are few competitors. There are relatively few businesses within the industry, which in many cases, would contribute to substantial market share concentration. However, according to available financial data and industry revenue estimates, no individual company has captured a substantial share of industry revenue."
+            },
+            {
+                "concentration_title": "High premiums discourage demand",
+                "concentration_description": "Long-term care insurance contracts frequently come with high expenses, making them unaffordable for some people. Rising healthcare costs and economic conditions make it difficult for some people to afford insurance. Lack of affordable coverage options and difficulty locating plans that meet individual requirements reduce demand."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Genworth Financial, Inc.",
+                "company_percentage": 9
+            },
+            {
+                "company_name": "New York Life Insurance Co",
+                "company_percentage": 1.5
+            },
+            {
+                "company_name": "Mutual of Omaha",
+                "company_percentage": 4.5
+            },
+            {
+                "company_name": "Aegon NV",
+                "company_percentage": 2.2
+            },
+            {
+                "company_name": "CNO Financial Group Inc.",
+                "company_percentage": 0.9
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 9.5
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 4.8
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 41.6
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0.7
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 3.0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 2.5
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0.2
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 41.6
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Operating costs have slowly declined as industry companies have consolidated",
+            "cost_factor_description": "As large, diversified insurance providers have grown their presence in the industry, average profit has grown, mainly benefiting these large businesses. Also, steady growth in the elderly population has created heightened demand for senior care services. This has enabled long-term care insurance providers to increase premium prices and be more stringent with whether or not to reject claims."
+        },
+        {
+            "cost_factor_title": "Labor expenses represent a relatively small cost for long term care insurance providers",
+            "cost_factor_description": "Industry companies need employees to manage client accounts and handle claims. Wage costs have marginally declined as industry companies have been better able to automate some client management processes. Client data can be more efficiently stored and processed using more advanced recordkeeping software."
+        },
+        {
+            "cost_factor_title": "Purchase costs accelerate as more adults reach retirement",
+            "cost_factor_description": "Purchases represent the highest single cost for the Long Term Care Insurance industry, including payments made to cover client claims. When a client begins using their long-term care benefits to cover senior care expenses, industry companies must start paying these clients. As more adults have reached retirement age and needed to use their long-term care benefits, purchase costs have increased for industry companies."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Medium capital intensity",
+                "capital_intensity_description": "A moderate and increasing capital intensity characterizes the Long Term Care Insurance industry. As a service industry, labor will be necessary for industry operations; however, wages account for a relatively small share of industry revenue. The sector has automated more services to reduce the need for skilled labor."
+            },
+            {
+                "capital_intensity_title": "Technological Disruption",
+                "capital_intensity_description": "The Long Term Care Insurance industry has not been subject to notable technological disruption. While some insurance industries have been disrupted by the emergence of mobile apps and websites that help consumers find insurance policies without using an industry sales force, such disruption has primarily been confined to other types of insurance companies."
+            },
+            {
+                "capital_intensity_title": "Medium Technology Change",
+                "capital_intensity_description": "The Long Term Care Insurance industry experiences a moderate rate of technology change. The primary area in which technological change has affected the sector has been information technology (IT). IT improvements have improved the business's risk management capabilities, communications, data interfacing, confidentiality and protection measures."
+            }
+        ],
+        "capital_intensity_trend": "Increasing"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Low",
+        "volatility_trend": "Unknown",
+        "volatility_points": [
+            {
+                "volatility_title": "The steady participation rate minimizes volatility",
+                "volatility_description": "Everyone needs healthcare. As a result, the number of people on health insurance doesn't fluctuate drastically annually. Demographic considerations, like the population's median age, will impact volatility in the coming years. The median age will increase as the baby boomers continue aging. Revenue will increase, creating volatility, as older people need more healthcare than the young."
+            },
+            {
+                "volatility_title": "Regulations cause uncertainty and limit growth",
+                "volatility_description": "Long-term care insurance regulations like Medicaid eligibility rules and reimbursement rates can frequently change, causing uncertainty for insurers. Industry revenue can be driven down by stricter regulation from the Securities and Exchange Commission (SEC) and the National Association of Insurance Commissioners (NAIC). Insurers' ability to adjust premiums and manage profitability is impacted by the time-consuming and unpredictable process of obtaining rate approvals."
+            }
+        ]
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_trend": "Steady",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Businesses may also implement proprietary methods to quantify and manage specific risks",
+                "technological_change_description": "Businesses may also implement proprietary methods to quantify and manage specific risks relating to their insurance operations. Successfully managing risk is essential to companies as it is the source of their profitability. As a result, the increasing availability of data and the inexpensiveness of data storage have benefited the industry by allowing businesses to calibrate their actuarial models more finely."
+            },
+            {
+                "technological_change_title": "Overall, the industry benefits from technology change but is not a fundamentally technology-driven industry",
+                "technological_change_description": "Similarly, these models enable them to price risk more accurately and have contributed to the decision-making process for companies regarding when to hike premium rates. Overall, the industry benefits from technology change but is not a fundamentally technology-driven industry."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "How has your company benefited from growth in the number of adults aged 65 and older?",
+            "answer": "The Long Term Care Insurance industry mainly caters to senior citizens, so as this population increases, so does industry revenue. In 2021, the number of adults aged 65 and older is expected to increase."
+        },
+        {
+            "question": "Do you operate in a state with a public-private partnership program?",
+            "answer": "Some states have programs to connect seniors with private long term care insurance providers."
+        },
+        {
+            "question": "What criteria do you use to determine whether a claim should be accepted or denied?",
+            "answer": "Long term care insurance providers typically publish a list of what types of claims they will cover. Long term care insurance providers must deny some claims to manage benefit expenses."
+        },
+        {
+            "question": "Have you been able to automate any of your day-to-day operations?",
+            "answer": "Many insurance providers use recordkeeping software to reduce labor needs."
+        },
+        {
+            "question": "Is your website user-friendly for seniors?",
+            "answer": "Many elderly consumers do not have experience using advanced web technology."
+        },
+        {
+            "question": "How closely do you work with your regulators?",
+            "answer": "Long term care insurance providers are regulated by the Securities and Exchange Commission (SEC)."
+        },
+        {
+            "question": "How do you ensure that clients have all of the information they need when buying policies and filing claims?",
+            "answer": "Insurance providers must be sure to make policies transparent."
+        },
+        {
+            "question": "How have your day-to-day operations been impacted by the COVID-19 (coronavirus) pandemic?",
+            "answer": "During the pandemic, industry companies could not provide in-person consultations with potential clients."
+        },
+        {
+            "question": "How has your company's profitability been impacted by the pandemic?",
+            "answer": "Increased demand following the pandemic has mostly caused profit margins to grow."
+        },
+        {
+            "question": "How do you keep your clients satisfied with your service? How do you improve customer loyalty?",
+            "answer": "Satisfied clients in nursing homes are likely to recommend your services to friends or family."
+        },
+        {
+            "question": "Do you also have life insurance products and services in addition to industry-relevant products? What other products do you provide?",
+            "answer": "Industry operators generate a relatively small share of their income through the provision of long-term care insurance; many generate a larger share of"
+        },
+        {
+            "question": "Do you monitor funding for Medicare and Medicaid? Have you noticed whether demand for your company's services trends in line with these programs?",
+            "answer": "While Medicaid can serve as a competitor for long term care insurance providers, demand for these benefits typically moves in line with funding for Medicare and Medicaid. In 2021, federal funding for Medicare and Medicaid is expected to rise."
+        },
+        {
+            "question": "How has the current level of total health expenditure affected your company? How can you adapt as total health expenditure increases?",
+            "answer": "As seniors' healthcare demand grows, so does demand for long-term care insurance."
+        }
+    ]
+}

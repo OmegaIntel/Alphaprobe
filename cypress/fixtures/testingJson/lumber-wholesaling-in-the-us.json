@@ -1,0 +1,407 @@
+{
+    "report_title": "Lumber Wholesaling in the US",
+    "report_date": "2023-10-01",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 142947000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "revenue_cagr_value": 0.01
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "revenue_cagr_value": 3.48
+            }
+        },
+        "profit": {
+            "profit_dollars": 101,
+            "profit_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "profit_cagr_value": 101
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "profit_cagr_value": 1.5
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 7e-07,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 0.01
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 3.4
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 15357000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0.01
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 3.2
+            }
+        },
+        "employees": {
+            "employees_count": 128138,
+            "employees_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "employees_cagr_value": 0.5
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "employees_cagr_value": 1.2
+            }
+        },
+        "wages": {
+            "wages_dollars": 10309000000,
+            "wages_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "wages_cagr_value": 0.06
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "wages_cagr_value": 3.0
+            }
+        },
+        "imports": {
+            "imports_dollars": 20000000,
+            "imports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "imports_cagr_value": 0.01
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "imports_cagr_value": 3.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 20000000,
+            "exports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "exports_cagr_value": 0.01
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "exports_cagr_value": 3.0
+            }
+        }
+    },
+    "executive_summary": "The Lumber Wholesaling industry has experienced a slight decline over the past five years, as the industry has faced volatile economic conditions, supply chain disruptions and fluctuations in downstream construction markets.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Lumber is an essential element in the construction",
+            "current_performance_point_description": "Companies in the Lumber Wholesaling industry distribute lumber, plywood, millwork and wood panel products to residential, industrial and commercial construction companies, hardware stores and carpentry contractors in the United States."
+        },
+        {
+            "current_performance_point_title": "Interest rate hikes have chopped down growth",
+            "current_performance_point_description": "Interest rates have been volatile in recent years and, therefore, so has the residential construction market."
+        },
+        {
+            "current_performance_point_title": "Lumber selling prices have been volatile",
+            "current_performance_point_description": "Many lumber products are considered almost identical and widely available from other wholesalers."
+        },
+        {
+            "current_performance_point_title": "Shifting Consumer Preferences Syphon Demand at the Edges",
+            "current_performance_point_description": "Metal products have become more popular for doors, windows and frames since they typically cost less."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Falling Interest Rates Will Encourage Residential Construction",
+            "future_outlook_point_description": "The Federal Reserve is expected to begin cuts in 2024, which will encourage residential construction activity."
+        },
+        {
+            "future_outlook_point_title": "Nonresidential Construction Will Grow Despite High Interest Rates",
+            "future_outlook_point_description": "Segments of nonresidential construction such as office space expansion will be lifted by restored business sentiment."
+        },
+        {
+            "future_outlook_point_title": "Lumber Prices Will Normalize",
+            "future_outlook_point_description": "After hitting historic highs during the coronavirus prices will normalize."
+        },
+        {
+            "future_outlook_point_title": "Fragmentation Will Remain the Norm, But Some Companies Will Buck This Trend",
+            "future_outlook_point_description": "The industry's profit is likely to stagnate over the next five years."
+        }
+    ],
+    "industry_definition": "This industry distributes a range of lumber, plywood, millwork and wood panel products to contractors, home improvement stores and hardware stores.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Technology Change Level: low"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level: low - increasing",
+            "Barriers To Entry Level: low - steady",
+            "Competition Level: high - steady"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low & Increasing Level of Assistance",
+            "Low Imports",
+            "Low Customer Class Concentration"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry",
+            "High Competition"
+        ],
+        "opportunities": [
+            "High Revenue Growth",
+            "Demand from lumber and building material stores"
+        ],
+        "threats": [
+            "Low Revenue Growth"
+        ]
+    },
+    "key_trends": [
+        "Price-based competition is a hallmark of the industry.",
+        "Time sensitivity prioritizes reliability.",
+        "Interest rates heavily influence lumber demand.",
+        "Metal is creeping in as a wood alternative."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Construction",
+            "segment_description": "Market includes construction markets who purchase lumber for both residential and non-residential construction.",
+            "segment_percentage": 28.9
+        },
+        {
+            "segment": "Retailers",
+            "segment_description": "Includes hardware and home improvement stores that service do-it-yourself construction activity.",
+            "segment_percentage": 30.0
+        },
+        {
+            "segment": "Other wholesalers",
+            "segment_description": "Includes other wholesalers who purchase products from specialized wholesalers.",
+            "segment_percentage": 28.9
+        },
+        {
+            "segment": "Manufacturers",
+            "segment_description": "Includes households, restaurants and businesses that need lumber and plywood.",
+            "segment_percentage": 3.5
+        },
+        {
+            "segment": "Other markets",
+            "segment_description": "Includes households, restaurants, businesses and government agencies.",
+            "segment_percentage": 8.7
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Wholesaling Lumber and Boards",
+            "product_description": "The lumber and boards segment includes lumber that is supplied rough, finished or dressed.",
+            "product_percentage": 36.2
+        },
+        {
+            "product_or_service": "Wholesaling Wood Millwork",
+            "product_description": "Includes wood millwork and metal millwork.",
+            "product_percentage": 22.0
+        },
+        {
+            "product_or_service": "Wholesaling Plywood and Panels",
+            "product_description": "Includes plywood, wood panels and engineered wood products.",
+            "product_percentage": 23.0
+        },
+        {
+            "product_or_service": "Other Products",
+            "product_description": "Includes firewood, pulpwood, fiberboard, wallboard and gypsum products.",
+            "product_percentage": 18.8
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Millwork in the US",
+            "Wood Paneling Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Wood Pulp Mills in the US",
+            "Wood Product Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Home Builders in the US",
+            "Industrial Building Construction in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Housing Starts",
+            "determinant_description": "The number of housing starts largely affects demand for the Lumber Wholesaling industry."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "The Southeast",
+            "location_description": "The Southeast is the nation's largest producer of lumber.",
+            "percentage_establishments": 30.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "The West",
+            "location_description": "Lumber wholesalers favor the West due to high construction activity in California.",
+            "percentage_establishments": 25.0,
+            "percentage_population": 25.0
+        },
+        {
+            "location": "The Great Lakes Region",
+            "location_description": "Wholesalers in the Great Lakes benefit from ready access to raw materials.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 15.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Unknown",
+        "regulations_points": [
+            {
+                "regulation_title": "Environmental Laws",
+                "regulation_description": "General regulations covering storage and transportation of goods."
+            },
+            {
+                "regulation_title": "Lacey Act",
+                "regulation_description": "Prohibits trade in illegally procured lumber."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "Mature"
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "Low - increasing"
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Price-based competition",
+                "basis_description": "Retailers look for the lowest-priced lumber products."
+            },
+            {
+                "basis_title": "Time sensitivity prioritizes reliability",
+                "basis_description": "Wholesalers with diverse product ranges are favored."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Diverse downstream markets contribute to low concentration",
+                "concentration_description": "The Lumber Wholesaling industry caters to a wide range of markets."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Bmc Stock Holdings, Inc.",
+                "company_percentage": 0.6
+            },
+            {
+                "company_name": "Belletete's, Inc.",
+                "company_percentage": 0.0
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 99.4
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases are the Largest Expense Category",
+            "cost_factor_description": "Wholesalers purchase lumber and millwork products from manufacturers."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Capital Spending Focused on Upgrading IT",
+                "capital_intensity_description": "Most notably, operators are adopting computer inventory systems."
+            }
+        ],
+        "capital_intensity_trend": "Increasing"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_trend": "Unknown",
+        "volatility_points": [
+            {
+                "volatility_title": "CYCLICAL NATURE OF THE CONSTRUCTION MARKET IS RESPONSIBLE FOR VOLATILITY",
+                "volatility_description": "The industry is susceptible to fluctuations in the residential construction market."
+            }
+        ]
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_trend": "Increasing",
+        "technological_change_points": [
+            {
+                "technological_change_title": "INCREASING AUTOMATION PROCESSES IS A KEY INNOVATION",
+                "technological_change_description": "Automated systems utilize advanced technology to perform routine tasks."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "How have your sales been affected by the growth of online shopping?",
+            "answer": "Operators do not experience intense competition from online operators."
+        },
+        {
+            "question": "Are your sales heavily dependent on any one market, major customer or other isolated revenue stream?",
+            "answer": "Sales are heavily dependent on the residential housing market."
+        }
+    ]
+}

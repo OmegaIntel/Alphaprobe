@@ -1,0 +1,537 @@
+{
+    "report_title": "Hay & Crop Farming Industry Report",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 37923000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": -2.66
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 0.35
+            }
+        },
+        "profit": {
+            "profit_dollars": 3792000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": -2.46
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 0.35
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 10.0,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0.0
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0.35
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 9373000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": -2.46
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 0.35
+            }
+        },
+        "employees": {
+            "employees_count": 588105,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": -2.46
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 0.35
+            }
+        },
+        "wages": {
+            "wages_dollars": 2434000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": -2.46
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 0.35
+            }
+        },
+        "imports": {
+            "imports_dollars": 1508000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": -2.46
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 0.35
+            }
+        },
+        "exports": {
+            "exports_dollars": 3395000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": -2.46
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 0.35
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2023 currency.\n\nThe Hay and Crop Farming industry produces hay, sugar beets and other crops, such as hops and herbs, agave, spices, tea and maple sap. Most industry operators are dedicated to growing hay, though the low margin nature of this product causes it to only account for roughly one-quarter of industry revenue, despite the overwhelming number of industry establishments being hay farmers. Overall, industry revenue performance has been bolstered by annualized increases in the value of each industry product segment, with 2023 preliminary results indicating double digit growth in the revenue earned from and hay. Other segment leaders include outdoor grown marijuana and hops. Industry revenue is expected to have increased at a CAGR of 0.3% over the five years to 2023 to reach $37.9 billion, including an estimated 1.2% decrease in 2023 alone as sweetener consumption falls.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Hay Has Seen Growing Returns",
+            "current_performance_point_description": "Hay, the crop that accounts for the single largest share of the industry's revenue, has also seen the strongest growth of any crop grown by the industry in recent years. Rising feed prices have allowed contributed to rising revenue from hay farming."
+        },
+        {
+            "current_performance_point_title": "Other Crops Have Mostly Seen Overall Growth",
+            "current_performance_point_description": "Sugar beets, the industry's second highest earing crop has seen growing returns as sugar prices have grown amid broader food price inflation. As marijuana has become increasingly legalized, it has seen a rise in revenue."
+        },
+        {
+            "current_performance_point_title": "Exports and Imports Have Grown in Recent Years",
+            "current_performance_point_description": "The industry has seen growth both in the overall value of exports and imports. Hay has a strong export market in China, which is the industry's leading export market."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "ORGANIC FARMING'S HEYDAY",
+            "future_outlook_point_description": "The industry's hay segment, which is primarily used to feed cattle raised for meat and dairy, is expected to fall slightly as demand from the Beef Cattle Production industry (IBISWorld report 11211) declines slightly."
+        },
+        {
+            "future_outlook_point_title": "HAY FARMERS ARE LIKELY TO BENEFIT FROM VERTICAL INTEGRATION",
+            "future_outlook_point_description": "Unlike sugar beet production, in which farmers have formed strong cooperatives that control most of sugar refineries in the United States, hay producers have plenty of opportunities for integration."
+        },
+        {
+            "future_outlook_point_title": "MARIJUANA FARMING CAN GO HIGHER",
+            "future_outlook_point_description": "As marijuana legalization continues to roll on, farmers will continue to expand their growing operations."
+        },
+        {
+            "future_outlook_point_title": "Trade Winds Are Blowing In Favor Of The Industry",
+            "future_outlook_point_description": "The expected depreciation of the US dollar should make industry products more affordable to international buyers, benefiting farmers' bottom lines. China recently approved imports of GMO alfalfa from the United States, which could contribute to growing export revenue from the country."
+        }
+    ],
+    "industry_definition": "More than half the farms in this industry grow hay, while a small number grow sugar beets. A variety of other crops, such as hops and herbs, are included in the industry. Some operators also gather agave, spices, tea and maple sap.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Revenue Volatility low",
+            "Concentration low"
+        ],
+        "negative_impact_factors": [
+            "Capital Intensity high",
+            "Barriers To Entry low - steady",
+            "Competition high - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage mature"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Volatility",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration"
+        ],
+        "weaknesses": [
+            "Low & steady Barriers to Entry",
+            "High Competition",
+            "High Product/Service Concentration",
+            "Low Revenue per Employee",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Performance Drivers",
+            "Trade-weighted index"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Low Revenue Growth (2023-2028)",
+            "Per capita sugar and sweetener consumption"
+        ]
+    },
+    "key_trends": [
+        "Other crops are a source of competition. Crops grown by other industries can replace hay as feed or sugar beets as a sweetener.",
+        "Imports are a source of competition from the industry. While not as significant as other agricultural industries, import levels have risen.",
+        "Hay crops farmers have seen strong returns. The crop accounts for the largest share of revenue of any one crop grown by the industry.",
+        "Marijuana, newly legalized, has contributed to growth. This should continue to be a source of growth as legalization proceeds."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Livestock farmers",
+            "segment_description": "This segment accounts for sales to livestock farmers. As the largest single product offered, hay is used primarily for livestock feed. When feed prices rise, especially the price of corn, livestock farmers seek alternative sources to provide their animals with the proper nutrients to assure their well-being.",
+            "segment_percentage": 26.2
+        },
+        {
+            "segment": "Food manufacturers",
+            "segment_description": "This segment accounts for demand from food manufacturers. Consumers' shift to demand more natural and organic options has driven food manufacturers to demand more industry products.",
+            "segment_percentage": 23.5
+        },
+        {
+            "segment": "Grocery wholesalers",
+            "segment_description": "This segment accounts for demand from wholesalers. The switch in consumer preference has caused wholesalers to scramble in search of the organic and natural products that their downstream markets are demanding, which has led such wholesalers to seek out industry products. Grocery wholesalers are estimated to account for 20.9% of revenue in 2022.",
+            "segment_percentage": 21.1
+        },
+        {
+            "segment": "Direct to retail",
+            "segment_description": "This segment accounts for demand from direct retailers and others. Retail consumers have begun to seek out crops sold by this industry to use in making their own foods at home. Sales of this variety usually take place at farmers' markets or similar events.",
+            "segment_percentage": 21.7
+        },
+        {
+            "segment": "Other",
+            "segment_percentage": 7.5
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Hay",
+            "product_description": "This segment accounts for sales of hay. Hays are typically classified as grass hays, legume hays, cereal grain hays and mixed hays. However, industry products are subdivided into alfalfa hay and other hay, which includes popular North American variants, such as Timothy, Blue, Oat and Sudan hays.",
+            "product_percentage": 25.1
+        },
+        {
+            "product_or_service": "Sugar beets",
+            "product_description": "This segment accounts for sales of sugar beets. This industry segment has been subject to fluctuations, representing changes in production and prices as dictated by yields and world sugar prices. As sugar prices have rose in recent years, this segment has claimed a growing share of revenue.",
+            "product_percentage": 5.2
+        },
+        {
+            "product_or_service": "Hops",
+            "product_description": "This segment accounts for sales of hops.",
+            "product_percentage": 1.9
+        },
+        {
+            "product_or_service": "Mint",
+            "product_description": "This segment accounts for sales of mint.",
+            "product_percentage": 0.3
+        },
+        {
+            "product_or_service": "Maple products",
+            "product_description": "This segment accounts for sales of maple products.",
+            "product_percentage": 0.4
+        },
+        {
+            "product_or_service": "Other crops",
+            "product_description": "This segment accounts for the sales of various other crops produced by the industry, including a variety of herbs and spices, as well as field-grown marijuana. As more and more states have legalized marijuana production, this segment has grown; however, it should be noted that most marijuana grown for the legal dispensary market is done so under cover and often sold raw, while field grown products tend to be sold in bulk to processors due to their lower quality.",
+            "product_percentage": 63.0
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Water Supply & Irrigation Systems in the US",
+            "Crop Services in the US",
+            "Farm, Lawn & Garden Equipment Wholesaling in the US",
+            "Farm Supplies Wholesaling in the US"
+        ],
+        "tier_2_suppliers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Livestock farmers regularly purchase hay as feed",
+            "determinant_description": "Livestock farmers regularly purchase hay as feed for their herds. Demand for hay usually increases during adverse weather conditions when the area of natural pastures is lower. Demand from beef cattle production is expected to fall in 2023."
+        }
+    ],
+    "international_trade": {
+        "import_level": "low",
+        "import_trend": "increasing",
+        "export_level": "moderate",
+        "export_trend": "increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports Have Risen",
+                "trade_description": "The value of industry imports has risen in recent years. Industry import levels fluctuate based on many factors including domestic feed prices, cattle inventory and weather conditions."
+            },
+            {
+                "trade_title": "CANADA LEADS IN IMPORTS WHILE CHINA HAS DECLINED",
+                "trade_description": "Due to its proximity to the United States, Canada is the largest provider of hay and other crops. China has experienced a decline due to trade headwinds and targeted agricultural tariffs."
+            },
+            {
+                "trade_title": "CHINA IS THE LEADING MARKET FOR EXPORTS",
+                "trade_description": "China's dairy industry has historically played a major role as an importer of industry products, with the value of industry exports having increased in recent years. China's large population and growing of its dairy herd is largely reliant on US industry exports. China recently allowed the import of genetically modified alfalfa, which should provide a source of growth for exports in coming years."
+            },
+            {
+                "trade_title": "EXPORTS FLOW TO OTHER MARKETS",
+                "trade_description": "After China, industry exports go to, in order, Japan, Canada and South Korea. Exports are set to become more competitive on the international market as the US dollar is expected to depreciate."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "THE PLAINS LEAD THE INDUSTRY",
+            "location_description": "According to the US Department of Agriculture, the Plains region accounts for the largest share of industry establishments. The Plains is the top producer of alfalfa hay and sugar beets, both in terms of harvested acres and production volume. Sugar beet production is largely concentrated in the Red River Valley area of North Dakota, Nebraska and Minnesota. Together, these states account for more than half of US sugar beet production.",
+            "percentage_establishments": 0,
+            "percentage_population": 0
+        },
+        {
+            "location": "THE SOUTHEAST AND SOUTHWEST ACCOUNT FOR LARGE SHARES OF THE INDUSTRY",
+            "location_description": "The Southeast region is the second-largest hub of industry establishments. The Southeast is the largest producer of other hay crops, producing one-third of the national output. The Southwest region accounts for the third-largest share of industry establishments.",
+            "percentage_establishments": 10,
+            "percentage_population": 20
+        },
+        {
+            "location": "OTHER REGIONS HAVE MORE NICHE CROPS",
+            "location_description": "Hops farming mainly takes place in Washington, with smaller-scale production also concentrated in Oregon and Idaho. Production of hops requires specific conditions, including volcanic soil, moderate temperatures and abundant irrigation, which limit the geographic spread of their production. Maple syrup production mainly occurs in New England, primarily in Vermont and Maine. Specific weather conditions, namely freezing nights and warm days, are needed to stimulate maple sap flows.",
+            "percentage_establishments": 0,
+            "percentage_population": 0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [
+            {
+                "regulation_title": "Local Regulation",
+                "regulation_description": "At the county level, farms must comply with zoning bylaws and use land that has been approved for field crops. Most states operate agricultural departments that act as regulatory agencies. These authorities monitor pollution levels associated with farming. The extent to which the industry is regulated can vary between geographic regions."
+            },
+            {
+                "regulation_title": "Environmental Protection Agency (EPA)",
+                "regulation_description": "The industry uses farm chemicals, which has given rise to concerns about the environmental effects of crop growing. Industry growers are subject to conditions relating to the use of fertilizers and pesticides in production by the EPA. The agency's responsibilities include ensuring that pesticide residues in food crops, such as sugar beets, stay within safety standards, and serving as a watchdog for pollution control and usage of natural resources."
+            },
+            {
+                "regulation_title": "U.S. DEPARTMENT OF AGRICULTURE (USDA)",
+                "regulation_description": "The USDA controls the planting of genetically modified (GM) crops and requires all growers of GM crops to obtain a permit before planting. The USDA releases national standards for organic production and processing of agricultural crops and livestock. The uniform standards are designed to meet demands of local and international customers seeking assurance that crops have been organically grown."
+            },
+            {
+                "regulation_title": "USDA SUGAR BEET REGULATIONS",
+                "regulation_description": "The sugar beet segment of this industry is regulated at the processor level. However, these regulations affect sugar beet farmers. The aim of sugar regulation is to control oversupply, which would depress prices and result in poor returns to the producer. To control supply and maintain a high domestic price, the USDA implements marketing allotments, which are allocated to individual states and producers based on historical production. Producers can only sell sugar to the market in accordance with their allotment."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [],
+        "factors_increased_barrier": [
+            "Life Cycle Stage - mature",
+            "Capital Intensity Level - high",
+            "Competition Level - high - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Revenue Volatility Level - low",
+            "Concentration Level - low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_points": [
+            {
+                "basis_title": "Other crops are a source of competition",
+                "basis_description": "Crops grown by other industries can replace hay as feed or sugar beets as a sweetener."
+            },
+            {
+                "basis_title": "Imports are a source of competition",
+                "basis_description": "While not as significant as other agricultural industries, import levels have risen."
+            }
+        ],
+        "basis_trend": "Steady"
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Family farms account for most hay and crop growing",
+                "concentration_description": "The Hay and Crop Farming industry is characterized by a low level of ownership concentration compared with other sectors of the US economy. The industry is dominated by small- and medium-sized farms, often family owned, who wield little power."
+            },
+            {
+                "concentration_title": "Hay growth is becoming more concentrated",
+                "concentration_description": "In the long term, pressure to reduce costs and increase efficiency is slowly causing the industry to shift toward larger-scale centralized production."
+            },
+            {
+                "concentration_title": "Small farms sell output through large co-ops",
+                "concentration_description": "In the sugar beet segment, a large share of output is sold through cooperatives, with almost half of all sugar beet farms belong to processing co-ops."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "American Crystal Sugar Company",
+                "company_percentage": 4
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 101
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 10.0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 20.0
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 50.0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 2.0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 3.0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Wage Costs Are Kept Low By Seasonal And Family Workers",
+            "cost_factor_description": "Wage costs are low for this industry, accounting for an estimated 6.4% of revenue in 2023. The overall low share of wages is due to the presence of an extremely large number of nonemployers and single-owner farms. Labor expenses fluctuate annually depending on the size of the harvest and seasonal conditions, which may hinder total crop yield, and thus, the need for excess labor."
+        },
+        {
+            "cost_factor_title": "Purchases Are The Farmers' Main Cost",
+            "cost_factor_description": "Purchases make up the largest expenditure for industry farmers in 2023, comprising an estimated 41.2% of revenue. Purchases include expenditures on fertilizer, seeds and chemicals. For hay farming, these costs are generally lower than for other segments because hay requires less pesticide spraying."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "High capital intensity",
+                "capital_intensity_description": "Hay and crop farming has become increasingly capital intense as farm equipment has advanced. An operator must have access to significant equipment to enter the sector successfully."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Low",
+        "volatility_points": [
+            {
+                "volatility_title": "LOW revenue volatility",
+                "volatility_description": "Industry volatility is a function of world prices, global demand, weather conditions, exchange rates and the level of profitability in alternative agriculture."
+            },
+            {
+                "volatility_title": "THE HAY AND CROP FARMING INDUSTRY'S REVENUE VOLATILITY HAS BEEN LOW",
+                "volatility_description": "Harvest volumes across all product segments are sensitive to seasonal weather conditions. For instance, yield per acre can be shaped by growing conditions. Yield has trended upward over time for most product segments as technological advances have tempered weather's effects on crops."
+            },
+            {
+                "volatility_title": "Trade Impacts Volatility",
+                "volatility_description": "Exchange rates largely influence the price-competitiveness of US exports in the international market. However, since the industry is not heavily engaged in international trade, exchange rate fluctuations have a limited effect on revenue."
+            },
+            {
+                "volatility_title": "",
+                "volatility_description": "Sugar beet producers are less affected by global supply and demand conditions for sugar due to government intervention in the domestic sugar market. Favorable conditions in other agricultural pursuits, such as wheat cropping, can encourage farmers to shift resources away from hay or sugar beet production."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "MODERATE technology change",
+                "technological_change_description": "In recent years, marijuana has been increasingly legalized. Revenue from marijuana farming is included in this industry. Other innovations in industry products, such as GMO plants, are long established."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company leveraging the current demand for organic produce?",
+            "answer": "Consumers are demanding organic beef and dairy, and to meet consumer preference the industry producers have shifted towards producing organic options and are required to feed cows organic hay. Therefore, farmers in the Hay and Crop Farming industry have been making the switch to organic, which trades at a premiium."
+        },
+        {
+            "question": "With diverging prices occurring at the farm gate and among processors and retailers, how does your company hedge against price loss risk?",
+            "answer": "Due to supply chain disruptions caused by the outbreak of COVID-19, farm prices have been weak while processed food prices have soared. Industry operators can hedge against price loss risk by producing a variety of products or by switching cropping activities, ensuring they are not exposed to price loss."
+        },
+        {
+            "question": "Via potential labor shortages due to reforms regarding the HB1 Visa Program, how does your company plan to limit rising wage pressure?",
+            "answer": "Reforms to seasonal laborer laws might serve to increase industry wages and operating costs in the short term, which suggests industry operators should move to a more capital-intensive model to limit rising wage pressure."
+        },
+        {
+            "question": "Given that fertilizer is made from crude oil, and its byproducts, how does your company protect itself from wide swings in input prices and hence, profitability?",
+            "answer": "Farmers who enter into long-term purchasing agreements from input suppliers can hedge against input price risk by being contractually obligated to purchase a specific quantity at a predetermined rate. This provides upside protection."
+        },
+        {
+            "question": "With such wide applications of technology in the Agriculture sector, has your company invested in drone or auto-steering tractor technology?",
+            "answer": "Mechanical harvesters and innovations in the areas of irrigation, crop rotation and pesticides have made important contributions to the industry. The harvest of the sugar beet crop is almost entirely mechanized. Common technologies used are global positioning systems and remote sensing. Drones can monitor and administer nutrients to crops."
+        },
+        {
+            "question": "Is your company threatened by the looming rise of lab-grown, synthetic meats?",
+            "answer": "Hay is a major feed source for livestock, such as cattle. With recent advancements and breakthroughs surrounding lab-grown meat, the industry has the potential to be undercut by meat that requires no feed and costs a fraction of what traditionally raised livestock do."
+        },
+        {
+            "question": "It is highly illegal to sell falsely labeled organic produce. How does your company ensure it follows all rules and regulations?",
+            "answer": "Organic crops carry a significant premium, with some trading in excess of 200.0% of their traditionally grown counterparts. Organically focused farms take on more risk since they cannot use traditional pesticides and herbicides, so as a result organic produce is sold at a higher per-unit price on the market."
+        },
+        {
+            "question": "Does your farm require any special environmental permits?",
+            "answer": "The United States Department of Agriculture controls the planting of genetically modified (GM) crops and requires all growers of GM crops to obtain a permit before planting. Farms that do not have the appropriate licensure will be ineligible to receive federal aid."
+        },
+        {
+            "question": "How does your farm compensate for the seasonality of cash flow?",
+            "answer": "Diversifying the crops creates many different avenues of revenue for farmers in the industry."
+        },
+        {
+            "question": "In an industry where goods are essentially substitutable, how does your company differentiate itself from your competitors to keep up cashflow?",
+            "answer": "Farms that put an emphasis on quality over quantity will likely perform better. Typically, handsome produce is sent to fresh markets for a premium while ugly produce is shipped to the processing market for lower returns."
+        },
+        {
+            "question": "How do you assess biophysical conditions for a plantation? What practices do you use to keep your soil nutrient-rich?",
+            "answer": "Crop farming requires fertile soils. The presence of fertile soils and other appropriate growing conditions plays a critical role in shaping the success of farms, because it influences harvest levels and crop quality."
+        },
+        {
+            "question": "How do you respond to variability in downstream demand? Are you able to quickly and easily alter your product mix?",
+            "answer": "The ability to alter the balance between various crops in response to changes in market conditions is important for a farm's viability. Farmers need to be able to change their production mix to maximize farm returns."
+        },
+        {
+            "question": "Is there capacity to increase export volumes? How will new tariff policies affect your export revenue?",
+            "answer": "Exports account for a significant industry revenue and represent a critical market. As exports decline, the domestic market floods with commodities and domestic prices will decline. Maintaining a healthy level of exports gives industry farmers a measure of control over domestic pricing conditions."
+        },
+        {
+            "question": "How do healthy eating trends or fad diets impact your revenue growth?",
+            "answer": "Maple and sweetener products are included in industry revenue and demand for these products will be dictated by levels of per capita sugar and sweetener consumption. Maple has been popular as an all-natural sweetener and alternative to sugar in recent years."
+        },
+        {
+            "question": "What measures does your company take to hedge against climate and weather risk?",
+            "answer": "Weather conditions play an important role in determining crop yields and production levels, given that favorable weather patterns boost crop yields. Some crops can be grown under cover which will cost more but often sell at a higher value, indicating growing crops under cover can mitigate climate risk."
+        },
+        {
+            "question": "With volatile beef and livestock prices, how has your company ensured consistent sales to livestock and beef?",
+            "answer": "Livestock farmers regularly purchase hay as feed for their herds. Demand for hay usually increases during adverse weather conditions when the area of natural pastures is lower. Additionally, via marketing organic hay, industry operators can sell at a higher premium."
+        }
+    ]
+}

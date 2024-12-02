@@ -1,0 +1,579 @@
+{
+    "report_title": "Custody, Asset & Securities Services in the US",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 37013000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": -0.32
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.91
+            }
+        },
+        "profit": {
+            "profit_dollars": 8365000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": -1.46
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 22.6,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": -1.3
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 18915000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": -0.46
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 3.02
+            }
+        },
+        "employees": {
+            "employees_count": 74561,
+            "employees_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "employees_cagr_value": 0.14
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 1.47
+            }
+        },
+        "wages": {
+            "wages_dollars": 9712000000,
+            "wages_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "wages_cagr_value": 2.06
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 1.56
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The Custody, Asset and Securities Services industry primarily provides trust, fiduciary and custody services to corporations, investment funds and individuals. Industry services are also responsible for back-office support associated with securities trading, including settlement, accounting and record-keeping services, and middle-office support related to securities lending, compliance pricing and performance analytics. Advisers generate revenue in various ways, including trust fund management fees, support services for financial and commodity markets, broker/dealer services and other financial services related to asset custody.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Strong Macroeconomic Growth Fuels Industry Success",
+            "current_performance_point_description": "The Custody, Asset and Securities Services industry is heavily dependent on consistent growth within the broader economy, as economic success translates to high trading volumes and increased value of key assets under custody (AUC) held within core markets such as the S&P 500. Since industry servicers generate fees based on the value of their holdings of AUC, growing asset prices benefit the broader industry. This consistent trend withstood volatile events such as the COVID-19 pandemic and enabled high market trading volumes."
+        },
+        {
+            "current_performance_point_title": "Consistent Trading Activity Strengthens Industry Servicers' Performance",
+            "current_performance_point_description": "A key factor influencing industry performance is trading activity within broader markets. Market liquidity has remained elevated, even as the COVID-19 pandemic occurred. Although the economy endured volatility, favorable fiscal conditions in the form of low interest rates and a dovish stance from the Federal Reserve fueled continuous trading activity, boosting AUC performance. Even as trading activity bolstered revenue growth, processing fees from trades across the markets slipped due to automation of trade reconciliation, dampening growth for industry servicers."
+        },
+        {
+            "current_performance_point_title": "Evolving Regulations and Services Influence the Industry's Business Strategy",
+            "current_performance_point_description": "Many industry servicers have adapted their business strategy, moving toward middle-office securities to diversify their revenue streams. Some US custodians have aggressively expanded into foreign markets such as Europe, Asia and the Middle East to take advantage of the developing financial sectors within these geographic markets, aiming to expand outreach toward global markets and consumers. The expansion of regulations onto downstream financial industries accelerated the industry's push toward areas traditionally occupied by larger financial firms, fueling alternative sources of revenue and shifting business strategy in tandem with prime brokers."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "EVOLVING ECONOMIC CONDITIONS POISED TO MAINTAIN INDUSTRY GROWTH",
+            "future_outlook_point_description": "As the economy continues to recover following the COVID-19 pandemic, industry servicers will benefit from renewed availability of disposable income from retail investors, fueling further growth in trading volume. Although assets under custody (AUC) holdings will continue to grow in tandem with strong macroeconomic performance, industry servicers will have to cope with a more hawkish Federal Reserve, as rising interest rates to combat inflation will dampen the performance of certain AUC. Nonetheless, strong corporate performance coupled with broader economic growth will overshadow interest rate hikes and enable steady growth for the industry."
+        },
+        {
+            "future_outlook_point_title": "TECHNOLOGICAL ADVANCEMENT ENHANCES ADAPTING BUSINESS STRATEGY",
+            "future_outlook_point_description": "A key development in recent years for the industry is the shift toward middle-office functions such as risk and compliance management analytics, securities lending and foreign exchange processing. As industry servicers continue to diversify their service offerings, technological advancement will be a key driver of growth in this sphere, with the growth of data management, electronic trading platforms and analytics programs exemplifying this trend. Although broader fiduciary services related to AUC holdings will remain a core component of revenue, the acceleration into alternative functions previously taken by central securities depositories and downstream industries will diversify the industry's business strategy and strengthen the industry\u2019s growth."
+        },
+        {
+            "future_outlook_point_title": "INCREASED GLOBAL COMPETITION WILL ADVANCE EMERGING MARKETS",
+            "future_outlook_point_description": "The industry will continue acquiring customers and new business opportunities from global markets moving forward. This trend is already taking effect, with internationalized custodian banks beginning to move some of their business processes toward global markets in Asia and Eastern Europe. These regions offer lower operational costs and newfound opportunities for AUC growth. As international markets continue to grow their financial sectors' footprint, it will lead to increased retail trading abroad, generating higher trading volumes and fee revenue for relevant industry servicers. This will also make foreign assets more enticing and accelerate the industry's progression abroad."
+        },
+        {
+            "future_outlook_point_title": "EVOLVING REGULATORY LANDSCAPE WILL INFLUENCE INDUSTRY OPERATIONS",
+            "future_outlook_point_description": "One of the key developments that will influence industry behavior is the continuous implementation and enforcement of federal regulations on financial institutions and markets. The most significant law impacting the industry is the 2010 Dodd-Frank Wall Street Reform & Consumer Protection Act (the Dodd-Frank Act), which regulates the financial sector and influences oversight on core financial services. With industry servicers looking to preserve profit, increased federal regulation will accelerate the industry's push abroad to developing markets, highlighting a change in industry operations. Although the Dodd-Frank Act endured a rollback in 2018 from Congress that influenced smaller banks and industry servicers, broader financial regulations remain in place, influencing industry behavior moving forward."
+        }
+    ],
+    "industry_definition": "This industry comprises custodial bank and brokerage firms that primarily provide trust, fiduciary and custody services to corporations, investment funds and individuals. Industry operations consist of back-office processes for transacting securities including settlement, accounting and record keeping. Other services include middle-office support such as securities lending, compliance pricing and performance analytics.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level: low - steady",
+            "Technology Change Level: high",
+            "Globalization Level: high - increasing",
+            "Competition Level: high - increasing"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "Yield on 10-year Treasury note"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Prime rate"
+        ]
+    },
+    "key_trends": [
+        "Strong economic performance is an important factor for industry success. As economic conditions improve, investors will be more willing to place assets under custody with industry servicers.",
+        "Maintaining high trade volume is crucial for retaining individual investors. If retail investors continue to trade at high volumes, it generates more revenue through fees.",
+        "Growing corporate profit fuels more robust industry performance. If corporate profit grows, financial institutions will have more capital to accelerate investment, benefiting the industry."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Businesses and governments",
+            "segment_description": "The businesses and governments market segment generates revenue from business and government entities that require industry services for safeguarding existing assets and smooth acquisition of new assets. Since financial institutions are one of the largest customers for the industry, the segment continues to maintain a significant share of revenue generated.",
+            "segment_percentage": 47.9
+        },
+        {
+            "segment": "Households",
+            "segment_description": "The households market segment generates revenue from high net-worth individuals and smaller retail investors. Although the industry's main revenue stream continues to be large financial institutions, individual investors looking for an added level of security and safeguarding of their portfolios continue to grow as a share of revenue.",
+            "segment_percentage": 27.8
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Some other markets serviced by the industry include charitable trusts, which employ industry services to safeguard the trusts' assets. The purpose of charitable trusts is to provide an irrevocable trust established for charitable purposes, whether that be by an institution or an individual. There are great tax benefits for wealthy individuals and leverage in selecting a beneficiary, so this market primarily services charitable trusts at an individual level.",
+            "segment_percentage": 24.3
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Trust and Fiduciary Services",
+            "product_description": "The trust and fiduciary services product segment is composed of revenue generated from asset custody services for personal, business and government funds. Industry servicers charge fees to generate revenue here. The level of fees from trust and fiduciary services depends on the value of assets held under custody.",
+            "product_percentage": 36.6
+        },
+        {
+            "product_or_service": "Support Services for Financial and Commodity Markets",
+            "product_description": "This product segment is composed of revenue generated from support services such as trade execution, clearing and settlement services for security and commodity contracts. Revenue is also generated from listing services for security and commodity contracts accompanied by payment clearing. One of the most important drivers for this segment is continuous growth in trading volume among small retailers and larger institutions. As trade volume increases, demand for industry services increases, fueling growth within the larger segment.",
+            "product_percentage": 35.7
+        },
+        {
+            "product_or_service": "Brokerage and Dealing Services",
+            "product_description": "The brokerage and dealing services segment generates revenue from brokering and dealing services for investment company securities, mutual funds, closed-end funds and unit investment funds.",
+            "product_percentage": 9.2
+        },
+        {
+            "product_or_service": "Financial Planning and Investment Management",
+            "product_description": "This product segment comprises revenue generated from services surrounding financial planning, consulting and wealth management for individuals and business clients. For individuals and business clients, a financial planner is a constant necessity, particularly for clients who operate large portfolios and want the best advice on managing it.",
+            "product_percentage": 8.2
+        },
+        {
+            "product_or_service": "Financing Related to Securities",
+            "product_description": "This product segment comprises revenue from securities lending fees, including securities borrowed from a broker's inventory and on margin. Some of the other sources of revenue that benefit the industry include revenue generated from loans to clients, investment securities and interest-bearing deposits. Treasury services are another tool that generates profit for the industry.",
+            "product_percentage": 6.4
+        },
+        {
+            "product_or_service": "Other Services",
+            "product_description": "",
+            "product_percentage": 3.9
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Internet Service Providers in the US",
+            "Office Supply Stores in the US",
+            "Commercial Leasing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Open-End Investment Funds in the US",
+            "Accounting Services in the US",
+            "Portfolio Management in the US",
+            "Securities Brokering in the US",
+            "Tax Preparation Services in the US"
+        ],
+        "tier_1_buyers": [
+            "Portfolio Management in the US",
+            "Financial Planning & Advice in the US",
+            "Investment Banking & Securities Dealing in the US",
+            "Securities Brokering in the US",
+            "Stock & Commodity Exchanges in the US",
+            "Venture Capital & Principal Trading in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Volatile economic conditions dampen profitability",
+            "determinant_description": "Industry servicers will fare worse under bearish economic conditions and lower trading volume, hampering profitability."
+        },
+        {
+            "determinant_title": "Accelerating interest rates fuel interest payments and operating costs",
+            "determinant_description": "As interest rates continue to grow, so will the cost of financing industry servicers' technology and debt obligations."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "As the industry relies on a large population presence to conduct business with clients and corporations alike, the Southeast represents a perfect location for industry establishments. In addition to procuring a significant number of corporate banks and institutions, the Southeast is also home to large population hubs in states such as Florida, providing the industry with a wide array of clients they can service.",
+            "percentage_establishments": 38,
+            "percentage_population": 21
+        },
+        {
+            "location": "Southwest",
+            "location_description": "Although the Southwest lacks major metropolitan hubs, the region remains a lucrative hotspot for financial institutions and banks due to the favorable local tax environment and lack of strong competition. In states such as Texas, industry establishments have found an attractive area to expand operations, with many individual clients and fund managers also operating here.",
+            "percentage_establishments": 30,
+            "percentage_population": 30
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "A significant advantage for the Mid-Atlantic is a large presence of diverse financial institutions and corporate clients across the globe. In states such as New York, many global banks and corporations maintain a large presence in the region, providing industry establishments with a diverse consumer base that touches different angles of the industry.",
+            "percentage_establishments": 11,
+            "percentage_population": 15
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "Even as the Great Lakes has a smaller banking presence than other geographic regions, it has a sizable population that benefits industry establishments and creates a solid client base. In states such as Illinois, large metropolitan centers benefit industry establishments looking to expand their services across a wide variety of",
+            "percentage_establishments": 8,
+            "percentage_population": 15
+        },
+        {
+            "location": "Plains",
+            "percentage_establishments": 5,
+            "percentage_population": 7
+        },
+        {
+            "location": "Rocky Mountains",
+            "percentage_establishments": 3,
+            "percentage_population": 7
+        },
+        {
+            "location": "New England",
+            "percentage_establishments": 5,
+            "percentage_population": 5
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "Securities and Exchange Commission (SEC) oversight",
+                "regulation_description": "The SEC administers and enforces federal securities laws to protect investors and maintain fair, honest and efficient securities markets."
+            },
+            {
+                "regulation_title": "Investment Company Act of 1940",
+                "regulation_description": "Regulates structure and operations of financial services sector, requiring investment companies to register with SEC."
+            },
+            {
+                "regulation_title": "Securities Act of 1933",
+                "regulation_description": "Requires federal registration of public securities offerings and providing prospectus to investors."
+            },
+            {
+                "regulation_title": "Securities Exchange Act of 1934",
+                "regulation_description": "Created the SEC and empowers it with broad authority over securities sector, including regulating self-regulatory organizations."
+            },
+            {
+                "regulation_title": "Investment Advisers Act of 1940",
+                "regulation_description": "Requires federal registration of investment advisers and has anti-fraud provisions and requirements."
+            },
+            {
+                "regulation_title": "Dodd-Frank Wall Street Reform and Consumer Protection Act",
+                "regulation_description": "Designed regulatory framework to identify systemic risks and prevent crises, including the Volcker Rule proprietary trading ban."
+            },
+            {
+                "regulation_title": "COVID-19 regulations",
+                "regulation_description": "The CARES Act permitted financial institutions to temporarily suspend accounting measures regarding COVID-19 loan modifications."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "low - steady"
+            },
+            {
+                "barrier_title": "Technology Change Level",
+                "barrier_description": "high"
+            },
+            {
+                "barrier_title": "Globalization Level",
+                "barrier_description": "high - increasing"
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "high - increasing"
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            {
+                "factor": "Although the industry faces notable capital costs when acquiring technology and office space, labor costs occupy a much larger portion of industry revenue. Since workers managing client portfolios have high technical and educational qualifications, labor costs will be more intense."
+            }
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Industry servicers must remain innovative",
+                "basis_description": "Industry servicers must remain innovative to fend off high internal competition. By investing in advanced technology and analytical software, industry servicers can secure more lucrative clients."
+            },
+            {
+                "basis_title": "Strict regulatory environment discourages new entrants",
+                "basis_description": "Strict regulatory environment discourages new entrants from entering the market. The wide array of regulations, coupled with federal laws such as Dodd-Frank, makes it hard for competitive new entrants."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "HIGH OPERATIONAL COSTS DISCOURAGE NEW ENTRANTS INTO THE INDUSTRY",
+                "concentration_description": "With industry servicers forced to exert a significant amount of capital toward daily operations and industry expansion, new entrants that lack the requisite capital will struggle to capture a sizable share of the market."
+            },
+            {
+                "concentration_title": "DIVERSE CLIENT BASE CREATES ADDITIONAL COMPETITION WITHIN THE INDUSTRY",
+                "concentration_description": "Despite the industry's moderate concentration, no single company can acquire a significant market share due to a large variety of clients."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "The Bank Of New York Mellon Corporation",
+                "company_percentage": 20.4
+            },
+            {
+                "company_name": "State Street Corporation",
+                "company_percentage": 16
+            },
+            {
+                "company_name": "Bank Of America Corpo",
+                "company_percentage": 1
+            },
+            {
+                "company_name": "Jpmorgan Chase &",
+                "company_percentage": 1
+            },
+            {
+                "company_name": "Citigroup inc.",
+                "company_percentage": 2.8
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 48.4
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 22.6
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 1
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 1
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 1
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 1
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 1
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 1
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 1
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Interest rate payments exacerbate costs for industry servicers",
+            "cost_factor_description": "Rising interest rates exacerbated costs like interest payments, asset write-downs, legal fees, insurance costs, compliance costs and other miscellaneous fees for industry servicers."
+        },
+        {
+            "cost_factor_title": "Demand for professional workers fuels higher wage costs",
+            "cost_factor_description": "The acceleration of demand for technology specialists, data analytics professionals and software engineers further exacerbates the need for professionals with requisite credentials, fueling larger labor costs for industry servicers."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Labor costs occupy larger portion of industry revenue",
+                "capital_intensity_description": "Although the industry faces notable capital costs when acquiring technology and office space, labor costs occupy a much larger portion of industry revenue since workers managing client portfolios have high technical and educational qualifications."
+            },
+            {
+                "capital_intensity_title": "Low rate of new patent technologies entering industry",
+                "capital_intensity_description": "The rate of new patent technologies entering the industry is low, which limits the potential for innovations. However, the concentration of technologies is high in this industry."
+            },
+            {
+                "capital_intensity_title": "Highly concentrated major markets",
+                "capital_intensity_description": "The major markets for this industry are highly concentrated, which implies that the market has a focus on key customer segments."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Depends on economic stability",
+                "volatility_description": "The industry's resilience on high trading volumes, booming corporate confidence and steady economic performance for the stability of assets under custody ensures moderate volatility."
+            },
+            {
+                "volatility_title": "Technology acceleration stabilizes volatility",
+                "volatility_description": "Industry services that upgrade technological capabilities have better customer relations and improved outcomes regarding fees and revenue, stabilizing volatility."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How do you emphasize the value of your company's services?",
+            "answer": "By offering new and increasingly complex services to their clients, custodians can emphasize the value of the new products they are delivering to their client. However, other custodians will soon start providing similar services."
+        },
+        {
+            "question": "Do you have a distant advantage in the marketplace?",
+            "answer": "Custodians gain more of an advantage the larger they get because it enables them to offer clients a wider array of services."
+        },
+        {
+            "question": "Are your operations spread across the country or are your establishments more concentrated in a certain geographic location?",
+            "answer": "Establishments are spread throughout the country from financial hubs to small towns. Depending on the size and population of the city, new establishments are opened."
+        },
+        {
+            "question": "What international operations do you conduct and how could you benefit from increasing your international reach?",
+            "answer": "As global financial markets become more intertwined, custodians have increased their operations internationally in hopes of managing international assets. Increase in foreign investment in foreign currency benefits the company and also increases market share by reaching to new class of customers."
+        },
+        {
+            "question": "How do you ensure that you stay up to date with software and technology trends?",
+            "answer": "When custodian banks see competitors implement software or technology that increases operations efficiencies, they quickly adapt the technologies for themselves."
+        },
+        {
+            "question": "To what extent are your processes automated and how do you plan on investing in automation over the coming years?",
+            "answer": "The automation of some middle-office services has allowed for trading across asset classes to be processed easier and more accurately, but also partially contributed to declining fees."
+        },
+        {
+            "question": "How have increased capital requirements under Basel III affected operations?",
+            "answer": "While custodial operations are generally conducted by large multinational banks, they are not the lending branch of the bank. As a result, Basel III is expected to have little to no effect on custodial operations."
+        },
+        {
+            "question": "How do you expect the proposed changes to Dodd-Frank to affect your business?",
+            "answer": "Dodd-Frank is expected to increase reporting and evaluations requirements and enact more stringent guidelines as to who can be considered a custodian bank."
+        },
+        {
+            "question": "Do you have enough capital reserved to be able to invest in new technology/software as soon as it becomes available?",
+            "answer": "Since large investment banks generally conduct custodial services, they generally have the capital required at any given time to implement new technology to streamline custodial services."
+        },
+        {
+            "question": "How does your profit margin compare with those of your competitors'?",
+            "answer": "Profit for custodial banks varies based upon their ability to charge fees on assets under custody, which has faced significant downward pressure."
+        },
+        {
+            "question": "How do you ensure prompt delivery of services? Are you located close to major clients?",
+            "answer": "Effective communication and solving problems immediately helps ensure prompt delivery of services. Most of the work is done virtually, either by mail or phone, so preference on location is low."
+        },
+        {
+            "question": "Do you have access to the latest available technology and techniques? How do you keep costs low?",
+            "answer": "Effective communication and solving problems immediately helps ensure prompt delivery of services. Access to the latest available and most efficient technology and techniques. Industry participants need to be able to use technology to provide services that are innovative, efficient and competitively priced. Investing in technology is very important to optimize workflow. With increase in dependency on technology, less work is required from employees, resulting in the cost of wages to decline and cancels out the expenditures towards investment in technology."
+        },
+        {
+            "question": "Are you able to leverage economies of scale? What is your budget for expanding operations?",
+            "answer": "Increasing the value of assets under custody helps greater volumes to be processed, lowering marginal costs, particularly information technology costs."
+        },
+        {
+            "question": "How much of your revenue is tied to AUC? How can you diversify your industry revenue in light of a decreasing personal savings rate?",
+            "answer": "The majority of industry income is based on the value of assets under custody (AUC). AUC is generally related to the inflow of funds and appreciation of assets within mutual funds, retirement savings accounts and collective investment schemes. When the personal savings rate declines, revenue can be generated from dealing in financing related to securities. By creating a diversified revenue stream, the industry is protected from sudden changes in the fiscal capabilities of ordinary consumers and provides a pivot opportunity towards other potential revenue streams."
+        },
+        {
+            "question": "How will higher interest rates affect the assets in your portfolio? What measures do you take when interest rates rise?",
+            "answer": "Demand for industry services largely depends on the health of the bond market, due to transaction fees and income derived from asset valuations. An increase in interest rates negatively affects the stock market which declines assets' value and decreases trading volume. Advising clients during an interest rate hike on how to benefit from this situation can help offset losses."
+        },
+        {
+            "question": "Do you monitor the S&P 500 index? As the S&P 500 increases do you expect increased revenue from rising transaction fees?",
+            "answer": "The Standard & Poor's 500 index (S&P 500) is a price-weighted index of the 500 large-cap common stocks held in the United States. Increase in S&P 500 increases trading volume which increases revenue generated from transaction fees. However, any increases in trading volume does not change the fees charged per trade. This always remains constant depending on the nature of the trade."
+        }
+    ]
+}

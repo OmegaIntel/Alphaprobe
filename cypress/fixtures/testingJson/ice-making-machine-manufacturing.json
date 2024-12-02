@@ -1,0 +1,576 @@
+{
+    "report_title": "Ice Making Machine Manufacturing Industry Report",
+    "report_date": "2022",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 964000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "revenue_cagr_value": 0.35
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "revenue_cagr_value": 1.12
+            }
+        },
+        "profit": {
+            "profit_dollars": 71000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "profit_cagr_value": 2.46
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "profit_cagr_value": 0.0
+            },
+            "profit_margins": {
+                "profit_margins_percentage": 7.4,
+                "profit_margins_cagr_historical": {
+                    "begin_year": 2005,
+                    "end_year": 2022,
+                    "profit_margins_cagr_value": 2.1
+                },
+                "profit_margins_cagr_projected": {
+                    "begin_year": 2022,
+                    "end_year": 2028,
+                    "profit_margins_cagr_value": 0.0
+                }
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 220000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "industry_value_added_cagr_value": 1.1
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "industry_value_added_cagr_value": 1.77
+            }
+        },
+        "employees": {
+            "employees_count": 2528,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "employees_cagr_value": 0.45
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "employees_cagr_value": 0.87
+            }
+        },
+        "wages": {
+            "wages_dollars": 144000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "wages_cagr_value": 0.57
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "wages_cagr_value": 1.04
+            }
+        },
+        "imports": {
+            "imports_dollars": 337000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "imports_cagr_value": 8.55
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "imports_cagr_value": 5.27
+            }
+        },
+        "exports": {
+            "exports_dollars": 67000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "exports_cagr_value": -0.72
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "exports_cagr_value": 1.48
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2022 currency.\n\nThe Ice Making Machine Manufacturing industry experienced subdued growth over the five years to 2022. Healthcare, hospitality and food-service providers are the industry's primary markets, and were all heavily affected by COVID-19 (coronavirus). Healthcare providers are the industry's largest downstream market, since hospitals use an exorbitant amount of ice per patient each day. Despite strong demand from hospitals, declines in restaurants and businesses in the hospitality industry due to the coronavirus pandemic have dragged down industry performance for the current period overall. Additionally, import penetration has resulted in intermittent revenue declines during the period. Therefore, over the five years to 2022, industry revenue is estimated to increase an annualized of 0.5% to $963.7 million.\n\nUnderlying industry demand has been sustained by growth in the accommodations and food services sector. As the US economy grew during the first half of the current five-year period and employment and disposable incomes rose, consumers began to spend more on traveling and dining out. Increased demand and sales at hotels, restaurants and other food-service providers justified the need for capital spending on durable machinery, such as ice making machines. However, as mentioned, this was largely undone by the coronavirus in in 2020, with industry revenue declining an estimated 9.2% in 2020 alone. The recovery of demand from the sector since 2021 has returned the industry to growth, with industry revenue projected to rise 1.4% during the current year.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Key Markets",
+            "current_performance_point_description": "The food-service sector is one of the primary markets for this industry because ice making machines are needed to preserve meat, fish and dairy in supermarkets and cool drinks and alcoholic beverages in bars, restaurants and other food establishments. According to Foodservice Equipment Reports Magazine, an average restaurant will use 1.5 pounds of ice for each meal sold, while keeping a salad bar chilled requires 35 pounds of ice per cubic foot. Hotels and the hospitality sector are other major downstream markets for industry operators because these establishments commonly provide their guests with ice."
+        },
+        {
+            "current_performance_point_title": "Revenue in the food-service and hospitality markets",
+            "current_performance_point_description": "Revenue in the food-service and hospitality markets increased over the past five years, as employment and disposable income levels grew and consumer discretionary spending on eating out and traveling increased. However, the fallout from the coronavirus pandemic introduced tremendous volatility for the industry, which led to steep declines in 2020 and dragged down performance for the current period. However, the recovery of the sector and positive trends predating the pandemic have buoyed industry revenue. For example, demand from food-service and drinking places is expected to rise an annualized 0.5% over the five years to 2022."
+        },
+        {
+            "current_performance_point_title": "Demand from healthcare sector",
+            "current_performance_point_description": "The industry also benefited from an increase in demand from the healthcare sector. According to IBISWorld estimates, hospitals are a major market for industry operators, accounting for an estimated 39.2% of total industry sales. Major players, such as Welbilt Inc., produce and promote products tailored for healthcare use; its RN Series machines make soft, easy-to-chew nugget ice for hospital patients. An aging US population and rising enrollment in public and private health insurance boosted revenue in the hospital and healthcare sector."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Anticipated increases in per capita disposable income and consumer spending",
+            "future_outlook_point_description": "Anticipated increases in per capita disposable income and consumer spending will propel downstream demand for food and accommodation services providers, such as restaurants and hotels. This expansion in downstream markets will in turn bolster private investment in durable goods such as ice making machines for use in these facilities."
+        },
+        {
+            "future_outlook_point_title": "The industry's major commercial markets are expected to grow",
+            "future_outlook_point_description": "The industry's major commercial markets are expected to grow over the five years to 2027. Supermarkets and grocery stores are anticipated to steadily expand due to population growth rates, leading to stable demand for ice making machines. Moreover, food-service and accommodation providers are projected to experience strong growth as consumer income rises and these downstream markets experience pent-up demand following challenges stemming from the pandemic between 2020 and 2022. Over the five years to 2027, demand from food-service and drinking places is projected to grow an annualized 2.6%, while demand from accommodations is forecast to increase at an annualized rate of 4.5%."
+        },
+        {
+            "future_outlook_point_title": "Energy-Efficient Products",
+            "future_outlook_point_description": "Industry operators have made a concerted effort to bring more energy-efficient ice making machines to the market. During the past decade, the Environmental Protection Agency's (EPA) Energy Star designation has created a more environmentally conscious industry. Air-cooled, as well as other types of self-contained and remote condensing commercial ice makers are eligible for Energy Star Certification. In addition, several US states, such as California, New York and Wisconsin offer ice making efficiency incentives."
+        },
+        {
+            "future_outlook_point_title": "Import Competition Continues",
+            "future_outlook_point_description": "Competition from imported ice making machines will remain a long-term threat to industry revenue growth, as downstream customers will continue to seek bargains among imported ice making machines. However, import competition will be limited by the depreciation in the value of the US dollar. This depreciation is reflected in an annualized decline of 1.2% in the trade-weighted index over the five years to 2027, which indicates that the US dollar will decline compared with the currencies of major trading partners. Nevertheless, over the five years to 2027, imports are projected to increase at an annualized rate of 5.1% to $431.8 million."
+        }
+    ],
+    "industry_definition": "This industry manufactures ice making machines, including ice cube makers, ice flake makers and combination ice makers, primarily served to commercial markets.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level: none - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature",
+            "Revenue Volatility Level: medium",
+            "Concentration Level: medium",
+            "Regulation Level: medium - steady",
+            "Technology Change Level: medium - steady",
+            "Barriers To Entry Level: medium - steady",
+            "Globalization Level: medium - increasing",
+            "Competition Level: medium - increasing"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "None & Steady Level of Assistance"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2017-2022)",
+            "High Revenue Growth (2022-2027)",
+            "High Performance Drivers",
+            "Consumer spending"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2022)",
+            "Low Outlier Growth",
+            "Trade-weighted index"
+        ]
+    },
+    "key_trends": [
+        "The industry benefited from an increase in demand from the healthcare sector",
+        "Industry operators have benefited from expanded investments in industrial automation, robotics and other labor-saving technologies",
+        "The industry experiences intense competition from manufactures overseas",
+        "Industry operators have made a concerted effort to bring more energy-efficient ice making machines to the market",
+        "Imported ice making machine manufacturers will remain a long-term threat",
+        "Manufacturing costs are projected to steadily decrease due to the implementation of labor-saving technologies in the manufacturing process",
+        "Industry revenue growth is expected to accelerate as exports rise and downstream demand recovers"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Hospital and healthcare facilities",
+            "segment_description": "Hospitals and healthcare facilities commonly offer ice for patients and visitors. This market's share has increased as hospitals made equipment upgrades and expansions due to rising insured individuals and an aging population requiring more medical services.",
+            "segment_percentage": 36.5
+        },
+        {
+            "segment": "Restaurants, grocery service and drinking",
+            "segment_description": "This diverse market includes restaurants, supermarkets, grocery stores, food service, drinking establishments like coffee shops and bars. Increased consumer spending on eating out typically increases demand, though the pandemic initially reduced restaurant demand before recovering.",
+            "segment_percentage": 24.0
+        },
+        {
+            "segment": "Hotel and hospitality",
+            "segment_description": "Hotels and accommodation facilities commonly provide ice machines for guests. As domestic travel and tourism increased pre-pandemic, hotels purchased new ice machines to meet capacity. Demand fell during the pandemic but is expected to recover.",
+            "segment_percentage": 20.6
+        },
+        {
+            "segment": "Other",
+            "segment_description": "This includes government institutions, schools, offices and consumer households. Schools make up the largest subsegment, installing ice machines in cafeterias. This market's share has slightly declined as budget deficits pressured institutional spending.",
+            "segment_percentage": 11.9
+        },
+        {
+            "segment": "Exports",
+            "segment_description": "Exports represent an estimated 7.0% of industry sales in 2022. The export share is expected to increase as the US dollar depreciates, making US goods less expensive abroad.",
+            "segment_percentage": 7.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Not Self-Contained",
+            "product_description": "Not self-contained ice makers are commonly found in food, retail and healthcare settings, requiring a separate storage bin. Demand is heavily influenced by consumer spending and the restaurant industry. This was the largest segment in 2022.",
+            "product_percentage": 39.5
+        },
+        {
+            "product_or_service": "Combination Ice Makers",
+            "product_description": "Combination ice makers produce nugget ice and can be freestanding or countertop. Used for hospitals, hotels, offices and restaurants. Sales are expected to increase as healthcare and food service demand rises.",
+            "product_percentage": 27.8
+        },
+        {
+            "product_or_service": "Self-Contained Ice Cube Makers",
+            "product_description": "Self-contained ice cube makers are used for bars, cafes, hotels and hospitals. The small size makes them ideal for small spaces. Demand is influenced by the food service and drinking places industry.",
+            "product_percentage": 24.1
+        },
+        {
+            "product_or_service": "Self-Contained Flake or Chip Machines",
+            "product_description": "These produce flake ice used for displays in retail and therapeutic use in hospitals. Demand slightly increased over the past five years due to greater healthcare services demand.",
+            "product_percentage": 8.6
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Metal Pipe & Tube Manufacturing in the US",
+            "Ferrous Metal Foundry Products in the US",
+            "Navigational Instrument Manufacturing in the US",
+            "Electrical Equipment Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [
+            "Retail Trade in the US",
+            "Restaurant & Hotel Equipment Wholesaling in the US"
+        ],
+        "tier_2_buyers": [
+            "Hospitals in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Consumer Spending",
+            "determinant_description": "Demand for the industry is dependent on consumer spending and domestic consumption of food and beverages. Growth in employment and disposable income facilitates an increase in demand for food and beverages, leading to more capital expenditures on food-service equipment like ice making machines."
+        },
+        {
+            "determinant_title": "Demand from Healthcare Facilities",
+            "determinant_description": "Hospitals and healthcare facilities are a major source of demand as they commonly provide patients and visitors with ice for treatment and consumption. As demand for healthcare rises and hospital budgets improve, purchases of ice making equipment increase."
+        },
+        {
+            "determinant_title": "Demand from Accommodation Services",
+            "determinant_description": "Hotels, motels and accommodation service providers demand ice makers for guests' beverages. When consumers are traveling more, they use more accommodation services, increasing demand for ice making machines."
+        },
+        {
+            "determinant_title": "Replacement Cycle",
+            "determinant_description": "Ice machines have a suggested commercial life of 7-10 years before requiring replacement, creating regular demand independent of economic conditions. However, harsh economic conditions may postpone necessary replacements."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Moderate",
+        "import_trend": "Decreasing",
+        "export_level": "Moderate",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Exports",
+                "trade_description": "Exports are estimated to fall at an annualized rate of 10.1% over the five years to 2022 due to an appreciating US dollar. Canada and Mexico account for 47.5% of exports due to geographic proximity and trade agreements. Exports are projected to increase 1.5% annually over the next five years as the dollar depreciates."
+            },
+            {
+                "trade_title": "Imports",
+                "trade_description": "Imports rose at an annualized 8.8% over the five years to 2022. China accounts for 68.5% of imports due to lower costs. Mexico accounts for 22.3% due to proximity. Imports are expected to grow 5.1% annually over the next five years as operators continue offshoring manufacturing."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region accounts for the highest percentage of establishments at around 43.8%.",
+            "percentage_establishments": 43.8,
+            "percentage_population": 101
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region accounts for approximately 31.3% of establishments and has the highest population percentage.",
+            "percentage_establishments": 31.3,
+            "percentage_population": 101
+        },
+        {
+            "location": "West",
+            "location_description": "The West region has a lower percentage of establishments at 12.5%.",
+            "percentage_establishments": 12.5,
+            "percentage_population": 101
+        },
+        {
+            "location": "New England",
+            "location_description": "The New England region has a lower percentage of establishments at 6.3%.",
+            "percentage_establishments": 6.3,
+            "percentage_population": 101
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "The Rocky Mountains region has a lower percentage of establishments at 6.3%.",
+            "percentage_establishments": 6.3,
+            "percentage_population": 101
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region has one of the lowest percentages of establishments based on the graph.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Plains",
+            "location_description": "The Plains region has one of the lowest percentages of establishments based on the graph.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "Department of Energy regulations",
+                "regulation_description": "Industry operators must comply with the Department of Energy's energy conservation standards for commercial ice makers since 2010, with more stringent standards enforced in 2018."
+            },
+            {
+                "regulation_title": "Energy Star certification",
+                "regulation_description": "The industry has become environmentally conscious due to the Energy Star designation. Products must be manufactured in EPA-recognized labs and are subject to screening."
+            },
+            {
+                "regulation_title": "COVID-19 guidelines",
+                "regulation_description": "The CDC released guidelines for businesses in response to COVID-19, such as employee separation, exposure notification, and flexible sick leave policies."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Brand recognition",
+                "barrier_description": "Brand recognition is a key component of buyer activity. This is because a recognized brand is associated with higher product quality and greater service support."
+            },
+            {
+                "barrier_title": "Capital costs",
+                "barrier_description": "The industry has high initial capital costs and a moderate amount of ongoing capital investment. Specialized plants and machinery must be purchased to start the production process."
+            },
+            {
+                "barrier_title": "Dealer network",
+                "barrier_description": "A great dealer network is essential to the success of industry participants and can be a significant hurdle that new entrants must overcome."
+            },
+            {
+                "barrier_title": "Globalization",
+                "barrier_description": "Since the industry is becoming increasingly globalized, the importance of having a global dealer network is becoming essential."
+            }
+        ],
+        "factors_increased_barrier": [
+            "The industry is mature"
+        ],
+        "factors_decreased_barrier": [
+            "The industry has low capital intensity level"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Product design, quality, aftermarket support services, maintenance costs, energy and water savings",
+                "basis_description": "Competition in the industry is primarily based on product design, quality of products, aftermarket support services, maintenance costs associated with products and energy and water savings."
+            },
+            {
+                "basis_title": "Brand loyalty",
+                "basis_description": "There is a high degree of brand loyalty because customers associate quality with certain brand names."
+            },
+            {
+                "basis_title": "Pricing",
+                "basis_description": "Competition in the industry is also heavily determined by pricing."
+            },
+            {
+                "basis_title": "Economies of scale and scope",
+                "basis_description": "Most industry participants are diversified industrial conglomerates, who produce a wide variety of industrial goods. To this end, diversified manufacturers share the use of productive machinery and facilities, thereby lowering per unit capital costs."
+            },
+            {
+                "basis_title": "Environmental friendliness",
+                "basis_description": "As a result of growing environmental concerns, energy efficiency is becoming a value-added proposition for industry products. If the majority of industry products have the Energy Star designation, industry participants will stand out."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Top 3 players comprise 48.4% market share",
+                "concentration_description": "The Ice Making Machine Manufacturing industry has a moderate level of concentration, with the top three major players comprising 48.4% of the market in 2022."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Welbilt",
+                "company_percentage": 33.7
+            },
+            {
+                "company_name": "Hoshizaki America",
+                "company_percentage": 8.1
+            },
+            {
+                "company_name": "Ali Group",
+                "company_percentage": 6.7
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 51.5
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 14.9
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 47.8
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0.6
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0.2
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0.8
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0.6
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 27.7
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases",
+            "cost_factor_description": "In 2022, purchase costs are estimated to account for 47.8% of industry revenue. Similar to other appliance manufacturers, purchases make up the bulk of industry costs. Ice making machine manufacturers need to purchase steel, aluminum, plastics, electronic components and other intermediary materials used to manufacture ice making machines."
+        },
+        {
+            "cost_factor_title": "Other Costs",
+            "cost_factor_description": "Other expenses are composed of maintenance, research and development (R&D), insurance, administration and other miscellaneous expenses. Maintenance and R&D account for the bulk of other expenses, because regular maintenance is required for manufacturing facilities and machinery."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital investments",
+                "capital_intensity_description": "In 2022, for every $1.00 spent on labor, industry operators are estimated to spend $0.04 on capital investments. Ice making machines are a relatively mature technology, and capital investments are focused on improving manufacturing efficiency and reducing costs."
+            },
+            {
+                "capital_intensity_title": "Minimal facility expansions",
+                "capital_intensity_description": "Although companies experience high initial costs for constructing factories, there has been minimal facility expansions over the past decade, which limits overall capital expenditures."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Steady downstream demand",
+                "volatility_description": "Over the five years to 2022, the industry benefited from steady downstream demand, including growth in its largest downstream market, the healthcare sector."
+            },
+            {
+                "volatility_title": "Import competition",
+                "volatility_description": "Industry revenue fluctuated inversely with the volume of ice maker imports during the period, overwhelmingly from China and Mexico who benefit from lower costs."
+            },
+            {
+                "volatility_title": "COVID-19 impact",
+                "volatility_description": "The industry experienced a significant dip in 2020 due to the economic slowdown from COVID-19, with industry revenue contracting an estimated 9.2%. In 2021, revenue bounced back with 6.6% growth."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Mature technology",
+                "technological_change_description": "Although many operators compete on technological improvements to existing machines, the industry does not contend with significant disruption from technological change."
+            },
+            {
+                "technological_change_title": "Increasing importance of innovation",
+                "technological_change_description": "The importance of technological advancement is becoming increasingly more important as innovation helps brand differentiation and recognition. Ice machines are becoming more interactive, boosting value to customers."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company affected by rising imports?",
+            "answer": "Increasing imports have hindered the revenue growth for industry companies over the period as countries such as China and Mexico increase their footprint."
+        },
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "Companies in this industry are significantly affected by the health of the US economy as revenue depends on the performance of the food service and accommodation sectors. As these sectors are extremely dependent on consumer demand, changes in the US economy will affect company performance."
+        },
+        {
+            "question": "How does your company stay ahead of regulations, such as energy-efficiency standards?",
+            "answer": "The industry has increasingly become environmentally conscious as the result of the Energy Star designation. For companies to properly achieve the designation on products they must be manufactured in laboratories recognized by the Environmental Protection Agency."
+        },
+        {
+            "question": "How does your company ensure all health and safety requirements are met?",
+            "answer": "To ensure a high quality of health and safety standards, companies in this industry must adhere to all regulatory protocols and ensure all employees are trained properly."
+        },
+        {
+            "question": "How does your company's inventory turnover rate compare to your major competitors'?",
+            "answer": "Keeping a turnover rate within industry averages allows companies in this industry to succeed."
+        },
+        {
+            "question": "How has input price volatility affected profit margins over the past 12 months?",
+            "answer": "Falling input prices have positively affected profit margins in this industry."
+        },
+        {
+            "question": "Have you invested heavily in automation? What affect does automation have on your profit margins? What is your budget for updating technology?",
+            "answer": "Operators in the industry must control labor costs and use flexible employment to meet demand."
+        },
+        {
+            "question": "How hard is it to promote your company by word-of-mouth recommendations? How can you improve to receive better word-of-mouth recommendations?",
+            "answer": "Customer service levels need to be superior to their competitors as a point of differentiation."
+        },
+        {
+            "question": "Do you operate near optimum capacity? Do you continually align capacity to demand? What improvements can you implement to improve overall efficiency?",
+            "answer": "Increased throughput and associated value-added services govern profitability for industry operators."
+        },
+        {
+            "question": "Do you monitor the trade-weighted index? How have fluctuations in the value of the US dollar affected demand for your products?",
+            "answer": "This industry is engaged in a moderate level of international trade. An increasing trade-weighted index means that the dollar is appreciating, which makes industry exports more expensive on international markets and lowers demand. In contrast, a declining trade-weighted index signals depreciation, and demand for exports typically increases."
+        },
+        {
+            "question": "Do you track trends in consumer spending? How does your company cope when consumer spending is low?",
+            "answer": "As consumers spend more of their discretionary income on nonessential luxuries such as traveling and eating out, revenue increases for hotels, restaurants and food service establishments. With more income, hotels and restaurants can expand their operations or upgrade their existing equipment, thereby increasing demand for ice making machinery manufacturers."
+        },
+        {
+            "question": "Do you have long-term supply contracts with food service and drinking places? How can you expand your reach in this market?",
+            "answer": "This industry relies heavily on the capital expenditure of restaurant and food service operators. Therefore, when food service establishments expand their operations and invest in equipment, industry revenue is positively affected."
+        }
+    ]
+}

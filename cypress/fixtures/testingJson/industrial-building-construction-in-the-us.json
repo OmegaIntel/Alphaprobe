@@ -1,0 +1,586 @@
+{
+    "report_title": "Industrial Building Construction in the US",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 26524000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": 0.4
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 0.8
+            }
+        },
+        "profit": {
+            "profit_dollars": 610000000,
+            "profit_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "profit_cagr_value": -0.99
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 2.3,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "profit_margins_cagr_value": -1.39
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 6863000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 71999,
+            "employees_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 6091000000,
+            "wages_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "The industrial building construction industry has faced considerable declines due to COVID-19 and interest rate hikes. Revenue fell at a 3.6% CAGR through 2023 to $26.4 billion, with a 2.4% decrease in 2023. Profit is set to dip to 2.3%. Early declines were caused by foreign competition reducing private manufacturing investment. COVID-19 and interest rate hikes further impacted the industry.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Contractors Already Faced Declines Pre-Pandemic",
+            "current_performance_point_description": "The industry peaked in 2016 due to Trump's economic promises but quickly declined as those promises failed to materialize. Foreign competition reduced private manufacturing investment early in the period. COVID-19 compounded the declines."
+        },
+        {
+            "current_performance_point_title": "Effects of the COVID-19 Pandemic",
+            "current_performance_point_description": "The pandemic hurt contractors through shutdowns, reduced corporate profits halting projects, trade disruptions, and falling steel prices. Unemployment reduced consumer spending and manufacturing output."
+        },
+        {
+            "current_performance_point_title": "Rising Inflation and Interest Rates Slow Growth",
+            "current_performance_point_description": "Low interest rates early in the period spurred construction. But the Fed raising rates since 2022 increased borrowing costs, slowing expansion. Some growth came from renovations to improve operations."
+        },
+        {
+            "current_performance_point_title": "Contractors Have Been Tackling the Remaining Hurdles",
+            "current_performance_point_description": "Niche markets like chemicals and plastics drove some growth early on before COVID-19. Falling manufacturing capacity utilization hindered downstream performance. But improvements attracted some manufacturers back to the US."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Higher Consumer Demand Will Drive Revenue",
+            "future_outlook_point_description": "Rising exports from manufacturers will increase production and facility expansions, benefiting contractors. As interest rates fall, investment in new and existing facilities will grow."
+        },
+        {
+            "future_outlook_point_title": "Contractors to Enjoy Modest Profit Gains",
+            "future_outlook_point_description": "Price competition will ease as supply chains improve and construction ramps up, though falling material costs will pressure profits. But uncertainty over the Russia-Ukraine war may raise costs."
+        },
+        {
+            "future_outlook_point_title": "Consolidation Will Continue to Increase",
+            "future_outlook_point_description": "Employment growth will be modest as services become specialized. Large contractors will acquire struggling smaller ones. Outsourcing will be limited by need for skilled staff."
+        },
+        {
+            "future_outlook_point_title": "Government Investment and Falling Interest Rates to Benefit Contractors",
+            "future_outlook_point_description": "Tax incentives will attract manufacturers back to the US. The Infrastructure Act will invest in transportation benefiting contractors. Falling interest rates will spur construction growth."
+        }
+    ],
+    "industry_definition": "The industry is composed of contractors responsible for construction (new, additions, alterations, maintenance, repairs) of industrial and manufacturing buildings, including general contractors, design-build companies and construction management operators.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Revenue Volatility Level: low",
+            "Capital Intensity Level: low",
+            "Globalization Level: low - increasing"
+        ],
+        "negative_impact_factors": [
+            "Life Cycle Stage: decline",
+            "Industry Assistance Level: low - increasing",
+            "Competition Level: high - steady"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low & Increasing Level of Assistance",
+            "Low Volatility",
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "High Revenue per Employee",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "High Competition",
+            "Low Profit vs. Sector Average",
+            "High Product/Service Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "Manufacturing capacity utilization"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers"
+        ]
+    },
+    "key_trends": [
+        "Industrial building construction contractors have faced considerable headwinds.",
+        "Industrial building contractors to enjoy modest growth.",
+        "Contractors must abide by heavy federal and state regulations.",
+        "Public assistance has been on the rise.",
+        "General contracting continues to comprise the largest service offering.",
+        "Additions and renovation services were a boon to contractors.",
+        "Construction Demand in Coastal States"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Pharmaceutical manufacturing",
+            "segment_description": "This market segment includes production laboratories, research and development facilities, pharmaceutical plants, ingredient production facilities and secondary pharmaceutical manufacturing facilities. Both generic and brand-name US pharmaceutical manufacturers experienced a significant boost in demand following the implementation of healthcare reform. Demand from this market segment has increased over the past five years, driven by rising domestic expenditures on research and development and vital growth in the pharmaceutical and life sciences sector. This segment will continue to grow as more COVID-19 research is needed. Although vaccines for the pandemic-causing disease have been administered, variants continue to cause a need to create boosters, increasing the demand from this segment.",
+            "segment_percentage": 31.1
+        },
+        {
+            "segment": "Chemical manufacturing",
+            "segment_description": "The rise in market share has been driven by rapid growth over the past five years, as the domestic production of chemical products has steadily increased. Demand for these products, which include a broad scope of chemicals, is influenced by the level of activity in the greater US manufacturing sector and the overall consumer spending level. These products are vital to various industries, including construction, motor vehicles, paper, electronics, transportation and agriculture. This market has expanded in recent years as the domestic production of chemical products has steadily increased. Supply chain woes pushed up prices and manufacturers looked to take advantage of the favorable price environment.",
+            "segment_percentage": 27.6
+        },
+        {
+            "segment": "Plastics and plastic product manufacturing",
+            "segment_description": "This segment includes manufacturers of thermosetting resins, thermoplastic resins and synthetic rubber and homeware, building materials and motor vehicle parts made from plastic. Given the crucial importance of plastic for the production of consumer goods, manufacturers in this segment have experienced a steady rise in demand for their products as per capita disposable incomes and, by extension, consumer spending has increased. The COVID-19 pandemic disrupted the global supply chain. Consumer demand outpaced the already constrained resin supply as the global economy reopened. Consequentially, manufacturers of plastic and resin looked to strengthen their production capabilities, benefitting contractors.",
+            "segment_percentage": null
+        },
+        {
+            "segment": "Mass transit",
+            "segment_description": "",
+            "segment_percentage": 7.6
+        },
+        {
+            "segment": "Aviation",
+            "segment_description": "",
+            "segment_percentage": 4.0
+        },
+        {
+            "segment": "Water transport",
+            "segment_description": "",
+            "segment_percentage": 1.1
+        },
+        {
+            "segment": "Other",
+            "segment_description": "",
+            "segment_percentage": 0.6
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "General Industrial Construction",
+            "product_description": "General Industrial Construction services for various industries",
+            "product_percentage": 48.9
+        },
+        {
+            "product_or_service": "Renovations",
+            "product_description": "Renovation services for existing structures",
+            "product_percentage": 21.2
+        },
+        {
+            "product_or_service": "Infrastructure and Other Building Services",
+            "product_description": "Construction and management of infrastructure projects",
+            "product_percentage": 18.2
+        },
+        {
+            "product_or_service": "Construction Management Services",
+            "product_description": "Management services for construction projects",
+            "product_percentage": 11.7
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [],
+        "tier_2_suppliers": [
+            "Construction Machinery Manufacturing in the US",
+            "Coal & Natural Gas Power in the US",
+            "Utilities in the US"
+        ],
+        "tier_1_buyers": [
+            "Manufacturing in the US",
+            "Utilities in the US"
+        ],
+        "tier_2_buyers": [
+            "Real Estate and Rental and Leasing in the US",
+            "Agriculture, Forestry, Fishing and Hunting in the US",
+            "Transportation and Warehousing in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "General Industrial Construction Has Remained the Primary Product Offering",
+            "determinant_description": "Construction companies obtain contracts through tendering or quoting a price accepted by the property developer. Contracts normally require the general contractor to oversee all aspects of the project (quantity surveying, material purchase, skilled labor and subcontractor recruitment and construction to the lockup stage). General contracting is associated with the construction of buildings on land owned by others, but there is a growing tendency for contractors to partly or fully finance property developments to increase profit and improve cashflow."
+        },
+        {
+            "determinant_title": "Construction Management Services Are an Important Service",
+            "determinant_description": "Construction managers do not participate in construction activities; instead, all the work is done by subcontractors. Contractors that supply construction management services oversee all aspects of the projects; this includes quantity surveying, purchasing material, hiring skilled labor and subcontractors and construction up to the lockup stage."
+        },
+        {
+            "determinant_title": "Additions and Renovations Have Kept Contractors Afloat",
+            "determinant_description": "Most manufacturers or industrial companies request remodelers when they develop a new product requiring an existing structure to be altered for production to occur. Renovations also include expanding existing buildings or plants; expansions occur when companies need to increase production to meet additional demand. Demand for renovations, land clearing, sewer installations, retrofits and expansions has risen over the past few years as downstream manufacturers have sought to make operations more flexible, energy efficient and environmentally friendly. An unexpected increase in demand from a rapid economic recovery has increased the need to retrofit plants since existing production capabilities are insufficient. Interest rate hikes have continued to spur some growth in this segment, as performing additions and renovations is often less expensive than building new structures."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast is home to more than a quarter of industrial construction contractors. Industrial operations are attracted to the region because of local government incentives and demand from their downstream markets.",
+            "percentage_establishments": 27.0,
+            "percentage_population": null
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes is the second-largest region for industrial building construction. Like the West, this region's concentration of major US industrial concerns like General Motors makes it an ideal location for manufacturers capitalizing on exports.",
+            "percentage_establishments": null,
+            "percentage_population": null
+        },
+        {
+            "location": "West",
+            "location_description": "The West houses the third largest concentration of contractors. The West is a major manufacturing center, home to major tech companies and manufacturers attempting to capitalize on the export market, driving contractors there.",
+            "percentage_establishments": null,
+            "percentage_population": null
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "Government regulation",
+                "regulation_description": "Currently, a broad range of codes governs industrial construction activity, including general building codes, residential codes, mechanical codes, plumbing codes, electric codes, fire codes, accessibility codes, zoning codes, state codes, local codes and ordinances."
+            },
+            {
+                "regulation_title": "Building codes",
+                "regulation_description": "There are multiple levels of checking for a building's compliance with codes before and during construction."
+            },
+            {
+                "regulation_title": "Health and safety regulations",
+                "regulation_description": "Health and safety regulations require that workers have safe conditions at all times, including protective clothing, scaffolding, ventilation and harnesses."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is in the decline stage of its life cycle."
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "The level of industry assistance is low and increasing."
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "The level of competition is high and steady."
+            }
+        ],
+        "factors_increased_barrier": [
+            "The industry is in the decline stage of its life cycle.",
+            "The level of industry assistance is low and increasing."
+        ],
+        "factors_decreased_barrier": [
+            "Revenue volatility level is low.",
+            "Capital intensity level is low.",
+            "Globalization level is low but increasing."
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Larger manufacturers are vertically integrated",
+                "basis_description": "Larger manufacturers are vertically integrated and have pursued technological innovation and aggressive acquisitions of smaller operations to increase their market share and fulfill larger contracts."
+            },
+            {
+                "basis_title": "Large contractors hire subcontractors",
+                "basis_description": "Large contractors also hire subcontractors to meet demand."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Most contractors are small scale",
+                "concentration_description": "Most industrial building construction contractors are small-scale nonemployers who subcontract labor for work in local markets, making it difficult to accumulate a considerable market share."
+            },
+            {
+                "concentration_title": "Few large contractors",
+                "concentration_description": "The largest contractors are multinational general contractors with the resources and staff to handle massive contracts for industrial facilities like automotive manufacturing plants and other large plants."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Fluor Corporation",
+                "company_percentage": 25.6
+            },
+            {
+                "company_name": "Aecom",
+                "company_percentage": 16.0
+            },
+            {
+                "company_name": "Dpr Construction, Inc.",
+                "company_percentage": 101.0
+            },
+            {
+                "company_name": "Gilbane Inc.",
+                "company_percentage": 11.5
+            },
+            {
+                "company_name": "Barton Malow Company",
+                "company_percentage": 6.3
+            },
+            {
+                "company_name": "OHL USA Inc.",
+                "company_percentage": 4.8
+            },
+            {
+                "company_name": "Jacobs Engineering Group Inc.",
+                "company_percentage": 4.1
+            },
+            {
+                "company_name": "The Stellar Group",
+                "company_percentage": 2.2
+            },
+            {
+                "company_name": "Kinsley Construction Inc.",
+                "company_percentage": 1.9
+            },
+            {
+                "company_name": "IMC Construction",
+                "company_percentage": 1.4
+            },
+            {
+                "company_name": "CR Meyer",
+                "company_percentage": 1.2
+            },
+            {
+                "company_name": "Walbridge",
+                "company_percentage": 0.8
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 23.0
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 57.7
+        },
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 2.3
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Labor shortages have pushed up wage costs despite the use of subcontractors",
+            "cost_factor_description": "The great resignation has led to labor shortages and forced many industrial building construction contractors to hike wages to attract and retain skilled workers, pushing up wages as a share of revenue despite overall employment declines."
+        },
+        {
+            "cost_factor_title": "Purchase costs dipped despite inflationary pressures",
+            "cost_factor_description": "In total, purchase costs account for an estimated 57.7% of total revenue in 2023 and are nearly evenly split between the cost of materials and the cost of third-party contractors."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "New entrants must attract and retain skilled workers",
+                "capital_intensity_description": "New entrants must attract and retain skilled workers to establish a solid reputation in local markets, as their work is labor-intensive."
+            },
+            {
+                "capital_intensity_title": "Low rate of new patent technologies",
+                "capital_intensity_description": "The rate of new patent technologies entering the industry is low, which limits the potential for innovations."
+            },
+            {
+                "capital_intensity_title": "Diversified market segments",
+                "capital_intensity_description": "Major market segments for industry operators are relatively diversified."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Low",
+        "volatility_points": [
+            {
+                "volatility_title": "General macroeconomic trends impact volatility",
+                "volatility_description": "The spread of demand across many markets somewhat moderates volatility. Like much of the Construction sector, contractors' growth rises and falls in response to cyclical building demand."
+            },
+            {
+                "volatility_title": "Global events have induced volatility",
+                "volatility_description": "In the current five-year period, the COVID-19 outbreak has impacted volatility considerably. Continued supply chain disruptions and the Russian invasion of Ukraine have compounded COVID-19-induced supply chain woes and volatility."
+            }
+        ],
+        "volatility_trend": "Increasing"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "How does your company hedge against downturns in core market activity?",
+            "answer": "Contractors that provide a wide range of services will be exposed to less revenue volatility and market risk."
+        },
+        {
+            "question": "Is your company hedge against price-loss risk?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices?",
+            "answer": "Contractors that engage in long-term supply contracts will exhibit lower purchase and material costs, increasing profitability. Contractors that control labor costs via the hiring of subcontractors will exhibit labor savings and purchase cost increases, pocketing the difference as profit."
+        },
+        {
+            "question": "Do you situate yourself in proximity to core-end markets?",
+            "answer": "Contractors in the immediate locale of projects will exhibit lower fuel and transportation costs, widening margins. The industry's structure calls for fragmented geographic markets, whereby large contractors can only increase geographic reach by buying up competitors."
+        },
+        {
+            "question": "Has your company been able to reduce wage payments by adopting the latest technologies?",
+            "answer": "Due to this industry's reliance on labor, contractors can best reduce wage costs by hiring more subcontracted labor and reducing permanent workforces. The latest technology can decrease the time it takes to complete tasks, marginally lowering wage costs through time savings."
+        },
+        {
+            "question": "Is your company leveraging drone technology?",
+            "answer": "The Federal Aviation Administration's legalization of commercial drone activity has opened up a wide application for potential uses within the industry, such as job site mapping, heat mapping and 3D modeling. The latest technologies can be leased and used on an ad hoc basis, keeping depreciation charges low and technology adoption rates high."
+        },
+        {
+            "question": "How does your company ensure that all health and safety standards are upheld? With rising safety standards do you expect operating costs to go up?",
+            "answer": "Contractors that have a proven reputation for safety may be favored in the contract tender process, providing for increased business opportunities. Contractors with a given reputation for safety may exhibit lower insurance premiums and costs, aiding profitability."
+        },
+        {
+            "question": "Is your company prepared to adapt to shifting environmental regulations?",
+            "answer": "With shifting environmental regulations operating costs may rise for industry operators. Operators that get ahead of regulation will likely be better prepared and display a competitive edge."
+        },
+        {
+            "question": "How does your company's profit margin compare with those of your competitors?",
+            "answer": "Contractors that enter into long-term supply contracts will exhibit lower purchase costs, less revenue volatility and increased profitability. Contractors that are able to prevent wage costs from ballooning via the hiring of subcontractors or the leveraging of technologies, such as drones, will exhibit wider profit margins."
+        },
+        {
+            "question": "Does your company contend with any issues financing current operations?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "Does your company have a flexible contracting structure that allows it to adapt to market conditions?",
+            "answer": "The ability to expand and contract employment in line with demand is essential for operators to maintain profit margins and compete against other operators for future projects. Overall, industry operators do not keep too many full-time employees on the books in order to keep wage costs low."
+        },
+        {
+            "question": "Does your company enter into long-term purchasing contracts to keep input costs level?",
+            "answer": "By purchasing materials for projects in bulk and on a regular basis industry operators will save on price and be protected from upside risk, should input-prices increase."
+        },
+        {
+            "question": "How do you respond to variability in consumer demand?",
+            "answer": "The capacity to generate contracts in a variety of building markets can assist companies in stabilizing cash flow, particularly during periods of weak economic growth or in flux of end market activity."
+        },
+        {
+            "question": "Are you able to quickly and easily alter the services offered?",
+            "answer": "The capacity to generate contracts in a variety of building markets can assist companies in stabilizing cash flow, particularly during periods of weak economic growth or in flux of end market activity."
+        },
+        {
+            "question": "Has your company had any difficulty securing financing for future projects in regard to the recently rising treasury yields?",
+            "answer": "Most property industry purchases, developments and construction activities are financed by mortgages or bonds, which are related to the yield on 10-year Treasury bonds. While interest rates are overall low, rising short-term yields will increase rates on mortgage instruments since they are based on long-term, not overnight rates. Rising yields will translate to higher borrowing costs."
+        },
+        {
+            "question": "How much of your company's revenue is derived from government consumption and investment? How can you prepare for fluctuations in government investment levels?",
+            "answer": "Public markets account for a significant portion of industry revenue. Overall, however, some of the largest projects undertaken by the industry are funded by private-public partnerships, which combined the funds of private and public sources."
+        },
+        {
+            "question": "Has your company had any difficulty securing future contracts in regard to a slowdown in capital expenditure?",
+            "answer": "Private investment in manufacturing structures includes new work, additions, alterations, maintenance and repairs. This will generally follow movements in capital expenditure as downstream customers expend resources on expanding operations. Capital expenditure has been depressed as a result of the COVID-19 pandemic."
+        }
+    ]
+}

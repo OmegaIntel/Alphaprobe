@@ -1,0 +1,530 @@
+{
+    "report_title": "Adult Day Care in the US",
+    "report_date": "2023-10-01",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 7515000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 4.37
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 5.32
+            }
+        },
+        "profit": {
+            "profit_dollars": 286000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 0.43
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0.5
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 3.8,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 0.43
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0.5
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 4611000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 4.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 4.5
+            }
+        },
+        "employees": {
+            "employees_count": 279674,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 1.2
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 1.5
+            }
+        },
+        "wages": {
+            "wages_dollars": 4165000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 2.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 2.5
+            }
+        },
+        "imports": {
+            "imports_dollars": 500000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 1.5
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 1.8
+            }
+        },
+        "exports": {
+            "exports_dollars": 300000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 1.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 1.2
+            }
+        }
+    },
+    "executive_summary": "Over the last five years, the aging Baby Boomer generation, nearly one-fifth of the US population, has significantly boosted demand for adult day cares. Adult day cares have seen solid usage as improving life expectancies expands their primary client base. The industry's growing popularity as a low-cost alternative to nursing homes led to an influx of new providers, particularly among owner-operators offering at-home care. The rise of at-home adult day care services has perpetuated the industry's fragmentation, allowing new providers to cater to underserved areas. Despite this growth, labor shortages force higher wages and compress profit. Industry revenue has been climbing at a CAGR of 2.1% to an estimated $7.5 billion over the five years through 2024, including an expected rise of 1.3% in 2024 alone.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Adult Day Cares' Use Base is Expanding as the Population Ages",
+            "current_performance_point_description": "The Baby Boomer generation, born between 1946 and 1964, accounts for an estimated one-fifth of the population. This generation is either approaching or well into retirement age. The number of adults 65 and over surged at its highest rate on record in 2023 as Baby Boomers continued to age into the primary user base for adult day cares."
+        },
+        {
+            "current_performance_point_title": "Rising Funding for Medicaid is Supporting Adult Day Care Services",
+            "current_performance_point_description": "According to the National Center for Health Statistics's National Post-acute and Long-term Care Study, over two-thirds of adult day care participants are fully covered by Medicaid. Medicaid has expanded under the Patient Protection and Affordable Care Act (PPACA), enabling more individuals to obtain funding for adult care services. Increased Medicaid funding has granted consumers an increased ability to afford adult care services based on insurance coverage, supporting industry revenue growth."
+        },
+        {
+            "current_performance_point_title": "Fragmentation is Swelling Amid an Influx of New Providers",
+            "current_performance_point_description": "Steadily growing demand for adult day care services provided opportunities for new providers to enter this industry. The number of adult day care services has accordingly climbed every year, especially in 2021 as unemployment and job insecurity led to a 10.8% jump in owner-operator adult day care services. The growing popularity of at-home adult day care further encourages companies and individuals to enter the industry."
+        },
+        {
+            "current_performance_point_title": "THE LABOR SHORTAGE IS CUTTING INTO PROFIT",
+            "current_performance_point_description": "A labor shortage across many healthcare industries has pushed adult day care services to raise salaries. Intensifying competition has kept adult day care centers from fully passing rising wage costs downstream through price hikes, forcing them to absorb some profit compression. Labor is by far the industry's top expense, accounting for over half of adult day care providers' revenue."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "CONTINUED AGING WILL CONTINUE TO EXPAND THE INDUSTRY'S PRIMARY USER BASE",
+            "future_outlook_point_description": "As the tail end of the Baby Boomer population ages into retirement age, the number of people aged 65 and older is forecast to surge at a higher rate than overall population growth. Strides in medical advancement and drug research have extended life expectancy, ensuring the longevity of elderly customers. As life expectancy rises, more older individuals will require living assistance, basic medical treatment and other personalized care for longer."
+        },
+        {
+            "future_outlook_point_title": "BOOMING MEDICAID FUNDING WILL ENABLE ADULTS TO SEEK DAY CARE",
+            "future_outlook_point_description": "The White House's Office of Management and Budget expects federal funding for Medicaid and Medicare to surge through the next five years as the economy grows and budget deficits sink. While Medicare doesn't cover adult day care, Medicaid covers over two-thirds of all adult day care participants. Republican senators and representatives continue proposing slashes to Medicaid funding and the repeal of the Affordable Care Act (ACA) in fiscal plans. If passed, these cuts would remove coverage for tens of millions of individuals, straining their ability to seek adult day care services."
+        },
+        {
+            "future_outlook_point_title": "A GROWING POPULATION AND RISING EMPLOYMENT WILL OFFSET DECLINES IN PRIVATE HEALTHCARE ENROLLMENT",
+            "future_outlook_point_description": "In 2018, the Trump administration repealed the Affordable Care Act (ACA)'s individual mandate, which placed a tax burden on individuals without public or private health insurance. Four states and the District of Columbia have imposed their own individual mandates in the years since, but many individuals are opting out of often-expensive health insurance entirely. The percentage of adults with private health insurance will sink through 2029. Still, the growing population will push the number of individuals with private health insurance upwards even as the percentage shrinks."
+        },
+        {
+            "future_outlook_point_title": "DEMAND WILL SWELL AS ADULT DAY CARE SERVICES OFFER MORE SPECIALIZED SERVICES",
+            "future_outlook_point_description": "Adults are expected to increasingly seek adult day care services as they become more accessible and specialized, enticing those seeking specific treatments or programs to enroll. Some adult day care centers carve out a niche by focusing their services on treating specific medical ailments, like dementia, nutrition issues, heart disease or Parkinson's disease. By narrowing their staff and facility's focus, specialized centers foster an attractive environment for their target demographic."
+        }
+    ],
+    "industry_definition": "This industry provides social and basic health assistance, including transportation, meals, personal hygiene and therapeutic activities, to the elderly and individuals with mental or physical disabilities. Services are typically provided during normal business hours through adult care centers. This industry does not include home care.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage"
+        ],
+        "negative_impact_factors": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Number of people with private health insurance"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Increasing Level of Assistance",
+            "Growth Life Cycle Stage",
+            "Low Volatility",
+            "Low Imports",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers - Number of adults aged 65 and older"
+        ],
+        "threats": []
+    },
+    "key_trends": [
+        "The industry is highly fragmented. Adult day cares centers cater to local demand, since adults aren't willing to travel far for care. Nonemployers and small providers can remain competitive, even amid a saturated market.",
+        "Adult day care centers rarely buy out competitors. The industry is dominated by small local operations, with no one provider holding greater than a 1.0% market share. Adult day cares' reliance on labor means economies of scale aren't readily available, so consolidation is rare.",
+        "The aging population is expanding adult day cares' primary user base. Adults over 65 face more medical issues, making adult day care centers especially popular with them. Adult day care centers see greater usage as medical technology lifts life expectancy.",
+        "The industry's success hinges on Medicaid funding. Over two-thirds of adult day care participants are fully covered by Medicaid, but continued efforts to slash funding and repeal the Affordable Care Act (ACA) could drastically change the industry's outlook.",
+        "No single care provider holds a market share greater than 1.0%. Over half of all care providers are owner-operators and operate in a single location."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Adults aged 65 years and older",
+            "segment_description": "The largest market for adult day care providers is made up of adults aged 65 and older. Within this share, women outnumber men.",
+            "segment_percentage": 61.0
+        },
+        {
+            "segment": "Adults aged between 41 and 64 years old",
+            "segment_description": "Adults aged between 41 and 64 years old make up a segment of the adult day care market.",
+            "segment_percentage": 27.3
+        },
+        {
+            "segment": "Adults aged 40 and younger",
+            "segment_description": "Adults aged 40 and younger make up a small segment of the adult day care market.",
+            "segment_percentage": 11.7
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Social Services Model",
+            "product_description": "The social model makes space for gathering",
+            "product_percentage": 35.1
+        },
+        {
+            "product_or_service": "Medical Services Model",
+            "product_description": "The medical model provides specialized services at a higher cost",
+            "product_percentage": 30.7
+        },
+        {
+            "product_or_service": "Social and Medical Services Model",
+            "product_description": "The social and medical model offers an integrated approach to adult day care",
+            "product_percentage": 34.2
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Medical Supplies Wholesaling in the US",
+            "Drug, Cosmetic & Toiletry Wholesaling in the US",
+            "Grocery Wholesaling in the US",
+            "Hospitals in the US",
+            "Nursing Care Facilities in the US",
+            "Healthcare and Social Assistance in the US"
+        ],
+        "tier_2_suppliers": [
+            "Generic Pharmaceutical Manufacturing in the US",
+            "Medical Device Manufacturing in the US",
+            "Medical Instrument & Supply Manufacturing in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Medicaid Funding",
+            "determinant_description": "Medicaid helps senior and disabled patients pay for adult day care services. Increasing government funding for medical care boosts downstream demand for adult day care, driving revenue growth."
+        },
+        {
+            "determinant_title": "Medicare Funding",
+            "determinant_description": "Medicare doesn't cover adult day care services. Still, any growth in federal funding for Medicare and Medicaid presents an opportunity for the industry."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "More than one-quarter of the US population resides in the Southeast region. As a central population hub, this area requires many healthcare and social assistance providers to meet its population's needs. Despite concentration, there are disparities within the region. States like West Virginia and Kentucky have notably lower access to healthcare facilities, highlighting uneven distribution. Florida has the highest percentage of senior citizens in the US.",
+            "percentage_establishments": 30.0,
+            "percentage_population": 25.0
+        },
+        {
+            "location": "West",
+            "location_description": "The Western region's sizeable population necessitates considerable healthcare and social assistance services to meet the growing demand. As the nation's most populous state, California leads the nation in the number of adult day care centers. High disposable income and pro-Medicaid policies within the state add to its relevance to the industry.",
+            "percentage_establishments": 20.0,
+            "percentage_population": 25.0
+        },
+        {
+            "location": "Plains",
+            "location_description": "The Plains region has a lower percentage of establishments compared to its population share, implying a potential underserved demand in this area.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic's share of healthcare facilities mirrors its share of the US population. The region also includes states with high Medicare quality ratings, which typically leads to favorable reimbursement rates. Pennsylvania and New York contribute substantially to the share of establishments in this region, as these states rank in the top five for personal healthcare spending.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region has a lower percentage of establishments compared to its population share, implying a potential underserved demand in this area.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "The Southwest region has a lower percentage of establishments compared to its population share, implying a potential underserved demand in this area.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "New England",
+            "location_description": "The New England region has a lower percentage of establishments compared to its population share, implying a potential underserved demand in this area.",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "The Rocky Mountains region has a lower percentage of establishments compared to its population share, implying a potential underserved demand in this area.",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "Licensing and Certification",
+                "regulation_description": "Licensing requirements for adult day care providers vary from state to state. Currently, an estimated half of US states require licensing for industry providers. Some states may require separate licenses depending on the level of care. Also, some states require certification in place of a license."
+            },
+            {
+                "regulation_title": "Certification for Funding",
+                "regulation_description": "Adult day care providers may also need certification to receive Medicaid funding. Michigan, Oregon, Idaho and North Dakota have heightened operating standards for adult day care providers. Licensed personnel are universally required to administer medications to patients. Most states specify minimum staff-to-participant ratios, which range between one and four and one to ten."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Legal",
+                "barrier_description": "Prospective care providers must secure access to government funding. To receive funding through the Older Americans Act, which reimburses for adult day care, providers must have a contract with the Area Agency on Aging. Adult day care centers must become Medicaid-certified providers to receive reimbursement through Medicaid."
+            },
+            {
+                "barrier_title": "Start-up Costs",
+                "barrier_description": "Potential care providers must invest in a central facility, which typically ranges between 1,000.0 and 5,000.0 square feet. Entrants seeking to provide medical care must also purchase all necessary medical devices and supplies."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: growth",
+            "Industry Assistance Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Revenue Volatility Level: low",
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Technology Change Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Differentiation",
+                "basis_description": "Localized demand keeps the industry highly fragmented, and no one company generates more than 1.0% of industry revenue. While there are no major companies exerting significant market power, new adult day care centers may struggle to compete with local incumbents' established reputations."
+            },
+            {
+                "basis_title": "Labor/Capital Intensity",
+                "basis_description": "Potential care providers will need qualified staff. Typically, providers employ registered nurses or licensed practical nurses as well as activity, recreational and therapy professionals. Companies may also employ social work professionals."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Localized Demand Keeps the Industry Fragmented",
+                "concentration_description": "Adults won't travel far to attend a day care center, so demand is heavily localized. Only one-third of care providers operate more than one location. Instead, care providers are increasingly opening larger one-site establishments rather than multiple locations."
+            },
+            {
+                "concentration_title": "Acquisitions are Uncommon",
+                "concentration_description": "The industry's reliance on labor mutes the benefits of economies of scale. Combined with an already high fragmentation that makes acquisitions less advantageous, consolidation is uncommon."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Senior Care Centers of America",
+                "company_percentage": 1.0
+            },
+            {
+                "company_name": "Easterseals",
+                "company_percentage": 1.0
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 50.1
+        },
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 10.5
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 15.0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 2.0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 3.0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 4.0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Food prices have especially increased amid inflation",
+            "cost_factor_description": "Food prices have especially increased amid inflation, which has led to rising purchase costs for care providers."
+        },
+        {
+            "cost_factor_title": "Gasoline purchases required for providing transportation services",
+            "cost_factor_description": "Gasoline purchases required for providing transportation services have fluctuated over the five-year period alongside volatile oil prices."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Low",
+        "volatility_trend": "Steady",
+        "volatility_points": [
+            {
+                "volatility_title": "Adult day cares are widely insulated from macroeconomic trends",
+                "volatility_description": "Adult day cares are widely insulated from macroeconomic trends."
+            },
+            {
+                "volatility_title": "Demand doesn't significantly fluctuate as adult day care isn't a discretionary expense",
+                "volatility_description": "Demand doesn't significantly fluctuate as adult day care isn't a discretionary expense for clients. While some individuals may cut back spending on social day care programs when money is tight, most of the industry is insulated from changes in disposable income."
+            },
+            {
+                "volatility_title": "Adult day care represents a less expensive option",
+                "volatility_description": "Adult day care represents a less expensive option compared with nursing homes and other long-term care providers. Accordingly, demand for adult day care remains stable through economic downturns."
+            }
+        ]
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_trend": "Steady",
+        "technological_change_points": [
+            {
+                "technological_change_title": "The industry itself does not innovate",
+                "technological_change_description": "The industry itself does not innovate. Instead, it adopts the latest medical technology available."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "Has increased access to health insurance offered opportunities for your company?",
+            "answer": "Rising healthcare coverage has benefited adult day care, as patients' ability to pay for these services is determined by healthcare coverage and reimbursement rates."
+        },
+        {
+            "question": "How does your company target key potential markets?",
+            "answer": "Since the majority of adult day care is directed toward people over the age of 65, a rise in the number of seniors leads to an increase in demand."
+        },
+        {
+            "question": "How does an increase in certain age groups affect your company's performance?",
+            "answer": "As older adults are major users of healthcare services due to the development of diseases later in life, the growth in the number of people aged 65 and older has increased demand for adult day care."
+        },
+        {
+            "question": "How does per capita disposable income, or the health of the US economy, influence pricing?",
+            "answer": "People's ability to pay out-of-pocket for adult day care is important to a company's success. Private payers account for about one-fourth of all spending on adult day care."
+        },
+        {
+            "question": "How is your company leveraging new technology to diversify product and service offerings?",
+            "answer": "Adult day care has made use of computer advancements to integrate virtual exercises into patients' routines."
+        },
+        {
+            "question": "Have you been able to reduce wage costs by automating operations over the past five years?",
+            "answer": "Companies have been unable to automate services because adult day care depends heavily on nursing labor."
+        },
+        {
+            "question": "Have your regulatory expenses been impacted by federal healthcare reform?",
+            "answer": "Uncertainty surrounding federal healthcare reform is a major concern for many companies. For example, the elimination of the individual mandate is expected to have a negative effect on adult day care companies."
+        },
+        {
+            "question": "Have any new mandates, as a result of healthcare reform, expanded your client base?",
+            "answer": "Healthcare reform, like the Medicaid expansion, can impact the number of patients with access to government health insurance. This government assistance is crucial for many potential adult day care users."
+        },
+        {
+            "question": "Has your company looked into financing options for low-income individuals?",
+            "answer": "With the expansion of Medicaid under the Affordable Care Act, more low-income individuals have been able to access adult day care."
+        },
+        {
+            "question": "How does your company's profit compare to your competitors?",
+            "answer": "Rates, costs and revenue drive profit for adult day care companies."
+        },
+        {
+            "question": "How do you attract and retain qualified staff? Does your staff undergo constant training?",
+            "answer": "Workers in this industry need to be highly skilled to deal with a broad range of medical conditions and implement innovative solutions in service delivery."
+        },
+        {
+            "question": "How close are you to demand hubs for your services? Do you have a strong relationship with your surrounding community?",
+            "answer": "Providing services in an area of need is a key success factor for adult day care services."
+        },
+        {
+            "question": "Do you monitor changes in government regulations?",
+            "answer": "Yes"
+        },
+        {
+            "question": "Have you had any issues with government regulations in the past?",
+            "answer": "No"
+        },
+        {
+            "question": "Must comply with government regulations",
+            "answer": "Adult day care services must meet all regulations by federal, state and regulatory bodies."
+        },
+        {
+            "question": "How much of your revenue stems from private health insurance reimbursements? Are you able to negotiate favorable reimbursement rates with providers?",
+            "answer": "As the number of insured individuals increases, more prospective patients will be able to afford adult day care service fees."
+        },
+        {
+            "question": "Do you monitor trends in disposable income? How will rising incomes impact your pricing?",
+            "answer": "Adult day care services are costly, so individuals are more willing and able to pay for the industry's services when disposable income is high."
+        },
+        {
+            "question": "How does an increase in the number of adults aged 65 and older affect your company? How do you plan to prepare for this increase?",
+            "answer": "Elderly individuals are more likely to require physical and mental health day care services."
+        }
+    ]
+}

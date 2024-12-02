@@ -1,0 +1,599 @@
+{
+    "report_title": "Dry Docks & Cargo Inspection Services in the US",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 2873000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 0.95
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.54
+            }
+        },
+        "profit": {
+            "profit_dollars": 678000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 3.0
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "profit_cagr_value": 6.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 23.6,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 2.03
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 3.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1509000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 3.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 2.0
+            }
+        },
+        "employees": {
+            "employees_count": 7653,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 1.05
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 2.0
+            }
+        },
+        "wages": {
+            "wages_dollars": 620000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 3.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 4.0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 0.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 0.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0.0
+            }
+        }
+    },
+    "executive_summary": "The industry provides maintenance, cargo inspection and other commercial and government watercraft support services. Increased trade activity in recent years has increased demand for these services, fueled by rising consumption and industrial production. As more cargo ships facilitate trade, demand for ship repair and other maintenance services rises. Simultaneously, declines in federal defense spending and outdated infrastructure in many US ports have constrained revenue and profitability during the current period. The COVID-19 pandemic significantly hampered trade activity and consumer spending, temporarily mitigating revenue. Revenue for dry docks and cargo inspection services is expected to climb at a CAGR of 6.0% to $2.9 billion through the end of 2024, including growth of 1.4% in 2024.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Growing Demand for Sustainable Practices",
+            "current_performance_point_description": "There's been a noticeable shift toward sustainability in the maritime industry, which is impacting how services are delivered in dry docks and during cargo inspections. Companies are now focusing on reducing their carbon footprints and adopting eco-friendly practices."
+        },
+        {
+            "current_performance_point_title": "Decreased federal spending on depot maintenance limited revenue growth",
+            "current_performance_point_description": "Budgetary cuts on maintenance and repair services have directly reduced demand. Lagging infrastructure to accommodate newly popular ultra-large container vessels (ULCVs), which emerged following the expansion of the Panama Canal, constrained revenue during the period."
+        },
+        {
+            "current_performance_point_title": "Increased trade bolstered revenue",
+            "current_performance_point_description": "Nonetheless, the total value of US trade has increased, recovering strongly from the COVID-19 pandemic. The expansion in commercial activity bolstered revenue for companies specializing in cargo ships and offset declines from budgetary cuts and outdated infrastructure."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Trade activity and number of active ships depend on economic climate",
+            "future_outlook_point_description": "As the volume of exports, imports and discretionary purchases swell, more ships are needed to transport goods and people, causing demand for industry-relevant services to increase."
+        },
+        {
+            "future_outlook_point_title": "Panama Canal expansion will aid trade activity",
+            "future_outlook_point_description": "The Panama Canal expansion will continue to affect global trade routes and vessel construction over the coming years. A large percentage of Asian imports typically destined for ports in California will shift to ports along the Atlantic Coast."
+        },
+        {
+            "future_outlook_point_title": "Trend toward larger cargo ships will continue",
+            "future_outlook_point_description": "To remain competitive and maintain steady demand, companies will have to revitalize many of their dry docks that are not currently capable of accommodating some of the larger vessels."
+        },
+        {
+            "future_outlook_point_title": "Increased automation and digitalization streamlines operations",
+            "future_outlook_point_description": "Automation and digital tools, like drones and AI, are transforming inspections and dry dock operations, making them faster, safer and more accurate."
+        },
+        {
+            "future_outlook_point_title": "Growing demand for skilled labor amidst technological advancements",
+            "future_outlook_point_description": "As technology advances, there's an increasing need for a workforce skilled in operating and maintaining sophisticated machinery and digital systems. Dry docks and cargo inspection services operators are in training programs to upskill current employees and attract new talent, ensuring the workforce can handle new inspection and maintenance technologies."
+        }
+    ],
+    "industry_definition": "This industry provides support services to water transportation industries including ship maintenance and repair, towing, cargo inspection and surveying. Shipbuilding and other manufacturing activities are not included in this industry.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Concentration Level: low"
+        ],
+        "negative_impact_factors": [],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Product/Service Concentration",
+            "High Revenue per Employee"
+        ],
+        "weaknesses": [
+            "High Customer Class Concentration",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "Total trade value"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Federal funding for defense"
+        ]
+    },
+    "key_trends": [
+        "Dock size is an important competitive factor. It dictates the repair services a dry dock can provide and the customers it can accommodate.",
+        "This industry also competes with other companies such as the Shipbuilding industry (IBISWorld report 33661a). It provides many of the same maintenance and repair services offered by dry docks.",
+        "The COVID-19 pandemic reduced overall trading activity. For companies that repair commercial and government vessels, profit contracts when trade activity and government spending drop.",
+        "The trend toward larger cargo ships with greater capacity will continue. Companies will have to revitalize many of their dry docks that cannot accommodate the larger vessels.",
+        "This industry is dominated by small companies. These small companies account for more than one-third of the market share.",
+        "The top two transportation services, Huntington Ingalls Industries and Intertek Group PLC account for less than 16.0% of the market share. These companies have endured more competition in recent years.",
+        "The Jones Act mandates that vessels operating in US ports be constructed by US shipyards. This means vessel owners often return to the original shipbuilders for repairs.",
+        "Companies are required to receive accreditation from The Occupational Safety and Health Association's Office of Maritime Enforcement (OME). Increases in OME regulations also increase operating costs."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Freighter vessels",
+            "segment_description": "Freighter vessels include general cargo ships and container ships carrying cargo in large containers. A cargo ship's carrying capacity is often measured in terms of twenty-foot equivalent units (TEU), which describes the number of standard twenty-foot containers a ship can transport.",
+            "segment_percentage": 101.0
+        },
+        {
+            "segment": "Tanker ships",
+            "segment_description": "Tanker ships account for the second-largest share of industry revenue within the commercial vessels segment. Tankers transport liquid cargo, including oil, liquefied gas and chemicals.",
+            "segment_percentage": 101.0
+        },
+        {
+            "segment": "Cruise ships and other passenger vessels",
+            "segment_description": "Demand from cruise ships and other passenger vessels is reliant on the economic health. The COVID-19 pandemic had negative effects on this market segment.",
+            "segment_percentage": 1.3
+        },
+        {
+            "segment": "Government",
+            "segment_description": "While many transport ships the US military uses are too large for most dry docks, major companies have sufficient infrastructure to perform maintenance on these vessels. Federal defense spending is an essential source of revenue for these companies.",
+            "segment_percentage": 30.3
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Some dry dock and cargo companies provide services directly to everyday consumers. These companies also provide in-water cleaning, maintenance and passenger transport services to consumers.",
+            "segment_percentage": 2.3
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Repairs from Floating Dry Docks",
+            "product_description": "Floating dry docks are the industry's core product. Demand for this segment remained largely unchanged even during the height of the COVID-19 pandemic.",
+            "product_percentage": 39.8
+        },
+        {
+            "product_or_service": "Repairs from Graving Dry Docks",
+            "product_description": "Contrary to a floating dry dock, a graving dock is a narrow basin carved out of the earth near a deep waterway. Graving docks store vessels as they are repaired, surveyed and cleaned.",
+            "product_percentage": 26.4
+        },
+        {
+            "product_or_service": "Transportation and Towing Services",
+            "product_description": "A small portion of companies engage in the transportation of commercial goods, typically among ports in the same region. Similarly, some companies obtain a small portion of their revenue by providing towing and tugboat services to their clients.",
+            "product_percentage": 7.8
+        },
+        {
+            "product_or_service": "Other Services",
+            "product_description": "Other services this industry provides include marine cargo inspection, passenger transport, ship scaling and repair services conducted on platforms other than floating and graving dry docks.",
+            "product_percentage": 101.0
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Port & Harbor Operations in the US",
+            "Aircraft, Marine & Railroad Transportation Equipment Wholesaling in the US",
+            "Stevedoring & Marine Cargo Handling in the US",
+            "Tugboat & Shipping Navigational Services in the US"
+        ],
+        "tier_2_suppliers": [
+            "Boat Building in the US",
+            "Construction in the US"
+        ],
+        "tier_1_buyers": [
+            "Transportation and Warehousing in the US",
+            "Freight Forwarding Brokerages & Agencies in the US",
+            "Inland Water Transportation in the US",
+            "Ocean & Coastal Transportation in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Total Trade Value",
+            "determinant_description": "Water transportation has historically been one of the most inexpensive modes of international trade. As a result, when trade activity increases, maritime activity also climbs, increasing demand for dry docks and cargo inspection services."
+        },
+        {
+            "determinant_title": "Industrial Production Index",
+            "determinant_description": "The Industrial Production Index (IPI) measures output from the US mining, manufacturing, electric and gas industries. The manufacturing sector relies heavily on waterborne transportation to import and export goods. As manufacturing output increases, demand for water transportation and its support services increases."
+        },
+        {
+            "determinant_title": "Consumer Spending",
+            "determinant_description": "Many dry dock operators generate revenue by providing services to cruise ships and other passenger lines. However, demand for these activities is highly sensitive to changes in consumer spending."
+        },
+        {
+            "determinant_title": "Federal Funding for Defense",
+            "determinant_description": "A large percentage of industry revenue is generated through maintenance and repair services performed on government vessels. When federal funding for defense increases, the military and other government entities construct and repair more ships, increasing demand for dry docks and cargo inspection services."
+        },
+        {
+            "determinant_title": "Demand from Water Transportation",
+            "determinant_description": "Companies involved in water transportation are the primary clients of dry docks and cargo inspection companies. Any increase in water transportation activity will promote a heightened level of spending on dry dock and cargo inspection services."
+        },
+        {
+            "determinant_title": "World Price of Crude Oil",
+            "determinant_description": "Since most cargo ships are powered by oil-based fuels, an increase in the world price of crude oil will limit international trade activity by increasing the cost of transportation. In turn, businesses in the Dry Dock and Cargo Inspection Services industry suffer from constrained trade activity."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast Region",
+            "location_description": "The Southeast region accounts for the largest share of establishments. Louisiana is home to the second-largest port by tonnage in the country and benefits from trade along the Gulf coastline and the Mississippi River.",
+            "percentage_establishments": 30.0,
+            "percentage_population": 40.0
+        },
+        {
+            "location": "West Region",
+            "location_description": "The West is the industry's second-largest region. Like the Southeast, it is home to several major cities with extensive port operations.",
+            "percentage_establishments": 20.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "Southwest Region",
+            "location_description": "Texas is the only state with a substantial number of establishments in the Southwest region. It accounts for the third-highest number of establishments and the second-largest percentage of industry revenue in the United States.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "Mid-Atlantic Region",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 10.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "Great Lakes Region",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 10.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "New England Region",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Plains Region",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Rocky Mountain Region",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5.0,
+            "percentage_population": 0.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "THE OCCUPATIONAL SAFETY AND HEALTH ASSOCIATION'S Office of Maritime Enforcement (OME)",
+                "regulation_description": "Companies must receive accreditation from the OME to handle certain devices and cargo gear. Increases in cargo and ship repair regulations positively affect the industry, enabling companies to command higher prices for services."
+            },
+            {
+                "regulation_title": "International Safety Management (ISM) Code",
+                "regulation_description": "The ISM Code, mandated by the International Maritime Organization (IMO), ensures ships' safe management, operations and pollution prevention. Dry docks and cargo inspection services must establish safety protocols, thoroughly document procedures and ensure strict adherence to sailors' safety and environmental standards."
+            },
+            {
+                "regulation_title": "International Ship and Port Facility Security (ISPS) Code",
+                "regulation_description": "The ISPS Code, part of the IMO's SOLAS Convention, bolsters maritime security. It requires cargo inspectors and dry dock operators to conduct risk assessments, implement security plans and ensure robust threat response measures to protect against terrorism and other illicit activities."
+            },
+            {
+                "regulation_title": "Environmental Protection Agency (EPA) Regulations",
+                "regulation_description": "In the U.S., the EPA enforces regulations to control water pollution from ships. Dry dock operations must comply with standards for wastewater discharge, pollutant control and spill prevention to mitigate environmental impacts and protect water bodies and marine life from contamination. Environmental regulations have become more stringent in recent years."
+            },
+            {
+                "regulation_title": "OCCUPATIONAL SAFETY AND HEALTH ADMINISTRATION (OSHA) STANDARDS",
+                "regulation_description": "OSHA sets health and safety guidelines for dry docks and cargo inspection services to prevent workplace accidents and injuries. These rules encompass equipment handling, employee training and adequate protective gear, fostering a safe working environment. Businesses that don't adhere to these standards can be subject to fines and business closures."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is mature."
+            },
+            {
+                "barrier_title": "Concentration Level",
+                "barrier_description": "The industry has a low concentration level."
+            },
+            {
+                "barrier_title": "Legal",
+                "barrier_description": "New entrants endure costly and demanding regulatory compliance obligations and licensing and certification requirements."
+            },
+            {
+                "barrier_title": "Start-up Costs",
+                "barrier_description": "Most companies have considerable initial capital costs, with dry docks costing up to $40.0 million each."
+            },
+            {
+                "barrier_title": "Differentiation",
+                "barrier_description": "The need for specialized knowledge, skills and experience in vessel maintenance and inspection often proves to be a new company entry barrier."
+            },
+            {
+                "barrier_title": "Labor Expenses",
+                "barrier_description": "Since the need for specialized knowledge, skills and experience in vessel maintenance and inspection is high, qualifying workers command high wages."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": []
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Dock Size",
+                "basis_description": "Dock size is an important competitive factor. It dictates the repair services a dry dock can provide and the customers it can accommodate."
+            },
+            {
+                "basis_title": "Competition from Other Industries",
+                "basis_description": "This industry also competes with other companies such as the Shipbuilding industry (IBISWorld report 33661a). It provides many of the same maintenance and repair services offered by dry docks."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Top Companies' Share",
+                "concentration_description": "The four largest companies account for more than one-third of revenue."
+            },
+            {
+                "concentration_title": "Large Companies' Focus",
+                "concentration_description": "The industry's largest companies generate most of their revenue through external activities and only operate industry-relevant services such as dry dock repairs in small, niche business segments."
+            },
+            {
+                "concentration_title": "Fragmentation",
+                "concentration_description": "These large-scale companies also use their superior buying power and economies of scale to reduce costs and expand faster. This causes the industry to be highly fragmented."
+            },
+            {
+                "concentration_title": "Small Establishments",
+                "concentration_description": "According to the US Census, about 60.0% of all establishments employ fewer than five employees."
+            },
+            {
+                "concentration_title": "Federal Spending Impact",
+                "concentration_description": "Federal spending has enabled the largest companies to expand their operations. With a larger, more diversified customer base, new players will enter the market, which threatens to reduce market share concentration."
+            },
+            {
+                "concentration_title": "Future Challenges",
+                "concentration_description": "Expanding industry market share concentration will encounter challenges in the coming years as increased industrial production and total trade activity will boost activity for dry dock and cargo inspection service providers."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Huntington Ingalls Industries, Inc.",
+                "company_percentage": 9.8
+            },
+            {
+                "company_name": "Intertek Group Plc",
+                "company_percentage": 9
+            },
+            {
+                "company_name": "Bae Systems Plc",
+                "company_percentage": 7.2
+            },
+            {
+                "company_name": "General Dynamics Corporation",
+                "company_percentage": 3
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 71
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 31.0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 7.4
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 21.6
+        },
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 23.6
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Labor Costs Burden Smaller Companies the Most",
+            "cost_factor_description": "Wage costs are expected to account for 21.6% of revenue in 2024, indicating that this industry is labor-intensive. Small companies often have higher wage costs since they don't benefit from economies of scale and must invest heavily in skilled workers to repair ships."
+        },
+        {
+            "cost_factor_title": "Capital Expenses",
+            "cost_factor_description": "Since the need for specialized knowledge, skills and experience in vessel maintenance and inspection is high, qualifying workers command high wages."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Dry dock operators purchase fuel, steel plates, copper tubing, aluminum, paints, blasting abrasives and ferrous and nonferrous castings for repair.",
+                "capital_intensity_description": "Large companies with a national customer base can buy these materials in bulk, reducing purchase costs."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "THIS INDUSTRY'S REVENUE IS CLOSELY LINKED TO OVERALL ECONOMIC PERFORMANCE",
+                "volatility_description": "When the economy is performing well, trade activity increases locally and internationally. This means more vessels are deployed, which increases the volume of vessels needing inspection and maintenance services."
+            },
+            {
+                "volatility_title": "OVERALL, BOATS AND SHIPS REQUIRE UPKEEP AT FAIRLY FIXED INTERVALS",
+                "volatility_description": "Regular maintenance schedules help to identify potential issues early on, reducing the chance of extended downtime or costly repairs. Failure to properly maintain ships can also subject inspection service providers to fines from regulators."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "AUTOMATED INSPECTION SYSTEMS INCREASE EFFICIENCY",
+                "technological_change_description": "Companies in the industry have developed automated inspection systems that use advanced technologies, including artificial intelligence and machine learning, to inspect vessels quickly and accurately."
+            },
+            {
+                "technological_change_title": "MOBILE INSPECTION UNITS INCREASE REACH",
+                "technological_change_description": "Dry docks and cargo inspection services companies have developed mobile inspection units that can be deployed to remote locations or onboard vessels. This helps reduce operating costs."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "Are your company's sales heavily dependent on total trade value?",
+            "answer": "Dry dock operators rely on international trade activity to stimulate the use of commercial cargo vessels. As the volume of traded goods increases, more ships are needed to transport cargo and existing ships experience greater wear and tear, boosting revenue for industry operators."
+        },
+        {
+            "question": "How does lower discretionary spending harm your major customers?",
+            "answer": "Companies benefit from higher discretionary spending, which stimulates international cargo transport."
+        },
+        {
+            "question": "Is your company located near large travel hubs?",
+            "answer": "Dry dock operators are almost exclusively located in coastal hubs of economic activity, with the Southeast region containing the largest share of the nation's dry dock facilities."
+        },
+        {
+            "question": "Has your company been exposed to the effects of volatile crude oil prices?",
+            "answer": "Many dry dock operators generate supplementary revenue by providing towing and tugboat services to their clients, and these services are highly sensitive to volatility in crude oil prices."
+        },
+        {
+            "question": "Is your company investing in technology, such as telematics and big data analysis software, to establish an edge over your competitors?",
+            "answer": "Dry dock operators do not generally experience substantial technological innovation, but many companies have worked to expand their dock facilities to accommodate larger vessels in recent years."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation?",
+            "answer": "The total value of the industry's wages has declined over the past five years as advanced equipment has replaced a lot of the manual labor that was historically needed for repair and cargo inspection services."
+        },
+        {
+            "question": "Have any regulatory expenses significantly impacted profitability recently? Do you anticipate tighter regulations under the new Biden administration?",
+            "answer": "Companies do not experience substantial compliance costs, as regulations relating to dry docks have not changed significantly in recent decades. The new Biden administration may introduce new environmental regulations that impact the industry."
+        },
+        {
+            "question": "Do you work with trade associations or other interest groups to advance your company's interests?",
+            "answer": "Many companies benefit from the assistance of the National Association of Marine Surveyors and the Society of Accredited Marine Surveyors, which primarily provide training and networking opportunities to cargo inspection companies."
+        },
+        {
+            "question": "What percentage of your customers renew their contracts?",
+            "answer": "Certain companies, such as BAE Systems, rely on government clients to renew their contracts on a consistent basis. Many manufacturers and maritime transportation companies sign long-term contracts with dry docks to reduce the impact of changes in commodity prices or consumer demand."
+        },
+        {
+            "question": "Do you have any big projects that will require capital financing?",
+            "answer": "It is imperative that US dry dock operators update existing port facilities to accommodate the largest types of commercial cargo vessels. In recent years, many companies have lost revenue to dry dock operators in Canada and Mexico that are able to offer larger facilities or lower prices."
+        },
+        {
+            "question": "What continual training procedures do you have in place? Do you encourage or require staff to participate in further training?",
+            "answer": "Ongoing staff training and development will ensure that a business can keep pace with customer needs and compete effectively."
+        },
+        {
+            "question": "How do you attract and retain skilled employees? Are there channels for promotion and career development?",
+            "answer": "Businesses in this industry must have access to adequate personnel to deliver specific services, such as ship repair. Honesty and integrity are essential attributes in successful ship surveying."
+        },
+        {
+            "question": "How hard is it to promote your company to suppliers?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "What can you do to bolster your supplier relationships?",
+            "answer": "Companies must have strong links with vessel operators and cargo handlers to assess their changing requirements. These close relationships will enable repeat customers."
+        },
+        {
+            "question": "Do you experience reduced demand when the price of crude oil increases?",
+            "answer": "As most cargo ships are powered by oil-based fuels, an increase in the world price of crude oil may limit international trade activity by increasing the cost of transportation. In turn, operators in the Dry Dock and Cargo Inspection Services industry suffer from constrained trade activity."
+        },
+        {
+            "question": "How do you monitor trends in water transportation activity? Do you take advantage of upward movements in water transportation?",
+            "answer": "Companies involved in water transportation are the primary clients of dry docks and cargo inspection companies. The industry performs regular, required maintenance on transport and trade ships. Any increase in water transportation activity will lead to increased demand for industry."
+        },
+        {
+            "question": "How do you take advantage of growing trade in merchandise? Where are your primary markets located?",
+            "answer": "Water transportation has historically been one of the most inexpensive modes of transportation for international trade. As a result, when trade activity increases, maritime activity also climbs, increasing demand for industry services like ship repair and cargo inspection."
+        }
+    ]
+}

@@ -1,0 +1,514 @@
+{
+    "report_title": "Deck & Patio Construction in the US",
+    "report_date": "Jun 02, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 934000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": -1.66
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 0
+            }
+        },
+        "profit": {
+            "profit_dollars": 56000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": -1.28
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2024,
+                "profit_cagr_value": -1.07
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 6,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0.38
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -1.67
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 358000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 7063,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 282000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "The Deck and Patio Construction industry consists of contractors that design, build and maintain outdoor living spaces, including decks and patios, for residential and commercial clients. The need for deck and patio construction is highly correlated with the housing market's overall health. Residential construction thrived during the pandemic as housing stock and low interest rates led to new construction projects. This prevented contractors from declining significantly as many households spent additional money to upgrade their homes by installing a deck or patio. However, heightened interest rates have sent industry revenue into decline since 2022.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Ups and Downs of Residential Construction",
+            "current_performance_point_description": "While revenue declined in 2020 amid the COVID-19 pandemic, the residential market was a saving grace for contractors. Low housing stock and near-zero interest rates allowed for a boom in construction, which helped soften the blow of the pandemic. With work-from-home policies becoming more prevalent, households began contacting contractors to help improve their homes through decks and patios. Even so, residential construction activity plummeted in 2022 as the Federal Reserve raised interest rates climbed to combat inflation."
+        },
+        {
+            "current_performance_point_title": "Commercial Contracts are Hard to Come By",
+            "current_performance_point_description": "While non-residential construction makes up a small portion of revenue, it is still a significant market for contractors. Non-residential construction fell significantly during the pandemic as business sentiment slumped and many businesses were forced to close. Clients put off the construction of patios, decks and other outdoor projects until further notice."
+        },
+        {
+            "current_performance_point_title": "Rising Costs Further Constrain Growth",
+            "current_performance_point_description": "Supply chain issues were exacerbated amid the pandemic, leading to a spike in the price of sawmill lumber, which is one of the main inputs. Plastics and other materials also exhibited price hikes. In normal circumstances, companies can pass on costs to consumers through price hikes, but during economic turmoil, they are forced to absorb some of the costs. As supply chains have normalized, input costs have fallen, allowing deck and patio contractors to turn a more reliable profit."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "The Housing Market is Set to Rebound",
+            "future_outlook_point_description": "Over the coming years, the Federal Reserve is expected to cut interest rates, which will encourage residential construction activity. Still, rates will not reach pandemic-era lows. Consumers are set to spend slightly more on home improvements, encouraging the number of residential construction projects. Households will continue to be the most significant market for deck and patio contractors."
+        },
+        {
+            "future_outlook_point_title": "A Ramp-Up in Commercial Construction",
+            "future_outlook_point_description": "After steady declines following the COVID-19 pandemic, commercial construction is set to continue to recover, bolstering contractors. Rising corporate profit will allow businesses to expand their buildings and add new decks, patios or outdoor rooms. Federal funding and policies will continue to support construction activity over the coming years."
+        },
+        {
+            "future_outlook_point_title": "NEW MATERIALS CONTINUE TO OFFER VARIETY FOR CUSTOMERS",
+            "future_outlook_point_description": "While the price of sawmill lumber is set to climb, having largely fallen from post pandemic peaks, a more predictable upstream supply chain will benefit contractors' profitability. Improved manufacturing technology allows contractors to use other materials as substitutes. While composite materials are expensive, they offer benefits like rot and water resistance. They are also more environmentally friendly since they are made from recycled materials. Composite materials also have lower maintenance costs, saving consumers money in the long run."
+        }
+    ],
+    "industry_definition": "This industry constructs outdoor living areas, including decks and patios, for residential and commercial clients. Industry operators perform new construction, reconstruction and repairs.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - steady"
+        ],
+        "negative_impact_factors": [],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low &amp; Steady Level of Assistance",
+            "High Competition",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Homeownership rate"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Housing starts"
+        ]
+    },
+    "key_trends": [
+        "The industry is highly fragmented, with companies operating at a local level. Low barriers to entry make it easier for contractors to come and go.",
+        "Large-scale companies compete with each other for commercial contracts. While these contracts can provide a stable source of revenue, companies typically need to be highly reputable to obtain them.",
+        "The residential market has ground to a halt as mortgage rates continue to climb to combat inflation. Even so, there will always be a need for deck and patio construction and repair from residential clients, providing a reliable income stream for contractors.",
+        "The decline of nonresidential markets prevented companies from securing long-term commercial contracts. Over the outlook period, this is set to reverse as businesses look to improve their facilities.",
+        "There are no major companies in this industry because most contractors are small and operate locally or nationally. The majority of companies employ fewer than 10 employees.",
+        "Contractors must follow a multitude of regulations. These regulations generally apply to workplace safety, building codes and environmental protection.",
+        "While there is no direct assistance from the government for deck and patio contractors, there are several industry associations and unions. These organizations provide information, training, advocacy and job opportunities for their members.",
+        "Wages continue to rise because of the stringent need for skilled labor. Installing and repairing decks and patios requires precision."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Residential building construction",
+            "segment_description": "The residential market includes new construction, remodeling and maintenance. It makes up more than two-thirds of the market. Residential construction is directly tied to the housing market. If housing prices push up, households can view a deck, patio or sunroom as an investment. A strong residential market push amid the pandemic aided this segment. Consumers also hired contractors to install decks or patios to improve their homes. Recent high interest rates have sent the residential construction market into decline.",
+            "segment_percentage": 68.9
+        },
+        {
+            "segment": "Commercial building construction",
+            "segment_description": "The industry derives the next-largest share of its revenue from the commercial building construction market (think office buildings and retail centers). Businesses in this market enter contracts with large, reputable contractors to ensure quality and timeliness. Nonresidential construction has slumped as the pandemic, then heightened interest rates, have hindered business sentiment.",
+            "segment_percentage": 16.7
+        },
+        {
+            "segment": "Municipal building construction",
+            "segment_description": "The remaining revenue is derived from municipal construction (hospitals, educational buildings and public safety buildings) and other miscellaneous projects. The majority of projects are related to outdoor seating areas for dining and smoking, as well as outdoor rooms. The decline in nonresidential construction also hindered this segment drastically.",
+            "segment_percentage": 8.1
+        },
+        {
+            "segment": "Other nonresidential building construction",
+            "segment_description": "The remaining revenue is derived from municipal construction (hospitals, educational buildings and public safety buildings) and other miscellaneous projects. The majority of projects are related to outdoor seating areas for dining and smoking, as well as outdoor rooms. The decline in nonresidential construction also hindered this segment drastically.",
+            "segment_percentage": 6.3
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Patio Construction",
+            "product_description": "Patios are built directly on the ground and are unconnected to the home. They are built on a concrete base and are adorned with tile, brick or other materials.",
+            "product_percentage": 50.6
+        },
+        {
+            "product_or_service": "Wood Deck Construction",
+            "product_description": "Wood decks are prevalent because they are the most affordable material for contractors. Wood is also naturally good at absorbing and retaining less heat, making it more comfortable in the summer. Even so, wood decks require constant maintenance to prevent rotting, fading and discoloration.",
+            "product_percentage": 39.2
+        },
+        {
+            "product_or_service": "Composite Deck Construction",
+            "product_description": "Synthetic decks are much more expensive and generate less revenue. While synthetic decks are pricy, they offer many benefits (rot-resistant and waterproof, require less maintenance and are long-lasting). They also used recycled material, making them more sustainable and attracting environmentally conscious consumers. Newer models of synthetic decks have multiple color options, appealing to various consumers. Even so, synthetic decks do not offer the look and feel of natural wood, which deters many consumers.",
+            "product_percentage": 10.2
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Construction in the US",
+            "Lumber Wholesaling in the US",
+            "Tool &amp; Hardware Wholesaling in the US",
+            "Finance and Insurance in the US",
+            "Heavy Equipment Rental in the US"
+        ],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [
+            "Home Builders in the US",
+            "Apartment &amp; Condominium Construction in the US",
+            "Commercial Building Construction in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Private Spending on Home Improvements",
+            "determinant_description": "Private spending on home improvements includes money spent on additions and alterations to existing houses by homeowners or property investors. Rising private spending on home improvements represents a potential opportunity for the industry."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region leads the country in deck and patio contractors. The region holds a large percentage of the total domestic population. Florida leads the region because of its warm climate, making it a perfect spot to construct decks, patios and sunrooms. Many retirees move to Florida to indulge in the weather, making construction more common.",
+            "percentage_establishments": 36,
+            "percentage_population": 22
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic has many urban cities and a large population. Large cities often undergo commercial construction, with many businesses installing decks or patios as an add-on. The region also has many suburban households that install decks and patios in their yards.",
+            "percentage_establishments": 18,
+            "percentage_population": 21
+        },
+        {
+            "location": "West",
+            "location_description": "Areas in the west include a wide variation of climatic conditions.",
+            "percentage_establishments": 14,
+            "percentage_population": 17
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 10,
+            "percentage_population": 15
+        },
+        {
+            "location": "Plains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 8,
+            "percentage_population": 7
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 6,
+            "percentage_population": 6
+        },
+        {
+            "location": "Southwest",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 6,
+            "percentage_population": 10
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 2,
+            "percentage_population": 2
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "Occupational Safety and Health Administration (OSHA) Regulations",
+                "regulation_description": "Operators must adhere to a workplace health and safety standard set out in Title 29 of the Code of Federal Regulations. Provisions must be put in place and limits must be set regarding weight limits and noise tolerance. All workers must also wear proper safety equipment."
+            },
+            {
+                "regulation_title": "Building Codes",
+                "regulation_description": "Companies must also follow several building codes, residential codes, fire codes, accessibility codes, zoning codes, state codes and local codes and ordinances. The International Code Council (ICC), an umbrella organization consisting of the three regional model code groups in the United States, endorsed building codes related to housing construction activities. These include the Southern Building Code Congress International (SBCCI), the Building Officials and Code Administrators (BOCA) and the International Conference of Code Officials (ICBO)."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "mature"
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "low - steady"
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "high - steady"
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level - low",
+            "Concentration Level - low",
+            "Globalization Level - low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "The industry is highly fragmented, with companies operating at a local level.",
+                "basis_description": "Low barriers to entry make it easier for contractors to come and go. Large-scale companies compete with each other for commercial contracts. While these contracts can provide a stable source of revenue, companies typically need to be highly reputable to obtain them."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Small companies make up the bulk of the market",
+                "concentration_description": "The industry is highly fragmented, with small, local companies making up the bulk of establishments. Because of the nature of industry activities, it is hard for any company to capture a significant market share."
+            },
+            {
+                "concentration_title": "Low Barriers Allow Contractors to Come and Go",
+                "concentration_description": "Low barriers to entry enable incredibly high levels of price competition. This leads to companies entering and exiting the industry depending on consumer needs. Market share concentration is set to remain low in the coming years."
+            }
+        ],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 30
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 40
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 50
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 60
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 70
+        },
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 80
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 90
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchase Expenses Can Be Up and Down",
+            "cost_factor_description": "Most purchases relate to materials used in the building process, which include railings, decking boards, plastic, glass, aluminum, adhesives, nails and lumber. The costs associated with purchases fluctuate based on input prices."
+        },
+        {
+            "cost_factor_title": "Profit Hits a Downturn",
+            "cost_factor_description": "Profit fluctuates according to cyclical investment in downstream construction markets and renovation and repair sentiment. Profit can vary depending on the size of the individual contractor."
+        },
+        {
+            "cost_factor_title": "Skilled Labor is Critical to Success",
+            "cost_factor_description": "Industry operations are highly labor intensive and involve manual work. Employees must be able to adapt to unique customer preferences and ensure the project is completed without any hitches."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LABOR EXPENSES",
+                "capital_intensity_description": "Construction is a very labor-intensive field. Companies must ensure workers are precise and on time with their work."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Construction Markets are Subject to Fluctuation",
+                "volatility_description": "Contractors are vulnerable to cyclical fluctuations in investment in the residential and nonresidential construction markets."
+            },
+            {
+                "volatility_title": "Economic Conditions Can Affect Revenue",
+                "volatility_description": "Contractors suffered in 2020 as the pandemic weakened business sentiment and drove down nonresidential construction activity."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "TECHNOLOGY CAN HELP BOTH PARTIES",
+                "technological_change_description": "Companies are incorporating design software programs into their operations to show clients how decks will look before starting construction."
+            },
+            {
+                "technological_change_title": "NEWER TOOLS CAN CUT DOWN PROJECT TIME",
+                "technological_change_description": "Advanced low-cost tools (think electric compound saws and high-pressure nail guns) can improve work quality and reduce physical labor."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company specialize in one corner of the market or provide a broad range of services?",
+            "answer": "Patio and deck construction workers offer a range of services, including construction, reconstruction and repairs."
+        },
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "The health of the US economy is important for contractors, which relies on high levels of consumer spending and construction activity."
+        },
+        {
+            "question": "How does exposure to volatile input prices impact performance?",
+            "answer": "Volatile input prices can threaten profitability if contractors are unable to negotiate steady contracts with suppliers."
+        },
+        {
+            "question": "Is your company investing in R&D to meet changing consumer preferences?",
+            "answer": "R&D investment has been crucial for deck and patio construction workers to stay on top of changing trends in new products."
+        },
+        {
+            "question": "How is your company leveraging new technology, such as deck designing software, in its operations?",
+            "answer": "Deck design software allows customers to build 3D models of custom deck layouts with user-selected railings, fittings, lighting and accessories."
+        },
+        {
+            "question": "Does your company invest in technology, such as high-pressurized nail guns and electric compound saws, to establish a competitive edge?",
+            "answer": "Some companies have begun using high-pressurized nail guns and electric compound saws in construction activities."
+        },
+        {
+            "question": "Is your company adequately prepared to adjust to changing regulations in construction activity?",
+            "answer": "The US Occupational Health & Safety Administration (OHSA) enforces standards for the construction sector."
+        },
+        {
+            "question": "Do you work with trade associations or other interest groups to advance your company's interests?",
+            "answer": "Deck and patio contractors receive assistance through The Associated General Contractors of America (AGC)."
+        },
+        {
+            "question": "How does your company's profit compare with your main competitors'?",
+            "answer": "Some larger companies have acquired smaller brands to leverage economies of scale."
+        },
+        {
+            "question": "What is your company doing to improve profit?",
+            "answer": "Many deck and patio contractors have decreased the size of crews in an effort to reduce costs."
+        },
+        {
+            "question": "Do you have a strong reputation among customers? Are you known for your reliability and performance?",
+            "answer": "Companies should ensure a good reputation by maintaining high standards for quality, timeliness and efficiency."
+        },
+        {
+            "question": "What relationships do you have with local development companies? How can you improve your company to receive better word-of-mouth recommendations?",
+            "answer": "It is necessary to establish and maintain close associations with major residential building and development companies."
+        },
+        {
+            "question": "How do you keep track of the company's expenditures? Are there any systems you can use to effectively control costs?",
+            "answer": "Contractors heavily depend on downstream building markets, which are subject to volatile cyclical fluctuations in investment."
+        }
+    ]
+}

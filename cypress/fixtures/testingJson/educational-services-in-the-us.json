@@ -1,0 +1,453 @@
+{
+    "report_title": "Educational Services Industry Report",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 126050000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 1.07
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "revenue_cagr_value": 0.6
+            }
+        },
+        "profit": {
+            "profit_dollars": 101,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": -0.38
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 6.7,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": null
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 101,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 13672456,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 101,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": 101,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": 101,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "The Educational Services sector comprises 13 subsectors of the US economy, ranging from public schools to testing and educational support schools. Primary, secondary and postsecondary schools alone generate 94.0% of the sector's revenue. Most of these institutions rely entirely on government funding, and nearly three-quarters of the educational services revenue comes from public schools and public universities. Accordingly, strong federal, state and local support for all levels of education has driven revenue upward over the past five years. Rising per capita disposable income has made private schools and higher education more affordable for students and parents, though recent inflation has strained consumers' wallets. Solid government funding for education has helped support the sector's success even amid fluctuating enrollment. Faltering birth rates are leading to lower head counts in K-12 schools, and ballooning student debt has made many would-be college students skeptical of the return on investment of an expensive degree. Federal plans to address student debt have been up in the air, but the rollout Department of Education's newest income-driven repayment program will likely make postsecondary education more attractive to a broader base of consumers. Trends in the domestic economy are set to move in the sector's favor over the next five years as prospective students become more able to afford rising tuition rates. A rise in unemployment will intensify competition for available jobs, encouraging consumers to continue their education and improve their resumes.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "GOVERNMENT FUNDING FOR PUBLIC SCHOOLS CONTINUES TO DRIVE REVENUE UPWARD",
+            "current_performance_point_description": "Local, state and federal governments fully fund public primary and secondary schools. Funds are directed to schools based on enrollment numbers, available programs, facility needs and student demographics."
+        },
+        {
+            "current_performance_point_title": "Nearly 95.0% of the sector's revenue is earned through just four industries, all of which receive federal, state and local government support.",
+            "current_performance_point_description": "While private schools don't receive direct government funding, they receive indirect assistance through the compulsory education requirement, making public or private education mandatory for those under 18."
+        },
+        {
+            "current_performance_point_title": "Economic growth through the current period boosted tax revenue for all levels of government, and sizable increases in government spending on education have uplifted primary and secondary educators.",
+            "current_performance_point_description": "However, birth rates continue to decline, making it difficult for primary schools to replace students aging out of their classes."
+        },
+        {
+            "current_performance_point_title": "I N F L A T I O N  I S  S T R A I N I N G  D E M A N D  F O R  D I S C R E T I O N A R Y E D U C A T I O N",
+            "current_performance_point_description": "Many of the sector's educational services provide discretionary classes, like tutoring services, sports camps and art teachers."
+        },
+        {
+            "current_performance_point_title": "Mounting inflation strained consumers' discretionary budgets, making grocery bills, utilities and other essential purchases much more costly.",
+            "current_performance_point_description": "Disposable income tanked in 2022."
+        },
+        {
+            "current_performance_point_title": "Educational services rely on labor much more than material inputs, so rising purchasing costs have had a minimal impact on profit.",
+            "current_performance_point_description": "Still, wages have."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "GROWING DISPOSABLE INCOME AND UNEMPLOYMENT WILL PUSH REVENUE UPWARD",
+            "future_outlook_point_description": "Inflation is expected to wane in the coming years, giving consumers' budgets some much-needed breathing room."
+        },
+        {
+            "future_outlook_point_title": "Unemployment is expected to climb through the next period.",
+            "future_outlook_point_description": "Rising unemployment will intensify competition for available jobs."
+        },
+        {
+            "future_outlook_point_title": "A DECLINE IN K-12 ENROLLMENT IS SET TO MUTE REVENUE GROWTH",
+            "future_outlook_point_description": "Educational providers at primary, secondary and postsecondary will continue to make up an estimated 94.0% of the sector's revenue."
+        },
+        {
+            "future_outlook_point_title": "While the number of K-12 students is set to sink through the next period, yearly increases to per-student funding policies will make this headwind more manageable.",
+            "future_outlook_point_description": "<UNKNOWN>"
+        }
+    ],
+    "industry_definition": "The Educational Services sector provides education across a broad spectrum of subjects and at diverse levels. Services offered by this sector include elementary and secondary schools, colleges and universities, technical and trade schools, fine art schools and language schools.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low revenue volatility level",
+            "low capital intensity level",
+            "high industry assistance level",
+            "low concentration level",
+            "high barriers to entry level"
+        ],
+        "negative_impact_factors": [
+            "low globalization level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Customer Class Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low Profit vs. Sector Average",
+            "High Product/Service Concentration",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers - Per capita disposable income"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "High school retention rate"
+        ]
+    },
+    "key_trends": [
+        "All individual industries that comprise the sector exhibit a low market share. The five largest institutions generate less than 5.0% of the sector's revenue.",
+        "Sector institutions compete on reputation, quality, service, product offerings and cost.",
+        "Educational services dodged heavy losses through the pandemic.",
+        "A shrinking youth population is posing a long-term threat to the sector.",
+        "There are no major companies."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Individuals under the age of 25",
+            "segment_description": "Individuals aged 25 and under are the primary determinants of sector demand.",
+            "segment_percentage": 31.7
+        },
+        {
+            "segment": "Individuals aged 25 to 34",
+            "segment_description": "This age segment includes individuals who delayed higher education until after high school.",
+            "segment_percentage": 9.6
+        },
+        {
+            "segment": "Individuals aged 35 to 44",
+            "segment_description": "Adults between 25 and 44 have some years in the workforce and have often completed their desired education.",
+            "segment_percentage": 13.2
+        },
+        {
+            "segment": "Individuals aged 45 to 54",
+            "segment_description": "Many individuals in this age demographic are parents to high school and college students.",
+            "segment_percentage": 26.2
+        },
+        {
+            "segment": "Individuals aged 55 to 64",
+            "segment_description": "Many parents or guardians aged 45 to 54 are sending their children to post-secondary education options.",
+            "segment_percentage": 15.5
+        },
+        {
+            "segment": "Individuals aged 65 and older",
+            "segment_description": "Many individuals in this age group are retired or work just part-time hours, limiting their income levels.",
+            "segment_percentage": 3.8
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Public and Private Elementary and Secondary Schools",
+            "product_description": null,
+            "product_percentage": 56.8
+        },
+        {
+            "product_or_service": "Community Colleges",
+            "product_description": null,
+            "product_percentage": 3.2
+        },
+        {
+            "product_or_service": "Non-Profit and For-Profit Universities and Colleges",
+            "product_description": null,
+            "product_percentage": 34.7
+        },
+        {
+            "product_or_service": "Business Coaching, Certification and IT Schools",
+            "product_description": null,
+            "product_percentage": 1.0
+        },
+        {
+            "product_or_service": "Trade and Technical Schools",
+            "product_description": null,
+            "product_percentage": 0.8
+        },
+        {
+            "product_or_service": "Other Schools and Instructions",
+            "product_description": null,
+            "product_percentage": 1.9
+        },
+        {
+            "product_or_service": "Educational Support Services",
+            "product_description": null,
+            "product_percentage": 1.6
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Book Stores in the US",
+            "Real Estate and Rental and Leasing in the US",
+            "Computer & Packaged Software Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Paper Mills in the US",
+            "Paper Product Manufacturing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Per Capita Disposable Income",
+            "determinant_description": "When per capita disposable income rises, US consumers become more willing to take on the added expenses of a private school or postsecondary institution."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "Educational service providers tend to be located in areas with high population densities.",
+            "percentage_establishments": 30,
+            "percentage_population": 30
+        },
+        {
+            "location": "West",
+            "location_description": "California is the US's most populous state.",
+            "percentage_establishments": 25,
+            "percentage_population": 25
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region holds more educational services than its population suggests.",
+            "percentage_establishments": 15,
+            "percentage_population": 15
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": null,
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        },
+        {
+            "location": "Southwest",
+            "location_description": null,
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        },
+        {
+            "location": "New England",
+            "location_description": null,
+            "percentage_establishments": 5,
+            "percentage_population": 5
+        },
+        {
+            "location": "Plains",
+            "location_description": null,
+            "percentage_establishments": 5,
+            "percentage_population": 5
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": null,
+            "percentage_establishments": 0,
+            "percentage_population": 0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "CHILD SAFETY LAWS",
+                "regulation_description": "Educational services that work with minors are legally mandated to conduct thorough background checks on employees."
+            },
+            {
+                "regulation_title": "ACCREDITATION",
+                "regulation_description": "Most educational services need to undergo accreditation before qualifying for federal, state or local assistance."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life cycle stage",
+                "barrier_description": "Life Cycle Stage"
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Revenue Volatility Level"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Competition on reputation, quality, service, product offerings and cost",
+                "basis_description": "Sector institutions compete on reputation, quality, service, product offerings and cost."
+            },
+            {
+                "basis_title": "Increasing competition",
+                "basis_description": "Increasing competition"
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Localized demand makes heavy fragmentation a staple of the sector",
+                "concentration_description": "All educational services are relatively fragmented and serve a localized area."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "New York City Department of Education",
+                "company_percentage": 1.6
+            },
+            {
+                "company_name": "University of California",
+                "company_percentage": 1.4
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 50
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 30
+        },
+        {
+            "cost_type": "Other Costs",
+            "cost_type_percentage": 10
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Wages for teachers, superintendents, food service workers, sports coaches and other administrative and instructional personnel",
+            "cost_factor_description": "The sector is highly labor-intensive because teaching and training are typically done face-to-face."
+        },
+        {
+            "cost_factor_title": "Purchases for developing courses and programs",
+            "cost_factor_description": "Many educators need to regularly develop courses and programs."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Increasing"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Low",
+        "volatility_trend": "Steady",
+        "volatility_points": []
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_trend": "Increasing",
+        "technological_change_points": []
+    },
+    "FAQs": [
+        {
+            "question": "How do you plan to effectively market and promote your educational services to attract new students in the highly competitive market?",
+            "answer": "As competition in the education industry grows, it becomes crucial for companies to devise effective marketing strategies to stand out and attract prospective students."
+        }
+    ]
+}

@@ -1,0 +1,477 @@
+{
+    "report_title": "Car Airbag Manufacturing in the US",
+    "report_date": "2022",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 3700000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "revenue_cagr_value": -1.0
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "revenue_cagr_value": 0.84
+            }
+        },
+        "profit": {
+            "profit_dollars": null,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "profit_cagr_value": 0.46
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5.0,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "profit_margins_cagr_value": 1.47
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 720000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "industry_value_added_cagr_value": -1.15
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "industry_value_added_cagr_value": 0.53
+            }
+        },
+        "employees": {
+            "employees_count": 2003,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "employees_cagr_value": -0.99
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "employees_cagr_value": -0.26
+            }
+        },
+        "wages": {
+            "wages_dollars": 450000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "wages_cagr_value": -1.75
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "wages_cagr_value": -0.04
+            }
+        },
+        "imports": {
+            "imports_dollars": 1394000000,
+            "imports_cagr_historical": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "imports_cagr_value": -1.17
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "imports_cagr_value": -1.17
+            }
+        },
+        "exports": {
+            "exports_dollars": 660000000,
+            "exports_cagr_historical": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "exports_cagr_value": 2.06
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "exports_cagr_value": -12.3
+            }
+        }
+    },
+    "executive_summary": "Over the five years to 2022, revenue for the Car Airbag Manufacturing industry is expected to decline. Industry operators manufacture airbags for all types of automobiles, including passenger cars and light and heavy trucks. Due to being an intermediate good in the production of automobiles, industry revenue tends to ebb and flow with fluctuations in demand and production levels for new vehicles. As a result, several negative trends have hampered industry revenue, such as the temporary closure of automobile manufacturers and dealers in 2020 due to the COVID-19 (coronavirus) pandemic. Although automobile production has since resumed, supply chain constraints and semiconductor shortages have limited production levels in 2021 and 2022. Consequently, IBISWorld expects industry revenue to decline at an annualized rate of 3.6% to $3.7 billion over the past five years, despite an anticipated 4.5% rise in revenue in 2022 due to rising new car sales and rebounding automobile production levels.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Downstream Demand Declines",
+            "current_performance_point_description": "Demand for car airbags has fallen in line with domestic automobile production levels. For instance, in 2019 domestic automobile production fell 9.8%, according to data from the Federal Reserve Bank of St. Louis and revenue fell 7.3% that year. In 2020 domestic automobile production levels declined another 22.7%, resulting in a decline in demand for car airbags from automobile manufacturers, which constitute the largest market for industry products. Moreover, new car sales are expected to decline at an annualized 0.6% over the five years to 2022."
+        },
+        {
+            "current_performance_point_title": "Declining International Trade",
+            "current_performance_point_description": "International trade is an integral component of the industry. Over the five years to 2022, industry exports are estimated to decline an annualized 12.3%, reaching $659.6 million in 2022. Exports fell 44.6% in 2020 alone amid a decline in global demand for car airbags and the temporary closure of automobile production facilities."
+        },
+        {
+            "current_performance_point_title": "External Competition Pressures Profit",
+            "current_performance_point_description": "In addition to volatile demand for automobiles, rising competition from operators in low-cost countries is anticipated to threaten profit growth. This price-based competition is expected to intensify, as auto makers increase incentives encouraging consumers to purchase new vehicles, such as 0.0% financing."
+        },
+        {
+            "current_performance_point_title": "Offshoring Operations",
+            "current_performance_point_description": "Although there are several advantages from foreign automakers building a greater domestic presence, many of these automakers continue to source parts from suppliers with whom they have an established relationship."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Globalization",
+            "future_outlook_point_description": "Exports are anticipated to grow at an annualized rate of 2.2% to $735.7 million over the next five years."
+        },
+        {
+            "future_outlook_point_title": "Ongoing Threat",
+            "future_outlook_point_description": "The industry is unique in that ongoing technological innovation may ultimately inhibit growth for the industry."
+        },
+        {
+            "future_outlook_point_title": "Exports and Imports",
+            "future_outlook_point_description": "As the global economy improves, the industry is expected to recover from the sharp declines experienced in 2020."
+        }
+    ],
+    "industry_definition": "This industry produces airbags for all types of automobiles.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Barriers To Entry Level"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level",
+            "Industry Assistance Level",
+            "Regulation Level",
+            "Globalization Level"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage",
+            "Capital Intensity Level",
+            "Concentration Level",
+            "Technology Change Level",
+            "Competition Level"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "Medium Imports"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Volatility",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration"
+        ],
+        "opportunities": [
+            "High Capital Requirements",
+            "High Revenue Growth (2022-2027)",
+            "High Performance Drivers",
+            "Import penetration into the manufacturing sector"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2022)",
+            "Low Revenue Growth (2017-2022)",
+            "Low Outlier Growth",
+            "Consumer confidence index"
+        ]
+    },
+    "key_trends": [
+        "Low interest rates have stimulated new car sales",
+        "Manufacturers in the automotive sector are increasingly offshoring operations to Mexico",
+        "Rising competition from operators in low-cost countries is anticipated to hinder profit growth",
+        "Rising automobile production levels will bolster demand",
+        "The industry will continue to compete against advanced technology like active safety systems"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Automobile and Other Vehicle Manufacturers",
+            "segment_description": "Automobile, light truck and utility vehicle original equipment manufacturers (OEMs) are the largest market segment for this industry.",
+            "segment_percentage": 64.7
+        },
+        {
+            "segment": "Exports",
+            "segment_description": "Exports are extremely important to the industry.",
+            "segment_percentage": 18
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Other markets including auto-repair workshops.",
+            "segment_percentage": 17.3
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Car Airbags",
+            "product_description": "",
+            "product_percentage": 27
+        },
+        {
+            "product_or_service": "Light Truck and Utility Vehicle Airbags",
+            "product_description": "The light truck and utility vehicle airbags form the largest product segment for this industry.",
+            "product_percentage": 70.2
+        },
+        {
+            "product_or_service": "Heavy-Duty Truck Airbags",
+            "product_description": "",
+            "product_percentage": 2.8
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Plastic Pipe & Parts Manufacturing in the US",
+            "Textile Mills in the US"
+        ],
+        "tier_2_suppliers": [
+            "Oxygen & Hydrogen Gas Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Car & Automobile Manufacturing in the US",
+            "SUV & Light Truck Manufacturing in the US",
+            "Truck & Bus Manufacturing in the US"
+        ],
+        "tier_2_buyers": [
+            "Truck, Trailer & Motor Home Manufacturing in the US",
+            "Automobile Steering & Suspension Manufacturing in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Automobile Production Levels",
+            "determinant_description": "In 2020, the temporary closure of automobile manufacturers had a negative impact on industry revenue for car airbags."
+        },
+        {
+            "determinant_title": "Government Regulation",
+            "determinant_description": "In 1998-1999, the government required mandatory airbags."
+        },
+        {
+            "determinant_title": "Competition Among Automobile Manufacturers",
+            "determinant_description": "Enhanced safety features can set the standard that all manufacturers must adhere to."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Medium",
+        "import_trend": "Decreasing",
+        "export_level": "Medium",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports",
+                "trade_description": "In comparison to the disruptions associated with the COVID-19 pandemic, imports are expected to decline."
+            },
+            {
+                "trade_title": "Exports",
+                "trade_description": "Exports are expected to decline amid tepid global demand."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region has a higher percentage of establishments compared to its population.",
+            "percentage_establishments": 26.2,
+            "percentage_population": 15
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region has a higher concentration of establishments compared to its population.",
+            "percentage_establishments": 24.3,
+            "percentage_population": 20
+        },
+        {
+            "location": "West",
+            "location_description": "In the West region, California accounts for a significant percentage of total establishments.",
+            "percentage_establishments": 16.1,
+            "percentage_population": 23
+        },
+        {
+            "location": "Southwest",
+            "location_description": "",
+            "percentage_establishments": 8,
+            "percentage_population": 11
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "",
+            "percentage_establishments": 8,
+            "percentage_population": 13
+        },
+        {
+            "location": "Plains",
+            "location_description": "",
+            "percentage_establishments": 7,
+            "percentage_population": 6
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "",
+            "percentage_establishments": 3,
+            "percentage_population": 6
+        },
+        {
+            "location": "New England",
+            "location_description": "",
+            "percentage_establishments": 8,
+            "percentage_population": 5
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "The National Highway Traffic Safety Administration (NHTSA)",
+                "regulation_description": "The National Highway Traffic Safety Administration issues regulations for automakers."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "High capital requirements",
+                "barrier_description": "Aspiring operators require significant capital outlays."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Revenue Volatility Level: high",
+            "Regulation Level: heavy - increasing",
+            "Globalization Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Industry Assistance Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Internal competition on price, technology and reputation",
+                "basis_description": "Industry operators compete on the basis of price, technology and reputation."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Top 3 companies account for 25.3% revenue in 2022",
+                "concentration_description": "The top three companies in this industry are expected to account for 25.3% of revenue."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Autoliv",
+                "company_percentage": 16.6
+            },
+            {
+                "company_name": "Zf Trw Automotive Holdings",
+                "company_percentage": 7.0
+            },
+            {
+                "company_name": "Continental Ag",
+                "company_percentage": 1.7
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 10.0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 25.0
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 40.0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 5.0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Profit",
+            "cost_factor_description": "Profit is anticipated to account for 5.0% of revenue in 2022."
+        },
+        {
+            "cost_factor_title": "Wages",
+            "cost_factor_description": "Wage's share of industry revenue is expected to account for 12.3% in 2022."
+        },
+        {
+            "cost_factor_title": "Purchases",
+            "cost_factor_description": "In 2022, purchases are expected to account for 68.2% of industry revenue."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Capital Intensity",
+                "capital_intensity_description": "A majority of the industry's products must be modified periodically."
+            }
+        ],
+        "capital_intensity_trend": "Increasing"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Revenue Volatility",
+                "volatility_description": "The Car Airbag Manufacturing industry is expected to exhibit a high level of revenue volatility."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Pedestrian Airbag Technology",
+                "technological_change_description": "Passenger car collisions are the leading cause of pedestrian fatalities."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company impacted by rising imports from abroad?",
+            "answer": "This industry endures strong import competition."
+        },
+        {
+            "question": "How have imports from low-wage countries like China and Mexico impacted your operations?",
+            "answer": "Imports from Mexico make up over 85% of all imported industry products."
+        }
+    ]
+}

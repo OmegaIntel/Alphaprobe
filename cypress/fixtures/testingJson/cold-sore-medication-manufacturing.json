@@ -1,0 +1,592 @@
+{
+    "report_title": "Cold Sore Medication Manufacturing",
+    "report_date": "2021",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 273000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "revenue_cagr_value": -1.75
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "revenue_cagr_value": 2.41
+            }
+        },
+        "profit": {
+            "profit_dollars": 20000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "profit_cagr_value": -1.24
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 7.3,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "profit_margins_cagr_value": 0.54
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 107000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 1582,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 81000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": 255000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": 113000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2021 currency.\n\nRevenue for the Cold Sore Medication Manufacturing industry is expected to fall at an annualized rate of 4.3% to $273.2 million over the five years to 2021, including 5.0% growth in 2021 alone, partly due to lower demand caused by the COVID-19 (coronavirus) pandemic. Generally, demand for cold sore medication is driven by broader trends, such as changes in disposable income, demographic shifts and total healthcare expenditure. Changes in private health insurance coverage can also cause demand to rise or fall, as a share of industry products include pharmaceutical treatments to treat conditions that arise from herpes simplex virus or herpes zoster virus. Common conditions treated by industry products include shingles, chickenpox and cold sores. Most industry products are now sold as over-the-counter (OTC) medications. As a result, downstream demand for products manufactured by this industry stems primarily from the Pharmacies and Drug Stores industry (IBISWorld report 44611).\n\nOverall, consumer demand for industry products has remained steady during the current period due to an increasingly aging population. Cold sore outbreaks often occur when a person's immune system is compromised, and often arise during cold and flu season. The elderly population is especially susceptible to cold sores and other conditions, such as shingles, that require treatment using industry products.\n\nIndustry revenue is expected to rise steadily, increasing at an annualized rate of 2.4% to $308.2 million over the five years to 2026. Still, manufacturers are expected to contend with rising competition over the coming years from generic offerings and OTC products, which carry lower profit. Generics are often sold at a discounted rate as compared with brand name offerings and have been increasingly prescribed to reduce rising healthcare costs in the",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Revenue for the Cold Sore Medication Manufacturing industry has steadily declined in recent years",
+            "current_performance_point_description": "Revenue is expected to fall at an annualized rate of 4.3% to $273.2 million over the five years to 2021, including 5.0% growth in 2021 alone. As the COVID-19 (coronavirus) pandemic causes unprecedented levels of unemployment, many people have lost health coverage, which has lowered demand for prescription-only products. Additionally, the high level of economic distress and uncertainty has hurt OTC product demand as consumers may forgo medication if possible. In 2021, industry revenue is expected to rebound as the broader macroeconomic environment recovers."
+        },
+        {
+            "current_performance_point_title": "Demographic Factors",
+            "current_performance_point_description": "The median age progressively increased from 37.7 years old in 2015 to 38.5 years old in 2020, therefore the median age has increased an annualized 0.4% over the five years to 2021. As a result, the higher the median age of the population, the higher the incidence of HSV-1 infection."
+        },
+        {
+            "current_performance_point_title": "Shift to Store Brand",
+            "current_performance_point_description": "IBISWorld estimates that the number of industry enterprises has grown at an annualized rate of 1.6% to 13 companies over the five years to 2021. These operators manufacture medicines that treat a relatively common condition; accordingly, they experience relatively consistent demand regardless of broader economic trends. Overall, increased competition from store-brand options drove the increase in the number of enterprises during the period. Store-brand alternatives to brand-name products have become increasingly popular among consumers, driving the number of industry employees to grow as well. However, as industry operators temporarily furloughed employees during the pandemic to protect their balance sheets, industry employment is expected to fall at an annualized rate of 0.1% to 1,582 workers over the five years to 2021."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Demographics and Economics",
+            "future_outlook_point_description": "The median age of the US population is anticipated to rise over the five years to 2026, increasing potential demand for the industry's products. Older adults experience a higher incidence of illnesses that affect their immune system, and as a result, they are more prone to cold sores. Therefore, as the population ages, demand for cold sore medication expands, ultimately benefiting the industry. According to the US Census Bureau and IBISWorld estimates, the median age of the population is expected to grow an annualized 0.4% over the five years to 2026. Additionally, the baby boomer generation is getting older, and since this demographic is larger than younger generations, it is an attractive segment for industry operators. As baby boomers age, they will likely make more purchases of industry products."
+        },
+        {
+            "future_outlook_point_title": "Competition and Expansion",
+            "future_outlook_point_description": "Companies that have a strong brand will likely still compete with other established brands on the pharmacy shelf. To capture a growing market for cold sore medication, these players are expected to differentiate themselves by expanding their research and development (R&D) budgets. Companies that concentrate on creating new and more effective cold sore treatments will likely outperform their peers, as consumers are typically willing to shift their allegiance toward the product with the strongest treatment track record."
+        }
+    ],
+    "industry_definition": "This industry develops and produces over-the-counter (OTC) and prescription treatments for cold sores, which are inflamed blisters in or near the mouth caused by infection from the herpes simplex virus.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low Capital Intensity Level",
+            "low Concentration Level",
+            "high - decreasing Barriers To Entry Level"
+        ],
+        "negative_impact_factors": [
+            "low - steady Industry Assistance Level",
+            "heavy - increasing Regulation Level",
+            "high Technology Change Level",
+            "high - increasing Globalization Level",
+            "high - increasing Competition Level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Decreasing Barriers to Entry",
+            "Low Volatility",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "High Imports",
+            "High Product/Service Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2021-2026)",
+            "High Performance Drivers",
+            "Trade-weighted index"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2021)",
+            "Low Revenue Growth (2016-2021)",
+            "Low Outlier Growth",
+            "Per capita disposable income"
+        ]
+    },
+    "key_trends": [
+        "The elderly is more likely to purchase cold sore medication due to compromised immune systems",
+        "Operators experience relatively consistent demand regardless of broader economic trends",
+        "Consistent demand for new products requires industry operators to increase R&D investment",
+        "The median age of the US population is anticipated to rise over the coming years"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Exports",
+            "segment_description": "Exports account for 41.2% of the industry's revenue, indicating significant exporting of pharmaceutical products.",
+            "segment_percentage": 41.2
+        },
+        {
+            "segment": "Drug stores",
+            "segment_description": "Drug stores account for 32.6% of revenue, representing sales through traditional pharmacies and drugstore chains.",
+            "segment_percentage": 32.6
+        },
+        {
+            "segment": "Big box/discount stores",
+            "segment_description": "Big box and discount stores make up 14.5% of the market, reflecting pharmaceutical sales through large retail chains.",
+            "segment_percentage": 14.5
+        },
+        {
+            "segment": "Grocery stores",
+            "segment_description": "Grocery stores account for 9.6% of the market, representing over-the-counter medication sales in supermarkets.",
+            "segment_percentage": 9.6
+        },
+        {
+            "segment": "Specialty health stores",
+            "segment_description": "Specialty health stores make up 2.1% of the market, including sales through independent health stores offering natural OTC products.",
+            "segment_percentage": 2.1
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Oral Prescription Medications",
+            "product_description": "Oral prescription medications account for 58.0% of cold sore medication sales in the US.",
+            "product_percentage": 58.0
+        },
+        {
+            "product_or_service": "OTC Medications and Generics",
+            "product_description": "Over-the-counter medications and generics represent 29.4% of the total cold sore medication market.",
+            "product_percentage": 29.4
+        },
+        {
+            "product_or_service": "Topical Prescription Medications",
+            "product_description": "Prescribed topical treatments for cold sores represent 12.6% of industry revenue.",
+            "product_percentage": 12.6
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [],
+        "tier_2_suppliers": [
+            "Chemical Product Manufacturing in the US",
+            "Plastic Bottle Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Drug, Cosmetic & Toiletry Wholesaling in the US"
+        ],
+        "tier_2_buyers": [
+            "Health Stores in the US",
+            "Supermarkets & Grocery Stores in the US",
+            "Pharmacies & Drug Stores in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Herpes virus infection rates",
+            "determinant_description": "Demand for cold sore medications is dependent upon herpes virus infection rates."
+        },
+        {
+            "determinant_title": "Government health policies",
+            "determinant_description": "Demand is affected by government health policies."
+        },
+        {
+            "determinant_title": "Price of medications",
+            "determinant_description": "The price of cold sore medications impacts demand."
+        },
+        {
+            "determinant_title": "Doctors' prescribing patterns",
+            "determinant_description": "Doctors' prescribing patterns for cold sore medications affect demand."
+        },
+        {
+            "determinant_title": "Consumer usage rates",
+            "determinant_description": "Consumer usage rates of cold sore medications determine demand."
+        },
+        {
+            "determinant_title": "Insurance coverage levels",
+            "determinant_description": "The level of insurance coverage impacts demand for medications."
+        },
+        {
+            "determinant_title": "Marketing activity",
+            "determinant_description": "Marketing activity by companies influences demand for their products."
+        },
+        {
+            "determinant_title": "Consumer income levels",
+            "determinant_description": "Consumer income levels affect demand for cold sore medications."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Increasing",
+        "export_level": "High",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "International market prices",
+                "trade_description": "Some economically developed countries control prices of innovative pharmaceuticals below market levels, leading to higher prices for US consumers."
+            },
+            {
+                "trade_title": "Manufacturing shift to other countries",
+                "trade_description": "Cost pressures and growth opportunities have prompted multinational companies to shift manufacturing to other countries, especially emerging markets."
+            },
+            {
+                "trade_title": "Counterfeit drug imports",
+                "trade_description": "The FDA estimates 10% of global medicines are counterfeit, posing risks. It has tightened border controls in response."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "West",
+            "location_description": "The West region accounts for the highest percentage of establishments at 30% but 0% of the population.",
+            "percentage_establishments": 30.0,
+            "percentage_population": 0.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region accounts for 0% of establishments but 20% of the population. Industry leader GlaxoSmithKline is located in this region.",
+            "percentage_establishments": 0.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region accounts for 0% of establishments but 20% of the population. It has a significant elderly population.",
+            "percentage_establishments": 0.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region accounts for 0% of establishments but 15% of the population.",
+            "percentage_establishments": 0.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "The Southwest region accounts for 0% of establishments but 10% of the population.",
+            "percentage_establishments": 0.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "The Rocky Mountains region accounts for 0% of establishments but 5% of the population.",
+            "percentage_establishments": 0.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "New England",
+            "location_description": "The New England region accounts for 0% of establishments and 0% of the population.",
+            "percentage_establishments": 0.0,
+            "percentage_population": 0.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "Heavy regulation Increasing regulation",
+                "regulation_description": "Cold sore medication manufacturing is primarily regulated by the US Food and Drug Administration (FDA). The FDA governs the laws and regulations related to the testing, manufacturing, labeling and marketing of pharmaceutical products."
+            },
+            {
+                "regulation_title": "APPROVAL COSTS TIME AND MONEY",
+                "regulation_description": "This industry receives extensive regulatory oversight by the FDA, which must approve all cold sore medication products before they can be marketed."
+            },
+            {
+                "regulation_title": "LABELING",
+                "regulation_description": "OTC cold sore medication distributed in the United States must also comply with the labeling regulations published by the FDA under the OTC monograph."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Decreasing",
+        "barriers_points": [
+            {
+                "barrier_title": "High costs and knowledge barriers",
+                "barrier_description": "Developing a new drug can cost more than $1.5 billion and entails extensive clinical trials to satisfy regulatory bodies. A high level of proprietary knowledge is required to successfully compete."
+            },
+            {
+                "barrier_title": "Encroachment of small manufacturers",
+                "barrier_description": "The proliferation of small biotechnology companies and laboratories manufacturing generic drugs and involved in R&D suggests barriers are falling due to technological advances and competition."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Patented vs generic products",
+                "basis_description": "For patented products, competition is based on product innovation which is expensive with long lead times. For generics, competition is based on pricing after patent expiry."
+            },
+            {
+                "basis_title": "Marketing ability and promotional spending",
+                "basis_description": "Significant promotional spending can influence prescribing habits. Direct-to-consumer advertising increases drug usage and sales."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "GlaxoSmithKline dominates OTC market",
+                "concentration_description": "GlaxoSmithKline commands over 50% of the OTC cold sore medication market with its product Abreva."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "GlaxoSmithKline PLC",
+                "company_percentage": 27.6
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 7.3
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 29.6
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 26.3
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 2.3
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0.9
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0.4
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0.6
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 32.5
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Profit",
+            "cost_factor_description": "The average profit margin for an industry operator, measured as earnings before interest and taxes, is expected to account for 7.3% of total revenue in 2021. However, this figure varies significantly among industry companies."
+        },
+        {
+            "cost_factor_title": "Wages",
+            "cost_factor_description": "IBISWorld estimates industry wages account for 29.6% of revenue. The industry requires a high level of labor since employees must perform a variety of technical tasks including machine operation, inspection and quality control."
+        },
+        {
+            "cost_factor_title": "Purchases",
+            "cost_factor_description": "Purchases account for an estimated 26.3% of total revenue for an average industry company in 2021. The high cost of goods sold for pharmaceutical products is partly the consequence of the methods by which quality in the product is achieved."
+        },
+        {
+            "cost_factor_title": "Depreciation",
+            "cost_factor_description": "Depreciation accounts for an estimated 2.3% of revenue in 2021, as operators rely on complex machinery for manufacturing facilities."
+        },
+        {
+            "cost_factor_title": "Marketing",
+            "cost_factor_description": "Marketing accounts for an estimated 0.9% of revenue. Marketing and administrative costs have marginally increased in recent years."
+        },
+        {
+            "cost_factor_title": "Rent",
+            "cost_factor_description": "Rent is expected to account for 0.4% of industry revenue in 2021 as operators require manufacturing facilities."
+        },
+        {
+            "cost_factor_title": "Utilities",
+            "cost_factor_description": "Utilities make up 0.6% of industry revenue as manufacturing facilities require significant levels of electricity and natural gas to operate."
+        },
+        {
+            "cost_factor_title": "Other Costs",
+            "cost_factor_description": "Other industry costs include administrative, research, licensing and litigation. Other costs account for 32.5% of revenue in 2021."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital intensity",
+                "capital_intensity_description": "The Cold Sore Medication Manufacturing industry has a low-to-moderate level of capital intensity. For every dollar spent on labor, the industry spends an estimated $0.08 on capital investment."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Medium revenue volatility",
+                "volatility_description": "The Cold Sore Medication Manufacturers industry has a low-to-moderate level of revenue volatility. Revenue has been slightly unstable over the past five years due to patent expirations and changes in prescription drug coverage."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Technological Disruption",
+                "technological_change_description": "The Cold Sore Medication Manufacturing industry is at the forefront of technological advancement, investing significantly in research and development (R&D) to develop new products."
+            },
+            {
+                "technological_change_title": "High technology change",
+                "technological_change_description": "Growth in this industry is heavily dependent on the introduction of new drugs, which in turn depends on continual technological developments."
+            },
+            {
+                "technological_change_title": "R&D",
+                "technological_change_description": "Innovation and development of high-potential breakthrough products is one of the most important sources of growth within the industry, and R&D is a major expense for companies."
+            },
+            {
+                "technological_change_title": "Advances in Technology",
+                "technological_change_description": "To continue growing and stay competitive in the slow economy, cold sore medication manufacturers will continue to streamline operations to reduce costs and time to market."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company affected by rising imports?",
+            "answer": "Rising imports from European manufacturers are a source of intense competition for domestic manufacturers."
+        },
+        {
+            "question": "How much does your company allocate to marketing expenses?",
+            "answer": "On average, depending on the size of the company, an average company allocates between 1.0 and 5.0% of total revenue on advertising and promotion."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "The price of plastic and resin products, which are a main component of industry product packaging, can increase purchase costs, thereby constraining profitability."
+        },
+        {
+            "question": "Is your company investing heavily in R&D to meet changing consumer preferences?",
+            "answer": "Given the high level of competition in the industry, establishing an edge through increased R&D can benefit a company."
+        },
+        {
+            "question": "Do you use SAP software systems to optimize all aspects of your company's manufacturing, sales, inventory and distribution channels?",
+            "answer": "SAP software systems enables for a company to streamline and monitor all aspects of the manufacturing process."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation over the past five years?",
+            "answer": "Increasing automation, thanks to developing technology, can help to reduce wage costs and operational inefficiencies."
+        },
+        {
+            "question": "Have any regulatory expenses significantly impacted profitability recently?",
+            "answer": "Reclassification of certain industry products could potentially impact profitability"
+        },
+        {
+            "question": "Do you work with trade associations or other interest groups to advance your company's interests?",
+            "answer": "The Consumer Healthcare Products Association (CHPA) is the largest industry association, and is membership based."
+        },
+        {
+            "question": "How does your company's profit compare to your main competitors'?",
+            "answer": "On average, the industry profit margin is 7.8%."
+        },
+        {
+            "question": "How does your company compensate for the seasonality of cash flow?",
+            "answer": "Since products are subject to a high degree of seasonality, a company must diversify its product offerings to maintain steady revenue throughout the year."
+        },
+        {
+            "question": "How much of your budget is invested in research and development? How do you attract highly skilled and educated researchers?",
+            "answer": "Industry firms invest heavily in R&D to drive future performance through the development of new medications. Companies that can discover and bring to market innovative products that address unmet medical needs hold a competitive advantage."
+        },
+        {
+            "question": "How can you improve your company to receive better word-of-mouth recommendations? How many of your clients were referred to you?",
+            "answer": "A reputable brand name is important to marketing success in the competitive cold sore medication industry"
+        },
+        {
+            "question": "Have you been able to effectively spread your capital costs over servicing many markets? Do you have global or cross-border operations?",
+            "answer": "As the pharmaceutical sector, and the Cold Sore Medication Manufacturing industry becomes increasingly global, it is essential for industry firms to have access to foreign markets and manufacturing facilities to help control costs and boost sales."
+        },
+        {
+            "question": "How much of your revenue comes from export markets?",
+            "answer": 101
+        },
+        {
+            "question": "Do you compete directly in the domestic market with any foreign manufacturers?",
+            "answer": "A rising TWI makes imports more affordable in the domestic market and renders exports more expensive for foreign buyers."
+        },
+        {
+            "question": "How much of your budget is allocated toward research and development? What consumer trends do you hope to leverage with new products?",
+            "answer": "An increase in total public and private funding for R&D will likely increase the number of new products on the market, piquing consumer interest and increasing industry revenue."
+        },
+        {
+            "question": "Do you manufacture brand name or generic medications?",
+            "answer": 101
+        },
+        {
+            "question": "How will rising disposable income affect your product portfolio and pricing strategy?",
+            "answer": "When per capita disposable income increases, consumers are more likely to purchase expensive, high-quality treatments, which favorably affects industry revenue."
+        }
+    ]
+}

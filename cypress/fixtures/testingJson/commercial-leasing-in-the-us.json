@@ -1,0 +1,549 @@
+{
+    "report_title": "Commercial Leasing in the US",
+    "report_date": "Jul 05, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 257729000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 0.53
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.1
+            }
+        },
+        "profit": {
+            "profit_dollars": 131700000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 0.76
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 51.1,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 0.23
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 205510000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0.0
+            }
+        },
+        "employees": {
+            "employees_count": 505050,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 0.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0.0
+            }
+        },
+        "wages": {
+            "wages_dollars": 25527000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0.0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 0.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 0.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0.0
+            }
+        }
+    },
+    "executive_summary": "Operators in the Commercial Leasing industry serve as lessors of buildings for nonresidential purposes. Industry participants include owner-lessors of nonresidential buildings, establishments that rent real estate and then act as lessors in subleasing it, and establishments that provide full-service office space. Over the five years to 2024, lessors have experienced mixed demand from critical downstream market segments. Since the onset of COVID-19, demand for office space has plunged amid work-from-home and hybrid work arrangements. However, demand for industrial and retail spaces has risen, buoying industry revenue. Over the past five years, industry revenue has risen at a CAGR of 0.1% to reach $257.7 billion, despite an estimated 1.2% decline in 2024.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "2023 Provides a Rocky Landscape for Commercial Leasing",
+            "current_performance_point_description": "High interest rates and a potential recession will make 2023 challenging for commercial leasing. The retail sector is expected to face challenges in 2023 due to e-commerce reducing foot traffic. The industrial sector is expected to continue growing due to demand for warehouse space from e-commerce. Rising interest rates can lead to lower property values, making it harder to refinance leases or sell properties. For most of the current period, low interest rates stimulated business expansion, but the Federal Reserve began raising rates in 2022 to combat inflation, resulting in higher borrowing costs and declining demand."
+        },
+        {
+            "current_performance_point_title": "Office Occupancy Rates Remain Below Pre-Pandemic Levels",
+            "current_performance_point_description": "Office vacancy rates are inversely correlated with employment and corporate profits. In New York City, office occupancy ranges from 25-59% over a week according to Kastle data. New York's return to office rate is lower than the average across major US metros. Fast-growing Sun Belt markets like Austin and Dallas have offset some reduced office demand from traditional markets like New York."
+        },
+        {
+            "current_performance_point_title": "The Retail Market Has Mostly Recovered From COVID-19",
+            "current_performance_point_description": "In 2020, many businesses temporarily closed due to COVID-19 shelter-in-place orders, hurting the industry. Brick-and-mortar retail sales rebounded in 2022, showing recovery in retail leasing. In 2023, inflation, interest rates and labor shortages may hamper retailers, but high construction costs and tight availability will keep retail demand stable. Retailers are adapting by offering new services like curbside pickup and virtual experiences."
+        },
+        {
+            "current_performance_point_title": "The Commercial Landscape Has Shifted",
+            "current_performance_point_description": "COVID-19 accelerated remote work acceptance, impacting commercial leasing. Some companies downsized office space while others expanded industrial/logistics footprints to support e-commerce operations."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Office Demand Won't Return to Pre-Pandemic Levels",
+            "future_outlook_point_description": "According to the Partnership for New York City, 80% of employers plan a hybrid work model based on employee preference. Demand will focus on top buildings in prime locations, while older buildings struggle. $1.5 trillion in commercial loans expiring soon poses a threat."
+        },
+        {
+            "future_outlook_point_title": "Commercial Leasing Providers Will Expansively Rely on Retail and Industrial Markets",
+            "future_outlook_point_description": "E-commerce growth will require investment in warehouses and distribution centers, boosting industrial demand for commercial lessors."
+        },
+        {
+            "future_outlook_point_title": "The Commercial Leasing Industry's Product Mix Will Shift to Garner Demand",
+            "future_outlook_point_description": "Demand will rise for lifestyle centers, LEED-certified buildings, flexible shared spaces for the sharing economy, and mixed-use properties that are more stable investments."
+        },
+        {
+            "future_outlook_point_title": "Tech Integration Is Estimated to Rise",
+            "future_outlook_point_description": "Data analytics tools will likely be used more to analyze building performance, tenant behavior and market trends to optimize leasing decisions. Digital lease management platforms are becoming essential."
+        }
+    ],
+    "industry_definition": "Operators in this industry serve as lessors of buildings that aren't used as residences or dwellings. Industry participants include owner-lessors of nonresidential buildings, establishments that rent real estate and then act as lessors in subleasing it to others, as well as establishments that provide full-service office space.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Concentration Level is low",
+            "Technology Change Level is low",
+            "Globalization Level is low - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage is mature"
+        ],
+        "negative_impact_factors": [
+            "Capital Intensity Level is high",
+            "Industry Assistance Level is low - steady"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "High Revenue per Employee"
+        ],
+        "weaknesses": [
+            "Low & Increasing Barriers to Entry",
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers",
+            "Number of businesses"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "National unemployment rate"
+        ]
+    },
+    "key_trends": [
+        "Commercial leasing companies exist around the country and often serve specific communities. The regionalization of the industry causes increased fragmentation.",
+        "Barriers to entry are low, allowing many small firms and owner-operators to operate in the Commercial Leasing industry. Penetration by these types of companies reduces the ability of large operators to dominate the industry.",
+        "Office vacancy rates remain high across the United States. As employees continue to work from home, office vacancy rates have reached record highs.",
+        "Recent interest rate hikes have introduced a note of caution to the market. Tenants have become more cost-conscious, seeking shorter leases or exploring alternative space options.",
+        "The four largest companies comprise less than 5.0% of revenue, indicating how fractured commercial leasing companies are. This encourages intense competition among firms by price and service quality.",
+        "Commercial leasing operators don't receive any direct governmental assistance. However, they are assisted through trade associations, like the National Association of Realtors (NAR).",
+        "Rising interest rates deter companies from expanding their office footprint. This has resulted in decelerated demand for Commercial Leasing providers.",
+        "Profit for commercial leasing operators tends to be high and steady compared with other industries. There were some fluctuations during COVID-19 and subsequent years as interest rates spiked."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Office and professional buildings",
+            "segment_description": "The office market can be differentiated by type, style, age, condition, location and tenant identity.",
+            "segment_percentage": 39.4
+        },
+        {
+            "segment": "Shopping centers, retail market spaces",
+            "segment_description": "The retail segment can be divided into shopping centers and nonshopping centers.",
+            "segment_percentage": 35
+        },
+        {
+            "segment": "Industrial buildings",
+            "segment_description": "Industrial properties are generally categorized into two distinct property segments, depending on the activity being conducted at the site.",
+            "segment_percentage": 11
+        },
+        {
+            "segment": "Other nonresidential properties",
+            "segment_description": "Other nonresidential properties segment.",
+            "segment_percentage": 10.9
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Other market segments.",
+            "segment_percentage": 3.7
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Renting Commercial Buildings",
+            "product_description": "The renting commercial buildings segment is primarily composed of renting retail buildings.",
+            "product_percentage": 31.5
+        },
+        {
+            "product_or_service": "Renting Office Buildings",
+            "product_description": "This segment includes renting office buildings.",
+            "product_percentage": 35.6
+        },
+        {
+            "product_or_service": "Renting Industrial Buildings",
+            "product_description": "This segment includes renting industrial buildings.",
+            "product_percentage": 10
+        },
+        {
+            "product_or_service": "Renting Other Nonresidential Properties",
+            "product_description": "Renting other nonresidential properties.",
+            "product_percentage": 9.8
+        },
+        {
+            "product_or_service": "Property Management and Sales",
+            "product_description": "Property management and sales services.",
+            "product_percentage": 1.9
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "Other products and services.",
+            "product_percentage": 11.2
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Commercial Building Construction in the US",
+            "Municipal Building Construction in the US",
+            "Industrial Building Construction in the US"
+        ],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Health of the business sector",
+            "determinant_description": "Demand for commercial real estate services is largely determined by the health of the business sector."
+        },
+        {
+            "determinant_title": "Growth in number of businesses",
+            "determinant_description": "Growth in the number of businesses represents a potential opportunity for commercial leasing companies."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast region",
+            "location_description": "The Southeast region has the highest concentration of the US population and the largest penetration of Commercial Leasing companies.",
+            "percentage_establishments": 30,
+            "percentage_population": 25
+        },
+        {
+            "location": "California",
+            "location_description": "California is the largest economy and most populated state in the US. It dominates the West region for commercial leasing.",
+            "percentage_establishments": 15,
+            "percentage_population": 20
+        },
+        {
+            "location": "New York",
+            "location_description": "New York is the third-largest economy and home to the most expensive commercial real estate in the US, driving commercial leasing activity in the Mid-Atlantic region.",
+            "percentage_establishments": 20,
+            "percentage_population": 15
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "Licensing Requirements",
+                "regulation_description": "Real estate agents must be properly licensed within their respective states to legally represent a broker. Brokers themselves are required to obtain more extensive licensing."
+            },
+            {
+                "regulation_title": "The National Association of Realtors (NAR)",
+                "regulation_description": "The National Association of Realtors seeks to help its members become more profitable and assist them with compliance. It advocates property transactions, develops standards for its members and provides professional development, research and communication services for its members."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Most states require commercial leasing agents to obtain a real estate license",
+                "barrier_description": "Most states require commercial leasing agents to obtain a real estate license. This involves passing qualifying exams and meeting specific education requirements. In some states, leasing agents who work under a broker might be required to obtain a surety bond."
+            },
+            {
+                "barrier_title": "Access to capital markets is often restricted",
+                "barrier_description": "Access to capital markets is often restricted, raising barriers to entry for potential commercial leasing companies. Generally, larger, well-established companies, especially individuals or operators with strong financial positions, can access credit at higher rates."
+            },
+            {
+                "barrier_title": "Success hinges on strong relationships with landlords and tenants",
+                "barrier_description": "The success of a leasing agent or firm often hinges on strong relationships with both landlords and tenants. Established players have a network of contacts built over years, giving them access to exclusive listings and a steady stream of clients."
+            },
+            {
+                "barrier_title": "Capital-intensive industry",
+                "barrier_description": "The Commercial Leasing industry is capital-intensive. Commercial property owners need to raise money to purchase property, develop land and run operations."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Capital Intensity Level: high",
+            "Industry Assistance Level: low - steady",
+            "Competition Level: high - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Concentration Level: low",
+            "Technology Change Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Regionalization of the industry causes increased fragmentation",
+                "basis_description": "Commercial leasing companies exist around the country and often serve specific communities. The regionalization of the industry causes increased fragmentation."
+            },
+            {
+                "basis_title": "Low barriers to entry allow many small firms and owner-operators",
+                "basis_description": "Barriers to entry are low, allowing many small firms and owner-operators to operate in the Commercial Leasing industry. Penetration by these types of companies reduces the ability of large operators to dominate the industry."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Large nonemployer presence keeps market share concentration low",
+                "concentration_description": "Many commercial leasing companies have fewer than five employees. No one player dominates the market; the top four industry players account for less than 5.0% of total industry revenue."
+            },
+            {
+                "concentration_title": "Independent agents have localized knowledge and personalized service",
+                "concentration_description": "Independent agents often build strong relationships with landlords and businesses in their local markets. This localized knowledge and personalized service can be a major advantage for businesses seeking a leasing partner who understands their specific needs and the nuances of the local market."
+            },
+            {
+                "concentration_title": "Low barriers make boosting consolidation difficult",
+                "concentration_description": "Commercial leasing businesses have been aggressively expanding their real estate offerings by leveraging assets and issuing equity, when large enough to do so. Smaller companies concurrently seek to reduce risk by diversifying operations. These entities diversify their businesses by expanding operations beyond their traditional regional market through corporate acquisitions and property purchases."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Brookfield Property Partners L.P.",
+                "company_percentage": 1.8
+            },
+            {
+                "company_name": "Simon Property Group, inc.",
+                "company_percentage": 1.6
+            },
+            {
+                "company_name": "Cbre Group, Inc.",
+                "company_percentage": 0.6
+            },
+            {
+                "company_name": "New York Convention Center Operating Corporation",
+                "company_percentage": 0.5
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 95.6
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "The Nature of Commercial Leasing Results in High Depreciation Costs",
+            "cost_factor_description": "Commercial and investment real estate properties receive a tax deduction for annual wear and tear or loss of utility, so companies depreciate real estate assets over time to account for this deduction. Amortization costs are included in other expenses."
+        },
+        {
+            "cost_factor_title": "High-Skilled Workers Boost Wage Costs",
+            "cost_factor_description": "Companies employ highly educated individuals who are experts in the real estate industry. The health of the commercial real estate market influences leasing agent wages. If there's a strong demand for office, retail, or industrial space, companies may compete more for leasing talent, driving up salaries."
+        },
+        {
+            "cost_factor_title": "Profit Remains High But Has Experienced Heightened Volatility",
+            "cost_factor_description": "The continuation of employees working from home has pressured profit, hampering demand for office space. The national office vacancy rate rose to a record-breaking 19.6% in the fourth quarter of 2023, according to Moody's Analytics. Higher interest rates have slowed down the commercial real estate market."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Capital Expenses",
+                "capital_intensity_description": "The Commercial Leasing industry is capital-intensive. Commercial property owners need to raise money to purchase property, develop land and run operations."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "INTEREST RATES INFLUENCE INDUSTRY VOLATILITY",
+                "volatility_description": "High-interest rates can slow down the expansion of businesses. When businesses pay more in interest, they have less money to invest in other areas, like commercial real estate leases. When interest rates rise, as they did in 2022 and 2023, investors are impacted by higher borrowing costs."
+            },
+            {
+                "volatility_title": "Long Lease Agreements Temper Industry Volatility",
+                "volatility_description": "Revenue largely remains stable year-to-year because it relies on rental income, which is locked up by lease agreements. A prevalence of long-term leases can provide greater transparency into market trends for longer periods. Commercial property leases range from one year to 25 years, but are typically only between three and five years, keeping revenue volatility moderate to high."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "PROPTECH AND DATA-DRIVEN SOLUTIONS ARE BECOMING MAINSTREAM",
+                "technological_change_description": "Technology platforms are transforming the industry. Online listing platforms aggregate properties, allowing for easier comparison and filtering based on specific needs. Data analytics tools provide insights into market trends, rental rates, and property performance, empowering both tenants and landlords to make informed decisions. Artificial intelligence (AI) is being used to develop matching algorithms that connect tenants with suitable properties based on their specific requirements."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company lease primarily to consumers or businesses?",
+            "answer": "Operators primarily lease space to businesses in professional services or retail capacities."
+        },
+        {
+            "question": "Are there segments of your business that increase demand when economic growth is slow?",
+            "answer": "Revenue in the Commercial Leasing industry is not significantly affected when economic growth is slow. However, if economic conditions are declining, then the industry is significantly affected."
+        },
+        {
+            "question": "How do you contend with volatile demand for commercial real estate?",
+            "answer": "Operators regularly research market trends, tenant needs, and potential economic shifts to help anticipate changes in demand and adjust strategies accordingly. Leasing across different property types, locations, and industries reduces reliance on any single sector susceptible to sudden fluctuations."
+        },
+        {
+            "question": "How has your company coped with rising wage costs?",
+            "answer": "Operators in the industry have coped with rising wage costs by expanding their work forces at gradual rates in order to ensure their bottom lines are high."
+        },
+        {
+            "question": "Have you successfully cut wage costs through automation in recent years?",
+            "answer": "Wage costs have been mitigated by having automated services associated with accounts receivable to improve collectivity rates and lower costs associated with processing payments and analyzing data."
+        },
+        {
+            "question": "How does your company ensure your properties are up to code?",
+            "answer": "Industry participants are required to meet various building and safety codes to rent commercial real estate to companies and individuals. As a result, certain guidelines are followed by operators to stay up to code."
+        },
+        {
+            "question": "How do your company's profit margins compare to your main competitors?",
+            "answer": "Profit margins in this industry for operators are relatively high compared to other industries. The industry's biggest companies tend to maintain high profit margins by having efficient operations in place."
+        },
+        {
+            "question": "What ongoing financing challenges is your company contending with?",
+            "answer": "One of the biggest ongoing financing challenges operators in this industry experience are the costs of depreciation of their buildings."
+        },
+        {
+            "question": "Do you have an accountant on staff to manage your cash flow? How can you reduce operational costs or increase efficiency?",
+            "answer": "A significant amount of capital and debt is used to finance property acquisitions. Therefore, companies must be able to properly manage cash flows, cash reserves and debt levels to grow and manage property portfolios."
+        },
+        {
+            "question": "Do you have a history of maintaining good relationships with your clients? How can you improve those relationships?",
+            "answer": "Understanding the needs of and having good relationships with existing and prospective tenants can assist in gaining and retaining tenants and negotiating higher rents."
+        },
+        {
+            "question": "Can you expand your reach into different territories, be it location or type of rental property?",
+            "answer": "101"
+        },
+        {
+            "question": "Tenants tend to have a preference for properties in prime locations and where tenant demand is less volatile. Lessors should have skills in identifying local economic, demographic and social trends.",
+            "answer": "Management of a high quality assets portfolio is important."
+        },
+        {
+            "question": "How will you contend with changes in investor uncertainty? Have you succeeded in times of high uncertainty in the past?",
+            "answer": "During economic downturns, uncertainty will increase as investors become more risk averse. Therefore, funding from investors decreases as they seek safer financial instruments, which reduces access to capital for companies."
+        },
+        {
+            "question": "Will you expand operations as the unemployment rate decreases? How can you diversify? Which areas will you tap into?",
+            "answer": "The unemployment rate is a major factor in determining the health of the US economy. During times of strong economic growth, companies expand and demand for commercial space increases."
+        },
+        {
+            "question": "As the number of businesses increases, how will you market to these new companies for retail space? How will you prepare for increased demand?",
+            "answer": "The Commercial Leasing industry includes office, industrial and retail space. Demand for commercial real estate services is largely determined by the number of businesses."
+        }
+    ]
+}

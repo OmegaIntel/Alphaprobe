@@ -1,0 +1,447 @@
+{
+    "report_title": "Japanese Restaurants in the US",
+    "report_date": "May 23, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 32156000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "revenue_cagr_value": 4.7
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.82
+            }
+        },
+        "profit": {
+            "profit_dollars": 1415000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 5.57
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.4,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 0.77
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 12186000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 447850,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 10070000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 101,
+            "imports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 101,
+            "exports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The Japanese restaurants industry experienced gradual revenue growth over the past five years, supported by expanding consumer palates seeking diverse ethnic cuisines, especially among younger demographics. The industry faced challenges from the COVID-19 pandemic in 2020-2021 with forced closures and supply chain disruptions, but recovered swiftly once restrictions were lifted.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Rise in Popularity of Omakase Dining Experiences",
+            "current_performance_point_description": "Over the past five years, omakase dining involving personalized, multi-course meals showcasing the chef's skills has emerged as a major trend in Japanese restaurants across the US, catering to higher income households seeking exclusive dining experiences. However, rising ingredient costs, particularly seafood, have posed challenges, leading to increased menu prices and reduced profit margins."
+        },
+        {
+            "current_performance_point_title": "The Outbreak of COVID-19 Forced Japanese Restaurants to Adapt",
+            "current_performance_point_description": "The pandemic hit Japanese restaurants hard in 2020, forcing stringent restrictions, significant revenue loss and operational hurdles. Restaurants had to pivot to emphasize takeout and delivery, implement safety protocols, and navigate reduced dine-in capacity and revenue. Many experienced financial strain leading to closures or business model adaptations."
+        },
+        {
+            "current_performance_point_title": "Supply Chain Disruptions Contributed to Ingredient Shortages",
+            "current_performance_point_description": "Japanese restaurants faced challenges securing essential ingredients like high-quality seafood, sauces and specialty produce due to supply chain disruptions during the pandemic. This led to menu inconsistencies, cost fluctuations affecting profit margins, and price adjustments for menu items."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Growing Urban Population Fueling Growth",
+            "future_outlook_point_description": "With a projected rise in disposable income in urban areas, Japanese restaurants are poised to witness increased patronage as consumers seek diverse culinary experiences and are more willing to spend on quality dining. Urban areas represent hotspots for industry establishments due to population density and ethnic diversity."
+        },
+        {
+            "future_outlook_point_title": "Sustainability and Environmental Consciousness Will Help Restaurants Differentiate Themselves",
+            "future_outlook_point_description": "Japanese restaurants are expected to prioritize sustainability by emphasizing eco-friendly sourcing, reducing food waste and adopting renewable packaging solutions to align with growing consumer environmental concerns. Anticipated trends suggest a heightened emphasis on responsibly sourced seafood and ingredients, transparency in supply chains and supporting local producers."
+        }
+    ],
+    "industry_definition": "The industry comprises chain and franchised restaurants that serve Japanese food to patrons. These establishments may also offer alcoholic and other beverages with the food.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage: growth",
+            "Revenue Volatility Level: low",
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Technology Change Level: low",
+            "Globalization Level: low - steady"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level: low - steady",
+            "Barriers To Entry Level: low - steady",
+            "Competition Level: high - increasing"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2005-2024)",
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers - Per capita disposable income"
+        ],
+        "threats": [
+            "Low Outlier Growth",
+            "Households earning more than $100,000"
+        ]
+    },
+    "key_trends": [
+        "There are high initial investment costs associated with setting up a traditional Japanese kitchen and acquiring authentic ingredients.",
+        "Competition saturation in certain areas might make it challenging for new restaurants to establish a distinctive presence.",
+        "Customers of Japanese restaurants wield moderate power thanks to a plethora of other dining options available, influencing pricing and quality expectations. Suppliers hold moderate power by providing essential ingredients, but competition among suppliers offers some leverage to restaurant owners."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Households earning more than $100,000",
+            "segment_description": "This high-income segment seeks exclusivity, quality and authenticity in dining experiences at Japanese restaurants.",
+            "segment_percentage": 58.4
+        },
+        {
+            "segment": "Households earning between $50,000 and $99,999",
+            "segment_description": "This income bracket dines out frequently and is willing to spend on quality Japanese cuisine.",
+            "segment_percentage": 26.2
+        },
+        {
+            "segment": "Households earning between $30,000 and $49,000",
+            "segment_description": "This segment seeks affordability and value deals when dining out at Japanese restaurants.",
+            "segment_percentage": 10.5
+        },
+        {
+            "segment": "Households earning less than $30,000",
+            "segment_description": "Budget constraints limit dining out for this low-income segment at higher-priced Japanese restaurants.",
+            "segment_percentage": 4.9
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Sushi",
+            "product_description": "Sushi is the most popular Japanese dish, consisting of vinegared rice combined with ingredients like raw fish, seafood, vegetables or fruits.",
+            "product_percentage": 76.9
+        },
+        {
+            "product_or_service": "Bento Meals",
+            "product_description": "Bento meals are traditional Japanese packed meals featuring a variety of food items neatly arranged in a compartmentalized box.",
+            "product_percentage": 7.8
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "Other Japanese menu items like tempura, udon noodles, yakitori and donburi bowls contribute to the varied culinary offerings.",
+            "product_percentage": 8.0
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Restaurant & Hotel Equipment Wholesaling in the US",
+            "Fish & Seafood Wholesaling in the US",
+            "Beef & Pork Wholesaling in the US",
+            "Beer Wholesaling in the US",
+            "Wine & Spirits Wholesaling in the US",
+            "Grocery Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Fish & Seafood Aquaculture in the US",
+            "Fishing in the US",
+            "Wineries in the US",
+            "Breweries in the US",
+            "Animal Food Production in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Per Capita Disposable Income",
+            "determinant_description": "Per capita disposable income represents the money consumers have to allocate toward discretionary purchases like dining out. Higher disposable income levels present an opportunity for the Japanese restaurant industry."
+        },
+        {
+            "determinant_title": "Households Earning Less Than $30,000",
+            "determinant_description": "A rise in households earning less than $30,000 can negatively impact Japanese restaurants as these consumers may limit dining out due to budget constraints, opting for more affordable options."
+        },
+        {
+            "determinant_title": "Households Earning $30,000 - $49,000",
+            "determinant_description": "This income group seeks affordability when dining out. Japanese restaurants can attract them by offering value deals and specials."
+        },
+        {
+            "determinant_title": "Households Earning $50,000 - $99,999",
+            "determinant_description": "This income bracket dines out more frequently and is willing to spend on quality dining experiences like Japanese cuisine."
+        },
+        {
+            "determinant_title": "Households Earning Over $100,000",
+            "determinant_description": "This high-income group seeks exclusivity, quality and authenticity in dining. Japanese restaurants can cater to them with premium offerings."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region has the highest percentage of Japanese restaurant establishments at 28.8%, but the population percentage is lower at 21.4%.",
+            "percentage_establishments": 28.8,
+            "percentage_population": 21.4
+        },
+        {
+            "location": "West",
+            "location_description": "The West region has 22.4% of Japanese restaurant establishments, while having the highest population percentage at 23.5%.",
+            "percentage_establishments": 22.4,
+            "percentage_population": 23.5
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region has 14.2% of Japanese restaurant establishments and 15.2% of the population.",
+            "percentage_establishments": 14.2,
+            "percentage_population": 15.2
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region has 11.5% of Japanese restaurant establishments and 15.1% of the population.",
+            "percentage_establishments": 11.5,
+            "percentage_population": 15.1
+        },
+        {
+            "location": "Southwest",
+            "location_description": "The Southwest region has 9.2% of Japanese restaurant establishments and 11.5% of the population.",
+            "percentage_establishments": 9.2,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "Plains",
+            "location_description": "The Plains region has 6.4% of Japanese restaurant establishments and 5.3% of the population.",
+            "percentage_establishments": 6.4,
+            "percentage_population": 5.3
+        },
+        {
+            "location": "New England",
+            "location_description": "The New England region has 4.6% of Japanese restaurant establishments and 4.7% of the population.",
+            "percentage_establishments": 4.6,
+            "percentage_population": 4.7
+        },
+        {
+            "location": "Rocky M",
+            "location_description": "The Rocky M region has 2.9% of Japanese restaurant establishments and 3.3% of the population.",
+            "percentage_establishments": 2.9,
+            "percentage_population": 3.3
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [],
+        "factors_increased_barrier": [
+            "Industry Assistance Level: low - steady",
+            "Competition Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage: growth",
+            "Revenue Volatility Level: low",
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Technology Change Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "High initial investment costs for setting up traditional Japanese kitchen",
+                "basis_description": "There are high initial investment costs associated with setting up a traditional Japanese kitchen and acquiring authentic ingredients."
+            },
+            {
+                "basis_title": "Competition saturation in certain areas",
+                "basis_description": "Competition saturation in certain areas might make it challenging for new restaurants to establish a distinctive presence."
+            },
+            {
+                "basis_title": "Customers have moderate power due to other dining options",
+                "basis_description": "Customers of Japanese restaurants wield moderate power thanks to a plethora of other dining options available, influencing pricing and quality expectations."
+            },
+            {
+                "basis_title": "Suppliers have moderate power",
+                "basis_description": "Suppliers hold moderate power by providing essential ingredients, but competition among suppliers offers some leverage to restaurant owners."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 4.4
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 31.3
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 39.0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Profit fell thanks to pressure during the pandemic",
+            "cost_factor_description": "Profit for Japanese restaurants is expected to account for 4.4% of revenue in 2024, representing a contraction from 5.3% in 2019. Profitability is highly dependent on an operator's ability to manage wage and purchase costs, which are the two largest industry expense categories. Though wages in proportion to average revenue have fallen, purchase costs have risen, putting downward pressure on profit margins."
+        },
+        {
+            "cost_factor_title": "Wages fell as a result of layoffs and high unemployment",
+            "cost_factor_description": "Wages represent the second-largest industry expense category, accounting for an estimated 31.3% of revenue in 2024, down from 36.2% in 2019. Similar to other food service industries, Japanese restaurants require highly trained staff, especially for those specializing in food items, like sushi. These restaurants often hire highly skilled chefs who have gone through years of training, along with ample support staff such as waiters, server's assistants and general managers. Wages have fallen over the last few years, undoubtedly thanks to the significant decline in the number of people working in food service since the pandemic."
+        },
+        {
+            "cost_factor_title": "Purchases represent the largest industry expense category",
+            "cost_factor_description": "Purchase expenses account for an estimated 39.0% of industry revenue in 2024, up from 37.2% in 2019. Purchase costs have experienced slight change over the past five years, as the industry was affected by global supply chain disruptions and the price of seafood has risen significantly."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "High-end Japanese steakhouses or sushi restaurants",
+                "capital_intensity_description": "High-end Japanese steakhouses or sushi restaurants will often source incredibly rare and expensive ingredients, dictating higher purchase costs when these are more difficult to obtain."
+            },
+            {
+                "capital_intensity_title": "Ramen and bento meal shops",
+                "capital_intensity_description": "In contrast, ramen and bento meal shops will typically sustain comparatively lower purchase expenses."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Low",
+        "volatility_points": [],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Robot Servers are Becoming More Common in the US",
+                "technological_change_description": "Restaurants like Kura Sushi are implementing the use of a 'Kura Robot' to deliver drinks and food items to customers, inspired by success of similar gimmicks in Japan. Serving robots in Japanese restaurants across the US assist in food delivery to tables and can efficiently navigate restaurant spaces, carrying orders and minimizing wait times ensuring a smoother dining experience for customers. Robots aren't just efficient servers; they also add a unique, futuristic charm to the dining atmosphere. Their presence sparks curiosity and engagement among diners, creating a memorable and interactive experience beyond just the food."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "What were the significant supply chain disruptions caused by COVID-19?",
+            "answer": "Fluctuations in availability of essential ingredients like seafood, rice and Japanese condiments impacted menu offerings and pricing. Sudden interruptions or delays in sourcing these items due to global events or logistical issues led to inconsistent quality or scarcity, affecting costs and customer satisfaction. Lockdowns, closures and reduced workforce in transportation caused logistical hurdles, delaying goods transportation from suppliers to restaurants and leading to inconsistent inventory levels."
+        }
+    ]
+}

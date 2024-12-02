@@ -1,0 +1,402 @@
+{
+    "report_title": "Pharmacies in the US",
+    "report_date": "Aug 21, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 24807000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 1.49
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 2.19
+            }
+        },
+        "profit": {
+            "profit_dollars": 1141000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 4.8
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.6,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 3.26
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 3224000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 44573,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 1973000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "The aging population and rising obesity rates are leading to higher incidences of age-related health conditions that are filling hospitals and depleting healthcare providers' pharmaceutical supplies faster. Increased federal support has offset declining private insurance coverage brought by inflation and a shaky job market. Major companies' dominance has allowed them to acquire competitors and boost profit. Revenue has been swelling at a CAGR of 1.2% to an estimated $24.8 billion over the five years through 2024.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Demographic Trends Are Upping Healthcare Providers' Usage",
+            "current_performance_point_description": "The US population is becoming significantly older on average as medical technology improves and expands the nation's life expectancy rates. Rising obesity rates are also raising demand for healthcare services. As hospitals, long-term care facilities and other healthcare services see greater usage, they deplete their pharmaceutical supplies faster. Institutional pharmacies sell more products to clients when their clients have higher occupancy rates, so demographic trends are ushering in stable revenue growth for institutional pharmacies."
+        },
+        {
+            "current_performance_point_title": "The contrast between brand-name and generic drugs significantly impacts institutional pharmacies.",
+            "current_performance_point_description": "Brand-name medications are extremely expensive but especially lucrative for institutional pharmacies as healthcare providers have no choice but to purchase brand-name drugs to treat patients who may not respond well to generic alternatives. Still, the approval of new brand-name medications is expected to counterbalance revenue dips from patent expirations. Institutional pharmacies contend with little supplier power, so they can pass rising input costs downstream and protect profit."
+        },
+        {
+            "current_performance_point_title": "Federal Support is Making Healthcare More Affordable",
+            "current_performance_point_description": "Federal funding for Medicare and Medicaid has climbed through the current period despite a one-year dip in 2021. The US's total healthcare expenditure has climbed as federal support offsets lackluster private insurance coverage. Healthcare providers are depleting their pharmaceutical supplies faster as patients pursue both essential and elective treatments. Accordingly, institutional pharmacies are selling more products and generating revenue growth."
+        },
+        {
+            "current_performance_point_title": "NEW REGULATION LIMITS DRUG PRICE HIKES",
+            "current_performance_point_description": "Passed in 2022, the Inflation Reduction Act imposes new limits on pharmaceutical manufacturers. Both name-brand and generic pharmaceutical manufacturers must pay rebates if they raise their prices above the inflation rate. While the Act's regulation has limited revenue growth for institutional pharmacies since its imposition, high inflation has kept drug prices on the rise. Institutional pharmacies are raising costs for clients and securing solid revenue growth amid rising input costs."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "DEMOGRAPHICS WILL CONTINUE TO MOVE IN INSTITUTIONAL PHARMACIES' FAVOR",
+            "future_outlook_point_description": "Adults aged 50 and older are poised to account for a comparatively higher proportion of the domestic population than in years past as life expectancies climb. Since medical issues are more common among this demographic, growth in the population of adults over 50 translates to an expanding market for institutional pharmacies' clients. A growing number of older adults will bolster demand for long-term care facilities, including nursing homes."
+        },
+        {
+            "future_outlook_point_title": "NEW PHARMACEUTICAL APPROVALS WILL MAKE UP FOR PATENT EXPIRATIONS",
+            "future_outlook_point_description": "Institutional pharmacies' revenue growth slows following the release of generic medications after brand-name patents expire. Still, pharmaceutical manufacturers are expected to continue innovating through the next period, leading to the release and approval of new brand-name medications. Specialized medications are especially lucrative for institutional pharmacies, and the release of new high-priced products will keep pharmacies' revenue trending upward as they pass heightened costs downstream."
+        },
+        {
+            "future_outlook_point_title": "STRONG FEDERAL BACKING WILL MAKE ROOM FOR NEW ENTRANTS",
+            "future_outlook_point_description": "Medical treatments are expected to continue becoming significantly more expensive through the end of 2029. The federal government's funding for Medicare and Medicaid is expected to climb to address consumers' financial headwinds and medical debt. High budgetary allocations to Medicare and Medicaid will make room for new healthcare providers and new institutional pharmacies. Still, concentration is set to continue swelling as major institutional pharmacies leverage economies of scale and existing relationships with high-profile healthcare companies."
+        }
+    ],
+    "industry_definition": "This industry comprises pharmacies that offer a range of services to residents of nursing homes, hospitals or hospice environments without an onsite pharmacy. In addition to supplying pharmaceuticals, institutional pharmacies also provide consulting services, which include monitoring the control, distribution and administration of drugs and assisting with regulation compliance.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low Capital Intensity Level",
+            "high - increasing Barriers To Entry Level",
+            "low - steady Globalization Level"
+        ],
+        "negative_impact_factors": [
+            "low - steady Industry Assistance Level",
+            "high Technology Change Level",
+            "high - increasing Competition Level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Increasing Barriers to Entry",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "Demand from hospitals"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Number of people with private health insurance"
+        ]
+    },
+    "key_trends": [
+        "Some healthcare providers maintain in-house pharmacies. Larger hospitals and other major facilities are typically more equipped to afford an in-house pharmacy's high start-up and maintenance costs.",
+        "Institutional pharmacies compete on price. Pharmacies' product homogeneity means there's little opportunity for pharmacies to set themselves apart through quality or reliability, so most focus on offering the most affordable medications as possible.",
+        "Demographics are moving in institutional pharmacies' favor. An aging population is boosting the US's health expenditure and filling rooms at healthcare facilities. Institutional pharmacies are selling more products as buyers' supplies run out faster.",
+        "Major institutional pharmacies are dominating. Companies like Omnicare and PharMerica are leveraging economies of scale and existing relationships with high-profile clients to push smaller competitors out of the industry.",
+        "Heightened federal spending on Medicare and Medicaid are offsetting lackluster private healthcare coverage. Consumers seek medical treatments more often when they're more affordable, so growth in insurance coverage helps support healthcare providers and, by extension, institutional pharmacies.",
+        "An aging population is leading to more incidences of medical issues. Hospitals and other medical facilities are becoming more crowded as Baby Boomers encounter more health issues, leading to faster pharmaceutical supply depletion and more sales for institutional pharmacies.",
+        "Profit is strong and climbing. Consolidation among the largest institutional pharmacies is giving them more control over prices, allowing profit to trend upward.",
+        "Institutional pharmacies are successfully navigating wage pressure. Despite unionization and a reliance on highly educated employees, institutional pharmacies have cut wages as a share of revenue by relying on lower-cost technicians and automating where possible.",
+        "Institutional pharmacies' distribution follows that of hospitals and nursing care facilities. Population is the most crucial factor for determining where institutional pharmacies locate."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Federal (Medicare)",
+            "segment_description": "This market includes patients who are covered under the Federal Medicare Part D and, to a lesser extent, Part B programs. In general, Medicare Part D subsidizes the cost of pharmaceuticals for Medicare beneficiaries, while Medicare Part B helps pay for physician services, medical supplies and other outpatient services. Federal funding's share of revenue has climbed as the Medicare Part D program has evolved.",
+            "segment_percentage": 49.0
+        },
+        {
+            "segment": "Private (Insurance and other)",
+            "segment_description": "The private market segment includes third-party payers (e.g. private insurers) and individuals or responsible parties. An increase in overall insurance premiums has led to people opting for State and Federal insurance. Inflation has strained consumers' budgets, leaving many unable to afford out-of-pocket medical expenses. While a slight uptick in the number of individuals with private insurance has helped offset some pressure, this segment has slumped as a share of revenue.",
+            "segment_percentage": 28.6
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Other types of payers include nongovernmental sources of funding from institutional healthcare providers and hospital management fees. Increasing federal funding for public health programs has outpaced growth in revenue generated from nongovernmental institutions, leading this segment to slump as a share of revenue.",
+            "segment_percentage": 17.6
+        },
+        {
+            "segment": "State (Medicaid)",
+            "segment_description": "Medicaid programs help low-income individuals or families pay for the costs associated with long-term medical care. This segment has swelled as a share of revenue as federal Medicaid funds distributed through state partnerships have expanded.",
+            "segment_percentage": 4.1
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Brand-name prescription medications",
+            "product_description": "Since institutional pharmacies are primarily based in hospitals and long-term care (LTC) facilities, medications are typically prescribed and based on the medical needs of the resident population. Purchased medications differ depending on the type of treatment specific to each facility.",
+            "product_percentage": 60.1
+        },
+        {
+            "product_or_service": "Generic prescription medications",
+            "product_description": "Generic pharmaceuticals offer a lower-cost alternative to brand-name prescriptions in cases where patent protection doesn't prohibit their manufacturing. Hospitals, nursing care facilities and other healthcare providers supplement their brand-name drug supply with more affordable generic prescriptions.",
+            "product_percentage": 11.6
+        },
+        {
+            "product_or_service": "Nonprescription Medications",
+            "product_description": "Nonprescription or over-the-counter (OTC) medication refers to medications that treat common conditions that aren't typically life-threatening and have little potential for abuse. OTC medications offer mild relief for pain, itches, sores, rashes, fungal infections and allergies. They're readily available to buy in almost any retail pharmacy, grocery or convenience store.",
+            "product_percentage": 5.1
+        },
+        {
+            "product_or_service": "Other Services",
+            "product_description": "Institutional pharmacies also offer other clinical services, including pharmacy consultation, monthly patient therapy evaluations, compliance assistance and clinical health management programs.",
+            "product_percentage": 23.2
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Brand Name Pharmaceutical Manufacturing in the US",
+            "Generic Pharmaceutical Manufacturing in the US",
+            "Institutional Pharmacies in the US"
+        ],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [
+            "Emergency & Other Outpatient Care Centers in the US",
+            "Hospitals in the US",
+            "Specialty Hospitals in the US",
+            "Nursing Care Facilities in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Demand from Hospitals",
+            "determinant_description": "The hospital sector is one of the largest pharmaceutical buyers and users of institutional pharmacies' services. When high incidences of personal injury or illness raise hospital occupancy, institutional pharmacies sell more products and see greater demand. Any growth in demand from hospitals represents a potential opportunity for the industry."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "Aside from the distribution of nursing facilities and hospitals, industry establishment distribution falls inline with concentrations in the general population. As a result, the Southeast represents the largest contributing region to industry operations at an estimated 30.0% in 2023.",
+            "percentage_establishments": 30.0,
+            "percentage_population": 101
+        },
+        {
+            "location": "West",
+            "location_description": "The West region is expected to account for the second most significant share of industry establishments. California alone represents over 10.0% of all industry establishments, primarily due to the high concentration of the domestic population within the state.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region is expected to account for a prominent share of industry establishments reflecting its percentage of the domestic population.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "THE FOOD AND DRUG ADMINISTRATION (FDA)",
+                "regulation_description": "The Food and Drug Administration (FDA) imposes strict regulations on institutional pharmacies."
+            },
+            {
+                "regulation_title": "LICENSING REQUIREMENTS",
+                "regulation_description": "Pharmacists must undergo education and state examinations to be licensed to dispense prescription drugs."
+            },
+            {
+                "regulation_title": "MEDICARE CONDITIONS OF PARTICIPATION",
+                "regulation_description": "Medicaid reimbursements are extremely beneficial for institutional pharmacies but come with extensive conditions of participation."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Life cycle stage",
+                "barrier_description": "The industry is mature."
+            }
+        ],
+        "factors_increased_barrier": [
+            "The increasing complexity of federal and state healthcare regulations",
+            "High start-up costs for purchasing facility, acquiring licensing, stocking inventory and equipping workplace",
+            "Significant competition from national players like Omnicare or PharMerica"
+        ],
+        "factors_decreased_barrier": [
+            "Low capital intensity level",
+            "Low and steady globalization level"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "In-house pharmacies",
+                "basis_description": "Some healthcare providers maintain in-house pharmacies."
+            },
+            {
+                "basis_title": "Price competition",
+                "basis_description": "Institutional pharmacies compete on price."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "High barriers preserve concentration",
+                "concentration_description": "It's extremely difficult to open a new institutional pharmacy."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Omnicare Inc.",
+                "company_percentage": 36.5
+            },
+            {
+                "company_name": "Pharmerica Corp",
+                "company_percentage": 15.3
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 48.2
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchasing expenses are primarily composed of pharmaceuticals.",
+            "cost_factor_description": "Institutional pharmacies also purchase medical supplies and pharmacy equipment."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_trend": "Unknown",
+        "capital_intensity_points": []
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_trend": "Unknown",
+        "volatility_points": []
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_trend": "Increasing",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Computerized Dispensing Systems Offer Clients Greater Convenience",
+                "technological_change_description": "The percentage of prescriptions that are routed electronically has risen considerably in recent years."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "What is your target market for industry products and services?",
+            "answer": "Adults in institutional living facilities, typically over the age of 50, are the target market for companies in this industry."
+        },
+        {
+            "question": "How has merger and acquisition activity affected your company?",
+            "answer": "Competition in the industry is increased when significant concerns merge with other significant-sized market participants."
+        }
+    ]
+}

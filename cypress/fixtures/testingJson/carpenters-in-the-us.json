@@ -1,0 +1,545 @@
+{
+    "report_title": "Carpenters in the US Industry Report",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 44240000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": -0.12
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.88
+            }
+        },
+        "profit": {
+            "profit_dollars": 1548000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": -1.98
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 3.5,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -1.86
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 14750000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0.0
+            }
+        },
+        "employees": {
+            "employees_count": 352779,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 0.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0.0
+            }
+        },
+        "wages": {
+            "wages_dollars": 12738000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0.0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0.0,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 0.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0.0,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 0.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0.0
+            }
+        }
+    },
+    "executive_summary": "Carpenters have endured modest declines over the past five years. Despite initial growth because of increased housing starts and private spending on home improvements, subsequent interest rate hikes limited this upward trend. While the post-pandemic demand in the commercial market helped balance declines in residential construction, office construction has maintained a sluggish pace, primarily because of high rental vacancies. Public funding for hospital construction added some impetus, but growth in other municipal building constructions remained slow.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Nonresidential Market Has Been a Mixed Bag",
+            "current_performance_point_description": "The pandemic impacted new construction activity for office buildings because of the rise of work-from-home arrangements. Stores and restaurants faltered as social distancing measures and economic closures hindered expenditure. Even as workers began to return to the office, the newfound popularity of hybrid work models resulted in a sustained increase in office rental vacancies, discouraging new construction."
+        },
+        {
+            "current_performance_point_title": "Carpenters are set to enjoy solid growth over the next five years",
+            "current_performance_point_description": "Interest rate cuts will spur growth in the residential construction market through housing starts. This, together with rising disposable income, will stimulate private spending on home improvements. The revival of commercial building construction, underpinned by growing corporate profit, promises substantial gains for carpenters. However, the minor reduction in office rental vacancies following a five-year surge presents a grim forecast for new office construction."
+        },
+        {
+            "current_performance_point_title": "Various factors have hindered profit expansion for carpenters",
+            "current_performance_point_description": "Labor shortages, precipitated by the great resignation alongside the waning interest of younger generations towards carpentry and trade schools, have driven wage costs up, successively curbing profits. Also, the less than favorable operating environments have spurred competition focused on price."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "CORPORATE PROFIT GROWTH AND INCREASED GOVERNMENT SPENDING TO BOLSTER GROWTH",
+            "future_outlook_point_description": "Boosts in corporate profit are set to drive growth in commercial construction, offering a much-needed lift to the carpentry industry. As corporate profit rises, businesses are more likely to expand their facilities, increasing business for carpenters. Climbing state and local government investments bring additional positive prospects through increased expenditure on educational and public safety buildings."
+        },
+        {
+            "future_outlook_point_title": "INTEREST RATE CUTS AND UPTICKS IN DISPOSABLE INCOMES FUEL RESIDENTIAL MARKET GROWTH",
+            "future_outlook_point_description": "A boost in residential construction is on the horizon, fueled by interest rate cuts which will stimulate a rise in housing initiatives \u2013 a primary growth catalyst for carpenters. Even more, growth in disposable income coupled with interest rate reductions, will spur increased private spending on home improvements, further stimulating growth in the residential market."
+        },
+        {
+            "future_outlook_point_title": "Carpenters Will Have to Navigate High Lumber and Labor Costs",
+            "future_outlook_point_description": "Over the next five years, falling interest rates will spur an upswing in residential construction activity, continuing to drive up lumber costs. Uncertainty surrounding the Russia-Ukraine conflict will lead to persistent sanctions on Russian lumber imports and contribute to this surge in prices by limiting supply. On the labor front, while shortages may begin to ease, elevated wage costs are set to persist."
+        }
+    ],
+    "industry_definition": "This industry comprises companies primarily engaged in framing, carpentry and finishing work. The carpentry work performed includes new work, additions, alterations, maintenance and repairs. Activities performed by establishments in this industry range from the installation of doors and windows to paneling, steel framing work and ship joinery.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low"
+        ],
+        "negative_impact_factors": [
+            "Life Cycle Stage: mature"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry",
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "Price of sawmill lumber"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Housing starts"
+        ]
+    },
+    "key_trends": [
+        "Carpenters compete on a regional basis to serve local communities.",
+        "Most carpenters are independent, though constant demand keeps direct competition low.",
+        "Despite no carpentry company commands more than a 2.0% market share, big companies go head-to-head for commercial contracts.",
+        "These contracts often prove very lucrative, but there's a trade-off as they're time-consuming to fulfill.",
+        "It's been a tale of two markets for contractors. Low interest rates spurred strong growth in the residential market for contractors. Nonresidential construction ramping up offset losses in the residential market following interest rate hikes.",
+        "Contractors are in a strong position for robust growth with anticipated interest rate cuts. This financial change will fuel an upswing in both residential and commercial construction projects.",
+        "The market remains considerably fragmented, with no single company controlling over 2.0% market share. The largest companies mainly target commercial clients and partake in larger construction undertakings."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Residential building construction (single-family)",
+            "segment_description": "Carpentry work in the housing market includes a range of activities, such as the erection of framework, roof trusses, formwork, external cladding in timber",
+            "segment_percentage": 50.8
+        },
+        {
+            "segment": "Commercial building construction",
+            "segment_description": "The second largest market for carpenters is the commercial building construction market, which includes work performed in the construction of office buildings and retail centers.",
+            "segment_percentage": 22.6
+        },
+        {
+            "segment": "Municipal building construction",
+            "segment_description": "Municipal construction, which includes work performed in the construction of hospitals, educational buildings and public safety buildings, also comprises a significant market for carpenters.",
+            "segment_percentage": 7.0
+        },
+        {
+            "segment": "Other nonresidential building construction",
+            "segment_description": "Carpenters serve various other nonresidential buildings. Work on these buildings done by carpenters includes decks, fences, cabinets and other carpentry activities.",
+            "segment_percentage": 13.3
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Finish Carpentry",
+            "product_description": "Finish carpentry involves finishing work or renovation work on the interiors of buildings, including amenities in houses (kitchen and bathroom cupboards and wardrobes), stairwells and shop fittings.",
+            "product_percentage": 85
+        },
+        {
+            "product_or_service": "Framing Carpentry",
+            "product_description": "This segment accounts for framing carpentry, which involves the construction of concrete formwork, timber and metal framework, partitions, studs, doors, joists, trusses, beams, columns, siding, roof shingles, exterior wall and roof sheathing, subflooring, walkways, rails, treads, risers, docks, dock planking, bull rails, fixed structure foundation pilings, wooden fencing, metal or plastic windows and scaffold erection.",
+            "product_percentage": 3.6
+        },
+        {
+            "product_or_service": "Other Contractor Services",
+            "product_description": "",
+            "product_percentage": 11.4
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Lumber Wholesaling in the US",
+            "Tool & Hardware Wholesaling in the US",
+            "Heavy Equipment Rental in the US",
+            "Construction in the US"
+        ],
+        "tier_2_suppliers": [
+            "Logging in the US",
+            "Timber Services in the US",
+            "Woodworking Machinery Manufacturing in the US",
+            "Sawmills & Wood Production in the US"
+        ],
+        "tier_1_buyers": [
+            "Home Builders in the US",
+            "Apartment & Condominium Construction in the US",
+            "Commercial Building Construction in the US",
+            "Municipal Building Construction in the US"
+        ],
+        "tier_2_buyers": [
+            "Industrial Building Construction in the US",
+            "Apartment Rental in the US",
+            "Commercial Leasing in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Housing Starts",
+            "determinant_description": "Carpenters' revenue largely hinges on new housing construction, including single-family and multifamily homes and renovations. As the number of housing starts escalates, the need for carpentry services concurrently swells. This dynamic is significantly influenced by demographic shifts and macroeconomic conditions like interest rates, underscoring the carpenters' susceptibility to fluctuations in the housing market."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Florida",
+            "location_description": "Florida's large population and expanding housing market create a high demand for carpenters. The state's vulnerability to natural disasters necessitates consistent carpentry services for repairs and rebuilding.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "New York",
+            "location_description": "New York City plays a key role in attracting carpenters because of its robust construction sector and large population. New York ranks as the second-largest state for carpenters in the US.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "California",
+            "location_description": "California has the largest share of carpenters because of its vast size and high population. The demand for carpentry services in California is also driven by ongoing natural disasters impacting residential communities, bolstering maintenance and repair services.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "OSHA's Safety Standards",
+                "regulation_description": "OSHA's safety standards, outlined in Title 29 of the CFR Part 1926, are crucial for construction industries. They demand safety measures for multi-level sites and confined spaces, enforce weight and noise limits and mandate protective gear. For instance, workers must wear helmets and goggles and use harnesses and approved respirators. These regulations, assessed and enforced by state and local authorities, ensure the well-being of construction workers, thereby reducing workplace accidents and improving productivity."
+            },
+            {
+                "regulation_title": "EPA'S ENVIRONMENTAL AND SAFETY STANDARDS FOR CARPENTRY",
+                "regulation_description": "The Environmental Protection Agency (EPA) oversees a broad spectrum of environmental and safety standards that impact carpenters. These regulations include air pollution control, noise emission limits and the management of asbestos and other environmental hazards. For instance, carpentry businesses must adhere to EPA's guidelines for safe asbestos removal to prevent harmful exposure."
+            },
+            {
+                "regulation_title": "MODEL BUILDING CODES",
+                "regulation_description": "Model building codes, crafted by code organizations, promote consistency in construction standards. However, these codes only gain legal standing when adopted by state and local governments. Typically, states adopt a model code, often with adjustments to suit local conditions. These codes hinge on standards set by various organizations, dictating the quality of materials and workmanship in construction. For instance, California's adoption of the International Building Code has influenced its earthquake-resistant construction practices."
+            },
+            {
+                "regulation_title": "BUILDING CODES",
+                "regulation_description": "Various codes, including general building, residential, fire, accessibility, zoning, state and local codes regulate carpenters. The International Code Council (ICC), a conglomerate of three regional model code groups in the US, endorses these codes. They publish the International Building Code, International Residential Code and other specific codes. For instance, contractors must adhere to the Access Design Standards under the Americans with Disability Act (ADA), ensuring their constructions are accessible to all."
+            },
+            {
+                "regulation_title": "Foundation and Fram Inspections",
+                "regulation_description": "Government regulations mandate that all foundation work and frames in housing construction undergo inspection by state-approved inspectors. This varies state by state. Prime contractors are required to demonstrate approved capability for their work to be insurance guaranteed. This regulation ensures the safety and quality of housing constructions. For instance, a poorly constructed foundation could lead to severe structural issues in the future."
+            }
+        ],
+        "regulations_trend": "Unknown"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Licensing requirements",
+                "barrier_description": "Licensing isn't required nationwide and in large states like New York and Pennsylvania. However, those without certified qualifications may struggle to get jobs due to insurance issues."
+            },
+            {
+                "barrier_title": "Start-up costs",
+                "barrier_description": "Costs to become licensed include apprenticeship, exams, license bonds/fees, tools, facilities and transportation."
+            },
+            {
+                "barrier_title": "Differentiation",
+                "barrier_description": "Newcomers may struggle to compete with established carpenters with proven reputations and ability to secure public contracts."
+            },
+            {
+                "barrier_title": "Labor expenses",
+                "barrier_description": "Carpentry is labor-intensive, requiring multiple workers for larger commercial projects which adds costs."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Industry Assistance Level: low - steady",
+            "Competition Level: high - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Regional competition",
+                "basis_description": "Carpenters compete on a regional basis to serve local communities."
+            },
+            {
+                "basis_title": "Independent operators",
+                "basis_description": "Most carpenters are independent, though constant demand keeps direct competition low."
+            },
+            {
+                "basis_title": "Commercial contracts",
+                "basis_description": "Big companies go head-to-head for commercial contracts which are lucrative but time-consuming."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Industry fragmentation",
+                "concentration_description": "Low entry barriers and vast market segments lead to high industry fragmentation among carpenters."
+            },
+            {
+                "concentration_title": "Specialization",
+                "concentration_description": "Specialization allows small residential carpenters to gain an edge over general service providers by better serving niche needs."
+            },
+            {
+                "concentration_title": "Localized competition",
+                "concentration_description": "Lack of a dominant national player creates a localized competitive environment with growth opportunities for new entrants."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Marvin",
+                "company_percentage": 1.5
+            },
+            {
+                "company_name": "Ply Gem Holdings Inc.",
+                "company_percentage": 0.4
+            },
+            {
+                "company_name": "Carpenter Contractors of America Inc.",
+                "company_percentage": 0.3
+            },
+            {
+                "company_name": "Window World",
+                "company_percentage": 0.3
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 97.5
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Carpenters Can Navigate Higher Purchase Costs",
+            "cost_factor_description": "Purchases include materials used for finishing carpentry and framing carpentry projects like frameworks, partitions, studs, doors, joists, trusses, beams, columns and siding. Purchases also include all tools and equipment needed on a per-project basis (these may also include rentals of larger machinery and equipment), as well as the costs of wage payments to part-time subcontractors."
+        },
+        {
+            "cost_factor_title": "Volatility and Wage Costs Have Constrained Profit",
+            "cost_factor_description": "Carpenters' profit fluctuates according to cyclical investment in downstream construction markets and renovation and repair sentiment. Operating profit varies depending on the size of the individual contractor. Carpenters have seen somewhat volatile growth in the past five years, leading to increased price-based competition among carpenters. This increased competition has hindered profit expansion."
+        },
+        {
+            "cost_factor_title": "Labor Shortages Drove Up Wage Costs in Carpentry",
+            "cost_factor_description": "Carpentry work is highly labor-intensive and involves manual labor for a wide range of activities, including on-site construction of cabinets, built-in shelving, interior stairs and banisters, cornices, doors, windows and sills, interior wooden trim, wall paneling and moldings. The construction sector, in particular, is grappling with labor shortages in the wake of the 'Great Resignation', causing wage costs to soar. A lack of interest in trade jobs among younger generations has also increased labor shortages."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Labor Expenses",
+                "capital_intensity_description": "Carpentry is labor-intensive. Larger projects, particularly those on a commercial contractual basis, often require multiple carpenters to complete. This adds to the labor costs and could pose a challenge for new entrants."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Mortgage rates and disposable income level fluctuations shape residential construction",
+                "volatility_description": "The state of the residential construction market is largely pinned to the rate of new housing starts. Volatility is often a reflection of fluctuations in the number of homes being built. One primary influencer of housing starts is mortgage rates. As a rule of thumb, when mortgage rates are low, there tends to be a surge in home-building activity, amplifying work opportunities for carpenters. Personal disposable income levels have a part to play. A rise in disposable income usually infers greater private spending on home improvements, driving demand in the residential construction market."
+            },
+            {
+                "volatility_title": "Corporate Profit, Interest Rate Levels, Government Investment and Office Rental Vacancies Impact the Nonresidential Market",
+                "volatility_description": "The condition of commercial and municipal building markets is influenced by various factors, significantly affecting revenue volatility. Key drivers here include corporate profit, sentiment among buyers, office space availability and cost of borrowing. Municipal building construction sees noticeable impact from the level of investment by state and local governments, signaling the crucial role of public sector engagement in moderating market instability. In recent years, fluctuating interest rates paired with an ascending trend in office rental vacancies have injected considerable volatility into the nonresidential construction market."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Innovations have driven increased efficiencies and the use of green carpentry practices",
+                "technological_change_description": "Carpenters are incorporating environmentally friendly practices by using renewable materials and constructing energy-efficient buildings. The increased use of renewable materials can attract downstream markets, particularly those looking for energy efficiency tax credits in commercial buildings. Advancements in tool technology, such as high-quality nail guns, help carpenters enhance efficiency in their projects. 3-D printing technology enables carpenters to create custom prototype designs for their construction work."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company serve as a general contractor or third-party subcontractor on most projects?",
+            "answer": "Carpentry contractors primarily serve as third-party contractors on most projects; however, industry companies will occasionally serve as prime contractors on smaller-scale projects."
+        },
+        {
+            "question": "Have you adjusted your marketing to capitalize on increased demand from residential construction?",
+            "answer": "The number of housing starts increases along with increasing per capita disposable income, low interest rates and low housing stock."
+        },
+        {
+            "question": "Does your company typically rent or own equipment for projects?",
+            "answer": "Industry purchase costs include all tools and equipment needed for projects; however, larger equipment is often leased by industry operators on a per-project basis."
+        },
+        {
+            "question": "Does your company make use of subcontractors to save on wage costs? Roughly, what percent of revenue is consumed by wages?",
+            "answer": "The cost of subcontractors counts towards purchase costs and allows carpenters to save on wages."
+        },
+        {
+            "question": "Investment in new technology is usually fairly low among builders and contractors. How much does your company invest in new equipment annually?",
+            "answer": "Less than 1.0% of industry revenue is reinvested in new technology. Most innovation in the industry relates to materials, which are developed at the manufacturing level."
+        },
+        {
+            "question": "In light of increasing wage costs, has your company considered using new technologies to increase productivity or reduce total employment?",
+            "answer": "Average wages in the industry are still low, which encourages the use of labor over technology. This is unlikely to change soon."
+        },
+        {
+            "question": "Has complying with new energy-efficiency rules in various building codes driven up costs?",
+            "answer": "The various building codes applicable to the carpentry contracting industry have been unified under the International Code Council's International Building Code (IBC)."
+        },
+        {
+            "question": "Have any regulatory expenses significantly impacted your company's profitability recently?",
+            "answer": "Regulatory expenses in the industry are few and are primarily related to the safety of workers and the standards of construction."
+        },
+        {
+            "question": "How has your company address fluctuations in demand?",
+            "answer": "Residential construction increases amid low interest rates, increasing per capita disposable income and low housing stock. Nonresidential construction declines amid low consumer spending and corporate profit."
+        },
+        {
+            "question": "What ongoing financing challenges does your company face?",
+            "answer": "Changes to interest rates have a significant effect on financing for large nonresidential projects, which affects some of the larger companies operating in the industry."
+        },
+        {
+            "question": "Do you have a strong reputation among customers?",
+            "answer": "Companies should ensure a good reputation by maintaining high standards for quality, timeliness and efficiency."
+        },
+        {
+            "question": "Which niches, if any, do you cater to? How can you diversify your product mix? How do you keep track of the latest trends?",
+            "answer": "Establishing a leading position in a niche market such as restoration work or installation of prefabricated stairs, cabinets, doors and windows could yield revenue during construction slumps."
+        },
+        {
+            "question": "How effective is your company at competing on tender? Who is your biggest competition based on pricing?",
+            "answer": "Much of the work generated by this industry is obtained through tendering for contracts or quoting jobs to property owners. Successful contractors ensure adequate profit margins while maintaining cash flow."
+        },
+        {
+            "question": "How has the volatile price of lumber affected your company in the past? Are you able to pass high lumber prices on to your customers?",
+            "answer": "Changes in the price of raw materials affect the price of industry products produced by carpenters. Higher lumber prices can spur industry revenue growth."
+        },
+        {
+            "question": "What proportion of your demand is linked to home improvements? How can you bolster demand from this market?",
+            "answer": "Growth in household disposable income stimulates demand for alterations and maintenance for single-family homes that require carpenter-contracting services. Therefore, an increase in private spending on home improvements boosts demand for the Carpenters industry."
+        },
+        {
+            "question": "What proportion of your company's revenue is generated by work on housing construction? How do you plan to capitalize on this opportunity?",
+            "answer": "The bulk of industry revenue is generated from work on new housing construction (single-family, multifamily and renovations). As housing starts rise and more homes are built, demand for carpentry contracting services increases in turn."
+        }
+    ]
+}

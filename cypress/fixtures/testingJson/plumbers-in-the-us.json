@@ -1,0 +1,543 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 121513000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 1.57
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 0
+            }
+        },
+        "profit": {
+            "profit_dollars": 5225000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 0
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.3,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 1.57
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 44021000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 550961,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 38076000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The plumbing industry provides essential services for construction and renovation of nonresidential buildings like offices, hospitals, factories, retail stores, schools and entertainment centers. Following a pandemic decline, nonresidential construction has performed well due to surging online shopping driving warehouse construction, government spending on manufacturing/infrastructure, and rising data center construction from AI growth. However, rapidly increasing material and wage costs have driven up plumbers' rates, boosting revenue but pressuring profit. The residential construction market boomed during COVID-19 but has slowed since 2022 due to higher mortgage rates and less home improvement spending. An expected 2024 rate cut is positive for residential construction.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Nonresidential Market Has Rebounded",
+            "current_performance_point_description": "Nonresidential construction covers hotels, offices, stores, restaurants, warehouses, institutional and manufacturing facilities. It diminished during COVID-19 shutdowns but has rebounded, particularly in 2023-2024 driven by ecommerce warehouse construction, federal policies spurring manufacturing/infrastructure, and rising data center construction as warehouse growth slows. Plumbers have raised rates due to significantly increased purchase and wage costs, boosting industry revenue."
+        },
+        {
+            "current_performance_point_title": "The Residential Market Has Suffered From High Interest Rates",
+            "current_performance_point_description": "The residential market covers single/multi-family homes and apartments. It boomed during COVID-19 from urban flight but has stalled since 2022 due to higher interest rates, with residential construction value and housing starts declining in 2022-2023. The Fed is expected to cut rates in 2024, though more cuts are needed for significant impact."
+        },
+        {
+            "current_performance_point_title": "Demand for Repair Work and Expansion",
+            "current_performance_point_description": "Plumbers generate significant revenue from regular maintenance/repair work, which is resistant to economic fluctuations as plumbing upkeep is essential. Revenue from repairs is steady income. Demand for residential repair/expansion increased before 2022 rate hikes but has since declined."
+        },
+        {
+            "current_performance_point_title": "Replacement of Dated Pipes Is Needed",
+            "current_performance_point_description": "Building managers are incentivized to use safer, efficient pipes, driving replacement of legacy pipes with modern materials, especially in urban areas. Though hazardous materials like lead have been phased out, full conversion is incomplete, incentivizing replacements. PVC pipes also require eventual replacement due to hazards."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Rising Corporate Profit Will Aid the Industry",
+            "future_outlook_point_description": "Nonresidential construction will continue expanding, benefiting plumbers. Public construction and data centers will see strongest near-term growth. Though plumbers don't immediately benefit from commercial growth due to project length, they will eventually see increased demand for installation, maintenance and renovations as businesses expand capacity."
+        },
+        {
+            "future_outlook_point_title": "The Residential Market Will Rebound",
+            "future_outlook_point_description": "With expected Fed rate cuts in 2024 and beyond, residential construction will rebound from growing housing starts and remodeling activity, creating more work for plumbers. The multifamily residential market will be promising for maintenance/repair services with property manager contracts."
+        },
+        {
+            "future_outlook_point_title": "Going Green in the Future",
+            "future_outlook_point_description": "The industry will expand by providing environmentally friendly plumbing services, with emphasis on energy/water management leading to replacement of older systems. Plumbers will be trained/accredited to install water recycling and conservation systems as businesses/families prioritize reduced water usage."
+        },
+        {
+            "future_outlook_point_title": "Continued Maintenance and Replacement of Legacy Products",
+            "future_outlook_point_description": "Regardless of economic conditions, the perpetual need for maintenance and replacement of existing pipes will buoy the industry, as plumbing is an essential service. Replacement of hazardous lead and PVC pipes as they degrade will fuel demand."
+        }
+    ],
+    "industry_definition": "Industry contractors install and maintain plumbing fixtures, fittings and equipment. Activities include work on household pipes and drains, installation of gas cooking and heating appliances, bathroom and toilet fixtures, venting systems, and emergency repair work like unclogging drains or repairing burst water mains. Contractors may also supply plumbing appliances and coupling products for construction projects.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low capital intensity level",
+            "low concentration level",
+            "low technology change level"
+        ],
+        "negative_impact_factors": [],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "low imports",
+            "low customer class concentration",
+            "low capital requirements"
+        ],
+        "weaknesses": [
+            "low & steady level of assistance",
+            "high competition",
+            "low profit vs. sector average",
+            "high product/service concentration",
+            "low revenue per employee"
+        ],
+        "opportunities": [
+            "high revenue growth (2018-2023)",
+            "high revenue growth (2023-2028)",
+            "high performance drivers - per capita disposable income"
+        ],
+        "threats": [
+            "low revenue growth (2005-2023)",
+            "low outlier growth",
+            "value of private nonresidential construction"
+        ]
+    },
+    "key_trends": [
+        "Plumbers compete regionally to serve local communities. Most are independent operators, though constant demand keeps direct competition low.",
+        "Nonresidential construction is booming again. Federal policies and rising e-commerce activity spurred growth, and while warehouse construction peaked, data center construction is now picking up the slack in 2024.",
+        "High mortgage rates have ground demand from the residential market to a halt. Still, there will always be a need for plumbing services from residential clients, providing a reliable stream of income, and interest rates are set to fall in the coming years.",
+        "The majority of plumbers are nonemployers located near primary markets to save on transportation and foster client relationships.",
+        "Licensing is the main barrier to entry, with requirements varying by state, reinforcing the regional industry structure.",
+        "Industry associations and unions provide information, training, advocacy and job opportunities though there is no direct government assistance.",
+        "Profit has fallen over the past five years due to an unstable commercial market but will grow as corporate profit climbs, though not to pre-pandemic levels.",
+        "Wages have increased as a share of plumbers' revenue due to the labor-intensive nature of the industry.",
+        "Purchase prices have risen with inflation but new materials have had little effect.",
+        "California is the largest state for plumbers due to high population, varied climate and natural disasters straining infrastructure.",
+        "Areas with extreme climate change show increased plumbing demand from pipe freezing, storms damaging infrastructure, etc.",
+        "Refurbishment and maintenance remain reliable income streams.",
+        "Mechanical contracting for larger construction projects, especially industrial/manufacturing facilities, is a stable source of income expected to rise with lower unemployment reinforcing production."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Residential construction",
+            "segment_description": "The residential market includes work done for new construction and existing structures which typically involves repair, maintenance or renovation of already-installed plumbing systems.",
+            "segment_percentage": 33.1
+        },
+        {
+            "segment": "Office buildings",
+            "segment_description": "Office buildings require plumbing specialists for water and other standard plumbing systems.",
+            "segment_percentage": 13.7
+        },
+        {
+            "segment": "Manufacturing and industrial facilities",
+            "segment_description": "Industrial construction requires plumbing specialists for water and other standard plumbing systems as well as other forms of liquid and gas piping used in industrial processes.",
+            "segment_percentage": 10.1
+        },
+        {
+            "segment": "Retail and storage spaces",
+            "segment_description": "The retail market consists of restaurants, automobile service stations, boutique stores, grocers, big-box retailers, distribution centers and mini-storage units.",
+            "segment_percentage": 10
+        },
+        {
+            "segment": "Healthcare, public safety and educational buildings",
+            "segment_description": "This segment includes hospitals, medical complexes, courts, prisons, police stations and schools.",
+            "segment_percentage": 16.6
+        },
+        {
+            "segment": "Other general construction",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 18.4
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "General Plumbing Services",
+            "product_description": "The installation, repair and maintenance of water distribution pipes and appliances, water heaters, garbage disposals, bathroom and kitchen sinks, water pipes and other plumbing.",
+            "product_percentage": 53.8
+        },
+        {
+            "product_or_service": "Mechanical Services",
+            "product_description": "The installation of mechanical and process piping and tubing, including main lines that convey hot and cold water, steam, medical gas, fuels and other liquids and gases.",
+            "product_percentage": 34.4
+        },
+        {
+            "product_or_service": "Building Sprinkler System Installation",
+            "product_description": "Installation of sprinkler systems related to both commercial properties, such as an office building's fire-protection systems and residential properties, in the form of lawn sprinklers.",
+            "product_percentage": 6.3
+        },
+        {
+            "product_or_service": "General Plumbing Contractors Expected to Grow",
+            "product_description": "General plumbing services include the installation, repair and maintenance of water distribution pipes and appliances, water heaters, garbage disposals, bathroom and kitchen sinks, water pipes and other plumbing.",
+            "product_percentage": 3.6
+        },
+        {
+            "product_or_service": "Steamfitting and Piping Services",
+            "product_description": "Pipefitters install and maintain pipes that usually carry chemicals and gases, while steamfitters work with pipe systems that move steam under high pressure.",
+            "product_percentage": 1.9
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Tool & Hardware Wholesaling in the US",
+            "Plumbing & Heating Supplies Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Electricians in the US"
+        ],
+        "tier_1_buyers": [
+            "Home Builders in the US",
+            "Apartment & Condominium Construction in the US",
+            "Commercial Building Construction in the US"
+        ],
+        "tier_2_buyers": [
+            "Industrial Building Construction in the US",
+            "Municipal Building Construction in the US",
+            "Land Development in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Nonresidential and Commercial Construction",
+            "determinant_description": "The industry is sensitive to cyclical fluctuations in investment in nonresidential and commercial construction, which raises demand for plumbing work in retail stores, office buildings, factories and other structures."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "The Southeast",
+            "location_description": "The Southeast region holds the largest concentration of plumbers due to the varied and volatile climate which damages and erodes plumbing fixtures. Florida is home to the most plumbers in the region.",
+            "percentage_establishments": 18.2,
+            "percentage_population": 21.8
+        },
+        {
+            "location": "The Mid-Atlantic",
+            "location_description": "The Mid-Atlantic is the second-largest region for plumbers due to its numerous urban centers and high residential population. It is also subject to intense winter weather causing pipes to freeze and require replacement. New York is the second-largest state for plumbers.",
+            "percentage_establishments": 14.5,
+            "percentage_population": 15.2
+        },
+        {
+            "location": "The West",
+            "location_description": "The West is the third-largest region for plumbers. Similar to the Mid-Atlantic and Southeast, its large population and susceptibility to natural disasters create demand for plumbing services.",
+            "percentage_establishments": 13.6,
+            "percentage_population": 17.4
+        },
+        {
+            "location": "California",
+            "location_description": "California is the largest state for the plumbing industry due to its size, population and climate. Ongoing natural disasters have increased demand for maintenance and repair of damaged plumbing infrastructure.",
+            "percentage_establishments": 10.1,
+            "percentage_population": 10.1
+        },
+        {
+            "location": "Southwest",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 12.7,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 12.5,
+            "percentage_population": 14.5
+        },
+        {
+            "location": "Plains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 9.1,
+            "percentage_population": 6.8
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5.5,
+            "percentage_population": 4.3
+        },
+        {
+            "location": "Rocky Mountain",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 4.9,
+            "percentage_population": 3.5
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "PLUMBING LICENSES",
+                "regulation_description": "Contractors in the Plumbing industry are subject to various federal, state and local laws and regulations. Although there are no uniform national licensing requirements, most states and communities require plumbers to be licensed. Licensing typically requires that potential plumbers have two to five years of experience and pass an examination that tests their knowledge of the trade and local plumbing codes."
+            },
+            {
+                "regulation_title": "LOCAL ORDINANCES",
+                "regulation_description": "Plumbers must also comply with local zoning ordinances, laws and regulations relating to consumer protection and laws and regulations relating to worker safety and human health protection."
+            },
+            {
+                "regulation_title": "Standards and Regulation",
+                "regulation_description": "Contractors are also subject to laws and regulations governing the remediation of contaminated soil and groundwater. These regulations are administered by the US Environmental Protection Agency and various state and local governmental agencies."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Licensing requirements",
+                "barrier_description": "Licensing is required for plumbing contractors, with requirements varying by state."
+            },
+            {
+                "barrier_title": "Low startup costs",
+                "barrier_description": "Start-up materials include basic tools, transportation, with larger companies needing surplus pipes and specialized pieces."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Mature life cycle stage"
+        ],
+        "factors_decreased_barrier": [
+            "Low capital intensity level"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Regional competition",
+                "basis_description": "Plumbers compete regionally to serve local communities."
+            },
+            {
+                "basis_title": "Independent operators",
+                "basis_description": "Most plumbers are independent operators, though constant demand keeps direct competition low."
+            },
+            {
+                "basis_title": "Commercial contracts",
+                "basis_description": "Larger contractors compete with one another for commercial contracts which are often lucrative but take longer to complete."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Highly fragmented industry",
+                "concentration_description": "The industry is highly fragmented, with no operator accounting for more than 1.0% of industry revenue."
+            },
+            {
+                "concentration_title": "Low barriers to entry",
+                "concentration_description": "Low barriers to entry, consistent revenue growth potential and expansive market segments lead to fragmentation."
+            },
+            {
+                "concentration_title": "Diversification enables saturation",
+                "concentration_description": "New companies can capture share by specializing in customer groups like residential construction."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Comfort Systems USA, Inc.",
+                "company_percentage": 0.3
+            },
+            {
+                "company_name": "Emcor Group, Inc.",
+                "company_percentage": 0.3
+            },
+            {
+                "company_name": "TDIndustries, Inc.",
+                "company_percentage": 0.2
+            },
+            {
+                "company_name": "Nooter Construction, Inc.",
+                "company_percentage": 0.0
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 99.2
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases are still the largest expense",
+            "cost_factor_description": "Purchase costs include subcontracted work and gasoline purchases, which can be significant for plumbers that must travel significant distances to clients."
+        },
+        {
+            "cost_factor_title": "Skilled Labor is Vital, Resulting in High Wages",
+            "cost_factor_description": "Wages are an inflexible expense as full-time employees are paid a salary regardless of demand levels."
+        },
+        {
+            "cost_factor_title": "Increasing Labor Fees Hampers Profit",
+            "cost_factor_description": "General profitability for the industry is dependent on a plumber's ability to effectively manage employee compensation."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital intensity",
+                "capital_intensity_description": "Plumbing is a very labor-intensive field."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_trend": "Unknown",
+        "volatility_points": [
+            {
+                "volatility_title": "COVID-19 UPSETS TRADITIONAL REVENUE STREAMS",
+                "volatility_description": "While plumbers have historically been characterized by a low level of revenue volatility, they have contended with moderate volatility recently."
+            },
+            {
+                "volatility_title": "MARKET-SPECIFIC FACTORS AFFECT INDUSTRY DEMAND",
+                "volatility_description": "Plumbers and mechanical contractors provide services for a variety of markets and industries."
+            }
+        ]
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Low technology change",
+                "technological_change_description": "Plumbing work relies heavily on skilled manual labor."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company primarily work with residential or nonresidential construction markets?",
+            "answer": "Plumbers work with both residential and nonresidential construction markets."
+        },
+        {
+            "question": "Are you solely focused on new work, or do you participate in remodeling activities?",
+            "answer": "Plumbers are focused on both new work and remodeling activities."
+        },
+        {
+            "question": "What is the size of your staff? How does that compare to your competitors?",
+            "answer": "A large number of very small plumbers dominate."
+        },
+        {
+            "question": "Does your company make use of subcontractors to save on wage costs?",
+            "answer": "Plumbers often use subcontractors."
+        },
+        {
+            "question": "How much of your revenue comes from residential work?",
+            "answer": 0
+        }
+    ]
+}

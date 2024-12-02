@@ -1,0 +1,623 @@
+{
+    "report_title": "Auctions in the US",
+    "report_date": "Sep 08, 2022",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 934155000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "revenue_cagr_value": 14.22
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "revenue_cagr_value": 7.64
+            }
+        },
+        "profit": {
+            "profit_dollars": 55115000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "profit_cagr_value": 16.37
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5.9,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "profit_margins_cagr_value": 1.88
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 97710000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 899475,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 36371000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The E-Commerce and Online Auctions industry, which comprises companies that sell merchandise online, is growing rapidly as more time-strapped and cost-conscious consumers are enticed by the convenience of finding, comparing and purchasing products online easily and quickly. From big-box retailers to specific niche stores, consumers can purchase anything from clothing, precooked meals, bulk home goods and collectible antiques from their computer or smartphone. Driven by increased consumer spending and the rapidly growing number of total internet connections, revenue for the industry is expected to rise an annualized 16.1% over the five years to 2022, including an anticipated 7.1% increase in 2022, to reach $934.2 billion. Additionally, the industry experienced significant growth in 2020 as the COVID-19 (coronavirus) pandemic provided consumers with an outlet for socially distanced shopping.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Revenue surge due to COVID-19 pandemic",
+            "current_performance_point_description": "Demand for industry products spiked during 2020 as a result of the COVID-19 (coronavirus) pandemic. In 2020 alone, industry revenue increased 42.0%. Lockdowns and social distancing caused more consumers to shift from in-store shopping to online platforms to purchase goods safely."
+        },
+        {
+            "current_performance_point_title": "Mobile drives growth",
+            "current_performance_point_description": "The proliferation of mobile device connections, such as smartphones and tablets, has further facilitated growth by giving consumers the opportunity to shop on the go. During the five-year period, the number of mobile internet connections grew at an annualized rate of 1.3%."
+        },
+        {
+            "current_performance_point_title": "Rising competition",
+            "current_performance_point_description": "Technical barriers to entry and initial capital costs are low for the industry, which gives individuals the ability to create their own e-commerce platform with ease. The simplicity of launching an e-commerce store has contributed to a rise in industry participation."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Continued revenue growth expected",
+            "future_outlook_point_description": "Over the five years to 2027, revenue is estimated to increase at an annualized rate of 7.7%, reaching $1.4 trillion in 2027. As revenue continues to increase, the number of enterprises is also expected to rise."
+        },
+        {
+            "future_outlook_point_title": "Artificial intelligence to play major role",
+            "future_outlook_point_description": "Though artificial intelligence is still in its infancy, it will likely play a major role in the industry over the next five years. Large companies are investing heavily in robotic technology to make warehouse processes more efficient."
+        },
+        {
+            "future_outlook_point_title": "Shift from traditional retail to online retail",
+            "future_outlook_point_description": "The rising success of the industry is not a result of a significant increase in consumer retail spending; instead, it comes from a significant shift from traditional retail to online retail."
+        }
+    ],
+    "industry_definition": "The E-Commerce and Online Auctions industry comprises establishments that sell merchandise online. The internet is the main selling platform via either a retailer's online store or an auction site. This industry excludes media and software that is streamed or downloaded online.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "High Revenue per Employee"
+        ],
+        "negative_impact_factors": [
+            "Low & Decreasing Barriers to Entry",
+            "None & Steady Level of Assistance",
+            "High Competition",
+            "High Capital Requirements"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "High Revenue per Employee"
+        ],
+        "weaknesses": [
+            "Low & Decreasing Barriers to Entry",
+            "None & Steady Level of Assistance",
+            "High Competition",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "Very High Revenue Growth (2005-2022)",
+            "High Revenue Growth (2017-2022)",
+            "High Revenue Growth (2022-2027)",
+            "Internet traffic volume"
+        ],
+        "threats": [
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Percentage of business conducted online"
+        ]
+    },
+    "key_trends": [
+        "Large companies have increased investment in artificial intelligence technology",
+        "Increased industry competition puts pressure on online retailers to differentiate themselves from industry rivals",
+        "Many operators have had success by selling niche products for specific customer segments",
+        "Wage growth will slightly outpace revenue growth, offsetting a stronger dollar",
+        "General consumer spending is expected to continue to rise, aiding revenue growth",
+        "Consumers and legislators have criticized the size of some major players is resulting in anticompetitive practices",
+        "Wages have been outpaced by revenue growth as new technology has increased per-employee productivity"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Consumers Under 34 Years Old",
+            "segment_description": "Individuals aged 34, which comprise the youngest consumer segment, account for 38.2% of E-Commerce and Online Auctions industry activity in 2022.",
+            "segment_percentage": 38.2
+        },
+        {
+            "segment": "Consumers Aged 35 to 54 Years Old",
+            "segment_description": "Consumers between 35 and 54 years old are the second-strongest contributor to the e-commerce industry. Individuals in this segment make up an estimated 32.7% of the adult population and generate an estimated 32.7% e-commerce shopping.",
+            "segment_percentage": 32.7
+        },
+        {
+            "segment": "Consumers Aged 55 and Older",
+            "segment_description": "Individuals that are 55 and older comprise the oldest consumer segment for this industry; however, given the larger wealth of the older generation, online spending still remains significant. This age group represents nearly 30.0% of the adult population and is expected to account for 29.1% of industry revenue.",
+            "segment_percentage": 29.1
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Computers, Electronics and Appliances",
+            "product_description": "The electronics segment includes computer hardware and software and other electronics including appliances.",
+            "product_percentage": 14.4
+        },
+        {
+            "product_or_service": "Media",
+            "product_description": "Books, magazines, music and video all fall under the media and entertainment segment of products.",
+            "product_percentage": 5.0
+        },
+        {
+            "product_or_service": "Clothing, Footwear and Accessories",
+            "product_description": "This segment, which includes, clothing, footwear and accessories (excluding jewelry), is made up of popular goods to buy online because consumers can compare items and prices from many different retailers.",
+            "product_percentage": 17.2
+        },
+        {
+            "product_or_service": "Home and Office",
+            "product_description": "Over the five years to 2022, sales of furniture and home appliances have increased to 17.7% of industry revenue thanks to rebounding construction activity and housing start growth.",
+            "product_percentage": 17.7
+        },
+        {
+            "product_or_service": "Medication and Health Aids",
+            "product_description": "Of the remaining revenue generated through products, 11.2% is derived from health and beauty aids, and perishable goods such as medication.",
+            "product_percentage": 11.2
+        },
+        {
+            "product_or_service": "Food, Beer and Wine",
+            "product_description": "Food and beverages are expected to account for 3.9% of industry revenue.",
+            "product_percentage": 3.9
+        },
+        {
+            "product_or_service": "Sporting Goods, Toys, Hobby Items and Games",
+            "product_description": "Another popular product group sold by online retailers includes sporting goods, toys, hobby items and games. Products in this category are easy to buy online, as these products are relatively basic and do not require much in-store research or inspection.",
+            "product_percentage": 8.3
+        },
+        {
+            "product_or_service": "Other Merchandise",
+            "product_description": "Of the remaining revenue generated through products, 22.3% is derived from products such as hardware parts and antiques, among others.",
+            "product_percentage": 22.3
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Synthetic Fiber Manufacturing in the US",
+            "Cardboard Box & Container Manufacturing in the US",
+            "Plastic & Resin Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [
+            "Couriers & Local Delivery Services in the US",
+            "Postal Service in the US",
+            "Wholesale Trade in the US"
+        ],
+        "tier_2_buyers": [
+            "Hobby & Toy Stores in the US",
+            "Educational Services in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Disposable income",
+            "determinant_description": "Disposable income has become an increasingly important determinant of demand for the E-Commerce and Online Auctions industry over the past five years. As the economy recovered from the recession and per capita disposable income increased, consumers felt more comfortable spending on discretionary items, such as clothing and electronics."
+        },
+        {
+            "determinant_title": "COVID-19 pandemic",
+            "determinant_description": "The COVID-19 (coronavirus) pandemic caused an increase in online shopping due to social distancing restrictions and temporary closures of brick-and-mortar stores. Consumers are able to do their shopping for clothes and groceries, among other items safely from their homes."
+        },
+        {
+            "determinant_title": "Clicks over bricks",
+            "determinant_description": "The internet makes it easy for customers to research different products, read reviews from other customers and find the best price for a product they are interested in. This improved customer experience gives online retailers an advantage over traditional outlets."
+        },
+        {
+            "determinant_title": "Product availability",
+            "determinant_description": "Operators should ensure that their product range is as extensive, if not more extensive, as those found in traditional brick and mortar stores. This will entice consumers to turn to online retailers for hard-to-find items, driving demand."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports of inventory",
+                "trade_description": "Operators in the E-Commerce and Online Auctions industry often purchase inventory items manufactured abroad due to lower production costs in countries such as China and Mexico."
+            },
+            {
+                "trade_title": "Exports through websites",
+                "trade_description": "Companies supply the domestic and international market through online websites."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "West",
+            "location_description": "",
+            "percentage_establishments": 24.0,
+            "percentage_population": 0
+        },
+        {
+            "location": "Southeast",
+            "location_description": "",
+            "percentage_establishments": 22.8,
+            "percentage_population": 0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "",
+            "percentage_establishments": 16.9,
+            "percentage_population": 0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "",
+            "percentage_establishments": 10.6,
+            "percentage_population": 0
+        },
+        {
+            "location": "<UNKNOWN>",
+            "location_description": "",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "Streamlined Sales and Use Tax Agreement",
+                "regulation_description": "Requires online retailers to collect sales tax from customers in states that have passed the agreement."
+            },
+            {
+                "regulation_title": "FTC Mail/Internet Order Merchandise Rule",
+                "regulation_description": "Requires retailers to ship goods within 30 days of order and notify of delays."
+            },
+            {
+                "regulation_title": "Online privacy and advertising laws",
+                "regulation_description": "FTC enforces laws to protect consumer data and prevent false advertising."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Decreasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "Revenue volatility level is high."
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "No industry assistance, steady level."
+            },
+            {
+                "barrier_title": "Technology Change Level",
+                "barrier_description": "Technology change level is high."
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "Competition level is high and increasing."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Life cycle stage is growth.",
+            "Concentration level is low.",
+            "Globalization level is low but increasing."
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Internal Competition",
+                "basis_description": "Operators compete on price, product selection, promotions, website features, value-added services like free shipping and customer service. Detailed product descriptions and high-quality photos are important."
+            },
+            {
+                "basis_title": "External Competition",
+                "basis_description": "Online retailers compete with brick-and-mortar stores on convenience, price and product availability. Online provides highest convenience, lowest prices and highest availability."
+            },
+            {
+                "basis_title": "Consumer Factors",
+                "basis_description": "Free shipping is attractive. Delivery mode and return/refund policy are important for consumers. Reputation affects customer retention."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Industry Fragmentation",
+                "concentration_description": "The industry is highly fragmented with many small players due to low barriers to entry."
+            },
+            {
+                "concentration_title": "Major Player",
+                "concentration_description": "Amazon has captured considerable share due to wide product variety and convenient shipping options."
+            },
+            {
+                "concentration_title": "Consolidation",
+                "concentration_description": "Large retailers like Walmart are acquiring smaller innovative companies to expand product mix and customer base."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Walmart Inc.",
+                "company_percentage": 4
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 5.9
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 3.9
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0.7
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 4.0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 1.3
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0.3
+        },
+        {
+            "cost_type": "Other Costs",
+            "cost_type_percentage": 19.8
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Shipping costs",
+            "cost_factor_description": "The majority of the costs in the 'Other Costs' category come from transportation and shipping activities."
+        },
+        {
+            "cost_factor_title": "Credit card fees",
+            "cost_factor_description": "The 'Other Costs' category includes credit card fees."
+        },
+        {
+            "cost_factor_title": "Insurance premiums",
+            "cost_factor_description": "The 'Other Costs' category includes insurance premiums."
+        },
+        {
+            "cost_factor_title": "Interest charges",
+            "cost_factor_description": "The 'Other Costs' category includes interest charges."
+        },
+        {
+            "cost_factor_title": "Administrative costs",
+            "cost_factor_description": "The 'Other Costs' category includes administrative costs."
+        },
+        {
+            "cost_factor_title": "Selling expenditures",
+            "cost_factor_description": "The 'Other Costs' category includes selling expenditures."
+        },
+        {
+            "cost_factor_title": "Taxes",
+            "cost_factor_description": "The 'Other Costs' category includes taxes."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Capital investment in software, warehouse space, computer equipment and fixtures",
+                "capital_intensity_description": "Capital investment is mainly in software, warehouse space, computer equipment and warehouse fixtures."
+            },
+            {
+                "capital_intensity_title": "Implementing warehouse technologies like handheld devices and voice-to-pick software",
+                "capital_intensity_description": "Operators have been implementing more technology in their warehouses, such as handheld devices for pickers and voice-to-pick software."
+            },
+            {
+                "capital_intensity_title": "Capital expenditure on websites, databases and payment systems",
+                "capital_intensity_description": "Industry operators also outlay capital on technology to establish, implement and maintain their websites and databases."
+            },
+            {
+                "capital_intensity_title": "Purchasing and maintaining delivery vehicles",
+                "capital_intensity_description": "Operators may also incur capital expenditure though purchasing and maintaining vehicles for delivering goods."
+            }
+        ],
+        "capital_intensity_trend": "Increasing"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Consistently strong revenue growth over past 5 years",
+                "volatility_description": "Revenue volatility has generally been moderate, as online retailers have reported consistently strong growth during the five-year period."
+            },
+            {
+                "volatility_title": "Significant growth in 2020 due to COVID-19 pandemic",
+                "volatility_description": "However, significant growth in 2020 due to the COVID-19 (coronavirus) pandemic, has increased revenue volatility during the period."
+            },
+            {
+                "volatility_title": "Dependence on discretionary consumer spending",
+                "volatility_description": "Operators compete for a share of consumers' discretionary income, which is highly dependent on employment levels and consumer confidence."
+            }
+        ],
+        "volatility_trend": "Increasing"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Growth of mobile commerce",
+                "technological_change_description": "As mobile phone connections increase, consumers will likely opt to make purchases through their devices even more."
+            },
+            {
+                "technological_change_title": "Increasing internet penetration and technological advancements",
+                "technological_change_description": "The surge in internet penetration and ongoing technological advancements are crucial to the industry's growth."
+            },
+            {
+                "technological_change_title": "Development of mobile apps and improving mobile experience",
+                "technological_change_description": "Retailers are devoting resources to developing native mobile applications and improving the customer experience."
+            },
+            {
+                "technological_change_title": "Advancements in payment systems like digital wallets",
+                "technological_change_description": "Important technological elements include payment systems like Google Wallet, Apple Pay and PayPal that enable easy online payments."
+            },
+            {
+                "technological_change_title": "Adoption of warehouse automation technologies",
+                "technological_change_description": "Warehouse technologies like handheld scanners, voice-to-pick software and automated packing lines help increase efficiency."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How has your businesses adapted to the growth of online sales over the past five years?",
+            "answer": "Applied. A change in the tariff rate of a particular good will generally alter where the good is purchased and the purchase price. For instance, a decline in tariffs for computer parts may result in falling purchasing costs, which can be passed on to consumers as lower prices, helping the retailer to remain competitive."
+        },
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "While the retail sector as a whole is generally reliant on the overall health of the US economy, online retail is less dependent. Due to the tremendous growth, adverse economic conditions may depress industry revenue, but should not reverse the industry's course."
+        },
+        {
+            "question": "Does your company look to lease equipment in order to reduce overhead costs?",
+            "answer": "Companies should look to make investment in warehouse equipment and technology to increase operational productivity and efficiency. In 2022, depreciation costs are expected to account for 0.7% of total industry revenue."
+        },
+        {
+            "question": "Has your company explored acquisition opportunities in order to expand reach and reduce overhead expenses?",
+            "answer": "Some e-commerce companies are looking to vertically integrate through acquiring companies in different industries. Traditionally brick and mortar stores are looking for e-commerce and technology startups to help them grow their online platform."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation over the past five years?",
+            "answer": "Using robotic technology, orders can be fulfilled and sent out for delivery quicker. While large companies have and continue to invest and acquire robotic technology companies, small operators can partner with these companies or use a third-party logistics company to handle operations."
+        },
+        {
+            "question": "Does your company use point-of-sale (POS) systems to ensure that the most popular products are kept in stock?",
+            "answer": "Operators should be aware of new POS technologies, including the new blockchain technology, that can improve inventory operations. Companies should also collect and analyze selling data in order to have a better understanding of how to order inventory."
+        },
+        {
+            "question": "Have any regulatory expenses significantly impacted profitability recently?",
+            "answer": "Many states have enacted e-commerce tax laws in recent years, which puts these retailers on a more level playing field with brick and mortar stores."
+        },
+        {
+            "question": "How does your company ensure all health and safety requirements are met?",
+            "answer": "Companies should consult state and local officials to ensure all regulatory requirements are met."
+        },
+        {
+            "question": "With the rise of automation, some companies may neglect the significance of regulation.",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "What ongoing financing challenges does your company face?",
+            "answer": "Companies should look to leasing equipment and warehouse space if financing proves challenging."
+        },
+        {
+            "question": "Do you have any challenges with customers paying on time?",
+            "answer": "Generally, e-commerce is a B2C business, so companies should not face challenges having customers pay on time. Some startups, however, allow customers to pay for purchases in monthly installments."
+        },
+        {
+            "question": "What do you do to promote loyalty and to keep your customers returning for follow-up visits?",
+            "answer": "Successful operators have a loyal customer base to attract repeat buyers and ensure continued sales."
+        },
+        {
+            "question": "How do you maintain optimum stock levels? What factors affect demand and stock levels?",
+            "answer": "To profit from trends, operators need to be able to control stock on hand to ensure that they have an adequate amount of popular items."
+        },
+        {
+            "question": "How quickly can do you adopt new technology, such as warehouse automation tech? What are the associated costs?",
+            "answer": "Ever-changing software systems, warehouse technology and personal information security systems require companies to continually update their business to keep pace with recent technology."
+        },
+        {
+            "question": "Do you monitor the percentage of services conducted online? How does the percentage of services conducted online affect your business?",
+            "answer": "The percentage of services conducted online reflects consumer preferences toward purchasing items and conducting services online. The percentage of services conducted online is expected to decrease in 2022. However, this is largely in response to the large spike in 2020 due to the COVID-19 (coronavirus) pandemic."
+        },
+        {
+            "question": "Do you monitor changes in per capita disposable income? How have you been affected by fluctuations in the past?",
+            "answer": "When disposable income is high, consumers are more likely to purchase discretionary, price-premium goods, therefore benefiting the industry."
+        },
+        {
+            "question": "How are you affected by an increase in the number of mobile internet connections? Have you developed any mobile-specific shopping apps?",
+            "answer": "Consumers are increasingly leveraging their mobile internet connections to purchase items on the go, enhancing the ease and convenience of online shopping. The number of mobile internet connections is expected to increase in 2022."
+        }
+    ]
+}

@@ -1,0 +1,519 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 3023000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 49.69
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.65
+            }
+        },
+        "profit": {
+            "profit_dollars": 206000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 52.8
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 6.8,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0.0
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1124000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 7484,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 797000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 797000000,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "Cell phone recycling companies primarily separate and sort recyclable materials from cell phones, smartphones, pagers and personal digital assistants. Companies also refurbish devices for resale. Revenue from processing other electronics is excluded from this industry.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Cell Phone Usage Has Been Surging",
+            "current_performance_point_description": "The Infrastructure Investment and Jobs Act represents a $1.2 trillion investment, with $550 billion above baseline funding. By mid-2024, more than $454 billion in Bipartisan Infrastructure Law funds have been allocated, enhancing various sectors, including recycling."
+        },
+        {
+            "current_performance_point_title": "Infrastructure Investment Act Spurs Capital Investments in Cell Phone Recycling",
+            "current_performance_point_description": "The Electronic Waste Reduction Programs and Pollution Prevention Grants have the most impact on cell phone recycling. These initiatives allocate $60 million and $100 million, respectively."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Market Saturation Will Increase",
+            "future_outlook_point_description": "Manufacturing capacity utilization (MCU) is calculated as the ratio of actual manufacturing output to potential full capacity output."
+        },
+        {
+            "future_outlook_point_title": "Manufacturing Capacity Utilization Will Fall Because of Outsourcing",
+            "future_outlook_point_description": "Companies in the United States will downscale their production as they plan to move their plants to developing nations to take advantage of lower labor costs."
+        }
+    ],
+    "industry_definition": "Cell phone recycling companies primarily separate and sort recyclable materials from cell phones, smartphones, pagers, and personal digital assistants. Companies also refurbish devices for resale.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level"
+        ],
+        "mixed_impact_factors": [
+            "Consumer Awareness"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Growth Life Cycle Stage"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance"
+        ],
+        "opportunities": [
+            "Number of mobile internet connections"
+        ],
+        "threats": [
+            "Low Outlier Growth"
+        ]
+    },
+    "key_trends": [
+        "The large number of enterprises keeps internal competition fairly high. Cell phone recycling companies compete based on price, quality, reputation, and the convenience of recycling services."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Adults aged 18 to 29",
+            "segment_description": "Adults aged 18 - 29 make up a decent share of revenue, as they purchase many cell phones since they're tech-savvy.",
+            "segment_percentage": 20.3
+        },
+        {
+            "segment": "Adults aged 30 to 49",
+            "segment_description": "Spending on cell phone recycling services from adults aged 30 - 64 comprise more than half of revenue.",
+            "segment_percentage": 32.3
+        },
+        {
+            "segment": "Adults aged 50 to 64",
+            "segment_description": "Most middle-aged adults work, so they use their cell phones often.",
+            "segment_percentage": 22.6
+        },
+        {
+            "segment": "Adults aged 65 and older",
+            "segment_description": "Adults aged 65 make up a small share of revenue relative to the size of their population.",
+            "segment_percentage": 14.7
+        },
+        {
+            "segment": "Businesses",
+            "segment_description": "Business agencies and non-profit organizations purchase cell phones for employees to use solely for work-related purposes.",
+            "segment_percentage": 9
+        },
+        {
+            "segment": "Government and other",
+            "segment_description": "Entities such as government agencies purchase cell phones for employees to use solely for work-related purposes.",
+            "segment_percentage": 1.1
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Asset Recovery",
+            "product_description": "Asset recovery involves refurbishing used cell phones for resale.",
+            "product_percentage": 22
+        },
+        {
+            "product_or_service": "Demanufacturing",
+            "product_description": "In the demanufacturing process, companies dismantle the electronic equipment and remove potentially valuable components.",
+            "product_percentage": 53.4
+        },
+        {
+            "product_or_service": "Shredding",
+            "product_description": "Shredding includes the destruction of hard drives and other components.",
+            "product_percentage": 13.4
+        },
+        {
+            "product_or_service": "Glass Cleaning",
+            "product_description": "Glass cleaning makes smartphones look clean.",
+            "product_percentage": 1.5
+        },
+        {
+            "product_or_service": "Other Activities",
+            "product_description": "Other services include collecting phones, administration and management.",
+            "product_percentage": 9.7
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Cell Phone Recycling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Recyclable Material Wholesaling in the US",
+            "Waste Collection Services in the US",
+            "Waste Treatment & Disposal Services in the US",
+            "Recycling Facilities in the US"
+        ],
+        "tier_1_buyers": [
+            "Communication Equipment Manufacturing in the US",
+            "Wireless Telecommunications Carriers in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Number of Mobile Internet Connections",
+            "determinant_description": "The number of mobile internet connections, including internet-connected smartphones, has skyrocketed."
+        }
+    ],
+    "international_trade": {
+        "import_level": "low",
+        "import_trend": "increasing",
+        "export_level": "high",
+        "export_trend": "increasing",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "The Great Lakes Region",
+            "location_description": "States in the Great Lakes region contain many of the nation's most prominent manufacturers.",
+            "percentage_establishments": 1,
+            "percentage_population": 1
+        },
+        {
+            "location": "The Southeast",
+            "location_description": "The Southeast region contains states such as Florida, Georgia, North Carolina, and Tennessee.",
+            "percentage_establishments": 1,
+            "percentage_population": 1
+        },
+        {
+            "location": "The Mid-Atlantic",
+            "location_description": "The Mid-Atlantic contains the country's biggest metropolitan areas including New York, Philadelphia, and Washington DC.",
+            "percentage_establishments": 1,
+            "percentage_population": 1
+        },
+        {
+            "location": "The West",
+            "location_description": "Populations on the Pacific coast are very concerned about climate change and pollution.",
+            "percentage_establishments": 1,
+            "percentage_population": 1
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "Certifications",
+                "regulation_description": "The Environmental Protection Agency (EPA) has developed volunteer accreditations for electronic recyclers."
+            },
+            {
+                "regulation_title": "Clean Air Act (CAA)",
+                "regulation_description": "The CAA requires that companies comply with limits on the emission of pollutants."
+            },
+            {
+                "regulation_title": "Clean Water Act (CWA)",
+                "regulation_description": "The CWA ensures cell phone recyclers don't pollute bodies of water."
+            },
+            {
+                "regulation_title": "Occupational Safety and Health Administration (OSHA)",
+                "regulation_description": "OSHA is a federal agency that enforces safety and health legislation in the United States."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Legal",
+                "barrier_description": "New entrants must acquire certification, specifically the Responsible Recycling (R2) Standard."
+            },
+            {
+                "barrier_title": "Start-up Costs",
+                "barrier_description": "Initial costs include tools and machinery for running cell phone diagnostics."
+            },
+            {
+                "barrier_title": "Differentiation",
+                "barrier_description": "Since the industry is localized, branding is low."
+            },
+            {
+                "barrier_title": "Labor Intensity",
+                "barrier_description": "Wages comprise a larger share of revenue since workers are highly-skilled."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage: growth",
+            "Revenue Volatility Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Price",
+                "basis_description": "Cell phone recycling companies compete based on price."
+            },
+            {
+                "basis_title": "Quality",
+                "basis_description": "Cell phone recycling companies compete based on quality."
+            },
+            {
+                "basis_title": "Reputation",
+                "basis_description": "Cell phone recycling companies compete based on reputation."
+            },
+            {
+                "basis_title": "Convenience",
+                "basis_description": "Cell phone recycling companies compete based on the convenience of recycling services."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Localization Hinders Consolidation",
+                "concentration_description": "Small cell phone recycling companies exist to serve residents in a specific town."
+            },
+            {
+                "concentration_title": "Modest Barriers to Entry Keep Market Share Concentration Low",
+                "concentration_description": "Barriers to entry for cell phone recycling companies include getting licenses."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Ecoatm, Llc",
+                "company_percentage": 9.2
+            },
+            {
+                "company_name": "Nextworth Solutions, Inc.",
+                "company_percentage": 3.9
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 87
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 6.8
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 26.4
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 35.9
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 24.1
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Recycling Companies Incur Lots of Other Costs",
+            "cost_factor_description": "\"Other\" costs are forecast to comprise 24.1% of revenue in 2023."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Labor Intensity",
+                "capital_intensity_description": "While cell phone recycling companies must purchase some capital, wages comprise a larger share of revenue."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Low",
+        "volatility_points": [
+            {
+                "volatility_title": "Shifting Economic Conditions Affect Households and Businesses",
+                "volatility_description": "When the economy goes into a recession, households are more wary to spend."
+            },
+            {
+                "volatility_title": "High Input Prices Provide Revenue Streams for Cell Phone Recycling Companies",
+                "volatility_description": "Cell phone recycling companies take inputs such as copper and silver from old merchandise."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Automation and Robotics Have Helped Streamline the Demanufacturing Process",
+                "technological_change_description": "Cell phone recycling companies have employed robotics to improve demanufacturing."
+            },
+            {
+                "technological_change_title": "Companies Have Been Improving Their Shredding Capacity",
+                "technological_change_description": "Cell phone recycling companies have built high-capacity shredders."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How dependent are your sales on the public sector?",
+            "answer": "The industry generates revenue through sales of mobile phones or scrap metal."
+        },
+        {
+            "question": "How do you market your services to potential clients?",
+            "answer": "This depends on the revenue model for each company."
+        },
+        {
+            "question": "Has your company looked into relocating its operations to lower-wage countries?",
+            "answer": "Wages play a significant role in the industry, but it's not the primary factor of expenses."
+        },
+        {
+            "question": "Does your business need to be located nearby key consumer or client markets?",
+            "answer": "Cell phone recycling companies should ensure they are located in convenient areas near population centers."
+        },
+        {
+            "question": "Have you been able to reduce costs by automating operations?",
+            "answer": "This depends on the type of operations being conducted."
+        },
+        {
+            "question": "Does your company use mobile applications to reduce labor costs and improve employee efficiency?",
+            "answer": "Cell phone recycling companies don't need to use mobile applications."
+        },
+        {
+            "question": "Do regulations pertinent to your business vary from state to state?",
+            "answer": "Regulation varies by state, but how a company operates won't change by state."
+        },
+        {
+            "question": "Have energy-efficiency regulations positively impacted your business?",
+            "answer": "Environmental regulations have played a positive role in this industry."
+        },
+        {
+            "question": "How quickly can your company pay off the money owed to its suppliers?",
+            "answer": "Companies immediately pay for old devices."
+        },
+        {
+            "question": "Do you have any challenges with customers paying on time?",
+            "answer": "This depends on the type of company operating."
+        },
+        {
+            "question": "Where are your distribution centers located?",
+            "answer": "Having an extensive distribution/collection network."
+        },
+        {
+            "question": "Do you monitor changes in government regulations?",
+            "answer": "Compliance with federal, state and municipal legislation regarding hazardous waste disposal is compulsory."
+        },
+        {
+            "question": "Do you have secure contracts with trustworthy suppliers?",
+            "answer": "Access to cell phone repair equipment and parts at a competitive cost enables players to compete on price."
+        },
+        {
+            "question": "How do you contend with companies offering discounts for new phones?",
+            "answer": "The industry contends with external competition from phone makers."
+        },
+        {
+            "question": "How will you take advantage of increasing disposable income?",
+            "answer": "Per capita disposable income indicates whether individuals can purchase goods or services."
+        },
+        {
+            "question": "How can you capitalize on an increasing number of mobile internet connections?",
+            "answer": "Offering financial incentives to recycle devices."
+        }
+    ]
+}

@@ -1,0 +1,508 @@
+{
+    "report_title": "Industry Research: Prepaid Credit & Debit Card Providers in the US",
+    "report_date": "Jul 01, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 16288000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "revenue_cagr_value": -1.46
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": -2.32
+            }
+        },
+        "profit": {
+            "profit_dollars": 2085000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": -1.02
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 12.8,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 0.43
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 6696000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 24062,
+            "employees_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 4326000000,
+            "wages_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "The prepaid credit and debit card industry has been volatile. The pandemic increased poverty, boosting demand for prepaid cards. But the recovery raised incomes, shifting demand back to traditional banking. Fewer teenagers also reduced a key revenue stream. But surging e-commerce partially offset this. Overall revenue is expected to decline slightly at -0.4% CAGR to $16.3B by 2024.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Pandemic Created a Big Opportunity for the Industry",
+            "current_performance_point_description": "The pandemic caused job losses and poverty to rise, boosting demand for prepaid cards as people lost access to traditional banking."
+        },
+        {
+            "current_performance_point_title": "The Recovery Reverses Gains Made From the Pandemic",
+            "current_performance_point_description": "As the economy reopened and incomes rose, consumers regained access to credit and banking, shifting revenue away from prepaid cards."
+        },
+        {
+            "current_performance_point_title": "Fewer Adolescents Reduce a Major Revenue Stream",
+            "current_performance_point_description": "Declining birth rates mean fewer teenagers, a key customer segment for prepaid cards used as allowances."
+        },
+        {
+            "current_performance_point_title": "Surging E-Commerce Sales Present a Beacon of Hope",
+            "current_performance_point_description": "Prepaid cards are popular for online purchases, helping offset declines from other factors."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Steady Income Growth Will Increase Consumer Options",
+            "future_outlook_point_description": "Rising incomes will enable more consumers to access traditional banking and credit cards, siphoning revenue from prepaid cards."
+        },
+        {
+            "future_outlook_point_title": "Rising Consumer Spending Will Stem Industry Decline",
+            "future_outlook_point_description": "More discretionary purchases will raise demand for prepaid cards used for online buying and privacy."
+        },
+        {
+            "future_outlook_point_title": "Greater Innovation Will Provide Opportunities",
+            "future_outlook_point_description": "Prepaid card providers will upgrade software and pricing to incentivize more card use and stem revenue declines."
+        },
+        {
+            "future_outlook_point_title": "Fragmentation Will Continue to Decline",
+            "future_outlook_point_description": "More companies will exit as competition from substitutes intensifies, leading to consolidation."
+        }
+    ],
+    "industry_definition": "This industry includes companies that issue preloaded, open-loop credit and debit cards to consumers for making purchases. It excludes EBT cards and closed-loop, store gift cards.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "growth",
+            "low",
+            "low",
+            "low - steady"
+        ],
+        "negative_impact_factors": [
+            "low - steady",
+            "high"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & steady Level of Assistance",
+            "High Competition",
+            "Low Profit vs. Sector Average"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "E-commerce sales"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers"
+        ]
+    },
+    "key_trends": [
+        "Competition has been significant despite operators exiting the industry. Significant competition has made it more difficult for small players to remain in the industry, leading to increased consolidation.",
+        "Some operators have established loyalty by building a brand name. Since consumers are less likely to move away from a brand that they prefer, established companies hold a significant share of revenue, which increases concentration.",
+        "Revenue has fallen modestly during the current period and has been volatile. The pandemic raised poverty rates, which boosted revenue since some consumers only had access to prepaid cards.",
+        "The industry will face a modest decline in revenue during the outlook period. Competition from substitutes will siphon markets away from operators, but companies will try to innovate to get these consumers back.",
+        "Major prepaid credit and debit card companies have been partnering with retailers to expand consumer access.",
+        "Major companies have engaged in mergers and acquisitions to consolidate.",
+        "The industry is subject to regulations on disclosures, consumer protections, and fee limitations similar to other financial services.",
+        "The industry receives little direct assistance but some from private groups like the Innovative Payments Association."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Low-Income Households",
+            "segment_description": "Low-income households are classified as those earning less than $20,710, many of whom are at or below the poverty line.",
+            "segment_percentage": 25.3
+        },
+        {
+            "segment": "Working-Class Americans",
+            "segment_description": "Since lower-income people have the least access to traditional banking, they are a significant market for the industry.",
+            "segment_percentage": 101
+        },
+        {
+            "segment": "Middle- and Upper-Income Households",
+            "segment_description": "Middle- and upper-income households have significant financial resources, so they have access to most types of banking, credit cards and other financial products.",
+            "segment_percentage": 101
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Card Fees",
+            "product_description": "The Continued Rise of Online Shopping Boosts Demand for Card Fees",
+            "product_percentage": 68.8
+        },
+        {
+            "product_or_service": "Cash Transfer and Reload Services",
+            "product_description": "Reload Service Fees Provide an Important Stream of Revenue for Operators",
+            "product_percentage": 15.4
+        },
+        {
+            "product_or_service": "Interchange Fees",
+            "product_description": "Spending on Interchange Fees Struggle Amid Price Wars",
+            "product_percentage": 15.8
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Commercial Banking in the US",
+            "Credit Card Processing & Money Transferring in the US",
+            "Investment Banking & Securities Dealing in the US",
+            "Office Supply Stores in the US",
+            "Database, Storage & Backup Software Publishing in the US",
+            "Computer Stores in the US"
+        ],
+        "tier_1_buyers": [
+            "Convenience Stores in the US",
+            "Supermarkets & Grocery Stores in the US"
+        ],
+        "tier_2_suppliers": [],
+        "tier_2_buyers": [
+            "Department Stores in the US",
+            "Warehouse Clubs & Supercenters in the US",
+            "Consumer Electronics Stores in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Number of Adolescents Aged 10 to 19",
+            "determinant_description": "The size of the younger population partially determines spending on prepaid debit cards."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "The Southeast",
+            "location_description": "The Southeast region is home to big states such as Florida, Georgia, Tennessee and Virginia, which makes the region populated.",
+            "percentage_establishments": 30.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "The Southwest",
+            "location_description": "The Southwest region contains states on the United States-Mexico border (e.g., Texas, Arizona, New Mexico). Given their proximity to the region, these states contain high levels of migrants from Latin America.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 25.0
+        },
+        {
+            "location": "The Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region is home to New York City, which is home to the largest banks, stock exchanges and other financial institutions.",
+            "percentage_establishments": 20.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "The West",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 10.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "The Great Lakes",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 10.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "The Plains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "The Rocky Mountains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "DISCLOSURE REQUIREMENTS",
+                "regulation_description": "Governments require card issuers (including prepaid card issuers) to provide clear information regarding fees, terms and conditions associated with the card. This information must be given to the industry's customers before the card is purchased."
+            },
+            {
+                "regulation_title": "PROTECTION FOR LOST OR STOLEN CARDS",
+                "regulation_description": "Prepaid card issuers are forced to protect consumers when their cards are lost or stolen. They must be able to cancel and replace the card, along with reducing the amount of money customers pay from unauthorized transactions."
+            },
+            {
+                "regulation_title": "LIMITATIONS ON FEES",
+                "regulation_description": "Governmental organizations at different levels ensure that fees charged by prepaid card providers are reasonable and disclosed to the consumer. These can be activation, transaction, ATM withdrawal and other types of fees."
+            },
+            {
+                "regulation_title": "P A N D E M I C - E R A  R U L E S",
+                "regulation_description": "With the advent of the pandemic, governments enforced social distancing laws and quarantines. Since the industry relies on consumer spending, these regulations indirectly affected the prepaid card providers by reducing revenue. Although companies were able to operate entirely remotely, providers that kept in-person work were forced by the government to make their employees wear masks and socially distance."
+            }
+        ],
+        "regulations_trend": "Unknown"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "Industry assistance level is low and steady."
+            },
+            {
+                "barrier_title": "Technology Change Level",
+                "barrier_description": "Technology change level is high."
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "Competition level is high and increasing."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Industry Assistance Level: low - steady",
+            "Technology Change Level: high",
+            "Competition Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage: growth",
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Competition has been significant",
+                "basis_description": "Competition has been significant despite operators exiting the industry. Significant competition has made it more difficult for small players to remain."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Decreasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Decreased popularity reduces competition",
+                "concentration_description": "The decreased popularity of prepaid credit and debit cards reduces competition."
+            },
+            {
+                "concentration_title": "Branding enables large operators to gain market share",
+                "concentration_description": "Branding enables large operators to gain notable market share."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Blackhawk Network Holdings, Inc.",
+                "company_percentage": 17.3
+            },
+            {
+                "company_name": "Green Dot Corp",
+                "company_percentage": 8.1
+            },
+            {
+                "company_name": "Global Payments Inc.",
+                "company_percentage": 6.7
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 68
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 12.8
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 25.1
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 50.1
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Labor Rigidity Increases Wages",
+            "cost_factor_description": "Labor costs are more sturdy than revenue, profit or other costs, as employers refrain from reducing wages so workers don't become discouraged. While revenue has declined during the current period, wages rose because of labor rigidity, so wages as a percentage of revenue increased."
+        },
+        {
+            "cost_factor_title": "LABOR EXPENSES",
+            "cost_factor_description": "Many workers, such as card usage analysts, compliance officers and cybersecurity specialists, are highly skilled. Workers with more skills demand higher wages, so labor costs represent a major barrier to entry for potential entrants."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Many Substitutes Enhance Volatility",
+                "volatility_description": "Other financial instruments act as substitutes for prepaid credit and debit cards, including bank accounts and credit cards. Many consumers can shift between using prepaid cards and traditional financing options based on quality, preferences, prices and economic conditions."
+            },
+            {
+                "volatility_title": "MORE ONLINE PURCHASES MAKE THE INDUSTRY'S SERVICES MORE POTENT",
+                "volatility_description": "Low-income consumers use prepaid credit and debit cards to complete online purchases (since they can't use cash), so a surge in e-commerce will boost revenue for the industry. Demand for online purchases has fluctuated."
+            },
+            {
+                "volatility_title": "SHIFTING POVERTY RATES CAUSES REVENUE TO SHIFT",
+                "volatility_description": "Operators benefit from higher poverty rates because it results in more households not being able to access the traditional banking system, so they turn to prepaid cards."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "BLOCKCHAIN TECHNOLOGY INCREASES THE EFFICIENCY OF CARD FEES",
+                "technological_change_description": "Blockchain is a method of recording information that makes it impossible or extremely difficult for a system to be altered or hacked."
+            },
+            {
+                "technological_change_title": "Recent Innovations in Reload Service Fees Can Boost Revenue for Providers",
+                "technological_change_description": "Operators have begun to use tiered pricing with regard to reload service fees, where customers who add larger amounts will face lower fees than those who contribute less money."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "What are the pandemic-era rules for the industry?",
+            "answer": "With the advent of the pandemic, governments enforced social distancing laws and quarantines."
+        },
+        {
+            "question": "What assistance did the industry receive?",
+            "answer": "The text does not provide details on the level of assistance received by the industry during the pandemic."
+        },
+        {
+            "question": "What is the Innovative Payments Association (IPA)?",
+            "answer": "The Innovative Payments Association (IPA) is a trade organization that represents the electronic payments sector."
+        },
+        {
+            "question": "How do companies emphasize the value of their services?",
+            "answer": "Prepaid debt and credit card providers emphasize the safety and accessibility their cards afford consumers."
+        },
+        {
+            "question": "How has online business affected demand?",
+            "answer": "Since many prepaid debit and credit cards are used for online transactions, the trend has led to increased demand for these products."
+        }
+    ]
+}

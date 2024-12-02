@@ -1,0 +1,589 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 8450000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 0.94
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.2
+            }
+        },
+        "profit": {
+            "profit_dollars": 718000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 2.37
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 8.5,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 1.42
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 2118000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 9703,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 993000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": 2721000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": 766000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2024 currency. Mineral and phosphate miners have seen their share of ups and downs in recent years, mainly driven by erratic commodity prices and various economic disruptions. Revenue and profit have been on a rollercoaster ride, oscillating with fluctuating demand and prices for key minerals like sulfur, soda ash, phosphate rock and salt. The pandemic initially depressed prices for some minerals, delivering a blow to revenue, but an economic rebound fueled a surge in demand and, in turn, prices for these commodities. Even so, prices came down to earth towards the end of the period, leading to revenue dips. Overall, revenue is set to lag at a CAGR of 0.6%, reaching $8.4 billion, including a 0.4% dip in 2024.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "COMMODITY PRICES SHIFTS DRASTICALLY SWING REVENUE",
+            "current_performance_point_description": "Both revenue and profit have remained volatile amid fluctuations in underlying commodity prices and mismatches between supply and demand. Amid the pandemic, prices for sulfur and soda ash dipped causing revenue to fall massively. Even so, phosphate rock and salt prices crept up, preventing massive downturns."
+        },
+        {
+            "current_performance_point_title": "EXTERNAL FACTORS BRING INSTABILITY TO MINERS",
+            "current_performance_point_description": "Several external factors have significantly impacted mineral and phosphate miners. Russia's invasion of Ukraine led to sanctions on Russian imports, causing prices of potash and sulfur to spike. Sulfur, critical for petroleum refining, saw its prices nearly double, temporarily boosting revenue. Even so, these gains were short-lived."
+        },
+        {
+            "current_performance_point_title": "INTERNATIONAL TRADE REMAINS A KEY COMPONENT",
+            "current_performance_point_description": "Exports, while a modest portion of revenue, are crucial for many mining operations. Numerous countries lack substantial domestic production of these minerals and rely on US miners to supply them. Canada remains the largest export destination because of its proximity, which reduces transportation costs."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "PRODUCTION EXPANSION COUNTERACTS LOWER PRICES",
+            "future_outlook_point_description": "Oil, gas and fertilizer prices are all set to dip as mineral prices normalize from the massive spikes experienced during the current period. Even so, production is ramping up as miners operate near full capacity again, pushing revenue up."
+        },
+        {
+            "future_outlook_point_title": "Trade Remains Essential to the Success of Miners",
+            "future_outlook_point_description": "Exports will remain crucial for miners throughout the outlook period. The global need for minerals to produce food, glass, chemicals, fertilizers, ceramics and detergents will boost foreign interest in domestic goods. A depreciating US dollar will make domestic minerals and phosphates more affordable for overseas buyers, bolstering export revenue."
+        },
+        {
+            "future_outlook_point_title": "Technology Will Help Improve Mining Operations",
+            "future_outlook_point_description": "Miners will continue seeking alternative ways to reduce costs and maintain profitability. One way will be to implement new technologies and systems to keep up with their competition. As machine learning and artificial intelligence evolve, miners will weave these into their day-to-day operations to help optimize activity and recover high-grade minerals."
+        }
+    ],
+    "industry_definition": "Operators in this industry primarily mine, mill and beneficiate nonmetallic minerals. Principal industry products and activities are potash and soda, as well as borate mineral mining, phosphate rock mining, mining other.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Barriers To Entry Level - high - increasing"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level - high",
+            "Capital Intensity Level - high",
+            "Industry Assistance Level - low - steady",
+            "Technology Change Level - high",
+            "Globalization Level - high - increasing"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage - mature"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Increasing Barriers to Entry",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "Low Profit vs. Sector Average",
+            "Low Revenue per Employee",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers",
+            "Demand from fertilizer manufacturing"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Trade-weighted index"
+        ]
+    },
+    "key_trends": [
+        "The level of competition remains intense. Larger companies are taking over smaller ones that can't handle the increased capital costs, leading to higher market concentration.",
+        "Long-term sales contracts can be a game-changer for buyers in the mining industry. Manufacturers and farmers benefit by stabilizing costs, but construction companies struggle because of unpredictable material needs.",
+        "Commodity prices have experienced drastic swings because of supply chain issues and geopolitical tensions. Prices surged significantly but later came down, leading to a revenue drop.",
+        "Exports to countries like Canada have been crucial despite the strong US dollar.",
+        "Imports haven't hurt domestic miners much because they're not significant producers of those particular minerals.",
+        "The Hydro Bullet product line is comprised of research-driven nutrient combinations that support specific needs with targeted nutritional benefits.",
+        "Rio Tinto has placed a greater focus on making sure the essential materials it sells are produced in a more responsible manner.",
+        "Tax deductions spark interest in exploring and producing minerals.",
+        "Driving economic growth and job creation.",
+        "Encouraging companies to tap into untapped reserves by easing the tax burden.",
+        "Mine companies must obtain surface mining reclamation administration and enforcement permits.",
+        "The Office of Surface Mining Reclamation and Enforcement (OSMRE) administers and enforces mining, environmental protection and reclamation standards for all aspects of surface mining and many parts of deep mining.",
+        "Automation reduces wages, but skilled workers are still crucial.",
+        "Even as businesses invest more in automation, finding and retaining highly skilled and motivated employees remains essential for success.",
+        "Supply chain disruptions and elevated prices of essential mining equipment and raw materials have significantly driven up expenses.",
+        "Most businesses are concentrated in the Rocky Mountains, the West, the Southeast and other regions."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Agriculture",
+            "segment_description": "All domestically mined phosphate rock is used to produce wet-process phosphoric acid and super phosphoric acid, which in turn is used to produce fertilizers.",
+            "segment_percentage": 37.9
+        },
+        {
+            "segment": "Industrial Chemicals",
+            "segment_description": "Chemical manufacturers use minerals to create materials for customer products like beauty care products, toothpaste and additives. Phosphate mining extracts raw materials for the development of fertilizers. 85% of domestic potash is used for fertilizer, while the inorganic chemical market uses the rest.",
+            "segment_percentage": 0
+        },
+        {
+            "segment": "Other nonmetallic mineral product (e.g. gypsum wallboard)",
+            "segment_description": "The construction industry uses minerals like limestone, gypsum, and sand to make building materials like cement, concrete, and mortar. These materials are utilized to develop homes, buildings, roads, and other frameworks.",
+            "segment_percentage": 24.1
+        },
+        {
+            "segment": "Construction and transportation",
+            "segment_description": "Rock salt is principally used for deicing highways. State highway authorities and municipal agencies purchase it directly from mining companies.",
+            "segment_percentage": 13.4
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Agriculture, Forestry, Fishing and Hunting in the US",
+            "product_description": null,
+            "product_percentage": 24.1
+        },
+        {
+            "product_or_service": "Manufacturing in the US",
+            "product_description": null,
+            "product_percentage": 9.0
+        },
+        {
+            "product_or_service": "PHOSPHATE",
+            "product_description": null,
+            "product_percentage": 3.1
+        },
+        {
+            "product_or_service": "POTASH",
+            "product_description": null,
+            "product_percentage": 23.8
+        },
+        {
+            "product_or_service": "SODA ASH",
+            "product_description": null,
+            "product_percentage": 30.9
+        },
+        {
+            "product_or_service": "ROCK SALT",
+            "product_description": null,
+            "product_percentage": 18.1
+        },
+        {
+            "product_or_service": "OTHER CHEMICAL AND FERTILIZER MINERALS",
+            "product_description": "Other minerals in this industry have a wide range of applications, like building products (gypsum, talc and perlite), paper production (talc), horticulture (diatomite and perlite) and industrial applications (pumice, native sulfur and natural abrasives). Gypsum and sulfur generate the bulk of this segment's sales, while the remaining revenue is split between talc and barite.",
+            "product_percentage": null
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Construction & Mining Equipment Wholesaling in the US",
+            "Surveying & Mapping Services in the US",
+            "Geophysical Services in the US",
+            "Industrial Machinery & Equipment Wholesaling in the US"
+        ],
+        "tier_2_suppliers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "The industrial production index",
+            "determinant_description": "The industrial production index measures the output from the mining, manufacturing, electric and gas industries. Miners in this industry produce potash, phosphate, salt, soda ash, barite, native sulfur, gypsum, diatomite, talc and various other minerals used in various downstream markets. When markets thrive, so does revenue for miners."
+        }
+    ],
+    "international_trade": {
+        "import_level": "moderate",
+        "import_trend": "increasing",
+        "export_level": "moderate",
+        "export_trend": "increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Pandemic Effects Continue to Linger",
+                "trade_description": "Imports suffered greatly as the pandemic severely hindered trade. While a recovering economy did cause imports to rebound it has yet to reach pre-pandemic levels."
+            },
+            {
+                "trade_title": "STRONGER DOLLAR IS MAKING FOREIGN GOODS MORE ATTRACTIVE",
+                "trade_description": "While imports were certainly weakened, the drop off was as significant because of the recent appreciation of the US dollar, which makes goods less expensive for downstream markets."
+            },
+            {
+                "trade_title": "CANADA AND MEXICO REMAIN THE PRIMARY EXPORT DESTINATIONS",
+                "trade_description": "Canada and Mexico remain two of the largest exporters of domestic minerals and phosphate. Its proximity to the US makes it an ideal trading partner."
+            },
+            {
+                "trade_title": "EXPORTS CONTINUE TO HOLD DOWN THE FORT",
+                "trade_description": "During the pandemic trade stopped abruptly, temporarily weakening exports. As the economy recovered, exports skyrocketed as prices for many minerals swelled as global supply chains were constrained."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "THE SOUTHEAST",
+            "location_description": "According to the USGS, production is highly concentrated within a small number of companies and states within each of the major mineral segments. The Southeast region is the dominant region in phosphate rock production. Phosphate rock is mined by five companies at nine mines across four states, with most US production sourced from Florida and North Carolina.",
+            "percentage_establishments": 30,
+            "percentage_population": 25
+        },
+        {
+            "location": "THE WEST",
+            "location_description": "The West region is dominant in the production of boron minerals and is an essential source of soda ash, with the bulk of the region's industry activity concentrated in California. Boron compounds are primarily produced in sodium borates by three companies in Southern California and shipped to major ceramic and glass manufacturers in northern and eastern regions of the US.",
+            "percentage_establishments": 15,
+            "percentage_population": 20
+        },
+        {
+            "location": "THE SOUTHWEST AND ROCKY MOUNTAINS",
+            "location_description": "The Southwest region is an essential source of potash, salt and gypsum. The bulk of potash production comes from three mines in southeastern New Mexico. The Rocky Mountains region is the dominant source of soda ash production (Wyoming and Colorado) and an essential source of phosphate rock (Idaho and Utah) and potash (Utah).",
+            "percentage_establishments": 20,
+            "percentage_population": 15
+        },
+        {
+            "location": "MID-ATLANTIC",
+            "location_description": null,
+            "percentage_establishments": 10,
+            "percentage_population": 15
+        },
+        {
+            "location": "GREAT LAKES",
+            "location_description": null,
+            "percentage_establishments": 10,
+            "percentage_population": 15
+        },
+        {
+            "location": "PLAINS",
+            "location_description": null,
+            "percentage_establishments": 10,
+            "percentage_population": 5
+        },
+        {
+            "location": "NEW ENGLAND",
+            "location_description": null,
+            "percentage_establishments": 5,
+            "percentage_population": 5
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "THE SURFACE MINING CONTROL AND RECLAMATION ACT OF 1977 (SMCRA)",
+                "regulation_description": "The SMCRA, which the Office of Surface Mining Reclamation administers and Enforcement (OSMRE), establishes mining, environmental protection and reclamation standards for all aspects of surface mining and many parts of deep mining. Mine companies must obtain SMCRA permits and permit renewals for mining operations from the OSMRE. The state becomes the regulatory authority when state regulatory agencies have adopted federal mining programs under the act."
+            },
+            {
+                "regulation_title": "COMPLIANCE WITH ENVIRONMENTAL PROGRAMS",
+                "regulation_description": "The Surface Mining Control and Reclamation Act (SMCRA) requires compliance with several key environmental programs, like the Clean Air and Clean Water Acts, impacting mineral and phosphate mining. For instance, mines must now implement stringent water treatment processes to mitigate acid mine drainage, reducing contamination in nearby water bodies. This regulation aims to preserve local ecosystems while maintaining mining activities."
+            },
+            {
+                "regulation_title": "HAZARDOUS SUBSTANCE LIABILITY: CERCLA AND OPA",
+                "regulation_description": "Under the Comprehensive Environmental Response, Compensation and Liability Act (CERCLA) and the Oil Pollution Act of 1990 (OPA), onshore and offshore mining businesses are liable for managing hazardous substance spills. For example, mining companies must have contingency plans and financial assurances to address potential spills, safeguarding environmental and public health."
+            },
+            {
+                "regulation_title": "EPA AUTHORITY UNDER RCRA: HAZARDOUS WASTE CONTROL",
+                "regulation_description": "The Resource Conservation and Recovery Act (RCRA) empowers the Environmental Protection Agency (EPA) to oversee hazardous waste from \"cradle to grave\" within the mining sector. This includes strict regulations on waste storage, transportation and disposal. Mining operations must follow stringent guidelines to manage tailings and other byproducts, ensuring they don't endanger the environment or nearby communities."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "High startup costs",
+                "barrier_description": "The primary obstacle for new entrants is the substantial working capital needed to establish a world-class, internationally competitive mine."
+            },
+            {
+                "barrier_title": "Differentiation challenges",
+                "barrier_description": "Long-term contracts between existing miners and buyers can obstruct new entrants from securing necessary agreements. Breaking into the market is challenging as established players often have well-established relationships with both local and international buyers."
+            },
+            {
+                "barrier_title": "High capital expenses",
+                "barrier_description": "Obtaining rights to operate a competitor's mine can involve hefty fees and royalties. High depreciation costs add another financial barrier, further complicating entry for new players aiming to compete."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Revenue Volatility Level: high",
+            "Capital Intensity Level: high",
+            "Technology Change Level: high",
+            "Globalization Level: high - increasing"
+        ],
+        "factors_decreased_barrier": []
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Larger companies taking over smaller ones",
+                "basis_description": "Larger companies are taking over smaller ones that can't handle the increased capital costs, leading to higher market concentration."
+            },
+            {
+                "basis_title": "Long-term sales contracts",
+                "basis_description": "Long-term sales contracts can be a game-changer for buyers in the mining industry. Manufacturers and farmers benefit by stabilizing costs, but construction companies struggle because of unpredictable material needs."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Multiple minerals allow for multiple businesses",
+                "concentration_description": "Since the industry consists of separate markets for several different types of minerals, major players rarely dominate across all market segments."
+            },
+            {
+                "concentration_title": "Rising commodity prices and interest rates impact concentration",
+                "concentration_description": "Market share concentration has pushed up from 2019, since large oil and gas companies have benefited from spiking crude oil prices and surging demand from exports. After the pandemic, concentration continued to rise amid rising interest rates, creating an environment in which larger companies acquired smaller companies that could not absorb additional costs associated with capital investment."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Mosaic Co",
+                "company_percentage": 40.9
+            },
+            {
+                "company_name": "Compass Minerals International Inc",
+                "company_percentage": 6.4
+            },
+            {
+                "company_name": "Rio Tinto Plc",
+                "company_percentage": 4.9
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 47.8
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 30
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 40
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 50
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 60
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 70
+        },
+        {
+            "cost_type": "Unknown",
+            "cost_type_percentage": 80
+        },
+        {
+            "cost_type": "Unknown",
+            "cost_type_percentage": 90
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Despite Automation Efforts the Importance of Workers Remain Crucial",
+            "cost_factor_description": "Businesses have invested in equipment to expand automation and cut down on wages. Even so, a mining company's success hinges on hiring, training and retaining a highly qualified and motivated workforce. Miners typically pay high average wages to employees because of technical nature of the work and these high wages must still be paid despite changes in mineral prices. This has caused wages to swell as a portion of revenue as revenue despite dips in performance."
+        },
+        {
+            "cost_factor_title": "Supply Chain Issues Lead to Elevated Expenses",
+            "cost_factor_description": "Purchase costs remained high as the price of acquiring mining equipment and raw materials spiked. Since a significant amount of equipment is imported from various countries, supply chain disruptions and economic shutdowns have made acquiring equipment parts much more difficult and costly. Even so, many miners enter long-term contracts to prevent costs from spiraling out of control amid volatility. Purchase costs have consistently accounted for slightly under a quarter of revenue."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Capital expenses",
+                "capital_intensity_description": "Obtaining rights to operate a competitor's mine can involve hefty fees and royalties. High depreciation costs add another financial barrier, further complicating entry for new players aiming to compete."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "ECONOMIC ACTIVITY IMPACTS MINERAL MINES",
+                "volatility_description": "Economic uncertainty and global events compelled many mines to reduce production as the need for some minerals fell stemming from business closures and stay-at-home orders. Minerals used in various consumer goods took a step back as consumers cut discretionary spending. In response to economic uncertainty, many miners adopted several strategies. They implemented cost-cutting measures, reduced capital expenditures and temporarily shut down operations to effectively manage the challenging conditions."
+            },
+            {
+                "volatility_title": "COMMODITY PRICES CAN DRASTICALLY SWING REVENUE",
+                "volatility_description": "Commodity prices of many minerals (potash, soda ash, phosphate and sulfur) has spiked after the pandemic causing revenue to go haywire. Much of these price hikes can be traced back to supply chain constrains. In 2022, price hikes can be attributed to sanctions placed on Russian commodities following the country's invasion of Ukraine. Sanctioned commodities that impacted the sector include crude oil, iron ore, gold, and coal. This forced countries to seek alternative sources for these minerals."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Productivity can be maximized with the addition of high-tech systems",
+                "technological_change_description": "With the help of data analysis, the efficiency of the current mining site can be increased, and prospective areas can be inspected granularly. Drones reduce labour costs and allow miners to collect unlimited aerial data and accurate volumetric measurements. Drones can also survey locations to ensure workers are safe in hazardous conditions."
+            },
+            {
+                "technological_change_title": "Sustainability continues to be a primary focus",
+                "technological_change_description": "Many miners are rapidly adopting energy-efficient technologies like autonomous electric vehicles. These vehicles not only reduce greenhouse gas emissions but also enhance worker safety. Miners are implementing strategies to minimize waste generation and maximize resource efficiency. These strategies include reusing materials and employing advanced waste management techniques."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company affected by the high level of import penetration?",
+            "answer": "Rising commodity prices have been a primary contributor behind an increase in the value of industry imports over the five years to 2022. Imports have commanded nearly one-quarter of total domestic demand for many years, limiting demand for domestic goods."
+        },
+        {
+            "question": "Has competition from low-wage countries such as China and Mexico impacted your company's operations?",
+            "answer": "Multinational mineral and phosphate mining companies have established operations in locations such as China and Mexico. Impact from low-wage countries has been noticeable as international trade is significant in this industry."
+        },
+        {
+            "question": "How has your company dealt with volatile commodity prices over the past few years?",
+            "answer": "Industry profitability has remained volatile as underlying commodity prices have largely failed to improve."
+        },
+        {
+            "question": "How does your company evaluate the profitability of a mining (or quarrying) location? Does your company have any new projects to begin over the next several years?",
+            "answer": "Both large and small operators have production reserves evaluated periodically. Companies such as Mosaic Co. have taken existing mines out of production but are also expected to expand upon existing mines or break new ground to increase output during the outlook period."
+        },
+        {
+            "question": "What technology does your company invest in to establish an edge over its competitors?",
+            "answer": "Technology has remained more or less consistent in the industry over the past five years. Using geological surveys helps to find appropriates locations to mine to maximize production."
+        },
+        {
+            "question": "What steps does your company take to safeguard its proprietary information?",
+            "answer": "Companies have proprietary technologies for mining industry products which can be patented."
+        },
+        {
+            "question": "Have any regulatory expenses significantly impacted your company's profitability recently?",
+            "answer": "Regulation has more or less remained steady over the past five years in the industry. So regulatory expenses have not significantly impacted company's profitability."
+        },
+        {
+            "question": "How does your company ensure all health and safety requirements are met? What new protocols has it established to ensure workplace safety during the coronavirus pandemic?",
+            "answer": "Operators have to comply with several health and safety regulations in the industry. Not only have operators been forced to comply with new regulations to ensure workplace safety during the pandemic which has slowed production and processing in some instances, operators are also encouraged to implement new wellness programs to prevent outbreaks among workers and reduce downtime."
+        },
+        {
+            "question": "How does your company's profit compare with its main competitors'?",
+            "answer": "Profit has increased over the five years to 2022."
+        },
+        {
+            "question": "How has input price volatility affected your company's profit over the past year?",
+            "answer": "Input prices have decreased over the past several years. However, volatility in price of oil and gas has affected profit over the past years."
+        },
+        {
+            "question": "How flexible is your company's workforce? What is your company's current production rate compared with pre-pandemic levels?",
+            "answer": "Successful producers typically prove capable of reading cyclical and seasonal trends in downstream demand for nonmetallic minerals and alter production accordingly, often idling plants. Workforce is flexible depending on demand. If demand and production increases, temporary workers are hired."
+        },
+        {
+            "question": "How does your company ensure that its prices are attractive to customers? Does your company hire consultants to help it submit proposals for contracts?",
+            "answer": "Industry participants are often required to compete for a supply contract on tender and the successful companies ensure an adequate margin is maintained when winning contracts."
+        },
+        {
+            "question": "What downstream ownership links does your company currently have? Can it leverage economies of scale and scope?",
+            "answer": "Many of the successful companies in this industry are vertically integrated and supply nonmetallic minerals directly to the downstream manufacturers of fertilizers, chemicals, pharmaceuticals and building products."
+        },
+        {
+            "question": "How have fluctuations in the trade-weighted index affected your company in the past? Are there new export markets it can pursue?",
+            "answer": "Any increase in the strength of the US dollar makes domestic goods more expensive for foreign customers, which could reduce demand for minerals and phosphates. Exploring new export markets is difficult to source as importing goods when US dollar is appreciating increases purchase cost for the buyer."
+        },
+        {
+            "question": "How do fertilizer manufacturers influence your company's overall performance?",
+            "answer": "Phosphate and potash are primary ingredients required to manufacture these fertilizers and nutrients; therefore, demand for phosphate and potash is completely reliant on fertilizer usage in the agricultural sector. Increase in price of fertilizers shows a positive sign for our industry products."
+        },
+        {
+            "question": "How sensitive is your company's revenue stream to changes in consumer spending? What sectors are expected to benefit the most from rebounding consumer spending?",
+            "answer": "As consumers spend more, manufacturing and farming activity generally increase, thereby raising demand for industry products as inputs."
+        }
+    ]
+}

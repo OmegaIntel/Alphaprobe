@@ -1,0 +1,417 @@
+{
+    "report_title": "Ghost Kitchens in the US",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 2932000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "revenue_cagr_value": -0.35
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 0.54
+            }
+        },
+        "profit": {
+            "profit_dollars": 147000000,
+            "profit_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "profit_cagr_value": -1.03
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -0.68
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1175000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 42248,
+            "employees_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 101,
+            "wages_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The growing adaptation of technology has prompted a surge in demand for food delivery services, a trend that was accelerated by COVID-19. However, ghost kitchens have also encountered significant headwinds. The industry endured intense competition and the need for sustainable business models has also emerged.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Volatility Fueled by the Pandemic",
+            "current_performance_point_description": "The COVID-19 pandemic caused a variety of consumer trends that had a conflicting influence on the performance of ghost kitchens. Consumers became increasingly comfortable with using technology and a new market of consumers became familiarized with the concept of online food delivery services. As the pandemic normalized, ghost kitchens have largely been left behind, pressuring profit. Revenue is expected to slide at a CAGR of 2.2% to $2.9 billion through the end of 2024, including a decline of 5.2% in 2024 alone."
+        },
+        {
+            "current_performance_point_title": "Virtual Brands Aim to Expand Through Investments in the Industry",
+            "current_performance_point_description": "Virtual brands refer to culinary concepts specifically designed for delivery, operating solely through online platforms without a physical dining presence. Leveraging data-driven insights, virtual brands strategically tailor their offerings to cater to trending cuisines and consumer preferences. Established restaurant chains and entrepreneurial chefs are also capitalizing on this trend to diversify revenue streams."
+        },
+        {
+            "current_performance_point_title": "Market Saturation Becomes More of a Problem",
+            "current_performance_point_description": "As more ghost kitchens enter the landscape, competition intensifies, making it challenging for businesses to stand out and secure a share of the market. The influx of new food service providers has caused oversaturation in certain cuisines or localities, diminishing profitability for individual ghost kitchens. This saturation has also started to strain partnerships with third-party delivery services, raising operational costs."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Ghost Kitchens Remain Susceptible to Threats From Other Food Service Providers",
+            "future_outlook_point_description": "Internal and external competition will continue to intensify in the coming years as food service providers struggle to capture a share of this evolving market. The need for differentiation becomes crucial for operators to stand out and attract a loyal customer base. Ghost kitchens will also continue to rely on the use of third-party platforms, which leaves them susceptible to changes in those platforms."
+        },
+        {
+            "future_outlook_point_title": "Ghost Kitchens Will Become More Integrated Into the Economy",
+            "future_outlook_point_description": "Modest revenue growth is expected as consumer trends continue to increase the popularity of ghost kitchen concepts. Technological advancements and the growing popularity of virtual food service options will also benefit the industry by increasing consumer access to ghost kitchens. Consumers have become more comfortable using online food delivery and takeout services since the pandemic."
+        }
+    ],
+    "industry_definition": "Operators in this industry provide industrial food services for other companies on a contractual basis. A ghost kitchen is a professional facility set up for the preparation of delivery-only meals or on a contractual basis for third parties.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage: Growth",
+            "Capital Intensity Level: Low",
+            "Concentration Level: Low",
+            "Globalization Level: Low - Steady"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level: High",
+            "Industry Assistance Level: Low - Steady",
+            "Barriers To Entry Level: Low - Steady",
+            "Competition Level: High - Increasing"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers: Consumer spending"
+        ],
+        "threats": [
+            "Agricultural price index"
+        ]
+    },
+    "key_trends": [
+        "Ghost kitchens contend with competition from a wide variety of sources. Some kitchens are focusing on quality and novelty to attract customers.",
+        "Competition for supply contracts can also be fierce. With relatively low levels of profit, ghost kitchens fight to secure beneficial supply contracts to guarantee supplies of key inputs.",
+        "Revenue slump caused by stiff competition in an evolving food services market. Ghost kitchens must continue to optimize their"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Delivery",
+            "segment_description": "Ghost kitchens operate as centralized cooking facilities focused solely on preparing meals for delivery or takeout.",
+            "segment_percentage": 62.8
+        },
+        {
+            "segment": "Contracts for third parties",
+            "segment_description": "Ghost kitchens can also act as a go-between for third-parties to help them fulfill their orders.",
+            "segment_percentage": 37.2
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Meals",
+            "product_description": "Food prepared for delivery or takeout",
+            "product_percentage": 39.2
+        },
+        {
+            "product_or_service": "Beverages",
+            "product_description": "Drinks offered alongside meals",
+            "product_percentage": 32.3
+        },
+        {
+            "product_or_service": "Packaged Foods",
+            "product_description": "Food items sold in packaging",
+            "product_percentage": 23.3
+        },
+        {
+            "product_or_service": "Alcoholic Beverages",
+            "product_description": "Alcoholic drinks offered to consumers",
+            "product_percentage": 5.2
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Beef & Pork Wholesaling in the US",
+            "Fruit & Vegetable Wholesaling in the US",
+            "Soft Drink, Baked Goods & Other Grocery Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Agriculture, Forestry, Fishing and Hunting in the US",
+            "Meat, Beef & Poultry Processing in the US",
+            "Bread Production in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Total Consumer Spending",
+            "determinant_description": "Total consumer spending measures the dollar amount spent by consumers on goods and services."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "Various ghost kitchen establishments",
+            "percentage_establishments": 30.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "West",
+            "location_description": "Various ghost kitchen establishments",
+            "percentage_establishments": 20.0,
+            "percentage_population": 25.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "Various ghost kitchen establishments",
+            "percentage_establishments": 15.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "Various ghost kitchen establishments",
+            "percentage_establishments": 10.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "Various ghost kitchen establishments",
+            "percentage_establishments": 10.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "Plains",
+            "location_description": "Various ghost kitchen establishments",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "New England",
+            "location_description": "Various ghost kitchen establishments",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "Various ghost kitchen establishments",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [],
+        "factors_increased_barrier": [
+            "Revenue Volatility Level: high",
+            "Industry Assistance Level: low - steady",
+            "Competition Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage: growth",
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Competition from various sources",
+                "basis_description": "Ghost kitchens contend with competition from a wide variety of sources."
+            },
+            {
+                "basis_title": "Focus on quality and novelty",
+                "basis_description": "Some kitchens are focusing on quality and novelty to attract customers."
+            },
+            {
+                "basis_title": "Competition for supply contracts",
+                "basis_description": "Competition for supply contracts can also be fierce."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 40
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 60
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 80
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Input costs and labor costs",
+            "cost_factor_description": "Over the past five years, both costs have increased as a share of revenue, pressuring profit."
+        },
+        {
+            "cost_factor_title": "Ghost kitchens operate in a highly saturated market",
+            "cost_factor_description": "The growing level of competition has eroded profitability as price competition is high."
+        },
+        {
+            "cost_factor_title": "Wage costs are expected to comprise 33.4% of revenue in 2024",
+            "cost_factor_description": "Ghost kitchens are labor-intensive since employees are required for food preparation, cooking and cleaning up."
+        },
+        {
+            "cost_factor_title": "Purchases are expected to account for 35.7% of revenue in 2024",
+            "cost_factor_description": "Ghost kitchens have to purchase various equipment like stoves, cookware and sanitary supplies."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "MARKET SATURATION HEIGHTENS THE LEVEL OF VOLATILITY",
+                "volatility_description": "In oversaturated markets, competition intensifies, making it harder for ghost kitchens to attract customers."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_trend": "Unknown",
+        "technological_change_points": [
+            {
+                "technological_change_title": "VIRTUAL BRANDS ARE CHANGING THE LANDSCAPE",
+                "technological_change_description": "The emergence of virtual brands has been a sign of innovation."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "What are the titles for the sections in the document?",
+            "answer": "The section titles are: Questions for Owners, INDUSTRY ASSISTANCE, LOW assistance STEADY assistance, Datatables & Glossary, INDUSTRY DATA."
+        },
+        {
+            "question": "What data is contained in the table?",
+            "answer": "The table contains yearly data from 2010 to 2023 for the following metrics: REVENUE ($ MILLION), ENTERPRISES (UNITS), ESTABLISHMENTS (UNITS), EMPLOYMENT (UNITS), WAGES ($ MILLION), IVA ($ MILLION). It does not contain data for IMPORTS or EXPORTS."
+        }
+    ]
+}

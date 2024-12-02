@@ -1,0 +1,562 @@
+{
+    "report_title": "Industry Report on Fertility Clinics",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 7923000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 1.48
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.36
+            }
+        },
+        "profit": {
+            "profit_dollars": 792000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 1.83
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 1.5
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 10,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0.34
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0.3
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 4196000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 1.4
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 1.5
+            }
+        },
+        "employees": {
+            "employees_count": 42003,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 2.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 2.5
+            }
+        },
+        "wages": {
+            "wages_dollars": 3177000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 1.9
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 1.8
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 0.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 0.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 0.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 0.0
+            }
+        }
+    },
+    "executive_summary": "Economic and societal trends are driving spending on fertility treatments. Rising incomes allow more individuals to pay for the substantial cost of treatment. Fertility clinics have also seen an uptick in demand as more people decide to marry or start families later in life, and same-sex couples seek out clinics to have a child.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Sociodemographic Trends Bring More Patients to Fertility Clinics",
+            "current_performance_point_description": "Economic forces are driving spending on fertility treatments. Rising incomes allow more individuals to pay for the substantial cost of treatment (IVF can easily total thousands of dollars). The leading industry-wide revenue is expected to expand at a CAGR of 2.1% over the past five years - including an expected drop of 1.4% in 2023 - when revenue is slated to total $7.9 billion."
+        },
+        {
+            "current_performance_point_title": "Changing societal norms also push fertility clinics to the forefront of family planning",
+            "current_performance_point_description": "More and more people are deciding to marry or start families later in life, leading these couples to use fertility clinics for help with having a child. Same-sex couples are also increasingly using fertility services to start a family following the Supreme Court's legalization of same-sex marriage in 2015."
+        },
+        {
+            "current_performance_point_title": "COVID-19 STRAINS FERTILITY CARE BUT LEAVES SOME POSITIVE IMPACTS",
+            "current_performance_point_description": "COVID-19 disruption created unprecedented operating challenges for clinics. Fertility clinics navigated shutdowns with unclear guidance on how to proceed with time-sensitive treatments. The number of assisted reproductive technology (ART) cycles declined by over 1.0% because of the pandemic, but clinics' quick adoption of telehealth and other digital tools kept the industry from contracting."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "More Patients Could Afford Treatment as Fertility Benefits Broaden",
+            "future_outlook_point_description": "Clinics will continue seeing rising patient volumes moving forward as societal norms evolve. More couples will seek clinics' help to conceive as more states and private employers offer fertility benefits, improving affordability and access to treatment."
+        },
+        {
+            "future_outlook_point_title": "Legal Risks for IVF Providers after Roe v. Wade Overturning",
+            "future_outlook_point_description": "Experts have questioned the future of reproductive rights following the Supreme Court's reversal of Roe V. Wade in 2022. Some states are expected to move forward to restrict some ART procedures. Clinics in these states will face legal risks and a complex regulatory environment and lose patients to states where laws are more protective of reproductive health."
+        },
+        {
+            "future_outlook_point_title": "Private Equity Investment and Regulatory Interest",
+            "future_outlook_point_description": "Private equity (PE) investment in other health sector industries will funnel into clinics. Rising PE activity could heighten regulatory interest in these clinics."
+        }
+    ],
+    "industry_definition": "This industry includes medical facilities that offer treatments to aid individuals in conceiving children. These facilities offer diagnosis, testing, fertility preservation, and assisted reproductive technologies like in vitro fertilization.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low capital intensity level",
+            "low concentration level",
+            "high - steady barriers to entry level",
+            "low - steady globalization level"
+        ],
+        "negative_impact_factors": [
+            "high technology change level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "Growth Life Cycle Stage",
+            "Low Volatility",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "Per capita disposable income"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Number of people with private health insurance"
+        ]
+    },
+    "key_trends": [
+        "Rising infertility rates are bringing fertility clinics to the forefront of family planning. More couples decide to marry or start a family later in life, leading them to fertility clinics for help.",
+        "Cost is the greatest barrier to fertility treatment, but increasing activity by states and private employers to make treatment more accessible is improving affordability.",
+        "Assisted reproductive treatment is one of the most highly regulated medical services in the US. Fertility clinics navigate an increasingly complex framework of federal, state and local regulations.",
+        "To what extent states mandate insurers to cover fertility benefits determines access to ART treatment. More states have added coverage for infertility treatment on some state-regulated health plans, granting more patients access to care.",
+        "Fertility clinics receive the most payments for performing in vitro fertilization procedures. Patients visit clinics for several fertility services, but IVF is where spending is highest."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Higher Fertility Rates Among Younger Women Reduce Visits to Clinics",
+            "segment_description": "Women aged 34 and below are less likely to seek treatment at a fertility clinic. According to the CDC, 1 in 8 couples have trouble conceiving their first child when the woman is younger than 30 (this expands to 1 in 5 for women 30 and above). Since fertility declines with age, younger women are less likely to need fertility treatments to conceive.",
+            "segment_percentage": 20.5
+        },
+        {
+            "segment": "Women aged 30 to 39 years",
+            "segment_description": "",
+            "segment_percentage": 33.2
+        },
+        {
+            "segment": "Women aged 40 to 49 years of age",
+            "segment_description": "Fertility clinics mainly provide fertility treatments to women aged 35 and over. On average, women between 35 and 37 undergo the most assisted reproductive technology (ART) cycles. Rising infertility rates come from a convergence of factors like age, lifestyle, environmental factors and medical conditions. Still, infertility most commonly afflicts women 35 and up.",
+            "segment_percentage": 46.3
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Assisted Reproductive Technology and Artificial Insemination",
+            "product_description": "",
+            "product_percentage": 56.7
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "",
+            "product_percentage": 25.4
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Drug, Cosmetic & Toiletry Wholesaling in the US",
+            "Colleges & Universities in the US",
+            "Medical Instrument & Supply Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Brand Name Pharmaceutical Manufacturing in the US",
+            "Generic Pharmaceutical Manufacturing in the US",
+            "Medical Supplies Wholesaling in the US"
+        ],
+        "tier_1_buyers": [
+            "Life Insurance & Annuities in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Advances in Assisted Reproductive Technology Encourage Patients to Bear the High Costs",
+            "determinant_description": "Advances in ART procedures have led to more successful outcomes, encouraging more potential patients to consider IVF to conceive despite the financial burden. Societal trends are also fueling spending on ART."
+        },
+        {
+            "determinant_title": "Fertility Medications",
+            "determinant_description": "Fertility clinics provide several medications to patients as part of the fertility treatment process. Medications are one of the main treatments for women who are infertile because of an ovulation disorder."
+        },
+        {
+            "determinant_title": "Private Equity Interest Is Changing Service Offerings",
+            "determinant_description": "Private-equity investment in some fertility clinics across the US is changing what services clinics offer. A handful of clinics are marketing services like egg freezing to younger patients to avoid issues later."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "California",
+            "location_description": "California has the most clinics in the US. According to the CDC, ten of the busiest fertility clinics in the country operate in the state. The state is synonymous with its first-rate fertility clinics, with some of the world's leading practitioners of IVF practicing here. California's proximity to tech hubs also provides clinics with first access to some of the most exciting advancements in fertility treatment.",
+            "percentage_establishments": 40,
+            "percentage_population": 101
+        },
+        {
+            "location": "Mid-Atlantic States",
+            "location_description": "The Mid-Atlantic's share of fertility clinics mirrors its share of the population. Within the region, New York has the largest share of fertility clinics. The CDC reports New York has the second-highest number of clinics in the US (following California). Many states within the region \u2013 New York, New Jersey and Maryland \u2013 rank in the top ten for per capita income. Higher incomes allow residents to spend on the high costs of fertility treatment.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "",
+            "percentage_establishments": 0,
+            "percentage_population": 0
+        },
+        {
+            "location": "New England",
+            "location_description": "",
+            "percentage_establishments": 0,
+            "percentage_population": 0
+        },
+        {
+            "location": "Plains",
+            "location_description": "",
+            "percentage_establishments": 0,
+            "percentage_population": 0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "",
+            "percentage_establishments": 20,
+            "percentage_population": 101
+        },
+        {
+            "location": "Southeast",
+            "location_description": "",
+            "percentage_establishments": 10,
+            "percentage_population": 101
+        },
+        {
+            "location": "Southwest",
+            "location_description": "",
+            "percentage_establishments": 30,
+            "percentage_population": 101
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "ANTI-KICKBACK STATUTE AND PHYSICIAN SELF-REFERRAL LAWS",
+                "regulation_description": "The federal Anti-Kickback Statute prohibits the exchange of anything of value (financial incentives, low rents, excessive compensation) to induce the referral of business reimbursable by federal healthcare programs. Kickbacks promote overutilization of healthcare costs and corrupt decision-making by steering patients away from good services."
+            },
+            {
+                "regulation_title": "HEALTH INSURANCE PORTABILITY AND ACCOUNTABILITY ACT",
+                "regulation_description": "Fertility clinics must follow all the criteria outlined in the Health Insurance Portability and Accountability Act (HIPAA). HIPAA outlines controls for patient health data for any healthcare provider that stores, shares, or sends private patient data."
+            },
+            {
+                "regulation_title": "THE HITECH ACT",
+                "regulation_description": "The Health Information Technology for Economic and Clinical Health (HITECH) mandates audits of healthcare providers to ensure they comply with HIPAA. The HITECH Act strengthens HIPAA by incentivizing providers to adopt electronic health records (EHR) and enforcing steeper penalties for noncompliance."
+            },
+            {
+                "regulation_title": "THE CENTERS FOR MEDICARE AND MEDICAID SERVICES",
+                "regulation_description": "The Centers for Medicare and Medicaid Services (CMS) makes payments to participating providers under its Medicare and Medicaid programs based on various formulas. CMS also oversees the Clinical Laboratory Improvement Act (CLIA). The CLIA ensures laboratory oversight and certification records."
+            },
+            {
+                "regulation_title": "THE FERTILITY CLINIC SUCCESS RATE AND CERTIFICATION ACT",
+                "regulation_description": "The Fertility Clinic Success Rate and Certification Act (FCSRCA) mandates all fertility clinics report success rate data and other requirements to the federal government. The act ensures data quality, comparability and safety for individuals considering Assisted Reproductive Technology (ART) to conceive."
+            },
+            {
+                "regulation_title": "THE CENTERS FOR DISEASE CONTROL AND PREVENTION",
+                "regulation_description": "The Centers for Disease Control and Prevention (CDC) collects and publishes data on ART procedures for all fertility clinics in the US. The CDC publishes the Fertility Clinic Success Rates Report annually, outlining national and clinic-specific pregnancy success rates."
+            },
+            {
+                "regulation_title": "THE FOOD AND DRUG ADMINISTRATION (FDA)",
+                "regulation_description": "The Food and Drug Administration monitors the use of drugs, medical devices and donor tissues. The FDA also regulates how clinics can screen and test reproductive tissues like donor eggs and sperm."
+            },
+            {
+                "regulation_title": "COVID-19 REGULATIONS",
+                "regulation_description": "Fertility clinics are subject to various regulations and protocols to mitigate and monitor the spread of COVID-19, its variants and future outbreaks. Regulation regarding COVID-19 is determined and mandated by the Centers for Disease Control and Prevention (CDC), the Occupational Safety and Health Administration (OSHA) and the United States Department of Health and Human Services (HHS). Exact regulation can vary from state to state."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Staffing challenges",
+                "barrier_description": "Fertility clinics can't provide services without a team of highly trained medical professionals. trained and qualified staff. Ongoing shortages and rising wages for medical staff may jeopardize clinics' ability to acquire and retain staff in a competitive labor market."
+            }
+        ],
+        "factors_increased_barrier": [
+            {
+                "factor": "Technology Change",
+                "level": "high"
+            }
+        ],
+        "factors_decreased_barrier": [
+            {
+                "factor": "Capital Intensity",
+                "level": "low"
+            },
+            {
+                "factor": "Concentration",
+                "level": "low"
+            },
+            {
+                "factor": "Globalization",
+                "level": "low - steady"
+            }
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Success rates",
+                "basis_description": "Potential patients can easily compare success rates between fertility clinics. Patients struggling with fertility want to visit clinics with established histories of successful outcomes."
+            },
+            {
+                "basis_title": "Pricing",
+                "basis_description": "Costs for fertility treatment quickly add up to thousands of dollars. Clinics offering lower-cost and transparent pricing appeal to patients balancing their treatment needs with the financial burden."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Independent clinics",
+                "concentration_description": "Independent physician-owned fertility clinics characterize the fertility space. Standalone clinics offer highly personalized care to patients on a local or regional basis."
+            },
+            {
+                "concentration_title": "Limited insurance coverage",
+                "concentration_description": "Fertility clinics are relatively new and private, and public insurance coverage of fertility benefits remains limited, preventing any single clinic from developing a foothold."
+            },
+            {
+                "concentration_title": "COVID-19 impact",
+                "concentration_description": "COVID-19's challenges to fertility clinics pressured some physician-owned clinics to join together to navigate workforce, regulatory and financial challenges better."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Integramed America Inc.",
+                "company_percentage": 8.4
+            },
+            {
+                "company_name": "Planned Parenthood Federation of America Inc.",
+                "company_percentage": 2.3
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 89.4
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 10.0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 40.1
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 10.0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 2.9
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 10.0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 10.0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 10.0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 10.0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "High Wages Temper Depreciation",
+            "cost_factor_description": "The subheading suggests that high wages may offset or mitigate the impact of depreciation expenses, potentially keeping depreciation steady in recent years."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Fertility clinics can't provide services without a team of highly trained medical professionals.",
+                "capital_intensity_description": "trained and qualified staff. Ongoing shortages and rising wages"
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Fertility Treatment is Sensitive to Changes in Healthcare Spending",
+                "volatility_description": "Fertility treatments are expensive. One cycle of in vitro fertilization can cost a patient an average of $20,000 (most patients need more than one cycle). Considerable treatment costs leave clinics highly susceptible to changes in healthcare spending."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "ADVANCES IN ASSISTED REPRODUCTIVE TECHNOLOGY ENCOURAGE PATIENTS TO BEAR THE HIGH COSTS",
+                "technological_change_description": "Assisted reproductive technology (ART) includes all treatments that handle embryos or eggs. In vitro fertilization (IVF) is the most common and widely known type of ART. Fertility clinics receive the most revenue from performing ART procedures. These procedures are incredibly complex \u2013 and can quickly cost a patient thousands of dollars out-of-pocket."
+            },
+            {
+                "technological_change_title": "OVULATION MEDICATIONS ARE THE MOST COMMON INFERTILITY TREATMENT",
+                "technological_change_description": "Fertility clinics provide several medications to patients as part of the fertility treatment process. Medications are one of the main treatments for women who are infertile because of an ovulation disorder. According to the CDC, infertility rates are rising, leading more women to seek out ovulation medications."
+            },
+            {
+                "technological_change_title": "Private Equity Interest is Changing Service Offerings",
+                "technological_change_description": "Fertility clinics offer many options for patients trying to start a family. Services include consultations, fertility testing, genetic testing, egg freezing and fertility preservation. Private-equity investment in some fertility clinics across the US is changing what services clinics offer."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How much does your clinic devote to advertising?",
+            "answer": "Typically, the general clinic allocates 1.0%-2.0% of total revenue per year on advertising."
+        },
+        {
+            "question": "How does your company target key potential markets?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "Does your company research demographic statistics within its local market?",
+            "answer": "Most industry organizations choose to locate themselves directly in the community they serve, which enables them to more easily reach their target market and create a relationship with the surrounding community."
+        },
+        {
+            "question": "How can you encourage visits from individuals who lack the ability to pay for services? How has your company adapted to decreasing private health coverage?",
+            "answer": "Encouraging employer health plans to incorporate fertility services coverage in their packages is an effective way to spur individuals to explore fertility clinic offerings. Promotional consultations and other marketing tactics may attract more consumers that are unwilling to pay for services upfront."
+        },
+        {
+            "question": "Is your company geographically positioned in communities where there is a strong need? Have you considered merger or acquisition activity to expand operations?",
+            "answer": "Rural communities are experiencing a decline in accessibility to fertility services, as most industry organizations are located in urban areas. Merger and acquisition activity is common in the industry since larger operators often experience cost benefits of economies of scale. Merger and acquisition activity is often used to penetrate previously untapped geographic markets."
+        },
+        {
+            "question": "How are you leveraging new technology to diversify product and service offerings?",
+            "answer": "As new fertility treatments and research emerges, industry organizations with a fertility focus likely have to adopt new technologies more often. Family planning clinics that provide contraception and prenatal care are less affected by new technology and don't adjust service offerings as often."
+        },
+        {
+            "question": "Is your clinic keeping up-to-date with the latest technology?",
+            "answer": "New technologies may include new and improved options for fertility services that are still in the development phase as well as infertility treatments and methods."
+        },
+        {
+            "question": "Has your clinic explored opportunities in states that offer coverage for infertility diagnosis and treatment?",
+            "answer": "Of the 15 states that mandate insurance providers to offer coverage for infertility diagnosis and treatment, only eight - Arkansas, Connecticut, Hawaii, Illinois, Mary."
+        },
+        {
+            "question": "Are you aware that government bodies monitor and report on nationwide fertility clinic data?",
+            "answer": "The Fertility Clinic Success Rate and Certification Act of 1992 established a federal monitoring mechanism through the Centers for Disease Control and Prevention (CDC). Data is updated annually via the CDC."
+        },
+        {
+            "question": "How do your company's profit margins compare to the industry average?",
+            "answer": "Company-specific profit levels that are above or below industry average figures implies pricing power or weakness in regard to services."
+        },
+        {
+            "question": "How frequently does your company have to replace its equipment?",
+            "answer": "Most organizations in the industry use whatever technology and equipment are necessary to provide service. Typically this does not entail purchasing the most recent technology. However, for companies that like to leverage the newest technology, they may replace their equipment more often."
+        },
+        {
+            "question": "How do you attract and retain qualified staff? What qualifications must your staff have? Do you have a high turnover rate?",
+            "answer": "Educational and medical services are the industry's main sources of income. Therefore, operators must hire and retain skilled employees who are able to provide fertility diagnoses and treatments. Labor competition over the five years to 2021 has directly increased industry average wage expenditure."
+        },
+        {
+            "question": "Is your company dominant in any particular regional markets? What range does your company have in terms of viable operating area?",
+            "answer": "Patients of fertility clinics typically prefer to access facilities close to their homes. This is particularly true when multiple visits are necessary. Locating in areas with high concentrations of young couples may prove more beneficial than a generally populous area."
+        },
+        {
+            "question": "How have you been affected by government policies? How has your company adapted to health and safety guidelines related to the COVID-19 (coronavirus) pandemic?",
+            "answer": "A thorough understanding of regulations to ensure compliance is essential for successful operations. Clinic closures are often due to failure in meeting government standards. Health and safety guidelines issued by public health officials to reduce infection risk include: capacity limits, telehealth consultations, mask mandates, increased sanitization of office space, and social distancing."
+        },
+        {
+            "question": "Marriage Rate",
+            "answer": "Fertility services are used more often by married couples than unmarried couples or single females. As a result, an increase in the marriage rate boosts demand for industry services. The marriage rate has consistently decreased in recent years as conventions of marriage change with different generations of consumers."
+        },
+        {
+            "question": "Private Health Coverage",
+            "answer": "A variety of private health insurance plans cover infertility treatments. As a result, when more people gain private health insurance, more people are able to afford industry services and boost demand for fertility clinics. Spiking national unemployment from the COVID-19 (coronavirus) decreased private health coverage from employer-sponsored plans."
+        },
+        {
+            "question": "Per Capita Disposable Income",
+            "answer": "A significant portion of services provided by fertility clinics is not covered by insurance plans and must be paid for out-of-pocket. Therefore, an increase in disposable income boosts demand for fertility clinics. Government stimulus programs from the coronavirus pandemic have temporarily increased per capita disposable income levels."
+        }
+    ]
+}

@@ -1,0 +1,423 @@
+{
+    "report_title": "Horse Training Services in the US",
+    "report_date": "May 17, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 304000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "revenue_cagr_value": -1.06
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.5
+            }
+        },
+        "profit": {
+            "profit_dollars": 20000000,
+            "profit_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "profit_cagr_value": -0.72
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 6.5,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 0.34
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 162000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 4819,
+            "employees_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 136000000,
+            "wages_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2024,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Over the five years to 2024, the Horse Training Services industry has seen a slight overall decline in revenue, falling at an expected CAGR of 0.4% to reach an estimated $304.2 million in 2024. This decline stems from the hit horse trainers took from the COVID-19 pandemic; many horse shows and races were cancelled in order to comply with safety requirements, particularly in 2020. This limited demand for horse training. Still, at the same time, the recreational market, which accounts for more than 50.0% of industry revenue, sustained demand for industry services as growth in per capita disposable boosted expenditure on horse training and boarding. Falling per capita disposable income in 2022 and an inflationary period is expected to have contributed to a slight decline in demand in that year alone.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The COVID-19 pandemic caused a slowdown",
+            "current_performance_point_description": "The coronavirus pandemic in 2020 stifled demand for horse training services as downstream markets suffered. Stay-at-home orders and social distancing guidelines led to the cancellation of many horse shows and races, which limited new demand for training from showing and racing markets. Declines were mitigated by sustained demand for other industry services, such as boarding and care, which are often offered alongside training services."
+        },
+        {
+            "current_performance_point_title": "Revenue grew following the pandemic",
+            "current_performance_point_description": "The Horse Training Services industry experienced moderate growth following the COVID-19 pandemic, as downstream demand from horse racing establishments and time spent on leisure and sports increased, boosting demand for industry services. Overall increases in per capita disposable income have mitigated declines in recent years, though a decline in 2022 amid rampant inflation harmed the industry. The recreational market, which accounts for more than 50.0% of industry revenue, sustained demand for industry services as growth in per capita disposable boosted expenditure on horse training and boarding."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Macroeconomic growth is set to benefit the industry",
+            "future_outlook_point_description": "A continued economic recovery from the COVID-19 pandemic is expected to fuel Horse Training Services industry revenue growth in the coming years. Consumer spending is set to see steady growth moving forward. This will drive growth for the Horse Training Services industry as consumer spending is the ultimate source of most demand for horse training."
+        },
+        {
+            "future_outlook_point_title": "Growing per capita disposable income will benefit horse trainers",
+            "future_outlook_point_description": "Since industry services are expensive, as training fees must typically cover boarding, feed, supplies and medical care, industry demand fluctuates alongside per capita disposable income and general macroeconomic conditions. Positive economic conditions are expected to boost direct demand for industry services, as well as demand for downstream markets such as horse racing and showing."
+        }
+    ],
+    "industry_definition": "Operators in this industry perform training activities related to raising horses.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Technology Change Level: low"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level: low - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers",
+            "Demand from racing and individual sports"
+        ],
+        "threats": [
+            "Time spent on leisure and sports"
+        ]
+    },
+    "key_trends": [
+        "Barriers to entry into the horse training industry are relatively low.",
+        "Acquiring skilled labor is the main hurdle for potential entrants.",
+        "Buyer power is moderate, while supplier power is low in the horse training industry. Many operators are nonemployers, which gives consumers choice and operators control over labor, as they provide it themselves.",
+        "The horse training industry has a low level of concentration. Many industry operators are nonemployers. Horse trainers also tend to operate locally, diluting the industry.",
+        "Substitutes for the horse training in industry are low. Some horse owners are able to train horses in-house (or in-barn) rather than outsourcing to industry operators.",
+        "The COVID-19 pandemic caused a slowdown in demand for horse training. Stay-at-home orders and social distancing guidelines led to the cancellation of many horse shows and races, which limited demand.",
+        "The Horse Training Services industry experienced moderate growth following the COVID-19 pandemic. Downstream demand from horse racing establishments and time spent on leisure and sports increased, boosting demand for industry services.",
+        "Downstream markets that demand trained horses for recreational use, such as horseback riding facilities and national parks, rely on consumers' time spent on leisure and sports. An increase in time spent on leisure and sports increases industry revenue. Falling time spent on leisure and sports poses a potential threat to the industry."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Recreational",
+            "segment_description": "This segment accounts for demand for training services from horses used for recreation. This segment accounts for the majority of industry revenue.",
+            "segment_percentage": 51.2
+        },
+        {
+            "segment": "Showing",
+            "segment_description": "As incomes have increased because of government relief during the pandemic and rising wages, consumers have had more money to spend on horses, increasing this segment's revenue share during the current period. Demand for training services from show horses comprise more than one-fifth of the industry's revenue. Individuals buy these horses to compete in dressage, jumping and rodeo events, all of which require extensive training. The wealthiest consumers have the most time and money to participate in these events. As the number of households making more than $100,000 per year has risen, demand for these events has surged, causing this segment's revenue share to increase.",
+            "segment_percentage": 20.0
+        },
+        {
+            "segment": "Racing",
+            "segment_description": "This segment accounts for demand for training services from racehorses. Since individuals that compete in horse races are spending lots of money on the races and the horses, they're more willing to make these risky investments when their confidence in the economy's future is high. Racehorses' share of revenue has fallen during the current period, as consumer confidence has fallen because of COVID-19, high inflation and recessionary fears.",
+            "segment_percentage": 20.0
+        },
+        {
+            "segment": "Working",
+            "segment_description": "This segment accounts for demand for horse training from farms. These animals are bred on farms to be kept as pets or used for rides for small children. As more people have left farms for the cities and suburbs, fewer people are using equines as pets or for other purposes, so this segment's share of revenue has declined during the current period.",
+            "segment_percentage": 8.8
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "TRAINING",
+            "product_description": "",
+            "product_percentage": 9.9
+        },
+        {
+            "product_or_service": "BOARDING",
+            "product_description": "",
+            "product_percentage": 27.7
+        },
+        {
+            "product_or_service": "CARE",
+            "product_description": "",
+            "product_percentage": 62.4
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Farm Animal Feed Production in the US"
+        ],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [
+            "Horse & Other Equine Production in the US",
+            "Horse Racing Tracks in the US",
+            "Horse Rentals in the US",
+            "Horseback Tours in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "",
+            "determinant_description": "Horse breeders are a significant source of demand for industry operators. As demand from horse and other equine production increases, industry revenue increases. Horse and other equine produces benefit from general macroeconomic growth and specifically from rising per capita disposable income since horses are often discretionary expenses."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "",
+            "percentage_establishments": 30.0,
+            "percentage_population": 30.0
+        },
+        {
+            "location": "West",
+            "location_description": "",
+            "percentage_establishments": 25.0,
+            "percentage_population": 25.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "",
+            "percentage_establishments": 15.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "",
+            "percentage_establishments": 10.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "",
+            "percentage_establishments": 8.0,
+            "percentage_population": 8.0
+        },
+        {
+            "location": "Plains",
+            "location_description": "",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "",
+            "percentage_establishments": 4.0,
+            "percentage_population": 4.0
+        },
+        {
+            "location": "New E",
+            "location_description": "",
+            "percentage_establishments": 3.0,
+            "percentage_population": 3.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Increasing",
+        "regulations_points": []
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Acquiring skilled labor",
+                "barrier_description": "Acquiring skilled labor is the main hurdle for potential entrants."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Industry Assistance Level: low - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Technology Change Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Barriers to entry into the horse training industry are relatively low.",
+                "basis_description": "Acquiring skilled labor is the main hurdle for potential entrants."
+            },
+            {
+                "basis_title": "Buyer power is moderate, while supplier power is low in the horse training industry.",
+                "basis_description": "Many operators are nonemployers, which gives consumers choice and operators control over labor, as they provide it themselves."
+            },
+            {
+                "basis_title": "The horse training industry has a low level of concentration.",
+                "basis_description": "Many industry operators are nonemployers. Horse trainers also tend to operate locally, diluting the industry."
+            },
+            {
+                "basis_title": "Substitutes for the horse training in industry are low.",
+                "basis_description": "Some horse owners are able to train horses in-house (or in-barn) rather than outsourcing to industry operators."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Moderate barriers",
+                "concentration_description": "Factors for Increased Barriers: Life Cycle Stage: mature, Industry Assistance Level: low - steady. Factors for Decreased Barriers: Capital Intensity Level: low, Concentration Level: low, Technology Change Level: low, Globalization Level: low - steady."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "OTHER COMPANIES",
+                "company_percentage": 100
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Wages Are Horse Trainers Leading Cost",
+            "cost_factor_description": "Wages represent a significant cost for industry operators. Workers are hired to provide horse training, as well as labor-intensive duties such as feeding, cleaning stables and horses, providing simple medical care for the horses and general facilities maintenance."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Shifting Incomes Foster Volatility",
+                "volatility_description": "When incomes rise, consumers have more money to spend on horse training, so higher incomes boost revenue. Per capita disposable income rose during the recovery from the pandemic, driving growth for the industry. It declined in 2022, as money given out by the government during COVID-19 dried up. These fluctuations in disposable income have fostered increased volatility for horse trainers in the United States."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Pharmaceutical and Genetic Innovations",
+                "technological_change_description": "Advances in animal pharmaceuticals can substantially improve the quality of care being provided by operators engaged in horse vaccination. Research in biotechnology is ongoing, and there have been several significant advances in this technology in recent years. For example, recent innovations in mRNA vaccines could move effectively prevent diseases in horses."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "What is the document about?",
+            "answer": "The document contains industry data such as revenue, number of enterprises, establishments, employment, wages, and value added for a particular industry over the years 2010 to 2025."
+        }
+    ]
+}

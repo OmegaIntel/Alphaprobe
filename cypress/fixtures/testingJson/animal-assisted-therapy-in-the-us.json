@@ -1,0 +1,442 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 110000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 5.99
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 4.57
+            }
+        },
+        "profit": {
+            "profit_dollars": 6000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 4.2
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 4.2
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5.4,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -1.64
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": -1.64
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 63000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 3.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 3.0
+            }
+        },
+        "employees": {
+            "employees_count": 3867,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 2.5
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 2.5
+            }
+        },
+        "wages": {
+            "wages_dollars": 53000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 2.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 2.0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The COVID-19 pandemic posed major challenges to the Animal-Assisted Therapy industry. Traditional in-person therapy sessions and direct human-animal interactions were severely limited, disrupting the effectiveness and implementation of proven therapeutic interventions. However, the industry showed impressive resilience by adapting to extraordinary circumstances and introducing new modes of operation and interaction.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "COVID-19's Impact on Animal-Assisted Therapy",
+            "current_performance_point_description": "The COVID-19 pandemic significantly disrupted the industry by limiting traditional in-person therapy sessions and direct human-animal interactions. Restrictions posed a major challenge, reducing the effectiveness of therapy and setting barriers to the in-person dynamics necessary for this treatment."
+        },
+        {
+            "current_performance_point_title": "TELEHEALTH REVOLUTIONIZES ANIMAL-ASSISTED THERAPY",
+            "current_performance_point_description": "The integration of telehealth platforms has greatly expanded accessibility to animal-assisted therapy by facilitating remote sessions."
+        },
+        {
+            "current_performance_point_title": "UNIFORM CERTIFICATION FOR ANIMAL-ASSISTED THERAPY",
+            "current_performance_point_description": "There is an increasing focus on standardization of certification processes which ensure therapy animals meet specific criteria."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "EMBRACING DIGITAL TRANSFORMATION IN ANIMAL-ASSISTED THERAPY",
+            "future_outlook_point_description": "Virtual platforms and telehealth applications will become more prevalent for remote animal-assisted therapy sessions. Use of technology will improve access to therapy services and overcome geographical barriers."
+        },
+        {
+            "future_outlook_point_title": "BOOSTING ANIMAL-ASSISTED THERAPY WITH ROBUST RESEARCH",
+            "future_outlook_point_description": "There will be increased investment in research to provide stronger evidence supporting the effectiveness of animal-assisted therapy. Enhanced collaboration between researchers and therapy providers will help deepen understanding of how therapy animals affect mental health."
+        },
+        {
+            "future_outlook_point_title": "EXPANSION OF ANIMAL-ASSISTED THERAPY APPLICATIONS",
+            "future_outlook_point_description": "The use of therapy animals will expand beyond traditional environments like schools and hospitals, into non-conventional settings such as corporate wellness and community programs. There will be a wider recognition of the positive impact of therapy animals on a variety of mental health issues."
+        }
+    ],
+    "industry_definition": "Operators in this industry provide general or specialized outpatient therapy and care services using animals to reach a goal with a patient. Those goals can be physical, mental or social.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage: Growth",
+            "Capital Intensity Level: Low",
+            "Concentration Level: low"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level: high",
+            "Barriers To Entry Level: low - steady"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Capital Requirements",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers",
+            "Demand from donations, grants and endowment"
+        ],
+        "threats": [
+            "Healthy eating index"
+        ]
+    },
+    "key_trends": [
+        "COVID-19 disrupted animal-assisted therapy. Virtual sessions have been established by adopting and integrating telehealth platforms, improving accessibility and convenience while promoting standardization in the certification process for therapy animals.",
+        "Technology is reshaping animal-assisted therapy. With the advent of telehealth applications and virtual platforms, the accessibility and convenience of this unique therapy approach have increased, overcoming geographical barriers and significantly improving overall efficiency.",
+        "The ADA ensures therapy animal inclusivity in healthcare. This provides significant benefits to individuals with disabilities, enhancing their treatment outcomes.",
+        "Animal-assisted therapy has more widespread acceptance. This reflects a changing trend towards embracing the therapeutic benefits of animals within traditional healthcare settings.",
+        "Adaptability is vital in animal-assisted therapy. By adjusting the duration of therapy sessions based on individual client needs, therapists can effectively promote healing and achieve therapeutic goals.",
+        "Animal-assisted therapy is gaining popularity. This innovative approach, from libraries and schools to healthcare facilities and corporate settings, demonstrates significant benefits in reading engagement, stress reduction and rehabilitation.",
+        "The scarcity of certified therapy animals is increasing. This is due to the growing demand for their services, intensifying the competition among therapy programs to secure these well-trained and suitable animals."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Healthcare facilities",
+            "segment_description": "Healthcare facilities and entities like hospitals, rehabilitation centers and mental health institutions are integrating animal-assisted therapy into their treatment protocols to elevate the patient experience.",
+            "segment_percentage": 58.6
+        },
+        {
+            "segment": "Schools and libraries",
+            "segment_description": "Schools and libraries are increasingly leveraging the benefits of animal-assisted therapy into their curricula and programs, acknowledging its positive impact on student learning and engagement.",
+            "segment_percentage": 34.5
+        },
+        {
+            "segment": "Other",
+            "segment_description": "",
+            "segment_percentage": 6.9
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "No time limit",
+            "product_description": "Capitalizing on 'No Time Limit'",
+            "product_percentage": 42
+        },
+        {
+            "product_or_service": "60 minutes per session limit",
+            "product_description": "Maximizing Effectiveness with the 60 Minutes Per Session Limit in Animal-Assisted Therapy",
+            "product_percentage": 20
+        },
+        {
+            "product_or_service": "90 Minutes Per Session Limit",
+            "product_description": "Unlocking Therapeutic Impact: The 90 Minute Session Limit",
+            "product_percentage": 17
+        },
+        {
+            "product_or_service": "120 Minutes Per Session Limit",
+            "product_description": "Unleashing the Potential of the 120 Minute Session Limit in Animal-Assisted Therapy",
+            "product_percentage": 13
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "Advancing Personalized Care Through Adaptable Animal-Assisted Therapy",
+            "product_percentage": 8
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Animal Food Production in the US"
+        ],
+        "tier_2_suppliers": [
+            "Pet Stores in the US",
+            "Veterinary Services in the US",
+            "Pet Grooming & Boarding in the US",
+            "Dog Training Services in the US"
+        ],
+        "tier_1_buyers": [
+            "Correctional Facilities in the US",
+            "Private Schools in the US",
+            "Hospitals in the US",
+            "Psychiatric Hospitals in the US",
+            "Retirement Communities in the US",
+            "Religious Organizations in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Schools and Libraries Incorporating Animal-Assisted Therapy Into Their Programs",
+            "determinant_description": "Schools and libraries are increasingly leveraging the benefits of animal-assisted therapy into their curricula and programs, acknowledging its positive impact on student learning and engagement."
+        },
+        {
+            "determinant_title": "HEALTHCARE FACILITIES ADVOCATE FOR ANIMAL-ASSISTED THERAPY",
+            "determinant_description": "Healthcare facilities and entities like hospitals, rehabilitation centers and mental health institutions are integrating animal-assisted therapy into their treatment protocols to elevate the patient experience."
+        },
+        {
+            "determinant_title": "FURRY FRIENDS BOOSTING WELL-BEING ACROSS SECTORS",
+            "determinant_description": "Animal-assisted therapy is being widely adopted in corporate wellness programs, proving its impact in stress reduction and improving work conditions."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "Distribution of establishments vs population in the Great Lakes region.",
+            "percentage_establishments": 10,
+            "percentage_population": 15
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "Distribution of establishments vs population in the Mid-Atlantic region.",
+            "percentage_establishments": 20,
+            "percentage_population": 15
+        },
+        {
+            "location": "New England",
+            "location_description": "Distribution of establishments vs population in the New England region.",
+            "percentage_establishments": 5,
+            "percentage_population": 5
+        },
+        {
+            "location": "Plains",
+            "location_description": "Distribution of establishments vs population in the Plains region.",
+            "percentage_establishments": 5,
+            "percentage_population": 5
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "Distribution of establishments vs population in the Rocky Mountains region.",
+            "percentage_establishments": 5,
+            "percentage_population": 5
+        },
+        {
+            "location": "Southeast",
+            "location_description": "Distribution of establishments vs population in the Southeast region.",
+            "percentage_establishments": 30,
+            "percentage_population": 25
+        },
+        {
+            "location": "Southwest",
+            "location_description": "Distribution of establishments vs population in the Southwest region.",
+            "percentage_establishments": 15,
+            "percentage_population": 20
+        },
+        {
+            "location": "W",
+            "location_description": "Distribution of establishments vs population in the W region.",
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_trend": "Steady",
+        "regulations_points": []
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "Revenue Volatility Level: high"
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage: growth",
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Technology Change Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Scarcity of Certified Therapy Animals",
+                "basis_description": "The scarcity of certified therapy animals is increasing. This is due to the growing demand for their services, intensifying the competition among therapy programs to secure these well-trained and suitable animals."
+            },
+            {
+                "basis_title": "Animal-assisted Therapy Going Digital",
+                "basis_description": "Animal-assisted therapy is going digital. This allows therapists to reach a broader audience and adapt to changing healthcare landscapes."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "High Wage Expenses in the Industry",
+            "cost_factor_description": "A significant part of the cost structure in animal-assisted therapy services is attributed to wages for therapy practitioners, support staff, and animal caretakers. The need for specialized training for therapists working with animals increases wage expenditure."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LOW capital intensity",
+                "capital_intensity_description": "The visual appears to be a bar chart showing the capital intensity for the Animal-Assisted Therapy Services industry in the US. The bar is very short, indicating a low capital intensity for this industry. The exact numerical value is not provided, but the length of the bar suggests it is a relatively low number compared to other industries."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "HIGH revenue volatility",
+                "volatility_description": "Regulations governing therapy animal certification and usage are subject to changes, which can bring about instability in the industry. Therapy businesses and providers may find adapting promptly to these new standards challenging, causing market fluctuations."
+            },
+            {
+                "volatility_title": "LICENSING REQUIREMENTS INDUCE INSTABILITY IN THE THERAPY MARKET",
+                "volatility_description": "Changes in state licensing requirements for therapy practitioners can cause uncertainties in the market. This threatens the available supply of qualified therapists, further increasing market volatility."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Low technology change",
+                "technological_change_description": "The industry is experiencing a low level of both the rate of new patents and the concentration of patents in the industry. This creates an environment where the threat of new technologies driving disruption is low."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "What is the regulation and policy situation?",
+            "answer": "LOW regulation STEADY regulation"
+        },
+        {
+            "question": "What is the industry assistance situation?",
+            "answer": "MODERATE assistance STEADY assistance"
+        }
+    ]
+}

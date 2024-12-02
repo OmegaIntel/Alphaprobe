@@ -1,0 +1,594 @@
+{
+    "report_title": "Industry Report on Polystyrene Foam Manufacturing",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 13255000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 0.43
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 0.3
+            }
+        },
+        "profit": {
+            "profit_dollars": 504000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": -1.3
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 3.8,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": -1.73
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 2686000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 31736,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 1883000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2023 currency. Manufacturers create polystyrene foam for various products, including insulation, food packaging containers and single-use tableware, like plates and cups. Through 2023, industry revenue is expected to strengthen at a CAGR of 3.0% to $13.3 billion, despite an expected 3.5% contraction in 2023 as demand from construction markets sharply declines. Profit has been volatile over the current period, overwhelmed by rising prices in oil and plastic. For most of the period, downstream buyers, like manufacturers, food service establishments and construction companies, have increased demand for polystyrene foam. Even so, the pandemic curtailed growth, halting spending and construction activity entirely.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Russian Invasion of Ukraine Adds to Input Price Volatility",
+            "current_performance_point_description": "Since manufacturers derive plastic and polystyrene from petrochemical refining, the price of crude oil plays a significant role in determining raw material costs for the industry. Through 2023, crude oil prices have been extremely volatile, especially as key supply chains ground to a halt during the pandemic. In 2022, major sanctions following the Ukrainian crisis banned Russian oil, stressing domestic supply chains and causing input prices to skyrocket. Manufacturers have been unable to pass off the full cost increases to buyers, slashing profit despite a substantial recovery period in 2021."
+        },
+        {
+            "current_performance_point_title": "Added Regulations Threaten Growth",
+            "current_performance_point_description": "Polystyrene foam manufacturers endure strict regulations, especially concerning polystyrene's negative environmental impact. Products are often single-use and take more than a century to decompose properly, leading to massive waste management issues. According to Seafood Source, Maryland, Maine and Vermont have responded to this concern by enacting polystyrene foam bans throughout communities."
+        },
+        {
+            "current_performance_point_title": "Strong Performances by Downstream Markets Drive Demand for Polystyrene Products",
+            "current_performance_point_description": "Despite growing regulation, post-pandemic recoveries across numerous major markets have driven industry growth. The manufacturing sector has provided solid growth, especially as industrial production has rebounded after the pandemic. In particular, automotive manufacturers have increased demand, spurred by ballooning new car sales. Similarly, e-commerce sales have skyrocketed since the pandemic's onset, creating elevated demand for packing materials. Despite some states banning packing peanuts, many companies purchase custom-molded polystyrene foam to hold fragile goods like electronics."
+        },
+        {
+            "current_performance_point_title": "Prevalence of Substitutes to Temper Growth",
+            "current_performance_point_description": "Even so, the prevalence of substitutes will temper growth. Packing companies can readily choose polyurethane, plastic, paper and cardboard alternatives."
+        },
+        {
+            "current_performance_point_title": "Statewide Bans on Expanded Polystyrene",
+            "current_performance_point_description": "New York has also adopted a statewide ban on expanded polystyrene, used for single-use foam containers and packing peanuts. Regarded as the nation's strongest ban relating to the issue, the Expanded Polystyrene Foam Container and Polystyrene Loose Fill Packaging Ban has been in effect since January 1, 2022. Following suit, New Jersey has joined the list of states that have enacted bans on expanded polystyrene products, enforcing the policy since May 2022. Even so, polystyrene foam manufacturers have performed well, deriving growth from markets unaffected by strict regulation."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "The Negative Public Opinion of Polystyrene Will Persist",
+            "future_outlook_point_description": "Increasingly vocal opposition to polystyrene materials on behalf of public figures and consumers will pose a major challenge for manufacturers during the outlook period. Polystyrene-based products are also difficult to recycle and can't be processed locally. Instead, these products are transported to an external facility, creating additional costs since polystyrene displaces a large volume for its weight. The total cost of recycling and repurposing is often more than manufacturing new foam. More states will respond with restrictions on polystyrene products, further muddying the industry's image with consumers. According to Seafood Source, Colorado intends to ban polystyrene products in 2024, with Florida expected to follow."
+        },
+        {
+            "future_outlook_point_title": "Consumers and Businesses Shift to Substitutes",
+            "future_outlook_point_description": "Polystyrene foam manufacturers constantly face heavy competition from substitute products in most major markets. Polyurethane, for example, competes in the same verticals as polystyrene but performs better in flexibility, general and chemical resistance, load-bearing, insulation and sound reduction. Food service establishments, for example, will turn to plastic and paper containers over polystyrene foam products. Even as the food service sector expands in the post-pandemic economy, polystyrene foam manufacturers will lose revenue to external competition. Likewise, shipping companies readily substitute polystyrene foam \"peanuts\" and molds with corrugated cardboard, paper and edible packing peanuts. While these materials provide less protection, they avoid state and local polystyrene bans. As more states issue bans, shipping companies could scrap traditional polystyrene products altogether, spelling doom for a major market."
+        },
+        {
+            "future_outlook_point_title": "Polystyrene Manufacturers Rely on Construction Market Rebound",
+            "future_outlook_point_description": "As interest rates ease, the value of construction will recover. Falling office vacancies will also spur businesses to start new projects. According to Insulfoam, long lead times of polyiso insulation have pushed contractors to use expanded polystyrene as an insulation solution instead of substitute insulators. Prolonged supply chain uncertainty will create elevated demand for polystyrene foam insulation products."
+        }
+    ],
+    "industry_definition": "This industry produces a wide range of polystyrene foam products that include the following: expanded polystyrene (EPS) for food containers and cups; foam ice chests and other packaging; and insulation goods. The industry's products are used by a wide range of downstream industries in the construction, manufacturing and hospitality sectors.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Concentration Level: low",
+            "Globalization Level: low - steady"
+        ],
+        "negative_impact_factors": [
+            "Life Cycle Stage: decline",
+            "Revenue Volatility Level: high",
+            "Industry Assistance Level: low - steady",
+            "Competition Level: high - steady",
+            "High Competition",
+            "High Volatility",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "Low Revenue per Employee",
+            "High Capital Requirements"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Consumer spending"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Value of construction"
+        ]
+    },
+    "key_trends": [
+        "Regulations will pose a constant threat to polystyrene foam manufacturers. Companies are adapting by introducing recycling plants and more sustainable products.",
+        "Companies navigate competitive markets teeming with substitutes",
+        "Polyurethane, for example, performs better than polystyrene, while paper, cardboard and other natural alternatives appeal to eco-friendly buyers.",
+        "Multiple states and municipalities have banned polystyrene foam products. Manufacturers are also subject to strict environmental waste regulations.",
+        "Manufacturers receive strong support from various industry associations",
+        "These groups notably appeal polystyrene foam bans in courts and lobby against unfavorable legislation.",
+        "Many manufacturers have opted to sell directly to retailers, contractors, manufacturers and other consumers, bypassing wholesalers",
+        "This trend has increased following the online retail explosion.",
+        "Many of the industry's most prominent products face bans from state and local governments",
+        "Manufacturers must navigate an increasingly inhospitable market.",
+        "Manufacturers will locate near major markets to cut transportation costs",
+        "The Great Lakes and West regions have robust manufacturing, construction and consumer markets.",
+        "Companies also attempt to source inexpensive inputs",
+        "Many organic and inorganic chemical manufacturers reside in the Southeast and Great Lakes regions",
+        "Polystyrene foam manufacturers face intense competition from substitutes. Companies must contend with alternatives in every major market.",
+        "Since polystyrene products are mostly identical, manufacturers compete heavily on price. Consistency and delivery time are also crucial to a company's success.",
+        "Major manufacturers must adapt",
+        "Major manufacturers must adapt to increasing competition from substitutes. Successful companies have emphasized product quality and sustainability at competitive prices.",
+        "The three most prominent companies, Reynolds, Dart and Pactiv, have gathered a significant market share by offering high-quality products and on-time delivery. These companies operate through multiple markets, while smaller manufacturers often serve local and niche markets.",
+        "Manufacturers have struggled",
+        "Manufacturers have struggled to maintain profit following the pandemic. Also, volatile input prices have prevented companies from expanding profit despite strong revenue growth.",
+        "Purchases depend on crude oil prices. Manufacturers use oil to create most polystyrene foam products."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Retailers and wholesalers",
+            "segment_description": "Retailers are the largest purchasers of polystyrene foam products. These buyers include food retailers, food service establishments, fast food restaurants, supermarkets, product packagers and other establishments since polystyrene is an effective insulator, keeping food fresh for longer.",
+            "segment_percentage": 47.5
+        },
+        {
+            "segment": "Construction",
+            "segment_description": "Construction companies are major purchasers of polystyrene foam products, typically purchasing foam for insulation in residential and commercial construction projects.",
+            "segment_percentage": 17.2
+        },
+        {
+            "segment": "Household consumers",
+            "segment_description": "Major online retailers have enabled manufacturers to sell goods directly to consumers online. Many of these sites let manufacturers list products on their markets for a listing fee.",
+            "segment_percentage": 15.8
+        },
+        {
+            "segment": "Manufacturers and other",
+            "segment_description": "Furniture makers, automotive manufacturers and other downstream manufacturing industries use polystyrene foam in their products. Automobile manufacturers use polystyrene heavily for car bodies for noise-dampening and energy absorption.",
+            "segment_percentage": 1.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Consumer and Institutional Products",
+            "product_description": "This segment includes polystyrene foam cups, plates and bowls for household and commercial use. Frequent users of polystyrene foam dishware are fast food, take-out and other quick-service restaurants.",
+            "product_percentage": 36.2
+        },
+        {
+            "product_or_service": "Packaging and Storing Products",
+            "product_description": "This segment includes polystyrene foam-based food containers, protective shipping pads and other foam packaging supplies, like expanded polystyrene (EPS) foam packaging. EPS is a white material used to cushion, insulate and protect goods during distribution.",
+            "product_percentage": 29.4
+        },
+        {
+            "product_or_service": "Building and Construction Products",
+            "product_description": "The major product for this segment is wall and pipe insulation; polystyrene is lightweight, requires little structural support, is quick to install and requires little to no drying time.",
+            "product_percentage": 17.2
+        },
+        {
+            "product_or_service": "Transportation Products",
+            "product_description": "This segment includes foam and padding for seating, insulation and padding for side panels and rear and front bumpers.",
+            "product_percentage": 6.3
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "Other polystyrene products include padding for furniture and cycling helmets, foam seeding trays for plants and kitchenware. Granulated EPS is also used as a soil conditioner to promote aeration.",
+            "product_percentage": 10.9
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Metal Tank Manufacturing in the US",
+            "Plastics & Rubber Machinery Manufacturing in the US",
+            "Oil Drilling & Gas Extraction in the US",
+            "Coal Mining in the US",
+            "Inorganic Chemical Manufacturing in the US",
+            "Petroleum Refining in the US",
+            "Petrochemical Manufacturing in the US",
+            "Industrial Machinery & Equipment Wholesaling in the US",
+            "Organic Chemical Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Paper Bag & Disposable Plastic Product Wholesaling in the US",
+            "Construction & Mining Equipment Wholesaling in the US",
+            "Automobile Interior Manufacturing in the US",
+            "Car & Automobile Manufacturing in the US",
+            "SUV & Light Truck Manufacturing in the US"
+        ],
+        "tier_2_buyers": [
+            "Supermarkets & Grocery Stores in the US",
+            "Construction in the US",
+            "Automobile Wholesaling in the US",
+            "Convenience Stores in the US",
+            "Warehouse Clubs & Supercenters in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Consumer and Institutional Product Segment Grows Despite Regulations",
+            "determinant_description": "Through the current period, this segment's share of revenue has increased, despite a growing number of municipalities banning polystyrene foam food and beverage containers. While consumer preferences tilt toward products made from more environmentally friendly materials, increased consumer spending and economic activity have boosted the product segment."
+        },
+        {
+            "determinant_title": "Packaging and Storing Products Face Heavy Competition From Substitutes",
+            "determinant_description": "E-commerce growth during the pandemic has increased demand for shipping and packing solutions, supporting this segment despite rigorous competition from substitute products like cardboard and paper."
+        },
+        {
+            "determinant_title": "Rising Interest Rates Limit Demand for Building and Construction Products",
+            "determinant_description": "Rising interest rates following the pandemic, though, have limited residential and commercial construction."
+        },
+        {
+            "determinant_title": "Transportation and Other Products Provide Small but Stable Revenue",
+            "determinant_description": "Since manufacturers incorporate polystyrene materials into cars, demand heavily depends on new car sales, which decreased sharply during the pandemic."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region is home to several oil refineries, placing polystyrene foam manufacturers close to raw material suppliers. The region also houses many organic and inorganic chemical manufacturers, making it ideal for companies to run plants in the area. The Southeast is also the nation's most populous region, making it a major market for residential housing and nonresidential office building developers.",
+            "percentage_establishments": 30.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "Like the Southeast region, the Great Lakes houses many organic and inorganic chemical manufacturers. The region also encompasses many key manufacturing and construction markets, enabling polystyrene foam manufacturers to cut transportation costs.",
+            "percentage_establishments": 20.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "West Region",
+            "location_description": "California has the most establishments of any state. Many companies can easily access inexpensive chemical imports from Asia. Also, California has a robust construction sector, enabling manufacturers to generate solid revenue from one of the industry's largest markets.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "",
+            "percentage_establishments": 10.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "New England",
+            "location_description": "",
+            "percentage_establishments": 10.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Plains",
+            "location_description": "",
+            "percentage_establishments": 10.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "",
+            "percentage_establishments": 5.0,
+            "percentage_population": null
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "Polystyrene Foam Container Bans",
+                "regulation_description": "Over 70 US cities have instituted bans on polystyrene foam containers in restaurants, with New York City being a major city to implement such a ban."
+            },
+            {
+                "regulation_title": "Environmental Regulations",
+                "regulation_description": "The industry is subject to extensive environmental regulations like the Clean Air Act and Clean Water Act regarding emissions, waste management, etc. increasing compliance costs."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life cycle stage",
+                "barrier_description": "Life Cycle Stage: decline"
+            },
+            {
+                "barrier_title": "Revenue volatility",
+                "barrier_description": "Revenue Volatility Level: high"
+            },
+            {
+                "barrier_title": "Industry assistance level",
+                "barrier_description": "Industry Assistance Level: low - steady"
+            },
+            {
+                "barrier_title": "Competition level",
+                "barrier_description": "Competition Level: high - steady"
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: decline",
+            "Revenue Volatility Level: high"
+        ],
+        "factors_decreased_barrier": [
+            "Mixing and molding polystyrene foam is highly technical.",
+            "Companies hire highly skilled workers for research and development teams adding to labor intensity."
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Competition from substitutes",
+                "basis_description": "Polystyrene foam manufacturers face intense competition from substitutes. Companies must contend with alternatives in every major market."
+            },
+            {
+                "basis_title": "Price competition",
+                "basis_description": "Since polystyrene products are mostly identical, manufacturers compete heavily on price."
+            },
+            {
+                "basis_title": "Consistency and delivery time",
+                "basis_description": "Consistency and delivery time are also crucial to a company's success."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Different concentrations in each segment",
+                "concentration_description": "This industry produces many products and each segment has its own set of producers. For example, companies that produce single-use food products, like cups and plates are within a highly concentrated segment."
+            },
+            {
+                "concentration_title": "Low concentration in some segments",
+                "concentration_description": "By contrast, construction and transportation products have more rigid specifications, limiting new entrants and keeping concentration low."
+            },
+            {
+                "concentration_title": "Major companies hold strong positions",
+                "concentration_description": "The industry's three major manufacturers, Reynolds, Dart and Pactiv, hold strong positions in various major markets, accounting for 35.0% of the"
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Pactiv Evergreen Inc.",
+                "company_percentage": 13.5
+            },
+            {
+                "company_name": "Reynolds Group Holdings Inc.",
+                "company_percentage": 12.8
+            },
+            {
+                "company_name": "Dart Container Corp",
+                "company_percentage": 4.8
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 68.9
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 20.0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 20.0
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 52.1
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 7.5
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 2.5
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 2.5
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 10.0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Manufacturers Face Input Price Volatility",
+            "cost_factor_description": "The main ingredient benzene is derived from petrochemicals whose prices have been volatile due to the pandemic and Ukraine crisis, with 72.7% and 52.5% price spikes in 2021 and 2022. However, many manufacturers have secured contracts with suppliers, limiting price surges."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Mixing and molding polystyrene foam is highly technical",
+                "capital_intensity_description": "Mixing and molding polystyrene foam is highly technical, requiring specialized equipment and processes."
+            },
+            {
+                "capital_intensity_title": "Companies hire skilled workers for R&D",
+                "capital_intensity_description": "Companies also hire chemists and other scientists for research and development teams to create new products, adding to labor intensity."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "The Industry Serves a Wide Array of Markets",
+                "volatility_description": "The industry supplies a large number of downstream industries that face different business cycles, which has a stabilizing effect on sales. However, demand from some markets like transportation is volatile."
+            },
+            {
+                "volatility_title": "Polystyrene Packaging Grows Less Popular",
+                "volatility_description": "Many states have placed partial bans on polystyrene packaging, especially for food and drink, cutting a major source of revenue."
+            }
+        ],
+        "volatility_trend": "Increasing"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Consumer and Institutional Product Segment Grows Despite Regulations",
+                "technological_change_description": "This segment including polystyrene foam cups, plates and bowls has grown despite bans on polystyrene food containers in some municipalities, due to increased consumer spending."
+            },
+            {
+                "technological_change_title": "Packaging and Storing Products Face Heavy Competition From Substitutes",
+                "technological_change_description": "This segment including polystyrene foam packaging faces competition from substitutes like other foam materials."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company specialize in a niche or do you produce a diversified range of products?",
+            "answer": "Most companies produce extensive polystyrene foam product lines. Manufacturers that produce extensive product lines are more insulated from sharp depressions in one product segment."
+        },
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "Sales for companies in this industry are tied to consumer spending, as higher consumption would result in more polystyrene containers being used."
+        },
+        {
+            "question": "Is your company investing heavily in R&D to meet changing consumer preferences?",
+            "answer": "Most of the R&D occurring in this industry is dedicated to figuring out how to make the industry's products easier to recycle. Also, many manufacturers have researched and developed more eco-friendly products to appeal to rising consumer environmental awareness."
+        },
+        {
+            "question": "Has your company located near key downstream distributors to reduce shipping costs?",
+            "answer": "Companies in this industry often locate themselves near populated areas or transport networks to reduce shipping costs, as higher fees can eat into profit."
+        },
+        {
+            "question": "Is your company investing in technology like biodegradable plastic resin to establish a competitive edge?",
+            "answer": "In the face of increasing regulation, companies in this industry have focused R&D resources on making their products biodegradable or easier to recycle."
+        },
+        {
+            "question": "What steps do you take to safeguard your company's proprietary information?",
+            "answer": "Companies in this industry regularly file patents for new processes or machinery developed to produce polystyrene products more efficiently."
+        },
+        {
+            "question": "Do you work with trade associations or other interest groups to advance your company's interests?",
+            "answer": "Extruded Polystyrene Foam Association (XPSA) and the EPS Industry Alliance (EPS-IA) are the main associations for this industry."
+        },
+        {
+            "question": "Have any regulatory trends impacted revenue streams recently?",
+            "answer": "The growing number of US municipalities that ban polystyrene foam containers presents a long-term threat to the industry. The pandemic and differing business operation regulations have negatively affected revenue for manufacturers."
+        },
+        {
+            "question": "What percentage of your customers renew their contracts?",
+            "answer": "The number of customers renewing contracts could sink as increasing regulation on polystyrene products forces them to switch to approved alternatives."
+        },
+        {
+            "question": "How does your company's profit compare to your main competitors'?",
+            "answer": "Comparison between manufacturers in the industry and their competitors depends on the products they manufacture, the size of their operations and the clients they serve. Input prices for raw materials like silica sand influence the profit of fiberglass manufacturers, the industry's main competitor in the insulation for construction market."
+        },
+        {
+            "question": "Do you have contracts in place with manufacturers? How can these relationships be strengthened?",
+            "answer": "manufacturers need to have access to a reliable supply of key inputs (like plastic resin) at a competitive cost."
+        },
+        {
+            "question": "How do the regulations that apply to your company affect your performance? How do you keep your company up to date on regulations?",
+            "answer": "This industry and its essential buyers are subject to changes in legislation and public policy regarding the use and disposal of polystyrene. Manufacturers also contended with increased regulation regarding health and safety during the coronavirus pandemic."
+        },
+        {
+            "question": "What industry is your biggest costumer? What impact does the construction industry have on your industry's demand and revenue?",
+            "answer": "The level of construction activity in the United States impacts demand for polystyrene foam products used as building materials. Polystyrene is used as an insulating material in constructing walls, roofs and floors."
+        },
+        {
+            "question": "Does your company monitor trends in consumer spending?",
+            "answer": "As consumer spending increases, spending on products packaged in polystyrene-based products will expand."
+        }
+    ]
+}

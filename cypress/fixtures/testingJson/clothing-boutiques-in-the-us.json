@@ -1,0 +1,526 @@
+{
+    "report_title": "Clothing Boutiques in the US",
+    "report_date": "2023-06-01",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 27907000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": -1.03
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.59
+            }
+        },
+        "profit": {
+            "profit_dollars": 1786000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 1.19
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 1.59
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 6.4,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 2.24
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 1.59
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 6943000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 1.5
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 1.59
+            }
+        },
+        "employees": {
+            "employees_count": 324347,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 2.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 1.7
+            }
+        },
+        "wages": {
+            "wages_dollars": 4847000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 3.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 3.5
+            }
+        },
+        "imports": {
+            "imports_dollars": 2000000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 1.5
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 2.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 1000000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 0.5
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0.8
+            }
+        }
+    },
+    "executive_summary": "The Clothing Boutiques industry has faced significant headwinds, with the expansion of e-commerce and fluctuating disposable incomes impacting traditional brick-and-mortar sales. Despite a growing appetite for personalized and exclusive fashion items, many traditional boutiques have seen a dip in overall revenue as more business is conducted online.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Online Shopping Boom Forces Boutiques to Improve",
+            "current_performance_point_description": "Online shopping has boomed, making it crucial for boutiques to have a strong online presence. Shopify and Etsy have become popular platforms for small boutique owners, expanding their reach beyond local communities."
+        },
+        {
+            "current_performance_point_title": "Economic Fluctuations Have Made Consumers More Cautious",
+            "current_performance_point_description": "Economic fluctuations, including inflation and changes in interest rates, have led consumers to become more cautious with their discretionary spending. As a result, they are allocating more of their budgets to essentials such as groceries and utilities, leaving less disposable income for non-essential purchases like fashion items."
+        },
+        {
+            "current_performance_point_title": "Younger Generations Drive Eco-Friendly and Ethical Shopping",
+            "current_performance_point_description": "Millennials and Gen Z prioritize environmental sustainability and social justice in purchasing decisions. This shift has prompted many boutiques to emphasize ethical sourcing, eco-friendly materials and fair labor practices."
+        },
+        {
+            "current_performance_point_title": "Brick-and-Mortar Stores Embrace Unique Experiences to Compete with Online Shopping Convenience",
+            "current_performance_point_description": "To combat the convenience of online shopping, brick-and-mortar stores focus on offering unique in-store experiences. This is especially pertinent amid economic uncertainty, where consumers are more selective about where they spend their money."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Rising Consumer Preference for Exclusivity Will Drive Clothing Boutiques' Demand for Unique Apparel",
+            "future_outlook_point_description": "Clothing boutiques will benefit from the rising consumer preference for exclusivity, driving demand for unique, limited-edition and personalized apparel. By offering bespoke pieces, these boutiques will attract discerning customers, differentiating themselves from mass-market retailers and solidifying their market position."
+        },
+        {
+            "future_outlook_point_title": "E-COMMERCE WILL CONTINUE TO THREATEN THE INDUSTRY",
+            "future_outlook_point_description": "E-commerce growth has shown no signs of slowing, making an omnichannel presence crucial. Boutiques will need to seamlessly integrate their online and offline operations to meet evolving consumer expectations."
+        },
+        {
+            "future_outlook_point_title": "INFLUENCERS AND SOCIAL MEDIA WILL SHAPE CLOTHING BOUTIQUE TRENDS",
+            "future_outlook_point_description": "Platforms like Instagram, TikTok and Pinterest will continue to be crucial for boutiques aiming to establish their brand presence. They'll offer dynamic spaces for showcasing new collections, engaging with customers and creating buzz around upcoming events or promotions."
+        },
+        {
+            "future_outlook_point_title": "Live shopping will take social media by storm",
+            "future_outlook_point_description": "Live shopping will take social media by storm, particularly on platforms like Instagram and TikTok. These live sessions will offer a real-time, interactive experience where customers can see products in action, ask questions and make purchases instantly."
+        },
+        {
+            "future_outlook_point_title": "Consumers will demand more inclusive, gender-neutral fashion options",
+            "future_outlook_point_description": "Consumers will demand more inclusive sizing, gender-neutral options, and representation in fashion. Brands like Fenty and Savage X Fenty have set industry benchmarks with their expansive size ranges and gender-neutral lingerie, and this trend will become increasingly evident as shoppers seek clothing that represents all body types, gender identities and cultural backgrounds."
+        }
+    ],
+    "industry_definition": "The industry consists of small retail stores that offer a limited range of apparel and accessories. It is characterized by single-establishment operations. These boutiques may either be designer-based, featuring only one designer's collection or carry a curated mix of brands tailored specifically to the local market.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low Capital Intensity Level",
+            "low Concentration Level",
+            "low - steady Globalization Level"
+        ],
+        "negative_impact_factors": [
+            "low - steady Industry Assistance Level",
+            "low - steady Barriers To Entry Level",
+            "high - increasing Competition Level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry",
+            "Low & Steady Level of Assistance",
+            "High Competition"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "Per capita disposable income"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Percentage of business conducted online"
+        ]
+    },
+    "key_trends": [
+        "Clothing boutiques compete locally in terms of price and quality.",
+        "They also consider location and selection to attract more customers.",
+        "Boutiques face significant competition. They compete with brand-name, department stores and online retailers that are generally more well-known and less expensive.",
+        "Online shopping is booming. This shift has prompted small boutiques to specialize or find unique niche markets to stand out amid heightened competition and evolving consumer behaviors.",
+        "Rising consumer preference for exclusivity will drive demand for unique apparel. Boutiques offering bespoke pieces, limited drops and exclusive collaborations with designers will attract discerning customers."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Lowest income quintile",
+            "segment_description": "This market segment comprises individuals and families earning minimal wages or living on a fixed income. Consequently, their consumption patterns are heavily focused on basic necessities rather than luxuries. High prices at boutique shops drive this market segment to seek more affordable clothing options.",
+            "segment_percentage": 9.3
+        },
+        {
+            "segment": "Second-lowest income quintile",
+            "segment_description": "This market segment comprises individuals and families earning minimal wages or living on a fixed income. Consequently, their consumption patterns are heavily focused on basic necessities rather than luxuries. High prices at boutique shops drive this market segment to seek more affordable clothing options.",
+            "segment_percentage": 12.5
+        },
+        {
+            "segment": "Third-lowest income quintile",
+            "segment_description": "Many consumers within these quintiles are aspirational shoppers who seek status symbols such as designer clothing and branded accessories. These consumers gravitate toward industry establishments that offer high-end and brand-name products, indicating a preference for quality and status despite their moderate income levels.",
+            "segment_percentage": 17.7
+        },
+        {
+            "segment": "Highest income quintile",
+            "segment_description": "Consumers in the highest income quintile typically have significant disposable income, allowing them to spend more on luxury goods and services. Clothing boutiques often design their marketing strategies around this affluent demographic, using exclusive events and VIP services to attract and retain such consumers.",
+            "segment_percentage": 37.1
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Women's Clothing",
+            "product_description": "Women's clothing includes a variety of apparel such as dresses, tops, skirts, pants and outerwear, catering to diverse style preferences and occasions from casual to formal wear.",
+            "product_percentage": 32.3
+        },
+        {
+            "product_or_service": "Men's Clothing",
+            "product_description": "Men's clothing encompasses shirts, pants, jackets, suits and casual wear. Staples such as graphic tees, jeans and blazers are included in this category, which provides various options for different consumer needs.",
+            "product_percentage": 8.9
+        },
+        {
+            "product_or_service": "Children's Clothing",
+            "product_description": "Children's clothing includes apparel for infants, toddlers and young children, including items such as onesies, dresses, t-shirts, pants and outerwear designed to meet the unique needs of growing kids.",
+            "product_percentage": 2.8
+        },
+        {
+            "product_or_service": "Footwear",
+            "product_description": "Footwear includes shoes, boots, sandals and athletic footwear for all age groups. Boutiques usually offer a range of styles to match different seasons and trends.",
+            "product_percentage": 29.8
+        },
+        {
+            "product_or_service": "Accessories",
+            "product_description": "Accessories include bags, belts, hats, scarves, and jewelry. They complement an outfit and allow customers to express their personal style.",
+            "product_percentage": 10.8
+        },
+        {
+            "product_or_service": "Other",
+            "product_percentage": 15.4
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Men's & Boys' Apparel Wholesaling in the US",
+            "Women's & Children's Apparel Wholesaling in the US",
+            "Footwear Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Men's & Boys' Apparel Manufacturing in the US",
+            "Women's, Girls' and Infants' Apparel Manufacturing in the US",
+            "Shoe & Footwear Manufacturing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Frequent Wardrobe Updates",
+            "determinant_description": "The content mentions that frequent wardrobe updates responding to fashion trends, social events, and professional attire needs drive demand for clothing boutiques."
+        },
+        {
+            "determinant_title": "Boutique Prices",
+            "determinant_description": "The content states that boutique prices drive lower-income customers toward affordable options."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast is home to numerous popular tourist destinations, such as Miami, Charleston and Savannah. These areas attract millions of visitors annually, providing a steady stream of potential customers who are often interested in purchasing unique, locally sourced, or boutique items as souvenirs or vacation wear.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 25.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region, which includes major metropolitan areas like New York City, Washington DC and Philadelphia, boasts a high population density.",
+            "percentage_establishments": 20.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "West",
+            "location_description": "Western regions often host more affluent populations with higher disposable incomes, making them ideal markets for boutique shopping.",
+            "percentage_establishments": 30.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "",
+            "percentage_establishments": 10.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "",
+            "percentage_establishments": 10.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "Plains",
+            "location_description": "",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "New England",
+            "location_description": "",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "Occupational Safety and Health Administration (OSHA)",
+                "regulation_description": "OSHA mandates that employers prominently display the OSHA workers' rights poster in an easily accessible location for all employees."
+            },
+            {
+                "regulation_title": "Americans with Disabilities Act (ADA)",
+                "regulation_description": "The Americans with Disabilities Act (ADA) mandates that clothing boutiques be accessible to individuals with disabilities."
+            },
+            {
+                "regulation_title": "Fair Labor Standards Act (FLSA)",
+                "regulation_description": "The Fair Labor Standards Act (FLSA) regulates clothing boutiques by setting minimum wage, overtime pay, recordkeeping and child labor standards."
+            },
+            {
+                "regulation_title": "Federal Trade Commission (FTC)",
+                "regulation_description": "The Federal Trade Commission (FTC) regulates clothing boutiques by enforcing truth-in-advertising laws to prevent deceptive marketing practices."
+            }
+        ],
+        "regulations_trend": "Unknown"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "mature"
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "low - steady"
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "high - increasing"
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": []
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "SMALL, INDEPENDENT STORES DOMINATE THE FRAGMENTED AND DIVERSE CLOTHING BOUTIQUE MARKET",
+                "concentration_description": "The Clothing Boutiques industry is primarily comprised of small, independent stores, many of which are single-location enterprises."
+            },
+            {
+                "concentration_title": "E-COMMERCE HAS ATTRACTED MORE CLOTHING BOUTIQUES",
+                "concentration_description": "The expansion of online shopping has facilitated smaller clothing boutiques' entry into the market, enabling them to expand their potential customer base."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "OTHER COMPANIES",
+                "company_percentage": 100
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 8
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 12
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 30
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 8
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 7
+        },
+        {
+            "cost_type": "Other Costs",
+            "cost_type_percentage": 5
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Rising Wages Have Placed Pressure on Profit",
+            "cost_factor_description": "Wages are high for clothing boutiques because the sales associates typically have a specialized knowledge of products and are required to provide a higher degree of customer service."
+        },
+        {
+            "cost_factor_title": "Disruptions in Global Supply Chain Boost Transportation Costs, Impact Boutique Purchases and Inventory",
+            "cost_factor_description": "The global supply chain has faced unprecedented disruptions because of various factors, such as port congestion, container shortages and geopolitical tensions."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LABOR EXPENSES",
+                "capital_intensity_description": "The Clothing Boutiques industry is largely labor-intensive."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "BOUTIQUES STRUGGLE AS FAST FASHION BRANDS RAPIDLY ADAPT TO CHANGING CONSUMER PREFERENCES",
+                "volatility_description": "Fast fashion brands churn out new styles at lightning speed, often making current trends obsolete within weeks."
+            },
+            {
+                "volatility_title": "Economic Downturns Lead to Decreased Discretionary Spending",
+                "volatility_description": "The economic downturn has prompted many to exercise greater caution with their finances."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "OMNICHANNEL AND AR TECHNOLOGY ELEVATE CONVENIENCE AND SATISFACTION IN BOUTIQUE RETAIL EXPERIENCES",
+                "technological_change_description": "Omnichannel retailing offers a seamless shopping experience across online, in-store and mobile platforms."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "What is the Association of Gift Boutique Retailers of America (AGBRA)?",
+            "answer": "The Association of Gift Boutique Retailers of America (AGBRA) supports clothing boutiques by providing industry networking opportunities and fostering connections among boutique owners."
+        },
+        {
+            "question": "What is the National Retail Federation (NRF)?",
+            "answer": "The National Retail Federation (NRF) is the world's largest retail trade association."
+        },
+        {
+            "question": "What is the American Apparel and Footwear Association (AAFA)?",
+            "answer": "The American Apparel and Footwear Association (AAFA) supports clothing boutiques by advocating for fair trade policies."
+        },
+        {
+            "question": "Do clothing boutiques specialize in one area or sell a diversified range?",
+            "answer": "Industry retailers generally sell a small array of heavily curated clothing at mid-to-high prices."
+        },
+        {
+            "question": "Are sales dependent on the health of the US economy?",
+            "answer": "The industry relies on a strong US economy since the clothing sold at industry establishments is generally sold at a high price point and considered discretionary."
+        },
+        {
+            "question": "Have rising input costs negatively impacted sales?",
+            "answer": "Input costs have been volatile, as the world price of cotton has increased while overall inflation has surged."
+        },
+        {
+            "question": "What steps are taken to retain talented employees?",
+            "answer": "The industry relies on talented sales professionals since clothing boutiques provide an intimate experience for the shopper."
+        },
+        {
+            "question": "Do companies use point-of-sale systems?",
+            "answer": "Many clothing boutiques now include point-of-sale systems to help streamline checkout and monitor inventory."
+        },
+        {
+            "question": "Have companies reduced wage costs through automation?",
+            "answer": "Wages have increased as a revenue share in recent years as companies have invested more in well-trained sales staff."
+        },
+        {
+            "question": "Have any regulatory expenses impacted profitability?",
+            "answer": "No new regulations, aside from state-by-state minimum wage changes, have long-term impacted this retail industry in recent years."
+        }
+    ]
+}

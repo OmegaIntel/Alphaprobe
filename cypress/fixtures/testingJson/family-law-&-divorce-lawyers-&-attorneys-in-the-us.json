@@ -1,0 +1,366 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "<UNKNOWN>",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 101,
+            "revenue_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "revenue_cagr_value": 101
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "revenue_cagr_value": 101
+            }
+        },
+        "profit": {
+            "profit_dollars": 101,
+            "profit_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "profit_cagr_value": 101
+            },
+            "profit_cagr_projected": {
+                "begin_year": 101,
+                "end_year": 101,
+                "profit_cagr_value": 101
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 101,
+            "profit_margins_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "profit_margins_cagr_value": 101
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 101,
+                "end_year": 101,
+                "profit_margins_cagr_value": 101
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 101,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "industry_value_added_cagr_value": 101
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 101,
+                "end_year": 101,
+                "industry_value_added_cagr_value": 101
+            }
+        },
+        "employees": {
+            "employees_count": 101,
+            "employees_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "employees_cagr_value": 101
+            },
+            "employees_cagr_projected": {
+                "begin_year": 101,
+                "end_year": 101,
+                "employees_cagr_value": 101
+            }
+        },
+        "wages": {
+            "wages_dollars": 101,
+            "wages_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "wages_cagr_value": 101
+            },
+            "wages_cagr_projected": {
+                "begin_year": 101,
+                "end_year": 101,
+                "wages_cagr_value": 101
+            }
+        },
+        "imports": {
+            "imports_dollars": 101,
+            "imports_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "imports_cagr_value": 101
+            },
+            "imports_cagr_projected": {
+                "begin_year": 101,
+                "end_year": 101,
+                "imports_cagr_value": 101
+            }
+        },
+        "exports": {
+            "exports_dollars": 101,
+            "exports_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "exports_cagr_value": 101
+            },
+            "exports_cagr_projected": {
+                "begin_year": 101,
+                "end_year": 101,
+                "exports_cagr_value": 101
+            }
+        }
+    },
+    "executive_summary": "<UNKNOWN>",
+    "current_performance": [
+        {
+            "current_performance_point_title": "<UNKNOWN>",
+            "current_performance_point_description": "<UNKNOWN>"
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "<UNKNOWN>",
+            "future_outlook_point_description": "<UNKNOWN>"
+        }
+    ],
+    "industry_definition": "<UNKNOWN>",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Volatility",
+            "Low Imports",
+            "High Profit vs. Sector Average"
+        ],
+        "negative_impact_factors": [
+            "Low & Steady Barriers to Entry",
+            "Low & Steady Level of Assistance",
+            "High Capital Requirements"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Volatility",
+            "Low Imports",
+            "High Profit vs. Sector Average"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry",
+            "Low & Steady Level of Assistance",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers",
+            "Per capita disposable income"
+        ],
+        "threats": [
+            "Low Revenue Growth (2018-2023)",
+            "Divorce rate",
+            "Supply Chain"
+        ]
+    },
+    "key_trends": [],
+    "market_segmentation": [],
+    "products_and_services": [],
+    "supply_chain": {
+        "tier_1_suppliers": [],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Per capita disposable income",
+            "determinant_description": "Per capita disposable income is a demand determinant"
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Unknown",
+        "export_level": "Unknown",
+        "export_trend": "Unknown",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Legal Services in Australia",
+            "location_description": "Competitive landscape for Legal Services in Australia",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Attorneys in China",
+            "location_description": "Competitive landscape for Attorneys in China",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Legal Activities in the UK",
+            "location_description": "Competitive landscape for Legal Activities in the UK",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Law Firms in Canada",
+            "location_description": "Competitive landscape for Law Firms in Canada",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Legal Services in New Zealand",
+            "location_description": "Competitive landscape for Legal Services in New Zealand",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Legal Activities in Ireland",
+            "location_description": "Competitive landscape for Legal Activities in Ireland",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "Legal qualifications required",
+                "regulation_description": "However, due to the qualifications a lawyer must receive to be able to practice, legal services cannot be replicated by an individual or business"
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Unknown",
+        "barriers_trend": "Unknown",
+        "barriers_points": [],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": []
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Firms specialize in family and divorce law",
+                "basis_description": "Firms specialize in family and divorce law, which includes divorce, child support, child custody and other matters pertaining to family life"
+            },
+            {
+                "basis_title": "Competition from online legal advice sources",
+                "basis_description": "Industry firms compete with online sources that give legal advice to individuals who choose to represent themselves"
+            },
+            {
+                "basis_title": "Legal qualifications required",
+                "basis_description": "However, due to the qualifications a lawyer must receive to be able to practice, legal services cannot be replicated by an individual or business"
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "No major players",
+                "concentration_description": "There are no major players in this industry."
+            }
+        ],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Unknown Cost Type 1",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Unknown Cost Type 2",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Competition from online sources",
+            "cost_factor_description": "Industry firms compete with online sources that give legal advice to individuals who choose to represent themselves"
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Unknown",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Unknown",
+        "volatility_points": [],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Unknown",
+        "technological_change_points": [],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company offer a broad range of services or specialize in a particular niche?",
+            "answer": "Firms specialize in family and divorce law, which includes divorce, child support, child custody and other matters pertaining to family life."
+        },
+        {
+            "question": "Does your company face significant competition from substitute goods or services?",
+            "answer": "Industry firms compete with online sources that give legal advice to individuals who choose to represent themselves. However, due to the qualifications a lawyer must receive to be able to practice, legal services cannot be replicated by an individual or business."
+        },
+        {
+            "question": "What is your company's most significant operational expense?",
+            "answer": "Due to the labor-intensive nature of the industry, the most significant expense for the majority of firms is wages. Additionally, the workers in this industry are highly skilled and therefore are paid based on their skill levels and to compensate for the high cost of law school."
+        },
+        {
+            "question": "To what degree are your operations capital intensive?",
+            "answer": "Operators spend little on capital investments compared to what they spend on labor. However, capital investments include office space, computers and other necessary office items."
+        },
+        {
+            "question": "Have you been able to minimize/reduce wage costs through automation?",
+            "answer": "Due the nature of the industry, operators have been unable to cut costs through automation because they are typically paid for face to face time with clients throughout the entire legal process."
+        },
+        {
+            "question": "Has investment in new technologies increased your company's competitiveness?",
+            "answer": "Many firms have updated computer networks that digitally information. Documents can now be easily retrieved and stored digitally, improving productivity and the transfer of documents."
+        },
+        {
+            "question": "What are the toughest regulatory requirements that your company experiences?",
+            "answer": "Firms are regulated by the American Bar Association (ABA) and state regulations that cover professional conduct. Lawyers must comply to the ABA's code of ethical standards for lawyers."
+        },
+        {
+            "question": "Does your company benefit (either directly or indirectly) from any government legislation?",
+            "answer": "Firms in this industry benefit from most of the legislation dealing with any familial matter. For example, firms benefited from an influx of new clients in June of 2015 when the Supreme Court rule that all states must legalize same-sex marriage."
+        },
+        {
+            "question": "How has your company's profitability trended over the past five years?",
+            "answer": "Firm's typically have large profit margins because they are able to charge high premiums due to the high value-added of their work."
+        },
+        {
+            "question": "Is your company looking to significantly expand its operations sometime in the near future?",
+            "answer": "The majority of firms within the industry are small and operate on a local or regional basis. As a result, it is difficult for companies to expand their reach past a localized area due to the intense competition within the industry."
+        },
+        {
+            "question": "What is the training process for new hires like? How much prior experience is necessary for employees at your firm?",
+            "answer": "Work in this industry is highly specialized. Lawyers experienced in their field are more likely to be familiar with previous court rulings and the intricacies involved in their area of practice."
+        },
+        {
+            "question": "Do you have a strong reputation among customers? Are you known for your reliability and performance?",
+            "answer": "An excellent reputation equates to the soaring prices commanded by high-profile firms. Likewise, strong word-of-mouth recommendations provide business to lawyers in private practices."
+        },
+        {
+            "question": "What is your prior success rate with repair work? Do you rely more on word-of-mouth or marketing to expand your clientele?",
+            "answer": "Law firms often attract clients based on reputation. Firms with a high success rate will attract more clients and be able to charge more for services."
+        },
+        {
+            "question": "What percentage of your cases are divorce cases? When divorce rates are low, how do you make up for the lost revenue?",
+            "answer": "Individuals typically need to hire specialized divorce lawyers when experiencing a divorce."
+        },
+        {
+            "question": "How has rising unemployment affected your business in the past? How will falling unemployment benefit your company?",
+            "answer": "The national unemployment rate is a key factor that influences the national divorce rate and, thereby, demand for divorce lawyers."
+        },
+        {
+            "question": "Do you change your hourly rates based on the state of the economy? When disposable income is low, do you see a decrease in demand for your services?",
+            "answer": "As disposable income increases, people seeking a legal change of their marital status will be more inclined to hire a qualified and experienced divorce lawyer."
+        }
+    ]
+}

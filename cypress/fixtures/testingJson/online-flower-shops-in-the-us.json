@@ -1,0 +1,510 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 16289000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": 16.17
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 2.2
+            }
+        },
+        "profit": {
+            "profit_dollars": 1368000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 25.18
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 8.4,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 8.3
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1971000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 8311,
+            "employees_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 406000000,
+            "wages_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": 101,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": 101,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2023 currency.\n\nThe Online Flower Shops industry retails flowers online using local florists to fulfill orders. Over the past five years, the industry experienced steady revenue, aided by a growing e-commerce market which helped capture significant market share from brick-and-mortar florists as more consumers shop online. Additionally, a healthy economy supported growth as per capita disposable income and consumer spending increased, boosting demand for flowers.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Online Flower Shops industry revenue has been growing",
+            "current_performance_point_description": "The Online Flower Shops industry revenue has been growing at an annualized 14.5% over the past five years \u2013 including an estimated 4.7% surge in the current year \u2013 and is expected to total $16.3 billion in 2023, with profit margins set to reach 8.4%."
+        },
+        {
+            "current_performance_point_title": "Downstream demand is susceptible to income changes",
+            "current_performance_point_description": "The purchase of flowers, gift baskets and other products, is sensitive to disposable income level, consumer spending level and overall consumer confidence."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "The Online Flower Shops industry revenue is expected to grow",
+            "future_outlook_point_description": "The Online Flower Shops industry revenue is expected to grow at an annualized 2.2% to $18.2 billion over the five years to 2028, when profit margins are estimated to climb to 7.9%."
+        },
+        {
+            "future_outlook_point_title": "Rising Inflation is Detrimental to Industry Demand",
+            "future_outlook_point_description": "Although consumer spending will increase, consumers may still exercise caution while buying flowers due to uncertainty resulting from rising inflation. Consumers will search for discounted products and increasingly turn to the Internet to find deals on flowers and gifts."
+        },
+        {
+            "future_outlook_point_title": "The Internal and External Competition Will Remain High",
+            "future_outlook_point_description": "The consumer market for flowers and gifts is highly competitive since consumers can buy these products from many sources, like traditional local retail florists and mass merchants."
+        },
+        {
+            "future_outlook_point_title": "The External Competition Will Stem From Amazon's Online Flower Market",
+            "future_outlook_point_description": "Although the company currently has limited floral arrangements and delivery options, shipping is free. Amazon's business model encourages consumers to buy floral arrangements on impulse with other purchases in different product lines."
+        },
+        {
+            "future_outlook_point_title": "As Per Capita Disposable Income Increases, Demand for Flowers Will Increase Accordingly",
+            "future_outlook_point_description": "Rising demand will encourage all flower retailers to expand into e-commerce to increase their consumer pool, effectively entering them into the industry."
+        }
+    ],
+    "industry_definition": "This industry retails flowers online, with industry operators receiving orders and payments through respective websites and then using either a network of local florists or growers to fulfill and deliver the order. This industry primarily includes revenue from fresh-cut flowers, floral arrangements and potted plants; internet florist network membership dues; and gift baskets sold online. Revenue from in-person orders is excluded from this report.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level high",
+            "Capital Intensity Level high",
+            "Industry Assistance Level low - steady",
+            "Barriers To Entry Level low - steady",
+            "Competition Level high - steady",
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "High Capital Requirements"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry"
+        ],
+        "opportunities": [
+            "Very High Revenue Growth (2005-2023)",
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers - Consumer spending"
+        ],
+        "threats": [
+            "Low Outlier Growth",
+            "Demand from florists"
+        ]
+    },
+    "key_trends": [
+        "The industry has benefited from increases in the number of services conducted online",
+        "The industry is highly competitive",
+        "The industry has been able to quickly adapt to changing opportunities",
+        "External competition will stem from Amazon adding flowers to its product portfolio",
+        "Both internal and external competition will remain high for the industry",
+        "As per capita disposable income increases, demand for flowers will likely increase also",
+        "Over the past five years, an increase in the number of industry operators has increased internal competition"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Consumers under age 29",
+            "segment_description": "As a technologically savvy generation, this consumer segment is prone to turning to the Internet for shopping needs, which increases the segment's share of industry demand.",
+            "segment_percentage": 28.2
+        },
+        {
+            "segment": "Consumers aged 30-49",
+            "segment_description": "Consumers in this age demographic typically have stable jobs with a consistent source of income, which increases the propensity to buy discretionary products such as flowers.",
+            "segment_percentage": 40.0
+        },
+        {
+            "segment": "Consumers aged 50-64",
+            "segment_description": "Consumers in this age range tend to be more emotionally connected to flowers and generally buy flowers as a traditional holiday or special occasion gift.",
+            "segment_percentage": 31.8
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "ARRANGED CUT FLOWERS",
+            "product_description": "Bouquets made from various flowers, such as roses, lilies, orchids, tulips and daisies.",
+            "product_percentage": 22.9
+        },
+        {
+            "product_or_service": "UNARRANGED CUT FLOWERS",
+            "product_description": "Unarranged cut flowers are typically purchased for self-arrangement at homes.",
+            "product_percentage": 18.3
+        },
+        {
+            "product_or_service": "POTTED PLANTS",
+            "product_description": "Online flower shops provide potted plants, which include orchids, gardenias and bonsai trees.",
+            "product_percentage": 36.4
+        },
+        {
+            "product_or_service": "Gift Baskets and Other",
+            "product_description": "Gift baskets may include candy, chocolates, popcorn, stuffed animals, fruits and other food.",
+            "product_percentage": 15.4
+        },
+        {
+            "product_or_service": "Floral Network Services",
+            "product_description": "The larger online flower shops provide services that facilitate the order exchange and fulfillment between local florists and third-party sales agents.",
+            "product_percentage": 7.0
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Plant & Flower Growing in the US",
+            "E-Commerce & Online Auctions in the US",
+            "Confectionery Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Floral Network Services"
+        ],
+        "tier_1_buyers": [
+            "Consumers in the US"
+        ],
+        "tier_2_buyers": [
+            "Florists in the US",
+            "Flower & Nursery Stock Wholesaling in the US",
+            "Nursery & Garden Stores in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Disposable Income",
+            "determinant_description": "Demand for Online Flower Shops industry products is tied closely to disposable income."
+        },
+        {
+            "determinant_title": "Internet Usage",
+            "determinant_description": "The industry is affected by the number of individuals with internet connections."
+        },
+        {
+            "determinant_title": "Flower Prices",
+            "determinant_description": "Fluctuations in flower prices are a significant demand determinant."
+        },
+        {
+            "determinant_title": "Demand Shift to Supermarkets",
+            "determinant_description": "Demand for flowers has swung to supermarkets for lower prices."
+        },
+        {
+            "determinant_title": "Special Occasions and Seasonality",
+            "determinant_description": "Demand for flowers is largely seasonal."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports",
+                "trade_description": "low and steady"
+            },
+            {
+                "trade_title": "Exports",
+                "trade_description": "low and steady"
+            },
+            {
+                "trade_title": "No International Trade",
+                "trade_description": "The Online Flower Shops industry does not participate in international trade."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region has the highest proportion of any region.",
+            "percentage_establishments": 22.8,
+            "percentage_population": 25.8
+        },
+        {
+            "location": "West",
+            "location_description": "THE WEST IS THE SECOND-LARGEST REGION BY ESTABLISHMENTS.",
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "THE MID-ATLANTIC AND THE GREAT LAKES ARE THE THIRD- AND FOURTH-POPULAR DESTINATIONS FOR ONLINE FLOWER SHOPS.",
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "THE MID-ATLANTIC AND THE GREAT LAKES ARE THE THIRD- AND FOURTH-POPULAR DESTINATIONS FOR ONLINE FLOWER SHOPS.",
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Light",
+        "regulations_points": [
+            {
+                "regulation_title": "Tax Laws",
+                "regulation_description": "Currently, businesses are only required to collect sales tax if they have a physical presence."
+            },
+            {
+                "regulation_title": "State Laws",
+                "regulation_description": "Floral retail regulations are enacted on the state level."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Revenue volatility level",
+                "barrier_description": "Revenue volatility level is high."
+            },
+            {
+                "barrier_title": "Capital intensity level",
+                "barrier_description": "Capital intensity level is high."
+            },
+            {
+                "barrier_title": "Industry assistance level",
+                "barrier_description": "Industry assistance level is low and steady."
+            },
+            {
+                "barrier_title": "Competition level",
+                "barrier_description": "Competition level is high and steady."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Life cycle stage is growth",
+            "Concentration level is low",
+            "Regulation level is light and steady",
+            "Globalization level is low but increasing"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Internal competition",
+                "basis_description": "Online flower shops compete based on location, price, quality, website quality, customer service and products."
+            },
+            {
+                "basis_title": "External competition",
+                "basis_description": "Online flower shops compete with brick-and-mortar retailers."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Low concentration",
+                "concentration_description": "The industry has a low level of market share concentration."
+            },
+            {
+                "concentration_title": "Concentration rising",
+                "concentration_description": "The industry's two largest companies have made acquisitions."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "1 800 FLOWERS COM INC.",
+                "company_percentage": 10.9
+            },
+            {
+                "company_name": "FTD Companies, Inc.",
+                "company_percentage": 3.1
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 30
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 25
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 3
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 2
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Industry Profit is Higher than the Retail Sector's Due to Online Stores' Lower Costs",
+            "cost_factor_description": "Companies pay less for rent and utilities."
+        },
+        {
+            "cost_factor_title": "Profit Trend",
+            "cost_factor_description": "The profit percentage has been steadily increasing over the years."
+        },
+        {
+            "cost_factor_title": "Wages",
+            "cost_factor_description": "Wages make up a small share of industry revenue."
+        },
+        {
+            "cost_factor_title": "Purchases",
+            "cost_factor_description": "Purchase expenses' revenue share has declined due to the removal of tariffs."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_trend": "Increasing",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "High capital intensity",
+                "capital_intensity_description": "The Online Flower Shops industry has a high level of capital intensity."
+            }
+        ]
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "High revenue volatility",
+                "volatility_description": "Revenue volatility depends on consumer trends."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Medium",
+        "technological_change_trend": "Increasing",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Technological Disruption",
+                "technological_change_description": "Operators have benefited from computer-literate generations."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "Does your company specialize in one corner of the market or do you retail a diversified range of products?",
+            "answer": "Industry operators specialize in selling flowers."
+        },
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "Flowers are considered discretionary goods."
+        },
+        {
+            "question": "What steps do you take to retain talented employees with specialized knowledge?",
+            "answer": "Some industry operators focus on hiring well-trained florists."
+        },
+        {
+            "question": "Has your company explored acquisition opportunities in order to expand reach and reduce overhead expenses?",
+            "answer": "Some of the industry's largest players have invested heavily in acquisitions."
+        },
+        {
+            "question": "How does your company utilize new technology, such as RFID tags, etc., in its operations?",
+            "answer": "Industry operators must keep pace with new technology updates."
+        }
+    ]
+}

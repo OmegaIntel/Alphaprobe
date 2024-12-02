@@ -1,0 +1,577 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 147574000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": -1.75
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 2.25
+            }
+        },
+        "profit": {
+            "profit_dollars": 9592000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": -1.75
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 2.25
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 6.5,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 0.0
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 2.25
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 27089000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": -1.75
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 2.25
+            }
+        },
+        "employees": {
+            "employees_count": 643494,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 1.5
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 1.5
+            }
+        },
+        "wages": {
+            "wages_dollars": 16904000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 1.5
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 1.5
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "Home builders construct single-family homes while also remodeling houses and other residential buildings. Perennially low housing stock has driven new housing development throughout the current period. Still, in 2022, the Federal Reserve began raising interest rates and has only continued to raise or maintain rates since. Rising from historic lows, these rate hikes have sent housing starts into a steady decline.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Pandemic Accelerated Housing Development",
+            "current_performance_point_description": "Construction was considered an essential business, leading to continued homebuilding during the COVID-19 pandemic. Homebuilders received a large chunk of the Paycheck Protection Program (PPP) to cover payroll expenses. They had to ensure their employees were working in a safe environment to prevent the additional spread of the virus. Historically low interest rates and a low housing stock led to an influx of private investors starting new housing projects."
+        },
+        {
+            "current_performance_point_title": "Interest Rate Hikes Have Put the Breaks on Growth",
+            "current_performance_point_description": "Beginning in 2022, the Federal Reserve has increased interest rates to combat inflationary conditions, directly heightening the cost of borrowing. Higher interest rates led to a drop in new housing projects. High interest rates have cooled the housing market, with home price inflation having cooled since 2022."
+        },
+        {
+            "current_performance_point_title": "Material Prices Have Been Volatile",
+            "current_performance_point_description": "While homebuilders have seen an overall increase in revenue over the current period, a portion of these gains have stemmed from dramatic inflation in construction materials prices being passed along to consumers in the form of higher home prices. The cost of materials skyrocketed following the pandemic as supply chain issues posed a threat. The price of steel, in particular, nearly doubled."
+        },
+        {
+            "current_performance_point_title": "Government Funding and Projects Aid Homebuilders",
+            "current_performance_point_description": "The US Department of Housing (HUD) offers special homebuying programs for qualifying consumers. Many states also have their own homebuying programs. First-time homebuyers are eligible for particular loans and discounts through a state program or the Federal Housing Administration (FHA). Many cities have affordable housing programs where they build new homes to house low-income consumers."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "The Housing Market Will Likely Heat Up Over the Coming Years",
+            "future_outlook_point_description": "With inflation showing signs of slowing, the Federal Reserve is expected to begin cutting interest rates in 2024. Over the coming years, rates will likely be gradually lowered. Falling rates could drive down mortgage rates, encouraging home buying. Housing starts are set to grow as housing supply across the country remains low."
+        },
+        {
+            "future_outlook_point_title": "Renting Continues to Deter a Large Pool of Potential Homebuyers",
+            "future_outlook_point_description": "Renting is still the most significant competitor for homebuilders. While rent prices continue to swell, most consumers opt to rent a smaller place or get roommates to reduce expenses instead of buying a home. Many younger consumers are opting to rent with roommates to reduce expenses instead of buying a home."
+        },
+        {
+            "future_outlook_point_title": "Government Assistance Will Likely Remain in Place",
+            "future_outlook_point_description": "Homebuying programs will remain, encouraging consumers to buy homes despite uncertain economic conditions. More affordable housing projects will provide a source of relief for homebuilders. Senior and disabled housing projects will also provide additional revenue. To promote homeownership, more homeowner tax credits are in the works, which may lead to more construction."
+        },
+        {
+            "future_outlook_point_title": "The Goal for Many Consumers is to Own a Home",
+            "future_outlook_point_description": "Currently elevated interest rates and fulfilled housing demand are just some of the roadblocks that home builders face occasionally. While these may deter the need to buy a home, it's usually temporary, as many consumers' goals are to be homeowners. An appreciation of home values over time makes purchasing a home much more attractive in the long run."
+        }
+    ],
+    "industry_definition": "Industry operators primarily construct single-family homes, in which units are separated by ground-to-roof walls with no other units above or below. The industry also encompasses the remodeling of houses and other residential buildings. Industry operators include general contractors, design-build companies and single-family construction management companies acting as general contractors and builders.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - decreasing"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature"
+        ],
+        "negative_impact_factors": [
+            "Barriers To Entry Level: low - steady",
+            "Competition Level: high"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry",
+            "High Competition",
+            "High Customer Class Concentration",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers",
+            "Number of households"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Housing starts"
+        ]
+    },
+    "key_trends": [
+        "Quality of work differentiates homebuilders from one another.",
+        "Having a portfolio of completed projects and word-of-mouth recommendations can help establish a brand.",
+        "Renting remains the biggest competitor to homebuilders. In tough economic times, renting is a more financially viable choice for many consumers.",
+        "Interest rates are crucial for the housing market's pulse. Higher interest rates have slowed new housing projects, but as rates are expected to begin to drop in 2024, we could see a resurgence in home buying and building.",
+        "Material costs have been a wild ride for builders. Prices had soared due to supply chain issues, but things are calming down now, making it easier for homebuilders to plan and profit.",
+        "NVR is one of America's leading homebuilders. The company operates across the country building single and multi-family homes. NVR is also vertically integrated with a mortgage business.",
+        "The home builders industry has very few large companies. Many home builders operate on a local basis, limiting industry concentration.",
+        "Affordable housing programs lead to new projects for homebuilders. These programs mostly take place in highly populated cities.",
+        "Homebuilders are required to follow a building code to ensure safety when constructing homes. The international building code is updated every three years.",
+        "Hiring subcontractors helps homebuilders reduce wage costs. Subcontractors aren't given the same benefits as full-time employees, lowering expenses for home builders.",
+        "Large-scale homebuilders benefit from the economics of scale - leading to a flurry of acquisitions - Buying materials in bulk reduces purchase costs",
+        "Areas with large populations - Have more projects for home builders - Competition is heightened in these areas - Clients typically rely on builders with strong reputations",
+        "The Southeast is a hotspot for homebuilders - More than a quarter of US homebuilders - Growing population - Demand for housing in Florida, North Carolina and Virginia is set to rise",
+        "Durable materials have become more popular - Provide homeowners with additional protection - May be more expensive - Can reduce maintenance costs in the long run",
+        "Consumers are wary of vinyl siding - Due to its environmental impact - PVC production process and toxic fume emissions during fires are major concerns - Less attractive despite its cost-effectiveness"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Property developers for private Households",
+            "segment_description": "Property developers represent private sector clients (buyers and investors) and commission contractors to build properties that are then sold to consumers. Private sector clients make up more than three-quarters of revenue.",
+            "segment_percentage": 16.6
+        },
+        {
+            "segment": "Federally funded projects",
+            "segment_description": "",
+            "segment_percentage": 0.5
+        },
+        {
+            "segment": "State or locally funded projects",
+            "segment_description": "State, local and federally funded government housing projects make up only a handful of the total market. Housing projects can range from public housing to housing for defense personnel and other municipalities that require homes. The uptick in affordable housing programs in major cities has helped this market expand.",
+            "segment_percentage": 1.1
+        },
+        {
+            "segment": "Households",
+            "segment_description": "Households directly commission homebuilders to construct homes on plots of land or on preexisting properties that require rebuilding. Strengthening disposable income has encouraged more households to enter contracts for projects. Household capital levels are far below those of private sector clients, so the benefits they reaped from low interest rates were few compared with those reaped by private investors.",
+            "segment_percentage": 101
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Brick Exterior Homes",
+            "product_description": "Brick exterior homes use brick and concrete. Brick homes are durable, low-maintenance and less taxing on the environment. Homes are more soundproof, perfect for homeowners who relish leisure time. These structures are also fire and weather-resistant. Although brick exterior homes offer advantages, their production can incur high costs, as can repairs and painting for these structures.",
+            "product_percentage": 18.5
+        },
+        {
+            "product_or_service": "Wood Exterior Homes",
+            "product_description": "Wood exterior homes use timber to lay the foundation and structural frame. Wood exterior homes are low maintenance, durable and environmentally friendly. The cost of wood has led to customers moving to other materials. The installation process is rapid but prone to damage and homeowners can incur additional costs from time to time.",
+            "product_percentage": 4.4
+        },
+        {
+            "product_or_service": "Stucco Exterior Homes",
+            "product_description": "Stucco exterior homes are made using various components like plaster, lime, sand and water. Stucco used on exteriors contains cement to improve durability during harsh weather conditions. It also requires little maintenance. The lower price point and absence of health and environmental concerns have led to an uptick in production. While stucco materials are less expensive, they require professionals to apply and finish.",
+            "product_percentage": 27.3
+        },
+        {
+            "product_or_service": "Vinyl Siding Exterior Homes",
+            "product_description": "Vinyl siding is a plastic exterior siding that is used for both exterior home decorations and weatherproofing. Plastic is less expensive than brick and wood, making vinyl siding an attractive and cost-effective option. Swelling environmental concerns have deterred consumers from purchasing vinyl siding because of the PVC production process and the chemicals released during manufacturing. Vinyl sliding homes also emit high levels of toxic fumes, making them riskier in the event of a fire.",
+            "product_percentage": 24.5
+        },
+        {
+            "product_or_service": "Fiber Cement Exterior Homes",
+            "product_description": "Homes with fiber cement siding use cement reinforced with cellulose fibers. This material makes homes more durable and resilient against termites and rotting. Fiber cement is also weather-resistant and fire-proof. Fiber cement exteriors pose some problems like being susceptible to mold, heavyweight and environmental impact. While it isn't toxic, it is not recyclable and can cause excessive landfill.",
+            "product_percentage": 23.5
+        },
+        {
+            "product_or_service": "Other Exterior Homes",
+            "product_description": "Other exterior materials include stone, concrete and aluminum. These materials make up a small share of industry projects. Stone is expensive to transport and difficult to use in construction. General concrete is similarly priced to stucco, which is more popular. Aluminum siding is primarily used in homes on the coast or in weathered areas to protect them from natural damage.",
+            "product_percentage": 1.8
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Construction & Mining Equipment Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Ready-Mix Concrete Manufacturing in the US",
+            "Cement Manufacturing in the US",
+            "Clay Brick & Product Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Lumber Wholesaling in the US",
+            "Roofing, Siding & Insulation Wholesaling in the US",
+            "Finance and Insurance in the US",
+            "Educational Services in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Home building depends on investment activity",
+            "determinant_description": "Home building depends on investment activity associated with single-family residential developments, with most capital coming from private enterprises and individual investors. Revenue grows alongside boosts in private investment, often influenced by economic cycles and changes in individual wealth."
+        },
+        {
+            "determinant_title": "Growth in residential construction represents opportunity",
+            "determinant_description": "Growth in residential construction represents a potential opportunity for home builders."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region hosts more than a quarter of the US population. Florida, North Carolina and Virginia are central states where homebuilders operate. The Southeastern US has a growing population, which will drive demand for homes in the coming years.",
+            "percentage_establishments": 30.2,
+            "percentage_population": 19.1
+        },
+        {
+            "location": "West",
+            "location_description": "The West contains almost a quarter of US homebuilders. While not as dense in population, the West is home to many workers, specifically in the technology sector. More people move to the West every year, leading to a boost in new housing construction.",
+            "percentage_establishments": 22.4,
+            "percentage_population": 23.5
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic is home to highly populated cities like New York City and Philadelphia. Large cities have housing programs to construct single and multifamily homes for low-income residents or people with disabilities.",
+            "percentage_establishments": 14.5,
+            "percentage_population": 15.2
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "",
+            "percentage_establishments": 11.2,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "",
+            "percentage_establishments": 9.1,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "",
+            "percentage_establishments": 5.5,
+            "percentage_population": 3.8
+        },
+        {
+            "location": "Plains",
+            "location_description": "",
+            "percentage_establishments": 4.6,
+            "percentage_population": 6.8
+        },
+        {
+            "location": "New England",
+            "location_description": "",
+            "percentage_establishments": 2.5,
+            "percentage_population": 5.1
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Increasing",
+        "regulations_points": [
+            {
+                "regulation_title": "Building Codes",
+                "regulation_description": "Homebuilders comply with building codes endorsed by the International Code Council. The building code is published every three years. The code covers many topics (electric systems, materials, fire protection, structural systems and much more)."
+            },
+            {
+                "regulation_title": "Health and Safety Regulations",
+                "regulation_description": "The Federal Occupational Safety and Health Administration (OSHA) requires protective clothing and helmets to be worn on-site. Safe conditions must be provided for workers (think scaffolding and ventilation)."
+            },
+            {
+                "regulation_title": "Fair Housing Guidelines",
+                "regulation_description": "The Department of Housing and Development endorsed a new building code to ensure that new housing developments are accessible to people with disabilities."
+            },
+            {
+                "regulation_title": "ZONING LAWS",
+                "regulation_description": "Zoning laws control land use and dictate where homes can be built. These regulations ensure the organized development of communities by separating residential, commercial and industrial areas."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The homebuilding industry is mature."
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "The competition level is high and increasing."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "The capital intensity level is low.",
+            "The concentration level is low.",
+            "The globalization level is low and decreasing."
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Quality of work",
+                "basis_description": "Quality of work differentiates homebuilders from one another."
+            },
+            {
+                "basis_title": "Reputation",
+                "basis_description": "Having a portfolio of completed projects and word-of-mouth recommendations can help establish a brand."
+            },
+            {
+                "basis_title": "Competition from renting",
+                "basis_description": "Renting remains the biggest competitor to homebuilders, especially in tough economic times when renting is more financially viable for many consumers."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Abundance of small homebuilders",
+                "concentration_description": "Homebuilding establishments are highly fragmented as most homebuilders are small-scale and serve narrow and localized markets."
+            },
+            {
+                "concentration_title": "New entrants due to low housing stock",
+                "concentration_description": "Low housing stock led to new, smaller entrants joining the industry."
+            },
+            {
+                "concentration_title": "Niche specialization",
+                "concentration_description": "Many homebuilders specialize in specific projects and serve niche markets, giving new entrants various options."
+            },
+            {
+                "concentration_title": "Few large national players",
+                "concentration_description": "Several companies provide design and development services at a regional or national level by operating in multiple regions and hiring subcontractors."
+            },
+            {
+                "concentration_title": "Acquisition activity",
+                "concentration_description": "Large-scale homebuilders have engaged in acquisition activity to expand their customer base and workforce."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "NVR, INC.",
+                "company_percentage": 6.5
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 55
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 2
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 3
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 1
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 1
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 13
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "WORKERS ARE THE BACKBONE OF CONSTRUCTION",
+            "cost_factor_description": "Wages are the second-largest expense for homebuilders since it is a labor-intensive industry. Wages have been outpaced by revenue growth, causing wages to fall as a share of revenue."
+        },
+        {
+            "cost_factor_title": "Homebuilders hire third-party subcontractors to reduce wage costs",
+            "cost_factor_description": "Subcontractors are paid on a per-project basis and are ineligible for the same benefits that full-time employees receive. Many new entrants start as subcontractors to gain a reputation before entering the industry."
+        },
+        {
+            "cost_factor_title": "M A T E R I A L S  A R E  E X P E N S I V E",
+            "cost_factor_description": "Purchase costs are the highest expenses for homebuilders and includes materials, equipment and supplies as well as the cost of subcontracted labor payments."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_trend": "Unknown",
+        "capital_intensity_points": []
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_trend": "Unknown",
+        "volatility_points": [
+            {
+                "volatility_title": "Mortgage rates influence the housing market",
+                "volatility_description": "Mortgage rates sank drastically in 2020 amid the pandemic, leading to more housing development. Developers were able to finance projects because of near-zero interest rates."
+            },
+            {
+                "volatility_title": "Housing Stock Dictates the Level of Construction",
+                "volatility_description": "Low housing stock through most of the current period led to boosted housing starts. With an uptick in construction fulfilling the need for housing, housing starts slumping in the latter half of the period."
+            }
+        ]
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_trend": "Increasing",
+        "technological_change_points": [
+            {
+                "technological_change_title": "There's been a substantial shift to sustainability",
+                "technological_change_description": "Home builders are applying more sustainable materials to qualify for a Leadership in Energy and Environmental Design (LEED) stamp and showcase their commitment to being environmentally friendly."
+            },
+            {
+                "technological_change_title": "More durable materials are swelling in popularity",
+                "technological_change_description": "Newer homes are typically built with more durable materials to ensure safety. Materials like brick, fiber cement and stucco have expanded in popularity because of their weather-resistant properties."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "How does your company fare with the rise in residential construction activity?",
+            "answer": "Industry operators primarily construct single-family homes. Accordingly, the industry works exclusively within the residential construction market."
+        },
+        {
+            "question": "Does your company make use of subcontractors to save on wage costs?",
+            "answer": "Industry operators hire subcontractors to reduce full-time wage payments."
+        },
+        {
+            "question": "Does your company typically rent or own equipment for projects?",
+            "answer": "Industry companies typically lease any large-scale equipment required for projects on an as-needed basis, reducing overhead and depreciation costs."
+        },
+        {
+            "question": "Investment in new technology is usually fairly low among builders and contractors. How much does your company invest in new equipment annually?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "Has your company considered using Internet-based product marketing and other production methods that limit on-site construction work?",
+            "answer": "Homebuilders are increasingly using Internet-based product marketing to display standard home designs and enable prospective buyers to view interactive customized designs prior to beginning construction."
+        },
+        {
+            "question": "Has complying with new energy-efficiency rules in various building codes driven up costs? How has your company offset these increases?",
+            "answer": "Industry operators are subject to energy-efficiency standards dictated by the International Code Council, adding to the cost of operating in the industry. New energy-efficiency rules will likely climb, given greater concern for the environment via the new Presidential administration."
+        },
+        {
+            "question": "How does your company ensure all health and safety requirements are met on and off the construction site?",
+            "answer": "Health and safety regulations, administered by the Occupational Safety and Health Administration, require that protective clothing and helmets be worn on site and that safe conditions are provided for industry workers."
+        },
+        {
+            "question": "How do your company's profit margins compare with your competitors'?",
+            "answer": "Profit has remained stable in recent years."
+        },
+        {
+            "question": "How does your company adapt to the volatile prices of key inputs?",
+            "answer": "The volatile cost of key input materials, such as sawmill lumber and plastic resin, hinder industry profitability. Companies can pass higher input costs onto consumers to maintain profit."
+        },
+        {
+            "question": "How does your company deal with rising costs?",
+            "answer": "Operators need to be able to read the building cycle turning points and position operations accordingly to deal with rising costs."
+        },
+        {
+            "question": "Do you have a strong reputation with clients? What is your prior success rate with repair work?",
+            "answer": "Having a high prior success rate (including completed prior contracts) gives companies an advantage."
+        },
+        {
+            "question": "How does your staff react to economic downturns? What kind of skills do you look for in a workforce?",
+            "answer": "It is essential to have access to a pool of reliable tradespeople and subcontractors. During times of economic downturns, having a flexible staff also boosts the chances of success."
+        },
+        {
+            "question": "How do you contend with lower interest rates? How closely do you track the 30-year conventional mortgage rate?",
+            "answer": "Mortgages finance most property purchases, which means that the cost of borrowing affects consumer likelihood to invest in new properties. Lower interest rates and credit standards expand the ability of individuals to purchase property."
+        },
+        {
+            "question": "How does the falling unemployment rate affect your operations?",
+            "answer": "When the unemployment level rises, homeownership dramatically falls because consumers cannot afford to make large investments. As a result, consumer spending goes down and typically affects the housing market."
+        },
+        {
+            "question": "How much of your business is residential-related?",
+            "answer": "Industry demand largely depends on investment activity associated with single-family residential developments, with the majority of capital coming from residential construction."
+        }
+    ]
+}

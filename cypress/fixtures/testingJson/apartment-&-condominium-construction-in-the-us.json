@@ -1,0 +1,546 @@
+{
+    "report_title": "Industry Report on Apartment and Condominium Construction",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 86734000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": 3.86
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 0.74
+            }
+        },
+        "profit": {
+            "profit_dollars": 5117000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 3.04
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5.9,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 11020000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 67654,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 5663000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "Companies in the Apartment and Condominium construction industry build new multifamily residential units, including apartment complexes, condominiums, townhouses and duplexes. Some companies offer construction management for projects. The drastic need for apartments has led to an expansion in construction through 2023. Overall, revenue is set to expand at an annualized rate of 5.6% to $86.7 billion over the five years to 2023. This includes a 3.0% drop in 2023 as inflation slows construction activity.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Pandemic Accelerates Housing Development",
+            "current_performance_point_description": "Construction remained essential amid the pandemic, leading to more projects. Companies that followed health and safety regulations could continue operations, facing only minor setbacks. Apartment and condo builders received much of the Paycheck Protection Program (PPP) to help cover payroll expenses. Low interest rates led investors and private companies to start new housing construction since the cost of borrowing remained low. Private companies could buy up land for less than market value, as landowners were trying to raise money amid economic uncertainty. This gave companies more space to begin building apartments and condos. The price of materials and fuel also skyrocketed temporarily after the pandemic, allowing developers to implement surcharges to accommodate for circumstances."
+        },
+        {
+            "current_performance_point_title": "Inflationary Concerns Lead to a Slowdown",
+            "current_performance_point_description": "Interest rates swelled toward the end of the period to fight off inflationary concerns, directly increasing the cost of borrowing. Contractors have stated that economic uncertainty has led to a delay in construction. Lower fuel and material prices have caused contractors to adjust their rates after raising them after the pandemic. The need for housing is still apparent as investors continue to fund new projects. While the cost of borrowing has gone up, this has been slightly offset by lower costs paid to contractors."
+        },
+        {
+            "current_performance_point_title": "Renting is More Popular Than Ever",
+            "current_performance_point_description": "While construction has slowed down, apartments are needed more than ever, as many consumers cannot afford homes. Co-living apartments have seen an uptick in popularity, especially in major cities. These apartments have a luxury feel while providing a shared space for residents. With many graduates facing increasing debt, co-living remains a budget option. The pandemic paved the way for more remote working opportunities for consumers. Having more apartments and condos allows them more flexibility in their work environment. Renters also do not have to worry about maintenance costs since many landlords and property managers are responsible for issues in a unit or building."
+        },
+        {
+            "current_performance_point_title": "Government Housing Projects Assist Contractors",
+            "current_performance_point_description": "Many cities have affordable housing programs where they build multifamily buildings to house low-income consumers."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Inflationary Concerns Remain a Temporary Concern",
+            "future_outlook_point_description": "Inflation and economic uncertainty will temporarily remain an issue for contractors. Rising interest rates bolster the rate of borrowing, slowing down investment in construction projects. In late 2023, the number of projects fell drastically compared to earlier in the year, indicating a slowdown. Price competition for a smaller number of projects will constrain growth. The price of material costs is also set to fall, following spikes earlier in the period. Fuel costs will also drive down prices as oil and gas prices fall from historical highs. Multifamily home builders will have to adjust their rates for projects and lower surcharges."
+        },
+        {
+            "future_outlook_point_title": "Not Enough Housing is Available",
+            "future_outlook_point_description": "More than 4.0 million affordable units were lost between 2015 and 2020. The National Multifamily Housing Council suggests that the US needs to build 4.3 million new apartments by 2035 to address the ongoing housing shortage. While immigration was sluggish amid the pandemic, it is set to reverse moving forward, which increases the need for more apartments. Texas, California and Florida are the three states that require the bulk of these new apartments."
+        },
+        {
+            "future_outlook_point_title": "Renting Might Be the Way to Go",
+            "future_outlook_point_description": "While home prices are set to drop, they may still be expensive for many potential buyers. New college graduates with student debt are unlikely to get approved for a loan, making renting a viable alternative. Renting offers immense flexibility since leases generally last a year. Renters can even sublet their places for a short period of time instead of breaking a lease. Sharing an apartment with roommates to split costs has become popular among the younger demographic. An uptick in vacancies will deter potential renters from new buildings."
+        },
+        {
+            "future_outlook_point_title": "Government Tax Incentives Provide a Spark for Builders",
+            "future_outlook_point_description": "The Low-Income Housing Tax Credit offers developers a 10-year tax credit for taking on low-income housing projects. The New Energy Efficient Home Credit offers a tax credit of up to $3,200 for improvements from 2023 to 2032. Up to $1,200 can be claimed for energy property, home audits and efficiency improvements. The remaining $2,000 is deserved for qualified heat pumps, biomass stoves and boilers. Many states also have energy efficiency programs that offer tax credits for multi-family properties that meet certain energy requirements."
+        }
+    ],
+    "industry_definition": "This industry is composed of general contractors responsible for constructing new multifamily residential units, including high-rise apartments, townhouses, condominiums and medium-to-high density units (i.e. units not separated by a ground-to-roof wall). All of the complexes may be constructed for sale as condominiums or cooperatives, or used as rental apartments. This industry does not include speculative builders or contractors who build on their own account for sale.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low capital intensity level",
+            "low concentration level",
+            "low - increasing globalization level"
+        ],
+        "negative_impact_factors": [
+            "low - steady barriers to entry level",
+            "high - increasing competition level"
+        ],
+        "mixed_impact_factors": [
+            "mature life cycle stage"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Medium &amp; Increasing Level of Assistance",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "High Revenue per Employee",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low &amp; Steady Barriers to Entry",
+            "High Competition",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration"
+        ],
+        "opportunities": [
+            "Urban population",
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Rental vacancy rates"
+        ]
+    },
+    "key_trends": [
+        "A proven track record and a portfolio of completed work are essential to attracting clients. Clients are willing to pay a premium to ensure timely delivery.",
+        "Marketing techniques and quality-of-life amenities help attract prospective consumers.",
+        "Low interest rates were the catalyst for construction.",
+        "An increase in rental vacancies will deter apartment construction.",
+        "AECOM restructures through sales and divestitures of high-risk operations.",
+        "Lendlease focuses on digital technology with the launch of Lendlease Digital.",
+        "Affordable housing programs lead to new projects for homebuilders.",
+        "Newly constructed federal buildings must meet energy efficiency standards the US Department of Energy (DOE) set.",
+        "Purchase costs remain elevated because of the extensive use of subcontractors.",
+        "Price competition constrains profit growth as it is the primary form of contractor competition."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Individual investors",
+            "segment_description": "Individual investors include individual property investors, owner-operated constructions and large multifamily home developers. These investors directly sell or rent buildings to their customers. Rental properties offer advantages for investors seeking long-term growth and opportunities. With a constant need for housing, vacancies can be filled rather quickly, especially in premier destinations. Low-interest rates amid the pandemic have led to an uptick in individual investment in multifamily construction.",
+            "segment_percentage": 53.0
+        },
+        {
+            "segment": "LLPs, LPs, LLCs and general partnerships",
+            "segment_description": "Limited partnerships (LPs), limited liability partnerships (LLPs), limited liability companies (LLCs) and general partnerships are the second-largest market for contractors.",
+            "segment_percentage": 28.6
+        },
+        {
+            "segment": "Real estate ownership",
+            "segment_description": "Companies in this market receive several liability protections and structural and tax advantages, depending on the business. Clients file articles of organization with a business registrar to transfer the property to a business to gain these benefits.",
+            "segment_percentage": 10.6
+        },
+        {
+            "segment": "Nonprofit organizations and housing cooperatives",
+            "segment_description": "Most nonprofit organizations represent companies and individuals involved in the ownership or management of affordable multifamily housing units, typically those subject to federal regulation. This segment also accounts for housing cooperatives, which are municipal entities responsible for developing and maintaining affordable housing.",
+            "segment_percentage": 4.0
+        },
+        {
+            "segment": "Trustees for estate",
+            "segment_percentage": 3.8
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "General Contracting",
+            "product_description": "General Contracting is the Main Focus for Builders. General contractors and design builders work on constructing buildings owned by others. Companies enter contracts after quoting a price accepted by the property developer. These contracts require general contractors to oversee all aspects of the project (quantity surveying and material purchases, skilled labor and subcontractor recruitment).",
+            "product_percentage": 65.5
+        },
+        {
+            "product_or_service": "Construction Management (At-Risk)",
+            "product_description": "Construction management (at-risk and agency) (CMs) - Consists of the same elements as general contractors. - CMs do not engage in construction activity. They hire subcontractors to do the work. - At-risk CMs involve a commitment by the manager to deliver the project within a guaranteed maximum price (a fixed fee that includes the costs of the project and a fee to cover risk). If this amount is exceeded, the CM is responsible for additional costs. - Agency CMs entail a fee-based service where the construction manager acts as the agent for the property owner's interest. They offer guidance but do not commit to completing the project on time or within a specific budget.",
+            "product_percentage": 21.8
+        },
+        {
+            "product_or_service": "Construction Management (Agency or Fee)",
+            "product_description": "Construction management (at-risk and agency) (CMs) - Consists of the same elements as general contractors. - CMs do not engage in construction activity. They hire subcontractors to do the work. - At-risk CMs involve a commitment by the manager to deliver the project within a guaranteed maximum price (a fixed fee that includes the costs of the project and a fee to cover risk). If this amount is exceeded, the CM is responsible for additional costs. - Agency CMs entail a fee-based service where the construction manager acts as the agent for the property owner's interest. They offer guidance but do not commit to completing the project on time or within a specific budget.",
+            "product_percentage": 6.3
+        },
+        {
+            "product_or_service": "Other Construction Activities",
+            "product_description": "Other activities include subdivision, land development, heavy construction and civil engineering. - This segment has remained steady throughout the period, providing construction companies with a consistent flow of revenue. Revenue from other activities falls in line with the overall industry and economy.",
+            "product_percentage": 6.4
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [],
+        "tier_2_suppliers": [
+            "Ready-Mix Concrete Manufacturing in the US",
+            "Concrete Pipe & Block Manufacturing in the US",
+            "Sheet Metal, Window & Door Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Apartment Rental in the US",
+            "Real Estate Investment Trusts in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Residential construction measures individuals' and businesses' total private residential investment",
+            "determinant_description": "Residential construction measures individuals' and businesses' total private residential investment in single and multifamily housing units. With an uptick in investment, new projects expand as more structures are built. Rising interest rates can increase the cost of borrowing and deter private contractors from starting new projects, posing a potential threat to multifamily housing construction."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Population Density in the Southeast. More than a quarter of multifamily contractors are located in the Southeast. The region is home to coastal cities with significant condominium developments. Many older consumers move to Florida or other states in the region when they enter retirement. Multifamily homes and condominiums make great spots for those with larger families.",
+            "percentage_establishments": 27.5,
+            "percentage_population": 19.1
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic is home to highly populated cities like New York City and Philadelphia. Large cities have housing programs to construct multifamily homes for low-income residents or people with disabilities. Big cities are also home to large luxury apartment building projects. Many investors took on these projects amid the pandemic because of low-interest rates.",
+            "percentage_establishments": 14.2,
+            "percentage_population": 15.3
+        },
+        {
+            "location": "West",
+            "location_description": "HIGH-DENSITY WEST COAST CITIES DRAW DEVELOPMENT. The West contains almost a quarter of US homebuilders. While not as dense in population, the West is home to many workers, specifically in the technology sector. The booming tech sector continues to attract consumers, bolstering the need for more units. More people move to the West every year, leading to an increase in new housing construction.",
+            "percentage_establishments": 10.8,
+            "percentage_population": 23.5
+        },
+        {
+            "location": "Great Lakes",
+            "percentage_establishments": 14.2,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Southwest",
+            "percentage_establishments": 9.2,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "Rocky Mountains",
+            "percentage_establishments": 5.0,
+            "percentage_population": 6.8
+        },
+        {
+            "location": "Plains",
+            "percentage_establishments": 5.0,
+            "percentage_population": 6.8
+        },
+        {
+            "location": "New England",
+            "percentage_establishments": 5.0,
+            "percentage_population": 4.7
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Increasing",
+        "regulations_points": [
+            {
+                "regulation_title": "Building Codes",
+                "regulation_description": "Construction workers comply with building codes endorsed by the International Code Council. The building code is published every three years, the most recent being September 2021. The code covers many topics (electric systems, materials, fire protection, structural systems and much more)."
+            },
+            {
+                "regulation_title": "Energy Efficiency Standards",
+                "regulation_description": "Newly constructed federal buildings are required to meet energy efficiency standards the US Department of Energy (DOE) set. The latest batch of rules was updated on June 6th, 2022 and applies to all buildings designed or constructed on or after April 5th, 2023."
+            },
+            {
+                "regulation_title": "Fair Housing Guidelines",
+                "regulation_description": "The Department of Housing and Development endorsed a new building code to ensure that new housing developments are accessible to people with disabilities."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Legal",
+                "barrier_description": "Depending on their location, multifamily contractors must have state-based licenses and registration."
+            },
+            {
+                "barrier_title": "Start-up Costs",
+                "barrier_description": "Contractors are required to pay employees and purchase housing materials. Established contractors have ongoing arrangements with material suppliers for bulk discounts. Newer entrants pay higher premium insurance payments because they need a proven track record."
+            },
+            {
+                "barrier_title": "Differentiation",
+                "barrier_description": "Contractors differentiate themselves through the quality of work, timeliness and design. Newer companies must provide excellent service while offering deeper discounts to keep up with reputable and established contractors."
+            },
+            {
+                "barrier_title": "Labor Expenses",
+                "barrier_description": "Contractors require a significant amount of labor since construction is physically demanding. New entrants often work as subcontractors to build a reputation before branching out independently."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Competition Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - increasing"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "A proven track record and a portfolio of completed work are essential to attracting clients.",
+                "basis_description": "Clients are willing to pay a premium to ensure timely delivery."
+            },
+            {
+                "basis_title": "Marketing techniques and quality-of-life amenities",
+                "basis_description": "Marketing techniques and quality-of-life amenities help attract prospective consumers. Buildings with technological amenities like 24/7 security and facial recognition have features for which customers are willing to pay more."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "An ample amount of small and medium-sized contractors",
+                "concentration_description": "Most contractors in the industry are small or medium-sized. These companies operate in narrow local or regional markets."
+            },
+            {
+                "concentration_title": "The two largest companies comprise less than 5.0% of the industry.",
+                "concentration_description": "The constant need for housing stock invites new contractors to enter the industry. Despite rising interest rates, a growing population continues to expand the number of contractors."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Aecom",
+                "company_percentage": 1.2
+            },
+            {
+                "company_name": "Lendlease Corp Ltd",
+                "company_percentage": 0.3
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Subcontractors",
+            "cost_factor_description": "Subcontractors are paid on a per-project basis and are ineligible for the same benefits that full-time employees receive. Contractors have increasingly relied on subcontractors to offset rising input costs and have reduced wages as a portion of revenue through 2023."
+        },
+        {
+            "cost_factor_title": "Building Materials",
+            "cost_factor_description": "Building materials make up the remaining costs. Larger contractors receive discounts when buying in bulk. Even so, supply chain disruptions have caused purchase costs to creep upward. The price of sawmill lumber has declined, but contractors have faced price hikes in electrical components, appliances and insulation."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Labor Expenses",
+                "capital_intensity_description": "Contractors require a significant amount of labor since construction is physically demanding. New entrants often work as subcontractors to build a reputation before branching out independently."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Mortgage Rates Influence the Housing Market",
+                "volatility_description": "Mortgage rates sank drastically in 2020 amid the pandemic, leading to more housing development. A spike in mortgage rates in the latter half of the period has made housing more expensive, causing a decrease in construction."
+            },
+            {
+                "volatility_title": "Housing Stock Dictates the Level of Construction",
+                "volatility_description": "Low housing demand through most of the period led to increased housing starts. With an uptick in construction fulfilling the need for housing, housing starts slumping in the latter half."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Luxury Apartments Continue to Attract High-Income Earners",
+                "technological_change_description": "More luxury housing has been developed to attract higher-income consumers. These places offer a variety of amenities (doorman, building gym, rooftop) to entice potential residents."
+            },
+            {
+                "technological_change_title": "Companies are Making Increasing Efforts Toward Sustainability",
+                "technological_change_description": "New buildings are required to meet energy efficiency standards. Contractors earn points on projects to obtain LEED (Leadership in Energy and Environmental Design) certification to show their commitment to going green."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company primarily work with residential or nonresidential construction markets?",
+            "answer": "Industry operators primarily construct multifamily homes. Accordingly, the industry works exclusively within the residential construction market."
+        },
+        {
+            "question": "Does your company serve as a general contractor or third-party subcontractor on most projects?",
+            "answer": "Industry companies primarily serve as the prime general contractor on most projects, hiring subcontractors to complete discrete segments of construction."
+        },
+        {
+            "question": "Does your company make use of subcontractors to save on wage costs during times of economic uncertainty?",
+            "answer": "Contractors hire subcontractors to reduce full-time wage payments."
+        },
+        {
+            "question": "Does your company typically rent or own equipment for projects?",
+            "answer": "Contractors typically lease any large-scale equipment required for projects, such as earth-moving equipment, on an as-needed basis, reducing overhead and depreciation costs."
+        },
+        {
+            "question": "Investment in new technology is usually fairly low among builders and contractors. How much does your company invest in new equipment annually?",
+            "answer": "The most important technological advancements within the industry have centered on the use of concrete, including both poured-on-site and precast concrete products, as the principal construction material."
+        },
+        {
+            "question": "Has your company considered using Internet-based product marketing and other production methods?",
+            "answer": "Apartment and condominium builders can display standard home designs on internet web pages or enable prospective buyers to view customized designs interactively."
+        },
+        {
+            "question": "Has complying with new energy-efficiency rules in various building codes driven up costs?",
+            "answer": "Contractors are subject to energy-efficiency standards dictated by the International Code Council, adding to the underlying cost of operating in the industry."
+        },
+        {
+            "question": "How does your company ensure all health and safety requirements are met on and off the construction site?",
+            "answer": "Health and safety regulations, administered by the Occupational Safety and Health Administration, require that protective clothing and helmets be worn on site and that safe conditions are provided for industry workers."
+        },
+        {
+            "question": "How do your company's profit margins compare with your competitors?",
+            "answer": "The scale of contractors can impact profit levels but profit among contractors is fairly consistent."
+        },
+        {
+            "question": "How does your company adapt to the volatile prices of key inputs?",
+            "answer": "The volatile cost of key input materials, such as sawmill lumber and ready-mix concrete, impacts profitability."
+        },
+        {
+            "question": "How can you leverage these connections to boost revenue during an economic downturn?",
+            "answer": "The leading contractors look to establish symbiotic relationships with other industries, like financial institutions and residential property developers, to ensure an adequate flow of funding and new contracts."
+        },
+        {
+            "question": "How do changing rental vacancy rates affect your company?",
+            "answer": "Rental vacancy rates strongly influence demand for new apartment complexes."
+        },
+        {
+            "question": "How do urban populations impact demand?",
+            "answer": "With the majority of multifamily developments located in or near major metropolitan areas, the urban population level is an important indicator of industry growth."
+        },
+        {
+            "question": "How do unemployment levels impact revenue?",
+            "answer": "Demand for multifamily complexes diminishes as unemployment rises and buyers and renters look to cut living expenses."
+        }
+    ]
+}

@@ -1,0 +1,518 @@
+{
+    "report_title": "Horse Racing Tracks in the US",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 4947000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": -1.37
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 0.58
+            }
+        },
+        "profit": {
+            "profit_dollars": 317000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 0.22
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 0.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 6.4,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 1.61
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1533000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 0.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 0.0
+            }
+        },
+        "employees": {
+            "employees_count": 21322,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 0.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 0.0
+            }
+        },
+        "wages": {
+            "wages_dollars": 992000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 0.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 0.0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0.0,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 0.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 0.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0.0,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 0.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 0.0
+            }
+        }
+    },
+    "executive_summary": "Horse racing tracks have grappled with declining consumer interest and competition from more accessible forms of gambling like lotteries, casinos and online platforms. While marquee events like the Triple Crown still captivate audiences, many racetracks struggle to attract a younger, more diverse clientele. Aging, predominantly male patrons continue to be the sport's core demographic. As this demographic shrinks and public concerns about horse doping and animal welfare continue, interest in horse racing has waned. Revenue has fallen at a CAGR of 2.8% to $6.4 billion through the end of 2024, including a contraction of 0.5% in 2024 alone.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Horse Racing Tracks Faces Falling Consumer Interest",
+            "current_performance_point_description": "The popularity of horse racing has waned, with lotteries, casinos, and online gambling offering simpler and more convenient alternatives. The 2018 Supreme Court decision overturning PAPSA legalized sports betting, introducing greater competition. Sports betting is extremely popular and comes at a lower cost, challenging horse racing's ability to retain and attract fans. Although events like the Triple Crown attract viewership, many tracks rely on aging, predominately male customers, struggling to attract patrons outside of that demographic."
+        },
+        {
+            "current_performance_point_title": "ONLINE BETTING BUOYS STRUGGLING RACETRACKS",
+            "current_performance_point_description": "Lower consumer confidence has led to reduced spending on discretionary leisure activities, resulting in poor performance for horse racetracks. Online horse race gambling has enabled track owners to maintain sizable handles or the total amount wagered, though not all have their own online platforms, leading to an overall revenue loss."
+        },
+        {
+            "current_performance_point_title": "QUESTIONS OF HORSE ABUSE HAVE REDUCED THE APPEAL OF HORSE RACING",
+            "current_performance_point_description": "The overuse of drugs like painkillers, anabolic steroids, muscle relaxers and bronchodilators to enhance horses' performance has come under scrutiny. The high costs of thoroughbred horses have prompted the use of various drugs to keep horses competitive. Animal rights activists continue to push for reform because of the numerous horse injuries and fatalities associated with horse racing."
+        },
+        {
+            "current_performance_point_title": "THE PROLIFERATION OF RACINOS DIVERTS CASINO REVENUE TOWARDS TRACKS",
+            "current_performance_point_description": "To remain afloat and support declining profit, many tracks have turned into racinos, combining horse racing tracks and casinos. In 2024, racinos are only legal in 13 states. While most racinos only have slot machines, many have added other games, like poker, roulette and blackjack. In Ohio, racinos are diverting a significant share of revenue from the state's top casinos, accounting for almost one-third of total gambling dollars in."
+        },
+        {
+            "current_performance_point_title": "RACETRACKS CONSOLIDATE UNDER NEW ENTITIES",
+            "current_performance_point_description": "Some states have begun to seize control of tracks to help secure the future of horse racing. Maryland's General Assembly passed legislation in 2024 to transfer Thoroughbred racing operations to a new entity: the Maryland Thoroughbred Racetrack Operating Authority. The equine sector in Maryland supports over 28,000 jobs, making government control a strategic move to protect employment and promote investment."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "AGING HORSERACING FANS ARE A CAUSE FOR CONCERN",
+            "future_outlook_point_description": "Older men make up the primary clientele for horse racing, while newer generations show little interest in the sport. Interest in horseracing will continue shrinking as tracks fail to attract younger consumers to replace their aging consumer base. Racetracks are focusing marketing efforts on younger people and give away freebies, like T-shirts, caps, and drink koozies. Music performances by popular artists and food festivals will also be employed to lure a younger audience."
+        },
+        {
+            "future_outlook_point_title": "ONLINE HORSE RACE GAMBLING WILL CREATE OPPORTUNITIES AND CHALLENGES",
+            "future_outlook_point_description": "Horse racetracks will work to combat falling demand and better compete with alternative forms of entertainment and gambling. Expanded access to online horse racing gambling also has the potential to stem revenue declines by making it more convenient for more consumers to gamble on horse racing. When carried out through third-party providers, racetrack and horse owners lose their share of betting revenue."
+        },
+        {
+            "future_outlook_point_title": "Technology Integration Will Innovate Horse Racing",
+            "future_outlook_point_description": "Technological advancements will change how horse race enthusiasts engage with racetracks. Digital platforms for betting and live streaming will attract a broader audience. Data analytics and machine learning algorithms will be used to generate predictive insights into a horse's performance potential, aiding in training and race strategies. Devices like heart rate monitors, GPS trackers, and biomechanical sensors will provide real-time data on a horse's health, fitness and performance, helping trainers optimize training and prevent injuries."
+        },
+        {
+            "future_outlook_point_title": "Regulatory Changes Can Pose a Challenge",
+            "future_outlook_point_description": "State-specific laws governing betting could shape these tracks' financial sustainability and health. Variation among states will lead to disparities in horse racing track performance across the country. Public concern over animal welfare will intensify, driving the implementation of stricter regulations. These regulations might necessitate alterations in horse training, racing practices and overall care standards. Tracks must adapt to these changes to meet new legal and ethical requirements, which could impact the overall racing experience and operational dynamics."
+        }
+    ],
+    "industry_definition": "Horse racing tracks in the United States center on organizing and managing horse races. It involves breeding, training, and maintaining the track and horses, as well as organizing races and events. Offerings include on-track, off-track and simulcast betting, as well as other gambling activities and services.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Barriers To Entry Level: high - steady",
+            "Globalization Level: low - increasing"
+        ],
+        "negative_impact_factors": [
+            "Life Cycle Stage: decline",
+            "Revenue Volatility Level: high",
+            "Capital Intensity Level: high",
+            "Competition Level: high - increasing"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "Low Imports",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "High Competition",
+            "Decline Life Cycle Stage",
+            "High Volatility",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "Per capita disposable income"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Percentage of business conducted online"
+        ]
+    },
+    "key_trends": [
+        "The Horse Racing Tracks industry has a moderate level of market share concentration, with the industry's four largest companies controlling an estimated 30.2% of the market in 2023.",
+        "State governments often have a substantial level of influence on local competition and the way in which tracks are operated by providing funding.",
+        "Many of the industry's largest enterprises are private companies that control a large number of horse racing tracks across multiple states.",
+        "Industry concentration has grown, as the industry's largest, most successful horse racing track operators continue to purchase tracks at low prices."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Consumers aged 56 and older",
+            "segment_description": "Consumers in this age range tend to have a larger amount of leisure time and higher disposable incomes than other age brackets. Members of this age demographic also recall horse racing's storied past, like legendary racehorse Secretariat gracing the covers of Time, Life and Sports Illustrated in the 1970s.",
+            "segment_percentage": 50.1
+        },
+        {
+            "segment": "Consumers aged 35 to 55",
+            "segment_description": "Similar to older demographics that makes up the bulk of this industry's market, consumers aged 35 to 55 tend to have a larger amount of leisure time and disposable incomes with which to spend a day at the races. Both family nights and gaming have been successful in appealing to consumers aged 35 to 55, and as a result, this demographic's contribution to industry revenue has increased over the past five years.",
+            "segment_percentage": 39.9
+        },
+        {
+            "segment": "Consumers aged 34 and younger",
+            "segment_description": "This demographic is the most important for industry operators, as the longer-term viability of the industry is contingent on attracting a younger audience. Marketing departments focus on increasing the number of young racing fans with date night events, drink specials, celebrity appearances and concerts. Likewise, operators have invested in online gaming and smartphone apps to plug into this demographics' technological savviness.",
+            "segment_percentage": 10.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "On-Track Betting",
+            "product_description": "On-Track Betting is the traditional form of wagering in horse racing.",
+            "product_percentage": 28.3
+        },
+        {
+            "product_or_service": "Off-Track and Simulcast Betting",
+            "product_description": "Off-track betting, which became prominent in 1970 when it was legalized in New York City, is the legal gambling on horse racing that happens outside of a race track.",
+            "product_percentage": 20.6
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Advertising Agencies in the US",
+            "Beer Wholesaling in the US",
+            "Wine & Spirits Wholesaling in the US"
+        ],
+        "tier_2_suppliers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Per Capita Disposable Income",
+            "determinant_description": "Consumers tend to increase their spending on discretionary goods and services, including betting on races and paying for other industry services, as disposable income grows. Per capita disposable income is expected to rise in 2023, representing a potential opportunity for the industry."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Unknown",
+        "import_trend": "Unknown",
+        "export_level": "Unknown",
+        "export_trend": "Unknown",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Mid-Atlantic",
+            "percentage_establishments": 27.3,
+            "percentage_population": 15.2,
+            "location_description": "The Mid-Atlantic contains the largest share of industry establishments. This region accounts for 27.3% of business locations in 2023. This is a far higher proportion than the region's share of the US population, at 15.2%. Horse racing in the Mid-Atlantic has a history dating back to the 17th century, and the region to this date remains its most important hub. Two out of the three Triple Crown races, the most important annual horse racing event in the US, take place in the Mid-Atlantic, including the Belmont Stakes at Belmont Park race track in Elmont, NY, and the Preakness Stakes at Pimlico Race Course in Baltimore."
+        },
+        {
+            "location": "Southeast",
+            "percentage_establishments": 20.0,
+            "percentage_population": 22.0,
+            "location_description": "The Southeast's share of establishments is low relative to the region's percentage of the population. Horse racing is not particularly prevalent in the Southeast, with Alabama, Georgia, North Carolina and South Carolina banning gambling on horse races. Still, the industry has a long history in some Southeastern states, most notably Florida and Kentucky. Florida accounts for 4.0% of industry establishments in 2023, as the large state's favorable climate permits racing year-round, while Kentucky accounts for 6.1% of locations in 2023. The Kentucky Derby, arguably the most important race in the United States, takes place in Louisville, KY, solidifying the state's importance to the industry."
+        },
+        {
+            "location": "Great Lakes",
+            "percentage_establishments": 14.3,
+            "percentage_population": 14.3,
+            "location_description": "The Great Lakes region has a history of horse racing. The Great Lakes' share of industry establishments is in line with the region's share of the US population, at 14.3% in 2023. Illinois and Ohio contain a particularly large share of industry establishments, accounting for 5.1% and 7.1% of business locations, respectively, in 2023."
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "State Horse Racing Regulations",
+                "regulation_description": "Some states have special horse racing authorities, such as the California Horse Racing Board and the Kentucky Horse Racing Commission, while in other states the industry is regulated by broader authorities, such as the New York State Gaming Commission. Horse racing tracks obtain gaming and operations licenses through their state. As gaming enterprises, these operations are heavily regulated and taxed."
+            },
+            {
+                "regulation_title": "The Horseracing and Integrity Act",
+                "regulation_description": "In December 2020, the Horseracing and Integrity Act was passed by Congress and signed by former President Trump. The legislation enforces uniform antidoping, racetrack safety and racehorse medication control and racetrack safety standing committees to reduce horse abuse and fatalities."
+            },
+            {
+                "regulation_title": "GAMBLING REGULATIONS",
+                "regulation_description": "Gambling is legal under US federal law, but states are free to regulate or prohibit the practice within their borders. The supervision of casinos is often undertaken by state-based casino or gaming commissions, and some commissions perform both a regulatory and a quasi-judicial function in the industry. Most commissions are established as independent state agencies, and the regulations which they enforce are extensive. These regulations generally cover the issuing and renewal of licenses for operation."
+            },
+            {
+                "regulation_title": "COVID-19 REGULATIONS",
+                "regulation_description": "In 2020, as a result of the coronavirus pandemic, US state and local governments enacted social-distancing measures and attempted to curb the occurrence of large gatherings of people. Many industry operators furloughed employees, enacted compensation reductions for remaining staff and held spectator-free races that brought in lower levels of revenue than their in-person events. Major horse races, such as the Kentucky Derby and the Preakness Stakes, were delayed for months."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Legal restrictions",
+                "barrier_description": "It is impossible for new entrants to operate in various states, since the act of gambling on horse races is illegal. In states that permit gambling, racetracks are usually heavily regulated by specially legislated bodies with wide-ranging powers."
+            },
+            {
+                "barrier_title": "High start-up costs",
+                "barrier_description": "Obtaining a license to operate in the industry is difficult, and the cost of purchasing an old license from an existing operator is usually very expensive."
+            },
+            {
+                "barrier_title": "Differentiation challenges",
+                "barrier_description": "Because of the high cultural significance of certain racetracks, like those involved in the Triple Crown, it is difficult for new operators to establish themselves against what are essentially historical landmarks."
+            },
+            {
+                "barrier_title": "Capital intensity",
+                "barrier_description": "Building or refurbishing a race track requires a very large initial capital expenditure, which can be a major barrier for operators without substantial capital at their disposal."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: decline",
+            "Revenue Volatility Level: high",
+            "Capital Intensity Level: high",
+            "Competition Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Globalization Level: low - increasing"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Competitive landscape",
+                "basis_description": "The Horse Racing Tracks industry has a moderate level of market share concentration, with the industry's four largest companies controlling an estimated 63.6% of the market in 2023."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "State government assistance",
+                "concentration_description": "State governments often have a substantial level of influence on local competition and the way in which tracks are operated. State governments sometimes provide tracks with direct subsidies or other forms of funding due to perceived cultural or economic benefits."
+            },
+            {
+                "concentration_title": "Multi-track operators",
+                "concentration_description": "Some operators, such as the New York Racing Association Inc., receive state assistance, but control multiple race tracks."
+            },
+            {
+                "concentration_title": "Industry consolidation",
+                "concentration_description": "Concentration has grown as the industry's most successful horse racing track operators continue to purchase tracks at low prices and attempt to revitalize them."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Churchill Downs Inc.",
+                "company_percentage": 46.1
+            },
+            {
+                "company_name": "Penn National Gaming, Inc",
+                "company_percentage": 12.9
+            },
+            {
+                "company_name": "The New York Racing Association Inc.",
+                "company_percentage": 3.7
+            },
+            {
+                "company_name": "Stronach Group",
+                "company_percentage": 0.9
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 30
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 40
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 50
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 60
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 70
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "WAGES REPRESENT THE SECOND-HIGHEST COST TO THE HORSE RACING TRACKS INDUSTRY",
+            "cost_factor_description": "A large number of workers must be employed to maintain race tracks and facilities, contributing to a rise in wage costs. There are workers who serve customers in race track bars, restaurants and casinos. Employees serve as attendants for horse bets and ensure that any horses being raced at tracks are properly fed, groomed and cared for."
+        },
+        {
+            "cost_factor_title": "TAXES AND LICENSES MAKE UP A HIGH SHARE OF OTHER COSTS",
+            "cost_factor_description": "Selling, general and administrative expenses are included in this category, in addition to insurance taxes and other miscellaneous costs, which are also substantial for this industry. In the case of the horse racing tracks, gambling fees and taxes are considered a cost of doing business. States that permit the operation of casino establishments charge relatively high license fees and taxes based on the percentage of gross revenue earned, the number of gaming devices operated or the number of table games operated."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "HIGH capital intensity",
+                "capital_intensity_description": "Building or refurbishing a race track requires a very large initial capital expenditure, which can be a major barrier for operators without substantial capital at their disposal."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "The industry is in a state of long-term decline",
+                "volatility_description": "Demand has been contracting in line with a gradual cultural change, the introduction of new and more diverse forms of entertainment and changing gambling preferences in the United States."
+            },
+            {
+                "volatility_title": "The Covid-19 Pandemic Led to Limited or No Spectators Attending Horse Race Tracks",
+                "volatility_description": "The industry's dependence on general economic conditions has somewhat limited volatility, as the growing economy kept the revenue from declining dramatically. Several horse racing events were canceled or postponed, leading to a loss of potential revenue from entry fees, sponsorships and media rights. As a result of the pandemic, industry revenue plummeted, falling 33.2% in 2020 alone. Revenue volatility is expected to decline over the five years to 2028, as the industry recovers from the unprecedented shock in 2020."
+            }
+        ],
+        "volatility_trend": "Decreasing"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Implementation of Artificial Intelligence (AI)",
+                "technological_change_description": "AI is now being used in data analysis related to a horse's performance, health and training patterns, providing valuable insights to trainers and owners. AI-driven algorithms can identify early signs of potential injuries in horses, allowing trainers to take proactive measures to prevent injuries and ensure the well-being of the animals."
+            },
+            {
+                "technological_change_title": "Virtual Reality (VR) Technology",
+                "technological_change_description": "VR now allows spectators to feel like they are on the track, right alongside the jockeys and horses, creating a thrilling and realistic race-viewing experience. VR can be integrated with online betting, so that spectators can place virtual bets on the races they're watching, adding a new layer of excitement and engagement to the horse racing experience."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How well does your company market to consumers with limited leisure time?",
+            "answer": "Consumers with less leisure time are more likely to cut out horse racing before limiting the time they devote to more popular team sports."
+        },
+        {
+            "question": "Are your company's prices competitive with both direct competitors and alternative forms of entertainment?",
+            "answer": "Some consumers will compare the price of attending a spectator sport against attending other activities. The lower the price of an industry performance compared to alternative forms of entertainment or simply watching the game on TV, the higher the demand for this industry's services."
+        },
+        {
+            "question": "How does your company use location to add value and offer unique products and services to your consumers?",
+            "answer": "Racetracks may benefit from being located near casinos."
+        },
+        {
+            "question": "Are you located in high traffic areas to increase your exposure?",
+            "answer": "Industry racetrack operators, specifically in the south region of the United States, may benefit from operating in high traffic areas, such as popular vacation spots."
+        },
+        {
+            "question": "Has your racetrack company integrated web and mobile gambling to improve consumer accessibility?",
+            "answer": "Some track owners, like Churchill Downs, have implemented online horse race wagering via websites and applications, which enable advance deposit wagering."
+        },
+        {
+            "question": "Have you established a strong internet presence through social media platforms to capture a larger audience?",
+            "answer": "Horse racing has increased in popularity over the past five years as a result of the industry's expanding social media presence and willingness to broadcast events through online streaming content."
+        },
+        {
+            "question": "Are you subject to specific safe practice laws?",
+            "answer": "The US Department of Agriculture Animal and Plant Health Inspection Service specifically defines safe practices for breeding, while state laws define various licensing, population control and immunization standards for animals intended to be bred for sport."
+        },
+        {
+            "question": "Are you up-to-date on your state's and industry's gambling laws?",
+            "answer": "Racetrack owners are subject to strict regulations established and overseen by the Gambling Regulatory Authority Act and state-level gambling or gaming control boards."
+        },
+        {
+            "question": "Do you develop off-season demand through alternative products and services in order to maintain a steady cash flow during slower seasons?",
+            "answer": "Because of the seasonality of many outdoor sports, track owners may benefit from having an indoor space able to host other off-season events."
+        },
+        {
+            "question": "Has your company planned and finance for any large renovations to existing infrastructure?",
+            "answer": "As ticket prices continue to rise, consumers are increasingly looking for more value-added and higher-quality establishments and offerings."
+        },
+        {
+            "question": "How do you ensure that your facilities are located in an appropriate location relative to climate? How often are you affected by climatic conditions?",
+            "answer": "Bad weather during the racing season can hurt a company's revenue growth. Tracks will be more successful if they can schedule races during warmer, drier months."
+        },
+        {
+            "question": "How do you keep track of the company's expenditures? Are there any systems you can use to effectively control costs?",
+            "answer": "Horse racing track operators must be able to accurately forecast race attendance and the amount of money being bet in order to maximize margins on a race day."
+        },
+        {
+            "question": "Do you regularly monitor the impact of government regulations? Do you have the ability to react quickly to changing regulations?",
+            "answer": "Gambling tends to be heavily regulated, yet this regulation changes periodically. Track owners must be able to quickly navigate these changes to avoid fees, as well as take advantage of regulation liberalization to increase revenue."
+        },
+        {
+            "question": "Do you find revenue trends to be in line with changes in competition? What products do customers tend to do # When competition is high?",
+            "answer": "Consumers spending time watching movies, attending concerts or engaging in other leisure activities represents lost potential revenue for racing tracks. The rising popularity of casinos and lotteries has diminished interest in horse racing gambling."
+        },
+        {
+            "question": "What proportion of your sales are to adults 50 and over?",
+            "answer": "Individuals aged 50 and older make up the most important market for horse racing tracks. These consumers tend to have more leisure time and higher disposable incomes compared with other demographic groups."
+        },
+        {
+            "question": "What other markets are significant to your business?",
+            "answer": "Individuals aged 50 and older make up the most important market for horse racing tracks. These consumers tend to have more leisure time and higher disposable incomes compared with other demographic groups."
+        },
+        {
+            "question": "Do you expect major changes in demand as a result of rising disposable income levels? How do you create demand when disposable income levels are low?",
+            "answer": "Some consumers actually increase their trips to horse racing tracks when income falls in the hope of earning large returns on bets."
+        }
+    ]
+}

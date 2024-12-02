@@ -54,7 +54,7 @@ const SearchBar = ({ placeholder }) => {
 };
 
 const Categories = () => {
-  const [activeCategory, setActiveCategory] = useState("Investment Thesis");
+  const [activeCategory, setActiveCategory] = useState("Dashboard");
   const [selectedSubcategory, setSelectedSubcategory] =
     useState("Current Workspace");
   const [progress, setProgress] = useState();
@@ -173,6 +173,7 @@ const Categories = () => {
             <div className="flex laptop:gap-2 largeDesktop:gap-0">
               {categoryList.map((data, index) => (
                 <div
+                  id={index}
                   className={`${
                     data === activeCategory && "bg-[#212126] rounded-lg"
                   } p-1 text-center desktop:p-2 cursor-pointer text-sm`}
@@ -185,7 +186,8 @@ const Categories = () => {
             </div>
             
             <div className="my-3">
-               <SearchBox section={activeCategory}/>
+              {activeCategory === "Company Insights" && (<SearchBox section={activeCategory}/>)}
+               
                {/* <SearchBar placeholder={activeCategory}/> */}
             </div>
           </div>
@@ -197,10 +199,10 @@ const Categories = () => {
             <FileUploadComponent />
           ) : activeCategory === "Investment Thesis" ? (
             <>
-              <div className="flex-grow overflow-y-auto bg-[#0d0d0d] ml-1 scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800">
+              <div className="flex-grow overflow-y-auto bg-[#1C1C1C] ml-1 scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800">
                 <div className="mt-10 p-3">
-                  <ThesisForm questions={questions} />
-                  <ThesisCardComponent />
+                  <ThesisForm questions={questions} setActiveIndustry={setActiveCategory} />
+                  {/* <ThesisCardComponent /> */}
                 </div>
               </div>
               <div className="flex-grow overflow-y-auto bg-[#151518] ml-1 scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800">
@@ -232,15 +234,15 @@ const Categories = () => {
                 </div>
               </div>
             </>
-          ) :
+          ) : 
           (
             <ProjectDetails
-              isActiveCategory={activeCategory}
+              isActiveCategory={activeCategory} 
               isActiveSubCategory={selectedSubcategory}
             />
           )}
         </div>
-       
+      
       </div>
     </>
   );

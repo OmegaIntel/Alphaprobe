@@ -1,0 +1,281 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 278718000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": 2.16
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.22
+            }
+        },
+        "profit": {
+            "profit_dollars": 11706000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 2.63
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 2.5
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.2,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0.86
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 1.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 29324000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 2.6
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 1.5
+            }
+        },
+        "employees": {
+            "employees_count": 248336,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 1.8
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 1.4
+            }
+        },
+        "wages": {
+            "wages_dollars": 15566000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 2.2
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 1.1
+            }
+        },
+        "imports": {
+            "imports_dollars": 1000000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 1.5
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 1.2
+            }
+        },
+        "exports": {
+            "exports_dollars": 500000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 1.7
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 0.9
+            }
+        }
+    },
+    "executive_summary": "Revenue for the Auto Parts Wholesaling industry has grown at an estimated CAGR of 2.3% to reach $278.7 billion in 2023, when revenue is set to grow 3.1% as the number of motor vehicle registrations and per capita disposable income both rise. Amid widespread stay-at-home orders, unemployment spiked in 2020, discouraging consumers from making large purchases, including automobiles. However, while some consumers are driving less now that they're working from home, demand for auto parts has rebounded along with vehicle registrations. Industry profit, measured as earnings before interest and taxes, has grown slightly as wholesalers have been able to pass along rising costs.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Pandemic Caused Markets to Tumble",
+            "current_performance_point_description": "The COVID-19 pandemic led to the temporary closure of major businesses, as social distancing was enforced..."
+        },
+        {
+            "current_performance_point_title": "Rising Interest Rates Impact Auto Parts Wholesalers",
+            "current_performance_point_description": "Inflation has risen in recent years..."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "The Rejuvenated Household Sector Will Buoy Auto Parts Wholesalers",
+            "future_outlook_point_description": "Despite lingering challenges from the COVID-19 pandemic..."
+        }
+    ],
+    "industry_definition": "This industry comprises operators that sell automotive parts wholesale...",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Concentration Level low",
+            "Globalization Level low - increasing"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level low - steady"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "High Profit vs. Sector Average"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)"
+        ]
+    },
+    "key_trends": [
+        "The COVID-19 pandemic caused a drastic decline in consumer...",
+        "Despite concerns regarding high inflation..."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Other Wholesalers",
+            "segment_description": "This segment includes sales to other auto parts wholesalers...",
+            "segment_percentage": 31.6
+        },
+        {
+            "segment": "Automakers",
+            "segment_description": "This segment accounts for sales to automakers.",
+            "segment_percentage": 17.9
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Powertrain Systems",
+            "product_description": "This segment accounts for sales of powertrain systems...",
+            "product_percentage": 22.6
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [],
+        "tier_2_suppliers": [
+            "Automobile Engine & Parts Manufacturing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "POWERTRAIN SYSTEMS ARE WIDELY PRODUCED",
+            "determinant_description": "Powertrain systems are the one product line common among all major companies within this industry."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "This region includes Illinois, Ohio, Michigan and other states...",
+            "percentage_establishments": 101.0,
+            "percentage_population": 101.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [
+            {
+                "regulation_title": "WHOLESALERS FACE LITTLE REGULATION",
+                "regulation_description": "Wholesaling industries are not typically regulated with the same level of detail..."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "low - steady"
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": []
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": []
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [],
+        "top_companies": [
+            {
+                "company_name": "Denso Corp.",
+                "company_percentage": 2.8
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 12.5
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 40.0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "PURCHASES",
+            "cost_factor_description": "Purchases are typically a wholesaler's main cost."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How does your company maintain a competitive edge?",
+            "answer": "The industry is very competitive..."
+        }
+    ]
+}

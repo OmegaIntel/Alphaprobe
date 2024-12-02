@@ -1,0 +1,582 @@
+{
+    "report_title": "Oven and Stove Manufacturing Industry Report",
+    "report_date": "2022",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 5264000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2003,
+                "end_year": 2022,
+                "revenue_cagr_value": 0.44
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "revenue_cagr_value": 0.2
+            }
+        },
+        "profit": {
+            "profit_dollars": 300000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "profit_cagr_value": 1.05
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5.7,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "profit_margins_cagr_value": 1.05
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1126000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2003,
+                "end_year": 2022,
+                "industry_value_added_cagr_value": 0.44
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 15438,
+            "employees_cagr_historical": {
+                "begin_year": 2003,
+                "end_year": 2022,
+                "employees_cagr_value": -0.2
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "employees_cagr_value": 0.06
+            }
+        },
+        "wages": {
+            "wages_dollars": 0,
+            "wages_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 518000000,
+            "exports_cagr_historical": {
+                "begin_year": 2003,
+                "end_year": 2022,
+                "exports_cagr_value": 0.55
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "exports_cagr_value": 0.85
+            }
+        }
+    },
+    "executive_summary": "The Oven and Stove Manufacturing industry includes producers of electric and gas ovens and ranges. Industry products are designed primarily for household installation and demand for them therefore follows broad trends in residential construction and real estate markets. Over the five years to 2022, overall construction growth has spurred heightened demand for industry products, while strong increases in consumer incomes after years of stagnation released pent-up replacement demand. Overall, industry revenue is expected to increase at an annualized rate of 2.8% to $5.3 billion over the",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Housing Markets Drive Growth",
+            "current_performance_point_description": "Over the five years to 2022, US housing starts are expected to increase at an annualized rate of 6.0%. Almost all new residential units in the United States are equipped with a stove, oven or both, so industry demand tends to closely follow housing starts. However, it does so at a lag since these products are"
+        },
+        {
+            "current_performance_point_title": "International Trade",
+            "current_performance_point_description": "Industry sales have lagged new construction growth in part because the industry has lost ground to foreign competitors. Over the five years to 2022, the value of imported industry-relevant products is expected to increase at an annualized rate of 3.8% to $7.2 billion. All told, foreign manufacturers are"
+        },
+        {
+            "current_performance_point_title": "Housing Starts and Home Improvement Spending",
+            "current_performance_point_description": "Housing starts were installed during the later stages of construction. Growth in housing starts was especially strong amid the coronavirus pandemic, increasing 6.9% and 15.8% in 2020 and 2021, respectively. These increases in housing starts were primarily due to a low housing stock, increasing per capita disposable income and accommodative interest rates. Home improvement spending has also risen during the period, at an annualized rate of 2.5%."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Construction to Slow",
+            "future_outlook_point_description": "Over the five years to 2027, the number of US housing starts is forecast to fall at an annualized rate of 1.8%, as the COVID-19 (coronavirus)-related conditions fueling housing continues to subside. Moreover, private spending on home improvements is projected to decline an annualized 0.8%."
+        },
+        {
+            "future_outlook_point_title": "Industry Innovation",
+            "future_outlook_point_description": "The industry, backed by the research and development resources of the multinational companies that dominate it, will likely strive to innovate products over the next five years to maintain growth. The kitchen has been the focus of the so-called smart home, which broadly refers to appliances and other gadgets with internet connectivity."
+        },
+        {
+            "future_outlook_point_title": "International Trade",
+            "future_outlook_point_description": "International trade trends will likely continue over the next five years, with imports slightly decreasing and exports increasing, albeit a slower rate compared with industry revenue. Over the five years to 2027, the value of imported industry-relevant products is projected to decrease at an annualized rate of 0.1% to $7.1 billion, while export revenue is forecast to increase at an annualized rate of 1.7% to $564.3 million."
+        }
+    ],
+    "industry_definition": "This industry manufactures a wide variety of ovens, stoves, ranges and other cooking equipment for home use. These products generally come in gas and electric form. This industry does not include microwaves, toaster ovens or commercial ovens.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low",
+            "Regulation Level: light - steady"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level: low - steady",
+            "Concentration Level: high",
+            "Globalization Level: high - increasing",
+            "Competition Level: high - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature",
+            "Revenue Volatility Level: medium"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Capital Requirements",
+            "Low Customer Class Concentration"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "High Imports",
+            "Low Profit vs. Sector Average",
+            "High Product/Service Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2017-2022)",
+            "High Revenue Growth (2022-2027)",
+            "Housing starts"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2022)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Per capita disposable income"
+        ]
+    },
+    "key_trends": [
+        "New home buyers often set aside renovation budgets to upgrade a new home's features",
+        "The industry has continued to lose ground in international markets",
+        "The industry is dominated by three major companies",
+        "Innovations will likely help industry operators move higher-priced units",
+        "US trade policy is currently very fluid, adding uncertainty to the trade outlook",
+        "More-stable costs are expected to help industry operators maintain profitability",
+        "Industry companies have found themselves in the crosshairs of a trade war over the past two years"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Wholesalers",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 30.7
+        },
+        {
+            "segment": "Electronics stores",
+            "segment_description": "Electronics stores are the largest industry segment, accounting for an estimated 16.4% of revenue. However, demand from the downstream Consumer Electronics Stores industry (IBISWorld report 44311) has fallen over the five years to 2022. Additionally, this segment was negatively affected by COVID-19 (coronavirus) and the widespread stay-at-home orders.",
+            "segment_percentage": 16.4
+        },
+        {
+            "segment": "Other",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 15.2
+        },
+        {
+            "segment": "Home improvement stores",
+            "segment_description": "Home improvement stores are the second-largest market for the industry, accounting for an estimated 14.8% of revenue. Demand from the Home Improvement Stores industry (IBISWorld report 44411) has fallen over the past five years. The leading players in this market are Home Depot Inc., Lowe's Companies Inc. and Menard Inc.",
+            "segment_percentage": 14.8
+        },
+        {
+            "segment": "Exports",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 9.8
+        },
+        {
+            "segment": "General mass merchandisers",
+            "segment_description": "General mass merchandisers include mostly national retail chains that lack a particular product specialization and generally use their scale to compete on a discount strategy. The largest industries in this segment are the Department Stores industry (IBISWorld report 45211) and the Warehouse Clubs and Supercenters industry (IBISWorld report 45291)",
+            "segment_percentage": 7.5
+        },
+        {
+            "segment": "E-commerce",
+            "segment_description": "E-commerce is a minor but growing component of industry sales. Consumers have been slower to purchase major appliances online, preferring instead to view them in showrooms from major retailers that often also provide installation services. However, in 2022, e-commerce is estimated to account for 3.2% of revenue.",
+            "segment_percentage": 3.2
+        },
+        {
+            "segment": "Other retailers",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 2.4
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Electric Ovens and Ranges",
+            "product_description": "Electric ovens and ranges account for the majority of Oven and Stove Manufacturing industry production, generating an estimated 62.6% of revenue. Electric products have long been on the rise due to their greater affordability, lower upfront and utility costs, easier maintenance and faster preheat and cook times. The proportion of revenue generated by this segment has been fairly steady over the five years to 2022. The electric ovens and ranges segment increased as a share of industry revenue over the COVID-19 (coronavirus) pandemic as cash-strapped consumers sought to reduce expenses.",
+            "product_percentage": 62.6
+        },
+        {
+            "product_or_service": "Gas Ovens and Ranges",
+            "product_description": "Gas ovens and ranges are expected to account for 33.3% of revenue in 2022. Although they have lost favor over the long-term, gas has remained popular for cooking among many households, for various reasons. Many consumers prefer gas because they perceive it as an easier-to-control heat source or because they live in regions where power outages demand a reliable nonelectric cooking method. Combining gas ranges with electric ovens has also been a popular home renovation option.",
+            "product_percentage": 33.3
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "The Oven and Stove Manufacturing industry is limited in scope to electric- and gas-powered products designed for households. Other revenue generated by the industry includes service charges, part sales and other miscellaneous income.",
+            "product_percentage": 4.1
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Iron & Steel Manufacturing in the US",
+            "Aluminum Manufacturing in the US",
+            "Hardware Manufacturing in the US",
+            "Sheet Metal, Window & Door Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Electric Power Transmission in the US",
+            "Industrial Machinery & Equipment Wholesaling in the US",
+            "Laboratory Testing Services in the US"
+        ],
+        "tier_1_buyers": [
+            "Home Improvement Stores in the US",
+            "Consumer Electronics Stores in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Construction trends",
+            "determinant_description": "Demand for Oven and Stove Manufacturing industry products is determined primarily by construction trends. The vast majority of residential units in the United States come equipped with an oven or stove, so housing starts (the number of new units begun in a given year) have a very strong relationship with demand."
+        },
+        {
+            "determinant_title": "Home improvement spending",
+            "determinant_description": "Home improvement spending can be a particularly positive influence on Oven and Stove Manufacturing industry revenue because it often represents an investment in a home's resale value, making homeowners more willing to invest in upscale appliances."
+        },
+        {
+            "determinant_title": "Product developments",
+            "determinant_description": "Construction trends are the largest determinant of industry sales, but product developments also affect demand and profit performance. For example, the rising adoption of so-called smart appliances, which broadly includes any internet-enabled kitchen gadget, could spur new demand."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Decreasing",
+        "export_level": "Medium",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports",
+                "trade_description": "Over the five years to 2022, the value of imported industry-relevant products is expected to increase at an annualized rate of 3.8% to $7.2 billion. However, tariffs on industry-relevant products and the global COVID-19 (coronavirus) pandemic slowed imports over 2020, when imports declined."
+            },
+            {
+                "trade_title": "Exports",
+                "trade_description": "Industry export revenue is expected to decline over the five years to 2022 at an annualized rate of 5.2% to $518.2 million. Canada accounts for the majority of industry export revenue (58.0%), but the remainder of the industry's international market is fragmented."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 36.4,
+            "percentage_population": 25.8
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region is home to the headquarters of Whirlpool Corporation, the industry's largest player, in Ann Arbor, MI.",
+            "percentage_establishments": 18.2,
+            "percentage_population": 15.1
+        },
+        {
+            "location": "Southwest",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 10.1,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "Plains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 9.1,
+            "percentage_population": 6.8
+        },
+        {
+            "location": "West",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 8.1,
+            "percentage_population": 17.4
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region, which prominently includes New York and Pennsylvania, has a low industry presence likely due to the high costs of operating in this densely populated region, combined with easy access to other major manufacturing hubs discouraging manufacturers from operating there.",
+            "percentage_establishments": 2.0,
+            "percentage_population": 15.2
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5.1,
+            "percentage_population": 4.5
+        },
+        {
+            "location": "Rocky Mo",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 11.0,
+            "percentage_population": 3.7
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [
+            {
+                "regulation_title": "Standard manufacturing regulations",
+                "regulation_description": "Industry manufacturing facilities are subject to regulations similar to other manufacturing facilities, covering issues such as worker safety and environmental discharge, and are enforced by agencies such as the Environmental Protection Agency, the Occupational Safety and Health Administration and state-level regulators."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Formal entry barriers are fairly low",
+                "barrier_description": "Capital requirements are moderate, the industry is not heavily regulated and industry products in their basic form are not subject to rigorous intellectual property restrictions."
+            },
+            {
+                "barrier_title": "Barriers to success are quite high",
+                "barrier_description": "The industry is heavily consolidated among three multinational conglomerates. These companies have numerous advantages like longstanding relationships with downstream retailers and international scope."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Concentration Level: high",
+            "Globalization Level: high - increasing",
+            "Competition Level: high - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Regulation Level: light - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Range of products",
+                "basis_description": "Since only three companies control the majority of the industry, each must try to produce a range of products that appeal to varying consumer segments."
+            },
+            {
+                "basis_title": "Product placements at major retailers",
+                "basis_description": "Companies compete by establishing and maintaining relationships with key downstream retailers, in part by competing on the efficiency of their logistics operations and ability to consistently deliver stock."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "High",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Three major companies control nearly 90% market share",
+                "concentration_description": "The industry's three major companies Whirlpool, Electrolux and GE Appliances control nearly 90% of the market."
+            },
+            {
+                "concentration_title": "Other smaller players",
+                "concentration_description": "There are 90 other smaller companies estimated to operate in this industry in 2021, but none is expected to have a market share greater than 5%."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Whirlpool Corporation",
+                "company_percentage": 61.5
+            },
+            {
+                "company_name": "Electrolux AB",
+                "company_percentage": 20.3
+            },
+            {
+                "company_name": "GE Appliances",
+                "company_percentage": 18.9
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 5.7
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 14.1
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 50.9
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 1.6
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0.2
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0.3
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0.6
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 26.6
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Steel is a major purchase cost",
+            "cost_factor_description": "Steel is one of the main purchase costs for industry operators, since it forms the structure of their appliances, but other components as well as some outsourced manufacturing-related services are also included."
+        },
+        {
+            "cost_factor_title": "Purchase costs volatile due to trade disputes",
+            "cost_factor_description": "Purchase costs have been somewhat volatile and may continue to be due to current trade disputes, which have included tariffs for US importers of steel."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital investment per worker",
+                "capital_intensity_description": "For every $1.00 spent on labor in 2022, industry operators are projected to invest an average $0.11 in capital equipment, machinery and property."
+            },
+            {
+                "capital_intensity_title": "High labor costs from large companies",
+                "capital_intensity_description": "Given high concentration in the industry among large consumer electronics manufacturers, the industry's employment costs are likely raised by these companies' propensity to undertake many marketing, logistics and development efforts internally."
+            },
+            {
+                "capital_intensity_title": "Increasing automation",
+                "capital_intensity_description": "In fact, the industry's production facilities have undergone substantial automation in recent years and operators continue to invest heavily in capital."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Stable demand for residential appliances",
+                "volatility_description": "Ovens and stoves are standard-issue for most residential dwellings and will likely remain so."
+            },
+            {
+                "volatility_title": "Concentration allows R&D investment",
+                "volatility_description": "With high market share concentration in the industry and three companies controlling the majority of industry sales, these companies have ample resources for research and development to stay ahead of the curve."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Smart home connectivity",
+                "technological_change_description": "For the Oven and Stove Manufacturing industry, upcoming developments likely include Bluetooth-enabled ovens that can connect to other appliances, such as a microwave, and sync the cook times for a meal."
+            },
+            {
+                "technological_change_title": "Remote control via smartphones",
+                "technological_change_description": "Additionally, manufacturers will be introducing ovens and stoves that can be controlled from a smartphone, enabling consumers to begin preheating or turn off their appliances from afar."
+            },
+            {
+                "technological_change_title": "Increased manufacturing automation",
+                "technological_change_description": "Technology has also been incorporated into the manufacturing process, mainly through the increased automation of production and inventory tracking."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company impacted by rising imports from abroad?",
+            "answer": "Imports have historically been challenged but are expected to be curbed by reshoring and tariffs."
+        },
+        {
+            "question": "Does your company specialize in one corner of the market or produce a diversified range of products?",
+            "answer": "All industry establishments are part of larger electronics and appliance companies that produce a wide scope of products."
+        },
+        {
+            "question": "Is your company investing heavily in R&D to meet changing consumer preferences?",
+            "answer": "The industry has focused on energy efficiency in its newest product lines."
+        },
+        {
+            "question": "Has your company located in proximity to its key downstream distributors to reduce shipping costs?",
+            "answer": "The industry has very few establishments and serves customers nationwide, so internal logistics is a major competitive factor."
+        },
+        {
+            "question": "Have you been able to reduce wage costs by automating operations over the past five years?",
+            "answer": "Wage costs in the industry have remained relatively stable as a share of revenue."
+        },
+        {
+            "question": "Does your company use SAP software systems to optimize all aspects of manufacturing, sales, inventory and distribution channels?",
+            "answer": "The industry has very few establishments and serves customers nationwide, so internal logistics is a major competitive factor."
+        },
+        {
+            "question": "What effect have international tariffs had on your ability to import and export products?",
+            "answer": "New tariffs imposed by the United States have added volatility to trade over the past few years."
+        },
+        {
+            "question": "Do you work with trade associations or other interest groups to advance your company's interests?",
+            "answer": "The industry is composed of only a few conglomerates, which have ample resources to advocate for their interests."
+        },
+        {
+            "question": "How frequently does your company purchase new equipment?",
+            "answer": "Capital costs are moderate in the industry."
+        },
+        {
+            "question": "How does your company's profit margins compare to your main competitors?",
+            "answer": "Industry margins are relatively low on average, but are somewhat volatile due to the small number of companies in the industry."
+        },
+        {
+            "question": "How well prepared are you to anticipate appliance trends? How much do you invest in research and development?",
+            "answer": "Good market research will help in the understanding of the needs of consumers and retailers, along with the responses of competitors, within specific market segments."
+        },
+        {
+            "question": "What new products have you developed recently? Have you been able to take advantage of the smart home trend?",
+            "answer": "Companies that can quickly introduce new products (incorporating new designs or technologies) to meet the changing wants and needs of consumers will compete more effectively."
+        },
+        {
+            "question": "What brand names are you able to leverage? What kind of reputation do your models have?",
+            "answer": "Brand strength can be promoted through advertising, supplying goods with a consistent quality and maintaining a strong retail presence. Since major appliances are relatively expensive goods, purchasers are drawn to products that have a recognizable name."
+        },
+        {
+            "question": "How have fluctuations in the value of the US dollar affected demand for your products? How can you boost your export levels?",
+            "answer": "The trade-weighted index (TWI) measures the strength of the US dollar relative to the currencies of the country's most significant trading partners. Growth in the trade-weighted index represents a strengthening US dollar. A more valuable US dollar increases demand from consumers for imported goods."
+        },
+        {
+            "question": "Do fluctuations in the price of steel affect certain products more than others? How can you adapt when the price of steel is volatile?",
+            "answer": "Steel is a key raw material used in the manufacture of ovens, stoves, ranges and other industry products. An increase in the price of steel increases the cost of manufacturing. Rising input costs can cut into profitability in the short term."
+        },
+        {
+            "question": "Do you expect major changes in demand as a result of rising disposable income levels? What price-premium products do you offer or are currently researching?",
+            "answer": "Per capita disposable income determines the ability of households to purchase goods and is a strong determinant of demand for ovens and stoves. When disposable income is low or declining, consumers are less willing to purchase new ovens or stoves."
+        }
+    ]
+}

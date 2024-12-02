@@ -1,0 +1,498 @@
+{
+    "report_title": "Oil Pipeline Transportation in the US",
+    "report_date": "Jun 28, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 15869000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 4.24
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": -0.32
+            }
+        },
+        "profit": {
+            "profit_dollars": 6506000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 5.68
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 2.5
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 41.0,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 1.38
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 2.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 10538000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 4.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": -0.5
+            }
+        },
+        "employees": {
+            "employees_count": 9262,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 1.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0.5
+            }
+        },
+        "wages": {
+            "wages_dollars": 1410000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 3.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 2.0
+            }
+        },
+        "imports": {
+            "imports_dollars": 5000000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": -1.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": -0.5
+            }
+        },
+        "exports": {
+            "exports_dollars": 7000000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 1.5
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0.5
+            }
+        }
+    },
+    "executive_summary": "Since 2019, the United States has emerged as a leading crude oil producer, surpassing giants like Saudi Arabia and Russia. The surge in domestic oil production, driven by fracking and other unconventional drilling techniques, has significantly increased demand for oil pipelines to transport crude oil to refineries nationwide. Geopolitical tensions, including the war in Ukraine, have further influenced oil prices, causing volatility and necessitating rapid adjustments in oil transportation and production. Technological advancements led to skyrocketing productivity, compensating for rig closures. Environmental regulations and protests played a significant role, culminating in the abandonment of the Keystone XL pipeline project in 2021. The oil pipeline transportation industry's revenue has been declining by a CAGR of 2.4% to $15.9 billion over the five years through 2024, including an expected 0.5% uptick in 2024 alone.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Energy Independence Drove a Boom in Domestic Oil Production",
+            "current_performance_point_description": "The US has been one of the largest crude oil producers during the period, surpassing Saudi Arabia and Russia. Fracking and other unconventional drilling techniques led to a boom in inland oil production. Pipeline owners have expanded capacity through mergers and acquisitions to meet the influx of oil flow."
+        },
+        {
+            "current_performance_point_title": "Geopolitical Tensions Spurred Volatility in Energy Markets",
+            "current_performance_point_description": "Geopolitical tensions, supply shocks and economic uncertainty drove fluctuations in crude oil prices. Prices dipped drastically during the pandemic, slowing down pipeline usage. Prices skyrocketed as the economy recovered, causing a surge in oil transportation to petroleum refineries as oil producers expanded production capacities."
+        },
+        {
+            "current_performance_point_title": "The Biden Administration Rejoined the Paris Agreement",
+            "current_performance_point_description": "In order to address concerns surrounding climate change, the Biden administration rejoined the Paris Agreement in 2021. The current administration's vision is to cut US emissions by at least 50 percent of 2005 levels by 2030 and achieve net-zero emissions by 2050."
+        },
+        {
+            "current_performance_point_title": "Environmental Regulation Caused Big Oil to Divest From California",
+            "current_performance_point_description": "The climate change fight propelled California to end its relationship with big oil companies, further pressuring the PADD 5's market share in the oil pipeline transport industry and emphasizing the importance of PADD 3 and Texas."
+        },
+        {
+            "current_performance_point_title": "Technological Improvements and Boosted Efficiency Result in Rig Closures",
+            "current_performance_point_description": "The US Energy Information Administration reported a 69.0% decrease in active rigs between 2014 and 2022. Skyrocketing productivity at new wells compensated for the declining rig count as energy companies leverage the latest technology to support their operations."
+        },
+        {
+            "current_performance_point_title": "Environmental Protests Forced Shutdown of the Keystone XL Pipeline",
+            "current_performance_point_description": "The Keystone XL pipeline was expected to transport 830,000 barrels of tar sands oil daily from Alberta to Texas refineries, but TC Energy abandoned the project amid pressures and regulations."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Low Liquidity Hampers Pipeline Expansion Efforts",
+            "future_outlook_point_description": "Infrastructure investment, including new pipelines along with expansion to strategic locations, is still needed to accommodate oil transportation between terminals, refineries and petrochemical factories."
+        },
+        {
+            "future_outlook_point_title": "A Sustainable Future Push Clouds Outlook for Oil Pipelines",
+            "future_outlook_point_description": "The US is rolling out infrastructure spending plans designed to achieve the net zero target."
+        },
+        {
+            "future_outlook_point_title": "While Projected to Decline, Oil Will Continue Holding a Significant Share of the Energy Sector",
+            "future_outlook_point_description": "Fossil fuels are expected to remain one of the critical components of the economy as the country still heavily relies on crude oil."
+        },
+        {
+            "future_outlook_point_title": "Phasing out oil will be a gradual process",
+            "future_outlook_point_description": "Phasing out oil will be a gradual process as new infrastructure has to be built to meet the tremendous energy needs of the US."
+        },
+        {
+            "future_outlook_point_title": "Oil Pipelines Are Expected To Prioritize Cybersecurity",
+            "future_outlook_point_description": "US energy infrastructure is a major target for cybercriminals. Companies will emphasize cybersecurity measures to prevent proprietary information from being leaked."
+        }
+    ],
+    "industry_definition": "Oil pipelines are the primary and most reliable method of distributing oil throughout the United States.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low Technology Change Level",
+            "high - steady Barriers To Entry Level"
+        ],
+        "negative_impact_factors": [
+            "high Revenue Volatility Level",
+            "high Capital Intensity Level",
+            "none - steady Industry Assistance Level"
+        ],
+        "mixed_impact_factors": [
+            "mature Life Cycle Stage"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "Low Imports",
+            "High Profit vs. Sector Average"
+        ],
+        "weaknesses": [
+            "None & Steady Level of Assistance",
+            "High Volatility",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2005-2024)",
+            "High Revenue Growth (2019-2024)"
+        ],
+        "threats": [
+            "Low Outlier Growth",
+            "Low Revenue Growth (2024-2029)"
+        ]
+    },
+    "key_trends": [
+        "There are only a few major pipeline operators.",
+        "Market concentration remains moderate.",
+        "Unconventional drilling techniques have increased oil production across the country.",
+        "Canada continues to be one of the biggest importers of oil.",
+        "Renewable and nuclear energy continue to take market share from oil."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "PADD 1 (East Coast)",
+            "segment_percentage": 0.5,
+            "segment_description": "PADD 1 is divided into PADD 1A and 1B."
+        },
+        {
+            "segment": "PADD 2 (Midwest)",
+            "segment_percentage": 13.3,
+            "segment_description": "PADD 2 includes states that are industrially active."
+        },
+        {
+            "segment": "PADD 3 (Gulf Coast)",
+            "segment_percentage": 101,
+            "segment_description": "PADD 3 includes states with substantial oil production."
+        },
+        {
+            "segment": "PADD 4 (Rocky Mountains)",
+            "segment_percentage": 7.1,
+            "segment_description": "PADD 4 includes states with hydropower initiatives."
+        },
+        {
+            "segment": "PADD 5 (West Coast)",
+            "segment_percentage": 5.4,
+            "segment_description": "PADD 5 has drilling regulations that impact production."
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Imported Crude Oil Transport",
+            "product_description": "Oil pipelines transport oil from ports to terminals.",
+            "product_percentage": 30.7
+        },
+        {
+            "product_or_service": "Lower 48 States Crude Oil Transport",
+            "product_description": "Domestic oil is primarily distributed to refineries.",
+            "product_percentage": 63.7
+        },
+        {
+            "product_or_service": "Alaskan Crude Oil Transport",
+            "product_description": "Alaska possesses significant oil fields but faces challenges.",
+            "product_percentage": 2.1
+        },
+        {
+            "product_or_service": "Transport of Other Materials and Miscellaneous Services",
+            "product_description": "Pipelines can be repurposed to transport various materials.",
+            "product_percentage": 101
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Metal Pipe & Tube Manufacturing",
+            "Gasoline & Petroleum Stations",
+            "Oil Drilling & Gas Extraction",
+            "Construction Industries"
+        ],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [
+            "Gasoline & Petroleum Wholesaling",
+            "Manufacturing"
+        ],
+        "tier_2_buyers": [
+            "Transportation and Warehousing"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Petroleum Refining Industry",
+            "determinant_description": "Crude oil is processed into products."
+        }
+    ],
+    "international_trade": {
+        "import_level": "low",
+        "import_trend": "steady",
+        "export_level": "low",
+        "export_trend": "steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southwest",
+            "location_description": "Over a third of pipelines located here due to production.",
+            "percentage_establishments": 9.3,
+            "percentage_population": 9.3
+        },
+        {
+            "location": "Southeast",
+            "location_description": "This area hosts a considerable population and pipelines.",
+            "percentage_establishments": 24.0,
+            "percentage_population": 19.3
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "Manufacturing hub with significant energy demands.",
+            "percentage_establishments": 11.0,
+            "percentage_population": 14.7
+        },
+        {
+            "location": "Plains",
+            "location_description": "Central location for oil distribution.",
+            "percentage_establishments": 32.0,
+            "percentage_population": 28.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "",
+            "percentage_establishments": 0,
+            "percentage_population": 4.0
+        },
+        {
+            "location": "West",
+            "location_description": "",
+            "percentage_establishments": 11.7,
+            "percentage_population": 12.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "",
+            "percentage_establishments": 9.3,
+            "percentage_population": 9.3
+        },
+        {
+            "location": "New England",
+            "location_description": "",
+            "percentage_establishments": 2.7,
+            "percentage_population": 3.4
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "Federal Energy Regulatory Commission",
+                "regulation_description": "Regulates oil pipeline rates."
+            },
+            {
+                "regulation_title": "State Regulations",
+                "regulation_description": "Each state has specific guidelines."
+            },
+            {
+                "regulation_title": "Office of Pipeline Safety",
+                "regulation_description": "Monitors pipeline safety and environmental impact."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Mature industry life cycle stage",
+                "barrier_description": "Industry is at a mature stage."
+            },
+            {
+                "barrier_title": "High revenue volatility",
+                "barrier_description": "Revenue volatility is high."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Mature",
+            "High Revenue Volatility"
+        ],
+        "factors_decreased_barrier": [
+            "Low Technology Change"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Few major pipeline operators",
+                "basis_description": "Limited number of major operators."
+            },
+            {
+                "basis_title": "Market share expansion through consolidation",
+                "basis_description": "Consolidation increases market share."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Oil pipelines consolidating amid renewable energy competition",
+                "concentration_description": "Renewable energy pressures industry consolidation."
+            },
+            {
+                "concentration_title": "Established operators dominate the industry",
+                "concentration_description": "Long-established operators control market."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Energy Transfer, Lp",
+                "company_percentage": 17.3
+            },
+            {
+                "company_name": "Tc Energy Corporation",
+                "company_percentage": 11.7
+            },
+            {
+                "company_name": "Plains All American Pipeline Lp",
+                "company_percentage": 10.4
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 40
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 5
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Depreciation is the Primary Cost for Oil Pipeline Transportation Industry",
+            "cost_factor_description": "Capital maintenance costs are significant."
+        },
+        {
+            "cost_factor_title": "Automation and Declining Number of Enterprises Pressure Wages",
+            "cost_factor_description": "Wages are decreasing due to fewer enterprises."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_trend": "Steady",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Labor Expenses",
+                "capital_intensity_description": "Workers are needed for monitoring operations."
+            }
+        ]
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_trend": "Steady",
+        "volatility_points": [
+            {
+                "volatility_title": "Pandemic impact on oil markets",
+                "volatility_description": "COVID-19 significantly affected oil prices."
+            }
+        ]
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_trend": "Increasing",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Technology advancements improve performance",
+                "technological_change_description": "Adoptions of new tech improve efficiency."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "Companies across the industry transport a range of products. Does your company transport a diversified range of products?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "Are your company's sales heavily dependent on the health of oil prices?",
+            "answer": "Crude oil can be segmented into light, medium and heavy crude."
+        },
+        {
+            "question": "Has your company explored acquisition opportunities?",
+            "answer": "Firms can grow through acquisitions."
+        },
+        {
+            "question": "How frequently does your company purchase new equipment?",
+            "answer": "Equipment purchases occur regularly during projects."
+        }
+    ]
+}

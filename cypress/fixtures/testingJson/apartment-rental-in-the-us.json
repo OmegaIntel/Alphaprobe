@@ -1,0 +1,350 @@
+{
+    "report_title": "Industry Report on Apartment Rental Market",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 94020000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 3.32
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.7
+            }
+        },
+        "profit": {
+            "profit_dollars": 31270000000,
+            "profit_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "profit_cagr_value": 101
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 1.5
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 33.3,
+            "profit_margins_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "profit_margins_cagr_value": 0.59
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 1.1
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 181138000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 2.5
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 1.6
+            }
+        },
+        "employees": {
+            "employees_count": 1145174,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 2.2
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 2.0
+            }
+        },
+        "wages": {
+            "wages_dollars": 32884000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 3.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 2.8
+            }
+        },
+        "imports": {
+            "imports_dollars": 101,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 1.2
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0.9
+            }
+        },
+        "exports": {
+            "exports_dollars": 101,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 1.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0.7
+            }
+        }
+    },
+    "executive_summary": "The apartment rental industry has seen revenue growth over the past five years to 2024, driven by favorable economic conditions and demographic trends that increased demand. COVID-19 temporarily reduced demand in 2020-2021, but revenue has rebounded since 2022 due to higher prices and strong rental market. Revenue grew at 2.1% CAGR over the past five years and is expected to reach $282.3 billion by end of 2024, including 1.0% growth in 2024.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Growing cities benefit lessors as consumers spend more on rent",
+            "current_performance_point_description": "The largest revenue share comes from urban centers where rental apartments are prevalent due to density and demographics."
+        },
+        {
+            "current_performance_point_title": "Rising interest rates put homeownership out of reach",
+            "current_performance_point_description": "Homeownership is preferred long-term, but rising interest rates from the Federal Reserve's 11 rate hikes between March 2022 and January 2024 made mortgages more expensive."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Rental supply to increase then taper off",
+            "future_outlook_point_description": "US apartment supply hit a record in 2023 and 2024 will also be high, but construction has slowed due to factors like insufficient debt and increased costs."
+        },
+        {
+            "future_outlook_point_title": "Interest rate cuts will impact the industry",
+            "future_outlook_point_description": "The Federal Reserve expects to cut interest rates three times in 2024 as inflation eases."
+        }
+    ],
+    "industry_definition": "The apartment rental industry consists of operators that act as lessors of residential buildings used as dwellings.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "High and steady industry assistance level",
+            "Low concentration level",
+            "Low technology change level",
+            "Low and steady globalization level"
+        ],
+        "negative_impact_factors": [
+            "High capital intensity level",
+            "High and increasing competition level"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & steady level of assistance",
+            "Low imports",
+            "High profit vs sector average"
+        ],
+        "weaknesses": [
+            "High competition",
+            "High capital requirements"
+        ],
+        "opportunities": [
+            "High revenue growth (2019-2024)",
+            "High revenue growth (2024-2029)"
+        ],
+        "threats": [
+            "Low revenue growth (2005-2024)",
+            "Low outlier growth"
+        ]
+    },
+    "key_trends": [
+        "Competition is strongest at the top end of the industry for luxury apartments",
+        "Rising property values benefit lessors but raise affordability concerns"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Singles",
+            "segment_description": "This segment accounts for single-person apartments' share of all occupied rental units in the US.",
+            "segment_percentage": 37.8
+        },
+        {
+            "segment": "Couples",
+            "segment_description": "This segment accounts for two person apartments' share of all occupied rental units in the US.",
+            "segment_percentage": 28.2
+        },
+        {
+            "segment": "Families",
+            "segment_description": "This segment accounts for three-or-more-person apartments' share of all occupied units in the US.",
+            "segment_percentage": 34.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Rental of One-Unit Structures",
+            "product_description": "This segment accounts for single-unit structures' share of total rental structures in the US.",
+            "product_percentage": 32.2
+        },
+        {
+            "product_or_service": "Rental of Two- to Four-Unit Structures",
+            "product_description": "Accounted for in this segment, smaller complexes and townhouses consisting of nine or fewer units have long been staples of cities in the United States.",
+            "product_percentage": 16.3
+        },
+        {
+            "product_or_service": "Rental of 10- to 19-Unit Structures",
+            "product_description": "Accounted for in this segment, larger complexes consisting of 10 or more units provide the obvious benefit of having a greater number of units, so lessors can generate more revenue in less space.",
+            "product_percentage": 14.6
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Apartment Rental in the US"
+        ],
+        "tier_2_suppliers": [
+            "Electric Power Transmission in the US",
+            "Woodworking Machinery Manufacturing in the US",
+            "Construction Machinery Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Apartment & Condominium Construction in the US",
+            "Water Supply & Irrigation Systems in the US"
+        ],
+        "tier_2_buyers": [
+            "Real Estate Sales & Brokerage in the US",
+            "Property Management in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Rental Vacancy Rates",
+            "determinant_description": "The rental vacancy rate is a key metric for apartment lessors as it is the best indicator of supply and demand."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic is home to some major cities, but New York stands clearly above the rest.",
+            "percentage_establishments": 18,
+            "percentage_population": 15
+        },
+        {
+            "location": "Southeast",
+            "location_description": "Cities in regions including the Southeast and West tend to be more spread out.",
+            "percentage_establishments": 22,
+            "percentage_population": 19
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "BUILDING CODES AND OTHER REGULATIONS ENSURE TENANTS HAVE A SAFE PLACE TO SLEEP",
+                "regulation_description": "Compliance with building codes and other safety regulations is required to operate an apartment building."
+            },
+            {
+                "regulation_title": "ZONING AND RENT RATE LIMITS KEEP LESSORS IN CHECK",
+                "regulation_description": "Zoning restrictions and rate limits protect renters."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_points": [
+            {
+                "barrier_title": "Legal barriers",
+                "barrier_description": "New apartment lessors contend with substantial legal barriers."
+            }
+        ],
+        "barriers_trend": "Steady",
+        "factors_increased_barrier": [
+            "mature",
+            "high",
+            "high - increasing"
+        ],
+        "factors_decreased_barrier": []
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Competition strongest at top end of industry",
+                "basis_description": "Competition is strongest at the top end of the industry."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_points": [
+            {
+                "concentration_title": "Top lessors generate high profit but small market share",
+                "concentration_description": "While the large luxury apartment complexes may be the most successful, the apartment rental market is massive."
+            }
+        ],
+        "concentration_trend": "Unknown",
+        "top_companies": [
+            {
+                "company_name": "Equity Residential",
+                "company_percentage": 4.7
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 15
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Administrative Costs Add Up for Lessors",
+            "cost_factor_description": "Costs connected to the operation of a rental facility are an essential part of operating a successful apartment complex."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Capital Expenses",
+                "capital_intensity_description": "Entrance into the apartment rental industry comes with significant capital expense."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "The job market and interest rates influence volatility",
+                "volatility_description": "Interest rate fluctuations significantly impact both renters and buyers."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Tech-driven experiences are becoming more prevalent",
+                "technological_change_description": "Virtual tours allow potential tenants to explore apartments remotely."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "Do your sales depend on the overall health of the US economy at large?",
+            "answer": "Demand for apartment rentals will follow trends in consumer affordability."
+        }
+    ]
+}

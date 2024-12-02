@@ -1,0 +1,589 @@
+{
+    "report_title": "PET Scanner Manufacturing Industry Report",
+    "report_date": "2021",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 1450000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "revenue_cagr_value": -3.71
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "revenue_cagr_value": 3.11
+            }
+        },
+        "profit": {
+            "profit_dollars": 97000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "profit_cagr_value": -4.06
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 6.7,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "profit_margins_cagr_value": -0.36
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 357000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 2115,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 233000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": 786000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": 833000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Over the five years to 2021, the PET Scanner Manufacturing industry has experienced a decline in revenue due to the cyclical nature of this industry, and the COVID-19 (coronavirus) pandemic's disruption of the Healthcare sector. PET (positron emission tomography) scanner purchases are infrequent and represent a significant capital investment for buyers. Prior to the current period, industry revenue boomed as downstream markets renewed and replaced old devices, and therefore, revenue declined early during the period as demand waned. However, PET scanner usage among oncologists has remained high because these scanners are used to diagnose a variety of cancers.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Revenue decline due to cyclical nature and COVID-19",
+            "current_performance_point_description": "Over the five years to 2021, revenue for the PET Scanner Manufacturing industry has declined due to its cyclical nature and the COVID-19 (coronavirus) pandemic's disruption of the Healthcare sector. PET scanners are a significant capital investment for healthcare providers, so purchasers do not buy new devices frequently."
+        },
+        {
+            "current_performance_point_title": "Importance of PET scanners in cancer diagnosis",
+            "current_performance_point_description": "However, revenue declines have not been as drastic in recent years as diagnostic imaging has become an increasingly vital component of diagnosing cancer in patients. Oncologists rely on PET and combined PET/CT scanners to help diagnose numerous cancers."
+        },
+        {
+            "current_performance_point_title": "Revenue decline and profit margin",
+            "current_performance_point_description": "Industry revenue has declined at an annualized rate of 5.2% to $1.4 billion over the five years to 2021, including a decline of 3.9% in 2021 alone. Profit, measured as earnings before interest and taxes, is anticipated to account for 6.7% of industry revenue in 2021, down from 8.4% in 2016."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Revenue growth expected",
+            "future_outlook_point_description": "Moving forward, industry demand is expected to reverse revenue declines that have occurred during the current period, with revenue expected to increase at an annualized rate of 3.5% to $1.7 billion over the five years to 2026."
+        },
+        {
+            "future_outlook_point_title": "Healthcare sector recovery to drive demand",
+            "future_outlook_point_description": "As the Healthcare sector begins to recover from the COVID-19 pandemic, private investment in industrial equipment and machinery is forecast to experience significant growth, boosting industry demand."
+        },
+        {
+            "future_outlook_point_title": "Aging population to increase healthcare expenditure",
+            "future_outlook_point_description": "Further, the continuously aging domestic population will likely precipitate growth in total health expenditure, providing more healthcare providers the excess capital required to invest in new PET models."
+        }
+    ],
+    "industry_definition": "This industry manufactures positron emission tomography (PET) scanners, including combination PET/CT scanners and radiopharmaceuticals. These machines produce 3D images of functional processes in the body and show molecular function and activity, rather than structure, to better differentiate between normal and abnormal tissues.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "High & Steady Level of Assistance",
+            "High Profit vs. Sector Average",
+            "Low Capital Requirements"
+        ],
+        "negative_impact_factors": [
+            "High Volatility",
+            "High Imports",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Level of Assistance",
+            "High Profit vs. Sector Average",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "High Volatility",
+            "High Imports",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2021-2026)",
+            "High Performance Drivers",
+            "Number of adults aged 65 and older"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2021)",
+            "Low Revenue Growth (2016-2021)",
+            "Low Outlier Growth",
+            "Trade-weighted index"
+        ]
+    },
+    "key_trends": [
+        "Private investment in industrial equipment and machinery will likely decline substantially in 2020",
+        "The regulatory landscape has been a key factor in driving industry revenue growth",
+        "The number of industry operators has stagnated over the past five years",
+        "Research and development is expected to become increasingly vital for PET scanner manufacturers",
+        "New technological advancements will likely benefit the industry",
+        "Increased demand from foreign emerging markets is expected to support export growth",
+        "demand is heavily influenced by the propensity for downstream markets to invest in new equipment"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Hospitals, including general and specialty",
+            "segment_description": "Hospitals account for 33.3% of industry revenue in 2021 due to resources to purchase advanced scanners.",
+            "segment_percentage": 33.3
+        },
+        {
+            "segment": "Ambulatory care",
+            "segment_description": "Ambulatory care settings like private practices account for 9.3% of revenue in 2021.",
+            "segment_percentage": 9.3
+        },
+        {
+            "segment": "Exports",
+            "segment_description": "Exports account for an estimated 57.4% of total industry revenue in 2021.",
+            "segment_percentage": 57.4
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Mobile PET/CT and PET Scanners",
+            "product_description": "Mobile PET/CT and PET scanners account for 47% of industry revenue in 2021.",
+            "product_percentage": 47
+        },
+        {
+            "product_or_service": "Fixed PET/CT Scanners",
+            "product_description": "Fixed PET/CT scanners account for 49% of industry revenue in 2021.",
+            "product_percentage": 49
+        },
+        {
+            "product_or_service": "Fixed PET Scanners",
+            "product_description": "Fixed PET scanners comprise 4% of industry revenue in 2021.",
+            "product_percentage": 4
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Plastic & Resin Manufacturing in the US",
+            "Brand Name Pharmaceutical Manufacturing in the US",
+            "Laminated Plastics Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Semiconductor Manufacturing in the US",
+            "Computer Manufacturing in the US",
+            "Power Tools & Other General Purpose Machinery Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Primary Care Doctors in the US",
+            "Specialist Doctors in the US",
+            "Hospitals in the US"
+        ],
+        "tier_2_buyers": [
+            "Specialty Hospitals in the US",
+            "Medical Supplies Wholesaling in the US",
+            "Laboratory Supply Wholesaling in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Scientific advancements",
+            "determinant_description": "Demand is influenced by scientific advancements that enable new and improved service capabilities for more accurate disease diagnosis."
+        },
+        {
+            "determinant_title": "Health and age of population",
+            "determinant_description": "An aging population requiring more medical care, including diagnosis of age-related illnesses like cancer, boosts demand."
+        },
+        {
+            "determinant_title": "Cost of services",
+            "determinant_description": "Lower costs due to technological advances and reimbursement from third-party payers can increase affordability and demand."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Steady",
+        "export_level": "High",
+        "export_trend": "Steady",
+        "international_trade_points": [
+            {
+                "trade_title": "Major import sources",
+                "trade_description": "In 2021, major import sources were Germany (57.2%), Japan (13.3%), Israel (10.6%), and China (4.8%)."
+            },
+            {
+                "trade_title": "Major export destinations",
+                "trade_description": "In 2021, major export destinations were China (24%), Germany (16.5%), Japan (7.7%), and the UK (3.3%)."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "West",
+            "location_description": "The West region accounts for 26.7% of industry establishments in 2021.",
+            "percentage_establishments": 26.7,
+            "percentage_population": 101
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region accounts for 22.4% of industry establishments in 2021.",
+            "percentage_establishments": 22.4,
+            "percentage_population": 101
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region accounts for 20.7% of industry establishments in 2021.",
+            "percentage_establishments": 20.7,
+            "percentage_population": 101
+        },
+        {
+            "location": "New England",
+            "location_description": "The New England region accounts for 15.5% of industry establishments in 2021.",
+            "percentage_establishments": 15.5,
+            "percentage_population": 101
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "FDA Regulations for Medical Devices",
+                "regulation_description": "Operators must obtain 510(k) clearance from the FDA before marketing a medical device like a PET scanner. Medical device reporting regulation requires reporting deaths, injuries and malfunctions."
+            },
+            {
+                "regulation_title": "Healthcare Reform",
+                "regulation_description": "The Affordable Care Act imposed taxes on medical device manufacturers, though the tax was suspended from 2016-2019."
+            },
+            {
+                "regulation_title": "Hospital Outpatient Prospective Payment System (HOPPS)",
+                "regulation_description": "Medicare reimbursements for PET scans vary by clinical condition and stage of diagnosis under this program."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Significant capital investments required",
+                "barrier_description": "Significant impediments exist for new entrants, as the product development for advanced PET/CT scanners requires substantial capital investments, in addition to highly trained and specialized personnel."
+            },
+            {
+                "barrier_title": "High R&D costs",
+                "barrier_description": "Research and development (R&D) costs in this industry are high, as industry operators must continue to invest in new scanner technologies and detector materials to stay competitive."
+            },
+            {
+                "barrier_title": "Competing with established companies",
+                "barrier_description": "New entrants must compete with well-established and often sizeable companies. Large multinational corporations dominate this field."
+            },
+            {
+                "barrier_title": "Regulatory compliance",
+                "barrier_description": "Regulation accreditation and compliance can also be costly and take a significant amount of time. Government regulations in the United States are extremely stringent, requiring lengthy and costly clinical trials."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Revenue Volatility Level: high",
+            "Concentration Level: high",
+            "Regulation Level: heavy - steady",
+            "Technology Change Level: high",
+            "Globalization Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Industry Assistance Level: high - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Product price, quality and capabilities",
+                "basis_description": "Competition in the PET Scanner Manufacturing industry is moderate as operators primarily compete on product price, quality, technical capabilities and ease of use, among other factors."
+            },
+            {
+                "basis_title": "Breadth of services and product features",
+                "basis_description": "Industry operators also compete on breadth of services and product features. For example, major manufacturers are introducing hybrid-scanning systems that combine positron emission technology (PET) and computer tomography (CT) technology."
+            },
+            {
+                "basis_title": "Relationships with downstream markets",
+                "basis_description": "Furthermore, establishing a working relationship with key downstream markets is vital in the industry."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "High",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Top 3 players account for over 90% market share",
+                "concentration_description": "Market share concentration in the PET Scanner Manufacturing industry is high as IBISWorld estimates that the top three industry players account for more than 90.0% of the market in 2021."
+            },
+            {
+                "concentration_title": "Capital-intensive industry",
+                "concentration_description": "Consequently, this industry requires highly specialized employees, including software developers, engineers and medical physicists, to help design high-tech PET scanning equipment. As a result, the industry is highly capital-intensive."
+            },
+            {
+                "concentration_title": "Established relationships with downstream markets",
+                "concentration_description": "Furthermore, many of the industry's major players have long-standing relationships with vital downstream markets, including hospitals and radiology centers, making it difficult for new companies promote products in this industry."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Siemens AG",
+                "company_percentage": 42.1
+            },
+            {
+                "company_name": "General Electric Company",
+                "company_percentage": 28.1
+            },
+            {
+                "company_name": "Koninklijke Philips NV",
+                "company_percentage": 24.6
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 6.7
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 16.1
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 38.0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 1.8
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0.6
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 1.0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0.5
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 35.2
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "PET Coverage Expansion",
+            "cost_factor_description": "The Centers for Medicare and Medicaid Services expanded PET coverage by eliminating previous requirements that patients with solid tumors needed to have evidence of a tumor developing prior to receiving a PET scan. In addition, the Centers for Medicare and Medicaid Services expanded PET coverage to include the use of diagnostic imaging for detecting prostate cancer."
+        },
+        {
+            "cost_factor_title": "Purchases",
+            "cost_factor_description": "Purchase costs for manufacturing PET scanners typically include gamma cameras, which are devices used to scan patients that have been injected with radionuclides. Radionuclides, which are radiopharmaceutical or radioactive tracers, are used during the PET scanning procedure to assist healthcare providers in examining patients' tissue."
+        },
+        {
+            "cost_factor_title": "Depreciation",
+            "cost_factor_description": "Overall, depreciation costs may carry a significant dollar value for larger operators, however, compared with other expense categories, depreciation does not represent a significant cost."
+        },
+        {
+            "cost_factor_title": "Marketing",
+            "cost_factor_description": "Marketing costs are minimal for the industry given the highly concentrated nature of operations."
+        },
+        {
+            "cost_factor_title": "Rent",
+            "cost_factor_description": "Industry operators rent the manufacturing space and warehouses to store raw materials."
+        },
+        {
+            "cost_factor_title": "Utilities",
+            "cost_factor_description": "Utility expenses are low for the industry, accounting for 0.5% of revenue in 2021."
+        },
+        {
+            "cost_factor_title": "Other Costs",
+            "cost_factor_description": "Other industry expenditures include insurance and miscellaneous costs, such as those associated with contracted legal or accounting services."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Capital Expenditure Ratio",
+                "capital_intensity_description": "In 2021, for every dollar spent on wages, the industry incurs an estimated $0.11 in capital expenditures."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Reimbursement Rates",
+                "volatility_description": "Overall, downstream demand for PET scanners is driven by reimbursement rates from both private and public health insurance providers."
+            },
+            {
+                "volatility_title": "International Trade",
+                "volatility_description": "Since the industry encompasses direct manufacturers of PET scanners, industry demand is vulnerable to fluctuations in international trade."
+            },
+            {
+                "volatility_title": "COVID-19 Pandemic",
+                "volatility_description": "Volatility surged in 2020 due to the COVID-19 (coronavirus) pandemic disrupting the downstream Healthcare sector."
+            },
+            {
+                "volatility_title": "Buy Cycles",
+                "volatility_description": "PET scanners are a significant investment for healthcare providers. Consequently, major consumers, such as large hospitals, do not purchase new scanners frequently."
+            }
+        ],
+        "volatility_trend": "Decreasing"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "PET/CT and PET/MRI Systems",
+                "technological_change_description": "Major manufactures have introduced hybrid-scanning systems, which combine PET and computer tomography (CT) technology as well as PET and MRI (magnetic resonance imaging) scanners."
+            },
+            {
+                "technological_change_title": "GE PET/CT Advancements",
+                "technological_change_description": "GE has pursued PET/CT advancements to improve resolution, lower patient dosage, motion correction and management."
+            },
+            {
+                "technological_change_title": "Philips Digital PET Platform",
+                "technological_change_description": "Philips has introduced a new digital PET platform using proprietary digital photon counting technology, providing higher sensitivity, resolution and accuracy."
+            },
+            {
+                "technological_change_title": "GE PET/MRI Scanner",
+                "technological_change_description": "GE has developed a PET/MRI scanner with enhanced sensitivity and improved PET image quality."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "What are some key points about the PET Scanner Manufacturing industry over the past five years?",
+            "answer": "Over the five years to 2021, favorable regulations including higher reimbursement rates and expanded Medicare coverage for PET scanning procedures helped bolster industry revenue. The industry receives assistance from associations like the Society of Nuclear Medicine and Molecular Imaging."
+        },
+        {
+            "question": "Are sales heavily dependent on the health of the US economy?",
+            "answer": "PET scanners are demanded regardless of economic health, though in tight times consumers may delay large capital investments that are not necessary."
+        },
+        {
+            "question": "Does the company produce a diversified range of products?",
+            "answer": "Companies producing mobile, fixed PET scanners and PET/CT scanners are more competitive at meeting diverse consumer needs."
+        },
+        {
+            "question": "Has the company been exposed to volatile input prices?",
+            "answer": "Fluctuations in key inputs may affect industry profit."
+        },
+        {
+            "question": "Is proximity to important inputs a factor?",
+            "answer": "Being close to a highly-educated labor force is important to fuel research and development."
+        },
+        {
+            "question": "How does the company invest in technology for competitive advantage?",
+            "answer": "Mobile scanners are trending as they are more convenient for consumers to use."
+        },
+        {
+            "question": "How do software publishing changes affect the company?",
+            "answer": "As software publishing changes more frequently, industry operators will likely have to update products to be compatible with new software."
+        },
+        {
+            "question": "Does the company work with trade associations?",
+            "answer": "Associations like the Society of Nuclear Medicine and Molecular Imaging and the American College of Radiology provide valuable information to understand consumer needs."
+        },
+        {
+            "question": "Is the company prepared to adjust to changing policy?",
+            "answer": "Changes in funding for Medicare and Medicaid greatly affect industry revenue, so being aware helps companies prepare to address changes."
+        },
+        {
+            "question": "How does the buy cycle affect profitability?",
+            "answer": "Due to the cyclical nature of PET scanner purchases, industry revenue and profit fluctuates. Planning according to cycles can benefit companies."
+        },
+        {
+            "question": "What percentage of customers renew contracts?",
+            "answer": "Keeping loyal customers is beneficial as downstream demand is inconsistent, and repeat customers buffer volatility of demand."
+        },
+        {
+            "question": "How does the company attract and retain qualified staff?",
+            "answer": "The industry employs highly skilled staff with expertise in physics, engineering and computer sciences. Research and development require technical expertise and creative talent."
+        },
+        {
+            "question": "Is having a strong reputation important?",
+            "answer": "It is important to establish a strong reputation for high quality and relationships with clients to ensure repeat contracts."
+        },
+        {
+            "question": "How have government policies affected the company?",
+            "answer": "Regulations are high in healthcare. Operators must comply and take advantage of incentives like Medicare reimbursements for PET scanning procedures."
+        },
+        {
+            "question": "How do fluctuations in the trade-weighted index affect the business?",
+            "answer": "When the trade-weighted index rises, measuring the US dollar value relative to other currencies, industry exports become relatively more expensive for global downstream markets."
+        },
+        {
+            "question": "Does demand fluctuate with the number of physician visits?",
+            "answer": "As the number of physician visits rises, more physicians may use PET scans as a diagnostic tool to address patients' health."
+        },
+        {
+            "question": "Is the business affected when Medicare/Medicaid funding is low?",
+            "answer": "As federal funding for Medicare and Medicaid rises, beneficiaries have more access to diagnostic tools like PET scans."
+        }
+    ]
+}

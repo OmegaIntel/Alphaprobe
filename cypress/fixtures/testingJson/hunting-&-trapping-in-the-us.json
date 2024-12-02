@@ -1,0 +1,578 @@
+{
+    "report_title": "Covid-19 Update: Hunting and Trapping Industry",
+    "report_date": "2022",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 848000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "revenue_cagr_value": 0.65
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "revenue_cagr_value": 0.82
+            }
+        },
+        "profit": {
+            "profit_dollars": 353000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "profit_cagr_value": 1.46
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "profit_cagr_value": 0.81
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 41.56,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "profit_margins_cagr_value": 0.18
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "profit_margins_cagr_value": 0.25
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 353000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "industry_value_added_cagr_value": 1.46
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "industry_value_added_cagr_value": 0.81
+            }
+        },
+        "employees": {
+            "employees_count": 15549,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "employees_cagr_value": 0.91
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "employees_cagr_value": 0.6
+            }
+        },
+        "wages": {
+            "wages_dollars": 233000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "wages_cagr_value": 2.59
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "wages_cagr_value": 0.64
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2022,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2022,
+                "end_year": 2028,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The Hunting and Trapping industry is composed of recreational hunting, game and fishing preserves that customers pay to use, as well as commercial fur trappers. Most commercial hunting activities have been illegal since the passage of the Lacey Act of 1900, and therefore, commercial hunting activity accounts for a negligible component of industry activity.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Industry Decline in 2022",
+            "current_performance_point_description": "The industry is expected to experience a decline of 0.9% in 2022 due to a decrease in per capita income. Additionally, industry profit has contracted over the past five years as wage costs have risen."
+        },
+        {
+            "current_performance_point_title": "Commercial Trapping Segment Growth",
+            "current_performance_point_description": "The commercial trapping segment of this industry has grown slightly over the past five years, despite competition from fur farms and the use of artificial fur. Industry activity grew as per capita disposable income has increased an annualized 1.7% over the five years to 2022."
+        },
+        {
+            "current_performance_point_title": "COVID-19 Impact",
+            "current_performance_point_description": "The COVID-19 pandemic and the associated rise in unemployment led to an increase in free time and spurred interest in outdoor recreational activities such as hunting and fishing. Additionally, sustenance hunting and fishing gained popularity as a way to save money on food shopping."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Revenue Growth Projection",
+            "future_outlook_point_description": "Overall, revenue is projected to increase at an annualized 0.9% to $887.7 million over the five years to 2027."
+        },
+        {
+            "future_outlook_point_title": "Rising Demand for Hunting Preserves",
+            "future_outlook_point_description": "A projected decline in available free public hunting land will likely drive more hunters toward hunting and game preserves, causing imminent price increases that will likely lead to growth in industry revenue."
+        },
+        {
+            "future_outlook_point_title": "High-end Preserves Growth",
+            "future_outlook_point_description": "High-end hunting and fishing preserves are forecast to increase in popularity over the coming years, especially as more preserves operate as retreats that feature lodging and meals. These preserves are expected to maintain revenue growth."
+        }
+    ],
+    "industry_definition": "This industry includes commercial trappers, commercial game preserves, hunting preserves, fishing preserves and game propagation companies. Hunting with the intent to sell animal carcasses is illegal according to federal law. Exceptions include the hunting of reptiles, amphibians and fish, as well as the sale of antlers, hides and other specific animal parts obtained via hunting.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Revenue Volatility Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - steady"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level: low - steady",
+            "Regulation Level: heavy - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature",
+            "Capital Intensity Level: medium",
+            "Technology Change Level: medium",
+            "Barriers To Entry Level: medium - steady",
+            "Competition Level: medium - increasing"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Volatility",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration"
+        ],
+        "weaknesses": [
+            "High Capital Requirements",
+            "Low &amp; Steady Level of Assistance",
+            "High Product/Service Concentration",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2017-2022)",
+            "High Revenue Growth (2022-2027)",
+            "Total recreation expenditure"
+        ],
+        "threats": [
+            "Per capita meat consumption",
+            "Low Revenue Growth (2005-2022)",
+            "Low Outlier Growth",
+            "Low Performance Drivers"
+        ]
+    },
+    "key_trends": [
+        "Recreational hunting has traditionally been conducted almost exclusively on public or private lands that do not charge a fee",
+        "The number of hunting preserves has experienced steady growth in recent years",
+        "Meat consumption has trended higher in the United States, more consumers have become interested in sourcing their own meat",
+        "High-end hunting and fishing preserves are forecast to increase in popularity over the coming years",
+        "Long-term demographic trends will likely constrain the popularity of hunting and limit the number of potential clients",
+        "The industry has long grappled with issues concerning its image",
+        "The industry will likely contend with the prospect of long-term sluggishness in revenue growth"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Hunters and anglers aged 45 to 65 years old",
+            "segment_percentage": 40.3
+        },
+        {
+            "segment": "Hunters and anglers aged 25 to",
+            "segment_percentage": 10.0,
+            "segment_description": "<UNKNOWN>"
+        },
+        {
+            "segment": "Hunters and anglers older than 65 years old",
+            "segment_percentage": 18.2
+        },
+        {
+            "segment": "Hunters and anglers younger than 25 years old",
+            "segment_percentage": 9.6
+        },
+        {
+            "segment": "Fur markets",
+            "segment_percentage": 0.4
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Commercial Trapping",
+            "product_description": "Commercial trapping includes the capture of animals for their fur or for wildlife management purposes.",
+            "product_percentage": 0.4
+        },
+        {
+            "product_or_service": "Hunting and Game Preserves",
+            "product_description": "Hunting and game preserves provide opportunities for recreational hunting in controlled environments.",
+            "product_percentage": 70.7
+        },
+        {
+            "product_or_service": "Fishing Preserves",
+            "product_description": "Fishing preserves include natural and manmade bodies of water where anglers can participate in fishing activities. Hunting and game preserves, depending on the geological traits of the area, often also contain bodies of water for fishing activities.",
+            "product_percentage": 28.9
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Sporting Goods Wholesaling in the US",
+            "Sporting Goods Stores in the US"
+        ],
+        "tier_2_suppliers": [
+            "Guns & Ammunition Manufacturing in the US",
+            "Sports Coaching in the US",
+            "Athletic & Sporting Goods Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Consumers in the US",
+            "Leather Good & Luggage Manufacturing in the US",
+            "Leather Tanning & Finishing in the US"
+        ],
+        "tier_2_buyers": [
+            "Specialty Food Stores in the US",
+            "Meat Markets in the US",
+            "Small Specialty Retail Stores in the US",
+            "Fishing in the US",
+            "Textile Mills in the US",
+            "National Parks & Other Nature Institutions",
+            "Tourism in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Leisure Time and Per Capita Income",
+            "determinant_description": "Hunting is generally a time-consuming activity, with several days or weeks required to achieve a successful hunt."
+        },
+        {
+            "determinant_title": "Per Capita Disposable Income and Consumer Spending",
+            "determinant_description": "Increased per capita disposable income tends to increase demand for hunting preserves."
+        },
+        {
+            "determinant_title": "Community Attitudes",
+            "determinant_description": "Demand for industry services is also highly dependent on changing demographics and community attitudes."
+        },
+        {
+            "determinant_title": "Industry Regulation",
+            "determinant_description": "Hunting and trapping activities are regulated by state wildlife agencies."
+        },
+        {
+            "determinant_title": "Sustenance and COVID-19",
+            "determinant_description": "For certain US residents, hunting and fishing represent something closer to a lifestyle than sport."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": [
+            {
+                "trade_title": "No international trade",
+                "trade_description": "The Hunting and Trapping industry does not participate in international trade."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 31.5,
+            "percentage_population": 25.8
+        },
+        {
+            "location": "Southwest",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 20.7,
+            "percentage_population": 12.8
+        },
+        {
+            "location": "West",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 12.9,
+            "percentage_population": 17.1
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 10.2,
+            "percentage_population": 14.5
+        },
+        {
+            "location": "Plains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 9.1,
+            "percentage_population": 6.5
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 6.5,
+            "percentage_population": 4.2
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5.5,
+            "percentage_population": 13.2
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 3.6,
+            "percentage_population": 4.3
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "State hunting and trapping regulations",
+                "regulation_description": "Animal hunting and trapping is primarily regulated at the state level."
+            },
+            {
+                "regulation_title": "Federal regulations",
+                "regulation_description": "Federal laws like the Endangered Species Act influence hunting regulations."
+            },
+            {
+                "regulation_title": "Hunting preserve regulations",
+                "regulation_description": "Hunting preserves must be registered and licensed within their state."
+            },
+            {
+                "regulation_title": "Firearm regulations",
+                "regulation_description": "The use of firearms for hunting is regulated by various factors."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_points": [
+            {
+                "barrier_title": "Increased Barriers",
+                "barrier_description": "Mature life cycle stage, heavy regulation level."
+            },
+            {
+                "barrier_title": "Decreased Barriers",
+                "barrier_description": "Low revenue volatility, low concentration."
+            }
+        ],
+        "barriers_trend": "Steady",
+        "factors_increased_barrier": [
+            "Mature life cycle stage",
+            "Heavy regulation level"
+        ],
+        "factors_decreased_barrier": [
+            "Low revenue volatility",
+            "Low concentration"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_points": [
+            {
+                "basis_title": "Internal Competition Factors",
+                "basis_description": "Compete on price, reputation, quality of environment, animal selection."
+            },
+            {
+                "basis_title": "External Competition",
+                "basis_description": "Competition from free hunting/fishing areas."
+            }
+        ],
+        "basis_trend": "Increasing"
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_points": [
+            {
+                "concentration_title": "Low Concentration",
+                "concentration_description": "No operators account for more than 5% of revenue."
+            }
+        ],
+        "concentration_trend": "Steady",
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 8.9
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 27.5
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 28.5
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 5.2
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0.6
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 7.2
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 6.5
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 15.7
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Wages",
+            "cost_factor_description": "Industry wage costs include salaries, benefits and other labor costs."
+        },
+        {
+            "cost_factor_title": "Purchases",
+            "cost_factor_description": "Purchases are the largest expense, including expenses on animals and equipment."
+        },
+        {
+            "cost_factor_title": "Depreciation",
+            "cost_factor_description": "Depreciation costs vary among operators."
+        },
+        {
+            "cost_factor_title": "Marketing",
+            "cost_factor_description": "A share of industry revenue is dedicated to marketing efforts."
+        },
+        {
+            "cost_factor_title": "Rent",
+            "cost_factor_description": "Rent costs include costs of leasing and maintaining hunting preserves."
+        },
+        {
+            "cost_factor_title": "Utilities",
+            "cost_factor_description": "Utility costs account for a percentage of industry revenue."
+        },
+        {
+            "cost_factor_title": "Other costs",
+            "cost_factor_description": "Typical costs include insurance, licensing fees, and travel expenses."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Capital intensity varies among segments",
+                "capital_intensity_description": "Capital intensity can vary significantly among different operating segments."
+            },
+            {
+                "capital_intensity_title": "Moderate level of capital intensity overall",
+                "capital_intensity_description": "This industry is characterized by moderate capital intensity."
+            },
+            {
+                "capital_intensity_title": "Capital expenditure ratio",
+                "capital_intensity_description": "In 2022, operators are expected to spend capital for every dollar spent on labor."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Low",
+        "volatility_points": [
+            {
+                "volatility_title": "Low historical volatility",
+                "volatility_description": "The industry has experienced low revenue volatility over the years."
+            },
+            {
+                "volatility_title": "Factors impacting volatility",
+                "volatility_description": "Changes in regulations and economic factors can impact volatility."
+            },
+            {
+                "volatility_title": "COVID-19 pandemic impact",
+                "volatility_description": "The pandemic spurred activity for the industry."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Low rate of new technologies",
+                "technological_change_description": "The rate of new patent technologies entering the industry is low."
+            },
+            {
+                "technological_change_title": "Hunting equipment innovations",
+                "technological_change_description": "Innovations include trail cameras and advancements in equipment."
+            },
+            {
+                "technological_change_title": "Wildlife management technologies",
+                "technological_change_description": "Technology is used for monitoring and managing wildlife."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "Does your business focus on one particular service?",
+            "answer": "Many hunting preserves contain bodies of water for fishing activities."
+        },
+        {
+            "question": "Are there export opportunities for your services?",
+            "answer": "There are no export opportunities for the services offered."
+        },
+        {
+            "question": "Does your region have a reliable labor pool?",
+            "answer": "Most industry establishments are privately owned and individually operated."
+        },
+        {
+            "question": "How do you deal with changes in the market?",
+            "answer": "Demand for industry services is highly dependent on changing demographics."
+        },
+        {
+            "question": "Does your company perform any in-house research and development?",
+            "answer": "Research and development of traps has focused on animal welfare issues."
+        },
+        {
+            "question": "What new equipment have you recently invested in?",
+            "answer": "New equipment includes trail cameras and scent control apparel."
+        },
+        {
+            "question": "Do you receive any federal subsidies?",
+            "answer": "Government agencies do not provide direct assistance to industry operators."
+        },
+        {
+            "question": "Does your business require any special environmental permits?",
+            "answer": "Regulations exist relating to the hunting and trapping of animals."
+        },
+        {
+            "question": "How has per capita disposable income affected your profit?",
+            "answer": "Disposable income has positively affected the industry."
+        },
+        {
+            "question": "How profitable is your business compared with your competitors?",
+            "answer": "The industry is characterized by low market share concentration."
+        },
+        {
+            "question": "Has your company been negatively affected by regulations during COVID-19?",
+            "answer": "Operators must comply with various regulations."
+        },
+        {
+            "question": "How does your company go about having an up-to-date license?",
+            "answer": "Hunting preserves must be licensed in their home state."
+        }
+    ]
+}

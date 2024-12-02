@@ -1,0 +1,505 @@
+{
+    "report_title": "Ice Skating Rinks in the US",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 715000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 0.23
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.31
+            }
+        },
+        "profit": {
+            "profit_dollars": 89000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 3.65
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 1.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 12.5,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 3.42
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 1.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 0,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 9243,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 0,
+            "wages_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "Ice rinks in the United States have faced a challenging landscape in recent years, marked by pressure from economic conditions and shifting consumer interests. Ice rinks have seen fluctuating attendance rates but have stayed afloat by diversifying their offerings and cultivating strong community ties. The increasing emphasis on personal health and fitness trends has helped draw varied population segments. Revenue fell at a CAGR of 0.6% to an estimated $714.7 million in 2024, climbing 1.0% that year.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Diversified Usage of Ice-Skating Rinks Offsets Large-Scale Losses",
+            "current_performance_point_description": "Ice skating rinks' ability to attract a wide range of customers and provide various offerings helps offset larger revenue losses. This approach ensures regular demand by catering to different customer needs."
+        },
+        {
+            "current_performance_point_title": "Growing Emphasis on Personal Health Strengthens Appeal of Ice Rinks",
+            "current_performance_point_description": "The International Food Information Council's (IFIC) Food and Health Survey indicates that people are focusing more on physical activity to maintain their health. Even though sports participation grew, ice rinks faced fluctuating attendance from athletes."
+        },
+        {
+            "current_performance_point_title": "Accessibility Impacts Participation in Ice Skating",
+            "current_performance_point_description": "Ice rinks function year-round, making their services accessible to a broader range of customers and providing a steady revenue stream through the seasons. The popularity of recreational ice skating in the winter offers an additional boost to attendance."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Economic Growth Will Accelerate Demand for Ice Rink Services",
+            "future_outlook_point_description": "As consumer sentiment expands and per capita disposable income continues growing, ice skating rinks will benefit from a higher revenue stream from core customer groups."
+        },
+        {
+            "future_outlook_point_title": "Ice Rinks Benefit From Growing Push To Stay Healthy",
+            "future_outlook_point_description": "Most ice rinks will continue to generate demand from sporting teams and clubs, like ice hockey and figure skating teams. The US population grows more health-conscious every year, leading to more consumers investing in activities that make maintaining physical fitness more enjoyable."
+        },
+        {
+            "future_outlook_point_title": "Rapid Rise In Sports Alternatives Will Dampen Larger Rate Of Growth",
+            "future_outlook_point_description": "Despite positive developments across sports activities, the prevalent popularity of less expensive physical activities, like basketball and soccer, will create a fiercely competitive landscape and limit ice rinks' growth prospects."
+        }
+    ],
+    "industry_definition": "Ice skating rinks primarily manage spaces for recreational and professional ice skating. These ice rinks offer skate rentals and classes but also provide other amenities, including indoor sports and concessions.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low Concentration Level",
+            "low Technology Change Level",
+            "low - steady Globalization Level",
+            "low - steady Competition Level"
+        ],
+        "negative_impact_factors": [
+            "very high Revenue Volatility Level",
+            "low - steady Industry Assistance Level"
+        ],
+        "mixed_impact_factors": [
+            "mature Life Cycle Stage"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Competition",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration"
+        ],
+        "weaknesses": [
+            "Low Product/Service Concentration",
+            "Low & Steady Level of Assistance",
+            "High Volatility",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "Consumer spending"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers"
+        ]
+    },
+    "key_trends": [
+        "Ice rinks that provide competitive market pricing enhances internal competition. Customers will look to gain access to ice rinks that have the most favorable pricing and can accommodate a variety of individual and family customers.",
+        "Growing appeal of alternative sports strengthens external competition. As traditional gyms and fitness continue to expand their amenity offering, it will create a competitive alternative to ice rinks for prospective customers.",
+        "While figure skating's popularity has waned, growing interest in ice hockey has helped ice rinks maintain attendance. By catering to diverse customer needs, ice rinks attract a steady stream of visitors.",
+        "The popularity of physical activity and an emphasis on personal health will fuel ice skating's appeal among a diverse consumer base.",
+        "No major companies operate dominate the ice rinks industry",
+        "Strong participation in sports boosts growth",
+        "A limited regulatory landscape lowers compliance costs",
+        "Emphasis on economic stability influences profit",
+        "Large employee presence boosts wage expenses",
+        "Ice rinks' popularity in large metropolitan areas fuels establishment growth",
+        "Regional popularity of sports boosts ice rink appeal"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Consumers aged 18 and under",
+            "segment_description": "Children and teenagers continue to encompass a significant market for operators, as many parents invest significant income to provide their kids with ice skating access, training and classes. Growth in ice hockey participation among young consumers has also benefited this segment.",
+            "segment_percentage": 30.5
+        },
+        {
+            "segment": "Consumers aged 19 to 39",
+            "segment_description": "Young adults continue to make up the largest market for operators, as they have steady disposable income and the highest leisure time among adults to participate in ice sports and activities at ice rinks, such as recreational skating. The steady rise of ice hockey and figure skating among college athletes continues to fuel this segment's rise.",
+            "segment_percentage": 42
+        },
+        {
+            "segment": "Consumers aged 40 to 54",
+            "segment_description": "Middle-aged adults have the least amount of leisure time to spend on recreational activities such as ice skating, which provides limited opportunities for operators within this market. Nonetheless, their advantageous fiscal situation and high disposable income levels provides opportunities for financing family ice skating trips and tournament admission passes for their kids, creating a niche demand stream.",
+            "segment_percentage": 50
+        },
+        {
+            "segment": "Consumers aged 55 and older",
+            "segment_description": "Older customers continue to be attracted to ice rinks in an attempt to preserve their physical health and maintain their well-being, with regular exercise a crucial determinant to a healthy lifestyle. Some grandparents and parents in this age category are also active as visitors to their kids' sporting events at ice rinks, creating robust demand within this age group.",
+            "segment_percentage": 50
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Ice rink revenue",
+            "product_description": "Ice rink revenue from admission fees and memberships.",
+            "product_percentage": 61.8
+        },
+        {
+            "product_or_service": "Recreation and Fitness Services",
+            "product_description": "Revenue from admission fees for recreational skating and fitness activities.",
+            "product_percentage": 10.6
+        },
+        {
+            "product_or_service": "Sports Teams and Tournaments Services",
+            "product_description": "Revenue from fees for sports teams, tournaments and related services.",
+            "product_percentage": 5.2
+        },
+        {
+            "product_or_service": "Athletic Instruction",
+            "product_description": "Revenue from athletic instruction classes and personal training.",
+            "product_percentage": 5.3
+        },
+        {
+            "product_or_service": "Food and Beverage Sales",
+            "product_description": "Revenue from sales of food and beverages at ice rinks.",
+            "product_percentage": 6.4
+        },
+        {
+            "product_or_service": "Rental and Resale of Equipment",
+            "product_description": "Revenue from rental and resale of sports equipment.",
+            "product_percentage": 4.0
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Sporting Goods Wholesaling in the US",
+            "Commercial Building Construction in the US",
+            "Heating & Air-Conditioning Contractors in the US",
+            "Heating & Air Conditioning Equipment Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Electric Power Transmission in the US",
+            "Parking Lots & Garages in the US"
+        ],
+        "tier_1_buyers": [
+            "Colleges & Universities in the US",
+            "Sports Coaching in the US",
+            "Racing & Individual Sports in the US",
+            "Sports Franchises in the US"
+        ],
+        "tier_2_buyers": [
+            "Concert & Event Promotion in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Per Capita Disposable Income",
+            "determinant_description": "Per capita disposable income directly influences the success of ice rinks in the U.S. As disposable income rises, more individuals can afford leisure activities, including ice skating, driving attendance and revenue. When disposable income declines, spending on recreational activities often dips, leading to fewer visits."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "Ice rinks are favored in regions with significant population presence and proximity to core customer demographics, making the Southeast a popular destination.",
+            "percentage_establishments": 35,
+            "percentage_population": 20
+        },
+        {
+            "location": "West",
+            "location_description": "Many consumers continue to generate interest in ice sports, like ice hockey, in the West, which has fueled strong demand for ice rinks in the region.",
+            "percentage_establishments": 25,
+            "percentage_population": 15
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes continues to attract a significant chunk of establishments thanks to the colder weather that makes a popular climate for ice rinks.",
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic can attract various ice rinks thanks to the robust popularity of sports and a consistent health maintenance trend among its residents.",
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        },
+        {
+            "location": "Southwest",
+            "location_description": "Although the Southwest lacks the population presence of other regions, it continues to benefit from a high saturation of family customers that use ice rinks for recreational and sports purposes.",
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [
+            {
+                "regulation_title": "Worker and Guest Safety Standards and Regulations",
+                "regulation_description": "Operators' strictest regulations focus on staff and guest safety."
+            },
+            {
+                "regulation_title": "Food Safety Guidelines",
+                "regulation_description": "Ice rinks that serve food must follow regulations concerning the preparation and storage of food and drink."
+            },
+            {
+                "regulation_title": "COVID-19 Safety Standards and Guidelines",
+                "regulation_description": "Following the onset of COVID-19, operators were forced to shut as they were not considered an essential business."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Factors for Increased Barriers",
+                "barrier_description": "- Life Cycle Stage: mature - Revenue Volatility Level: very high - Industry Assistance Level: low - steady"
+            },
+            {
+                "barrier_title": "Factors for Decreased Barriers",
+                "barrier_description": "- Concentration Level: low - Technology Change Level: low - Globalization Level: low - steady - Competition Level: low - steady"
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Revenue Volatility Level: very high",
+            "Industry Assistance Level: low - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Concentration Level: low",
+            "Technology Change Level: low",
+            "Globalization Level: low - steady",
+            "Competition Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Low",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Competitive market pricing enhances internal competition",
+                "basis_description": "Ice rinks that provide competitive market pricing enhances internal competition."
+            },
+            {
+                "basis_title": "Growing appeal of alternative sports strengthens external competition",
+                "basis_description": "As traditional gyms and fitness continue to expand their amenity offering, it will create a competitive alternative to ice rinks for prospective customers."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "HIGH FRAGMENTATION DAMPENS MARKET CONCENTRATION",
+                "concentration_description": "Since ice rinks primarily operate in localized areas, there is a high level of fragmentation across the marketplace."
+            },
+            {
+                "concentration_title": "LARGE OPERATIONAL COSTS LIMITS GROWTH OPPORTUNITIES",
+                "concentration_description": "Ice rink operators face significant wage and administrative costs, which makes capturing a larger share of the market difficult."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Example Company",
+                "company_percentage": 10
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 30
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 40
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 50
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 60
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 70
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Depreciation Costs",
+            "cost_factor_description": "Most depreciation costs are derived from the buildings and equipment owned by ice rinks."
+        },
+        {
+            "cost_factor_title": "Consistent Employee Presence Exacerbates Wage Costs",
+            "cost_factor_description": "Wages continue to constitute the largest expense for ice rinks."
+        },
+        {
+            "cost_factor_title": "Volatile Economic Conditions Dampen Profitability",
+            "cost_factor_description": "Ice rinks are heavily dependent on robust consumer activity."
+        },
+        {
+            "cost_factor_title": "EMPHASIS ON CUSTOMER SERVICE BOOSTS ADMINISTRATIVE COSTS",
+            "cost_factor_description": "Some expenses accrued by ice rinks include general administration."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LABOR EXPENSES",
+                "capital_intensity_description": "Although capital is necessary for operators, there's much higher labor intensity."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Economic Uncertainty Due to High Inflationary Pressures Exacerbates Volatility",
+                "volatility_description": "The persistent impact of high inflation threatens core revenue streams."
+            },
+            {
+                "volatility_title": "Robust Demand Shift During COVID-19 Derails Revenue Stability",
+                "volatility_description": "Ice rink operators endured significant volatility due to the effects of COVID-19."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "ACCELERATED ADOPTION OF NEW COOLING SYSTEMS BOOSTS ICE RINK EFFICIENCY",
+                "technological_change_description": "Most innovation is geared toward advances in the ice rinks themselves."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "How well does your company market to consumers with limited leisure time?",
+            "answer": "Ice rinks have been forced to contend with other sports and forms of exercise competing for consumer leisure time."
+        },
+        {
+            "question": "Are your company's prices competitive with both direct competitors and alternative forms of entertainment?",
+            "answer": "Ice activities, particularly ice hockey, tend to be relatively more expensive than other forms of sports and exercise."
+        },
+        {
+            "question": "If your company benefits from population density, are you located in high traffic areas to increase your exposure?",
+            "answer": "Rinks located in high-traffic areas or popular vacation spots may benefit from strong foot traffic."
+        },
+        {
+            "question": "How does your company use location to add value and offer unique products and services to your consumers?",
+            "answer": "By situating themselves near establishments like restaurants or movie theaters, ice rinks can benefit from consumers wishing to include multiple activities in their outing."
+        },
+        {
+            "question": "Has your company integrated web and mobile reservation and appointment systems to improve consumer accessibility?",
+            "answer": "Rinks could reduce admission lines by enabling consumers to check in for ice times via mobile applications."
+        },
+        {
+            "question": "Have you established a strong internet presence through social media platforms to capture a larger audience?",
+            "answer": "Social media accounts and advertisements can help operators reach their largest client base, those under the age of 35."
+        },
+        {
+            "question": "Do you offer membership agreements, tickets or passes that may be subject to state or federal regulation?",
+            "answer": "Some rinks may offer memberships to participate in special events or to be members of competitive teams."
+        }
+    ]
+}

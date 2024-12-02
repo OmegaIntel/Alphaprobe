@@ -1,0 +1,599 @@
+{
+    "report_title": "Industry Research: Children's Specialty Hospitals in the US",
+    "report_date": "Sep 12, 2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 41224000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 10.56
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 3.45
+            }
+        },
+        "profit": {
+            "profit_dollars": 4741000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 12.36
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 11.5,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 1.63
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 23279000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 11.66
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 3.7
+            }
+        },
+        "employees": {
+            "employees_count": 299912,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 12.4
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 4.02
+            }
+        },
+        "wages": {
+            "wages_dollars": 17204000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 11.5
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 3.91
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Though they represent less than 5% of all US hospitals, children's specialty hospitals are critical to pediatric healthcare. And despite COVID-19 disruptions, the industry experienced growth due to the inelastic demand for children's health services. While the pandemic raised operating costs, telemedicine and government support helped offset significant declines in demand and revenue.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Revenue decline",
+            "current_performance_point_description": "Revenue has been declining at a CAGR of 0.9% over the past five years \u2013 including an estimated 1.2% rebound in the current year \u2013 and is expected to total $41.2 billion in 2023, with profit set to drop to 11.5%."
+        },
+        {
+            "current_performance_point_title": "COVID-19 impact",
+            "current_performance_point_description": "The COVID-19 pandemic disrupted services, but because most of the services provided were considered essential and the government provided ample relief from the Provider Relief Fund (PRF), the declines were short-lived."
+        },
+        {
+            "current_performance_point_title": "Medicaid and CHIP importance",
+            "current_performance_point_description": "Medicaid and CHIP remain vital to children's specialty hospital's revenue, accounting for more than one-third of industry revenue."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Revenue rebound",
+            "future_outlook_point_description": "Revenue is expected to rebound at a CAGR of 3.0% to $47.8 billion over the five years to 2028, when profit is estimated to climb to 11.2%."
+        },
+        {
+            "future_outlook_point_title": "Managed care consolidation",
+            "future_outlook_point_description": "Forecast increases in Medicaid funding will swell the number of insured patients, boosting potential revenue. Still, as states adopt or expand Medicaid managed care, profit will be squeezed because of lower reimbursement rates."
+        },
+        {
+            "future_outlook_point_title": "Technology driving demand",
+            "future_outlook_point_description": "Population growth, measured as increases in birth rate or number of children under 18, will increase the need for services. At the same time, data indicates chronic health conditions among children are growing, creating a need for specialized pediatric care services."
+        },
+        {
+            "future_outlook_point_title": "Worker shortages",
+            "future_outlook_point_description": "Shortages of skilled workers are expected to continue to plague profit and compromise care."
+        }
+    ],
+    "industry_definition": "This industry includes hospitals that provide diagnostic and medical treatment (surgical and nonsurgical) to inpatients who are typically aged 21 and younger. These hospitals treat a specific type of disease or medical condition (except psychiatric conditions or substance abuse), maintain inpatient beds and provide patients with food services and other services.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage: growth",
+            "Capital Intensity Level: low",
+            "Industry Assistance Level: high - steady",
+            "Concentration Level: low",
+            "Barriers To Entry Level: high - steady",
+            "Globalization Level: low - steady"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level: <UNKNOWN>",
+            "Regulation Level: high - increasing"
+        ],
+        "mixed_impact_factors": [
+            "Technology Change Level: medium",
+            "Competition Level: medium - increasing"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "High & Steady Level of Assistance",
+            "Growth Life Cycle Stage",
+            "Low Volatility",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "High Competition"
+        ],
+        "opportunities": [
+            "Very High Revenue Growth (2005-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Federal funding for Medicare and Medicaid"
+        ],
+        "threats": [
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Number of births"
+        ]
+    },
+    "key_trends": [
+        "Before the COVID-19 pandemic, the industry was experiencing strong positive revenue growth",
+        "Children's specialty hospitals represent less than 5.0% of all hospitals in the United States",
+        "The shortage of healthcare professionals in children's specialty hospitals negatively affects patient treatment by delaying care",
+        "Forecast increases in Medicaid funding will swell the number of insured patients, boosting potential revenue",
+        "Population growth will increase the need for services",
+        "The shortage of medical personnel has become a significant issue impacting the quality of care",
+        "Children's specialty hospitals face the challenge of physician and nurse shortages, creating a competitive, wage-raising environment"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Public and private health insurance",
+            "segment_description": "Public and private health insurance accounts for the majority of industry revenue. The Children's Health Insurance Program (CHIP) and CHIPRA (2009) provide health coverage to children in families with incomes too high to qualify for Medicaid but that cannot afford private coverage.",
+            "segment_percentage": 53.7
+        },
+        {
+            "segment": "Medicaid",
+            "segment_description": "Created by Congress in 1965 to provide health insurance to low-income families and people with disabilities, Medicaid is the primary funding source for child healthcare services.",
+            "segment_percentage": 39.0
+        },
+        {
+            "segment": "Out-of-pocket expenditures",
+            "segment_description": "Out-of-pocket expense is a nonreimbursable expense paid for by patients. The number of patients paying for medical services out-of-pocket has decreased over the past five years as medical costs have risen.",
+            "segment_percentage": 5.3
+        },
+        {
+            "segment": "Other",
+            "segment_percentage": 2.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Inpatient Medicine",
+            "product_description": "This segment provides primary pediatric care for infants, children and adolescents on a consultative or routine basis.",
+            "product_percentage": 25.4
+        },
+        {
+            "product_or_service": "Inpatient Surgery",
+            "product_description": "Contributing to the significant percentage of services is the development of new technology that permits less invasive procedures.",
+            "product_percentage": 24.3
+        },
+        {
+            "product_or_service": "Inpatient Pulmonology",
+            "product_percentage": 17.3
+        },
+        {
+            "product_or_service": "Inpatient Urology",
+            "product_percentage": 13.6
+        },
+        {
+            "product_or_service": "Outpatient Diagnostics",
+            "product_description": "Outpatient services include preventative checkups, appointments with pediatric specialists, minor surgical procedures, tests and diagnostics, vaccinations, allergy shots, physiotherapy and follow-up hospital discharge visits.",
+            "product_percentage": 7.3
+        },
+        {
+            "product_or_service": "Inpatient Cardiology",
+            "product_description": "Some cardiology services are performed before a child's birth through fetal cardiology (screening for congenital heart diseases) and at the pediatric stage.",
+            "product_percentage": 6.4
+        },
+        {
+            "product_or_service": "Outpatient Services",
+            "product_percentage": 5.7
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Medical Instrument & Supply Manufacturing in the US (/ibisworld/reportkey/1/881)",
+            "Toy, Doll & Game Manufacturing in the US (/ibisworld/reportkey/1/894)",
+            "Medical Device Manufacturing in the US (/ibisworld/reportkey/1/764)",
+            "Brand Name Pharmaceutical Manufacturing in the US (/ibisworld/reportkey/1/487)"
+        ],
+        "tier_1_buyers": [
+            "Medical Supplies Wholesaling in the US (/ibisworld/reportkey/1/930)",
+            "Drug, Cosmetic & Toiletry Wholesaling in the US (/ibisworld/reportkey/1/964)",
+            "Consumers in the US"
+        ],
+        "tier_2_suppliers": [],
+        "tier_2_buyers": [
+            "Specialist Doctors in the US (/ibisworld/reportkey/1/1555)",
+            "Dentists in the US (/ibisworld/reportkey/1/1557)",
+            "Hospitals in the US (/ibisworld/reportkey/1/1587)",
+            "Specialty Hospitals in the US (/ibisworld/reportkey/1/1591)"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Number of Children and Ability to Pay",
+            "determinant_description": "The demand for services in the Children's Specialty Hospitals industry heavily relies on the number of children in the population and their parent's ability to pay for medical services."
+        },
+        {
+            "determinant_title": "Health Insurance Coverage",
+            "determinant_description": "Insured children visit children's hospitals more frequently, while uninsured households tend to cut back on spending and delay essential visits."
+        },
+        {
+            "determinant_title": "Health Outcomes of Uninsured Children",
+            "determinant_description": "Research indicates that insured children generally have better health outcomes than their uninsured counterparts. The uninsured, low-income children in poor health use more services in the long run than covered children."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports",
+                "trade_description": "International trade does not generally apply to the Children's Specialty Hospitals industry, as it is service-oriented with no measurable imports."
+            },
+            {
+                "trade_title": "Exports",
+                "trade_description": "International trade does not generally apply to the Children's Specialty Hospitals industry, as it is service-oriented with no measurable exports. There is some medical tourism, with US residents seeking less expensive/ or specialty care and foreigners seeking special care in the US."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "More than one-quarter of the US population resides in the Southeast region. As a central population hub, this area houses many healthcare and social assistance providers to meet its population's needs.",
+            "percentage_establishments": 26.5,
+            "percentage_population": 27.9
+        },
+        {
+            "location": "Mid-Atlantic",
+            "percentage_establishments": 15.1,
+            "percentage_population": 15.1
+        },
+        {
+            "location": "West",
+            "percentage_establishments": 18.9,
+            "percentage_population": 19.1
+        },
+        {
+            "location": "Great Lakes",
+            "percentage_establishments": 15.1,
+            "percentage_population": 14.9
+        },
+        {
+            "location": "Southwest",
+            "percentage_establishments": 10.8,
+            "percentage_population": 11.1
+        },
+        {
+            "location": "Plains",
+            "percentage_establishments": 6.8,
+            "percentage_population": 6.5
+        },
+        {
+            "location": "New England",
+            "location_description": "New England's share of hospitals surpasses the population share. According to the Centers for Medicare and Medicaid Services, New England had the highest total per capita personal healthcare spending in 2020.",
+            "percentage_establishments": 6.8,
+            "percentage_population": 4.4
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "THE CHILDREN'S HEALTH INSURANCE PROGRAM REAUTHORIZATION ACT (CHIPRA)",
+                "regulation_description": "The Children's Health Insurance Program Reauthorization Act (CHIPRA) was signed in 2009 and expanded CHIP by adding $33.0 billion in federal boosting revenue for the industry."
+            },
+            {
+                "regulation_title": "THE 2010 PATIENT PROTECTION AND AFFORDABLE CARE ACT (PPACA)",
+                "regulation_description": "PPACA expanded CHIP funding through September 2015, provided enhanced financing between 2016 and 2019, eliminated pediatric pre-existing condition exclusions and mandated oral and vision coverage."
+            },
+            {
+                "regulation_title": "THE 21ST CENTURY CURES ACT (2016)",
+                "regulation_description": "The act authorized billions in funding for medical research, including pediatric medical research supporting innovations and developing treatments and therapies at children's specialty hospitals."
+            },
+            {
+                "regulation_title": "CARES (CORONAVIRUS AID, RELIEF AND ECONOMIC SECURITY) ACT",
+                "regulation_description": "CARES provided $100 billion in relief funds to help healthcare providers deal with the impact of COVID-19."
+            },
+            {
+                "regulation_title": "THE CHILDREN'S HOSPITALS GME (GRADUATE MEDICAL EDUCATION) SUPPORT REAUTHORIZATION ACT",
+                "regulation_description": "The act provided independent children's hospitals with federal backing for graduate medical education, aiding future generations of pediatricians and specialized pediatric practitioners."
+            },
+            {
+                "regulation_title": "CERTIFICATE OF NEED (CON) LAWS",
+                "regulation_description": "These laws require hospital planners to demonstrate the need for expanded health services before receiving approval."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Legal",
+                "barrier_description": "Complying with numerous regulations, accreditation and State laws (Certificate of Need laws) raise barriers to entry for children's specialty hospitals."
+            },
+            {
+                "barrier_title": "Start-up Costs",
+                "barrier_description": "The high costs for medical equipment, leasing, and technological infrastructure can be significant barriers to entry."
+            },
+            {
+                "barrier_title": "Differentiation",
+                "barrier_description": "Differentiation will be a barrier to entry for locations large hospitals are already in the market, providing vital children's care. Carving out your unique niche and staying compelling amid established children's hospitals is a tall task."
+            },
+            {
+                "barrier_title": "Labor Intensity",
+                "barrier_description": "If the start-up cost barrier is not insurmountable, a location with other healthcare facilities may boost wages and intense competition for skilled workers may pose a significant barrier."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Revenue Volatility Level: high",
+            "Regulation Level: heavy - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage: growth",
+            "Capital Intensity Level: low",
+            "Industry Assistance Level: high - steady",
+            "Concentration Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Quality of services and service prices",
+                "basis_description": "Children's specialty hospitals compete on the quality of services and service prices."
+            },
+            {
+                "basis_title": "Nonprofit advantage",
+                "basis_description": "Nonprofit children's hospitals have the advantage of receiving charitable contributions and being able to finance capital expenses on a tax-exempt basis."
+            },
+            {
+                "basis_title": "Negotiating contracts",
+                "basis_description": "Competition is expected to strengthen as hospitals negotiate contracts with healthcare service purchasers (managed-care companies, preferred provider organizations, health maintenance organizations) to secure discounts on hospital charges."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "A Tale of Two Markets: Fragmentation Nationally, Concentration Locally",
+                "concentration_description": "Competition from general hospitals sustains fragmentation as specialty hospitals looking to expand in new markets face the challenges of competing with established public hospitals with a children's specialty department. However, the children's specialty hospital's expertise and state-of-the-art medical services support local growth and concentration."
+            },
+            {
+                "concentration_title": "Benefits From Economies of Scale Propel Market Share Concentration",
+                "concentration_description": "The significant barriers to entry promote growth through expansion. Hospitals consider mergers a better development path because it is hard to enter unserved markets. Larger hospitals seeking to expand or add a children's specialty department can acquire a specialty hospital, taking advantage of economies of scale, while the merger concentrates services among fewer hospitals."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "THE CHILDREN'S HOSPITAL OF PHILADELPHIA",
+                "company_percentage": 7.8
+            },
+            {
+                "company_name": "Boston Children's Hospital",
+                "company_percentage": 5.6
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 15.5
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 41.7
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 30.0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 2.0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 3.0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 3.3
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Skilled nurses",
+            "cost_factor_description": "Skilled nurses can help reduce other costs at the hospital, improve the quality of care and outcomes, and differentiate the hospital's services."
+        },
+        {
+            "cost_factor_title": "Rent, utilities and depreciation expenses are a pint-sized cost",
+            "cost_factor_description": "Together rent, utilities and depreciation account for 4.8% of revenue."
+        },
+        {
+            "cost_factor_title": "No doubt that other costs and doubtful debt eat into revenue",
+            "cost_factor_description": "Other expenses account for an estimated 27.0% of revenue."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital intensity",
+                "capital_intensity_description": "The Children's Specialty Hospitals industry has a low level of capital intensity. The industry is labor-intensive dependent on skilled labor (i.e. physicians, surgeons and nurses) to provide services."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Changing Government Policies Influence Industry Revenue",
+                "volatility_description": "Changes to Medicaid and CHIP policies can cause significant shifts in the funding and support for hospital services."
+            },
+            {
+                "volatility_title": "The Flu and Holiday Seasons Bring Change",
+                "volatility_description": "Patient admissions and the usage of hospital services often dip during holiday periods. Conversely, hospitals often see a boost in respiratory illnesses during flu seasons, causing seasonal fluctuations in revenue patterns."
+            },
+            {
+                "volatility_title": "Private Insurance Contributes to Steady Growth",
+                "volatility_description": "The accessibility and affordability of health insurance influence revenue. Decreases in unemployment and the availability of health insurance for hospital services lower patient costs and strengthen access to hospital care."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Technological Disruption",
+                "technological_change_description": "Children's hospitals have adopted administrative and medical, and COVID-19 spurred the increased use of telemedicine, but no system has fostered disruption."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "Has increased access to health insurance offered opportunities for your company?",
+            "answer": "Demand for hospital services is directly tied to how many potential patients have health insurance."
+        },
+        {
+            "question": "How does your company target key potential markets?",
+            "answer": "Children's hospitals rely on referrals from other healthcare providers."
+        },
+        {
+            "question": "Is your company geographically positioned in communities where there is a strong need?",
+            "answer": "Most children's hospitals are based in central locations with large populations."
+        },
+        {
+            "question": "How does an increase in certain age groups affect your company's performance?",
+            "answer": "This industry's market is entirely made up of people under age 18."
+        },
+        {
+            "question": "Is your company keeping up-to-date with the latest technology?",
+            "answer": "Children's hospitals must frequently update their equipment to stay competitive."
+        },
+        {
+            "question": "Has your company explored offering telehealth services to improve patient accessibility and improve efficiency?",
+            "answer": "A growing share of hospital revenue comes from outpatient care."
+        },
+        {
+            "question": "Have any new mandates, as a result of healthcare reform, expanded your client base?",
+            "answer": "As healthcare reform grows the number of people with health insurance has increased, leading to greater demand."
+        },
+        {
+            "question": "How does your company ensure all health and safety requirements are met?",
+            "answer": "Children's hospitals need to maintain high safety standards to prevent further illness in patients."
+        },
+        {
+            "question": "Has your company looked into financing options for low-income individuals and/or families?",
+            "answer": "Many children's hospitals raise funds so low-income parents can get better care for their children."
+        },
+        {
+            "question": "How frequently does your company have to replace its equipment?",
+            "answer": "Children's hospitals need to frequently update their equipment to maintain safety standards."
+        },
+        {
+            "question": "How do you attract and retain qualified staff? What qualifications must your staff have? Does your staff undergo constant training?",
+            "answer": "The ability to attract and retain qualified medical, nursing and administrative staff improves the services and reputation of children's specialty hospitals."
+        },
+        {
+            "question": "Is your company dominant in any particular regional markets? What range does your company have in terms of viable operating area?",
+            "answer": "Consumers prefer to attend facilities close to their home. Additionally, operators typically locate in areas that are near general hospitals that can refer patients."
+        },
+        {
+            "question": "How have you been affected by government policies? How have you dealt with the negative effects of government policies?",
+            "answer": "An understanding of and adherence to government regulations can reduce costs and improve reimbursement rates."
+        },
+        {
+            "question": "How much does your clinic rely on government funding?",
+            "answer": "Federal funding for Medicare and Medicaid"
+        },
+        {
+            "question": "What other sources of income does your clinic have?",
+            "answer": "Funding for Medicaid and the terms of access to these reimbursement programs affect demand for services provided by children's specialty hospitals."
+        },
+        {
+            "question": "Do you expect major changes in demand as a result of rising disposable income levels? How will higher income affect the kinds of patients you treat?",
+            "answer": "As disposable income rises, individuals are better able to afford out-of-pocket expenses, and demand subsequently increases."
+        },
+        {
+            "question": "Do you track trends in the number of people with private health insurance? Do you have the capacity and workforce to cater to increasing demand?",
+            "answer": "Children covered by private health insurance are more likely to use healthcare services because private health insurance decreases out-of-pocket expenses."
+        }
+    ]
+}

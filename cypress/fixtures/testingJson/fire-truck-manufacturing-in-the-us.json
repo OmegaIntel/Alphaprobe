@@ -1,0 +1,562 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 2207000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 0.42
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.28
+            }
+        },
+        "profit": {
+            "profit_dollars": 93000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": -0.31
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.2,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": -0.74
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 546000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 6505,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 429000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": 10000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": 207000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "The Fire Truck Manufacturing industry largely depends on government funding. Over the past five years, local and state government funding has decreased, reducing manufacturers' spending on new firefighting vehicles. However, federal funding for homeland security has grown, contributing to increased funding for the Assistance to Firefighters Grant (AFG) program. The AFG program assists fire departments in acquiring new vehicles and outfitting departments with safety equipment, which has grown to $370.0 million in 2023, up from $350.0 million in 2018. Over the five years to 2023, revenue has fallen at a CAGR of 6.0% to $2.2 billion, including an expected 2.1% increase in 2023. Profit is expected to account for 4.2% of revenue in 2023, remaining relatively unchanged from 2018.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "THE PANDEMIC ADVERSELY AFFECTED THE INDUSTRY",
+            "current_performance_point_description": "The outbreak of the pandemic had an adverse effect on the industry's performance in 2020. Driven by supply chain disruptions, labor shortages, delayed customer final inspections and declines in certain downstream markets. Many manufacturers struggled to satisfy demand due to reduced operating capacities, resulting in a high backlog. The number of company-wide employees dropped, reducing production capacities."
+        },
+        {
+            "current_performance_point_title": "FIRE DEPARTMENTS DEPEND SIGNIFICANTLY ON STATE AND LOCAL GOVERNMENT BUDGETS",
+            "current_performance_point_description": "Fire departments depend largely on city and state funding. When new expenses appear or revenue drops, state and local governments often have to cut funding for fire departments, reducing demand for new fire trucks and engines."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Vehicle Upgrades Will Contribute to Industry Growth",
+            "future_outlook_point_description": "Revenue will grow as the economy continues to improve and new and replacement demand supports the industry. Fire departments are expected to seek more fuel-efficient vehicles compared with the older models they held onto during the period of limited funding."
+        },
+        {
+            "future_outlook_point_title": "A Weakening US Dollar Will Impact International Trade",
+            "future_outlook_point_description": "Exports will climb and contribute to industry growth over the next five years. Given its proximity and strong levels of government investment, Canada will likely continue to dominate as an export destination. Imports are expected to climb slower during the outlook period compared to the past five years, partially because of a depreciation of the US dollar."
+        }
+    ],
+    "industry_definition": "This industry manufactures fire trucks and fire engines. These vehicles assist in fighting fires by transporting firefighters and essential equipment, such as pumps, ladders and safety gear, to the scene of fires.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low"
+        ],
+        "negative_impact_factors": [
+            "Life Cycle Stage: decline",
+            "Revenue Volatility Level: high"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "High Volatility",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers",
+            "Local and state government investment"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Federal funding for homeland security"
+        ]
+    },
+    "key_trends": [
+        "The pandemic negatively impacted the industry. Supply chain disruptions, labor shortages and delayed customer final inspections contributed to revenue declining.",
+        "Electric firefighting vehicles are expected to encounter increased demand over the next five years. Electric vehicles will help to lower CO2 emissions and have better acceleration and produce less noise.",
+        "The National Fire Protection Association (NFPA) provides requirements for fire apparatus. Although NFPA standards are not enforced legally, manufacturers monitor changes in these standards.",
+        "The Assistance to Firefighters Grant (AFG) meets the firefighting needs of fire departments. The program helps fire departments purchase vehicles, equipment and protective gear.",
+        "The Aircraft Rescue Fire Fighting (ARFF) trucks segment declined over the past five years. Amid the pandemic, reduced international flights caused the decline in this segment.",
+        "The volunteer fire department market has shrunk. The growing requirements to become a firefighter have shrunk the pool of candidates, hindering this market.",
+        "Fire truck manufacturers concentrate in regions with major ports or in proximity to the industry's largest trading partner in Canada. This can reduce additional transportation costs."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Volunteer fire departments",
+            "segment_description": "Volunteer fire departments are composed of nonprofessional firefighters who provide fire safety and perform other duties for a local jurisdiction. The number of volunteer firefighters has declined consistently over the past five years due to growing requirements to become a firefighter.",
+            "segment_percentage": 70.2
+        },
+        {
+            "segment": "Combination of career and volunteer fire departments",
+            "segment_description": "A combination of career and volunteer fire departments rely on the services of full-time, professional firefighters and volunteer employees. This segment represents the second-largest market for the industry in 2023.",
+            "segment_percentage": 20.5
+        },
+        {
+            "segment": "Career fire departments",
+            "segment_description": "Career fire departments employ full-time, professional firefighters who work in organized shifts out of a centrally located firehouse. Over the past five years, this market has increased as a share of total revenue, partly due to a decline in volunteer firefighters. However, career fire departments comprise the smallest market in the industry.",
+            "segment_percentage": 9.3
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Fire Engines",
+            "product_description": "A fire engine, also known as a pumper, is the most common fire apparatus in fire department fleets, which accounts for over one-half of revenue in 2023.",
+            "product_percentage": 61.8
+        },
+        {
+            "product_or_service": "ARFF Trucks and Other Vehicles",
+            "product_description": "Aircraft Rescue Fire Fighting (ARFF) vehicles are highly specified engines that assist with potential aircraft accidents. Other fire vehicles include fire engines with pumps that produce less than 1,000 GPM and other highly specialized vehicles with smaller dimensions.",
+            "product_percentage": 24.9
+        },
+        {
+            "product_or_service": "Fire Trucks",
+            "product_description": "Fire trucks, often called aerials, are the second-largest group of firefighting vehicles. Fire trucks serve as auxiliary vehicles that help transport firefighters and all the necessary equipment to the fire scene.",
+            "product_percentage": 13.3
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Iron & Steel Manufacturing in the US",
+            "Tire Wholesaling in the US",
+            "Automobile Metal Stamping in the US"
+        ],
+        "tier_2_suppliers": [
+            "Automobile Engine & Parts Manufacturing in the US",
+            "Automobile Electronics Manufacturing in the US",
+            "Automobile Steering & Suspension Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Automobile Wholesaling in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Demand from fire departments",
+            "determinant_description": "Demand for industry products is largely driven by the needs of fire departments, which require new and replacement fire trucks and engines."
+        },
+        {
+            "determinant_title": "Government funding",
+            "determinant_description": "Fire departments rely heavily on government funding to purchase new equipment, which drives demand for industry products."
+        },
+        {
+            "determinant_title": "Replacement cycles",
+            "determinant_description": "Fire trucks and engines have limited useful lives, requiring replacement after 10-30 years depending on the vehicle type."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Decreasing",
+        "export_level": "Moderate",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports",
+                "trade_description": "Imports have been volatile, although Canada has remained the largest importer of industry products. Despite imports growing significantly, imports still satisfy a small share of domestic demand."
+            },
+            {
+                "trade_title": "Exports",
+                "trade_description": "Trade activity within the industry has been historically volatile. The pandemic and a strengthening US dollar have negatively impacted exports."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region accounts for the largest share of manufacturers, representing almost one-quarter of industry establishments.",
+            "percentage_establishments": 8.3,
+            "percentage_population": 14.5
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 14.5,
+            "percentage_population": 13.4
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 4.2,
+            "percentage_population": 4.4
+        },
+        {
+            "location": "Plains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 23.6,
+            "percentage_population": 20.1
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 4.2,
+            "percentage_population": 7.0
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region represents a significant share of industry establishments.",
+            "percentage_establishments": 22.9,
+            "percentage_population": 21.8
+        },
+        {
+            "location": "Southwest",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 14.6,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "West",
+            "location_description": "The West region represents a significant share of industry establishments.",
+            "percentage_establishments": 7.6,
+            "percentage_population": 7.3
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "NATIONAL FIRE PROTECTION ASSOCIATION (NFPA)",
+                "regulation_description": "The NFPA is a global self-funded organization that provides nearly 300 codes and standards."
+            },
+            {
+                "regulation_title": "ENVIRONMENTAL PROTECTION AGENCY (EPA)",
+                "regulation_description": "Fire truck manufacturers must comply with general heavy-duty truck regulations."
+            },
+            {
+                "regulation_title": "COVID-19",
+                "regulation_description": "Amid the pandemic, the Centers for Disease Control and Prevention (CDC) introduced a set of recommendations."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "Life Cycle Stage: decline"
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: decline"
+        ],
+        "factors_decreased_barrier": []
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Manufacturers compete on price and ability to meet customer specifications",
+                "basis_description": "Manufacturers compete on price and ability to meet customer specifications."
+            },
+            {
+                "basis_title": "External competition from firefighting aircraft",
+                "basis_description": "Manufacturers encounter external competition from firefighting aircraft."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "The largest manufacturers compete globally.",
+                "concentration_description": "The largest manufacturers compete globally, while smaller manufacturers cater to local markets."
+            },
+            {
+                "concentration_title": "Market share concentration",
+                "concentration_description": "Market share concentration within the Fire Truck Manufacturing industry is moderate."
+            },
+            {
+                "concentration_title": "Large manufacturers produce diversified products.",
+                "concentration_description": "Major companies have established relationships with various government agencies."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Rev Group, Inc.",
+                "company_percentage": 49
+            },
+            {
+                "company_name": "Oshkosh Corporation",
+                "company_percentage": 3.7
+            },
+            {
+                "company_name": "Rosenbauer International AG",
+                "company_percentage": 0.9
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 46.4
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 60.3
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchase Costs Sink but Remain the Largest Expense Because of the High Costs of Inputs",
+            "cost_factor_description": "Purchase costs are expected to account for 60.3% of revenue in 2023."
+        },
+        {
+            "cost_factor_title": "WAGE EXPENSES HIKE",
+            "cost_factor_description": "Wage expenses are expected to account for 19.4% of revenue in 2023."
+        },
+        {
+            "cost_factor_title": "PROFIT HAS REMAINED RELATIVELY STABLE",
+            "cost_factor_description": "Profit, measured as earnings before interest and taxes, is expected to account for 4.2% of revenue in 2023."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Manufacturers are increasingly restructuring operations.",
+                "capital_intensity_description": "However, operators still require highly skilled workers."
+            },
+            {
+                "capital_intensity_title": "The major markets for this industry are highly concentrated.",
+                "capital_intensity_description": "This presents an opportunity for strategic entrance into lower-end markets."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "The industry has encountered very high revenue volatility.",
+                "volatility_description": "The industry is sensitive to business cycles and regulatory changes."
+            },
+            {
+                "volatility_title": "The pandemic adversely affected industry revenue.",
+                "volatility_description": "Many state and local governments endured significant budgetary issues."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "THE FIRE ENGINE SEGMENT REMAINS THE LARGEST FOR MANUFACTURERS",
+                "technological_change_description": "A fire engine is the most common fire apparatus in fire department fleets, which accounts for over one-half of revenue in 2023."
+            },
+            {
+                "technological_change_title": "THE FIRE TRUCK SEGMENT REMAINS RELATIVELY STABLE",
+                "technological_change_description": "Fire trucks are often called aerials."
+            },
+            {
+                "technological_change_title": "The ARFF Trucks Segment Declines Due to Reduced International Flights",
+                "technological_change_description": "Such vehicles tend to incorporate larger water tanks."
+            },
+            {
+                "technological_change_title": "Other Fire Vehicles are Specialized Vehicles",
+                "technological_change_description": "Such vehicles include Type 2 through Type 7 fire engines."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company impacted by import penetration?",
+            "answer": "Imports are expected to account for a minuscule share of domestic demand for this industry."
+        },
+        {
+            "question": "Does your company specialize in one corner of the market or produce a diversified range of products?",
+            "answer": "Most companies in the industry produce a wide range of products."
+        },
+        {
+            "question": "Does your company receive any direct assistance?",
+            "answer": "Fire truck manufacturers typically do not receive any direct assistance."
+        },
+        {
+            "question": "What is the Assistance to Firefighters Grant?",
+            "answer": "The AFG Program is provided by the Federal Emergency Management Agency (FMA)."
+        },
+        {
+            "question": "What products does your company manufacture?",
+            "answer": "These products include various types of heavy-duty trucks, such as RVs, commercial vehicles and other emergency vehicles."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "Over the past five years, the price of steel has been extremely volatile."
+        },
+        {
+            "question": "Has your company explored acquisition opportunities in locations with well-established infrastructure networks?",
+            "answer": "Larger companies are continuing to expand via acquisitions."
+        },
+        {
+            "question": "How is your company leveraging new technology in its operations?",
+            "answer": "Companies are increasingly automating production operations."
+        },
+        {
+            "question": "Have you been able to reduce wage costs by automating operations over the past five years?",
+            "answer": "Highly trained employees are required."
+        },
+        {
+            "question": "How does your company stay ahead of regulations such as energy-efficiency standards?",
+            "answer": "Companies must always be on top of regulatory changes."
+        },
+        {
+            "question": "What effect have international tariffs had on your ability to import and export products?",
+            "answer": "The largest import and export market is Canada."
+        },
+        {
+            "question": "How has price volatility of inputs affected profit margins over the past 12 months?",
+            "answer": "The volatility of major inputs impacts profit."
+        },
+        {
+            "question": "What percentage of your company's customers renew their contracts?",
+            "answer": "Many companies have long-term contracts."
+        },
+        {
+            "question": "Has your company developed export markets? Is there capacity to increase export volumes?",
+            "answer": "Operators may find significant opportunity."
+        },
+        {
+            "question": "Is your technical expertise to a world standard?",
+            "answer": "The degree of investment in technological improvements will positively influence industry players."
+        },
+        {
+            "question": "In what ways have you innovated your service offerings?",
+            "answer": "Successful fire truck manufacturers value innovation."
+        },
+        {
+            "question": "What can you do to mitigate the threat of a decreasing TWI in 2023?",
+            "answer": "As the US dollar depreciates, domestic goods become less expensive."
+        },
+        {
+            "question": "How do fluctuating steel prices affect your company?",
+            "answer": "Fluctuations in commodity prices have an adverse effect."
+        },
+        {
+            "question": "Does a large fleet necessarily result in increased customers?",
+            "answer": "The average age of the fleet indicates how soon repair or replacement will be required."
+        }
+    ]
+}

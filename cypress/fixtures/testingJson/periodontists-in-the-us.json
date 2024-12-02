@@ -1,0 +1,454 @@
+{
+    "report_title": "Industry Report on Periodontists",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 1900000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2009,
+                "end_year": 2024,
+                "revenue_cagr_value": 1.25
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 3.24
+            }
+        },
+        "profit": {
+            "profit_dollars": 101,
+            "profit_cagr_historical": {
+                "begin_year": 2009,
+                "end_year": 2024,
+                "profit_cagr_value": 0
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 12.4,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2009,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -0.26
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 9254000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2009,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 29522,
+            "employees_cagr_historical": {
+                "begin_year": 2009,
+                "end_year": 2024,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 6888000000,
+            "wages_cagr_historical": {
+                "begin_year": 2009,
+                "end_year": 2024,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 101,
+            "imports_cagr_historical": {
+                "begin_year": 2009,
+                "end_year": 2024,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 101,
+            "exports_cagr_historical": {
+                "begin_year": 2009,
+                "end_year": 2024,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2024 currency.\n\nThe economy's health significantly impacts periodontists' performance since out-of-pocket and private insurance are the primary sources of revenue and can be a source of volatility. But the root cause of volatility during the current period was the combination of COVID-19 and economic factors. The significant falloff in revenue in 2020 was mitigated by a quick recovery as per capita disposable income, healthcare expenditures and private insurance funded the pent-up demand. With technological innovations and improved access for an aging population propping up the recovery, industry-wide revenue is expected to rally at a CAGR of 1.2% to $15.3 billion through 2024, with a slight 0.6% bump in 2024.\n\nPeriodontists require additional education, specialized training and certification, and this tightens entry, limits substitution of other services and leads to higher fees. However, some practitioners join larger practices to stop ever-emerging products and technology with significant initial investments and repair and training costs from chewing up profit. These collaborative practice models offer periodontists the opportunity to share in economies of scale and a captive patient referral base.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "COVID-19 Put a Serious Spin on Volatility",
+            "current_performance_point_description": "While the demand for periodontists' services has grown over the past five years, the volatility brought on by COVID-19 took a significant toll on performance. In 2020, at the height of COVID-19, many cities and states prohibited nonessential in-person healthcare services. And as a result, revenue fell and wage costs rose, bringing a significant dip in profit."
+        },
+        {
+            "current_performance_point_title": "Consumers' Pockets Deepen as the Economy Improves",
+            "current_performance_point_description": "Periodontists are dental specialists who treat gum diseases, provide preventive care, and conduct cosmetic procedures for gums. Their client base extends from general care dentists, usually from patient referrals for severe cases."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Innovations Bring Frowns and Smiles",
+            "future_outlook_point_description": "The field of periodontics has seen significant advancements in practice techniques, such as laser technology, minimally invasive surgery techniques, digital imaging, diagnostic tools, electronic health records, and teledentistry."
+        },
+        {
+            "future_outlook_point_title": "Wage Hike Pressures Revenue But The Future Is Bright",
+            "future_outlook_point_description": "In the wake of industry growth, operating costs are forecast to rise over the next five years, primarily due to an ongoing nursing shortage in the wider healthcare sector."
+        }
+    ],
+    "industry_definition": "This industry includes establishments of health practitioners primarily engaged in the independent practice of dentistry specializing in the gums and the supporting structures and tissues of teeth, requiring additional training programs in periodontics.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low capital intensity level",
+            "low concentration level",
+            "low - steady globalization level"
+        ],
+        "negative_impact_factors": [
+            "high revenue volatility level",
+            "low - steady industry assistance level",
+            "high technology change level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High Profit vs. Sector Average",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers - Total health expenditure"
+        ],
+        "threats": [
+            "Low Revenue Growth (2019-2024)",
+            "Number of people with private health insurance"
+        ]
+    },
+    "key_trends": [
+        "COVID-19 impacted periodontists' performance. Profit drops in response to fluctuating revenue and wage costs were followed by easing restrictions and demand surges for services, including treatments for pandemic-induced neglect.",
+        "Economic recovery bolsters periodontist profit. Amid the COVID-19 aftermath, periodontists reap the benefits of heightened disposable income and increased dental insurance enrollments, optimizing revenue growth despite government funding setbacks.",
+        "Classifying adult dental services as an essential health benefit - Strengthens the industry - CMS proposed allowing states to include adult dental services as an \"essential health benefit\" (EHB) that ACA health plans must cover - Reverses a ban on states from including adult dental services as an essential benefit",
+        "State Oversight - While the state doesn't provide assistance, state dental boards and regulatory agencies oversee dental practices",
+        "Dental Support Organizations (DSOs) - To better understand the benefit of DSOs, the ADSO (Association of Dental Support Organizations) provides resources, information and education about DSOs"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Private insurance",
+            "segment_description": "The segment of the market covered by private insurance.",
+            "segment_percentage": 49.3
+        },
+        {
+            "segment": "Out-of-pocket payments",
+            "segment_description": "The segment of the market where patients pay out-of-pocket.",
+            "segment_percentage": 41.2
+        },
+        {
+            "segment": "Government insurance",
+            "segment_description": "The segment of the market covered by government insurance programs.",
+            "segment_percentage": 8.5
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Other sources of payment in the market.",
+            "segment_percentage": 1.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Gum Graft",
+            "product_description": "A surgical procedure to treat gum recession.",
+            "product_percentage": 32.8
+        },
+        {
+            "product_or_service": "Crown Lengthening",
+            "product_description": "A procedure to expose more of the tooth's surface.",
+            "product_percentage": 19.6
+        },
+        {
+            "product_or_service": "Regenerative Procedures",
+            "product_description": "Procedures to regenerate bone and tissue around teeth.",
+            "product_percentage": 18.6
+        },
+        {
+            "product_or_service": "Dental Implants",
+            "product_description": "Artificial tooth roots used to support dental prosthetics.",
+            "product_percentage": 15.8
+        },
+        {
+            "product_or_service": "Plastic Surgery",
+            "product_description": "Cosmetic surgical procedures.",
+            "product_percentage": 5.4
+        },
+        {
+            "product_or_service": "Laser Treatment",
+            "product_description": "Use of lasers for dental procedures.",
+            "product_percentage": 3.9
+        },
+        {
+            "product_or_service": "Nonsurgical Procedures",
+            "product_description": "Non-surgical dental procedures.",
+            "product_percentage": 3.9
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Dental Laboratories in the US"
+        ],
+        "tier_2_suppliers": [
+            "Dentists in the US",
+            "Dental Schools in the US"
+        ],
+        "tier_1_buyers": [
+            "Health & Medical Insurance in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "The aging population has created opportunities",
+            "determinant_description": "There has been a boost in demand for fixed and removable prosthodontic services as elderly individuals tend to require implants, veneers and other geriatric dental care services, including periodontics services."
+        },
+        {
+            "determinant_title": "Government actions hit various nerves",
+            "determinant_description": "Government policies implementing lockdowns and social distancing measures during the COVID-19 pandemic greatly affected the demand for periodontist services directly and indirectly through fewer dental referrals."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region of the United States.",
+            "percentage_establishments": 16.1,
+            "percentage_population": 14.9
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region of the United States.",
+            "percentage_establishments": 14.5,
+            "percentage_population": 14.1
+        },
+        {
+            "location": "New England",
+            "location_description": "The New England region of the United States.",
+            "percentage_establishments": 5.2,
+            "percentage_population": 4.5
+        },
+        {
+            "location": "Plains",
+            "location_description": "The Plains region of the United States.",
+            "percentage_establishments": 7.2,
+            "percentage_population": 6.8
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "The Rocky Mountains region of the United States.",
+            "percentage_establishments": 6.6,
+            "percentage_population": 7.4
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region of the United States.",
+            "percentage_establishments": 23.5,
+            "percentage_population": 21.8
+        },
+        {
+            "location": "Southwest",
+            "location_description": "The Southwest region of the United States.",
+            "percentage_establishments": 15.1,
+            "percentage_population": 19.5
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Location constraints",
+                "barrier_description": "Dentists and periodontists need to operate their facilities near their patients' homes."
+            },
+            {
+                "barrier_title": "Industry fragmentation",
+                "barrier_description": "Industry fragmentation prevents any major company from dominating the industry; however, group practices can stall the entry of smaller independent periodontists."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Revenue Volatility",
+            "Technology Change"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity",
+            "Concentration"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Competition among periodontists",
+                "basis_description": "Periodontists primarily compete with other periodontists."
+            },
+            {
+                "basis_title": "Price and quality competition",
+                "basis_description": "Periodontists compete on quality and price. Consumers have some power to visit competing providers if they're in more significantly populated urban regions where more dentists and periodontists are located."
+            },
+            {
+                "basis_title": "Group practices to reduce price competition",
+                "basis_description": "To minimize price competition, mergers or group practice formation is economical and can increase market concentration."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases, depreciation, rent and utility costs are reduced at group practices",
+            "cost_factor_description": "In the dental industry, group practices offer several advantages for individual doctors, including reduced administrative costs, improved marketing and recruiting and sharing in investment costs in equipment, rent and utilities."
+        },
+        {
+            "cost_factor_title": "Wages take a bite out of periodontists' profit",
+            "cost_factor_description": "In a marketplace characterized by scarcity, one main factor contributing to profit deterioration is the need to compete for skilled workers and offer competitive wages. Periodontists can also share in the expense of wages. By hiring a flexible, skilled staff at a group practice, costs can be minimized and there is also the opportunity to share insurance expenses."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LOW capital intensity",
+                "capital_intensity_description": "The industry is experiencing a low level of both the rate of new patents and the concentration of patents in the industry. This creates an environment where the threat of new technologies driving disruption is low."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "COVID-19 EXPOSED THE ROOTS OF VOLATILITY",
+                "volatility_description": "COVID-19 drastically influenced volatility among periodontist services. Temporary closures and reduced working hours in dental offices led to lost business and revenue since nonessential and elective procedures were postponed."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "LASER TECHNOLOGY PLACES FOCUS ON COST",
+                "technological_change_description": "Laser technology is utilized in periodontist offices for precise surgical procedures and reducing bleeding and swelling. This efficient method has pushed the industry towards adopting advanced technological equipment for better patient care."
+            },
+            {
+                "technological_change_title": "DIGITAL IMAGING AND DIAGNOSTIC TOOLS ARE ENVIRONMENTALLY FRIENDLY",
+                "technological_change_description": "Digital imaging facilitates prompt precise diagnostics, enhancing the accuracy of treatment plans. It's being widely adopted for its ability to instantly process and store images, aiding immediate and future references."
+            },
+            {
+                "technological_change_title": "ELECTRONIC HEALTH RECORDS (EHRS) ARE A SECURE AND ECO-FRIENDLY APPROACH",
+                "technological_change_description": "Electronic Health Records (EHRs) have revolutionized how periodontists access patient histories. They facilitate timely treatment decisions, streamline operations, and enhance patient engagement. The switch to EHRs significantly reduces the dependency on paper, reflecting cost savings and a positive environmental impact."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "What was the impact of COVID-19 on the periodontist services industry?",
+            "answer": "COVID-19 drastically influenced volatility among periodontist services. Temporary closures and reduced working hours in dental offices led to lost business and revenue since nonessential and elective procedures were postponed. Virtual consultations and telehealth tactics were used to some extent but were insufficient to prevent a significant revenue decline, forcing some practices to shutter or merge."
+        },
+        {
+            "question": "What was the level of regulation in the industry?",
+            "answer": "The level of regulation was moderate and steady."
+        },
+        {
+            "question": "What was the level of industry assistance?",
+            "answer": "The level of industry assistance was low and steady."
+        }
+    ]
+}

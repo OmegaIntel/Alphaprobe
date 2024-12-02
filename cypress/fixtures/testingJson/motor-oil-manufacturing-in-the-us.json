@@ -1,0 +1,311 @@
+{
+    "report_title": "Motor Oil Manufacturing in the US",
+    "report_date": "May 26, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 21611000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 1.68
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 0.95
+            }
+        },
+        "profit": {
+            "profit_dollars": 1405000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 3.1
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 6.5,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 1.39
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 2994000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 12754,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 1238000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 48000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 6.63
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0.27
+            }
+        },
+        "exports": {
+            "exports_dollars": 174000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 1.01
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 1.62
+            }
+        }
+    },
+    "executive_summary": "The motor oil manufacturing industry has faced challenges and recoveries in recent years due to the COVID-19 pandemic.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Pandemic Has Had Lingering Effects",
+            "current_performance_point_description": "The COVID-19 outbreak severely impacted motor oil manufacturers."
+        },
+        {
+            "current_performance_point_title": "Economic Conditions Have Constrained Profit Growth",
+            "current_performance_point_description": "Economic duress can make it difficult for refineries to pass on crude oil costs to downstream customers."
+        },
+        {
+            "current_performance_point_title": "An Aging Fleet and Falling New Car Sales Benefitted Manufacturers",
+            "current_performance_point_description": "Motor oil manufacturers have benefitted from the increasing average age of the US automobile fleet."
+        },
+        {
+            "current_performance_point_title": "High Oil Prices Have Had Mixed Effects",
+            "current_performance_point_description": "Higher oil prices have led to some price-based gains for manufacturers."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Falling Fuel Prices Will Have Mixed Effects",
+            "future_outlook_point_description": "Falling oil prices will enhance consumer sentiment."
+        },
+        {
+            "future_outlook_point_title": "Aging Cars Will Reignite Demand",
+            "future_outlook_point_description": "As vehicles age and require more maintenance, demand will surge."
+        },
+        {
+            "future_outlook_point_title": "Motor Oil Manufacturers Will Continue to Develop More Eco-Friendly Products",
+            "future_outlook_point_description": "Manufacturers will likely increase market share by pioneering eco-friendly products."
+        },
+        {
+            "future_outlook_point_title": "New Car Sales Are Set to Climb",
+            "future_outlook_point_description": "New car sales are expected to rise."
+        }
+    ],
+    "industry_definition": "Operators in this industry primarily engage in blending or compounding refined petroleum to make lubricating blended motor oils.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Barriers To Entry Level high - steady",
+            "Globalization Level low - steady"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level high"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage mature"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "Low Imports",
+            "High Profit vs. Sector Average"
+        ],
+        "weaknesses": [
+            "High Volatility",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "Average age of vehicle fleet"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "World price of crude oil"
+        ]
+    },
+    "key_trends": [
+        "Motor oil manufacturers operate on tight profit due to volatile crude oil prices.",
+        "Manufacturers are still struggling to recover post-pandemic.",
+        "New car sales and EVs may threaten the consumption of motor oil."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Automotive dealers and parts retailers",
+            "segment_percentage": 37.6,
+            "segment_description": "Most auto dealerships offer maintenance services."
+        },
+        {
+            "segment": "Gas stations",
+            "segment_percentage": 17.7,
+            "segment_description": "Gas stations often contract with major oil companies."
+        },
+        {
+            "segment": "Other",
+            "segment_percentage": 26.8,
+            "segment_description": "Includes various retailers and dealers."
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Synthetic Motor Oils",
+            "product_description": "Produced via a sophisticated, highly engineered process.",
+            "product_percentage": 0.7
+        },
+        {
+            "product_or_service": "Conventional Motor Oils",
+            "product_description": "Massive share of revenue.",
+            "product_percentage": 81.3
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Petrochemical Manufacturing in the US",
+            "Oil Drilling & Gas Extraction in the US"
+        ],
+        "tier_2_suppliers": [
+            "Lubricant Oil Manufacturing in the US",
+            "Plastic Film, Sheet & Bag Manufacturing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": [
+            "New Car Dealers in the US",
+            "Auto Parts Stores in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "The world price of crude oil",
+            "determinant_description": "The price significantly impacts manufacturers."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports are Low and Insignificant",
+                "trade_description": "Imports satisfy a small amount of demand."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "Rich history and infrastructure in automobile production.",
+            "percentage_establishments": 30.0,
+            "percentage_population": 28.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "Proximity to oil and gas industry.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 20.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "Zoning and Permit Requirements",
+                "regulation_description": "Compliance is crucial for operations."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": []
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": []
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Steady",
+        "concentration_points": [],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [],
+    "cost_factors": [],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "Industry sales have an interesting relationship with the US economy."
+        }
+    ]
+}

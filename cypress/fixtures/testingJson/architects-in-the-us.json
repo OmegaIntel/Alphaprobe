@@ -1,0 +1,491 @@
+{
+    "report_title": "Architects in the US",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 55313000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 0.24
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 2.59
+            }
+        },
+        "profit": {
+            "profit_dollars": 101,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 1.65
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 1.2
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 10.1,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 1.65
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 1.5
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 25427000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 1.75
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 1.8
+            }
+        },
+        "employees": {
+            "employees_count": 225482,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 1.6
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 1.7
+            }
+        },
+        "wages": {
+            "wages_dollars": 19250000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 2.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 2.1
+            }
+        },
+        "imports": {
+            "imports_dollars": 101,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 1.1
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 1.2
+            }
+        },
+        "exports": {
+            "exports_dollars": 101,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 1.1
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 1.2
+            }
+        }
+    },
+    "executive_summary": "The Architects industry in the US faced volatility over the past five years due to the COVID-19 pandemic. Strong economic conditions pre-pandemic led to high revenue growth, but the pandemic caused a temporary decline. The recovery resulted in substantially higher spending, boosting performance. The Bipartisan Infrastructure Law increased demand for architects. Rising interest rates recently threatened residential and nonresidential markets. Expansion of technology enhanced architects' efficiency and innovation.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Strong Economic Conditions Pre-Pandemic Caused Revenue to Soar",
+            "current_performance_point_description": "The US economy was robust in the late 2010s as the nation was in the final stages of an expansion following the 2008 financial crisis. Soaring economic growth led to record-low unemployment and rising wages. These indicators gave consumers lots of disposable income, boosting spending in the housing and retail markets."
+        },
+        {
+            "current_performance_point_title": "Pandemic Caused a Temporary Decline",
+            "current_performance_point_description": "The spread of COVID-19 (coronavirus) caused a massive economic contraction in 2020 as businesses were forced to temporarily close or operate at reduced capacity to prevent the virus' spread."
+        },
+        {
+            "current_performance_point_title": "Recovery from the Pandemic Resulted in Substantially Higher Spending",
+            "current_performance_point_description": "The recovery from the pandemic resulted in substantially higher spending in most downstream sectors, boosting the industry's performance."
+        },
+        {
+            "current_performance_point_title": "Bipartisan Infrastructure Law Increases Architect Demand",
+            "current_performance_point_description": "The Infrastructure Investment and Jobs Act involves a $1.2 trillion investment in infrastructure, with $550 billion above the baseline dedicated for upgrades."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Full economic recovery will aid revenue growth",
+            "future_outlook_point_description": "The implementation of artificial intelligence will accelerate architects' efficiency by helping process building data and develop layouts faster while considering environmental factors."
+        },
+        {
+            "future_outlook_point_title": "AI will bolster efficiency",
+            "future_outlook_point_description": "The implementation of AI in architectural services is crucial for improving operations and client satisfaction."
+        }
+    ],
+    "industry_definition": "Architects in the United States plan and design residential, institutional, recreational, commercial and industrial buildings and structures by applying their knowledge of design, construction procedures, zoning regulations, building codes and building materials.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "High Revenue per Employee",
+            "Low Capital Requirements"
+        ],
+        "negative_impact_factors": [
+            "Low & Steady Level of Assistance",
+            "Low Profit vs. Sector Average"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "High Revenue per Employee",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "Low Profit vs. Sector Average"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Value of residential construction"
+        ]
+    },
+    "key_trends": [
+        "Most architects operate locally, enabling diverse niches for smaller firms.",
+        "Many cater to clients seeking unique designs, creating steady specialized revenue.",
+        "Revenue was volatile due to inflation, rebounding post-pandemic but harmed by rising rates.",
+        "Outlook is positive due to economic stability and sustainable building trends.",
+        "The industry is highly fragmented with low consolidation."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Household consumers and individuals",
+            "segment_description": "Households require architectural services, particularly as homes become more complex.",
+            "segment_percentage": 8.1
+        },
+        {
+            "segment": "Governmental bodies",
+            "segment_description": "Government bodies that demand services from architects include the defense, health and human services and education departments, along with a host of other facilities.",
+            "segment_percentage": 19.1
+        },
+        {
+            "segment": "All other private businesses and Nonprofit organizations",
+            "segment_description": "Architects receive some portion of their revenue from projects offered by nonprofit organizations.",
+            "segment_percentage": 11.0
+        },
+        {
+            "segment": "Construction, engineering and architectural firms and all other",
+            "segment_description": "Many architects are employed by construction, architectural and engineering companies.",
+            "segment_percentage": 11.4
+        },
+        {
+            "segment": "Private hospitals and clinics",
+            "segment_description": "Private hospitals are part of the private business segment that demands architectural services.",
+            "segment_percentage": 10.0
+        },
+        {
+            "segment": "Private corporations and businesses",
+            "segment_description": "Slightly more than half of revenue that architects generate comes from other businesses and private organizations.",
+            "segment_percentage": 14.1
+        },
+        {
+            "segment": "Private colleges and universities",
+            "segment_description": "Private universities are part of the private business segment that demands architectural services.",
+            "segment_percentage": 4.6
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Office Building Projects",
+            "product_description": "Architects provide services to office buildings so new office spaces can be constructed in a fashionable manner.",
+            "product_percentage": 15.5
+        },
+        {
+            "product_or_service": "Hospitals and Clinical Buildings",
+            "product_description": "Architects provide services to hospitals and clinical buildings so new medical facilities can be constructed in a fashionable manner.",
+            "product_percentage": 13.3
+        },
+        {
+            "product_or_service": "College and University School Projects",
+            "product_description": "Architects provide services to colleges and universities mostly for libraries and large halls.",
+            "product_percentage": 8.4
+        },
+        {
+            "product_or_service": "Primary and Secondary School Projects",
+            "product_description": "Architects provide services to primary and secondary schools to build gyms, classrooms and other recreational facilities.",
+            "product_percentage": 8.0
+        },
+        {
+            "product_or_service": "Retail and Restaurant Projects",
+            "product_description": "Retailers and restaurants need architects to build their stores and eateries.",
+            "product_percentage": 10.4
+        },
+        {
+            "product_or_service": "All Other Nonresidential Building Projects",
+            "product_description": "Architects provide services for other nonresidential building projects, such as those for recreational centers, industrial buildings and hotels.",
+            "product_percentage": 20.2
+        },
+        {
+            "product_or_service": "Architectural Services for Residential Building Projects",
+            "product_description": "Developers and new homeowners who want specific designs for their residencies hire architects.",
+            "product_percentage": 9.9
+        },
+        {
+            "product_or_service": "Architectural Services for All Other Projects",
+            "product_description": "Architects also provide other services, ranging from construction management, project management and historical restoration services.",
+            "product_percentage": 14.3
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Landscape Design in the US",
+            "Engineering Services in the US",
+            "Surveying & Mapping Services in the US"
+        ],
+        "tier_2_suppliers": [
+            "Design, Editing & Rendering Software Publishing in the US",
+            "Laboratory Supply Wholesaling in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Institutional and commercial development trends",
+            "determinant_description": "Institutional and commercial development trends are significant revenue drivers since corporations need architects to build office space, stores, recreational centers and other structures."
+        },
+        {
+            "determinant_title": "Value of private nonresidential construction",
+            "determinant_description": "The value of private nonresidential construction measures demand for commercial and industrial developments."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region, which houses the largest share of the domestic population in the United States, is geographically expansive and includes major population centers such as Nashville, Charlotte, Miami and Atlanta.",
+            "percentage_establishments": 19,
+            "percentage_population": 19
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region, which includes states like Michigan, Ohio and Illinois, hosts some of the country's largest manufacturers.",
+            "percentage_establishments": 12,
+            "percentage_population": 15
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region hosts major cities such as New York City, Philadelphia and Washington, DC.",
+            "percentage_establishments": 14,
+            "percentage_population": 15
+        },
+        {
+            "location": "West",
+            "location_description": "The Western region is able to attract numerous architects due to its saturated population and strong corporate presence.",
+            "percentage_establishments": 30,
+            "percentage_population": 23
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "THE NATIONAL COUNCIL OF ARCHITECTURAL REGISTRATION BOARDS (NCARB)",
+                "regulation_description": "The National Council of Architectural Registration Boards (NCARB) sets licensing standards for architects to protect public safety and welfare."
+            },
+            {
+                "regulation_title": "LICENSING REQUIREMENTS",
+                "regulation_description": "Each state requires that architects receive a degree from a university accredited by the NCARB."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life cycle stage",
+                "barrier_description": "The architecture industry is mature."
+            },
+            {
+                "barrier_title": "Industry assistance level",
+                "barrier_description": "The industry assistance level is low and steady."
+            }
+        ],
+        "factors_increased_barrier": [
+            "mature"
+        ],
+        "factors_decreased_barrier": [
+            "low",
+            "low - increasing"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Localization of architects enables diverse demand niches",
+                "basis_description": "Most architects operate within a specific city or county in the United States."
+            },
+            {
+                "basis_title": "Specialization is a priority for new entrants",
+                "basis_description": "Many architects cater to clients seeking unique designs, creating a steady revenue stream for specialized architect services."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Geographic isolation keeps consolidation muted",
+                "concentration_description": "Most architectural firms are tiny and some architects even operate their own businesses as nonemployers."
+            },
+            {
+                "concentration_title": "Modest barriers to entry increase fragmentation",
+                "concentration_description": "Becoming an architect requires significant schooling, but setting up an architectural company is fairly straightforward."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Gensler",
+                "company_percentage": 2.1
+            },
+            {
+                "company_name": "HKS Inc.",
+                "company_percentage": 0.6
+            },
+            {
+                "company_name": "Stantec Inc.",
+                "company_percentage": 0.5
+            },
+            {
+                "company_name": "M. Arthur Gensler Jr. & Associates, Inc.",
+                "company_percentage": 0.3
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 96.4
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 30
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 15
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 10
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Inflation Causes Purchase Costs to Soar",
+            "cost_factor_description": "Purchases include the cost of temporary employees, travel expenses, computing and photocopying costs."
+        },
+        {
+            "cost_factor_title": "Miscellaneous Costs Grow Amid High Inflation",
+            "cost_factor_description": "\"Other\" costs include professional and business-related fees."
+        },
+        {
+            "cost_factor_title": "RELATIVE WAGES DECLINE AS INFLATION BECOMES PROMINENT",
+            "cost_factor_description": "Rising prices have caused the cost of computing, paperwork and fees to increase exponentially."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LABOR EXPENSES",
+                "capital_intensity_description": "Capital investments in paperwork and computers are minimal compared to the labor required."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Fluctuations in Consumer Demand Produce Volatility",
+                "volatility_description": "Consumer demand often influences the level of employment, wages and spending in the economy."
+            },
+            {
+                "volatility_title": "Interest Rates Have a Major Effect on Downstream Demand for Architects",
+                "volatility_description": "Architects mostly provide designs for construction projects."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "GREEN OFFICES PROVIDE NEW DESIGN TOOLS FOR ARCHITECTS",
+                "technological_change_description": "Many have recently started designing sustainable and environmentally friendly buildings."
+            },
+            {
+                "technological_change_title": "COMPUTER-AIDED DESIGN (CAD) IS INCREASINGLY BEING USED BY HOMEBUILDERS",
+                "technological_change_description": "CAD enables builders to plan their designs in a 2D or 3D setting using software."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "Is your company experiencing changes in the type of products and services that customers want?",
+            "answer": "Consumers of this industry are increasingly demanding that designs be sustainable and energy efficient."
+        },
+        {
+            "question": "How does the bidding process differ between residential clients and nonresidential/corporate clients?",
+            "answer": "The bidding process for obtaining nonresidential contracts is often more involved."
+        }
+    ]
+}

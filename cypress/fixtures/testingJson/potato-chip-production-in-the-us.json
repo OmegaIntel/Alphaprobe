@@ -1,0 +1,325 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 10800000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 1.05
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.9
+            }
+        },
+        "profit": {
+            "profit_dollars": 421000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 8.01
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 1.5
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 3.9,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 6.89
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 1.5
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1304000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 2.75
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 1.5
+            }
+        },
+        "employees": {
+            "employees_count": 10001,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 3.5
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 1.5
+            }
+        },
+        "wages": {
+            "wages_dollars": 646000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 2.5
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 1.5
+            }
+        },
+        "imports": {
+            "imports_dollars": 265000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 2.74
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 1.2
+            }
+        },
+        "exports": {
+            "exports_dollars": 225000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": -1.02
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 2.58
+            }
+        }
+    },
+    "executive_summary": "The Potato Chip Production industry has faced hurdles from rising health consciousness, even as it has remained a staple of the US diet. The potato chip was invented in 1853 and has been America's number-one snack food for over 50 years. The product's popularity is often renewed annually due to major sporting events like the Super Bowl. While the COVID-19 pandemic derailed economic growth, it generated additional demand for potato chips as consumers spent more time at home, increasing snacking habits.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Rising health consciousness has forced producers to adapt",
+            "current_performance_point_description": "Consumers have become increasingly health conscious as overweight and obesity trends have been more apparent."
+        },
+        {
+            "current_performance_point_title": "Potato chips remain popular, aided by rising consumer spending",
+            "current_performance_point_description": "The sustained popularity of potato chips has made them a mainstay in the US diet."
+        },
+        {
+            "current_performance_point_title": "Large companies dominate the landscape, although niche opportunities remain",
+            "current_performance_point_description": "Major businesses remain dominant due to the production scale."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Chip producers will focus on marketing alternatives",
+            "future_outlook_point_description": "Potato chip producers are establishing brand recognition surrounding nutritious variations of potato chip products."
+        },
+        {
+            "future_outlook_point_title": "International trade will establish limited footholds",
+            "future_outlook_point_description": "The popularity of potato chips as a snack option in the United States will keep most chips domestically produced."
+        },
+        {
+            "future_outlook_point_title": "Eco-friendly initiatives for sustainable potato chip production",
+            "future_outlook_point_description": "Producers are working to embrace farming methods that limit water consumption."
+        }
+    ],
+    "industry_definition": "Operators in this industry strictly produce potato chips for snack consumption.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Revenue Volatility Level - low",
+            "Industry Assistance Level - high - steady",
+            "Globalization Level - low - steady"
+        ],
+        "negative_impact_factors": [
+            "Capital Intensity Level - high"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage - mature"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Level of Assistance",
+            "Low Volatility",
+            "Low Imports"
+        ],
+        "weaknesses": [
+            "Low Profit vs. Sector Average",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth"
+        ]
+    },
+    "key_trends": [
+        "Innovation is at the heart of commercial success.",
+        "Brand equity keeps consumers tied to their favorite potato chips.",
+        "Health consciousness is altering consumer behavior."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Supermarkets and grocery stores",
+            "segment_description": "Supermarkets and grocery stores represent the most critical market for the industry.",
+            "segment_percentage": 33.3
+        },
+        {
+            "segment": "Wholesalers",
+            "segment_description": "Wholesalers traditionally supply pre-packaged potato chips.",
+            "segment_percentage": 13.5
+        },
+        {
+            "segment": "Convenience stores and gas stations",
+            "segment_description": "Sales are driven by impulse buys.",
+            "segment_percentage": 5.0
+        },
+        {
+            "segment": "Supercenters",
+            "segment_description": "Large discount stores that sell perishable groceries.",
+            "segment_percentage": 26.7
+        },
+        {
+            "segment": "Vending machines",
+            "segment_description": "Potato chips are sold in various package sizes.",
+            "segment_percentage": 0.5
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Plain Potato Chips",
+            "product_percentage": 51
+        },
+        {
+            "product_or_service": "Barbecue Potato Chips",
+            "product_percentage": 11.4
+        },
+        {
+            "product_or_service": "Sour Cream and Onion Potato Chips",
+            "product_percentage": 9.8
+        },
+        {
+            "product_or_service": "Salt and Vinegar Potato Chips",
+            "product_percentage": 7.8
+        },
+        {
+            "product_or_service": "Other Flavors",
+            "product_percentage": 20
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Laminated Plastics Manufacturing",
+            "Seasoning, Sauce and Condiment Production",
+            "Vegetable Farming"
+        ],
+        "tier_2_suppliers": [
+            "Oilseed Farming",
+            "Corn Farming",
+            "Corn, Wheat & Soybean Wholesaling"
+        ],
+        "tier_1_buyers": [
+            "Grocery Wholesaling",
+            "Supermarkets & Grocery Stores",
+            "Convenience Stores"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Aggregate Consumption",
+            "determinant_description": "Consumers often purchase more snack products when general spending rises."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports make up a tiny share of domestic demand",
+                "trade_description": "Imports make up a small share of domestic demand."
+            },
+            {
+                "trade_title": "The impact of trade tariffs on potato chip imports",
+                "trade_description": "Increased costs for imported potato chips due to tariffs discourage US buyers."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "The West",
+            "location_description": "The favorable climate conditions make it an ideal location for growing.",
+            "percentage_establishments": 35,
+            "percentage_population": 25
+        },
+        {
+            "location": "The Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region is home to some of the US' biggest cities.",
+            "percentage_establishments": 30,
+            "percentage_population": 20
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "PUBLIC HEALTH AND LABELING RULES TIGHTEN",
+                "regulation_description": "Producers are required to have accurate nutrition labels."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": []
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": []
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Increasing",
+        "concentration_points": [],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [],
+    "cost_factors": [],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Low",
+        "volatility_trend": "Steady",
+        "volatility_points": []
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": []
+}

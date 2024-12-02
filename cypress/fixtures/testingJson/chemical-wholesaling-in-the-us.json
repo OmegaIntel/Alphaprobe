@@ -1,0 +1,585 @@
+{
+    "report_title": "Chemical Wholesaling in the US",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 254936000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": 2.39
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 0.13
+            }
+        },
+        "profit": {
+            "profit_dollars": 10962000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 3.05
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 0.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.3,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0.84
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 26990000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 2.6
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 0.0
+            }
+        },
+        "employees": {
+            "employees_count": 144006,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 0.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 0.0
+            }
+        },
+        "wages": {
+            "wages_dollars": 14215000000,
+            "wages_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "wages_cagr_value": 2.35
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 0.11
+            }
+        },
+        "imports": {
+            "imports_dollars": 101,
+            "imports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "imports_cagr_value": 0.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 0.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 101,
+            "exports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "exports_cagr_value": 0.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 0.0
+            }
+        }
+    },
+    "executive_summary": "Chemical wholesalers have faced volatile conditions as production levels across the downstream construction and manufacturing sectors have vacillated. Economic disruptions from COVID-19 negatively impacted demand from many of the downstream markets. The industry recovered in 2021, mirroring macroeconomic trends. Improving economic conditions following the pandemic peak renewed demand across the downstream markets, enabling a recovery as heightened consumer spending spurred manufacturing and industrial production activity. However, rising interest rates and escalating global tensions have constrained potential revenue.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Volatile Economic Environment has Contributed to Fluctuating Demand Conditions",
+            "current_performance_point_description": "Downstream customers, including the manufacturing, construction and healthcare sectors, have increased chemical purchases as production levels have risen, leading to top-line revenue expansion despite price fluctuations in key inputs into chemical manufacturing. The onset of the COVID-19 pandemic and the ensuing economic fallout disrupted growth. As consumer spending declined as economic uncertainty and the unemployment rate rose, demand from many of the industry's key downstream markets declined."
+        },
+        {
+            "current_performance_point_title": "Improvements in the broader economy following alleviating pandemic concerns have driven recovery",
+            "current_performance_point_description": "Rising consumer spending on a wide range of goods has supported growth from downstream markets as they ramp up production to meet heightened business."
+        },
+        {
+            "current_performance_point_title": "INPUT PRICES FLUCTUATED WILDLY OVER THE PANDEMIC-SCARRED PERIOD",
+            "current_performance_point_description": "In 2020, reduced energy needs led to a collapse in the world price of crude oil. Following already depressed demand for chemical products, lower oil prices placed downward pressure on the prices wholesalers could charge downstream buyers, contributing to revenue declines. The world price of crude oil rapidly recovered as the domestic and global economy reopened throughout 2021, quickly exceeding pre-pandemic prices. Crude oil prices continued to rise into 2022, exacerbated by the ongoing conflict in Ukraine."
+        },
+        {
+            "current_performance_point_title": "WHOLESALERS HAVE LOOKED TO CONSOLIDATE AMID INCREASED PRESSURES",
+            "current_performance_point_description": "High operating costs and increased price competition have encouraged consolidation, particularly for smaller chemical wholesalers looking to cease operations amid a highly competitive environment. Larger companies have acquired smaller regional companies to realize cost efficiencies from economies of scale."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "As Oil Prices Temper, Expansion Will Follow Suit",
+            "future_outlook_point_description": "While oil price volatility will continue over the outlook period, inflationary woes subsiding will lead to falling prices. A decline in the world price of crude oil will place downward pressure on selling prices, threatening growth and overall profitability as chemical wholesalers won't enjoy price-based gains."
+        },
+        {
+            "future_outlook_point_title": "Chemical wholesalers must manage their inventories efficiently",
+            "future_outlook_point_description": "Chemical wholesalers that don't will be stuck with excess inventory that will not reflect the drop in oil prices, hindering profit."
+        },
+        {
+            "future_outlook_point_title": "I N D U S T R I A L  P R O D U C T I O N  R A M P I N G  U P  W I L L  P R O M O T E G R O W T H",
+            "future_outlook_point_description": "Despite interest rates remaining high early over the outlook period, the industrial production index will increase, providing wholesalers with strong growth in key downstream markets."
+        },
+        {
+            "future_outlook_point_title": "R E G U L A T I O N  W I L L  C O N T I N U E  T O  T I G H T E N",
+            "future_outlook_point_description": "The regulation of chemical distribution processes will continue rising. Regulations typically increase compliance costs, negatively impacting wholesalers' bottom line and discouraging new chemical wholesalers from beginning operating."
+        },
+        {
+            "future_outlook_point_title": "Profit Growth to Remain Stable",
+            "future_outlook_point_description": "Despite various countervailing forces, chemical wholesalers' profit will remain stable over the outlook period."
+        },
+        {
+            "future_outlook_point_title": "International Events Will Alter the Industry's Landscape",
+            "future_outlook_point_description": "Russia's invasion of Ukraine will continue to subdue supply chains and the normalization of energy prices, hiking oil and gas production in the US and fueling growth for chemical wholesalers."
+        }
+    ],
+    "industry_definition": "This industry wholesales chemicals and related products, including compressed gas, chemical additives and synthetic rubber, to the manufacturing, construction and mining industries. This industry does not wholesale agricultural or medicinal chemicals, paints or varnishes, fireworks or plastics materials.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level low",
+            "Concentration Level low",
+            "Technology Change Level low"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level high",
+            "Industry Assistance Level low - steady",
+            "Competition Level high - steady"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "High Customer Class Concentration",
+            "High Product/Service Concentration",
+            "Low Revenue per Employee",
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "High Volatility"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "Industrial production index"
+        ],
+        "threats": [
+            "Low Performance Drivers",
+            "World price of crude oil",
+            "Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth"
+        ]
+    },
+    "key_trends": [
+        "Volatile input prices have led to divergent revenue trends. The skyrocketing oil price caused chemical wholesale revenue to surge in 2021 and 2022.",
+        "Wholesalers will benefit from the industrial production index returning to growth. Increased industrial production, particularly from manufacturers, will sustain the industry through the end of 2028.",
+        "The storage and transportation of chemicals is subject to significant regulatory scrutiny. In recent years, oversight of the industry has increased."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Major industrial users",
+            "segment_description": "Major industrial users comprise manufacturers of paints and coatings, chemicals, metal, industrial and household cleaning and sanitation products. This segment also includes downstream markets in refining and mining. These industrial users dominate the market because of the essential nature of chemicals in production.",
+            "segment_percentage": 53.2
+        },
+        {
+            "segment": "Manufacturers",
+            "segment_description": "This segment includes manufacturers of automobiles, semiconductors and electronics, materials and pharmaceutical products. This segment comprises manufacturers of every day convenience items like beauty products, personal care products and food ingredients.",
+            "segment_percentage": 33.7
+        },
+        {
+            "segment": "Healthcare",
+            "segment_description": "",
+            "segment_percentage": 6.8
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Chemical wholesalers supply chemicals to various downstream industries, including repair shops, restaurants, hotels, building contractors, farmers and governmental bodies. These segments have varying chemical needs and are less dependent on large contracts for production purposes.",
+            "segment_percentage": 6.3
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Other Chemicals",
+            "product_description": "",
+            "product_percentage": 58.4
+        },
+        {
+            "product_or_service": "Cleaning Chemicals (i.e., Soaps and Detergents)",
+            "product_description": "Products in this segment include industrial cleaning and sanitation chemicals, laundry and dishwashing detergents, leather or textile softeners, textile scouring agents and wetting agents.",
+            "product_percentage": 17.8
+        },
+        {
+            "product_or_service": "Adhesives, Automotive and Plastic Chemicals",
+            "product_description": "This segment includes adhesives and dry ice, primarily sold to manufacturers.",
+            "product_percentage": 8.2
+        },
+        {
+            "product_or_service": "Biofuels",
+            "product_description": "This segment includes biofuels like ethanol, methanol, biodiesel and gasohol. Downstream markets commonly use ethanol as a blending agent with gasoline to increase octane and reduce carbon monoxide emissions. Downstream markets use biodiesel in its pure form as a renewable alternative fuel for diesel engines and, more commonly, as a fuel additive to reduce vehicle emissions.",
+            "product_percentage": 7.0
+        },
+        {
+            "product_or_service": "Industrial Gases",
+            "product_description": "Industrial gases include nitrogen, oxygen, carbon dioxide, argon, hydrogen, helium and acetylene, commonly used by oil and gas, petrochemicals, mining, steelmaking, biotechnology, electronics and aerospace industries.",
+            "product_percentage": 6.0
+        },
+        {
+            "product_or_service": "Laminate, Raw Plastic Materials and Crude Rubber",
+            "product_description": "",
+            "product_percentage": 2.6
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Inorganic Chemical Manufacturing in the US",
+            "Dye & Pigment Manufacturing in the US",
+            "Adhesive Manufacturing in the US",
+            "Utilities in the US",
+            "Metal Tank Manufacturing in the US",
+            "Tank & Refrigeration Trucking in the US"
+        ],
+        "tier_2_suppliers": [
+            "Explosives Manufacturing in the US",
+            "Organic Chemical Manufacturing in the US",
+            "Soap & Cleaning Compound Manufacturing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "THE OUTBREAK OF COVID-19 DROVE GROWTH FOR CLEANING CHEMICALS",
+            "determinant_description": "Following the outbreak of COVID-19, households and businesses increased expenditure on cleaning chemicals considerably, leading to strong growth in this segment."
+        },
+        {
+            "determinant_title": "VOLATILE MANUFACTURING ACTIVITY IMPACTED ADHESIVES AND DRY ICE",
+            "determinant_description": "High commodity prices spurred an increase in manufacturing output following the outbreak of COVID-19, but domestic manufacturing output has faced heightened import penetration late over the current period."
+        },
+        {
+            "determinant_title": "HIGH ENERGY PRICES HIKE EXPENDITURE ON BIOFUELS",
+            "determinant_description": "The ever-growing shift toward sustainable products, environmentally-friendly alternatives and oil and gas prices surging through the end of 2023 increased biofuel production and consumption."
+        },
+        {
+            "determinant_title": "CLIMBING DOMESTIC ENERGY AND STEEL PRODUCTION INCREASED EXPENDITURE ON INDUSTRIAL GASES",
+            "determinant_description": "Chemical wholesalers have enjoyed growth in this segment from oil, gas and steel producers hiking their output to take advantage of favorable commodity prices, increasing their need for industrial gases."
+        },
+        {
+            "determinant_title": "EXPENDITURE ON OTHER CHEMICAL PRODUCTS REMAINED STRONG",
+            "determinant_description": "Because of the breadth of chemicals sold and the diversity of end markets, this segment is more shielded from changes in economic conditions, which can adversely impact downstream markets."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "The Southeast",
+            "location_description": "This region accounts for almost a quarter of industry establishments since many industry consumers have manufacturing facilities in this region. Industry wholesalers establish facilities that are closest to key market segments and other wholesale and retail businesses.",
+            "percentage_establishments": 25.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "California",
+            "location_description": "California is the leading industrial state, ranking first in almost every general manufacturing industry, including machinery, fabricated metals, agricultural products and food processing. The majority of manufacturers rely on chemical inputs supplied by chemical wholesalers.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "Texas is home to the greatest number of chemical wholesalers by state. Proximity to key inputs is essential to reduce delivery times and minimize transportation costs.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "The Great Lakes",
+            "location_description": "Wholesalers have flocked to the Great Lakes to appeal to downstream industrial and manufacturing markets. This region is also a major hub for the industry's main upstream supplier, the chemical manufacturing industry.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 10.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "Clean Air Act",
+                "regulation_description": "Clean Air Act is a comprehensive Federal law regulating all air emissions sources. The 1970 CAA authorized the US Environmental Protection Agency (EPA) to establish National Ambient Air Quality Standards (NAAQS) to protect public health and the environment."
+            },
+            {
+                "regulation_title": "Clean Water Act (CWA)",
+                "regulation_description": "CWA is the principal law governing pollution control and water quality of the Nation's waterways. Restoring and maintaining the chemical, physical and biological integrity of the Nation's waters."
+            },
+            {
+                "regulation_title": "Resource Conservation and Recovery Act (RCRA)",
+                "regulation_description": "RCRA gives EPA the authority to control hazardous waste from the cradle to the grave, including the generation, transportation, treatment, storage and disposal of hazardous waste."
+            },
+            {
+                "regulation_title": "TOXIC SUBSTANCES CONTROL ACT (TSCA)",
+                "regulation_description": "The TSCA regulates the introduction of new or already existing chemicals. If transporting a chemical that is not listed on the TSCA Inventory List, chemical wholesalers must submit a notification to the Environmental Protection Agency prior to distribution."
+            },
+            {
+                "regulation_title": "FRANK R. LAUTENBERG CHEMICAL SAFETY FOR THE 21ST CENTURY ACT (LAUTENBERG ACT)",
+                "regulation_description": "The Lautenberg Act reformed the TSCA, making enforcement stricter by requiring distributors to submit more data on new and existing chemicals."
+            },
+            {
+                "regulation_title": "COMPREHENSIVE ENVIRONMENTAL RESPONSE, COMPENSATION AND LIABILITY ACT (CERCLA)",
+                "regulation_description": "CERCLA established how wholesalers must handle hazardous goods and products, including waste disposal regulations with respect to chemical products."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "Revenue volatility level is high."
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "Industry assistance level is low and steady."
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "Competition level is high and steady."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Revenue Volatility Level is high",
+            "Industry Assistance Level is low and steady",
+            "Competition Level is high and steady"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level is low",
+            "Concentration Level is low",
+            "Technology Change Level is low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Long-term distribution agreements",
+                "basis_description": "Long-term distribution agreements are essential to wholesalers' success. This affects wholesalers' ability to meet customer needs and limit cost fluctuations."
+            },
+            {
+                "basis_title": "Regulatory compliance",
+                "basis_description": "Regulatory compliance in the industry is essential. Because wholesalers handle chemicals, they must receive proper certification to operate."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Highly competitive nature",
+                "concentration_description": "The highly competitive nature of the industry limits market concentration. With diversified product offerings that serve over 750,000 customers, no one company holds a dominant share of the market."
+            },
+            {
+                "concentration_title": "Consolidation for market position",
+                "concentration_description": "Larger players have looked to consolidate to enhance their scale and financial position, enabling them to offer more competitive prices."
+            }
+        ],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Other Costs",
+            "cost_type_percentage": 0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "PURCHASES ARE COSTS SUBJECT TO VOLATILITY",
+            "cost_factor_description": "A significant portion of inputs used in various chemical products is derived from petrochemical feedstock, which depends heavily on oil and natural gas prices. Since natural gas and oil prices have been volatile, companies have had to manage their supply contracts aptly to control purchase costs."
+        },
+        {
+            "cost_factor_title": "WAGES CONTINUE TO DECLINE",
+            "cost_factor_description": "Technology has had an increasing role in wholesale operations. The use of technology and automated services has created efficiencies in packaging, sorting, tracking and transporting merchandise. Still, industry production and distribution are still heavily reliant on manual labor. Wholesalers need to maintain a staff to communicate with clients to make sales, initiate follow-up orders and maintain warehouses."
+        },
+        {
+            "cost_factor_title": "PROFIT FLUCTUATES BECAUSE OF VOLATILE INPUT PRICES",
+            "cost_factor_description": "Profit has fluctuated due to uncertain demand conditions, increased petrochemical supply and volatile input prices that determine purchase costs. Improving economic conditions and rising oil prices have supported growth in profit despite fluctuating input prices."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_trend": "Unknown",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital intensity",
+                "capital_intensity_description": "The industry's primary function is to transport merchandise into the market, which involves marketing products and taking, preparing, checking and shipping orders to customers. Labor is needed to oversee the ordering and dispatch of merchandise and to provide additional customer service to manufacturers and retailers."
+            },
+            {
+                "capital_intensity_title": "Low technology change",
+                "capital_intensity_description": "The rate of new patent technologies entering the industry is low, which limits the potential for innovations. A low rate does not mean that innovations cannot occur, just that the likelihood of some innovation materializing as a threat is lower. However, the concentration of technologies is high in this industry. This suggests that industry operators have exposure to potentially unforeseen areas of innovation."
+            }
+        ]
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Changes in Downstream Demand Increase Revenue Volatility",
+                "volatility_description": "Fluctuations in demand from industrial and manufacturing customers typically track variations in the business cycle. When economic conditions are weak, industrial activity decreases, thereby decreasing downstream demand and industry revenue. Conversely, demand for the industry increases amid strong economic performance."
+            },
+            {
+                "volatility_title": "Raw Material Costs Contribute to Wide Fluctuations",
+                "volatility_description": "While demand from downstream sectors greatly influences industry sales volumes, the price of the industry's major input, specifically oil, affects sales prices. Between 2019 and 2020, industry revenue was stymied by the collapse in the world oil price, forcing wholesalers to pass on input price savings to customers."
+            },
+            {
+                "volatility_title": "Long-Term and Stable Contractual Terms with Customers Stabilize the Industry",
+                "volatility_description": "Wholesalers benefit from long-term and stable contractual terms with customers and diversification in their end markets, moderating commodity volatility. While reduced demand from manufacturing users contributed to a revenue decline in 2020, this decline was lessened by heightened demand for chemicals from pharmaceutical and personal care manufacturers."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_trend": "Increasing",
+        "technological_change_points": [
+            {
+                "technological_change_title": "The outbreak of COVID-19 drove growth for cleaning chemicals",
+                "technological_change_description": "Products in this segment include industrial cleaning and sanitation chemicals, laundry and dishwashing detergents, leather or textile softeners, textile scouring agents and wetting agents. Following the outbreak of COVID-19, households and businesses increased expenditure on cleaning chemicals considerably, leading to strong growth in this segment."
+            },
+            {
+                "technological_change_title": "VOLATILE MANUFACTURING ACTIVITY IMPACTED ADHESIVES AND DRY ICE",
+                "technological_change_description": "This segment includes adhesives and dry ice, primarily sold to manufacturers. High commodity prices spurred an increase in manufacturing output following the outbreak of COVID-19, but domestic manufacturing output has faced heightened import penetration late over the current period."
+            },
+            {
+                "technological_change_title": "HIGH ENERGY PRICES HIKE EXPENDITURE ON BIOFUELS",
+                "technological_change_description": "This segment includes biofuels like ethanol, methanol, biodiesel and gasohol. Downstream markets commonly use ethanol as a blending agent with gasoline to increase octane and reduce carbon monoxide emissions. Downstream markets use biodiesel in its pure form as a renewable alternative fuel for diesel engines and, more commonly, as a fuel additive to reduce vehicle emissions. The ever-growing shift toward sustainable products, environmentally-friendly alternatives and oil and gas prices surging through the end of 2023 increased biofuel production and consumption."
+            },
+            {
+                "technological_change_title": "CLIMBING DOMESTIC ENERGY AND STEEL PRODUCTION INCREASED EXPENDITURE ON INDUSTRIAL GASES",
+                "technological_change_description": "Industrial gases include nitrogen, oxygen, carbon dioxide, argon, hydrogen, helium and acetylene, commonly used by oil and gas, petrochemicals, mining, steelmaking, biotechnology, electronics and aerospace industries. Chemical wholesalers have enjoyed growth in this segment from oil, gas and steel producers hiking their output to take advantage of favorable commodity prices, increasing their need for industrial gases."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "Are your sales heavily dependent on any one market, major customer or other isolated revenue stream?",
+            "answer": "The majority of operators in the industry are small companies and they only focus on wholesaling of a particular set of chemicals."
+        },
+        {
+            "question": "How does your company contend with seasonal demand from retail channels? Did your company see an increase in online channels?",
+            "answer": "As companies sell to a wide-variety of industries, seasonality does not affect retail demand a lot. During 2020, retail was impacted due to stay at home orders as a result of COVID-19 (coronavirus)."
+        },
+        {
+            "question": "How does the size of your company affect its profitability and growth potential?",
+            "answer": "Profitability is solely affected by feedstock prices such as price of crude oil and natural gas. During 2020, profitability was hindered amid price volatility due to COVID-19 (coronavirus)."
+        },
+        {
+            "question": "Has your company explored growth opportunities via mergers or acquisitions?",
+            "answer": "M&A activities have increased over the past five years, especially among the major companies."
+        },
+        {
+            "question": "How has your company been able to implement technology into the purchasing process to make buying more efficient for customers?",
+            "answer": "Scope for technological evolution is limited in this industry."
+        },
+        {
+            "question": "Does your company use RFID to optimize inventory management and improve efficiency?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "How does your company monitor potential changes to the regulatory environment? Did your company receive any assistance from the CARES Act?",
+            "answer": "Regulation has increased over the past five years and companies have begun to spend more on regulatory compliance costs. During 2020, the 116th congress passed the CARES Act, a $2.2 trillion economic stimulus package. The CARES Act is eligible for businesses who qualify."
+        },
+        {
+            "question": "The distribution of certain industrial and electronic equipment is subject to environmental regulations from the EPA. What is your company policy?",
+            "answer": "These types of regulations have increased over the past five years for both smaller and larger operators in the industry."
+        },
+        {
+            "question": "How do your trading profit margins compare to your main competitors'?",
+            "answer": "Margins for larger companies in the industry have increased as they are better able to hedge input costs."
+        },
+        {
+            "question": "How has input price volatility affected your purchase costs and selling prices over the past five years? How does this contrast to 2020?",
+            "answer": "Input price volatility has decreased top-line selling prices thereby decreasing overall revenue in the industry. During 2020, input prices were volatile amid the COVID-19 (coronavirus) pandemic."
+        },
+        {
+            "question": "How hard is it to promote your company to suppliers? Can you market specifically to target suppliers? Was your relationship with suppliers hindered during 2020?",
+            "answer": "Having links with a diverse range of suppliers enables industry wholesalers to sell a variety of product types. During 2020, it is likely that the supply chain for industry operators was impacted due to COVID-19 (coronavirus)."
+        },
+        {
+            "question": "What do you do to promote loyalty? How do you keep your customers returning for follow-up visits?",
+            "answer": "Repeat customer sales are a key success factor in this industry."
+        },
+        {
+            "question": "Where are your distribution centers located? Have you considered expanding into new territories?",
+            "answer": "Strong distribution networks minimize distribution costs and maximize market penetration."
+        },
+        {
+            "question": "Do you pass on high input costs to your downstream customers? What other tactics can you employ to keep profit margins afloat?",
+            "answer": "Several key raw material inputs are derived from petrochemical feedstock, so changes in the price of oil can greatly affect the industry's cost structure. During 2020, the world price of crude oil declined amid the COVID-19 (coronavirus) pandemic. See report A5211 for more detail."
+        },
+        {
+            "question": "How much of your revenue is derived from mining, manufacturing, electric and gas industries? How can you maximize the opportunity of a rising IPI?",
+            "answer": "The IPI is a leading indicator for the level of domestic demand for chemical wholesalers, with an increase in the IPI typically meaning an increase in demand for industrial chemicals."
+        },
+        {
+            "question": "How much of your revenue is generated from construction-related chemicals? How can you diversify revenue streams in case of a decrease in demand?",
+            "answer": "The construction sector uses various products that are distributed to them by chemical wholesalers. Therefore, activity in the construction sector drives demand for the Chemical Wholesaling industry."
+        }
+    ]
+}

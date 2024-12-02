@@ -1,0 +1,559 @@
+{
+    "report_title": "Hotel Construction in the US",
+    "report_date": "Apr 02, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 19131000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 1.87
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "revenue_cagr_value": 2.57
+            }
+        },
+        "profit": {
+            "profit_dollars": 823000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 3.38
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2024,
+                "profit_cagr_value": 7.45
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.3,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 1.48
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 2.33
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 0,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 11733,
+            "employees_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 0,
+            "wages_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The hotel construction industry benefited from increased demand for services through the end of 2024 amid improving hotel occupancy rates and rising consumer spending in the US. However, the COVID-19 pandemic significantly hampered industry revenue growth over the past five years, with revenue falling at a CAGR of 7.1% and expected to total $20.1 billion in 2024.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "COVID-19 Impact",
+            "current_performance_point_description": "The COVID-19 pandemic severely muted industry revenue growth due to travel restrictions, stay-at-home orders and safety concerns. However, demand rebounded in 2022 and onwards driven by increased domestic and international travel and improved consumer confidence."
+        },
+        {
+            "current_performance_point_title": "Corporate Clients are the Most Profitable Customers",
+            "current_performance_point_description": "Corporate clients account for almost half of hotel customers and tend to spend more per room night than leisure travelers. Domestic travel has recovered due to renewed travel and elimination of COVID-19 restrictions, though still below pre-pandemic levels due to low consumer confidence."
+        },
+        {
+            "current_performance_point_title": "Rising Room Rates Help Mitigate Revenue Declines",
+            "current_performance_point_description": "Rising room rates signal improving demand, enabling hotels to raise rates and grow profits instead of engaging in price wars. Higher profits make hotels more likely to expand, increasing demand for hotel construction services."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Hotel Construction is Poised to Have Strong Growth",
+            "future_outlook_point_description": "Rising disposable income will drive demand for accommodation services and hotel/motel construction. Domestic travel within the US will accelerate, while lower interest rates will make borrowing for construction projects more affordable for hoteliers."
+        },
+        {
+            "future_outlook_point_title": "Leisure Demand Will Grow While Business Travel Will Stagnate",
+            "future_outlook_point_description": "Leisure travel demand will grow as almost half of hotel customers travel for leisure. However, business travel growth will be slower due to increased use of video teleconferencing as a cheaper alternative."
+        },
+        {
+            "future_outlook_point_title": "International Travel is a Significant Source of Demand",
+            "future_outlook_point_description": "International visitors account for a quarter of lodging sales. Travel from Asia and South America, especially South Korea, China, Brazil and Argentina, will drive growth due to rising disposable incomes in those countries. The 2026 FIFA World Cup hosted in the US will also boost international visitation."
+        }
+    ],
+    "industry_definition": "Operators and contractors in the Hotel Construction industry engage in new construction, addition, reconstruction and maintenance projects for accommodation establishments ranging from hotels, motels, resorts and related structures.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - increasing"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level: high",
+            "Competition Level: high - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "High Competition",
+            "High Volatility",
+            "Low Profit vs. Sector Average"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Consumer spending"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Value of private nonresidential construction"
+        ]
+    },
+    "key_trends": [
+        "Competitive pricing is key to attracting customers in a relatively low-margin industry. Hotel construction contractors must also possess a skilled workforce to accommodate large scale projects.",
+        "Word-of-mouth referrals are a crucial marketing method. Hotel construction contractors differentiate their service on the basis of price, timeliness and quality of work.",
+        "Increased travel patterns as COVID-19 restrictions dwindle boost demand for hotels. Domestic trips by US residents rise alongside growing disposable incomes.",
+        "Luxury hotels are the most profitable market. Corporate clients increasingly prefer luxury hotels and tend to spend more per room.",
+        "Rising occupancy rates and prices bolster revenue. As hotels receive more income, they are more willing to hire contractors to make renovations and additions.",
+        "The industry is highly fragmented. Hotel construction contractors operate in regional markets and cater to local projects.",
+        "Top contractors often specialize in general construction projects, mostly hotels and motels. Also, there is a relatively high nonemployer presence, which further adds to the highly fragmented nature of this industry.",
+        "Certification is necessary to acquire high-revenue contracts. This lifts the quality of workmanship and ensures the work is up to standard.",
+        "Hotel construction contractors receive support from industry associations. These include the Associated Builders and Contractors along with the Associated General Contractors of America."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Luxury",
+            "segment_description": "This segment includes luxury, upper upscale and upscale hotels. These hotels offer rooms and public spaces with unique and distinctive designs and d\u00e9cor and promote a stylish, luxurious or avant-garde aesthetic.",
+            "segment_percentage": 4.6
+        },
+        {
+            "segment": "Upper upscale",
+            "segment_description": "This segment includes luxury, upper upscale and upscale hotels. These hotels offer rooms and public spaces with unique and distinctive designs and d\u00e9cor and promote a stylish, luxurious or avant-garde aesthetic.",
+            "segment_percentage": 15.3
+        },
+        {
+            "segment": "Upscale",
+            "segment_description": "This segment includes luxury, upper upscale and upscale hotels. These hotels offer rooms and public spaces with unique and distinctive designs and d\u00e9cor and promote a stylish, luxurious or avant-garde aesthetic.",
+            "segment_percentage": 23.4
+        },
+        {
+            "segment": "Upper midscale",
+            "segment_description": "Within the segment, midscale and upper midscale hotels demonstrate stronger performance than economy hotels, which eat into their profit and customer share. Demand from the upper midscale market has increased over the past five years as it balances affordability and luxury.",
+            "segment_percentage": 28.2
+        },
+        {
+            "segment": "Midscale",
+            "segment_description": "Midscale hotels are quality hotels located in major cities or suburban areas, often near major business areas, convenient to shopping and attractions. These hotels often feature medium-sized restaurants, fitness centers and pools. Ramada hotel is an example of a midscale hotel.",
+            "segment_percentage": 6.7
+        },
+        {
+            "segment": "Economy",
+            "segment_description": "Within the segment, midscale and upper midscale hotels demonstrate stronger performance than economy hotels, which eat into their profit and customer share.",
+            "segment_percentage": 4.1
+        },
+        {
+            "segment": "Independent",
+            "segment_description": "Independent hotels are not franchised or affiliated with a member organization. Due to their ownership type, independent hotels have greater flexibility in setting rates and making decisions on capital improvements and expense allocations since they have no financial pressure from a chain group that requires a certain performance.",
+            "segment_percentage": 17.7
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "General Contracting and New Construction",
+            "product_description": "Construction companies obtain contracts through tendering or quoting a price to the property developer. Demand for new construction has fallen over",
+            "product_percentage": 73.8
+        },
+        {
+            "product_or_service": "Additions and Renovations",
+            "product_description": "The majority of remodels are required when a client develops a new type of product or service that requires an existing structure to be altered. Renovations also include expanding existing buildings or plants. Expansions often take place when clients need to increase the number of supplied units to meet additional demand.",
+            "product_percentage": 24.9
+        },
+        {
+            "product_or_service": "Maintenance, Repair and Other Services",
+            "product_description": "Other activities include specialty trades, such as architectural and engineering services, in addition to general maintenance and repair work. Demand for other services has remained stagnant as the other service segments have continually surpassed it.",
+            "product_percentage": 1.3
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Construction in the US",
+            "Construction & Mining Equipment Wholesaling in the US",
+            "Heavy Equipment Rental in the US",
+            "Glass Product Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Cement Manufacturing in the US",
+            "Concrete Pipe & Block Manufacturing in the US",
+            "Iron & Steel Manufacturing in the US",
+            "Property, Casualty and Direct Insurance in the US"
+        ],
+        "tier_1_buyers": [
+            "Casino Hotels in the US",
+            "Hotels & Motels in the US"
+        ],
+        "tier_2_buyers": [
+            "Real Estate Investment Trusts in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Value of Private Nonresidential Construction",
+            "determinant_description": "The value of hotel construction is nestled within the overall value of private nonresidential construction. Demand for commercial space largely depends on consumer conditions, financing markets and the general well-being of the overall economy. A fall in the value of private nonresidential construction poses a potential threat to the industry."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region is home to a quarter of the US population. The region includes Florida, which boasts several high-density, commercially developed cities including Miami, Orlando, Tampa and Jacksonville, among others.",
+            "percentage_establishments": 25,
+            "percentage_population": 19
+        },
+        {
+            "location": "West",
+            "location_description": "California is particularly attractive due to its large consumer markets and accommodative sector. California has populous metropolitan areas and commercial centers such as Los Angeles, San Jose, San Diego and San Francisco. All of which benefit from increased tourism.",
+            "percentage_establishments": 22,
+            "percentage_population": 23
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The region includes densely populated cities in New York and New Jersey, which provide a strong source of demand for hotel admissions.",
+            "percentage_establishments": 14,
+            "percentage_population": 15
+        },
+        {
+            "location": "Southwest",
+            "location_description": "",
+            "percentage_establishments": 11,
+            "percentage_population": 11
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "",
+            "percentage_establishments": 11,
+            "percentage_population": 15
+        },
+        {
+            "location": "Plains",
+            "location_description": "",
+            "percentage_establishments": 8,
+            "percentage_population": 7
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "",
+            "percentage_establishments": 5,
+            "percentage_population": 7
+        },
+        {
+            "location": "New England",
+            "location_description": "",
+            "percentage_establishments": 4,
+            "percentage_population": 3
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "THE INTERNATIONAL CODE COUNCIL",
+                "regulation_description": "Hotel construction contractors must adhere to a range of building codes, including general building codes, residential codes, mechanical codes, plumbing codes, electrical codes, fire codes, accessibility codes, zoning codes, state codes, local codes and safety ordinances. The International Code Council endorses building codes and publishes an International Building Code that covers building planning, fire protection, building envelope, structural systems, structural and nonstructural materials, building services and special services."
+            },
+            {
+                "regulation_title": "THE AMERICANS WITH DISABILITIES ACT",
+                "regulation_description": "Adhering to regulations governing access, including building requirements under the Americans with Disabilities Act, is particularly important to buildings consumers use. Noncompliance could lead to fines or legal issues. For example, as of January 31, 2013, all pools and spas in hotel and lodging facilities must comply with the Americans with Disability Act regarding their accessibility."
+            },
+            {
+                "regulation_title": "THE AMERICAN INSTITUTE OF CONSTRUCTORS' (AIC) CONSTRUCTOR CERTIFICATION PROGRAM",
+                "regulation_description": "Six major trade and professional associations have officially endorsed the American Institute of Constructors (AIC) Constructor Certification program, including the Associated General Contractors of America, American Subcontractors Association, Associated Builders and Contractors, the Business Roundtable, American Council for Construction Education and American Society of Professional Estimators. These qualify individuals."
+            },
+            {
+                "regulation_title": "Occupational Safety and Health Act (OSHA)",
+                "regulation_description": "Hotel construction contractors are governed by laws and regulations relating to workplace safety and worker health. OSHA covers several topics relating to worker safety, including break and meal times, noise levels and dust standards. These also include staff training on working with hazardous chemicals, confined space entry and trench safety. Companies are held accountable to various state OSHAs, which may vary from their federal counterpart."
+            },
+            {
+                "regulation_title": "Noise Control",
+                "regulation_description": "Noise regulation is governed by the US Code, which is a source of federal law enacted by Congress. The law lists the types of machinery considered and requires the Environmental Protection Agency (EPA) to monitor progress through developed noise emission standards."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Legal requirements",
+                "barrier_description": "Hotel construction contractors must comply with licensing and regulatory requirements. Compliance with the myriad zoning, building, fire, electrical and plumbing, weight and structural load codes, personal safety requirements, and environmental regulations governing building sites and materials recovery can add costs to a contractor's expenses."
+            },
+            {
+                "barrier_title": "Start-up costs",
+                "barrier_description": "Starting up in the industry requires relatively low capital, mostly for purchasing transportation. Contractors that seek to retain a variety of specialized subcontractors on staff to ensure quality standards or to build an in-house construction team may find difficulty attracting skilled tradesmen."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Revenue Volatility Level: high",
+            "Competition Level: high - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - increasing"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Competitive pricing is key to attracting customers in a relatively low-margin industry.",
+                "basis_description": "Competitive pricing is key to attracting customers in a relatively low-margin industry. Hotel construction contractors must also possess a skilled workforce to accommodate large scale projects."
+            },
+            {
+                "basis_title": "Word-of-mouth referrals are a crucial marketing method.",
+                "basis_description": "Word-of-mouth referrals are a crucial marketing method. Hotel construction contractors differentiate their service on the basis of price, timeliness and quality of work."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Hotel construction contractors are localized and market specific",
+                "concentration_description": "Hotel construction contractors are localized and market specific. Hotel construction exhibits a very low concentration level due to the presence of many small, market-specific companies."
+            },
+            {
+                "concentration_title": "The largest companies will capture high-paying contracts",
+                "concentration_description": "Existing large-scale hotel construction contractors are positioned to continue capturing high-revenue builds. This is due to the increasingly lucrative new construction contracts captured by the largest players to work within nonresidential centers and residential complexes."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "OTHER COMPANIES",
+                "company_percentage": 100
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 25.0
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 45.0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 15.0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 5.0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases Continue to Dominate Costs",
+            "cost_factor_description": "The bulk of this overall purchase cost includes subcontractors' wages. Although hotel construction is labor intensive, the percentage of in-house wages accounts for a small share of industry revenue. This is largely due to the industry practice of subcontracting out major labor positions. These contracts are often short-term, within a year, classifying them as a purchase cost instead of a wage cost."
+        },
+        {
+            "cost_factor_title": "Rising Wage Costs Hampers Profit",
+            "cost_factor_description": "Higher selling prices, along with declining wage costs, have boosted profit. However, recent complications from the COVID-19 pandemic placed pressure on profit as demand for hotel construction services dwindled. Nonetheless, demand for hotel construction services has renewed as restrictions ease and construction work returns to normal operating levels. However, an unfavorable lending environment has reduced demand for new constructions, negatively affecting profit."
+        },
+        {
+            "cost_factor_title": "Skilled Labor is Highly Important, Resulting in High Wage Costs",
+            "cost_factor_description": "This segment does not include subcontracting costs, which are accounted for in purchase costs. Over the past five years, wages have risen as a share of revenue as employers have sought to bolster their labor forces after massive layoffs amid the pandemic. Also, with more convergence of design and general contractor services, the average wage has risen nominally to reflect more designers and architects on staff."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_trend": "Unknown",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Labor Expenses",
+                "capital_intensity_description": "Hotel construction work is highly labor-intensive. Contractors may also need specialist, such as architects and engineers, to execute specialized services, especially as technology continue to progress."
+            }
+        ]
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_trend": "Increasing",
+        "volatility_points": [
+            {
+                "volatility_title": "Hotel construction has a high level of revenue volatility",
+                "volatility_description": "Industry revenue often follows the trends of overall commercial construction in the United States, which fluctuates with economic cycles and consumer spending levels. Through the end of 2024, the value of private nonresidential construction significantly declined, largely due to COVID-19-related complications and restrictions, as well as unfavorable interest rates."
+            },
+            {
+                "volatility_title": "The COVID-19 recovery will stimulate tourism",
+                "volatility_description": "Increased consumer spending and renewed traveling activity in 2024 have enabled industry revenue to remain afloat and modestly increase. As COVID restrictions dwindle, tourism levels and international travel will also benefit the industry. Further, the FIFA World Cup 2026 will boost the US tourism industry, benefiting demand for new hotel construction projects from hoteliers."
+            }
+        ]
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_trend": "Steady",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Construction and Management Technologies Have Advanced at a Moderate Pace",
+                "technological_change_description": "In the planning stage, computer-aided design (CAD) and building information modeling (BIM) have enabled general contractors and architects to fully visualize a structure before breaking ground. BIM permits companies to calculate minute details and project how a proposed change will affect subcontractor costs and scheduling, taking much of the guesswork out of altering a project's plans. Throughout construction, laser- and GPS-based technologies let foremen and engineers to precisely delineate a building's perimeter and floor plan."
+            },
+            {
+                "technological_change_title": "There Has Been a Steady Introduction of Logistics Management",
+                "technological_change_description": "These innovations are primarily in project design and construction, enabling companies to properly align equipment and workers from remote locations. Better management techniques let contractors quickly identify deviations from the planning path. Using CAD, stock-flow software packages, field estimating technology and personnel skilled in logistics, the industry has become significantly more efficient."
+            },
+            {
+                "technological_change_title": "Contractors are using high-grade materials that are better equipped to resist natural disasters",
+                "technological_change_description": "Incremental advancements in construction material, in terms of strength, prefabrication, fire resistance and insulation qualities, have improved the efficiency and flexibility of building design and construction. The principal area of technological advancement involves using glass and concrete-based products instead of traditional steel, timber and ceramic materials in commercial buildings."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "Does your company primarily work with residential or nonresidential construction markets? Can you easily switch between these markets?",
+            "answer": "Companies in this industry primarily work with nonresidential contraction markets, of which the high-end hotel market is the largest."
+        },
+        {
+            "question": "Are you solely focused on new work, or do you participate in remodeling activities?",
+            "answer": "Companies focus primarily on new work, but do offer remodeling services to clients."
+        },
+        {
+            "question": "Have the rising prices of key construction inputs significantly affected profit margins in recent years?",
+            "answer": "The rising prices of key construction inputs, along with elevated labor costs, have constrained profit margins in recent years."
+        },
+        {
+            "question": "Does your company make use of subcontractors to save on wage costs? Roughly, what percent of revenue is consumed by wages?",
+            "answer": "Companies in this industry use subcontractors to save on wage costs, which is accounted for as a purchase cost."
+        },
+        {
+            "question": "Investment in new technology is usually fairly low among builders and contractors. How much does your company invest in new equipment annually?",
+            "answer": "Depreciation in this industry is relatively low, accounting for less than 1.0% of industry revenue. Accordingly, companies are not investing large amounts of capital each year in new equipment."
+        },
+        {
+            "question": "Have productivity issues ever kept you from winning lucrative contracts over larger competitors?",
+            "answer": "The industry's largest companies are able to secure lucrative contracts over smaller companies, primarily as a result of their efficient operating systems."
+        },
+        {
+            "question": "Has complying with new energy-efficiency rules in various building codes driven up costs? How has your company offset these increases?",
+            "answer": "While new energy-efficiency rules have caused internal costs to rise, contractors have tried to leverage these new rules by offering environmentally conscious clients with more options."
+        },
+        {
+            "question": "Do you work with local or national trade associations to advance your company's interests?",
+            "answer": "Some trade associations that contractors work with include the Associated Builders and Contractors or The Associated General Contractors of America."
+        },
+        {
+            "question": "How do your company's profit margins compare with your competitors'?",
+            "answer": "Profit margins in this industry typically account for 1.0% to 5.0% of industry revenue."
+        },
+        {
+            "question": "What ongoing financing challenges does your company face?",
+            "answer": "One of the biggest financing challenges that companies contend with include purchase costs. Since companies use subcontractors, managing the expenses they pay out is important."
+        },
+        {
+            "question": "How do you attract and retain qualified staff? What qualifications must your staff have?",
+            "answer": "Ensuring ready access to skilled workers and subcontracting building trade specialists is essential for success in this industry."
+        },
+        {
+            "question": "Do you monitor changes in government regulations? Have you had any issues with government regulations in the past?",
+            "answer": "Contractors must establish a record of compliance with government regulations and the Internal Code Council's building codes."
+        },
+        {
+            "question": "What quality control processes do you have in effect? Is your company known for the quality of its services?",
+            "answer": "Successful companies establish good working relationships with suppliers of high-quality construction materials and fixtures."
+        },
+        {
+            "question": "How will this affect your company? How will your company offset declines caused by an increase in the yield on the 10-year Treasury note?",
+            "answer": "The supply of industry services is largely determined by the availability of financing. Most property purchases, developments and construction activities in the industry are financed by commercial mortgages, which relate to the yield on 10-year Treasury bonds."
+        }
+    ]
+}

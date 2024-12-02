@@ -1,0 +1,541 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 9874000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": -2.41
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 2.24
+            }
+        },
+        "profit": {
+            "profit_dollars": 415000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": -3.97
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": -1.5
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.2,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -1.59
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": -1.3
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 2265000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": -2.9
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 1.5
+            }
+        },
+        "employees": {
+            "employees_count": 25413,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": -1.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0.5
+            }
+        },
+        "wages": {
+            "wages_dollars": 1647000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 2.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 1.5
+            }
+        },
+        "imports": {
+            "imports_dollars": 9748000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 3.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 2.5
+            }
+        },
+        "exports": {
+            "exports_dollars": 3246000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": -1.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 1.0
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2024 currency.\n\nHardware manufacturers produce a variety of metal hardware, including hinges, handles, keys, and locks, as well as coin-operated and time locks. The industry primarily serves the automobile manufacturing and construction markets, closely tying revenue to the economy's overall health. The COVID-19 pandemic hindered downstream industries' ability to function, decimating demand for hardware. Overall, revenue is expected to fall at a CAGR of 2.0% through the end of 2024 to reach $9.9 billion, including an anticipated gain of 0.7% in 2024 alone. Profit is expected to fall to 4.2% of revenue in 2024, down from 6.1% in 2019.\n\nManufacturers recovered somewhat in 2021 in line with the broader economy as social distancing requirements eased and government stimulus depressed operating woes. A hike in demand from residential construction in 2021 fueled industry growth. However, this gain was short-lived, as downstream demand from the automotive and residential construction industries fell. Rising interest rates caused demand for construction to tank. Meanwhile, rising oil prices constricted demand for automobiles. Also, volatility in the price of steel has made it difficult for manufacturers to pass purchase costs down to downstream markets, further weakening revenue.\n\nInterest rates are expected to ease in the coming years, mitigating the stress on the construction industry. Input prices, notably the price of steel, are expected to stabilize, easing cost pressures for manufacturers. Also, an expected devaluation of the US dollar will impede import penetration and expand demand from export markets, boosting revenue streams from overseas. Overall, the industry is expected to hike at a CAGR of 2.1% through the end of 2029 to reach $11.0 billion.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "DOWNSTREAM VOLATILITY HAS HINDERED REVENUE POTENTIAL",
+            "current_performance_point_description": "Manufacturers were forced to halt operations during the height of the COVID-19 pandemic. Social distancing measures restricted the need from downstream construction and manufacturing markets, causing revenue to dip. The industry rebounded in 2021 in line with the broader US economy. Manufacturers enjoyed abundant downstream demand as restrictions eased. Also, government stimulus created an abundance of per-capita disposable income, much of which was diverted into housing starts and home improvement. This success was short lived, however, as rising interest rates restricted housing starts and spending on residential construction. Compounding this, extreme volatility in the price of steel, the industry's main input, made it difficult for manufacturers to pass expenses down to consumers."
+        },
+        {
+            "current_performance_point_title": "VOLATILE COMMODITY PRICES HURT MANUFACTURERS BOTTOM LINE",
+            "current_performance_point_description": "Industry product lines are relatively homogenous, meaning price-based competition is key. Volatile steel and aluminum prices have made it difficult for hardware manufacturers to pass costs down to consumers, forcing less established manufacturers out of the industry. Manufacturers have had trouble keeping up with modern technological trends. Electronic security systems in new houses and automated vehicle keys have superseded traditional products. This has forced many manufacturers to appeal to shifting market trends."
+        },
+        {
+            "current_performance_point_title": "IMPORT PENETRATION HAS FALLEN",
+            "current_performance_point_description": "The COVID-19 pandemic brought significant disruptions to established trade and distribution routes, limiting import and export activity. Prudent"
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Expanding Downstream Markets Will Boost Revenue",
+            "future_outlook_point_description": "The housing market is expected to open up as interest rates level in the coming years. Manufacturers will likely be able to rely on steady demand from the construction sector as consumers are able to invest more into their homes. Growing demand from the automotive industry is expected to support hardware manufacturers' revenue. A rapidly aging existing vehicle fleet, combined with evolving emissions standards, will ensure high demand for new cars and trucks in the coming years."
+        },
+        {
+            "future_outlook_point_title": "Falling Purchase Costs Will Ease the Strain on Manufacturers",
+            "future_outlook_point_description": "Notoriously volatile steel prices are expected to continue to shrink after their record height in 2021. Overall, input prices are expected to level in the coming years, allowing manufacturers to more reliably pass costs to downstream markets. The ongoing trade war with China is expected to limit import penetration. This will make it easier for manufacturers to retain control of domestic demand gained over the pandemic. Also, an appreciation of the US dollar will likely boost hardware exports, especially to USMCA trade partners."
+        },
+        {
+            "future_outlook_point_title": "Consolidation and International Markets Will Present New Opportunities",
+            "future_outlook_point_description": "The industry is expected to continue its trend of consolidation as new entrants struggle to compete with well established manufacturers. Still, prospective manufacturers may succeed in targeting niche markets or focusing on exports. Export activity is expected to boom as the value of the US dollar declines globally. This will likely allow manufacturers to expand into previously sparse overseas markets."
+        }
+    ],
+    "industry_definition": "The Hardware Manufacturing industry manufactures various forms of metal hardware, including metal hinges, metal handles, keys and locks, excluding time locks and coin-operated locks.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Concentration Level: low"
+        ],
+        "negative_impact_factors": [
+            "Globalization Level: high - increasing",
+            "Competition Level: high - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Medium & Increasing Level of Assistance",
+            "Low Customer Class Concentration"
+        ],
+        "weaknesses": [
+            "High Competition",
+            "High Imports",
+            "Low Profit vs. Sector Average",
+            "High Product/Service Concentration",
+            "Low Revenue per Employee",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers",
+            "Import penetration into the manufacturing sector"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Trade-weighted index"
+        ]
+    },
+    "key_trends": [
+        "Competition is fierce among manufacturers due to the industry's fragmentation. Industry participants can be distinguished from one",
+        "Hardware Manufacturers produce a range of metal hardware goods, such as hinges, handles, keys, and locks.",
+        "The industry has recently seen a minor income increase due to better market circumstances for residential construction, aviation engines and parts production.",
+        "Hardware manufacturers now make more money. This is due to the proliferation of new technologies, such as the Internet of Things (IoT), artificial intelligence (AI) and virtual reality (VR), as well as the rising demand for hardware products, such as sensors, processors and displays.",
+        "The Hardware Manufacturing industry is renowned for its fierce competition. Many big and small companies are active in the market, vying for market share and trying to stand out from their competitors.",
+        "Due to high barriers to entry, there are fewer companies overall in the industry. It can be too expensive for many businesses to spend on the research and development, manufacturing facilities and supply chain management needed to create new hardware goods.",
+        "The disposal of trash from facilities in the Hardware Manufacturing industry is governed by a variety of environmental laws and regulations. The Environmental Protection Agency (EPA) sets these varied legal standards at the federal level.",
+        "Government support for the Hardware Manufacturing industry is limited and mostly comes in the form of tariffs. The majority of manufactured hardware imports into the United States are subject to a normal trade relations duty that ranges from 0.2% to 6.0% of the item's value.",
+        "Manufacturers spend a lot of money on purchases, mostly nonferrous metals including steel, aluminum and bronze. Consequently, any input price changes will likely have a significant impact on manufacturers' profitability.",
+        "Larger manufacturers are often able to achieve economies of scale by investing in advanced production facilities and equipment. Manufacturers can also leverage their purchasing power to negotiate lower prices for raw materials and components.",
+        "The industry's client market dispersion is correlated with its geographic spread. Automobile, auto component, airplane, aircraft engine and aircraft parts makers, whose operations are also concentrated in the Southeast, Great Lakes and West regions, account for a sizable share of industry demand.",
+        "Construction is another crucial market. Population dispersion, overall economic activity and construction investment all impact these customers' locations, with more populous areas having a higher need for construction, particularly for residential buildings. Construction market growth is mainly responsible for demand for products related to home improvement. These goods include door locks, screen sets, screens, storm door and window hardware, cabinet and closet hardware, hinges, padlocks, door controls and other building hardware.",
+        "Some of the industry's key markets include wholesalers, hardware and home improvement stores, dealers and specialized shops, contractors and overseas markets. More oversized items, such as automobiles, shelves, doors and desks, are frequently produced using industry products."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Hardware and home improvement centers",
+            "segment_description": "This group also includes auto parts retailers that directly offer customers hardware for vehicle components. Metal brackets, bolts, locks, door opening mechanisms and hinges are just a few products that can be sold directly to these stores. This consumer base also includes nearby businesses and small retailers. Hardware and home improvement stores likely also purchase goods from wholesalers and other producers and buy directly from the latter.",
+            "segment_percentage": 34.5
+        },
+        {
+            "segment": "Wholesale",
+            "segment_description": "Wholesalers play a major role in this industry, buying products from hardware manufacturers and selling them down the supply chain to other manufacturers and retailers. Wholesalers sell a variety of products, including general tools and hardware and auto parts.",
+            "segment_percentage": 32.1
+        },
+        {
+            "segment": "Specialty retail",
+            "segment_description": "The need for hardware from specialty retail stores has boomed in recent years. These stores stock a small selection of high-end industry products and cater to specific downstream markets. These stores have grown in prominence. Downstream consumers prefer the specialized expertise offered by staff over the general knowledge available at a regular hardware store.",
+            "segment_percentage": 29.8
+        },
+        {
+            "segment": "Contractors",
+            "segment_description": "Hardware is often bought in quantity by producers of other goods including washing machines, air conditioners and pianos.",
+            "segment_percentage": 3.6
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Furniture Hardware",
+            "product_description": "Furniture hardware includes drawer pulls and knobs, rotating and tilting furniture fixtures and bases, furniture drawers and slides, furniture casters and other floor protection devices.",
+            "product_percentage": 6.6
+        },
+        {
+            "product_or_service": "Motor Vehicle Hardware",
+            "product_description": "Motor vehicle hardware includes lock units, door and window handles, window regulators, hinges, license plate brackets and other components used in the construction and assembly of motor vehicles.",
+            "product_percentage": 21.5
+        },
+        {
+            "product_or_service": "Builder's Hardware",
+            "product_description": "The construction sector heavily relies on builder's hardware, which comprises various products, such as hinges, door controls, padlocks, door locks, screen sets, window hardware, cabinet hardware and construction hardware.",
+            "product_percentage": 50.3
+        },
+        {
+            "product_or_service": "Other Transportation Equipment",
+            "product_description": "This includes hardware for airplanes and trains, casters and wheels for dollies and commercial hand trucks.",
+            "product_percentage": 5.0
+        },
+        {
+            "product_or_service": "Miscellaneous Hardware",
+            "product_description": "Miscellaneous hardware includes caskets and casket shell hardware, naval hardware (e.g. shackles, rope sockets, tackle blocks, wire rope clips, clamps), joiners' hardware and refrigerator and stove hardware.",
+            "product_percentage": 16.6
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Iron & Steel Manufacturing in the US",
+            "Metal Pipe & Tube Manufacturing in the US",
+            "Copper Rolling, Drawing & Extruding in the US"
+        ],
+        "tier_2_suppliers": [
+            "Ferrous Metal Foundry Products in the US",
+            "Wire & Spring Manufacturing in the US",
+            "Screw, Nut & Bolt Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Home Builders in the US",
+            "Aircraft, Engine & Parts Manufacturing in the US",
+            "Commercial Building Construction in the US",
+            "Car & Automobile Manufacturing in the US",
+            "Municipal Building Construction in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Value of Residential Construction",
+            "determinant_description": "The value of residential construction measures spending by individuals and businesses on residential construction. This encompasses expenditure on single-family and multifamily structures, improvements on existing locations, broker's commissions and net purchases of used structures. Since metal locks and hinges are purchased for use in housing construction and improvement, the value of residential construction is a major source of demand."
+        },
+        {
+            "determinant_title": "Import Penetration into the Manufacturing Sector",
+            "determinant_description": "For over a decade, imports have satisfied an increasing level of domestic demand for manufactured hardware products. As a result, industry revenue has experienced consistent declines as imports have serviced an increasing share of demand. Growth in import penetration into the manufacturing sector poses a potential threat to the industry."
+        },
+        {
+            "determinant_title": "Trade-Weighted Index",
+            "determinant_description": "Hardware manufacturers have historically relied more on exports for revenue, particularly as import penetration has grown in recent years. The trade-weighted index measures the strength of the US dollar against other major currencies. Any increase in the strength of the US dollar makes domestic goods more expensive for foreign customers. Conversely, a depreciating dollar makes US goods less expensive for international markets."
+        },
+        {
+            "determinant_title": "Demand From Car and Automobile Manufacturing",
+            "determinant_description": "Car and Automobile Manufacturers typically produce cars, including electric cars, in assembly plants. Automakers purchase metal hardware to assemble and produce automobiles. Car and automobile manufacturers contribute to driving demand for the Hardware Manufacturing industry. Growth in demand from car and automobile manufacturers represents a potential opportunity for the industry."
+        },
+        {
+            "determinant_title": "Demand From Aircraft, Engine and Parts Manufacturing",
+            "determinant_description": "Companies in the Aircraft, Engine Parts and Manufacturing industry manufacture and overhaul complete aircraft, develop prototypes and convert aircraft for the civil and defense markets. Also, the industry makes related parts."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Decreasing",
+        "export_level": "High",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "China Dominates US Imports",
+                "trade_description": "China is the single-largest exporter of hardware to the US. Chinese manufacturers enjoy inexpensive labor costs and abundant natural resources, enabling them to mass-produce goods and flood international markets."
+            },
+            {
+                "trade_title": "Increased Trade with USMCA Partners",
+                "trade_description": "As the US-China trade war heats up, downstream markets have turned to USMCA participants to fulfill import demands. Canada's established hardware manufacturing industry provides a steady stream of imports from the country. Mexico has invested heavily in its manufacturing sector, causing hardware exports to the US to boom."
+            },
+            {
+                "trade_title": "US-Mexico-Canada-Agreement Participants",
+                "trade_description": "The USMCA, which replaced the existing North-American Free Trade Agreement (NAFTA) in 2020, ensures free trade between Mexico, Canada and the US. Domestic manufacturers capitalize on shared borders with these countries to cut down on costs and attract foreign markets."
+            },
+            {
+                "trade_title": "Exports to China Have Fallen",
+                "trade_description": "China is the third-largest importer of US-produced hardware behind USMCA trade partners. Demand from China has fallen in the face of the ongoing trade war between itself and the US. High tariffs on goods going to and from China have limited trade activity, making US goods costly and unattractive to budget-minded markets. Also, China has a robust hardware manufacturing sector that fulfills the bulk of its domestic demand."
+            }
+        ]
+    },
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "ENVIRONMENTAL PROTECTION AGENCY (EPA)",
+                "regulation_description": "Numerous environmental laws and rules governing waste discharge apply to facilities in the Hardware Manufacturing industry. At the federal level, the EPA sets these varied legal criteria."
+            },
+            {
+                "regulation_title": "AMERICAN NATIONAL STANDARDS INSTITUTE",
+                "regulation_description": "The American National Standards Institute defines quality certifications for produced goods at the national and international levels in this industry."
+            },
+            {
+                "regulation_title": "COVID-19 REGULATIONS",
+                "regulation_description": "During the COVID-19 pandemic in 2020, health and safety regulations were developed. Such recommendations recommended continuing additional sanitation measures inside facilities as well as brief social isolation."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The hardware manufacturing industry is mature."
+            },
+            {
+                "barrier_title": "Globalization Level",
+                "barrier_description": "The industry has a high and increasing level of globalization."
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "Competition within the industry is high and steady."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Low market concentration level"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Differentiation",
+                "basis_description": "Hardware manufacturers differentiate products by offering advanced features their competitors don't have, like high-speed processors, graphics cards, storage options."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Top 4 Players Control Less Than 25%",
+                "concentration_description": "The top 4 players control less than 25% of the market share, indicating low concentration."
+            },
+            {
+                "concentration_title": "Smaller Companies Specialize",
+                "concentration_description": "Many smaller operators specialize in niche product lines or markets, giving them competitive advantages."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Allegion Plc",
+                "company_percentage": 6.2
+            },
+            {
+                "company_name": "Spectrum Brands Holdings, Inc.",
+                "company_percentage": 4.7
+            },
+            {
+                "company_name": "Fortune Brands Home & Security, Inc.",
+                "company_percentage": 3.1
+            },
+            {
+                "company_name": "Uline, Inc.",
+                "company_percentage": 1.2
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchase Costs are the Most Significant Industry Expense",
+            "cost_factor_description": "Steel, zinc, aluminum, brass and other nonferrous metals are among the raw materials used in hardware production. Additional processed inputs made of the same metals, such as screws, nuts, bolts, springs and services for coating and coloring metal, may also be used in production."
+        },
+        {
+            "cost_factor_title": "Employment Has Declined but Wages Remain Steady",
+            "cost_factor_description": "Overall employment shrunk as manufacturers grappled with the COVID-19 pandemic and its aftermath. Still, wage costs are expected to have remained consistent through the end of 2024."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "CAPITAL EXPENSES",
+                "capital_intensity_description": "Prospective hardware manufacturers will have difficulty penetrating well-established trade networks between suppliers and existing manufacturers."
+            },
+            {
+                "capital_intensity_title": "Input prices are highly volatile and inexperienced manufacturers will struggle to pass these costs down to consumers.",
+                "capital_intensity_description": "Input prices are highly volatile and inexperienced manufacturers will struggle to pass these costs down to consumers."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "THE HARDWARE MANUFACTURING INDUSTRY IS CURRENTLY QUITE VOLATILE",
+                "volatility_description": "Domestic construction activity is one of the main drivers of revenue fluctuations in this industry. When construction activity is high, there is typically a boost in demand for hardware products such as tools, building materials and equipment. This can lead to an uptick in revenue for hardware manufacturers."
+            },
+            {
+                "volatility_title": "Input costs and domestic construction activity can significantly impact the Hardware Manufacturing industry's fluctuating revenue.",
+                "volatility_description": "This comprises the price of labor, energy and raw materials. Manufacturers' profits may be squeezed as these costs swell, resulting in diminished sales."
+            },
+            {
+                "volatility_title": "CHANGES IN THE US DOLLAR AFFECT TRADE, HAMPERING INDUSTRY GROWTH PROSPECTS AND REVENUE",
+                "volatility_description": "When the US dollar strengthens, it makes US exports more expensive for foreign buyers, which can lead to a slump in demand for US-made hardware products. This can hamper the growth prospects and revenue of the Hardware Manufacturing industry in the US."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "3 D  P R I N T I N G",
+                "technological_change_description": "The manufacturing of hardware components in the US and around the world has changed as a consequence of additive manufacturing, often known as 3D printing. Using materials like plastics, metals and ceramics, hardware components can be created on a computer and produced one layer at a time using 3D printing technology."
+            },
+            {
+                "technological_change_title": "I N T E R N E T  O F  T H I N G S  ( I O T )",
+                "technological_change_description": "IoT refers to a network of actual physical items that have sensors, software and other technologies integrated into them, enabling them to communicate and exchange data over the internet. With the aid of IoT technology, hardware and software may cooperate to create intelligent systems that can communicate with their surroundings and take decisions and actions depending on data."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company specialize in a niche or do you produce a diversified range of products?",
+            "answer": "Many companies manufacture products under a range of brand names and over a range of product segments."
+        },
+        {
+            "question": "Have exports offered an opportunity for your company?",
+            "answer": "Domestic manufacturers must compete with high levels of imports in the domestic marketplace."
+        },
+        {
+            "question": "Is your company investing heavily in R&D to meet changing consumer preferences?",
+            "answer": "This determines how competitive a company will be in the long run. Moving forward, companies that create products with a higher value added will be the most successful and will be less affected by import penetration."
+        },
+        {
+            "question": "Has your company explored acquisition opportunities in areas with well-established infrastructure?",
+            "answer": "Acquiring already established brands and companies will generally increase revenue and market share going forward."
+        },
+        {
+            "question": "Have you been able to reduce wage costs intensity?",
+            "answer": "Many manufacturers are highly price competitive. In order to compete, companies with lower costs may be able to provide products at a lower price. Automating operations, increases production, and allows fixed costs to be spread over a larger quantity."
+        },
+        {
+            "question": "Do you use SAP software systems to optimize all aspects of your company's manufacturing, sales, inventory and distribution channels?",
+            "answer": "This could help companies keep all company information updated and organized, enabling them to track information along their supply chain to make more precise and informed decisions."
+        },
+        {
+            "question": "Have any regulatory expenses significantly impacted profitability recently?",
+            "answer": "Regulations could be specific to labor, health, environment or taxes."
+        },
+        {
+            "question": "Is your company adequately prepared to adjust to changing environmental standards?",
+            "answer": "Environmental standards might determine how a company processes waste, the quantity of air emissions and any regulations associated with the discharge of waste."
+        },
+        {
+            "question": "How do your company's profit margins compare to your main competitors'?",
+            "answer": "This provides context to how a company might compare to its competitors. Whether or not they provide high value products or lower value products. Depending, they might face more or less price competition."
+        },
+        {
+            "question": "How does your company work to develop new products? Have you done market research to identify untapped niche demand?",
+            "answer": "Product innovation, in terms of aesthetics and functionality, is critical for the consumer-related product markets."
+        },
+        {
+            "question": "How do you ensure that all staff are thoroughly knowledgeable about the products? What is your training process like?",
+            "answer": "Employees with a high level of technical knowledge of the product and end user exposure create an image of quality."
+        },
+        {
+            "question": "Do you have a reputation for quality products? Do you manufacture any branded products?",
+            "answer": "In this highly price-competitive industry, having a strong brand name is critical for attracting and retaining customers. Fostering brand loyalty can help mitigate the effects of pricing standardized products."
+        },
+        {
+            "question": "How does a rise in demand from the aircraft, engine and parts manufacturing industry affect your industry? How do you plan to take advantage of this rise in demand?",
+            "answer": "Aircraft manufacturers purchase metal hardware to assemble and produce engines and parts."
+        },
+        {
+            "question": "Do you experience significant competition from imports? What have you done to offset the declines related to the competition?",
+            "answer": "Imports have satisfied increasing domestic demand for manufactured hardware products since they are extremely price-competitive."
+        },
+        {
+            "question": "How does an increase in the TWI affect your company? How do you plan to mitigate the threat of this increase?",
+            "answer": "Any increase in the strength of the US dollar makes domestic goods more expensive for foreign customers; conversely, a depreciating dollar makes US goods less expensive for international markets."
+        }
+    ]
+}

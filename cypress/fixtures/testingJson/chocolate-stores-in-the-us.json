@@ -1,0 +1,404 @@
+{
+    "report_title": "Industry Report on US Chocolate Stores",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 1462000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "revenue_cagr_value": 0.65
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 0.2
+            }
+        },
+        "profit": {
+            "profit_dollars": 154000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 7.0
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 5.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 10.5,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 5.95
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 3.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 461000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0.5
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0.3
+            }
+        },
+        "employees": {
+            "employees_count": 16124,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 2.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 1.5
+            }
+        },
+        "wages": {
+            "wages_dollars": 270000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 4.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 2.5
+            }
+        },
+        "imports": {
+            "imports_dollars": 100000000,
+            "imports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "imports_cagr_value": 0.2
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0.1
+            }
+        },
+        "exports": {
+            "exports_dollars": 50000000,
+            "exports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "exports_cagr_value": 0.4
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0.3
+            }
+        }
+    },
+    "executive_summary": "Chocolate stores in the US have experienced a dynamic period marked by shifts in consumer preferences, economic fluctuations and evolving market trends. Over the past few years, the industry has seen challenges and opportunities, with a notable hike in demand for premium and artisanal chocolates. This surge has been fueled by a growing consumer interest in unique, high-quality products and an emphasis on ethical sourcing...",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Chocolates with a Conscience and the Rise of Health-Conscious Indulgence",
+            "current_performance_point_description": "Consumers are increasingly seeking chocolates with lower sugar content, natural ingredients and associated health benefits, reflecting a broader trend towards health-conscious indulgence..."
+        },
+        {
+            "current_performance_point_title": "Seasonal Preferences Influence Sales and Product Offerings",
+            "current_performance_point_description": "Chocolate consumption tends to be highly seasonal, with a significant portion of chocolate sales occurring during recognized holidays such as Valentine's Day, Easter, Christmas and Halloween..."
+        },
+        {
+            "current_performance_point_title": "Fluctuating Cocoa Prices Prevent Significant Profit Growth",
+            "current_performance_point_description": "Cocoa prices have surged in recent years, driven by global cocoa shortages and supply chain disruptions, adding economic strain across the chocolate industry..."
+        },
+        {
+            "current_performance_point_title": "Growing External Competition Threatens Traditional Retailers",
+            "current_performance_point_description": "Chocolate stores face intense competition from various retailers, including drug stores, supermarkets and mass merchandisers..."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Improving Economic Conditions Support Sales",
+            "future_outlook_point_description": "As personal income levels climb, demand for premium and luxury chocolates will expand..."
+        },
+        {
+            "future_outlook_point_title": "GROWING HEALTH CONSCIOUSNESS LOWERS SUGAR CONSUMPTION",
+            "future_outlook_point_description": "The increasing trend of health consciousness among US consumers is leading to a significant shift in preferences..."
+        },
+        {
+            "future_outlook_point_title": "THE RISE OF ONLINE RETAILERS THREATENS BRICK-AND-MORTAR STORES",
+            "future_outlook_point_description": "Online platforms such as Amazon and Etsy are growing in popularity due to the convenience they offer..."
+        },
+        {
+            "future_outlook_point_title": "Chocolate Retailers Embrace Sustainability",
+            "future_outlook_point_description": "Chocolate retailers emphasize sustainability initiatives, including ethical sourcing to ensure fair labor practices and better support for cocoa farmers..."
+        }
+    ],
+    "industry_definition": "This industry includes specialty shops and boutiques that retail chocolate products to consumers. Supermarkets, department stores, drug stores, mass merchandisers and online retailers are excluded from this industry.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low concentration level",
+            "low technology change level",
+            "high globalization level"
+        ],
+        "negative_impact_factors": [
+            "high revenue volatility level",
+            "low - steady industry assistance level",
+            "low - steady barriers to entry level",
+            "high - increasing competition level"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry",
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "High Volatility",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "Per capita disposable income"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Low Revenue Growth (2024-2029)",
+            "Low Performance Drivers",
+            "National unemployment rate"
+        ]
+    },
+    "key_trends": [
+        "Chocolate stores compete with traditional retailers, like supermarkets and convenience stores...",
+        "Uncertain economic conditions slow retail sales...",
+        "Rising cocoa prices hinder profitability...",
+        "Large retailers improve their e-commerce capabilities...",
+        "Major chocolate stores prioritize sustainable practices..."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Consumers under 25",
+            "segment_description": "Consumers' preferences for chocolate differ across age groups...",
+            "segment_percentage": 6.7
+        },
+        {
+            "segment": "Consumers aged 25 to 44",
+            "segment_description": "Consumers aged 25 to 44, many of whom are parents...",
+            "segment_percentage": 32.7
+        },
+        {
+            "segment": "Consumers aged 45 to 64",
+            "segment_description": "Consumers between 45 and 64 tend to have significantly higher disposable incomes...",
+            "segment_percentage": 10.1
+        },
+        {
+            "segment": "Consumers aged 65 and older",
+            "segment_description": "Consumers over 65 significantly contribute to industry revenue...",
+            "segment_percentage": 14.9
+        },
+        {
+            "segment": "Businesses and other",
+            "segment_description": "Businesses and other corporate clients purchase goods for office events...",
+            "segment_percentage": 8.3
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Milk Chocolate",
+            "product_percentage": 46.8,
+            "product_description": "Milk chocolate is broadly used to produce seasonal products..."
+        },
+        {
+            "product_or_service": "Dark Chocolate",
+            "product_percentage": 39.2,
+            "product_description": "Many premium chocolates are dark chocolate made from high-quality cocoa beans..."
+        },
+        {
+            "product_or_service": "White Chocolate",
+            "product_percentage": 6.3,
+            "product_description": "Demand for white chocolate products is lower..."
+        },
+        {
+            "product_or_service": "Other",
+            "product_percentage": 7.7,
+            "product_description": "Other chocolates include particular non-premium varieties..."
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Chocolate Stores in the US"
+        ],
+        "tier_2_suppliers": [
+            "Chocolate Production in the US",
+            "Dairy Product Production in the US"
+        ],
+        "tier_1_buyers": [
+            "Supermarkets & Grocery Stores in the US"
+        ],
+        "tier_2_buyers": [
+            "Pharmacies & Drug Stores in the US",
+            "Gas Stations with Convenience Stores in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Per Capita Sugar and Sweetener Consumption",
+            "determinant_description": "Chocolate products, abundant in sugar..."
+        },
+        {
+            "determinant_title": "Per Capita Disposable Income",
+            "determinant_description": "Chocolate, considered a luxury or discretionary purchase..."
+        },
+        {
+            "determinant_title": "Households Earning More Than $100,000",
+            "determinant_description": "Chocolate products, particularly premium or gourmet varieties..."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "West",
+            "location_description": "With proximity to cacao-producing regions...",
+            "percentage_establishments": 30.0,
+            "percentage_population": 25.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "Major cities, like New York and DC...",
+            "percentage_establishments": 15.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Southeast",
+            "location_description": "With popular destinations like Florida...",
+            "percentage_establishments": 20.0,
+            "percentage_population": 20.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [
+            {
+                "regulation_title": "SHERMAN ANTITRUST ACT",
+                "regulation_description": "In the chocolate store industry, retailers are barred from engaging in activities..."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Legal",
+                "barrier_description": "Navigating food safety regulations and acquiring the necessary licenses..."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Revenue Volatility Level: high"
+        ],
+        "factors_decreased_barrier": [
+            "Concentration Level: low",
+            "Technology Change Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Competition from traditional retailers",
+                "basis_description": "Chocolate stores compete with traditional retailers..."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "top_companies": [
+            {
+                "company_name": "Chocoladefabriken Lindt & Sprungli AG",
+                "company_percentage": 14.6
+            },
+            {
+                "company_name": "See's Candies",
+                "company_percentage": 11
+            }
+        ],
+        "concentration_points": [
+            {
+                "concentration_title": "Brand recognition enables large retailers",
+                "concentration_description": "Due to their recognizability..."
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 25
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 20
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Unlocking the Costs of Wages and Their Impact on Chocolate Store Profitability",
+            "cost_factor_description": "Wages constitute significant operational costs..."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Digital Transformation Enhances Customer Experience",
+                "technological_change_description": "Online sales platforms and mobile apps enable chocolate stores to reach a wider audience..."
+            },
+            {
+                "technological_change_title": "Sustainable Practices Drive Market Appeal",
+                "technological_change_description": "Employing biodegradable and recyclable materials aligns..."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "What are the key requirements for ensuring a safe and healthy workplace in this industry?",
+            "answer": "Companies must follow requirements set by OSHA..."
+        }
+    ]
+}
