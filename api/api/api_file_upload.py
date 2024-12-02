@@ -1,3 +1,4 @@
+"""
 import boto3
 from fastapi import APIRouter, Depends, UploadFile, File, Form, HTTPException
 from sqlalchemy import func
@@ -258,4 +259,4 @@ async def get_document_details(document_id: str, db: Session = Depends(get_db)):
         "category": clean_value(document.category),
         "sub_category": clean_value(document.sub_category),
         "tags": cleaned_tags
-    }
+    }"""

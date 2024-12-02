@@ -1,3 +1,4 @@
+"""
 from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel, EmailStr
 from db_models.session import get_db
@@ -112,3 +113,4 @@ def checklistcontext(deal_id: Optional[UUID] = None,type: Optional[str] = None, 
             error_message = "No data items found."
         raise HTTPException(status_code=404, detail=error_message)
     return data
+"""

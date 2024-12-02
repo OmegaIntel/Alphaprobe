@@ -59,7 +59,8 @@ services:
       - .:/Omega_scraper
     environment:
       - PYTHONUNBUFFERED=1
-      - FIRECRAWL_API_KEY=fc-f0b5a990147f4ae88364925cd0dee335
+      - FIRECRAWL_API_KEY=fc-03c54bbfef47490ab832485ecb1bf21c
     command:
       # fastapi run --reload --port 8008 app.py   # for dev, with reload
       fastapi run --workers 8 --port 8008 app.py  # for PROD, no reloads, several workers
+

@@ -1,3 +1,5 @@
+
+"""
 import os
 import uuid
 from fastapi import APIRouter, HTTPException, UploadFile, File
@@ -102,3 +104,4 @@ async def end_chat(chat_id: str):
     deleted_obj = weaviate.delete_context(chat_id)
 
     return {"message": deleted_obj}
+"""
