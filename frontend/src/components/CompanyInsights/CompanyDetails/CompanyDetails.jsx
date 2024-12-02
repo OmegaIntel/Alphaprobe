@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import CompanyDetailsComponent from "./CompanyDetailsComponent";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCompanyInsightSuccess } from "../../../redux/companyInsightsSlice";
+import PreloadingScreen from "../PreloadingScreen/PreloadingScreen";
+
 
 // const tempData = {
 //   "result": {
@@ -60,10 +62,14 @@ const CompanyDetails = () => {
   useEffect(() => {
     dispatch(fetchCompanyInsightSuccess());
   }, [dispatch]);
-  
+
   // Ensure that data is defined and has the expected structure
   if (!data) {
-    return <p>Search For Company...</p>;  // Fallback if no data or essential field is missing
+    return (
+      <div>
+        <PreloadingScreen />
+      </div>
+    ); // Fallback if no data or essential field is missing
   }
 
   return (
