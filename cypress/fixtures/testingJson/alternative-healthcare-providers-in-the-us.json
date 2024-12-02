@@ -1,0 +1,472 @@
+{
+    "report_title": "Healthcare Providers in the US",
+    "report_date": "Aug 15, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 41931000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 4.33
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 3.4
+            }
+        },
+        "profit": {
+            "profit_dollars": 5577000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 5.53
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 13.3,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 1.15
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 20431000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 475526,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 14236000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "Alternative healthcare treatments have increasingly become part of mainstream medical care. While many alternative approaches lack conclusive scientific research, more consumers are interested in supplementing or substituting traditional healthcare to treat common conditions or improve their overall well-being. An opioid epidemic has also pushed more people to uptake alternative care methods as a safe and effective option.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Consumers' Interest in Alternative Healthcare Reaches a New Height",
+            "current_performance_point_description": "Alternative healthcare isn't anything new, but fast-growing spending on complementary approaches showcases a greater acceptance of them than ever before. What's behind this rising spending varies by specialty, but demographics, income growth and consumer trends are primary drivers."
+        },
+        {
+            "current_performance_point_title": "Demographic shifts are partially responsible",
+            "current_performance_point_description": "A growing population of adults 65 and over has supported the uptake of complementary medicines to address issues like pain management, mobility and well-being."
+        },
+        {
+            "current_performance_point_title": "Social Media Trends Introduce a New Era of Wellness",
+            "current_performance_point_description": "A conclusive body of medical research supporting the efficacy of alternative healthcare remains lacking."
+        },
+        {
+            "current_performance_point_title": "Insurers' Acceptance of Some Alternative Approaches Expands",
+            "current_performance_point_description": "Most health plans still don't fully cover alternative healthcare providers, but some insurers have begun adding alternative providers into their networks."
+        },
+        {
+            "current_performance_point_title": "Telehealth Augments the Role of Alternative Providers",
+            "current_performance_point_description": "Telehealth adoption surged during the pandemic as a way for patients to safely connect with healthcare providers."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "STATES ARE PAVING THE WAY",
+            "future_outlook_point_description": "Companies will benefit from the increased focus on prevention and wellness services as part of essential health benefits state-by-state."
+        },
+        {
+            "future_outlook_point_title": "INCORPORATING CAM INTO MEDICAL SCHOOLING",
+            "future_outlook_point_description": "Medical schools have integrated alternative medicine into their curriculums."
+        },
+        {
+            "future_outlook_point_title": "Demographic Changes Are Driving Demand",
+            "future_outlook_point_description": "Over the next decade, the number of adults over 65 is expected to continue outpacing growth in the overall population."
+        },
+        {
+            "future_outlook_point_title": "Advancements In Technology Transforming Healthcare Delivery",
+            "future_outlook_point_description": "Improvements in AI and machine learning technologies are expected to revolutionize patient care and diagnostics."
+        }
+    ],
+    "industry_definition": "This industry provides health services not classified in any other industry, like meditation, acupuncture or massage.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage: Growth",
+            "Capital Intensity Level: Low",
+            "Concentration Level: Low",
+            "Technology Change Level: Low",
+            "Globalization Level: Low - Steady"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level: High",
+            "Barriers To Entry Level: Low - Increasing",
+            "Competition Level: High - Steady"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Increasing Barriers to Entry",
+            "High Competition",
+            "High Volatility",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers",
+            "Number of people with private health insurance"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Federal funding for Medicare and Medicaid"
+        ]
+    },
+    "key_trends": [
+        "Alternative healthcare often operates outside of mainstream medical practices.",
+        "Research supports some alternative approaches more than others.",
+        "More adults than ever are engaging with alternative healthcare therapies."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "People aged 17 and under",
+            "segment_description": "More teenagers and children are being introduced to alternative healthcare to support their well-being.",
+            "segment_percentage": 11.2
+        },
+        {
+            "segment": "People aged 18 to 44",
+            "segment_description": "Adults aged 18 to 44 are the largest users of alternative healthcare providers.",
+            "segment_percentage": 38.7
+        },
+        {
+            "segment": "People aged 45 to 64",
+            "segment_description": "Adults aged 44 to 64 are also frequent users of alternative healthcare providers.",
+            "segment_percentage": 29.2
+        },
+        {
+            "segment": "People aged 65 and older",
+            "segment_description": "Adults aged 65 and over utilize alternative healthcare providers the least.",
+            "segment_percentage": 20.9
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Acupuncture",
+            "product_description": "Acupuncture is a traditional Chinese medical practice.",
+            "product_percentage": 23.5
+        },
+        {
+            "product_or_service": "Massage Therapy",
+            "product_description": "Massage therapy is a hands-on treatment.",
+            "product_percentage": 20.1
+        },
+        {
+            "product_or_service": "Naturopathy",
+            "product_description": "Naturopathy is a system of healthcare.",
+            "product_percentage": 12.4
+        },
+        {
+            "product_or_service": "Meditation",
+            "product_description": "Meditation involves a trained instructor guiding.",
+            "product_percentage": 11.1
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": null,
+            "product_percentage": 32.9
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Medical Supplies Wholesaling in the US",
+            "Commercial Leasing in the US",
+            "Drug, Cosmetic & Toiletry Wholesaling in the US"
+        ],
+        "tier_2_suppliers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Most private insurers don't cover alternative healthcare",
+            "determinant_description": "Most private insurers don't cover alternative healthcare."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "The West",
+            "location_description": "The West contains many alternative healthcare providers.",
+            "percentage_establishments": 35,
+            "percentage_population": 25
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "This region's dense population attracts alternative healthcare providers.",
+            "percentage_establishments": 20,
+            "percentage_population": 15
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "The Health Insurance Portability and Accountability Act",
+                "regulation_description": "Alternative healthcare providers must follow HIPAA regulations."
+            },
+            {
+                "regulation_title": "ANTI-KICKBACK STATUTE AND PHYSICIAN SELF-REFERRAL LAWS",
+                "regulation_description": "Prohibits exchange of anything of value to induce referrals."
+            },
+            {
+                "regulation_title": "STATE LICENSING",
+                "regulation_description": "Alternative healthcare providers must fulfill state requirements."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "No national licensing standards",
+                "barrier_description": "No national standards oversee alternative healthcare providers."
+            },
+            {
+                "barrier_title": "Low start-up costs",
+                "barrier_description": "New providers don't face substantial start-up costs."
+            },
+            {
+                "barrier_title": "Differentiation",
+                "barrier_description": "Providers differentiate by operating outside of traditional healthcare."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Revenue Volatility Level: high",
+            "Competition Level: high - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage: growth",
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Technology Change Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Reputation and credibility",
+                "basis_description": "A strong reputation lends credibility to the provider."
+            },
+            {
+                "basis_title": "Scientific support",
+                "basis_description": "Research supports some alternative approaches."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Industry fragmentation",
+                "concentration_description": "Alternative healthcare encompasses many modalities."
+            },
+            {
+                "concentration_title": "Limited growth potential",
+                "concentration_description": "Many providers operate solo or in small practices."
+            },
+            {
+                "concentration_title": "Integration challenges",
+                "concentration_description": "Independent practitioners struggle to integrate with others."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 100
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Hiring Challenges Haven't Translated into Wage Growth",
+            "cost_factor_description": "Providers prioritize personalized care."
+        },
+        {
+            "cost_factor_title": "Alternative Healthcare Providers Balance Rising Purchase Costs with Profitability",
+            "cost_factor_description": "Providers depend heavily on supplies to ensure quality care."
+        },
+        {
+            "cost_factor_title": "Inflation's Impact Slows Down Profit Growth",
+            "cost_factor_description": "Profit growth will slow in 2024 due to inflation."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital intensity",
+                "capital_intensity_description": "<UNKNOWN>"
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "INSURERS PRIORITIZE MAINSTREAM MEDICAL CARE",
+                "volatility_description": "Challenges for alternative providers due to inconsistent insurance coverage."
+            },
+            {
+                "volatility_title": "An Uneven Regulatory Landscape Creates Volatility",
+                "volatility_description": "A loose regulatory environment can create uncertainty."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "VIRTUAL SESSIONS HAVE A LIMITED ROLE FOR ALTERNATIVE HEALTHCARE PROVIDERS",
+                "technological_change_description": "Some studios offered virtual sessions during the pandemic."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "How do you identify and target potential customers to expand your customer base and increase revenue?",
+            "answer": "The text does not provide any specific information on how to identify and target potential customers."
+        },
+        {
+            "question": "What is the Anti-Kickback Statute and Physician Self-Referral Laws?",
+            "answer": "Prohibits exchanging anything of value to induce referrals."
+        },
+        {
+            "question": "What are the state licensing requirements for alternative healthcare providers?",
+            "answer": "Many states don't require practitioners to receive a license."
+        },
+        {
+            "question": "What assistance does the industry receive?",
+            "answer": "Moderate assistance and steady assistance."
+        },
+        {
+            "question": "What is the American Holistic Health Association (AHHA)?",
+            "answer": "AHHA is a non-profit organization promoting holistic and integrative approaches."
+        }
+    ]
+}

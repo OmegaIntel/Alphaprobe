@@ -1,0 +1,599 @@
+{
+    "report_title": "Overhead Crane Manufacturing Industry Report",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 1438000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 3.6
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.5
+            }
+        },
+        "profit": {
+            "profit_dollars": 71000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 4.06
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.9,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 0.45
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 293000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 2732,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 203000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 296000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": -1.7
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0.65
+            }
+        },
+        "exports": {
+            "exports_dollars": 75000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": -3.63
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 2.19
+            }
+        }
+    },
+    "executive_summary": "The overhead crane manufacturing industry had imports of $296 million and exports of $75 million in 2024. Imports had a CAGR of -1.70% from 2005 to 2024 and a projected CAGR of 0.65% from 2024 to 2030. Exports had a CAGR of -3.63% from 2005 to 2024 and a projected CAGR of 2.19% from 2024 to 2030. Industry revenue grew at a CAGR of 1.6% over the past five years to $1.5 billion in 2024, with a 0.3% increase in 2024. However, profit dropped despite increased consolidation due to higher input costs like steel. Decreased import penetration from China and increased exports to Mexico for infrastructure projects benefited manufacturers.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Profit has dropped despite increased consolidation",
+            "current_performance_point_description": "Despite solid growth, overhead crane manufacturers endured profit declines due to higher input costs like steel. Consolidation increased as smaller manufacturers ceased operations, contributing to lower wage costs."
+        },
+        {
+            "current_performance_point_title": "Import penetration and export values have fallen",
+            "current_performance_point_description": "Import penetration plummeted due to lower Chinese imports. Exports also fell sharply, except to Mexico driven by infrastructure investments there."
+        },
+        {
+            "current_performance_point_title": "Supply chain woes and increased infrastructure construction promoted growth",
+            "current_performance_point_description": "Supply chain issues led to warehouse/distribution investments boosting crane demand. The Infrastructure Investment and Jobs Act increased domestic infrastructure construction needs."
+        },
+        {
+            "current_performance_point_title": "Mixed performance of downstream markets",
+            "current_performance_point_description": "Higher electricity demand boosted crane needs for power plants. Lower raw material availability reduced crane needs for mining. Rising energy production increased investments by producers."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Downstream markets and improving economic conditions to promote growth",
+            "future_outlook_point_description": "Growth will come from commercial/industrial construction, remaining infrastructure funding, rising oil/gas production, and increasing trade values."
+        },
+        {
+            "future_outlook_point_title": "Trade activity to ramp up",
+            "future_outlook_point_description": "A dropping trade-weighted index may boost exports to Canada. Mexican port investments will increase exports there. But rising imports could hinder performance."
+        },
+        {
+            "future_outlook_point_title": "Countervailing forces to keep profit growth largely stagnant",
+            "future_outlook_point_description": "While revenue will grow from downstream markets, new competition and input costs may limit profit growth. But automation can enhance efficiency."
+        },
+        {
+            "future_outlook_point_title": "Growth from some downstream markets to lag",
+            "future_outlook_point_description": "Reduced mining and coal output will lower crane needs. Slowing warehouse construction despite e-commerce growth may also limit demand."
+        }
+    ],
+    "industry_definition": "This industry manufactures overhead cranes, gantry cranes and bridge cranes used to move heavy equipment and materials.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Low capital intensity level",
+            "High barriers to entry level"
+        ],
+        "negative_impact_factors": [
+            "Low industry assistance level",
+            "High concentration level",
+            "High competition level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low customer class concentration",
+            "Low product/service concentration",
+            "Low capital requirements"
+        ],
+        "weaknesses": [
+            "Low profit vs sector average",
+            "Low and steady level of assistance",
+            "High competition"
+        ],
+        "opportunities": [
+            "High revenue growth (2019-2024)",
+            "High revenue growth (2024-2029)",
+            "High performance driver - freight transportation services index"
+        ],
+        "threats": [
+            "Low revenue growth (2005-2024)",
+            "Low outlier growth",
+            "Trade-weighted index"
+        ]
+    },
+    "key_trends": [
+        "Cost and quality are key for manufacturers to gain competitive edge",
+        "Diversification and reputation are crucial through broad product range and automation",
+        "Overhead crane manufacturers thriving despite obstacles like supply chain issues",
+        "Growth will come from increased trade, infrastructure investment but could be curtailed by rising imports"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Mining, metals and concrete",
+            "segment_description": "This market comprises mining, metals and concrete companies. Mining and metals companies require overhead cranes to move and transport raw materials. Concrete manufacturers use bridge cranes inside factories and gantry cranes outdoors to move precast and premix concrete.",
+            "segment_percentage": 11
+        },
+        {
+            "segment": "Energy",
+            "segment_description": "This market comprises the energy market, which requires overhead cranes to move supplies and various other materials. Energy producers use cranes on both onshore and offshore sites.",
+            "segment_percentage": 4
+        },
+        {
+            "segment": "Transportation and heavy machinery",
+            "segment_description": "This market comprises the general manufacturing sector and transportation equipment companies. Transportation equipment requires cranes for moving items throughout warehouses and distribution centers and onto trucks. While the overall manufacturing sector in the US struggled initially, it has begun to recover. Tax credits incentivizing manufacturers to return to the US",
+            "segment_percentage": 29
+        },
+        {
+            "segment": "Construction and industrial",
+            "segment_description": "This market comprises construction and industrial users that require cranes. Construction markets typically require cranes for large-scale commercial and infrastructure construction projects. Other industrial markets include customers using cranes for container handling.",
+            "segment_percentage": 40
+        },
+        {
+            "segment": "Other",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 16
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Single-Top Running Bridge",
+            "product_description": "",
+            "product_percentage": 11
+        },
+        {
+            "product_or_service": "GANTRY",
+            "product_description": "",
+            "product_percentage": 10.5
+        },
+        {
+            "product_or_service": "UNDER-RUNNING BRIDGE, GANTRY, STACK-STORAGE AND OTHER",
+            "product_description": "",
+            "product_percentage": 38
+        },
+        {
+            "product_or_service": "BUCKETS, GRABS AND GRIPS",
+            "product_description": "",
+            "product_percentage": 4
+        },
+        {
+            "product_or_service": "Monorail Systems",
+            "product_description": "",
+            "product_percentage": 1.8
+        },
+        {
+            "product_or_service": "Double-Top Running Bridge",
+            "product_description": "",
+            "product_percentage": 16
+        },
+        {
+            "product_or_service": "Parts and Attachments",
+            "product_description": "",
+            "product_percentage": 16.9
+        },
+        {
+            "product_or_service": "OTHER",
+            "product_description": "",
+            "product_percentage": 1.8
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Steel Rolling & Drawing in the US",
+            "Metal Stamping & Forging in the US"
+        ],
+        "tier_2_suppliers": [
+            "Engine & Turbine Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Manufacturing in the US",
+            "Transportation and Warehousing in the US"
+        ],
+        "tier_2_buyers": [
+            "Port & Harbor Operations in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Industrial Production Index",
+            "determinant_description": "Industrial production tends to impact the performance of overhead crane manufacturers considerably. Industries, including shipbuilding, chemicals, automotive, steel and paper, frequently use these cranes to move equipment and materials. When industrial production lags, manufacturers' revenue tends to follow suit. Growth in the industrial production index represents a potential opportunity for the industry."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Moderate",
+        "import_trend": "Decreasing",
+        "export_level": "Moderate",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Less costly goods from foreign countries",
+                "trade_description": "Germany, China and Poland provide low-cost substitute goods since these countries have lower labor costs and that's why companies in the United States buy from them. Cargotec's manufacturing facilities in Poland contributed to imports from the country."
+            },
+            {
+                "trade_title": "Supply chain clogs push down imports",
+                "trade_description": "Ports become congested as cargo ships take longer than usual to unload goods as they try to keep up with surging demand, leading to slow import growth."
+            },
+            {
+                "trade_title": "Chinese imports falling sharply over the past five years have contributed to this import trend",
+                "trade_description": "The US has become increasingly reliant on Europe for trade amid supply chain woes. Another factor has been the government of China placing production limits on steel in 2021 and 2022."
+            },
+            {
+                "trade_title": "United States-Mexico-Canada Agreement (USMCA) secures trading partners",
+                "trade_description": "Both countries benefit from geographic proximity as transportation is quick and inexpensive. This is also exemplified by companies concentrating their operations in the Great Lakes region. Moving closer to a major exporter lowers the friction of shipping."
+            },
+            {
+                "trade_title": "Appreciating dollar and rising steel and oil prices hinders exports",
+                "trade_description": "The appreciation of the US dollar relative to the currencies of major trading partners makes domestic goods more expensive and, therefore, less appealing."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast is a powerhouse for the industry. The region is rich with a skilled workforce, carrying expertise in manufacturing and engineering, allowing overhead crane manufacturers to tap into local talents. Home to numerous key industries like automotive, aerospace, logistics and construction, the region's overhead crane manufacturers have the advantage of proximity, reducing transportation costs and fostering stronger business relationships.",
+            "percentage_establishments": 30,
+            "percentage_population": 20
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region provides unmatched access to extensive waterways, simplifying the transport of heavy machinery and materials, thereby saving on logistical expenses and enhancing operational efficiency. With its longstanding legacy in manufacturing, the region offers an experienced workforce, existing supply chains and an infrastructure conducive to industrial production, making it an excellent prospect for overhead crane manufacturers to set up shop.",
+            "percentage_establishments": 20,
+            "percentage_population": 15
+        },
+        {
+            "location": "Southwest",
+            "location_description": "The Southwest's heavy concentration of oil, gas and renewable energy industries creates a constant demand for overhead crane manufacturing and services. The region's lower taxes, flexible regulations and supportive policies foster a nurturing ground for overhead crane manufacturers, offering an advantageous cost structure and potential local government incentives. Situated in a geographically strategic location, crane manufacturers in the Southwest enjoy logistical advantages with easy access to national and international markets via a robust transportation infrastructure.",
+            "percentage_establishments": 15,
+            "percentage_population": 10
+        },
+        {
+            "location": "Plains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 10,
+            "percentage_population": 5
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 10,
+            "percentage_population": 15
+        },
+        {
+            "location": "West",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 10,
+            "percentage_population": 20
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5,
+            "percentage_population": 5
+        },
+        {
+            "location": "Rocky Mo",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 0,
+            "percentage_population": 10
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "THE CLEAN AIR ACT",
+                "regulation_description": "Imposed by the Environmental Protection Association, the Clean Air Act governs the pollution limits in overhead crane manufacturing."
+            },
+            {
+                "regulation_title": "Occupational Health and Safety Regulations",
+                "regulation_description": "Federal and state Occupational Health and Safety Regulations are designed to secure the welfare of overhead crane manufacturers' employees and visitors."
+            },
+            {
+                "regulation_title": "Crane Manufacturers Association of America Regulations",
+                "regulation_description": "The Crane Manufacturers Association of America plays an active role by establishing tailored industry norms and guidelines."
+            },
+            {
+                "regulation_title": "American National Standards Institute (ANSI) Standards",
+                "regulation_description": "The ANSI sets significant standards for overhead and gantry cranes."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Legal",
+                "barrier_description": "Understanding and adhering to complex regulations and standards can be difficult for new manufacturers. These include environmental laws, occupational health, safety regulations and industry-specific standards."
+            },
+            {
+                "barrier_title": "Startup Costs",
+                "barrier_description": "New overhead crane manufacturers will likely grapple with sizable initial capital requirements. Also, they may face initial losses as they scale up their businesses."
+            },
+            {
+                "barrier_title": "Differentiation",
+                "barrier_description": "Standing out can be a steep uphill climb for new overhead crane manufacturers. Given their well-established reputations and pre-existing contracts, existing enterprises typically hold the upper hand."
+            },
+            {
+                "barrier_title": "Labor Expenses",
+                "barrier_description": "Finding appropriately skilled labor, such as certified welders and machinists, can present a significant hurdle. With scarce availability and fierce competition for these high-demand skills, overhead crane manufacturers may find this a substantial barrier to entry."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Industry Assistance Level: low - steady",
+            "Concentration Level: high",
+            "Competition Level: high - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "High competition",
+                "basis_description": "Cost and quality reign among manufacturers. Producers that seamlessly blend price and performance, using economies of scale, gain a competitive advantage."
+            },
+            {
+                "basis_title": "Steady competition",
+                "basis_description": "Steady competition exists in this industry."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "High",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Blocked merger prevented a large increase in consolidation",
+                "concentration_description": "The merger of Konecranes and Cargotec was halted after the US Justice Department threatened to sue, preventing further market share concentration among domestic overhead crane manufacturers."
+            },
+            {
+                "concentration_title": "Overhead crane manufacturing swings between concentration and fragmentation",
+                "concentration_description": "Several major overhead crane manufacturers dominate. These large companies typically produce industrial-scale cranes for heavy lifting operations in industries like automotive, steel or container shipping. Still, a sizable portion of the US market remains fragmented with small to mid-sized businesses specializing in custom-made, non-industrial cranes catering to specific customer needs or local markets. The degree of consolidation or fragmentation then depends on whether the focus is on mass-produced, industrial-scale products or customized, low-volume manufacturing."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Konecranes Plc",
+                "company_percentage": 89.1
+            },
+            {
+                "company_name": "Cargotec Corp Oyj",
+                "company_percentage": 10.9
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 15
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 45
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 7.5
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 3.5
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 3.5
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 3.5
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 7.5
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Climbing Steel Costs Have Subdued Profit",
+            "cost_factor_description": "While the complexity of product offerings has somewhat supported profitability, the steep rise in steel prices has recently increased costs, negatively affecting profit."
+        },
+        {
+            "cost_factor_title": "Overhead Crane Manufacturing Industry Faces Rising Costs With Steel Prices",
+            "cost_factor_description": "Steel, being a significant input, is primarily responsible for fluctuating costs within the industry, where the price changes are dictated by the supply and demand dynamics in the steel industry."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_trend": "Unknown",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LABOR EXPENSES",
+                "capital_intensity_description": "Finding appropriately skilled labor, such as certified welders and machinists, can present a significant hurdle."
+            },
+            {
+                "capital_intensity_title": "MODERATE technology change",
+                "capital_intensity_description": ""
+            },
+            {
+                "capital_intensity_title": "ENVIRONMENTALLY FRIENDLY ADJUSTMENTS",
+                "capital_intensity_description": "To reduce and avoid carbon emissions, overhead crane manufacturers have adjusted their production and switched to producing electrically powered machines more favorable to evolving legislations and the wants of customers."
+            },
+            {
+                "capital_intensity_title": "Constructing Stronger, Lighter Cranes Using Lightweight Materials",
+                "capital_intensity_description": "Implementing lightweight materials like high-strength alloys and composites in crane construction enhances their performance by minimizing weight and maintaining robustness and longevity."
+            }
+        ]
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_trend": "Unknown",
+        "volatility_points": [
+            {
+                "volatility_title": "Large Contracts Swing Revenue Boat For Overhead Crane Manufacturing",
+                "volatility_description": "The size and frequency of supply contracts for major projects like ports dramatically influence the industry's revenue."
+            },
+            {
+                "volatility_title": "SMALLER CRANE SALES CUSHION MANUFACTURING INDUSTRY FROM MAJOR REVENUE DIPS",
+                "volatility_description": "Despite significant contract-induced volatility, overhead crane manufacturers' sales declines are typically buffered by more regular sales of smaller crane types."
+            }
+        ]
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_trend": "Unknown",
+        "technological_change_points": []
+    },
+    "FAQs": [
+        {
+            "question": "Are there opportunities for your company in exports?",
+            "answer": "Some industry operators derive a significant portion of their revenue from export sales already."
+        },
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "This industry's performance roughly follows the same business cycle as the economy as a whole. However, saturated demand from a high base hurt the industry throughout this period."
+        },
+        {
+            "question": "Is your company investing heavily in R&D to meet changing consumer preferences?",
+            "answer": "Operators in this industry have poured resources into improving their products' energy efficiency."
+        },
+        {
+            "question": "Has your company located near key downstream customers to reduce shipping costs?",
+            "answer": "To compete, smaller industry operators have strategically located near key customers."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation over the past five years?",
+            "answer": "For this industry, the savings on lower-skilled labor due to automation have been surpassed by the increased hiring of more skilled and expensive workers."
+        },
+        {
+            "question": "What steps do you take to safeguard your company's proprietary information?",
+            "answer": "It is routine for operators in this industry to patent their products and designs."
+        },
+        {
+            "question": "Is your company adequately prepared to comply with new environmental standards?",
+            "answer": "Operators are already investing in more energy-efficient/greener products to keep ahead of new regulations."
+        },
+        {
+            "question": "How does your company ensure all health and safety requirements are met?",
+            "answer": "Operators in this endure scrutiny from OSHA due to the potential workplace hazards involved in the manufacture of industrial machinery."
+        },
+        {
+            "question": "How often do your customers purchase new equipment?",
+            "answer": "Most customers purchase products from this industry as long-term capital investments."
+        },
+        {
+            "question": "How do your company's profit margins compare to your main competitors'?",
+            "answer": "Industry profit has declined over the five years to 2021."
+        },
+        {
+            "question": "Do you employ a highly skilled workforce? How do you attract quality engineers to your company?",
+            "answer": "Industry operators require a range of skilled employees, particularly welders and machinists. As there are a limited number of individuals with these skills, industry operators must compete for access to this labor pool with a range of other industries."
+        },
+        {
+            "question": "What brands do you market your products under? Do you have a reputation for quality products?",
+            "answer": "Particularly given the importance of safety and durability in overhead crane operations, the establishment of a reputable brand name provides a crucial competitive advantage in the industry."
+        },
+        {
+            "question": "How do you monitor changing legislation? Have you incurred any fines from the EPA?",
+            "answer": "To continue operating, industry manufacturers must abide by the emission standards and waste disposal regulations set by the US Environmental Protection Agency."
+        },
+        {
+            "question": "Do you monitor the trade-weighted index? How has import penetration affected your company?",
+            "answer": "When the dollar appreciates, industry exports become more expensive, while imports become less expensive. As a result, demand for US-built overhead cranes falls."
+        },
+        {
+            "question": "When the IPI increases, how does this affect demand from downstream markets? How many of your clients are manufacturers?",
+            "answer": "Manufacturers often use overhead cranes to move equipment, material and product components throughout their facilities. Consequently, when industrial production increases, demand for industry products rises."
+        },
+        {
+            "question": "Do you monitor total trade value? What percentage of your revenue is related to cargo shipment?",
+            "answer": "Ports and harbors extensively use overhead cranes to handle shipping freight and containers. As a result, an increase in trade activity typically leads to higher demand for industry products as cranes are needed to handle increased volume."
+        }
+    ]
+}

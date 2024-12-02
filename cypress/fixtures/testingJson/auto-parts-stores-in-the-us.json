@@ -1,0 +1,586 @@
+{
+    "report_title": "Auto Parts Stores in the US",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 81714000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": 1.33
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.15
+            }
+        },
+        "profit": {
+            "profit_dollars": 4494000000,
+            "profit_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "profit_cagr_value": 0.5
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 1.03
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5.5,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "profit_margins_cagr_value": -1.26
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": -0.5
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 18833000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 0.34
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 3.1
+            }
+        },
+        "employees": {
+            "employees_count": 439360,
+            "employees_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "employees_cagr_value": 1.23
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 1.29
+            }
+        },
+        "wages": {
+            "wages_dollars": 13518000000,
+            "wages_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "wages_cagr_value": 0.64
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 1.26
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The auto parts stores industry has faced challenges during the COVID-19 pandemic but has recovered strongly, with revenue growing at a CAGR of 2.2% to $81.7 billion from 2004-2023. The end of pandemic restrictions led to a surge in driving and demand for vehicle maintenance, boosting industry revenue. However, the rise of electric vehicles and increasing complexity of modern cars pose threats as consumers may shift away from DIY repairs.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Pandemic disruptions impacted demand",
+            "current_performance_point_description": "Stay-at-home orders and reduced driving during the pandemic led to a decline in demand for auto parts stores as consumers postponed vehicle maintenance and repairs."
+        },
+        {
+            "current_performance_point_title": "Supply chain disruptions and material costs",
+            "current_performance_point_description": "Supply chain issues and rising material costs, particularly for steel, increased auto part prices but also enabled stores to pass on cost increases for higher revenue."
+        },
+        {
+            "current_performance_point_title": "Loyal customer base supported industry",
+            "current_performance_point_description": "Auto enthusiasts and DIY consumers provided a loyal customer base that helped sustain demand for auto parts stores during the pandemic."
+        },
+        {
+            "current_performance_point_title": "Economic recovery boosted demand",
+            "current_performance_point_description": "The rapid economic recovery after the pandemic led to increased driving and disposable income, driving demand for auto parts and repairs."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Rising consumer confidence impacts demand",
+            "future_outlook_point_description": "Continued growth in consumer confidence may lead some consumers to purchase new vehicles instead of repairing existing ones, impacting demand for auto parts stores."
+        },
+        {
+            "future_outlook_point_title": "National chains to gain strength",
+            "future_outlook_point_description": "Large national auto parts chains are expected to gain market share due to their resources and ability to offer their own branded products and services."
+        },
+        {
+            "future_outlook_point_title": "Electric vehicle adoption a threat",
+            "future_outlook_point_description": "Government support and increasing affordability of electric vehicles may reduce demand for auto parts stores as consumers shift away from DIY repairs on complex EV systems."
+        },
+        {
+            "future_outlook_point_title": "External competition from e-commerce",
+            "future_outlook_point_description": "The entry of major e-commerce players like Amazon into the auto parts market poses a competitive threat to traditional auto parts stores."
+        }
+    ],
+    "industry_definition": "This industry comprises operators that sell new and used automotive parts and accessories, as well as repair automobiles and install automotive accessories.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Revenue Volatility is low",
+            "Capital Intensity is low",
+            "Technology Change is low",
+            "Globalization is low - steady"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance is low - steady",
+            "Barriers To Entry are low - steady"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Volatility",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry",
+            "Low & Steady Level of Assistance",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Total vehicle miles"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Price of new cars"
+        ]
+    },
+    "key_trends": [
+        "The end of pandemic-related restrictions puts consumers back on the road. Increased wear on vehicles raises demand for auto parts",
+        "Desirable new cars draw consumers away",
+        "New car sales take away customers",
+        "The government doesn't interfere much with auto parts stores",
+        "Critical parts make up the foundation of this industry",
+        "Auto parts stores want consumers to take on DIY projects",
+        "Regions without extensive rail infrastructure demand the most from auto parts stores",
+        "Areas that attract car enthusiasts attract many auto parts stores",
+        "Lack of product line variation keeps competition strong",
+        "Auto repair shops are gaining popularity",
+        "Leading auto parts stores expand their reach",
+        "Sustainability becomes the focus for the future",
+        "Profit takes a dip as auto parts stores spend",
+        "Wage labor is essential to providing excellent service"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Households in the middle 40.0% of income",
+            "segment_description": "The largest market for auto parts stores is households and individuals who are taking their vehicle maintenance and enhancement into their own hands. These customers also purchase parts for repairs being carried out by professionals. The internet has made these activities much more accessible to the general public.",
+            "segment_percentage": 28.5
+        },
+        {
+            "segment": "Repair shops",
+            "segment_description": "Repair shops rely on established connections with OEMs to minimize input costs, cutting out auto parts stores. But when these shops can't find a part they need or are in a time crunch, they turn to auto parts stores.",
+            "segment_percentage": 22.3
+        },
+        {
+            "segment": "Households in the bottom 40.0% of income",
+            "segment_description": "Other customers include businesses, farmers and various government bodies. Many companies rely on vehicle fleets to generate revenue, incentivizing them to stock up on parts to keep operations flowing. Farmers turn to auto parts stores to keep their tractors running and prevent production slowdowns. Among these, other markets make up the largest portion of this segment.",
+            "segment_percentage": 16.1
+        },
+        {
+            "segment": "Retailers and wholesalers for resale",
+            "segment_description": "Wholesalers and retailers turn to auto parts stores to expand their offerings. New and used car dealerships are prime examples, as providing the additional parts a customer wants can help close a deal. Demand from these auto part resellers generally follows the trends of the auto sector, as more attention paid to automobiles leads to faster turnarounds.",
+            "segment_percentage": 5.9
+        },
+        {
+            "segment": "Other",
+            "segment_description": "",
+            "segment_percentage": 4.9
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Critical Parts (New)",
+            "product_description": "Critical parts include anything vital for a vehicle to run, for example, engine pumps and belts, batteries, carburetors and radiators. Critical parts can either be new or used, with the new options being vastly more popular than their more affordable counterparts.",
+            "product_percentage": 43
+        },
+        {
+            "product_or_service": "Maintenance Parts",
+            "product_description": "Maintenance parts include anything that gets replaced regularly and easily. Some examples of maintenance parts include windshield wipers, brake pads, headlights and oil filters. The nature of these parts lends them to be less expensive than critical parts, they are much less complex and don't decide whether or not the car runs.",
+            "product_percentage": 31.8
+        },
+        {
+            "product_or_service": "Performance Parts",
+            "product_description": "Performance parts improve the functionality of other parts in an effort to boost the vehicle's performance. These modifications can improve horsepower, response times and acceleration, among other things.",
+            "product_percentage": 12.8
+        },
+        {
+            "product_or_service": "Critical Parts (Used)",
+            "product_description": "",
+            "product_percentage": 6.2
+        },
+        {
+            "product_or_service": "Vehicle Accessories",
+            "product_description": "Vehicle accessories include anything nice to have in a vehicle but not related to functionality. These include USB chargers, air fresheners, soap, wax and trash cans.",
+            "product_percentage": 6.2
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Automobile Interior Manufacturing in the US",
+            "Battery Manufacturing in the US",
+            "Commercial Leasing in the US",
+            "Utilities in the US"
+        ],
+        "tier_2_suppliers": [
+            "Wire & Cable Manufacturing in the US",
+            "Automobile Metal Stamping in the US",
+            "Auto Parts Manufacturing in the US",
+            "Automobile Engine & Parts Manufacturing in the US",
+            "Automobile Electronics Manufacturing in the US",
+            "Automobile Steering & Suspension Manufacturing in the US",
+            "Automobile Brakes Manufacturing in the US",
+            "Automobile Transmission Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Auto Parts Stores in the US",
+            "Auto Mechanics in the US",
+            "Car Body Shops in the US",
+            "Car Wash & Auto Detailing in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Average Age of Vehicle Fleet",
+            "determinant_description": "The average vehicle fleet age is an equally weighted average of automobiles and trucks that are registered in the United States. The older a vehicle is, the more attention it requires. So, the greater the average age of the vehicle fleet, the better for auto parts stores."
+        },
+        {
+            "determinant_title": "Consumer Spending",
+            "determinant_description": "Consumer spending measures the total amount Americans spend on services and new goods and net purchases of used goods domestically and abroad. Consumers often put off vehicle maintenance since it is expensive. So, the more consumers spend, the more likely they are to focus on their automobiles."
+        },
+        {
+            "determinant_title": "Price of New Cars",
+            "determinant_description": "When new car prices rise, consumers are less inclined to purchase them. Auto parts stores compete directly with new vehicles, as they don't need replacement parts or maintenance. The price of new cars growing more affordable threatens auto parts stores as consumers become more likely to purchase a new vehicle rather than repair their existing one."
+        },
+        {
+            "determinant_title": "Total Vehicle Miles",
+            "determinant_description": "Total vehicle miles represent the total miles driven by all motor vehicles, including cars, trucks, motorcycles and buses, but not trains or planes, over the calendar year. The more people drive, the more wear is put on their automobiles. So, as total vehicle miles increase, the need for replacement parts and maintenance increases."
+        },
+        {
+            "determinant_title": "Consumer Confidence Index",
+            "determinant_description": "The consumer confidence index represents the economy's health since the more confident consumers are, the more likely they are to make purchases, invest and start businesses. Greater consumer confidence means more people will take on car projects, aiding auto parts stores."
+        },
+        {
+            "determinant_title": "Per Capita Disposable Income",
+            "determinant_description": "Per capita disposable income determines an individual's ability to purchase goods or services. As disposable income rises, consumers will feel they have enough to spend on DIY auto projects, boosting industry revenue. But greater disposable income also makes repair shops more accessible, cutting out auto parts stores."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region has the highest percentage of both establishments (33.6%) and population (38.1%), indicating a high concentration of auto parts stores due to the large population relying on automobiles for transportation.",
+            "percentage_establishments": 33.6,
+            "percentage_population": 38.1
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region, being the historic home of domestic auto manufacturing, also has a relatively high percentage of establishments (22.1%) compared to its population (14.9%).",
+            "percentage_establishments": 22.1,
+            "percentage_population": 14.9
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [
+            {
+                "regulation_title": "Low regulation Steady regulation",
+                "regulation_description": "Some parts, namely soap and wax, gain demand when times are tough, as consumers seek to save by cutting out extra costs like car washes. These products rest at a relatively low price point, lending them to impulse purchases on top of other parts."
+            },
+            {
+                "regulation_title": "ENVIRONMENTAL RESTRICTIONS CONTINUE TO TIGHTEN",
+                "regulation_description": "As climate consciousness continues to grow, the government will clamp down on hazardous material disposal. This directly applies to auto parts stores since they handle lead-acid batteries and used oil. These stores have to recycle these materials responsibly to remain compliant. The types of products auto parts stores carry will be scrutinized moving forward."
+            },
+            {
+                "regulation_title": "OTHER REGULATIONS ARE MINIMAL",
+                "regulation_description": "The government does not interfere much with the auto parts stores industry, as it isn't threatened by foreign competition and doesn't produce parts itself. The government does implement tariffs on foreign automakers and assist domestic ones, which does trickle down to have some effect on auto parts stores."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Finding and retaining knowledgeable workers",
+                "barrier_description": "The auto parts industry requires knowledgeable workers to help DIY mechanics. Finding and retaining these workers can be a challenge. This barrier can be particularly significant for new entrants that may still need to establish recruitment and training processes."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Revenue volatility is low",
+            "Capital intensity is low",
+            "Technology change is low",
+            "Globalization level is low and steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Lack of product line variation",
+                "basis_description": "Lack of product line variation keeps competition strong. Providing the best service in the best location is paramount to success in this industry."
+            },
+            {
+                "basis_title": "Auto repair shops gaining popularity",
+                "basis_description": "Auto repair shops are gaining popularity. As cars become increasingly complex, fewer individuals are willing to work on them themselves."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Local auto parts stores retain business",
+                "concentration_description": "Since auto parts stores in this industry are traditional bricks-and-mortar shops, finding a strategic location is key to success. Stores situated in areas with denser populations tend to fare better. Product offerings don't vary much between auto parts stores, so smaller shops that have well-established connections in the neighborhood are able to retain their customers even as more chains open up."
+            },
+            {
+                "concentration_title": "National auto parts stores gain strength",
+                "concentration_description": "Although the number of enterprises is rising thanks to high demand, the larger auto parts stores are still gaining strength. In fact, Auto Zone, the industry's most prominent company accounts for over 15.0% of total revenue."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Autozone Inc.",
+                "company_percentage": 15.3
+            },
+            {
+                "company_name": "O'reilly Automotive, Inc.",
+                "company_percentage": 15.3
+            },
+            {
+                "company_name": "Genuine Parts Co",
+                "company_percentage": 12.8
+            },
+            {
+                "company_name": "Advance Auto Parts, I",
+                "company_percentage": 5.8
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 44.7
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 49.7
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Higher Demand Commands an Increase in Inventory",
+            "cost_factor_description": "The rapid increase of industry revenue in the wake of pandemic-related disruptions has presented auto parts stores with a great opportunity. To capitalize on this, auto parts stores are spending more on purchases."
+        },
+        {
+            "cost_factor_title": "PROFIT",
+            "cost_factor_description": "Purchase costs are forecast to account for 49.7% of revenue in 2023, an increase from 47.5% in 2018. This change can largely be attributed to hikes in the price of steel, a key industry input."
+        },
+        {
+            "cost_factor_title": "PROFIT CONTINUES CLIMBING BACK UP",
+            "cost_factor_description": "Industry profit took a hit when the pandemic began, placing stress on auto parts stores, especially those with limited liquid resources. Profit recovered somewhat in the wake of pandemic-related restrictions but still held low as auto parts stores were spending to expand and capitalize on revitalized demand."
+        },
+        {
+            "cost_factor_title": "WAGES",
+            "cost_factor_description": "Although automation has increased across many industries, sales associates and car experts are irreplaceable for auto parts stores that seek to provide excellent customer service. So, wages have held their portion of revenue."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LOW capital intensity",
+                "capital_intensity_description": "The auto parts industry requires knowledgeable workers to help DIY mechanics. Finding and retaining these workers can be a challenge."
+            },
+            {
+                "capital_intensity_title": "LOW capital intensity",
+                "capital_intensity_description": "The rate of new patent additions to the industry is low. This is combined with a low concentration of innovation. Both factors being low suggests that new technology entry is slow and widespread, which limits the threat of disruptive threats hurting leading industry operators."
+            },
+            {
+                "capital_intensity_title": "LOW capital intensity",
+                "capital_intensity_description": "Major market segments for industry operators are relatively diversified. The spread of market segments suggests that there are limited entry points other than those already served my incumbent operators."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Low",
+        "volatility_points": [
+            {
+                "volatility_title": "The pandemic causes revenue to drop and bounce back",
+                "volatility_description": "As lockdowns were put into place, people went from driving daily to not at all, drastically reducing their propensity to spend on their vehicles and causing revenue to stagnate."
+            },
+            {
+                "volatility_title": "The pandemic causes revenue to drop and bounce back",
+                "volatility_description": "When restrictions were lifted, demand surged as the pent-up demand from all the maintenance people put off was released. This caused revenue to grow quickly, incentivizing auto parts stores to expand."
+            },
+            {
+                "volatility_title": "Increasingly complex vehicles push consumers to auto repair shops",
+                "volatility_description": "As electric vehicles become more popular and the modernization of automobiles continues, the mounting complexity of non-traditional vehicles will dissuade people from working on their vehicles themselves."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "SALES OF CRITICAL PARTS STEADY THE INDUSTRY",
+                "technological_change_description": "Critical parts include anything vital for a vehicle to run, for example, engine pumps and belts, batteries, carburetors and radiators. Critical parts can either be new or used, with the new options being vastly more popular than their more affordable counterparts."
+            },
+            {
+                "technological_change_title": "FRUGAL DRIVERS BUY MAINTENANCE PARTS",
+                "technological_change_description": "Maintenance parts include anything that gets replaced regularly and easily. Some examples of maintenance parts include windshield wipers, brake pads, headlights and oil filters."
+            },
+            {
+                "technological_change_title": "ENTHUSIASTS ENHANCE THEIR RIDES WITH PERFORMANCE PARTS",
+                "technological_change_description": "Performance parts improve the functionality of other parts in an effort to boost the vehicle's performance. These modifications can improve horsepower, response times and acceleration, among other things."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company specialize in marketing to households or downstream businesses?",
+            "answer": "Most operators serve an array of downstream markets, including households, repair shops and other downstream retailers. In 2023, households are expected to account for 66.8% of industry revenue, while repair shops are expected to account for 22.8% and other businesses are expected to account for 10.4%."
+        },
+        {
+            "question": "How has the recent economic recovery affected demand for auto parts?",
+            "answer": "High disposable incomes combined with stay-at-home orders and general concern about being in public has led to massive increases in sales of automotive parts for DIY applications. Retaining these customers could be a significant opportunity."
+        },
+        {
+            "question": "How have rising input prices and declining consumer confidence amid the pandemic affected your company's ability to strategically price products to optimize returns?",
+            "answer": "When input costs increase, parts manufactures often times pass on these rising costs to downstream consumers, such as auto parts retailers. Consequently, higher input costs at the manufacturing level often times causes the price of these parts at the retail level to rise."
+        },
+        {
+            "question": "In an industry experiencing rising market share concentration, have you explored acquisition opportunities to expand your market share and lower operational costs?",
+            "answer": "Companies are always looking to grow operations through acquisitions. Larger companies acquire smaller, less profitable auto parts stores in order to expand their market presence and product portfolios. The industry's largest players grew to such status through a combination of organic growth and aggressive acquisition activity."
+        },
+        {
+            "question": "How has the implementation of point-of-sales (POS) systems enabled your company to track stock levels and ensure popular items remain stocked? Have you passed any of these tracking benefits on to customer-visible systems?",
+            "answer": "Companies typically use POS systems in order to track inventory quickly and efficiently. Companies also provide product inventory online in many cases. POS systems enable companies to better manage their inventories, resulting in higher customer satisfaction, as popular items are kept stocked, and stable profit margins, as operators are not spending money on superfluous items. Customers now expect relatively accurate inventory counts on e-commerce platforms."
+        },
+        {
+            "question": "Have you implemented any automation processes in an attempt to reduce wage costs?",
+            "answer": "Auto part stores often times invest in POS systems to lessen the need for employees and reduce wage costs. Moreover, many operators have installed self-check-out systems, slightly reducing employment needs. However, due to high internal and external competition, many operators have experienced rising wage costs and highly-knowledgeable employees have become imperative and command higher wages."
+        },
+        {
+            "question": "Have increased regulations resulting from the coronavirus pandemic hindered profit growth for your business?",
+            "answer": "Operators have been exposed to rising regulations amid the pandemic, mostly pertaining to the health and safety of employees and customers and have included the purchase of PPE for employees and retrofitting establishments to follow social distancing guidelines. Due to these changes, many operators experienced rising purchase costs, eating away at profit."
+        },
+        {
+            "question": "How does your company ensure it is staying abreast of changing regulations pertaining to the operation of auto parts stores?",
+            "answer": "Operators have several outlets for staying aware of changing regulations, including the Automotive Parts and Accessories Association and the Automotive Service Industry Association. Such industry associations provide members with information regarding changing regulation and policies and generally provide additional information on operational activities, along with lobbying on behalf of industry operators."
+        },
+        {
+            "question": "As many companies introduce financing options for all purchases through third-party applications, has your company explored offering financing options to customers?",
+            "answer": "Parts and accessories are not typically as expensive as a new or used vehicle and therefore, financing is not necessary. Accessories are often the least expensive and most discretionary, while auto parts are purchased more on a as need basis."
+        },
+        {
+            "question": "How have supply chain disruptions amid the pandemic affected your company's profit? Are there any disruptions still impacting your business?",
+            "answer": "Operators rely on a slew of upstream manufacturers and distributors for their products. Amid the pandemic, many upstream suppliers experienced manufacturing disruptions or issues with distribution, resulting in relatively scarcity in certain products, which drove purchasing prices up. Due to the economic downturn, consumers became increasingly uncertain regarding their financial status."
+        },
+        {
+            "question": "How do you ensure that your delivery system is cost-effective? Does your company use software-as-a-service applications? Have you been able to reduce operational costs with effective distribution systems?",
+            "answer": "National auto parts chains require distribution networks to keep stores well stocked. Efficient distribution systems can be a significant comparative advantage. Despite more efficient distribution systems, many operators experienced rising purchase costs over the past five years, resulting in declining profit."
+        },
+        {
+            "question": "How do you ensure your employees are highly-skilled and trained and able to answer customers questions about various automotive issues? Do you offer educational services for your employees?",
+            "answer": "Hiring highly-knowledgeable employees is critical for successful operators, as industry establishments carry a wide variety of products for various downstream uses. As a result, the value of wages is expected to rise 3.0% over the five years to 2022, as operators compete to entice highly-knowledgeable workers."
+        },
+        {
+            "question": "What promotions or special deals do your offer to ensure repeat, loyal customers? Does your business have a customer loyalty program? What other methods have you used to build a strong customer base?",
+            "answer": "Having a loyal customer base increases profitability by creating a consistent revenue base and reducing the need for advertisement. Some national operators offer rewards programs, which entice repeat visits, as customers may receive discounts or special pricing on select services. Operators also ensure customer loyalty by providing top-notch service, keeping stock of popular items and ensuring customers are served quickly and efficiently."
+        },
+        {
+            "question": "How does the age of the vehicle fleet influence demand for your business's services? Do customers still frequent your establishment when they have a new vehicle?",
+            "answer": "A rise in the average age of the vehicle fleet represents an opportunity for industry operators, as older vehicles generally require more regular work and auto parts. In 2023, the average age of the vehicle fleet is expected to rise 0.5%, representing an increase in the potential customer pool for operators."
+        },
+        {
+            "question": "Do you expect major changes in demand as a result of rising disposable income levels? When disposable income rises but other economic factors are declining, how does demand for your business fluctuate?",
+            "answer": "Growth in disposable income may decrease industry demand, as consumers are able to purchase new automobiles instead of spending money on auto parts. Conversely, increased disposable income enables other individuals that otherwise would not have been able to do so to purchase auto parts. In 2023, disposable income is expected to grow 0.2%."
+        },
+        {
+            "question": "How has the rise in e-commerce auto parts sales affected demand for your brick-and-mortar business? Have you experienced mounting competition from e-commerce platforms amid the pandemic? How have you added value to in-person or e-commerce systems?",
+            "answer": "E-commerce platforms represent a significant form of competition for industry operators, as consumers have increasingly opted to purchase online following research rather than purchase in-person. Amid the coronavirus pandemic and social distancing policies, demand for e-commerce increased substantially to the detriment of industry operators."
+        }
+    ]
+}

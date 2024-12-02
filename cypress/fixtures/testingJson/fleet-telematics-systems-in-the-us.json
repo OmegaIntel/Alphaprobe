@@ -1,0 +1,591 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 8515000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 9.76
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.26
+            }
+        },
+        "profit": {
+            "profit_dollars": 358000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 6.5
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.2,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": -2.95
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 2605000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 22935,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 2095000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 159000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 64000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The Fleet Telematics Systems industry has expanded rapidly through the end of 2023. Operators manufacture devices and develop service software to track the location and characteristics of fleet vehicles. Industry revenue is reliant upon demand from truck transportation, the industry's key downstream market, in addition to trade flows and the taxi and limousine industry. Although volatile fuel prices often distort industry revenue for the transportation sector, revenue is only affected if the industry's key markets encounter reduced revenue due to significantly deficient demand. This was the case amid the COVID-19 pandemic, which led to much lower economic activity in the US and overseas, including reduced demand for truck transportation and taxi &amp; limousine services. Nonetheless, demand will regain momentum amid the recovering economy. Fleet Telematics Systems industry revenue has surged at a CAGR of 5.5% over the past five years, pushed up by a 2.8% increase to an estimated $8.5 billion in 2023 alone.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Demand Rises Alongside Transportation Activity",
+            "current_performance_point_description": "As demand for truck transportation and taxi &amp; limousine services (IBISWorld report 48533) increased over the past five years, industry revenue soared. Greater software capabilities and more competitive pricing contributed to the emergence of new, niche markets. Still, the COVID-19 pandemic contributed to lower industry revenue growth due to travel restrictions. This has been and continues to be rectified due to the resumption of normal travel patterns. Also, outsourcing of hardware production and increasing saturation in core markets has tempered growth over the past five years."
+        },
+        {
+            "current_performance_point_title": "Manufacturers are Streamlining the Process by Offering Easy to Use Services",
+            "current_performance_point_description": "Fleet telematics systems were initially hardware-focused. Most manufacturers offered devices that needed to be installed in vehicles. Installation across entire fleets required substantial investment from consumers, particularly those with extensive vehicle fleets. Fleet telematics systems manufacturers now differentiate themselves by developing software that is easy to use, flexible and provides advanced analyses and unique insights and efficiency enhancements. These new services include a software-as-a-service model, where consumers pay a subscription fee for access to a telematics system and software that is consistently upgraded and improved. The software is offered to consumers as a service and they can access data and analyses online."
+        },
+        {
+            "current_performance_point_title": "Mobile Devices are a Simple and Convenient Way to Provide Software",
+            "current_performance_point_description": "Rapidly improving software capabilities have led to greater telematics system use on mobile devices instead of installed vehicle hardware. Since most mobile devices are equipped with GPS and other communication capabilities, they can function as telematics devices once industry software is installed. As the number of mobile internet connections skyrocketed through the end of 2023, mobile telematics software has become one of the dominant product platforms in this industry. The increased reliance on technology has significantly boosted industry demand."
+        },
+        {
+            "current_performance_point_title": "The Utility of Telematics Boosts Fuel and Route Efficiency",
+            "current_performance_point_description": "The capacity of telematics to help monitor and analyze driver behavior, improve asset utilization, track and monitor cargo and equipment conditions, reduce accidents and improve sustainability has enabled the industry to enter new markets and strengthen popularity in existing ones. Utility vehicle fleets and construction equipment fleets, for example, represent new and fast-growing markets. Changing product offerings and platforms have facilitated the industry's penetration of new markets over the past five years. Since many drivers already use smartphones, subscription-based products require less up-front investment and fleet telematics systems are now more affordable to smaller transportation companies."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "The Trucking Sector Will Increase Due to Diminished Restrictions",
+            "future_outlook_point_description": "As the US economy recovers from the extended effects of the COVID-19 pandemic, demand for trucking services will rise once again. Combined with rebounding fuel prices, the Long-Distance Freight Trucking industry (IBISWorld 48412) will encounter fairly robust revenue growth over the next five years. Carriers will have more money to spend on fleet telematics systems, bolstering demand from the industry's key market. Also, the continued shift toward mobile platforms will make it very simple and easy for carriers to purchase telematics systems, making it a small risk for a potentially large gain."
+        },
+        {
+            "future_outlook_point_title": "Regulations Drive Demand",
+            "future_outlook_point_description": "As public awareness of environmental issues increases, both federal and state governments continue phasing in more stringent emission standards for vehicles ranging from commercial vans to heavy trucks. Demand for fleet telematics systems will rise as these products help reduce emissions by improving fuel and route efficiency. The Department of Transportation's Federal Motor Carrier Safety Administration recently introduced rules that require interstate commercial truck and bus companies to use electronic on-board recorders (EOBRs). These recorders monitor the amount of time a vehicle is being used, enabling regulators to track compliance with laws covering driving hours and emissions. Fleet vehicle owners have been encouraged to buy fleet telematics systems to comply with new regulations."
+        },
+        {
+            "future_outlook_point_title": "Reduced Prices Broaden Downstream Markets",
+            "future_outlook_point_description": "The industry's expansion into new markets will drive higher industry demand over the next five years. As the price of fleet telematics systems continues fall, owners of small vehicle fleets will be able to afford them more easily. Due to this, the local trucking, taxi and limousine market will account for a larger share of industry revenue at the expense of the long-haul trucking market in 2028. This will also lead to an increase in industry exports, as foreign nations begin to value the higher-quality telematics systems produced by US-based manufacturers. Still, this will likely not have a material effect on demand as exports have consistently accounted for a minority share of industry revenue."
+        },
+        {
+            "future_outlook_point_title": "Increased Complexity Heightens the Importance of Proper Monitoring Systems",
+            "future_outlook_point_description": "As supply chains become more complex and integrated, the need to monitor both standard and intermodal vehicle assets will rise in importance, further benefiting industry demand. Rental companies, especially those specializing in heavy equipment, are also expected to continue expanding their use of fleet telematics systems to monitor their equipment and improve asset utilization. With the number of mobile internet connections forecast to climb through the end of 2028, demand for already popular mobile telematics devices and applications will also continue to rise. Fleet telematics systems will likely become integral to every industry that includes some form of transportation. This opens up the potential markets considerably, which will lead to industry expansion in the form of enterprise growth and increased hiring efforts."
+        }
+    ],
+    "industry_definition": "This industry manufactures hardware and software for fleet telematics systems. Fleet telematics systems use electronics and GPS to track the location and other characteristics (e.g. mileage or speed) of vehicles in a fleet. This industry includes fleet telematics systems for mobile devices.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low Capital Intensity Level",
+            "low Concentration Level"
+        ],
+        "negative_impact_factors": [
+            "low - increasing Industry Assistance Level",
+            "high Technology Change Level",
+            "high - increasing Competition Level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low & Increasing Level of Assistance",
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Medium & Decreasing Barriers to Entry",
+            "High Competition",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "Very High Revenue Growth (2005-2023)",
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Number of mobile internet connections"
+        ],
+        "threats": [
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "World price of crude oil"
+        ]
+    },
+    "key_trends": [
+        "The surge of mobile device usage provides the industry with a booming market. Rapidly improving software capabilities have led to greater telematics system use on mobile devices instead of installed vehicle hardware.",
+        "Telematics systems boost efficiency by providing real-time information. This enables drivers and other downstream buyers to optimally position their fleets.",
+        "Easy-to-use software is becoming a primary differentiating tool. Further differentiating tactics include flexible software and provides advanced analyses, unique insights and efficiency enhancements.",
+        "Fleet telematics systems manufacturers are under heavy environment and noise regulations. These include the Clean Water Act, Resource Conservation and Recovery Act, Clean Air Act, the Cluster Rule and noise control governed by the US Code.",
+        "Environmental regulations boost demand for telematics. For instance, the Department of Transportation's Federal Motor Carrier Safety Administration has proposed rules requiring interstate commercial truck and bus companies to use electronic onboard recorders (EOBRs).",
+        "Fleet telematics systems for local trucking remain the industry's largest product segment. Producing software for mobile platforms also accounts for a significant portion of demand.",
+        "Sales of fleet telematics systems for trucking industries are driven by industrial and manufacturing activity. Lower COVID-19 restrictions lead to heightened activity in the primary market."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Trucking",
+            "segment_description": "Trucking dominates the market for fleet telematics systems. Most customers in this market are for-hire carriers, but private fleets have become major users over the past five years. Long-distance freight trucking companies were the first to invest in fleet telematics systems and remain a leading market. As the price of telematics systems has steadily decreased over the past five years in line with cheaper hardware manufacturing and better software distribution methods, local freight trucking companies have increased their investment in telematics systems.",
+            "segment_percentage": 62.8
+        },
+        {
+            "segment": "Other including express and logistics services",
+            "segment_description": "Parcel and courier companies are rapidly installing telematics systems across their vast fleets of trucks and vans to improve the efficiency of routes. Demand from this market has soared amid the COVID-19 pandemic as it prompted a boom in e-commerce sales. This segment also includes taxi and limo services, government and commercial vehicle fleets and owners of heavy equipment. While telematics applications differ with each segment, most use fleet telematics systems to monitor driver behavior, vehicle and equipment conditions and improve utilization.",
+            "segment_percentage": 37.2
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Local Fleet Systems",
+            "product_description": "Local fleet systems devices are installed directly into vehicles, enabling users to monitor factors such as driver behavior, route productivity, fuel efficiency and vehicle location. Most of these systems are used by local trucking companies to improve efficiency in a competitive market.",
+            "product_percentage": 48.3
+        },
+        {
+            "product_or_service": "Mobile Devices",
+            "product_description": "Mobile devices represent applications for smartphones that perform the function of vehicle systems devices as part of a fleet telematics system. Since smartphones already house both a GPS and cellular antenna, they have been used to collect and transmit vehicle location data in lieu of a vehicle systems device. This software is installed on the vehicle driver's phone.",
+            "product_percentage": 21.7
+        },
+        {
+            "product_or_service": "Long Haul Fleet Systems",
+            "product_description": "Similar to local fleet systems, these systems enable users to monitor and analyze data regarding driver behavior, route productivity and fuel efficiency. While this segment's revenue has increased over the past five years, its share of overall industry revenue has shrunk due to the more rapid growth of local fleet and mobile segments.",
+            "product_percentage": 0
+        },
+        {
+            "product_or_service": "Trailer Tracking and Monitoring Systems",
+            "product_description": "By installing telematics systems onto trailers, users can monitor the location of their trailers and create trucking routes that increase trailer utilization. Telematics devices can now transmit data on the condition of trailers, including temperature and humidity, which is useful to companies transporting freight such as frozen food and grains.",
+            "product_percentage": 0
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Semiconductor & Circuit Manufacturing in the US",
+            "Circuit Board & Electronic Component Manufacturing in the US",
+            "Wire & Cable Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Telecommunication Networking Equipment Manufacturing in the US",
+            "Navigational Instrument Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Local Freight Trucking in the US",
+            "Long-Distance Freight Trucking in the US",
+            "Local Specialized Freight Trucking in the US",
+            "Tank & Refrigeration Trucking in the US"
+        ],
+        "tier_2_buyers": [
+            "Construction in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "The Widespread Usage of Mobile Devices Makes it the Fastest-Growing Product Segment",
+            "determinant_description": "As smartphones have grown in popularity and dropped in price over the past five years, mobile vehicle systems software has increased in revenue share, mainly at the expense of vehicle systems devices. The use of cloud computing and internet connectivity is rapidly replacing traditional industry operational models. The COVID-19 pandemic accelerated this."
+        },
+        {
+            "determinant_title": "Long Haul Fleet Systems Provide Real-Time Information",
+            "determinant_description": "Similar to local fleet systems, these systems enable users to monitor and analyze data regarding driver behavior, route productivity and fuel efficiency. While this segment's revenue has increased over the past five years, its share of overall industry revenue has shrunk due to the more rapid growth of local fleet and mobile segments."
+        },
+        {
+            "determinant_title": "Trailer Tracking and Monitoring Systems are Essential for the Perishable Goods Market",
+            "determinant_description": "By installing telematics systems onto trailers, users can monitor the location of their trailers and create trucking routes that increase trailer utilization. Telematics devices can now transmit data on the condition of trailers, including temperature and humidity, which is useful to companies transporting freight such as frozen food and grains."
+        },
+        {
+            "determinant_title": "Other Devices Improve Asset Utilization",
+            "determinant_description": "Most of these other devices are heavy equipment monitoring devices, which enable equipment owners such as earthmovers to know the location and condition of their assets. In particular, equipment leasing and rental companies have increased their use of such devices to improve asset utilization and estimate when equipment repairs and maintenance are due."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Increasing",
+        "export_level": "Low",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Software Prevails Over Hardware, Making Imports a Minor Concern",
+                "trade_description": "A significant amount of revenue growth is driven by non-traded software development and service, which has made hardware imports increasingly negligible."
+            },
+            {
+                "trade_title": "Countries with Low Labor Costs are Primary Importers",
+                "trade_description": "Taiwan accounts for a significant portion of imports due to its relatively low wages and abundance of technology-heavy manufacturing capacity. Mexico has low labor costs and is near the United States. Malaysia and China are also major electronics exporters."
+            },
+            {
+                "trade_title": "Exports are Minor Due to Heightened Price-Based Competition From Foreign Companies",
+                "trade_description": "Exports account for a negligible share of total industry revenue. Still, demand for exports is driven by the wider acceptance of fleet telematics systems outside the United States. Exports are far lower than imports since US-based manufacturers must compete with lower-priced products from Taiwan and Mexico while also dealing with a recently strengthening dollar that has made exports more expensive for foreign buyers."
+            },
+            {
+                "trade_title": "Increased Online Offerings Have Devalued Exports",
+                "trade_description": "The most significant change is the emergence of hardware-free software along with a lower cost of physical systems. As hardware costs have fallen or been removed altogether, exports have naturally fallen as software is distributed online. This means trade values for imports and exports do not include the remote transfer of software internationally."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "West",
+            "location_description": "The West dominates due to its booming technology sector. California alone is home to a quarter share of establishments since it is a hub for technology and software developments. It is easier for companies to not only find the best engineers but also establish links with other industries and investors that can help operators grow.",
+            "percentage_establishments": 40,
+            "percentage_population": 30
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic is home to extensive research centers and provides access to highly skilled labor. New Jersey and New York are particularly popular as they have high research and development spending. This region also provides fleet telematics systems manufacturers with highly skilled labor.",
+            "percentage_establishments": 0,
+            "percentage_population": 0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "Texas is not only home to major technology hubs such as Austin but has a large trucking industry that uses fleet telematics systems. Similar to other popular regions, the high level of skilled labor is another perk.",
+            "percentage_establishments": 0,
+            "percentage_population": 0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "Federal Communications Commission (FCC)",
+                "regulation_description": "The FCC heavily regulates the manufacturing of communication devices, such as GPS navigation devices, cellular networks and wireless networks, which telematics systems employ."
+            },
+            {
+                "regulation_title": "Environmental Protection Agency (EPA)",
+                "regulation_description": "The industry benefits from the EPA's actions to pressure transportation companies to reduce their carbon footprint, increasing demand for fleet telematics systems to help reduce fuel usage."
+            },
+            {
+                "regulation_title": "Clean Water Act (CWA) and Resource Conservation and Recovery Act (RCRA)",
+                "regulation_description": "Manufacturers must ensure appropriate water and solid waste discharge procedures and are subject to provisions relating to airborne pollution emissions."
+            },
+            {
+                "regulation_title": "Clean Air Act (CAA)",
+                "regulation_description": "The CAA limits air pollutants and is designed to protect air resources for public health and welfare."
+            },
+            {
+                "regulation_title": "Comprehensive Environmental Response, Compensation and Liability Act (CERCLA)",
+                "regulation_description": "CERCLA regulates the release and remediation of hazardous substances, with substantial monetary consequences for violations."
+            },
+            {
+                "regulation_title": "Occupational Safety and Health Act (OSHA)",
+                "regulation_description": "Manufacturers must follow laws and regulations relating to workplace safety and worker health, covering topics like break times, noise levels and dust standards."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Decreasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Industry assistance level",
+                "barrier_description": "Industry assistance level is low but increasing."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            {
+                "factor": "Capital intensity level is low."
+            }
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Competitive pricing",
+                "basis_description": "Competitive pricing is key to attracting downstream customers in a relatively low-margin industry."
+            },
+            {
+                "basis_title": "Product and service range",
+                "basis_description": "Fleet telematics systems manufacturers must be able to deliver a range of high-quality products and services."
+            },
+            {
+                "basis_title": "Brand strength",
+                "basis_description": "Brand strength enables established companies to gain greater market presence and product acceptance."
+            },
+            {
+                "basis_title": "Emerging company challenges",
+                "basis_description": "To gain market share, emerging companies must convince potential customers that their telematics system has a sufficiently large coverage area and is easy to use."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "<UNKNOWN>",
+        "concentration_points": [
+            {
+                "concentration_title": "Low concentration",
+                "concentration_description": "Fleet telematics systems have a low level of market concentration."
+            },
+            {
+                "concentration_title": "Top players market share",
+                "concentration_description": "The four largest players account for less than a quarter of industry revenue combined."
+            },
+            {
+                "concentration_title": "Small local players",
+                "concentration_description": "Most of the industry contains small-scale companies that serve smaller, often local, markets based on the functionality of the telematics systems they provide."
+            },
+            {
+                "concentration_title": "Large players advantages",
+                "concentration_description": "The larger-scale companies use their abundant resources to offer premium products with greater functionality."
+            },
+            {
+                "concentration_title": "Low barriers impact",
+                "concentration_description": "Low barriers to entry and the potential for rapid future growth have encouraged a wave of new fleet telematics systems manufacturers over the past five years."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Verizon Communications Inc.",
+                "company_percentage": 5.6
+            },
+            {
+                "company_name": "Trimble Inc.",
+                "company_percentage": 5.6
+            },
+            {
+                "company_name": "Vontier Corporation",
+                "company_percentage": 3.8
+            },
+            {
+                "company_name": "Omnitracs, Llc",
+                "company_percentage": 2.9
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 82.2
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 4.2
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 24.6
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 36.9
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 30.8
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases",
+            "cost_factor_description": "Purchases include metal products, printed circuit boards, semiconductors, wireless communications devices and many other materials, components and supplies."
+        },
+        {
+            "cost_factor_title": "Wages",
+            "cost_factor_description": "The two dominant types of industry workers are factory employees and software engineers. As the industry has focused more and more on software development and services, software engineers' share of wages has increased."
+        },
+        {
+            "cost_factor_title": "Other costs",
+            "cost_factor_description": "Other costs include research and development (R&D), insurance, administrative costs and legal fees. R&D accounts for a large portion of revenue since companies must constantly develop and update their software and hardware offerings to stay ahead of the competition."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Fleet telematics systems manufacturing is labor-intensive.",
+                "capital_intensity_description": "Manufacturers require skilled workers to operate complex machinery and design software."
+            },
+            {
+                "capital_intensity_title": "Major markets are highly concentrated",
+                "capital_intensity_description": "This implies that the market has a focus on key customer segments, presenting an opportunity for strategic entrance into lower-end markets or unserved markets for innovations to take on a disruptive trajectory."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Downstream trucking activity influences demand",
+                "volatility_description": "Industries such as trucking have increased the use of telematics to improve efficiencies amid strong competition and volatile fuel prices."
+            },
+            {
+                "volatility_title": "Input costs affect selling prices and sales volumes",
+                "volatility_description": "Revenue depends on input costs like metal products, printed circuit boards, semiconductors etc. Input price fluctuations introduce upstream volatility."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Local fleet systems devices help maximize efficiency",
+                "technological_change_description": "Local fleet systems devices installed in vehicles enable monitoring of driver behavior, route productivity, fuel efficiency and vehicle location. Demand has increased as the technology became less expensive."
+            },
+            {
+                "technological_change_title": "Mobile devices are the fastest-growing product segment",
+                "technological_change_description": "Mobile device apps perform the functions of vehicle systems devices as part of fleet telematics systems. As smartphones grew popular and cheaper, this segment's revenue share increased rapidly."
+            },
+            {
+                "technological_change_title": "Long haul fleet systems provide real-time information",
+                "technological_change_description": "Similar to local systems, these enable monitoring of driver behavior, routes and fuel efficiency. While revenue increased, the segment's overall share shrank due to faster local and mobile growth."
+            },
+            {
+                "technological_change_title": "Trailer tracking systems are essential for perishable goods",
+                "technological_change_description": "Telematics systems on trailers monitor location and conditions like temperature and humidity, useful for transporting perishable freight like frozen food and grains."
+            },
+            {
+                "technological_change_title": "Other devices improve asset utilization",
+                "technological_change_description": "Most of these are heavy equipment monitoring devices, enabling owners to know the location and condition of their assets like earthmovers."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How have imports from low-wage countries like China and Mexico impacted your operations?",
+            "answer": "On account of high technological bandwidth required to manufacture industry products, low-wage countries do not pose import competition."
+        },
+        {
+            "question": "Does your company specialize in a niche or do you produce a diversified range of products?",
+            "answer": "Major operators produce highly diversified and customized products that give them an edge over other competitors."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "Volatility in crude oil prices have increased demand for industry products in order to boost downstream customers' efficiency and decrease costs."
+        },
+        {
+            "question": "Has your company explored acquisition opportunities in areas with well-established infrastructure?",
+            "answer": "Mergers and acquisition activity has increased in the industry over the past five years as several large operators have acquired smaller upstarts or were acquired themselves."
+        },
+        {
+            "question": "How is your company leveraging new technology?",
+            "answer": "Technological innovation continues to remain high in the industry and operators have a large research and development (R&D) budget."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation over the past five years?",
+            "answer": "Wage costs continue to remain high in the industry on account of a need for labor with a high skill set such as engineers. Industry wages increased in each of the past five years, as software development and service became increasingly dominant."
+        },
+        {
+            "question": "Have any regulatory expenses significantly impacted profitability recently?",
+            "answer": "Regulations have remained steady in the industry over the past five years. Regulatory expenses are low in the industry and have not increased over the past five years. New environmental regulation or standards under the new Biden admin might benefit demand for industry products."
+        },
+        {
+            "question": "How do your company's profit margins compare to your main competitors'?",
+            "answer": "High competition among operators in the industry generally constrains profit margins for all except the industry's leading operators."
+        },
+        {
+            "question": "How has input price volatility affected profit margins over the past 12 months?",
+            "answer": "Volatility has led to an increase in purchase costs over the past 12 months. The world price of crude oil is consequential downstream, whereas this industry experienced volatility in steel and intellectual property prices, which can also impact operations."
+        },
+        {
+            "question": "Is your company dominant in any particular regional markets? What are you key markets?",
+            "answer": "Most fleet telematics systems companies are small, local operations. Successful telematics companies must locate themselves close to their potential customers. In recent years, software development has dominated the industry as SaaS has become more popular. These operators are located in more traditional Information Technology hubs like California and Texas."
+        },
+        {
+            "question": "How quickly can new technology be adopted? What kind of new technology have you recently adopted?",
+            "answer": "Companies in this industry must be on the cutting edge of wireless communication and navigational instrument technology."
+        },
+        {
+            "question": "What advantages do you offer to customers? How do you make usage simple and accessible for them?",
+            "answer": "The industry's products are highly technical. However, successful companies create products that can be easily used by users with little technical knowledge. Customers will switch to a more user-friendly system if available. Accessibility has increasingly been boosted by reducing or removing hardware requirements and offering software access over smartphones."
+        },
+        {
+            "question": "Do you monitor the price of oil? How do you compensate for reduced demand when the price of oil is low?",
+            "answer": "As the world price of crude oil increases, transportation companies that own fleets of vehicles look to cut fuel costs by using telematics. Consequently, when the price of oil increases, demand for industry products climbs."
+        },
+        {
+            "question": "Do you monitor changes in the trade-weighted index? How do you combat import competition when the value of the dollar increases? Are you reliant on exports?",
+            "answer": "An increase in the value of the dollar makes industry exports more expensive for foreign consumers and imports less expensive, thereby reducing exports."
+        },
+        {
+            "question": "Do you find revenue trends to be in line with the number of mobile internet connections? Do you closely track the number of mobile internet connections?",
+            "answer": "Drivers can increasingly access fleet telematics systems on mobile devices such as smartphones and tablets. Therefore, as the number of mobile internet connections increases, demand for fleet telematics systems on mobile devices rises. The number of mobile internet connections has consistently increased over the past five years."
+        }
+    ]
+}

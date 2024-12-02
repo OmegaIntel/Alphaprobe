@@ -1,0 +1,592 @@
+{
+    "report_title": "Metal Can & Container Manufacturing in the US",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 25959000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 0.45
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.18
+            }
+        },
+        "profit": {
+            "profit_dollars": 2881000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 1.45
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 11.1,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 0.99
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 6164000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 29073,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 2347000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": 2037000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": 1494000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2024 currency.\n\nFluctuations in commodity prices have led to substantial revenue swings within the industry. Highly susceptible to the prices of aluminum and steel, the industry saw significant growth between 2021 and 2022 due to price surges post-pandemic, driven by supply chain disruptions including lockdowns, port closures and labor shortages. However, as global supply chains and economies began to normalize, a decline in aluminum and steel prices in 2023 resulted in a downturn for the industry, with expectations of continued downward pressure on growth in 2024. Overall, industry revenue is estimated to grow at a CAGR of 2.3%, including projected 0.5% growth in 2024 alone, reaching $26.0 billion.\n\nDespite the price swings, demand for metal cans has been supported by growth in the beverage manufacturing industry, particularly among soft drink and beer producers. Population growth has propelled higher beverage consumption, though shifting consumer preferences towards wine and spirits have exerted downward pressures on demand for metal cans. Despite these shifts, beer remains a significant driver of industry demand. Additionally, the cost structure has been impacted by tariffs on imported aluminum and steel from China, temporarily hampering profitability following the onset of trade tensions in 2018. Nevertheless, the industry has advanced in recycling and coating technologies, embracing closed-loop recycling systems, eco-friendly coatings and innovations to improve efficiency and environmental impact.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Fluctuations in Commodity Prices Resulted in Substantial Revenue Swings",
+            "current_performance_point_description": "Industry revenue is highly influenced by commodity prices, especially aluminum and steel. Following the pandemic, aluminum and steel prices experienced a significant surge, which contributed to the overall growth of the industry between 2021 and 2022. The pandemic caused disruptions in global supply chains. Lockdowns, port closures and labor shortages hampered the production and transportation of raw materials and finished goods, leading to reduced supply. Lower supply led to strong price increases. However, as supply chains and global economies began to normalize, steel and aluminum prices declined in 2023, contributing to the industry's downturn that year. In 2024, commodity prices are expected to continue exerting downward pressure on industry growth."
+        },
+        {
+            "current_performance_point_title": "Demand for Metal Cans has Benefited from Growth in the Beverage Manufacturing Industry",
+            "current_performance_point_description": "Beverage manufacturers, such as soft drink and beer producers, represent the major market for the industry. The beverage manufacturing industry experienced growth during the current period, benefiting metal can manufacturers. Demand for alcoholic and soft beverages is generally driven by population growth and consumer preferences. Continued population growth has contributed to higher beverage consumption, leading to increased demand for a variety of beverage options. However, consumer preferences for alcoholic drinks overall have been shifting toward wine and spirits, moving away from beer. This shift has suppressed growth in demand for metal cans. Despite this trend, beer still accounts for the vast majority of all alcoholic drinks consumed in the US, providing a stable source of demand for metal can manufacturers."
+        },
+        {
+            "current_performance_point_title": "The Cost Structure Has Been Impacted by Tariffs on Imported Aluminum and Steel from China",
+            "current_performance_point_description": "Aluminum and steel cans account for nearly 80% of all products manufactured in this industry. A substantial portion of steel and aluminum is imported from China, which is the largest producer of steel and aluminum globally. The trade war between the US and China, which started in 2018, resulted in a substantial increase in tariffs on both US goods exported to China and Chinese goods imported to the US, including aluminum and steel. As a result, the industry's profitability suffered in the first few years following the beginning of the trade war."
+        },
+        {
+            "current_performance_point_title": "The Industry Has Seen Advancements in Recycling and Coating Technologies",
+            "current_performance_point_description": "In recent years, the metal can manufacturing industry has seen significant advancements in recycling and coatings technologies. Companies had developed closed-loop recycling systems to ensure that aluminum and steel cans were continuously repurposed into new cans with minimal material loss. Efforts to decarbonize recycling processes had been underway, with innovations such as renewable energy integration and carbon capture technologies. Furthermore, chemical recycling methods have emerged, breaking down coatings and polymers more efficiently. Public-private partnerships had been established to bolster recycling infrastructure and educate the public, leading to higher recycling rates. Simultaneously, the industry had made notable strides in advanced coatings. Manufacturers had shifted towards BPA-free linings like polyester or acrylic-based alternatives, addressing health concerns while maintaining necessary barrier properties."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "The Price of Aluminum is Projected to Grow, Contributing to Overall Industry Growth",
+            "future_outlook_point_description": "Following some stagnation in 2024, aluminum prices are expected to rise early in the outlook period, driven by stronger global economic activity and increasing demand for aluminum in electric vehicle production and renewable power infrastructure projects. Growth in aluminum prices will be partly offset by increased supply, as European smelters restart operations after halting due to the energy price shock from the war in Ukraine. Power pricing significantly affects aluminum production costs, helping to balance rising demand."
+        },
+        {
+            "future_outlook_point_title": "Industry Growth Will Be Partly Offset by Declining Steel Prices",
+            "future_outlook_point_description": "Global steel prices are driven largely by changes in construction activity in China and iron production volumes in Australia and Brazil, the two largest producers of iron. China's domestic demand for steel and iron is expected to remain weak, supporting lower projected global prices for iron and steel in the coming years. In addition to subdued demand from China, the anticipated increase in iron ore production in Australia and Brazil, along with new projects elsewhere, will likely put further downward pressure on steel prices, decelerating growth in industry revenue."
+        },
+        {
+            "future_outlook_point_title": "Economic Growth Will Contribute to Higher Demand, Benefitting the Top Line",
+            "future_outlook_point_description": "Demand for metal cans is influenced by consumer spending and discretionary income. When consumers have more disposable income, they tend to spend more on a variety of goods, including both alcoholic and non-alcoholic beverages, which are commonly packaged in metal cans. Consumer spending and discretionary income are influenced by employment rates and economic growth. Both of these indicators are projected to grow over the outlook period as interest rates expected to decline, thus stimulating the economy."
+        },
+        {
+            "future_outlook_point_title": "The Industry Will Continue to Consolidate, Introducing Additional Barriers to Entry",
+            "future_outlook_point_description": "The industry has been dominated by a handful of major companies, with the top four players accounting for more than half of the industry's revenue. Over the past decade, consolidation has been a significant trend in the industry, and this pattern is expected to persist moving forward. As competition from both domestic and international players continues to intensify, manufacturers will increasingly benefit from larger economies of scale. This shift is expected to contribute to the exit of smaller companies and the growing market share of established players."
+        }
+    ],
+    "industry_definition": "This industry primarily manufactures light metal cans made of aluminum or steel that are used as beverage and food containers. Steel shipping barrels, drums, pails and other fabricated steel boxes are also manufactured by this industry and account for a small share of revenue. This industry doesn't manufacture foil containers or heavy metal containers.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Globalization Level: low - steady"
+        ],
+        "negative_impact_factors": [
+            "Capital Intensity Level: high",
+            "Competition Level: high - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Customer Class Concentration",
+            "High Revenue per Employee"
+        ],
+        "weaknesses": [
+            "High Competition",
+            "Medium Imports",
+            "Low Profit vs. Sector Average",
+            "High Product/Service Concentration",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "Per capita expenditure on alcohol"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Low Performance Drivers: Per capita soft drink consumption"
+        ]
+    },
+    "key_trends": [
+        "Because of their lower production costs, plastic bottles are a major competitor for the metal can and container manufacturing industry. Also, their convenience in larger sizes makes them a popular choice among consumers.",
+        "Consumers are moving away from canned foods. Fresh alternatives are typically thought of as tastier and healthier than preserved canned alternatives.",
+        "Commodity price fluctuations greatly impacted industry revenue. During the pandemic, disruptions drove supply drops, spiking aluminum and steel prices and boosting industry growth. As supply chains normalized, prices fell in 2023, exerting downward pressures on revenue growth.",
+        "Beverage manufacturing growth supported metal can demand. Population growth increased beverage consumption, benefiting metal can manufacturers. However, a consumer shift away from beer to wine and spirits suppressed overall demand growth.",
+        "Ball Corporation continues to lead the way. Headquartered in Colorado, it continues to supply more aluminum cans than any competitor.",
+        "Crown Holdings provides a variety of different metal containers. Their product diversity enables them to carve out a sizeable chunk of the market."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Beverage manufacturers",
+            "segment_description": "Soft drinks account for slightly less than two-thirds of the market's revenue in the beverage can segment. This is largely driven by the constant and robust demand for carbonated soft drinks, energy drinks and sports beverages.",
+            "segment_percentage": 67.8
+        },
+        {
+            "segment": "Food manufacturers",
+            "segment_description": "Food manufacturers prefer steel cans due to steel's durability, long shelf life and cost efficiency. Steel cans can withstand significant mechanical stress, such as impacts and crushing forces, during transportation and handling, greatly reducing the risk of dents, punctures and leaks.",
+            "segment_percentage": 20.9
+        },
+        {
+            "segment": "Other",
+            "segment_description": "The use of metal cans extends far beyond the food and beverage sectors, encompassing aerosol products, paints and varnishes, automotive supplies and a diverse array of other applications.",
+            "segment_percentage": 3.3
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Aluminum Cans",
+            "product_description": "Aluminum cans dominate the beverage market, particularly for carbonated drinks, beer and energy drinks. The lightweight, quick-cooling properties and aesthetic appeal make them the preferred choice.",
+            "product_percentage": 52
+        },
+        {
+            "product_or_service": "Steel and Tin Cans",
+            "product_description": "Steel cans are generally stronger and more durable than aluminum cans, making them a better option for packaging products that require more protection, like soups, vegetables, fruits, pet food and ready-to-eat meals.",
+            "product_percentage": 29.8
+        },
+        {
+            "product_or_service": "Other Metal Containers",
+            "product_description": "Other products encompass light-gauge metal containers such as bins, drums, garbage cans, lunch boxes, mailboxes, and barrels. These items are commonly made of steel, making them susceptible to fluctuations in steel prices.",
+            "product_percentage": 18.2
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Steel Rolling & Drawing in the US",
+            "Metalworking Machinery Manufacturing in the US",
+            "Land Leasing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Iron & Steel Manufacturing in the US",
+            "Aluminum Manufacturing in the US",
+            "Iron Ore Mining in the US",
+            "Copper, Nickel, Lead & Zinc Mining in the US"
+        ],
+        "tier_1_buyers": [
+            "Metal Can & Container Manufacturing in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Soft Drink Consumption",
+            "determinant_description": "Soft drinks remain the most common use of metal cans and containers, making general soft drink consumption essential to success in this industry. Soft drink consumption has sunk steadily as healthy eating has increased. A slump in soft drink consumption will potentially threaten the industry."
+        }
+    ],
+    "international_trade": {
+        "import_level": "moderate",
+        "import_trend": "increasing",
+        "export_level": "moderate",
+        "export_trend": "increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Chinese imports undercut domestic manufacturers",
+                "trade_description": "China is the worldwide leader in steel and aluminum production, which gives Chinese metal can and container manufacturers an upper hand when it comes to input costs and output volume. Chinese companies spend less on labor than those based in the United States. This allows them to provide lower-cost alternatives to metal cans and containers produced domestically, taking up an increasing portion of domestic demand."
+            },
+            {
+                "trade_title": "Mexico's proximity to the US and trade agreements make it a large exporter of metal cans",
+                "trade_description": "The close geographical proximity between Mexico and major markets such as the United States and Canada reduces shipping costs and transit times, making it economically viable to import metal cans. Formerly known as NAFTA, the USMCA facilitates easier and more cost-effective trade between these three countries. This agreement reduces tariffs and trade barriers, making it financially attractive to import metal cans from Mexico. Manufacturing costs in Mexico, including labor, are generally lower compared to the United States and other developed countries. This cost advantage allows Mexican manufacturers to produce metal cans at a competitive price."
+            },
+            {
+                "trade_title": "Canada and Mexico dominate the export market",
+                "trade_description": "Canada and Mexico benefit from a free trade agreement with the United States, in addition to ease of transport between the two countries due to proximity. The greater volume of output by United States-based metal can and container manufacturers allows exports to take up a substantial portion of the markets in these countries."
+            },
+            {
+                "trade_title": "Demand from foreign customers grows during the pandemic",
+                "trade_description": "At the beginning of the pandemic, great uncertainty about the future, both economically and logistically, caused a surge in demand for canned foods due to their long shelf life. This caused a surge in demand for cans from food processors. This benefited domestic manufacturers, as the United States produces a high volume of these products. Exports have since begun to normalize as volatility decreases. Demand for cans for food products has returned to its typical cycle."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes is home to the largest percentage of metal can and container manufacturers. This region provides easy access to Canada, one of the leading export destinations for domestic manufacturers. The Great Lakes is the US manufacturing hub and a prominent producer of natural resources from its robust mining sector. Metal can manufacturers congregate here to engender close relationships with upstream suppliers.",
+            "percentage_establishments": 38,
+            "percentage_population": 27
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast is the most populated region in the United States. The Southeast provides easy access to Mexico, one of the key destinations for exports of metal cans and containers. Food and beverage manufacturers focus on this region thanks to the high population commanding enormous demand, so the metal can and container manufacturers operate many facilities to capitalize on this.",
+            "percentage_establishments": 18,
+            "percentage_population": 38
+        },
+        {
+            "location": "West",
+            "location_description": "The West is the second-most populous region in the US, and it commands high demand for food and beverage products stored in cans. The West also provides easy access to Canada and Mexico, which provides added incentive for manufacturers to locate there. The West is by far home to the most vegetable farms in the US. Many metal can and container manufacturers choose to house their production here to capitalize on this, as vegetable farmers can use their goods to extend their shelf life and expand their sales year-round.",
+            "percentage_establishments": 12,
+            "percentage_population": 23
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "101",
+            "percentage_establishments": 11,
+            "percentage_population": 15
+        },
+        {
+            "location": "Plains",
+            "location_description": "101",
+            "percentage_establishments": 9,
+            "percentage_population": 7
+        },
+        {
+            "location": "Southwest",
+            "location_description": "101",
+            "percentage_establishments": 6,
+            "percentage_population": 11
+        },
+        {
+            "location": "New England",
+            "location_description": "101",
+            "percentage_establishments": 4,
+            "percentage_population": 5
+        },
+        {
+            "location": "Rocky M",
+            "location_description": "101",
+            "percentage_establishments": 2,
+            "percentage_population": 2
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "EPA Regulations Keep Manufacturers in Check",
+                "regulation_description": "The Environmental Protection Agency (EPA) stipulates how much and what kind of waste manufacturers produce and what materials go into the production and pre-treatment of metal cans and containers."
+            },
+            {
+                "regulation_title": "LABELING STANDARDS PROVIDE CLARITY TO CONSUMERS",
+                "regulation_description": "The government regulates what information must be contained in labeling and what companies can claim about their products. This includes clarity on health concerns, alcoholic beverage controls, environmental claims, etc."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is mature."
+            },
+            {
+                "barrier_title": "Capital Intensity Level",
+                "barrier_description": "The capital intensity level is high."
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "The competition level is high and steady."
+            },
+            {
+                "barrier_title": "Legal",
+                "barrier_description": "Legal hurdles relate to environmental regulations set by the Environmental Protection Agency (EPA) on materials used to produce and treat cans."
+            },
+            {
+                "barrier_title": "Start-up Costs",
+                "barrier_description": "Producing cans and containers entails significant start-up costs. Price competition is high, so new manufacturers often must operate at a loss initially."
+            },
+            {
+                "barrier_title": "Differentiation",
+                "barrier_description": "Cans and containers are no-frill products with little differentiation between manufacturers' output. Success hinges on high-quality, low-price production."
+            },
+            {
+                "barrier_title": "Labor Expenses",
+                "barrier_description": "Once relationships are formed, success hinges on product volume. Manufacturers must hire many workers but can reduce labor costs through automation."
+            }
+        ],
+        "barriers_trend": "Steady",
+        "factors_increased_barrier": [
+            "The industry is mature.",
+            "The capital intensity level is high.",
+            "The competition level is high and steady."
+        ],
+        "factors_decreased_barrier": [
+            "The globalization level is low and steady."
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Plastic bottles are a major competitor",
+                "basis_description": "Because of their lower production costs, plastic bottles are a major competitor for the metal can and container manufacturing industry."
+            },
+            {
+                "basis_title": "Consumers moving away from canned foods",
+                "basis_description": "Consumers are moving away from canned foods. Fresh alternatives are typically thought of as tastier and healthier than preserved canned alternatives."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Metal can and container manufacturers merge",
+                "concentration_description": "Smaller manufacturers have merged with or been acquired by larger ones to benefit from better deals with metal producers and keep prices low to compete with imports."
+            },
+            {
+                "concentration_title": "Vertically integrated food/beverage producers",
+                "concentration_description": "Some larger food and beverage producers have in-house bottling/packaging, cutting out metal can manufacturers. During the pandemic, some sold these departments, bringing demand back but mostly to the largest manufacturers."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Ball Corp",
+                "company_percentage": 24.1
+            },
+            {
+                "company_name": "Crown Holdings, Inc.",
+                "company_percentage": 13.8
+            },
+            {
+                "company_name": "Ardagh Group S.A.",
+                "company_percentage": 13.4
+            },
+            {
+                "company_name": "Silgan Holdings Inc.",
+                "company_percentage": 9.0
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 39.4
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 80
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 30
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 40
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 50
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 60
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 70
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Passing on Cost Increases to Customers",
+            "cost_factor_description": "Metal can manufacturers have been successful at passing on cost increases to customers through a combination of market positioning, contractual frameworks, value-added services and operational efficiencies."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Labor Expenses",
+                "capital_intensity_description": "Once relationships have been formed, success hinges on the volume of products made. Operators must hire as many workers as possible to pump out products, but increasing automation can reduce labor costs."
+            },
+            {
+                "capital_intensity_title": "Capital Expenses",
+                "capital_intensity_description": "Once relationships have been formed, success hinges on product volume. Manufacturers must hire as many workers as possible to pump out products, but increasing automation can reduce labor costs."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "The cost of inputs changes based on fluctuations in steel and aluminum prices",
+                "volatility_description": "The industry heavily relies on steel and aluminum. Prices for these metals can fluctuate widely based on global supply and demand dynamics, geopolitical tensions and market speculations."
+            },
+            {
+                "volatility_title": "Demand for Canned Beverages and Food Impact Revenue Volatility",
+                "volatility_description": "Changes in consumer preferences, such as a shift towards sustainable packaging solutions like biodegradables or reusable containers, can weaken demand for traditional metal cans."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Material advancements have made metal cans lighter and better suited for various applications",
+                "technological_change_description": "Advances in metallurgy have allowed manufacturers to produce thinner, lighter cans that use less material without compromising strength and durability. This reduces transportation costs and environmental impact."
+            },
+            {
+                "technological_change_title": "The industry has improved its recycling process",
+                "technological_change_description": "Enhanced recycling processes have increased the use of recycled materials in can production. Aluminum, in particular, is highly recyclable and innovations in sorting and processing technologies have made recycling more efficient."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "Have exports offered an opportunity for your company?",
+            "answer": "Metal Can and Container Manufacturing industry's businesses benefit from exports as it increases their customer base and increases their revenue. Furthermore, diversifying the customer base by country and industry helps insulate manufacturing businesses from shocks in various markets."
+        },
+        {
+            "question": "Does your company specialize in a niche or do you produce a diversified range of products?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "LABELING STANDARDS PROVIDE CLARITY TO CONSUMERS",
+            "answer": "While mostly of concern to customers of metal can and container manufacturers, the government regulates what information must be contained in labeling and what companies can claim about their products. This includes clarity on health concerns, alcoholic beverage controls, environmental claims, etc. Manufacturers must ensure the products they produce for their customers adhere to these stipulations."
+        },
+        {
+            "question": "INDUSTRY ASSISTANCE",
+            "answer": "MODERATE assistance STEADY assistance"
+        },
+        {
+            "question": "CAN MANUFACTURER'S INSTITUTE",
+            "answer": "The Can Manufacturer's Institute is a trade association that conveys the interests of can and container manufacturers to government agencies and promotes legislation that's beneficial to the industry. This gives metal can manufacturers the power to have more input on market conditions than their prices and supply."
+        },
+        {
+            "question": "Sales & Marketing",
+            "answer": "More metal can manufacturing businesses are beginning to produce specialty sized products to accommodate a growing need from customers. Customers are looking for packaging that will help their goods stand out from its competitors."
+        },
+        {
+            "question": "Has your company located near key downstream distributors to reduce shipping costs?",
+            "answer": "The transportation of empty cans is inefficient. Therefore, many manufacturers have set up facilities near their customers as a way to reduce shipping costs and strengthen relationships with their customers."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "The most important input for the Metal Can and Container Manufacturing industry is aluminum. Similar to many commodities, the price of aluminum is quite volatile."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation over the past five years?",
+            "answer": "Improvements in technology have helped simplify the production process. Therefore, low skilled employees are becoming less essential. Instead, there has been a shift towards hiring employees who can operate and repair the machines involved in the automation process."
+        },
+        {
+            "question": "What steps do you take to safeguard your company's proprietary information?",
+            "answer": "Certain metal can manufacturing businesses have placed a lot of emphasis on R&D to develop propriety technology and products. In order to protect their investment many acquire patents as a way of safeguarding their newest assets."
+        },
+        {
+            "question": "How does your company ensure all health and safety requirements are met?",
+            "answer": "Manufacturers are also subject to a variety of non-environmental matters. Included in these are occupational health and safety, wage, overtime and other employment matters. These issues are carefully monitored by both state and federal government agencies."
+        },
+        {
+            "question": "Do you work with trade associations or other interest groups to advance your company's interests?",
+            "answer": "Metal Can Manufacturers can work with the Can Manufacturers Institute (CMI). The CMI provides a forum for members to advocate to legislative and regulatory agencies to promote the metal can manufacturing industry."
+        },
+        {
+            "question": "How has input price volatility affected profit over the past 12 months?",
+            "answer": "The price of aluminum, a key input, is volatile. This impacts the cost of these manufacturers and may be impacting profit margin, depending on whether the additional costs are being passed onto the customer or not."
+        },
+        {
+            "question": "How does your company's profit compare with your main competitors'?",
+            "answer": "Industry consolidation has helped the largest companies improve operating efficiencies and contain costs, sustaining above-average industry profit margins even with higher input costs. Conversely, smaller operators may"
+        },
+        {
+            "question": "How hard is it to promote your company to suppliers? Do you have any supply contracts in place?",
+            "answer": "It is important to maintain a good relationship with suppliers to secure competitively priced raw materials avert costly disruptions in raw material supply."
+        },
+        {
+            "question": "How quickly do you adopt new technology? Do you engage in any R&D activity to improve your manufacturing technology?",
+            "answer": "The industry has a relatively high degree of capital intensity. Productivity gains are sought primarily to maintain profitability. Continually investing in and upgrading a company's manufacturing machinery is essential to competitive success."
+        },
+        {
+            "question": "What measures do you have in place to reduce operational costs? Do you have a steady source of key inputs?",
+            "answer": "A successful company protects their fine line of profit. To limit exposure to price movements of raw materials, operators incorporate sales provisions into contracts or use derivatives."
+        },
+        {
+            "question": "What proportion of your revenue comes from soft drink producers? How has your company fared as soft drink consumption declines?",
+            "answer": "Increased soft drink consumption drives industry growth. Conversely, the industry is hurt when demand for soda declines."
+        },
+        {
+            "question": "What percentage of your products are made from aluminum? Are you able to pass along costs downstream when prices fluctuate?",
+            "answer": "Higher aluminum prices raise purchase costs, forcing industry operators to transfer those hikes in production costs to consumers in the form of higher selling prices. However, a rise in product prices is likely to lower demand for aluminum cans as soft drink and breweries manufacturers will opt to use other substitute materials such as glass and plastics."
+        },
+        {
+            "question": "What proportion of your revenue is derived from exports? How does your company fare when the dollar appreciates?",
+            "answer": "Imports that come from China, Germany and other countries fulfill a moderate share of domestic demand. A strong US dollar, as reflected by a high trade-weighted index, encourages imports and discourages exports, hurting industry operators."
+        }
+    ]
+}

@@ -1,0 +1,441 @@
+{
+    "report_title": "Industry at a Glance: Electronic and Computer Repair Services",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 21271000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "revenue_cagr_value": -2.11
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": -2.0
+            }
+        },
+        "profit": {
+            "profit_dollars": 1319000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": -1.57
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": -1.5
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 6.2,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -0.64
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": -0.5
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 9114000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": -1.7
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": -1.0
+            }
+        },
+        "employees": {
+            "employees_count": 123727,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": -0.5
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": -0.3
+            }
+        },
+        "wages": {
+            "wages_dollars": 7540000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 2.5
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 1.5
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 0.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 0.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0.0
+            }
+        }
+    },
+    "executive_summary": "The electronic and computer repair services industry includes repairing and maintaining consumer electronic equipment, computers, office machines, communications equipment and other electronic equipment. Industry performance generally runs countercyclical to poor economic conditions, as consumers substitute purchases with repairs during periods of economic uncertainty. Revenue declined over 2019-2024 due to low unemployment and high income supporting new device purchases versus repairs. Despite the pandemic, business closures and stay-at-home orders deepened demand declines in 2020 as consumers deferred repairs.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Industry Performance is Countercyclical to Economic Performance",
+            "current_performance_point_description": "Strong economic conditions over most of the past five years have contributed to recent revenue declines. Electronic and computer repair services are one of a few industries with potential to weather weak economic conditions, especially compared with other industries in the electronics subsector."
+        },
+        {
+            "current_performance_point_title": "Supply Chain Disruptions",
+            "current_performance_point_description": "Supply chain disruptions contributed to increased demand for repairs in 2022."
+        },
+        {
+            "current_performance_point_title": "Heightened Usage and Technical Advancements",
+            "current_performance_point_description": "Heightened usage of electronics should increase the rate at which they need repairs, but technical advancements have elongated the life cycle of these goods while rapid obsoletion of technology has provided further incentive for consumers to replace old equipment, constraining revenue."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Industry Operators Will Find New Areas of Demand",
+            "future_outlook_point_description": "Operators will find sustained demand via the increasing complexity of consumer devices, computers and other precision instruments that require certain complex repair services."
+        },
+        {
+            "future_outlook_point_title": "Accelerated Technological Change Will Drive Replacements Over Repair",
+            "future_outlook_point_description": "The choice between replacing and repairing equipment will continue to be the most significant demand determinant for this industry."
+        },
+        {
+            "future_outlook_point_title": "New Product Introductions and Consumer Demand for the Latest Models Will Constrain Growth",
+            "future_outlook_point_description": "Falling prices will grow demand for new electronic goods, providing a stronger incentive for consumers to replace rather than repair products."
+        },
+        {
+            "future_outlook_point_title": "Decreasing Demand Will Cause Smaller Operators to Struggle",
+            "future_outlook_point_description": "The number of electrical and electronic installers and repairers will continue to decline as operators contend with falling demand."
+        }
+    ],
+    "industry_definition": "Companies in this industry are involved in repairing and maintaining consumer electronic equipment, computers, office machines, communications equipment and other electronic and precision equipment.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - increasing"
+        ],
+        "negative_impact_factors": [
+            "Life Cycle Stage: decline",
+            "Industry Assistance Level: low - steady"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "Low Product/Service Concentration",
+            "High Revenue per Employee",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "Decline Life Cycle Stage",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Percentage of households with at least one computer"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Per capita disposable income"
+        ]
+    },
+    "key_trends": [
+        "The industry is highly fragmented and is dominated by small and independent operators.",
+        "The industry has suffered amid the increasing affordability of electronics and computers.",
+        "Despite advancements in technology, the repair service demand has been impacted by the rapid obsolescence of modern devices."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Businesses and nonprofit organizations",
+            "segment_description": "The operations of these business clientele vary and include both large and small corporations.",
+            "segment_percentage": 55.8
+        },
+        {
+            "segment": "Households",
+            "segment_description": "The typical consumer household postpones the repair or maintenance of equipment like computers.",
+            "segment_percentage": 29.7
+        },
+        {
+            "segment": "Federal, state and local governments",
+            "segment_description": "Repair purchases from public sector industries such as education and healthcare.",
+            "segment_percentage": 9.5
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Includes building contractors, hotels and restaurants.",
+            "segment_percentage": 5.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Consumer electronics repairs, including radio, TV and VCR",
+            "product_description": "Repairs include all consumer electronics.",
+            "product_percentage": 9.1
+        },
+        {
+            "product_or_service": "Computer and office machine repairs",
+            "product_description": "Covers repairs for office machines.",
+            "product_percentage": 26.6
+        },
+        {
+            "product_or_service": "Communications equipment repairs",
+            "product_description": "Includes repairs for communications devices.",
+            "product_percentage": 19.7
+        },
+        {
+            "product_or_service": "Other electronic equipment repairs, including medical equipment",
+            "product_description": "Includes repairs on a variety of electronics.",
+            "product_percentage": 44.6
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "/ibisworld/reportkey/1/938",
+            "/ibisworld/reportkey/1/927",
+            "/ibisworld/reportkey/1/939",
+            "/ibisworld/reportkey/1/941"
+        ],
+        "tier_2_suppliers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Per Capita Disposable Income",
+            "determinant_description": "As per capita disposable income rises, demand for industry services may decline."
+        },
+        {
+            "determinant_title": "Consumer Preferences and Buying Patterns",
+            "determinant_description": "Consumer preferences greatly affect demand for repair services."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region hosts the most industry establishments.",
+            "percentage_establishments": 25.8,
+            "percentage_population": 25.8
+        },
+        {
+            "location": "West",
+            "location_description": "Home to technology corporations and numerous establishments.",
+            "percentage_establishments": 22.4,
+            "percentage_population": 23.5
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "Contains various industry establishments.",
+            "percentage_establishments": 14.9,
+            "percentage_population": 15.2
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "Various establishments located in this area.",
+            "percentage_establishments": 14.4,
+            "percentage_population": 14.9
+        },
+        {
+            "location": "Southwest",
+            "location_description": "This region hosts fewer industry establishments.",
+            "percentage_establishments": 8.9,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "Plains",
+            "location_description": "Few establishments due to dominant industries.",
+            "percentage_establishments": 6.4,
+            "percentage_population": 6.8
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "Known for lower demand due to lower population density.",
+            "percentage_establishments": 4.2,
+            "percentage_population": 6.9
+        },
+        {
+            "location": "New England",
+            "location_description": "Involves various industries.",
+            "percentage_establishments": 3.0,
+            "percentage_population": 4.4
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: decline",
+            "Industry Assistance Level: low - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - increasing"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": []
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 30
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 25
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 5
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Large Companies Benefit from Lower Purchase Costs",
+            "cost_factor_description": "Operators must purchase replacement parts; larger companies often negotiate better prices."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "How heavily dependent are your company's sales on the health of the US economy?",
+            "answer": "Dependent on disposable income."
+        },
+        {
+            "question": "Have you noticed any changes in customer demographics?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "How do you ensure quality control in repair services?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "Is your company investing heavily in R&D to meet changing consumer preferences?",
+            "answer": "The average operator invests in efficient newly developed components."
+        },
+        {
+            "question": "What software tools are used in your repair services?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "Have you been able to reduce wage costs by automating operations?",
+            "answer": "Some diagnostics are automated, but repairs are labor-intensive."
+        },
+        {
+            "question": "How do you ensure compliance with electronic waste disposal regulations?",
+            "answer": "Regulations mainly pertain to employee training."
+        },
+        {
+            "question": "How frequently does your company purchase new equipment?",
+            "answer": "Purchases occur constantly as technology evolves."
+        },
+        {
+            "question": "How does your company's profit margin compare with your main competitors?",
+            "answer": "High reputation influences pricing and profit."
+        },
+        {
+            "question": "How do you maintain optimum stock levels?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "How do you negotiate contracts for supplies?",
+            "answer": "Negotiations are crucial for access to competitive supplies."
+        },
+        {
+            "question": "How do you train your staff to ensure they provide sound customer service?",
+            "answer": "Strong technical expertise and reputation are key."
+        }
+    ]
+}

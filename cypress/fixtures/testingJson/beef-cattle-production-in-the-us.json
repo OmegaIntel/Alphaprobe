@@ -1,0 +1,489 @@
+{
+    "report_title": "Cattle Ranching Industry Report",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 97856000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 1.38
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": -0.05
+            }
+        },
+        "profit": {
+            "profit_dollars": 5186000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": -1.58
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5.3,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -2.92
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 14525000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 1594576,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 2991000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": 1286000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": 827000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2024 currency. In the current period, fluctuating feed prices and production inefficiencies, exacerbated by the COVID-19 pandemic, have caused volatility in the price of red meat. In 2021 alone, the price of red meat jumped 21.1% as drought conditions lowered herd numbers and increased the price of feed. While red meat prices are expected to begin falling back toward pre-pandemic levels, the overall surge has resulted in revenue growing at a CAGR of 4.2% to $97.9 billion through the end of 2024. However, per capita beef consumption declines, and falling red meat prices have led to revenue dropping an estimated 3.7% in 2024. Industry profit has grown from 4.2% in 2018 to 5.3% in 2024 as feed prices begin to stabilize, putting less pressure on ranchers and feedlots.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Droughts and expensive feed challenge cattle farmer",
+            "current_performance_point_description": "Intense drought conditions from 2020 to 2022 made raising cattle difficult, and ranchers had to spend more money consistently to maintain their herds. The persisting drought conditions decreased crop yields and caused the already volatile price of feed to surge."
+        },
+        {
+            "current_performance_point_title": "Meat consumption declines",
+            "current_performance_point_description": "Per capita beef consumption has been declining for nearly three decades as concerns about red meat's nutritional value and link to heart disease have led consumers toward alternative foods."
+        },
+        {
+            "current_performance_point_title": "International trade booms",
+            "current_performance_point_description": "Canada and Mexico are by far the most common trading partner for beef cattle ranchers and feedlots as the transportation costs associated with"
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Weather Volatility Makes Droughts Less Predictible",
+            "future_outlook_point_description": "In the coming years, volatile weather conditions will continue to determine the performance of the cattle industry. When there is sufficient rain, crop yields are better, and feed prices remain healthy."
+        },
+        {
+            "future_outlook_point_title": "Meat Consumption Will Continue to Fall",
+            "future_outlook_point_description": "While beef has long been considered a staple in everyday Americans' diets, external competition will threaten the growth of beef cattle producers as red meat consumption falls and alternatives become more accessible."
+        },
+        {
+            "future_outlook_point_title": "Mergers and Cooperatives Will Emerge",
+            "future_outlook_point_description": "Recent acquisitions, like JBS SA's sale of Five Rivers Cattle Feeding to Pinnacle Asset Management, show how the world's largest meat processors are moving away from feedlot operations and cattle production."
+        },
+        {
+            "future_outlook_point_title": "TECHNOLOGICAL INNOVATION WILL REDUCE COSTS AND RAISE QUALITY",
+            "future_outlook_point_description": "In the coming years, cattle ranchers will invest in new technology to improve efficiency and reduce operating costs."
+        }
+    ],
+    "industry_definition": "This industry includes farms and ranches that primarily raise cattle, including cattle for dairy herd replacements, or feed cattle to fatten and prepare them for consumption. The industry also includes cattle feedlot operations, which produce high-quality beef.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low Concentration Level",
+            "low Technology Change Level",
+            "low - increasing Globalization Level"
+        ],
+        "negative_impact_factors": [
+            "high Capital Intensity Level",
+            "high - steady Competition Level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "High Competition",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "Low Revenue per Employee",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "Price of feed"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Low Revenue Growth (2024-2029)",
+            "Low Performance Drivers",
+            "Per capita beef consumption"
+        ]
+    },
+    "key_trends": [
+        "Beef producers compete on quality for price. Organic and grass-finished beef is becoming highly sought-after, but processors and consumers want to pay a fair price.",
+        "Alternative meats threaten beef's market acceptance. Plant-based substitutes, as well as poultry and seafood, are becoming increasingly popular because of their reputation as healthier and more humane.",
+        "Droughts and expensive feed challenge cattle farmers. Margin compression and volatile meat prices have combined with falling beef consumption to push down revenue.",
+        "International trade has boomed. Challenging cattle conditions in Canada have made exports to the nation one of the only areas of growth for the industry.",
+        "Profit will continue to be low. All major meat processors have exited the industry, indicating the inefficiencies of cattle farming.",
+        "There are no major players in the industry, as all large corporations have closed their feedlots in recent years."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Cattle sold for slaughter",
+            "segment_description": "A very small portion of revenue comes from cattle sold directly to slaughterhouses, as slaughterhouses typically raise their own cattle.",
+            "segment_percentage": 2.7
+        },
+        {
+            "segment": "Sales to other farms for feedlot",
+            "segment_description": "Cattle ranches save money by purchasing cheaper-priced stockers, calves early on in life and not ready for slaughter. Most cattle are sold to other farms.",
+            "segment_percentage": 12.1
+        },
+        {
+            "segment": "Sales to other farms for stockers",
+            "segment_description": "Cattle ranches save money by purchasing cheaper-priced stockers, calves early on in life and not ready for slaughter. Most cattle are sold to other farms.",
+            "segment_percentage": 85.2
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "S T E E R S",
+            "product_description": "Steers, young castrated male cattle, are used primarily for beef production.",
+            "product_percentage": 14.6
+        },
+        {
+            "product_or_service": "H E I F E R S",
+            "product_description": "Heifers are younger female cows that haven't calved and are used for herd replacement to keep populations stable.",
+            "product_percentage": 15.8
+        },
+        {
+            "product_or_service": "Beef Cows",
+            "product_description": "Female cows are used primarily for beef production.",
+            "product_percentage": 30.7
+        },
+        {
+            "product_or_service": "Calves",
+            "product_description": "Calves weigh less than 500 pounds and may be either male or female. Most calves are bred with the purpose of cow-calf operations that specialize in supplying herd replacements.",
+            "product_percentage": 27.3
+        },
+        {
+            "product_or_service": "Dairy Cows",
+            "product_description": "Female cows are also, to a lesser extent, used for dairy products.",
+            "product_percentage": 9.6
+        },
+        {
+            "product_or_service": "Bulls",
+            "product_description": "Bulls are non-castrated male cattle typically used for breeding and make up a very small percentage of total cattle.",
+            "product_percentage": 2
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [],
+        "tier_2_suppliers": [
+            "Farm, Lawn & Garden Equipment Wholesaling in the US",
+            "Water Supply & Irrigation Systems in the US",
+            "Livestock Production Support Services in the US",
+            "Coal & Natural Gas Power in the US",
+            "Tractors & Agricultural Machinery Manufacturing in the US",
+            "Fence Construction in the US"
+        ],
+        "tier_1_buyers": [
+            "Beef & Pork Wholesaling in the US",
+            "Meat, Beef & Poultry Processing in the US",
+            "Meat Markets in the US"
+        ],
+        "tier_2_buyers": [
+            "Specialty Food Stores in the US",
+            "Grocery Wholesaling in the US",
+            "Supermarkets & Grocery Stores in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Red meat prices",
+            "determinant_description": "Red meat prices dictate the returns for US cattle ranches and feedlots. Increased prices generate an increase in returns per head for farmers, though sustained high prices can push customers to substitutes."
+        },
+        {
+            "determinant_title": "Market segmentation",
+            "determinant_description": "Farms need feeders and stockers - most cattle are sold to other farms as stockers (85.2%) or for feedlots (12.1%), with only 2.7% sold directly for slaughter. Slaughterhouses are a small portion of revenue."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Increasing",
+        "export_level": "Low",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Cattle imports from Canada",
+                "trade_description": "Canada is the number one source of cattle imported to the US, with Mexico responsible for almost all non-Canadian cattle imports."
+            },
+            {
+                "trade_title": "Lower domestic production costs drive down imports",
+                "trade_description": "Feeding cattle in Canada is often cheaper, which lowers the price of red meat imported from the nation."
+            },
+            {
+                "trade_title": "Supply chain disruptions abroad support export growth",
+                "trade_description": "Because of high cattle mortality rates in Canada, the value of exported cattle to Canada surged and has remained high."
+            },
+            {
+                "trade_title": "Overseas markets create opportunities for exporters",
+                "trade_description": "While most imports go to Canada and Mexico, overseas countries are more willing to pay for transporting live cattle overseas."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Southwest",
+            "location_description": "The favorable climate, the lower price of land and the proximity to beef processors and feed suppliers combine to make the Southwest an extremely favorable region for cattle ranchers and feedlots.",
+            "percentage_establishments": 32,
+            "percentage_population": 10
+        },
+        {
+            "location": "Plains",
+            "location_description": "The favorable climate, the lower price of land and the proximity to beef processors and feed suppliers combine to make the Plains an extremely favorable region for cattle ranchers and feedlots.",
+            "percentage_establishments": 30,
+            "percentage_population": 8
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region has a somewhat favorable climate and is close to crucial feed sources.",
+            "percentage_establishments": 15,
+            "percentage_population": 20
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region has a somewhat favorable climate and is close to crucial feed sources.",
+            "percentage_establishments": 10,
+            "percentage_population": 18
+        },
+        {
+            "location": "West",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5,
+            "percentage_population": 10
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5,
+            "percentage_population": 15
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 2,
+            "percentage_population": 5
+        },
+        {
+            "location": "Rocky M",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 1,
+            "percentage_population": 4
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "MEAT MUST BE SAFE AND HIGH QUALITY",
+                "regulation_description": "The Food and Drug Administration (FDA) conducts inspections to ensure beef is of a certain quality, products are labeled appropriately and packaged foods are fit for consumers."
+            },
+            {
+                "regulation_title": "ENVIRONMENTAL REGULATIONS ARE INCREASING",
+                "regulation_description": "The US Department of Agriculture (USDA) and the Environmental Protection Agency (EPA)..."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Factors for increased barriers",
+                "barrier_description": "Life Cycle Stage: mature. Capital Intensity Level: high. Competition Level: high - steady."
+            },
+            {
+                "barrier_title": "Factors for decreased barriers",
+                "barrier_description": "Concentration Level: low. Technology Change Level: low. Globalization Level: low - increasing."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Capital Intensity Level: high",
+            "Competition Level: high - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Concentration Level: low",
+            "Technology Change Level: low",
+            "Globalization Level: low - increasing"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Quality and price competition",
+                "basis_description": "Beef producers compete on quality for price. Organic and grass-finished beef is becoming highly sought-after, but processors and consumers want to pay a fair price."
+            },
+            {
+                "basis_title": "Competition from alternative meats",
+                "basis_description": "Alternative meats threaten beef's market acceptance. Plant-based substitutes, as well as poultry and seafood, are becoming increasingly popular because of their reputation as healthier and more humane."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Concentration varies by operation type",
+                "concentration_description": "Cattle ranchers are almost all classified as nonemployers, which means they're usually family-owned and..."
+            }
+        ],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Other Costs Keep Cattle Healthy",
+            "cost_factor_description": "Other costs include miscellaneous fees, administrative costs and insurance and veterinary services bills."
+        },
+        {
+            "cost_factor_title": "Heavy Machinery Creates High Depreciation Costs",
+            "cost_factor_description": "Cattle ranchers and feedlots depend on heavy machinery and expensive equipment, reducing the labor need."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "CAPITAL EXPENSES",
+                "capital_intensity_description": "The cattle farming sector demands a considerably high level of capital expenditure. Constant investments in tractors, trucks, scales, ..."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_trend": "Unknown",
+        "volatility_points": [
+            {
+                "volatility_title": "Erratic Feed Costs Bring High Volatility",
+                "volatility_description": "Feed is the primary input cost for cattle ranchers and feedlots..."
+            },
+            {
+                "volatility_title": "Weather and Disease Influence Production",
+                "volatility_description": "The presence of animal disease in the local region..."
+            }
+        ]
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_trend": "Unknown",
+        "technological_change_points": [
+            {
+                "technological_change_title": "BREEDING INNOVATIONS BOOST MEAT OUTPUT",
+                "technological_change_description": "Special DNA tests and genetic engineering have begun to increase the efficiency of cattle."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "How are you adapting your marketing strategies to meet consumer demands for sustainably raised beef?",
+            "answer": "Consumers are trending towards sustainably raised beef as opposition to 'factory farming' mounts. These demands are changing the traditional marketing models in the industry."
+        }
+    ]
+}

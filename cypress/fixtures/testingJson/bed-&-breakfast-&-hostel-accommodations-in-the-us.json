@@ -1,0 +1,506 @@
+{
+    "report_title": "Bed & Breakfast & Hostel Accommodations in the US",
+    "report_date": "Jul 14, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 3018000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "revenue_cagr_value": 2.36
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 2.7
+            }
+        },
+        "profit": {
+            "profit_dollars": 127000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": -3.6
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.2,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -6.0
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 977000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0.72
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 2.43
+            }
+        },
+        "employees": {
+            "employees_count": 19090,
+            "employees_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "employees_cagr_value": -0.81
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 1.95
+            }
+        },
+        "wages": {
+            "wages_dollars": 708000000,
+            "wages_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "wages_cagr_value": 1.47
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 2.1
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "The bed & breakfast and hostel industry has evolved over the past several years, steadily expanding from budget-focused accommodations to form a vibrant cohort within the broader lodging sector. These establishments offer a one-of-a-kind, intimate hospitality experience, setting them apart from the uniformity and impersonality of larger hotels.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "COVID-19 Restrictions Adversely Reduced Travel Activities",
+            "current_performance_point_description": "Spending on recreational activities moves closely with per capita disposable income and leisure time. Therefore, before COVID-19, the industry benefited from a surge of retiring baby boomers who typically have ample leisure time and retirement income to travel. Both international and domestic travel rates slumped drastically after the coronavirus hit, deteriorating demand for accommodations in general. Also, many bed & breakfast and hostel operators were forced to temporarily shutter operations due to local restrictions and health concerns. As a result, industry revenue is estimated to have plunged 27.8% in 2020 alone."
+        },
+        {
+            "current_performance_point_title": "The Industry has been Impacted by Airbnb-Style Short-Term Sublease Services",
+            "current_performance_point_description": "The industry has been particularly ravaged by Airbnb-style short-term sublease services. These platforms encapsulated a sizable share of budget accommodation clientele, principally targeting consumers aspiring for a more localized travel experience, which once housed this industry's unique selling proposition. However, optimism crackled for these small stalwarts arising from recent crackdowns on house-sharing services in major metropolitan areas. This unexpected regulatory shift has potentially swung open doors for bed & breakfasts and hostels, redirecting consumers back into their landscape."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "The Industry will Focus on Catering to a Niche Market",
+            "future_outlook_point_description": "Accommodations that find a niche, like establishments on farms or near tourist attractions, will fare better than others. To maintain their market share, hostels will offer significant competitive advantages like sightseeing and cultural tours, day excursions, bar crawls and other value-added services. Likewise, B&Bs will also focus on wellness like outdoor exercise classes and spa services. Many B&Bs have partnered with yoga and meditation centers to provide on-site sessions."
+        },
+        {
+            "future_outlook_point_title": "The Industry will Benefit from Stricter Short-Term Rental Regulations",
+            "future_outlook_point_description": "The industry will continue to remain primarily small-business-focused despite increasing pressure for these lodgings to combine forces to ward off competition from hotels and providers of informal accommodation. In response to growing interest, many major hotel chains have begun to explore the prospect of increasing competition for the industry, particularly within urban areas."
+        }
+    ],
+    "industry_definition": "The Bed and Breakfast and Hostel Accommodations industry comprises businesses that are primarily engaged in providing short-term lodging. Hotels, motels and casino hotels are excluded from this industry.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Concentration Level low",
+            "Technology Change Level low",
+            "Globalization Level low - steady"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level very high",
+            "Industry Assistance Level low - steady",
+            "Barriers To Entry Level low - steady",
+            "Competition Level high - increasing"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage mature"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "High Revenue per Employee"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry",
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "Very high Volatility",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "Consumer spending"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Time spent on leisure and sports"
+        ]
+    },
+    "key_trends": [
+        "In the accommodation industry, price wars are common due to similar services. Consequently, hostels and B&Bs enhance amenities and add extras to stand out."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Property website",
+            "segment_description": "In a study by travel research company Phocuswright, bed and breakfast (B&B) received the most bookings on their own property's website.",
+            "segment_percentage": 49.7
+        },
+        {
+            "segment": "Online travel agency",
+            "segment_description": "Popular among younger travelers, online travel agencies, including Airbnb Inc., TripAdvisor Inc. and BedandBreakfast.com, provided the second-greatest source of bookings at B&Bs.",
+            "segment_percentage": 24.1
+        },
+        {
+            "segment": "Direct bookings",
+            "segment_description": "Thanks to their popularity among older travelers, bed and breakfasts still generate a significant portion of their bookings from offline channels.",
+            "segment_percentage": 24.0
+        },
+        {
+            "segment": "Travel agency",
+            "segment_description": "As online travel agencies become more user-friendly, travelers will rely less on travel agents to make travel arrangements.",
+            "segment_percentage": 2.2
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Bed and Breakfast Accommodations",
+            "product_description": null,
+            "product_percentage": 47.7
+        },
+        {
+            "product_or_service": "Hostels and Other Accommodations",
+            "product_description": null,
+            "product_percentage": 12.6
+        },
+        {
+            "product_or_service": "Food and Alcohol",
+            "product_description": null,
+            "product_percentage": 8.1
+        },
+        {
+            "product_or_service": "Other Products and Services",
+            "product_description": null,
+            "product_percentage": 4.5
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Computer Stores in the US",
+            "Home Improvement Stores in the US",
+            "Supermarkets & Grocery Stores in the US"
+        ],
+        "tier_2_suppliers": [
+            "Laundromats in the US",
+            "Commercial Leasing in the US",
+            "Furniture Stores in the US",
+            "Home Furnishing Wholesaling in the US",
+            "TV & Appliance Wholesaling in the US",
+            "Egg & Poultry Wholesaling in the US",
+            "Computer & Packaged Software Wholesaling in the US",
+            "Beer Wholesaling in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Higher consumer spending",
+            "determinant_description": "Higher consumer spending represents an opportunity for the industry because visits to bed and breakfasts and hostels will potentially rise."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Tourist Attraction-Rich Southeast and West",
+            "location_description": "B&B and hostel businesses are heavily concentrated in the Southeast, West, New England, and Mid-Atlantic regions. This geographic preference is mainly due to the concentration of tourist attractions, making these areas hotspots for both domestic and international visitors.",
+            "percentage_establishments": 35,
+            "percentage_population": 20
+        },
+        {
+            "location": "West",
+            "location_description": "The Southeast and West regions are known for their plethora of locations and tourist spots. These regions witness a significant proportion of discretionary travelers, creating a heavy demand for accommodation businesses. This makes them prime locations for the industry.",
+            "percentage_establishments": 25,
+            "percentage_population": 25
+        },
+        {
+            "location": "Urban Peripheries and Rural Heartlands",
+            "location_description": "Bed and breakfast have a significant presence within a two-hour drive from major urban areas such as California, New York, Minnesota, Maine, and Florida. This is a deliberate strategy to appeal to high-income professionals seeking quick getaways, making these establishments popular choices for short-break markets.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Popular Tourist and Business Hubs",
+            "location_description": "Numerous bed and breakfast and hostel businesses have strategically centralized their locations in popular tourist and business hubs, such as Phoenix, AZ; El Paso, TX; and Las Vegas, NV. The high influx of visitors for both leisure and professional engagement offers a continuous demand for their services.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "California Cities",
+            "location_description": "In California, cities like Los Angeles, San Francisco, and San Diego accommodate such businesses due to their diverse attractions like beaches, amusement parks, and film studios and their corporate allure.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Miami",
+            "location_description": "Miami, with its appealing beaches and weather, is a year-round tourist hotspot, significantly boosting vacancies at hostels and B&Bs.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "REGULATORY CONFORMANCE IN THE HOSTEL INDUSTRY",
+                "regulation_description": "While regulation in the hostel industry is not as stringent as in other sectors, significant rules still exist. The industry must adhere to local and state planning laws, including fire safety regulations."
+            },
+            {
+                "regulation_title": "DATA PROTECTION REGULATIONS",
+                "regulation_description": "Given that hostels collect and store guest data, they must comply with data protection regulations such as GDPR. These laws cover how personal information is held and used while protecting guest privacy."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "mature"
+            },
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "very high"
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "low - steady"
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "high - increasing"
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Revenue Volatility Level: very high",
+            "Industry Assistance Level: low - steady",
+            "Competition Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Concentration Level: low",
+            "Technology Change Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Price wars",
+                "basis_description": "In the accommodation industry, price wars are common due to similar services."
+            },
+            {
+                "basis_title": "Amenities and extras",
+                "basis_description": "Consequently, hostels and B&Bs enhance amenities and add extras to stand out."
+            },
+            {
+                "basis_title": "Low initial costs",
+                "basis_description": "This industry's fragmentation is fueled by low initial costs."
+            },
+            {
+                "basis_title": "New technologies",
+                "basis_description": "By investing in new technologies, a slew of B&Bs and hostels are aiming to simplify their operations and cut labor dependence."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Low number of hostels",
+                "concentration_description": "The number of hostels in the United States has traditionally been low."
+            },
+            {
+                "concentration_title": "Owner-occupied B&Bs",
+                "concentration_description": "Most bed and breakfast (B&B) establishments are owner-occupied and have an average of six rooms."
+            },
+            {
+                "concentration_title": "Hostel size variation",
+                "concentration_description": "Hostels can vary from 25 beds in rural areas to up to 500 beds in central city locations."
+            },
+            {
+                "concentration_title": "Low industry concentration",
+                "concentration_description": "Due to the owner-occupied nature of B&Bs, the number of these lodgings is generally low, resulting in low industry concentration."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "OTHER COMPANIES MARKET SHARE",
+                "company_percentage": 100
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": null
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchase Costs Primarily Include Guest Supplies and Cleaning Materials",
+            "cost_factor_description": "Guest supplies can include replaceable bedding products like sheets, blankets, towels and pillows. Other supplies can include food and beverages for meals, vending machines and replaceable cleaning products to ensure rooms are fit for use after a customer has departed."
+        },
+        {
+            "cost_factor_title": "Labor Input is High in the Industry",
+            "cost_factor_description": "Labor is required for customer service, cleaning, room maintenance, marketing the property and preparing breakfast. As owner-operators often perform the majority of these tasks, wages are understated."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "REVENUE VOLATILITY IN THE BED AND BREAKFAST AND HOSTEL ACCOMMODATIONS INDUSTRY IS HIGH",
+                "volatility_description": "The industry revenue grew despite shaky consumer confidence and external competition during most of the current period."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "HOSTELS OFFER MORE ADD-ON SERVICES",
+                "technological_change_description": "Hostels and bed-and-breakfast will continue to offer significant competitive advantages like sightseeing and cultural tours, day excursions, bar crawls and food options using local produce with local wines."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "Are your company's sales affected by seasonality?",
+            "answer": "Destination hotels that offer offseason promotions and unique services fare better than their direct competitors."
+        },
+        {
+            "question": "Does your company leverage free social media platforms, such as Facebook, Twitter and others, to inform and attract new customers?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "How does your company provide ancillary services to diversify revenue streams?",
+            "answer": "Operators that anchor a destination bar or restaurant in industry establishments are able to diversify revenue streams and increase demand."
+        },
+        {
+            "question": "Does your establishment offer complimentary Wi-Fi to customers?",
+            "answer": "To remain competitive, most hostels offer more amenities than ever before, including perks such as free Wi-Fi and breakfast."
+        },
+        {
+            "question": "Is your business subject to varying state laws pertaining to the sale of certain items, such as liquor?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "Is your company subject to any franchising laws?",
+            "answer": "Franchise laws vary between states and can place limitations on where establishments can locate and how they can compete."
+        },
+        {
+            "question": "How does your company maintain customer satisfaction?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "What steps have you taken to build relationships with other vendors and services in your immediate area?",
+            "answer": "It is important to develop relationships with other local tourism operators and attractions."
+        },
+        {
+            "question": "What steps do you take to ensure your products are well presented and clearly displayed?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "Consumers' expenditure on discretionary goods and services is influenced by their perception of macroeconomic variables. How do you offset the effects of negative fluctuations?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "The number of inbound trips by non-US residents is expected to increase in 2021. What percentage of your business comes from international visitors?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "When consumer spending declines, discretionary expenses, such as travel, are among the first to be cut. How do you respond to fluctuations in domestic travel?",
+            "answer": "<UNKNOWN>"
+        }
+    ]
+}

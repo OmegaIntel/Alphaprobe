@@ -1,0 +1,479 @@
+{
+    "report_title": "Aerospace Engineering Services in the US",
+    "report_date": "Jan 31, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 15836000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": null
+            },
+            "revenue_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "revenue_cagr_value": null
+            }
+        },
+        "profit": {
+            "profit_dollars": 1457000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 3.82
+            },
+            "profit_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 9.2,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 1.6
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 12859000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 78969,
+            "employees_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 11213000000,
+            "wages_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Aerospace engineering companies in the United States currently navigate through a climate of paradoxes, where the thrill of innovation meets the weight of reality. Recent geopolitical conflicts have redirected aerospace engineering priorities\u2014heightening defense spending and spurring technological advances to meet immediate military needs, such as advanced missile defense systems. Amidst escalating investment in national security, these firms must balance their strategic importance with the ethical quandaries of their profound influence on international peace and warfare.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "HIGH PROFILE CRISES REFOCUS ENGINEERING PROGRESS",
+            "current_performance_point_description": "Geopolitical conflicts, such as those in Ukraine and Israel, result in immediate increases in defense spending, directly affecting the aerospace and defense sector. The urgent lifesaving demand for military aircraft and advanced missile defense systems, such as the Iron Dome in Israel, accelerates innovation and production within the industry."
+        },
+        {
+            "current_performance_point_title": "PUBLIC-PRIVATE PARTNERSHIP SPACEFLIGHT PROVES A DRAMATIC SUCCESS, DESPITE ARTEMIS CONTINUATION",
+            "current_performance_point_description": "Private enterprises, particularly SpaceX and Blue Origin, have reshaped the landscape of more routine space missions traditionally dominated by government agencies like NASA and Roscosmos. Cost reductions through reusable launch systems have proven to be a game-changer, making spaceflight more accessible for both commercial and research purposes."
+        },
+        {
+            "current_performance_point_title": "S A T E L L I T E  I N T E R N E T  P U L L S  R E V E N U E  F R O M  O F T - D E S P I S E D  G R O U N D  I N T E R N E T  S E R V I C E  P R O V I D E R S  I N T O  C A T A LY Z I N G  A E R O S P A C E  E N G I N E E R I N G",
+            "current_performance_point_description": "Satellite internet technology has leapfrogged into competition mainstream services, with companies like Starlink deploying massive satellite constellations to deliver high-speed internet globally. While fundamental physics prevents these services from ever exceeding current ground-based fiber tech, the revenue from underserved rural communities could catalyze significant engineering expenditure."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "P O W E R  B E H I N D  E L E C T R I C  A I R C R A F T  G R O W S  W I T H  R I S I N G  F U E L  P R I C E S",
+            "future_outlook_point_description": "Aerospace engineers are increasingly veering towards sustainability, with the sector's future trajectory significantly influenced by electric aviation's burgeoning development. The anticipated upsurge in investment towards hybrid and fully electric propulsion technologies signals a response to the imperative need for reduced fuel spending."
+        },
+        {
+            "future_outlook_point_title": "Composite Materials and Additive Manufacturing",
+            "future_outlook_point_description": "Amidst a relentless pursuit of efficiency, aerospace engineers are harnessing the potential of composite materials, such as carbon fiber, to craft lighter and more fuel-efficient aircraft that can lift heavy batteries. Concurrently, additive manufacturing is set to disrupt aerospace construction norms, enabling precise and resource-efficient production of intricate composite structures."
+        },
+        {
+            "future_outlook_point_title": "Supersonic Travel",
+            "future_outlook_point_description": "The resurgence of supersonic jets orchestrates a dramatic reduction in global travel times, offering an enticing glimpse into an era of expedited intercontinental mobility. Companies like Boom Supersonic and Virgin Galactic are architecting the future of flight with models that slash transatlantic journeys to less than three hours."
+        },
+        {
+            "future_outlook_point_title": "Space-based Defense Capabilities",
+            "future_outlook_point_description": "Amid escalating investments in military satellite constellations, aerospace engineering is at the vanguard of a profound strategic pivot toward space-based defense capabilities. This uptick underscores the urgency for robust international norms in addition to the Outer Space Treaty to forestall an arms race beyond Earth's atmosphere."
+        }
+    ],
+    "industry_definition": "Industry operators are primarily engaged in engineering duties related to the design, construction, and testing of aircraft, missiles, and spacecraft. To a lesser degree, operators may evaluate and recommend improvements relative to materials, equipment, and techniques.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level low",
+            "Concentration Level low",
+            "Barriers To Entry Level high - increasing",
+            "Globalization Level low - increasing"
+        ],
+        "negative_impact_factors": [
+            "Competition Level high - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage mature"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Customer Class Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low Profit vs. Sector Average",
+            "High Product/Service Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers",
+            "Demand from air transportation"
+        ],
+        "threats": [
+            "Government consumption and investment"
+        ]
+    },
+    "key_trends": [
+        "Aerospace engineering firms in the U.S. have been navigating shifting skies - heightened defense spending has energized the sector. At the same time, industry titans faced increased scrutiny and a pressing need to advance safety protocols following accidents in the sky and on the launchpad.",
+        "With a rising focus on eco-friendly propulsion and the looming reintroduction of supersonic travel, the aerospace engineering horizon promises revolutionary electric aircraft and rapid intercontinental flights, albeit tempered by cost and environmental compliance challenges.",
+        "Aerospace engineers soar through a regulatory cumulonimbus, where meticulous compliance is critical - from cybersecurity in defense contracts to environmental rules in crafting greener aircraft - steering the industry's course more than ever.",
+        "Aerospace engineering firms often benefit immensely from government contracts and partnerships, which act as financial jet streams, providing much-needed uplift through subsidies and grants during economic turbulence.",
+        "Aerospace companies concentrate on high-tech research and bespoke manufacturing, prioritizing innovation in design over commoditized production to ensure their offerings meet the stringent safety and functional standards of the aerospace industry.",
+        "Aerospace engineers target markets experienced with disruption\u2014like space tourism fueled by private-sector vigor and expanding defense contracts\u2014 as these niche domains offer unparalleled potential for long-term growth and technological prestige."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Civilian Aircraft",
+            "segment_description": "Civilian aviation manufacturers reap substantial revenues from the steady demand for passenger and cargo aircraft, driven by global air travel growth and fleet modernization efforts.",
+            "segment_percentage": 29.0
+        },
+        {
+            "segment": "Defense",
+            "segment_description": "Defense contractors command lucrative contracts from governments for the development and supply of advanced military aircraft, UAVs, and missile systems.",
+            "segment_percentage": 30.9
+        },
+        {
+            "segment": "Space",
+            "segment_description": "Space-focused enterprises pioneer cutting-edge vehicles and technologies, placing them at the forefront of innovation with potentially game-changing applications in satellite deployment, space exploration, and possibly space tourism.",
+            "segment_percentage": 3.2
+        },
+        {
+            "segment": "Other Aerospace Manufacturers",
+            "segment_description": "Aerospace entities serving other contractors are embedded in a complex B2B supply chain hierarchy; they must ensure just-in-time delivery while upholding exacting part specifications and industry benchmarks.",
+            "segment_percentage": 36.9
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Design Services",
+            "product_description": "Design within aerospace engineering represents the conceptualization and detailed planning of air and space vehicles, including their systems and subsystems.",
+            "product_percentage": 60.8
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "Other services in the aerospace engineering industry.",
+            "product_percentage": 34.0
+        },
+        {
+            "product_or_service": "Research and Development Services",
+            "product_description": "Research in aerospace engineering encompasses the exploration of new technologies and methodologies for advancements in air and spacecraft, systems, and material sciences.",
+            "product_percentage": 5.2
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [],
+        "tier_2_suppliers": [
+            "Engineering Services in the US"
+        ],
+        "tier_1_buyers": [
+            "International Airlines in the US",
+            "Domestic Airlines in the US"
+        ],
+        "tier_2_buyers": [
+            "Telecommunication Networking Equipment Manufacturing in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Aerospace Research Underpins the Innovation the Sector is Famous For",
+            "determinant_description": "Research in aerospace engineering encompasses the exploration of new technologies and methodologies for advancements in air and spacecraft, systems, and material sciences. This segment is a long term revenue generator as it fuels the development of innovative products that meet emerging needs and compliance with rigorous safety standards, often resulting in patents and cutting-edge applications that command premium market prices."
+        },
+        {
+            "determinant_title": "AEROSPACE MANUFACTURING IS TYPICALLY BESPOKE AND EXPENSIVE",
+            "determinant_description": "Manufacturing and repair in aerospace engineering involve producing and maintaining aircraft components, engines, and structural elements. As a direct revenue contributor, this segment capitalizes on the robust demand for aircraft parts and maintenance services, which stem from stricter safety regulations and the natural wear and tear of the operational fleet."
+        },
+        {
+            "determinant_title": "DESIGN FOR NEW VEHICLES TAKES YEARS, EVEN WITH HUNDREDS OF ENGINEERS",
+            "determinant_description": "Design within aerospace engineering represents the conceptualization and detailed planning of air and space vehicles, including their systems and subsystems. Through iterative design enhancements leveraging advanced simulation tools and computational models, firms achieve performance breakthroughs that set industry benchmarks, dictating price premiums."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "West",
+            "location_description": "The West region has the highest percentage of establishments (around 30%) and population (around 25%) in the aerospace engineering industry.",
+            "percentage_establishments": 30.0,
+            "percentage_population": 25.0
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region has around 20% of establishments and population in the aerospace engineering industry.",
+            "percentage_establishments": 20.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "The Southwest region has around 15% of establishments and population in the aerospace engineering industry.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 15.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "Stringent safety and performance standards",
+                "regulation_description": "The industry maintains rigorous safety and performance standards."
+            },
+            {
+                "regulation_title": "Export controls and intellectual property rights",
+                "regulation_description": "Legal expenses loom large as companies deal with export controls, intellectual property rights, and complex contractual agreements with governments and private entities."
+            },
+            {
+                "regulation_title": "Environmental regulations",
+                "regulation_description": "Compliance costs are rising as environmental standards become stricter."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Demanding capital investment",
+                "barrier_description": "The aerospace engineering industry requires significant capital investment, which increases barriers to entry."
+            },
+            {
+                "barrier_title": "Obtaining specialized certifications",
+                "barrier_description": "New entrants in the aerospace engineering industry need to obtain specialized certifications, increasing barriers."
+            }
+        ],
+        "factors_increased_barrier": [
+            "mature life cycle stage",
+            "high and steady competition level"
+        ],
+        "factors_decreased_barrier": [
+            "low capital intensity level",
+            "low concentration level",
+            "increasing globalization level"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "High market concentration",
+                "basis_description": "The aerospace engineering industry has high market concentration, indicating intense competition."
+            },
+            {
+                "basis_title": "Heavily branching subcontractor structure",
+                "basis_description": "The industry has a complex subcontractor structure, contributing to the high level of competition."
+            },
+            {
+                "basis_title": "Significant established players",
+                "basis_description": "Major established entities dominate the industry foundations from design to launches."
+            },
+            {
+                "basis_title": "Regulatory and financial hurdles for new entrants",
+                "basis_description": "New entrants face significant regulatory and financial challenges in the aerospace engineering industry."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": null
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Profit reinvestment into research",
+            "cost_factor_description": "Profit costs are frequently reinvested into research."
+        },
+        {
+            "cost_factor_title": "Compensation for highly skilled workforce",
+            "cost_factor_description": "Compensation strategies within aerospace firms prioritize attracting top-tier engineering and technical talent essential for innovation in a high-stakes industry. Wages are calibrated to reflect the specialized skills required for an industry that maintains rigorous safety and performance standards."
+        },
+        {
+            "cost_factor_title": "Procurement of high-quality components",
+            "cost_factor_description": "Procurement strategies in aerospace are dominated by the need to secure high-quality components that comply with stringent industry standards, often from a limited set of suppliers."
+        },
+        {
+            "cost_factor_title": "Legal and compliance costs",
+            "cost_factor_description": "Budget allocations toward legal, compliance, and grant writing reflect the aerospace industry's navigation through an intricate web of domestic and international regulations."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low rate of new patent additions and low concentration of innovation",
+                "capital_intensity_description": "The rate of new patent additions to the industry is low. This is combined with a low concentration of innovation. Both factors being low suggests that new technology entry is slow and widespread, which limits the threat of disruptive threats hurting leading industry operators."
+            },
+            {
+                "capital_intensity_title": "Highly concentrated major markets",
+                "capital_intensity_description": "The major markets for this industry are highly concentrated, which implies that the market has a focus on key customer segments. This presents an opportunity for strategic entrance into lower-end markets or unserved markets for innovations to take on a disruptive trajectory."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Military conflicts drive demand volatility",
+                "volatility_description": "Aerospace engineering firms specializing in defense experience amplified revenue fluctuations when international tensions escalate, as governments adjust military contractor spending in response to perceived threats."
+            },
+            {
+                "volatility_title": "Government support mitigates volatility",
+                "volatility_description": "Governments often view their aerospace engineering companies as too strategic to fail because of their crucial role in national defense, leading to financial support that tempers revenue volatility."
+            },
+            {
+                "volatility_title": "Space exploration reduces volatility",
+                "volatility_description": "Deep space missions like NASA's Artemis program and Mars exploration inject dynamism into the aerospace engineering sector by opening up long-term revenue streams."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Research drives innovation",
+                "technological_change_description": "Research in aerospace engineering encompasses the exploration of new technologies and methodologies for advancements in air and spacecraft, systems, and material sciences. This segment is a long term revenue generator as it fuels the development of innovative products."
+            },
+            {
+                "technological_change_title": "Bespoke and expensive manufacturing",
+                "technological_change_description": "Manufacturing and repair in aerospace engineering involve producing and maintaining aircraft components, engines, and structural elements. As a direct revenue contributor, this segment capitalizes on the robust demand for aircraft parts and maintenance services."
+            },
+            {
+                "technological_change_title": "Years-long design process",
+                "technological_change_description": "Design within aerospace engineering represents the conceptualization and detailed planning of air and space vehicles, including their systems and subsystems. Through iterative design enhancements leveraging advanced simulation tools and computational models, firms achieve performance breakthroughs."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "Has there been any new technological developments that apply to your company? Have you experienced any rapidly changing technology?",
+            "answer": "While engineering services have not fundamentally changed with technological innovation, industry services can be made more efficient with application of technology. This is especially apparent with design and prototyping services."
+        },
+        {
+            "question": "What are some upstream markets you work closely with?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "Have you had any difficulty with establishing a relationship with contractors?",
+            "answer": "Government contracts represent a significant market segment for industry operators. Thus, the ability to establish relationships with government contractors is crucial for success at the national level."
+        },
+        {
+            "question": "Have you had issues finding appropriate staff? What kind of qualifications do you look for?",
+            "answer": "As an application of mechanical engineering, aerospace engineers are highly educated and require years of extensive experience. Thus, labor competition is high."
+        },
+        {
+            "question": "How does a rise in government consumption and investment affect your company? How do you take advantage of this rise?",
+            "answer": "Since government aerospace companies represent a significant industry market segment, industry operators benefit from expansion in government expenditure."
+        },
+        {
+            "question": "Do you follow trends in corporate profit? How have these trends affected your business?",
+            "answer": "Since industry services represent contracted professional labor, corporate profit levels represent excess capital available for businesses to hire aerospace engineers."
+        },
+        {
+            "question": "What proportion of your revenue is derived from commercial domestic airline sales? How have trends in scheduled air transport demand affected you?",
+            "answer": "Industry professionals are crucial for the continued development of these services, and therefore, industry demand fluctuates alongside performance of air transportation as a whole."
+        }
+    ]
+}

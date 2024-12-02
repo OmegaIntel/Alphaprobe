@@ -1,0 +1,476 @@
+{
+    "report_title": "Industry Report on Insulin Manufacturing",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 2635000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 2.76
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.79
+            }
+        },
+        "profit": {
+            "profit_dollars": 941000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 4.2
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 3.5
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 35.7,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 1.4
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 1.2
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1311000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 3.5
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 1.3
+            }
+        },
+        "employees": {
+            "employees_count": 2850,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 1.5
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 1.2
+            }
+        },
+        "wages": {
+            "wages_dollars": 304000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 3.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 2.5
+            }
+        },
+        "imports": {
+            "imports_dollars": 1254000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 2.5
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 2.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 536000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 2.5
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 1.8
+            }
+        }
+    },
+    "executive_summary": "Companies in this industry produce insulin, a treatment for diabetes, which is one of the top health concerns for the US population. In 2020, 11.3% of the US population, equivalent to 37.3 million people, were diagnosed with diabetes, according to the CDC. Thanks to medical advancements, insulin has become more widely accessible to a larger share of the diabetic population over the past years. But industry revenue is expected to fall at a CAGR of 5.9% to $2.6 billion over the five years to 2023, including an expected 3.5% growth in 2023 alone.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Insulins are essential for treating diabetes",
+            "current_performance_point_description": "Diabetes is a chronic ailment in which the body doesn't produce enough insulin to assist blood sugar entering the body's cells. As a result, this results in excessive blood glucose staying in the body, causing high glucose levels. There are two main types of diabetes: type I and type II. While type II can be prevented by adjusting lifestyle and diet, type I diabetes is unpreventable as the body fails to produce insulin."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Insulin Prices Will Continue Falling",
+            "future_outlook_point_description": "The big three have announced the biggest price cuts of the decade, reducing some of their most prescribed insulin prices by over 70.0%. Since the Inflation Reduction Act of 2022 caps a monthly supply of insulin at $35.00 for Medicare Part D patients, Eli Lilly has taken a similar approach."
+        },
+        {
+            "future_outlook_point_title": "Technology Provides Room for Growth",
+            "future_outlook_point_description": "Automated insulin delivery (AID) system has been continuously improved. AID systems use Hybrid Closed-Loop or Artificial Pancreas technology, which helps to constantly alter insulin injection doses according to the body's blood level."
+        },
+        {
+            "future_outlook_point_title": "External Competition Will Rise",
+            "future_outlook_point_description": "While insulin treatment is considered unsubstitutable in treating diabetes, artificial pancreatic islet cells can be implanted into the patient's body."
+        }
+    ],
+    "industry_definition": "Companies in this industry develop and produce hormones that lower the level of blood glucose. These products are typically used to treat type 1 and type 2 diabetes mellitus.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Barriers To Entry Level high - steady"
+        ],
+        "negative_impact_factors": [
+            "Life Cycle Stage decline",
+            "Revenue Volatility Level high",
+            "Globalization Level high - increasing",
+            "Competition Level high - increasing"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "High Profit vs. Sector Average",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "High Competition",
+            "High Volatility",
+            "High Imports",
+            "High Customer Class Concentration",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth"
+        ]
+    },
+    "key_trends": [
+        "Demand for insulin has consistently grown. But industry revenue has conversely declined over the past five years as major insulin makers start to cut their prices.",
+        "The Inflation Reduction Act of 2022 will permanently impact the industry. After years of being overpriced, insulin is now accessible and affordable to a larger share of the population.",
+        "The industry is heavily regulated both in terms of quality standards and prices.",
+        "Drug patents and exclusivity rights represent the backbone of this industry.",
+        "Insulin pens have increased in popularity at the expense of declining syringe sales.",
+        "Medicare will represent a larger industry revenue share after the Inflation Reduction Act of 2022 is passed.",
+        "Access to talented labor and proximity to foreign markets is crucial.",
+        "Pharmaceutical sales align more closely with clinical trials than with availability."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Medicare",
+            "segment_description": "Older individuals are more likely to be diabetes-prone. In 2023, Medicare Part D will impose a $35.00 cap on a monthly supply of insulin.",
+            "segment_percentage": 48.7
+        },
+        {
+            "segment": "Private insurance",
+            "segment_description": "Individuals who don't qualify for both Medicare and Medicaid can purchase their own insurance.",
+            "segment_percentage": 22.3
+        },
+        {
+            "segment": "Medicaid",
+            "segment_description": "Medicaid is targeting low-income individuals.",
+            "segment_percentage": 21.2
+        },
+        {
+            "segment": "Out-of-pocket",
+            "segment_description": "Payments that are not reimbursed by the patients' insurers.",
+            "segment_percentage": 5.3
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Other relevant segments.",
+            "segment_percentage": 2.5
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Fast-Acting Insulin",
+            "product_description": "Fast-acting insulin, will take effect within 15 minutes. But its effect only lasts between two and four hours.",
+            "product_percentage": 54.6
+        },
+        {
+            "product_or_service": "Long-Acting Insulin",
+            "product_description": "Popular brand name long-acting insulin includes Lantus and Basaglar. After Sanofi's Lantus primary patent expired in 2015.",
+            "product_percentage": 40.9
+        },
+        {
+            "product_or_service": "Premix Insulin",
+            "product_description": "Premix insulin is mixed between fast-acting and long-acting insulin.",
+            "product_percentage": 4.5
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [],
+        "tier_2_suppliers": [
+            "Inorganic Chemical Manufacturing in the US",
+            "Organic Chemical Manufacturing in the US",
+            "Industrial Machinery & Equipment Wholesaling in the US"
+        ],
+        "tier_1_buyers": [
+            "Drug, Cosmetic & Toiletry Wholesaling in the US",
+            "Laboratory Supply Wholesaling in the US"
+        ],
+        "tier_2_buyers": [
+            "Pharmacies & Drug Stores in the US",
+            "Hospitals in the US",
+            "Psychiatric Hospitals in the US",
+            "Specialty Hospitals in the US",
+            "Nursing Care Facilities in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Federal Funding for Medicare and Medicaid",
+            "determinant_description": "Medicare represents the largest source of industry revenue."
+        },
+        {
+            "determinant_title": "Number of People with Private Health Insurance",
+            "determinant_description": "Individuals ineligible for Medicare and Medicaid can purchase health insurance plans."
+        },
+        {
+            "determinant_title": "Adult Obesity Rate",
+            "determinant_description": "Obesity is directly linked to diabetes."
+        },
+        {
+            "determinant_title": "Trade-Weighted Index",
+            "determinant_description": "As US dollar strengthens, US-made insulin becomes relatively more expensive."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Increasing",
+        "export_level": "Moderate",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports",
+                "trade_description": "Most imported insulins come from Germany."
+            },
+            {
+                "trade_title": "Exports",
+                "trade_description": "Mexico ranks 7th in the top 10 countries with the highest diabetes rate."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Mid-Atlantic Region",
+            "location_description": "New Jersey is a popular hub for insulin manufacturing.",
+            "percentage_establishments": 50,
+            "percentage_population": 50
+        },
+        {
+            "location": "North Carolina",
+            "location_description": "Novo Nordisk's only US insulin manufacturing facility is located in Clayton, North Carolina.",
+            "percentage_establishments": 50,
+            "percentage_population": 50
+        },
+        {
+            "location": "West",
+            "location_description": "California is attractive to insulin manufacturers because of its large labor force market.",
+            "percentage_establishments": 50,
+            "percentage_population": 50
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "FDA approval required",
+                "regulation_description": "Approval from the FDA of an ANDA is required."
+            },
+            {
+                "regulation_title": "Drug Safety and Accountability Act",
+                "regulation_description": "The FDA must establish accurate, interoperable information systems."
+            },
+            {
+                "regulation_title": "The CREATES Act",
+                "regulation_description": "The CREATES Act aims to reduce the price of generic drugs."
+            },
+            {
+                "regulation_title": "Prescription Drug User Fee Act",
+                "regulation_description": "PDUFA gives the FDA authority to collect user fees from pharmaceutical companies."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "Life Cycle Stage: decline"
+            },
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "Revenue Volatility Level: high"
+            },
+            {
+                "barrier_title": "Globalization Level",
+                "barrier_description": "Globalization Level: high - increasing"
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "Competition Level: high - increasing"
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Capital intensity is medium in this industry."
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Competition from generic drugmakers",
+                "basis_description": "Rising competition from generic drugmakers when patents expire."
+            },
+            {
+                "basis_title": "Competition from foreign alternatives",
+                "basis_description": "Insulin manufacturers experience competition from foreign alternatives."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Big three control over 90% market share",
+                "concentration_description": "The big three control over 90% of the global and US insulin market."
+            },
+            {
+                "concentration_title": "Factors supporting high concentration",
+                "concentration_description": "Exclusive patented products and economies of scale."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Eli Lilly And Company",
+                "company_percentage": 40.1
+            },
+            {
+                "company_name": "Sanofi",
+                "company_percentage": 7.7
+            },
+            {
+                "company_name": "Novo Nordisk A",
+                "company_percentage": 7.6
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 44.7
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 30
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 50
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 15
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 5
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Research and development costs",
+            "cost_factor_description": "Research and development represent one of the highest costs."
+        },
+        {
+            "cost_factor_title": "Purchase costs",
+            "cost_factor_description": "Purchases are the Industry's Largest Costs."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Medical equipment and skilled labor required",
+                "capital_intensity_description": "Medical equipment and skilled labor are required to manufacture drugs."
+            },
+            {
+                "capital_intensity_title": "Low innovation limits disruption",
+                "capital_intensity_description": "Low levels of innovation limit the threat to incumbent operators."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Robust demand insulates from economic woes",
+                "volatility_description": "A growing diabetic population shields the industry."
+            },
+            {
+                "volatility_title": "Price cuts cause volatility",
+                "volatility_description": "The backlash on overpriced insulin prices induces insulin producers to cut prices."
+            }
+        ],
+        "volatility_trend": "Increasing"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Fast-acting insulin benefits from lower prices",
+                "technological_change_description": "Fast-acting insulin will take effect within 15 minutes."
+            },
+            {
+                "technological_change_title": "Long-acting insulin is second most popular",
+                "technological_change_description": "Long-acting insulin takes several hours to take effect."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "What is the provision about?",
+            "answer": "The regulation prevents companies in the Insulin Manufacturing industry from refusing to sell drug samples to other manufacturers."
+        },
+        {
+            "question": "What is the Prescription Drug User Fee Act?",
+            "answer": "On September 30, 2022, PDUFA gives the FDA authority to collect user fees."
+        },
+        {
+            "question": "What assistance is provided to the industry?",
+            "answer": "Moderate assistance with steady assistance."
+        },
+        {
+            "question": "What is PhRMA?",
+            "answer": "PhRMA represents the country's largest biopharmaceutical companies."
+        }
+    ]
+}

@@ -1,0 +1,574 @@
+{
+    "report_title": "Golf Cart Manufacturing in the US",
+    "report_date": "8/30/24",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 1233000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": -0.51
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.73
+            }
+        },
+        "profit": {
+            "profit_dollars": 62000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 2.07
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5.0,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 3.48
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 242000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 2008,
+            "employees_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "employees_cagr_value": -1.58
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 1.12
+            }
+        },
+        "wages": {
+            "wages_dollars": 160000000,
+            "wages_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "wages_cagr_value": -0.44
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 1.24
+            }
+        },
+        "imports": {
+            "imports_dollars": 407000000,
+            "imports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "imports_cagr_value": 26.61
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 0.39
+            }
+        },
+        "exports": {
+            "exports_dollars": 186000000,
+            "exports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "exports_cagr_value": 0.61
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 2.6
+            }
+        }
+    },
+    "executive_summary": "Golf cart manufacturers have been enduring high volatility over the past five years. Although the standard golf cart has emerged as a convenient method of transportation for security personnel, retirement communities, families and other businesses and organizations, the primary market for golf carts remains the Golf Courses and Country Clubs industry (IBISWorld report 71391). While the COVID-19 pandemic sparked consumer interest in golf, health and safety regulations prevented manufacturers from fully capitalizing on evolving consumer tastes. Instead, inexpensive imports filled gaps in demand. Over the past five years, industry revenue has been falling at a CAGR of 5.4% and is expected to reach $1.2 billion in 2023, including a 0.2% contraction in 2023 alone.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Revenue for golf cart manufacturers has been plummeting",
+            "current_performance_point_description": "Revenue for golf cart manufacturers has been plummeting at a CAGR of 5.4% over the past five years, and is expected to reach $1.2 billion in 2023. This includes a 0.2% drop in 2023, when profit is projected to dip to 5.0%."
+        },
+        {
+            "current_performance_point_title": "The Covid-19 Pandemic Buoyed Interest in Golf",
+            "current_performance_point_description": "Golf cart sales largely depend on purchases from golf course and country club owners. When course visits decline, the impact reverberates through the supply chain to golf cart manufacturers. The pandemic revived interest in golf, especially with younger generations. Golf courses continued to operate while most leisure activities shut down. Many courses offered reduced green fees and discounted memberships to capitalize on rising demand."
+        },
+        {
+            "current_performance_point_title": "Imports Have Been Swelling, Creating a Major Threat",
+            "current_performance_point_description": "Golf cart imports, particularly from China, have skyrocketed in the post-pandemic economy. These foreign manufacturers can produce at significantly lower per-unit costs."
+        },
+        {
+            "current_performance_point_title": "Low-wage Producers Undercutting Domestic Manufacturers",
+            "current_performance_point_description": "Low-wage producers can easily undercut domestic producers with barebone golf carts, perfect for public and municipal courses. With the influx of inexpensive alternatives, buyers could leverage their growing substitution and pricing power, forcing domestic producers to lower costs to match international competition."
+        },
+        {
+            "current_performance_point_title": "The Rising Elderly Population Has Been Driving Golf Cart Sales",
+            "current_performance_point_description": "Older adults are a key demographic for golf courses; many are retired, with stable retirement funds or income, enabling them to play consistently and purchase memberships at private courses. Older players more frequently opt for carts, while younger golfers might walk courses. This trend will encourage courses to expand and replace golf cart fleets, purchasing high-end carts to sate private course expectations."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "NEW GOLFERS ARE EXPECTED TO DRIVE DEMAND",
+            "future_outlook_point_description": "For the first time in decades, golf courses set records for first-time and returning golfers in 2022. The National Golf Foundation reported that 3.3 million people played on golf courses for the first time in 2022, breaking a record from 2000 when Tiger Woods was at the height of his popularity. Young golfers had an especially large influx of new players, creating new opportunities for lifetime golfers. This trend will create steady demand for golf carts, reversing long-term declines in golf's popularity."
+        },
+        {
+            "future_outlook_point_title": "GOLF CART MANUFACTURERS EMPHASIZE VARIETY",
+            "future_outlook_point_description": "Manufacturers will continue to emphasize the range and diversity of golf cart fleets, especially as alternatives to all-terrain vehicles (ATVs) for work, particularly with construction and security companies. Manufacturers will also market product lineups to include family-oriented carts; these have grown particularly popular in gated communities and retirement homes. Many of these carts must adhere to stricter regulations to operate on public roads, creating added costs for manufacturers."
+        },
+        {
+            "future_outlook_point_title": "COMPANIES WILL LIKELY EXPAND ELECTRIC AND SOLAR-POWERED GOLF CARTS",
+            "future_outlook_point_description": "Manufacturers will continue to invest heavily in developing more fuel-efficient and green-energy golf carts. In particular, companies will strive to create electric carts to match the horsepower and versatility of gas-powered carts. Currently, most electric carts manage three to five horsepower, while gas-powered carts can reach twelve horsepower. For example, the newest 48-volt carts from Club Car can reach 10.0 horsepower. Also, many companies will experiment with solar-powered golf carts. This product has rapidly gained popularity, creating a potentially disruptive force in the market."
+        }
+    ],
+    "industry_definition": "Companies in this industry manufacture golf carts. Industry products are used for passenger transport on golf courses and, to a lesser extent, for transportation in other settings, such as in gated and elderly communities.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level low",
+            "Regulation Level light - steady",
+            "Technology Change Level low",
+            "Barriers To Entry Level high - steady"
+        ],
+        "negative_impact_factors": [
+            "Life Cycle Stage decline",
+            "Revenue Volatility Level high",
+            "Industry Assistance Level low - steady",
+            "Concentration Level high"
+        ],
+        "mixed_impact_factors": [
+            "Globalization Level medium - increasing",
+            "Competition Level medium - increasing"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "Decline Life Cycle Stage",
+            "High Volatility",
+            "Medium Imports",
+            "Low Profit vs. Sector Average"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers",
+            "Demand from golf courses and country clubs"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Trade-weighted index"
+        ]
+    },
+    "key_trends": [
+        "Golf cart sales largely depend on purchases from golf course and country club owners",
+        "During the COVID-19 pandemic, foreign manufacturers rushed to fill sudden demand spikes for golf",
+        "Older adults are a key demographic for golf courses",
+        "For the first time in decades, golf courses set records for first-time and returning golfers in 2022",
+        "Manufacturers will continue to emphasize the range and diversity of golf cart fleets",
+        "Manufacturers will continue to invest heavily in developing more fuel-efficient and green-energy golf carts",
+        "As interest in golf faltered over the past decades, golf cart manufacturers have struggled to expand sales"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Private golf courses and country clubs",
+            "segment_description": "Private courses often cater to high-income consumers. Since these courses are more expensive to play than public courses, the consumers that frequent these establishments demand premium services, including more expensive golf carts.",
+            "segment_percentage": 42.9
+        },
+        {
+            "segment": "Public golf courses",
+            "segment_description": "Compared with private golf courses, which cater to a higher-income clientele, public courses are more sensitive to changes in the macroeconomic climate. These courses often purchase lower-end carts and upgrade fleets less frequently.",
+            "segment_percentage": 30.4
+        },
+        {
+            "segment": "Consumers",
+            "segment_description": "Golf carts have become increasingly popular among individual consumers. Gated communities, campers and families have increasingly purchased golf carts for personal use, as golf carts have expanded in terms of safety, on-board technology, power and other amenities.",
+            "segment_percentage": 26.7
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Electric-Powered Golf Carts and Parts",
+            "product_description": "Electric carts often lack the horsepower of gas carts, requiring charging after two hours of continuous use (22 to 30 miles, depending on terrain). Many manufacturers focus on making electric carts match the efficiency and power of gas carts.",
+            "product_percentage": 49.6
+        },
+        {
+            "product_or_service": "Gas-Powered Golf Carts and Parts",
+            "product_description": "On average, gas-powered carts have about 10 to 12 horsepower making them more powerful than their electric-powered counterparts. Manufacturers often design gas carts to travel difficult terrain and long distances while transporting heavy cargo.",
+            "product_percentage": 43.4
+        },
+        {
+            "product_or_service": "Solar-Powered Golf Carts and Parts",
+            "product_description": "Solar-powered carts are a small, rapidly expanding segment for manufacturers. While major companies have kept their gas and electric breakdowns, many smaller companies have ventured into alternative power supplies.",
+            "product_percentage": 7.0
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Iron & Steel Manufacturing in the US",
+            "Aluminum Manufacturing in the US",
+            "Tire Manufacturing in the US",
+            "Structural Metal Product Manufacturing in the US",
+            "Engine & Turbine Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [
+            "Golf Courses & Country Clubs in the US",
+            "Golf Driving Ranges & Family Fun Centers in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Golf courses and country clubs",
+            "determinant_description": "Golf courses and country clubs are the primary factor in demand. As golf courses, country clubs and other high-end hospitality companies expand, they purchase more golf carts. Golf courses and country clubs depend on consumers to continually play golf and renew their memberships in country clubs and other high-end hospitality services."
+        },
+        {
+            "determinant_title": "International demand",
+            "determinant_description": "Demand for golf carts internationally also fuels growth. Although exports of manufactured goods represent a small portion of annual performance, golf is a popular sport that has achieved widespread familiarity throughout much of the world. The dollar's value also plays an important role; the depreciation of the dollar relative to other currencies incentivizes foreign buyers to purchase golf carts."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Moderate",
+        "import_trend": "Increasing",
+        "export_level": "Moderate",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports",
+                "trade_description": "China is the largest importer of golf carts into the United States, accounting for more than 95.0% of imports. Chinese manufacturers leverage low production costs to undercut domestic manufacturers."
+            },
+            {
+                "trade_title": "Exports",
+                "trade_description": "Most exports end up in Canada. The USMCA cuts trade barriers between the two nations, making it easier for domestic manufacturers to sell golf carts in Canada."
+            },
+            {
+                "trade_title": "Manufacturers Rely on Golf's International Popularity",
+                "trade_description": "Manufacturers rely on demand from other developed nations, including the UK, France and Germany. Golf is a well-accepted leisure activity and sport, creating stable demand for golf carts."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region is a prime location for golf cart manufacturers. The region has a disproportionate number of golf courses, given its population. In particular, the region has a cluster of highly exclusive and sought-after golf courses.",
+            "percentage_establishments": 37.5,
+            "percentage_population": 21.8
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region is a historical manufacturing hub in the United States. Companies in this region can leverage existing manufacturing infrastructure and supply chains to reduce production costs.",
+            "percentage_establishments": 16.7,
+            "percentage_population": 15.1
+        },
+        {
+            "location": "West",
+            "location_description": "Like the Southeast, the West region hosts numerous highly exclusive, well-renowned public and private golf courses, like Pebble Beach and Torrey Pines. These courses more frequently purchase high-end golf carts.",
+            "percentage_establishments": 12.5,
+            "percentage_population": 17.4
+        },
+        {
+            "location": "Plains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 8.3,
+            "percentage_population": 6.8
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 8.3,
+            "percentage_population": 13.2
+        },
+        {
+            "location": "Southwest",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 8.3,
+            "percentage_population": 11.1
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 4.2,
+            "percentage_population": 6.9
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 4.2,
+            "percentage_population": 4.7
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [
+            {
+                "regulation_title": "NATIONAL HIGHWAY TRAFFIC AND SAFETY REGULATIONS",
+                "regulation_description": "Manufacturers must abide by safety regulations from the National Highway Traffic and Safety Administration. Most golf carts don't meet the standards for use on ordinary roads. The few that pass these standards must meet low-speed vehicle (LSV) regulations. These carts can reach speeds exceeding 20 miles per hour and require seatbelts. These carts are subject to local and state laws too. Seatbelts are optional on carts designed for golf courses and private communities."
+            },
+            {
+                "regulation_title": "ENVIRONMENTAL LEGISLATION",
+                "regulation_description": "Golf cart manufacturers' operations are subject to federal, state, local and foreign environmental laws and regulations relating to the discharge, treatment, storage, disposal, investigation and remediation of certain materials, substances and wastes. The Environmental Protection Agency (EPA) and the Occupational Safety and Health Administration (OSHA) oversee the effluent discharge produced during manufacturing and the overall safety of the industry's manufacturing conditions."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The life cycle stage of the industry poses a barrier to entry."
+            },
+            {
+                "barrier_title": "Capital Intensity Level",
+                "barrier_description": "The capital intensity level of the industry decreases barriers to entry."
+            },
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "The revenue volatility level of the industry is high."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Retail prices",
+                "basis_description": "Retail prices influence demand for golf carts."
+            },
+            {
+                "basis_title": "Quality",
+                "basis_description": "Quality influences demand for golf carts."
+            },
+            {
+                "basis_title": "Reliability",
+                "basis_description": "Reliability influences demand for golf carts."
+            },
+            {
+                "basis_title": "Styling",
+                "basis_description": "Styling influences demand for golf carts."
+            },
+            {
+                "basis_title": "Added features",
+                "basis_description": "Added features like fuel economy, engine noise, operating and maintenance costs influence demand."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "High",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Top manufacturers dominate",
+                "concentration_description": "The three largest golf cart manufacturers make up more than 60.0% of the total addressable market in the United States."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Textron Inc.",
+                "company_percentage": 21.5
+            },
+            {
+                "company_name": "Ingersoll Rand Inc.",
+                "company_percentage": 14.1
+            },
+            {
+                "company_name": "Yamaha Motor Company Ltd.",
+                "company_percentage": 12.4
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 8
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 40
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 60
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 80
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 40
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Manufacturers Rely on Raw Material Prices",
+            "cost_factor_description": "Companies primarily purchase steel, aluminum, plastics and other metals to manufacture golf carts. Electric golf carts rely more on semiconductors and other electronic components."
+        },
+        {
+            "cost_factor_title": "Purchases",
+            "cost_factor_description": "As manufacturers continue to add amenities, like USB chargers and temperature control, purchase costs will swell. In particular, supply chain disruptions during the pandemic led to higher purchase costs. While manufacturers have attempted to pass costs onto buyers, prolonged disruptions and shortages have pressured profit. Overall, purchases will account for an expected 72.5% of revenue in 2023."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital intensity",
+                "capital_intensity_description": "The Golf Cart Manufacturing industry has a moderate capital intensity, with the average manufacturer spending $0.13 on capital for every $1.00 spent on labor. Companies face little technological change so production processes remain heavily standardized. Most facets of production are automated."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Golf's Popularity is Declining",
+                "volatility_description": "- The number of new golf courses has outpaced the number of new golfers. - Many golf courses have unused golf cart fleets, leading to low use and replacement rates. - Many courses may also close as golf's popularity steadily falls. This trend will reduce the potential pool of golf cart buyers, forcing manufacturers to compete heavily for remaining buyers."
+            },
+            {
+                "volatility_title": "MANUFACTURERS RELY ON ECONOMIC TAILWINDS",
+                "volatility_description": "Golf cart manufacturers rely on broader economic trends to spur demand. In particular, higher per capita disposable income leads to more consumers playing golf or purchasing golf carts for personal use. In contrast, low unemployment often countervails strong spending since individuals spend less time on leisure, sports and entertainment."
+            }
+        ],
+        "volatility_trend": "Increasing"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Technological Disruption",
+                "technological_change_description": "Golf cart manufacturers don't face exposure to significant technological disruptions because manufacturers provide an essential output for downstream golf courses. Golf courses require significant movement between each shot. Although walking is possible, it is undesirable for most golfers, especially casual and elderly players. Golfers are often older and wealthy, so long walks in the hot sun are unpalatable. The nature of golfing protects the industry from disruption and replacement by another movement method. Any changes in the actual engineering and manufacturing of the carts would not be a disruption. This industry is also labor-intensive, so introducing new technology is mostly associated with making manufacturing more efficient."
+            },
+            {
+                "technological_change_title": "Low Technology Change",
+                "technological_change_description": "Golf cart manufacturers implement new technologies to maintain a competitive cost structure by controlling operating expenses and investing in global standardization, IT infrastructure and product development."
+            },
+            {
+                "technological_change_title": "Installing Additional Features",
+                "technological_change_description": "Some companies are installing additional features like USB chargers, weather protection, fender guards and side baskets on golf carts. Some companies are also creating solar-powered golf carts. Some golf carts have special systems installed to remember routes, providing riders additional convenience."
+            },
+            {
+                "technological_change_title": "Expanded Product Lineups",
+                "technological_change_description": "Companies have expanded product lineups. Aside from traditional golf carts with room for customization, leaders have introduced new golf carts for various occasions: - All-terrain golf carts offer engines with greater load capacity, higher ground clearance, more durable tires, stronger headlights, windshields and extended truck beds. - Family vehicles feature added safety features, USB connectivity, extra cupholders, more seating and more stylish customization options. - Some of the industry's carts classify as low-speed vehicles (LSV), a street-legal class of 4-wheel vehicles that reach a maximum of about 25 miles per hour. Consumers can often drive these vehicles on any street where the speed limit is 35 miles per hour or less. However, manufacturers must equip these carts with seat belts, running lights, headlights, brake lights, rearview mirrors, turn signals and meet federal safety standards."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company affected by rising imports?",
+            "answer": "Imports have increased as a share of domestic demand in this industry. Many manufacturers are overwhelmed by the sudden influx of inexpensive golf carts, forcing them to cut prices or shift to other markets."
+        },
+        {
+            "question": "Does your company specialize in a niche or do you produce a diversified range of products?",
+            "answer": "Large manufacturers consistently create new golf cart models. Successful companies have access to several markets, including golf courses, businesses, government buyers and consumers."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "Companies face significant exposure to rising steel, oil and other key input prices. Since most manufacturers operate internationally, they maintain global supply chains."
+        },
+        {
+            "question": "Have you looked into setting up manufacturing facilities in lower-wage regions of the country?",
+            "answer": "Large manufacturers have facilities abroad where they manufacture a majority of their carts and essential parts. Low-wage imports have pushed many companies to accelerate offshoring plans."
+        },
+        {
+            "question": "Is your company investing heavily in R&D to meet changing consumer preferences?",
+            "answer": "There is constant innovation, but mostly to make the carts more environmentally friendly to manufacture and operate. Companies hope to create electric carts with higher horsepower."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation over the past five years?",
+            "answer": "Wages share of revenue has remained relatively steady in the industry over the past five years. While automation has limited the need for low-skill labor, companies need engineers for design and electric-powered cart innovation."
+        },
+        {
+            "question": "Have any regulatory expenses significantly impacted profitability recently?",
+            "answer": "Regulation has remained relatively steady. Since companies don't face many regulations, these expenses are low."
+        },
+        {
+            "question": "How does your company stay ahead of regulations, such as energy-efficiency standards?",
+            "answer": "Environmental regulation has remained stringent. Companies have tailored fleets toward environmental goals, focusing on electric and solar power."
+        },
+        {
+            "question": "How do your company's profit margins compare to your main competitors'?",
+            "answer": "Profit has declined. Rising international competition has pressured most manufacturers."
+        },
+        {
+            "question": "How has input price volatility affected profit margins over the past 12 months?",
+            "answer": "Purchase costs have grown volatile following the pandemic. Companies will pass rising costs onto consumers, given they possess strong brand loyalty."
+        },
+        {
+            "question": "Is your company dominant in any particular regional markets? How quick are your delivery turnarounds?",
+            "answer": "It is costly to ship golf carts across long distances, so manufacturers prefer to locate their facilities close to popular golfing regions."
+        },
+        {
+            "question": "Are you able to leverage economies of scale? How do you curtail the threat of overexpanding your operations?",
+            "answer": "Economies of scale enable companies to manufacture more efficiently and increase profit. Smaller manufacturers struggle in the long run due to higher per-unit costs."
+        },
+        {
+            "question": "Does your company provide after-sales advice to its customers? How do you increase the likelihood of customer success and repeat business?",
+            "answer": "A key success factor is the ability to provide superior before and after-sales services. This strategy promotes brand loyalty and repeat purchases among golf courses."
+        },
+        {
+            "question": "How do you monitor the trade-weighted index? What can you do to promote your products abroad?",
+            "answer": "As the Golf Cart Manufacturing industry has increasingly expanded into export markets and experienced competition from imports, the value of the dollar has helped determine revenue performance and competition."
+        },
+        {
+            "question": "Do you expect major changes in demand as a result of rising disposable income levels? With what other forms of recreation are you primarily competing?",
+            "answer": "Golf courses purchase new carts when opening new facilities or responding to increased visitor demand. Per capita disposable income heavily influences visitor demand because higher disposable income leads to increased expenditure on leisure activities."
+        },
+        {
+            "question": "What proportion of your sales are from golf courses and country clubs? Do you target regions where new courses are opening?",
+            "answer": "When courses invest in new equipment for guests and workers, they often allocate a share of funds to purchasing new golf carts."
+        }
+    ]
+}

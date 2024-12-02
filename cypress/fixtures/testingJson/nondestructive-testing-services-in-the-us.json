@@ -1,0 +1,568 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 3393000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 2.49
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 2.31
+            }
+        },
+        "profit": {
+            "profit_dollars": 282000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 1.82
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 2.5
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 8.3,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -0.65
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 1.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1799000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 2.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 2.5
+            }
+        },
+        "employees": {
+            "employees_count": 17726,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 1.5
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 1.7
+            }
+        },
+        "wages": {
+            "wages_dollars": 1400000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 2.1
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 2.4
+            }
+        },
+        "imports": {
+            "imports_dollars": 500000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 1.8
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 1.9
+            }
+        },
+        "exports": {
+            "exports_dollars": 400000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 1.6
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 1.8
+            }
+        }
+    },
+    "executive_summary": "Nondestructive testing service companies have benefited from rapidly changing technology and the increasing complexity of products and processes that need testing over the past few years, although revenue has been volatile during the current period. Companies experienced severe losses during 2020 as COVID-19 rocked the US economy, with profit becoming negative. The industry benefited from soaring corporate profit resulting from surging GDP growth amid the pandemic recovery, but the lapse of COVID-19-era aid reduced investment in public utilities, constraining demand from a major market for providers. As a result, revenue didn't rise much in 2021 and 2022. Over the past few years, skyrocketing interest rates have made it much more expensive for businesses to set up facilities and purchase equipment, causing them to reduce spending on NDT services.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Overall Performance",
+            "current_performance_point_description": "Overall, revenue for nondestructive testing service providers is anticipated to fall at a CAGR of 2.8% during the current period, reaching $3.4 billion in 2024. This includes a 4.1% drop in revenue in that year."
+        },
+        {
+            "current_performance_point_title": "Technological Developments Require a Highly Skilled Workforce",
+            "current_performance_point_description": "Companies have continued to adapt to rapidly changing technologies to remain relevant and win new business. The two dominant technologies in the field of nondestructive testing (NDT), ultrasonic and radiographic testing, have both experienced a slew of technological changes. Specifically, phased array ultrasonic testing uses multiple elements in an array within a transducer to steer, focus and scan ultrasonic beams electronically. This enables providers to get an extremely detailed and accurate assessment of the internal structure of materials."
+        },
+        {
+            "current_performance_point_title": "Many Companies Have Recently United To Hedge Against Economic Downturns",
+            "current_performance_point_description": "During COVID-19, revenue for NDT companies plunged while profit became negative because of plunging downstream demand from most industries. In response, major players in this moderately concentrated industry ramped up the pace of mergers and acquisitions to maintain whatever net income they had left. These tactics are also meant to protect the presence of the biggest companies in this industry and capitalize on the success of smaller competitors."
+        },
+        {
+            "current_performance_point_title": "Weak Demand From The Utilities Sector Hindered Revenue During The Pandemic Recovery",
+            "current_performance_point_description": "As pandemic restrictions lapsed in 2021, strong employment, corporate profit and rising consumer and business sentiment have drove demand for greater production, boosting investment in NDT services. Despite these positive developments, the industry was negatively affected by slow demand from the utilities sector. Public investment in electricity systems, power plants, trash and recycling systems and other forms of necessary utilities infrastructure declined in 2021 and 2022 as the lapse of pandemic-era deficit spending made it difficult for authorities to start or do existing work on various projects."
+        },
+        {
+            "current_performance_point_title": "SOARING INTEREST RATES HAVE CREATED MALAISE FOR MANY PROVIDERS",
+            "current_performance_point_description": "To combat high inflation, the Federal Reserve has been pushing up interest rates since 2022. Quite a few businesses have halted their investment in new facilities and equipment since they can't afford to borrow money anymore. New materials require NDT in many instances, so higher interest rates have hindered downstream demand for the industry's services, fostering an expected decline in revenue in 2024."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "STABLE ECONOMIC GROWTH WILL BRING BACK DEMAND FROM THE PRIVATE SECTOR",
+            "future_outlook_point_description": "Despite recent economic challenges, the US economy will expand at a steady pace during the outlook period. As rising GDP fosters consumer spending, industrial production will pick up. Manufacturers will purchase new equipment and facilities to maintain elevated industrial production, boosting downstream demand for nondestructive testing (NDT) services."
+        },
+        {
+            "future_outlook_point_title": "DOMESTIC ENERGY EXPANSION WILL SPUR INVESTMENT IN THE INDUSTRY'S SERVICES",
+            "future_outlook_point_description": "While world oil prices will drop modestly during the outlook period as supply chain disruptions ease, growth in oil and gas extraction markets is expected to be strong, driving revenue upwards. Russia's invasion of Ukraine in 2022 resulted in global sanctions and Russia's reduction of oil supplies to Europe. Since Russia supplied more than one-tenth of the world's oil supply and a large chunk of Europe's crude oil, American companies will engage in more oil extraction to make up for this lost market."
+        },
+        {
+            "future_outlook_point_title": "TECHNOLOGICAL ADVANCEMENTS ARE EXPECTED TO DRIVE GROWTH",
+            "future_outlook_point_description": "Technological advancements will continue making NDT easier, more convenient and more effective. Specifically, these advancements will motivate manufacturers across all industries to use NDT services to detect structure variations, minute changes in surface finish, cracks or other physical discontinuities to determine the thickness of materials and coatings and other characteristics of industrial products."
+        },
+        {
+            "future_outlook_point_title": "Sustainability and Green Practices Will Become More Essential for NDT Companies",
+            "future_outlook_point_description": "Sustainability will become a key focus across all industries, and NDT is no exception. Companies will look for eco-friendly NDT solutions that minimize environmental impact. The use of non-toxic, less harmful chemicals and materials in NDT processes is likely to expand in the near future. There will also be a growing emphasis on reducing waste and recyclability of testing materials."
+        }
+    ],
+    "industry_definition": "This industry includes companies that perform nondestructive tests and inspections on industrial assets. Numerous companies offer nondestructive testing services in the United States, specializing in various methods to inspect materials and structures without causing damage. These services are crucial across multiple industries, including aerospace, automotive, construction, energy and manufacturing.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low Capital Intensity Level",
+            "low Concentration Level",
+            "medium Barriers To Entry Level"
+        ],
+        "negative_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "Medium & Increasing Level of Assistance",
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "High Volatility",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2005-2023)",
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers"
+        ],
+        "threats": [
+            "Low Outlier Growth",
+            "Prime rate"
+        ]
+    },
+    "key_trends": [
+        "Companies compete on delivery speed. This factor depends on numerous variables, such as the test subject and the number and type of tests requested.",
+        "Large associations that have in-house labs pose an external threat to providers. Businesses, such as car manufacturers, conduct lots of testing as part of the product development process.",
+        "Demand for nondestructive testing (NDT) services has fluctuated significantly. As the US economy recovered from COVID-19, corporate profit expanded and fueled capital expenditure. Soaring interest rates over the past few years have recently hindered demand for the industry's services.",
+        "The industry will perform well during the outlook period because of expanding industrial production and declining interest rates. Technological advancements and domestic energy expansion will also drive growth.",
+        "Mistras is a public company located in New Jersey with more than 5,000 employees. This business is the industry's largest company and only comprises slightly more than five percent of revenue, reflecting the relatively low market share concentration of nondestructive testing service providers."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Oil and gas",
+            "segment_description": "The oil and gas sector is a major consumer of nondestructive testing (NDT) services. NDT is crucial for monitoring material during petroleum extraction and ensuring equipment and facilities' safety, especially where the facilities or infrastructure is aged. As a result, these businesses make up more than half of the market for the industry.",
+            "segment_percentage": 59.0
+        },
+        {
+            "segment": "Infrastructure, including power",
+            "segment_description": "This segment includes infrastructure research, engineering, power generation and transmission. To prevent public infrastructure catastrophes, like a bridge collapsing, more public authorities have been employing NDT services. NDT is used for asset protection and maintenance on bridges, highways and rail segments.",
+            "segment_percentage": 9.0
+        },
+        {
+            "segment": "Aerospace and defense",
+            "segment_description": "NDT service providers test aircraft through ultrasonic immersion systems or digital radiography to detect structural defects and other problems. Aircraft are also tested for fatigue and corrosion to ensure safe use. Defense organizations use similar testing on equipment ranging from on-ground vehicles to ballistics technologies.",
+            "segment_percentage": 11.0
+        },
+        {
+            "segment": "Industrial processing",
+            "segment_description": "Industrial processing companies include businesses that process raw materials such as chemicals, pharmaceuticals, food and metals into finished products. The use of chemicals while processing materials requires a high degree of capital, while infrastructure needs continuous testing to prevent breakdowns. This spurs demand for NDT and causes industrial processing businesses to make up nearly one-tenth of the industry's market.",
+            "segment_percentage": 9.0
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Other NDT services markets include manufacturers that need to test consumer and capital goods. Industries such as consumer and medical electronics are required by law to maintain zero to low defective components. This has driven the purchase of the industry's services and promotes greater use of NDT throughout the production cycle.",
+            "segment_percentage": 12.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Machinery and Equipment Testing",
+            "product_description": "There has been a greater emphasis on guaranteeing machinery and equipment safety in different sectors, such as aviation, auto and oil and gas. For this reason, there's growing demand for nondestructive testing services to guarantee compliance with standards and regulations.",
+            "product_percentage": 43.7
+        },
+        {
+            "product_or_service": "Minerals and Chemicals Testing",
+            "product_description": "Environmental regulations have become more potent, leading to increased demand for testing services to ensure compliance with soil contamination, air quality and water quality regulations. Testing services are also being increasingly used to ensure compliance with minerals and chemicals import and export regulations as global trade expands.",
+            "product_percentage": 22.3
+        },
+        {
+            "product_or_service": "Construction Materials Testing",
+            "product_description": "The testing of construction materials includes machinery and equipment such as elastomers, protecting coatings, composite materials, calibration of instruments and reference materials. Testing for structural integrity and safety has become increasingly essential as construction projects become more complex.",
+            "product_percentage": 22.0
+        },
+        {
+            "product_or_service": "Consumer Products Testing",
+            "product_description": "Products in this segment that are tested include containers, paper products, children's products, textiles, leather products, houseware and wood products. The production of consumer goods incorporates new technologies and materials that need to be tested to make sure they are safe and work well.",
+            "product_percentage": 11.7
+        },
+        {
+            "product_or_service": "Environmental Testing",
+            "product_description": "Environmental testing evaluates the impact of various activities on the environment, crucial in biotechnology, life sciences and engineering research. Public concern over issues like pollution and climate change has driven increased demand for these testing services.",
+            "product_percentage": 0.3
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Inorganic Chemical Manufacturing in the US",
+            "Organic Chemical Manufacturing in the US",
+            "Copier & Optical Machinery Manufacturing in the US",
+            "Oil Drilling & Gas Extraction in the US",
+            "Plastic & Resin Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Construction in the US",
+            "Petrochemical Manufacturing in the US",
+            "Aircraft, Engine & Parts Manufacturing in the US",
+            "Oil Pipeline Transportation in the US"
+        ],
+        "tier_2_buyers": [
+            "Finance and Insurance in the US",
+            "Retail Trade in the US",
+            "Wholesale Trade in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "The industrial production index measures output",
+            "determinant_description": "The industrial production index measures output from the mining, manufacturing, electric and gas industries. Manufacturing and other industrial markets, which use nondestructive testing services to test and inspect products and equipment, represent the primary market for businesses. An increase in industrial production creates a more vital need for testing services to ensure safety."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "The Southeast Regions",
+            "location_description": "Numerous aerospace and energy companies make up the Southeast, meaning there is much demand for NDT services to ensure their safe and reliable operations. The energy business in the Southeast incorporates oil and gas investigation, refining, creation and thermal energy stations. These businesses require regular NDT inspections to identify and prevent equipment malfunctions.",
+            "percentage_establishments": 30.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "The West",
+            "location_description": "The West has a high concentration of petroleum processors, shipbuilders and aerospace companies that require NDT services.",
+            "percentage_establishments": 20.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "The Great Lakes",
+            "location_description": "This region is also well-known for its highly skilled workforce of technicians, engineers and inspectors who are knowledgeable about and trained in various NDT techniques. The growth of NDT services is aided by the region's skilled workforce, which enables businesses to provide high-quality, dependable and effective NDT services to various industries. Despite a similar share of establishments relative to population, the Great Lakes region generates a high percentage of revenue and pays one of the highest wages per employee because many of the industry's largest competitors have a significant presence there.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "This region features a mix of diverse industries requiring nondestructive testing services, including aerospace, automotive and oil and gas.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "This region is known for its mix of industrial and service-based sectors, contributing to NDT service demand.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Plains",
+            "location_description": "The Plains region is characterized by agricultural services and some industrial applications of NDT.",
+            "percentage_establishments": 5.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "This region boasts a combination of mining, energy and manufacturing sectors, necessitating NDT inspections.",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "New England",
+            "location_description": "This region traditionally emphasizes manufacturing and healthcare, driving demand for NDT in these sectors.",
+            "percentage_establishments": 5.0,
+            "percentage_population": 10.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "Environment Protection Agency (EPA)",
+                "regulation_description": "The industry is involved in regularly reporting on and analyzing inspection and nondestructive testing results to clients and regulatory bodies such as the EPA. Much of the work done by the industry is to meet compliance standards in the petrochemical, aerospace, utilities and construction industries. Equipment and infrastructure leak standards are designed by the EPA to cut or eliminate emissions of volatile organic compounds and hazardous air pollutants."
+            },
+            {
+                "regulation_title": "Certifications and Accreditation",
+                "regulation_description": "Providers are also required to obtain and keep up certain certification levels to conduct various tests. Employers and other agencies can offer certifications that qualify people to do certain work. Since many nondestructive testing methods don't produce a record of inspection results, certification presents objective evidence of the knowledge and skill level of the person performing an inspection."
+            },
+            {
+                "regulation_title": "The Occupational Safety and Health Administration (OSHA)",
+                "regulation_description": "OSHA will shut down providers that don't offer a suitable work environment or take all necessary precautions with hazardous materials."
+            },
+            {
+                "regulation_title": "Documentation and Record-Keeping Standards",
+                "regulation_description": "States, localities and the Federal Government ensure nondestructive testing companies keep accurate and comprehensive records of their testing procedures, results, calibrations and equipment maintenance, which is essential in helping authorities replicate these tests again with the same results. Companies must also guarantee the data they collect is accurate to ensure the reliability of their results."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is mature, increasing barriers."
+            },
+            {
+                "barrier_title": "Technology Change Level",
+                "barrier_description": "High level of technology change increases barriers."
+            },
+            {
+                "barrier_title": "Capital Intensity Level",
+                "barrier_description": "Low capital intensity decreases barriers."
+            },
+            {
+                "barrier_title": "Concentration Level",
+                "barrier_description": "Low concentration decreases barriers."
+            },
+            {
+                "barrier_title": "Globalization Level",
+                "barrier_description": "Low to steady globalization decreases barriers."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Technology Change Level: high"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Delivery Speed",
+                "basis_description": "Companies compete on delivery speed which depends on variables like test subject and number/type of tests."
+            },
+            {
+                "basis_title": "In-house Labs",
+                "basis_description": "Large associations with in-house labs pose external threat to providers."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Diverse Client Needs",
+                "concentration_description": "Diverse client needs across sectors lead to market fragmentation."
+            },
+            {
+                "concentration_title": "Consolidation",
+                "concentration_description": "Major companies acquiring smaller ones to expand into new markets, leading to consolidation."
+            },
+            {
+                "concentration_title": "Technological Advancements",
+                "concentration_description": "New technologies expanding customer base and allowing companies to gain larger market share."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Mistras Group, inc.",
+                "company_percentage": 9.6
+            },
+            {
+                "company_name": "Team Inc.",
+                "company_percentage": 8
+            },
+            {
+                "company_name": "Rockwood Service Corp",
+                "company_percentage": 7.2
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 75.2
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 50
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 35
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "SKILLED WORKERS DEMAND HIGH SALARIES",
+            "cost_factor_description": "Labor costs comprise nearly half of revenue since paying highly qualified and trained staff is expensive. High-tech equipment forces the industry to rely heavily skilled employees with greater salaries."
+        },
+        {
+            "cost_factor_title": "PURCHASES HOLD STEADY DESPITE SOARING INFLATION",
+            "cost_factor_description": "Purchases comprise nearly one-tenth of revenue and cover supplies such as wires, magnetic particle powder, protective gear, chemicals and other materials that are used during testing processes. Major equipment depreciates, while smaller items and software are classified under the purchases segment."
+        },
+        {
+            "cost_factor_title": "OTHER EXPENSES HAVE BEEN SOMEWHAT VOLATILE",
+            "cost_factor_description": "Miscellaneous costs include spending on licenses and permits, insurance, research and development (R&D) and transportation. These expenses are essential for the functioning of the industry, so other costs make up more than one-third of revenue."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Labor Expenses",
+                "capital_intensity_description": "Small companies with a handful of employees can still perform particular nondestructive testing services in the short to medium term, but those tests will be for niche markets. Large companies and in-house R&D departments can afford to employ talented scientists."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "FLUCTUATING OIL PRICES INFLUENCE REVENUE",
+                "volatility_description": "Revenue volatility has been driven by fluctuations in oil prices, which influence capital expenditure on structures and equipment in the energy sector that require nondestructive testing."
+            },
+            {
+                "volatility_title": "CHANGES TO REGULATIONS HAVE FORCED COMPANIES TO SHIFT THEIR OPERATIONS",
+                "volatility_description": "Changes in guidelines and norms connected with nondestructive testing (NDT), such as security, quality and environmental regulations, can impact NDT administrations' unpredictability in the US."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Advanced Sensory Technology Has Made Providers More Efficient",
+                "technological_change_description": "To boost inspection accuracy and efficiency, nondestructive testing service providers are making use of cutting-edge sensor technology, such as thermographic, electromagnetic and ultrasonic sensors."
+            },
+            {
+                "technological_change_title": "Artificial Intelligence (AI) and Machine Learning Can Streamline Testing Processes",
+                "technological_change_description": "AI and machine learning algorithms are being used to analyze and interpret inspection data for better defect detection and predictive maintenance."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company rely heavily on demand from a single, key market?",
+            "answer": "Operators provide services for a wide-range of customers including oil and gas companies, manufacturers and government entities."
+        },
+        {
+            "question": "How has the shift toward conducting business online affected demand for your services?",
+            "answer": "A shift towards online services has not had a drastic impact on demand. However, it has increased consumer connectivity and streamlined operations such as scheduling testing visits."
+        },
+        {
+            "question": "Has your company pursued merger and acquisition strategies to gain market share and improve efficiencies?",
+            "answer": "Merger and acquisition has increased as larger companies acquire smaller companies to increase geographic presence."
+        },
+        {
+            "question": "What is your company's most significant operational expense?",
+            "answer": "Due to the nature of industry, wages are the largest expensive for the average industry operator. Nondestructive testing services is highly labor intensive and companies require highly qualified and trained personnel."
+        },
+        {
+            "question": "Has investment in new technologies increased your company's competitiveness?",
+            "answer": "Technological developments that have occurred in this industry have increased the speed of processes, eliminated steps in experimentation and automated manual processes."
+        },
+        {
+            "question": "Have you been able to minimize/reduce wage costs through automation?",
+            "answer": "Skilled and knowledgeable workers are required for the majority of work in this industry and therefore operators are unable to reduce wages costs through automation"
+        },
+        {
+            "question": "Does your company benefit (either directly or indirectly) from any government legislation?",
+            "answer": "Operators benefit indirectly from changes in government regulation because companies require services to make sure their products are in compliance."
+        },
+        {
+            "question": "Do you work with industry associations or other groups to advance your company's interests?",
+            "answer": "Companies work with several industry associations, such as the National Institute of Standards and Technology (NIST). NIST advocates on behalf of industry operators and develops technology, measurements and standards for service operators."
+        },
+        {
+            "question": "How has your company's profitability trended over the past five years?",
+            "answer": "Margins across the industry is high, with the average company recouping more than 10.0% of revenue as profit. However, volatile oil prices play a significant role in dampening profit."
+        },
+        {
+            "question": "How frequently does your company purchase new capital equipment?",
+            "answer": "The level of depreciation may vary from company to company, based on which industries they service."
+        },
+        {
+            "question": "How quickly can new technology be adopted? Does your company keep up to date with the latest technology?",
+            "answer": "The ability to keep up-to-date with changes in technology is important to remain competitive."
+        },
+        {
+            "question": "Do you have the ability to react quickly to changing regulations? How have recent regulation changes affected your company?",
+            "answer": "It is vital to keep testing procedures relevant to changing demands and compliant with regulations."
+        },
+        {
+            "question": "How do you attract and retain skilled employees? Are there channels for promotion and career development within your company?",
+            "answer": "Low industry unemployment could challenge companies to retain their most skilled employees."
+        },
+        {
+            "question": "Do you track the industrial production index? How have you fared in the past when industrial production was low?",
+            "answer": "Manufacturing and other industrial markets, which use nondestructive testing services to test and inspect products and equipment, represent the primary market for industry operators."
+        },
+        {
+            "question": "Do you keep track of the prime rate? Has your company monitored trends in loan demand? How will this affect demand for your company?",
+            "answer": "An increase in the cost of borrowing for large businesses discourages investment in new facilities and equipment, which require testing services over an extended period of time."
+        },
+        {
+            "question": "Do you track the value of utilities construction? How much is your business affected by the value of utilities?",
+            "answer": "When the value of utilities construction increases, more nondestructive testing is required to ensure components remain safe and do not require immediate replacement."
+        }
+    ]
+}

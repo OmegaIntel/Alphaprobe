@@ -1,0 +1,536 @@
+{
+    "report_title": "Corn Farming Industry Report",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 75210000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "revenue_cagr_value": 3.34
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 0.23
+            }
+        },
+        "profit": {
+            "profit_dollars": 101,
+            "profit_cagr_historical": {
+                "begin_year": 101,
+                "end_year": 101,
+                "profit_cagr_value": 101
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 13.2,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 0.25
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 19588000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 136061,
+            "employees_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 2152000000,
+            "wages_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 386000000,
+            "imports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "imports_cagr_value": 3.33
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": -0.56
+            }
+        },
+        "exports": {
+            "exports_dollars": 12972000000,
+            "exports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "exports_cagr_value": 1.48
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0.87
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2024 currency. Revenue for the corn farming industry has been volatile over the last five years because corn prices and demand have fluctuated dramatically. The outbreak of the COVID-19 pandemic caused a downturn in revenue after the supply chain backed up and products were left unsold, but a subsequent uptick in demand, massive increases in exports and boosted oil production caused revenue to skyrocket in 2021 and 2022. As a result of these outliers, revenue has risen at a CAGR of 5.1% in the current period to an expected $75.2 billion in 2024.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Ethanol Production Experiences a Rebound",
+            "current_performance_point_description": "During the pandemic, as restrictions lifted and the pent-up demand for travel pushed gas prices through the roof in 2021, demand for ethanol was renewed. Corn farmers benefited from a huge jump in revenue that lasted into 2022. Ethanol's primary input material is corn, so rising demand for ethanol leads to higher corn prices \u2013 and heightened revenue and profit for corn farmers who can provide corn for biofuel production."
+        },
+        {
+            "current_performance_point_title": "Massive Jumps in Exports Caused Revenue to Spike",
+            "current_performance_point_description": "The US is the world's number one supplier of corn, and total exports nearly doubled in 2021 as supply chain bottlenecks pushed the world to rely on US corn production. A large portion of this jump came from China, which tripled its imports of US corn from 2020 to 2021 when Ukraine \u2013 the other primary supplier of corn \u2013 was cut off from trade amid the Russian invasion. China severely dropped its imports of corn in 2023 and export values plummeted."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "The Price of Corn Will Decline",
+            "future_outlook_point_description": "Like most commodities, the price of corn is affected by multiple variables and is therefore difficult to predict. But the projected decline in the price of oil will likely lead to a decrease in demand for ethanol, and corn by extension. Corn's relevance to the ethanol manufacturing process is fairly secure, with corn accounting for 94.0% of ethanol production. However, emerging alternatives like sugarcane may siphon away some demand for corn."
+        },
+        {
+            "future_outlook_point_title": "Export Growth Stabilizes Following a Volatile Few Years",
+            "future_outlook_point_description": "Exports of corn will significantly slow over the next five years as shortages begin to be filled by other countries with cheaper transportation costs. Demand from markets in Asia continues to rise, so countries like China and India are expected to continue boosting their share of the world's corn production."
+        },
+        {
+            "future_outlook_point_title": "Export revenue will continue to grow",
+            "future_outlook_point_description": "Export revenue will continue to grow but not at the same level that it did during the huge spikes seen after COVID-19 restrictions were lifted. Still, exports will grow as a share of revenue as domestic markets struggle with lower corn prices. Additionally, as China's pork industry continues to recover from its outbreak of African Swine Fever during the current period, US exporters may benefit from increased demand from China."
+        },
+        {
+            "future_outlook_point_title": "The New Farm Bill Will Change The Forecast",
+            "future_outlook_point_description": "The Farm Bill, which provides subsidies for corn farmers, is due to get a revision later in 2024 that will determine the level of government assistance to the industry in 2025 and beyond. The price of corn is forecast to fall 1.1% per year to $5.10 a bushel in 2029, which means corn farms signed up for the current Price Loss Coverage (PLC) program will be on their own for the next five years."
+        },
+        {
+            "future_outlook_point_title": "Corn Farmers Face A Shrinking Food Market",
+            "future_outlook_point_description": "While high-fructose corn syrup will remain a staple of US food production, health-conscious consumers will continue to move away from foods and beverages that contain high levels of sugar and corn syrup. As Americans continue to embrace healthy diets, sugar and sweetener consumption is poised to continue falling. This trend, coupled with rising artificial sweetener consumption, will place pressure on farms that produce corn for food and beverage production."
+        }
+    ],
+    "industry_definition": "Operators in this industry primarily grow corn (except sweet corn) and produce corn seeds. Corn commonly refers to the grains or kernels of the tall annual cereal grass Zea mays, a staple cereal in many parts of the world. In the United States, it is most commonly used as livestock feed and in the production of ethanol, sweeteners, oil and other products.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "high - increasing Industry Assistance Level",
+            "low Concentration Level"
+        ],
+        "negative_impact_factors": [
+            "very high Revenue Volatility Level",
+            "high Capital Intensity Level",
+            "high - increasing Globalization Level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Increasing Level of Assistance",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "High Revenue per Employee"
+        ],
+        "weaknesses": [
+            "Very high Volatility"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "Subsidies for corn farming"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Low Revenue Growth (2024-2029)",
+            "Low Performance Drivers",
+            "Price of corn"
+        ]
+    },
+    "key_trends": [
+        "Price is the main basis of competition. While demand for premium organic corn will continue to grow, price remains more of a differentiator than the various attributes of the corn itself.",
+        "Maintaining access to export markets is key. The US is the largest exporter of corn in the world, and domestic corn farmers need to be able to capitalize on the extensive global demand.",
+        "Postpandemic exports caused revenue to boom. Reduced global production and a supply cutoff from Ukrainian corn led many buyers to rely on the US's robust corn farming industry.",
+        "Ethanol production has been volatile. Corn has historically been the main ingredient used in creating renewable fuel, and production is expected to climb following the Inflation Reduction Act of 2022's extension of incentives for the use of sustainable fuels.",
+        "Profit varies with weather patterns. Unforeseen natural disasters in the United States could significantly cut into a farm's yield.",
+        "Corn prices will fall. Substantial spikes in the price of a bushel of corn in 2021 and 2022 have begun to normalize as production steadily recovers and consumption remains pressured amid changing economic factors, which will cause revenue to slightly decline in the coming years.",
+        "Bayer is going green. New crop science leadership, a carbon-neutral mission and a focus on sustainability show the direction the corn farming industry's only major player is headed.",
+        "The growing use of genetically modified corn is monitored. Farmers need to obtain a permit from the USDA in order to use genetically modified corn; farms wanting to market their corn as organic must obtain certification.",
+        "The US government heavily subsidizes corn farming. While the level of assistance has lessened over the years, guaranteed price minimums and revenue floors help farmers make up for losses brought on by drought, severe weather and even drops in demand.",
+        "Profit is volatile. Year-to-year changes in growing conditions challenge farmers, but government subsidies help protect against major losses.",
+        "Purchases have become more expensive. Bayer's growing control of the seed market in the US and abroad gives it strong pricing authority, but farmers will benefit from slumping fertilizer prices in the near term.",
+        "Four states dominate in corn farming. Iowa, Illinois, Nebraska and Minnesota make up the Corn Belt, which is responsible for almost half of all US corn production.",
+        "The Plains and the Great Lakes are the industry's primary regions for growing. The favorable climate, cheap land, soil nutrition, flat terrain and proximity to processors make these regions ideal for corn farming."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Seed wholesalers",
+            "segment_description": "The seed market is a tiny fraction of the industry's revenue and has remained so for more than two decades. These products are lower-margin than corn, making them less impactful on revenue. Since most corn is genetically modified (GM), farmers have to purchase their seeds from seed developers like Bayer, which currently supplies more than 80.0% of all corn seeds used in the US.",
+            "segment_percentage": 0.2
+        },
+        {
+            "segment": "Animal feed producers",
+            "segment_description": "Livestock farmers rely on corn-based feed to fatten up animals in preparation for slaughter, and corn farmers sell almost half of all US corn to animal feed manufacturers for use in meat production. The USDA's Economic Research Service estimates that corn consistently accounts for more than 95.0% of all feed grain production and use because of its high caloric yield and widespread availability.",
+            "segment_percentage": 45.2
+        },
+        {
+            "segment": "Food, beverage and other consumable product manufacturers",
+            "segment_description": "Manufacturers use corn derivatives like high-fructose corn syrup, glucose, dextrose and alcohol to make food and drink products for consumers. Growing concerns among consumers about the link between corn-derived sweeteners and obesity, cancer and other health issues have led many food and beverage makers to turn to alternative sweeteners.",
+            "segment_percentage": 11.7
+        },
+        {
+            "segment": "Ethanol manufacturers",
+            "segment_description": "Ethanol manufacturers use corn to manufacture renewable biofuels. Though sorghum and sugarcane are both viable substitutes for corn, the large supply of corn makes it the most accessible option even when corn prices rise. This market segment will rise moving forward as gas prices remain a concern, especially throughout the ongoing invasion of Ukraine.",
+            "segment_percentage": 42.9
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Corn used in livestock feed",
+            "product_description": "Corn is sold to animal feed manufacturers who sell corn-based feed to farmers for use in feeding cattle, chickens, hogs and other livestock. Some corn is sold directly to farmers, skipping the middleman, though this is more rare because corn farmers generally have long-term contracts with feed manufacturers and not with livestock farmers.",
+            "product_percentage": 44.6
+        },
+        {
+            "product_or_service": "Corn used in biofuel production",
+            "product_description": "Corn farmers have dedicated more and more land to cultivating high-value corn varieties with greater oil content for use in biofuel production. This segment increased significantly since the enactment of the Energy Policy Act of 2005 and the Energy Independence and Security Act of 2007 because selling to ethanol producers is far more lucrative.",
+            "product_percentage": 43.9
+        },
+        {
+            "product_or_service": "Corn used in food and alcohol",
+            "product_description": "This segment includes corn used to manufacture sweeteners, including high-fructose corn syrup, glucose and dextrose; various starch products and cereals are also included. The Hispanic population is a major consumer of corn flour and other corn-derived products. However, rising demand for corn as a result of a growing Hispanic population has been overshadowed by larger growth in demand for corn for ethanol production.",
+            "product_percentage": 11.2
+        },
+        {
+            "product_or_service": "Corn seeds for sowing",
+            "product_description": "More than 90.0% of corn grown in the US comes from genetically modified (GM) seeds, which must be bought every year and can't legally be sold between corn farmers. Corn seeds are a very restricted segment because of intense patent protection on GM seeds. This segment is a minuscule percent of revenue as non-GM seeds aren't widely used.",
+            "product_percentage": 0.3
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Crop Services in the US",
+            "Water Supply & Irrigation Systems in the US",
+            "Tractors & Agricultural Machinery Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [
+            "Commercial Building Construction in the US",
+            "Coal & Natural Gas Power in the US",
+            "Natural Gas Distribution in the US"
+        ],
+        "tier_2_buyers": [
+            "Livestock Production Support Services in the US",
+            "Corn, Wheat & Soybean Wholesaling in the US",
+            "Organic Chemical Manufacturing in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Price of Corn",
+            "determinant_description": "The prices of agricultural commodities like corn are subject to wide fluctuations due to factors like weather, government farm programs and changes in global demand. Volatile corn prices directly affect growers' returns and profit."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Increasing",
+        "export_level": "High",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "America Grows Plenty of Corn to Go Around",
+                "trade_description": "Imports are consistently low because the US can produce all the corn it needs as the world's foremost supplier. The US has little incentive to use imported corn without protections of the domestic supply."
+            },
+            {
+                "trade_title": "US Corn Exports Boomed in the Wake of the Pandemic",
+                "trade_description": "Total corn exports from the US nearly doubled in 2021 due to supply chain disruptions and global shortages from COVID-19, pushing many countries to rely more on the US as the top exporter."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Plains",
+            "location_description": "The Plains' Corn Belt Runs US Corn Production. Corn production is centralized in what's known as the Corn Belt, which includes the top four states for corn farming. Iowa, Illinois, Nebraska and Minnesota account for nearly half of all corn farming locations in the US. Iowa, Nebraska and Minnesota are all in the Plains region, which is the largest region for corn farming because of its flat terrain, soil nutrition and proximity to processing plants.",
+            "percentage_establishments": 35,
+            "percentage_population": 10
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "After the Plains, the Great Lakes region, which includes Illinois, is the second largest region for corn farming in the US.",
+            "percentage_establishments": 20,
+            "percentage_population": 20
+        },
+        {
+            "location": "Southeast",
+            "location_description": "After the Great Lakes, Most Other Regions Have Little Corn Farming. With the exception of the Great Lakes region, which includes Illinois, US regions outside the Plains have a very small corn farming presence. The Southeast is the third-largest producer of corn in the US, but a heavy manufacturing presence in the region and a large population make buying the vast acreage needed for corn farming more expensive.",
+            "percentage_establishments": 15,
+            "percentage_population": 25
+        },
+        {
+            "location": "Southwest",
+            "location_description": "Buying farmland has also become prohibitively more expensive in heavily populated regions like the Southwest.",
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "Buying farmland has also become prohibitively more expensive in heavily populated regions like the Mid-Atlantic.",
+            "percentage_establishments": 5,
+            "percentage_population": 15
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "The Rocky Mountains region isn't densely populated, but the amount of money it would take to flatten the land enough for farming makes the endeavor too challenging to attempt.",
+            "percentage_establishments": 5,
+            "percentage_population": 5
+        },
+        {
+            "location": "West",
+            "location_description": "Buying farmland has also become prohibitively more expensive in heavily populated regions like the West.",
+            "percentage_establishments": 5,
+            "percentage_population": 10
+        },
+        {
+            "location": "New England",
+            "location_description": "Buying farmland has also become prohibitively more expensive in heavily populated regions like New England.",
+            "percentage_establishments": 5,
+            "percentage_population": 5
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [
+            {
+                "regulation_title": "The EPA oversees critical components of corn farming",
+                "regulation_description": "Corn farmers use chemicals, which have spawned concerns over the last three decades about the environmental effect of disposal in addition to the effects of the chemicals on the crop itself, surrounding water supplies and nearby residential zones. The Environmental Protection Agency regulates the use of fertilizers and pesticides, and farmers must follow guidelines to avoid fines or a forced shutdown."
+            },
+            {
+                "regulation_title": "The genetic modification of corn is monitored by the USDA",
+                "regulation_description": "The USDA regulates genetically modified (GM) corn, especially crops grown for use in industrial chemical production and inputs for the pharmaceutical industry. Biotech companies must isolate crops of pharmaceutical corn to reduce the risk of trans-crop contamination. To oversee this type of farming, growers of GM corn must obtain a permit from the department. At the other end of the spectrum, farmers who want to grow and market their crops as organic must also meet criteria set by the USDA and acquire proper certification."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life cycle stage",
+                "barrier_description": "Life Cycle Stage: mature"
+            },
+            {
+                "barrier_title": "Revenue volatility",
+                "barrier_description": "Revenue Volatility Level: very high"
+            },
+            {
+                "barrier_title": "Capital intensity",
+                "barrier_description": "Capital Intensity Level: high"
+            },
+            {
+                "barrier_title": "Globalization",
+                "barrier_description": "Globalization Level: high - increasing"
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Industry Assistance Level: high - increasing",
+            "Concentration Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Price competition",
+                "basis_description": "Price is the main basis of competition. While demand for premium organic corn will continue to grow, price remains more of a differentiator than the various attributes of the corn itself."
+            },
+            {
+                "basis_title": "Access to export markets",
+                "basis_description": "Maintaining access to export markets is key. The US is the largest exporter of corn in the world, and domestic corn farmers need to be able to capitalize on the extensive global demand."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Family-owned farms push down concentration",
+                "concentration_description": "As is typical of the agricultural sector, the Corn Farming industry is overwhelmingly made up of small companies and family-owned farms. The United States Department of Agriculture (USDA) put the average farm size at 463.0 acres in 2022 (latest data available), which means each farm can only capture a sliver of the market since 89.9 million acres of corn were planted that year."
+            },
+            {
+                "concentration_title": "Intensifying competition is raising concentration",
+                "concentration_description": "Corn farmers aren't exempt from a long-term trend toward fewer farms. Larger farms are using their larger income streams to buy up nearby competitors and expand their crop yields, and the USDA estimates that the average size of a US corn farm has more than tripled in the last three decades. Internal competition will continue to become more intense as rising costs and volatile prices tighten margins for smaller farms, and the economies of scale larger companies benefit from push them to outperform owner-operators."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Bayer Corp",
+                "company_percentage": 2.3
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 15
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 55
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Other Costs",
+            "cost_type_percentage": 5
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Wages are Seasonal and Low",
+            "cost_factor_description": "Corn farmers pay much less in wages than other farming industries, because most are self-employed and get additional help from family members. Corn farms also use highly efficient harvesting and planting equipment that keep the need for labor low."
+        },
+        {
+            "cost_factor_title": "Purchases Will Become More Expensive",
+            "cost_factor_description": "Corn farmers purchase seeds, chemicals and fertilizers, which constitute the industry's largest source of costs. These inputs are necessary for corn growing, so farms must absorb any price increases. Bayer provides more than 80.0% of corn seeds in the US and controls nearly one-third of the global seed market. Its growing global dominance has allowed it to better control prices and increase the cost of seeds, which could put pressure on corn farmers."
+        },
+        {
+            "cost_factor_title": "Depreciation Isn't Optional",
+            "cost_factor_description": "Depreciation is a substantial cost because farmers must use heavy equipment to till, sow and harvest their corn. For example, combine harvesters can easily cost $300,000 but are indispensable to modern corn farming operations. Even small producers are subject to high capital costs, and by extension the depreciation of the asset purchased, because doing all the labor by hand is no longer economically viable for corn farmers."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Capital Expenses",
+                "capital_intensity_description": "Corn farmers deal with a high level of capital intensity, because the necessary farming equipment such as tractors, combine harvesters and storage mills are depreciable assets that will require continual investment."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Very High Revenue Volatility",
+                "volatility_description": "Crop yields by corn farmers are highly dependent on seasonal conditions, and uncontrollable negative effects from agricultural plagues, droughts or severe weather phenomena often ravage corn production. These adverse occurrences can give other crops a competitive advantage over corn, further reducing revenue for corn producers in bad years."
+            },
+            {
+                "volatility_title": "Yields Vary Year to Year",
+                "volatility_description": "Crop yields by corn farmers are highly dependent on seasonal conditions, and uncontrollable negative effects from agricultural plagues, droughts or severe weather phenomena often ravage corn production."
+            },
+            {
+                "volatility_title": "Government Assistance Reduces Volatility",
+                "volatility_description": "Guaranteed price minimums and revenue loss compensation help reduce the amount of volatility corn farmers have to deal with. Countercyclical direct payments used to do this to a higher extent, but lawsuits from countries like Brazil put a stop to this level of government assistance."
+            },
+            {
+                "volatility_title": "Overall Demand Can Fluctuate",
+                "volatility_description": "General shifts in consumer preferences, oil prices and global production of competing crops can all shift revenue up or down for corn farmers."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Planting and Harvesting Machinery Advances",
+                "technological_change_description": "Planting and harvesting corn by hand simply isn't an option anymore, because the time it would take would make the investment unprofitable. Heavy machinery has reduced the time it takes to harvest a bushel of corn to just six minutes of labor, and the implementation of drones for use in the dispersal of fungicides, herbicides and pesticides has started to boost profit even more."
+            },
+            {
+                "technological_change_title": "Data Advancements Track Crops",
+                "technological_change_description": "Corn farmers are using high-tech data solutions that combine information on soil type, fertilizer use, land outlays, weather patterns and other information to determine the optimal crop planting density."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "Does your farm face competition from imports?",
+            "answer": "Corn farmers face little competition from imports, as almost all domestic demand is satisfied by US production."
+        },
+        {
+            "question": "What export opportunities exist for your produce?",
+            "answer": "Growing middle classes in several emerging countries represent an opportunity for corn farmers to export their produce and capitalize on growing demand."
+        },
+        {
+            "question": "What are your largest input costs? How many suppliers do you work with?",
+            "answer": "Corn farmers' largest input costs are seeds, fertilizers and other chemicals used in the planting of corn."
+        },
+        {
+            "question": "How does your business cope with changes in the market price of your produce?",
+            "answer": "When the market price of corn fluctuates, corn farmers' profit and revenue tend to rise or drop accordingly as they seek to remain price competitive."
+        },
+        {
+            "question": "How much biotechnology is involved in your agricultural products? Who owns the intellectual property?",
+            "answer": "The largest biotechnology advances in recent years have stemmed from seeds used to grow corn. Since corn farmers do not own the patents for these seeds, purchasing costs have increased in recent years."
+        },
+        {
+            "question": "What opportunities exist for further automation in your operations?",
+            "answer": "Farm technology has evolved in recent years, allowing some corn farmers to reduce their reliance on expensive laborers."
+        },
+        {
+            "question": "Does your farm require any special environmental permits? Do these inhibit your ability to expand?",
+            "answer": "Corn farmers don't need to obtain environmental permits to plant and grow corn crops."
+        },
+        {
+            "question": "Do you receive any federal subsidies? How much of your revenue do they comprise?",
+            "answer": "Corn farmers receive federal subsidies that help stabilize farmers' profit when corn prices sink. Price floors also help mitigate major drops in the price of corn."
+        },
+        {
+            "question": "How has agricultural price volatility affected profit over the past year?",
+            "answer": "101"
+        }
+    ]
+}

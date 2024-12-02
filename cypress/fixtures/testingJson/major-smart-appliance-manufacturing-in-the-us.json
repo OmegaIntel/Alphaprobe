@@ -1,0 +1,661 @@
+{
+    "report_title": "Major Smart Appliance Manufacturing in the US",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 4905000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 11.46
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.04
+            }
+        },
+        "profit": {
+            "profit_dollars": 334000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 9.6
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 5.18
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 6.8,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": -1.67
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0.06
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1000000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 10.93
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 2.07
+            }
+        },
+        "employees": {
+            "employees_count": 9791,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 11.01
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 4.89
+            }
+        },
+        "wages": {
+            "wages_dollars": 612000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 11.95
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 4.12
+            }
+        },
+        "imports": {
+            "imports_dollars": 4529000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 17.03
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": -0.8
+            }
+        },
+        "exports": {
+            "exports_dollars": 550000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 10.69
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 1.92
+            }
+        }
+    },
+    "executive_summary": "Major smart appliance manufacturers build smart household cooking appliances, refrigerators and laundry equipment. Revenue for the industry has surged during the current period because major smart appliances have become less expensive and more accessible to consumers, enabling manufacturers to sell to most households for the first time. Rising incomes during much of the current period also benefited the industry, as more money enabled consumers to purchase luxuries, such as major smart appliances.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Widespread Adoption of New Technology Has Driven Revenue Growth",
+            "current_performance_point_description": "As major smart appliances have become less expensive and more accessible, an increasing number of consumers have started to use them, boosting revenue growth. Revenue growth has been so rapid because the lack of market saturation has enabled manufacturers to find millions of first-time customers."
+        },
+        {
+            "current_performance_point_title": "COVID-19 Caused More Households to Rely on Smart Cooking Appliances",
+            "current_performance_point_description": "COVID-19 forced people to stay home, so more people prepared their own food. Smart appliances make the cooking process easier, so demand for the industry's products soared during the pandemic, resulting in a massive increase in revenue in 2020."
+        },
+        {
+            "current_performance_point_title": "Rising Incomes Have Consistently Provided a Source of Demand for the Industry's Products",
+            "current_performance_point_description": "When consumers have more disposable income, spending rises on expensive products, such as major smart appliances. High wage growth in the years preceding the pandemic caused incomes to surge, benefiting the industry in 2018 and 2019. Massive government aid during COVID-19 gave consumers tons of cash. They used this money during the pandemic and the recovery to buy smart appliances, which raised revenue in 2020 and 2021."
+        },
+        {
+            "current_performance_point_title": "HIGH INPUT PRICES HAVE PROVIDED NEW REVENUE STREAMS FOR MANUFACTURERS",
+            "current_performance_point_description": "Wealthy consumers that purchase smart appliances are less sensitive to prices, so manufacturers can pass on the high costs of inputs to their buyers, raising their revenue. Supply chain disruptions have caused prices of key inputs (e.g. steel, plastic) to skyrocket during the pandemic recovery, causing revenue to soar in 2021. Buyers will eventually purchase traditional appliances if input prices become too high, so the industry can only benefit from higher costs up to a point."
+        },
+        {
+            "current_performance_point_title": "RISING INTEREST RATES HAVE INHIBITED DOWNSTREAM DEMAND",
+            "current_performance_point_description": "The Federal Reserve has raised interest rates in recent years to reduce inflation. As the cost of borrowing has risen, homebuying and residential construction have fallen. Since some consumers purchase major smart appliances when they build or buy a new home, the less active housing market has inhibited revenue growth."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "STEADILY RISING INCOMES WILL BENEFIT MANUFACTURERS",
+            "future_outlook_point_description": "Despite challenges from high inflation, rising interest rates and recessionary fears, GDP is anticipated to rise at a modest pace during the outlook period."
+        },
+        {
+            "future_outlook_point_title": "The Housing Market Will Stabilize",
+            "future_outlook_point_description": "Interest rates will stay high during the outlook period, but consumers will eventually adjust to them, so homebuying and residential construction will pick up again as households accumulate more savings. Since the housing market is a major source of downstream demand for major smart appliance manufacturers, they'll benefit from the revived residential sector."
+        },
+        {
+            "future_outlook_point_title": "The Depreciating Dollar Will Boost Demand From Foreign Markets",
+            "future_outlook_point_description": "The dollar is expected to depreciate during the outlook period. As the value of the dollar falls, domestically produced products become less expensive for buyers abroad. More foreigners will purchase US-produced smart appliances, providing an extra revenue stream for the industry."
+        },
+        {
+            "future_outlook_point_title": "The Industry Will Become Saturated",
+            "future_outlook_point_description": "Revenue soared during the current period because manufacturers were able to introduce their products to households for the first time. Many households will have already purchased major smart appliances by the mid-2020s, so the market for the industry's products will become saturated. Saturation makes it harder for manufacturers to find new customers, so revenue will increase at a much slower rate than during the current period."
+        }
+    ],
+    "industry_definition": "Companies in this industry manufacture major smart household cooking appliances, refrigerators, freezers, laundry equipment and other major electrical and nonelectrical smart household appliances.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Barriers To Entry Level: high - steady"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level: very high",
+            "Industry Assistance Level: low - steady",
+            "Technology Change Level: high",
+            "Globalization Level: high - increasing",
+            "Competition Level: high - steady"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "Growth Life Cycle Stage",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "Very high Volatility",
+            "High Imports"
+        ],
+        "opportunities": [
+            "Very High Revenue Growth (2005-2023)",
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Trade-weighted index"
+        ],
+        "threats": [
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Value of residential construction",
+            "Supply Chain"
+        ]
+    },
+    "key_trends": [
+        "Percentage of Business Conducted Online"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Wholesalers",
+            "segment_description": "Wholesalers and retailers are major buyers of smart appliances, as their sales comprise more than four-tenths of the industry's revenue. Wholesalers sell major smart appliances from the industry and transfer them to retailers, which then sell them to the general population.",
+            "segment_percentage": 30.9
+        },
+        {
+            "segment": "Building, heavy construction, special trade contractors",
+            "segment_description": "Building contractors and construction companies often buy smart appliances, as prospective homeowners want them to be automatically installed when purchasing a house.",
+            "segment_percentage": 101
+        },
+        {
+            "segment": "Businesses for end use",
+            "segment_description": "Businesses also purchase smart appliances for end use in their own operations, as some products are useful in improving production processes.",
+            "segment_percentage": 17.4
+        },
+        {
+            "segment": "Manufacturers for use as input goods in production",
+            "segment_description": "Major smart appliance manufacturers sell their goods to other manufacturers so they can use them as inputs in production. This can be for integrated home systems that combine multiple appliances.",
+            "segment_percentage": 12.9
+        },
+        {
+            "segment": "Retailers",
+            "segment_description": "Wholesalers and retailers are major buyers of smart appliances, as their sales comprise more than four-tenths of the industry's revenue. Retailers sell smart appliances from the industry to the general population.",
+            "segment_percentage": 9.3
+        },
+        {
+            "segment": "Other",
+            "segment_description": "",
+            "segment_percentage": 8.2
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Smart Refrigerators and Freezers",
+            "product_description": "Smart refrigerators and freezers integrate radio-frequency identification and barcode sensors into their design to keep track of their stock, enabling users to know when there's no more food in the fridge or when produce is about to spoil.",
+            "product_percentage": 28.8
+        },
+        {
+            "product_or_service": "Smart Cooking Appliances",
+            "product_description": "Smart cooking appliances include internet-enabled ovens, stoves, electric ranges, gas ranges and other cooking equipment and parts. One common feature in household cooking appliances is the use of voice-activated artificial assistant programs (e.g. Amazon Alexa, Google Assistant) to provide people with information regarding recipes, to set timers and to help in other ways.",
+            "product_percentage": 20.9
+        },
+        {
+            "product_or_service": "Other Smart Appliances",
+            "product_description": "Other smart appliances include Wi-Fi-enabled dishwashers, microwave ovens and other household items.",
+            "product_percentage": 24.9
+        },
+        {
+            "product_or_service": "Smart Laundry Equipment",
+            "product_description": "Smart laundry equipment enables users to start washing and drying machines through an app on a smartphone.",
+            "product_percentage": 25.4
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Major Smart Appliance Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Plastic Pipe & Parts Manufacturing in the US",
+            "Circuit Board & Electronic Component Manufacturing in the US",
+            "Laminated Plastics Manufacturing in the US",
+            "Hose & Belt Manufacturing in the US",
+            "Steel Rolling & Drawing in the US"
+        ],
+        "tier_1_buyers": [
+            "TV & Appliance Wholesaling in the US",
+            "Department Stores in the US",
+            "Consumer Electronics Stores in the US"
+        ],
+        "tier_2_buyers": [
+            "Commercial Building Construction in the US",
+            "Home Builders in the US",
+            "Housing Developers in the US",
+            "Apartment & Condominium Construction in the US",
+            "Consumers in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Rising Input Prices Have Boosted Demand for Smart Refrigerators and Freezers",
+            "determinant_description": "Supply chain disruptions have caused the price of plastic materials to soar. Companies have been able to pass on these high prices to consumers. Since smart refrigerators and freezers contain many plastics, their share of revenue has increased during the current period."
+        },
+        {
+            "determinant_title": "Steel Prices Have a Significant Impact on Revenue Received from Smart Laundry Equipment",
+            "determinant_description": "Since steel is a primary component in the manufacture of washers and dryers, its price is vital to the industry. The surging world price of steel has enabled companies to pass on these high prices to consumers, so smart laundry equipment's revenue share has crept upward during the current period."
+        },
+        {
+            "determinant_title": "Higher Incomes Have Increased Spending on Other Smart Appliances",
+            "determinant_description": "As per capita disposable income has increased, more consumers can afford these household goods, so other appliances' revenue share has risen during the current period."
+        },
+        {
+            "determinant_title": "Demand for Smart Cooking Appliances Surged During COVID-19 but Has Declined Recently",
+            "determinant_description": "Demand for these appliances surged during COVID-19 since individuals were spending far more time at home but it has declined recently as people have been flocking back to the office."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Increasing",
+        "export_level": "Moderate",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "COVID-19 Caused Imports to Soar",
+                "trade_description": "The pandemic forced manufacturers to follow mask-wearing and social distancing regulations. These regulations made organizing assembly lines and plants more difficult, so production fell. To make up for this lost production, manufacturers imported more smart appliances in significant numbers."
+            },
+            {
+                "trade_title": "Intake From China Has Declined",
+                "trade_description": "The Trump administration imposed tariffs on China to encourage domestic production. These actions caused China to raise its tariffs, initiating a trade war. The trade war reduced imports from China drastically, altering the composition of where US consumers received the smart appliances from."
+            },
+            {
+                "trade_title": "High-Interest Rates Have Battered Down Downstream Demand",
+                "trade_description": "The Federal Reserve has been raising interest rates to fight inflation. Since the cost of borrowing has risen, residential construction has fallen, reducing demand for smart appliances. Since demand for the industry's products has declined, so have imports."
+            },
+            {
+                "trade_title": "The United States-Mexico-Canada (USMCA) Agreement Has Improved Ties With America's Partners",
+                "trade_description": "The USMCA was signed in 2019 and was made effective in 2020. The law reduced tariffs between the United States, Mexico and Canada for many goods, strengthening trade ties between the three North American countries. These provisions caused the share of exports of major smart appliances going to Mexico and Canada to rise."
+            },
+            {
+                "trade_title": "The Industry Will Benefit From a Depreciating Dollar",
+                "trade_description": "The value of the US dollar is forecast to decrease during the outlook period. Smart appliances will become less expensive for consumers and companies abroad, so exports will surge, benefiting the industry."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "West",
+            "location_description": "The West region contains the largest share of major smart appliance manufacturers, driven by California. Since California is home to Silicon Valley, where many residents are tech-savvy and seek to use new devices, raising demand for smart appliances and giving the industry a significant presence in the state.",
+            "percentage_establishments": 101,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "States in the Great Lakes region, such as Illinois, Ohio and Michigan, contain many of the nation's biggest manufacturers. Since manufacturers are major buyers of smart appliances, there's a big incentive for the industry to locate there. Many manufacturers produce many key inputs for smart appliances (e.g. steel, plastic), so some companies locate there to be near suppliers.",
+            "percentage_establishments": 20.0,
+            "percentage_population": 101
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region contains states including Florida, Tennessee, North Carolina and Virginia. These states are large, so the region has the largest share of the country's population. The high population boosts demand for housing, increasing the need for smart appliances, so the industry has a major presence in the region.",
+            "percentage_establishments": 30.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Plains",
+            "location_description": "",
+            "percentage_establishments": 101,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "New England",
+            "location_description": "",
+            "percentage_establishments": 5.0,
+            "percentage_population": 101
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "CLEAN AIR ACT (CAA)",
+                "regulation_description": "The CAA requires that companies comply with limits on the emission of pollutants. These rules apply to major smart appliance manufacturers because building new products can release chemicals that can pollute the air. The Environmental Protection Agency (EPA) applies allowances for the level of sulfur, nitrogen oxides, ozone and other pollutants companies can release into the atmosphere."
+            },
+            {
+                "regulation_title": "CLEAN WATER ACT (CWA)",
+                "regulation_description": "The CWA ensures that major smart appliance manufacturers don't pollute bodies of water. Since making smart appliances can create waste, companies might pollute streams of water if there isn't government regulation."
+            },
+            {
+                "regulation_title": "DATA PRIVACY AND SECURITY REGULATIONS",
+                "regulation_description": "Smart appliances can collect personal data, such as usage patterns and preferences. Since consumers care about the protection of their private information, there are significant regulations on the collection and sharing of this data. Other regulations also force smart appliances to have systems in place to ensure they aren't hacked. This is to prevent third parties from finding the user's private information."
+            },
+            {
+                "regulation_title": "PRODUCT SAFETY RULES",
+                "regulation_description": "Major smart appliances must adhere to fire, electrical and other safety standards to ensure that they don't pose a risk to their users."
+            },
+            {
+                "regulation_title": "PANDEMIC-ERA REGULATIONS",
+                "regulation_description": "To ensure that COVID-19 didn't spread, governments forced manufacturers to enforce social distancing and mask-wearing laws. Major smart appliance makers had to adjust their procedures to follow these rules."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Factors for Increased Barriers",
+                "barrier_description": "Revenue Volatility Level: very high, Industry Assistance Level: low - steady, Technology Change Level: high, Globalization Level: high - increasing, Competition Level: high - steady"
+            },
+            {
+                "barrier_title": "Factors for Decreased Barriers",
+                "barrier_description": "Capital Intensity Level: low, Concentration Level: low"
+            },
+            {
+                "barrier_title": "Costs of labor and capital as barriers",
+                "barrier_description": "The costs of labor and capital provide notable barriers to entry for potential entrants. Capital intensity hinders the establishment of major smart appliance manufacturing companies more, as start-up costs for the machines, plants and other equipment used to build appliances are hefty."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Revenue Volatility Level: very high",
+            "Industry Assistance Level: low - steady",
+            "Technology Change Level: high",
+            "Globalization Level: high - increasing",
+            "Competition Level: high - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Competition among major smart appliance manufacturers is high",
+                "basis_description": "The industry is composed of a few large players. These players primarily compete on price and quality."
+            },
+            {
+                "basis_title": "Competition from imports",
+                "basis_description": "The industry faces significant competition from imports. Threats from imports are dependent on exchange rates, supply chains and the cost of labor abroad."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "High barriers to entry increase market share concentration",
+                "concentration_description": "It's costly to start up a major smart appliance manufacturing company, as it requires extensive investment in plants, assembly lines, technology, raw materials and workers. Manufacturers must also establish contracts with suppliers to remain competitive. Since barriers to entry are so high, many individuals decide not to set up shop, enabling large global players to control most of the industry."
+            },
+            {
+                "concentration_title": "Recent acquisitions keep concentration high",
+                "concentration_description": "Since most major players are international companies, they acquire corporations throughout the entire world. Major player Electrolux AB recently took over a French company called La Compagnie du SAV. While many acquisitions are of international companies, they enable big players to control the production of a specific product that's sometimes imported from abroad, reducing competition from foreign producers and raising concentration."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Haier Group Corporation",
+                "company_percentage": 8.4
+            },
+            {
+                "company_name": "Whirlpool Corp",
+                "company_percentage": 7.5
+            },
+            {
+                "company_name": "Electrolux AB",
+                "company_percentage": 5.5
+            },
+            {
+                "company_name": "A. O. Smith Corporation",
+                "company_percentage": 0.9
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 77.7
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 6.8
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 12.5
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 50.6
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 28.0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "PURCHASES HOLD STEADY DESPITE ECONOMIC CHALLENGES",
+            "cost_factor_description": "Purchase costs are forecast to make up 50.6% of revenue in 2023. Purchases include raw materials, software and other items used to produce major smart appliances. Costs of these inputs have surged amid high inflation, but companies have been able to pass on many high prices to consumers, so purchase costs as a percentage of revenue have been stable during the current period."
+        },
+        {
+            "cost_factor_title": "MISCELLANEOUS COSTS INCREASE AMID HIGH INFLATION",
+            "cost_factor_description": "Costs included in the \"other\" category are anticipated to comprise 28.0% of revenue. The cost of general administration, insurance and outsourced professional services are included in this category. High inflation has caused the costs of these services to increase. Since these services are used for manufacturers' benefit, they can't pass on these prices to consumers, so miscellaneous costs have risen as a percentage of revenue during the current period."
+        },
+        {
+            "cost_factor_title": "FALLING DOWNSTREAM DEMAND CONSTRAINS PROFIT",
+            "cost_factor_description": "In 2023, profit is anticipated to comprise 6.8% of revenue. High-interest rates have reduced homebuying, reducing the need for major smart appliances. Declining downstream demand from the housing market has caused revenue and profit to fall in recent years."
+        },
+        {
+            "cost_factor_title": "EMPLOYEES DEMAND MORE PAY AMID HIGHER INFLATION",
+            "cost_factor_description": "Wages are anticipated to comprise 12.5% of revenue in 2023. As inflation has reduced workers' purchasing power, employees have been demanding higher wages. Under the threat that workers may flock to other companies, manufacturers have been raising their employees' pay, causing wages as a percentage of revenue to creep upward during the current period."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "The costs of labor and capital provide notable barriers to entry for potential entrants.",
+                "capital_intensity_description": "Capital intensity hinders the establishment of major smart appliance manufacturing companies more, as start-up costs for the machines, plants and other equipment used to build appliances are hefty."
+            },
+            {
+                "capital_intensity_title": "The industry is experiencing a low level of both the rate of new patents and the concentration of patents in the industry.",
+                "capital_intensity_description": "This creates an environment where the threat of new technologies driving disruption is low."
+            },
+            {
+                "capital_intensity_title": "Major market segments for industry operators are relatively diversified.",
+                "capital_intensity_description": "The spread of market segments suggests that there are limited entry points other than those already served by incumbent operators."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Shifting Input Prices Foster Volatility in the Industry",
+                "volatility_description": "High input prices for materials, such as plastic and steel, are often beneficial for major smart appliance manufacturers, as they can pass on these high prices to consumers in many situations. Lower prices reduce this revenue stream for manufacturers, so they're damaging to the industry's performance. Supply chain disruptions and fluctuating demand resulting from COVID-19 and inflation have caused input prices to be unstable, enabling increased revenue volatility."
+            },
+            {
+                "volatility_title": "Interest Rates Affect Downstream Demand from the Housing Market",
+                "volatility_description": "Higher interest rates reduce homebuying, as the cost of borrowing is a major determinant of whether individuals decide to purchase property in a given year. Since homes are often installed with smart appliances, fewer homes being purchased inhibit downstream demand. Rates have fluctuated amid COVID-19 and high inflation because of the actions of the Federal Reserve, so they've increased volatility for the industry."
+            },
+            {
+                "volatility_title": "HIGH INCOMES BOOST SPENDING ON MAJOR SMART APPLIANCES",
+                "volatility_description": "As incomes rise, consumers use more of their money to purchase luxuries, such as major smart appliances, benefiting the industry. Income growth has shifted significantly during the current period because of COVID-19, the pandemic recovery and government aid that was given out during that time period, creating more revenue volatility."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "SMART APPLIANCES ARE OFTEN USED FOR COOKING",
+                "technological_change_description": "Smart cooking appliances include internet-enabled ovens, stoves, electric ranges, gas ranges and other cooking equipment and parts."
+            },
+            {
+                "technological_change_title": "Rising Input Prices Have Boosted Demand for Smart Refrigerators and Freezers",
+                "technological_change_description": "Smart refrigerators and freezers integrate radio-frequency identification and barcode sensors into their design to keep track of their stock, enabling users to know when there's no more food in the fridge or when produce is about to spoil. These devices are often paired with smartphones to remind users to buy groceries at certain times. Supply chain disruptions have caused the price of plastic materials to soar. Companies have been able to pass on these high prices to consumers. Since smart refrigerators and freezers contain many plastics, their share of revenue has increased during the current period."
+            },
+            {
+                "technological_change_title": "Steel Prices Have a Significant Impact on Revenue Received from Smart Laundry Equipment",
+                "technological_change_description": "Smart laundry equipment enables users to start washing and drying machines through an app on a smartphone. Since steel is a primary component in the manufacture of washers and dryers, its price is vital to the industry. The surging world price of steel has enabled companies to pass on these high prices to consumers, so smart laundry equipment's revenue share has crept upward during the current period."
+            },
+            {
+                "technological_change_title": "One Common Feature in Household Cooking Appliances",
+                "technological_change_description": "One common feature in household cooking appliances is the use of voice-activated artificial assistant programs (e.g. Amazon Alexa, Google Assistant) to provide people with information regarding recipes, to set timers and to help in other ways. Demand for these appliances surged during COVID-19 since individuals were spending far more time at home but it has declined recently as people have been flocking back to the office. Overall, smart cooking appliances' revenue share has crept downward during the current period."
+            },
+            {
+                "technological_change_title": "Higher Incomes Have Increased Spending on Other Smart Appliances",
+                "technological_change_description": "Other smart appliances include Wi-Fi-enabled dishwashers, microwave ovens and other household items. As per capita disposable income has increased, more consumers can afford these household goods, so other appliances' revenue share has risen during the current period."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company affected by rising imports?",
+            "answer": "Rising imports have negatively affected exports during the current period."
+        },
+        {
+            "question": "Have exports offered an opportunity for your company?",
+            "answer": "Exports are expected to rise over the next five years as the US dollar depreciates."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "Volatile input prices, such as steel and plastic, affect revenue performance."
+        },
+        {
+            "question": "Have you looked into setting up manufacturing facilities in lower-wage regions of the country?",
+            "answer": "Low-cost production regions are always attractive for major smart appliance manufacturers."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation over the past five years?",
+            "answer": "Many companies haven't been able to reduce wage costs."
+        },
+        {
+            "question": "How is your company leveraging new technology, such as [example: RFID tags, etc.]?",
+            "answer": "As a producer of smart appliances, major smart appliance manufacturers always look to leverage new technology, such as Bluetooth, Wi-Fi and syncing between devices."
+        },
+        {
+            "question": "Have any regulatory expenses significantly impacted profitability recently?",
+            "answer": "Regulatory expenses haven't significantly affected profitability."
+        },
+        {
+            "question": "Is your company adequately prepared to comply with new environmental standards?",
+            "answer": "Companies monitor new environmental standards to remain compliant with regulations."
+        },
+        {
+            "question": "How does your company's profit compare to your main competitors'?",
+            "answer": "Profit is anticipated to comprise 6.9% of revenue in 2023."
+        },
+        {
+            "question": "How has input price volatility affected profit recently?",
+            "answer": "Relatively low input prices have boosted profitability."
+        },
+        {
+            "question": "How do you effectively manage your economies of scale?",
+            "answer": "Being able to take advantage of economies of scale as a larger company is a strong advantage in terms of reducing production costs and being able to produce large quantities of inventory."
+        },
+        {
+            "question": "Have you been able to use your size to generate higher revenue?",
+            "answer": "Being able to take advantage of economies of scale as a larger company is a strong advantage in terms of reducing production costs and being able to produce large quantities of inventory."
+        },
+        {
+            "question": "How have you shifted production to accommodate environmental regulations? Have you been fined in the past for not adhering to these requirements?",
+            "answer": "As environmental regulations shift, it's essential that major smart appliance manufacturers understand how to navigate these requirements."
+        },
+        {
+            "question": "Do you measure the price of steel? What other inputs do you use during the manufacturing process?",
+            "answer": "Price competition is very high in this industry, which makes it essential for companies to adjust their inputs based on costs."
+        },
+        {
+            "question": "Do you track the value of the US dollar? How have currency exchange rates affected your business?",
+            "answer": "As the dollar's value rises, imported goods become relatively less costly, which hurts demand for exported goods."
+        },
+        {
+            "question": "How does a rise in consumer spending affect demand for your company? How do you keep up with rising demand?",
+            "answer": "When consumer spending rises, so too does potential revenue for the industry."
+        },
+        {
+            "question": "Do you track the value of residential construction? How much of your business is dedicated to sales to new residential structures?",
+            "answer": "As the value of residential construction activity rises, so too does potential demand for major smart appliances."
+        }
+    ]
+}

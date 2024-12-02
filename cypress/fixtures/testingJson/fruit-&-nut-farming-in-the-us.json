@@ -1,0 +1,545 @@
+{
+    "report_title": "Industry Report on Fruit and Nut Farming",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 29630000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2003,
+                "end_year": 2024,
+                "revenue_cagr_value": 2.43
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": -1.77
+            }
+        },
+        "profit": {
+            "profit_dollars": 2282000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": -0.41
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 7.7,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -2.35
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 11589000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 181795,
+            "employees_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 7613000000,
+            "wages_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": 30594000000,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": 16692000000,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2024 currency. Although fruit and nut farms benefited from increased demand from wineries and exports, downward pressure due to supply chain disruptions caused by the COVID-19 pandemic and Russia's invasion of Ukraine have greatly impacted revenue growth. These supply chain disruptions have resulted in significant revenue swings, as supply changes have caused fruit price volatility.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Demand for fruits and nuts continues to fade",
+            "current_performance_point_description": "Over the last few years, overall demand for non-citrus fruit has been lagging largely due to the fact that fruit and nut prices have been rising, yet vegetable consumption and consumer spending levels have been declining. Fruit consumption has also declined as the high sugar content of many fruit juices has driven consumers to replace fruit juice with green vegetable juice."
+        },
+        {
+            "current_performance_point_title": "Costs of operation are on the rise",
+            "current_performance_point_description": "The rising costs of irrigation and pollination services for tree nuts, especially almonds and avocados have hurt production conditions and increased costs. Nearly all the nation's almonds are grown in California and the region is experiencing severe water shortage for irrigation. Rising water costs have been compounded by declines in the wild honeybee population, which is the sole and exclusive pollinator of almond and avocado trees."
+        },
+        {
+            "current_performance_point_title": "Exports remain a major source of industry revenue",
+            "current_performance_point_description": "Despite export growth declining due to the COVID-19 outbreak and Russia's invasion of Ukraine disrupting the global supply chain, exports continue to be a major source of industry revenue."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "The pursuit of healthier lifestyles will keep demand high",
+            "future_outlook_point_description": "In the coming years, consumers will be inclined to purchase higher-priced fresh fruits than some less-expensive canned, frozen and processed varieties due to the added health benefits of unprocessed fruit. The continuation of healthy eating programs under the Agriculture Improvement Act of 2018, SNAP Food Stamps and school lunch programs will similarly provide steady demand."
+        },
+        {
+            "future_outlook_point_title": "International trade has significant impacts",
+            "future_outlook_point_description": "The global economic decline largely attributed to Russia's invasion of Ukraine and the dollar's depreciation will make industry imports more expensive for domestic buyers. While the US will still need to rely on imports for tropical fruits that can't grow in the US, domestic farmers will have an opportunity to claim a larger piece of the market for other crops."
+        },
+        {
+            "future_outlook_point_title": "Quicker technological implementations are needed",
+            "future_outlook_point_description": "As employment levels continue to decline, technological innovation has the potential to raise productivity and profit and strengthen the worldwide competitiveness of US fruit growers. For farmers, this can entail using harvesting equipment, growing new crop varieties and constructing high-density orchards with more effective designs."
+        },
+        {
+            "future_outlook_point_title": "Fruit and nut prices will stabilize",
+            "future_outlook_point_description": "After surging in 2024, fruit and nut prices will stabilize in the coming years. Fruit prices rose to encourage farmers to increase production and better satisfy the global market. As production levels recover, prices will decline."
+        }
+    ],
+    "industry_definition": "Farmers in this industry grow nuts, such as almonds and macadamia nuts, as well as fruits excluding citrus, such as apples, berries, grapes and others. Operators in this industry sell their crops to downstream processors and fresh produce wholesalers and retailers. This industry does not include peanuts (IBISWorld Report 11199).",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Industry Assistance Level high - increasing",
+            "Concentration Level low"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level high",
+            "Globalization Level high - increasing",
+            "Competition Level high - increasing"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Increasing Level of Assistance",
+            "Low Product/Service Concentration",
+            "High Revenue per Employee"
+        ],
+        "weaknesses": [
+            "High Competition",
+            "Very high Volatility",
+            "High Imports",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Performance Drivers",
+            "Trade-weighted index"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Low Revenue Growth (2024-2029)",
+            "Price of fruit"
+        ]
+    },
+    "key_trends": [
+        "Farms with lower production costs have a competitive edge. This highlights the importance of cost efficiency in maintaining a sustainable and thriving agricultural operation",
+        "Competition intensifies with the increasing production of processed foods, meeting the demands of discerning consumers at retail. As the market expands, producers are challenged to stand out in a crowded landscape to capture a growing consumer base.",
+        "Exports continue to be the main source of revenue. Despite COVID-19 and Russia's invasion of Ukraine, thanks to advancements in transportation and supply chain management technology.",
+        "Consumers opt for fresh fruits due to their superior health benefits compared to cheaper canned or processed alternatives. Unprocessed fruits offer additional nutritional advantages, making them a preferred choice for health-conscious consumers.",
+        "There are no major players in this industry due to the segmented nature of this industry.",
+        "Production of most fruits and nuts is sensitive to climate. Warmer growing season temperatures mean greater crop water requirements, with the potential to affect yield and profit.",
+        "Farms can benefit from tax breaks and deductions, with conservation expenses limited to 25.0% of gross farm income annually. These deductions help operators maintain and improve their land without exceeding the specified limit on tax deductions.",
+        "Farmers rely on labor to maintain the desirable appearance of certain fruits for retail. This dependence highlights the necessity for efficient and cost-effective agricultural practices to minimize expenses and sustain profitability in the industry.",
+        "Utility expenditures are increasing as temperatures have risen, leading to droughts and heightened fuel costs for farming."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Wine manufacturers",
+            "segment_description": "Grapes are the largest product segment and about two-thirds of all grapes grown in the United States are destined for wineries. Restaurants and nightlife establishments reopening after the COVID-19 lockdowns boosted demand for wine in the last few years.",
+            "segment_percentage": 8.1
+        },
+        {
+            "segment": "Fresh fruit markets and supermarkets",
+            "segment_description": "Fruit and nuts sold in their purest form are sold to fresh fruit markets (e.g. farmers' markets) and grocery stores. Demand from this segment will remain constant due to the continued public trend of living a healthier lifestyle.",
+            "segment_percentage": 13.7
+        },
+        {
+            "segment": "Fruit and nut processors",
+            "segment_description": "Most nuts have to undergo processing at facilities, where they are hulled, shelled and packaged for consumption. Further processing includes grinding peanuts for peanut butter and peanut oil and processing almonds for almond butter and almond milk.",
+            "segment_percentage": 16.2
+        },
+        {
+            "segment": "Other",
+            "segment_description": "The other segment includes various smaller markets and applications for fruits and nuts.",
+            "segment_percentage": 62.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Grapes",
+            "product_description": "Grapes are mainly sold to winemakers, which provide a large, steady market for this product.",
+            "product_percentage": 19.6
+        },
+        {
+            "product_or_service": "Almonds",
+            "product_description": "Almonds are the country's largest tree nut crop and the United States is the largest almond producer in the world. Demand for almonds has skyrocketed as the nut becomes more popular as a snack and a derivative for other food products.",
+            "product_percentage": 18.2
+        },
+        {
+            "product_or_service": "Apples",
+            "product_description": "Apples are well-established fruit varieties with several uses in different foods, such as snacks and desserts. Farmers increasingly sell to food processors, which prepare and package them in refrigerated or frozen varieties.",
+            "product_percentage": 10.7
+        },
+        {
+            "product_or_service": "Other (Including Pistachios)",
+            "product_description": "The other segment includes various smaller fruit and nut products like pistachios.",
+            "product_percentage": 24.4
+        },
+        {
+            "product_or_service": "Cherries, Blueberries and Cranberries",
+            "product_description": "This segment has remained stable partly due to the media promoting these fruits as excellent sources of vitamins and antioxidants. Both organic and dried varieties have increased in popularity as low-calorie, low-carb snacks.",
+            "product_percentage": 8.2
+        },
+        {
+            "product_or_service": "Strawberries",
+            "product_description": "Strawberries are well-established fruit varieties with several uses in different foods, such as snacks and desserts.",
+            "product_percentage": 13.4
+        },
+        {
+            "product_or_service": "Pecans and Walnuts",
+            "product_description": "Other major tree nuts include pecans and walnuts, which are primarily produced in California and Georgia. Prices have declined in recent years due to rising irrigation and pollination costs.",
+            "product_percentage": 5.5
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [],
+        "tier_2_suppliers": [
+            "Water Supply & Irrigation Systems in the US",
+            "Farm, Lawn & Garden Equipment Wholesaling in the US",
+            "Crop Services in the US",
+            "Pesticide Manufacturing in the US",
+            "Fertilizer Manufacturing in the US",
+            "Tractors & Agricultural Machinery Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Fruit & Vegetable Wholesaling in the US",
+            "Grocery Wholesaling in the US",
+            "Canned Fruit & Vegetable Processing in the US"
+        ],
+        "tier_2_buyers": [
+            "Supermarkets & Grocery Stores in the US",
+            "Fruit & Vegetable Markets in the US",
+            "Specialty Food Stores in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "An increase in the price of fruit positively affects the industry",
+            "determinant_description": "Price fluctuations reflect supply levels, downstream processing activity, global demand and other factors. The price of fruit will fall in 2023, presenting the industry with a potential threat."
+        },
+        {
+            "determinant_title": "The Highest Domestic Demand Comes From Fruit and Nut Processors",
+            "determinant_description": "Most nuts have to undergo processing at facilities, where they are hulled, shelled and packaged for consumption. Further processing includes grinding peanuts for peanut butter and peanut oil and processing almonds for almond butter and almond milk."
+        },
+        {
+            "determinant_title": "Wine manufacturers have a constant need for grapes",
+            "determinant_description": "Grapes are the largest product segment and about two-thirds of all grapes grown in the United States are destined for wineries. Restaurants and nightlife establishments reopening after the COVID-19 lockdowns boosted demand for wine in the last few years."
+        },
+        {
+            "determinant_title": "Fresh fruit markets and supermarkets",
+            "determinant_description": "Fruit and nuts sold in their purest form are sold to fresh fruit markets (e.g. farmers' markets) and grocery stores. Demand from this segment will remain constant due to the continued public trend of living a healthier lifestyle."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Increasing",
+        "export_level": "High",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports are boosted by year-round demand for fresh produce, regardless of domestic availability",
+                "trade_description": "Constant demand for fresh produce combined with the seasonal nature of fruit production in the United States means imports increase during off-seasons. Similar to exports, imports will trend downward in 2023 due to serious economic slowdowns caused by Russia's invasion of Ukraine."
+            },
+            {
+                "trade_title": "The dollar's appreciation will hinder exports",
+                "trade_description": "As global economic health stabilizes in 2023 and the dollar appreciates, real costs for exporting fruits and nuts will rise since other countries will have to comparatively spend more to obtain US fruits and nuts than they did in the last few years. As a result, those countries will look for cost-effective alternatives."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "West",
+            "location_description": "Fruit and nut farms are heavily concentrated in the West region of the United States due to the favorable weather patterns that enhance the quality and yield of these crops.",
+            "percentage_establishments": 35.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast's warm and humid climate is ideal for growing some varieties of fruits and nuts, as it provides the right conditions for plants to thrive. The region's fertile soil, particularly in states like Georgia and Florida, is rich in nutrients essential for producing high-quality crops. The Southeast's proximity to major markets and transportation hubs makes it easier for fruit and nut farmers to distribute their products quickly and efficiently.",
+            "percentage_establishments": 20.0,
+            "percentage_population": 25.0
+        },
+        {
+            "location": "Other regions",
+            "location_description": "Farms and orchards are generally located away from major markets, with historical trends showing a shift from urban fringes due to the increasing value of metropolitan land. Advancements in transportation and storage have facilitated the relocation of farms, enabling farmers to adapt to changing market demands.",
+            "percentage_establishments": 45.0,
+            "percentage_population": 55.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "MARKETING ORDERS BY THE US DEPARTMENT OF AGRICULTURE (USDA)",
+                "regulation_description": "Marketing orders are designed and administered by handlers and growers' representatives and overseen by the US Department of Agriculture (USDA)."
+            },
+            {
+                "regulation_title": "USDA LICENSES AND GUIDELINES",
+                "regulation_description": "Farmers wishing to promote their produce as organic must obtain certification from the USDA. Additionally, peanut farmers' produce must be analyzed in a USDA-approved laboratory for the presence of aflatoxin."
+            },
+            {
+                "regulation_title": "STATE-SPECIFIC REGULATIONS",
+                "regulation_description": "Most states operate agricultural departments that act as regulatory agencies. These authorities monitor pollution levels associated with growing fruit and nuts."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "mature"
+            },
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "high"
+            },
+            {
+                "barrier_title": "Globalization Level",
+                "barrier_description": "high - increasing"
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "high - increasing"
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Revenue Volatility Level: high",
+            "Globalization Level: high - increasing",
+            "Competition Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Industry Assistance Level: high - increasing",
+            "Concentration Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Differentiation",
+                "basis_description": "Average consumers seek produce that is convenient, of high value and well-packaged. As a result, operators differentiate themselves by producing high-quality fruits and nuts, branding themselves and filing for patents and trademarks."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "<UNKNOWN>",
+        "concentration_points": [
+            {
+                "concentration_title": "Farm cooperatives enable farmers to realize the benefits of economies of scale",
+                "concentration_description": "A majority of enterprises are small- to mid-sized, but there's a handful of large-scale, highly diversified commercial farms. To consolidate, farmers usually pool their resources to farm cooperatives that act on their behalf to improve demand and returns, often through marketing and promotional activities."
+            },
+            {
+                "concentration_title": "Technology and machinery advances marginally benefit larger operators",
+                "concentration_description": "Newer technology and machinery continue expanding the productivity, scale and speed of industry operations, reducing the percentage of unsown lands. This in turn increases yields. Large operators are able to grow and expand faster since they are better positioned to afford pricier machinery and equipment. But as previously discussed, smaller farms can join cooperatives to minimize the costs of new machinery."
+            }
+        ],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 23.9
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Insurance premiums",
+            "cost_factor_description": "Other industry costs include insurance premiums, interest payments and transportation costs."
+        },
+        {
+            "cost_factor_title": "Interest payments",
+            "cost_factor_description": "Other industry costs include insurance premiums, interest payments and transportation costs."
+        },
+        {
+            "cost_factor_title": "Transportation costs",
+            "cost_factor_description": "Transportation costs vary among farmers depending on the distance from common markets and the mode of transport."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Climate is a Major Factor",
+                "volatility_description": "The production of most fruits and nuts is sensitive to temperature, air pollution and carbon dioxide."
+            },
+            {
+                "volatility_title": "Macroeconomic Conditions Present Additional Volatility",
+                "volatility_description": "Industry revenue is influenced by macroeconomic conditions such as exchange rates, the world price of crude oil and inflation rates."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Innovation in this Sector is Lagging Behind Other Agricultural Sectors",
+                "technological_change_description": "A significant gap exists in developing machinery capable of harvesting distorted fruit without causing physical damage."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "How does your company hedge against price loss risk?",
+            "answer": "Most farms grow several crops in an effort to diversify while switching cropping activities to suit market conditions is also a viable strategy. A diverse range of crops helps to protect farmers from price fluctuations, insulating operators against downturns in one specific commodity."
+        },
+        {
+            "question": "Does your company place an emphasis on growing organic produce?",
+            "answer": "Organic produce trades at a significant premium, sometimes in excess of 200.0% of non-organic counterparts. This will garner higher revenue per sale. Consumer demand for organic fruits and nuts has grown sharply over the past five years."
+        },
+        {
+            "question": "How does your company handle potential market risk?",
+            "answer": "- Farms that enter into contract growing will be less likely to be harmed by adverse events causing end-market activity to decline since they are contracted for a specific quantity and value of industrial products. - Farms that primarily sell to one specific end-market may exhibit higher returns but will also take on greater market risk."
+        },
+        {
+            "question": "How does your company control for environmental factors of production?",
+            "answer": "- Some crops are extremely temperamental and will not be viable without sufficient water, heat and light. - Growing crops under cover may incur more upfront expense, but this will allow growers total control over their crops' growing climate."
+        },
+        {
+            "question": "Has your company engaged in the use of commercial drones in operations?",
+            "answer": "With the Federal Aviation Administration's authorization of the use of commercial drones, farmers have been leveraging drones to monitor and adjust crop nutrient levels, reducing labor needs and increasing profitability."
+        },
+        {
+            "question": "Has your farm sought to reduce labor costs via seasonal labor?",
+            "answer": "Some crops are too delicate to be harvested by machine and necessitate the use of labor to harvest by hand. Overall, seasonal labor can be employed to lower labor costs when and where necessary."
+        },
+        {
+            "question": "How does your company ensure it meets all organic certifications and qualifications?",
+            "answer": "Organic produce trades at a significant premium, while it is also highly illegal to sell falsified organic produce, which will incur steep fines and penalties from the United States Department of Agriculture."
+        },
+        {
+            "question": "How does your company ensure it is following all legal restrictions and legislation?",
+            "answer": "Potential reforms to the HB1 visa program may make it more difficult to hire seasonal labor on an as-needed basis. As it becomes more difficult to hire seasonal labor, costs for industry products will rise."
+        },
+        {
+            "question": "How does your company ensure profitability in volatile and turbulent market conditions? Has your company had any difficulty financing current operations?",
+            "answer": "Most agricultural producers produce at a loss and do not make a profit until government payments are factored in. However, government payments as a share of net farm income have been growing."
+        },
+        {
+            "question": "How does your company keep depreciation charges low?",
+            "answer": "Through the rental of equipment on an as-needed basis, small-scale farms can keep depreciation charges low vis the renting of equipment. This will keep cashflow freed up and allow for greater profitability."
+        },
+        {
+            "question": "Does your company have contracts for international sales?",
+            "answer": "Securing export market contracts allows farmers to temper the effects of domestic demand fluctuations. Effectively, as more fruit and nuts are exported, domestic supply tightens and prices rise."
+        },
+        {
+            "question": "How do you ensure the health and viability of your crops?",
+            "answer": "The presence of fertile soils and other appropriate growing conditions plays a critical role in shaping the success of growing fruit and nuts because they influence harvest volumes and crop quality. Some fruits such as avocados are extremely temperamental and require the strictest of growing conditions, often incurring significant costs in the form of irrigation and pollination."
+        },
+        {
+            "question": "How does your company grow operations?",
+            "answer": "Economies of scale in production generate cost savings for fruit and nut growers. Specifically, economies of scale result in lower per-unit costs that ultimately result in higher net returns."
+        },
+        {
+            "question": "Does your company sell grapes to wineries?",
+            "answer": "Grapes alone account for a large portion of industry revenue, many of these sales being to wineries. Since wines require specific grapes, this product segment is one of the industry's highest-margin segments due to the limited production of grapes by type."
+        },
+        {
+            "question": "Exports account for the plurality of industry revenue by end-market. Facing turbulent international demand conditions, how does your company ensure consistent export sales?",
+            "answer": "A significant portion of industry revenue is derived from exports. As export conditions deteriorate, the domestic market floods and drives prices down as export sales and revenue decline."
+        },
+        {
+            "question": "How much of your product goes to canned fruit and vegetable processors?",
+            "answer": "Though a significant portion of industry fruits are destined for the processing market, the processing market is substantially less profitable than is the fresh produce market. Fresh produce trades at a premium, while less attractive produce is typically sent to the lower-value processing market."
+        }
+    ]
+}

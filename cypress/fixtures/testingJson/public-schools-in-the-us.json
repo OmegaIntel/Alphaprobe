@@ -1,0 +1,538 @@
+{
+    "report_title": "Public Schools in the US",
+    "report_date": "Feb 27, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 982523000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 1.45
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 0.89
+            }
+        },
+        "profit": {
+            "profit_dollars": -13755000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": -1.4
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 101,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 0
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 736082000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 1.16
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0.82
+            }
+        },
+        "employees": {
+            "employees_count": 6830651,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 0.57
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0.81
+            }
+        },
+        "wages": {
+            "wages_dollars": 663263000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 1.23
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0.83
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "Public schools include traditional elementary (kindergarten through fifth grade), middle (sixth through eighth grade) and high schools (ninth through 12th grade), in addition to charter and magnet schools. Public schools' revenue depends on government funding from tax revenue and borrowing. Over the past five years, disruptions from the COVID-19 pandemic have been supplemented by strong growth amid recovery, but lingering difficulties from rising interest rates will temper growth moving forward. Falling birth rates are also threatening the long-term health of the industry as fewer young students replace graduating seniors.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "More Money in the Economy Means More Tax Revenue",
+            "current_performance_point_description": "Public school funding primarily comes from local and state governments. Local property tax revenue is the key driver of public school revenue. It soared in recent years as home prices rose and households migrated to the suburbs."
+        },
+        {
+            "current_performance_point_title": "Public School Enrollment Has Peaked",
+            "current_performance_point_description": "Public schools have received a bump in funding from these three sources in recent years, even though enrollment is starting to sink as the birth and high school retention rates both slump."
+        },
+        {
+            "current_performance_point_title": "Alternatives to Public Schools Have Become More Popular",
+            "current_performance_point_description": "COVID-19 restrictions that changed teaching mediums led to soured relations between parents and public schools. Alternative education options, like homeschooling, suddenly seemed more viable both in 2020 and afterward."
+        },
+        {
+            "current_performance_point_title": "HEIGHTENED FUNDING IS GOING TO TEACHER SALARIES",
+            "current_performance_point_description": "Teacher strikes in early 2022 forced schools to delay opening. This signals tension between unions and school boards as inflation strains budgets and puts pressure on schools to lift wages."
+        },
+        {
+            "current_performance_point_title": "STATE REGULATIONS ARE SHIFTING",
+            "current_performance_point_description": "Several states are implementing stricter restrictions on the content taught in their classrooms. Book bans reached an all-time high in 2023, a trend expected to continue in 2024. School boards and teachers have been under pressure to stay up-to-date with shifting legislation to ensure their lesson plans line up with state guidelines."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "HIGH INTEREST RATES CHANNEL CASH FLOWS FROM SCHOOL FUNDING TO DEBT SERVICE",
+            "future_outlook_point_description": "Higher tax revenue previously enabled more funding for public schools without a jump in debt levels, but state and local governments notoriously struggle to manage public finances. Tax surpluses will disappear quickly moving forward."
+        },
+        {
+            "future_outlook_point_title": "Public School Enrollment is Set to Decline",
+            "future_outlook_point_description": "Public school enrollment will peak in 2022, according to estimates from the National Center for Education Statistics. The rebound from a drop in 2020 was short-lived and isn't expected to sustain growth over the next five years."
+        },
+        {
+            "future_outlook_point_title": "Schools Offer a Variety of Community Resources That Support Funding",
+            "future_outlook_point_description": "The role of public schools could shift to look similar to that of childcare centers over the next five years, ensuring stable funding for public school districts. While their primary role as educators will remain key, this shift could ensure funding remains consistent."
+        },
+        {
+            "future_outlook_point_title": "Private Schools Will Gain Traction",
+            "future_outlook_point_description": "As inflation begins to wane, consumers are expected to benefit from rising disposable income. Parents can use these expanded budgets to enroll their children in private schools."
+        }
+    ],
+    "industry_definition": "The Public Schools industry includes elementary and secondary schools supported by government funds to provide free education for a community or district's children from kindergarten through 12th grade. All public schools operate on a nonprofit basis.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Revenue Volatility Level: low",
+            "Industry Assistance Level: high - steady",
+            "Concentration Level: low",
+            "Barriers To Entry Level: high - steady",
+            "Globalization Level: low - decreasing"
+        ],
+        "negative_impact_factors": [
+            "Life Cycle Stage: decline"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "High & Steady Level of Assistance",
+            "Low Volatility",
+            "Low Imports"
+        ],
+        "weaknesses": [
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration",
+            "Low Revenue per Employee",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2024-2029)",
+            "Government funding for primary and secondary education"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Revenue Growth (2019-2024)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Number of children aged nine and younger"
+        ]
+    },
+    "key_trends": [
+        "Enrollment in public schools has fallen in the long run, threatening school budgets. Consumers have been having fewer kids, and the past five years have seen a prominent rise in dropouts.",
+        "Local governments raked in property tax revenue, the main funding source for public schools. Higher spending and property values after 2020 expanded budgets for local and state governments, which gave schools the funding needed to afford rising teacher pay and inflated purchasing costs.",
+        "Low-income students receive educational support. The federal government's Every Child Succeeds Act helps provide extra care for public schools to afford free lunch and other amenities to students whose families fall below the poverty line.",
+        "States and local governments outline education policy, so regulation is relatively inelastic. This also means that regulations vary widely across the US and are continually evolving with new political initiatives.",
+        "Toddlers form a new potential market. Public schools have been offering programs catered to younger children as the push for public preschool gains backing."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Elementary school students",
+            "segment_description": "Students enrolled in elementary education schools.",
+            "segment_percentage": 57.6
+        },
+        {
+            "segment": "High school students",
+            "segment_description": "Students enrolled in high school education.",
+            "segment_percentage": 20.8
+        },
+        {
+            "segment": "Middle school students",
+            "segment_description": "Students enrolled in middle school education.",
+            "segment_percentage": 15.2
+        },
+        {
+            "segment": "Gifted students",
+            "segment_description": "Students enrolled in special gifted education programs.",
+            "segment_percentage": 4.5
+        },
+        {
+            "segment": "Pre-Kindergarten",
+            "segment_description": "Students enrolled in pre-kindergarten programs.",
+            "segment_percentage": 1.9
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Regular Education Elementary Schools",
+            "product_description": "Elementary educational institutions providing basic education.",
+            "product_percentage": 52.4
+        },
+        {
+            "product_or_service": "Regular Education High Schools",
+            "product_description": "High schools offering secondary education.",
+            "product_percentage": 18.2
+        },
+        {
+            "product_or_service": "Nontraditional Education",
+            "product_description": "Education institutions that offer alternative forms of education.",
+            "product_percentage": 18.2
+        },
+        {
+            "product_or_service": "Charter Schools",
+            "product_description": "Publicly funded but independently operated schools.",
+            "product_percentage": 8.2
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Sports Coaching in the US",
+            "Public School Bus Services in the US",
+            "Book, Magazine & Newspaper Wholesaling in the US",
+            "Laboratory Supply Wholesaling in the US",
+            "Computer & Packaged Software Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Meat, Beef & Poultry Processing in the US",
+            "Animal Food Production in the US",
+            "Office Stationery Manufacturing in the US",
+            "Bread Production in the US",
+            "Paper Mills in the US",
+            "Printing in the US",
+            "Computer Manufacturing in the US",
+            "Truck & Bus Manufacturing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "DECLINING BIRTH RATES ARE DAMPENING ELEMENTARY SCHOOL ENROLLMENT",
+            "determinant_description": "Birth rates have steadily declined for decades. This has translated to declining class sizes and shrinking enrollment overall. Expanding childcare services like public Pre-Kindergarten will support funding for this otherwise declining market segment."
+        },
+        {
+            "determinant_title": "HIGH SCHOOLS AND MIDDLE SCHOOLS ARE SHRINKING",
+            "determinant_description": "Middle schools feel the downstream effects of declining youth populations. Enrollment rates in public middle schools have fallen in recent years as fewer and fewer students replace aging and graduating students. A move toward private middle schools and early college preparation compounds this trend. High schools are reporting enrollment declines, even as the dropout rate falls."
+        },
+        {
+            "determinant_title": "NONTRADITIONAL SCHOOLS GAIN FOR A VARIETY OF REASONS",
+            "determinant_description": "Nontraditional schools provide special, vocational and alternative education. Special education includes disabled students. Vocational schools train students in a trade, giving them career-specific experience. Alternative schools include language immersion or teen pregnancy-specific schools. This segment has remained stable in recent years. More funding for special education programs supports nontraditional schools."
+        },
+        {
+            "determinant_title": "CHARTER SCHOOLS' POPULARITY SKYROCKETS",
+            "determinant_description": "Charter schools are elementary or secondary schools that receive public money but are exempt from many of the rules, regulations and statutes that apply to other public schools. These schools are part of the public school system and aren't permitted to charge tuition. This segment is attractive because of its flexibility. Charter school enrollment rates have jumped in recent years at the cost of regular public schools."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "The Southeast",
+            "location_description": "Taxes, rising prices, lack of space and COVID-19 restrictions led many households to move to the Southeast in 2020. This grows the tax base and supports public school enrollment. The youth population also rises in states known for attracting the elderly, such as Florida.",
+            "percentage_establishments": 24.2,
+            "percentage_population": 21.6
+        },
+        {
+            "location": "The West and Southwest",
+            "location_description": "Rising Costs Lead the West and Southwest to Trade Residents. The West's loss has been the Southwest's gain in recent years. Households are leaving expensive areas in California in search of lower property taxes. This hurt California and Western public schools, but Southwestern metropolitan areas gain public school students and grow the tax base. This has led to contrasting trends between the two neighboring regions.",
+            "percentage_establishments": 0,
+            "percentage_population": 0
+        },
+        {
+            "location": "The Great Lakes",
+            "location_description": "Relatively Weak Economies Ensure Public School Enrollment in the Great Lakes. The Great Lakes has also experienced a demographic reshuffling. Areas with a high cost of living are experiencing an exodus, such as Illinois. At the same time, areas with poor economic and public services performance, such as Michigan, are not gaining high-income residents. Still, the Great Lakes enrolls many public school students because of these economic trends since private schools are not in high demand.",
+            "percentage_establishments": 12.9,
+            "percentage_population": 14.8
+        },
+        {
+            "location": "The Mid-Atlantic",
+            "location_description": "Money Talks in the Mid-Atlantic. With high-income residents comes high property tax revenue. The Mid-Atlantic may not house the most public schools, but it commands the highest share of public school revenue, home to top-performing public and private schools.",
+            "percentage_establishments": 14.1,
+            "percentage_population": 15.1
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "The No Child Left Behind (NCLB) Act (2002)",
+                "regulation_description": "The 2002 No Child Left Behind (NCLB) Act implemented requirements for schools, districts and states on education programs, student responsibilities, teacher qualifications, funding, accountability, special needs education and many other initiatives. Schools must comply with the legislation to be eligible for federal government funding. NCLB has received criticism from states for focusing only on standardized test scores. Schools that don't meet progress requirements may be subject to corrective action and restructuring measures."
+            },
+            {
+                "regulation_title": "The Race to the Top Initiative (2012)",
+                "regulation_description": "In 2012, the Race to the Top initiative was developed to fund new learning models and increase states' autonomy. The Department of Education pushed the Common Core Standards and gave states waivers for NCLB regulations if they developed their own education standards. Currently, 41 states, Washington, DC, four US territories and the Department of Defense Education Activity have adopted Common Core Standards. Of these, 42 states and Washington, DC, are approved for NCLB flexibility."
+            },
+            {
+                "regulation_title": "STATE LEGISLATION",
+                "regulation_description": "Schools must provide a safe teaching environment for teachers and students, including safety requirements for classrooms and playgrounds. States have sanitary codes that govern immunization and other health policies. Fire drills must be carried out on a regular basis. There are also laws applicable to compulsory attendance by students of school age. These vary between states but generally involve required enrollment and student attendance between the ages of five and 18 or 19."
+            },
+            {
+                "regulation_title": "COVID-19 RESTRICTIONS",
+                "regulation_description": "Amid COVID-19, most schools were required to temporarily close and shift to remote learning beginning March 2020. In August 2020, some state governments permitted schools to resume in-person classes for the 2020-21 school year, while others remained remote. Most schools reopened in September 2021 with vaccine requirements or recommendations."
+            },
+            {
+                "regulation_title": "TIGHTENING CURRICULUM GUIDELINES",
+                "regulation_description": "Many states are implementing stricter restrictions on the content taught in their classrooms. Book bans reached an all-time high in 2023, a trend expected to continue in 2024. Public schools need to stay up-to-date with their governing body's current guidelines to avoid legal backlash."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life cycle stage",
+                "barrier_description": "Life Cycle Stage: decline"
+            },
+            {
+                "barrier_title": "Labor-intensive industry",
+                "barrier_description": "Educating children is extremely labor-intensive. Teacher salaries are often regarded as too low, leading to shortages as fewer adults choose this career path. Union representatives play a significant role in contract negotiations."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: decline"
+        ],
+        "factors_decreased_barrier": [
+            "Revenue Volatility Level: low",
+            "Industry Assistance Level: high - steady",
+            "Concentration Level: low",
+            "Globalization Level: low - decreasing"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Private and alternative schools gaining ground",
+                "basis_description": "Parents are more and more choosing homeschool programs or sending their children to alternative schools instead of enrolling them in traditional public schools, which are often seen as unsafe or less effective."
+            },
+            {
+                "basis_title": "Local government tax policies drive competition",
+                "basis_description": "Property taxes are one of the main sources of revenue for public schools, and this revenue stream varies by property values and tax policies in each school district."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Growing popularity of charter schools",
+                "concentration_description": "The number of charter schools has steadily risen in the past decade. Charter schools are growing in popularity and receiving more public funds."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "New York City Department of Education",
+                "company_percentage": 3.1
+            },
+            {
+                "company_name": "Los Angeles Unified School District",
+                "company_percentage": 0.9
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 96
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Schools Invest Heavily in Technology",
+            "cost_factor_description": "Purchases include school supplies, textbooks and other educational materials. These are essential for providing education. Purchases have increasingly become more expensive as schools have looked to technology to help augment teaching."
+        },
+        {
+            "cost_factor_title": "High Wages Pressure Public Schools",
+            "cost_factor_description": "Wages include salaries and benefits for teachers, superintendents, food service workers and other administrative and instructional personnel. Relations between teachers and local governments have soured in recent years."
+        },
+        {
+            "cost_factor_title": "Labor-intensive Education",
+            "cost_factor_description": "Education is a highly labor-intensive task, and high-quality teachers are crucial to the success of any public school."
+        },
+        {
+            "cost_factor_title": "School Choice Encourages Marketing Campaigns",
+            "cost_factor_description": "Charter, alternative and gifted schools spend more on advertising. Schools advertise their academic and extracurricular achievements."
+        },
+        {
+            "cost_factor_title": "THE AVERAGE SCHOOL OPERATES AT A LOSS",
+            "cost_factor_description": "Public schools operate on a nonprofit basis. Schools rely entirely on government funding, which fluctuates in line with the number of students at a school."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Educating children is extremely labor-intensive",
+                "capital_intensity_description": "Teacher salaries are often regarded as too low, leading to shortages as fewer adults choose this career path."
+            },
+            {
+                "capital_intensity_title": "The rate of new patent additions to the industry is low",
+                "capital_intensity_description": "This is combined with a low concentration of innovation."
+            },
+            {
+                "capital_intensity_title": "The major markets for this industry are highly concentrated",
+                "capital_intensity_description": "This implies that the market has a focus on key customer segments."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Low",
+        "volatility_points": [
+            {
+                "volatility_title": "Public schools typically receive consistent funding",
+                "volatility_description": "Consistent education funding limits revenue volatility for public schools."
+            },
+            {
+                "volatility_title": "Rising borrowing costs could introduce some downside volatility",
+                "volatility_description": "State and local governments collected huge tax revenue in 2021 and 2022 as consumer spending, income and property values spiked."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Declining birth rates are dampening elementary school enrollment",
+                "technological_change_description": "Birth rates have steadily declined for decades."
+            },
+            {
+                "technological_change_title": "High schools and middle schools are shrinking",
+                "technological_change_description": "Middle schools feel the downstream effects of declining youth populations."
+            },
+            {
+                "technological_change_title": "NONTRADITIONAL SCHOOLS GAIN FOR A VARIETY OF REASONS",
+                "technological_change_description": "Nontraditional schools provide special, vocational and alternative education."
+            },
+            {
+                "technological_change_title": "CHARTER SCHOOLS' POPULARITY SKYROCKETS",
+                "technological_change_description": "Charter schools are elementary or secondary schools that receive public money."
+            },
+            {
+                "technological_change_title": "MAGNET SCHOOLS GROW ON THE BACK OF EDUCATIONAL COMPETITION AND SCHOOL CHOICE INITIATIVES",
+                "technological_change_description": "Magnet schools offer special themes or curricula and are competitive."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "What are some key factors that affect demand for public schools?",
+            "answer": "Demand for public schooling decreases when more households are able to afford private schooling, which is often perceived as superior."
+        },
+        {
+            "question": "How do public schools generate revenue and what challenges do they face?",
+            "answer": "Public elementary and secondary schools in the US are supported primarily by government funding from state, local and federal sources."
+        },
+        {
+            "question": "What role does technology play in public education?",
+            "answer": "The integration of technology into curriculum delivery has become increasingly important to foster skill development."
+        },
+        {
+            "question": "How do public schools maintain enrollment and reputation?",
+            "answer": "Schools with a good reputation for quality education in a safe environment can benefit from higher enrollments and funding levels."
+        }
+    ]
+}

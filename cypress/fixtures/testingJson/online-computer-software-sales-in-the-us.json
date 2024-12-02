@@ -1,0 +1,572 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 708963000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": 5.89
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.89
+            }
+        },
+        "profit": {
+            "profit_dollars": 14888000000,
+            "profit_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "profit_cagr_value": 0.05
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 2.1,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "profit_margins_cagr_value": -5.67
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 129263000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 709221,
+            "employees_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 104300000000,
+            "wages_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": 101,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": 101,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2023 currency. There is a wide range of computer software applications currently available and that continue to be launched yearly for both business and personal use, leading the Online Computer Software Sales industry to have numerous vertical markets. The industry has largely benefited from the gradual digital transformation that runs concurrently with macroeconomic growth. However, while many facets of the global economy have suffered during COVID-19 and accompanying economic burdens, online retailers have benefited tremendously from increased digital screen time for work and leisure purposes. So, industry-wide revenue has been increasing at a CAGR of 6.0% over the past five years, including an estimated 2.6% increase in 2023, with revenue expected to total $709.0 billion in 2023. In the same year, profit is projected to increase to 2.1%.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Revenue growth will continue to outperform the overall economy",
+            "current_performance_point_description": "Revenue growth will continue to outperform the overall economy, though at a tempered rate. More software sales will be executed online as software developers transition to a subscription-based distribution model. Moreover, developing and publishing innovative software products will trigger new and escalated spending from businesses and consumers alike."
+        },
+        {
+            "current_performance_point_title": "Online computer software sales revenue has increased",
+            "current_performance_point_description": "Online computer software sales revenue has increased at a CAGR of 6.0% to reach $709.0 billion through the end of 2023. This includes a 2.6% increase in 2023 alone, while profit increases to 2.1%."
+        },
+        {
+            "current_performance_point_title": "Innovation and Investment Drive Growth",
+            "current_performance_point_description": "Daily computer usage has been a boon for the computer software industry as more households and businesses adopt digital tools and services, increasing demand for online software sales."
+        },
+        {
+            "current_performance_point_title": "Innovation in the software publishing industry has greatly impacted its growth",
+            "current_performance_point_description": "As the number of new users plateaus, the industry's growth relies on introducing innovative and updated software products. The influx of private investments in the sector has resulted in robust revenue growth, encouraging new businesses to venture into the industry."
+        },
+        {
+            "current_performance_point_title": "The Software as a Service model is gaining popularity",
+            "current_performance_point_description": "Top software companies like Microsoft, Adobe and Google have switched to software licensing and delivery subscription-based models. This innovation has reshaped the landscape of software sales by offering continuous updates and upgrades, fostering more predictable and steady revenue streams."
+        },
+        {
+            "current_performance_point_title": "Online Computer Software Sales Face Profit Squeeze Amid Rising Competition",
+            "current_performance_point_description": "The ever-growing competitive landscape in the industry has led to slightly reduced industry profit as price competition intensifies and cost-cutting becomes more challenging. Companies had to deal with higher capital expenditures, partly because of the shift to the Software as a Service (SaaS) model, further impacting profit."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "The Industry Will Chart Robust Growth",
+            "future_outlook_point_description": "- The computer software market will expand consistently since many households own computers and businesses will continue investing in technological infrastructures. - The industry will benefit from a steady boost in corporate profit and private investments, strengthening the overall economic climate and supporting business and personal expenses towards computer software. - The Software as a Service (SaaS) sales model will be instrumental in generating consistent revenue, with the opportunity to offer continual upgrades and subscription packages as leading software publishers bolster their product portfolios."
+        },
+        {
+            "future_outlook_point_title": "TABLETS AND SMARTPHONES WILL REVOLUTIONIZE ONLINE COMPUTER SOFTWARE SALES",
+            "future_outlook_point_description": "Tablets armed with keyboard attachments will challenge the dominance of conventional laptops, inevitably pushing software makers to prioritize tablet-friendly and smartphone-optimized solutions. With the growing trend of consumers shifting to tablets and smartphones, online software sales platforms will transform their services to cater to the ever-changing needs of these highly portable device users."
+        },
+        {
+            "future_outlook_point_title": "PRICE COMPETITION AND AUTOMATION WILL RESHAPE ONLINE RETAILERS",
+            "future_outlook_point_description": "- Increased price competition will persistently pressure the industry, potentially undermining profitability. - Smaller companies will likely consider consolidation a strategic move to effectively compete against top online retailers, boosting their cost-efficiency and protecting their profit. - The expansion of automation across key industry roles like sales and customer service will continue."
+        }
+    ],
+    "industry_definition": "This industry sells and distributes software for local installation and execution to customers via the internet. Companies in this industry may also handle digital rights management for that software.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Growth Life Cycle Stage",
+            "Low Capital Intensity Level",
+            "Low Concentration Level",
+            "Light - increasing Regulation Level",
+            "Low - increasing Globalization Level"
+        ],
+        "negative_impact_factors": [
+            "None & Steady Level of Assistance",
+            "High Competition",
+            "Low Profit vs. Sector Average"
+        ],
+        "mixed_impact_factors": [
+            "Medium Revenue Volatility Level",
+            "Medium Technology Change Level",
+            "Medium - increasing Barriers To Entry Level"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "None & Steady Level of Assistance",
+            "High Competition",
+            "Low Profit vs. Sector Average"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2005-2023)",
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Private investment in computers and software"
+        ],
+        "threats": [
+            "Low Outlier Growth",
+            "Low Performance Drivers"
+        ]
+    },
+    "key_trends": [
+        "The industry no longer benefits from a rapidly rising number of new users",
+        "A subscription model is anticipated to encourage brand loyalty",
+        "Profit has contracted as a result of greater capital expenditures",
+        "The ability to offer packages and upgrades will generate steady revenue"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Household consumers and individual users",
+            "segment_description": "Household consumers and individuals, who engage in diverse online software purchases for entertainment, education and data analytics, stand as the largest market segment in the industry. Demand for computer software has significantly increased during the COVID-19 pandemic because of a hike in people spending more time at home. However, as consumers continue to adopt mobile devices and tablets as their main devices, online computer software sales from this segment have slowed in recent years compared with historical levels.",
+            "segment_percentage": 57.3
+        },
+        {
+            "segment": "Businesses for end use in their own operation",
+            "segment_description": "Many businesses require computers, peripherals and software to perform daily operations. Even though large businesses tend to buy in bulk from computer and software wholesalers or directly from software publishers, small and mid-size enterprises typically purchase the latest system or application software via the Internet. Demand from businesses is fairly stable, given that companies require various software programs to conduct business, many of which require continual software upgrades. Despite COVID-19 significantly negatively affecting business as large swaths of the macroeconomy were restricted, private enterprises' investment in computers and software jumped as more businesses embraced the virtual economy.",
+            "segment_percentage": 35.2
+        },
+        {
+            "segment": "Government",
+            "segment_description": "Demand from this major market is typically the most stable compared with other segments, given that demand from this end market is consistent and",
+            "segment_percentage": 4.9
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Others are less likely to buy computer software online. The other segment includes retailers for resell and merchant wholesalers, among others. Most of these other segments purchase software directly from software wholesalers or publishers instead of online retailers.",
+            "segment_percentage": 2.6
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "General Business Productivity and Home Use Applications",
+            "product_description": null,
+            "product_percentage": 30.3
+        },
+        {
+            "product_or_service": "GAME SOFTWARE",
+            "product_description": null,
+            "product_percentage": 6.1
+        },
+        {
+            "product_or_service": "CROSS-INDUSTRY APPLICATION SOFTWARE",
+            "product_description": null,
+            "product_percentage": 10.1
+        },
+        {
+            "product_or_service": "VERTICAL MARKET APPLICATION SOFTWARE",
+            "product_description": null,
+            "product_percentage": 7.3
+        },
+        {
+            "product_or_service": "Operating Systems Software",
+            "product_description": null,
+            "product_percentage": 12.6
+        },
+        {
+            "product_or_service": "Network Software",
+            "product_description": null,
+            "product_percentage": 9.4
+        },
+        {
+            "product_or_service": "Database Management Software",
+            "product_description": null,
+            "product_percentage": 6.7
+        },
+        {
+            "product_or_service": "Other System and Application Software",
+            "product_description": null,
+            "product_percentage": 17.5
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Software Publishing in the US",
+            "Computer & Packaged Software Wholesaling in the US",
+            "Computer Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Application Software Account for the Largest Share of the Industry",
+            "determinant_description": "Application software includes general business productivity and home-use applications, game, cross-industry, vertical market applications and others. Application software comprises programs that perform specific tasks for end-users. Examples include Microsoft Word, Adobe Photoshop and AutoCAD, among others. This segment experienced a surge as more customers turned to application software, driven by the rise in remote work and independent workers."
+        },
+        {
+            "determinant_title": "Demand for System Software is Increasing Amid Cybersecurity Threats",
+            "determinant_description": "System software includes operating systems, networks, database management and other systems software. Threat and virus protection software has experienced increased demand because of high-profile cyberattacks on enterprises. As software becomes more data-driven, consumers also want to protect their personal information by upgrading security software."
+        },
+        {
+            "determinant_title": "Many software publishers use Software as a Service (SaaS) model, offering subscriptions for online access to their software, eliminating the need for physical purchases.",
+            "determinant_description": "The COVID-19 pandemic has led to an increased demand for online software purchases because of their transaction simplicity."
+        },
+        {
+            "determinant_title": "Per capita disposable income and corporate profit play a role in demand.",
+            "determinant_description": "The industry caters mostly to individuals who purchase software for various reasons, like productivity, security or entertainment. As consumer spending and per capita disposable income boost, consumers are more likely to splurge on the latest software for their own benefit or entertainment. Also, high levels of leisure time typically boost video game software sales within younger demographics."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": [
+            {
+                "trade_title": "International trade",
+                "trade_description": "International trade doesn't occur in the Online Computer Software Sales industry. Physical software shipments have fallen rapidly to negligible levels over the past decade because transferring programs electronically is faster and more affordable, making trade figures for software-related industries relatively negligible."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "The West",
+            "location_description": "The West has been a hotbed of software innovation for years, hosting Silicon Valley, Hollywood and Los Angeles only a few hours' drive from each other. Silicon Valley attracts high-tech enterprises since it is a prime location where programmers and software developers seek jobs and a hub where other high-tech start-ups are located, which is vital to suppliers. California is home to the world's best technology universities like Stanford University and California Institute of Technology.",
+            "percentage_establishments": 101,
+            "percentage_population": 20
+        },
+        {
+            "location": "Southeast",
+            "location_description": "While the Southeast doesn't carry the name recognition of Western region destinations, it benefits from a massive labor pool, key for an industry defined by its workforce. Florida is also fast becoming a region of start-up activity, generating new software development establishments at an unprecedented rate. The Southeast region will expand as the high cost of living in the West becomes untenable.",
+            "percentage_establishments": 15,
+            "percentage_population": 20
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region contains the United States' financial heart, making it a strategic area for significant online retailers. New York also acts as a labor hub for the entire region, drawing in younger talent, which costs less to hire. Still, the region suffers from the same cost-of-living challenges as the West, with high rents driving skilled programmers away.",
+            "percentage_establishments": 15,
+            "percentage_population": 15
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_trend": "Increasing",
+        "regulations_points": [
+            {
+                "regulation_title": "FEDERAL TRADE COMMISSION (FTC)",
+                "regulation_description": "The FTC enforces online privacy laws. Truthful advertising standards also apply to online retailers. These measures protect customers from false advertisements, ensuring transparency and authenticity."
+            },
+            {
+                "regulation_title": "ONLINE SALES TAX REGULATIONS",
+                "regulation_description": "The US Supreme Court has imposed taxes on online sales, thus allowing states to collect sales tax on digital transactions, whether or not a physical location within the state exists for the selling enterprise."
+            },
+            {
+                "regulation_title": "COVID-19 PANDEMIC",
+                "regulation_description": "Health and safety guidelines were established in 2020 amid the COVID-19 pandemic. Such guidelines advised temporary social distancing and ongoing additional sanitation measures within facilities. Many of these guidelines have since been repealed."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "High and increasing competition level is a barrier to entry."
+            },
+            {
+                "barrier_title": "Start-up Costs",
+                "barrier_description": "Significant expenses for licensing, acquiring software, hiring staff and marketing efforts impose substantial costs on potential entrants."
+            }
+        ],
+        "factors_increased_barrier": [
+            "High and increasing competition level"
+        ],
+        "factors_decreased_barrier": [
+            "Low capital intensity level",
+            "Low concentration level",
+            "Light and increasing regulation level",
+            "Low and increasing globalization level"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Internal Competition",
+                "basis_description": "Internal competition is intensifying as companies vie for supremacy in price, product portfolio, quality and brand recognition."
+            },
+            {
+                "basis_title": "Attracting Skilled Workforce",
+                "basis_description": "Attracting a skilled and reliable workforce is a critical area of competition among industry companies."
+            },
+            {
+                "basis_title": "Customer Service",
+                "basis_description": "Providing superior online customer service is important given the inability to offer in-person experience."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Fragmented Landscape",
+                "concentration_description": "Numerous sellers distribute a variety of software, making the industry highly fragmented with no single dominant entity."
+            },
+            {
+                "concentration_title": "Amazon's Increasing Share",
+                "concentration_description": "Amazon continues to gain momentum, while smaller sellers consolidate or exit due to increasing competition."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Microsoft Corporation",
+                "company_percentage": 9.5
+            },
+            {
+                "company_name": "Amazon.com, Inc.",
+                "company_percentage": 5.6
+            },
+            {
+                "company_name": "Apple Inc.",
+                "company_percentage": 1.9
+            },
+            {
+                "company_name": "Adobe Inc.",
+                "company_percentage": 1.7
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 14.7
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 58.7
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 1.5
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 3.6
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 1.2
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0.3
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 18.0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "FIERCE COMPETITION ERODES PROFIT IN SMALL COMPANIES",
+            "cost_factor_description": "Rising price competition and relatively low product differentiation have resulted in contracting profitability for small sellers."
+        },
+        {
+            "cost_factor_title": "DESPITE THE AUTOMATION PROCESS, WAGES ARE ON THE HIKE",
+            "cost_factor_description": "Wages are paid to website designers and customer service personnel because they are essential components that cultivate brand loyalty and consumer trust in the digital domain."
+        },
+        {
+            "cost_factor_title": "Purchase costs account for by far the largest cost associated with the industry",
+            "cost_factor_description": "Purchase costs, including the acquisition of industry software rights and related technologies, represent the primary expense in an industry operation. Investments in necessary technologies and equipment for online sales also form a significant part of purchase expenses."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital intensity",
+                "capital_intensity_description": "The Online Computer Software Sales industry exhibits a low-to-moderate level of capital intensity, with companies estimated to allocate $0.10 toward capital for every dollar spent on labor in 2023."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "COVID-19 Bolstered Demand for Online Computer Software",
+                "volatility_description": "The industry has incurred significant revenue growth on account of the rapid integration of cutting-edge software platforms by businesses, governments, academic institutions and household consumers."
+            },
+            {
+                "volatility_title": "Inflation Hikes Have Caused Some Volatility",
+                "volatility_description": "Several online computer software products and downstream products that require software are often seen as discretionary consumer purchases."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_trend": "Steady",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Medium technology change",
+                "technological_change_description": "The Online Computer Software Sales industry has a moderate level of technological change. Even though computer software experiences big technological change since it's always evolving, online retailers that sell software are subject to a moderate level since technological change is centered around the e-commerce platforms and ways to improve it."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "How has your businesses adapted to the growth of online sales over the past five years?",
+            "answer": "Companies without an online presence will likely be forced out of the industry in the coming years."
+        },
+        {
+            "question": "COVID-19 RELIEF",
+            "answer": "The Online Computer Software Sales industry benefited from forgivable loans from the Paycheck Protection Program (PPP), established by the Coronavirus Aid, Relief and Economic Security Act in 2020. Assistance connected to the pandemic has since ended."
+        },
+        {
+            "question": "SOFTWARE AND INFORMATION INDUSTRY ASSOCIATION (SIIA)",
+            "answer": "The SIIA is a trade association exclusively for those within the software and digital content industry. The association provides networking opportunities, educational resources, regulation support and intellectual property protection. Also, the association provides a forum for companies that specialize in developing applications and tools that drive the software industry."
+        },
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "While the retail sector as a whole is reliant on the overall health of the US economy, the software market may be more resistant. Due to tremendous e-commerce growth, adverse economic conditions may depress industry revenue but should not reverse the industry's course."
+        },
+        {
+            "question": "Has your company explored acquisition opportunities in order to expand reach and reduce overhead expenses?",
+            "answer": "Some online retailers are looking to horizontally integrate through acquiring similar companies. The industry has broadly demonstrated a degree of consolidation in recent years."
+        },
+        {
+            "question": "Has your company been exposed to rising wages in recent years?",
+            "answer": "High wages has been somewhat mitigated by increasing automation of several key operations, including sales and customer support roles."
+        },
+        {
+            "question": "Has your company prepared adequately to address the increased security risks posed by digital data storage?",
+            "answer": "The cyberattacks on Equifax and web hosting companies, which have temporarily shut down Twitter and Spotify, are among a number of high-profile cyberattacks in recent years. Billions of dollars are lost when companies fall victim to a cybercrime."
+        },
+        {
+            "question": "Has your company been able to keep current with changing digital interfaces?",
+            "answer": "It is vital for software developers, especially smaller companies, to be aware of changing consumer preferences. As computer-alternatives continue penetrating the market, its important for retailers to offer software that is compatible with all devices."
+        },
+        {
+            "question": "Have any recent regulatory changes significantly affected your operations?",
+            "answer": "Regulation plays a small role in the industry. Larger companies should be aware of antitrust laws, as Microsoft and other companies have been scrutinized."
+        },
+        {
+            "question": "Have any regulatory expenses significantly impacted profitability recently?",
+            "answer": "Many states have enacted e-commerce tax laws in recent years, which puts these retailers on a more level playing field with brick and mortar stores."
+        },
+        {
+            "question": "Do you have any challenges with customers paying on time?",
+            "answer": "Generally, e-commerce is a B2C business, so companies should not face challenges having customers pay on time. Some startups, however, allow customers to pay for purchases in monthly installments."
+        },
+        {
+            "question": "How do your company's profit margins compare to your main competitors'?",
+            "answer": "Profit margins remain high in this industry, carried by large companies like Microsoft Corporation and Oracle Corporation. Small companies, especially venture-backed, typically have low-to-zero profit margins. Some startups pay little attention to profit margins, focusing on user acquisition and product development."
+        },
+        {
+            "question": "How do you and your company set about differentiating yourselves and establishing a strong brand name?",
+            "answer": "Popular industry brand names are generally more successful at generating industry sales, as they are able to rely on a reputation for fair pricing and simple sales processes."
+        },
+        {
+            "question": "What is the process for developing new products? How quickly are you able to get a product in development to the market?",
+            "answer": "Introducing new products draws in more consumers that wish to upgrade their software or stay on top of industry trends."
+        },
+        {
+            "question": "Is your sales platform considered easily accessible for clients? How do you ensure streamlined sales and access? How has your company made it easier for customers to purchase from your site during the COVID-19 pandemic?",
+            "answer": "Online sales are highly dependent upon easy access and simple sales processes, so as not to deter potential clientele and attract sales."
+        },
+        {
+            "question": "How much of your business comes from corporations? How can you better serve this market?",
+            "answer": "If corporate profit is high, companies are more likely to increase capital expenditure and allocate spending toward software and related technologies."
+        },
+        {
+            "question": "How do you track computer ownership? What do you do when computer ownership is down? How do you plan to mitigate this threat?",
+            "answer": "A higher rate of PC ownership translates to a larger market for software. As this percentage climbs higher, demand for software will increase."
+        },
+        {
+            "question": "Do you monitor consumer spending? How have changes in per capita disposable income affected your company in the past?",
+            "answer": "Industry software and computers are often considered discretionary purchases that could be delayed or avoided if necessary. Higher per capita disposable income means higher consumer spending levels and discretionary spending increases."
+        }
+    ]
+}

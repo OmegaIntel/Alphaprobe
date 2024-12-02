@@ -1,0 +1,577 @@
+{
+    "report_title": "Environmental Consulting in the US",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 22188000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 1.61
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "revenue_cagr_value": 2.04
+            }
+        },
+        "profit": {
+            "profit_dollars": 101,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 1.0
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "profit_cagr_value": 1.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 8.2,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 0.0
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 11735000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 1.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 1.0
+            }
+        },
+        "employees": {
+            "employees_count": 144883,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 1.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "employees_cagr_value": 1.0
+            }
+        },
+        "wages": {
+            "wages_dollars": 9575000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "wages_cagr_value": 0.0
+            }
+        },
+        "imports": {
+            "imports_dollars": 101,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 0.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "imports_cagr_value": 0.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 101,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 0.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2029,
+                "exports_cagr_value": 0.0
+            }
+        }
+    },
+    "executive_summary": "The Environmental Consulting industry's revenue has been volatile over the past five years due to factors like the COVID-19 pandemic, rising interest rates, and fluctuations in nonresidential construction activity. Despite challenges, revenue is projected to rise in 2023 amid increasing corporate profit and government spending. The industry's future outlook is promising with anticipated growth in corporate demand for sustainability services and increasing environmental regulations.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "COVID-19's Varied Consequences",
+            "current_performance_point_description": "The pandemic disrupted demand for environmental consulting services in 2020 due to factors like reduced government spending and disruptions to nonresidential construction activity. However, it also accelerated the adoption of remote work and digital technologies in the industry."
+        },
+        {
+            "current_performance_point_title": "Increasing Awareness of Environmental Issues Aids Demand",
+            "current_performance_point_description": "Public opinion favoring sustainable practices has led businesses to hire environmental consultants. The EPA's budget has also risen recently, boosting industry revenue."
+        },
+        {
+            "current_performance_point_title": "Rising Interest Rates Stunt Growth",
+            "current_performance_point_description": "The Federal Reserve's interest rate hikes in 2022 made it more expensive for businesses and government agencies to borrow money for environmental projects, decreasing demand for environmental consulting services."
+        },
+        {
+            "current_performance_point_title": "Demand For And Usage Of Renewable Energy Has Risen",
+            "current_performance_point_description": "Renewable energy sources met a record 13.0% of total US energy demand and 23.0% of electricity demand in 2022. The Inflation Reduction Act also promoted the clean energy transition, benefiting environmental consultants."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Investors and Consumers Demand Companies Go Green",
+            "future_outlook_point_description": "Increasing pressure from investors and consumers for companies to be eco-friendly is anticipated to support industry revenue growth over the next five years."
+        },
+        {
+            "future_outlook_point_title": "New Rules by Biden Administration Set to Increase Industry Demand",
+            "future_outlook_point_description": "The Biden Administration's stronger environmental protection approach and proposed increase in the EPA's budget for fiscal year 2024 are expected to bolster demand for environmental consultants."
+        },
+        {
+            "future_outlook_point_title": "More Stringent Environmental Regulations Will Benefit Consultants",
+            "future_outlook_point_description": "Federal tax credits for renewable energy investment and more legislation regulating offshore drilling are projected to increase demand for environmental consultants to aid companies in meeting legal requirements."
+        },
+        {
+            "future_outlook_point_title": "Technological Advancements Will Drive the Industry Forward",
+            "future_outlook_point_description": "Environmental consulting firms will increasingly rely on advanced technologies like remote sensing, GIS, and big data analytics to enhance their services and provide more accurate information to clients."
+        }
+    ],
+    "industry_definition": "This industry provides advice to businesses and federal governments on environmental issues, such as controlling environmental contamination from pollutants, toxic substances and hazardous materials. Environmental consultants identify problems, measure and evaluate risks and recommend solutions. The industry employs a multidisciplined staff of scientists, engineers and other technicians.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low",
+            "Technology Change Level: low",
+            "Globalization Level: low - increasing"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level: low - steady",
+            "Concentration Level: high",
+            "Barriers To Entry Level: low - steady"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Volatility",
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & steady Barriers to Entry",
+            "Low & steady Level of Assistance",
+            "Low Profit vs. Sector Average",
+            "High Product/Service Concentration",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers",
+            "Government consumption and investment"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Value of construction"
+        ]
+    },
+    "key_trends": [
+        "Environmental consulting firms often strike a balance between diversification and specialization. On one hand, diversifying the",
+        "Diversified Service Offerings Enhance Resilience",
+        "Importance of Expertise and Client Relationships",
+        "Biden Administration's Focus on Environment",
+        "Public Demand for Corporate Sustainability",
+        "Key Contract Wins",
+        "Impact of Interest Rate Hikes",
+        "EPA Funding Boost",
+        "Virtual Consulting Benefits"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Private Industries",
+            "segment_description": "The largest industry clients are in the construction, infrastructure, energy generation, technology and manufacturing industries.",
+            "segment_percentage": 101
+        },
+        {
+            "segment": "Energy, chemical and petrochemical companies",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 20.6
+        },
+        {
+            "segment": "Infrastructure and construction companies",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 28.8
+        },
+        {
+            "segment": "Aerospace and technolog companies",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 20.3
+        },
+        {
+            "segment": "Federal government",
+            "segment_description": "Demand from the government sector mainly relates to work on old or long-abandoned and polluted sites. Environmental consultants are primarily employed by larger government departments, particularly the Department of Defense, Department of Energy, the Environmental Protection Agency and General Services Administration, to provide remediation consultation and pollution prevention assistance.",
+            "segment_percentage": 13.3
+        },
+        {
+            "segment": "State and local governments",
+            "segment_description": "Services provided to state and local governments also comprise remediation and pollution consultation. Government-operated airports and waterways are the largest users of environmental consulting services, while schools are also using environmental consulting services to design energy- and water-saving systems.",
+            "segment_percentage": 12.8
+        },
+        {
+            "segment": "Households",
+            "segment_description": "The consumer market accounts for a small proportion of industry revenue, with household customers only recently beginning to use the services of this industry. Rising media exposure of environmental issues, has precipitated rising demand for environmental assistance and advice for private individuals. Services provided to households are more homogenous and highly commoditized, rather than the customized services provided to larger, institutional clients.",
+            "segment_percentage": 4.2
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Environmental Assessments",
+            "product_description": "Environmental consultants provide objective studies through the collection of information by conducting investigations, surveying, physical sampling, testing and other activities.",
+            "product_percentage": 47.5
+        },
+        {
+            "product_or_service": "Environmental Audits",
+            "product_description": "<UNKNOWN>",
+            "product_percentage": 5.2
+        },
+        {
+            "product_or_service": "Site Remediation Planning Services",
+            "product_description": "Site Remediation Planning Services Refer to the Development of Plans to Correct Contamination and Damage Done to the Environment",
+            "product_percentage": 12.1
+        },
+        {
+            "product_or_service": "Natural Resource Management Consulting Services",
+            "product_description": "<UNKNOWN>",
+            "product_percentage": 2.0
+        },
+        {
+            "product_or_service": "Waste Management Consulting Services",
+            "product_description": "<UNKNOWN>",
+            "product_percentage": 5.0
+        },
+        {
+            "product_or_service": "Policy, Licensing and Litigation Support Services",
+            "product_description": "Consultants provide advice to public and private institutions regarding the design, development and operations of environmental statutes, regulations and other standards and practices. Additionally, consultants aid companies that are required to prepare and file applications, reports and other documents that are mandatory for regulatory approval or permitting. Finally, consultants may also provide companies with legal support when engaged in civil suits and other legal battles pertaining to environmental issues.",
+            "product_percentage": 9.6
+        },
+        {
+            "product_or_service": "Other Environmental Consulting Services",
+            "product_description": "<UNKNOWN>",
+            "product_percentage": 15.3
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "<UNKNOWN>",
+            "product_percentage": 3.3
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Laboratory Testing Services in the US",
+            "Inorganic Chemical Manufacturing in the US",
+            "Organic Chemical Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Hardware Manufacturing in the US",
+            "Computer Peripheral Manufacturing in the US",
+            "Medical Instrument & Supply Manufacturing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Value of Construction",
+            "determinant_description": "The value of construction measures the total dollar value of both private and public construction work done in the United States. The construction sector is a major market for environmental consultants; and an increase in construction activity will likely boost the need for environmental consulting services and increase revenue for the industry. When the value of construction falls it poses a potential threat to the industry."
+        },
+        {
+            "determinant_title": "Government Consumption and Investment",
+            "determinant_description": "Government consumption and investment measures the total value of services produced by federal, state and local governments, like education and national defense, as well as investment in fixed assets. It is analogous to total government spending minus subsidies, interest payments and transfer payments. Government contracts constitute a significant share of revenue for environmental consultants, making their performance dependent on such spending. When government consumption and investment is increases it represents a potential opportunity for the industry."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "The West",
+            "location_description": "The concentration of industry establishments in this region is in part because of the concentration of industry establishments in the state of California. Consultants in California are involved in several sectors (including construction, manufacturing and agriculture) due to the diverse range of client markets centered in the state. The state is home to two major players, Tetra Tech Inc. and AECOM, adding to the concentration of establishments in the state.",
+            "percentage_establishments": 30,
+            "percentage_population": 23
+        },
+        {
+            "location": "The Southeast",
+            "location_description": "Florida is the most heavily concentrated state in the region. The Southeast has experienced significant economic growth and development in recent years. As new businesses, industries, and construction projects emerge, there is a growing demand for environmental consulting services. Virginia and North Carolina also are significant within this region, because of their large farming and agricultural industries.",
+            "percentage_establishments": 20,
+            "percentage_population": 19
+        },
+        {
+            "location": "The Mid-Atlantic",
+            "location_description": "New York has fewer establishments than its share of the population because of the state's concentration of financial companies and other businesses that have limited demand for environmental consultants. Pennsylvania, New Jersey and Maryland all have relatively high establishment figures because of a more diverse range of client markets. The Mid-Atlantic region faces various environmental challenges, like managing air and water quality, addressing hazardous waste sites, and mitigating the impact of urban development on ecosystems.",
+            "percentage_establishments": 15,
+            "percentage_population": 15
+        },
+        {
+            "location": "The Southwest",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 12,
+            "percentage_population": 11
+        },
+        {
+            "location": "The Great Lakes",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 10,
+            "percentage_population": 15
+        },
+        {
+            "location": "The Rocky Mountains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 8,
+            "percentage_population": 4
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5,
+            "percentage_population": 5
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [
+            {
+                "regulation_title": "The National Environmental Policy Act",
+                "regulation_description": "NEPA requires federal agencies to assess the potential environmental impacts of their proposed actions, like construction projects, infrastructure development, or policy changes. Environmental consultants play a crucial role in conducting Environmental Impact Assessments (EIA) to identify and evaluate these impacts. This includes assessing air and water quality, wildlife habitats, and potential ecological effects."
+            },
+            {
+                "regulation_title": "THE OIL POLLUTION ACT AND THE POLLUTION PREVENTION ACT",
+                "regulation_description": "These acts are both critical to high-polluting industries including manufacturing, mining and energy generation, all of which are large clients of environmental consultants. OPA mandates the development of detailed spill response plans for facilities and vessels that store, transport, or handle oil. Companies require the knowledge of environmental consultants to help them meet and comply with these regulations."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Legal barriers",
+                "barrier_description": "This industry has few legal barriers that prospective operators face. Operators must demonstrate an awareness of the legal and regulatory environment to ensure that all activities are within the appropriate environmental legal framework."
+            },
+            {
+                "barrier_title": "Start-up costs",
+                "barrier_description": "Start-up costs in the industry are relatively minimal, as basic computing equipment is often all that is required. In addition, economies of scale possessed by large players do not prevent smaller players from entering the industry."
+            },
+            {
+                "barrier_title": "Differentiation",
+                "barrier_description": "To prove themselves to clients, new entrants should develop a deep understanding of the current environmental regulations and the requirements for companies to meet compliance."
+            },
+            {
+                "barrier_title": "Labor expenses",
+                "barrier_description": "The most significant barrier to entry into the industry is obtaining skilled employees with the knowledge required to consult on a variety of environmental issues. Environmental consulting firms require the expert knowledge of workers who understand broader environmental legal issues."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Industry Assistance Level: low - steady",
+            "Concentration Level: high"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Technology Change Level: low",
+            "Globalization Level: low - increasing"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Diversification vs specialization balance",
+                "basis_description": "Environmental consulting firms often strike a balance between diversification and specialization. Diversifying the range of services offered can make a firm more resilient to market fluctuations and changes in client demands. However, clients often value firms that demonstrate a deep understanding of specific environmental challenges and provide effective solutions."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "High",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "High concentration",
+                "concentration_description": "The industry is largely composed of small operators, many of which are nonemployers. Environmental regulations and permitting processes vary from state to state, creating opportunities for consultants to specialize in specific regions or areas of expertise. This can make it easier for new entrants to focus on a specific state or region."
+            },
+            {
+                "concentration_title": "Barriers to enter the industry are low",
+                "concentration_description": "Relatively high profit and low barriers to entry enable many small businesses or sole proprietors to enter and compete within this industry and provide consulting work in their field of expertise."
+            },
+            {
+                "concentration_title": "The industry is experiencing consolidation due to acquisitions",
+                "concentration_description": "The industry is undergoing consolidation because of acquisitions by its largest players, which typically operate as engineering and design companies as well. These companies are expected to continue to consolidate, while smaller companies continue to enter the industry and provide specialized services."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Aecom",
+                "company_percentage": 45.2
+            },
+            {
+                "company_name": "Jacobs Engineering Group In",
+                "company_percentage": 29.5
+            },
+            {
+                "company_name": "Tetra Tech, inc.",
+                "company_percentage": 9
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 16.3
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Third-Party Services",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 40.9
+        },
+        {
+            "cost_type": "Profit (Earnings before interest and taxes)",
+            "cost_type_percentage": 8.6
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Rising Wage Costs Inhibit Profit Growth",
+            "cost_factor_description": "The largest expense for environmental consultants, and a primary determining force of profit, are wage costs, which have increased."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_trend": "Unknown",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital intensity",
+                "capital_intensity_description": ""
+            },
+            {
+                "capital_intensity_title": "Low technology change",
+                "capital_intensity_description": ""
+            }
+        ]
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_trend": "Unknown",
+        "volatility_points": [
+            {
+                "volatility_title": "Long-lasting environmental regulations lend stability to industry",
+                "volatility_description": "Environmental regulations establish a consistent demand for consulting services. Since these regulations typically remain in place for extended periods, environmental consultants have a reliable and sustained client base, which supports the stability of their businesses."
+            },
+            {
+                "volatility_title": "Varied customer base keeps industry demand afloat",
+                "volatility_description": "Consulting services are offered across a variety of industries, mitigating the effects of a downturn in one or more of the industry's downstream markets. Strong industry growth is driven by both public opinion and economic factors, and this growth tends to mitigate any negative effects from downturns in client industries."
+            }
+        ]
+    },
+    "technological_change": {
+        "technological_change_level": "Unknown",
+        "technological_change_trend": "Unknown",
+        "technological_change_points": []
+    },
+    "FAQs": [
+        {
+            "question": "Does your company specialize in one corner of the market or provide a broad range of services?",
+            "answer": "Larger companies generally offer a broad range of consulting and advisory services to compete as a one-stop shop for client contracts; meanwhile, smaller companies tend to specialize in niche service offerings, as they generally are not able to compete for larger contracts."
+        },
+        {
+            "question": "What is the role of environmental consultants in conducting Environmental Impact Assessments (EIA)?",
+            "answer": "Environmental consultants play a role in conducting Environmental Impact Assessments (EIA) to identify and evaluate impacts. This includes assessing air and water quality, wildlife habitats, and potential ecological effects."
+        },
+        {
+            "question": "What are the Oil Pollution Act (OPA) and the Pollution Prevention Act, and why are they important for environmental consultants?",
+            "answer": "The Oil Pollution Act (OPA) and the Pollution Prevention Act are critical for high-polluting industries like manufacturing, mining, and energy generation, which are large clients of environmental consultants. OPA mandates the development of detailed spill response plans for facilities and vessels that store, transport, or handle oil. Companies require the knowledge of environmental consultants to help them meet and comply with these regulations."
+        },
+        {
+            "question": "What is the National Association of Environmental Professionals (NAEP)?",
+            "answer": "The National Association of Environmental Professionals (NAEP) is a multidisciplinary association that supports environmental professionals across various sectors, including consulting firms, government agencies, and academic institutions. It provides resources, networking opportunities, and professional development programs to enhance the knowledge and skills of its members."
+        },
+        {
+            "question": "How does industry revenue depend on corporate profit and construction activity?",
+            "answer": "Industry revenue is heavily dependent on the health of corporate profit, as businesses are more likely to spend money on discretionary industry services during times of increasing corporate profit. The construction sector is a major market for environmental consultants; therefore, an increase in construction activity will boost the need for environmental consulting services and raise revenue for the industry."
+        },
+        {
+            "question": "What knowledge is required for environmental consultants regarding site remediation and waste disposal?",
+            "answer": "Environmental consultants are required to develop knowledge regarding site remediation planning and waste disposal; this includes understanding different technologies and systems that are used to provide the most cost-effective solution to clients."
+        },
+        {
+            "question": "How is the geographic distribution of establishments in the Environmental Consulting industry determined?",
+            "answer": "The geographic distribution of establishments in the Environmental Consulting industry is closely correlated with the number of businesses in various regions and the dispersal of the overall population."
+        },
+        {
+            "question": "What new technologies have been developed for site remediation?",
+            "answer": "New technologies that have been developed for site remediation include excavation of sites and surfactant enhanced aquifer remediation (SEAR); SEAR refers to the injection of hydrocarbon mitigation agents to enhance desorption in soil and other materials."
+        },
+        {
+            "question": "Does your company invest in technology to establish a competitive edge?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "How does your company prepare for changes in regulation? Among which of your clients is the level of demand for environmental law consultancy highest?",
+            "answer": "The nature of the regulatory environment directly influences demand for industry services; more stringent laws regarding the environmental impact of companies' actions will require the expertise of environmental consultants."
+        },
+        {
+            "question": "How does your company stay ahead of regulations such as the water, soil and air regulations of the Environmental Protection Agency (EPA)?",
+            "answer": "Companies have to meet the standards and comply with EPA conditions under various acts and regulations; some of these laws are directly administered by the EPA in some states, while powers are delegated to local governments in other states."
+        },
+        {
+            "question": "How does your company compensate for seasonality of cash flow? What measures do you take to reduce the financial impact to your company of fluctuations in construction markets?",
+            "answer": "Companies that offer nondiscretionary environmental consulting services, such as environmental audits, are able to partially insulate themselves from fluctuations in industry revenue since these services are demanded regardless of macroeconomic volatility."
+        },
+        {
+            "question": "What is your company doing to improve profit? Of the services you offer, which command the highest margins?",
+            "answer": "Industry profit rises in line with overall economic growth and an expansion of the construction market."
+        },
+        {
+            "question": "How do you make sure your prices are attractive to customers? How effective is your company at competing on tender?",
+            "answer": "It is important that companies in this industry compete profitably for tendered contracts."
+        },
+        {
+            "question": "What measures do you have in place to reduce operational costs? Are you considering any new cost-saving measures?",
+            "answer": "Industry operators must be knowledgeable about the various national and local regulations that affect their clients. In the face of changes in regulation, industry operators must make themselves experts fast in order to help serve clients and provide effect change management."
+        },
+        {
+            "question": "How do you attract and retain skilled employees? Do you offer salaries competitive with those of your competitors?",
+            "answer": "Companies should have qualified staff who are knowledgeable about a wide range of industries."
+        },
+        {
+            "question": "Do you notice fluctuations in demand in line with corporate profit levels? Aside from profit levels, what other factors have you noticed impact demand?",
+            "answer": "An increase in corporate profit drives business spending on discretionary environmental reforms and enables businesses to invest in consulting services. Therefore, an increase in corporate profit precipitates rising industry revenue. Industry demand is also influenced by construction activity, interest rates and the level of business confidence."
+        },
+        {
+            "question": "Does the value of construction trend in line with your company's revenue? What percentage of your revenue comes from the construction sector?",
+            "answer": "101"
+        },
+        {
+            "question": "What share of your revenue comes from manufacturing clients, if at all? What types of factors influence demand from these clients specifically?",
+            "answer": "Rising industrial production leads to increases in hazardous environmental emissions, such as air pollution from manufacturing plants, resulting in a need for the industry's services."
+        }
+    ]
+}

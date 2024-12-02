@@ -1,0 +1,577 @@
+{
+    "report_title": "Hedge Funds in the US",
+    "report_date": "May 26, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 127357000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2024,
+                "revenue_cagr_value": 5.11
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 3.09
+            }
+        },
+        "profit": {
+            "profit_dollars": 42792000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 5.36
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 33.6,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 0.37
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 92652000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 142989,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 48438000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "Consistent growth in assets under management (AUM) has immensely benefited the Hedge Funds industry over the past five years. Industry servicers invest capital they receive from a variety of investor types across a broad range of asset classes and investment strategies. Operators collect a fee for the amount of money they manage for these clients and a percentage of gains they are able to generate on invested assets. This business model helped industry revenue climb at a CAGR of 7.7% to $127.4 billion over the past five years, including an expected incline of 5.7% in 2024.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Volatile Economic Conditions Amid the Pandemic Was No Match for Hedge Fund Growth",
+            "current_performance_point_description": "Although industry professionals question the relevance of benchmarking hedge fund returns against equity performance, given that hedge funds rely on a range of instruments other than stocks, the industry's poor performance relative to the S&P 500 has begun to raise concern from some investors. These trends have affected the industry's structure, with the traditional 2.0 and 20.0 structure of a flat fee on total AUM and a right-to-earned profit deteriorating into a 1.4 and 16.0 arrangement. As a result, industry profit, measured as earnings before interest and taxes, has been hindered over the past five years."
+        },
+        {
+            "current_performance_point_title": "FAVORABLE INTEREST RATE ENVIRONMENT EARLY ON BOOSTS INVESTMENT OPPORTUNITIES",
+            "current_performance_point_description": "The industry benefited from historically low interest rates at the onset of the period, which lowered the cost of borrowing and increased investment opportunities across various asset classes. Core assets held within the industry and the advantage of diversification enabled hedge funds to significantly grow revenue. In addition, an increase in access to credit exacerbated revenue gains as hedge funds were able to boost revenue gains with leverage."
+        },
+        {
+            "current_performance_point_title": "RISING INFLATIONARY PRESSURES THREATEN INDUSTRY STABILITY",
+            "current_performance_point_description": "Following the pandemic, heightened inflationary pressures drew a response from the Federal Reserve, which resulted in hiking interest rates to combat this trend. Due to high inflation in the latter part of the period, hedge funds encountered economic volatility which put downward pressure on industry profit. Hedge fund managers have increasingly been concerned over the stability of the economy, with the conflict in Ukraine and global inflationary pressures exemplifying this concern among managers and investors alike."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "INCREASED ECONOMIC VOLATILITY POISED TO LIMIT FURTHER INDUSTRY GROWTH",
+            "future_outlook_point_description": "As global economic conditions remain uncertain due to inflationary pressures which are expected to be persistent into the onset of the outlook period, hedge funds are poised to remain cautiously optimistic about their growth opportunities. For smaller hedge funds looking to protect their capital and maximize returns, safer investments, such as government-backed bonds and cash equivalents, can provide protection against global economic volatility and provide better returns due to higher interest rates."
+        },
+        {
+            "future_outlook_point_title": "IMPROVING RISK MANAGEMENT SET TO CHANGE INDUSTRY STRATEGY",
+            "future_outlook_point_description": "Recent uncertainty in global economic conditions and persistently high interest rates will incentivize hedge fund managers to invest more capital in risk management departments. By enhancing core risk protections, such as stress tests, the industry will be better positioned to adapt in times of economic hardship and maximize returns on its investments. These changes in risk management primarily benefit smaller and mid-sized hedge funds, particularly as larger hedge funds must allocate more capital for these types of programs relative to their size."
+        },
+        {
+            "future_outlook_point_title": "EVOLVING REGULATORY LANDSCAPE INCREASES SCRUTINY FOR HEDGE FUND MANAGERS",
+            "future_outlook_point_description": "As hedge fund managers face more scrutiny surrounding the tax code and broader federal regulations, the industry may face a dampened growth outlook. A recent push to eliminate the carried interest loophole by the federal government, which influences the tax rate for long-term investors, will influence the rate of investment among hedge funds. The continuous need to adhere to federal laws, such as the Dodd-Frank Act and Consumer Protection Act, ensures limits on hedge funds' investment capabilities and increases compliance costs for smaller managers."
+        }
+    ],
+    "industry_definition": "Companies in this industry pool investments, securities or other assets on behalf of shareholders, unit holders or other beneficiaries. This industry comprises hedge funds, but does not include mutual funds, real estate investment trusts or exchange-traded funds. Additionally, funds in this industry are considered establishments, while fund managers are considered enterprises.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage: growth",
+            "Capital Intensity Level: low",
+            "Concentration Level: low"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level: high"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "None & Steady Level of Assistance",
+            "High Competition",
+            "High Volatility"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2005-2024)",
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers",
+            "Demand from retirement and pension plans"
+        ],
+        "threats": [
+            "Low Outlier Growth"
+        ]
+    },
+    "key_trends": [
+        "Establishing favorable fee structure enhances internal competition",
+        "Growing popularity of ETFs strengthens external competition for hedge funds",
+        "Diversification of investment boosts industry revenue",
+        "Evolving regulatory landscape affects level of risk taken by managers",
+        "One company owns more than a 5.0% share of the market",
+        "Increased compliance costs dampen expansion propensity"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Pension funds",
+            "segment_description": "This market segment generates revenue from positive returns into pension funds.",
+            "segment_percentage": 33
+        },
+        {
+            "segment": "Wealth managers",
+            "segment_description": "This market segment generates revenue from positive returns among clients in wealth management, such as high-net-worth individuals, portfolio managers, corporate investors and investment companies.",
+            "segment_percentage": 15
+        },
+        {
+            "segment": "Insurance companies",
+            "segment_description": "This market segment generates revenue from positive returns among clients in life and property/casualty (P&C) insurance companies.",
+            "segment_percentage": 12
+        },
+        {
+            "segment": "Sovereign wealth funds",
+            "segment_description": "This market segment generates revenue from positive returns among sovereign wealth funds.",
+            "segment_percentage": 7
+        },
+        {
+            "segment": "Endowments and foundations",
+            "segment_description": "This market segment generates revenue from positive returns among endowments and foundations.",
+            "segment_percentage": 7
+        },
+        {
+            "segment": "Fund of funds",
+            "segment_description": "This market segment generates revenue from positive returns through diversified investments.",
+            "segment_percentage": 2
+        },
+        {
+            "segment": "Banks",
+            "segment_description": "This market segment generates revenue from positive returns through diversified investments.",
+            "segment_percentage": 2
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Other markets that participate within the industry's parameters include alternative investors.",
+            "segment_percentage": 29
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Equity Focus",
+            "product_description": "This product segment generates revenue from fees generated from the performance of equity-focused strategies.",
+            "product_percentage": 25.3
+        },
+        {
+            "product_or_service": "Fixed Income Focus",
+            "product_description": "This product segment generates revenue from fees generated from fixed-income arbitrage.",
+            "product_percentage": 22.3
+        },
+        {
+            "product_or_service": "Multi-Strategy",
+            "product_description": "This product segment generates revenue from various investment strategies aimed at maintaining diversification.",
+            "product_percentage": 15.9
+        },
+        {
+            "product_or_service": "Emerging Markets",
+            "product_description": "This product segment generates revenue from positive returns in investing within emerging markets.",
+            "product_percentage": 9.7
+        },
+        {
+            "product_or_service": "Event-Driven Focus",
+            "product_description": "This product segment generates revenue from event-driven investing.",
+            "product_percentage": 5.2
+        },
+        {
+            "product_or_service": "Macro",
+            "product_description": "These investments are primarily geared toward riskier trades with higher upside.",
+            "product_percentage": 3.5
+        },
+        {
+            "product_or_service": "Distressed Securities",
+            "product_description": "This product segment generates revenue from various algorithmic and distressed investments.",
+            "product_percentage": 0.4
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "The acceleration of technology has attracted hedge funds into rapidly growing investments.",
+            "product_percentage": 17.7
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Investment Banking & Securities Dealing in the US",
+            "Securities Brokering in the US",
+            "Stock & Commodity Exchanges in the US"
+        ],
+        "tier_2_suppliers": [
+            "Investment Banking & Securities Intermediation in the US",
+            "Commercial Leasing in the US",
+            "Office Supply Stores in the US"
+        ],
+        "tier_1_buyers": [
+            "Colleges & Universities in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Demand from Retirement and Pension Plans",
+            "determinant_description": "Pension funds are anticipated to represent over one-third of the industry's assets under management."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region has numerous advantages that makes it a hotspot for industry establishments.",
+            "percentage_establishments": 37,
+            "percentage_population": 22
+        },
+        {
+            "location": "West",
+            "location_description": "The Western region continues to attract many hedge funds to the area.",
+            "percentage_establishments": 18,
+            "percentage_population": 23
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "Much of the appeal from the Great Lakes stems from a strong corporate presence.",
+            "percentage_establishments": 12,
+            "percentage_population": 15
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The presence of various corporate clients and financial institutions boosts the appeal of the Mid-Atlantic region.",
+            "percentage_establishments": 11,
+            "percentage_population": 13
+        },
+        {
+            "location": "Southwest",
+            "location_description": "Although the Southwest lacks prominent metropolitan centers, the area is growing in corporate concentration.",
+            "percentage_establishments": 9,
+            "percentage_population": 11
+        },
+        {
+            "location": "Plains",
+            "location_description": "The Plains region has a significantly smaller industry concentration.",
+            "percentage_establishments": 6,
+            "percentage_population": 7
+        },
+        {
+            "location": "New England",
+            "location_description": "The New England region has a significantly smaller industry concentration.",
+            "percentage_establishments": 4,
+            "percentage_population": 5
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "The Rocky Mountains region has a significantly smaller industry concentration.",
+            "percentage_establishments": 3,
+            "percentage_population": 4
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "The Securities Act of 1933",
+                "regulation_description": "Hedge funds must comply with trade reporting and record-keeping requirements."
+            },
+            {
+                "regulation_title": "Investment Company Act of 1940",
+                "regulation_description": "Larger hedge funds are restricted to raising capital from sophisticated investors."
+            },
+            {
+                "regulation_title": "Dodd-Frank Wall Street Reform and Consumer Protection Act of 2010",
+                "regulation_description": "Requires hedge fund advisers with over $100 million AUM to register with the SEC."
+            },
+            {
+                "regulation_title": "Volcker Rule",
+                "regulation_description": "Limits banking entities' ownership stakes in hedge funds."
+            },
+            {
+                "regulation_title": "SEC Proposes to Enhance Private Fund Reporting",
+                "regulation_description": "Investment fund advisers must disclose a fund's fees and performance."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "Revenue volatility level is high."
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "Industry assistance level is none - steady."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Revenue Volatility Level is high",
+            "Industry Assistance Level is none - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage is growth",
+            "Capital Intensity Level is low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Establishing favorable fee structure enhances internal competition",
+                "basis_description": "Hedge funds that implement a favorable fee structure will gain a competitive edge."
+            },
+            {
+                "basis_title": "Growing popularity of ETFs strengthens external competition",
+                "basis_description": "The availability of ETFs boosts external competition."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Diversified Product Offering Creates Lucrative Marketing Opportunities for Smaller Hedge Funds",
+                "concentration_description": "Diverse product offerings improve marketing opportunities."
+            },
+            {
+                "concentration_title": "High Compliance Costs Discourage Larger Industry Expansion",
+                "concentration_description": "Costly regulatory compliance hampers hedge fund expansion."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Bridgewater Associates, LP",
+                "company_percentage": 4.8
+            },
+            {
+                "company_name": "Blackrock, Inc.",
+                "company_percentage": 3.7
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 25
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 30
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 15
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Other costs",
+            "cost_type_percentage": 25
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "CONSISTENT DEMAND FOR QUALIFIED EMPLOYEES MAINTAINS HIGH WAGE COSTS",
+            "cost_factor_description": "A significant expense for hedge fund managers is the hiring of qualified employees."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LABOR EXPENSES",
+                "capital_intensity_description": "The industry is labor-intensive with high demand for qualified employees."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "THE HEDGE FUNDS INDUSTRY ENDURES HIGH REVENUE VOLATILITY",
+                "volatility_description": "Revenue volatility correlates with macroeconomic conditions."
+            },
+            {
+                "volatility_title": "Variability in Access to Credit Influences Rate of Investment Among Hedge Funds",
+                "volatility_description": "Access to credit affects hedge fund investment strategies."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "ACCELERATION OF TECHNOLOGY ADOPTION INCREASES EFFICIENCY FOR HEDGE FUNDS",
+                "technological_change_description": "Technology adoption enhances management and client interactions."
+            },
+            {
+                "technological_change_title": "IMPROVEMENT IN MARKET MODELING BOOSTS RATE OF RETURN AMONG CORE PRODUCTS",
+                "technological_change_description": "Advanced modeling techniques enhance investment performance."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How do you emphasize the value of your company's services?",
+            "answer": "Hedge funds emphasize the value of their services by displaying their long-term historical returns."
+        },
+        {
+            "question": "How diversified are your product offerings compared to competitors?",
+            "answer": "Hedge fund operators tend to have very different investment strategies."
+        },
+        {
+            "question": "Are your operations spread across the country or are your establishments more concentrated in a certain geographic location?",
+            "answer": "Hedge funds operate in areas that attract the most clients."
+        },
+        {
+            "question": "Does your company have exposure to fintech competitors? How is it affecting your strategy moving forward?",
+            "answer": "Hedge funds face little competition from fintech competitors."
+        },
+        {
+            "question": "How have you taken advantage of rising internet and mobile-internet penetration into the financial services industry?",
+            "answer": "Some smaller hedge fund managers have utilized the internet to attract clients."
+        },
+        {
+            "question": "To what extent are your processes automated and how do you plan on investing in automation over the coming years?",
+            "answer": "Hedge funds are expected to see little automation in their processes."
+        },
+        {
+            "question": "How do you expect the proposed changes to Dodd-Frank to affect your business?",
+            "answer": "Dodd-Frank mandates reporting positions to the SEC quarterly for hedge funds over $100 million."
+        },
+        {
+            "question": "How have the increased capital requirements under Basel III affected operations?",
+            "answer": "Hedge funds are not affected by Basel III, as they do not lend."
+        },
+        {
+            "question": "Do you have enough capital reserved to be able to invest in new technology/software as soon as it becomes available?",
+            "answer": "Hedge funds typically pass on technology and software expenses to clients."
+        },
+        {
+            "question": "How does your profit margin compare to those of your competitors?",
+            "answer": "Profitability varies based on asset classes and individual asset performance."
+        },
+        {
+            "question": "Are you known for your reliability and performance?",
+            "answer": "Establishing a good reputation is crucial for attracting capital."
+        },
+        {
+            "question": "Have you dealt with compliance issues in the past?",
+            "answer": "Hedge funds must ensure compliance as oversight increases."
+        },
+        {
+            "question": "Do you have a high prior success rate with clients?",
+            "answer": "Performance helps attract and retain investors."
+        },
+        {
+            "question": "Do you keep track of investor uncertainty?",
+            "answer": "Investor risk aversion negatively impacts industry fees."
+        },
+        {
+            "question": "How does demand for your services correlate with the performance of the S&P 500?",
+            "answer": "The S&P 500 growth can enhance hedge fund revenues."
+        },
+        {
+            "question": "How does access to credit affect your company? How do you adapt when interest rates are high?",
+            "answer": "Access to credit is crucial for leveraging potential gains."
+        }
+    ]
+}

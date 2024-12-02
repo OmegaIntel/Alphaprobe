@@ -1,0 +1,551 @@
+{
+    "report_title": "Equipment Manufacturing in the US",
+    "report_date": "Jul 14, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 1405000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": -2.03
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.79
+            }
+        },
+        "profit": {
+            "profit_dollars": 80000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": -1.09
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 1.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5.7,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 1.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 327000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": -1.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 1.0
+            }
+        },
+        "employees": {
+            "employees_count": 3105,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 1.0
+            }
+        },
+        "wages": {
+            "wages_dollars": 227000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 1.0
+            }
+        },
+        "imports": {
+            "imports_dollars": 495000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 1.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 1.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 197000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 1.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 1.0
+            }
+        }
+    },
+    "executive_summary": "Industrial spraying equipment manufacturers produce machinery that apply coatings, finishes and paints to industrial products through aerospace, automotive and consumer industries. The industry correlates closely to the manufacturing and construction sectors; both sectors plummeted during the pandemic, particularly as consumer uncertainty and weak industrial production piled onto the manufacturing sector's decline. Construction markets provided no reprieve as interest rates climbed in 2022 and 2023. Foreign manufacturers also flooded the market, filling domestic production pitfalls and undercutting domestic prices. Overall, revenue has been declining at a compound annual growth rate (CAGR) of 6.1% over the past five years, and is expected to reach $1.4 billion in 2023. This includes a 0.5% drop in 2023.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Weak industrial production leads to plummeting demand",
+            "current_performance_point_description": "The manufacturing sector fell into disarray during the pandemic. Consumer uncertainty compounded the sector's struggles as individuals held off on big-ticket expenses, like new cars or travel. The automotive and aerospace markets both struggled in 2020 and 2021; since these industries represent a key portion of commercial-grade spraying equipment, industrial spraying equipment manufacturers also scuffled. Supply chain issues also magnified weak demand. Manufacturers couldn't seamlessly pass skyrocketing steel prices onto downstream buyers, leading to higher purchasing costs and sharply contracting profit."
+        },
+        {
+            "current_performance_point_title": "Climbing interest rates stifle demand from contractors",
+            "current_performance_point_description": "Many manufacturers rely on demand from contractors. Residential, utilities and nonresidential contractors use spraying equipment for a wide range of activities, including paint and insulation spraying, sandblasting and applying finishes. Skyrocketing interest rates have made funding new construction projects unfeasible for many homeowners and companies. This subdued demand has discouraged contractors from upgrading or replacing spraying equipment. Rising interest rates have also countered strong residential construction markets. Many homeowners had started do-it-yourself (DIY) remodeling projects, often involving painting rooms or facades. Consumers would often purchase paint sprayers from local hardware stores."
+        },
+        {
+            "current_performance_point_title": "Imports flood domestic markets during the pandemic",
+            "current_performance_point_description": "Industrial spraying equipment manufacturers have combatted climbing import penetration for most of the current period. In particular, imports"
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Infrastructure Spending is Expected to Support the Industry's Recovery",
+            "future_outlook_point_description": "In its 2020 Report Card for US Infrastructure, the American Society of Civil Engineers gave both the nation's roads and aviation infrastructure a grade of D, indicating an inadequate national transportation network. Governments have faced mounting pressure to allocate more funding to road, highway and airport runway construction and repair. Many contractors use industrial spraying equipment to paint road and runway lines and sandblast bridges and tunnels. These markets rely on public infrastructure spending to generate revenue. The recent Infrastructure Investment and Jobs Act (IIJA) will spark demand."
+        },
+        {
+            "future_outlook_point_title": "Manufacturers Focus on High-Tech Spraying Equipment",
+            "future_outlook_point_description": "Companies produce robotic spraying machines that reduce labor costs for downstream users. For example, ABB Robotics appeals to potential customers with custom-made, high-quality products. According to ABB Robotics' website, these products are quite expensive, ranging from $100,000 to $150,000. High-tech products can reduce material usage and human input, leading to downstream cost savings despite higher initial costs. Even so, high costs will prevent many potential buyers, especially low-profit manufacturing industries, from integrating these new sprayers. These"
+        }
+    ],
+    "industry_definition": "This industry primarily manufactures industrial spraying equipment used to coat products such as automobiles, appliances, furniture and other industrial and consumer products. Industrial spraying equipment used for commercial construction purposes is also included. This industry excludes sprayers used for agricultural purposes.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level: high",
+            "Industry Assistance Level: low - increasing",
+            "Globalization Level: high - increasing"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low & Increasing Level of Assistance",
+            "Medium Imports",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "High Volatility",
+            "Low Profit vs. Sector Average"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers",
+            "Trade-weighted index"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "World price of steel"
+        ]
+    },
+    "key_trends": [
+        "Buyers balance quality and price. Companies with strong client relationships generate more stable demand.",
+        "Manufacturers have faced growing competition from low-cost imports. Many companies have shifted to higher-tech and custom-made products to remain competitive."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Contractors",
+            "segment_description": "Construction companies are the industry's largest market. These companies buy various industrial sprayers for painting, priming and waterproofing. Many contractors will also use sprayers to apply insulation. Demand from construction companies plummeted amid the pandemic as dipping construction values and skyrocketing interest rates curtailed construction projects.",
+            "segment_percentage": 36.4
+        },
+        {
+            "segment": "Other",
+            "segment_description": null,
+            "segment_percentage": 23.9
+        },
+        {
+            "segment": "Aerospace manufacturers",
+            "segment_description": "Aerospace manufacturers are the second largest market for industrial spraying equipment. Like automobile manufacturers, aerospace manufacturers require industrial spraying equipment to apply paint and primer to the body of airplanes. Although aerospace manufacturers primarily use to enhance the aesthetic appeal of planes, they also use primer to inhibit metal corrosion. This market also endured volatility during the pandemic. As governments lift travel restrictions, consumers will fly more frequently, causing airliners to upgrade fleets to handle elevated capacity. This demand will ripple through the supply chain to industrial spraying equipment manufacturers.",
+            "segment_percentage": 21.5
+        },
+        {
+            "segment": "Automotive manufacturers",
+            "segment_description": "The automotive sector is a key downstream market for manufacturers. Automakers use industrial robots to paint new model cars in the manufacturing process. These robots often have explosion-proof arms, enabling them to spray coatings that contain combustible gasses. Recent technological innovations also enable these robots to control all spray parameters, including fan air, fluid flow and voltage, representing significant cost-savings for downstream automakers. The pandemic also created severe supply chain shortages, leading to production backlogs and depressed demand for spray equipment. As governments lift restrictions, automotive demand has soared, leading to this market's resurgence.",
+            "segment_percentage": 18.2
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Industrial Paint Sprayers and Other Liquid Power Sprayers",
+            "product_description": null,
+            "product_percentage": 71.1
+        },
+        {
+            "product_or_service": "Blasting Machines and Parts and Other Equipment",
+            "product_description": null,
+            "product_percentage": 20.0
+        },
+        {
+            "product_or_service": "ROOF AND WATERPROOF SPRAYERS",
+            "product_description": null,
+            "product_percentage": 8.9
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Ferrous Metal Foundry Products in the US",
+            "Nonferrous Metal Rolling & Alloying in the US",
+            "Nonferrous Metal Refining in the US"
+        ],
+        "tier_2_suppliers": [
+            "Iron & Steel Manufacturing in the US",
+            "Aluminum Manufacturing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": [
+            "Car & Automobile Manufacturing in the US",
+            "Household Furniture Manufacturing in the US",
+            "Commercial Building Construction in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "PENT-UP DEMAND FOR TRAVEL SUPPORTS PAINTING SPRAYERS",
+            "determinant_description": "Buyers can use painting sprayers to enhance the aesthetic appeal and apply a special coating to prevent corrosion. This segment especially struggled during the pandemic as travel halted and downstream manufacturers halted production. The automotive and aerospace sectors drive growth for painting sprayers. Robust growth, especially as governments lift pandemic restrictions, has encouraged sales. Many consumers have expressed pent-up demand for travel, bolstering this segment."
+        },
+        {
+            "determinant_title": "ROOF AND WATERPROOF SPRAYERS FALTER ALONGSIDE CONSTRUCTION MARKETS",
+            "determinant_description": "The construction sector is the primary buyer of roof and waterproof sprayers. Downstream operators use these sprayers to fill cracks and crevices in roofs or apply waterproofing to prevent leaks. This segment heavily struggled following the pandemic as downtrodden construction values and skyrocketing interest rates limited new construction, remodeling and renovation projects."
+        },
+        {
+            "determinant_title": "BLASTING MACHINES AND PARTS AND OTHER EQUIPMENT GENERATE STABLE SALES",
+            "determinant_description": "Buyers use these machines for pretreatment before applying paint and coating. Companies often use these products alongside paint sprayers since blasting machines blow particles away to ensure a smooth surface. This segment also includes parts, accessories and components sold separately. This segment is very stable, especially during economic downturns. Buyers often prefer to repair existing devices with parts since the process is less expensive."
+        },
+        {
+            "determinant_title": "Most of the industry's revenue comes from the manufacturing sector",
+            "determinant_description": "Most of the industry's revenue comes from the manufacturing sector; the industrial production index (IPI) measures this sector's output. Manufacturers purchase spraying equipment to assist with coating, painting and finishing products. The IPI is expected to falter in 2023."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Moderate",
+        "import_trend": "Decreasing",
+        "export_level": "Moderate",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "China Undercuts Domestic Producers",
+                "trade_description": "Chinese imports dominate the market. These manufacturers have lower per-unit costs, relying on China's lax emissions and labor policies. Some larger domestic manufacturers also have facilities in China, Mexico and Taiwan to take advantage of lower costs. This offshoring trend has slowly exposed domestic manufacturers to import penetration."
+            },
+            {
+                "trade_title": "The Dollar's Value Encourages Imports",
+                "trade_description": "Strong domestic demand and the appreciating dollar have propelled import volume through the current period. The trade-weighted index (TWI) rapidly climbed following the pandemic. This trend will reverse in the outlook period as the US dollar returns to its historical equilibrium, making imports more expensive. Domestic products will rush to fill the gap, limiting import penetration."
+            },
+            {
+                "trade_title": "The United States-Mexico-Canada Agreement (USMCA) Drives Trade",
+                "trade_description": "Canada and Mexico are the largest import and export markets; these countries account for more than two-thirds of imports and half of exports. The USMCA especially benefits Canada as the country ranks third in imports from and first in exports to the United States. Lower trade barriers facilitate robust trade."
+            },
+            {
+                "trade_title": "International Buyers Prefer Advanced Domestic Products",
+                "trade_description": "While inexpensive imported sprayers have saturated the market, many buyers prefer custom-fit sprayers from domestic manufacturers. Many domestic manufacturers also offer superior after-sale services, like customer support and repairs. These companies can differentiate with better quality products despite higher selling points."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "Industrial spraying equipment manufacturers take advantage of the Great Lakes region's existing manufacturing infrastructure to forge relationships with key buyers and suppliers. The Midwest's Proximity to Steel and Automotive Manufacturers In particular, manufacturers manage supply contracts with steel producers. Many companies will also hold contracts with automakers; these automotive manufacturers often request custom products, making close relationships a necessity. The region also benefits from its proximity to Canada. Many manufacturers will manage trade, especially through major trading lanes, like the Detroit-Windsor Tunnel.",
+            "percentage_establishments": 0,
+            "percentage_population": 30
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region serves as a trade hub through the Gulf of Mexico and across the Atlantic Ocean. The region's many major ports make trade easier. The Southeast region has the highest population in the United States, making it easier for manufacturers to acquire labor. The region's high population also leads to higher construction activity, bolstering demand from contractors.",
+            "percentage_establishments": 10,
+            "percentage_population": 20
+        },
+        {
+            "location": "Southwest",
+            "location_description": "Many manufacturers in the Southwest prioritize relationships with aerospace and defense contractors. Many downstream aerospace companies have testing and manufacturing facilities in Texas. These products often require protective finishes and paints, leading to robust demand for custom-made industrial sprayers. Manufacturers in the Southwest often manage trade with Mexico too.",
+            "percentage_establishments": 20,
+            "percentage_population": 10
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": null,
+            "percentage_establishments": 30,
+            "percentage_population": 0
+        },
+        {
+            "location": "West Plains",
+            "location_description": null,
+            "percentage_establishments": 40,
+            "percentage_population": 0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": null,
+            "percentage_establishments": 30,
+            "percentage_population": 10
+        },
+        {
+            "location": "New E",
+            "location_description": null,
+            "percentage_establishments": 20,
+            "percentage_population": 30
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Increasing",
+        "regulations_points": [
+            {
+                "regulation_title": "CLEAN AIR AND WATER ACT",
+                "regulation_description": "The Clean Air Act limits harmful air pollutant and volatile organic compound emissions."
+            },
+            {
+                "regulation_title": "LOCAL AND STATE REGULATIONS",
+                "regulation_description": "Some state and local governments push the use of HVLP spray guns instead of conventional sprayers."
+            },
+            {
+                "regulation_title": "DOWNSTREAM REGULATIONS",
+                "regulation_description": "Manufacturers must know downstream market regulations like OSHA standards in spray-finishing operations."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "mature"
+            },
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "high"
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "low - increasing"
+            },
+            {
+                "barrier_title": "Globalization Level",
+                "barrier_description": "high - increasing"
+            },
+            {
+                "barrier_title": "Capital Intensity Level",
+                "barrier_description": "low"
+            },
+            {
+                "barrier_title": "Legal",
+                "barrier_description": "Companies adhere to environmental standards, like the Clean Air and Water Acts. Manufacturers must also manage state or local bans on specific spray guns."
+            },
+            {
+                "barrier_title": "Differentiation",
+                "barrier_description": "Diversified manufacturers with established client relationships dominate the market. Companies can still enter by developing a niche product to cater to specific and unfulfilled client needs while commanding premium prices."
+            },
+            {
+                "barrier_title": "Start-up Costs",
+                "barrier_description": "Entrants must invest heavily in technological infrastructure and qualified employees. These costs have climbed as technological innovation becomes central to competition."
+            },
+            {
+                "barrier_title": "Labor Intensity",
+                "barrier_description": "While companies have increasingly relied on automation, skilled labor remains essential. Many manufacturers prioritize custom-built products, necessitating engineers and other high-wage employees."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": []
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Buyers balance quality and price",
+                "basis_description": "Buyers balance quality and price. Companies with strong client relationships generate more stable demand."
+            },
+            {
+                "basis_title": "Increasing competition",
+                "basis_description": "Manufacturers have faced growing competition from low-cost imports. Many companies have shifted to higher-tech and custom-built niches."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Incumbent Manufacturers Dominate the Industry",
+                "concentration_description": "The industry's largest companies account for nearly half of the total market. These manufacturers are entrenched in the market, holding vital contracts with buyers and suppliers to reduce costs and maximize returns. Smaller companies account for the remaining half. Since the industry provides a wide range of niches, manufacturers can specialize in these markets and develop stable positions."
+            },
+            {
+                "concentration_title": "Consolidation Drives Market Share Concentration",
+                "concentration_description": "Many manufacturers have reached a point where organic growth is challenging and entering new niches is costly. Imports have also made it difficult for domestic companies to expand to capital-poor markets. Even so, regulatory hurdles have stifled consolidation efforts. For example, the Federal Trade Commission ruled against Graco in a major 2015 antitrust ruling, forcing them to divest DeVilbiss, Binks, BGK, Gema and Ransburg to Carlisle Companies."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Graco Inc.",
+                "company_percentage": 31.9
+            },
+            {
+                "company_name": "Trane Technologies Plc",
+                "company_percentage": 16.5
+            },
+            {
+                "company_name": "Carlisle Companies Inc",
+                "company_percentage": 4.6
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 47
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 0
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 55.6
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 16.2
+        },
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 5.7
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases are the average manufacturer's primary expense",
+            "cost_factor_description": "Raw material purchases include steel, pipes, gaskets, motors and specialized low-friction materials."
+        },
+        {
+            "cost_factor_title": "Companies Hire Skilled Workers",
+            "cost_factor_description": "Manufacturers need labor to design products, calibrate machines, maintain quality assurance and provide customer and after-sale services."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_trend": "Unknown",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital intensity",
+                "capital_intensity_description": "While companies have increasingly relied on automation, skilled labor remains essential."
+            }
+        ]
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_trend": "Steady",
+        "volatility_points": [
+            {
+                "volatility_title": "The pandemic generated significant volatility",
+                "volatility_description": "Many key markets struggled during the pandemic, leading to sharp declines in 2020 and 2021."
+            },
+            {
+                "volatility_title": "Low-cost imports add to uncertainty",
+                "volatility_description": "Companies have struggled to compete with foreign manufacturers, particularly Chinese and Mexican producers."
+            }
+        ]
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_trend": "Unknown",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Automated Products",
+                "technological_change_description": "Manufacturers have prioritized value-added products to combat rising import penetration."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "How is your company affected by rising imports?",
+            "answer": "Rising imports have decreased total domestic production activity through the current period."
+        },
+        {
+            "question": "How have imports from low-wage countries like China and Mexico impacted your operations?",
+            "answer": "Both small and large manufacturers have operations abroad. These companies have lower per-unit costs."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "Companies face exposure to steel prices. Manufacturers will often pass rising costs onto buyers. However, weak demand made it difficult for companies to pass costs off."
+        },
+        {
+            "question": "Have you looked into setting up manufacturing facilities in lower-wage regions of the country?",
+            "answer": "Large manufacturers have expanded manufacturing facilities abroad. This trend enables companies to compete more effectively."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation over the past five years?",
+            "answer": "Companies have automated most low-skill positions. Even so, manufacturers require skilled labor for design, quality control and sales roles."
+        },
+        {
+            "question": "How does your company stay ahead of regulations, such as energy-efficiency standards?",
+            "answer": "Large manufacturers have incurred expenditures to develop new, more environmentally friendly products. Energy regulations have also remained steady in the industry."
+        },
+        {
+            "question": "Have any regulatory expenses significantly impacted profitability recently?",
+            "answer": "Regulation has remained steady in the industry."
+        },
+        {
+            "question": "How do your company's profit margins compare to your main competitors'?",
+            "answer": "Profit is heavily influenced by macroeconomic conditions. Volatility in steel prices and the consistent trend of import penetration continues to play a role in dampening profitability."
+        },
+        {
+            "question": "How has input price volatility affected profit margins over the past 12 months?",
+            "answer": "Steel price volatility has impacted the selling prices of the industry's products. Companies have struggled to offset rising costs, placing pressure on profit."
+        },
+        {
+            "question": "What measures do you have in place to reduce operational costs?",
+            "answer": "Due to high competition from other manufacturers and from imports, companies must maintain relatively low and competitive prices. Minimizing costs can help achieve market-favored prices while lifting profit."
+        },
+        {
+            "question": "How do you maintain product quality?",
+            "answer": "Quality control systems help achieve uniformity across product lines and encourage brand loyalty."
+        },
+        {
+            "question": "Which niches, if any, do you cater to?",
+            "answer": "Manufacturers can benefit from specialization in an appropriate market niche like household furniture manufacturing."
+        },
+        {
+            "question": "How does an increase in the industrial production index affect your company? How do you mitigate a decline in the IPI?",
+            "answer": "Nearly half of the industry's revenue comes from the manufacturing industry, the output of which is measured by the Industrial Production Index. Manufacturers purchase industrial sprayers to assist with the coating, painting and finishing of products."
+        },
+        {
+            "question": "How does falling demand from car and automobile manufacturing affect your company?",
+            "answer": "Car and automobile manufacturers use industrial spraying equipment to apply paint in the finishing of automobiles. Increasing demand for car and automobile manufacturing benefits industrial spraying equipment."
+        },
+        {
+            "question": "How much of your revenue is derived from export markets? How do you mitigate the threat of a decline in the TWI?",
+            "answer": "The trade-weighted index measures the strength of the US dollar relative to the currencies of its primary trading partners. As the trade-weighted index decreases, the cost of US goods relative to foreign goods falls, making domestic goods more attractive to foreign buyers, bolstering industry revenue."
+        }
+    ]
+}

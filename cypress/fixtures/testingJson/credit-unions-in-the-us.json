@@ -1,0 +1,565 @@
+{
+    "report_title": "Credit Unions Industry Report",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 124753000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2003,
+                "end_year": 2024,
+                "revenue_cagr_value": 3.63
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2031,
+                "revenue_cagr_value": 1.22
+            }
+        },
+        "profit": {
+            "profit_dollars": 25200000000,
+            "profit_cagr_historical": {
+                "begin_year": 2003,
+                "end_year": 2024,
+                "profit_cagr_value": 5.79
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2031,
+                "profit_cagr_value": 2.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 20.2,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2003,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 2.08
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2031,
+                "profit_margins_cagr_value": 2.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 53416000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2003,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 4.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2031,
+                "industry_value_added_cagr_value": 3.0
+            }
+        },
+        "employees": {
+            "employees_count": 358628,
+            "employees_cagr_historical": {
+                "begin_year": 2003,
+                "end_year": 2024,
+                "employees_cagr_value": 1.5
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2031,
+                "employees_cagr_value": 1.1
+            }
+        },
+        "wages": {
+            "wages_dollars": 27191000000,
+            "wages_cagr_historical": {
+                "begin_year": 2003,
+                "end_year": 2024,
+                "wages_cagr_value": 2.5
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2031,
+                "wages_cagr_value": 1.8
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2003,
+                "end_year": 2024,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2031,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2003,
+                "end_year": 2024,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2031,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "Credit unions have experienced growth in recent years, stemming from increased membership and rising interest rates throughout the period. As macroeconomic conditions improved through 2019, credit unions benefited from increased consumer borrowing, especially as interest rates rose alongside borrowing activity. By 2020, the pandemic seriously hampered the industry's activity and growth.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The monetary response to the pandemic set the tone for revenue",
+            "current_performance_point_description": "Financial markets went into turmoil at the onset of the pandemic in early 2020. To ease the global liquidity crisis and general economic turmoil, the Federal Reserve lowered interest rates in 2020. This policy negatively affected credit unions, as lower interest rates reduced interest income."
+        },
+        {
+            "current_performance_point_title": "Strong credit union membership has bolstered revenue",
+            "current_performance_point_description": "Credit unions have experienced strong membership growth compared to commercial banks in recent years. This is due to their ability to pay higher interest rates on deposits and charge lower rates on loans. Credit unions focus on promoting the economic and financial well-being of members."
+        },
+        {
+            "current_performance_point_title": "The escalating consolidation of operators is reshaping the industry",
+            "current_performance_point_description": "The credit union industry is consolidating to compete with commercial banks, limiting the number of new enterprises in recent years. In many cases, small operators are absorbed by larger credit unions. Those remaining expanded regarding service offerings, branches, assets and membership."
+        },
+        {
+            "current_performance_point_title": "The exuberant house market influenced credit union revenue growth",
+            "current_performance_point_description": "The shutdowns in the pandemic pushed workers to the suburbs and countryside. Freed from being stuck in a tight apartment in the city, many sought to buy houses with more space."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Interest Rates Will Remain High",
+            "future_outlook_point_description": "The Federal Reserve is expected to keep interest rates high in the coming years. Historically, high inflation spreading across the globe requires considerably higher interest rates. Credit unions will shorten the term duration of their loans to combat high interest rate expenses."
+        },
+        {
+            "future_outlook_point_title": "Credit Union Memberships Will Keep Rising",
+            "future_outlook_point_description": "New members will create opportunities for credit unions to issue new loans. Rising memberships will help mitigate coming economic hardships. High interest rates will depress the number of loans issued but will accelerate the income interest on each loan."
+        },
+        {
+            "future_outlook_point_title": "Surging Competition Will Force Out Weak Credit Unions",
+            "future_outlook_point_description": "More people joining credit unions in a harsh economic climate will increase competition between credit unions and retail banks. As nonprofit organizations focus on local and regional markets, credit unions tend to offer better deals to individuals and businesses."
+        },
+        {
+            "future_outlook_point_title": "Technological Change Will Increase Emphasis on Cyber Security",
+            "future_outlook_point_description": "Looking ahead, technology will play a critical role in the evolution of banking operations, enabling greater efficiency, improved customer experience and advanced security measures. This offers opportunities for credit unions to embrace innovative technologies but also exposes them to cyber security risks."
+        }
+    ],
+    "industry_definition": "This industry comprises financial institutions known as credit unions or cooperatives. Credit unions provide banking services, primarily taking deposits and lending to these same members. Credit unions are not-for-profit, member-only institutions that offer lower borrowing costs and use surplus funds to offer higher deposit rates.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage: growth",
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - steady"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level: low - steady",
+            "Competition Level: high - steady"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "Aggregate household debt"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "External competition for the Credit Unions industry"
+        ]
+    },
+    "key_trends": [
+        "Most credit unions are small companies. According to the National Credit Union Association (NCUA), nearly three-fourths of all credit unions are considered small, which can be defined as holding less than $100.00 million in assets.",
+        "Credit union membership requirements are more specific than those of a regular bank. These requirements can range from geographic location to employment, union or military membership and more. These requirements contribute to the industry's fragmentation.",
+        "Fears over inflation forced the Fed to reverse course in 2022. Higher rates boost investment income on loans issued by credit unions. Fewer loans are being issued, but there is higher investment income per loan.",
+        "Credit union memberships will continue to rise in the coming years. To increase membership, credit unions will continue undercutting rates offered by retail banks. This tactic will be even more effective if the economy enters a prolonged recession."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Residential market",
+            "segment_description": "Residential credit union memberships comprise the largest share of credit union memberships. This market demands loans for first and second mortgages and home equity loans. Demand for residential mortgage loans is derived from local members of the community. The mortgage rate and home prices affect demand for residential mortgage loans. The rate hikes from the Federal Reserve increase mortgage rates. As the mortgage rate rises, demand from this market will dip.",
+            "segment_percentage": 55
+        },
+        {
+            "segment": "Multiple-group market",
+            "segment_description": "Multiple-group credit union members are granted greater flexibility with the requirements for credit union memberships. Credit unions usually require members from the local community or tied to a specific business or industry.",
+            "segment_percentage": 31
+        },
+        {
+            "segment": "Single-group occupational market",
+            "segment_description": "Individuals in this market must be employed in a specific line of work to be a single-group occupational credit union member. These types of credit unions aren't specific to a particular region or location. The number of single-group occupational memberships is expected to expand as certain credit unions open their doors to additional occupations to expand the pool of potential members.",
+            "segment_percentage": 13
+        },
+        {
+            "segment": "Associational market",
+            "segment_description": "Associational credit union memberships are based on religious affiliation, fraternity membership or other associational factors. This type of credit union is also not region or location-dependent. The exclusivity of this type of credit union prevents further consolidation of the credit union industry. Still, this exclusivity prevents this market from becoming a primary driver of membership growth for the industry.",
+            "segment_percentage": 1
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "New Vehicle Loans",
+            "product_description": "",
+            "product_percentage": 11.1
+        },
+        {
+            "product_or_service": "Used Vehicle Loans",
+            "product_description": "Used vehicle loans are expected to perform better than new vehicle loans as used vehicles are less expensive.",
+            "product_percentage": 20.4
+        },
+        {
+            "product_or_service": "First-Mortgage Loans",
+            "product_description": "First mortgage loans are for people buying their first home. As interest rates increase, the mortgage rate will also climb. Higher mortgage rates will lower the number of first mortgage loans in the coming years.",
+            "product_percentage": 36.1
+        },
+        {
+            "product_or_service": "Second-Mortgage and Home-Equity Loans",
+            "product_description": "Second mortgage loans are closed-end loans. The debtor receives them in one upfront installment. Home equity loans are open-ended; debtors can keep drawing upon the loan as they pay it down.",
+            "product_percentage": 8
+        },
+        {
+            "product_or_service": "Other Unsecured Loans",
+            "product_description": "Unsecured loans like credit cards and personal lines of credit are not attached to a physical asset that the credit union can repossess in case of default. The interest rates charged on these loans are higher than secured loans. These types of loans will expand in the coming years if the predictions of a recession come to pass. People facing economic hardships take out credit cards and personal lines of credit regardless of the interest rate.",
+            "product_percentage": 9.3
+        },
+        {
+            "product_or_service": "Member Business Loans",
+            "product_description": "",
+            "product_percentage": 15.1
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Computer Stores in the US",
+            "Wired Telecommunications Carriers in the US",
+            "Internet Service Providers in the US"
+        ],
+        "tier_2_suppliers": [
+            "Computer Manufacturing in the US",
+            "Telecommunication Networking Equipment Manufacturing in the US",
+            "Computer & Packaged Software Wholesaling in the US"
+        ],
+        "tier_1_buyers": [
+            "Religious Organizations in the US",
+            "Civic, Social & Youth Organizations in the US"
+        ],
+        "tier_2_buyers": [
+            "Housing Developers in the US",
+            "New Car Dealers in the US",
+            "Used Car Dealers in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Aggregate Household Debt",
+            "determinant_description": "Aggregate household debt includes all outstanding credit market debt consumers hold, including credit card debt, mortgages, personal loans and other debt. Aggregate household debt is highly correlated with consumer confidence, which affects the level of debt consumers choose to hold and strongly influences private consumption. Growth in aggregate household debt supports industry revenue."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "The Southeast",
+            "location_description": "The Southeast is the region with the largest concentration of establishments nationwide. This is in line with the region's high population and commercial start-up presence, which are major downstream markets for the industry. Florida's high demand for financial services aligns with its dense population. Credit union branches establish themselves in this state to be close to individual and commercial markets. Suncoast Credit Union is the largest in Florida, with $17.5 billion in assets.",
+            "percentage_establishments": 35,
+            "percentage_population": 30
+        },
+        {
+            "location": "The Great Lakes",
+            "location_description": "The second-largest geographic region for credit unions. This region is the manufacturing hub for the US and home to several prominent US cities like Detroit and Chicago. Local manufacturers seek credit unions for better deals on loans and deposit accounts.",
+            "percentage_establishments": 20,
+            "percentage_population": 15
+        },
+        {
+            "location": "The West",
+            "location_description": "The West is the third-largest region in the country for credit union branches. Because of its sheer size, the region is synonymous with California, which is home to the US tech industry and several large cities, including Los Angeles and San Francisco. California is home to more than half of the credit union branches in the West. This aligns with the state's large population and business start-ups, particularly in the tech-heavy Silicon Valley. Credit unions in this state tailor their products and services to tech start-ups. Schools First Federal Credit Union is the largest in the region.",
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        },
+        {
+            "location": "The Mid-Atlantic",
+            "location_description": "The Mid-Atlantic is home to some of the most populated cities in the United States, including New York City and Philadelphia. Consumers in larger cities typically struggle with the real estate market; many seek the better mortgage deals their local credit union can offer. The Mid-Atlantic is home to the significant financial center, New York City, and the historical importance of financial markets in the region helps credit unions have better access to capital. Bethpage Federal Credit Union is the largest in New York, serving over 440,000 members.",
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        },
+        {
+            "location": "Michigan",
+            "location_description": "Michigan hosts the most branches within the Great Lakes region. Detroit is the former seat of the US auto industry, and the highest concentration of credit unions in this region are found in this city. Lake Michigan Credit Union is the largest credit union in the area, with $13.1 billion in assets.",
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "FEDERAL CREDIT UNION ACT (FCU ACT) OF 1934",
+                "regulation_description": "The act authorized the establishment of federally chartered credit unions in all states and was enacted at the height of the Great Depression, at a time when liquidity was scarce."
+            },
+            {
+                "regulation_title": "NATIONAL CREDIT UNION ADMINISTRATION (NCUA)",
+                "regulation_description": "The NCUA, created in 1970, consists of a three-member board appointed by the President of the United States; the function of the administration is to charter and supervise federal credit unions."
+            },
+            {
+                "regulation_title": "CREDIT UNION GOVERNANCE MODERNIZATION ACT",
+                "regulation_description": "An amendment to the FCU Act was signed into law by the Biden administration in March 2022. This new amendment grants federal credit unions more flexibility to expel members they consider a threat to their organization."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Industry assistance level",
+                "barrier_description": "Industry assistance level is low and steady."
+            },
+            {
+                "barrier_title": "Competition level",
+                "barrier_description": "Competition level is high and steady."
+            },
+            {
+                "barrier_title": "Life cycle stage",
+                "barrier_description": "The industry is in the growth life cycle stage."
+            },
+            {
+                "barrier_title": "Capital intensity level",
+                "barrier_description": "The capital intensity level is low."
+            },
+            {
+                "barrier_title": "Concentration level",
+                "barrier_description": "The concentration level is low."
+            },
+            {
+                "barrier_title": "Globalization level",
+                "barrier_description": "The globalization level is low and steady."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Industry assistance level is low and steady",
+            "Competition level is high and steady"
+        ],
+        "factors_decreased_barrier": [
+            "The industry is in the growth life cycle stage",
+            "The capital intensity level is low",
+            "The concentration level is low",
+            "The globalization level is low and steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Most credit unions are small companies",
+                "basis_description": "According to the National Credit Union Association (NCUA), nearly three-fourths of all credit unions are considered small, which can be defined as holding less than $100.00 million in assets."
+            },
+            {
+                "basis_title": "Specific membership requirements",
+                "basis_description": "Credit union membership requirements are more specific than those of a regular bank. These requirements can range from geographic location to employment, union or military membership and more. These requirements contribute to the industry's fragmentation."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Number of small companies",
+                "concentration_description": "The number of small companies with few workers results in low concentration."
+            },
+            {
+                "concentration_title": "Membership requirements",
+                "concentration_description": "Membership requirements for joining a credit union are more specific than those of a regular bank. Clients must be either a part of a certain business or be citizens of a specific state to be considered for membership. The higher requirements contribute to the fragmentation of the credit union industry."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Navy Federal Credit Union",
+                "company_percentage": 7.8
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 92.2
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 0
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases are low, as no physical products are produced",
+            "cost_factor_description": "Credit unions don't produce a physical product; instead, these institutions provide services such as banking and loan servicing, which require more human capital than physical capital."
+        },
+        {
+            "cost_factor_title": "Wages are kept high as the need for skilled workers persists",
+            "cost_factor_description": "Like most depository credit intermediaries, credit unions' basic input is human resources. Credit unions use branch networks to distribute products and services, which require them to employ many employees."
+        },
+        {
+            "cost_factor_title": "Profit has surged along growing interest rates",
+            "cost_factor_description": "Credit unions are not-for-profit institutions; profit is generally reinvested in dividends, higher returns on deposits, credit union operations, technological improvements or branch expansion."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LABOR EXPENSES",
+                "capital_intensity_description": "Newly formed entities must invest in skilled employees since they help establish strong ties with clients and the local community."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "THE FLUCTUATION IN INTEREST RATES AFFECTS REVENUE",
+                "volatility_description": "For typical depository institutions, such as commercial banks, higher prevailing interest rates hike borrowing costs charged by banks and lead to lower loan demand. Credit unions are not-for-profit, member-only institutions"
+            },
+            {
+                "volatility_title": "THE OVERALL LEVELS OF AGGREGATE HOUSEHOLD DEBT IMPACT REVENUE VOLATILITY",
+                "volatility_description": "Aggregate household debt is historically reflective of greater loan demand, leading to higher revenue. When the aggregate household debt rises, credit unions encounter increased demand."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "INNOVATION LIES IN THE DIGITIZATION OF SERVICES",
+                "technological_change_description": "Banking products have remained relatively unchanged since the economic recession of the late 2000s and early 2010s. Heavy regulations limit banks' innovation in creating new products."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company specialize in one corner of the market or produce a diversified range of products?",
+            "answer": "The text does not provide a direct answer to this question."
+        },
+        {
+            "question": "Are your sales heavily dependent on the health of the US economy?",
+            "answer": "Yes, the health of the US economy is essential to this industry, which relies on access to credit and interest rates. Demand for loans increases as the prime rate falls."
+        },
+        {
+            "question": "Has your company been exposed to volatile prices over the past few years?",
+            "answer": "Yes, volatility in interest rates affects loan demand, which affects credit union demand."
+        },
+        {
+            "question": "Has your company explored acquisition opportunities in locations with well-established infrastructure networks?",
+            "answer": "Credit unions establish branches near member communities, situated near residential or commercial areas to attract maximum customers."
+        },
+        {
+            "question": "Does your company use advanced software systems for operations?",
+            "answer": "Yes, automated predictive models and analysis improve the quality of risk assessments and loan terms. Online loan payments are another technological improvement in the industry."
+        },
+        {
+            "question": "Have you been able to reduce wage costs by automating operations over the past five years?",
+            "answer": "No, despite improvements in technology, the industry remains very labor-intensive."
+        },
+        {
+            "question": "How does your company stay compliant with industry regulations?",
+            "answer": "The industry relies on capital adequacy requirements dictated by the National Credit Union Association. Higher capital adequacy requirements reduce the amount of loans unions can issue."
+        },
+        {
+            "question": "How does your company earn revenue in the case of looser or simpler legislation?",
+            "answer": "Credit unions favor looser regulation, enabling more loan origination and interest income."
+        },
+        {
+            "question": "How has the volatility of interest rates affected profit margins over the past months?",
+            "answer": "Volatile interest rates affect the interest spread in which credit unions earn income and the pricing of credit union investments. Credit unions favor paying interest rates on deposits lower than they charge on loans."
+        },
+        {
+            "question": "How does your company compensate for the dependence of cashflow on the economy?",
+            "answer": "Credit unions seek to offer alternative lending products to generate revenue. Credit unions typically offer lower interest rates than commercial banks to attract customers in challenging credit markets."
+        },
+        {
+            "question": "How do you keep track of the company's expenditures?",
+            "answer": "The text does not provide information on how credit unions track expenditures."
+        },
+        {
+            "question": "What costs can you cut back on?",
+            "answer": "The text suggests optimizing workflow using the latest technology to reduce dependency on people, leading to less hiring and reducing wage costs."
+        },
+        {
+            "question": "Are you located close to your members? How can you increase accessibility and convenience for your members?",
+            "answer": "Successful credit unions must be able to siphon members away from competing industries. Offering membership to family members of individuals who comply with the standard bond requirements is an opportunity to widen the membership base."
+        },
+        {
+            "question": "What proportion of your revenue is derived from additional financial services? How can you expand your service offerings?",
+            "answer": "The text does not provide information on the proportion of revenue from additional financial services. It states that credit unions may need to aggressively push nontraditional products by providing additional financial services to cope with slower lending growth."
+        },
+        {
+            "question": "What are your main sources of competition? How do you differentiate your services from those of large commercial banks?",
+            "answer": "Competition is mainly based on interest rates charged on loans, rates of return guaranteed on deposits, quality of service and the availability and range of products relative to other financial institutions. Credit unions have historically out-competed banks in customer service."
+        },
+        {
+            "question": "Do you keep track of the prime rate? Has your company monitored trends in loan demand?",
+            "answer": "Yes, keeping track of the prime rate is essential as industry revenue comes from the spread between the rate credit unions pay on deposits and the interest rate charged on loans, whether the prime rate or another rate."
+        },
+        {
+            "question": "Do you keep track of the aggregate household debt? How are you affected by fluctuations in aggregate household debt?",
+            "answer": "The text does not mention if credit unions track aggregate household debt. However, it states that aggregate household debt is highly correlated with consumer confidence, which affects the level of debt consumers choose to hold and strongly influences private consumption. An increase in aggregate household debt increases demand for industry services."
+        }
+    ]
+}

@@ -1,0 +1,583 @@
+{
+    "report_title": "Lubricant Oil Manufacturing in the US",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 25051000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 1.28
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.32
+            }
+        },
+        "profit": {
+            "profit_dollars": 1253000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 1.28
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 1.32
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5.0,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 0.0
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 0.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 3398000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 1.28
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 1.32
+            }
+        },
+        "employees": {
+            "employees_count": 17163,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 1.28
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 1.32
+            }
+        },
+        "wages": {
+            "wages_dollars": 1665000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 1.28
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 1.32
+            }
+        },
+        "imports": {
+            "imports_dollars": 49000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 1.28
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 1.32
+            }
+        },
+        "exports": {
+            "exports_dollars": 286000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 1.28
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 1.32
+            }
+        }
+    },
+    "executive_summary": "Lubricant oil manufacturers have faced shaky circumstances over the period, primarily because of the volatile prices of crude oil. Revenue and profit sunk drastically as prices plummeted amid the pandemic. Manufacturers saw the need for lubricants slump as stay-at-home orders cut the need for automobiles, minimizing oil changes. The lone bright spot for manufacturers during this time was the essential industrial markets that remained open. As the economy reopened and crude oil production resumed, prices shot back up, allowing manufacturers to climb back up from the pandemic downturns.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Volatile Crude Oil Prices Mitigate Growth",
+            "current_performance_point_description": "The world price of crude oil significantly disrupted revenue for manufacturers. Amid the pandemic, prices plummeted, forcing companies to lower prices as the need for lubricant oil hit historic lows."
+        },
+        {
+            "current_performance_point_title": "Specialization Results in Longer-Lasting Products",
+            "current_performance_point_description": "In automotive applications, specialization has led to a heightened focus on oils that bolster fuel economy and improve performance. Companies can focus on niche or specialized products to help generate additional streams of revenue since they can generally charge higher prices."
+        },
+        {
+            "current_performance_point_title": "Lubricants are Essential to Downstream Markets",
+            "current_performance_point_description": "To cut costs, many downstream manufacturing industries are trying to avoid new capital investments by maximizing the operating life of their existing machinery. In industrial settings, where efficiency is key, manufacturers strive to optimize machinery performance by running it at higher speeds for longer durations. This emphasizes the critical role of lubricants in ensuring smooth operations and prolonged equipment lifespan."
+        },
+        {
+            "current_performance_point_title": "Quality Oil Keeps Cars Running",
+            "current_performance_point_description": "Lubricant oil manufacturers have also benefited from an uptick in motor vehicle registrations and aging vehicles. Lubricant oil is essential for most cars, but as they age, it becomes more critical for owners to maintain oil levels and engine maintenance properly for optimal functioning."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Longer-Lasting Synthetic Oil Will Pave The Way",
+            "future_outlook_point_description": "Through the end of 2029, sustained interest in recycled oil and synthetic products will benefit lubricant oil manufacturers as more consumers and businesses purchase these products."
+        },
+        {
+            "future_outlook_point_title": "Foreign Expansion Will Mitigate Domestic Growth But Also Provide Emerging Markets",
+            "future_outlook_point_description": "Emerging economies like China and China will continue purchasing lubricant oil as industrial production and vehicle use in these countries pick up steam. A depreciation of the US dollar will make domestic goods less expensive to foreign countries, bolstering export growth."
+        },
+        {
+            "future_outlook_point_title": "Environmental Regulations Will Increase Over The Next Five Years",
+            "future_outlook_point_description": "Strict regulations make it costly for lubricant oil manufacturers to develop new products. Nonetheless, consumer preference toward eco-friendly oil lubricants will remain strong, supporting sales."
+        },
+        {
+            "future_outlook_point_title": "The Benefits Of Technology To Manufacturers",
+            "future_outlook_point_description": "Manufacturers are constantly looking for new ways to improve production while cutting costs. While the industry requires skilled labor for research and development, automation is set to ramp up and handle many miscellaneous tasks. Automated systems can control functions like blending, filling, labeling and packaging."
+        }
+    ],
+    "industry_definition": "Operators in this industry manufacture petroleum products (except for asphalt-paving, roofing and saturated materials), such as blended motor oils, brake fluids, lubricating grease and other oil-based additives. Key buyers include downstream automobile manufacturers, wholesalers and automotive retail chains.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Concentration Level low",
+            "Barriers To Entry Level high - steady"
+        ],
+        "negative_impact_factors": [
+            "Life Cycle Stage decline",
+            "Revenue Volatility Level high",
+            "Industry Assistance Level low - steady"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High Revenue per Employee",
+            "High & Steady Barriers to Entry",
+            "Low Imports",
+            "Low Customer Class Concentration"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Volatility",
+            "Low Profit vs. Sector Average",
+            "High Product/Service Concentration",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers",
+            "Industrial production index"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Revenue Growth (2019-2024)",
+            "Low Outlier Growth",
+            "World price of crude oil"
+        ]
+    },
+    "key_trends": [
+        "Lubrication is vital to car and machinery producers. These companies have an interest in making sure their products are properly maintained",
+        "Specialized products, such as synthetic oil, are buoying demand.",
+        "Synthetic oil does not need to be replaced as often as conventional oil and performs better at high temperatures.",
+        "Lubricant oil manufacturers are under heavy regulation",
+        "Tariff protection shields domestic manufacturers. There is tariff protection against imports of lubricant oil and greases, which significantly hinders penetration from abroad.",
+        "Industrial lubricants remain the industry's largest product segment",
+        "Location advantages for manufacturers",
+        "Competitive pricing is key"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Industrial",
+            "segment_description": "Industrial industries use lubricant and grease products to maintain their machinery. This market has continued to purchase lubricant oil to maximize existing machinery instead of buying new equipment.",
+            "segment_percentage": 36.5
+        },
+        {
+            "segment": "Wholesalers and retailers",
+            "segment_description": "Wholesalers and retailers purchase automotive and industrial lubricants to sell to large automotive retail chains and manufacturers. This includes industries like metalworking businesses, industrial engine manufacturers and Wholesalers prefer to work with large clients to ensure a sizeable lubricant delivery. Retailers purchase lubricant and grease products for resale to consumers and use when servicing automobiles. Mass merchandisers and independent auto part stores also participate in this market. Auto parts owners have many establishments and these customers buy in bulk directly from the manufacturer to save on costs.",
+            "segment_percentage": 101
+        },
+        {
+            "segment": "Do-it-yourself consumers",
+            "segment_description": "Consumers in the do-it-yourself (DIY) market purchase lubricant oil to do their own automotive maintenance. DIY applications can vary based on the complexity of the job and a customer's experience and skill in applying lubricant oils. Valvoline Inc., one of the largest lubricant oil manufacturers, sells to installer customers, who provide services related to automotive maintenance, termed \"do-it-for-me.\" Most lubricant oil manufacturers sell their products directly to customers through company-owned retail sites, providing easy product access instead of jumping through hurdles.",
+            "segment_percentage": 27.5
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Automotive Lubricants are Required for Proper Functioning Vehicles",
+            "product_description": "Automotive lubricants keep various parts of motor vehicle bodies and engines running smoothly by cushioning adjacent metal pieces, oiling moving parts and keeping dirt out of the combustion chambers.",
+            "product_percentage": 46.6
+        },
+        {
+            "product_or_service": "The four main product types",
+            "product_description": "The four main product types are: Motor oil, Transmission and axle lubricants, Fluids for hydraulic torque converters and fluid couplings used in automatic transmissions. Each category has subdivisions based on viscosity or resistance to molecular rearrangement or flow.",
+            "product_percentage": 50.0
+        },
+        {
+            "product_or_service": "Light vehicles have used lubricant oil less frequently",
+            "product_description": "Light vehicles have used lubricant oil less frequently as newer models have increased vehicle efficiency, reducing the number of oil changes needed.",
+            "product_percentage": 10.0
+        },
+        {
+            "product_or_service": "Industrial Lubricant Demand Rises as Work in Downstream Industries Resume",
+            "product_description": "Industrial lubricants range from machine oils to steam turbine oils. These products serve a similar purpose as automotive lubricants but have added endurance capacity. For example, some industrial lubricants are formulated to prevent rust from high-temperature steams. Customers use industry lubricants to maximize the life and functionality of their machines. They can help improve friction between parts while protecting against corrosion and contamination.",
+            "product_percentage": 48.8
+        },
+        {
+            "product_or_service": "Other Lubricants are Primary Home-Care Products",
+            "product_description": "Other lubricants include a wide range of personal-use items, including: Skin creams, Soaps, Cleansers, Deodorants. And household lubricants such as WD-40. Vaseline, a popular and widely known brand of petroleum jelly, is commonly used as a moisture and an insulator for dry and damaged skin. WD-40 is a popular water-displacing lubricant with numerous household uses, including: Lubricating and loosening joints and hinges, Removing dirt and residue, Extracting stuck screws and bolts",
+            "product_percentage": 4.6
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [],
+        "tier_2_suppliers": [
+            "Metal Tank Manufacturing in the US",
+            "Oil & Gas Pipeline Construction in the US",
+            "Oil Drilling & Gas Extraction in the US",
+            "Coal Mining in the US"
+        ],
+        "tier_1_buyers": [
+            "Gasoline & Petroleum Wholesaling in the US",
+            "Chemical Wholesaling in the US"
+        ],
+        "tier_2_buyers": [
+            "Auto Mechanics in the US",
+            "Manufacturing in the US",
+            "Transportation and Warehousing in the US",
+            "Car Body Shops in the US",
+            "Oil Change Services in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "INDUSTRIAL PRODUCTION IS PICKING UP AS THE ECONOMY RECOVERS",
+            "determinant_description": "Industrial industries use lubricant and grease products to maintain their machinery. This market has continued to purchase lubricant oil to maximize existing machinery instead of buying new equipment. Even so, the market saw a slight dip as the industrial production slumped toward the beginning and ends of the period. The need for finished lubricants from the marine and railroad industries also supported this market."
+        }
+    ],
+    "international_trade": {
+        "import_level": "low",
+        "import_trend": "increasing",
+        "export_level": "low",
+        "export_trend": "increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "IMPORTS ARE LOW AND INSIGNIFICANT",
+                "trade_description": "The appreciation of the US dollar gave domestic markets more purchasing power for foreign lubricant oils, causing import penetration to swell. Primary sources of imports include Germany, the United Kingdom, Switzerland and South Korea. Imports remain low as tariffs deter many foreign businesses."
+            },
+            {
+                "trade_title": "DOMESTIC PRODUCTION HAS RISEN",
+                "trade_description": "Technological improvements in domestic oil extraction and manufacturing, through methods such as hydraulic fracking, have boosted US crude oil production. Imports lost competitiveness relative to domestically produced petroleum products, which has mitigated import growth."
+            },
+            {
+                "trade_title": "EXPORTS ACCOUNT FOR A MINOR SHARE OF REVENUE",
+                "trade_description": "Because of the complex nature of the products, refined petroleum products are mostly consumed domestically. Exporters may face regulations or tariffs regarding lubricant oil. Industrial or automobile manufacturers purchase lubricant oil directly from lubricant oil manufacturers since it is typically less expensive and they can receive their products much faster."
+            },
+            {
+                "trade_title": "THE TRADE-WEIGHTED INDEX HAS INCREASED",
+                "trade_description": "The value of the US dollar has appreciated throughout the period, which made US lubricant oil more expensive for foreign countries."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "Suppliers in the Southeast are responsible for the distribution of lubricant oil manufacturers in this region. Being close to suppliers helps manufacturers reduce purchasing costs while providing quicker production turnaround, which helps meet demand. This region has many manufacturing and industrial industries, resulting in a consistent customer base. Being closer to critical markets helps cut down on fuel costs.",
+            "percentage_establishments": 24.2,
+            "percentage_population": 21.8
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "Automotive companies use lubricant oil products to maintain their vehicles. The Big Three US auto manufacturers, which include General Motors Company, Ford Motor Company and Fiat Chrysler Automobiles NV, are based in Michigan. Toyota Motor Corporation and Honda Motor Company Ltd. have manufacturing facilities in Indiana. A significant amount of other manufacturing activity occurs in the region, making it a suitable location.",
+            "percentage_establishments": 16.2,
+            "percentage_population": 14.5
+        },
+        {
+            "location": "Southwest",
+            "location_description": "The Southwest region attracts lubricant oil manufacturers because of its substantial customer base. Large markets in Texas are associated with the oil refining and drilling industries, which procure goods from lubricant oil manufacturers. Being closer to customers helps reduce fuel costs and enables faster delivery, which is beneficial for maintaining strong customer relationships.",
+            "percentage_establishments": 12.1,
+            "percentage_population": 11.5
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "Zoning and permit requirements",
+                "regulation_description": "Before an operation can be established, it must meet local and state zoning requirements. Lubricant oil manufacturers also require environmental permits, which are subject to modification, renewal and revocation."
+            },
+            {
+                "regulation_title": "The Clean Water Act (CWA) and the Resource Conservation and Recovery Act (RCRA)",
+                "regulation_description": "Under the CWA and RCRA, manufacturers ensure that appropriate water and solid waste discharge procedures have been followed. They are also subject to specific provisions relating to airborne pollution emissions."
+            },
+            {
+                "regulation_title": "The Clean Air Act (CAA)",
+                "regulation_description": "The CAA is designed to protect and enhance the nation's air resources to protect public health and welfare. It establishes limits to air pollutants, including carbon monoxide, nitrous oxides, sulfur oxides and other particulate matter."
+            },
+            {
+                "regulation_title": "The Comprehensive Environmental Response, Compensation and Liability Act (CERCLA)",
+                "regulation_description": "The CERCLA regulates the release and remediation of hazardous substances. Manufacturers endure substantial monetary consequences when found in violation of environmental standards."
+            },
+            {
+                "regulation_title": "Occupational Safety and Health Act (OSHA)",
+                "regulation_description": "Manufacturers are governed by laws and regulations relating to workplace safety and worker health. OSHA covers several topics relating to worker safety, including break and meal times, noise levels and dust standards. Companies are also held accountable to various state OSHAs, which may vary from their federal counterpart."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is in the decline stage of its life cycle."
+            },
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "The industry experiences high revenue volatility."
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "The industry receives low and steady levels of assistance."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: decline",
+            "Revenue Volatility Level: high"
+        ],
+        "factors_decreased_barrier": [
+            "Concentration Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Competitive pricing",
+                "basis_description": "Competitive pricing is key to attracting downstream customers in a relatively low-margin industry."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Major oil companies are the industry's largest manufacturers",
+                "concentration_description": "Lubricant oil manufacturing comprises relatively few producers, with major oil companies representing the largest businesses."
+            },
+            {
+                "concentration_title": "Top lubricant oil manufacturers",
+                "concentration_description": "Top lubricant oil manufacturers include Exxon Mobil Corporation, Royal Dutch Shell PLC, Valvoline Inc. and BP PLC."
+            },
+            {
+                "concentration_title": "Large manufacturers can better withstand volatile input prices",
+                "concentration_description": "Since major companies have been better equipped to absorb fluctuations in oil prices, their market share has remained relatively stable."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Royal Dutch Shell Plc",
+                "company_percentage": 15.6
+            },
+            {
+                "company_name": "Bp Plc",
+                "company_percentage": 6.9
+            },
+            {
+                "company_name": "Valvoline Inc.",
+                "company_percentage": 6.5
+            },
+            {
+                "company_name": "Exxon Mobil Corporation",
+                "company_percentage": 5.9
+            },
+            {
+                "company_name": "Marathon Petroleum Corporation",
+                "company_percentage": 4.0
+            },
+            {
+                "company_name": "Amsoil Inc.",
+                "company_percentage": 1.5
+            },
+            {
+                "company_name": "Wilmar International Ltd",
+                "company_percentage": 1.2
+            },
+            {
+                "company_name": "Csw Industrials, Inc.",
+                "company_percentage": 0.7
+            },
+            {
+                "company_name": "Rbf Management Comp",
+                "company_percentage": 1.0
+            },
+            {
+                "company_name": "Ag Processing Inc A Coo",
+                "company_percentage": 1.0
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 25.0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 20.0
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 30.0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 10.0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 2.0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 3.0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases continue to dominate costs",
+            "cost_factor_description": "Purchases are the largest costs for lubricant oil manufacturers, accounting for more than half of revenue."
+        },
+        {
+            "cost_factor_title": "Wages are a small piece of the pie",
+            "cost_factor_description": "The industry relies on skilled employees, so average industry wages are high."
+        },
+        {
+            "cost_factor_title": "Volatile crude oil prices hamper profit",
+            "cost_factor_description": "Profit generally accounts for a small portion of revenue. When crude oil prices swell, lubricant oil manufacturers can pass on some costs to downstream customers."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_trend": "Unknown",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Wages are a small component of the industry cost structure",
+                "capital_intensity_description": "Wages are a small component of the industry cost structure as certain tasks are automated."
+            }
+        ]
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Downstream industrial and manufacturing activity",
+                "volatility_description": "Lubricant oil manufacturing exhibits a high level of revenue volatility."
+            },
+            {
+                "volatility_title": "Volatile world crude prices cause significant demand fluctuations",
+                "volatility_description": "The price of crude oil is highly volatile and drastically impacts revenue."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_trend": "Steady",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Low levels of innovation limit threat from new technologies",
+                "technological_change_description": "Low levels of innovation limit the threat to incumbent operators from new technologies disrupting their operations."
+            },
+            {
+                "technological_change_title": "Major market segments relatively diversified",
+                "technological_change_description": "Major market segments for industry operators are relatively diversified."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "Sales are somewhat dependent on the health of the US economy. As disposable income increases, lubricant sales will rise."
+        },
+        {
+            "question": "Does your company specialize in a niche or do you produce a diversified range of products?",
+            "answer": "The Lubricant Oil Manufacturing industry specializes in the niche area of blended motor oils, brake fluids, lubricating grease and other oil-based additives."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "The volatile price of crude oil over the past few years has resulted in fluctuating revenue."
+        },
+        {
+            "question": "Is your company investing heavily in research and development (R&D) to meet changing consumer preferences?",
+            "answer": "The industry is investing in R&D in synthetic and eco-friendly lubricants to cater to growing consumer preferences for longer lasting and environmentally friendly materials."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation in recent years?",
+            "answer": "This industry has high average wages because employees include engineers, whose processes cannot be automated."
+        },
+        {
+            "question": "Do you use SAP software systems to optimize all aspects of your company's manufacturing, sales, inventory and distribution channels?",
+            "answer": "Software is implemented by all major players to streamline manufacturing and distribution operations."
+        },
+        {
+            "question": "How does your company ensure all health and safety requirements are met?",
+            "answer": "Manufacturers must follow stringent guidelines set by the US government in their manufacturing processes."
+        },
+        {
+            "question": "Have any regulatory expenses significantly impacted profitability recently?",
+            "answer": "This industry has not been affected by regulatory expenses recently."
+        },
+        {
+            "question": "How has input price volatility affected profit margins over the past 12 months?",
+            "answer": "The volatile price of crude oil has caused profit to fluctuate as manufacturers must decide what percentage of price increases to push downstream to consumers."
+        },
+        {
+            "question": "What percentage of your customers renew their contracts?",
+            "answer": "Ensuring regular cashflows is vital for the lubricant manufacturing industry to maintain expensive industry operations. Manufacturers are highly motivated to obtain a high renewal rate."
+        },
+        {
+            "question": "Does your establishment use distributors? If so, are these distributors located near your business? Proximity to transport",
+            "answer": "Distributors are a key part of the lubricant business. Lubricants are moved from the manufacturer to the end user either directly or through distributors."
+        },
+        {
+            "question": "How does your establishment aim to optimize base oil costs? How do you enhance the quality of your products?",
+            "answer": "Base oil selection has strategic implications that have resulted in long-term competitive advantages and disadvantages to manufacturers. The challenge for manufacturers is to optimize the base oil costs and also enhance product quality."
+        },
+        {
+            "question": "How does your company go about recruiting professionals? What's your company's retention rate for highly trained staff?",
+            "answer": "Formulating and developing lubricants is performed by chemists, engineers and other professionals. Training and developing these professionals are paramount to the industry's success."
+        },
+        {
+            "question": "How often does your company see fluctuations in revenue based on the trade-weighted index? How does the strength of the dollar affect you?",
+            "answer": "The trade-weighted index (TWI) measures the strength of the US dollar relative to the currencies of its trading partners. International trade plays a relatively minor role in industry operations."
+        },
+        {
+            "question": "How do fluctuations in crude oil prices affect your company? How have recent trends in oil prices influenced demand?",
+            "answer": "Crude oil comprises the bulk of input costs for manufacturers. However, manufacturers are able to pass down some of this cost to downstream markets in the form of higher product prices."
+        },
+        {
+            "question": "Do you monitor trends in the number of motor vehicle registrations? How do changes in the number of motor vehicle registrations influence your growth?",
+            "answer": "Any increase in the number of motor vehicles registered, and thus the number of miles traveled and the volume of cars in need of repairs or maintenance, will positively affect demand for industry products."
+        }
+    ]
+}

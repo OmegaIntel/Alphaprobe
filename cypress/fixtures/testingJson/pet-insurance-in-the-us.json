@@ -1,0 +1,571 @@
+{
+    "report_title": "Pet Insurance in the US",
+    "report_date": "Nov 17, 2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 3238000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": 16.4
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 8.06
+            }
+        },
+        "profit": {
+            "profit_dollars": 249000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 23.7
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 7.7,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 5.18
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 580000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2010,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 6853,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 293000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Rapidly increasing consumer awareness and acceptance of industry offerings has benefited the Pet Insurance industry. Pets are more and more being seen as members of the family, and owners have accordingly taken steps to ensure they live a long, happy and healthy life. Veterinary care has rapidly advanced, and the broader range of applications has created more incentive for owners to purchase pet insurance. Over the past five years, industry revenue has been growing at a CAGR of 16.5% to an estimated $3.2 billion, despite an estimated 8.9% drop in 2023 alone, when profit will expand to an estimated 7.7%.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Tech Advancements in Veterinary Medicine is Increasing the Cost of Pet Care",
+            "current_performance_point_description": "Advancements in veterinary medicine are elevating the quality and range of treatments available for pets. Pet healthcare has become comparable to healthcare for humans, helping treat all sorts of pet ailments."
+        },
+        {
+            "current_performance_point_title": "THE GROWING INDUSTRY IS BRINGING IN NEW ENTRANTS",
+            "current_performance_point_description": "In recent years, new players have entered the pet insurance industry, including startups and technology companies, seeking to capitalize on the growing demand for pet insurance."
+        },
+        {
+            "current_performance_point_title": "LINGERING COVID-19 EFFECTS ARE PUTTING DOWNWARD PRESSURE ON DEMAND",
+            "current_performance_point_description": "While the COVID-19 pandemic has since dissipated, severe inflation and economic uncertainty in its aftermath has put the industry on the later side of a K shaped recovery."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "TECHNOLOGY WILL MIGRATE FROM HUMAN HEALTHCARE INTO VETERINARY MEDICINE",
+            "future_outlook_point_description": "The growing trend of pet humanization has resulted in many owners seeing their pets more as a part of the family. This trend has led to pet owners becoming more willing to pay for pet treatments once reserved for humans."
+        },
+        {
+            "future_outlook_point_title": "INVESTMENT CONDITIONS ARE SET TO IMPROVE FOR INSURERS",
+            "future_outlook_point_description": "Pet insurers invest most of their assets in bonds, particularly municipal securities, loans and corporate and foreign bonds. This helps provide them with capital to afford payouts to veterinarians, and returns heavily depend on investment conditions."
+        },
+        {
+            "future_outlook_point_title": "PET INSURERS WILL COLLABORATE MORE WITH VETERINARIANS MOVING FORWARD",
+            "future_outlook_point_description": "Both veterinarians and insurers benefit from heightened usage of pet care facilities, so pet insurers are expected to collaborate more with veterinarians to improve the quality of care for pets and reduce healthcare costs."
+        }
+    ],
+    "industry_definition": "This industry underwrites insurance policies for pets and pays veterinary costs related to illness or injury.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low Capital Intensity Level",
+            "high - increasing Barriers To Entry Level",
+            "low - decreasing Globalization Level"
+        ],
+        "negative_impact_factors": [
+            "low - steady Industry Assistance Level",
+            "high Technology Change Level",
+            "high - decreasing Competition Level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Increasing Barriers to Entry",
+            "Growth Life Cycle Stage",
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "Low Profit vs. Sector Average"
+        ],
+        "opportunities": [
+            "Very High Revenue Growth (2005-2023)",
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers - Number of pets (cats and dogs)"
+        ],
+        "threats": [
+            "Low Outlier Growth",
+            "National unemployment rate"
+        ]
+    },
+    "key_trends": [
+        "Revenue still climbed at the height of the pandemic. While demand for pet insurance is typically tied to unemployment, the trend of remote work encouraged adoption and created further need for pet insurance.",
+        "Key variables will move in the industry's favor. Since demand for pet insurance is tied to disposable income rates, revenue suffers when economic conditions take a downturn. Luckily, key fundamental and demographic variables are forecast to continue to work in the industry's favor over the years ahead.",
+        "The industry is regulated by several organizations. The regulations aim to promote competitive markets, fair and equitable treatment of insurance consumers and supporting and improving state regulation of insurance.",
+        "The North American Pet Health Insurance Association (NAPHIA) supports pet insurance companies. By providing research, data sharing and advocacy efforts, the organization promotes the industry."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Single households",
+            "segment_description": "Single households refer to individuals who live alone and have a pet. In recent years, there has been an increase in the number of single households and relatedly, an increase in the demand for pet insurance among this demographic.",
+            "segment_percentage": 20.0
+        },
+        {
+            "segment": "Two-person households",
+            "segment_description": "Two-person households refer to couples who share a living space and have a pet. The demand for pet insurance among two-person households has been steadily increasing in recent years.",
+            "segment_percentage": 41.4
+        },
+        {
+            "segment": "Three-person households",
+            "segment_description": "Three-person households refer to households that consist of a couple and a child or a single parent and two children, along with a pet. As more families choose to include pets as part of their household, the demand for pet insurance among three-person households is likely to rise.",
+            "segment_percentage": 14.1
+        },
+        {
+            "segment": "Four-person households",
+            "segment_description": "Four-person households refer to households that consist of two parents and two children, along with a pet. Four-person households are less likely to purchase pet insurance due to the larger household and larger daily expenses.",
+            "segment_percentage": 11.6
+        },
+        {
+            "segment": "Five or more-person households",
+            "segment_description": "Five or more-person households refer to households that consist of three or more children, along with a pet. This market tends to have similar trends as the four-person household market.",
+            "segment_percentage": 12.6
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Accident and Illness Insurance Policies for Dogs",
+            "product_description": "Accident and illness insurance policies for cats and dogs provide coverage for unexpected accidents and illnesses that may require veterinary care. These policies typically cover treatments for injuries, illnesses, and chronic conditions, as well as diagnostic tests and medications.",
+            "product_percentage": 45.1
+        },
+        {
+            "product_or_service": "Accident and Illness Insurance Policies for Cats",
+            "product_description": "Accident and illness insurance policies for cats and dogs provide coverage for unexpected accidents and illnesses that may require veterinary care. These policies typically cover treatments for injuries, illnesses, and chronic conditions, as well as diagnostic tests and medications.",
+            "product_percentage": 26.5
+        },
+        {
+            "product_or_service": "Accident Insurance Policies for Dogs",
+            "product_description": "Accident insurance policies for cats and dogs provide coverage for unexpected accidents that may require veterinary care. These policies typically cover treatments for injuries, such as broken bones, lacerations, and poisoning, as well as diagnostic tests and medications.",
+            "product_percentage": 18.4
+        },
+        {
+            "product_or_service": "Accident Insurance Policies for Cats",
+            "product_description": "Accident insurance policies for cats and dogs provide coverage for unexpected accidents that may require veterinary care. These policies typically cover treatments for injuries, such as broken bones, lacerations, and poisoning, as well as diagnostic tests and medications.",
+            "product_percentage": 10.0
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [],
+        "tier_2_suppliers": [
+            "Third-Party Administrators & Insurance Claims Adjusters in the US",
+            "Insurance Brokers & Agencies in the US",
+            "Computer & Packaged Software Wholesaling in the US",
+            "Wired Telecommunications Carriers in the US",
+            "Data Processing & Hosting Services in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "The Single Household Market is on the Rise",
+            "determinant_description": "Single households refer to individuals who live alone and have a pet. In recent years, there has been an increase in the number of single households and relatedly, an increase in the demand for pet insurance among this demographic."
+        },
+        {
+            "determinant_title": "Two-Person Households are the Biggest Market Segment",
+            "determinant_description": "Two-person households refer to couples who share a living space and have a pet. The demand for pet insurance among two-person households has been steadily increasing in recent years."
+        },
+        {
+            "determinant_title": "Three-Person Households are Becoming More Common",
+            "determinant_description": "Three-person households refer to households that consist of a couple and a child or a single parent and two children, along with a pet. As more families choose to include pets as part of their household, the demand for pet insurance among three-person households is likely to rise."
+        },
+        {
+            "determinant_title": "Four-Person Households is the Smallest Market Segment",
+            "determinant_description": "Four-person households refer to households that consist of two parents and two children, along with a pet. Four-person households are less likely to purchase pet insurance due to the larger household and larger daily expenses."
+        },
+        {
+            "determinant_title": "Five or More-Person Households Follow Similar Trends as a Four-Person Household",
+            "determinant_description": "Five or more-person households refer to households that consist of three or more children, along with a pet. This market tends to have similar trends as the four-person household market."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region has been experiencing a growing demand for pet insurance in recent years. Many pet insurance companies have expanded their presence in this region by opening new offices or partnering with veterinary clinics. The region's warm climate and high pet ownership rates make it an attractive market for pet insurance companies. The large population and growing economy create opportunities for pet insurance companies to expand their customer base and increase their revenue.",
+            "percentage_establishments": 40,
+            "percentage_population": 30
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region is the second largest region. Pet insurance companies have been expanding their presence in the region by partnering with veterinary clinics and offering coverage for a wide range of pets. The region's harsh winters and seasonal outdoor activities make pet accidents and illnesses more common, increasing the need for pet insurance coverage.",
+            "percentage_establishments": 50,
+            "percentage_population": 50
+        },
+        {
+            "location": "West",
+            "location_description": "The West region of the United States has been experiencing rapid growth. Many pet insurance companies have expanded their presence in this region by opening new offices. The region's large population and high pet ownership rates make it an attractive market for pet insurance companies. The West's outdoor lifestyle and emphasis on wellness create opportunities for pet insurance companies to offer coverage for preventative care and alternative treatments.",
+            "percentage_establishments": 50,
+            "percentage_population": 50
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 50,
+            "percentage_population": 50
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 50,
+            "percentage_population": 50
+        },
+        {
+            "location": "Plains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 50,
+            "percentage_population": 50
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 50,
+            "percentage_population": 50
+        },
+        {
+            "location": "Southwest",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 50,
+            "percentage_population": 50
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "The National Association of Insurance Commissioners (NAIC)",
+                "regulation_description": "The NAIC is the organization of insurance regulators and provides a forum for developing uniform policies. The NAIC's mission is to assist state insurance regulators, individually and collectively, in servicing the public interest and achieving the following fundamental insurance regulatory goals: promoting competitive markets; facilitating the fair and equitable treatment of insurance consumers; promoting insurance institutions' reliability and solvency; and supporting and improving state regulation of insurance."
+            },
+            {
+                "regulation_title": "NAIC Accreditation",
+                "regulation_description": "The NAIC Accreditation Program is designed to improve regulation quality to boost consumers' and fellow regulators' confidence in an insurance department's abilities. The standards require that insurance departments have adequate statutory and administrative authority to regulate an insurer's."
+            },
+            {
+                "regulation_title": "The Uniform Certificate of Authority Application (UCAA)",
+                "regulation_description": "The UCAA process is part of the NAIC and is designed to enable insurers to file copies of the same application for admission in numerous states. Each state that accepts the UCAA is designed as a uniform state. Each uniform state still performs its independent review of each application, but the UCAA eliminates the need to file different applications in different formats for all states that accept the uniform application."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "low - steady"
+            },
+            {
+                "barrier_title": "Technology Change Level",
+                "barrier_description": "high"
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "high - decreasing"
+            }
+        ],
+        "factors_increased_barrier": [
+            "Industry Assistance Level",
+            "Technology Change Level",
+            "Competition Level"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level",
+            "Globalization Level"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Decreasing",
+        "basis_points": [
+            {
+                "basis_title": "Price competition",
+                "basis_description": "Price represents the primary competitive base. The value perceptions of consumers and businesses depends on rates, so insurers need to deliver added value by providing products that meet individual risk needs and circumstances for consumers."
+            },
+            {
+                "basis_title": "Technology competition",
+                "basis_description": "Mobile apps that streamline underwriting. The use of technology in the insurance underwriting process has added another element of competition. These competitors can competitively price policies since they don't employ a sales force or underwriters."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Economies of scale",
+                "concentration_description": "Operators that can expand their operations can achieve economies of scale faster and in turn create lower costs and expand operations more efficiently."
+            },
+            {
+                "concentration_title": "Mergers and acquisitions",
+                "concentration_description": "Insurers that can't achieve economies of scale will need to merge with larger operators, which increases market share concentration."
+            },
+            {
+                "concentration_title": "Major players acquisitions",
+                "concentration_description": "Large players attempt to acquire companies that provide exposure to specific markets."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Trupanion, Inc.",
+                "company_percentage": 18.8
+            },
+            {
+                "company_name": "Nationwide Pet Insurance",
+                "company_percentage": 16.3
+            },
+            {
+                "company_name": "Petplan Pet Insurance",
+                "company_percentage": 6.5
+            },
+            {
+                "company_name": "ASPCA Pet Health Insurance",
+                "company_percentage": 5.4
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 52.9
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 10.0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 9.0
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 4.8
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 5.0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases costs are essential to operations",
+            "cost_factor_description": "Purchases costs have increased over the past five years, accounting for an estimated 4.8% of industry revenue in the current year. Purchase expenses entail administrative materials needed to run their enterprises daily."
+        },
+        {
+            "cost_factor_title": "Competition for skilled workers keep wage costs high",
+            "cost_factor_description": "Wage costs have decreased over the past five years, accounting for an estimated 9.0% of industry revenue in the current year. Insurers rely extensively on labor for each product and service offering, including selling, underwriting and processing insurance policies. Highly skilled actuaries, underwriters and claims investigators remain necessary for operations and there is a limited pool of individuals with these skill sets."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Industry operators rely extensively on labor",
+                "capital_intensity_description": "Industry operators rely extensively on labor for each product and service offering, including selling, underwriting and processing insurance policies."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "The Federal Reserve affects the industry's investment income",
+                "volatility_description": "The Federal Reserve rapidly cut the Federal Funds rate to support economic stability during the pandemic. This led to a reduction in bond yields and investment income from bonds, hurting the industry. Because of the rapid rise of inflation, the Federal Reserve has begun to raise interest rates in the hopes to curb historically high inflation. Though, increased investment income from bonds will benefit the industry."
+            },
+            {
+                "volatility_title": "Competition and market saturation can create volatility",
+                "volatility_description": "The pet insurance market is highly saturated. High competition and market saturation can lead to increased pricing pressure and might reduce profit margins for pet insurance companies."
+            }
+        ],
+        "volatility_trend": "Increasing"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Accident and Illness Insurance Policies for Cats and Dogs are the Most Popular Product",
+                "technological_change_description": "Accident and illness insurance policies for cats and dogs provide coverage for unexpected accidents and illnesses that may require veterinary care. These policies typically cover treatments for injuries, illnesses, and chronic conditions, as well as diagnostic tests and medications. In recent years, pet insurance providers have expanded their coverage for cats and dogs to include alternative therapies, such as acupuncture and chiropractic, as well as behavioral therapy and prescription food."
+            },
+            {
+                "technological_change_title": "Accident Insurance Policies for Cats and Dogs are a Less Popular Product Segment",
+                "technological_change_description": "Accident insurance policies for cats and dogs provide coverage for unexpected accidents that may require veterinary care. These policies typically cover treatments for injuries, such as broken bones, lacerations, and poisoning, as well as diagnostic tests and medications. The demand for accident insurance policies is likely to increase as cat and dog owners seek to protect their pets from unexpected accidents."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How do you emphasize the value of your company's services?",
+            "answer": "Companies emphasize their value by focusing on the potential costs of pet surgery."
+        },
+        {
+            "question": "How has the shift toward conducting business online affected demand for your services?",
+            "answer": "Online services have made it easier to purchase pet insurance."
+        },
+        {
+            "question": "What is your company doing to reduce costs?",
+            "answer": "Companies are using online services and automation to reduce costs."
+        },
+        {
+            "question": "Are your operations spread across the country or are your establishments more concentrated in a certain geographic location?",
+            "answer": "As a national industry, companies can operate anywhere in the country."
+        },
+        {
+            "question": "How have you taken advantage of rising internet and mobile-internet penetration into the financial services industry?",
+            "answer": "Rising internet penetration has permitted pet insurance companies to sell to a wider range of people."
+        },
+        {
+            "question": "What new IT and data systems have you invested into in recent years?",
+            "answer": "Pet insurance companies must invest in cyber security to protect customer data."
+        },
+        {
+            "question": "How does your company keep up to date with potential regulation changes?",
+            "answer": "Pet insurance providers can participate in industry associations to keep up to date with industry news and trends."
+        },
+        {
+            "question": "Is your company prepared for new regulations?",
+            "answer": "The Pet Insurance industry is not heavily regulated."
+        },
+        {
+            "question": "How does your profit margin compare to those of your competitors?",
+            "answer": "Profit margins vary between small and large companies."
+        },
+        {
+            "question": "Do you have enough capital reserved to be able to invest in new technology/software as soon as it becomes available?",
+            "answer": "Many companies in this industry are relatively young and may not have large asset pools."
+        },
+        {
+            "question": "How do you ensure the accuracy of your information? What technology have you invested in to more accurately assess risk?",
+            "answer": "A large database of risk related information enables insurers to price policies accurately and calculate requisite surplus levels."
+        },
+        {
+            "question": "How hard is it to promote your company by word-of-mouth recommendations?",
+            "answer": "Superior customer relations are essential to maintain clients, while a good reputation within the market is crucial to increase pet insurance policy volumes."
+        },
+        {
+            "question": "What internal management systems and practices do you employ? How often do you update your standards and practices?",
+            "answer": "Underwriting procedures must emphasize high quality risks."
+        },
+        {
+            "question": "How does the homeownership rate affect your company's revenue?",
+            "answer": "According to the Bureau of Labor Statistics, homeowners spend nearly three times more on pets compared with renters."
+        },
+        {
+            "question": "As the number of cats and dogs increase, how do you present your product to owners?",
+            "answer": "The number of domestic pets fundamentally affects revenue for industry operators."
+        },
+        {
+            "question": "Do you find revenue trends in line with changes in competition?",
+            "answer": "Externally, industry operators primarily compete against consumers that choose to self-fund veterinary costs and pet medications."
+        }
+    ]
+}

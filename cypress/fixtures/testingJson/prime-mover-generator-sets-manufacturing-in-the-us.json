@@ -1,0 +1,596 @@
+{
+    "report_title": "Generator Sets Manufacturing in the US",
+    "report_date": "Sep 01, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 4287000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": -1.04
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.94
+            }
+        },
+        "profit": {
+            "profit_dollars": 317000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 1.13
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 1.13
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 7.4,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 2.19
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 2.19
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1018000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 8985,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 647000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 604000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": -0.72
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 0.96
+            }
+        },
+        "exports": {
+            "exports_dollars": 597000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": -1.21
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 2.68
+            }
+        }
+    },
+    "executive_summary": "Prior to the pandemic, robust economic growth significantly boosted wages and corporate profits. Companies capitalized on their increased profitability by investing in new office spaces, leading to a surge in nonresidential construction during 2018 and 2019. As organizations built more offices, the demand for generators rose accordingly. The pandemic has influenced volatile residential and nonresidential construction activity, limiting industry expansion. As a result, revenue for prime mover generator set manufacturers is expected to remain stable at $4.3 billion in 2024.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Volatile construction economic performance influences demand",
+            "current_performance_point_description": "Prior to the pandemic, robust economic growth significantly boosted wages and corporate profits. Companies capitalized on their increased profitability by investing in new office spaces, leading to a surge in nonresidential construction during 2018 and 2019. As organizations built more offices, the demand for generators rose accordingly. Falling commercial construction activity leads to lower spending on prime mover generator sets, offsetting growth in residential activity."
+        },
+        {
+            "current_performance_point_title": "Prime mover generator sets manufacturing rebounds amidst shifting market dynamics",
+            "current_performance_point_description": "While the pandemic disrupted manufacturing sectors, its impact has contributed to volatile construction activity. Low downstream demand reduced the need for manufactured products, so the industrial production index (IPI) plunged. There's a renewed focus on innovation to buffer against similar disruptions in the future. Technological advancements are also playing a crucial role, with smarter, more integrated systems becoming more prevalent in factory settings."
+        },
+        {
+            "current_performance_point_title": "Increased consumer spending supports residential demand",
+            "current_performance_point_description": "Residential activity has experienced a significant boost as manufacturers ramp up production to meet rising construction. Soaring consumer spending raised industrial activity, so manufacturers started to demand prime mover generator sets for their factories and machinery, aiding revenue growth. Households also used their money to buy and build new homes at record levels, boosting downstream demand from the residential sector."
+        },
+        {
+            "current_performance_point_title": "Rising interest rates contribute to volatility",
+            "current_performance_point_description": "To combat elevated inflation, the Federal Reserve has been increasing interest rates. The higher cost of borrowing has made it much harder to purchase homes, office spaces or other structures, so both nonresidential and residential construction has plunged in recent years. Since fewer residential and nonresidential structures have been built, demand for generators has declined recently, offsetting growth earlier in the period."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Rising incomes will grow electric power consumption",
+            "future_outlook_point_description": "Despite high inflation, rising interest rates, and recessionary fears, the economy is expected to recover during the period. Steady GDP growth will lead to modest increases in incomes, prompting higher electricity consumption among consumers. Increased electricity usage will boost demand for generators, raising revenue for manufacturers in the industry."
+        },
+        {
+            "future_outlook_point_title": "The housing market is expected to recover after the pandemic",
+            "future_outlook_point_description": "The housing market is expected to recover after the pandemic, driven by households adjusting to higher interest rates. As families adapt their consumption and saving patterns, they will likely buy homes at higher costs, sparking demand in the residential sector. High interest rates will persist even after inflation declines. This will initially curtail spending but will lead to long-term adjustments in household purchasing behaviors. These families will reach this point during the period, so the housing market will recover, boosting downstream demand for prime mover generator sets from the residential sector and helping the industry grow."
+        },
+        {
+            "future_outlook_point_title": "Exports will soar as the dollar depreciates",
+            "future_outlook_point_description": "As the US dollar depreciates, domestically produced prime mover generator sets become more attractive to foreign buyers since they are less expensive. Rising demand from international consumers could lead to a surge in exports, providing a significant revenue boost for manufacturers within the industry. Higher exports will boost an important revenue stream for manufacturers, benefiting the industry."
+        },
+        {
+            "future_outlook_point_title": "Renewables will present a long-term threat to manufacturers",
+            "future_outlook_point_description": "The rise in research and development of alternative energy sources is making electricity generation from wind and solar more attractive. Prime mover generator sets, typically used to create electricity from oil, coal, and gas, may see decreased demand as renewables become more popular. Companies will use innovations such as Variable Frequency Drives (VDFs) and Smart Motor Systems to boost the efficiency of traditional generators, combating the threat of renewables."
+        }
+    ],
+    "industry_definition": "This industry manufactures prime mover generator sets, integral horsepower motors and fractional horsepower motors. These products combine an electrical generator with an engine, or prime mover to produce electrical power. These products are used to supply electrical power in places where utility power is not available. This industry does not include steam and hydraulic turbine sets.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level - low"
+        ],
+        "negative_impact_factors": [
+            "Concentration Level - high",
+            "Globalization Level - high - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage - mature"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Medium Imports"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers",
+            "Trade-weighted index"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Industrial production index"
+        ]
+    },
+    "key_trends": [
+        "There's intense internal competition among prime mover generator sets manufacturers. Companies compete on price, services and reputation.",
+        "The industry competes with many substitutes. These substitutes include imports, solar power, wind turbines and grid connections.",
+        "Revenue growth was tempered due to volatile construction activity. The pandemic has influenced construction and renovation volatility.",
+        "Manufacturers still benefited from the pandemic recovery. However, rising interest rates and tempered residential activity hindered growth.",
+        "As the economy recovers, incomes will rise, boosting electric power consumption. The industry will perform better over the coming years because of a recovering housing market and surging exports.",
+        "However, the growth of renewables will present a long-term threat to the industry.",
+        "High barriers to entry prevent some individuals from setting up shop, enabling large players to control most of the industry. The biggest company, Generac Power Systems, comprises nearly half of the industry's revenue.",
+        "Many of the industry's major players also sell other products to find multiple revenue streams. Caterpillar operates in construction machinery, engine and turbine, heavy-duty diesel engine, prime mover generator sets and other industries.",
+        "Prime mover generator sets manufacturers are subject to a slew of different regulations. These include laws regulating pollution, energy efficiency and workplace safety.",
+        "The industry receives assistance from the private and public sectors. The Electrical Generating Systems Association (EGSA) is one private organization that helps manufacturers.",
+        "Profit rises and falls based on economic conditions. It plunged during the pandemic as industrial production tanked, but soared amid the recovery as consumer spending soared.",
+        "Purchases include steel, copper, zinc, aluminum and other inputs. Purchase costs have held steady over the years, as manufacturers have been able to pass on high input costs to consumers.",
+        "The Great Lakes region is home to the nation's largest manufacturers. These manufacturers purchase generators in high numbers, so the industry has a notable presence in this region.",
+        "Regions with high populations demand prime mover generator sets in large amounts. Since the Southeast is the most populous region, many manufacturers are located there."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Residential markets: consumers aged 18 to 41",
+            "segment_percentage": 21.5,
+            "segment_description": "Residential markets encompass various age groups and make up more than half of the total revenue, significantly impacting the industry's overall performance."
+        },
+        {
+            "segment": "Commercial and industrial markets",
+            "segment_percentage": 101,
+            "segment_description": "The commercial and industrial markets, which include businesses, hospitals, and nonresidential structures, have seen a sustained decline. As remote work becomes more normalized, the demand for generators in these sectors continues its downward trend."
+        },
+        {
+            "segment": "Other markets",
+            "segment_percentage": 11.1,
+            "segment_description": "Other markets comprise nearly one-tenth of revenue and mostly include demand for generators from government organizations. Government spending has risen in recent years, as COVID-19 has boosted investment in organizations related to public health."
+        },
+        {
+            "segment": "Residential markets: consumers aged 42 to 66",
+            "segment_percentage": 22.6,
+            "segment_description": "Residential markets encompass various age groups and make up more than half of the total revenue, significantly impacting the industry's overall performance."
+        },
+        {
+            "segment": "Residential markets: consumers aged 67 and over",
+            "segment_percentage": 8.4,
+            "segment_description": "Residential markets encompass various age groups and make up more than half of the total revenue, significantly impacting the industry's overall performance."
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Fractional Horsepower Motors",
+            "product_description": "Fractional horsepower motors are defined as motors with a power rating of less than one horsepower. They are widely used in commercial and industrial sectors, including automatic windows, windshield wipers, mirrors, cars, and household appliances.",
+            "product_percentage": 25.7
+        },
+        {
+            "product_or_service": "Integral Horsepower Motors and Generators",
+            "product_description": "Integral horsepower motors convert electrical energy into mechanical energy through the interaction of magnetic fields and electrical current. They're essential in yard equipment, heavy-duty appliances, and large machinery.",
+            "product_percentage": 6.2
+        },
+        {
+            "product_or_service": "Prime Mover Generator Sets (except Steam and Hydraulic Turbines)",
+            "product_description": "Prime mover generator sets, comprising an electric motor and an alternator, generate electrical current and exclude steam and hydraulic turbines. Smaller units power homes during outages, while larger sets serve businesses in areas lacking utility power.",
+            "product_percentage": 68.1
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Electrical Equipment Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Wire & Cable Manufacturing in the US",
+            "Power Conversion Equipment Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Construction in the US",
+            "Utilities in the US"
+        ],
+        "tier_2_buyers": [
+            "Healthcare and Social Assistance in the US",
+            "Educational Services in the US",
+            "Coal & Natural Gas Power in the US",
+            "Hydroelectric Power in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Value of Private Nonresidential Construction",
+            "determinant_description": "The value of private nonresidential construction includes expenditure on office buildings, hospitals, factories, power plants, communication lines, railroads, schools and more. With new construction comes increased demand for power systems for the new property. This boosts the need for prime mover generator sets."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Moderate",
+        "import_trend": "Decreasing",
+        "export_level": "Moderate",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Pandemic Impact on Imports",
+                "trade_description": "Due to social distancing and mask-wearing mandates, the pandemic introduced significant challenges to the prime mover generator manufacturing industry. These restrictions hindered the efficiency of domestic production processes, making locally produced goods more costly. In response to rising costs, buyers turned to international sources, leading to a surge in imports during the pandemic."
+            },
+            {
+                "trade_title": "Trade War Impact on Imports",
+                "trade_description": "In the late 2010s, the Trump Administration initiated a trade war with China, raising tariffs on many Chinese goods with the hope of boosting domestic production. China retaliated by raising tariffs on their goods, so overall trade between the two countries plunged."
+            },
+            {
+                "trade_title": "Dollar Strength Impact on Imports",
+                "trade_description": "The strengthening dollar has made foreign-manufactured goods cheaper than those produced domestically, expanding imports over the years. Since buyers generally aim to save money, the availability of less expensive goods abroad has bolstered the current import trend."
+            },
+            {
+                "trade_title": "Pandemic Impact on Exports",
+                "trade_description": "As the pandemic waned, consumer spending abroad initially surged with the reopening of businesses. During the early recovery phase, demand for prime mover generator sets from various countries significantly increased, leading to a temporary boost in exports and additional revenue streams for the industry."
+            },
+            {
+                "trade_title": "USMCA Impact on Exports",
+                "trade_description": "The USMCA has reduced tariffs, making it easier for Mexico and Canada to purchase U.S.-made generator sets. Simplified cross-border trade regulations have boosted exports to closest neighbors."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "States in the Great Lakes region, such as Illinois, Indiana and Michigan, contain many of the nation's biggest manufacturers. Since manufacturers use so much power, they often don't want to use standard electrical grids. Many companies in this region purchase generators instead, so demand for the industry's products is high in this region, giving manufacturers a significant presence throughout the Great Lakes states.",
+            "percentage_establishments": 29.1,
+            "percentage_population": 15.3
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast comprises the largest share of the United States population since it contains big states such as Florida, Georgia and North Carolina. Some portion of the population will demand generators, so the number of prime mover generator sets manufacturers in each region is correlated with its population. Since the Southeast has a high population, there are many households that use generators, so the industry has many establishments located in this region.",
+            "percentage_establishments": 16.4,
+            "percentage_population": 19.7
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "",
+            "percentage_establishments": 14.2,
+            "percentage_population": 13.5
+        },
+        {
+            "location": "West",
+            "location_description": "",
+            "percentage_establishments": 11.8,
+            "percentage_population": 17.6
+        },
+        {
+            "location": "Southwest",
+            "location_description": "",
+            "percentage_establishments": 10.2,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "Plains",
+            "location_description": "The Plains region has a low population but encompasses a massive amount of land area. Since many of this region's residents live in rural areas, they often need generators, so demand for prime mover generator sets is high. The share of establishments that operate in the Plains region is much larger than its share of the United States population.",
+            "percentage_establishments": 8.1,
+            "percentage_population": 6.8
+        },
+        {
+            "location": "New England",
+            "location_description": "",
+            "percentage_establishments": 5.5,
+            "percentage_population": 4.9
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "",
+            "percentage_establishments": 4.7,
+            "percentage_population": 10.7
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "Clean Air Act",
+                "regulation_description": "This law requires that companies comply with limits on the emission of pollutants. These rules apply to prime mover generator sets manufacturers because building new products can release chemicals that can pollute the air. The Environmental Protection Agency (EPA) applies allowances for the level of sulfur, nitrogen oxides, ozone and other pollutants companies can release into the atmosphere."
+            },
+            {
+                "regulation_title": "Clean Water Act",
+                "regulation_description": "This act ensures that prime mover generator sets manufacturers don't pollute bodies of water. Since these products can create waste, companies might"
+            },
+            {
+                "regulation_title": "U.S. Energy Policy Act of 2005",
+                "regulation_description": "This law forces companies to be energy efficient, so they limit their pollution. Manufacturers constantly innovate to meet these standards."
+            },
+            {
+                "regulation_title": "Occupational Safety and Health Administration (OSHA)",
+                "regulation_description": "OSHA is a federal agency that enforces safety and health legislation in the United States. The agency ensures that workers are adequately trained when operating in an unsafe environment. They also require manufacturers to offer their employees generous workers' compensation when injured."
+            },
+            {
+                "regulation_title": "Pandemic-Era Regulations",
+                "regulation_description": "To ensure that COVID-19 didn't spread, governments forced manufacturers to enforce social distancing and mask-wearing laws. Prime mover generator sets makers had to adjust their procedures to follow these rules."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is mature."
+            },
+            {
+                "barrier_title": "Concentration Level",
+                "barrier_description": "Market share concentration is high."
+            },
+            {
+                "barrier_title": "Globalization Level",
+                "barrier_description": "The industry has a high and steady level of globalization."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Patented designs require new companies to get licenses to sell products.",
+            "Regulations manufacturers must consider before entering.",
+            "High startup costs for factory, machinery, distribution network.",
+            "Highly skilled labor leading to high labor costs."
+        ],
+        "factors_decreased_barrier": [
+            "Low capital intensity level."
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Competition on price, services and reputation",
+                "basis_description": "There is intense internal competition among manufacturers on price, services and reputation."
+            },
+            {
+                "basis_title": "Competition with substitutes",
+                "basis_description": "The industry competes with many substitutes like imports, solar power, wind turbines and grid connections."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "High",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "High startup costs prevent entry",
+                "concentration_description": "High startup costs for factory, equipment, distribution network and labor discourage new entrants, keeping concentration high."
+            },
+            {
+                "concentration_title": "Recent acquisitions increased consolidation",
+                "concentration_description": "Recent mergers and acquisitions by large players have wiped out small players, increasing market concentration."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Generac Power Systems, Inc.",
+                "company_percentage": 64.5
+            },
+            {
+                "company_name": "Caterpillar Inc.",
+                "company_percentage": 14.2
+            },
+            {
+                "company_name": "Cummins Inc.",
+                "company_percentage": 4
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 17.3
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Rising miscellaneous costs impact generator set manufacturing",
+            "cost_factor_description": "The prime mover generator set manufacturing industry has seen moderate volatility, contributing to fluctuations in transaction fees."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Capital expenses",
+                "capital_intensity_description": "While labor costs are high in this industry relative to other manufacturers, capital still presents a higher barrier to entry since getting a plant and setting up machinery to start building generator sets is very costly."
+            },
+            {
+                "capital_intensity_title": "Labor expenses",
+                "capital_intensity_description": "<UNKNOWN>"
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Recessions and expansions cause revenue to rise and fall",
+                "volatility_description": "During a downturn, GDP declines lead to reduced industrial production and electric power consumption, causing a drop in capacity and revenue for prime mover generator manufacturers. In an expansion, increased consumer demand for electricity boosts industrial production and electric power consumption, resulting in higher revenue for these manufacturers."
+            },
+            {
+                "volatility_title": "Interest rates affect downstream demand",
+                "volatility_description": "Low interest rates stimulate residential and nonresidential construction, increasing demand for prime mover generator sets. High interest rates discourage construction, leading to reduced revenue for manufacturers."
+            },
+            {
+                "volatility_title": "The level of exports affects the industry's performance",
+                "volatility_description": "When the value of the US dollar is low, domestically produced goods are less costly, raising demand from foreigners and increasing exports. Exports constitute a significant revenue stream for manufacturers, so shifting exports create volatility for the industry. Since exchange rates fluctuate often, exports have shifted during the period, enhancing revenue volatility."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Variable frequency drives (VFDs) provide significant cost savings for manufacturers",
+                "technological_change_description": "VFDs are used by manufacturers in integral and fractional horsepower motors. These drives enable precise control of motor speed, boosting process control and energy savings. It also reduces wear and tear on motors over time. These results make motors more efficient, boosting cost savings for prime mover generator sets manufacturers."
+            },
+            {
+                "technological_change_title": "Smart motor systems increase efficiency",
+                "technological_change_description": "Smart Motor Systems use algorithms to enable autonomous motor operation, self-diagnosis and integration with larger automation systems. These innovations help manufacturers reduce wear-and-tear since the algorithms can spot out problems with motors on the spot, raising efficiency."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company affected by rising imports?",
+            "answer": "Imports compete with our products on a cost basis because of their low-wage costs. We invest in research and development to differentiate our products."
+        },
+        {
+            "question": "Does your company specialize in a niche or do you produce a diversified range of products?",
+            "answer": "We are able to specialize in a niche to better serve our specific customers."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "Input prices for metals such as copper and aluminum have fluctuated historically."
+        },
+        {
+            "question": "Have you looked into setting up manufacturing facilities in lower-wage regions of the country?",
+            "answer": "Some manufacturers have sought to establish manufacturing operations in low-cost regions and countries with low labor costs."
+        },
+        {
+            "question": "How is your company leveraging new technology?",
+            "answer": "Companies are using different types of steel to increase efficiency. Automation in the form of assembly line robots are an increasing trend in the industry."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation over the past five years?",
+            "answer": "Despite operators attempting to reduce wages, increased employment have kept wage costs relatively high during the period."
+        },
+        {
+            "question": "Is your company adequately prepared to comply with new environmental standards?",
+            "answer": "EPA regulations are a large influence. Manufacturers are expected to meet EPA regulations by certain deadlines."
+        },
+        {
+            "question": "Do you work with trade associations or other interest groups to advance your company's interests?",
+            "answer": "Major players lobby for decreased tariffs on imported steel. Increased tariffs on imported steel from China raises costs for companies."
+        },
+        {
+            "question": "How does your company's profit compare to your main competitors'?",
+            "answer": "Profit relies heavily on material input costs and the overall economy."
+        },
+        {
+            "question": "Do you have any big projects on the horizon that will require capital financing?",
+            "answer": "Opening new facilities will require capital financing."
+        },
+        {
+            "question": "Do you track demand for energy-efficient power generation? How do you mitigate declines in demand?",
+            "answer": "When demand for energy-efficient power generation increases, new generators and upgrades to existing systems are likely to be developed."
+        },
+        {
+            "question": "Do you have more than one location? Do you plan to open more locations in the future?",
+            "answer": "Manufacturers in a more central distribution location may have a competitive advantage because of lower transportation costs."
+        },
+        {
+            "question": "How do you mitigate high production costs? How do you leverage your economies of scale?",
+            "answer": "Larger companies exhibit lower production costs via scale economies. As more units are produced at once, this drives down per-unit costs and increases profitability per unit."
+        },
+        {
+            "question": "How does increased nonresidential construction affect demand? How do you plan to prepare for declines in this market?",
+            "answer": "101"
+        },
+        {
+            "question": "How have fluctuations in the value of the US dollar affected demand for your products? How can you boost your export levels?",
+            "answer": "Fluctuations in the value of the US dollar affect the relative prices of imports and exports, which influences spending on prime mover generator sets."
+        },
+        {
+            "question": "How can you diversify your revenue streams amid declining energy power consumption? How do you adapt when consumption declines?",
+            "answer": "When demand for energy-efficient power generation increases, new generators and upgrades to existing systems are likely to be developed. This raises spending on prime mover generator sets."
+        }
+    ]
+}

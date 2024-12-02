@@ -1,0 +1,522 @@
+{
+    "report_title": "Book Stores in the US",
+    "report_date": "2024-02-20",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 34320000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": -0.29
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 2.98
+            }
+        },
+        "profit": {
+            "profit_dollars": -275000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 101
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": -0.8,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 101
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 4337000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": -0.92
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 2.57
+            }
+        },
+        "employees": {
+            "employees_count": 221833,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 0.03
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 2.49
+            }
+        },
+        "wages": {
+            "wages_dollars": 4220000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0.17
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 2.59
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Over the past five years, the Book Stores industry has undergone substantial changes, largely driven by the proliferation of online retail giants like Amazon. Their vast selection, competitive pricing and immediate access to reading materials have fundamentally reshaped consumer buying habits. Yet, the traditional charm and sensory experience offered by brick-and-mortar stores continue to hold an appeal. Many book stores have revamped their spaces, now incorporating coffee shops, hosting author events, offering cozy reading spaces and nurturing book clubs.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Despite challenges, industry revenue is expected to",
+            "current_performance_point_description": "Despite challenges, industry revenue is expected to have increased at a CAGR of 1.7% to $34.3 billion through the end of 2024. In 2024, revenue is expected to increase 2.9%, but profit is expected to remain low."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "The resurgence of book clubs will influence book sales",
+            "future_outlook_point_description": "Looking ahead, the next five years promise interesting trends for the Book Stores industry. The resurgence of book clubs will influence book sales and readership patterns positively. Book clubs encourage regular book purchases and stimulate traffic in-store, which contribute to book stores' revenue."
+        },
+        {
+            "future_outlook_point_title": "Demand for personalization and unique experiences",
+            "future_outlook_point_description": "Concurrently, the rise in demand for personalization and unique experiences across retail sectors is likely to echo in the book industry. Readers will increasingly seek tailored recommendations, limited editions or personalized versions of books, leading bookstores to differentiate their offerings and create unique selling propositions."
+        },
+        {
+            "future_outlook_point_title": "Improving economic conditions and disposable income",
+            "future_outlook_point_description": "Also, with improving economic conditions and disposable income, consumers will be more willing to spend on leisure experiences, including visits to book stores. Physical stores that offer a welcoming ambiance, host local author events, or support local book clubs can leverage this trend."
+        },
+        {
+            "future_outlook_point_title": "Industry revenue expected to rise at a CAGR of 3.0%",
+            "future_outlook_point_description": "Though digital pressures persist, these forward-looking trends suggest continuous reinvention, reaffirming the endurance and potential resurgence of book stores. Industry revenue is expected to rise at a CAGR of 3.0% to $39.8 billion in 2029."
+        }
+    ],
+    "industry_definition": "Companies in this industry primarily retail a broad range of books, newspapers and periodicals, including trade books, textbooks, magazines, paperbacks and religious books. These goods are purchased from domestic, and in some cases international, manufacturers and wholesalers. Operators then retail these goods to the general public through industry stores.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level low",
+            "Concentration Level low",
+            "Technology Change Level low",
+            "Globalization Level low - steady"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level low - steady",
+            "Competition Level high - steady"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "Decline Life Cycle Stage",
+            "Low Profit vs. Sector Average",
+            "High Product/Service Concentration",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2024-2029)",
+            "E-commerce sales"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Revenue Growth (2019-2024)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Percentage of business conducted online"
+        ]
+    },
+    "key_trends": [
+        "COVID-19 turns around a struggling book market. Unexpected showings of strong, local support and renewed interest in reading create an unprecedented spike in book spending.",
+        "Online sales will continue to capture a growing share of book sales.",
+        "Competition from Amazon will pressure book shops even as more small stores adopt online storefronts.",
+        "With more book stores selling online, retailers must adopt data and privacy laws. Book stores must follow regulations outlining how they can collect, store and use customer data."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Consumers aged 45 to 64",
+            "segment_description": "This market segment includes consumers aged 45 to 64. Consumers in this demographic are the largest market for book stores.",
+            "segment_percentage": 33.3
+        },
+        {
+            "segment": "Consumers between 26 and 44",
+            "segment_description": "This market segment includes consumers aged between 26 and 44 years old. This demographic is the second-highest spenders at book stores. Steadier incomes for consumers in this age group allow more frequent spending books. Millennials also have the purchasing power to spend on higher-margin books than their younger counterparts. Many adults within this age bracket have children. Spending on books for toddlers and young children is prevalent among this age group to develop children's language skills.",
+            "segment_percentage": 33.3
+        },
+        {
+            "segment": "Consumers 65 and over",
+            "segment_description": "This market segment includes consumers aged 65 and older. This demographic is a key market for the Book Stores industry. Adults 65 and older are at retirement age and have more free time to pursue interests and hobbies, including reading. Some adults in this age group have fixed incomes, which could make them more selective about where and how they spend on books. Book stores are popular meeting grounds for older adults, leading to higher spending on books. Additionally, this demographic is more inclined to read physical books rather than virtually, further supporting demand for book stores.",
+            "segment_percentage": 23.8
+        },
+        {
+            "segment": "Consumers under 25",
+            "segment_description": "This market segment includes consumers under the age of 25. This demographic is the smallest market segment for the Book Stores industry. Young consumers have limited disposable income, so spending on books isn't always a priority. Some young consumers also prioritize other activities like classes, social time or social media over reading, limiting spending on books. College students in this age group spend robustly on college books and other educational materials. But, the popularity of secondhand books online allows this age group to be more selective. A recent positive trend in this demographic has been social media is invigorating young readers to pick up books. TikTok trends are highlighting popular book titles and local book shops.",
+            "segment_percentage": 10.5
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Trade Books",
+            "product_description": "Trade books include children's, young adult and fiction and nonfiction books. Trade books are the most popular item sold at book stores. Diversification among trade books makes them appealing to many young and old readers. Social media, mainly TikTok, is also helping drive trade book sales as specific titles and authors go viral.",
+            "product_percentage": 60.7
+        },
+        {
+            "product_or_service": "PreK Through 12 Books",
+            "product_description": "Pre-K through 12 books typically include textbooks, workbooks, teacher's guides and other educational materials designed for kindergarten through 12th grade students. Sales of these books are increasing as students have returned to in-person school full-time since the pandemic. Still, digitization has pressured this segment as more learning is done through online platforms.",
+            "product_percentage": 14.9
+        },
+        {
+            "product_or_service": "Higher Education Books",
+            "product_description": "Higher education books include textbooks, reference materials and other print educational resources tailored for college and university students. Sales of higher education books aren't as strong as in previous years, as more college programs integrate digital platforms and e-textbooks into coursework. College students have more ways to access textbooks than ever online. High costs of textbooks also incentivize college students to find alternative options.",
+            "product_percentage": 13.6
+        },
+        {
+            "product_or_service": "Professional Books",
+            "product_description": "The image shows a bar chart with the percentage 4.9% which seems to represent the sales or market share of professional books.",
+            "product_percentage": 4.9
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "Other items include reference and religious books, greeting cards, puzzles, gift and novelty items (mugs, magnets), stationery items and other small reading accessories (book lights, bookmarks). Most consumers pick up these items when browsing book stores, since these items are widely available at lower prices online or through a big-box store.",
+            "product_percentage": 5.9
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Book, Magazine & Newspaper Wholesaling in the US",
+            "Book Publishing in the US",
+            "Magazine & Periodical Publishing in the US",
+            "Office Stationery Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Logging in the US",
+            "Paper Mills in the US",
+            "Paperboard Mills in the US"
+        ],
+        "tier_1_buyers": [
+            "Newspaper Publishing in the US",
+            "Commercial Leasing in the US",
+            "Public Schools in the US",
+            "Private Schools in the US",
+            "Community Colleges in the US",
+            "Colleges & Universities in the US",
+            "For-Profit Universities in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Consumer Spending",
+            "determinant_description": "Consumer spending influences how much consumers will decide to spend on books. When consumer spending rises, consumers are likely to spend on nondiscretionary items like books. As spending falls, consumers lower their purchases or look for lower-cost alternatives. A rise in consumer spending represents a potential opportunity for the industry."
+        },
+        {
+            "determinant_title": "E-commerce Sales",
+            "determinant_description": "More book stores are adopting online selling platforms to compete with big-box stores and Amazon. While online sales are helping book stores compete, small, indie bookstores still aren't able to be as price competitive as larger retailers."
+        },
+        {
+            "determinant_title": "Percentage of Business Conducted Online",
+            "determinant_description": "As consumers spend more time online, they move away from physical books. Books are available digitally through smartphones and tablets, allowing consumers to read or listen to books on the go without carrying or storing physical books. A rise in the percentage of business conducted online poses a potential threat to the industry."
+        },
+        {
+            "determinant_title": "Time Spent on Leisure and Sports",
+            "determinant_description": "The time individuals spend on leisure activities significantly impacts the Book Stores industry. When people have more free time, they are more likely to engage in recreational reading, thus increasing sales for book stores. Conversely, in periods of high work intensity or when time is diverted toward digital entertainment, physical book sales may decline."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region is the most populated region in the US. This large population base creates a high demand for a variety of books and reading materials, supporting the presence of numerous book stores. The region is also home to several important educational institutions. This creates a constant demand for books and educational resources, leading to a multitude of book stores to meet this need.",
+            "percentage_establishments": 30.6,
+            "percentage_population": 38.1
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region is home to numerous renowned universities and educational institutions. This creates a constant demand for academic and general books, contributing to a large presence of bookstores. The region boasts a high literacy rate, resulting in a higher demand for books both for educational and leisure reading, which motivates the establishment of many book stores.",
+            "percentage_establishments": 21.4,
+            "percentage_population": 15.2
+        },
+        {
+            "location": "West",
+            "location_description": "With a strong economy and high per capita income, residents have more discretionary income for spending on books, making the region attractive for bookstore establishments. The West region, notably California, is a global tech hub hosting numerous universities and tech companies. This fosters a culture of continuous learning and a demand for the latest publications in technology, science and entrepreneurship, driving the growth of book stores. The West region consists of several metropolitan areas, like Los Angeles, San Francisco and Seattle. With its large customer base, the region can sustain a higher number of book stores. Famous for its landscapes and landmarks, the West region is a popular tourist destination. Visitors often frequent local book stores for travel guides or regional literature, supporting the book store industry in the region.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "Labor Laws",
+                "regulation_description": "Federal labor laws, including the Fair Labor Standards Act (FSLA) and The Americans with Disabilities Act (ADA), oversee the rights of employees. The FSLA establishes minimum wage, overtime pay and other standards for employees in the US. The ADA prohibits discrimination against individuals with disabilities in a retailer's employment decisions."
+            },
+            {
+                "regulation_title": "Copyright Laws",
+                "regulation_description": "Copyright laws significantly impact the Book Stores industry. These laws protect the rights of authors and publishers and prevent the unauthorized duplication and sale of their works. Copyright laws ensure that retailers sell only legally obtained copies of books, maintaining fair pricing and protecting profitability for all parties involved."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "low - steady"
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "high - steady"
+            },
+            {
+                "barrier_title": "Employment Trends",
+                "barrier_description": "Book stores need a staff to run all day-to-day functions. External employment trends driving up wages could challenge new stores balancing start-up costs."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level low",
+            "Concentration Level low",
+            "Technology Change Level low",
+            "Globalization Level low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Indie Bookstores Attracting New Customers",
+                "basis_description": "Indie book stores are bringing in new customers by tailoring their shops to the local community."
+            },
+            {
+                "basis_title": "Amazon's Influence",
+                "basis_description": "Amazon's influence on the book market challenges book stores. The online retailer's low prices, convenience and selection pull sales from book stores."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Diverse Independent Bookstores",
+                "concentration_description": "The diverse variety of independent book stores limits concentration."
+            },
+            {
+                "concentration_title": "Unique Offerings and Community Connection",
+                "concentration_description": "These independent stores are known for their unique offerings, personalized service and strong community connection, which resonate with a particular segment of book buyers."
+            },
+            {
+                "concentration_title": "Catering to Niche Preferences",
+                "concentration_description": "Also, these local stores have the ability to better cater to regional or niche preferences, stocking a range of books that might be overlooked by larger chains, attracting a diverse clientele and holding their own share of the market."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Barnes & Noble Inc.",
+                "company_percentage": 7.1
+            },
+            {
+                "company_name": "Barnes & Noble Education, Inc.",
+                "company_percentage": 3.9
+            },
+            {
+                "company_name": "Follett Higher Education Group Inc.",
+                "company_percentage": 1.8
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 87.2
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 40
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 5
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "PUBLISHERS PASS HIGH PAPER PRICES DOWN TO BOOK STORES",
+            "cost_factor_description": "Purchases are the single-largest expense for book stores, comprising over half of industry revenue. In recent years, Higher costs for inventory have contributed to losses at book stores. Supply chain snafus, fluctuating transportation costs and challenges at paper mills have driven up the cost of paper, leading publishers to charge more for books."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital intensity",
+                "capital_intensity_description": "Book stores need a staff to run all day-to-day functions. External employment trends driving up wages could challenge new stores balancing start-up costs. The rate of new patent technologies entering the industry is low, which limits the potential for innovations. A low rate does not mean that innovations cannot occur, just that the likelihood of some innovation materializing as a threat is lower. However, the concentration of technologies is high in this industry. This suggests that industry operators have exposure to potentially unforeseen areas of innovation. Major market segments for industry operators are relatively diversified. The spread of market segments suggests that there are limited entry points other than those already served by incumbent operators."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "CONSUMER SPENDING ON BOOKS IS DISCRETIONARY",
+                "volatility_description": "Consumers change the volume and frequency of book purchases depending on their income. While some books, like those required for school, are nondiscretionary most are non-discretionary. Retail spending on books generally rises when consumers have more income and feel confident about their financial position. When consumers become more budget-conscious, consumers prioritize spending on necessities like food and bills over books."
+            },
+            {
+                "volatility_title": "COMPETITION CONTINUES TO DISRUPT BOOK STORES",
+                "volatility_description": "Even as book stores expand their digital footprint, competition from leading online retailers creates volatile conditions for book retailers. Amazon's stronghold on the online book market siphons online and in-person sales from book stores. Small, indie bookstores have benefitted from social media, but competition from Amazon and other big-box retailers influences their ability to expand further."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company specialize in one corner of the market or do you retail a diversified range of products?",
+            "answer": "Book stores with a wide product selection will attract a wider customer base, increasing potential revenue streams."
+        },
+        {
+            "question": "How has your business adapted to the growth of online sales in recent years?",
+            "answer": "By establishing e-commerce websites and offering in-store promotions, industry participants have fought to combat and participate in the heavy impact of online sales."
+        },
+        {
+            "question": "Do you contract directly with manufacturers in order to reduce purchase costs?",
+            "answer": "Many companies have direct connections with different publishers, allowing them to have quick access to new and popular books. Large book stores may even own publishing companies."
+        },
+        {
+            "question": "Does your company lease equipment to reduce overhead costs?",
+            "answer": "Book stores tend to lease their storefronts to reduce their overhead costs."
+        },
+        {
+            "question": "How has your company reacted to the rise of online sales?",
+            "answer": "Many large book stores have launched their own e-commerce websites. Additionally, some of these stores have offered promotions and incentives for customers to make more in-store purchases."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation?",
+            "answer": "Automation can only help so much for retail industries. Customer service provided by employees is an important differentiating factor."
+        },
+        {
+            "question": "Have any regulatory expenses significantly impacted profitability recently?",
+            "answer": "Companies are subject to federal minimum wage laws. This forces fixed wage costs for book stores as revenue is declining, potentially influencing profitability."
+        },
+        {
+            "question": "How does your company ensure all health and safety requirements are met?",
+            "answer": "Companies with coffee shops that serve food are subject to health inspections and standards. Stores that meet these standards will have added income provided by these operations."
+        },
+        {
+            "question": "How does your company's inventory turnover compare to major competitors'?",
+            "answer": "Operators with higher turnover will experience greater revenue streams. Indicating sale volumes of books, industry turnover is key to book stores improving profitability."
+        },
+        {
+            "question": "What ongoing financing challenges does your company face?",
+            "answer": "Industry participants will experience challenges to find financing opportunities as revenue streams are declining. Lack of financing opportunities will limit growth and expansion."
+        },
+        {
+            "question": "Do you use a visual merchandising team to display your products attractively? How do you encourage impulse buying?",
+            "answer": "The internal display of stores should be inviting, so as to encourage impulse buying."
+        },
+        {
+            "question": "Do you use any after-sales services? What are the key features of your customer-service initiatives?",
+            "answer": "Operators should encourage customer loyalty through promotional discounts, superior customer service and author signing days."
+        },
+        {
+            "question": "What methods do you use to recruit and maintain staff? What are the associated costs?",
+            "answer": "To satisfy customers, book stores need to have staff who have relevant knowledge of the products currently being sold."
+        },
+        {
+            "question": "Does your company have a website where customers can purchase books? How do you fare against intense competition?",
+            "answer": "Book stores are particularly vulnerable to the success of online retailers, department stores and mass merchandisers. As consumers purchase more products online and in department stores, demand for books bought in book stores decreases."
+        },
+        {
+            "question": "How do you monitor trends in leisure time? How can you compete for consumers' leisure time?",
+            "answer": "Fluctuations in leisure time availability determine the amount of time that consumers will spend on pastimes, like reading novels or the newspaper. Apart from its educational benefits, reading is generally considered to be a leisure activity."
+        },
+        {
+            "question": "How do trends in disposable income affect your overall revenue? How do you plan to mitigate the threat of declining disposable income?",
+            "answer": "In periods of low disposable income, consumers are less likely to spend money on discretionary goods, including books. If the book is a necessity, as textbooks are for school, consumers will look for lower-cost options, including used textbooks."
+        }
+    ]
+}

@@ -1,0 +1,583 @@
+{
+    "report_title": "Comic Book Publishing in the US",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 1972000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 5.03
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "revenue_cagr_value": 0.05
+            }
+        },
+        "profit": {
+            "profit_dollars": 235000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 7.92
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2024,
+                "profit_cagr_value": -2.51
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 11.9,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 2.75
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -4.2
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 483000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 2151,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2024,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 226000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2024,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The Comic Book Publishing industry consists of companies engaged in the publication of comic books, graphic novels and other related materials. The industry is primarily dominated by DC Comics and Marvel Entertainment LLC (Marvel), by far the most well-known brands in comics currently. The industry experienced revenue growth in line with rising consumer spending through the end of 2024, along with increased interest in the source material for high-profile comic book adaptations, most prominently the Marvel Cinematic Universe movies. Overall, industry revenue has increased at a CAGR of 11.5% to reach $2.0 billion in 2024. This comes in spite of a decline of 0.4% in 2024 alone. Also, profit is slated to expand during the same period as the shift in the industry toward increased graphic novel sales, which typically command higher prices, is poised to boost profit for the industry.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Industry Experienced an Unexpected Rise in Demand During the COVID-19 Pandemic",
+            "current_performance_point_description": "Despite the poor economic conditions and temporary shutdowns brought on by the COVID-19 pandemic, the industry experienced growth in 2020 due to a surge in demand at the consumer level. Temporary shutdowns of nonessential businesses, including comic publishers, in early 2020, initially caused a sharp depression in revenue. Production cutbacks caused a reduction in new releases and therefore, decreased demand from downstream buyers. However, as businesses reopened, demand for new comics and graphic novels rebounded strongly. Pent-up demand culminated in 2021 with markups on new releases supporting tremendous industry revenue growth. As a result, industry revenue increased a staggering 54.1% in 2021 alone."
+        },
+        {
+            "current_performance_point_title": "There Has Been a Shift in Sales Channels",
+            "current_performance_point_description": "Historically, the vast majority of comic sales were through bookstores. While bookstores still generate the majority of revenue for this industry, an increasing proportion is now generated through sales in both brick-and-mortar and e-commerce bookstores. These channels tend to sell graphic novels rather than traditional periodical comics. This trend has benefited industry revenue growth for most of the period, as graphic novels tend to accrue higher profit due to their higher quality and price."
+        },
+        {
+            "current_performance_point_title": "Digital Comics Are Rising in Popularity",
+            "current_performance_point_description": "A significant proportion of comic book consumers have shifted from physical comic books to digital comics read on tablets and e-readers. Digital comics tend to accrue higher profit for comic publishers as well because of the lower cost of production compared with physical comic books. Comic book publishers increasingly focus on digital platforms, including webcomics, digital subscription services, and online marketplaces. This trend aimed to reach wider audiences and adapt to changing consumer preferences for digital content consumption."
+        },
+        {
+            "current_performance_point_title": "Independent and small press comic publishers are gaining prominence",
+            "current_performance_point_description": "Independent and small press comic publishers are gaining prominence, thanks to crowdfunding platforms, self-publishing options, and alternative distribution channels. These entities offer creators more creative freedom and opportunities to explore niche markets."
+        },
+        {
+            "current_performance_point_title": "The ongoing trend of theatrical and TV adaptations of comic books has attracted large audiences",
+            "current_performance_point_description": "The ongoing trend of theatrical and TV adaptations of comic books has attracted large audiences. The massive popularity of the films released by the Walt Disney Company based on Marvel properties, and films released by Warner Bros. Entertainment based on DC properties has supported a 21st-century revitalization of the comic industry."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "The industry resets after tremendous growth",
+            "future_outlook_point_description": "Retailers will contest with an abundance of options as publishers continue to expand output in order to capitalize on the burgeoning market that was established in 2021. Retailers will have to gamble on what to stock, resulting in a high variance in sales."
+        },
+        {
+            "future_outlook_point_title": "The Industry is Expected to Endure Greater External Competition From Online-Only Publishers",
+            "future_outlook_point_description": "An influx of comics being published paired with an increasing trend toward variant covers will force stores stocking comics to contend with a dramatically lengthening ordering process. After the spending spree that was 2021, which brought with it a surge of interest in collectibles and an influx of stimulus money, publishers will have to readjust to consumers tightening their purse strings amid inflationary pressures."
+        },
+        {
+            "future_outlook_point_title": "Digital Comics Experienced the Largest Increase in Demand",
+            "future_outlook_point_description": "Digital comics experienced the largest increase in demand, compared with print graphic novels and comic books due in large part to the pandemic, prompting some publishers to invest more heavily in digital-only sales. This trend is poised to continue to gain popularity as it offers consumers a quick and convenient way to access thousands of comics from their electronic devices. The shift toward digital will be compounded by the long-term decline of print advertising expenditure."
+        },
+        {
+            "future_outlook_point_title": "Graphic Novels Continue to Dominate Industry Readership",
+            "future_outlook_point_description": "The popularity of graphic novels will continue to rise, with an increasing number of readers, including those outside the traditional comic book fandom, embracing the format. Publishers will expand their graphic novel catalogs, covering a wide range of genres and themes, catering to diverse readerships."
+        },
+        {
+            "future_outlook_point_title": "Conventions and Events Sustain Industry Activity",
+            "future_outlook_point_description": "Large events and conventions for the comic industry have resumed, attracting large crowds of fans. New York Comic Con (NYCC), perhaps the most popular industry convention in the country, attracted over 220,000 fans and industry professionals alike in 2022. Although smaller in scale, San Diego's International Comic Con is the West Coast equivalent to NYCC and attracts over 100,000 attendees annually. These events will continue to support the industry's health as they drive demand."
+        }
+    ],
+    "industry_definition": "This industry publishes comic books, graphic novels and related magazines. Industry operators include well-known companies such as DC Comics and Marvel Entertainment LLC, in addition to independent comic and graphic novel publishers. The industry does not include revenue from online-only publishers or from licensing agreements for movies and merchandise.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level",
+            "Globalization Level"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level",
+            "Industry Assistance Level"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "None & Steady Level of Assistance",
+            "Very high Volatility",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2005-2023)",
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers",
+            "Per capita disposable income"
+        ],
+        "threats": [
+            "Low Outlier Growth",
+            "Print advertising expenditure"
+        ]
+    },
+    "key_trends": [
+        "Publishers compete based on price, target markets, readership and customer service. Comic publishers strive to maximize single-copy and subscription sales of their publications to increase the value of the advertising space they sell. Advertising in comic books, however, is limited and the success of one publisher over another hinges on the appeal of the content and characters of each comic book.",
+        "Competition against comic book publishing is escalating. The most direct competition comes from internet-only comics, which have lower production and distribution costs and from other entertainment options available to consumers (i.e. e-books, TV shows and movies).",
+        "The pandemic created the perfect environment for the Comic Book Publishing industry. Consumers found themselves with increased disposable income and leisure time and spent that time and money fostering hobbies like comic collecting.",
+        "Digital comics are becoming an increasingly popular medium for comic consumers. This trend is rising in popularity in line with overall shifts toward digitization.",
+        "Revenue will wane as the industry levels out following the 2021 spike. The rising popularity of digital format comics will hinder"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Book stores",
+            "segment_description": "Book stores make up the largest market for the Comic Book Publishing industry accounting for over half of revenue, with this share having increased through the end of 2024.",
+            "segment_percentage": 57.2
+        },
+        {
+            "segment": "Direct to comic book stores",
+            "segment_description": "Comic bookstores, like Forbidden Planet, make up the second-largest market for comic book publishers. Since the 1990s, publishers have increasingly focused on selling non-returnable often single-issue comic books direct to comic book stores.",
+            "segment_percentage": 34.0
+        },
+        {
+            "segment": "Digital to consumers",
+            "segment_description": "Consumers themselves have gained market share as digital buying has increased. Major publishers like Marvel Entertainment LLC and DC Comics have increasingly adopted digital distribution methods to modernize their operations, with other publishers following suit, making digital publishing a normalized part of comic book sales.",
+            "segment_percentage": 7.2
+        },
+        {
+            "segment": "Other",
+            "segment_percentage": 1.6,
+            "segment_description": ""
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "GRAPHIC NOVELS",
+            "product_description": "Graphic novels are the most popular product offered by the industry. These are generally lengthy, well-constructed comic books that tell an in-depth story as opposed to traditional single-issue serialized comics.",
+            "product_percentage": 72.7
+        },
+        {
+            "product_or_service": "COMIC BOOKS",
+            "product_description": "Comic books are typically serialized, illustrated stories told in a panel format and feature the same world and characters within each title, in which each comic book stands as a chapter in an ongoing narrative.",
+            "product_percentage": 20.1
+        },
+        {
+            "product_or_service": "DIGITAL COMICS",
+            "product_description": "Digital comics are rising in popularity. These comics are less expensive to produce and easier to distribute, though they are consequentially less profitable.",
+            "product_percentage": 7.2
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "News Syndicates in the US",
+            "Graphic Designers in the US",
+            "Photography in the US"
+        ],
+        "tier_2_suppliers": [
+            "Coated & Laminated Paper Manufacturing in the US",
+            "Promotional Products in the US",
+            "Internet Service Providers in the US"
+        ],
+        "tier_1_buyers": [
+            "Media Buying Agencies in the US",
+            "Book, Magazine & Newspaper Wholesaling in the US",
+            "Book Stores in the US",
+            "Convenience Stores in the US"
+        ],
+        "tier_2_buyers": [
+            "Professional, Scientific and Technical Services in the US",
+            "Educational Services in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Per Capita Disposable Income",
+            "determinant_description": "Trends in per capita disposable income reflect trends in demand for comic books. When disposable income rises, consumers are more willing and able to spend money on nonessential items. However, when disposable income declines, demand for comic books typically falls. Growth in per capita disposable income represents a potential opportunity for the industry."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "",
+            "percentage_establishments": 37.5,
+            "percentage_population": 35.1
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "",
+            "percentage_establishments": 14.6,
+            "percentage_population": 15.3
+        },
+        {
+            "location": "West",
+            "location_description": "",
+            "percentage_establishments": 12.5,
+            "percentage_population": 17.4
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "",
+            "percentage_establishments": 12.5,
+            "percentage_population": 14.8
+        },
+        {
+            "location": "Southwest",
+            "location_description": "",
+            "percentage_establishments": 8.3,
+            "percentage_population": 9.5
+        },
+        {
+            "location": "Plains",
+            "location_description": "",
+            "percentage_establishments": 8.3,
+            "percentage_population": 5.8
+        },
+        {
+            "location": "New England",
+            "location_description": "",
+            "percentage_establishments": 4.2,
+            "percentage_population": 4.3
+        },
+        {
+            "location": "Rocky Mountain",
+            "location_description": "",
+            "percentage_establishments": 2.1,
+            "percentage_population": 2.8
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Low",
+        "regulations_points": [
+            {
+                "regulation_title": "COPYRIGHT LAWS",
+                "regulation_description": "Comic Book publishers contend with regulations that restrict copyrights. The Copyright Act of 1976 restricts the reproduction of copyrighted work to the owner's discretion."
+            },
+            {
+                "regulation_title": "AGE RATING SYSTEMS",
+                "regulation_description": "Comic book publishers have long endured criticism about their products' content as too violent and sexual in nature. Marvel Comics, the largest comic publisher in the industry, created its own in-house rating system in 2001 to address this issue."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Life cycle stage",
+                "barrier_description": "Life Cycle Stage: mature"
+            },
+            {
+                "barrier_title": "Revenue volatility level",
+                "barrier_description": "Revenue Volatility Level: very high"
+            },
+            {
+                "barrier_title": "Industry assistance level",
+                "barrier_description": "Industry Assistance Level: none - steady"
+            },
+            {
+                "barrier_title": "Capital intensity level",
+                "barrier_description": "Capital Intensity Level: low"
+            },
+            {
+                "barrier_title": "Globalization level",
+                "barrier_description": "Globalization Level: low - steady"
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Revenue Volatility Level: very high",
+            "Industry Assistance Level: none - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Price, target markets, readership and customer service",
+                "basis_description": "To varying extents, publishers compete based on price, target markets, readership and customer service. Comic publishers strive to maximize single-copy and subscription sales of their publications to increase the value of the advertising space they sell."
+            },
+            {
+                "basis_title": "Appeal of content and characters",
+                "basis_description": "Advertising in comic books is limited and the success of one publisher over another hinges on the appeal of the content and characters of each comic book."
+            },
+            {
+                "basis_title": "Competition from internet-only comics and other entertainment",
+                "basis_description": "Competition against comic book publishing is escalating. The most direct competition comes from internet-only comics, which have lower production and distribution costs and from other entertainment options available to consumers (i.e. e-books, TV shows and movies)."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Industry concentration",
+                "concentration_description": "The industry is highly concentrated"
+            },
+            {
+                "concentration_title": "New entrants reducing concentration",
+                "concentration_description": "Although the top three comic book publishers account for nearly 50.0% of industry revenue, the industry has grown more diffused as new entrants flock into the field following a boom in revenue during 2021."
+            },
+            {
+                "concentration_title": "Niche offerings and digital publishing",
+                "concentration_description": "Many smaller publishers pride themselves on their specialty or niche offerings in this diverse and artistic field. Digital publishing has also reduced industry start-up costs, lowering the industry's barrier to entry."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Marvel Entertainment LLC",
+                "company_percentage": 25.7
+            },
+            {
+                "company_name": "DC Comics",
+                "company_percentage": 16.7
+            },
+            {
+                "company_name": "Image Comics Inc.",
+                "company_percentage": 3.8
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 53.8
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 15
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 25
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 15
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 15
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Wages have shrunk, giving way to increased profit",
+            "cost_factor_description": "Wages represent the second-largest expense category for the average industry participant but have shrunk since 2019 as struggling publishers lay off staff and others prioritize automation."
+        },
+        {
+            "cost_factor_title": "Profit has boomed",
+            "cost_factor_description": "Profitability has boomed following a revenue surge in 2021. This can be attributed to a shift in this industry toward graphic novels, which are sold through book channels, both online and brick-and-mortar, in addition to comic book stores."
+        },
+        {
+            "cost_factor_title": "Purchases have remained steady",
+            "cost_factor_description": "Purchase costs are the single most significant expense for comic book publishers. Items in this cost component include paper, ink, drawing"
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Labor/Capital Intensity",
+                "capital_intensity_description": "Capital comes in the form of computer software and hardware, drawing and sketching desks and other equipment needed to animate and write a comic book. As the industry has increasingly shifted toward a digital format, capital intensity is slated to grow in turn."
+            },
+            {
+                "capital_intensity_title": "Labor Expenses",
+                "capital_intensity_description": "The industry has a mainly labor-intensive production process involving tasks machines cannot do, such as seeking talent, contract management, writing, editing, designing cover art and marketing."
+            }
+        ],
+        "capital_intensity_trend": "Increasing"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "VERY HIGH revenue volatility",
+                "volatility_description": "The image shows a bar graph indicating very high revenue volatility in the comic book publishing industry."
+            },
+            {
+                "volatility_title": "HIGH VOLATILITY IN RECENT YEARS",
+                "volatility_description": "Trends in consumer spending and time use mainly determine volatility for comic book publishers. Pandemic-related disruptions in the form of operational capacity limits and business closures threw a wrench into industry performance."
+            },
+            {
+                "volatility_title": "EVENTS AND RELEASES",
+                "volatility_description": "High-profile comic book releases, like crossover events or tie-ins with a popular comic book film adaptation, can cause short bursts in industry revenue that quickly dip back to more typical levels."
+            }
+        ],
+        "volatility_trend": "Increasing"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Digital Comics",
+                "technological_change_description": "Digital comics have become an increasingly popular alternative to traditional print comics. Unlike traditional comics, digital comics enable consumers to have an extensive collection of material without sacrificing space."
+            },
+            {
+                "technological_change_title": "Genre and Product Development",
+                "technological_change_description": "Comic genres cycle through periods of popularity. During these periods, narrative devices, artistic styles and arc structures are honed and evolve to appeal to a broader audience."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How has the shift towards conducting business online affected demand for your services?",
+            "answer": "Digital comics and e-commerce sales comprise an increasingly significant industry revenue. This is raising profit somewhat as digital comics tend to have lower production costs."
+        },
+        {
+            "question": "Does technology change for your customers significantly affect your company?",
+            "answer": "Comic book publishers have long endured criticism about their products' content as too violent and sexual in nature. Marvel Comics, the largest comic publisher in the industry, created its own in-house rating system in 2001 to address this issue. Most comic book publishers have followed suit, establishing rating systems that alert parents of the appropriateness of a specific title for their child's age."
+        },
+        {
+            "question": "How have changes in technology affected the costs associated with serving your customers?",
+            "answer": "Digital platforms have decreased transaction costs associated with serving customers. Decreasing transaction costs inflate industry profitability."
+        },
+        {
+            "question": "Has your company been exposed to rising wages in recent years?",
+            "answer": "Wages have fallen somewhat as publishers have increasingly sought to integrate automation into their operations."
+        },
+        {
+            "question": "How have software advances altered your company's operations?",
+            "answer": "Publishers are seeking to keep up with advances in drawing and illustration software to increase the efficiency of their publication processes."
+        },
+        {
+            "question": "How is your company leveraging new technology, particularly as it pertains to data storage, computing power and other factors?",
+            "answer": "Digital comics are becoming increasingly popular, driving the industry to invest in e-commerce and e-reader platforms."
+        },
+        {
+            "question": "Are you or your competitors facing scrutiny from antitrust litigation?",
+            "answer": "Marvel and DC have market shares significantly higher than their competitors and are owned by media companies with large market shares in various entertainment industries."
+        },
+        {
+            "question": "Have any recent regulatory changes significantly affected your operations?",
+            "answer": "The Comic Book Publishers industry is not subject to a high level of specific regulations."
+        },
+        {
+            "question": "Has technological change had a positive effect on your company's financial performance?",
+            "answer": "Increased popularity of digital comics and e-commerce platforms has been beneficial to industry revenue."
+        },
+        {
+            "question": "How does your company's profit margins compare to your main competitors?",
+            "answer": "Profitability has increased as products have shifted to higher margin offerings, such as graphic novels and digital comics."
+        },
+        {
+            "question": "Which niches, if any, do you cater to? How can you diversify your product mix?",
+            "answer": "Successful publishers can identify and service niche markets. This factor may include providing an online means of reaching comic book audiences."
+        },
+        {
+            "question": "How do you attract and retain qualified staff? What qualifications must your staff have?",
+            "answer": "Access to high-quality staff is essential as they can promote and support customer service and the reputation of industry products."
+        },
+        {
+            "question": "How do you maintain control of distribution arrangements?",
+            "answer": "Successful publishers maintain control over their distribution arrangements to remain adaptable to changes in the industry and respond to challenges."
+        },
+        {
+            "question": "Do you track trends in time spent on leisure and sports? How do shifts in these trends affect demand?",
+            "answer": "Industry products are discretionary purchases generally bought for entertainment. Increases in time spent on leisure and sports generally benefit the industry."
+        },
+        {
+            "question": "Do you track trends in per capita disposable income? Are you able to increase your prices to reflect higher disposable income?",
+            "answer": "Since industry products are discretionary purchases, demand typically fluctuates with disposable income."
+        }
+    ]
+}

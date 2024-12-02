@@ -1,0 +1,459 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 369000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 0.61
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2031,
+                "revenue_cagr_value": 101
+            }
+        },
+        "profit": {
+            "profit_dollars": 33000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 1.26
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2031,
+                "profit_cagr_value": 101
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 8.8,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 0.64
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2031,
+                "profit_margins_cagr_value": 101
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 196000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0.76
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2031,
+                "industry_value_added_cagr_value": 101
+            }
+        },
+        "employees": {
+            "employees_count": 2526,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 3.63
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2031,
+                "employees_cagr_value": 101
+            }
+        },
+        "wages": {
+            "wages_dollars": 156000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0.73
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2031,
+                "wages_cagr_value": 101
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The Food Safety Training industry has navigated volatility spurred by the COVID-19 pandemic to return to growth. The need for food safety training is largely driven by increased consumer spending on food at establishments such as grocery stores and restaurants. Thus, as spending on food services and drinking places increases, so too does the need for companies to certify their employees to handle products.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Need for Food Safety Training",
+            "current_performance_point_description": "The need for food safety training is driven by consumer spending on food at establishments such as grocery stores and restaurants."
+        },
+        {
+            "current_performance_point_title": "The COVID-19 Pandemic Resulted in a Disruption",
+            "current_performance_point_description": "The COVID-19 pandemic resulted in a disruption in industry services in 2020, as most downstream demand from new and expanding establishments dried up."
+        },
+        {
+            "current_performance_point_title": "The Pandemic Saw a Rise in Online Services",
+            "current_performance_point_description": "Online classes have changed how companies provide food safety training. While most industry services are still provided in person, the increasing use of the internet has translated to increased demand for online education and certification."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "A Healthy Food Industry Will Generate Greater Need for Food Training",
+            "future_outlook_point_description": "The food industry will continue growing as consumer spending strengthens. Rising health consciousness will present restaurants with ongoing opportunities to reach niche markets with premium products."
+        },
+        {
+            "future_outlook_point_title": "New Regulation Will Adapt to Changing Conditions",
+            "future_outlook_point_description": "The industry will also be driven by rising regulation at the federal and municipal levels. During the pandemic, many restaurants were forced to operate as delivery only kitchens, and a plethora of new technology has expanded the role of nontraditional players in the food handling business."
+        }
+    ],
+    "industry_definition": "Companies in this industry offer instructional courses on food safety for vocational food service employees.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - steady"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level: high"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2024-2029)"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Revenue Growth (2019-2024)",
+            "Low Outlier Growth",
+            "Healthy eating index"
+        ]
+    },
+    "key_trends": [
+        "The COVID-19 pandemic singed the restaurant industry, temporarily curtailing demand before unleashing consumer spending across the food sector.",
+        "Food safety training services have tracked these demand swings, as the need for industry services depends largely on consumer spending at a variety of food establishments.",
+        "The pandemic saw a rise in online services, with more training services delivered off-site.",
+        "Moving forward, the industry will also see greater demand as a result of regulatory changes aimed at addressing changes in the food business spurred by COVID-19.",
+        "Food safety training providers need to be accredited. This process can be lengthy and varies across states, counties, and municipalities.",
+        "Restaurant assistance during the COVID-19 pandemic was focused on traditional establishments. Food safety training providers relied on this funding to get its client base back to work.",
+        "Food safety instruction services includes both professional training and exam preparation. Across the country, the needs of businesses differ according to rules at the state and local levels."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "In-person services",
+            "segment_description": "Majority of food safety instruction delivered on-site at restaurants or business locations.",
+            "segment_percentage": 71.0
+        },
+        {
+            "segment": "Online services",
+            "segment_description": "Online food safety instruction services saw spike in demand due to COVID-19 pandemic.",
+            "segment_percentage": 23.7
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Other types of food safety instruction services.",
+            "segment_percentage": 5.3
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Exam Preparation Services",
+            "product_description": "Exam preparation for food safety certifications required across state, county and municipal levels.",
+            "product_percentage": 61.3
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "Other services offered by food safety training companies.",
+            "product_percentage": 30.2
+        },
+        {
+            "product_or_service": "Professional Training Services",
+            "product_description": "Professional training services like sanitizing kitchens, food handling, testing and record keeping.",
+            "product_percentage": 8.5
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Computer & Packaged Software Wholesaling in the US",
+            "Drug, Cosmetic & Toiletry Wholesaling in the US",
+            "Book, Magazine & Newspaper Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Utilities in the US",
+            "Municipal Building Construction in the US",
+            "Office Stationery Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Chain Restaurants in the US",
+            "Single Location Full-Service Restaurants in the US",
+            "Food Service Contractors in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Demand from Food Services and Drinking Places",
+            "determinant_description": "Demand driven by food and beverage establishments and downstream industries. Rise in spending requires more training."
+        },
+        {
+            "determinant_title": "Consumer Spending",
+            "determinant_description": "Industry sensitive to changes in consumer spending at restaurants and grocery stores requiring certified employees."
+        },
+        {
+            "determinant_title": "Corporate Profit",
+            "determinant_description": "Most services paid for by companies, so decline in corporate profit poses threat."
+        },
+        {
+            "determinant_title": "Healthy Eating Index",
+            "determinant_description": "Measures percentage of recommended diet consumed. As health-consciousness rises, need for latest certifications increases."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region has the highest percentage of establishments (around 30%) and population (around 35%).",
+            "percentage_establishments": 30.0,
+            "percentage_population": 35.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region has the second highest percentage of establishments (around 20%) and population (around 15%).",
+            "percentage_establishments": 20.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region accounts for a moderate percentage of establishments and population.",
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        },
+        {
+            "location": "New England",
+            "location_description": "The New England region accounts for a moderate percentage of establishments and population.",
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        },
+        {
+            "location": "Plains",
+            "location_description": "The Plains region has one of the lowest percentages of establishments and population.",
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "The Rocky Mountains region has one of the lowest percentages of establishments and population.",
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        },
+        {
+            "location": "Southwest",
+            "location_description": "The Southwest region accounts for a moderate percentage of establishments and population.",
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Moderate barriers to entry",
+                "barrier_description": "The text states that there are moderate barriers to entry in the industry."
+            },
+            {
+                "barrier_title": "Steady barriers to entry",
+                "barrier_description": "The barriers to entry in the industry are described as steady."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Revenue Volatility Level: high"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Moderate level of competition",
+                "basis_description": "The text indicates a moderate level of competition in the industry."
+            },
+            {
+                "basis_title": "Steady competition",
+                "basis_description": "The competition in the industry is described as steady."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Low market share concentration",
+                "concentration_description": "The text indicates that there is low concentration of market share in the industry."
+            }
+        ],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 40
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 60
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 80
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 10
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "INCREASED RELIANCE ON TECHNOLOGY HAS MITIGATED HIGH WAGES",
+            "cost_factor_description": "Wages are high for food safety training as employees require specialization, and the primary value-add of the industry is the dissemination of information. Salaries are required for teaching staff, as well as administrative and management staff. Still, companies have relied on technological advancement to limit wage growth, providing more and more services online rather than in person."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LOW capital intensity",
+                "capital_intensity_description": "The industry is experiencing a low level of both the rate of new patents and the concentration of patents in the industry. This creates an environment where the threat of new technologies driving disruption is low."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Skyrocketing Volatility During COVID-19 Pandemic Adds to Stress",
+                "volatility_description": "Many food businesses run on knife-edge profit margins during the best of times, so the volatility of the pandemic, recovery and inflation has raised blood pressures higher for all businesses in the food industry. Swings in economic conditions and the burden of new health regulations prompt the need for food safety training throughout the pandemic."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company leverage social media platforms like Facebook or Twitter to inform and attract new customers?",
+            "answer": "Social media advertising is most important for companies in the food services market. Opening channels of communication with consumers encourages brand loyalty and trust."
+        },
+        {
+            "question": "Is your company geographically positioned in communities where there is a strong need?",
+            "answer": "Companies are located in highly populated areas in order to maximize our outreach. Consequently, higher population areas typically have more potential food establishments that require training services."
+        },
+        {
+            "question": "Is your company investing in new technology to improve internal processes?",
+            "answer": "By investing in better client tracking programs, companies are better equipped to monitor their progress. Additionally, more efficient databases enables operators to track our own progress to improve our performance."
+        },
+        {
+            "question": "What measures does your company take to ensure it is up to date with the latest certifications for food handling and safety laws?",
+            "answer": "Regulations regarding product safety, nutritional content and menu labeling vary between municipalities. Companies must keep abreast of all relevant regulations and certifications related to dietary restrictions or health concerns, kitchen processes and ingredient rules."
+        },
+        {
+            "question": "Do you have a high retention rate among consumers under contract?",
+            "answer": "By developing strong relationships with clients, consultants retain clients a majority of the time. Additionally, many clients require follow-ups and additional support to monitor their progress."
+        },
+        {
+            "question": "What kind of accreditation is required to provide trainings? Have you had difficulty gaining accreditation?",
+            "answer": "To attract new clients, industry operators must have a good reputation. Operators need to be accredited, offer good quality courses, teaching and test outcomes of graduates."
+        },
+        {
+            "question": "How quickly are you able to alter your services? How have you been able to alter your services in the past?",
+            "answer": "Operators in this industry must ensure that they meet the changing needs of their clients and adapt their course content to match the changing needs of business."
+        },
+        {
+            "question": "What current policies does your business contend with? Do you anticipate any new policies in the future?",
+            "answer": "Operators in this industry must be able to keep track of the latest government policies at the federal, state and local levels to provide up-to-date training."
+        },
+        {
+            "question": "How do you deal with consumers' increasing demand for healthy food? How have you adjusted operations to changing dietary trends?",
+            "answer": "As consumers become increasingly health-conscious, they are less likely to consume food that is generally considered unhealthy."
+        },
+        {
+            "question": "At what price point do your products become too expensive for the average consumer? How do you attract customers when disposable income is low?",
+            "answer": "As consumer spending increases, including at restaurants and grocery stores, these establishments require additional certified employees to meet rising demand."
+        },
+        {
+            "question": "What proportion of demand comes from food service establishments and drinking places? Do you specialize in any specific kind of end-user?",
+            "answer": "Demand for services provided by the Food Safety Training industry is driven by food and beverage establishments and the downstream food and beverage industries on which they rely."
+        }
+    ]
+}

@@ -1,0 +1,565 @@
+{
+    "report_title": "Aircraft, Engine & Parts Manufacturing in the US",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 219894000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 1.34
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 2.52
+            }
+        },
+        "profit": {
+            "profit_dollars": 13414000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 1.16
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 6.1,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": -0.18
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 61114000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 404335,
+            "employees_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 41882000000,
+            "wages_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": 57367000000,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": 12916000000,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Airplane, engine and parts manufacturers develop and produce planes, rotorcraft, engines and related components for civil and defense markets. Despite a collapse of demand for air travel and new airplanes amid the COVID-19 pandemic, the pent-up demand in its aftermath brought a surge of air transit that boosted revenue as airlines sought replacements for planes and plane parts. Even so, revenue has faltered at an expected CAGR of 4.0% to $219.9 billion through the current period despite a massive 22.0% increase in 2023.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Economy's Post-Pandemic Recovery Has Kickstarted Growth",
+            "current_performance_point_description": "COVID-19 restrictions stalled nearly all passenger air travel, putting aircraft, engine and parts manufacturers' largest market on shaky ground and cutting demand for their products. Air travel skyrocketed following COVID-19 as consumers expressed pent-up demand for domestic and international travel, reestablishing demand for passenger airplanes and flooding airlines with much-needed capital flexibility."
+        },
+        {
+            "current_performance_point_title": "THE MILITARY HAS READILY ADOPTED UNMANNED AIRCRAFT",
+            "current_performance_point_description": "Unmanned aerial vehicles (UAVs) have become indispensable in modern combat; aircraft manufacturers have benefited from widespread demand to keep soldiers out of the line of fire by using these devices. UAV and remote technology have largely driven innovation through the current period. Manufacturers have prioritized precision aiming and stealth technology to gain a competitive edge and acquire more defense contracts."
+        },
+        {
+            "current_performance_point_title": "DEFENSE CONTRACTORS FACE FLUCTUATING DEFENSE SPENDING",
+            "current_performance_point_description": "Federal funding allocated to the defense budget initially climbed but has tapered off through the current period as the US federal government increasingly allocated resources to domestic initiatives to address COVID-19 and domestic strife. Defense contractors have increasingly tried to mitigate fluctuations in government funding by diversifying product offerings and servicing demand from the commercial aviation sector."
+        },
+        {
+            "current_performance_point_title": "MANUFACTURERS ENDURE VOLATILE INPUT COSTS",
+            "current_performance_point_description": "Aircraft, engine and parts manufacturers require various imports, ranging from ferrous and nonferrous metals to adhesives, fasteners and complex electrical components. Companies have endured volatile supply chains and major shortages through the current period."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "INNOVATION WILL DRIVE THE GROWTH IN CONSUMER-FACING MARKETS",
+            "future_outlook_point_description": "Boeing has recently received approval from the Federal Aviation Administration to continue production of the 747 MAX line with an array of improvements to the Maneuvering Characteristics Augmentation System (MCAS) to sate fears regarding previous crashes. The new 747 MAX line of airplanes contains several efficiency-focused innovations that cut emissions by increasing fuel efficiency."
+        },
+        {
+            "future_outlook_point_title": "WORLD TENSIONS WILL BOLSTER DEMAND FROM DEFENSE MARKETS",
+            "future_outlook_point_description": "Climbing world tensions will lead to greater domestic, NATO and allied defense spending. Russia's aggression has posed a major threat to US allies like Poland and Sweden. This conflict has already sparked an uptick in demand for American fifth-generation fighters. Similarly, China's increased aggression in the South China Sea and Taiwan has led to increased military spending from neighboring countries and an unprecedented trilateral agreement between Japan, South Korea and the United States."
+        },
+        {
+            "future_outlook_point_title": "NEW TECHNOLOGY AND DEVELOPMENTS WILL DRIVE DEFENSE MARKETS",
+            "future_outlook_point_description": "The United States subsidizes research and development in the defense segment of aircraft manufacturing to produce the most high-tech armaments on the planet; this effort has proven successful in the rollout of the F-35 Lightning II fighter jet. The Department of Defense has announced its intent to create a sixth generation of fighter jets to replace aging fleets. These aircraft will have more advanced stealth and radar technology, coming with extremely lucrative contracts for manufacturers."
+        },
+        {
+            "future_outlook_point_title": "MANY MANUFACTURERS WILL CONTINUE TO PRIORITIZE CONSUMER MARKETS",
+            "future_outlook_point_description": "Commercial air transit represents the largest revenue stream, so steadily improving consumer sentiment will drive growth. Domestic and international trips by US residents to reliably and notably climb over the next five years, representing a continued interest in travel following the still-lingering pandemic lockdowns. Increased air transit places more stress on the planes and leads to issues with many mechanical parts, especially wheels and brakes."
+        }
+    ],
+    "industry_definition": "Companies in this industry manufacture and overhaul complete aircraft, develop prototypes and convert aircraft. The industry also includes the manufacture, conversion and overhaul of aircraft engines and propulsion systems. Additionally, the industry makes related parts and auxiliary equipment.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Industry Assistance Level: high - steady",
+            "Barriers To Entry Level: high - steady"
+        ],
+        "negative_impact_factors": [
+            "Life Cycle Stage: decline",
+            "Revenue Volatility Level: high",
+            "Globalization Level: high - increasing"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "High & Steady Level of Assistance",
+            "Medium Imports",
+            "High Profit vs. Sector Average"
+        ],
+        "weaknesses": [
+            "High Volatility",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration",
+            "Low Revenue per Employee",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers",
+            "Demand from air transportation"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Trade-weighted index"
+        ]
+    },
+    "key_trends": [
+        "Air travel skyrocketed following COVID-19, reestablishing demand for passenger airplanes and bringing airlines some much-needed",
+        "Capital and Usage - Heightened usage also spurred sales of parts to keep airlines gathering more wear and tear running smoothly.",
+        "Exports - Exports have surged throughout the period. Highly advanced US manufacturers have captured demand from countries seeking to expand their air capabilities but without a present manufacturing infrastructure.",
+        "New Products - New product lines will boost revenue; Boeing 747's return to production will garner robust demand. This plane is more fuel-efficient than current models and airlines will seek these solutions to mitigate volatile fuel costs.",
+        "Quality Standards - Aircraft quality must meet rigorous standards. The Federal Aviation Administration conducts routine inspections to ensure the safety of all passengers.",
+        "International Trade - International trade is subject to the greater political climate. Policies set by the National Industrial Security Program and the Defense Security Service can change as foreign relationships deteriorate or improve.",
+        "Research and Development - The US government foots the bill for most R&D costs. Elevated defense spending will fund programs to develop more advanced fighter jets and aviation equipment, a process that has led to the creation of the F-35 Lightning II.",
+        "Revenue Sources - More than half of revenue comes from the completed aircraft segment, divided between the civilian passenger sector and military defense sector. Defense contractors have benefited from rising world tensions.",
+        "Efficiency Improvements - Aircraft engines and parts are becoming more efficient. Airlines want to reduce fuel usage to comply with tightening emissions regulations and protect against volatile fuel prices.",
+        "Cost Advantages - The West provides access to Asian-sourced input costs, making transportation and per-unit costs more affordable. Seattle is an ideal location for aircraft manufacturing due to its proximity to Asian suppliers."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Civil market",
+            "segment_description": "The civil market primarily comprises airlines as well as leasing companies, other aircraft manufacturers, distributors, corporations, wealthy individuals and civil government agencies. Businesses often buy private aircraft and helicopters.",
+            "segment_percentage": 63.2
+        },
+        {
+            "segment": "Defense market",
+            "segment_description": "Defense contractors are subject to high regulation and high barriers to entry; innovative companies have a clear competitive edge and receive more contracts. Defense contracts can significantly vary by the political party or presidential administration in charge.",
+            "segment_percentage": 29.2
+        },
+        {
+            "segment": "Repair market",
+            "segment_description": "Third-party companies often purchase aircraft and engine parts to provide maintenance for existing military and civilian aircraft. This market often includes aftermarkets like repair shops and third-party distributors.",
+            "segment_percentage": 7.6
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Aircraft",
+            "product_description": "Completed aircraft broadly includes civilian and military aircraft and modifications to completed aircraft. Civilian aircraft include large commercial aircraft (LCA), medium or regional aircraft, business jets, helicopters and ultra-light aircraft, while military aircraft come in various specializations and make up one-third of all aircraft.",
+            "product_percentage": 60.7
+        },
+        {
+            "product_or_service": "Aircraft Engines and Engine Parts",
+            "product_description": "Aircraft engines and parts include turbine, shaft, jet and rocket engines. Fuel efficiency is the foremost aim of technological development in this segment; R&D teams are focused on swapping in lighter materials where possible.",
+            "product_percentage": 21.3
+        },
+        {
+            "product_or_service": "Other Aircraft Parts and Auxiliary Equipment",
+            "product_description": "Other aircraft parts and auxiliary equipment include civilian and military aircraft subassemblies and parts, aircraft mechanical power transmission equipment, propellers, helicopter rotors, research and development of parts (excluding engines) and landing gear.",
+            "product_percentage": 18.0
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Metalworking Machinery Manufacturing in the US",
+            "Engine & Turbine Manufacturing in the US",
+            "Computer Manufacturing in the US",
+            "Plastics & Rubber Machinery Manufacturing in the US",
+            "Iron & Steel Manufacturing in the US",
+            "Molybdenum & Metal Ore Mining in the US"
+        ],
+        "tier_2_suppliers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "COMPLETED AIRCRAFT PROVIDE THE MOST REVENUE",
+            "determinant_description": "Completed aircraft broadly includes civilian and military aircraft and modifications to completed aircraft. Civilian aircraft include large commercial aircraft (LCA), medium or regional aircraft, business jets, helicopters and ultra-light aircraft, while military aircraft come in various specializations and make up one-third of all aircraft."
+        },
+        {
+            "determinant_title": "UAVs in Military Actions",
+            "determinant_description": "Consumer aircraft sales rely on consumer confidence, corporate profit and business sentiment. Favorable post-pandemic conditions and robust travel markets enabled strong expansion; however, economic headwinds in 2023 have hindered growth trends."
+        },
+        {
+            "determinant_title": "AIRCRAFT ENGINES AND ENGINE PARTS CREATE STABLE DEMAND",
+            "determinant_description": "Aircraft engines and parts include turbine, shaft, jet and rocket engines. Fuel efficiency is the foremost aim of technological development in this segment; R&D teams are focused on swapping in lighter materials where possible."
+        },
+        {
+            "determinant_title": "Other Aircraft Parts and Auxiliary Equipment",
+            "determinant_description": "Sales in this segment often rely on part replacement for existing aircraft; increased flying time leads to a greater need for repairs and more revenue for parts manufacturers."
+        },
+        {
+            "determinant_title": "RESEARCH AND DEVELOPMENT",
+            "determinant_description": "More generic markets face greater competition from low-cost importers."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Moderate",
+        "import_trend": "Increasing",
+        "export_level": "Moderate",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports",
+                "trade_description": "Imports have struggled to recover from the pandemic. Imports sharply contracted during the pandemic; international trade largely halted and governments restricted trade due to COVID-19 restrictions. While exports quickly recovered from the downturn, imports have languished as supply chain issues make US alternatives a more attractive option."
+            },
+            {
+                "trade_title": "Nearly Half of All Imports Come From Two Countries",
+                "trade_description": "Aircraft products from France and Canada account for more than 40.0% of total imports. Germany also represents a growing aircraft and parts exporter. Airbus, the primary aircraft competitor, has extensive manufacturing facilities across Europe, particularly France and Germany."
+            },
+            {
+                "trade_title": "Canadian manufacturers benefit from trade proximity",
+                "trade_description": ""
+            },
+            {
+                "trade_title": "Exports",
+                "trade_description": "The US Aerospace Industry is the Largest in the World. Boeing primarily competes with Airbus, the only other large commercial aircraft manufacturer globally, for the export market. At the same time, US defense companies produce some of the most advanced military tech in the world."
+            },
+            {
+                "trade_title": "Half of World's Commercial Aircraft Use US-Made Engines",
+                "trade_description": ""
+            },
+            {
+                "trade_title": "Exports Have Skyrocketed Through the Current Period",
+                "trade_description": "Countries with prominent aerospace sectors, like Japan and South Korea, are primary importers of aircraft products."
+            },
+            {
+                "trade_title": "Rising Geopolitical Tensions Boost Demand",
+                "trade_description": ""
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "West",
+            "location_description": "Aircraft, engine and parts manufacturers are disproportionately located in the West.",
+            "percentage_establishments": 24.1,
+            "percentage_population": 17.4
+        },
+        {
+            "location": "Southeast",
+            "location_description": "Many states in the Southeast and Southwest are right-to-work states, meaning union influence is weaker and labor is more affordable.",
+            "percentage_establishments": 19.2,
+            "percentage_population": 21.8
+        },
+        {
+            "location": "Southwest",
+            "location_description": "Defense contractors benefit from Texas's favorable climate.",
+            "percentage_establishments": 13.2,
+            "percentage_population": 13.8
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region has an extensive manufacturing base.",
+            "percentage_establishments": 14.3,
+            "percentage_population": 14.9
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "Region description is not provided.",
+            "percentage_establishments": 12.9,
+            "percentage_population": 13.4
+        },
+        {
+            "location": "Plains",
+            "location_description": "Home to many Boeing locations.",
+            "percentage_establishments": 6.6,
+            "percentage_population": 6.8
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "Region description is not provided.",
+            "percentage_establishments": 5.2,
+            "percentage_population": 7.4
+        },
+        {
+            "location": "New England",
+            "location_description": "Region description is not provided.",
+            "percentage_establishments": 4.5,
+            "percentage_population": 4.5
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "AIRCRAFT QUALITY",
+                "regulation_description": "Manufacturers must meet rigorous standards set by the US government and other oversight boards."
+            },
+            {
+                "regulation_title": "TRANSACTION OVERSIGHT",
+                "regulation_description": "Manufacturers must follow policies set by the National Industrial Security Program."
+            },
+            {
+                "regulation_title": "EXPORT POLICIES",
+                "regulation_description": "Companies must adhere to the Arms Export Control Act."
+            },
+            {
+                "regulation_title": "EMISSIONS REGULATIONS",
+                "regulation_description": "Strict environmental regulations set by the EPA."
+            },
+            {
+                "regulation_title": "WORKPLACE SAFETY REGULATIONS",
+                "regulation_description": "Manufacturers must follow OSHA regulations."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is in the decline stage of its life cycle."
+            },
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "The industry has high revenue volatility."
+            },
+            {
+                "barrier_title": "Globalization Level",
+                "barrier_description": "The industry has high and increasing globalization."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: decline",
+            "Revenue Volatility Level: high",
+            "Globalization Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Industry Assistance Level: high - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Technological advancement is paramount for defense-focused manufacturers",
+                "basis_description": "Government contracts go to companies that provide the military with the most cutting-edge equipment."
+            },
+            {
+                "basis_title": "Air travel providers are looking for efficiency",
+                "basis_description": "Airplane manufacturers that can supply engines with lower emissions and lower fuel costs will garner higher demand."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Leading manufacturers secure repeat contracts",
+                "concentration_description": "Many manufacturers choose to sign multiyear agreements."
+            },
+            {
+                "concentration_title": "Parts manufacturers face less concentration",
+                "concentration_description": "Specialized parts markets have greater fragmentation."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Raytheon Technologies Corporation",
+                "company_percentage": 16.7
+            },
+            {
+                "company_name": "Boeing Co",
+                "company_percentage": 13.7
+            },
+            {
+                "company_name": "Ge Aviation Uk",
+                "company_percentage": 9.0
+            },
+            {
+                "company_name": "Lockheed Martin Corpo",
+                "company_percentage": 10.1
+            },
+            {
+                "company_name": "Textron Inc.",
+                "company_percentage": 1.5
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 25.0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 20.0
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 30.0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 10.0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 2.0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 3.0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Heavy Dependency on Purchases",
+            "cost_factor_description": "Manufacturers rely on various inputs, vulnerable to upstream volatility."
+        },
+        {
+            "cost_factor_title": "Profit Trends",
+            "cost_factor_description": "Profit is affected by increases in input costs but contracts help stabilize revenue."
+        },
+        {
+            "cost_factor_title": "Labor Quality and Cost",
+            "cost_factor_description": "Requires highly skilled labor, leading to higher wage expenses."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "MODERATE capital intensity",
+                "capital_intensity_description": "Companies have adopted new production technology."
+            },
+            {
+                "capital_intensity_title": "Less Patent Activity",
+                "capital_intensity_description": "The rate of new patents is low, signaling lower disruption threat."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "LONG-TERM CONTRACTS HELP STABILIZE REVENUE",
+                "volatility_description": "Contracts secure stable demand and revenue."
+            },
+            {
+                "volatility_title": "YEARLY FLUCTUATIONS",
+                "volatility_description": "Revenue can shift with consumer and business confidence."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Innovation in Aircraft Production",
+                "technological_change_description": "Technological advancements play a critical role."
+            },
+            {
+                "technological_change_title": "Importance of UAVs",
+                "technological_change_description": "Significant developments in military UAV technology."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How have imports from low-wage countries like China and Mexico impacted your operations?",
+            "answer": "While imports from low wage countries are increasing, the high-end nature of industry products makes low wage production less attractive."
+        },
+        {
+            "question": "Have export markets offered an opportunity for your company?",
+            "answer": "As the value of the US dollar depreciates, industry revenue from exports will likely rise."
+        },
+        {
+            "question": "Is your company investing heavily in R&D to meet changing consumer preferences?",
+            "answer": "Industry operators have invested billion into a new generation of commercial and military aircraft."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "Fluctuating prices of steel and aluminum can threaten profit margins."
+        },
+        {
+            "question": "How does your company invest in technology, such as 3D printing?",
+            "answer": "Incorporating technology can reduce manufacturing expenses."
+        }
+    ]
+}

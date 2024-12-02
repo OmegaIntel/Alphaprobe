@@ -1,0 +1,578 @@
+{
+    "report_title": "Industry Research: Industrial Chocolate Production in the US",
+    "report_date": "Sep 12, 2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 2110000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 0.23
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": -0.82
+            }
+        },
+        "profit": {
+            "profit_dollars": 103000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 0
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.9,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 388000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 4660,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 243000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 1734000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 165000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The Industrial Chocolate Production industry has experienced growth, despite volatility from fluctuating cocoa prices and challenges introduced by the COVID-19 pandemic. The industry's production, which includes processed cocoa beans to manufacture cocoa products, including cocoa powder, liquor and butter, is largely destined for chocolate confectionery producers, although bakers and dairy beverage producers also buy cocoa products to infuse into their foods. In recent years, fluctuations in cocoa prices have been offset by improving disposable incomes and greater demand for premium chocolate goods.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Revenue growth",
+            "current_performance_point_description": "Revenue for industrial chocolate producers has been increasing at a CAGR of 0.5% over the past five years and is expected to reach $2.1 billion in 2023. This includes a decline of 0.5% in 2023, when profit is projected to reach 4.9%."
+        },
+        {
+            "current_performance_point_title": "Volatility of cocoa prices",
+            "current_performance_point_description": "Cocoa beans are the main input into products. When cocoa bean prices rise, purchase cost grow; however, it also raises the value of inventory, enabling companies to pass costs downstream via higher selling prices and boosting industry revenue. Conversely, falling cocoa prices devalue inventory and cause selling prices and revenue to decline."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Projected revenue decline",
+            "future_outlook_point_description": "Revenue for industrial chocolate producers is expected to decline at a CAGR of 0.9% to $2.0 billion over the five years to 2028, when profit is projected to reach 4.5%."
+        },
+        {
+            "future_outlook_point_title": "Falling cocoa prices",
+            "future_outlook_point_description": "With the world price of cocoa forecast to contract at a CAGR of 2.0% over the next five years, industrial chocolate producers will experience lower product selling prices."
+        },
+        {
+            "future_outlook_point_title": "Stable demand",
+            "future_outlook_point_description": "Industry demand will likely remain strong with higher chocolate consumption. Chocolate is considered an inexpensive indulgence by the majority of Americans, causing demand to remain resilient in both good and bad economic times."
+        }
+    ],
+    "industry_definition": "This industry includes companies that press cocoa beans to manufacture cocoa ingredients used in other food processing. This industry's products include cocoa powder, cocoa butter and cocoa liquor.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Technology Change Level: low",
+            "Barriers To Entry Level: high - steady"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level: low - steady",
+            "Concentration Level: high",
+            "Regulation Level: heavy - steady",
+            "Globalization Level: high - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature",
+            "Revenue Volatility Level: medium",
+            "Capital Intensity Level: medium",
+            "Competition Level: medium - increasing"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Imports",
+            "Low Profit vs. Sector Average",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers: Per capita disposable income"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth"
+        ]
+    },
+    "key_trends": [
+        "Cocoa beans are the main input into products",
+        "The role of imported chocolate has undercut the position of domestic industrial chocolate producers",
+        "The majority of products are sold to the downstream Chocolate Production industry",
+        "Stability in cocoa prices is good news for small chocolate producers that are less able to pass high costs downstream",
+        "Industry demand will likely remain strong with higher chocolate consumption",
+        "Global markets are expected to drive demand for industrial chocolate products",
+        "High demand for chocolate raises the selling price of cocoa beans and products, especially when supply is limited"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Chocolate producers",
+            "segment_description": "Chocolate producers are the primary market for industrial chocolate. This downstream market manufactures chocolate confectionery, like chocolate bars and boxed chocolates, for resale to grocers, wholesalers and retailers, who then sell it to consumers (see IBISWorld Report 31135). Chocolate producers purchase their cocoa products from this industry as well as from importers. Major chocolate producers include Hershey's, Mars, Nestle and Mondelez, all of which are either based in the United States or have significant production operations in the United States.",
+            "segment_percentage": 67.1
+        },
+        {
+            "segment": "Confectionery wholesalers",
+            "segment_description": "Confectionary wholesalers supply chocolate products to various confectionery producers and candy retailers. This market is an important link in the supply chain because wholesalers are the most resourceful and cost-efficient sales channel for industry producers.",
+            "segment_percentage": 17.6
+        },
+        {
+            "segment": "Exports",
+            "segment_description": "Global markets for cocoa products are increasingly important. Over 90.0% of all exports go to neighboring Canada and Mexico. Still, a greater share of exports is destined for emerging markets whose consumers are have higher disposable incomes and consume chocolate as a snack or delicacy.",
+            "segment_percentage": 7.8
+        },
+        {
+            "segment": "Specialty retailers",
+            "segment_description": "Some industrial chocolate producers sell their finished product to bakery cafes, specialty chocolate stores or in gift shops within their factories. For example, California-based Guittard Chocolate Company has an exclusive contract with Williams-Sonoma to provide all the for-sale chocolate in the home goods retailer's locations. Bakeries use cocoa products to make chocolate baked treats, including cakes, muffins and cookies. Although sweet treat sales have been hampered by America's increasing health consciousness, this market's demand for cocoa has remained steady as bakers have responded with low-fat and gluten-free treats using chocolate. Dairy producers use cocoa products to make chocolate-flavored beverages, including chocolate milk and hot cocoa. Dairy producers have been a declining because chocolate milk is rich in sugars and producers have had limited recourse to Americans' call for more nutritious beverages.",
+            "segment_percentage": 4.2
+        },
+        {
+            "segment": "Other",
+            "segment_description": "<UNKNOWN>",
+            "segment_percentage": 3.3
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Cocoa Powder",
+            "product_description": "Cocoa powder is the solid substance remaining from cocoa beans after the fat, or cocoa butter, is removed. Cocoa powder is relatively inexpensive, and food manufacturers who buy it go on to re-add different types of cocoa butter and liquor to the powder to create the desired chocolate product. Markets have increased their use of cocoa powder in chocolates because the powder is a rich source of nutrition. It contains a variety of minerals, like zinc, calcium, and magnesium, as well as caffeine. Cocoa powder is also a rich source of flavanol antioxidants, which manufacturers are using to market their products as nutritious and appealing.",
+            "product_percentage": 42.8
+        },
+        {
+            "product_or_service": "Sweetened Chocolate",
+            "product_description": "This segment includes solid chocolate chips and blocks meant for use an ingredient for melting or baking. Chip and block chocolate types include milk, dark, and white chocolate, and are purchased according to the end confectionery desired. Sweetened varieties generate nearly ten times the revenue of unsweetened varieties, which are subject to tariffs. The dark variety has become more popular as chocolate consumption shifts towards this variety, considered both more nutritious and high-end than regular milk chocolate. The organic and fair-trade chocolate block subsegments have also become more popular as more Americans became health and eco-conscious.",
+            "product_percentage": 34.2
+        },
+        {
+            "product_or_service": "Unsweetened Chocolate",
+            "product_description": "<UNKNOWN>",
+            "product_percentage": 4.9
+        },
+        {
+            "product_or_service": "Cocoa Liquor",
+            "product_description": "Cocoa liquor, also known as cocoa paste, is cocoa mass in pure liquid form. It contains both solids and oils and can be later separated into cocoa powder and cocoa butter. To make cocoa liquor, cocoa beans are first fermented, dried, roasted and separated from their skins before being ground into a paste. Cocoa butter is a derivative of cocoa liquor, and is the edible vegetable fat extracted from the cocoa paste. It is used to make chocolate, and is also used in lotions and pharmaceutical creams.",
+            "product_percentage": 9.0
+        },
+        {
+            "product_or_service": "Chocolate Syrup",
+            "product_description": "Chocolate syrup is used as an ingredient condiment into cakes, ice creams and other food products. Typically, syrup is a byproduct of cocoa powder, created by adding sugar and water to the powder.",
+            "product_percentage": 3.9
+        },
+        {
+            "product_or_service": "Cocoa Butter",
+            "product_description": "<UNKNOWN>",
+            "product_percentage": 5.2
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Forklift & Conveyor Manufacturing in the US",
+            "Tractors & Agricultural Machinery Manufacturing in the US",
+            "Computer Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [
+            "Sugarcane Harvesting in the US",
+            "Dairy Product Production in the US",
+            "Syrup & Flavoring Production in the US",
+            "Margarine & Cooking Oil Processing in the US"
+        ],
+        "tier_2_buyers": [
+            "Supermarkets & Grocery Stores in the US",
+            "Convenience Stores in the US",
+            "Specialty Food Stores in the US",
+            "Confectionery Wholesaling in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Demand from chocolate producers",
+            "determinant_description": "Demand for industrial chocolate is mainly determined by demand from chocolate producers, the largest downstream market."
+        },
+        {
+            "determinant_title": "Consumer health and disposable income",
+            "determinant_description": "Chocolate demand is affected by consumer health. As disposable incomes increase, so does consumer spending on nonessential food items, like candy and other chocolate-based treats."
+        },
+        {
+            "determinant_title": "Value of the US dollar",
+            "determinant_description": "The value of the American dollar also has an effect on demand for the industry's chocolate products. As the value of the US dollar rises, imported cocoa products becomes more inexpensive relative to domestically produced cocoa products, negatively impacting sales."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Decreasing",
+        "export_level": "Moderate",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Import sources",
+                "trade_description": "Imports originate largely from low-cost cacao producers in Africa and Asia, with Cote d'Ivoire being the largest importer."
+            },
+            {
+                "trade_title": "Import growth drivers",
+                "trade_description": "The low cost of internationally produced industrial chocolate has promoted import growth, with imports accounting for nearly half of domestic demand."
+            },
+            {
+                "trade_title": "Export destinations",
+                "trade_description": "Most exports are destined for Canada and Mexico, with Canada accounting for nearly four-fifths of all exports."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic has the largest number of downstream chocolate producers. The region is the birthplace of chocolate production in the United States making it a likely place of expansion because it already has the necessary infrastructure in place. Major company Barry Callebaut has two of its American offices in the region.",
+            "percentage_establishments": 30.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region is home to the industrial states of Illinois, Ohio and Michigan. Illinois is home to Chicago's Blommer Chocolate Company, the largest producer in the industry.",
+            "percentage_establishments": 20.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "West",
+            "location_description": "The West is led by California, which has access to large markets, domestically and internationally. California alone accounts for more than 10.0% of all industrial chocolate producers. California boasts a well-established infrastructure for easy access to big cities, like San Francisco, Los Angeles, Seattle and cities in Mexico and Western Canada. Guittard Chocolate Company, a notable industrial chocolate producer, is located in California.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "Southeast",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 10.0,
+            "percentage_population": 25.0
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 101.0,
+            "percentage_population": 101.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 101.0,
+            "percentage_population": 101.0
+        },
+        {
+            "location": "Plains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 101.0,
+            "percentage_population": 101.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 101.0,
+            "percentage_population": 101.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "FOOD & DRUG ADMINISTRATION (FDA)",
+                "regulation_description": "The FDA sets standards regarding ingredients listed, minimum contents for ingredients and the inspection of premises to ensure compliance. The FDA requires all food to display nutritional content and for all health claims to meet FDA regulations."
+            },
+            {
+                "regulation_title": "FEDERAL TRADE COMMISSION (FTC)",
+                "regulation_description": "The Fair Packaging & Labeling Act, mandated by the FTC requires manufacturers to disclose information regarding the product contents and business information to prevent consumer deception."
+            },
+            {
+                "regulation_title": "ENVIRONMENTAL PROTECTION AGENCY (EPA)",
+                "regulation_description": "The EPA oversees environmental protection at the federal level, governing manufacturing activities under the significant laws like the Clean Water Act (CWA) and the Clean Air Act (CAA). Both regulate the manufacturing process and waste disposal."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is mature."
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "The level of industry assistance is low and steady."
+            },
+            {
+                "barrier_title": "Concentration Level",
+                "barrier_description": "The industry concentration level is high."
+            },
+            {
+                "barrier_title": "Regulation Level",
+                "barrier_description": "The regulation level is heavy and steady."
+            },
+            {
+                "barrier_title": "Globalization Level",
+                "barrier_description": "The globalization level is high and steady."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "The technology change level is low."
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Price Competition",
+                "basis_description": "Manufactures mainly compete on price, especially in the generic product segment."
+            },
+            {
+                "basis_title": "Quality Competition",
+                "basis_description": "Quality is an important basis of competition, determined by nutrition, taste and ingredient quality."
+            },
+            {
+                "basis_title": "Nutritional Value",
+                "basis_description": "Nutritional value has become an increasing basis of competition, with companies introducing organic and dark cocoa products."
+            },
+            {
+                "basis_title": "Taste",
+                "basis_description": "Producers offering the best-tasting products have a competitive advantage."
+            },
+            {
+                "basis_title": "Ingredient Quality",
+                "basis_description": "The quality and source of ingredients have become more important to consumers."
+            },
+            {
+                "basis_title": "Sustainable Sourcing",
+                "basis_description": "Top customers aim to increase use of certified sustainable cocoa."
+            },
+            {
+                "basis_title": "Downstream Relationships",
+                "basis_description": "Developing strong relationships with downstream markets like food producers, retailers and wholesalers is critical."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "High",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "High Concentration",
+                "concentration_description": "The industry is highly concentrated with the three largest companies accounting for over 80% of revenue."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Blommer Chocolate Company",
+                "company_percentage": 36.3
+            },
+            {
+                "company_name": "Cargill, Incorporated",
+                "company_percentage": 26.8
+            },
+            {
+                "company_name": "Barry Callebaut AG",
+                "company_percentage": 19.1
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 4.9
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 11.5
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 1.9
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0.5
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 1.2
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 1.0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 26.0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Profit margins are buoyed by strong demand for chocolate products",
+            "cost_factor_description": "Profit rises when demand for chocolate products is strong. Likewise, margins rise further when the global supply of cocoa is constrained or limited, boosting the value of inventory and raises the selling price of cocoa products."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Medium capital intensity",
+                "capital_intensity_description": "The Industrial Chocolate Production industry is moderately capital intensive. For every $1.00 spent on wages, companies typically spend $0.17 in capital investment in 2023. Companies require capital to maintain and upgrade its storage facilities, processing plants, refineries, ports, transportation assets and other facilities."
+            },
+            {
+                "capital_intensity_title": "Technological Disruption",
+                "capital_intensity_description": "Technological disruption has come from the 3D printing of chocolate, enabling anyone to make chocolate on their own accord. However, manufactures have also harnessed this technology to deliver new products to consumers."
+            },
+            {
+                "capital_intensity_title": "Low technology change",
+                "capital_intensity_description": "Technology change in the Industrial Chocolate Production industry is limited. The basic processes involved in industrial chocolate production have remained the same."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Cocoa Prices Drive Revenue Trends",
+                "volatility_description": "Cocoa prices have shown some volatility in recent years, climbing through 2020 before beginning a decline in 2021 that has lasted into the current year. The price of ingredients is a fundamental determinant of which direction the industry moves."
+            },
+            {
+                "volatility_title": "Consumer Factors",
+                "volatility_description": "Volatility is primarily influenced by major shifts in the macroeconomic environment, which impacts consumers' ability to spend on chocolate. The most important indicator of consumer spending is disposable income."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Heavy regulation",
+                "technological_change_description": "While the basic production process has remained the same, improving automation and computerization has advanced industry logistics. To ensure consistency in health standards, factories constantly run computerized quality tests."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company affected by rising imports?",
+            "answer": "Import penetration has negatively impacted industry revenue. Moving forward, imports are expected to continue to rise and account for an even larger share of domestic demand."
+        },
+        {
+            "question": "Have exports offered an opportunity for your company?",
+            "answer": "While exports do account for a somewhat significant share of revenue, exports are expected to fall due to the appreciating US dollar making US chocolate products more expensive abroad."
+        },
+        {
+            "question": "How have international tariffs impacted your ability to import and export products?",
+            "answer": "Tariffs have both helped and hurt the industry as the United States has placed import tariffs on certain forms of industry goods. Meanwhile, China has retaliated and has placed an import tariff on certain chocolate products, limiting export opportunities."
+        },
+        {
+            "question": "Is your company investing heavily in R&D to meet changing consumer preferences?",
+            "answer": "Larger industry operators, such as Bloomer, are investing in research and development in order to create more product lines and improve on existing formulas."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "The world price of cocoa, the key input for the industry, has experienced significant swings, which has impacted profitability and purchasing costs during the period."
+        },
+        {
+            "question": "How is your company leveraging new technology?",
+            "answer": "The Industrial Chocolate Production industry has not experienced much technological change over the past decade, thus new technology is not often incorporated into the production process."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation over the past five years?",
+            "answer": "While the industry has experienced some automation, the growing trend towards premium artisan chocolate has resulted in a need for more employees as these products are often produced by hand."
+        },
+        {
+            "question": "Do you work with trade associations or other interest groups to advance your company's interests?",
+            "answer": "Industrial chocolate producers work with various trade and industry associations, such as the Fine Chocolate Industry Association and the National Confectioners Association."
+        },
+        {
+            "question": "Do you have any big projects on the horizon that will require capital financing?",
+            "answer": "larger operators are investing in research and development in order to expend their product offering. This type of investment is often costly and does not always yield the return expected."
+        },
+        {
+            "question": "How do your company's profit margins compare to your main competitors'?",
+            "answer": "Given that the industry is highly concentrated profit margins among similarly sized companies tend to be relatively similar."
+        }
+    ]
+}

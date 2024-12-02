@@ -1,0 +1,478 @@
+{
+    "report_title": "Beer Wholesaling Industry Report",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 100079000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2002,
+                "end_year": 2023,
+                "revenue_cagr_value": 1.63
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.32
+            }
+        },
+        "profit": {
+            "profit_dollars": 5004000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 3.84
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 3.5
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 2.17
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 2.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 13865000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 2.5
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 2.0
+            }
+        },
+        "employees": {
+            "employees_count": 118932,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 0.85
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 0.9
+            }
+        },
+        "wages": {
+            "wages_dollars": 7774000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 1.5
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 1.4
+            }
+        },
+        "imports": {
+            "imports_dollars": 25000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": -0.5
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": -0.3
+            }
+        },
+        "exports": {
+            "exports_dollars": 22000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 0.75
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 0.9
+            }
+        }
+    },
+    "executive_summary": "Revenue growth for the Beer Wholesaling industry has been supported by beneficial regulations and shifts in consumer preferences towards premium and craft beers. The three-tier system in the alcohol industry refers to the structured distribution pathway from breweries, through wholesalers, to retailers. This system benefits beer wholesalers by providing them a secure position in the supply chain. The shift in consumer preferences towards premium and craft beers has supported the industry by driving demand for higher-priced products, consequently leading to an increase in revenue and profit. Over the past five years, industry revenue is expected to have increased at a CAGR of 3.3% to $100.1 billion, including an increase of 1.9% in 2023 alone.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Three-Tier System is Crucial to the Success of the Industry",
+            "current_performance_point_description": "The alcohol distribution system upholds a clear separation of responsibilities and promotes a competitive market environment."
+        },
+        {
+            "current_performance_point_title": "Distinct Separation Between Manufacturers, Wholesalers and Retailers",
+            "current_performance_point_description": "The distinct separation prevents monopolistic practices and ensures a level playing field for businesses of all sizes."
+        },
+        {
+            "current_performance_point_title": "Shifting Consumer Preferences Has Expanded Wholesalers' Portfolios",
+            "current_performance_point_description": "Over the past five years, consumer preferences have shifted towards craft and specialty beers."
+        },
+        {
+            "current_performance_point_title": "Online Sales and Alcohol Delivery Has Shifted the Industry Landscape",
+            "current_performance_point_description": "The rise of online alcohol sales and delivery services has expanded the scope of beer wholesaling."
+        },
+        {
+            "current_performance_point_title": "Changing Alcohol Regulations Challenges the Industry",
+            "current_performance_point_description": "Varying alcohol laws and regulations across states significantly influence the industry."
+        },
+        {
+            "current_performance_point_title": "The Industry Experienced Growth Despite COVID-19",
+            "current_performance_point_description": "Despite the disruption from COVID-19, the industry showed resilience in 2020."
+        },
+        {
+            "current_performance_point_title": "A Shortage of Carbon Dioxide Contributed to Rising Beer Prices",
+            "current_performance_point_description": "In 2022, a shortage of carbon dioxide increased costs for brewers."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Consumer Trends Will Continue to Shape the Industry",
+            "future_outlook_point_description": "There is a notable shift towards craft beers, positively impacting revenue."
+        },
+        {
+            "future_outlook_point_title": "The Rising Popularity of Non-Alcoholic Beers",
+            "future_outlook_point_description": "Health trends are steering the industry towards a rising demand for non-alcoholic beers."
+        },
+        {
+            "future_outlook_point_title": "Differentiating by Promoting and Offering Sustainable Products",
+            "future_outlook_point_description": "Sustainability initiatives will significantly affect the industry over the next five years."
+        },
+        {
+            "future_outlook_point_title": "A Campaign to Remove Three-Tiered System Will Gain Traction",
+            "future_outlook_point_description": "Critics argue that the system creates barriers to entry for new breweries."
+        }
+    ],
+    "industry_definition": "The Beer Wholesaling in the US industry comprises operators that primarily purchase, store, sell and distribute beer and other fermented malt beverages made by the Breweries industry.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "High & Steady Barriers to Entry",
+            "High & Steady Level of Assistance",
+            "Low Competition",
+            "Low Volatility",
+            "Low Imports"
+        ],
+        "negative_impact_factors": [
+            "Low Revenue per Employee",
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Excise tax on beer"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "High & Steady Level of Assistance",
+            "Low Competition",
+            "Low Volatility",
+            "Low Imports",
+            "High Profit vs. Sector Average"
+        ],
+        "weaknesses": [
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Per capita expenditure on alcohol"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Excise tax on beer"
+        ]
+    },
+    "key_trends": [
+        "The Beer Wholesaling industry has experienced growth over the past five years.",
+        "Changing consumer preferences towards premium and craft beers has contributed to the boost in revenue."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Beer, wine and liquor stores",
+            "segment_description": "This segment includes stores that sell beer.",
+            "segment_percentage": 42.3
+        },
+        {
+            "segment": "Supermarkets and groceries",
+            "segment_description": "Includes grocery stores and supermarkets.",
+            "segment_percentage": 30.5
+        },
+        {
+            "segment": "Other wholesalers",
+            "segment_description": "Involves wholesalers of food and beverages.",
+            "segment_percentage": 15.5
+        },
+        {
+            "segment": "Restaurants, drinking establishments and hotels",
+            "segment_description": "Includes establishments where beer is consumed on site.",
+            "segment_percentage": 10.5
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Premium",
+            "product_description": "Includes premium beers with higher ABV.",
+            "product_percentage": 40
+        },
+        {
+            "product_or_service": "Sub-Premium",
+            "product_description": "Includes sub-premium beers.",
+            "product_percentage": 17.5
+        },
+        {
+            "product_or_service": "Super-Premium",
+            "product_description": "Includes the most costly beers with high ABVs.",
+            "product_percentage": 15.8
+        },
+        {
+            "product_or_service": "Craft",
+            "product_description": "Includes craft beers from independent brewers.",
+            "product_percentage": 14.5
+        },
+        {
+            "product_or_service": "Flavored Malt Beverages",
+            "product_description": "Includes alcoholic seltzers.",
+            "product_percentage": 12.2
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Agriculture, Forestry, Fishing and Hunting",
+            "Wheat, Barley & Sorghum Farming",
+            "Margarine & Cooking Oil Processing"
+        ],
+        "tier_2_suppliers": [
+            "Breweries",
+            "Distilleries"
+        ],
+        "tier_1_buyers": [
+            "Supermarkets & Grocery Stores",
+            "Gas Stations",
+            "Beer, Wine & Liquor Stores",
+            "Hotels & Motels",
+            "Casino Hotels",
+            "Convenience Stores"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Per Capita Expenditure on Alcohol",
+            "determinant_description": "Higher expenditure leads to greater demand for beers."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast represents the largest number of establishments.",
+            "percentage_establishments": 40,
+            "percentage_population": 50
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "Second-highest number of establishments.",
+            "percentage_establishments": 30,
+            "percentage_population": 20
+        },
+        {
+            "location": "West",
+            "location_description": "California is the largest state by industry establishment.",
+            "percentage_establishments": 30,
+            "percentage_population": 30
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "THE THREE-TIER DISTRIBUTION SYSTEM",
+                "regulation_description": "Beer manufacturers must sell to authorized wholesalers."
+            },
+            {
+                "regulation_title": "DRY LAWS",
+                "regulation_description": "Certain areas impose restrictions on alcoholic beverages."
+            },
+            {
+                "regulation_title": "LICENSES",
+                "regulation_description": "Wholesalers must obtain various licenses."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Capital and labor intensive",
+                "barrier_description": "Labor and capital-intensive nature of the industry."
+            },
+            {
+                "barrier_title": "Ongoing operational costs",
+                "barrier_description": "Equipment and employee salaries are ongoing costs."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": []
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Price and customer satisfaction",
+                "basis_description": "Competition based on price and satisfaction."
+            },
+            {
+                "basis_title": "Unique products or service",
+                "basis_description": "Requires competitive pricing and unique offerings."
+            },
+            {
+                "basis_title": "Competing with wine and spirits",
+                "basis_description": "Industry competes with wine and spirits wholesalers."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Diverse consumer preferences",
+                "concentration_description": "The industry caters to diverse consumer preferences."
+            },
+            {
+                "concentration_title": "Online sales enabling smaller players",
+                "concentration_description": "Online sales have allowed small and medium-sized wholesalers to reach a broader base."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Reyes Beverage Group Inc.",
+                "company_percentage": 32.6
+            },
+            {
+                "company_name": "Columbia Distributing",
+                "company_percentage": 0.5
+            },
+            {
+                "company_name": "DBI Beverage Inc.",
+                "company_percentage": 0.2
+            },
+            {
+                "company_name": "Straub Distributing",
+                "company_percentage": 0.2
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 12.5
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 17.5
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 52.5
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 3.5
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 7.5
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 3.5
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 2
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 2
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases are the Largest Cost",
+            "cost_factor_description": "Purchases account for the largest share of industry revenue."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_trend": "Steady",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital intensity",
+                "capital_intensity_description": "The industry is labor and capital-intensive."
+            },
+            {
+                "capital_intensity_title": "Moderate technology change",
+                "capital_intensity_description": "Lower likelihood of innovation materializing."
+            }
+        ]
+    },
+    "revenue_volatility": {
+        "volatility_level": "Low",
+        "volatility_points": [
+            {
+                "volatility_title": "Changing consumer preferences affect volatility",
+                "volatility_description": "New trends towards healthier lifestyles affect industry stability."
+            },
+            {
+                "volatility_title": "Fluctuations in input prices increase volatility",
+                "volatility_description": "Dependency on grains affects pricing and costs."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_trend": "Steady",
+        "technological_change_points": []
+    },
+    "FAQs": [
+        {
+            "question": "How do shifts in consumer preferences toward health consciousness affect business performance?",
+            "answer": "Growing competition emerges from wine and health-focused beverages."
+        },
+        {
+            "question": "What are the key regulations for beer wholesalers?",
+            "answer": "Wholesalers require licenses and must comply with state regulations."
+        },
+        {
+            "question": "What industry assistance is available?",
+            "answer": "NBWA supports the industry and advocates for beneficial regulations."
+        }
+    ]
+}

@@ -1,0 +1,560 @@
+{
+    "report_title": "Electronic Medical Records Industry Report",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 2507000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 2.33
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 4.15
+            }
+        },
+        "profit": {
+            "profit_dollars": null,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 0.84
+            },
+            "profit_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 12.9,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": null
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 5914000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 33240,
+            "employees_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 3309000000,
+            "wages_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "The adoption of electronic medical record (EMR) systems has proliferated in healthcare settings over the past decade. Federal funding and legislation requiring the uptake of EMR systems in recent years have led more than 96.0% of hospitals and physicians to go digital as of 2023, compared to less than 10.0% in 2010. An evolving healthcare landscape is enhancing the role of EMR providers in the health sector. While demographic and economic factors drive the use of EMRs, valuable cost-savings, security and coordination show the strength of digital records over paper-based ones.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "EHRs have become a focal point of healthcare delivery",
+            "current_performance_point_description": "Healthcare organizations' adoption of electronic health records (EHRs) has surged over the past decade. EHR adoption has been on an upward since 2009 (following the American Recovery and Reinvestment Act), with adoption rates at hospitals jumping from 12.0% in 2009 to over 96.0% in 2021, according to data from the ONC; office-based physicians show a similar trend, but an overall lower adoption rate (22.0% in 2009 to 78.0% in 2021)."
+        },
+        {
+            "current_performance_point_title": "An Evolving Regulatory Environment Bolsters EHR Vendors",
+            "current_performance_point_description": "Regulatory and financial incentives underpin the industry's growth, compelling healthcare providers to adopt systems that streamline operations and enhance patient outcomes. The 21st Century Cures Act, although passed in 2016, continues to shape the landscape for how EHR vendors develop, deploy or license systems. One of the primary goals of the Act is promoting interoperability, mandating developers to create systems that offer this functionality; other vital components include ensuring patients can easily access their data, establishing security standards, facilitating data exchange and enforcing penalties for noncompliance."
+        },
+        {
+            "current_performance_point_title": "Consolidation Rewards the Industry's Leading Vendors",
+            "current_performance_point_description": "Consolidation has been a defining trend in the EHR space for over a decade. Data from KLAS Research, a firm focusing on health IT, shows that the number of EHR vendors shrunk from around 1,000 in 2009 to 400 in 2019. As EHR adoption approaches saturation, vendors have had to use mergers and acquisitions to diversify their offerings and bolster market share to stay competitive."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "EHR SYSTEMS WILL BE VITAL TO AN EVOLVING HEALTHCARE LANDSCAPE",
+            "future_outlook_point_description": "Demographic and economic forces will continue driving healthcare consumption, leading the volume and frequency of medical records to accelerate moving forward. An aging population's rapidly expanding medical needs will result in costlier and more complex medical cases. Medical case managers are critical in keeping costs low and managing utilization for these cases. Health systems will depend more on efficient, fast and secure ways to manage and access patients' medical information, strengthening demand for EMR systems."
+        },
+        {
+            "future_outlook_point_title": "HEALTH SECTOR CONSOLIDATION WILL CREATE OPPORTUNITIES AND CHALLENGES",
+            "future_outlook_point_description": "The COVID-19 pandemic exposed the importance of interoperability between EMR systems. Systems offering interoperability between organizations and healthcare providers will only mount in importance moving forward. Consolidation in the broader health sector will expose concerns about interoperability as more growing health systems switch to one standard EHR provider over multiple ones. One standard EHR system creates better experiences for staff and patients while reducing costs and errors."
+        },
+        {
+            "future_outlook_point_title": "Government Funding Will Support EHR Uptake",
+            "future_outlook_point_description": "Government funding for electronic health records will continue to support industry expansion. A proposed $20.0 funding bill would encourage the broader adoption of electronic health records for behavioral health providers. Only 6.0% of behavioral health providers were using a certified EHR as of 2022, according to the Medicaid and CHIP Payment and Access Commission, providing EHR vendors access to an underserved and untapped market."
+        },
+        {
+            "future_outlook_point_title": "Tech Advances Will Introduce Opportunities for EHR Vendors",
+            "future_outlook_point_description": "Saturation in some healthcare markets will limit some opportunities but won't diminish new EMR vendors from entering the market. Specialty-specific EHRs, vendors focusing on areas like pediatrics or ambulatory care, could garner more investment than those without. Tech advances expanding an EHR system's capabilities will also allow vendors to differentiate. How EHR companies leverage advances in AI, predictive analytics and machine learning to cater to trends in healthcare \u2013 like personalized care or rising costs \u2013 will influence competitiveness."
+        }
+    ],
+    "industry_definition": "This industry includes companies that develop electronic medical records (EMR) and health records (EHR) systems. EMR and EHR systems are digital replacements for traditional paper and file medical records systems used by healthcare providers.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Life Cycle Stage: growth",
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Barriers To Entry Level: high - steady",
+            "Globalization Level: low - steady"
+        ],
+        "negative_impact_factors": [
+            "Technology Change Level: high",
+            "Competition Level: high - increasing"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High &amp; Steady Barriers to Entry",
+            "Growth Life Cycle Stage",
+            "Low Volatility",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low &amp; Steady Level of Assistance",
+            "High Competition"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2005-2024)",
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "Private investment in computers and software"
+        ],
+        "threats": [
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Total health expenditure"
+        ]
+    },
+    "key_trends": [
+        "Low turnover rates for EMR systems stifle competition. Deploying a new EMR system can cost a health system millions of dollars and create disruptions, disincentivizing health systems from making a switch.",
+        "How EMR vendors leverage emerging tech advances will influence competitiveness. EMR software integrating technology like AI that alleviates challenges in the health sector will be most sought after."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "General medical and surgical hospitals",
+            "segment_description": "General medical and surgical hospitals include a wide range of medical services and facilities, including emergency departments, rehabilitation",
+            "segment_percentage": 42.9
+        },
+        {
+            "segment": "Offices of physicians",
+            "segment_description": "Offices of physicians include a variety of medical specialties and subspecialties. Examples include pediatrics, obstetrics, internal medicine and cardiology. Within this segment, EMR revenue differs by the size of clients. For example, solo practitioners often have limited resources and budgets compared to large medical groups and may face challenges in implementing and maintaining EMR systems. Data from the ONC reports that 4 out of 5 physician practices had adopted a certified EHR system by 2021."
+        },
+        {
+            "segment": "Outpatient care centers",
+            "segment_description": "Outpatient care centers, like ambulatory care centers, are healthcare facilities that provide medical services to patients who don't require an overnight stay. Outpatient care centers use EMR systems to improve patient care, increase efficiency, comply with regulations, save costs and improve coordination. EMR companies have been providing services to more outpatient care centers in recent years, as outpatient providers centers treat more patients than ever as more procedures shift away from the costly inpatient setting.",
+            "segment_percentage": 7.2
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Other markets include dentists, medical and diagnostic laboratories, psychiatric and substance abuse hospitals and mental health and substance abuse facilities. Population trends, government incentives, economic growth and technological improvements support the uptake of EMR systems from other markets. Major disruptions caused by events like the pandemic also influence this segment.",
+            "segment_percentage": 29.5
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "COMPREHENSIVE EMRS",
+            "product_description": "Comprehensive EMRs are more advanced systems that are designed to handle a larger number of patients and a wide range of clinical functions. They typically include all the features of basic EMRs and also include more advanced features like lab reports, nursing orders and decision support. Comprehensive EMRs are used primarily by larger clinics, hospitals and other healthcare organizations that have a large patient base.",
+            "product_percentage": 46.8
+        },
+        {
+            "product_or_service": "BASIC EMR WITH CLINICIAN NOTES",
+            "product_description": "An EMR is a digital version of a patient's paper chart that contains all of the information related to a patient's medical history. Clinician notes, which are written by doctors and other healthcare providers, provide a detailed record of a patient's condition, treatment and progress.",
+            "product_percentage": 48.3
+        },
+        {
+            "product_or_service": "BASIC WITHOUT CLINICIAN NOTES",
+            "product_description": "Similar to basic EMRs with clinical notes, basic EMRs without clinical notes provide patient demographics, problem lists, medication lists and discharge summaries. Unlike basic EMRs with clinical notes, basic EMRs without clinical notes do not include physician notes and nursing assessments. Strong competition from EMRs with clinical notes and comprehensive EMRs has contributed to a decline in the market share of EMRs without clinical notes.",
+            "product_percentage": 4.9
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Software Publishing in the US",
+            "IT Consulting in the US"
+        ],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Federal Funding for Medicare and Medicaid",
+            "determinant_description": "Increases in federal funding for Medicare and Medicaid allow more individuals to afford and access medical care. When more people can access medical care, it translates into higher demand for electronic health record (EHR) systems."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Location Loses Influence in Software-Centric Companies",
+            "location_description": "Electronic medical record (EMR) companies operate a software-as-a-service (SaaS) operating model. Cloud-based SaaS products are accessible over the internet, allowing users to access them from anywhere with an internet connection. SaaS companies often leverage remote work opportunities to tap into talent pools across the US and globally, lessening the importance of a central work location.",
+            "percentage_establishments": null,
+            "percentage_population": null
+        },
+        {
+            "location": "Silicon Valley Draws Developers to the West",
+            "location_description": "The West has been a hotbed of software innovation for years. Silicon Valley is known for its leading tech companies, access to venture capitalists and skilled labor pools. Tech hubs have a supportive tech ecosystem, including incubators, accelerators, mentorship programs and educational institutions focused on tech development. Access to these resources supports an EMR company's growth.",
+            "percentage_establishments": 27.8,
+            "percentage_population": 23.5
+        },
+        {
+            "location": "Southeast",
+            "location_description": null,
+            "percentage_establishments": 11.1,
+            "percentage_population": 21.8
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": null,
+            "percentage_establishments": 10.2,
+            "percentage_population": 15.2
+        },
+        {
+            "location": "Southwest",
+            "location_description": null,
+            "percentage_establishments": 9.3,
+            "percentage_population": 11.5
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": null,
+            "percentage_establishments": 14.8,
+            "percentage_population": 14.9
+        },
+        {
+            "location": "Plains",
+            "location_description": null,
+            "percentage_establishments": 5.6,
+            "percentage_population": 6.8
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": null,
+            "percentage_establishments": 5.6,
+            "percentage_population": 6.3
+        },
+        {
+            "location": "New E",
+            "location_description": null,
+            "percentage_establishments": 15.6,
+            "percentage_population": 0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "HITECH Act",
+                "regulation_description": "The HITECH Act, which is part of the American Recovery and Reinvestment Act of 2009, provides financial incentives to providers demonstrating meaningful use of certified EMR systems."
+            },
+            {
+                "regulation_title": "Health Insurance Portability and Accountability Act",
+                "regulation_description": "The Health Insurance Portability and Accountability Act (HIPAA) provides federal protections for personal health information and sets national standards for privacy and security of electronic protected health information."
+            },
+            {
+                "regulation_title": "21st Century Cures Act",
+                "regulation_description": "The 21st Century Cures Act aims to accelerate the discovery, development and delivery of new treatments and cures for diseases."
+            },
+            {
+                "regulation_title": "ANTI-KICKBACK STATUTE AND PHYSICIAN SELF-REFERRAL LAWS",
+                "regulation_description": "The federal Anti-Kickback Statute prohibits the exchange of anything of value to induce the referral of business reimbursable by federal healthcare programs."
+            },
+            {
+                "regulation_title": "THE CENTER FOR MEDICARE AND MEDICAID SERVICES",
+                "regulation_description": "The Center for Medicare and Medicaid Services (CMS) has issued regulations related to EMRs and meaningful use."
+            },
+            {
+                "regulation_title": "THE OFFICE OF THE NATIONAL COORDINATOR FOR HEALTH INFORMATION TECHNOLOGY",
+                "regulation_description": "The Office of the National Coordinator for Health Information Technology (ONC) is responsible for the certification of EMR systems."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Technology change level",
+                "barrier_description": "Technology Change Level: high"
+            },
+            {
+                "barrier_title": "Competition level",
+                "barrier_description": "Competition Level: high - increasing"
+            }
+        ],
+        "factors_increased_barrier": [
+            "Technology Change Level: high",
+            "Competition Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Life Cycle Stage: growth",
+            "Capital Intensity Level: low",
+            "Concentration Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Talent hub proximity provides competitive advantage",
+                "basis_description": "Being close to a talent hub provides companies with a competitive advantage in recruitment."
+            },
+            {
+                "basis_title": "More EMR companies in California",
+                "basis_description": "More EMR companies are found in California than in any other state."
+            },
+            {
+                "basis_title": "Low turnover rates stifle competition",
+                "basis_description": "Low turnover rates for EMR systems stifle competition."
+            },
+            {
+                "basis_title": "Leveraging emerging tech influences competitiveness",
+                "basis_description": "How EMR vendors leverage emerging tech advances will influence competitiveness."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Smaller providers could struggle to offer interoperability",
+                "concentration_description": "Smaller providers may lack the financial or technical capabilities to achieve the same level of interoperability as larger providers."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Epic Systems Corporation",
+                "company_percentage": 15.8
+            },
+            {
+                "company_name": "Cerner Corporation",
+                "company_percentage": 11.1
+            },
+            {
+                "company_name": "Allscripts Healthcare Solutions, Inc.",
+                "company_percentage": 6.6
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 66.6
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 40
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 60
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 80
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Steep Customer Acquisition Costs Eat at Profit",
+            "cost_factor_description": "Major expenses for a company operating a Software-as-a-Service model include customer acquisition and research and development costs."
+        },
+        {
+            "cost_factor_title": "Employment Trends Drive Wage Growth",
+            "cost_factor_description": "Electronic medical record (EMR) providers need a skilled workforce to manage everything from regulatory compliance to client support and data management."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LOW capital intensity",
+                "capital_intensity_description": "Developing and maintaining EMR software is a labor-intensive process."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "An Evolving Regulatory Environment Creates Risk",
+                "volatility_description": "EMR providers must comply with stringent and evolving regulations that dictate how Protected Health Information (PHI) should be protected."
+            },
+            {
+                "volatility_title": "Adapting to Industry Dynamics is a Complex Process",
+                "volatility_description": "EHR systems need to adapt quickly to changes and trends in the health sector."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "ARTIFICIAL INTELLIGENCE WILL AUGMENT EMR SYSTEMS' ROLE",
+                "technological_change_description": "Artificial intelligence's evolution in electronic medical records (EMR) transforms how patients, healthcare organizations and stakeholders manage, analyze and use healthcare data."
+            },
+            {
+                "technological_change_title": "INTEROPERABILITY STANDS AS HEALTHCARE PROVIDERS' LEADING PRIORITY",
+                "technological_change_description": "Interoperability is a leading priority among healthcare providers."
+            },
+            {
+                "technological_change_title": "Innovation",
+                "technological_change_description": "EMR companies are increasingly adopting Fast Healthcare Interoperability Resources (FHIR), a standard that creates a common language for health data."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "What marketing channels have been the most effective?",
+            "answer": "Identifying successful marketing strategies is key for a strategic plan that includes business expansion."
+        },
+        {
+            "question": "How has technology (i.e. data storage and analytics) changed the type of customers you sell to?",
+            "answer": "Cloud-based EHR and EMR platforms are now considered the norm for a company selling EHR systems and services, due to the accessibility and reliability of cloud storage."
+        },
+        {
+            "question": "Has your company been exposed to rising wages in recent years?",
+            "answer": "Since wages represent one of the largest expenses for a company, rising wages can affect profitability."
+        },
+        {
+            "question": "Has your company adequately prepared to address the increased security risks posed by digital data storage?",
+            "answer": "Ensuring existing platforms and storage systems are safe is pivotal to preventing major losses due to hacking or other kinds of data breaches."
+        },
+        {
+            "question": "Are you attracting the best talent to build on or improve existing software platforms?",
+            "answer": "Given the intensely competitive nature of the healthcare informatics industry, attracting top talent is key."
+        },
+        {
+            "question": "What percent of revenue does your company invest in research and development (R&D)?",
+            "answer": "Major companies in this industry allocate a significant percentage of revenue to R&D to differentiate their product and maintain quality in a highly competitive environment."
+        },
+        {
+            "question": "How have penalties reducing funding for Centers for Medicare and Medicaid (CMS) affected your operations?",
+            "answer": "Increasing penalties accrued due to failure to adapt to the new status quo incentivizes healthcare operators to adopt EHR and EMR platforms."
+        },
+        {
+            "question": "Should the new administration or Congress repeal or make adjustments to the Affordable Care Act, is your company adequately prepared adjust quickly?",
+            "answer": "A shifting regulatory environment, particularly for healthcare, can bring in increased compliance expenses."
+        },
+        {
+            "question": "How does your pricing structure match up to competitors?",
+            "answer": "Understanding competitors' pricing and product offerings is essential for attracting new customers and informing the development of budgetary and strategic plans."
+        },
+        {
+            "question": "How does your company's profit compare with your main competitors'?",
+            "answer": "Financial performance is linked to the ability to compete on price and access capital to fund expansion and growth."
+        },
+        {
+            "question": "How do you attract and retain qualified staff? Do you have a high turnover rate?",
+            "answer": "Skilled staff are vital for designing and providing services, including troubleshooting, for electronic medical record systems."
+        },
+        {
+            "question": "Do you have access to the latest available and most efficient technology and techniques? How do you achieve and maintain good product quality?",
+            "answer": "Companies must have access to the latest technology by investing in R&D or acquiring it through the purchase of other enterprises with patented technology."
+        },
+        {
+            "question": "Do you have systems in place to keep standards up to date? How efficiently have you resolved compliance issues in the past?",
+            "answer": "Clients, to receive electronic health record (EHR) incentive payments, need to demonstrate that their EHR software demonstrates meaningful use in line with the Medicare and Medicaid EHR Incentive Program."
+        },
+        {
+            "question": "How do changes in funding for Medicare and Medicaid affect demand for EMR systems?",
+            "answer": "Medicare and Medicaid play a significant role in increasing demand for EMR systems by providing financial incentives for adoption."
+        },
+        {
+            "question": "How much of your budget is invested in R&D? How do you attract highly skilled and educated researchers?",
+            "answer": "Companies that produce Electronic Medical Records Systems invest significant amounts in R&D in order to stay competitive."
+        },
+        {
+            "question": "How do you plan to capture a greater market share?",
+            "answer": "As markets are getting increasingly saturated, EMR providers are looking for new ways to generate revenue."
+        }
+    ]
+}

@@ -1,0 +1,525 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 27079000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 6.29
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2025,
+                "end_year": 2029,
+                "revenue_cagr_value": 3.6
+            }
+        },
+        "profit": {
+            "profit_dollars": null,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 2.9
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2025,
+                "end_year": 2029,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.3,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 2.9
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2025,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": null,
+            "industry_value_added_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": null,
+            "employees_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": null,
+            "wages_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": null,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": null,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2024 currency. The Pharmacies and Drug Stores industry consists of stores that retail a range of prescription and over-the-counter (OTC) medications, health and beauty items, toiletries and consumable goods. Stores exhibited revenue growth in recent years, as the number of people with private health insurance remained high, filling more prescription medications. The burgeoning elderly population boosted performance, as this consumer bracket requires medication to address chronic ailments, resulting in higher volumes of foot traffic.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The industry will continue growing despite an acceleration in competition.",
+            "current_performance_point_description": "Improving macroeconomic conditions and further growth in the size of the elderly population will promote spending at pharmacies and drug stores. This growth will be fueled by the expansion of store services, including preventive care options and additional front-end offerings. As the number of insured individuals swells, many consumers will continue to fill their prescriptions because of the low -out-of-pocket costs."
+        },
+        {
+            "current_performance_point_title": "Revenue is expected to climb at a CAGR of 3.6% to $751.7 billion through the end of 2029.",
+            "current_performance_point_description": "As conditions for the industry improve, so will profit, rising in unison with revenue."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Improving Macroeconomic Conditions and Demographic Shifts Benefit Pharmacies",
+            "future_outlook_point_description": "Many pharmacies and drug stores will continue to expand their services to include preventive care options and additional front-end offerings. Consumers appreciate the added convenience and some are willing to pay a higher price for the ability to buy medications, consumer care goods and grocery items in the same location."
+        },
+        {
+            "future_outlook_point_title": "As conditions continue to improve, profitability will climb",
+            "future_outlook_point_description": "An improved consumer environment will boost sales of high-margin drugs, including biologics. Sales of preventative care products and over-the-counter medications will also be boosted as consumers are more concerned about their health following the pandemic."
+        },
+        {
+            "future_outlook_point_title": "Patent Cliff Forces Pharmacies To Broaden The Scope Of Their Services",
+            "future_outlook_point_description": "New generic drugs can generate higher profits. These products have low purchasing costs and they can generate significant sales. In the future, several high-profile medication patents are scheduled to expire. Keytruda, which accounts for about 40.0% of all Merck & Co., Inc. pharmaceutical sales, has a patent set to expire in 2028."
+        },
+        {
+            "future_outlook_point_title": "EXTERNAL COMPETITION MOUNTS AS MORE COMPANIES INTRODUCE ONLINE PHARMACY SERVICES",
+            "future_outlook_point_description": "Competition for drug stores and pharmacies will intensify, mainly with mass merchants, mail-order and online pharmacies. These retailers compete for sales and fierce competition can push down prices."
+        },
+        {
+            "future_outlook_point_title": "HIGH COMPETITION LEADS TO SHIFTS IN INDUSTRY STRUCTURE",
+            "future_outlook_point_description": "The high and increasing level of competition, coupled with lower reimbursement rates, has caused many pharmacies and drug stores to consolidate. Prominent stores will acquire small chains, independent pharmacies and drug stores to strengthen their market share and generate the leverage to negotiate favorable rates with PBMs."
+        }
+    ],
+    "industry_definition": "Pharmacies and drug stores retail a range of prescription and over-the-counter medications, health and beauty items, toiletries and consumable goods directly to consumers on a walk-in basis. Industry companies may also provide basic health and photo-processing services. The industry excludes mail-order retailers, hospitals and clinics.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Low Imports",
+            "High Profit vs. Sector Average"
+        ],
+        "negative_impact_factors": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "High Product/Service Concentration"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "High Profit vs. Sector Average"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "High Product/Service Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "Federal funding for Medicare and Medicaid"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Low Performance Drivers"
+        ]
+    },
+    "key_trends": [
+        "Due to low product differentiation, the industry is highly price-competitive. Many pharmacies and drug stores have consolidated in response to this high competition.",
+        "External competition intensifies as stores have begun to branch out into e-commerce sales. Supercenters and other large-scale wholesalers, including Walmart and Amazon, represent the biggest threat as these retailers offer convenience and lower prices.",
+        "Pharmacies were deemed essential businesses, which fueled revenue growth for stores during the height of the pandemic. Many drug stores and pharmacies bulked up their grocery items and consumer products offerings to take advantage of the influx of customers.",
+        "Stores market branded and generic drugs using online platforms and discount incentives. The proliferation of price-based competition and low product differentiation has led to many smaller pharmacies struggling and succumbing to consolidation activity.",
+        "A growing number of individuals aged 65 and over represents a consistent and steady stream of demand. Older adults are more likely to require medication.",
+        "The prevalence of low-priced generic drugs has cut into industry profitability.",
+        "Pharmacies have begun integrating more product offerings into their storefronts to offer more convenience to consumers. This process has inflated purchase costs, and many stores have streamlined operations to keep costs manageable."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Consumers aged 17 and younger",
+            "segment_description": "While consumers of all ages purchase prescription and over-the-counter medications (OTC), consumers in younger demographics are considered healthier, requiring fewer daily, long-term medications, on average.",
+            "segment_percentage": 11.9
+        },
+        {
+            "segment": "Consumers aged 18 to 44 years",
+            "segment_description": "Consumers aged 18 to 44 tend to visit the doctor's office more regularly than consumers aged 17 and younger, as they tend to have steadier income streams than young adults and better health insurance policies.",
+            "segment_percentage": 23.9
+        },
+        {
+            "segment": "Consumers aged 45 to 64 years",
+            "segment_description": "Individuals aged 45 to 64 account for the largest share of revenue. Consumers in this segment are more likely to require consistent prescription medications, which creates a stable revenue stream.",
+            "segment_percentage": 36.4
+        },
+        {
+            "segment": "Consumers aged 65 years and older",
+            "segment_description": "This age demographic has a high demand for prescription drugs since elderly individuals have the highest rate of chronic illness.",
+            "segment_percentage": 27.8
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "BRANDED PRESCRIPTION DRUGS",
+            "product_description": null,
+            "product_percentage": 57.9
+        },
+        {
+            "product_or_service": "GENERIC DRUGS",
+            "product_description": null,
+            "product_percentage": 14.5
+        },
+        {
+            "product_or_service": "NONPRESCRIPTION MEDICINES",
+            "product_description": null,
+            "product_percentage": 5.9
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Medical Supplies Wholesaling in the US",
+            "Drug, Cosmetic & Toiletry Wholesaling in the US",
+            "Wholesale Trade in the US"
+        ],
+        "tier_2_suppliers": [
+            "Sanitary Paper Product Manufacturing in the US",
+            "Brand Name Pharmaceutical Manufacturing in the US",
+            "Medical Device Manufacturing in the US",
+            "Generic Pharmaceutical Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Hospitals in the US",
+            "Healthcare and Social Assistance in the US",
+            "Accommodation and Food Services in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Household Income Levels",
+            "determinant_description": "Household income levels determine consumers' ability to purchase products from drug stores and pharmacies. Although need-based demand for prescription drugs is typically less susceptible to consumer discretionary income changes, sales of nonessential, front-end goods are influenced by per capita disposable income fluctuations."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "The Southeast",
+            "location_description": "The Southeast's elderly population makes it a strategic location for industry enterprises. The establishments in this industry follow the distribution of the US population, with the most populous region, the Southeast, containing the most pharmacies. Florida contains a large share of pharmacies and drug stores, leveraging the state's significant share of people aged 65 and older.",
+            "percentage_establishments": 30.2,
+            "percentage_population": 21.1
+        },
+        {
+            "location": "The Mid-Atlantic",
+            "location_description": "Pharmacies in the Mid-Atlantic capitalize on proximity to key downstream markets. Pharmacies take advantage of their proximity to many healthcare-related businesses, including hospitals, nursing homes and healthcare complexes. The Mid-Atlantic region is another popular region for retirees and older individuals, which promotes a high concentration of pharmacies and drug stores.",
+            "percentage_establishments": 18.6,
+            "percentage_population": 15.1
+        },
+        {
+            "location": "Rural Areas",
+            "location_description": "Rural pharmacies have declined as establishments concentrate around urban hubs. Rural pharmacies have declined as stores have moved closer to population centers and major cities. As with most other retail establishments, convenience has become the key to success.",
+            "percentage_establishments": 1,
+            "percentage_population": 1
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "FDA Regulations",
+                "regulation_description": "The US Food and Drug Administration (FDA) regulates the laws relating to pharmaceutical development, testing, manufacturing, marketing and distribution."
+            },
+            {
+                "regulation_title": "The Fair Packaging and Labeling Act",
+                "regulation_description": "The Fair Packaging and Labeling Act requires all products to be properly labeled with accurate and complete information on their contents."
+            },
+            {
+                "regulation_title": "The Controlled Substances Act",
+                "regulation_description": "The Controlled Substances Act (CSA) places stringent regulations on the manufacturing, dispensing and distribution of controlled substances."
+            },
+            {
+                "regulation_title": "Medicare Part D",
+                "regulation_description": "Pharmacies participating in Medicare Part D must comply with CMS guidelines concerning prescription drug plans."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "High competition",
+                "barrier_description": "Due to low product differentiation, the industry is highly price-competitive. Many pharmacies and drug stores have consolidated in response to this high competition."
+            },
+            {
+                "barrier_title": "External competition",
+                "barrier_description": "External competition intensifies as stores have begun to branch out into e-commerce sales. Supercenters and other large-scale wholesalers like Walmart and Amazon represent the biggest threat."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Mature life cycle stage",
+            "Low industry assistance level",
+            "High and increasing competition level"
+        ],
+        "factors_decreased_barrier": [
+            "Low capital intensity level",
+            "Low concentration level",
+            "Low but increasing globalization level"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Location near complementary businesses",
+                "basis_description": "Pharmacies and drug stores locate in strip malls near hardware stores, restaurants, liquor stores, dry cleaning and laundromat facilities to attract customers."
+            },
+            {
+                "basis_title": "Regional distribution differences",
+                "basis_description": "The Southeast region has the highest percentage of pharmacy/drug store establishments at 30.2% while having a relatively lower population percentage of 21.1%. The Great Lakes and West regions have a more balanced distribution."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Stringent regulations",
+                "concentration_description": "The industry is subject to federal and state laws that make retailing certain products subject to stringent regulations."
+            },
+            {
+                "concentration_title": "High start-up costs",
+                "concentration_description": "Establishing a pharmacy or drug store in a high-foot-traffic area is costly due to rental costs and real estate values for prime locations."
+            },
+            {
+                "concentration_title": "Low product differentiation",
+                "concentration_description": "Product differentiation is relatively low, as most drug stores stock similar products and brands that can be purchased from other retailers."
+            },
+            {
+                "concentration_title": "Capital requirements",
+                "concentration_description": "Considerable capital is required to establish a new store, purchase an existing location, and maintain merchandise inventory."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Walgreens Boots Alliance, Inc.",
+                "company_percentage": 18.9
+            },
+            {
+                "company_name": "CVS Health Corporation",
+                "company_percentage": 16.6
+            },
+            {
+                "company_name": "Rite Aid Corp",
+                "company_percentage": 2.7
+            },
+            {
+                "company_name": "Walmart Inc.",
+                "company_percentage": 1.2
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 60.6
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchase Costs Inflate as Stores Expand the Scope of Their Product Offerings",
+            "cost_factor_description": "Similar to most retail industries, purchases account for the largest revenue share for pharmacies and drug stores. To avoid losing business, stores must ensure that popular consumer products and prescription medications are constantly stocked."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "CAPITAL EXPENSES",
+                "capital_intensity_description": "While this industry is not highly technical, considerable levels of capital are required to establish a new store or purchase an existing location. Capital costs include acquiring and maintaining merchandise inventory."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Consistent demand for prescription medication limits volatility",
+                "volatility_description": "The average pharmacy generates more than 70.0% of revenue from prescription medication sales. While prescription medications can be expensive, especially for consumers without insurance, many are deemed necessary purchases."
+            },
+            {
+                "volatility_title": "Pharmacies Diversify Their Product Portfolios to Combat Seasonality",
+                "volatility_description": "The timing and severity of the cold and flu season influences both prescription and nonprescription drug sales. Although the industry fluctuates in line with the cold and flu season, volatility remains low to moderate because demand for medications and basic consumables are sheltered from changes in product price and consumer income."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Pharmacies Begin to Integrate Internet Services to Better Customer Service",
+                "technological_change_description": "Technological advancements are improving efficiency. For example, faster claims transmission, central fill stations, central call centers, electronic prescription transfers, product databases and other technological innovations help pharmacies."
+            },
+            {
+                "technological_change_title": "Pharmacies Use Automation to Make Service More Convenient",
+                "technological_change_description": "Automated medication dispensing systems, including AutoScript III, have continued to reduce operating costs while improving reliability."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How has the shift to online pharmacies (external competition) impacted demand for your business?",
+            "answer": "Heightened competition from online pharmaceuticals will continue to threaten traditional pharmacies and drug stores. Many larger stores have begun offering online services to combat external competitors. Online pharmacies are gaining traction among consumers as they offer safe and convenient services."
+        },
+        {
+            "question": "How is demand for pharmaceutical services impacted by periods of volatile economic performance?",
+            "answer": "During periods of economic volatility, many consumers switch to generic medications rather than brand name due to the relatively lower costs. Consumers generally decrease medical visits when economic conditions are unfavorable, resulting in a declining need for prescription medications."
+        },
+        {
+            "question": "Does your company pursue mergers and acquisitions in an attempt to reduce costs through economies of scale?",
+            "answer": "The industry's largest companies have completed multiple mergers and acquisitions. The most effective way for pharmacies and drug stores to grow their business is through acquisitions, which can gain their company access to new clientele."
+        },
+        {
+            "question": "Have you renegotiated purchasing contracts to reduce purchasing costs?",
+            "answer": "Operators' profitability partially depends on their ability to negotiate favorable discounts from drug manufacturers. Larger players are better suited to develop favorable supply contracts with manufacturers."
+        },
+        {
+            "question": "How has your company leveraged point-of-sale (POS) systems to reduce purchasing errors and reduce overall operational costs?",
+            "answer": "Advances in computerized retail point-of-sales (POS) systems enable pharmacies and drug stores to more accurately manage stock levels and improve inventory turnover."
+        },
+        {
+            "question": "How does your company utilize new technology, like automated medication dispensing systems, in its operations?",
+            "answer": "Computerized dispensing systems enable pharmacists to keep records of a client's conditions, allergies, prescription history, concessional status, the doctor who prescribed the drug and the amount owed to the pharmacy."
+        },
+        {
+            "question": "How does your company ensure all health and safety requirements are met?",
+            "answer": "Pharmacies and drug stores must comply with various employee health and operation regulations, particularly those set by the Occupational Safety and Health Administration."
+        },
+        {
+            "question": "In a highly regulated industry, how does your company stay abreast of an ever-evolving regulatory environment?",
+            "answer": "Few industries are subject to as much regulation as the pharmaceutical industry due to safety concerns. The government designs cost-containment programs that can encourage consumption, and it also controls the drug approval process."
+        },
+        {
+            "question": "In an industry with high market share concentration and rising internal and external competition, how does your company's profit margin compare with your major competitors?",
+            "answer": "Profit in this industry varies depending on the size and locations of the store, with the major players generally experiencing the highest profit. Demand for pharmacies and drug stores will continue to grow, as older consumers tend to generate higher demand for these stores and the US population is aging."
+        },
+        {
+            "question": "How have you adjusted to rising purchase costs to maintain profitability?",
+            "answer": "Pharmacies and drug stores work to keep operational costs low to ensure profitability."
+        },
+        {
+            "question": "How has your company leveraged its relationship with its pharmacy benefit management networks? How does your network compare to that of your competitors?",
+            "answer": "A PBM is a third-party administrator of prescription drug programs responsible for contracting with pharmacies and directing clients to certain stores."
+        },
+        {
+            "question": "Have you experienced supply chain disruptions? How has this impacted your ability to control your stock on hand?",
+            "answer": "Stock controls must be used to manage ideal inventory levels and increase sales."
+        },
+        {
+            "question": "What training does your work force undergo to ensure all staff is highly knowledgeable of products and services?",
+            "answer": "Successful stores must staff employees with the accreditation to give medication advice to consumers."
+        },
+        {
+            "question": "How does the change in federal funding for Medicare and Medicaid impact your pharmacy's revenue and customer base?",
+            "answer": "Many consumers rely on Medicare and Medicaid to be able to afford access to healthcare and medication."
+        },
+        {
+            "question": "How reliant is your business on older demographics?",
+            "answer": "However, consumers 65 and older account for the second largest market, proving to be an important market for pharmacies."
+        },
+        {
+            "question": "How has the rising disposable income affected your company's performance? Do disposable income levels impact your business during periods of relative normalcy?",
+            "answer": "Although need-based demand for prescription drugs is typically less susceptible to changes in consumers' discretionary income, sales of nonessential, front-end goods are influenced by fluctuations in disposable income."
+        }
+    ]
+}

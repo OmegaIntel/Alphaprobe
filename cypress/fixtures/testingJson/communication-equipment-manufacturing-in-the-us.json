@@ -1,0 +1,593 @@
+{
+    "report_title": "Communication Equipment Manufacturing Industry Report",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 28663000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": -3.32
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.48
+            }
+        },
+        "profit": {
+            "profit_dollars": 1376000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": -4.36
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.8,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -1.08
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 8106000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": null
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": null
+            }
+        },
+        "employees": {
+            "employees_count": 52948,
+            "employees_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            },
+            "employees_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "employees_cagr_value": null
+            }
+        },
+        "wages": {
+            "wages_dollars": 6320000000,
+            "wages_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            },
+            "wages_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "wages_cagr_value": null
+            }
+        },
+        "imports": {
+            "imports_dollars": 121397000000,
+            "imports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            },
+            "imports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "imports_cagr_value": null
+            }
+        },
+        "exports": {
+            "exports_dollars": 14040000000,
+            "exports_cagr_historical": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            },
+            "exports_cagr_projected": {
+                "begin_year": null,
+                "end_year": null,
+                "exports_cagr_value": null
+            }
+        }
+    },
+    "executive_summary": "Communication equipment manufacturers have endured multiple challenges and have struggled to maintain profit levels. This trend is mainly driven by high research and development (R&D) costs and falling equipment prices driven by elevated price competition. Since the industry is diverse, specific product segments may perform better than others, and large companies with contracts in place will be less affected than smaller manufacturers. The need for work-from-home equipment boosted demand for manufacturers, although falling input and product prices resulted in contracting revenue. The pandemic and other supply chain disruptions have greatly hindered the industry, and the volatility in the cost of semiconductors, along with investor uncertainty, has posed immense challenges for manufacturers.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Macroeconomic Conditions Influence Demand",
+            "current_performance_point_description": "The pandemic pushed companies to offer work-from-home, igniting demand for communication equipment. However, supply chain disruptions and rising input prices have significantly impacted production and profitability. As workers return to offices, communication equipment sales are expected to fall."
+        },
+        {
+            "current_performance_point_title": "Steady Demand Amid Technological Developments",
+            "current_performance_point_description": "Businesses invest in technological changes when corporate profit is high. Longer replacement cycles for communication equipment have reduced purchase frequency. The rollout of 5G networks is a significant driver for manufacturers."
+        },
+        {
+            "current_performance_point_title": "Import Competition Stifles Revenue Growth",
+            "current_performance_point_description": "Buyers opt for imported equipment due to lower prices. The appreciation of the US dollar has made imports more affordable. Chinese equipment faces restrictions over national security concerns, although imports still account for over 80% of domestic demand."
+        },
+        {
+            "current_performance_point_title": "Increasing Demand for Advanced Wireless Technologies",
+            "current_performance_point_description": "Companies are shifting focus to developing sophisticated equipment to support faster data transfer, lower latency and more connected devices for IoT and smart cities. Governments are investing heavily in upgrading communication infrastructure."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Manufacturing Revenue Outlook",
+            "future_outlook_point_description": "Manufacturing revenue is expected to slow down over the upcoming years, resulting from declining TV and radio subscriptions. Widespread adoption of 5G technologies will boost communication equipment sales, as the new network will support new products and improve performance. Despite this, import penetration will still remain high overall, although they will wane, motivated by international scrutiny and a reversing trade-weighted index."
+        },
+        {
+            "future_outlook_point_title": "Domestic manufacturers are poised to entirely shift toward high-end or niche",
+            "future_outlook_point_description": "Domestic manufacturers are poised to entirely shift toward high-end or niche products, as they cannot compete with the lower prices of imports on generic products. Some manufacturers have adopted strategies like selling physical devices at a loss and creating value-added services like subscriptions."
+        },
+        {
+            "future_outlook_point_title": "Trade tensions and supply chain impacts",
+            "future_outlook_point_description": "Trade tensions between major economies like the United States and China will continue to influence global supply chains and tariffs on imported components and finished products. These factors will add complexity and costs to manufacturing operations, affecting profitability for companies operating in the communication equipment sector."
+        },
+        {
+            "future_outlook_point_title": "Rising demand and changing infrastructure",
+            "future_outlook_point_description": "Wireless service providers seeking to expand their product portfolios and revenue streams will benefit from the rollout of broadband fifth-generation (5G) wireless, which offers faster transfer rates, lower latency and decreased power use for identical data transfer. The federal government passed the Bipartisan Infrastructure Law, which aims to improve infrastructure across the country, including a significant investment in bringing access to high-speed internet to rural communities. This level of investment benefits manufacturers, as it will result in both the federal government and customers purchasing wireless network devices."
+        },
+        {
+            "future_outlook_point_title": "Technological advancements create new possibilities",
+            "future_outlook_point_description": "Domestic manufacturers will continue investing in new product development that adapts to changing needs. Technological developments encourage other trends, including the growth of the 'Internet of Things' (IoT), smart cities and connected homes."
+        },
+        {
+            "future_outlook_point_title": "The proliferation of IoT devices will drive demand for communication equipment",
+            "future_outlook_point_description": "The proliferation of IoT devices will drive demand for communication equipment capable of handling their increased data traffic. Manufacturers have been focusing on developing IoT-specific communication modules and devices."
+        },
+        {
+            "future_outlook_point_title": "5G networks will enable new technologies",
+            "future_outlook_point_description": "5G networks will enable the development of new technologies, including autonomous vehicle communication, forecast infrastructure failure and ultra-low-power cellular radios to enable on-demand services like waste pickup. As 5G networks continue to be adopted by new industries, new uses are expected to be discovered."
+        },
+        {
+            "future_outlook_point_title": "Improving Macroeconomic Conditions Help Mitigate Losses",
+            "future_outlook_point_description": "Economic conditions are poised to improve over the coming years as the Federal Reserve continues efforts to reduce inflation and boost consumer confidence. Improving economic conditions will boost the construction sector, with gains mainly concentrated in the nonresidential sector. In turn, this recovery will stimulate private investment in industrial equipment and machinery, supporting demand for manufacturers."
+        },
+        {
+            "future_outlook_point_title": "Surges in Wireless Tech and Open RAN Alter the Industry Landscape",
+            "future_outlook_point_description": "Manufacturers will continue to benefit from a flood of connectivity needs. The demand for wireless technology is skyrocketing, fueled by remote work, smart cities and mobile reliance. Open RAN (Radio Access Networks) is gaining traction, enabling flexible, cost-effective and vendor-neutral network deployments. Manufacturers can reduce production costs and pass savings on by decoupling hardware and software components. This could open up new markets and customers who previously couldn't afford traditional systems."
+        }
+    ],
+    "industry_definition": "Operators in this industry primarily manufacture broadcasting and other wireless communication equipment such as antennas, set-top boxes, GPS systems, cell phones, satellite uplink technologies and radio and TV broadcasting equipment.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "High & Steady Barriers to Entry",
+            "Low Volatility",
+            "Low Customer Class Concentration",
+            "Low Capital Requirements"
+        ],
+        "negative_impact_factors": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "High Imports",
+            "Low Profit vs. Sector Average",
+            "High Product/Service Concentration",
+            "Low Revenue per Employee"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "Low Volatility",
+            "Low Customer Class Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "High Imports",
+            "Low Profit vs. Sector Average",
+            "High Product/Service Concentration",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)"
+        ],
+        "threats": [
+            "High start-up costs are a barrier",
+            "Imports force domestic manufacturers to produce high-end products"
+        ]
+    },
+    "key_trends": [
+        "Imports of communication equipment are strong and unlikely to face significant losses. Most manufacturers have fully or partially offshored operations to lower production costs.",
+        "Companies that develop new features gain the upper hand. Introducing new features or products improves the brand's image and allows it to build a customer base. Domestic manufacturers thrive by targeting niche markets or high-end product lines. This strategy helps them bypass stiff competition from low-cost imports and strengthens their market position.",
+        "High start-up costs are a barrier. New manufacturers face steep initial expenses in research, development and marketing. Competing with established brands is tough, as consumer loyalty and long-term sales agreements favor the old players.",
+        "Imports force domestic manufacturers to produce high-end products. The inability to compete with low-priced imports forced manufacturers to change their pricing strategy. With rising input prices, many manufacturers are offshoring operations and focusing on high-end products to remain competitive.",
+        "Economic recovery and infrastructure investment are bright spots. Improving macroeconomic conditions and significant federal investment in high-speed internet and infrastructure aim to boost demand.",
+        "Large companies offering network services rolled out 5G networks. The new network supports other technologies besides cell phones and computers, creating growth opportunities.",
+        "Companies that specialize in a niche can bolster their market share. Manufacturers that serve the general public face higher levels of competition, lowering revenue.",
+        "FCC Regulations Keep Devices in Check. The FCC ensures that devices don't disrupt others by strictly regulating radio frequency usage. Companies must get FCC approval before selling devices that intentionally transmit electromagnetic frequencies.",
+        "Infrastructure Investments Boost Demand. The US government's massive infrastructure investment includes a historic $65 million for rural high-speed internet. This boost is expected to drive demand for communication equipment in the coming years.",
+        "Chinese-produced equipment is not accepted in multiple countries. Fears of espionage and national security led to numerous governments banning the use of products manufactured in China.",
+        "Profitability is shrinking under economic pressure. With weakened demand from major markets and rising input costs, especially semiconductors, many manufacturers are dwindling their profits amid tough market conditions.",
+        "Focusing on research and development drives wages higher. The average wage increases as lower-paying jobs are offshored, particularly within the manufacturing line. Companies can't skimp on R&D to stay competitive, leading them to pay more for skilled workers despite outsourcing other functions to cut costs."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Government",
+            "segment_description": "Communication equipment is used across multiple government entities, including the Federal Aviation Administration and the National Oceanic and Atmospheric Administration, as they rely on advanced communication equipment, including satellite-based communication, radar processors, voice switching and control systems.",
+            "segment_percentage": 12.6
+        },
+        {
+            "segment": "Communication service provide",
+            "segment_description": "Downstream communication service providers primarily acquire the industry's equipment for their networks and mobile handsets, which are then sold to those companies' consumer bases. This segment has benefited from smartphone ownership rates that have skyrocketed in the last decade and continue accelerating as they consolidate multiple tools into a single device.",
+            "segment_percentage": 101
+        },
+        {
+            "segment": "Radio and TV broadcasters",
+            "segment_description": "Radio and TV broadcasters purchase various products, from individual accessories to end-to-end systems, including nationwide networks with multiple stations and transmitters.",
+            "segment_percentage": 1
+        },
+        {
+            "segment": "Retailers, businesses and other",
+            "segment_description": "The market includes two-way radios, wireless receivers and antennas that are sold to consumers and private businesses. These devices are often essential for businesses requiring secure and constant phone communications.",
+            "segment_percentage": 30.6
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Broadcast, Studio and Related Electronic Equipment",
+            "product_description": "Broadcast and studio equipment includes audio and video equipment, AM and FM transmitters, TV transmitters, broadcasting transmitting antennae and cable TV systems.",
+            "product_percentage": 6.8
+        },
+        {
+            "product_or_service": "Wireless Networking Equipment",
+            "product_description": "Wireless network equipment covers cellular base stations that provide radio links that transmit and receive cellular subscriber calls and manage hand-offs as customers switch from cell to cell. It also includes cellular mobile telephone switching equipment, which connects radio base stations to public voice and data networks, cell phones and Wi-Fi public equipment.",
+            "product_percentage": 19.3
+        },
+        {
+            "product_or_service": "Radio Station Equipment",
+            "product_description": "Radio station products serve multiple purposes: space, airborne, marine, earth, fixed, earth and mobile-based stations. Many other non-broadcast types of radio stations exist, including base stations for police, fire and ambulance networks, military base stations, dispatch base stations for taxis, emergency broadcast systems and amateur, low-power radio systems.",
+            "product_percentage": 8.8
+        },
+        {
+            "product_or_service": "GPS",
+            "product_description": "GPS and other non-phone devices represent a significant portion of the industry. Technological developments have contributed to falling demand for these devices, as they are less convenient for consumers.",
+            "product_percentage": 12.2
+        },
+        {
+            "product_or_service": "Part, Accessory and Contract Manufacturing",
+            "product_description": "Buyers purchase parts to fix faulty equipment and reduce costs rather than buy new products. Contract manufacturing includes additional services manufacturers add, including design, testing and distribution, benefiting downstream consumers.",
+            "product_percentage": 4.2
+        },
+        {
+            "product_or_service": "Other Communications Systems",
+            "product_description": "Other systems include microwave communications equipment and automobile antennas. Automobile antennas allow the transmission of wireless signals and radio waves to a vehicle. Microwave transmissions are used for point-to-point communication systems, satellite communications and deep space radio communications. They are also sometimes used for radars, navigation systems and sensors. This product category also includes producing individual components that will later be used in smartphones, such as individual antennas for cellular service.",
+            "product_percentage": 48.7
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [],
+        "tier_2_suppliers": [
+            "Semiconductor & Circuit Manufacturing in the US",
+            "Circuit Board & Electronic Component Manufacturing in the US",
+            "Telecommunications Resellers in the US"
+        ],
+        "tier_1_buyers": [
+            "Computer Manufacturing in the US",
+            "Telecommunication Networking Equipment Manufacturing in the US",
+            "Computer Peripheral Manufacturing in the US"
+        ],
+        "tier_2_buyers": [
+            "Internet Publishing and Broadcasting in the US",
+            "Computer & Packaged Software Wholesaling in the US",
+            "Wireless Telecommunications Carriers in the US",
+            "VoIP in the US",
+            "Television Broadcasting in the US",
+            "Radio Broadcasting in the US",
+            "Cable Networks in the US",
+            "Radar & Satellite Operations in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Price of computers and peripheral equipment",
+            "determinant_description": "The price of computers and peripheral equipment is affected by the cost of smartphones, a significant good produced by manufacturers."
+        },
+        {
+            "determinant_title": "Price of semiconductor and electronic components",
+            "determinant_description": "Chips manufactured from semiconducting silicon are the most valuable input to industry operations."
+        },
+        {
+            "determinant_title": "Value of construction",
+            "determinant_description": "Businesses' upgrade schedules of backbone computer infrastructure and communications technology tend to follow trends in industrial investment."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Decreasing",
+        "export_level": "High",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Low Operating Costs Abroad Result in High Imports",
+                "trade_description": "Minimum wage requirements in other countries, primarily in Asia, reduce the cost of manufacturing devices."
+            },
+            {
+                "trade_title": "Technological Capabilities and Development in Southeast Asia",
+                "trade_description": "Companies compete on the technology sold, including camera quality, screen resolution, battery life and other new features."
+            },
+            {
+                "trade_title": "High Production Costs Drive Down Exports",
+                "trade_description": "Labor, communications and environmental regulations in the United States are stricter than in many other countries, driving operating costs up."
+            },
+            {
+                "trade_title": "Domestic High-End Products Remain Strong",
+                "trade_description": "Although many manufacturers have offshored operations, the design of well-established technologies, such as semiconductors and operating systems, remains domestic."
+            },
+            {
+                "trade_title": "Trade Conditions Determine Exports Destinations",
+                "trade_description": "The United States-Mexico-Canada Agreement (USMCA) supports trade between the three countries."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Silicon Valley",
+            "location_description": "Silicon Valley is the technological hub of the United States, with California housing more than 20.0% of manufacturing operations.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "The West",
+            "location_description": "The West region benefits from its proximity to major trading partners in Asia and Mexico.",
+            "percentage_establishments": 0,
+            "percentage_population": 0
+        },
+        {
+            "location": "The Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region benefits from proximity to key buyers, including laminated plastics and circuit board manufacturers.",
+            "percentage_establishments": 10,
+            "percentage_population": 20
+        },
+        {
+            "location": "The Southeast",
+            "location_description": "The Southeast benefits from major companies, like the Harris Corporation, basing regional operations.",
+            "percentage_establishments": 20,
+            "percentage_population": 30
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_trend": "Increasing",
+        "regulations_points": [
+            {
+                "regulation_title": "FEDERAL COMMUNICATIONS COMMISSION (FCC)",
+                "regulation_description": "FCC prevents devices transmitting in restricted frequencies."
+            },
+            {
+                "regulation_title": "NATIONAL SECURITY",
+                "regulation_description": "US enacted bans/restrictions on import of some communications tech from China."
+            },
+            {
+                "regulation_title": "INTELLECTUAL PROPERTY PROTECTION",
+                "regulation_description": "Standards and IP assist manufacturers in using electromagnetic spectrum prudently."
+            },
+            {
+                "regulation_title": "CE Marking in the European Union",
+                "regulation_description": "To sell in EU, products must meet CE marking requirements."
+            },
+            {
+                "regulation_title": "Cybersecurity Regulations",
+                "regulation_description": "With IoT rise, cybersecurity regulations critical like GDPR."
+            },
+            {
+                "regulation_title": "The Waste Electrical and Electronic Equipment (WEEE) Directive",
+                "regulation_description": "WEEE requires manufacturers to responsibly manage product disposal/recycling."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The communication equipment manufacturing industry is in a mature life cycle stage."
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "The level of industry assistance is low and steady."
+            },
+            {
+                "barrier_title": "Technology Change Level",
+                "barrier_description": "The level of technology change is high in this industry."
+            },
+            {
+                "barrier_title": "Globalization Level",
+                "barrier_description": "The globalization level is high and increasing."
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "The competition level is high and increasing."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Technology Change Level: high",
+            "Globalization Level: high - increasing",
+            "Competition Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "New features and products",
+                "basis_description": "Companies that develop new features gain the upper hand."
+            },
+            {
+                "basis_title": "Niche markets and high-end products",
+                "basis_description": "Domestic manufacturers thrive by targeting niche markets or high-end product lines."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Domestic companies compete for remaining market share",
+                "concentration_description": "Imports satisfy more than 85.0% of domestic demand."
+            },
+            {
+                "concentration_title": "Specialization in niche markets",
+                "concentration_description": "Most domestic manufacturers gain market share by specializing in smaller, niche markets."
+            },
+            {
+                "concentration_title": "Acquisitions increase large companies' market share",
+                "concentration_description": "Major manufacturers aiming to adopt new technologies often acquire the smaller companies."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Commscope Inc.",
+                "company_percentage": 20.1
+            },
+            {
+                "company_name": "L3harris Technologies, Inc.",
+                "company_percentage": 16.7
+            },
+            {
+                "company_name": "Garmin Ltd.",
+                "company_percentage": 12.7
+            },
+            {
+                "company_name": "Motorola Solutions, inc",
+                "company_percentage": 101
+            },
+            {
+                "company_name": "Others",
+                "company_percentage": 40.9
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 70
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 5
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 5
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Fluctuating Input Prices Drive Up Costs",
+            "cost_factor_description": "Components like integrated circuits, memory storage represent significant costs."
+        },
+        {
+            "cost_factor_title": "Focus on Research and Development Requires High-Skilled Workers",
+            "cost_factor_description": "Manufacturers opt to outsource manufacturing but maintain R&D domestically."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "International Affairs Affect Manufacturing Stability",
+                "volatility_description": "Products made abroad more affordable due to lack of minimum wage."
+            },
+            {
+                "volatility_title": "Macroeconomic Conditions Affect Capital Investments",
+                "volatility_description": "Overall economy health determines equipment purchases."
+            },
+            {
+                "volatility_title": "Timing of Product Releases",
+                "volatility_description": "Pressure to develop new products creates revenue spikes/dips."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_trend": "Increasing",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Hardware and Software Upgrades",
+                "technological_change_description": "Companies aim to introduce groundbreaking new features to improve popularity."
+            },
+            {
+                "technological_change_title": "5G Network",
+                "technological_change_description": "5G networks increased capabilities for non-phone tasks like autonomous vehicles."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "Has regulatory scrutiny impacted how you target customers?",
+            "answer": "Labor, communications and environmental regulations in the United States are stricter than in other countries, driving operating costs up and limiting profit."
+        },
+        {
+            "question": "What is the Association of Equipment Manufacturers (AEM)?",
+            "answer": "The AEM supports Construction Machine Manufacturers by lobbying for beneficial policies."
+        },
+        {
+            "question": "What are Public-Private Partnerships (PPPs)?",
+            "answer": "PPPs between governments and private companies can lead to the development of critical communication infrastructure."
+        },
+        {
+            "question": "How do labor and environmental regulations impact the industry?",
+            "answer": "Compliance costs for environmental regulations are high and constantly changing, forcing companies to adapt quickly to avoid fines."
+        },
+        {
+            "question": "Does your company specialize in a niche or produce a diversified range of products?",
+            "answer": "Some operators are able to specialize in a niche to better serve specific customers."
+        },
+        {
+            "question": "Have you looked into setting up manufacturing facilities in lower-wage regions of the country?",
+            "answer": "Outsourcing manufacturing to low-cost regions greatly reduces wage costs."
+        }
+    ]
+}

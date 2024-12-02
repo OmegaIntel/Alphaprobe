@@ -1,0 +1,276 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 51137000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": 2.99
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "revenue_cagr_value": 3.2
+            }
+        },
+        "profit": {
+            "profit_dollars": 5983000000,
+            "profit_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "profit_cagr_value": 0.77
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "profit_cagr_value": 2.3
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 11.7,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "profit_margins_cagr_value": -0.75
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "profit_margins_cagr_value": 0.5
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 18737000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 2.93
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "industry_value_added_cagr_value": 3.0
+            }
+        },
+        "employees": {
+            "employees_count": 101931,
+            "employees_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "employees_cagr_value": 2.74
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "employees_cagr_value": 2.5
+            }
+        },
+        "wages": {
+            "wages_dollars": 11996000000,
+            "wages_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "wages_cagr_value": 2.79
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "wages_cagr_value": 3.0
+            }
+        },
+        "imports": {
+            "imports_dollars": 24248000000,
+            "imports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "imports_cagr_value": 1.47
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "imports_cagr_value": 1.5
+            }
+        },
+        "exports": {
+            "exports_dollars": 19870000000,
+            "exports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "exports_cagr_value": 3.62
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2028,
+                "exports_cagr_value": 3.5
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2023 currency. Medical device manufacturing revenue has faltered over the past five years, stagnating at $51.2 billion over the five years to 2023...",
+    "current_performance": [
+        {
+            "current_performance_point_title": "CHANGING DEMOGRAPHICS HAVE BENEFITED MEDICAL DEVICE MANUFACTURERS",
+            "current_performance_point_description": "The Patient Protection and Affordable Care Act (PPACA) increased public and private health spending on health programs..."
+        },
+        {
+            "current_performance_point_title": "BROADER ACCESS TO INSURANCE SUPPORTS DEMAND FOR MEDICAL DEVICES",
+            "current_performance_point_description": "Broader insurance access results in increased demand for medical devices..."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "MEDICAL DEVICES ARE EXPECTED TO BECOME MORE EFFECTIVE AND EFFICIENT",
+            "future_outlook_point_description": "The average age of the US population is expected to reach 40.7 years by 2028..."
+        },
+        {
+            "future_outlook_point_title": "THE MEDIAN AGE OF THE US POPULATION IS PROJECTED TO CONTINUE TO GROW, BENEFITING MANUFACTURERS",
+            "future_outlook_point_description": "Elderly population growth leads to increased demand for medical devices..."
+        }
+    ],
+    "industry_definition": "This industry includes manufacturers of electromedical and electrotherapeutic apparatuses, such as magnetic resonance imaging...",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level"
+        ],
+        "negative_impact_factors": [
+            "Competition Level"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Strong market position",
+            "Advanced technologies"
+        ],
+        "weaknesses": [
+            "High operational costs"
+        ],
+        "opportunities": [
+            "Emerging markets",
+            "Innovative tech"
+        ],
+        "threats": [
+            "Regulatory changes",
+            "Intense competition"
+        ]
+    },
+    "key_trends": [
+        "Aging population",
+        "Technological advancements",
+        "Increased healthcare spending"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Offices of Physicians",
+            "segment_description": "Facilities that operate for the purpose of examination, evaluation and treatment or referral of patients.",
+            "segment_percentage": 18.8
+        },
+        {
+            "segment": "General Medical and Surgical Hospitals",
+            "segment_description": "Healthcare facilities that provide a wide range of inpatient and outpatient services.",
+            "segment_percentage": 17.8
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Electromedical Cardiovascular Devices",
+            "product_description": "Devices used for cardiovascular treatment.",
+            "product_percentage": 21.7
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "/ibisworld/reportkey/1/473",
+            "/ibisworld/reportkey/1/529"
+        ],
+        "tier_2_suppliers": [],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Number of Physician Visits",
+            "determinant_description": "An increase in physician visits bolsters demand for medical devices."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Increasing",
+        "export_level": "High",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Germany Represents the Main Source of Imports, But Its Share Has Declined",
+                "trade_description": "Germany has lost a considerable market share to countries like Mexico..."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "West",
+            "location_description": "The West is home to many major population centers...",
+            "percentage_establishments": 30,
+            "percentage_population": 25
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast is the largest US region by population...",
+            "percentage_establishments": 10,
+            "percentage_population": 20
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "21 Code of Federal Regulations (CFR) Part 820 - Quality System Regulation",
+                "regulation_description": "Sets out the requirements for the design, development, production, and distribution of medical devices."
+            }
+        ],
+        "regulations_trend": "Increasing"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": []
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": []
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Increasing",
+        "concentration_points": [],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [],
+    "cost_factors": [],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "How does your company benefit from depreciation of the US dollar?",
+            "answer": "Depreciation makes domestically manufactured medical devices more affordable..."
+        }
+    ]
+}

@@ -1,0 +1,602 @@
+{
+    "report_title": "Paper Wholesaling Industry Report",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 10661000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": -8.12
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2031,
+                "revenue_cagr_value": 101
+            }
+        },
+        "profit": {
+            "profit_dollars": 203000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": -9.8
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2031,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 1.9,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -1.83
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2031,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1124000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2031,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 8446,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2031,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 861000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2031,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "Digitalization has deteriorated demand for traditional paper products. Demand for paper products has fallen as individuals, retailers, other wholesalers and corporate clients have adopted digital technology to perform tasks more efficiently and at a lower cost, reducing the need for paper. Moreover, as sales have moved online, wholesalers have been further cut out of the paper supply chain as more customers purchase directly from superstores and manufacturers.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "The Digital Age Has Undermined Paper's Position",
+            "current_performance_point_description": "Digitalization has increasingly siphoned demand for paper away from wholesalers. The commercial printing industry has continued to contract along with other sources of downstream demand including newspaper, magazine and book publishers, resulting in lower overall demand for paper wholesalers."
+        },
+        {
+            "current_performance_point_title": "COVID-19 Accelerates the Decline of Paper",
+            "current_performance_point_description": "Widespread business closures prompted by the COVID-19 pandemic jumpstarted a trend toward hybrid and remote work. Many offices have maintained flexible remote policies since the pandemic has subsided, urging companies to digitize various operations. This forced businesses to conduct more of their work online, reducing their reliance on paper."
+        },
+        {
+            "current_performance_point_title": "Companies Have Pushed Partnerships as the Market Has Shrunk",
+            "current_performance_point_description": "To foster demand for paper, companies in both the production and distribution side of paper products are forming relationships with companies that offer complementary products. The importance of partnerships demonstrates a vertical expansion inside and outside the industry meant to promote paper products and, indirectly, paper wholesaling."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Consumption Patterns Will Move Further Toward Digital Mediums",
+            "future_outlook_point_description": "Digitalization will continue to shifting consumer preferences away from paper. Increased competition from internet-based advertising and publications will suppress demand from the industry's traditional downstream markets, printing, publishing and paper-based manufacturing industries."
+        },
+        {
+            "future_outlook_point_title": "A Diminished Market Will Prompt Additional Exit",
+            "future_outlook_point_description": "The profitability of the industry will shrink because of poor growth prospects for paper. Volatile commodity prices will also negatively affect profitability, as the costs of electricity, gasoline and paper are expected to remain high, raising expenses for wholesalers. Limited opportunities too eek out profit will push more paper wholesalers out of the industry."
+        },
+        {
+            "future_outlook_point_title": "Surviving Companies Will Turn to New Products",
+            "future_outlook_point_description": "Wholesalers will introduce new paper products to assist with business presentations and other visual requirements as electronic channels of communication continue replacing traditional letters and envelope. The introduction of different paper grains has enabled businesses to produce their own presentation documents, a trend that has provided a limited growth opportunity for paper distributors."
+        }
+    ],
+    "industry_definition": "Paper wholesalers purchase bulk writing paper from manufacturers, generally in rolls for further processing, and distribute them to other manufacturing industries, publishers and commercial printers. Wholesalers provide a service for paper manufacturers and users of paper products and charge a mark-up on all goods distributed.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low capital intensity level",
+            "low concentration level",
+            "low - increasing globalization level"
+        ],
+        "negative_impact_factors": [
+            "decline life cycle stage",
+            "low - steady industry assistance level",
+            "low - steady barriers to entry level",
+            "high - steady competition level",
+            "low & steady level of assistance",
+            "high competition",
+            "decline life cycle stage",
+            "low profit vs. sector average",
+            "high customer class concentration",
+            "high product/service concentration",
+            "low revenue per employee"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry"
+        ],
+        "opportunities": [
+            "High Outlier Growth",
+            "Demand from cardboard box and container manufacturing"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2024)",
+            "Low Revenue Growth (2019-2024)",
+            "Low Revenue Growth (2024-2029)",
+            "Low Performance Drivers",
+            "Percentage of business conducted online"
+        ]
+    },
+    "key_trends": [
+        "COVID-19 accelerated digitalization across downstream businesses, further reducing sales of paper products. Digitizing document sharing, document storage and mailing reduces the need for paper.",
+        "Paper wholesalers are consolidating to cut costs as paper prices rise further. Companies have merged in an effort to increase scale and reduce competition as paper prices have risen, further deteriorating the operating environment.",
+        "An increase in business conducted online has hindered paper sales. Digitization reduces the need for paper, negatively impacting its wholesalers.",
+        "Paper wholesalers must patent and trademark. Paper wholesalers must ensure that they products are compliant with manufacturers' patents to avoid recalls.",
+        "Digitalization has curbed demand for newsprint. Consumers have made the switch away from newsprint, and low advertising revenue has reduced the number of published newspaper copies and pages per copy.",
+        "Other wholesalers represent the largest downstream buyer of paper products. These companies often serve as a one-stop shop or are in better proximity to deliver products."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Other wholesalers",
+            "segment_description": "Other wholesalers purchase products from specialized wholesalers and offer one-stop shopping to downstream consumers.",
+            "segment_percentage": 49.4
+        },
+        {
+            "segment": "Businesses",
+            "segment_description": "Businesses include restaurants, hotels, construction companies and manufacturers.",
+            "segment_percentage": 29.8
+        },
+        {
+            "segment": "Paper retailers",
+            "segment_description": "Paper supply retailers negotiate directly with wholesalers about product offerings, price and delivery.",
+            "segment_percentage": 15.4
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Other buyers include household consumers and individuals that purchase paper products at the wholesale level, governmental bodies and repair shops.",
+            "segment_percentage": 5.4
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Printing and Writing Paper",
+            "product_description": "Printing and writing papers are made from uncoated free sheet or wood-free papers, which contain less than 10.0% mechanical pulp.",
+            "product_percentage": 50.7
+        },
+        {
+            "product_or_service": "Fine Roll Paper",
+            "product_description": "Fine roll paper, unlike other printing and writing paper, is bleached.",
+            "product_percentage": 26.9
+        },
+        {
+            "product_or_service": "Newsprint",
+            "product_description": "Newsprint is a paper grade used to produce newspapers, directories, periodicals and advertising circulars that are low-cost, uncoated and lightweight.",
+            "product_percentage": 2.7
+        },
+        {
+            "product_or_service": "Packaging Materials",
+            "product_description": "Packaging materials include cardboard boxes, as well as industrial paper packaging.",
+            "product_percentage": 5.4
+        },
+        {
+            "product_or_service": "Personal Care",
+            "product_description": "<UNKNOWN>",
+            "product_percentage": 2.1
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "<UNKNOWN>",
+            "product_percentage": 12.2
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Wood Pallets & Skids Production in the US",
+            "Paper Mills in the US",
+            "Cardboard Box & Container Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Storage & Warehouse Leasing in the US",
+            "Electric Power Transmission in the US",
+            "Sewage Treatment Facilities in the US"
+        ],
+        "tier_1_buyers": [
+            "Paper Bag & Disposable Plastic Product Wholesaling in the US",
+            "Office Stationery Wholesaling in the US",
+            "Coated & Laminated Paper Manufacturing in the US",
+            "Office Stationery Manufacturing in the US",
+            "Printing in the US"
+        ],
+        "tier_2_buyers": [
+            "Database & Directory Publishing in the US",
+            "Newspaper Publishing in the US",
+            "Greeting Cards & Other Publishing in the US",
+            "Book Publishing in the US",
+            "Professional, Scientific and Technical Services in the US",
+            "Magazine & Periodical Publishing in the US",
+            "Finance and Insurance in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Supply Chain",
+            "determinant_description": "Gottesman cumulatively account for more than a quarter of all revenue. Paper wholesalers face declining profitability."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region has the highest saturation of paper product manufacturers.",
+            "percentage_establishments": 40,
+            "percentage_population": 30
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes has a large number of paper and paperboard mills.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "Several of the largest cities in the United States are in the Mid-Atlantic.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Plains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "Southwest",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        },
+        {
+            "location": "West",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "PATENT AND TRADEMARK LAWS",
+                "regulation_description": "Wholesaler trademark holders must comply with patent and trademark laws that relate to the protection of intellectual property rights, with penalties imposed on the infringement of these patents."
+            },
+            {
+                "regulation_title": "THE OCCUPATIONAL HEALTH AND SAFETY ADMINISTRATION (OSHA)",
+                "regulation_description": "The OSHA sets regulations and standards to ensure employees' safe and healthy working conditions."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The paper wholesaling industry is in the decline stage of its life cycle."
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "The level of industry assistance is low and steady."
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "The competition level in the industry is high and steady."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "The capital intensity level is low.",
+            "The market concentration level is low.",
+            "The level of globalization is low but increasing."
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Price competition",
+                "basis_description": "Remaining wholesalers compete on price in a shrinking market."
+            },
+            {
+                "basis_title": "Product quality and offerings",
+                "basis_description": "Wholesalers also compete on product quality and offerings."
+            },
+            {
+                "basis_title": "Vertical integration",
+                "basis_description": "Vertically integrated manufacturers heighten competition by selling at lower prices."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Consolidation expands concentration",
+                "concentration_description": "Consolidation enables wholesalers to cut costs, expand market reach, invest in new technologies."
+            },
+            {
+                "concentration_title": "Transportation costs limit concentration",
+                "concentration_description": "Need to be located close to suppliers/customers limits ability to service large areas."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Veritiv Corporation",
+                "company_percentage": 21.2
+            },
+            {
+                "company_name": "Central National Gottesman Inc.",
+                "company_percentage": 18.7
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 60.1
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Oth",
+            "cost_type_percentage": 101
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases are the most significant cost for wholesalers",
+            "cost_factor_description": "Wholesalers buy ready-made paper products."
+        },
+        {
+            "cost_factor_title": "Fluctuating demand for these raw materials leads to volatility in input costs",
+            "cost_factor_description": "Fluctuating demand for these raw materials leads to volatility in input costs, causing purchase expenses to fluctuate for manufacturers and for wholesalers."
+        },
+        {
+            "cost_factor_title": "Wages remain essential to paper wholesaling",
+            "cost_factor_description": "Despite labor productivity improvements from technological innovation, wages have risen considerable as a share of revenue because of rapidly declining demand for paper."
+        },
+        {
+            "cost_factor_title": "At the same time, the average wage has risen",
+            "cost_factor_description": "At the same time, the average wage has risen as wages have declined slower than overall industry employment."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Paper wholesaling is labor-intensive",
+                "capital_intensity_description": "Paper wholesaling is labor-intensive. Companies require floor staff, sales officers, marketing staff, management and administrative staff."
+            },
+            {
+                "capital_intensity_title": "The rate of new patent technologies entering the industry is low",
+                "capital_intensity_description": "The rate of new patent technologies entering the industry is low, which limits the potential for innovations."
+            },
+            {
+                "capital_intensity_title": "However, the concentration of technologies is high in this industry",
+                "capital_intensity_description": "High concentration of technologies suggests industry operators have exposure to potentially unforeseen areas of innovation."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "DIGITALIZATION SLOWS PAPER SALES",
+                "volatility_description": "As more businesses have shifted to digital operations, sales of paper have decelerated."
+            },
+            {
+                "volatility_title": "Digital technology",
+                "volatility_description": "Digital technology allows businesses to perform tasks more efficiently and at a lower cost, reducing the need for paper."
+            },
+            {
+                "volatility_title": "INPUT COSTS FLUCTUATE FREQUENTLY",
+                "volatility_description": "Driven by global economic changes, the prices of key inputs like gas, oil and wood pulp are highly volatile."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "PRINTING AND WRITING PAPER IS WHOLESALERS' STAPLE PRODUCT",
+                "technological_change_description": "Printing and writing papers are made from uncoated free sheet or wood-free papers."
+            },
+            {
+                "technological_change_title": "FINE ROLL PAPER REMAINS IN DEMAND",
+                "technological_change_description": "Fine roll paper, unlike other printing and writing paper, is bleached."
+            },
+            {
+                "technological_change_title": "DIGITALIZATION HAS CURBED DEMAND FOR NEWSPRINT",
+                "technological_change_description": "Newsprint is a paper grade used to produce newspapers, directories, periodicals and advertising circulars."
+            },
+            {
+                "technological_change_title": "PACKAGING MATERIALS HAVE RETAINED THEIR USE",
+                "technological_change_description": "Packaging materials include cardboard boxes, as well as industrial paper packaging."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "How have your sales been affected by the growth of online shopping?",
+            "answer": "Growth of online shopping has negatively affected many companies, as downstream industries increasingly purchase online directly from manufacturers to cut costs."
+        },
+        {
+            "question": "How do shifts in consumer preferences toward things like increased environmental consciousness affect your business performance?",
+            "answer": "Increases in environmental consciousness has led to declining demand, as businesses and consumers increasingly opt to not print materials out."
+        },
+        {
+            "question": "Has your company explored growth opportunities via mergers or acquisitions?",
+            "answer": "Due to declining demand and profitability, many smaller companies cannot survive in the industry and therefore are oftentimes acquired by larger companies who are able to withstand the loss of revenue."
+        },
+        {
+            "question": "How does your company negotiate favorable purchase costs with suppliers?",
+            "answer": "Companies are able to negotiate favorable purchase costs with suppliers by establishing a mutually beneficial relationship."
+        },
+        {
+            "question": "Does your company use RFID to optimize inventory management and improve efficiency?",
+            "answer": "RFID-based products are automatically tabulated through geolocations."
+        },
+        {
+            "question": "How has your company been able to implement technology into the purchasing process to make buying more efficient for customers?",
+            "answer": "Many orders are now taken through internet-based, electronic ordering and payment systems that are linked to warehouses and distribution centers."
+        },
+        {
+            "question": "How does your company ensure all relevant health and safety requirements are met?",
+            "answer": "Companies work with associations, such as the National Paper Trade Association, to stay up-to-date on new health and safety requirements."
+        },
+        {
+            "question": "How have you adjusted to new regulations over the past decade? How have you handled compliance costs?",
+            "answer": "Companies are subject to US Patent and Trademark laws."
+        },
+        {
+            "question": "How do your trading profit margins compare to your main competitors' profit margins?",
+            "answer": "Average profit margins have decreased as a result of declining demand for paper products from downstream markets."
+        },
+        {
+            "question": "What cost-saving measures do you currently employ, and what measures might you implement in the future?",
+            "answer": "Companies will likely continue to implement cost-saving measures as revenue is forecast to continue declining."
+        },
+        {
+            "question": "Do you have contacts with key distributors and end users? Are you located close to your target markets and suppliers?",
+            "answer": "Being located close to paper mills cuts transport costs and hence wholesalers' prices for their goods."
+        },
+        {
+            "question": "Have you invested heavily in automation? What affect does automation have on your profit margins?",
+            "answer": "Installation of state-of-the-art computerized technology to improve warehouse efficiency."
+        },
+        {
+            "question": "Is your company dominant in any particular regional markets? What range does your company have in terms of viable operating area?",
+            "answer": "Being close to major printers, publishers and other customers in urban areas reduces transportation costs."
+        },
+        {
+            "question": "How has the digital age affected your company? Have you considered changing your revenue model and business plan to include an online platform?",
+            "answer": "Mounting competition from electronic mediums is leading to declining consumption of paper products."
+        },
+        {
+            "question": "Do you regularly monitor trends in the Printing industry?",
+            "answer": "1"
+        },
+        {
+            "question": "How has poor performance from this industry influenced your demand?",
+            "answer": "The Printing industry is one of the largest consumers of paper rolls sold by industry wholesalers."
+        },
+        {
+            "question": "What proportion of your sales is made to cardboard box and container manufacturing? How do you take advantage of increased demand from this market?",
+            "answer": "Converted paper product manufacturers are a source of sales for paper wholesalers."
+        }
+    ]
+}

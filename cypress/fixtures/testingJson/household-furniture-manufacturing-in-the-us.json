@@ -1,0 +1,495 @@
+{
+    "report_title": "Household Furniture Manufacturing in the US",
+    "report_date": "Dec 13, 2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 23511000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": -3.27
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 0.42
+            }
+        },
+        "profit": {
+            "profit_dollars": 729000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": -2.54
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 3.1,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0.98
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 6655000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": -2.83
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 0.32
+            }
+        },
+        "employees": {
+            "employees_count": 125805,
+            "employees_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "employees_cagr_value": -3.07
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 0.25
+            }
+        },
+        "wages": {
+            "wages_dollars": 5694000000,
+            "wages_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "wages_cagr_value": -2.92
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 0.29
+            }
+        },
+        "imports": {
+            "imports_dollars": 42219000000,
+            "imports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "imports_cagr_value": 2.72
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": -1.62
+            }
+        },
+        "exports": {
+            "exports_dollars": 3140000000,
+            "exports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "exports_cagr_value": 2.41
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 1.08
+            }
+        }
+    },
+    "executive_summary": "New furniture sales have been declining, a trend enhanced by the 2020 pandemic. During the early stages of the pandemic, manufacturers experienced a boom in sales, as low interest rates and high disposable income supported the residential market through gains in housing starts and existing home sales. Consumers often purchase new pieces to furnish their homes after moving. However, high inflation and elevated interest rates caused the residential sector to slow down, reversing the 2021 gains. These factors caused revenue to fall at an estimated CAGR of 4.8% to $23.5 billion over the past five years, including a 4.7% lag in 2023 alone.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Fluctuations in the Residential Market Impact Performance",
+            "current_performance_point_description": "Furniture manufacturers rely heavily on the health of the real estate market and the residential construction sector. When moving homes, consumers often purchase new furniture, as many look for pieces that match their new spaces and adapt to their needs."
+        },
+        {
+            "current_performance_point_title": "Interest Rate Hikes Discourage Real Estate Activity",
+            "current_performance_point_description": "At the start of the pandemic, interest rates dropped close to 0.0% to avoid or lessen the impact of the pandemic on the economy. As a result, the long-term cost of borrowing fell, causing the residential real estate market to slow down."
+        },
+        {
+            "current_performance_point_title": "Volatile Input Prices Affect Sales",
+            "current_performance_point_description": "Pent-up demand for manufactured goods resulted in significant supply chain disruptions. These trends led to lower delivery times and higher purchase costs, negatively impacting manufacturers."
+        },
+        {
+            "current_performance_point_title": "Prominent Import Penetration Increases Competition",
+            "current_performance_point_description": "Many foreign furniture manufacturers benefit from operating in countries with lower operating costs, including lower wage requirements and fewer regulations, giving foreign producers a competitive advantage."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Macroeconomic Trends Discourage Residential Activity",
+            "future_outlook_point_description": "Although the Federal Reserve has paused interest rate increases, it announced its intentions to continue raising the interest rate if needed to control inflation. This possibility contributes to the elevated economic uncertainty, as the Fed is not confident about the short-term future of the economy."
+        },
+        {
+            "future_outlook_point_title": "Elevated Inflation Remains a Concern",
+            "future_outlook_point_description": "High inflation will continue to threaten residential activity as the elevated prices will likely require consumers to postpone new home purchases and construction plans."
+        },
+        {
+            "future_outlook_point_title": "Manufacturers Must Adapt to Changes in Preferences",
+            "future_outlook_point_description": "The newer generations are increasingly tech-savvy, causing significant growth in e-commerce activity and forcing manufacturers to adopt these new trends. Smaller manufacturers with limited shipping capabilities will struggle to meet demand from e-commerce, enabling large producers to capture a higher market share."
+        },
+        {
+            "future_outlook_point_title": "A Weakening Dollar Benefits Domestic Manufacturers",
+            "future_outlook_point_description": "As global conflicts continue to resolve, the value of the US dollar is likely to depreciate, causing domestically produced furniture to become comparatively more affordable and boosting export activity."
+        }
+    ],
+    "industry_definition": "This industry manufactures a range of furniture for personal, household and public use. Public furniture is used for hospitals, theaters, cafeterias, schools and other facilities. Furniture may be made on a stock or custom basis and may be sold assembled or unassembled.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level",
+            "Concentration Level"
+        ],
+        "negative_impact_factors": [
+            "Life Cycle Stage",
+            "Industry Assistance Level",
+            "Globalization Level",
+            "Competition Level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Customer Class Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "Decline Life Cycle Stage",
+            "High Imports",
+            "Low Profit vs. Sector Average",
+            "High Product/Service Concentration",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers",
+            "Per capita disposable income"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Import penetration into the manufacturing sector"
+        ]
+    },
+    "key_trends": [
+        "Prominent import penetration harms domestic manufacturers.",
+        "Domestic producers struggle to compete with lower production costs overseas, enabling foreign producers to capture a large portion of domestic demand.",
+        "Losses in the residential market result in falling revenue. Elevated inflation and high interest rates discourage housing starts and existing home sales, negatively impacting new furniture sales.",
+        "The expected depreciation of the US dollar is likely to result in some revenue growth. However, this growth will be slow as unfavorable economic conditions prevent consumers from making large purchases.",
+        "Housing starts and existing home sales fall amid macroeconomic conditions. This trend harms manufacturers, as consumers tend to purchase new pieces when moving.",
+        "Manufacturers are subject to various environmental regulations, including laws protecting the water and air. This increases operating costs for domestic manufacturers.",
+        "Upholstered furniture generates the most revenue. These pieces are often heavier than other furniture, resulting in most of this furniture being produced or assembled domestically."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Home furnishing stores",
+            "segment_description": "Retailers purchase furniture from manufacturers to sell directly to consumers.",
+            "segment_percentage": 42.8
+        },
+        {
+            "segment": "Other retailers",
+            "segment_description": "Many consumers prefer to purchase furniture directly from retailers, enabling them to test pieces before making an investment.",
+            "segment_percentage": 19.0
+        },
+        {
+            "segment": "Businesses",
+            "segment_description": "A smaller portion of the industry serves the nonresidential market, producing furniture like restaurant seating and benches.",
+            "segment_percentage": 13.4
+        },
+        {
+            "segment": "Independent wholesalers",
+            "segment_description": "Wholesalers purchase furniture items in bulk and resell them to retailers, business, and government customers.",
+            "segment_percentage": 8.7
+        },
+        {
+            "segment": "Department stores and warehouse clubs",
+            "segment_description": "Large retailers such as Walmart and Macy's establish direct relationships with manufacturers to offer lower prices to customers.",
+            "segment_percentage": 5.8
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Upholstered Household Furniture",
+            "product_description": "Upholstered furniture includes couches, recliners, futons and ottomans. This is the most popular segment, generating more than half the revenue.",
+            "product_percentage": 52.4
+        },
+        {
+            "product_or_service": "Institutional Furniture",
+            "product_description": "Institutional furniture includes furniture designed for schools, restaurants, theaters and other public establishments.",
+            "product_percentage": 17.9
+        },
+        {
+            "product_or_service": "Non-Upholstered Wood Household Furniture",
+            "product_description": "The non-upholstered wood household furniture segment includes shelves, dressers, cabinets made of hard materials.",
+            "product_percentage": 13.6
+        },
+        {
+            "product_or_service": "Metal Household Furniture",
+            "product_description": "Metal furniture includes wrought iron furniture, outdoor metal furniture, bed frames, and tables.",
+            "product_percentage": 10.8
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "Household furniture made of other materials, such as plastic and fiberglass.",
+            "product_percentage": null
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Electric Power Transmission in the US",
+            "Industrial Machinery & Equipment Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Sawmills & Wood Production in the US",
+            "Wood Paneling Manufacturing in the US",
+            "Hardware Manufacturing in the US",
+            "Adhesive Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Furniture Stores in the US",
+            "Furniture Wholesaling in the US"
+        ],
+        "tier_2_buyers": [
+            "Home Improvement Stores in the US",
+            "Warehouse Clubs & Supercenters in the US",
+            "Home Furnishings Stores in the US",
+            "Department Stores in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Economic conditions have improved since the start of the pandemic",
+            "determinant_description": "although the recovery has shown to be slow."
+        },
+        {
+            "determinant_title": "High levels of economic uncertainty prevent the segment from expanding",
+            "determinant_description": "as recession fears deter new businesses from forming."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Decreasing",
+        "export_level": "Moderate",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports",
+                "trade_description": "Lower operating costs abroad lead to strong imports from cost-efficient manufacturers."
+            },
+            {
+                "trade_title": "Exports",
+                "trade_description": "An appreciating dollar harms exports."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region has the highest percentage of furniture manufacturing establishments.",
+            "percentage_establishments": 35.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "West",
+            "location_description": "The West region also has a higher percentage of establishments compared to its population.",
+            "percentage_establishments": 25.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "Many manufacturers are based in the Great Lakes due to access to suppliers.",
+            "percentage_establishments": null,
+            "percentage_population": null
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "Proximity to suppliers positively impacts contract renewals.",
+            "percentage_establishments": null,
+            "percentage_population": null
+        },
+        {
+            "location": "New England",
+            "location_description": "Manufacturers can lower transportation costs by remaining close to suppliers.",
+            "percentage_establishments": null,
+            "percentage_population": null
+        },
+        {
+            "location": "Plains",
+            "location_description": "Producers often base operations in regions with access to trade ports.",
+            "percentage_establishments": null,
+            "percentage_population": null
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "Manufacturers in the West and Great Lakes have access to main export routes.",
+            "percentage_establishments": null,
+            "percentage_population": null
+        },
+        {
+            "location": "Southwest",
+            "location_description": "Southeast and West benefit from proximity to trade ports.",
+            "percentage_establishments": null,
+            "percentage_population": null
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "California Flammability Standard for Upholstered Furniture",
+                "regulation_description": "California requires upholstered furniture to withstand exposure to fire."
+            },
+            {
+                "regulation_title": "Consumer Product Safety Commission (CPSC)",
+                "regulation_description": "CPSC administers regulations to mitigate hazards in furniture."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is in the decline life cycle stage, increasing barriers."
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "The industry receives low to steady levels of government assistance."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "The industry has low capital intensity requirements.",
+            "The industry has a low concentration level."
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Product design",
+                "basis_description": "US producers compete on product design as domestic furniture aims to develop better products."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Import Competition",
+                "concentration_description": "Domestic producers face strong competition from imports."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Ashley Furniture Industries, Inc.",
+                "company_percentage": 21.1
+            },
+            {
+                "company_name": "La-Z-Boy Incorporated",
+                "company_percentage": 5.9
+            },
+            {
+                "company_name": "Ameriwood Home",
+                "company_percentage": 3.8
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": null
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": null
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Other Costs Include Trade Expenses",
+            "cost_factor_description": "Other expenses include research and development, repair and maintenance costs."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_trend": "Steady",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Reliance on human labor",
+                "capital_intensity_description": "Manufacturers rely heavily on human labor."
+            }
+        ]
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_trend": "Steady",
+        "volatility_points": [
+            {
+                "volatility_title": "Affordable shipping",
+                "volatility_description": "Affordable shipping contributes to low volatility in prices."
+            }
+        ]
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_trend": "Steady",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Automation in metal furniture",
+                "technological_change_description": "Metal furniture production is less labor-intensive."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "How has your company adapted to recent international trade disruption from the coronavirus pandemic?",
+            "answer": "Both industry imports and exports declined from the pandemic, but as the economy rebounds, both are set to rebound."
+        },
+        {
+            "question": "What is the BUSINESS AND INSTITUTIONAL FURNITURE MANUFACTURERS ASSOCIATION (BIFMA)?",
+            "answer": "The BIFMA is a non-profit trade organization representing commercial and institutional furniture manufacturers."
+        }
+    ]
+}

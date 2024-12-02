@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const BarriersToEntryComponent = ({ barriersToEntry = {} }) => {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [allOpen, setAllOpen] = useState(false); // State to control if all accordions are open or closed
 
   // Default values for properties to avoid errors if they are undefined
   const barriersLevel = barriersToEntry.barriers_level || "N/A";
@@ -25,16 +25,13 @@ const BarriersToEntryComponent = ({ barriersToEntry = {} }) => {
       )
     : [];
 
-
-  const toggleAccordion = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+  const toggleAllAccordions = () => {
+    setAllOpen(!allOpen); // Toggle the state to open/close all sections
   };
 
   return (
-    <div className="rounded-lg p-4 shadow-md text-gray-400 bg-[#171717] border border-[#2e2e2e] px-10 ">
-      <h3 className="text-2xl font-semibold mb-4 text-white">
-        Barriers to Entry
-      </h3>
+    <div className="rounded-lg p-4 shadow-md text-gray-400 bg-[#171717] border border-[#2e2e2e] px-10">
+      <h3 className="text-2xl font-semibold mb-4 text-white">Barriers to Entry</h3>
 
       <div className="mb-4 flex justify-between">
         <p className="text-lg">
@@ -47,9 +44,7 @@ const BarriersToEntryComponent = ({ barriersToEntry = {} }) => {
         </p>
       </div>
 
-      <h4 className="font-semibold text-lg mb-2 text-[#e1e1e1]">
-        Barrier Points
-      </h4>
+      <h4 className="font-semibold text-lg mb-2 text-[#e1e1e1]">Barrier Points</h4>
       <div className="grid grid-cols-2 gap-12">
         {barriersPoints.map((point, index) => (
           <div
@@ -57,15 +52,15 @@ const BarriersToEntryComponent = ({ barriersToEntry = {} }) => {
             className="border border-gray-600 bg-gradient-to-b from-[#ffffff]/10 to-[#999999]/10 rounded-2xl p-4 py-6 shadow-md hover:shadow-lg hover:border-gray-500 transition duration-200"
           >
             <div
-              onClick={() => toggleAccordion(index)}
+              onClick={toggleAllAccordions} // Toggle all accordions on click
               className="flex justify-between items-center cursor-pointer"
             >
               <h5 className="text-lg text-[#b9bbbe] font-medium">
                 {point.barrier_title || "Untitled Barrier"}
               </h5>
-              <span className="text-lg">{openIndex === index ? "-" : "+"}</span>
+              <span className="text-lg">{allOpen ? "-" : "+"}</span>
             </div>
-            {openIndex === index && (
+            {allOpen && (
               <p className="mt-2 font-normal text-[#a8a8a8]">
                 {point.barrier_description || "No description available."}
               </p>

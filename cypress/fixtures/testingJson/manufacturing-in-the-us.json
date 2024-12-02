@@ -1,0 +1,546 @@
+{
+    "report_title": "Manufacturing in the US",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 6977996000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": 0.16
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 0.24
+            }
+        },
+        "profit": {
+            "profit_dollars": 690822000000,
+            "profit_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "profit_cagr_value": 2.32
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 9.9,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 2.16
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 1709112000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 0
+            }
+        },
+        "employees": {
+            "employees_count": 11357140,
+            "employees_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "employees_cagr_value": 0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 0
+            }
+        },
+        "wages": {
+            "wages_dollars": 797793000000,
+            "wages_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "wages_cagr_value": 0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 0
+            }
+        },
+        "imports": {
+            "imports_dollars": 2650394000000,
+            "imports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 1289450000000,
+            "exports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The manufacturing sector contracted at an expected CAGR of 0.4% to $7.0 trillion through the current period, including a 3.5% drop in 2023, while profit will falter to 8.0%. The COVID-19 pandemic harmed the sector, but manufacturers have started to recover with vaccines and stimulus in 2021. The sector will struggle in 2023 due to rising interest rates and high uncertainty. The sector remains vital but its importance has waned as the economy becomes more service-oriented and manufacturers offshore production.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Manufacturers Combat Poor Economic Conditions During the Pandemic",
+            "current_performance_point_description": "The COVID-19 pandemic harmed the manufacturing sector, with revenue plummeting in 2020 due to lockdowns and supply chain disruptions. Some subsectors like food and consumer electronics benefited from changing markets, while others like transportation manufacturers struggled as travel declined. Many companies cut production to handle uncertainty."
+        },
+        {
+            "current_performance_point_title": "Supply Chain Disruptions Slam the Manufacturing Sector",
+            "current_performance_point_description": "Companies faced severe supply chain issues like oil shortages from Russian sanctions, mining lockdowns, and semiconductor shortages. Automakers faced skyrocketing prices and unfilled orders. Food manufacturers coped with soaring commodity prices and cut contracts with Russian farmers."
+        },
+        {
+            "current_performance_point_title": "The Manufacturing Sector Remains Critical to the US Economy",
+            "current_performance_point_description": "The manufacturing sector has a large economic multiplier effect, but its role has declined as the US economy becomes more service-oriented. Manufacturers have offshored production to lower labor cost countries."
+        },
+        {
+            "current_performance_point_title": "The Strengthening US Dollar Has Harmed the Manufacturing Sector",
+            "current_performance_point_description": "A stronger US dollar makes exports more expensive, hurting manufacturers who rely on trade. The pandemic and strong dollar contributed to declining exports, while imports surged to fill production gaps left by lockdowns."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "The Manufacturing Sector Will Benefit From the Economy's Recovery",
+            "future_outlook_point_description": "Key economic metrics like consumer confidence and employment will improve, benefiting manufacturers. Transportation manufacturers will see pent-up travel demand, while lower interest rates will spur investment in new facilities."
+        },
+        {
+            "future_outlook_point_title": "Exports Will Start to Rebound Through the Outlook Period",
+            "future_outlook_point_description": "Exports are expected to climb faster than revenue due to a projected decline in the US dollar's value, making US goods more affordable abroad. However, import penetration from offshoring will remain a threat."
+        },
+        {
+            "future_outlook_point_title": "Manufacturers Will Integrate Advanced Technologies",
+            "future_outlook_point_description": "To improve efficiency and supply chain resilience, manufacturers will invest in technologies like 3D printing, AI, and machine learning over the outlook period."
+        },
+        {
+            "future_outlook_point_title": "Companies Will Prioritize Sustainability and the Environment",
+            "future_outlook_point_description": "Responding to regulations and consumer preferences, manufacturers will adapt sustainable practices like electric vehicles, lightweight materials, non-petroleum products, energy efficiency, and healthier food options."
+        }
+    ],
+    "industry_definition": "The Manufacturing sector includes operators engaged in the transformation of raw inputs into new products using mechanical, physical or chemical processes. Additionally, assemblage of component parts into new, complex goods is included in this sector, except where they should be considered construction. Goods may be sold directly to end users or to wholesalers for redistribution. Harvesting, extraction, resale and publishing are not included.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Concentration Level"
+        ],
+        "negative_impact_factors": [
+            "Globalization Level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "High Revenue per Employee"
+        ],
+        "weaknesses": [
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers",
+            "World price of steel"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Trade-weighted index"
+        ]
+    },
+    "key_trends": [
+        "The COVID-19 slammed the manufacturing sector. Many companies reduced production and faced subdued demand.",
+        "The manufacturing sector's importance has waned. The US economy has grown increasingly service-oriented, especially as manufacturers move their production processes abroad."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Wholesalers",
+            "segment_description": "Wholesalers often sell products to other businesses instead of directly to consumers. Wholesalers often anticipate consumer and economic trends to maximize profit. Most retailers and downstream manufacturers operate through wholesalers. Many manufacturers, especially consumer product producers, have increasingly bypassed wholesalers, connecting directly with retailers and consumers. These companies have leveraged online shopping trends to attract new consumers to websites, cutting out the middleman. Even so, wholesalers represent a stable demand source. Many manufacturers use wholesalers to manage excess inventory and purchase intermediary inputs, like screws and adhesives, almost entirely from.",
+            "segment_percentage": 43.9
+        },
+        {
+            "segment": "Retailers",
+            "segment_description": "Most manufacturers rely on retailers to sell finished consumer goods to the public. Some companies have increasingly relied on online marketplaces to sell their products rather than retailers. Many companies forge partnerships with retailers for exclusivity and prime shelf space; some manufacturers manage vertically integrated retailers too. The pandemic and lockdown measures constrained retail demand. Many brick-and-mortar stores closed, leading to massive inventory backlogs as companies rushed to adjust production. Even so, rising e-commerce sustained demand. Online shopping will create major growth opportunities for consumer product manufacturers.",
+            "segment_percentage": 21.6
+        },
+        {
+            "segment": "Manufacturers",
+            "segment_description": "Manufacturers often purchase raw materials, components and semi-finished products, like steel ingots, screws or chemicals, from other manufacturers to produce finished products. The pandemic created major supply chain disruptions, leading to higher input costs. Certain shortages, like the semiconductor backlog, rippled through the sector. Supply chain issues have ebbed as the economy recovers.",
+            "segment_percentage": 18.9
+        },
+        {
+            "segment": "Construction",
+            "segment_description": "Construction companies primarily purchase manufactured goods, primarily metals, plastics and rubber. These buyers also commonly purchase construction machinery and vehicles. Construction demand has plummeted as interest rates climb. Many potential buyers have suspended projects, leading to lower input demand and fewer machinery replacements. Most companies have opted for smaller projects, limiting the market.",
+            "segment_percentage": 6.6
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Other major markets include the healthcare, utilities, food service and mining sectors. Federal and local governments and direct-to-consumer (DTC) also represent critical markets for some manufacturers. While small, these sectors and industries represent vital demand sources. Food, beverage and tobacco manufacturers, for example, rely heavily on demand from food and accommodation services, while defense and aerospace companies place greater emphasis on government contracts. Economic indicators, like per capita disposable income and consumer confidence, also dictate demand from consumers. As an end market for many manufactured goods, consumer sentiment plays a key role in the manufacturing sector. Even so, direct-to-consumer sales represent a small portion of demand.",
+            "segment_percentage": 9
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Petroleum, Coal and Chemical Manufacturing",
+            "product_description": "This segment includes crude oil and coal derivatives and other chemicals, including rubbers, pesticides, pharmaceuticals, plastics, chemicals and cleaning compounds. Many petroleum derivative manufacturers sell to transportation, heating and electricity generation companies too.",
+            "product_percentage": 27.7
+        },
+        {
+            "product_or_service": "Transportation Equipment and Machinery Manufacturing",
+            "product_description": "Transportation equipment includes vehicles, like cars, trucks, buses, trains and aircraft, alongside components and equipment for these vehicles. Machinery equipment includes products that perform specific tasks across the agriculture, construction, manufacturing and mining sectors.",
+            "product_percentage": 23.1
+        },
+        {
+            "product_or_service": "Food, Beverage and Tobacco Manufacturing",
+            "product_description": "Food, beverage and tobacco manufacturers cover a significant portion of the manufacturing sector's total revenue generation. Many food products are nondiscretionary or semi-discretionary, leading to stable demand. In particular, many tobacco and alcohol products create addiction and dependency, though anti-tobacco campaigns have constrained tobacco manufacturers.",
+            "product_percentage": 18.1
+        },
+        {
+            "product_or_service": "Metal and Mineral Production",
+            "product_description": "This segment includes nonmetallic mineral products, primary metal and fabricated metal product manufacturing. These segments include concrete, ferrous and nonferrous metal, gypsum and other mineral products. Manufacturers commonly make fabricated metal from secondary or recycled metal, while manufacturers refine raw materials to create primary metals. This segment includes foundry work.",
+            "product_percentage": 12.3
+        },
+        {
+            "product_or_service": "Computer and Electronics Manufacturing",
+            "product_description": "Computer and electronic products include products used for communication, entertainment and information processing. Companies use advanced electronics technologies like computer hardware, software and semiconductors to produce consumer electronics.",
+            "product_percentage": 7.8
+        },
+        {
+            "product_or_service": "Wood and Paper Product Manufacturing",
+            "product_description": "Wood and paper products make up a significant remainder of the manufacturing sector. Even so, buyers have increasingly purchased Canadian and Brazilian wood products. Similarly, most businesses have cut paper consumption significantly, causing this segment to decline.",
+            "product_percentage": 6.6
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "This segment also includes apparel manufacturers; this industry has almost entirely outsourced to low-cost regions like India and Malaysia. Other manufacturing encompasses furniture and miscellaneous manufacturing.",
+            "product_percentage": 4.4
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Agriculture, Forestry, Fishing and Hunting in the US",
+            "Mining in the US"
+        ],
+        "tier_2_suppliers": [
+            "Manufacturing in the US",
+            "Wholesale Trade in the US"
+        ],
+        "tier_1_buyers": [
+            "Wholesale Trade in the US",
+            "Retail Trade in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Consumer Preferences",
+            "determinant_description": "Consumers will often trade up to more expensive food and beverage brands or dine out as per capita disposable income increases. High inflation has discouraged many consumers from purchasing more expensive brands. Manufacturers have also adapted to drastically shifting consumer preferences. Buyers have expressed healthier tendencies and expanded palates, leading to more low-calorie, whole wheat, foreign and similarly."
+        },
+        {
+            "determinant_title": "Brand Loyalty",
+            "determinant_description": "While consumers display strong brand loyalty, they readily switch to less costly alternatives when prices pass a certain variable threshold."
+        },
+        {
+            "determinant_title": "Innovation and Replacement Cycles",
+            "determinant_description": "Machinery and transportation equipment benefit from regular innovation and replacement. Buyers regularly replace outdated or broken vehicles and machines, creating steady demand."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Moderate",
+        "import_trend": "Decreasing",
+        "export_level": "Moderate",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Low-cost Manufacturers Threaten Domestic Markets",
+                "trade_description": "Many manufacturers have faced increasing pressure from low-cost manufacturers, particularly Chinese and Mexican producers. These companies leverage lax environmental and labor regulations to offer lower prices than domestic manufacturers. Southeast Asia also represents growing threats to domestic manufacturers. Many companies have moved production to these developing regions to take advantage of abundant, low-cost labor."
+            },
+            {
+                "trade_title": "Tariffs and Trade Policies",
+                "trade_description": "The US government's extensive tariff war with China has reduced their role in US import markets. Chinese imports have dropped nearly 25.0% in 2023. Many companies have pulled out of China, relocating in nearby countries too. The Chinese government has displayed weak patent protection, causing many technology companies to flock to South Korea, Taiwan and Malaysia instead."
+            },
+            {
+                "trade_title": "USMCA Benefits",
+                "trade_description": "The USMCA lowers trade barriers between its three partner nations, creating inexpensive trade opportunities for domestic manufacturers. China and Mexico are the top two export partners for US manufacturers. Canada and Mexico's proximity to the United States also makes trade easier. Companies benefit from well-established land and sea routes between the three nations to cut transportation costs and forge stronger relationships with buyers."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region has easy access to international shipping routes with South America and Europe, respectively. The Southeast also offers a favorable business climate, with lower taxes and less regulation, making it an attractive location for manufacturers. The region also has a large and skilled labor force.",
+            "percentage_establishments": 30,
+            "percentage_population": 20
+        },
+        {
+            "location": "West",
+            "location_description": "The West region boasts a large, affluent consumer market and well-developed transportation infrastructure. Many manufacturers in the West leverage trade routes with Mexico, Western Canada and Asia Pacific. The West region also has access to natural resources, including minerals and energy. Even so, California's energy consumption policies are detrimental to most energy-intensive manufacturers, encouraging many manufacturers to move to the Southwest. The West is also a traditional technology hub, with several major research institutions dotting the area. Many manufacturers partner with these universities and labs to expand research opportunities. As a result, many electronics and medicinal manufacturers locate in the West.",
+            "percentage_establishments": 17,
+            "percentage_population": 27
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region states tend to have an affordable cost of living, making it more attractive for manufacturers to locate in the region and attract labor. The region also has several industrial clusters, like the automotive and steel industries. This trend can give manufacturers access to specialized suppliers, services and a skilled labor force.",
+            "percentage_establishments": 16,
+            "percentage_population": 15
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 18,
+            "percentage_population": 15
+        },
+        {
+            "location": "Southwest",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 12,
+            "percentage_population": 20
+        },
+        {
+            "location": "Plains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 10,
+            "percentage_population": 7
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5,
+            "percentage_population": 7
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 9,
+            "percentage_population": 5
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "ENVIRONMENTAL PROTECTION AGENCY (EPA) REGULATIONS",
+                "regulation_description": "The EPA is a federal agency that regulates the release of pollutants into the environment. Manufacturers adhere to EPA regulations covering ecological issues, like air emissions, water discharge, noise pollution and hazardous waste management."
+            },
+            {
+                "regulation_title": "FOOD AND DRUG ADMINISTRATION (FDA) REGULATIONS",
+                "regulation_description": "The FDA is a federal agency that regulates the production, labeling and marketing of food, drugs and other consumer products. Manufacturing businesses that produce food, drugs or other consumer products are subject to FDA regulations."
+            },
+            {
+                "regulation_title": "OCCUPATIONAL SAFETY AND HEALTH ADMINISTRATION (OSHA) REGULATIONS",
+                "regulation_description": "OSHA is a federal agency that sets and enforces safety and health standards for workplaces in the United States. Manufacturing businesses adhere to OSHA regulations; this organization covers workplace issues."
+            },
+            {
+                "regulation_title": "CONSUMER PRODUCT SAFETY COMMISSION (CPSC) REGULATIONS",
+                "regulation_description": "The CPSC is a federal agency that regulates the safety of consumer products in the US. It primarily covers product labeling, testing and recalls. Companies that mislead buyers face hefty penalties."
+            },
+            {
+                "regulation_title": "TRADE REGULATIONS",
+                "regulation_description": "Manufacturers that import or export products are subject to trade regulations, including tariffs, quotas and other trade barriers. Some manufacturers must use US-manufactured inputs."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage: mature",
+                "barrier_description": "Life Cycle Stage: mature"
+            },
+            {
+                "barrier_title": "Globalization Level: high - increasing",
+                "barrier_description": "Globalization Level: high - increasing"
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Globalization Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Concentration Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Imports represent a growing competitive threat",
+                "basis_description": "Imports represent a growing competitive threat to the domestic manufacturing sector."
+            },
+            {
+                "basis_title": "Efficient production methods and flexible supply chains crucial",
+                "basis_description": "Efficient production methods and flexible supply chains are crucial for success. More efficient manufacturers can more successfully respond to changing consumer preferences and regulations."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "SPECIALIZATION IMPACTS MARKET SHARE CONCENTRATION",
+                "concentration_description": "Companies that specialize in a specific industry or niche product category often capture a larger market share within that industry or category. These companies successfully focus their resources and expertise on a specific area, stressing core competencies and giving them an advantage over more diversified companies."
+            },
+            {
+                "concentration_title": "EFFICIENT TRANSPORTATION NETWORKS ENABLE COMPANIES TO EXPAND",
+                "concentration_description": "Larger companies with strong distribution networks can reach more customers, capturing a larger market share. These manufacturers can get their products into more stores or other outlets, like wholesalers, for buyers to purchase."
+            }
+        ],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 20
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 30
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 40
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 50
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 60
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 70
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Manufacturers endure heavy input price volatility",
+            "cost_factor_description": "Manufacturers primarily rely on raw inputs, like steel, oil and other ferrous and nonferrous metals. Most companies also purchase machinery and semi-finished inputs, like foundry products, to make consumer goods."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "MODERATE capital intensity",
+                "capital_intensity_description": "Capital is a critical expense for most manufacturers. The sector constantly upgrades and replaces machines, leading to high capital and depreciation costs. Even so, specialized manufacturers often rely more on skilled labor, leading to a notable expense difference."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Economic Uncertainty Has Added to Volatility",
+                "volatility_description": "The COVID-19 pandemic had a significant impact on market volatility. Lockdowns and travel restrictions disrupted supply chains, cutting production capacity. The pandemic also slashed demand particularly as consumer sentiment plummeted."
+            },
+            {
+                "volatility_title": "MANUFACTURERS ENDURE VOLATILE COMMODITY PRICES",
+                "volatility_description": "Manufacturers often use raw materials, semifinished goods and other commodities as inputs in the production process. Climbing prices lead to higher production costs for manufacturing businesses, cutting into profit and adding to volatility."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "MODERATE technology change",
+                "technological_change_description": "Food, beverage and tobacco manufacturers cover a significant portion of the manufacturing sector's total revenue generation. Many food products are nondiscretionary or semi-discretionary, leading to stable demand."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company impacted by rising imports from abroad?",
+            "answer": "Import penetration is a consistent threat to US manufacturing. Imported goods are often less expensive as they are manufactured in countries with lower labor costs."
+        },
+        {
+            "question": "Have foreign markets offered an opportunity for your company?",
+            "answer": "The value of exports in the manufacturing sector tends to rise when the value of the US dollar declines. Government regulations and tariffs also play a key role in determining demand from foreign markets."
+        },
+        {
+            "question": "Has your company explored acquisition opportunities in locations with well-established infrastructure networks?",
+            "answer": "Technological change has resulted in nontraditional acquisitions as manufacturing companies have increased software use."
+        },
+        {
+            "question": "Has your company located in proximity to its key downstream distributors to reduce shipping costs?",
+            "answer": "The manufacturing sector is very diverse, however, this diversity tends to create regional clusters where companies buy and sell from each other within the sector."
+        },
+        {
+            "question": "Have you been able to reduce wage costs by automating operations over the past five years?",
+            "answer": "The average wage in the industry has continued to grow. However, the number of workers per establishment has declined, driven by growing automation."
+        },
+        {
+            "question": "How does your company invest in technology to establish a competitive edge over your competitors?",
+            "answer": "Technology investment is necessary for all facets of manufacturing, which includes both product and process investment."
+        },
+        {
+            "question": "Have you had any regulatory expenses that have significantly impacted profitability recently?",
+            "answer": "Manufacturers, as a broad sector, are subject to wide-ranging regulations that are always subject to change and revision. Regulation may increase under the new administration, potentially impacting operator profitability."
+        },
+        {
+            "question": "How does your company stay ahead of regulations such as energy-efficiency standards?",
+            "answer": "Energy efficiency is a component of regulation that has affected most of the manufacturing sector in one form or another."
+        },
+        {
+            "question": "How does your company's profit compare to your main competitors?",
+            "answer": "It is difficult to compare profit across segments of the sector, but in general, they are exposed to underlying commodity prices. Profit has fallen during the period in line with declining revenue and rising average wages."
+        },
+        {
+            "question": "How does your company compensate for seasonality of cash flow?",
+            "answer": "Overall, the manufacturing sector is exposed to limited seasonality."
+        },
+        {
+            "question": "Do you use intelligent manufacturing techniques? Has digitization been integrated into your processes?",
+            "answer": "Manufacturers use various intelligent manufacturing techniques like automation, robotics and machine learning to improve efficiency, quality and flexibility in their manufacturing processes. Digitization has also been integrated into many manufacturing processes, including computer-aided design (CAD), computer-aided manufacturing (CAM) and manufacturing execution systems (MES). These technologies enable manufacturers to collect and analyze data from their processes, allowing them to optimize production and make informed decisions."
+        },
+        {
+            "question": "Does your company negotiate long-term supply contracts? Are you exposed to volatile input prices?",
+            "answer": "Manufacturers often negotiate long-term supply contracts with their suppliers in order to secure a stable supply of materials and components at a fixed price. Long-term contracts also provide manufacturers with greater visibility into the future costs of their inputs and can help to reduce the risk of supply chain disruptions. Even with long-term contracts in place, prices for raw materials and components can still fluctuate because of changes in market demand, natural disasters and geopolitical events."
+        }
+    ]
+}

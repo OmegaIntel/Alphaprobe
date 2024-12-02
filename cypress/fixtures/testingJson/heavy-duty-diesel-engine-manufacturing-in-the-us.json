@@ -1,0 +1,621 @@
+{
+    "report_title": "Heavy-Duty Diesel Engine Manufacturing in the US",
+    "report_date": "May 24, 2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 31148000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": -0.17
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 0.07
+            }
+        },
+        "profit": {
+            "profit_dollars": 1744000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": -0.91
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5.6,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": -0.74
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 7255000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 0.69
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": -0.03
+            }
+        },
+        "employees": {
+            "employees_count": 29207,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": -0.08
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": -0.23
+            }
+        },
+        "wages": {
+            "wages_dollars": 4883000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 1.23
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": -0.17
+            }
+        },
+        "imports": {
+            "imports_dollars": 18530000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 2.01
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": -2.97
+            }
+        },
+        "exports": {
+            "exports_dollars": 17190000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 1.26
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 0.93
+            }
+        }
+    },
+    "executive_summary": "Figures have been adjusted for inflation and are presented in 2023 currency.\n\nHeavy-duty diesel engine manufacturers primarily make products used in freight trucks and industrial machinery. When COVID-19 hit, businesses were shut down, so consumer spending plunged. Businesses shipped fewer goods in response to lower consumer spending, so demand for trucks and diesel engines fell, causing revenue to plunge in 2020. As the economy recovered from the pandemic, businesses displayed record sales, resulting in high corporate profit. More profit enabled companies to invest more in manufacturing equipment, so demand for heavy-duty diesel engines rose, benefiting the industry. Rising interest rates have reduced home buying, so demand for construction has fallen. Weak construction demand has reduced the need for trucks carrying building materials, so revenue has been hampered in recent years. Lower steel prices have also hurt manufacturers, as they can't pass high costs onto consumers. Overall, revenue for heavy-duty diesel engine manufacturers is anticipated to decline at a CAGR of 3.2% during the current period, reaching $31.1 billion in 2023. Revenue is forecast to creep upward 0.9% in that year.\n\nThe industry will perform better in the near future, but revenue growth will still be meager. Manufacturers will benefit from steadily rising incomes, as they'll increase business activity, raising the need for trucks and heavy-duty diesel engines. The value of the US dollar will also decline, benefiting exports. Higher exports will create more revenue streams for the industry, boosting revenue. Engine producers will be hurt by falling industrial production, as this will reduce downstream demand from manufacturers. Higher Corporate Average Fuel Average (CAFE) standards will also rise, encouraging manufacturers to improve their engines so they can be more environmentally sustainable. Overall, revenue is forecast to creep upward at a CAGR of 0.7% during the current period, reaching $32.2 billion in 2028. Profit is projected to make up 5.7% of revenue in that year.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "LOWER STEEL PRICES HAVE CONSTRAINED REVENUE GROWTH",
+            "current_performance_point_description": "Elevated steel prices often benefit the industry, as manufacturers pass on high costs to buyers. An excess supply of steel caused prices to plunge in the years immediately preceding the pandemic, reducing a significant revenue stream for diesel engine manufacturers and damaging the industry's performance during the current period."
+        },
+        {
+            "current_performance_point_title": "COVID-19 LEAD TO A COLLAPSE IN DEMAND FOR TRUCKING",
+            "current_performance_point_description": "As the pandemic hit, state and local governments forced businesses to shut down while also enforcing social distancing rules. These regulations caused consumer spending to plunge since everything was closed or severely restricted. Businesses didn't need to ship goods nearly as much because of lower economic activity, so demand for trucking tanked. Fewer trucks were purchased, so the need for heavy-duty diesel engines fell, causing revenue to drop significantly in 2020."
+        },
+        {
+            "current_performance_point_title": "THE PANDEMIC RECOVERY HAS CREATED A RESURGENCE IN CORPORATE PROFIT",
+            "current_performance_point_description": "As mass vaccination enabled businesses to open up, consumer spending increased significantly as households were willing to engage in normal economic activities again. Businesses displayed record amounts of sales, so corporate profit soared."
+        },
+        {
+            "current_performance_point_title": "Higher corporate profit has boosted investment in plants and machinery",
+            "current_performance_point_description": "They've purchased diesel engines in record amounts to maintain their equipment, causing revenue to surge during the pandemic recovery."
+        },
+        {
+            "current_performance_point_title": "HIGH-INTEREST RATES HAVE CONSTRAINED DOWNSTREAM DEMAND FROM THE CONSTRUCTION SECTOR",
+            "current_performance_point_description": "Interest rates have risen markedly in recent years as the Federal Reserve has been combatting inflation. The higher cost of borrowing has reduced home buying and home improvements, causing demand for construction to fall. Lower construction demand requires fewer trucks to transport building materials, so spending on heavy-duty diesel engines has also declined, hampering revenue growth in recent years."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "STEADILY RISING INCOMES WILL BENEFIT MANUFACTURERS",
+            "future_outlook_point_description": "Despite current economic challenges related to high inflation, rising interest rates and recessionary fears, GDP growth is expected to grow steadily during the outlook period. Higher incomes will raise consumer spending, increasing business and freight transportation activity. Since trucks need heavy-duty diesel engines to function, more trucks on the road will help revenue grow during the outlook period."
+        },
+        {
+            "future_outlook_point_title": "INFLATION WILL CONSTRAIN INDUSTRIAL PRODUCTION IN THE YEARS TO COME",
+            "future_outlook_point_description": "Inflation during 2021 - 2023 has caused production costs to rise significantly. These costs will force manufacturers to reduce production during the outlook period to stay operational. Less manufacturing will reduce demand for diesel engines from machinery, hindering revenue."
+        },
+        {
+            "future_outlook_point_title": "The Falling Dollar Will Raise Exports",
+            "future_outlook_point_description": "The Trade-Weighted Index (TWI), which measures the value of the US dollar relative to other currencies, is anticipated to decline during the outlook period. As the US dollar's value falls, domestic goods appear less expensive to foreign buyers, so exports will rise in the near future. Higher exports will generate more revenue streams for diesel engine manufacturers, improving the industry's performance."
+        },
+        {
+            "future_outlook_point_title": "More Environmental Regulations Will Improve The Efficiency Of Diesel Engines",
+            "future_outlook_point_description": "Corporate Average Fuel Economy (CAFE) standards will rise during the outlook period, forcing trucks to pollute less. To satisfy these regulations, heavy-duty diesel engine manufacturers will improve their products, making them more efficient, less costly and more versatile. These innovations will provide more revenue streams for manufacturers, benefiting them."
+        }
+    ],
+    "industry_definition": "This industry manufactures heavy-duty diesel engines. A diesel engine is an internal combustion engine that uses the heat of compression to initiate ignition and burn fuel. This fuel is then injected into the combustion chamber. These engines are used in highway vehicles (i.e. freight trucks) and machinery.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Barriers To Entry Level"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level",
+            "Industry Assistance Level",
+            "Regulation Level",
+            "Technology Change Level",
+            "Globalization Level",
+            "Competition Level"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage",
+            "Capital Intensity Level",
+            "Concentration Level"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Steady Barriers to Entry",
+            "Low & Increasing Level of Assistance"
+        ],
+        "weaknesses": [
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration",
+            "High Competition",
+            "Very high Volatility",
+            "High Imports",
+            "Low Profit vs. Sector Average",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers",
+            "Freight transportation services index"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Industrial production index"
+        ]
+    },
+    "key_trends": [
+        "COVID-19 caused revenue to plunge"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Wholesalers",
+            "segment_description": "Heavy-duty diesel manufacturers sell their products to wholesalers, as these companies transfer the industry's products to truck and other manufacturers for use in transportation and machinery. Since wholesalers are effective middlemen, sales to them comprise more than half of the industry's revenue.",
+            "segment_percentage": 61.4
+        },
+        {
+            "segment": "Manufacturers",
+            "segment_description": "Manufacturers of trucks, buses, construction machinery, tractors and other materials often purchase engines from the industry directly. Industrial production has grown slowly during the current period, as COVID-19 hindered manufacturing. Despite these problems, manufacturers' share of revenue has increased during the current period because they're increasingly replacing wholesalers.",
+            "segment_percentage": 38.6
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Heavy-duty Transportation Engines",
+            "product_description": "Heavy and medium-duty truck diesel engines comprise more than two-thirds of revenue. Wholesalers, retailers, manufacturers and other businesses purchase these heavy and medium-duty trucks to transport goods to their stores or to other companies.",
+            "product_percentage": 37
+        },
+        {
+            "product_or_service": "Medium-Duty Transportation Engines",
+            "product_description": "Buses also use medium-duty diesel engines, but they make up a relatively small share of sales. As the economy has recovered from COVID-19, consumer spending has soared, raising demand for trucking. This has caused heavy-duty truck engines' revenue share to increase during the current period.",
+            "product_percentage": 31
+        },
+        {
+            "product_or_service": "Light-Duty Transportation Engines",
+            "product_description": "Light-duty diesel truck engines are used in small vehicles designed to carry smaller payloads. These trucks are helpful in small construction projects, as they can efficiently carry building materials. High-interest rates have discouraged construction in recent years, so light-duty automobile engines' revenue share has declined during the current period.",
+            "product_percentage": 15
+        },
+        {
+            "product_or_service": "Industrial Machinery Engines",
+            "product_description": "Diesel engines are also used in industrial machinery, as they're applied to streamline the manufacturing process. Industrial production has been meager in recent years, as the pandemic pushed manufacturing to a halt. Demand for industrial machinery engines has been weak, so their share of revenue has crept downward during the current period.",
+            "product_percentage": 17
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Iron & Steel Manufacturing in the US",
+            "Screw, Nut & Bolt Manufacturing in the US",
+            "Metalworking Machinery Manufacturing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_suppliers": [
+            "Valve Manufacturing in the US",
+            "Structural Metal Product Manufacturing in the US",
+            "Engine & Turbine Manufacturing in the US"
+        ],
+        "tier_2_buyers": [
+            "Truck & Bus Manufacturing in the US",
+            "Construction Machinery Manufacturing in the US",
+            "Tractors & Agricultural Machinery Manufacturing in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Level of production from manufacturers",
+            "determinant_description": "The level of production from manufacturers depends heavily on the amount of activity from their respective downstream markets."
+        },
+        {
+            "determinant_title": "Demand for heavy-duty diesel engines",
+            "determinant_description": "Demand for heavy-duty diesel engines from heavy-duty truck manufacturers depends largely on freight activity and the new vehicle purchasing activity of trucking companies. Higher freight activity will encourage trucking companies to purchase new vehicles to add to their existing fleets. Demand from industrial machinery manufacturers depends on the level of activity in the agricultural, construction, mining, oil and gas extraction, marine and rail industries. Lower levels of production or activity in these industries curb demand for new industrial equipment or machinery with heavy-duty diesel engines."
+        },
+        {
+            "determinant_title": "Impact of COVID-19",
+            "determinant_description": "During COVID-19, demand for heavy-duty diesel engines fell amid vast economic uncertainty and the temporary closure or limit of production in many downstream industries. New vehicle purchasing activity fell as companies were hesitant to purchase new trucks when uncertainty regarding the virus and economy persisted."
+        },
+        {
+            "determinant_title": "Recent increase in demand",
+            "determinant_description": "Spending on heavy-duty diesel engines has recently increased amid a rise in industrial activity, freight activity and recovery in the rail, agricultural and marine industries."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Steady",
+        "export_level": "High",
+        "export_trend": "Steady",
+        "international_trade_points": [
+            {
+                "trade_title": "LOW LABOR COSTS BOOST INTAKE FROM ABROAD",
+                "trade_description": "As low-income countries have developed, manufacturers have set up diesel engine plants there. Since labor costs are significantly lower in these nations than in the United States, engines sold are much less expensive. Corporations seeking to save money bought from these foreign manufacturers in high amounts, raising imports throughout the current period."
+            },
+            {
+                "trade_title": "THE RECENT TRADE WAR WITH CHINA REDUCES TRADE WITH THAT COUNTRY",
+                "trade_description": "To encourage domestic production, the Trump administration initiated a trade war with China during the late 2010s by raising tariffs on their goods. In retaliation, China raised its tariffs on American products, hindering trade between the two nations and hampering the global economy. The tariffs made it more expensive to import engines from China, causing imports from that country to fall during the current period."
+            },
+            {
+                "trade_title": "COVID-19 HINDERED SPENDING ON FOREIGN PRODUCTS FROM MANUFACTURERS",
+                "trade_description": "The pandemic resulted in a massive drop in consumer spending, as many businesses that Americans would often shop in were closed. Since households weren't spending, industrial production plunged, so truck manufacturers purchased significantly fewer engines from abroad, causing imports to plunge in 2020."
+            },
+            {
+                "trade_title": "THE UNITED STATES-MEXICO-CANADA AGREEMENT (USMCA) ENCOURAGES FURTHER INTERDEPENDENCE WITH NEIGHBORING COUNTRIES",
+                "trade_description": "The USMCA came into effect in 2020, reducing many trade barriers with Mexico and Canada. This agreement has made it easier to sell diesel fuel engines to America's neighbors, so trade with Canada and Mexico has helped exports during the current period."
+            },
+            {
+                "trade_title": "THE COVID-19 RECOVERY HAS BENEFITED MANUFACTURERS",
+                "trade_description": "As mass vaccination enabled foreign governments to eliminate social distancing measures, consumer spending soared in these countries as households began engaging in outdoor economic activities again. Demand for trucking rose in response to higher consumer spending, so more manufacturers abroad have been buying US-produced engines, boosting exports."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes Region",
+            "location_description": "States in the great lakes region such as Ohio, Illinois and Michigan are known for their manufacturing prowess. Since heavy-duty diesel engine makers sell to machinery and truck manufacturers, they want to be located near them. Many manufacturers have their headquarters in the Great Lakes region, so the industry also has many establishments in the region.",
+            "percentage_establishments": 30,
+            "percentage_population": 20
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region contains big states such as North Carolina and Florida. Since much of the nation's population resides in these two regions, there's high demand for goods and services, which increases spending on trucking. High spending on trucking creates demand for heavy-duty diesel engines, so the industry has a notable presence in the Southeast region.",
+            "percentage_establishments": 10,
+            "percentage_population": 30
+        },
+        {
+            "location": "West",
+            "location_description": "The West region is home to massive states such as California. Since much of the nation's population resides in these two regions, there's high demand for goods and services, which increases spending on trucking. High spending on trucking creates demand for heavy-duty diesel engines, so the industry has a notable presence in the West region.",
+            "percentage_establishments": 10,
+            "percentage_population": 40
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region has around 20% of establishments but only 10% of the population.",
+            "percentage_establishments": 20,
+            "percentage_population": 10
+        },
+        {
+            "location": "Plains",
+            "location_description": "Most of the plains states have small populations but are geographically expansive. Truckers must travel much longer distances in this region because of its geographic size. Truck manufacturers need heavy-duty diesel engines in higher amounts to travel through the plains states, so the industry's presence in this region is significant.",
+            "percentage_establishments": 10,
+            "percentage_population": 10
+        },
+        {
+            "location": "Southwest",
+            "location_description": "The Southwest region contains big states such as North Carolina and Florida. Since much of the nation's population resides in these two regions, there's high demand for goods and services, which increases spending on trucking. High spending on trucking creates demand for heavy-duty diesel engines, so the industry has a notable presence in the Southwest region.",
+            "percentage_establishments": 10,
+            "percentage_population": 30
+        },
+        {
+            "location": "New England",
+            "location_description": "The New England region has a relatively smaller presence in terms of both establishments and population.",
+            "percentage_establishments": 10,
+            "percentage_population": 5
+        },
+        {
+            "location": "Rocky M",
+            "location_description": "The Rocky M region has a relatively smaller presence in terms of both establishments and population.",
+            "percentage_establishments": 0,
+            "percentage_population": 5
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_trend": "Increasing",
+        "regulations_points": [
+            {
+                "regulation_title": "NATIONAL HIGHWAY TRAFFIC SAFETY ADMINISTRATION (NHTSA)",
+                "regulation_description": "The NHTSA enforces vehicle safety standards, and will require that a manufacturer recall its vehicle if it finds a defect that \"poses an unreasonable risk to safety\". This applies to heavy-duty diesel engine manufacturers since their products are used in vehicles."
+            },
+            {
+                "regulation_title": "CLEAN AIR ACT",
+                "regulation_description": "This law requires that companies comply with limits on the emission of pollutants. These rules apply to heavy-duty diesel engine manufacturers because building new products can release chemicals that can pollute the air. The Environmental Protection Agency (EPA) applies allowances for the level of sulfur, nitrogen oxides, ozone and other pollutants companies can release into the atmosphere."
+            },
+            {
+                "regulation_title": "CLEAN WATER ACT",
+                "regulation_description": "This act ensures that heavy-duty diesel engine manufacturers don't pollute bodies of water. Since making smart appliances can create waste, companies might pollute streams of water if there isn't government regulation."
+            },
+            {
+                "regulation_title": "SULFUR CONTENT REGULATIONS",
+                "regulation_description": "Starting in 2010, the EPA required that all on-road vehicles use ultra-low sulfur diesel (ULSD). Manufacturers had to alter their engines to comply with these standards."
+            },
+            {
+                "regulation_title": "CAFE STANDARDS",
+                "regulation_description": "The EPA and the NHTSA jointly administer the Corporate Average Fuel Economy (CAFE) standards. They require vehicles to meet specific fuel economy standards so their pollution into the atmosphere is limited. Diesel engine manufacturers have had to change the way they build their products to adhere to these standards. The EPA has also passed laws to further reduce pollution from heavy-duty vehicles beginning in 2027."
+            },
+            {
+                "regulation_title": "PANDEMIC-ERA REGULATIONS",
+                "regulation_description": "To ensure that COVID-19 didn't spread, governments forced manufacturers to enforce social distancing and mask-wearing laws. Heavy-duty diesel engine manufacturers had to adjust their procedures to follow these rules."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is mature, indicating high barriers to entry."
+            },
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "The industry has high revenue volatility, which increases barriers."
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "The industry has low to increasing assistance, suggesting higher barriers."
+            },
+            {
+                "barrier_title": "Regulation Level",
+                "barrier_description": "The industry faces heavy and increasing regulation, raising barriers."
+            },
+            {
+                "barrier_title": "Technology Change Level",
+                "barrier_description": "High level of technology change creates barriers for new entrants."
+            },
+            {
+                "barrier_title": "Globalization Level",
+                "barrier_description": "High and increasing globalization poses barriers for domestic entrants."
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "High and increasing competition level indicates significant barriers."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "There aren't any specific licenses required to become a heavy-duty diesel engine manufacturer. Some states may force entrants to get a basic business license, which asks for proof of residence, age and other essential information."
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Price competition",
+                "basis_description": "Heavy-duty diesel manufacturers compete primarily on price, which is determined by costs of raw materials, manufacturing processes, wages and distribution agreements."
+            },
+            {
+                "basis_title": "Quality and reliability",
+                "basis_description": "Companies compete on product quality and reliability factors like engine power, efficiency, lifespan and repair frequency."
+            },
+            {
+                "basis_title": "Customer service",
+                "basis_description": "Customer service is also a basis of competition among manufacturers."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Medium",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "High barriers encourage concentration",
+                "concentration_description": "It's hard for new players to enter due to high capital requirements, so concentration remains medium as established firms dominate."
+            },
+            {
+                "concentration_title": "Mergers and acquisitions",
+                "concentration_description": "Large players engage in M&A to gain skills and knowledge, making it harder for new firms to compete and increasing concentration."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Caterpillar Inc.",
+                "company_percentage": 15.5
+            },
+            {
+                "company_name": "Cummins Inc.",
+                "company_percentage": 8.3
+            },
+            {
+                "company_name": "Navistar International Corp",
+                "company_percentage": 5.4
+            },
+            {
+                "company_name": "Daimler AG",
+                "company_percentage": 1.1
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 5.6
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 15.7
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 54.1
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 2.1
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0.1
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0.5
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0.7
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 21.2
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Inflation pushes wages slightly upward",
+            "cost_factor_description": "As inflation has increased, employees have been demanding higher wages. Manufacturers have mostly relented, as their highly skilled employees can threaten to leave for another company, so wages have crept upward as a percentage of revenue during the current period."
+        },
+        {
+            "cost_factor_title": "Purchases hold steady as manufacturers pass on high prices to buyers",
+            "cost_factor_description": "While inflation and supply chain disruptions have caused the prices of these materials to soar, manufacturers have been able to pass on high costs to consumers, so purchases as a percentage of revenue have been steady during the current period."
+        },
+        {
+            "cost_factor_title": "Rising service costs raise miscellaneous costs' revenue share",
+            "cost_factor_description": "Inflation has caused the prices of these services to rise. Since manufacturers can't pass on these costs to consumers, \"other\" costs have increased as a share of revenue during the current period."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Medium capital intensity",
+                "capital_intensity_description": "The Heavy-Duty Diesel Engine Manufacturing industry is moderately capital-intensive. For every $1.00 spent on wages, the average company will invest an estimated $0.13 in capital equipment. The manufacturing process often requires a large amount of capital in the forms of plant, property and equipment, with most capital investment stemming from automated assembly line machinery used to increase production speed and cost efficiency."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Economic Conditions Influence Demand for Trucking",
+                "volatility_description": "When the economy is expanding, business activity is higher, so demand for trucking and heavy-duty engines increase. When there's a recession, downstream demand from companies is low, so trucking companies spend less on engines. GDP growth plunged amid COVID-19, while it soared during the recovery, creating significant revenue volatility for manufacturers."
+            },
+            {
+                "volatility_title": "Prices for Raw Materials Shift Constantly",
+                "volatility_description": "The prices of raw materials for diesel engines such as steel often fluctuate because of supply chains, disruptions to foreign trade and demand for the items. Higher input prices benefit manufacturers often, as they can pass on higher costs to their buyers. They don't have this opportunity when prices are lower, so revenue growth is lower when prices of steel and other materials are low."
+            },
+            {
+                "volatility_title": "Exchange Rates Cause Exports to Fluctuate",
+                "volatility_description": "The industry often benefits when the dollar's value is lower, as it boosts exports."
+            }
+        ],
+        "volatility_trend": "Increasing"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Technological Disruption",
+                "technological_change_description": "The Heavy-Duty Diesel Engine Manufacturing industry may contend with technological disruption moving forward. Efforts to research more environmentally friendly alternatives to diesel engines are expected to continue. As electric motor technology continues to develop, the technology may reach the point where it can serve as a competitive substitute for heavy-duty diesel engines."
+            },
+            {
+                "technological_change_title": "High Technology Change",
+                "technological_change_description": "Technology change within the Heavy-Duty Diesel Engine Manufacturing industry has been high. Many of its key downstream industries have faced more environmental regulations, prompting heavy-duty diesel engine manufacturers to innovate. Engine manufacturers have increasingly introduced new engine technologies over the past five years. Most of this technological change relates to compliance with Environmental Protection Agency (EPA) emissions standards."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company impacted by rising imports from abroad?",
+            "answer": "This industry has a high level of import penetration, which can cut into manufacturers' revenue. Imports have declined during the current period, mostly because of COVID-19."
+        },
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "The industry depends on trucking companies' sales, which is heavily tied to the overall economy. The industry displayed a decline in 2020 because of the pandemic."
+        },
+        {
+            "question": "Is your company located in proximity to important suppliers?",
+            "answer": "Companies are clustered in areas where the automotive industry has a high presence, such as the Great Lakes region."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices over the past few years?",
+            "answer": "Volatility in the world price of crude oil and steel has hampered industry performance over the past five years."
+        },
+        {
+            "question": "Have you been able to reduce wage costs by automating operations over the past five years?",
+            "answer": "This industry has a medium level of capital intensity, so wage costs as a percentage of revenue are relatively low."
+        },
+        {
+            "question": "How does your company invest in technology, such as 3D printing, to establish a competitive edge over your competitors?",
+            "answer": "Technological progress is pretty slow in this industry. The main area of technological innovation is in fuel efficiency and emissions control."
+        },
+        {
+            "question": "What effect have international tariffs had on your ability to import and export products?",
+            "answer": "New diesel engine tariffs may cut import penetration, but retaliatory tariffs may also reduce export revenue."
+        },
+        {
+            "question": "Have you had any regulatory expenses that have significantly impacted profitability recently?",
+            "answer": "The industry has been adjusting to EPA emissions and fuel economy regulations implemented during the past decade."
+        },
+        {
+            "question": "How has the volatility of the prices of inputs affected profit during the current period?",
+            "answer": "Large increases in the price of steel often benefit manufacturers because they can pass on high costs to their buyers."
+        },
+        {
+            "question": "How frequently does your company purchase new equipment?",
+            "answer": "Purchasing raw materials and machinery is the most significant expense for companies in this industry."
+        },
+        {
+            "question": "Does your company keep up to date with the latest technology? What are the associated costs?",
+            "answer": "Engine manufacturers that adopt new technology quickly can gain an edge over competitors and potentially boost their revenue."
+        },
+        {
+            "question": "How can you improve your company to receive better word-of-mouth recommendations? How many of your clients were referred to you by a satisfied client?",
+            "answer": "The moderate to high concentration level favors companies that leverage economies of scale to continue expanding their operations."
+        },
+        {
+            "question": "Has your company developed export markets? If so, is there capacity to increase export volumes?",
+            "answer": "Emerging economies have ramped up industrial production and activity in the construction market. Successful engine manufacturers will capitalize on the increased demand from abroad. Exports are anticipated to soar in 2023 in line with high global demand for heavy-duty diesel engines."
+        },
+        {
+            "question": "What steps have you taken to ensure compliance with current regulations? What steps do you take to ensure compliance with expected future regulations?",
+            "answer": "Regulations place limits on engine emissions. Changes in regulation require engineering and research efforts to ensure future compliance."
+        },
+        {
+            "question": "Do you monitor the industrial production index? How have fluctuations in the IPI affected demand?",
+            "answer": "High levels of industrial production often lead to increased demand for heavy-duty engines, as machines use these engines to make industrial products. When the industrial production index is high, manufacturers tend to benefit. The industrial production index is anticipated to fall in 2023, hurting the industry."
+        },
+        {
+            "question": "Do you monitor the trade-weighted index? How do you prepare for an upswing in demand for engines when exports increase?",
+            "answer": "The trade-weighted index measures the value of the US dollar against other major currencies. As the trade-weighted index decreases, exports become more competitive as the US dollar depreciates. The trade-weighted index is estimated to creep downward in 2023, boosting export volumes."
+        }
+    ]
+}

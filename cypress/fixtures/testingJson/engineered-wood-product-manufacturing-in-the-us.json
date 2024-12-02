@@ -1,0 +1,492 @@
+{
+    "report_title": "Industry Report on Engineered Wood Product Manufacturing",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 3644000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": -0.99
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 0.96
+            }
+        },
+        "profit": {
+            "profit_dollars": 179000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": -0.27
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 0.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.9,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0.73
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 610000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 0.0
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 0.0
+            }
+        },
+        "employees": {
+            "employees_count": 5209,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 0.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 0.0
+            }
+        },
+        "wages": {
+            "wages_dollars": 355000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 0.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 0.0
+            }
+        },
+        "imports": {
+            "imports_dollars": 1227000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 0.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 0.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 312000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 0.0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 0.0
+            }
+        }
+    },
+    "executive_summary": "The Engineered Wood Product Manufacturing industry develops wood products such as laminated veneer lumber and other engineered wood members. New home construction is the largest market, with demand depending on housing starts and home improvement spending, which grew in the five years to 2023 due to low interest rates from the COVID-19 pandemic. Industry revenue expanded at a 3.0% CAGR over this period and is expected to reach $3.6 billion in 2023, though falling 4.9% that year. Profit increased due to declining costs.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Residential Construction Activity Skyrockets Due to Low Interest Rates",
+            "current_performance_point_description": "The Federal Reserve lowered interest rates during COVID-19, reducing mortgage rates and boosting residential construction and renovation activity, a key market for the industry. However, the Fed is now raising rates, expected to slow residential work."
+        },
+        {
+            "current_performance_point_title": "Engineered Wood Products are a Required Structural Component to Home Renovations",
+            "current_performance_point_description": "Engineered wood products are required for home renovations, a steady demand source as emergency repairs are always needed. Low interest rates during the pandemic boosted renovation spending, though rising rates will decrease it."
+        },
+        {
+            "current_performance_point_title": "Competitive Imports Pressure Revenue",
+            "current_performance_point_description": "Imports from developing countries with low labor costs are extremely price competitive, pressuring domestic manufacturers' revenue. However, domestic producers focus on higher quality products enabled by skilled labor and technology."
+        },
+        {
+            "current_performance_point_title": "Demand from the Nonresidential Construction Market Fell Throughout the Pandemic",
+            "current_performance_point_description": "Nonresidential construction like offices and hotels declined sharply during the pandemic as businesses halted plans, offsetting residential gains. This market will recover in 2023 as complications diminish, though facing more substitute competition."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Residential Construction Activity Will Slow Due to Increasing Mortgage Rates",
+            "future_outlook_point_description": "The Federal Reserve will raise interest rates over the outlook period to maintain economic growth, increasing mortgage rates and slowing residential construction and renovation activity, a key demand driver."
+        },
+        {
+            "future_outlook_point_title": "The Nonresidential Construction Market is Set to Recover",
+            "future_outlook_point_description": "The nonresidential market like offices and commercial space will rebound as the economy recovers from the pandemic, boosted by restored business sentiment, government spending, and remodeling projects."
+        },
+        {
+            "future_outlook_point_title": "A Higher Demand for Quality and a Depreciating Dollar Will Propel Exports",
+            "future_outlook_point_description": "Exports will grow due to international demand for higher quality domestic products and a depreciating US dollar making exports more attractive, though low-cost imports will remain competitive."
+        },
+        {
+            "future_outlook_point_title": "Substitutes Continue to Capture Demand",
+            "future_outlook_point_description": "The industry will face rising competition from substitutes like steel and concrete, especially in the more profitable nonresidential market, though wood will remain dominant for most projects."
+        }
+    ],
+    "industry_definition": "This industry includes establishments primarily engaged in manufacturing engineered wood products, including: I-Joists used in floor and roof construction; laminated veneer lumber used for headers, beams, studs and columns; and glue-laminated timber, structural wood panels, plywood, rim board, siding and other specialty products.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "low concentration level",
+            "low - increasing competition level"
+        ],
+        "negative_impact_factors": [
+            "very high revenue volatility level",
+            "low - steady barriers to entry level"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Competition",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry",
+            "Very high Volatility",
+            "Medium Imports",
+            "Low Profit vs. Sector Average",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers"
+        ],
+        "threats": []
+    },
+    "key_trends": [
+        "The Federal Reserve lowered interest rates to curtail the negative effects of the COVID-19-induced recession and stimulate the stagnant economy. Mortgage rates followed suit and were lowered as well, boosting residential construction activity.",
+        "Low-cost imports pose a significant threat. Domestic engineered wood manufacturers are responding to this by focusing on higher-quality products.",
+        "Nonresidential construction work fell. The COVID-19 pandemic halted activity within the nonresidential building market and forced businesses to revise construction plans.",
+        "Engineered wood manufacturers are under heavy environmental and noise regulation. These include the Clean Water Act, Resource Conservation and Recovery Act, Clean Air Act, the Cluster Rule and noise control governed by the US Code.",
+        "Tariff protection has a significant bearing on domestic demand. There is a moderate level of tariff protection against imports of veneer, plywood and engineered wood products.",
+        "Engineered wood members remains the industry's largest product segment. Laminated veneer lumber also account for a significant portion of demand.",
+        "Residential construction boomed due to COVID-19-induced low interest rates, but is now starting to decline as the Federal Reserve begins to spike up rates. Nonresidential construction continues to dwindle as activity within this sector has historically taken longer to improve post-recession.",
+        "Engineered wood manufacturers choose to locate themselves near downstream markets, making the Southeast the most popular region due to housing activity and population. California is also popular for its strong housing market."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Retailers",
+            "segment_description": "Retailers are the Largest Market for Engineered Wood Manufacturers. This includes sales direct to retailers and excludes sales intermediated through third-party wholesalers.",
+            "segment_percentage": 42.5
+        },
+        {
+            "segment": "Independent Wholesalers",
+            "segment_description": "Independent Wholesalers Provide a Much-Needed Sales Avenue. Engineered wood manufacturers are concentrated in proximity to upstream suppliers of lumber and does not necessarily operate close to population centers.",
+            "segment_percentage": 33.9
+        },
+        {
+            "segment": "Building Contractors",
+            "segment_description": "Building Contractors Have a Much Larger Influence Than Its Share of Direct Sales Would Suggest. Construction companies also purchase engineered wood products through wholesalers and, to a lesser extent, retailers.",
+            "segment_percentage": 15.2
+        },
+        {
+            "segment": "Manufacturers and Other Businesses",
+            "segment_description": "Manufacturers and Other Businesses Use Engineered Wood as Primary Inputs. The majority of sales within this segment are to manufacturers that use engineered wood products as inputs in the production of other goods.",
+            "segment_percentage": 8.4
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Engineered Wood Members (except truss)",
+            "product_description": "Engineered wood products are manufactured by binding the strands, particles, fibers or veneers of wood together. These products are most commonly used in the residential construction market.",
+            "product_percentage": 56.6
+        },
+        {
+            "product_or_service": "Laminated Veneer Lumber",
+            "product_description": "Demand for laminated veneer lumber has increased alongside a booming residential construction market",
+            "product_percentage": 38.2
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "",
+            "product_percentage": 5.2
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Timber Services in the US",
+            "Logging in the US",
+            "Electric Power Transmission in the US",
+            "Power Tools & Other General Purpose Machinery Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Sawmills & Wood Production in the US",
+            "Adhesive Manufacturing in the US",
+            "Laminated Plastics Manufacturing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": [
+            "Home Builders in the US",
+            "Millwork in the US",
+            "Prefabricated Home Manufacturing in the US",
+            "Office Furniture Manufacturing in the US",
+            "Furniture Wholesaling in the US",
+            "Apartment & Condominium Construction in the US",
+            "Housing Developers in the US",
+            "Remodeling in the US",
+            "Home Furnishing Wholesaling in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Engineered wood members are extremely durable",
+            "determinant_description": "Engineered wood products are more resistant to warping than solid lumber and can be designed to meet specific performance requirements for construction markets."
+        },
+        {
+            "determinant_title": "Demand for engineered wood products has increased",
+            "determinant_description": "Demand for engineered wood products has increased as custom dimensions and project specific products is becoming a strong competitive tool."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Moderate",
+        "import_trend": "Increasing",
+        "export_level": "Moderate",
+        "export_trend": "Increasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Countries with low labor costs pose a significant threat",
+                "trade_description": "Foreign produced engineered wood products have an advantage over domestic manufacturers through the use of low-cost labor, enabling them to offer lower prices."
+            },
+            {
+                "trade_title": "Weak Brazilian real increases demand",
+                "trade_description": "Brazil has been one of the fastest-growing sources of imports over the past five years, in part due to their weak currency, which has reduced the relative cost for US consumers of products manufactured in the country."
+            },
+            {
+                "trade_title": "The largest destination for industry exports is Canada",
+                "trade_description": "Industry trade with Canada benefits from advantageous trade conditions with the United States through the United States-Mexico-Canada Agreement (USMCA)."
+            },
+            {
+                "trade_title": "A depreciating dollar will boost export volumes",
+                "trade_description": "A decreasing trade-weighted index (TW), which measures the strength of the US dollar relative to the currencies of its major trading partners, will benefit industry exports as domestically produced goods become comparatively less expensive for foreign customers."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "The West",
+            "location_description": "The West Leads the Industry with Strong Supply and Demand. Oregon and Washington have the largest concentration of establishments. Engineered wood manufacturers choose to locate in the region due to the area's ready supply of lumber and other raw materials.",
+            "percentage_establishments": 40.9,
+            "percentage_population": 8.1
+        },
+        {
+            "location": "The Southeast",
+            "location_description": "The Southeast Benefits From a Booming Housing Market. Alabama, Florida and Louisiana are the main areas in the region for engineered wood production. These states are major producers of lumber, the key input for the industry.",
+            "percentage_establishments": 18.9,
+            "percentage_population": 21.7
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "Great Lakes Producers Benefit From Canadian Proximity. Engineered wood manufacturers benefit from ready access to raw materials since the Great Lakes is the third-most popular destination for logging companies and the second-most popular destination for sawmill operators.",
+            "percentage_establishments": 8.1,
+            "percentage_population": 21.3
+        },
+        {
+            "location": "Indiana and Wisconsin",
+            "location_description": "Indiana and Wisconsin are the main producers of engineered wood products in the region. Manufacturers set up in these states because of their close proximity to Canada, the world's second-largest producer of lumber.",
+            "percentage_establishments": 101,
+            "percentage_population": 101
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "The Clean Water Act (CWA) and the Resource Conservation and Recovery Act (RCRA)",
+                "regulation_description": "Under the CWA and RCRA, manufacturers are responsible for ensuring that appropriate water and solid waste discharge procedures have been followed. They are also subject to specific provisions relating to airborne pollution emissions."
+            },
+            {
+                "regulation_title": "The Clean Air Act (CAA)",
+                "regulation_description": "The CAA is designed to protect and enhance the nation's air resources to protect public health and welfare. It establishes limits to air pollutants, including carbon monoxide, nitrous oxides, sulfur oxides and other particulate matter."
+            },
+            {
+                "regulation_title": "The Cluster Rule",
+                "regulation_description": "The Cluster Rule protects human health and the environment by reducing toxic releases to the air and water. The rule applies to most manufacturers in the United States and is enforced by the Environmental Protection Agency (EPA)."
+            },
+            {
+                "regulation_title": "Noise Control",
+                "regulation_description": "Noise regulation is governed by the US Code, which is a source of federal law enacted by Congress. The law lists the types of industrial machinery considered and requires the EPA to monitor progress through developed noise emission standards."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The engineered wood manufacturing industry is mature."
+            },
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "The revenue volatility level in the industry is very high."
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "The concentration level in the industry is low.",
+            "The competition level is low but increasing."
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Competitive pricing",
+                "basis_description": "Competitive pricing is key to attracting downstream customers in a relatively low-margin industry."
+            },
+            {
+                "basis_title": "Product quality and range",
+                "basis_description": "Engineered wood manufacturers must be able to deliver a range of high-quality products that have aesthetic appeal."
+            },
+            {
+                "basis_title": "Import competition",
+                "basis_description": "Imported wood products are extremely price-competitive, as they're often manufactured in developing countries with low labor costs."
+            },
+            {
+                "basis_title": "Domestic response",
+                "basis_description": "Domestic manufacturers respond to import competition by focusing on higher quality, but this strains profitability."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Unknown",
+        "concentration_points": [
+            {
+                "concentration_title": "Fragmented market",
+                "concentration_description": "The engineered wood manufacturing market is fragmented with a mix of a few large companies and many small manufacturers."
+            },
+            {
+                "concentration_title": "Niche markets",
+                "concentration_description": "Smaller manufacturers increasingly cater to niche markets, reducing susceptibility to competitively priced imports."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Boise Cascade Company",
+                "company_percentage": 3.8
+            },
+            {
+                "company_name": "Louisiana-Pacific Corporation",
+                "company_percentage": 3.3
+            },
+            {
+                "company_name": "Georgia-Pacific Llc",
+                "company_percentage": 2.7
+            },
+            {
+                "company_name": "Weyerhaeuser Company",
+                "company_percentage": 1.7
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 10
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 60
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 70
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 80
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 90
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Other miscellaneous costs are high",
+            "cost_factor_description": "Other costs as a share of revenue have increased over the past five years. Other costs include administrative expenses, freight charges, unsold inventory and insurance, along with investments toward research and development."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Engineered wood manufacturing is a labor-intensive industry",
+                "capital_intensity_description": "Prospective manufacturers will have to hire skilled workers to operate and maintain specialized machinery. Also, designers will have to be hired to ensure the structural integrity of products provided."
+            },
+            {
+                "capital_intensity_title": "Low level of new patents and patent concentration",
+                "capital_intensity_description": "The industry is experiencing a low level of both the rate of new patents and the concentration of patents in the industry. This creates an environment where the threat of new technologies driving disruption is low."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Demand is susceptible to trends in residential and commercial construction",
+                "volatility_description": "As the Federal Reserve lowered interest rates amid the COVID-19 pandemic, engineered wood manufacturers enjoyed significant demand growth from downstream residential construction markets."
+            },
+            {
+                "volatility_title": "Household income influences home improvement sales",
+                "volatility_description": "Engineered wood manufacturers are sensitive to changes in household disposable income since private spending on home improvements is a prominent downstream market."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Demand for laminated veneer lumber has increased",
+                "technological_change_description": "Engineered wood products are manufactured by binding the strands, particles, fibers or veneers of wood together. These products are most commonly used in the residential construction market."
+            },
+            {
+                "technological_change_title": "Engineered wood members are extremely durable",
+                "technological_change_description": "Engineered wood products are more resistant to warping than solid lumber and can be designed to meet specific performance requirements for construction markets."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "What is the document about?",
+            "answer": "The document contains industry data tables and a glossary for a particular industry."
+        },
+        {
+            "question": "What data is included in the table?",
+            "answer": "The table includes yearly data from 2005 to 2021 on revenue, IVA (industry value added), number of establishments, enterprises, employment, exports, imports, wages, and domestic demand for the industry, all in monetary and unit terms."
+        }
+    ]
+}

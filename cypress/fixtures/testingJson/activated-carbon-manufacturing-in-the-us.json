@@ -1,0 +1,456 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 445000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": 2.87
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 2.59
+            }
+        },
+        "profit": {
+            "profit_dollars": 21000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 2.31
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 2.5
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.6,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0.0
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 2.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 81000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 2.5
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 2.5
+            }
+        },
+        "employees": {
+            "employees_count": 916,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 3.0
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 2.5
+            }
+        },
+        "wages": {
+            "wages_dollars": 53000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 3.5
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 2.0
+            }
+        },
+        "imports": {
+            "imports_dollars": 240000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "imports_cagr_value": 1.5
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 1.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 275000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "exports_cagr_value": 1.8
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 1.5
+            }
+        }
+    },
+    "executive_summary": "The Activated Carbon Manufacturing industry has continued to be subject to influence from an intensified focus on environmental policy. Activated carbon is processed with oxygen to create pores between carbon atoms, increasing their surface area and enabling activated carbon to absorb contaminants as liquid or gas passes through it. Activated carbon is used primarily for water treatment and air purification. A range of downstream industrial sectors rely on activated carbon for the removal of impurities. The industry is beholden to industrial production activity as it is typically correlated with the issuance of additional contaminants and an increased need for activated carbon products.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Stagnant Growth in Industrial Production and Rising Input Costs Have Inhibited Revenue",
+            "current_performance_point_description": "The industrial production index, along with investment in industrial equipment, has wavered since 2018, siphoning away much of the demand for activated carbon manufacturing. The proliferation of activated carbon manufacturers in emerging markets has intensified competition for domestic activated carbon manufacturers, causing industry revenue to decline. Demand began to bounce back in 2021 as the economy was recovering from the pandemic. This period of economic recovery significantly increased worldwide demand for coal, causing input costs to rise for the industry."
+        },
+        {
+            "current_performance_point_title": "A Strong US Dollar Has Made Domestic Products Relatively Expensive for Foreign Consumers",
+            "current_performance_point_description": "As indicated by an increase in the trade-weighted index (TWI) and rise of input costs, domestic enterprises struggled against competition despite stable downstream demand."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Hikes in Domestic and Global Downstream Demand Propel the Industry Forward",
+            "future_outlook_point_description": "Demand for activated carbon will improve as the industry distances itself from the disruptions that occurred at the height of the pandemic."
+        },
+        {
+            "future_outlook_point_title": "Emission Standards and Industry Profit",
+            "future_outlook_point_description": "Despite increased competition from new entrants and mounting imports, industry profit is expected to rise."
+        },
+        {
+            "future_outlook_point_title": "Industrial Production Expands",
+            "future_outlook_point_description": "Downstream demand will persist in manufacturing industries, benefiting industry demand."
+        },
+        {
+            "future_outlook_point_title": "International Growth Parallels Domestic Trends",
+            "future_outlook_point_description": "A depreciating US dollar will make exports more competitive on the global market."
+        },
+        {
+            "future_outlook_point_title": "GOVERNMENT FUNDING WILL SUPPORT DEMAND FOR ACTIVATED CARBON MANUFACTURING",
+            "future_outlook_point_description": "The Infrastructure Investment and Jobs Act will provide opportunities for the industry."
+        }
+    ],
+    "industry_definition": "Companies in this industry manufacture activated carbon, which is a form of carbon that has been processed to make it extremely porous.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Technology Change Level: low"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage: mature"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level: high",
+            "Globalization Level: high - increasing",
+            "Competition Level: high - steady"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "High Competition",
+            "High Volatility",
+            "High Imports",
+            "Low Profit vs. Sector Average"
+        ],
+        "opportunities": [
+            "High Capital Requirements",
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers: World price of steaming coal"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Trade-weighted index"
+        ]
+    },
+    "key_trends": [
+        "Fierce competition based around price and quality.",
+        "Intense import competition in this industry.",
+        "Struggling industrial production activity amid work stoppages during the pandemic."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Water treatment",
+            "segment_description": "To create pure water, all the contaminants in surface, groundwater, waterways, or wastewater streams must be removed.",
+            "segment_percentage": 42.8
+        },
+        {
+            "segment": "Air purification",
+            "segment_description": "Activated carbon is used to meet emission regulations to protect the environment.",
+            "segment_percentage": 33.4
+        },
+        {
+            "segment": "All other",
+            "segment_description": "Activated carbon products are used in the food industry.",
+            "segment_percentage": 23.8
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Powdered Activated Carbon",
+            "product_description": "Most Popular Product.",
+            "product_percentage": 61.1
+        },
+        {
+            "product_or_service": "Granular Activated Carbon",
+            "product_description": "Less Versatile Than Its Smaller Counterpart.",
+            "product_percentage": 28.6
+        },
+        {
+            "product_or_service": "Other Products",
+            "product_description": "Wavering Industrial Production.",
+            "product_percentage": 10.3
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Coal Mining in the US"
+        ],
+        "tier_2_suppliers": [
+            "Wood Pulp Mills in the US"
+        ],
+        "tier_1_buyers": [
+            "Industrial Equipment Manufacturers"
+        ],
+        "tier_2_buyers": [
+            "Retail Consumers"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Private investment in industrial equipment and machinery",
+            "determinant_description": "Annual expenditure by businesses on industrial equipment."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Decreasing",
+        "export_level": "High",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Low-Cost Imports Proliferate",
+                "trade_description": "Industry imports have remained steady."
+            },
+            {
+                "trade_title": "Emerging Economies Enter the Industry",
+                "trade_description": "India, Sri Lanka, Philippines and China account for substantial imports."
+            },
+            {
+                "trade_title": "EXPORTS EXPERIENCE A DECLINE",
+                "trade_description": "Value of industry exports has plummeted due to appreciating US dollar."
+            },
+            {
+                "trade_title": "THE USMCA AGREEMENT SUPPORTS INDUSTRY TRADE",
+                "trade_description": "Mexico is expected to be the largest export destination."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "Manufacturers in the Southeast leverage access to a dense population.",
+            "percentage_establishments": 30,
+            "percentage_population": 20
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "Strategic location for activated carbon manufacturing.",
+            "percentage_establishments": 25,
+            "percentage_population": 15
+        },
+        {
+            "location": "West",
+            "location_description": "Provides a bevy of opportunities for manufacturers.",
+            "percentage_establishments": 20,
+            "percentage_population": 15
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_trend": "Increasing",
+        "regulations_points": [
+            {
+                "regulation_title": "Environmental Regulations",
+                "regulation_description": "Subject to regulations governing manufacture, storage, handling and disposal."
+            },
+            {
+                "regulation_title": "American Water Works Association (AWWA)",
+                "regulation_description": "Must adhere to the requirements of the AWWA standard B605."
+            },
+            {
+                "regulation_title": "NSF/ANSI Standard 61",
+                "regulation_description": "Seek certification for drinking water products under NSF/ANSI Standard 61."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Mature industry life cycle stage",
+                "barrier_description": "Life Cycle Stage: mature."
+            },
+            {
+                "barrier_title": "High revenue volatility",
+                "barrier_description": "Revenue Volatility Level: high."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Revenue Volatility Level: high"
+        ],
+        "factors_decreased_barrier": [
+            "Technology Change Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Homogeneity of products leads to fierce competition on price and quality",
+                "basis_description": "Fierce competition based around price and quality."
+            },
+            {
+                "basis_title": "Trademarks and patents play a crucial role in differentiation",
+                "basis_description": "Play a crucial role in differentiating industry enterprises."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Moderate",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Strong concentration",
+                "concentration_description": "Top three players accounting for more than 65.0% of industry revenue."
+            },
+            {
+                "concentration_title": "Import penetration is significant",
+                "concentration_description": "Imports account for more than half of domestic demand."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Kuraray Co Ltd",
+                "company_percentage": 27
+            },
+            {
+                "company_name": "Cabot Corporation",
+                "company_percentage": 12
+            },
+            {
+                "company_name": "Ingevity Corporation",
+                "company_percentage": 5.3
+            },
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 55.7
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 25
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 11.9
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 49.4
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 5.0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 7.5
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 1.0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 1.0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 0.1
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Input Cost Hikes Deplete Industry Profit",
+            "cost_factor_description": "Industry profit has declined due to rising prices."
+        },
+        {
+            "cost_factor_title": "Labor Intensity Drives Wages Up",
+            "cost_factor_description": "Wages are expected to account for a proportion of industry revenue."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Moderate",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Moderate capital intensity",
+                "capital_intensity_description": "The industry requires a need for highly skilled employees."
+            }
+        ],
+        "capital_intensity_trend": "Unknown"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Downstream Demand Grows Unstable",
+                "volatility_description": "High level of revenue volatility."
+            },
+            {
+                "volatility_title": "The Industry Ebbs and Flows to Volatile Inputs",
+                "volatility_description": "Fluctuations in prices affect industry revenue."
+            }
+        ],
+        "volatility_trend": "Unknown"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Research and Development Pushes Boundaries",
+                "technological_change_description": "R&D driven by emerging end uses."
+            }
+        ],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company specialize in one corner of the market or produce a diversified range of products?",
+            "answer": "<UNKNOWN>"
+        },
+        {
+            "question": "Are your sales heavily dependent on the health of the US economy?",
+            "answer": "The industry is dependent on demand from downstream industrial manufacturers."
+        }
+    ]
+}

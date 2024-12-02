@@ -1,0 +1,525 @@
+{
+    "report_title": "Musical Groups & Artists in the US",
+    "report_date": "Sep 01, 2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 6720000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": -0.5
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "revenue_cagr_value": 2.07
+            }
+        },
+        "profit": {
+            "profit_dollars": 437000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 1.2
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2024,
+                "profit_cagr_value": 6.85
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 6.5,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 1.7
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 1.54
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 2571000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": -0.43
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 1.55
+            }
+        },
+        "employees": {
+            "employees_count": 65686,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 0.58
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "employees_cagr_value": 0.67
+            }
+        },
+        "wages": {
+            "wages_dollars": 2067000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": -0.62
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2030,
+                "wages_cagr_value": 1.2
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "Musical groups and artists have undergone significant transformations in recent years, primarily driven by shifts in consumption patterns and technological advancements. Lower album sales, exacerbated by the popularity of streaming and digital music downloads, compelled artists to adapt and find new revenue streams. Social media and streaming platforms have forever changed how musicians connect with their audiences, creating opportunities and challenges. These technological shifts have introduced new hurdles in monetization and sustaining a music career.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Lower album sales, driven by the rise of streaming and digital music downloads, significantly stifle top musicians' earnings.",
+            "current_performance_point_description": "This shift forces artists to explore alternative income sources to sustain their careers. With revenue from album sales dwindling, artists have no choice but to depend heavily on live performances like concerts, tours and festivals as primary income sources."
+        },
+        {
+            "current_performance_point_title": "Social Media and Streaming Services Shape Listening Trends",
+            "current_performance_point_description": "Social media platforms like Facebook, X, and Instagram allow musicians to generate publicity and connect with listeners, boosting their outreach and Streaming services like Spotify, Apple Music and YouTube Music dominate music consumption globally, providing massive reach."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Artists Will Boost Album Sales by Releasing Variants and Special Editions",
+            "future_outlook_point_description": "A resurgence in consumer spending and heightened interest in live performances will lead to more album sales. Concert promotion will play a vital role in this trend, as live shows remain a crucial revenue stream. Artists will increasingly rely on special editions and album variants to boost sales."
+        },
+        {
+            "future_outlook_point_title": "Independent Artists Benefit From The Use Of The Internet",
+            "future_outlook_point_description": "Online platforms and tools will continue reducing operating costs in the music industry. More independent and unsigned artists will distribute their music directly to listeners on services like YouTube, Soundcloud and Spotify, bypassing traditional label infrastructure and resources."
+        },
+        {
+            "future_outlook_point_title": "AI's Role In New Music Creation",
+            "future_outlook_point_description": "AI will impact elements in music production, from songwriting to mixing, enabling artists to experiment in unprecedented ways. Concerns arise regarding AI diluting artistic authenticity and mimicking artists' voices and styles without consent."
+        }
+    ],
+    "industry_definition": "Musicians, recording artists and songwriters produce music professionally in front of a live audience, in a recording studio or both. Musicians may earn revenue from songwriting, producing or recording, but they primarily operate.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level low",
+            "Concentration Level low",
+            "Globalization Level low - increasing"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage mature"
+        ],
+        "negative_impact_factors": [
+            "Revenue Volatility Level high",
+            "Technology Change Level high",
+            "Barriers To Entry Level low - decreasing",
+            "Competition Level high - increasing"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "Low Customer Class Concentration",
+            "Low Product/Service Concentration"
+        ],
+        "weaknesses": [
+            "Low Capital Requirements",
+            "Low & Decreasing Barriers to Entry",
+            "High Competition",
+            "High Volatility",
+            "Low Profit vs. Sector Average",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "Consumer spending"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Album sales"
+        ]
+    },
+    "key_trends": [
+        "There's no dominant player in the music scene. Even top-earning musicians only snag a tiny slice of the overall revenue, making this an industry with a surprisingly low market share concentration.",
+        "Digital platforms have made it easier for artists to break into the music scene. With affordable software like ProTools and GarageBand, musicians can record high-quality tracks from home.",
+        "Affordable recording gear and professional-level software enable musicians to produce high-quality music from home. This gives Artists more creative control and reduces reliance on pricey studio sessions.",
+        "Musical groups and artists have undergone a rocky transition to digital music distribution models. While these platforms help artists reach massive audiences, the low per-stream payouts make it tough for them to earn substantial revenue.",
+        "There are no major companies dominating the industry. Even though there are individual artists or groups that can make millions of dollars annually, none individually hold a market share greater than 1.0%.",
+        "Musical groups and artists operate under many government policies regarding intellectual property rights and piracy protection. There are legal rules regarding royalty rates based on the medium of transmitting an artist's content.",
+        "Touring costs have gone up significantly lately. Prices for accommodations, meals and travel soared in the last few years, making it tough for new artists to break even on tour.",
+        "Wages account for musical groups and artists' highest cost figures. This is inflated by the top musicians, who get paid a drastically greater amount than the average musician.",
+        "Music groups and artists are highly concentrated in urban areas with a history of supporting the arts. Cities like Los Angeles, New York City and Nashville fit the bill and are home to many talented artists.",
+        "Greater consumer spending means more disposable income, leading to higher spending on entertainment. For musical groups and artists, this translates to greater concert attendance and music streaming services. As disposable income rises, fans are more willing to attend concerts and subscribe to platforms where they can access music. The music industry benefits from enhanced revenue streams, so a rise in consumer spending represents a potential opportunity for the industry."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Younger Listeners Stream Their Favorite Artists Music",
+            "segment_description": "Consumers aged 25 to 34 are a particularly large market since they have higher disposable incomes than younger listeners. They are more likely to go to concerts and use paid music stream subscriptions, rather than ad-supported streaming services. While consumers younger than 24 have significantly limited incomes compared to other demographics, they spend a larger portion on entertainment.",
+            "segment_percentage": 22.9
+        },
+        {
+            "segment": "People Aged 35 to 54 Have Less Recreational Time to Attend Live Events",
+            "segment_description": "Middle-age consumers attend fewer music events, but are able to spend more on higher ticket prices and paid streaming subscriptions. Consumers in this age group tend to have established listening preferences and are less likely to purchase newly released music, but they're increasingly opting to pay for streaming services, like Spotify.",
+            "segment_percentage": 0
+        },
+        {
+            "segment": "Consumers Aged 55 and Older Still Enjoy Live Performances",
+            "segment_description": "Consumers aged 55 and older continue to enjoy concerts and buy music. These consumers are least likely to use paid streaming services to access music. Thanks to their ample free time and disposable income older consumers contribute over a third of revenue and are well-represented in market segments for classical music and symphony orchestra performances. Older consumers tend to be long-time fans of the same artists and are less likely to spend on musical groups and artists that are new to them.",
+            "segment_percentage": 32.9
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Live Performance",
+            "product_description": "",
+            "product_percentage": 39.4
+        },
+        {
+            "product_or_service": "Recording and Royalties",
+            "product_description": "",
+            "product_percentage": 19.9
+        },
+        {
+            "product_or_service": "Salaried and Contract Income",
+            "product_description": "",
+            "product_percentage": 18.1
+        },
+        {
+            "product_or_service": "Session Performance",
+            "product_description": "",
+            "product_percentage": 11.9
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "",
+            "product_percentage": 7.6
+        },
+        {
+            "product_or_service": "Merchandise",
+            "product_description": "",
+            "product_percentage": 3.1
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Musical Instrument & Supplies Stores in the US",
+            "Audio Production Studios in the US",
+            "Celebrity & Sports Agents in the US"
+        ],
+        "tier_2_suppliers": [
+            "Electronic Part & Equipment Wholesaling in the US",
+            "Computer & Packaged Software Wholesaling in the US",
+            "Toy, Doll & Game Manufacturing in the US",
+            "Copier & Office Equipment Wholesaling in the US"
+        ],
+        "tier_1_buyers": [
+            "Music Publishing in the US"
+        ],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Consumer Spending",
+            "determinant_description": "Greater consumer spending means more disposable income, leading to higher spending on entertainment. For musical groups and artists, this translates to greater concert attendance and music streaming services. As disposable income rises, fans are more willing to attend concerts and subscribe to platforms where they can access music. The music industry benefits from enhanced revenue streams, so a rise in consumer spending represents a potential opportunity for the industry."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Many Artists Reside in the Western Region, Specifically in California",
+            "location_description": "This region holds the greatest concentration of artists while being home to only 17.1% of the nation's population. The West includes Los Angeles and San Francisco, the two major cities that make California the state with the most industry establishments, with 21.5% of the total. Universal Music Group, one of the Big Three major music labels, is headquartered in Los Angeles. While record labels are excluded from the industry, their presence in certain areas indicates strong local support for musicians.",
+            "percentage_establishments": 21.5,
+            "percentage_population": 17.1
+        },
+        {
+            "location": "THE SOUTHEAST IS A HUB FOR MUSICAL ARTISTS",
+            "location_description": "Thanks to the area's population, there's a high concentration of artists in this region. Nashville is located in the region, and is the most popular city for country music in the US. Driven by the concentration in Nashville this is the region with the second-most industry operators.",
+            "percentage_establishments": 0,
+            "percentage_population": 0
+        },
+        {
+            "location": "NEW YORK CITY IS HOME TO MAJOR LABELS AND MUSIC GROUPS",
+            "location_description": "The Mid-Atlantic region holds the third-largest number of establishments, largely due to its inclusion of New York City, a hub for the arts and a home to many musicians. The two second-biggest major record labels, Sony Music Entertainment and Warner Music Group, are headquartered in New York City, as is the New York Philharmonic, one of the largest and most-respected symphonies in the country. New York houses 11.5% of industry establishments.",
+            "percentage_establishments": 11.5,
+            "percentage_population": 0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "COPYRIGHT LAW IN THE CONSTITUTION",
+                "regulation_description": "Article I of the constitution grants Congress the power to protect the work of artists and scientists for a limited number of years and grants them exclusive rights to reproduce or license the work."
+            },
+            {
+                "regulation_title": "THE DIGITAL MILLENNIUM COPYRIGHT ACT",
+                "regulation_description": "The act, signed in 1998, criminalizes the production of any device or software that circumvents the digital rights management features embedded in most music files."
+            },
+            {
+                "regulation_title": "MUSIC MODERNIZATION ACT",
+                "regulation_description": "Performance and songwriting royalties vary based on the medium through which a song is played. The act updated copyright laws and regulated royalty payments for songs being played on streaming services."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Decreasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "mature"
+            },
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "high"
+            },
+            {
+                "barrier_title": "Technology Change Level",
+                "barrier_description": "high"
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "high - increasing"
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - increasing"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "There's no dominant player in the music scene.",
+                "basis_description": "Even top-earning musicians only snag a tiny slice of the overall revenue, making this an industry with a surprisingly low market share concentration."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "The industry features a high number of nonemployers and individual musicians",
+                "concentration_description": "There are no major players in this industry; even the highest-paid musicians and groups account for a minor share of the industry's revenue."
+            },
+            {
+                "concentration_title": "Even the largest industry players like the New York Philharmonic still capture less than 1.0% of industry revenue.",
+                "concentration_description": "The COVID-19 pandemic led to a mass exodus of many musicians in 2020, but the revival of live musical events is expected to enable many artists who were forced to leave the industry at the height of the pandemic to return."
+            },
+            {
+                "concentration_title": "The increasing power of production and mixing software like ProTools and Apple's GarageBand has enabled individual musicians to record songs and albums with relatively high fidelity and quality.",
+                "concentration_description": "This trend has led to even lower market share concentration in the industry, as the number of musicians has been able to grow substantially."
+            },
+            {
+                "concentration_title": "Many musicians who record and sell their own material are not full members of groups or ensembles and thus operate as individuals or nonemployers.",
+                "concentration_description": "This category of musicians has flourished with the advent of digital platforms providing lower barriers to entry."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Other Companies",
+                "company_percentage": 100
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 0
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "PURCHASE COSTS HAVE INCREASED DURING THE PERIOD",
+            "cost_factor_description": "Typical purchases include touring expenses like accommodations, meals, plane tickets and gas. Purchase costs spiked under pandemic pressures and remained high in the following years."
+        },
+        {
+            "cost_factor_title": "WAGES COMPRISE THE LARGEST COST SEGMENT FOR THE INDUSTRY",
+            "cost_factor_description": "Average wage costs are high because of the high salaries paid to professional, classically trained musicians. Wage costs remained steady in the last few years."
+        },
+        {
+            "cost_factor_title": "MODERN MUSICIANS RELY ON SOCIAL MEDIA AS A WAY OF MARKETING THEIR PERSONALITY AND MUSIC",
+            "cost_factor_description": "Independent musicians dedicate their limited resources to publicizing their work on social media platforms. The bigger an artist's social media presence, the larger the audience they can reach without incurring substantial marketing costs."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LABOR EXPENSES",
+                "capital_intensity_description": "Managers, group members, crew and anyone else who is doing stuff needs to be compensated. Classical musicians often require much more formal training, like a college or conservatory degree, before they can obtain a salaried position with an orchestra."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_points": [
+            {
+                "volatility_title": "Macroeconomic conditions influence spending on industry services",
+                "volatility_description": "The level of consumer spending in the US and the amount of free time that people have contributes to their level of discretionary spending. When there's a strain on income, consumers reduce spending on entertainment."
+            },
+            {
+                "volatility_title": "Disruption to consumer activities causes fluctuations in revenue for musical artists",
+                "volatility_description": "The outbreak of COVID-19 led to the closure of large swaths of the economy. Many performances were canceled in the wake of the pandemic, and as long as stay-at-home orders were in place, revenue for artists was strained."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_points": [
+            {
+                "technological_change_title": "ONLINE STREAMING PLATFORMS MAKE DISTRIBUTION MORE PROFITABLE",
+                "technological_change_description": "A decline in album sales has been going on for years, hurting the potential revenue from royalties. The introduction of music streaming services has made listening to music much easier and increased the revenue artists can make from distribution."
+            },
+            {
+                "technological_change_title": "AUDIO EDITING AND PRODUCING SOFTWARE HAS BECOME MORE ACCESSIBLE",
+                "technological_change_description": "Music production has become an accessible skill for individuals to learn and practice. This shift has contributed to the rising popularity of raw or homemade-sounding music."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "What strategies would you implement to expand our customer base and reach a wider audience for live concerts and events?",
+            "answer": "Growing the fanbase and attracting new attendees is essential for the success and profitability of musical performances."
+        },
+        {
+            "question": "How much does your company rely on successful advertising to stand out from the competition? How do you leverage social media to connect with the public?",
+            "answer": "Advertising and marketing are paramount in this competitive industry. Musicians must effectively market themselves to succeed in the industry. In order to accomplish this, musicians focus on creating a robust social media presence."
+        },
+        {
+            "question": "If your company benefits from population density, are you located in high traffic areas to increase your exposure?",
+            "answer": "Since most revenue is sourced from concert ticket sales, artists normally benefit from locating and performing in areas with high population concentrations. More consumers have access to the event. Although live performances are still highly limited amid the ongoing pandemic, they will play a large role in the industry's recovery once the pandemic has been contained."
+        },
+        {
+            "question": "Have you been able to use rental agreements to save on equipment expenses?",
+            "answer": "Many artists rent recording space and equipment to save money on purchasing these items. The equipment used for music production can be very costly, so renting can help smaller players reduce costs."
+        },
+        {
+            "question": "How have new technologies made it easier for operators to enter the industry? Has this threatened your market position?",
+            "answer": "New recording technology has made it easier and more affordable to enter the industry. Music production software is more affordable and marketing costs have been brought down by the rise of social media. This has led to an increase in competition among industry players."
+        },
+        {
+            "question": "Have you established a strong internet presence through social media platforms to capture a larger audience?",
+            "answer": "Successful industry players connect with fans and potential fans through social media. this provides a cheap and effective medium through which to reach a large audience."
+        },
+        {
+            "question": "Do you offer membership agreements, tickets or passes that may be subject to state or federal regulation?",
+            "answer": "Some industry players, like symphonies, offer bundled ticket options to ensure regular attendance to their shows."
+        },
+        {
+            "question": "How have you been monitoring regulations related to the coronavirus pandemic? How long do you think it will be before you are able to operate live performances at full capacity?",
+            "answer": "As concerts and live performances have been largely cancelled, it is important that operators are monitoring regulations and other developments related to the coronavirus pandemic."
+        },
+        {
+            "question": "How would you develop and manage budget forecasts to achieve financial goals, considering factors like artist expenses and revenue distribution?",
+            "answer": "Sound financial management is essential to maximize profitability and allocate funds efficiently within a dynamic industry."
+        },
+        {
+            "question": "Does your company have to purchase new equipment on an annual basis?",
+            "answer": "While most musical instruments need not be purchased on a regular basis, recording technology changes rapidly, necessitating more frequent purchases."
+        },
+        {
+            "question": "How do you ensure your intellectual property is protected? What intellectual property issues have you run into in the past?",
+            "answer": "Protection of an artist's intellectual property ensures that they receive royalties for the use of their music. This has been a significant issue for artists since music has become readily available on the internet."
+        },
+        {
+            "question": "How do you promote your brand? Do you promote a cohesive brand across social platforms? What is your strategy for maximizing your relationships with streaming services?",
+            "answer": "Musicians must be able to use social media and digital technology to publicize and distribute their work. It is also important that artists have good relations with streaming services and that they understand how to leverage streaming as a way to generate revenue."
+        },
+        {
+            "question": "Are your products sold in different outlets? How can you get your physical albums into trending, but nontraditional outlets?",
+            "answer": "Selling albums and singles at well-known outlets, particularly in digital marketplaces like iTunes, exposes a musician's work to more consumers. Vinyl record sales have made a comeback as demand has been growing, presenting a potential opportunity for operators."
+        },
+        {
+            "question": "Do you benefit from government funds? How does falling federal funding affect your operations?",
+            "answer": "A higher level of public funds directed toward performances typically translates to a higher caliber musician and increases the potential number of ticket and merchandise sales."
+        },
+        {
+            "question": "How have falling album sales affected your business? Have you been able to leverage new streaming services as a way of making up for lost album sales?",
+            "answer": "Physical album sales, which have historically been the most lucrative form of nonperformance consumption for artists and labels alike, have declined rapidly over the past five years. Although music sales have fallen, new streaming services have appeared in over the years that pay industry operators royalties in order to stream their music."
+        },
+        {
+            "question": "How has your business been affected by changes in consumer confidence?",
+            "answer": "When household disposable income is high, consumers have more discretionary power to purchase nonessential items, like streaming services and concert tickets. A steep decline in consumer confidence is likely to lead many to decrease their discretionary spending, which could have a negative impact on the industry."
+        }
+    ]
+}

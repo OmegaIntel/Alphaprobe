@@ -1,0 +1,592 @@
+{
+    "report_title": "Cabinet & Vanity Manufacturing in the US",
+    "report_date": "Dec 19, 2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 16459000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "revenue_cagr_value": -2.59
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 1.91
+            }
+        },
+        "profit": {
+            "profit_dollars": 708000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": -2.7
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 1.68
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.3,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": 0.4
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 1.5
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 5527000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": -2.03
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 1.68
+            }
+        },
+        "employees": {
+            "employees_count": 98979,
+            "employees_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "employees_cagr_value": -1.96
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": 1.59
+            }
+        },
+        "wages": {
+            "wages_dollars": 4550000000,
+            "wages_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "wages_cagr_value": -1.98
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 1.65
+            }
+        },
+        "imports": {
+            "imports_dollars": 2576000000,
+            "imports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "imports_cagr_value": 4.19
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "imports_cagr_value": 0.91
+            }
+        },
+        "exports": {
+            "exports_dollars": 62000000,
+            "exports_cagr_historical": {
+                "begin_year": 2004,
+                "end_year": 2023,
+                "exports_cagr_value": -1.95
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "exports_cagr_value": 2.77
+            }
+        }
+    },
+    "executive_summary": "The cabinet and vanity manufacturing industry is highly susceptible to changes in residential construction and private spending on home improvements. The industry faced volatility due to the turbulent housing market over the past five years. COVID-19 initially impacted the industry negatively, but low interest rates and fiscal stimulus boosted demand as the housing market boomed in 2020 and 2021. However, climbing import penetration subdued growth for domestic manufacturers. As interest rates rose and disposable income growth fell due to inflation, the industry suffered towards the end of 2023. Industry revenue has been falling at a CAGR of 2.4% over the past five years and is expected to total $16.5 billion in 2023, with an estimated 5.6% drop.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "A turbulent housing market induced volatility",
+            "current_performance_point_description": "Demand grew in 2020 and 2021 as the US housing market boomed due to low unemployment, interest rates and high disposable income. Interest rate hikes in 2022 and 2023 hindered performance as consumers were disincentivized from buying/building new homes or taking on construction projects."
+        },
+        {
+            "current_performance_point_title": "Competition from substitutes remained high",
+            "current_performance_point_description": "Wood countertop sales fell due to consumer preferences shifting toward granite and quartz which are more durable, especially in bathrooms. Manufacturers invested in laser edgebanding technology to make wood products more viable in bathrooms."
+        },
+        {
+            "current_performance_point_title": "Manufacturers faced heightened import penetration",
+            "current_performance_point_description": "Low-cost imports reduced demand for large companies supplying to retailers like Home Depot and Lowe's. Domestic manufacturers didn't fully benefit from the 2020-2021 housing boom due to surging imports. As interest rates climbed in 2022, consumers sought cheaper imports."
+        },
+        {
+            "current_performance_point_title": "Various headwinds hindered profit growth",
+            "current_performance_point_description": "Surging lumber costs reduced profit for manufacturers over the current period. Domestic manufacturers couldn't hike prices in line with lumber costs due to rising imports. Labor shortages forcing higher wages also pressured profit."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Import penetration slowing will provide breathing room",
+            "future_outlook_point_description": "Imports as a share of domestic demand will fall as the trade-weighted index falls, encouraging US consumers to purchase from domestic manufacturers. Supply chain reorganization post-pandemic will contribute to the import slowdown."
+        },
+        {
+            "future_outlook_point_title": "Rising costs will continue to subdue profit",
+            "future_outlook_point_description": "Volatility in sawmill lumber prices due to the Russia-Ukraine conflict will hamper profit through 2028. Some revenue gains will be price-based as manufacturers pass on increased lumber costs to consumers."
+        },
+        {
+            "future_outlook_point_title": "Competition from large companies will continue increasing",
+            "future_outlook_point_description": "Large manufacturers with national distribution and economies of scale to provide stock cabinetry at low prices will gain market share as major retailers like Home Depot and Lowe's seek to limit their suppliers."
+        },
+        {
+            "future_outlook_point_title": "Innovations to drive growth for manufacturers",
+            "future_outlook_point_description": "Smaller manufacturers must invest in technologies like 2D/3D designs, computer numerical control programs, and smart home/IoT features to compete with larger companies and imports and improve customer experience."
+        }
+    ],
+    "industry_definition": "Operators in this industry manufacture kitchen cabinets, bathroom vanities and countertops, primarily made of wood or wood coverings. Manufacturers then distribute these products to wholesalers, contract outfitters and home improvement stores throughout the United States.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - increasing"
+        ],
+        "negative_impact_factors": [
+            "Life Cycle Stage: decline",
+            "Industry Assistance Level: low - steady",
+            "Competition Level: high - steady"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Customer Class Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "Medium Imports",
+            "Low Profit vs. Sector Average",
+            "High Product/Service Concentration",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2023-2028)",
+            "Price of sawmill lumber"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2023)",
+            "Low Revenue Growth (2018-2023)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Private spending on home improvements"
+        ]
+    },
+    "key_trends": [
+        "The volatile housing market led to a turbulent period. Cabinet and vanity manufacturers enjoyed heightened demand in 2020 and 2021 as the housing market boomed, but suffered through the end of 2023 as rising interest rates cooled off the housing market.",
+        "Manufacturers to return to growth. Slowing import penetration, continued growth in housing starts and private spending on home improvements ramping up will greatly benefit manufacturers over the outlook period."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Retailers",
+            "segment_description": "RETAILERS INCREASINGLY PURCHASED DIRECTLY FROM MANUFACTURERS TO REDUCE COSTS",
+            "segment_percentage": 33.6
+        },
+        {
+            "segment": "Other businesses",
+            "segment_description": "COVID-19 INDUCED VOLATILITY FROM OTHER BUSINESSES",
+            "segment_percentage": 2.0
+        },
+        {
+            "segment": "Independent wholesalers",
+            "segment_description": "Manufacturers Bypassed Independent Wholesalers to Reduce Costs",
+            "segment_percentage": 19.0
+        },
+        {
+            "segment": "Construction contractors",
+            "segment_description": "Sales to Construction Contractors Have Inched Down",
+            "segment_percentage": 14.9
+        },
+        {
+            "segment": "Other",
+            "segment_description": "CLIMBING DIRECT-TO-CONSUMER SALES BOLSTERED OTHER MARKETS",
+            "segment_percentage": 9.1
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Kitchen Cabinets",
+            "product_description": "High demand product primarily used in residential construction.",
+            "product_percentage": 46.6
+        },
+        {
+            "product_or_service": "Custom Cabinets",
+            "product_description": "Tailored cabinets designed and made to fit the specific needs of consumers.",
+            "product_percentage": 32.8
+        },
+        {
+            "product_or_service": "Countertops",
+            "product_description": "Flat surfaces utilized in kitchens and bathrooms.",
+            "product_percentage": 11.0
+        },
+        {
+            "product_or_service": "Bathroom Vanities",
+            "product_description": "Vanities designed for use in bathrooms to provide storage and function.",
+            "product_percentage": 5.7
+        },
+        {
+            "product_or_service": "Other Cabinetwork and Accessories",
+            "product_description": "Includes cabinets and associated items not specifically classified.",
+            "product_percentage": 3.9
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Electric Power Transmission in the US",
+            "Industrial Machinery & Equipment Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Sawmills & Wood Production in the US",
+            "Plastic & Resin Manufacturing in the US",
+            "Adhesive Manufacturing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": [
+            "Home Improvement Stores in the US",
+            "Furniture Stores in the US",
+            "Home Furnishings Stores in the US",
+            "Lumber Wholesaling in the US",
+            "Furniture Wholesaling in the US",
+            "Carpenters in the US",
+            "Remodeling in the US",
+            "Home Builders in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Kitchen Cabinet Sales Have Dipped",
+            "determinant_description": "Kitchen cabinets are built-in furniture items installed in kitchens to store food, cooking equipment, silverware and dishes. Surging import penetration for stock kitchen cabinets has hindered growth in this segment."
+        },
+        {
+            "determinant_title": "Consumer Preferences Shifting and Disposable Income",
+            "determinant_description": "Climbing benefited custom cabinetry sales which includes cabinets with custom dimensions and features made by small companies that operate on a regional basis."
+        },
+        {
+            "determinant_title": "Countertop and Bathroom Vanities Sales Fell",
+            "determinant_description": "Sales have lagged as substitute products grew in popularity."
+        },
+        {
+            "determinant_title": "Demand for Other Cabinetwork and Accessories Has Dipped",
+            "determinant_description": "This segment includes medicine cabinets, drain boards and other cabinet and vanity-related items. Contractors typically install products in this segment during construction or as part of a remodeling or renovation project."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Moderate",
+        "import_trend": "Decreasing",
+        "export_level": "Low",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports",
+                "trade_description": "Penetration from low-cost manufacturers is increasing"
+            },
+            {
+                "trade_title": "Imports",
+                "trade_description": "Imports from neighboring countries are increasing"
+            },
+            {
+                "trade_title": "Exports",
+                "trade_description": "Exports are low and falling"
+            },
+            {
+                "trade_title": "Exports",
+                "trade_description": "The nature of the industry makes the export environment unfavorable"
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Great Lakes",
+            "location_description": "Proximity to Buyers and Suppliers Drives Manufacturers to the Southeast.",
+            "percentage_establishments": 22.9,
+            "percentage_population": 14.5
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic's Transportation Infrastructure and Population Attract Manufacturers.",
+            "percentage_establishments": 10.5,
+            "percentage_population": 13.4
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 3.3,
+            "percentage_population": 4.4
+        },
+        {
+            "location": "Plains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 6.6,
+            "percentage_population": 6.8
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 4.9,
+            "percentage_population": 7.3
+        },
+        {
+            "location": "Southeast",
+            "location_description": "Proximity to Buyers and Suppliers Drives Manufacturers to the Southeast.",
+            "percentage_establishments": 35.2,
+            "percentage_population": 21.7
+        },
+        {
+            "location": "Southwest",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 16.6,
+            "percentage_population": 31.9
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "Federal, State and Local Laws and Regulations",
+                "regulation_description": "Compliance with various environmental and worker health laws."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "New entrants face challenges in finding skilled workers."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Competition Factors",
+                "basis_description": "Competition is stiff among cabinet and vanity manufacturers."
+            },
+            {
+                "basis_title": "Import Competition",
+                "basis_description": "Competition from low-cost imports is rising."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Small Manufacturers",
+                "concentration_description": "High number of small manufacturers contribute to low concentration."
+            },
+            {
+                "concentration_title": "Local Operations",
+                "concentration_description": "Most manufacturers operate on a local level."
+            },
+            {
+                "concentration_title": "Large Retailers",
+                "concentration_description": "Few companies can supply large retailers."
+            },
+            {
+                "concentration_title": "Import Competition",
+                "concentration_description": "Imports discourage increased domestic production."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "American Woodmark Corp",
+                "company_percentage": 12.5
+            },
+            {
+                "company_name": "Fortune Brands Home & Security, Inc.",
+                "company_percentage": 8.8
+            },
+            {
+                "company_name": "Masco Corporation",
+                "company_percentage": 5
+            },
+            {
+                "company_name": "Conestoga Wood Specialties Corporation",
+                "company_percentage": 0.4
+            },
+            {
+                "company_name": "QuakerMaid Cabinetry",
+                "company_percentage": 0
+            },
+            {
+                "company_name": "Sherman & Gosweiler",
+                "company_percentage": 0
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 73.4
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 38.7
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 27.6
+        },
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 4.3
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Purchases only inched upward despite inflationary woes",
+            "cost_factor_description": "Increased purchase costs were slightly offset by established supply contracts."
+        },
+        {
+            "cost_factor_title": "Climbing costs and competition hindered profit",
+            "cost_factor_description": "Profit fell due to surging lumber costs and increased competition."
+        },
+        {
+            "cost_factor_title": "Stiff internal competition and labor shortages hiked wages",
+            "cost_factor_description": "Labor shortages and competition led to increased wage costs."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital intensity",
+                "capital_intensity_description": "New entrants must find sufficient skilled workers."
+            },
+            {
+                "capital_intensity_title": "Low levels of innovation",
+                "capital_intensity_description": "Limited threat from new technologies."
+            },
+            {
+                "capital_intensity_title": "Diversified market segments",
+                "capital_intensity_description": "Major market segments are relatively diversified."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Residential Construction Activity Influences Volatility",
+                "volatility_description": "Changes in housing construction activity lead to revenue volatility."
+            },
+            {
+                "volatility_title": "The Price of Substitute Materials Affects Volatility",
+                "volatility_description": "Price competition from substitutes affects demand."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Kitchen cabinet sales have dipped",
+                "technological_change_description": "Surging import penetration has hindered growth."
+            },
+            {
+                "technological_change_title": "Consumer preferences shifting and disposable income",
+                "technological_change_description": "Increasing demand for custom cabinetry."
+            },
+            {
+                "technological_change_title": "Countertop and bathroom vanities sales fell",
+                "technological_change_description": "Substitute materials gained popularity."
+            },
+            {
+                "technological_change_title": "Demand for other cabinetwork and accessories has dipped",
+                "technological_change_description": "This segment shrank with falling home improvement spending."
+            }
+        ],
+        "technological_change_trend": "Steady"
+    },
+    "FAQs": [
+        {
+            "question": "How is your company impacted by rising imports from abroad?",
+            "answer": "Imports have increased as a share of the domestic market over the past decade."
+        },
+        {
+            "question": "Are your company's sales heavily dependent on the health of the US economy?",
+            "answer": "Sales trend in line with the residential construction market."
+        },
+        {
+            "question": "Is your company located in proximity to important suppliers?",
+            "answer": "Lumber inputs are readily available in the Southeast."
+        },
+        {
+            "question": "Is your company investing heavily in R&D to meet changing consumer preferences?",
+            "answer": "Most R&D occurs outside the industry."
+        },
+        {
+            "question": "Have you been able to reduce wage costs by automating operations over the past five years?",
+            "answer": "Focus on customization has increased labor intensity."
+        },
+        {
+            "question": "Does your company use SAP software systems to optimize all aspects of manufacturing, sales, inventory and distribution channels?",
+            "answer": "Maintaining an efficient supply chain is key."
+        },
+        {
+            "question": "Have you had any regulatory expenses that have significantly impacted profitability recently?",
+            "answer": "The industry is not heavily regulated and incurs minimal compliance costs."
+        },
+        {
+            "question": "What effect have international tariffs had on your ability to import and export products?",
+            "answer": "The industry exports little and does not have import protection."
+        },
+        {
+            "question": "How does your company compensate for seasonality of cash flow?",
+            "answer": "Demand is sensitive to seasonal trends in construction."
+        },
+        {
+            "question": "How frequently does your company purchase new equipment?",
+            "answer": "Varying levels of equipment use depending on production focus."
+        },
+        {
+            "question": "Do you have contracts with key suppliers? How have your current contracts helped with cost savings?",
+            "answer": "Established links with key suppliers lead to savings."
+        },
+        {
+            "question": "What do you look for when hiring new employees? How do you go about training new hires?",
+            "answer": "Staff must provide quality workmanship in assembly."
+        },
+        {
+            "question": "How can you improve the diversity of your clients? What types of clients does your company currently have?",
+            "answer": "A diverse clientele reduces financial risk."
+        },
+        {
+            "question": "Do you monitor trends in consumer confidence? How do you market your products to lower-income consumers?",
+            "answer": "Demand is generally low during periods of low confidence."
+        },
+        {
+            "question": "Do you monitor trends in per capita disposable income? How can you take advantage when disposable incomes increase?",
+            "answer": "Higher disposable income increases demand for new products."
+        },
+        {
+            "question": "How has the current level of private spending on home improvements affected your company? How can you adapt as private spending declines?",
+            "answer": "Spending on remodeling directly affects demand for products."
+        }
+    ]
+}

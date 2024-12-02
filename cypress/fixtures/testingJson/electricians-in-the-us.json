@@ -1,0 +1,620 @@
+{
+    "report_title": "Industry at a Glance",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 255400000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": 2.39
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 2.4
+            }
+        },
+        "profit": {
+            "profit_dollars": 13793000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": 1.73
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 2.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 5.4,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": 1.73
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 1.5
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 93812000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 2.2
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 2.5
+            }
+        },
+        "employees": {
+            "employees_count": 1141623,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": 1.8
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 1.2
+            }
+        },
+        "wages": {
+            "wages_dollars": 77667000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": 2.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 2.2
+            }
+        },
+        "imports": {
+            "imports_dollars": 5000000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 1.5
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 1.6
+            }
+        },
+        "exports": {
+            "exports_dollars": 6000000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 1.5
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 1.7
+            }
+        }
+    },
+    "executive_summary": "The electricians industry powers the modern economy and digital lifestyle. It includes electrical workers who service, sell and install electrical equipment and perform electrical work. While most work is on new construction, a third comes from electrical upgrades. Nonresidential and utility work has expanded despite higher interest rates stifling residential construction since 2022. Revenue has inched up at a 0.9% CAGR over the past five years and is expected to total $255.4 billion in 2024, rising an estimated 1.3%. Profit has dropped due to rising labor and materials costs.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Interest rates have had an impact",
+            "current_performance_point_description": "The Federal Reserve lowered interest rates during COVID-19, stimulating residential construction. Since 2022, rate hikes have stymied this but boosted commercial and utility construction aided by infrastructure acts. Inflation of electrical components has accounted for some revenue gains."
+        },
+        {
+            "current_performance_point_title": "The push for a greener world benefits the industry",
+            "current_performance_point_description": "Demand has grown for electricians to install energy-efficient systems like solar panels, EV chargers and heat pumps to reduce costs and emissions. Regions with more green incentives have seen more electricians specializing in these projects."
+        },
+        {
+            "current_performance_point_title": "Fuel-powered competition to electricity burns out",
+            "current_performance_point_description": "Fluid fuels like natural gas were primary heating/transportation sources, but electrification is becoming standard as electric options have fewer risks. Few new houses use fuel furnaces, opting for electric heat pumps installed by electricians."
+        },
+        {
+            "current_performance_point_title": "The electrician labor shortage expands further",
+            "current_performance_point_description": "The push for STEM education has drawn many away from trades like electrical work despite relatively high pay and union benefits. This labor shortage has increased wages but lowered profit margins as companies try to retain talent."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Electric vehicle installations shock electrical revenue",
+            "future_outlook_point_description": "Demand for electricity has surged with EVs and appliances, increasing jobs installing EV chargers. The high risk limits substitutes, creating industry reliance. Smart grid systems involving EVs are proposed to address the overloaded grid."
+        },
+        {
+            "future_outlook_point_title": "Interest rates will fall",
+            "future_outlook_point_description": "The Federal Reserve will likely gradually cut interest rates as inflation cools, though not to pandemic lows. Lower rates will encourage new housing and renovation projects requiring electricians."
+        },
+        {
+            "future_outlook_point_title": "The green energy transition will be a source of growth",
+            "future_outlook_point_description": "Reducing carbon emissions requires massive electric infrastructure like renewable sources, grid storage/transmission and EV charging, all involving extensive electrician work. The Inflation Reduction Act provides long-term subsidies for this over 10 years."
+        },
+        {
+            "future_outlook_point_title": "Electricians refocus on electrical supply markets",
+            "future_outlook_point_description": "Electricians are returning focus to wiring installation as aging infrastructure breaks down and modern wireless devices reduce side jobs like security system wiring. The industry constantly encounters new technology changes."
+        }
+    ],
+    "industry_definition": "This industry performs electrical work at a site and services, sells and installs electrical equipment. The electrical services performed include new work, additions, alterations, maintenance, and repairs.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Revenue Volatility low",
+            "Capital Intensity low",
+            "Concentration low",
+            "Globalization low - steady"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage mature"
+        ],
+        "negative_impact_factors": [
+            "Industry Assistance Level low - steady",
+            "Barriers To Entry Level low - steady",
+            "Competition Level high - steady"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Volatility",
+            "Low Imports",
+            "High Profit vs. Sector Average",
+            "Low Customer Class Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry",
+            "Low & Steady Level of Assistance",
+            "High Competition",
+            "High Product/Service Concentration",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "High Performance Drivers",
+            "Existing home sales"
+        ],
+        "threats": [
+            "Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth"
+        ]
+    },
+    "key_trends": [
+        "Electricians operate in a small service area, only competing with those in the immediate surrounding area. Exceptions exist for utility-based electricians or those working on massive government projects away from the consumer space.",
+        "Electricity is fundamental to the modern world and few substitutes exist for homeowners. Still, IoT and smart home devices are increasingly using wireless communication, stripping away the need for professional electrical installers.",
+        "Interest Rates Affect Construction Activity. Lower interest rates initially boosted residential construction, but recent rate hikes have stymied this growth. Commercial construction, however, has thrived as rates have risen, thanks in part to federal support.",
+        "Green Energy is Fueling Electrician Demand. The push for energy efficiency and greener energy systems has powered electricians' work. Installing solar panels, electric vehicle chargers, and heat pumps is complex and requires professional expertise to meet code compliance.",
+        "There is a labor shortage in the electrical trades. There's a growing electrician labor shortage due to a shift towards college education and fewer people entering trades. Despite the high pay and union benefits, the industry is struggling to attract new talent.",
+        "No electrical contractor earns more than 5.0% of the industry's income, owing to low barriers to entry and an abundance of nonemployers. Electrical contractors focus on control of a local market more than expansion into new areas."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Government",
+            "segment_description": "This segment accounts for hospitals, clinics, medical centers, schools, law courts, prisons, churches and police and fire stations. Electrical services in the institutional market are driven by population growth and the level of government spending, both state and federal and corporate profit.",
+            "segment_percentage": 25.5
+        },
+        {
+            "segment": "Commercial and Industrial Buildings",
+            "segment_description": "Electrical work includes wiring and maintenance performed on commercial properties, including stores, restaurants, factories, warehouses and other structures. Commercial and industrial wiring activity dropped during the COVID-19 pandemic as expansion activity halted. Demand has since picked up, particularly from residential construction.",
+            "segment_percentage": 39.5
+        },
+        {
+            "segment": "Office Buildings",
+            "segment_description": "Office buildings with desk workers don't require significant power, but they do need extensive and thoughtful power distribution for desks and servers.",
+            "segment_percentage": 18.7
+        },
+        {
+            "segment": "Residential",
+            "segment_description": "Residential electrical work is performed on any structure where people live. Demand from home builders has seen an overall increase since 2019, but peaked in 2021 along with low interest rates. Rising interest rates have also caused residential clients to put off housing improvements, threatening electrician income in this vital industry sector.",
+            "segment_percentage": 8.5
+        },
+        {
+            "segment": "Infrastructure",
+            "segment_description": "Transportation is moving toward the core of US policy, giving opportunities to electricians wiring traffic lights, streetlights, mass transit and installing under-street utilities.",
+            "segment_percentage": 10.1
+        },
+        {
+            "segment": "Other",
+            "segment_description": "Wiring other buildings, including accommodation structures and nonbuilding electrical installations, generate a fraction of electricians' revenue.",
+            "segment_percentage": 1.0
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Electric Power and Systems Installation and Servicing",
+            "product_description": "The backbone of the Electricians industry, laying and testing wires designed to carry electrical power inside buildings, consistently generates over two-thirds of electrician revenue.",
+            "product_percentage": 67.6
+        },
+        {
+            "product_or_service": "Telecommunications Installation and Servicing",
+            "product_description": "Electrical work is not just limited to wires carrying household power. The relative risk of working near energized electrical lines gives electricians jobs wiring and maintains a vast array of telecommunications wires.",
+            "product_percentage": 9.8
+        },
+        {
+            "product_or_service": "Fire and Security System Installation and Servicing",
+            "product_description": "Installation and servicing of fire alarms and security systems.",
+            "product_percentage": 6.0
+        },
+        {
+            "product_or_service": "Electronic Control System Installation and Servicing",
+            "product_description": "Wiring for specialized electronic control systems.",
+            "product_percentage": 5.7
+        },
+        {
+            "product_or_service": "Highway, Street, or Bridge Lighting and Signal Installation and Servicing",
+            "product_description": "Installation of lighting and signal systems for transportation infrastructure.",
+            "product_percentage": 3.9
+        },
+        {
+            "product_or_service": "All Other Services",
+            "product_description": "Electricians perform essential wiring work on many systems that involve high voltage or current.",
+            "product_percentage": 7.0
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Electrical Equipment Wholesaling in the US",
+            "Electronic Part & Equipment Wholesaling in the US",
+            "Construction & Mining Equipment Wholesaling in the US"
+        ],
+        "tier_2_suppliers": [
+            "Hand Tool & Cutlery Manufacturing in the US",
+            "Wire & Cable Manufacturing in the US",
+            "Circuit Board & Electronic Component Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Real Estate and Rental and Leasing in the US"
+        ],
+        "tier_2_buyers": [
+            "Municipal Building Construction in the US",
+            "Commercial Building Construction in the US",
+            "Industrial Building Construction in the US",
+            "Home Builders in the US",
+            "Apartment & Condominium Construction in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Value of Private Nonresidential Construction",
+            "determinant_description": "Expenditure on office buildings, factories, power plants, mining shafts, communication lines, barns, railroads and other buildings."
+        },
+        {
+            "determinant_title": "Value of Residential Construction",
+            "determinant_description": "The value of residential construction measures investment in private residential structures of any size."
+        },
+        {
+            "determinant_title": "Per Capita Disposable Income",
+            "determinant_description": "An increase in disposable income drives demand for electrical services since it financially enables individuals to undertake home upgrades and repairs."
+        },
+        {
+            "determinant_title": "Existing Home Sales",
+            "determinant_description": "When the housing market falters, buyers tend to purchase more existing homes, lowering electrician revenue."
+        },
+        {
+            "determinant_title": "Private Investment in Manufacturing Structures",
+            "determinant_description": "Private investment in manufacturing structures represents businesses' annual expenditure on manufacturing facilities in the United States."
+        },
+        {
+            "determinant_title": "Industrial Production Index",
+            "determinant_description": "A declining industrial production index represents a potential threat to the industry."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The nation's most populous region also contains the highest number of electrical contractors.",
+            "percentage_establishments": 30.0,
+            "percentage_population": 25.0
+        },
+        {
+            "location": "West",
+            "location_description": "Home to the second-highest fraction of the United States population.",
+            "percentage_establishments": 20.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "Population density is high in the Mid-Atlantic region.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 10.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 10.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Plains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5.0,
+            "percentage_population": 5.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5.0,
+            "percentage_population": 10.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_points": [
+            {
+                "regulation_title": "Licensing",
+                "regulation_description": "Electrical contractors must obtain necessary licenses both at the state and local levels."
+            },
+            {
+                "regulation_title": "The National Electric Code",
+                "regulation_description": "Released by the National Fire Protection Agency every three years."
+            },
+            {
+                "regulation_title": "National Electrical Installation Standards",
+                "regulation_description": "More detailed and specific than the National Electrical Code."
+            },
+            {
+                "regulation_title": "Occupational Safety and Health Administration (OSHA) Standards",
+                "regulation_description": "Essential for ensuring workplace safety in electrical contracting."
+            },
+            {
+                "regulation_title": "State and Local Building Codes",
+                "regulation_description": "Contractors must follow state and local building codes which can have specific requirements for electrical installations."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "Life Cycle Stage: mature"
+            },
+            {
+                "barrier_title": "Industry Assistance Level",
+                "barrier_description": "Industry Assistance Level: low - steady"
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "Competition Level: high - steady"
+            }
+        ],
+        "factors_increased_barrier": [],
+        "factors_decreased_barrier": [
+            "Revenue Volatility Level: low",
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Globalization Level: low - steady"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Electricians operate in a small service area",
+                "basis_description": "Electricians operate in a small service area."
+            },
+            {
+                "basis_title": "Electricity is fundamental to the modern world",
+                "basis_description": "Electricity is fundamental to the modern world and few substitutes exist for homeowners."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Electricians must physically visit each job site",
+                "concentration_description": "Electricians must physically visit each job site and operate in a limited-service area."
+            },
+            {
+                "concentration_title": "Finding a growing community without quality, local electrical service",
+                "concentration_description": "Finding a growing community without quality, local electrical service can kick start a new electrician's business."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Quanta Services, Inc.",
+                "company_percentage": 2.8
+            },
+            {
+                "company_name": "Emcor Group, Inc.",
+                "company_percentage": 0.7
+            },
+            {
+                "company_name": "Bergelectric Corporation",
+                "company_percentage": 0.3
+            },
+            {
+                "company_name": "MDU Construction Services Group Inc.",
+                "company_percentage": 0.3
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 95.9
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 8.9
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 24.3
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 39.2
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 2.3
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 2.1
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 2.4
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 1.2
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 19.6
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Labor Expenses",
+            "cost_factor_description": "Electrical contracting is highly labor-intensive."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Capital Expenses",
+                "capital_intensity_description": "Capital intensity for electricians remains very low."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Low",
+        "volatility_points": [
+            {
+                "volatility_title": "THE COVID-19 BUILDING BOOM PROTECTED HOME CONTRACTORS",
+                "volatility_description": "A rush of new home construction beginning in summer 2020 elevated electricians above the worst of the COVID-19 pandemic."
+            },
+            {
+                "volatility_title": "LOW INDUSTRY-WIDE VARIABILITY MASKS MORE SUBSTANTIAL FLUCTUATIONS FOR INDIVIDUAL BUSINESSES",
+                "volatility_description": "The industry leans heavily on its fractured workforce."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Moderate",
+        "technological_change_points": [
+            {
+                "technological_change_title": "The Industry is Exposed to a Significant Level of Technological Change",
+                "technological_change_description": "The industry's services constantly change to reflect innovations."
+            },
+            {
+                "technological_change_title": "Digital Electrical Backbones and the Smart Grid",
+                "technological_change_description": "Verifying an electrical install has become more accessible."
+            }
+        ],
+        "technological_change_trend": "Increasing"
+    },
+    "FAQs": [
+        {
+            "question": "Does your company primarily work with residential or nonresidential construction markets? Can you easily switch between these markets?",
+            "answer": "Nonresidential construction is the largest market for the industry, but residential construction is also important."
+        },
+        {
+            "question": "Does your company work to anticipate changes in sales based on current market performance?",
+            "answer": "Demand for industry services is largely dependent on activity in the construction sector."
+        },
+        {
+            "question": "Are you solely focused on new work, or do you participate in remodeling activities?",
+            "answer": "New construction and remodeling projects are all a large source of demand for industry operators."
+        },
+        {
+            "question": "How does your company compete for contracts with larger businesses? Do you ever lack the capacity to deliver on more lucrative projects?",
+            "answer": "Generally, larger companies are able to submit more competitive bids."
+        },
+        {
+            "question": "What is the size of your staff? How does that compare to your competitors?",
+            "answer": "Most industry operators hire fewer than five employees."
+        },
+        {
+            "question": "Does your company make use of subcontractors to save on wage costs?",
+            "answer": "Some companies hire subcontractors for specific projects."
+        },
+        {
+            "question": "Have productivity issues ever kept you from winning lucrative contracts over larger competitors?",
+            "answer": "Larger companies are generally more competitive in terms of productivity."
+        },
+        {
+            "question": "Has your company considered using 3D printing and other production methods that limit on-site construction work?",
+            "answer": "Preproduction of parts and systems can limit on-site work."
+        },
+        {
+            "question": "Do you work with local or national trade associations to advance your company's interests?",
+            "answer": "Organizations such as the National Electrical Contractors Association (NECA) are popular among industry operators."
+        },
+        {
+            "question": "How does your company ensure that all health and safety requirements are met on and off the construction site?",
+            "answer": "There are strict health and safety requirements that all industry operators must follow."
+        },
+        {
+            "question": "How does your company's profit compare with those of your competitors'?",
+            "answer": "Generally, industry profit varies depending on the size of operators."
+        },
+        {
+            "question": "How many of your clients are return customers?",
+            "answer": "For individual operators, customer loyalty is very important."
+        },
+        {
+            "question": "Do you have a strong reputation among customers? Are you known for your reliability and performance?",
+            "answer": "Maintaining a reputation for quality and timeliness is essential for operators."
+        },
+        {
+            "question": "How do you make sure your prices are attractive to customers? Have you had to adjust prices recently to compete with your competitors?",
+            "answer": "Industry operators must control labor costs to ensure prices are competitive."
+        },
+        {
+            "question": "Do you have positive relationships with key distributors and end users? Are you located close to your target markets and suppliers?",
+            "answer": "Maintaining positive relationships with clients is important to the success of industry operators."
+        },
+        {
+            "question": "Do you track the level of investment into manufacturing structures?",
+            "answer": "Private investment in manufacturing structures represents the annual expenditure by businesses."
+        },
+        {
+            "question": "How much nonresidential-related business do you participate in?",
+            "answer": "The value of private nonresidential construction includes expenditure on various structures."
+        },
+        {
+            "question": "Do you do business in residential construction markets?",
+            "answer": "The value of residential construction measures investment in private residential structures."
+        }
+    ]
+}

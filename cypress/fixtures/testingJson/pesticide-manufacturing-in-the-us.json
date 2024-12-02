@@ -1,0 +1,615 @@
+{
+    "report_title": "Pesticide Manufacturing Industry Report",
+    "report_date": "2024",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 18534000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "revenue_cagr_value": -0.77
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "revenue_cagr_value": 1.16
+            }
+        },
+        "profit": {
+            "profit_dollars": 890000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_cagr_value": -2.1
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_cagr_value": 1.0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 4.8,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "profit_margins_cagr_value": -1.34
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "profit_margins_cagr_value": 1.0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 2291000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "industry_value_added_cagr_value": 0.5
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "industry_value_added_cagr_value": 1.0
+            }
+        },
+        "employees": {
+            "employees_count": 11281,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "employees_cagr_value": -0.5
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "employees_cagr_value": 1.0
+            }
+        },
+        "wages": {
+            "wages_dollars": 987000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "wages_cagr_value": -1.0
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "wages_cagr_value": 1.0
+            }
+        },
+        "imports": {
+            "imports_dollars": 1961000000,
+            "imports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "imports_cagr_value": 2.0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "imports_cagr_value": 1.0
+            }
+        },
+        "exports": {
+            "exports_dollars": 4275000000,
+            "exports_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2024,
+                "exports_cagr_value": 1.5
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2024,
+                "end_year": 2030,
+                "exports_cagr_value": 0.5
+            }
+        }
+    },
+    "executive_summary": "Pesticide manufacturers have experienced moderate growth over the past few decades, driven by the increasing global demand for food and the need to protect crops from pests. The industry has been marked by continuous innovation and technological advancements, which have led to the development of more effective and environmentally friendly pesticides.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Industry revenue forecast",
+            "current_performance_point_description": "Industry revenue is forecast to climb at a CAGR of 2.9% to $18.5 billion through the end of 2024, including a slight decline of 0.3% in 2024 alone."
+        },
+        {
+            "current_performance_point_title": "Market dominance",
+            "current_performance_point_description": "Historically, the industry has been dominated by a few large multinational corporations, such as Bayer, Syngenta, and BASF, which have extensive research and development capabilities."
+        },
+        {
+            "current_performance_point_title": "Increasing competition",
+            "current_performance_point_description": "The industry has also seen the emergence of several smaller players who have gained market share by offering lower-priced pesticides."
+        },
+        {
+            "current_performance_point_title": "Profit growth",
+            "current_performance_point_description": "Average profit has increased over the past five years as rising sales have contributed to expanding margins."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Industry growth forecast",
+            "future_outlook_point_description": "The pesticide manufacturing industry is expected to grow at a CAGR of 1.2% to $19.7 billion through the end of 2028, driven by the ongoing need to increase agricultural productivity and feed a growing global population."
+        },
+        {
+            "future_outlook_point_title": "Challenges",
+            "future_outlook_point_description": "The industry is expected to face several challenges, including increasing regulatory scrutiny, particularly in developed countries, and increased competition from biopesticides."
+        },
+        {
+            "future_outlook_point_title": "Rise of biopesticides",
+            "future_outlook_point_description": "The rising demand for organic food has resulted in increased use of biopesticides, which are derived from natural materials and are seen as a more sustainable alternative to traditional synthetic pesticides."
+        },
+        {
+            "future_outlook_point_title": "Regulatory promotion of biopesticides",
+            "future_outlook_point_description": "Regulatory bodies, such as the US Environmental Protection Agency (EPA), are promoting the use of biopesticides by implementing a simpler registration process for them compared to chemical pesticides."
+        }
+    ],
+    "industry_definition": "Operators in this industry manufacture household and agricultural pest control chemicals. Industry products include pesticides and agricultural",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Barriers To Entry Level - high - increasing"
+        ],
+        "negative_impact_factors": [
+            "Capital Intensity Level - high",
+            "Concentration Level - high",
+            "Technology Change Level - high",
+            "Globalization Level - high - increasing"
+        ],
+        "mixed_impact_factors": [
+            "Life Cycle Stage - mature"
+        ]
+    },
+    "swot_analysis": {
+        "strengths": [
+            "High & Increasing Barriers to Entry",
+            "Medium & Increasing Level of Assistance",
+            "High Revenue per Employee"
+        ],
+        "weaknesses": [
+            "Medium Imports",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "High Product/Service Concentration",
+            "High Capital Requirements"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2019-2024)",
+            "High Revenue Growth (2024-2029)",
+            "Demand from crop production"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2024)",
+            "Low Outlier Growth",
+            "Low Performance Drivers",
+            "Trade-weighted index"
+        ]
+    },
+    "key_trends": [
+        "Product innovation is essential to continued growth. Companies compete to provide the most-effective and lowest-cost product on the market for each specific segment.",
+        "Patents are expiring. Patents will not be awarded to the majority of crop protection chemicals, enabling greater competition between brands.",
+        "The Pesticide Manufacturing industry has been heavily consolidating. The industry's major manufacturers have facilitated deals to boost market share and add new innovations to existing product lines.",
+        "Downstream markets and consumers have grown aware of pesticide's environmental impact. Stricter regulations, too, will force manufacturers to prioritize environmental concerns when creating new products."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Agricultural Industries",
+            "segment_description": "Agricultural industries pertain to all aspects of food production from the growth of crops to the rearing of livestock. These industries are vital to sustaining populations and economies around the globe.",
+            "segment_percentage": 80.6
+        },
+        {
+            "segment": "Households and other",
+            "segment_description": "While a smaller market, the outdoor lawn and garden segment has also sustained some growth during the period, boosted by introducing innovative ready-to-use products.",
+            "segment_percentage": 13.7
+        },
+        {
+            "segment": "Businesses, governments and all other",
+            "segment_description": "Commercial exterminators, schools, highway departments and utility companies also use pesticide products to control insects, weeds and other pests in nonagricultural settings.",
+            "segment_percentage": 5.7
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Herbicides",
+            "product_description": "Herbicides are pesticides commonly used in agriculture to control unwanted plants or weeds.",
+            "product_percentage": 45.4
+        },
+        {
+            "product_or_service": "Insecticides",
+            "product_description": "Insecticides are substances used to kill insects. They include ovicides and larvicides which are used against the eggs and larvae of insects respectively.",
+            "product_percentage": 14.5
+        },
+        {
+            "product_or_service": "Fungicides",
+            "product_description": "Fungicides are chemical compounds or biological organisms primarily used to hinder the growth of fungi and fungal spores.",
+            "product_percentage": 29.3
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Industrial Machinery & Equipment Wholesaling in the US",
+            "Petrochemical Manufacturing in the US",
+            "Chemical Product Manufacturing in the US",
+            "Inorganic Chemical Manufacturing in the US",
+            "Organic Chemical Manufacturing in the US",
+            "Oxygen & Hydrogen Gas Manufacturing in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_suppliers": [
+            "Oil Drilling & Gas Extraction in the US",
+            "Mineral & Phosphate Mining in the US",
+            "Power Tools & Other General Purpose Machinery Manufacturing in the US"
+        ],
+        "tier_2_buyers": [
+            "Farm Supplies Wholesaling in the US",
+            "Tool & Hardware Wholesaling in the US",
+            "Piece Goods, Notions & Other Apparel Wholesaling in the US",
+            "Agriculture, Forestry, Fishing and Hunting in the US",
+            "Home Improvement Stores in the US",
+            "Warehouse Clubs & Supercenters in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Herbicides are the Industry's Primary Source of Income",
+            "determinant_description": "Herbicides are pesticides commonly used in agriculture to control unwanted plants or weeds."
+        },
+        {
+            "determinant_title": "Fungicide Sales Remain Stable",
+            "determinant_description": "Fungicides are chemical compounds or biological organisms primarily used to hinder the growth of fungi and fungal spores."
+        },
+        {
+            "determinant_title": "Insecticide Sales Increase",
+            "determinant_description": "Insecticides are substances used to kill insects."
+        },
+        {
+            "determinant_title": "Other Repellents Face Greater Competition",
+            "determinant_description": "Other products offered by this industry include insect repellents."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Moderate",
+        "import_trend": "Decreasing",
+        "export_level": "High",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports Grow to New Heights",
+                "trade_description": "Major imported products include complex chemicals, including organophosphorus and carboxylate phenols."
+            },
+            {
+                "trade_title": "IMPORTS FROM INDIA SKYROCKET",
+                "trade_description": "India is the fastest-growing exporter of pesticide products primarily because of its inexpensive labor and production costs."
+            },
+            {
+                "trade_title": "THE UNITED STATES IS A NET EXPORTER OF PESTICIDES",
+                "trade_description": "Canada is a valuable trading partner and the leading importer of pesticides produced in the United States."
+            },
+            {
+                "trade_title": "STRONG MANUFACTURING STANDARDS MAKE DOMESTIC PESTICIDES ATTRACTIVE",
+                "trade_description": "The United States benefits from its stringent regulations and advanced technology in this industry."
+            },
+            {
+                "trade_title": null,
+                "trade_description": "The strong value of the US dollar, though, has limited exports as foreign markets turn to less expensive pesticides."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast contains a large number of commercial farms. More than one-quarter of all cotton farming establishments are located in the Southeast region.",
+            "percentage_establishments": 30.0,
+            "percentage_population": 20.0
+        },
+        {
+            "location": "Plains",
+            "location_description": "Multiple major key farming markets, like corn, wheat, oilseed and soybean farmers, are in this region.",
+            "percentage_establishments": 15.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "West",
+            "location_description": "California accounts for over half of all fungicides consumed, reflecting its importance as a grape-growing region.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 17.0
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The nearby Great Lakes region is also home to many major chemical manufacturers.",
+            "percentage_establishments": 10.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 10.0,
+            "percentage_population": 15.0
+        },
+        {
+            "location": "Southwest",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5.0,
+            "percentage_population": 10.0
+        },
+        {
+            "location": "New England",
+            "location_description": "<UNKNOWN>",
+            "percentage_establishments": 5.0,
+            "percentage_population": 10.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "High",
+        "regulations_trend": "Increasing",
+        "regulations_points": [
+            {
+                "regulation_title": "THE PESTICIDE USE/RISK REDUCTION INITIATIVE",
+                "regulation_description": "In 1993, the United States Department of Agriculture launched the Pesticide Use/Risk Reduction Initiative."
+            },
+            {
+                "regulation_title": "THE COMMISSION FOR ENVIRONMENTAL COOPERATION",
+                "regulation_description": "The Commission for Environmental Cooperation promotes cooperation on various environmental issues."
+            },
+            {
+                "regulation_title": "POTENTIAL BANS ON NEONICOTINOIDS",
+                "regulation_description": "The EPA has also investigated the impact of certain pesticides on the bee population."
+            },
+            {
+                "regulation_title": "Environmental Legislation",
+                "regulation_description": "Facilities within this industry are subject to extensive environmental legislation."
+            },
+            {
+                "regulation_title": "OTHER EPA REGULATIONS AND INVESTIGATIONS",
+                "regulation_description": "The EPA is responsible for regulating the production and use of pesticides in the United States."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "High",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The pesticide manufacturing industry is in a mature life cycle stage."
+            },
+            {
+                "barrier_title": "Capital Intensity Level",
+                "barrier_description": "The pesticide manufacturing industry has a high level of capital intensity."
+            },
+            {
+                "barrier_title": "Concentration Level",
+                "barrier_description": "The pesticide manufacturing industry has a high level of market concentration."
+            },
+            {
+                "barrier_title": "Technology Change Level",
+                "barrier_description": "The pesticide manufacturing industry has a high level of technological change."
+            },
+            {
+                "barrier_title": "Globalization Level",
+                "barrier_description": "The pesticide manufacturing industry has a high and increasing level of globalization."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: mature",
+            "Capital Intensity Level: high",
+            "Concentration Level: high",
+            "Technology Change Level: high",
+            "Globalization Level: high - increasing"
+        ],
+        "factors_decreased_barrier": [
+            "Navigating through the complex web of legal regulations such as registering new pesticides and adhering to environmental safety regulations."
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Product innovation",
+                "basis_description": "Product innovation is essential to continued growth."
+            },
+            {
+                "basis_title": "Patent expiration",
+                "basis_description": "Patents will not be awarded to the majority of crop protection chemicals."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "High",
+        "concentration_trend": "Increasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Heavy consolidation activity",
+                "concentration_description": "The pesticide manufacturing industry's concentration is significantly impacted by heavy consolidation activity."
+            },
+            {
+                "concentration_title": "Prominent manufacturers invest in new start-ups",
+                "concentration_description": "Prominent manufacturers' investments in promising start-ups also impact the industry's concentration."
+            }
+        ],
+        "top_companies": [
+            {
+                "company_name": "Bayer Corp",
+                "company_percentage": 41.6
+            },
+            {
+                "company_name": "Corteva, Inc.",
+                "company_percentage": 19.1
+            },
+            {
+                "company_name": "Syngenta Ag",
+                "company_percentage": 9.9
+            },
+            {
+                "company_name": "Nufarm Ltd",
+                "company_percentage": 2.8
+            },
+            {
+                "company_name": "OTHERS",
+                "company_percentage": 26.6
+            }
+        ]
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 48.2
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 36.9
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Raw Material Costs Remain High",
+            "cost_factor_description": "The industry relies on purchases of organic and inorganic chemicals to produce pesticides."
+        },
+        {
+            "cost_factor_title": "R&D Is a Key Growth Factor",
+            "cost_factor_description": "Innovation is crucial for manufacturers, especially as companies try to create new and effective products."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "High",
+        "capital_intensity_trend": "Unknown",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "CAPITAL EXPENSES",
+                "capital_intensity_description": "Pesticide manufacturers are heavily reliant on mechanized processes."
+            }
+        ]
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_trend": "Unknown",
+        "volatility_points": [
+            {
+                "volatility_title": "Changing Environmental Regulations Pose Challenges",
+                "volatility_description": "With the increasing global emphasis on sustainability."
+            },
+            {
+                "volatility_title": "Weather Changes Can Stifle Key Markets",
+                "volatility_description": "Changing weather conditions affect the industry's volatility."
+            },
+            {
+                "volatility_title": "Public Perception and Fluctuations in Demand",
+                "volatility_description": "The public's awareness about the health impacts of pesticides has led to a negative perception."
+            }
+        ]
+    },
+    "technological_change": {
+        "technological_change_level": "High",
+        "technological_change_trend": "Increasing",
+        "technological_change_points": [
+            {
+                "technological_change_title": "COMPUTER CHEMISTRY AND TECHNOLOGY ADOPTION",
+                "technological_change_description": "Computer chemistry enables research teams to process more chemical structures."
+            },
+            {
+                "technological_change_title": "New Generation Pesticides",
+                "technological_change_description": "Pesticide manufacturers have created diagnostic apps."
+            },
+            {
+                "technological_change_title": "Biopesticides",
+                "technological_change_description": "Biopesticides are cutting-edge innovations transforming pest control."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "How is your company affected by rising imports?",
+            "answer": "Rising imports threaten companies already under stress from depressed agricultural revenue."
+        },
+        {
+            "question": "Have exports offered an opportunity for your company?",
+            "answer": "Many US manufacturers of pesticides already depend on exports for a significant portion of their revenue."
+        },
+        {
+            "question": "Is your company investing heavily in R&D to meet changing customer preferences?",
+            "answer": "Major companies heavily invest in developing genetically engineered seeds."
+        },
+        {
+            "question": "Has your company explored merger and acquisition (M&A) opportunities?",
+            "answer": "Major companies have engaged in significant merger and acquisition activity."
+        },
+        {
+            "question": "Is your company investing in R&D to establish a competitive edge?",
+            "answer": "Many companies have dedicated significant resources to research and development."
+        },
+        {
+            "question": "What steps do you take to safeguard your company's proprietary information?",
+            "answer": "Companies regularly file patents for new formulas of pesticides."
+        },
+        {
+            "question": "Do you work with trade associations or other interest groups to advance your company's interests?",
+            "answer": "The American Crop Protection Association represents this industry's primary interest group."
+        },
+        {
+            "question": "Is your company adequately prepared to comply with new environmental standards?",
+            "answer": "Major manufacturers have shifted resources to developing genetically engineered seeds."
+        },
+        {
+            "question": "How does your company's profit compare with your main competitors'?",
+            "answer": "Profit mirrors agricultural production."
+        },
+        {
+            "question": "Do you have any challenges with customers paying on time?",
+            "answer": "Farmers often rely on credit to purchase supplies."
+        },
+        {
+            "question": "How much time is invested in research and development?",
+            "answer": "Research and development assist pesticide manufacturers in maintaining a competitive edge."
+        },
+        {
+            "question": "How do you market your company's products to the general public?",
+            "answer": "In this highly competitive industry, brand awareness and marketing are essential."
+        },
+        {
+            "question": "Are you able to leverage economies of scale?",
+            "answer": "Increasing price competition has increased the need to generate economies of scale."
+        },
+        {
+            "question": "Do you monitor changes in the trade-weighted index?",
+            "answer": "International trade is an essential component of this industry."
+        },
+        {
+            "question": "Do you monitor the agricultural price index?",
+            "answer": "The agricultural price index represents prices received by farmers."
+        },
+        {
+            "question": "Do you monitor trends in consumer spending?",
+            "answer": "Consumer spending measures the total amount Americans spend."
+        }
+    ]
+}

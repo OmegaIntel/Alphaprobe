@@ -1,0 +1,609 @@
+{
+    "report_title": "Covid-19 Impact on the Men's and Boys' Apparel Manufacturing Industry",
+    "report_date": "2021",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 1591000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2002,
+                "end_year": 2021,
+                "revenue_cagr_value": -11.56
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "revenue_cagr_value": 0.55
+            }
+        },
+        "profit": {
+            "profit_dollars": 40000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "profit_cagr_value": -13.07
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "profit_cagr_value": null
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 2.5,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2021,
+                "profit_margins_cagr_value": -3.04
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "profit_margins_cagr_value": null
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 554000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2002,
+                "end_year": 2021,
+                "industry_value_added_cagr_value": -8.02
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "industry_value_added_cagr_value": 0.87
+            }
+        },
+        "employees": {
+            "employees_count": 16928,
+            "employees_cagr_historical": {
+                "begin_year": 2002,
+                "end_year": 2021,
+                "employees_cagr_value": -7.39
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "employees_cagr_value": 0.91
+            }
+        },
+        "wages": {
+            "wages_dollars": 501000000,
+            "wages_cagr_historical": {
+                "begin_year": 2002,
+                "end_year": 2021,
+                "wages_cagr_value": -7.81
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "wages_cagr_value": 0.84
+            }
+        },
+        "imports": {
+            "imports_dollars": 16020000000,
+            "imports_cagr_historical": {
+                "begin_year": 2002,
+                "end_year": 2021,
+                "imports_cagr_value": -3.51
+            },
+            "imports_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "imports_cagr_value": -8.5
+            }
+        },
+        "exports": {
+            "exports_dollars": 785000000,
+            "exports_cagr_historical": {
+                "begin_year": 2002,
+                "end_year": 2021,
+                "exports_cagr_value": -6.96
+            },
+            "exports_cagr_projected": {
+                "begin_year": 2021,
+                "end_year": 2027,
+                "exports_cagr_value": 1.1
+            }
+        }
+    },
+    "executive_summary": "The Men's and Boys' Apparel Manufacturing industry in the United States experienced inconsistent performance over the five years to 2021 despite favorable economic conditions for most of the period. The industry generally contends with intense competition from manufacturers abroad due to the labor-intensive nature of the industry. Operators have managed to differentiate their products based on quality rather than price, offering premium clothing to a niche market. Industry revenue is expected to decline at an annualized rate of 1.4% to $1.6 billion over the five years to 2021, including a mild anticipated recovery of 1.7% in 2021.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Revenue decline due to imports and COVID-19",
+            "current_performance_point_description": "Revenue for the industry has declined, fueled by overwhelming import penetration and offshoring operations to low-wage countries. This decline was further accelerated in 2020 due to the COVID-19 pandemic constraining global demand and economic activity. Industry revenue is expected to fall at an annualized rate of 1.4% to $1.6 billion over the five years to 2021, including a decline of 15.0% in 2020 alone."
+        },
+        {
+            "current_performance_point_title": "Import penetration and outsourcing",
+            "current_performance_point_description": "Due to pricing pressure from imports, manufacturers have been forced to outsource manufacturing activities to third-party operators, predominantly overseas, to reduce labor expenses. An overwhelming portion of domestic demand for men's and boys' apparel is met by imports, estimated at 95.2% in 2021."
+        },
+        {
+            "current_performance_point_title": "Trade conditions and exports",
+            "current_performance_point_description": "Restrictions on global trade and a shifting trade-weighted index are expected to boost exports' share of revenue in 2021, accounting for 49.4% of industry revenue, driving an overall 1.7% recovery in 2021."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Revenue growth forecast",
+            "future_outlook_point_description": "Industry revenue is anticipated to increase modestly, rising at an annualized rate of 0.8% to $1.7 billion over the five years to 2026, aided by a recovery in exports in 2021 caused by a falling trade-weighted index."
+        },
+        {
+            "future_outlook_point_title": "Demand for premium products",
+            "future_outlook_point_description": "IBISWorld expects demand for high-quality tailored suits and premium denim to grow over the next five years, with both segments forecast to increase as a share of industry revenue."
+        },
+        {
+            "future_outlook_point_title": "Exports and imports",
+            "future_outlook_point_description": "The value of industry exports is expected to increase while imports are expected to fall as trade restrictions ease with the abating of the COVID-19 pandemic."
+        }
+    ],
+    "industry_definition": "Industry operators manufacture men's and boys' apparel from purchased fabric. Activities also include buying raw materials, designing and preparing samples, arranging for apparel to be made from raw materials and marketing finished apparel. This industry only includes companies that operate their own production facilities in the United States.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Low capital intensity",
+            "Low industry concentration",
+            "Low technology change"
+        ],
+        "negative_impact_factors": [
+            "Decline life cycle stage",
+            "High revenue volatility",
+            "High globalization level increasing",
+            "High competition level steady"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Medium & Decreasing Level of Assistance",
+            "High Competition",
+            "Decline Life Cycle Stage",
+            "High Volatility",
+            "High Imports",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration",
+            "Low Revenue per Employee"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2021-2026)",
+            "High Performance Drivers",
+            "Trade-weighted index"
+        ],
+        "threats": [
+            "Very Low Revenue Growth (2005-2021)",
+            "Low Revenue Growth (2016-2021)",
+            "Low Outlier Growth",
+            "Import penetration into the manufacturing sector"
+        ]
+    },
+    "key_trends": [
+        "Growth prospects in the industry are generally limited given the high degree of import penetration",
+        "While input prices have declined due to plunging demand, industry profit has still fallen",
+        "There has been growing concern about the environmental footprint of the apparel manufacturing industry",
+        "Revenue is forecast to grow at a tempered rate as per capita disposable income recovers",
+        "IBISWorld expects demand for high-quality tailored suits and premium denim to grow",
+        "Reshoring of apparel manufacturing has gained increased credibility",
+        "Operators have managed to differentiate their products based on quality rather than price"
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Exports",
+            "segment_description": "Exports are the largest market, with Canada the top destination at 39.5% of export values. Share expected to remain stable over 5 years to 2021 despite declines in 2020.",
+            "segment_percentage": 49.4
+        },
+        {
+            "segment": "Wholesalers",
+            "segment_description": "Wholesalers represent immediate downstream market along with specialty stores. Some large operators are vertically integrated with their own retail stores.",
+            "segment_percentage": 14.4
+        },
+        {
+            "segment": "Specialty retail stores",
+            "segment_description": "Specialty clothing stores are immediate downstream market along with wholesalers. Some large operators have their own retail stores.",
+            "segment_percentage": 14.3
+        },
+        {
+            "segment": "E-commerce",
+            "segment_description": "E-commerce segment.",
+            "segment_percentage": 13.6
+        },
+        {
+            "segment": "Discount, warehouse clubs and superstores",
+            "segment_description": "Includes retailers like Macy's, Target, Dollar General. Gained share during pandemic as incomes weakened and consumers turned to discounters.",
+            "segment_percentage": 5.6
+        },
+        {
+            "segment": "Department stores",
+            "segment_description": "Revenue dwindled to 2.4% in response to reduced foot traffic and shuttering of leaders like Sears.",
+            "segment_percentage": 2.7
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Suits, Coats and Jackets",
+            "product_description": "Tailored suits, coats and dress uniforms. Largest segment despite casual workwear trend as products became more expensive/higher margin.",
+            "product_percentage": 41.8
+        },
+        {
+            "product_or_service": "Shirts (except work shirts)",
+            "product_description": "Includes dress shirts, polos, t-shirts. Share fell as demand satisfied by imports but fueled by economic conditions.",
+            "product_percentage": 18.0
+        },
+        {
+            "product_or_service": "Work Clothes",
+            "product_description": "Uniform shirts, pants, coveralls, scrubs etc. Share remained steady as job creation rose.",
+            "product_percentage": 19.2
+        },
+        {
+            "product_or_service": "Pants and Jeans (except work pants)",
+            "product_description": "Premium US denim persisted despite imports, targeting high-income consumers as households earning $100k+ rose.",
+            "product_percentage": 7.0
+        },
+        {
+            "product_or_service": "Underwear and Nightwear",
+            "product_description": "Share improved recently as consumer confidence/income provided impetus to buy domestic products after offshoring.",
+            "product_percentage": 2.0
+        },
+        {
+            "product_or_service": "Other",
+            "product_description": "Includes shorts, swimwear, sweaters etc. Increased specialization transformed into higher value subsegments.",
+            "product_percentage": 1.0
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Apparel Knitting Mills in the US",
+            "Industrial Machinery & Equipment Wholesaling in the US",
+            "Industrial Building Construction in the US",
+            "Synthetic Fiber Manufacturing in the US",
+            "Dye & Pigment Manufacturing in the US",
+            "Textile Mills in the US"
+        ],
+        "tier_2_suppliers": [
+            "Cotton Farming in the US",
+            "Crop Services in the US",
+            "Sheep Farming in the US",
+            "Printing, Paper, Food, Textile & Other Machinery Manufacturing in the US"
+        ],
+        "tier_1_buyers": [
+            "Men's & Boys' Apparel Wholesaling in the US",
+            "Piece Goods, Notions & Other Apparel Wholesaling in the US"
+        ],
+        "tier_2_buyers": [
+            "Men's & Boys' Apparel Wholesaling in the US"
+        ]
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Downstream activity",
+            "determinant_description": "Downstream activity among wholesalers and retailers directly determines demand for the industry. Factors like disposable income and consumer demand drive this downstream activity."
+        },
+        {
+            "determinant_title": "Fashion trends",
+            "determinant_description": "Fashion swings and trends can lead to unprofitable production runs if demand changes quickly. Conversely, they can boost profit if manufacturers can supply in-demand clothing."
+        },
+        {
+            "determinant_title": "Weather patterns",
+            "determinant_description": "Weather patterns can stimulate demand for different apparel segments, e.g. demand for coats increases in winter."
+        },
+        {
+            "determinant_title": "Brand awareness",
+            "determinant_description": "Brand awareness can stimulate demand when new products are launched. Product quality and perceived differences between domestic and foreign-made clothing determine brand strength."
+        },
+        {
+            "determinant_title": "Sustainability initiatives",
+            "determinant_description": "Sustainability initiatives help operators differentiate and cater to environmentally conscious consumers."
+        }
+    ],
+    "international_trade": {
+        "import_level": "High",
+        "import_trend": "Decreasing",
+        "export_level": "High",
+        "export_trend": "Decreasing",
+        "international_trade_points": [
+            {
+                "trade_title": "Imports",
+                "trade_description": "Imports account for 95.2% of domestic demand in 2021 as operators shift production to low-cost Asia. Expected to decrease 13.0% annualized over 5 years to 2021."
+            },
+            {
+                "trade_title": "Exports",
+                "trade_description": "Exports account for 49.4% of revenue in 2021, primarily high-end premium apparel. Expected to decrease 3.8% annualized over 5 years to 2021 but rise 3.4% in 2021 itself."
+            }
+        ]
+    },
+    "business_locations": [
+        {
+            "location": "West",
+            "location_description": "The West region accounts for 25.9% of total industry establishments, with California being home to the bulk at 19.4% due to its status as an import/export hub with large harbors and proximity to target markets.",
+            "percentage_establishments": 25.9,
+            "percentage_population": 101
+        },
+        {
+            "location": "Mid-Atlantic",
+            "location_description": "The Mid-Atlantic region accounts for 25.9% of establishments, with New York having 14.8% due to proximity to transportation for international trade and large domestic consumer market.",
+            "percentage_establishments": 25.9,
+            "percentage_population": 101
+        },
+        {
+            "location": "Southeast",
+            "location_description": "The Southeast region accounts for 22.9% of establishments, historically known for cotton farming and access to Gulf of Mexico for trade. Florida has 4.9% of establishments.",
+            "percentage_establishments": 22.9,
+            "percentage_population": 101
+        },
+        {
+            "location": "Great Lakes",
+            "location_description": "The Great Lakes region accounts for 9.0% of industry establishments.",
+            "percentage_establishments": 9.0,
+            "percentage_population": 101
+        },
+        {
+            "location": "Southwest",
+            "location_description": "The Southwest region holds 8.1% of total establishments, with Texas being the most populous state at 8.8% of nation's population and 6.7% of industry establishments.",
+            "percentage_establishments": 8.1,
+            "percentage_population": 101
+        },
+        {
+            "location": "Plains",
+            "location_description": "The Plains region accounts for 2.8% of industry establishments.",
+            "percentage_establishments": 2.8,
+            "percentage_population": 101
+        },
+        {
+            "location": "New England",
+            "location_description": "The New England region accounts for 3.5% of industry establishments.",
+            "percentage_establishments": 3.5,
+            "percentage_population": 101
+        },
+        {
+            "location": "Rocky Mountains",
+            "location_description": "The Rocky Mountains region accounts for 1.9% of industry establishments.",
+            "percentage_establishments": 1.9,
+            "percentage_population": 101
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_trend": "Steady",
+        "regulations_points": [
+            {
+                "regulation_title": "Intellectual property laws",
+                "regulation_description": "Operators must comply with US patent and trademark laws related to intellectual property rights."
+            },
+            {
+                "regulation_title": "Import duties and quotas",
+                "regulation_description": "Imported fabrics and materials are subject to US customs duties. Import quotas imposed on some Asian countries."
+            },
+            {
+                "regulation_title": "Environmental and labor laws",
+                "regulation_description": "Companies must follow environmental laws on waste discharge, US labor laws, wage laws, occupational safety etc."
+            }
+        ]
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Moderate",
+        "barriers_trend": "Increasing",
+        "barriers_points": [
+            {
+                "barrier_title": "Life Cycle Stage",
+                "barrier_description": "The industry is in the decline stage of its life cycle."
+            },
+            {
+                "barrier_title": "Revenue Volatility Level",
+                "barrier_description": "The industry has high revenue volatility."
+            },
+            {
+                "barrier_title": "Globalization Level",
+                "barrier_description": "The industry has a high and increasing level of globalization."
+            },
+            {
+                "barrier_title": "Competition Level",
+                "barrier_description": "The industry has high but steady competition."
+            }
+        ],
+        "factors_increased_barrier": [
+            "Life Cycle Stage: decline",
+            "Revenue Volatility Level: high",
+            "Globalization Level: high - increasing",
+            "Competition Level: high - steady"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level: low",
+            "Concentration Level: low",
+            "Technology Change Level: low"
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "High",
+        "basis_trend": "Steady",
+        "basis_points": [
+            {
+                "basis_title": "Internal Competition",
+                "basis_description": "The majority of products are well-known consumer brands or licensed apparel made to specific requirements."
+            },
+            {
+                "basis_title": "External Competition",
+                "basis_description": "Major competition comes from less costly imports, particularly from China, Southeast Asia, Mexico and Bangladesh."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Decreasing",
+        "concentration_points": [
+            {
+                "concentration_title": "Fragmented Market",
+                "concentration_description": "Over 80% of industry establishments are non-employing, indicating a highly fragmented market."
+            },
+            {
+                "concentration_title": "Larger Companies Outsourcing",
+                "concentration_description": "Larger companies focus on higher value-added activities like design and marketing, outsourcing production."
+            }
+        ],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 101
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 31.5
+        },
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 44.1
+        },
+        {
+            "cost_type": "Depreciation",
+            "cost_type_percentage": 0.8
+        },
+        {
+            "cost_type": "Marketing",
+            "cost_type_percentage": 0.9
+        },
+        {
+            "cost_type": "Rent",
+            "cost_type_percentage": 1.8
+        },
+        {
+            "cost_type": "Utilities",
+            "cost_type_percentage": 0.7
+        },
+        {
+            "cost_type": "Other",
+            "cost_type_percentage": 17.8
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "Wages are a major cost",
+            "cost_factor_description": "Wages are expected to account for 31.5% of revenue in 2021 as compared with 27.6% in 2016. The industry is highly labor intensive."
+        },
+        {
+            "cost_factor_title": "Purchases are the largest expense",
+            "cost_factor_description": "The largest expense category is the cost of goods like fabrics, yarns, buttons etc, accounting for an estimated 44.1% of revenue in 2021."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_trend": "Steady",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "Low capital expenditure compared to labor costs",
+                "capital_intensity_description": "Expenditure on wages accounts for a much larger portion of revenue than expenditure on capital. A typical operator spends $0.03 on capital for every $1.00 spent on labor."
+            },
+            {
+                "capital_intensity_title": "Shift to higher value-added activities",
+                "capital_intensity_description": "Domestic companies have shifted focus to higher value-added activities like design, marketing and manufacturing of premium goods which require higher labor costs."
+            },
+            {
+                "capital_intensity_title": "Limited domestic capital investments",
+                "capital_intensity_description": "US companies have limited capital investments domestically as they have continued to shift most production abroad during the period."
+            }
+        ]
+    },
+    "revenue_volatility": {
+        "volatility_level": "High",
+        "volatility_trend": "Steady",
+        "volatility_points": [
+            {
+                "volatility_title": "Fashion trends and demand swings",
+                "volatility_description": "Volatility is created by fashion swings, changes in clothing trends which can fluctuate rapidly and are difficult to foresee."
+            },
+            {
+                "volatility_title": "Supply chain disruptions",
+                "volatility_description": "Disruptions in textile supply to manufacturers due to issues like logistics, labor disputes, raw material costs etc can cause volatility."
+            },
+            {
+                "volatility_title": "Consumer demand drivers",
+                "volatility_description": "Revenue is influenced by consumer demand drivers like per capita disposable income, as premium apparel is a discretionary purchase."
+            },
+            {
+                "volatility_title": "COVID-19 impact",
+                "volatility_description": "Volatility heightened due to plunging international trade, demand and revenue during the COVID-19 pandemic."
+            }
+        ]
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_trend": "Steady",
+        "technological_change_points": [
+            {
+                "technological_change_title": "Labor intensive tradition",
+                "technological_change_description": "Lack of technological development due to tradition of labor intensity and limited automated machinery development."
+            },
+            {
+                "technological_change_title": "Shift towards automation",
+                "technological_change_description": "Increased competition and consolidation causing operators to seek new automated production models to remain competitive."
+            }
+        ]
+    },
+    "FAQs": [
+        {
+            "question": "Does your company specialize in a niche or do you produce a diversified range of products?",
+            "answer": "In response to intense price-based import competition, companies within the industry narrowed their product mix and specialized in higher value-added products to justify higher selling prices. Nonetheless, as the economy took a downturn in 2020, having a diversified roster of products has been key to success during the COVID-19 pandemic, as pricier items have been less in demand due to reduced consumer confidence."
+        },
+        {
+            "question": "Have your company's sales been heavily affected by the health of the US economy in the wake of the COVID-19 pandemic?",
+            "answer": "Macroeconomic conditions, such as consumer confidence and unemployment, heavily influence demand for industry products, as they are key determinants in consumers' propensity to make discretionary purchases on premium industry products. As these metrics plummeted in response to COVID-19, it hastened industry declines."
+        },
+        {
+            "question": "Have you looked into setting up manufacturing facilities in states or countries with less-restrictive working conditions established post-COVID-19?",
+            "answer": "As states now have varying regulations regarding work safety and what facilities can be open, establishing operations elsewhere in response to idling facilities in more-regulated regions may be key to success in the wake of the pandemic."
+        },
+        {
+            "question": "Has your company been exposed to volatile input prices due to the pandemic?",
+            "answer": "Cotton is a key input in many apparel-manufacturing processes, so fluctuations in the price of cotton can have a significant impact on profit margins. Plummeting prices and interruptions in the supply chain due to the effects of COVID-19 (coronavirus) has exacerbated revenue declines while generally harming profit levels."
+        },
+        {
+            "question": "Have you been able to reduce reliance on labor through automation during the pandemic?",
+            "answer": "Industry processes, like cutting and sewing, require precise manual labor and many activities are difficult to automate because clothing styles vary each season and consumer preferences are constantly changing. Nonetheless, as employment fell due to the pandemic, those with the most sophisticated automated processes have been able to the most successful."
+        },
+        {
+            "question": "Is your company investing in technology to establish a competitive edge?",
+            "answer": "Due to high price-based competition, companies are shifting production toward high-value apparel. The detailed features that add value to these more expensive products are often hand-made, and thus are more labor-intensive than technology intensive."
+        },
+        {
+            "question": "Do you work with trade associations or other interest groups to advance your company's interests?",
+            "answer": "The American Apparel and Footwear Association (AAFA) aims to promote and enhance its members' competitiveness, productivity and profitability in the global market by minimizing regulatory, political and trade restraints."
+        },
+        {
+            "question": "How have international travel restrictions to limit the spread of COVID-19 affected your revenue?",
+            "answer": "US legislation has limited travel to certain regions, and other countries have put similar processes in place. However, many major import generators have been able to recover quicker from the pandemic due to more-stringent measures put in place, boosting capacity abroad and affecting trade dynamics."
+        },
+        {
+            "question": "How has your company's profit and growth compared to your main competitors' during the pandemic period?",
+            "answer": "Given the presence of competitively priced imports in the domestic market, companies face high pressure from downstream buyers to lower selling prices. Furthermore, like most clothing industries, companies compete based largely on price, and diminishing consumer sentiment due to COVID-19 has spurred many losses as companies compete for this reduced demand."
+        },
+        {
+            "question": "How often does your company purchase new equipment?",
+            "answer": "Expenditure on wages in this industry accounts for a much larger portion of revenue than expenditure on capital. However, investment in infrastructure has been a means of avoiding steeper declines during the COVID-19 pandemic."
+        },
+        {
+            "question": "Which niches, if any, do you cater to? How can you diversify your product mix to remain successful despite reduced spending due to the effects of the COVID-19 (coronavirus pandemic)?",
+            "answer": "The ability to offer niche products, such as private-label and branded clothing, allows industry participants to compete against other establishments more effectively. However, recent trends have favored more utilitarian and price-conscious products, rendering those that offers value or discount products have been able to better maintain demand during the pandemic."
+        },
+        {
+            "question": "Do you have a reputation for good quality service? Do you manufacture any branded products?",
+            "answer": "Consumer loyalty to established brands can help a company thrive in this competitive industry, and brand-name companies have been more successful than smaller-name operators during the pandemic, as they need to spend less on marketing to capture limited consumer demand."
+        },
+        {
+            "question": "Has your company developed export markets? If so, is there capacity to increase export volumes as the value of the dollar depreciates in 2021 after COVID-19 lows?",
+            "answer": "Manufacturers that can establish export markets insulate themselves from the more dramatic macroeconomic changes happening domestically in response to the COVID-19 pandemic."
+        },
+        {
+            "question": "How have low-cost imports affected your company's sales? Have you experienced any change in demand as imports became scarcer in 2020?",
+            "answer": "While import penetration has intensified the competitive pressures experienced by domestic manufacturers, given supply-chain interruptions due to the COVID-19, some consumers have chosen to buy domestically."
+        },
+        {
+            "question": "How does your company maintain relationships with physical retailers? What other markets can you explore as this one dwindles due to stay-at-home orders?",
+            "answer": "Retailer demand for clothing drives the output of manufacturing operators, and has been declining for years. Due to COVID-19, retail traffic is down even further, rendering a diversification of customers crucial for success in 2020 and 2021."
+        },
+        {
+            "question": "Do you track consumer spending? How do you plan to capture rising consumer spending despite poor macroeconomic conditions caused by COVID-19?",
+            "answer": "Consumer spending growth stimulates apparel sales, boosting industry revenue. While spending is anticipated to expand somewhat, new clothing has been less of a necessity as more people stay at home, meaning those with price-diverse product lines have been more successful."
+        }
+    ]
+}

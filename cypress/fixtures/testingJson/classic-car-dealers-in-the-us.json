@@ -1,0 +1,515 @@
+{
+    "report_title": "Industry Research: Classic Car Dealers in the US",
+    "report_date": "Sep 12, 2023",
+    "key_statistics": {
+        "revenue": {
+            "revenue_dollars": 2735000000,
+            "revenue_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "revenue_cagr_value": 5.82
+            },
+            "revenue_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "revenue_cagr_value": 0.64
+            }
+        },
+        "profit": {
+            "profit_dollars": 47000000,
+            "profit_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_cagr_value": 4.06
+            },
+            "profit_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_cagr_value": 0
+            }
+        },
+        "profit_margins": {
+            "profit_margins_percentage": 1.7,
+            "profit_margins_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "profit_margins_cagr_value": -1.67
+            },
+            "profit_margins_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "profit_margins_cagr_value": 0
+            }
+        },
+        "industry_value_added": {
+            "industry_value_added_dollars": 199000000,
+            "industry_value_added_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "industry_value_added_cagr_value": 5.24
+            },
+            "industry_value_added_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "industry_value_added_cagr_value": 0.36
+            }
+        },
+        "employees": {
+            "employees_count": 2312,
+            "employees_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "employees_cagr_value": 4.09
+            },
+            "employees_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "employees_cagr_value": -0.09
+            }
+        },
+        "wages": {
+            "wages_dollars": 146000000,
+            "wages_cagr_historical": {
+                "begin_year": 2005,
+                "end_year": 2023,
+                "wages_cagr_value": 5.61
+            },
+            "wages_cagr_projected": {
+                "begin_year": 2023,
+                "end_year": 2029,
+                "wages_cagr_value": 0.06
+            }
+        },
+        "imports": {
+            "imports_dollars": 0,
+            "imports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            },
+            "imports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "imports_cagr_value": 0
+            }
+        },
+        "exports": {
+            "exports_dollars": 0,
+            "exports_cagr_historical": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            },
+            "exports_cagr_projected": {
+                "begin_year": 0,
+                "end_year": 0,
+                "exports_cagr_value": 0
+            }
+        }
+    },
+    "executive_summary": "The Classic Car Dealers industry has experienced revenue growth at a CAGR of 2.2% over the past five years to reach $2.7 billion in 2023, driven by recovery from pandemic impacts and growing interest from millennials in affordable classics. However, growth is expected to slow to 0.1% in 2023 due to inflationary pressures.",
+    "current_performance": [
+        {
+            "current_performance_point_title": "Classic car sales rev up as investors seek alternative assets",
+            "current_performance_point_description": "Classic car demand relies on perceived value and anticipated return on investment. Economic uncertainty from COVID-19 led investors toward equity stock instead of classic cars in 2019-2020. A recovery in the 10-year treasury rate drove investors back to classic cars, boosting revenue past pre-pandemic levels."
+        },
+        {
+            "current_performance_point_title": "Millennials drive demand for affordable classics",
+            "current_performance_point_description": "While high-end classic car prices remained stagnant, demand and prices increased for affordable classics under $100,000, averaging $40,500 in 2023. Millennials showed increased interest in affordable classics, fueled by rising disposable income."
+        },
+        {
+            "current_performance_point_title": "Car sales shift online, posing challenge and opportunity",
+            "current_performance_point_description": "Competition from consumer-to-consumer online marketplaces stifled growth for traditional dealers. Many dealers moved online to broaden reach, with online dollar volume surging to 37.5% of total auction spending by Q3 2022."
+        }
+    ],
+    "future_outlook": [
+        {
+            "future_outlook_point_title": "Alternative investments will dampen classic car sales",
+            "future_outlook_point_description": "Demand will wane as treasury bills become more lucrative due to lower treasury rates. Lingering inflation will discourage ultra-high-priced car purchases. But demand for affordable drivable classics will inch up as new car prices swell."
+        },
+        {
+            "future_outlook_point_title": "Green wave to threaten traditional classic cars",
+            "future_outlook_point_description": "Demand will surge for remakes of classics with modern features like electric/hybrid conversions to meet environmental consciousness. Larger dealers will expand services for conversions, threatening traditional dealers without such capabilities."
+        },
+        {
+            "future_outlook_point_title": "C2C platforms to force traditional dealers to adapt",
+            "future_outlook_point_description": "Online consumer-to-consumer platforms will continue siphoning demand from traditional dealers, forcing them to use data analytics, establish online operations and leverage quality assurance to retain competitive edge."
+        }
+    ],
+    "industry_definition": "The industry sells classic and antique cars. A classic car is defined as a foreign- or US-made vehicle manufactured more than 25 years ago and no longer in production. An antique car is a vehicle manufactured more than 45 years ago. Companies may sell previously purchased cars or third-party vehicles on consignment or at auction, excluding individuals selling their own cars at auction.",
+    "industry_impact": {
+        "positive_impact_factors": [
+            "Low capital intensity level",
+            "Low concentration level",
+            "Low technology change level",
+            "Low to steady globalization level"
+        ],
+        "negative_impact_factors": [
+            "Decline life cycle stage",
+            "Low and steady barriers to entry",
+            "Low and steady level of assistance"
+        ],
+        "mixed_impact_factors": []
+    },
+    "swot_analysis": {
+        "strengths": [
+            "Low Imports",
+            "Low Product/Service Concentration",
+            "Low Capital Requirements"
+        ],
+        "weaknesses": [
+            "Low & Steady Barriers to Entry",
+            "Low & Steady Level of Assistance",
+            "Decline Life Cycle Stage",
+            "Low Profit vs. Sector Average",
+            "High Customer Class Concentration"
+        ],
+        "opportunities": [
+            "High Revenue Growth (2005-2023)",
+            "High Revenue Growth (2018-2023)",
+            "High Revenue Growth (2023-2028)",
+            "High Performance Drivers",
+            "Per capita disposable income"
+        ],
+        "threats": [
+            "Low Outlier Growth",
+            "Price of new cars",
+            "Supply Chain"
+        ]
+    },
+    "key_trends": [
+        "The average price of high-end classic cars has remained rigid over the years, highlighting a surge in demand and prices for affordable classics.",
+        "Over the next five years, the Classic Car Dealers industry will contend with heightened competition and sluggish demand.",
+        "As alternative investments like treasury bills become more appealing due to predicted lower treasury rates and ongoing inflation, interest in ultra-high-priced classic cars will fall.",
+        "A moderate increase in disposable income levels will steer consumers towards more affordable classic vehicles.",
+        "Classic car dealers will also adapt to swelling environmental consciousness and demand for remakes of classics with modern, fuel-efficient features.",
+        "As dealers adapt to a shifting landscape, revenue will inch upward at a CAGR of 0.5%, reaching $2.8 billion in 2028."
+    ],
+    "market_segmentation": [
+        {
+            "segment": "Consumers Under 40",
+            "segment_description": "Despite typically being in the early stages of their careers with relatively lower purchasing power, consumers under 40 generate the most classic car sales of any age group. Millennials prefer less expensive, reliable utility vehicles, like trucks, instead of expensive sports cars.",
+            "segment_percentage": 52.2
+        },
+        {
+            "segment": "Consumers aged 41 to 76",
+            "segment_description": "The trend of buying and preserving classic cars has surged among consumers aged 35 to 54 as their purchasing power has swelled. As baby boomers near retirement, they've been selling their car collections faster than they've been buying them, limiting demand from older consumers. Consumers in this age group often see classic cars not just as a pastime, but as a way of preserving wealth.",
+            "segment_percentage": 35.6
+        },
+        {
+            "segment": "Consumers aged 77 and older",
+            "segment_description": "Thanks to their nostalgic affinity for antique car models, older consumers are vital contributors to the Classic Car Dealers industry. More leisure time enables these consumers to dedicate more time to hobbies, like classic car collection. Still, this age group has purchased fewer classic cars over the past five years as younger age groups are better suited for the maintenance and repair work associated with classic car collection.",
+            "segment_percentage": 12.2
+        }
+    ],
+    "products_and_services": [
+        {
+            "product_or_service": "Ferrari",
+            "product_description": "This segment includes Ferraris.",
+            "product_percentage": 33.2
+        },
+        {
+            "product_or_service": "British Classics",
+            "product_description": "This segment includes British classics, which are post-war British collectible cars.",
+            "product_percentage": 17.7
+        },
+        {
+            "product_or_service": "Affordable Classics",
+            "product_description": "This segment includes affordable classics, which are collectible cars priced under $40,000, along with the most popular models from before the 1950s.",
+            "product_percentage": 16.4
+        },
+        {
+            "product_or_service": "Blue Chip Classics",
+            "product_description": "This segment includes blue-chip classic cars, which represent the top 25 most sought-after collectible models from the post-war era.",
+            "product_percentage": 16
+        },
+        {
+            "product_or_service": "1950s American Classics",
+            "product_description": "This segment includes American antiques and 1950s American cars.",
+            "product_percentage": 6.9
+        },
+        {
+            "product_or_service": "American Muscle Cars",
+            "product_description": "This segment includes American muscle cars, which were primarily built between the late 1950s and early 1970s.",
+            "product_percentage": 5.6
+        }
+    ],
+    "supply_chain": {
+        "tier_1_suppliers": [
+            "Car Body Shops in the US",
+            "Car & Automobile Manufacturing in the US",
+            "Automobile Engine & Parts Manufacturing in the US"
+        ],
+        "tier_2_suppliers": [
+            "Automobile Wholesaling in the US",
+            "Auto Parts Stores in the US",
+            "Auto Mechanics in the US"
+        ],
+        "tier_1_buyers": [],
+        "tier_2_buyers": []
+    },
+    "demand_determinants": [
+        {
+            "determinant_title": "Ferraris Dominate Classic Car Sales",
+            "determinant_description": "The popularity and prestige of Ferrari models significantly exceed that of any other car manufacturer globally. Despite their extremely high price tag, Ferraris remain the most lucrative category in the Classic Car Dealers industry."
+        },
+        {
+            "determinant_title": "British Classics Represent Affordable Luxury",
+            "determinant_description": "Vintage post-war British collectible cars from iconic brands like Jaguar, Austin-Healey, Aston Martin and MG have gained popularity in car auctions across Europe and the US. These vintage automobiles offer an affordable alternative in the luxury market, selling in larger volumes than high-end vehicles like Ferraris or blue-chip classic models."
+        },
+        {
+            "determinant_title": "Affordable Classics Swell Among Younger Consumers",
+            "determinant_description": "Affordable classics from bygone eras are popular among smaller dealers and enthusiasts who don't want to overspend. The lower end of the market, including models priced below $25,000, was resilient amid the pandemic and continues to attract young and less affluent buyers. Millennials, in particular, have shown interest in affordable classic trucks thanks to their blend of economy, comfort and utility."
+        },
+        {
+            "determinant_title": "Blue-Chip Classics Are Prized Collectibles",
+            "determinant_description": "Blue-chip classics typically rank among the most expensive classic cars. Their value is not in beating Ferrari's average price but in their broader quantity and variety. While pricey and rare, collectors quickly snap up these cars, making this segment a constant contributor to classic car revenue."
+        },
+        {
+            "determinant_title": "1950s American Cars Represent the Golden Age of Autos",
+            "determinant_description": "Classic American 1950s cars are seen as prized possessions among classic car collectors, with models like the Chevrolet Bel Air and Camaro boosting dealers' revenue. With their vintage appeal and showpiece status, American antiques attract high-income buyers who overlook their limited practical use and challenging maintenance."
+        },
+        {
+            "determinant_title": "Muscle Cars Are an Iconic Chapter in American Automotive History",
+            "determinant_description": "American muscle cars are an essential part of US automotive history and garnered a significant following in their heyday because of their high-performance engines and affordable pricing. With the implementation of the Clean Air Act in 1971, muscle cars began to dwindle as their lead-based fuel was gradually prohibited. Still, muscle cars are seen as a symbol of 20th-century Americana and continue to hold charm for automobile enthusiasts."
+        },
+        {
+            "determinant_title": "German Collectibles Are a Niche Luxury",
+            "determinant_description": "On average, German collectibles continuously rank as the third most expensive cars, establishing them as top-tier luxury investments. Despite their high-end status and profitability, the overall presence of German classics in the market is slightly limited, making them a niche segment within the Classic Car Dealers industry."
+        }
+    ],
+    "international_trade": {
+        "import_level": "Low",
+        "import_trend": "Steady",
+        "export_level": "Low",
+        "export_trend": "Steady",
+        "international_trade_points": []
+    },
+    "business_locations": [
+        {
+            "location": "The Southeast",
+            "location_description": "The Southeast's significant car culture makes it the hub of the Classic Car industry. The region is a leader in automobile racing, classic car auctions and overall automobile culture. Florida and North Carolina are major sources of classic car demand, regularly hosting significant classic car auctions by distinguished auction houses like Barrett-Jackson, Mecum Auctions and RM Sotheby's.",
+            "percentage_establishments": 33.3,
+            "percentage_population": 31.1
+        },
+        {
+            "location": "The Great Lakes",
+            "location_description": "The Great Lakes region's share of classic car dealers mimics its proportion of the US population. The region has a rich racing culture, hosting some of the world's leading car races, like the iconic Indianapolis 500.",
+            "percentage_establishments": 21.1,
+            "percentage_population": 21.3
+        },
+        {
+            "location": "Texas",
+            "location_description": "The Southwest has become an increasingly popular destination for classic car dealers as Texas' population has swelled. Texas also has a substantial car collector culture, with Hagerty estimating the state to hold 6.0% of the country's collector vehicles.",
+            "percentage_establishments": 6.0,
+            "percentage_population": 6.0
+        }
+    ],
+    "regulations_and_policies": {
+        "regulations_level": "Moderate",
+        "regulations_points": [
+            {
+                "regulation_title": "Licensing and Permits",
+                "regulation_description": "Classic car dealers must obtain various licenses and permits to conduct their business operations legally."
+            },
+            {
+                "regulation_title": "Consumer Protection Laws",
+                "regulation_description": "Consumer protection laws ensure the welfare of classic car customers."
+            },
+            {
+                "regulation_title": "Vehicle Registration Regulations",
+                "regulation_description": "Most state departments govern the use of classic registration plates."
+            }
+        ],
+        "regulations_trend": "Steady"
+    },
+    "barriers_to_entry": {
+        "barriers_level": "Low",
+        "barriers_trend": "Steady",
+        "factors_increased_barrier": [
+            "Life Cycle Stage"
+        ],
+        "factors_decreased_barrier": [
+            "Capital Intensity Level",
+            "Industry Assistance Level"
+        ],
+        "barriers_points": [
+            {
+                "barrier_title": "The process of restoring classic cars for resale demands skilled labor and substantial time, presenting a possible hurdle for newcomers.",
+                "barrier_description": "The process of restoring classic cars for resale demands skilled labor and substantial time, presenting a possible hurdle for newcomers."
+            }
+        ]
+    },
+    "basis_of_competition": {
+        "basis_level": "Moderate",
+        "basis_trend": "Increasing",
+        "basis_points": [
+            {
+                "basis_title": "Classic car dealers compete based on the diversity of their inventories, reputation and the financing options they provide.",
+                "basis_description": "Classic car dealers compete based on the diversity of their inventories, reputation and the financing options they provide."
+            },
+            {
+                "basis_title": "Attendance at renowned auctions is crucial for dealers to expand their consumer base and showcase their collections to potential buyers from various locations.",
+                "basis_description": "Attendance at renowned auctions is crucial for dealers to expand their consumer base and showcase their collections to potential buyers from various locations."
+            },
+            {
+                "basis_title": "Externally, classic car dealers compete with new and used car dealerships and independent car owners.",
+                "basis_description": "Externally, classic car dealers compete with new and used car dealerships and independent car owners."
+            },
+            {
+                "basis_title": "Remakes of classic cars with advanced safety and efficiency features have attracted buyers, while online platforms offer cheaper alternatives.",
+                "basis_description": "Remakes of classic cars with advanced safety and efficiency features have attracted buyers, while online platforms offer cheaper alternatives."
+            }
+        ]
+    },
+    "market_share_concentration": {
+        "concentration_level": "Low",
+        "concentration_trend": "Steady",
+        "concentration_points": [
+            {
+                "concentration_title": "Scarcity encourages localization in the classic car dealers industry",
+                "concentration_description": "Classic car dealers typically serve local or regional markets because of classic cars' limited demand and availability."
+            },
+            {
+                "concentration_title": "Classic car collectors are few and far between, limiting the pool of potential customers for dealers and keeping dealerships small scale.",
+                "concentration_description": "Classic car collectors are few and far between, limiting the pool of potential customers for dealers and keeping dealerships small scale."
+            },
+            {
+                "concentration_title": "Diverse inventories limit dealers' power",
+                "concentration_description": "Dealers seek to offer diverse inventories of classic cars in order to appeal to the widest consumer base. The lack of standardized products limits the power any one dealer can have."
+            },
+            {
+                "concentration_title": "Different dealers specialize in specific types, makes or eras of classic cars, contributing to a highly fragmented market since no single dealer can stock all variations of cars.",
+                "concentration_description": "Different dealers specialize in specific types, makes or eras of classic cars, contributing to a highly fragmented market since no single dealer can stock all variations of cars."
+            }
+        ],
+        "top_companies": []
+    },
+    "cost_structure_breakdown": [
+        {
+            "cost_type": "Purchases",
+            "cost_type_percentage": 81.6
+        },
+        {
+            "cost_type": "Wages",
+            "cost_type_percentage": 5.3
+        },
+        {
+            "cost_type": "Profit",
+            "cost_type_percentage": 1.7
+        }
+    ],
+    "cost_factors": [
+        {
+            "cost_factor_title": "SWELLING CAR PRICES BOOST PURCHASE COSTS",
+            "cost_factor_description": "Purchase costs have swelled alongside vehicle prices over the past five years."
+        },
+        {
+            "cost_factor_title": "WAGES FALL AS CURATED DEALERS TAKE OVER",
+            "cost_factor_description": "Wages have formed a comparatively small portion of dealers' revenue as the landscape has shifted in favor of small dealers with curated collections."
+        },
+        {
+            "cost_factor_title": "PROFIT SHRINKS AMID BALLOONING COMPETITION",
+            "cost_factor_description": "Profitability for classic car dealers has also shrunk amid swelling competition from private sellers and online dealers."
+        }
+    ],
+    "capital_intensity": {
+        "capital_intensity_level": "Low",
+        "capital_intensity_points": [
+            {
+                "capital_intensity_title": "LOW capital intensity",
+                "capital_intensity_description": "The process of restoring classic cars for resale demands skilled labor and substantial time, presenting a possible hurdle for newcomers."
+            },
+            {
+                "capital_intensity_title": "LOW technology change",
+                "capital_intensity_description": "The major markets for this industry are highly concentrated, which implies that the market has a focus on key customer segments."
+            }
+        ],
+        "capital_intensity_trend": "Steady"
+    },
+    "revenue_volatility": {
+        "volatility_level": "Moderate",
+        "volatility_points": [
+            {
+                "volatility_title": "Discretionary Buyers Shape the Classic Car Market",
+                "volatility_description": "The Classic Car Dealers industry contends with a constant level of volatility because of the discretionary nature of classic car purchases."
+            },
+            {
+                "volatility_title": "Trends and Tastes Drive Classic Car Sales",
+                "volatility_description": "Classic car sales change with the tides of consumer interest. Trends in tastes and habits dictate the popularity and price of a classic car."
+            }
+        ],
+        "volatility_trend": "Steady"
+    },
+    "technological_change": {
+        "technological_change_level": "Low",
+        "technological_change_points": [],
+        "technological_change_trend": "Unknown"
+    },
+    "FAQs": [
+        {
+            "question": "Are your sales heavily dependent on wealthy consumers or households?",
+            "answer": "Classic Car dealers are reliant on individuals with steady disposable income to spend on an expensive discretionary product. Dealers that specialize in luxury, foreign or other high-end classic car models rely extensively on wealthy consumers due to the high price points of their products."
+        },
+        {
+            "question": "Does your company specialize in one corner of the market or do you retail a diversified range of products?",
+            "answer": "Many consumers find classic and antique cars to be niche items. Dealers that specialize in a single car model or brand further segment themselves into specialized markets. The Antique Automobile Club of America focuses primarily on antique cars but also provides membership to classic car dealers. It supports dealers through legislative action efforts and group meetups that aim to promote the interests of dealers and owners of classic and antique automobiles. Classic car dealers also receive support from the CCCA, which helps members by developing, researching and publishing information on classic cars. The club provides insights into each make and model of classic automobiles."
+        },
+        {
+            "question": "What steps do you take to retain talented employees with specialized knowledge?",
+            "answer": "Classic car dealers require staff with knowledge of the various type of automobiles, years of production, quality and current markets. This specialized knowledge makes them very valuable for classic car dealers, requiring a lot of time and care be spent on employees."
+        },
+        {
+            "question": "Have rising input costs negatively affected your company's sales?",
+            "answer": "Dealers who purchased cars at the height of the most recent bubble will face challenges when attempting to resale the vehicles. Many may need to hold on to the vehicles for a long time before being able to turn a profit."
+        },
+        {
+            "question": "Have you been able to reduce wage costs through automation over the past five years?",
+            "answer": "Automation is hard to implement for classic car dealers as each vehicle represents a unique issue to be fixed or upgraded. Classic car garages primarily rely on skilled labor."
+        },
+        {
+            "question": "How has your company reacted to the rise of online sales over the past few years?",
+            "answer": "Online sales have allowed individual hobbyists and investors to sell cars online without needing to go to a dealership. These individuals are not included in this industry which negatively impacts industry revenue."
+        },
+        {
+            "question": "How does your company ensure that it is compliant with the EPA's regulations concerning emissions?",
+            "answer": "Many classic and antique cars do not meet current emissions standards, requiring the vehicles to be grandfathered under current law or refurbished by classic car dealers."
+        },
+        {
+            "question": "Do you work with trade associations or other interest groups to advance your company's interests?",
+            "answer": "Classic car dealers work with several interest groups to connect and lobby of industry interests. Most interest groups function more as a connection forum for classic car dealers and other industry enthusiasts."
+        },
+        {
+            "question": "How do your company's profit margins compare to your main competitors'?",
+            "answer": "Classic car dealers that primarily sell more high-end vehicles will typically have higher profit margins compared to other dealers who sell more mid-to-low-range cars."
+        },
+        {
+            "question": "Does your company help consumers finance their purchases?",
+            "answer": "Dealers who help finance vehicle purchases often are able to make more sales by offering such in-house services that are specialized for their niche products."
+        },
+        {
+            "question": "Does your company have access to reliable maintenance facilities to service warranty agreements? How much do you follow up after a sale?",
+            "answer": "Industry operators need access to reliable maintenance facilities to service warranty agreements and offer higher levels of customer service over competitors."
+        },
+        {
+            "question": "How hard is it to promote your company by word-of-mouth recommendations? What kinds of promotion can you experiment with?",
+            "answer": "Most classic car dealers cater to local or regional markets. Dealers must be able to attract and maintain a customer base in their respective market."
+        },
+        {
+            "question": "What measures do you have in place to reduce operational costs? Would it be cost-effective to further specialize your offerings?",
+            "answer": "Classic car dealers need to aggressively manage operating costs, particularly labor expenses, to maintain profitability. Control of financing and debt expenses is unavoidably limited."
+        },
+        {
+            "question": "How will you contend with increasing aggregate household debt? Will you be able to focus more on budget offerings?",
+            "answer": "Consumers who hold a significant level of debt are unlikely to make major purchases of classic cars. Increasing aggregate household debt in the United States will generally lead to fewer classic car purchases."
+        },
+        {
+            "question": "How closely do you monitor trends in time spent on leisure and sports? Do you offer any resources to make the hobby less time-intensive?",
+            "answer": "Demand for classic and antique cars increases with the number of people that maintain an interest in classic cars as a hobby."
+        },
+        {
+            "question": "How closely do you monitor trends in per capita disposable income? How can you entice more consumers to the classic car space?",
+            "answer": "Purchases of classic and antique cars are discretionary, and consumers often avoid purchasing classic cars when disposable income declines."
+        }
+    ]
+}
