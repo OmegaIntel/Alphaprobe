@@ -5,11 +5,11 @@ import FuzzySearch from './FuzzySearch.jsx'
 const SearchBox = ({section}) => {
   return (
     <div>
-      {/* {section.toLowerCase() === "market research" ? (
+      {section.toLowerCase() === "market research" ? (
         <FuzzySearch section={section} />
-      ) : ( */}
+      ) : (
         <SearchBoxComponent section={section} />
-     
+      )}
     </div>
   )
 }

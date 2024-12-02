@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
 const CurrentPerformanceComponent = ({ currentPerformance = [] }) => {
-  const [allOpen, setAllOpen] = useState(false);
+  const [openIndex, setOpenIndex] = useState(null);
 
   // Ensure currentPerformance is an array, fallback to an empty array if undefined or incorrect type
   const performanceData = Array.isArray(currentPerformance) ? currentPerformance : [];
 
-  const toggleAllAccordions = () => {
-    setAllOpen(!allOpen);
+  const toggleAccordion = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
@@ -21,15 +21,15 @@ const CurrentPerformanceComponent = ({ currentPerformance = [] }) => {
               className="border border-gray-600 bg-gradient-to-b from-[#ffffff]/10 to-[#999999]/10 rounded-2xl p-4 py-6 shadow-md hover:shadow-lg hover:border-gray-500 transition duration-200"
             >
               <div
-                onClick={toggleAllAccordions}
+                onClick={() => toggleAccordion(index)}
                 className="flex justify-between items-center cursor-pointer"
               >
                 <h4 className="text-lg text-[#b9bbbe] font-medium">
                   {point.current_performance_point_title || "Untitled Insight"}
                 </h4>
-                <span className="text-lg">{allOpen ? "-" : "+"}</span>
+                <span className="text-lg">{openIndex === index ? "-" : "+"}</span>
               </div>
-              {allOpen && (
+              {openIndex === index && (
                 <p className="mt-2 font-normal text-[#a8a8a8]">
                   {point.current_performance_point_description || "No description available."}
                 </p>

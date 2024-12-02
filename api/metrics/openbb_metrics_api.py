@@ -1,5 +1,5 @@
 import os
-# from openbb import obb
+from openbb import obb
 from interfaces import Retriever
 from llm_models.llm import LLM
 

@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 
-const FutureOutlookComponent = ({ futureOutlook = [] }) => {
+const FutureOutlookComponent = ({ futureOutlook = [] }) => { // Default to an empty array
   const [isExpanded, setIsExpanded] = useState(false);
-  const [allOpen, setAllOpen] = useState(false); // Track whether all accordions are open
+  const [openIndex, setOpenIndex] = useState(null);
 
   // Display either the first 4 points or all points, depending on isExpanded state
   const displayedPoints = isExpanded ? futureOutlook : futureOutlook.slice(0, 4);
 
-  // Toggle all accordions
-  const toggleAllAccordions = () => {
-    setAllOpen(!allOpen);
+  // Toggle the description for a specific item
+  const toggleAccordion = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
@@ -23,13 +23,13 @@ const FutureOutlookComponent = ({ futureOutlook = [] }) => {
             className="border border-gray-600 bg-gradient-to-b from-[#ffffff]/10 to-[#999999]/10 rounded-2xl p-4 py-6 shadow-md hover:shadow-lg hover:border-gray-500 transition duration-200"
           >
             <div
-              onClick={toggleAllAccordions} // Toggle all accordions when clicked
+              onClick={() => toggleAccordion(index)}
               className="flex justify-between items-center cursor-pointer"
             >
               <h4 className="font-medium text-lg text-[#b9bbbe]">{point.future_outlook_point_title}</h4>
-              <span className="text-lg">{allOpen ? "-" : "+"}</span>
+              <span className="text-lg">{openIndex === index ? "-" : "+"}</span>
             </div>
-            {allOpen && (
+            {openIndex === index && (
               <p className="mt-2 text-[#a8a8a8]">{point.future_outlook_point_description}</p>
             )}
           </div>

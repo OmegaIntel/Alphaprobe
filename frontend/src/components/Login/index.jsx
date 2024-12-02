@@ -72,7 +72,6 @@ const Login = ({ setToken }) => {
           <div className="mb-5 flex flex-col gap-3">
             <label className="text-xs text-[#8a8a90]">Email</label>
             <input
-              name="email"
               type="email"
               placeholder="example@omegaintelligence.org"
               className="w-full p-[10px] bg-[#212126] border border-[#303038] rounded text-white text-sm outline-none placeholder:text-[#5c5c5c]"
@@ -84,7 +83,6 @@ const Login = ({ setToken }) => {
           <div className="mb-5 flex flex-col gap-3 relative">
             <label className="text-xs text-[#8a8a90]">Password</label>
             <input
-              name="password"
               type={showPassword ? "text" : "password"}
               placeholder="Enter your password"
               className="w-full p-[10px] bg-[#212126] border border-[#303038] rounded text-white text-sm outline-none placeholder:text-[#5c5c5c]"

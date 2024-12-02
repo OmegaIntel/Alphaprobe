@@ -20,7 +20,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 S3_STORAGE_BUCKET = 'omega-intel-doc-storage'
-IBIS_SUMMARY_ROOT = 'Normalized_IBIS_Reports'
+IBIS_SUMMARY_ROOT = 'Summaries/IBIS-reports'
 
 
 # IBIS_MAP_FILENAME = 'api/data/IBIS NAICS Code mapping.csv'
