@@ -12,7 +12,7 @@ import { setSelectedCategory } from "../../../redux/dealsSlice";
 import { ThesisForm } from "../../InvestmentThesis/ThesisForm";
 import IndustryCheckboxes from "../../MarketResearch/MarketResearchCheckbox";
 import CollapsibleSidebar from "../../Sidebar/CollapsibleSidebar";
-import ThesisCardComponent from "../../InvestmentThesis/ThesisSummary/ThesisCardComponent";
+
 import IndustryReport from "../../MarketResearch/IndustryReportSection/IndustryReport";
 import ReportDropdown from "../../MarketResearch/IndustryReportSection/ReportDropdown";
 import MarketResearchLayout from "../../MarketResearch/MarketResearchLayout";
@@ -22,7 +22,6 @@ import SearchBox from "../../SearchBox/SearchBox";
 import DashboardLayout from "../../Dashboard/DashboardLayout";
 
 const { Option } = Select;
-
 
 const SearchBar = ({ placeholder }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -43,10 +42,7 @@ const SearchBar = ({ placeholder }) => {
         className="bg-transparent w-full outline-none text-white placeholder-gray-400"
         placeholder={placeholder || "Search..."}
       />
-      <button
-        
-        className="text-gray-400 hover:text-white ml-3 focus:outline-none"
-      >
+      <button className="text-gray-400 hover:text-white ml-3 focus:outline-none">
         🔍
       </button>
     </div>
@@ -136,7 +132,6 @@ const Categories = () => {
         "Growth Rate",
         "Fragmentation",
         "Recurring Revenue",
-        "Profit Margins",
         "Other",
       ],
     },
@@ -184,11 +179,13 @@ const Categories = () => {
                 </div>
               ))}
             </div>
-            
+
             <div className="my-3">
-              {activeCategory === "Company Insights" && (<SearchBox section={activeCategory}/>)}
-               
-               {/* <SearchBar placeholder={activeCategory}/> */}
+              {activeCategory === "Company Insights" && (
+                <SearchBox section={activeCategory} />
+              )}
+
+              {/* <SearchBar placeholder={activeCategory}/> */}
             </div>
           </div>
           {}
@@ -199,9 +196,12 @@ const Categories = () => {
             <FileUploadComponent />
           ) : activeCategory === "Investment Thesis" ? (
             <>
-              <div className="flex-grow overflow-y-auto bg-[#1C1C1C] ml-1 scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800">
+              <div className="flex-grow overflow-y-auto bg-[#1C1C1C]  ml-1 scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800">
                 <div className="mt-10 p-3">
-                  <ThesisForm questions={questions} setActiveIndustry={setActiveCategory} />
+                  <ThesisForm
+                    questions={questions}
+                    setActiveIndustry={setActiveCategory}
+                  />
                   {/* <ThesisCardComponent /> */}
                 </div>
               </div>
@@ -230,19 +230,20 @@ const Categories = () => {
             <>
               <div className="flex-grow overflow-y-auto bg-[#0d0d0d] ml-1 scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800">
                 <div className="p-3">
-                  <DashboardLayout active={activeCategory} setActive={setActiveCategory} />
+                  <DashboardLayout
+                    active={activeCategory}
+                    setActive={setActiveCategory}
+                  />
                 </div>
               </div>
             </>
-          ) : 
-          (
+          ) : (
             <ProjectDetails
-              isActiveCategory={activeCategory} 
+              isActiveCategory={activeCategory}
               isActiveSubCategory={selectedSubcategory}
             />
           )}
         </div>
-      
       </div>
     </>
   );

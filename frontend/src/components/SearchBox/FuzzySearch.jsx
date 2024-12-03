@@ -6,7 +6,7 @@ import { setSummaryData, setError } from "../../redux/industrySlice"; // Adjust 
 import Fuse from "fuse.js";
 import SearchIcon from "@mui/icons-material/Search";
 
-const FuzzySearch = ({ section, industry }) => {
+const FuzzySearch = ({ section, industry , setIndustry }) => {
   const dispatch = useDispatch(); // Initialize dispatch
 
   // Sample data for searching
@@ -43,7 +43,7 @@ const FuzzySearch = ({ section, industry }) => {
       industry_code: payload.data.industry_code,
       industry_name: payload.data.industry_name,
     }
-    industry.push(industryToAdd);
+    setIndustry((prevIndustry) => [...prevIndustry, industryToAdd]);
     try {
       // Send the request to the API
       const response = await fetch(`${API_BASE_URL}/api/industry-summary`, {
