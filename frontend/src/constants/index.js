@@ -90,6 +90,8 @@ export const activeItems = [
 ];
 export const categoryList = ["Dashboard","Investment Thesis", "Market Research" ,"Company Insights",];
 
+export const documentAnalysisList = ["Summary","Document Analysis", "Financial Data" ,"Saved Data",];
+
 // "Financial Insights",
 // "Valuation",
 // "Documents",

@@ -13,6 +13,7 @@ import Dashboard from "./components/Dashboard";
 import ProtectedLayout from "./components/ProtectedLayout";
 import Categories from "./components/projectHeaders/categories";
 import DocumentsWrapper from "./components/FileUploadComponent/wrapper";
+import DocumentAnalysisLayout from "./components/DocumentAnalysis/DocumentAnalysisLayout";
 
 const App = () => {
   const [token, setToken] = useState(localStorage.getItem("token") || "");
@@ -51,11 +52,19 @@ const App = () => {
             </ProtectedLayout>
           }
         />
-        <Route
-          path="/create-deal"
+         <Route
+          path="/dashboard"
           element={
             <ProtectedLayout setToken={handleSetToken} isLoggedIn={isLoggedIn}>
-              <CreateDeal />
+              <Categories />
+            </ProtectedLayout>
+          }
+        />
+        <Route
+          path="/document"
+          element={
+            <ProtectedLayout setToken={handleSetToken} isLoggedIn={isLoggedIn}>
+              <DocumentAnalysisLayout />
             </ProtectedLayout>
           }
         ></Route>
