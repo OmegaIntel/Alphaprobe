@@ -1,11 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Search } from "@mui/icons-material";
 import { API_BASE_URL, token } from "../../../services";
+import { fetchCompanyInsightFailure, fetchCompanyInsightSuccess } from "../../../redux/companyInsightsSlice";
+import { useDispatch } from "react-redux";
 
 const PreloadingScreen = () => {
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState(() => {
+    // Load saved results from local storage on mount
+    const savedResults = localStorage.getItem("searchResults");
+    return savedResults ? JSON.parse(savedResults) : [];
+  });
   const [loading, setLoading] = useState(false);
+  const [generating, setGenerating] = useState(false); // State for generating data animation
+  const [isFirstVisit, setIsFirstVisit] = useState(() => {
+    // Determine if this is the first visit
+    const savedResults = localStorage.getItem("searchResults");
+    return !savedResults; // If no saved results, it’s the first visit
+  });
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Save results to local storage whenever they change
+    if (results.length > 0) {
+      localStorage.setItem("searchResults", JSON.stringify(results));
+    }
+  }, [results]);
 
   const handleSearch = async () => {
     if (!query.trim()) {
@@ -16,6 +36,7 @@ const PreloadingScreen = () => {
     const encodedQuery = encodeURIComponent(query.trim());
     const apiUrl = `${API_BASE_URL}/api/companies?query=${encodedQuery}`;
     setLoading(true); // Start spinner
+    setIsFirstVisit(false); // No longer the first visit
 
     try {
       const response = await fetch(apiUrl, {
@@ -40,6 +61,42 @@ const PreloadingScreen = () => {
     }
   };
 
+  const handleCompanySelection = async (company) => {
+    setGenerating(true); // Start generating animation
+    const payload = {
+      data: {
+        company_name: company,
+      },
+    };
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/company-profile`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        console.log("Search payload:", payload);
+        dispatch(fetchCompanyInsightSuccess(result));
+        console.log("Search Response:", result);
+      } else {
+        const error = await response.text();
+        dispatch(fetchCompanyInsightFailure(error));
+        console.error("API Error:", error);
+      }
+    } catch (error) {
+      dispatch(fetchCompanyInsightFailure(error.toString()));
+      console.error("Network Error:", error);
+    } finally {
+      setGenerating(false); // Stop generating animation
+    }
+  };
+
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       handleSearch();
@@ -47,9 +104,9 @@ const PreloadingScreen = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-900 text-white">
+    <div className="flex flex-col items-center justify-center h-screen py-20 bg-stone-950 text-white">
       {/* Search Bar */}
-      <div className="flex items-center w-80 bg-gray-800 rounded-md px-4 py-2 mb-4">
+      <div className="flex items-center w-1/3 bg-gray-800 rounded-md px-4 py-2 mb-4">
         <Search className="cursor-pointer mr-3" onClick={handleSearch} />
         <input
           type="text"
@@ -62,26 +119,33 @@ const PreloadingScreen = () => {
       </div>
 
       {/* Results Section */}
-      <div className="w-80 bg-gray-800 p-4 rounded-md">
-        <h3 className="text-lg font-semibold mb-2">Search Results</h3>
+      <div className="w-1/2 p-4 rounded-md flex flex-col">
+        <h3 className="text-lg font-semibold mb-4 text-center">Search Results</h3>
         {loading ? (
           <div className="flex justify-center items-center">
             {/* Spinner */}
             <div className="w-6 h-6 border-4 border-t-transparent border-white rounded-full animate-spin"></div>
           </div>
+        ) : generating ? (
+          <div className="text-center animate-pulse text-gray-300">
+            Generating data for the selected company...
+          </div>
+        ) : isFirstVisit ? (
+          <p className="text-center">Search for a company to begin.</p>
         ) : results.length > 0 ? (
           <div className="grid grid-cols-2 gap-4">
             {results.map((company, index) => (
               <div
                 key={index}
-                className="bg-gray-700 p-2 rounded-md text-center"
+                className="bg-gray-700 p-2 rounded-md text-center cursor-pointer hover:bg-gray-600"
+                onClick={() => handleCompanySelection(company)}
               >
                 {company}
               </div>
             ))}
           </div>
         ) : (
-          <p>No results found</p>
+          <p className="text-center">No companies found. Try searching for other domains or niches.</p>
         )}
       </div>
     </div>
