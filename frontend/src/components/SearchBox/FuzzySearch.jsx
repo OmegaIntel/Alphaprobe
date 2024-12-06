@@ -7,7 +7,7 @@ import Fuse from "fuse.js";
 import SearchIcon from "@mui/icons-material/Search";
 import { setFormResponse } from "../../redux/formResponseSlice";
 
-const FuzzySearch = ({ section, industry , setIndustry }) => {
+const FuzzySearch = ({ section, industry, setIndustry, styles = {} }) => {
   const dispatch = useDispatch(); // Initialize dispatch
 
   // Sample data for searching
@@ -46,8 +46,6 @@ const FuzzySearch = ({ section, industry , setIndustry }) => {
         industry_code: payload.data.industry_code,
         industry_name: payload.data.industry_name,
       };
-
-      // Push to the `industry` array
       setIndustry((prevIndustry) => [...prevIndustry, industryToAdd]);
     } else {
       const PreloadPayload = {
@@ -57,13 +55,11 @@ const FuzzySearch = ({ section, industry , setIndustry }) => {
             industry_name: payload.data.industry_name,
           },
         ],
-      }
-      // Dispatch `setFormResponse` to store the payload
+      };
       dispatch(setFormResponse(PreloadPayload));
     }
 
     try {
-      // Send the request to the API
       const response = await fetch(`${API_BASE_URL}/api/industry-summary`, {
         method: "POST",
         headers: {
@@ -141,21 +137,21 @@ const FuzzySearch = ({ section, industry , setIndustry }) => {
 
   return (
     <div
-      style={{ position: "relative", margin: "0 auto", marginRight: "none" }}
+      className={`relative mx-auto ${styles?.container || ""}`}
     >
       <form onSubmit={handleSearch}>
-        <div style={{ display: "inline-flex" }}>
+        <div className="inline-flex">
           <input
             type="text"
             name="fuzzySearch"
             value={queryRef.current}
             onChange={handleInputChange}
             placeholder={section}
-            className="p-2 rounded-xl w-40 border border-gray-600 h-10 bg-[#0d0d0d] text-sm "
+            className={`p-2 rounded-xl w-40 border border-gray-600 h-10 bg-[#0d0d0d] text-sm ${styles?.input || ""}`}
           />
           <button
             type="submit"
-            className="ml-2 p-2 bg-[#fcfcfc] text-[#121212] rounded-xl  h-10 hover:bg-[#121212] hover:text-[#fcfcfc] transition-all duration-200 ease-out"
+            className={`ml-2 p-2 bg-[#fcfcfc] text-[#121212] rounded-xl h-10 hover:bg-[#121212] hover:text-[#fcfcfc] transition-all duration-200 ease-out ${styles?.button || ""}`}
           >
             <SearchIcon />
           </button>
@@ -163,27 +159,13 @@ const FuzzySearch = ({ section, industry , setIndustry }) => {
       </form>
       {suggestions.length > 0 && (
         <div
-          style={{
-            border: "1px solid black",
-            maxHeight: "12rem",
-            overflowY: "auto",
-            position: "absolute",
-            backgroundColor: "white",
-            width: "100%",
-            zIndex: 1,
-            color: "black",
-            borderRadius: "0.75rem",
-          }}
+          className={`absolute border border-black max-h-48 overflow-y-auto bg-white w-full z-10 text-black rounded-xl ${styles?.suggestions || ""}`}
         >
           {suggestions.map((item, index) => (
             <div
               key={index}
               onClick={() => handleClickChange(item)}
-              style={{
-                padding: "8px",
-                cursor: "pointer",
-                borderRadius: "0.75rem",
-              }}
+              className={`p-2 cursor-pointer rounded-xl ${styles?.suggestionItem || ""}`}
             >
               {item.name}
             </div>
