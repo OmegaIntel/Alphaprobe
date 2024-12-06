@@ -11,7 +11,7 @@ const ListDocumentCard = ({ heading, type, date, score }) => {
           <p className="text-gray-400 text-xs">{date}</p>
         </div>
         <div className="flex justify-between items-center space-x-2 text-sm ">
-          <p className="bg-blue-950 p-1 px-2 text-blue-200 rounded-lg">{type}</p>
+          <p className="bg-[#1E2430] p-1 px-2 text-[#5692DC] rounded-lg">{type}</p>
           <p>Score:{score}</p>
         </div>
       </div>

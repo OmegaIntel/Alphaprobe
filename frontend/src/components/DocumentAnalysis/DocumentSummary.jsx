@@ -6,9 +6,9 @@ import DocumentPDF from './DocumentSummary/DocumentPDF'
 const DocumentSummary = () => {
   return (
     <div className='flex w-full space-x-2'>
-        <ListDocument heading={"something"} date={"12/14/2000"} score={"2"} type={"Financial"} />
+        <ListDocument  />
         <SummaryPoints />
-        <DocumentPDF highlightText={"Dummy"} pdfUrl={""} heading={"Dummy"}/>
+        <DocumentPDF highlightText={"May"} pdfUrl={"/testPDF/test.pdf"} heading={"test"}/>
     </div>
   )
 }

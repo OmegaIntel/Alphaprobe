@@ -1,133 +1,154 @@
-import React, { useEffect, useState } from "react";
-import { Document, Page } from "@react-pdf/renderer";
-// import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-// import 'react-pdf/dist/esm/Page/TextLayer.css';
-import { Search, ZoomIn, ZoomOut, Download, Type } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { Worker } from "@react-pdf-viewer/core";
+import { Viewer, SpecialZoomLevel } from "@react-pdf-viewer/core";
+import { searchPlugin } from "@react-pdf-viewer/search";
+import { zoomPlugin } from "@react-pdf-viewer/zoom";
+import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout"; // For scrolling and better layout
+import "@react-pdf-viewer/core/lib/styles/index.css";
+import "@react-pdf-viewer/search/lib/styles/index.css";
+import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 
 const DocumentPDF = ({ pdfUrl, highlightText, heading }) => {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-  const [scale, setScale] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
-  const [error, setError] = useState(null);
-//   const [pdfData, setPdfData] = useState(null)
+  const [rotation, setRotation] = useState(0); // For rotating pages
 
+  // Initialize plugins
+  const searchPluginInstance = searchPlugin();
+  const { Search } = searchPluginInstance;
 
-//   useEffect(() => {
-//     const fetchPDF = async () => {
-//         try {
-//             const response = await fetch(pdfUrl);
-//             const blob = await response.blob();
-//             const url = URL.createObjectURL(blob);
-//             setPdfData(url); // Assume setPdfData sets state that holds this Blob URL
-//         } catch (error) {
-//             console.error("Error fetching PDF:", error);
-//             setError("Failed to load PDF");
-//         }
-//     };
+  const zoomPluginInstance = zoomPlugin();
+  const { ZoomInButton, ZoomOutButton, CurrentScale } = zoomPluginInstance;
 
-//     fetchPDF();
-// }, [pdfUrl]);
+  const defaultLayoutPluginInstance = defaultLayoutPlugin(); // For enabling scrolling
 
-  const onDocumentLoadSuccess = ({ numPages }) => {
-    setNumPages(numPages);
-    setError(null);
-  };
-
-  const onDocumentLoadError = (error) => {
-    console.error("PDF load error:", error);
-    setError("Failed to load PDF. Please check the URL and try again.");
-  };
-
-  const zoomIn = () => setScale(Math.min(scale + 0.25, 2));
-  const zoomOut = () => setScale(Math.max(scale - 0.25, 0.5));
-
-  const downloadPDF = () => {
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = "document.pdf";
-    link.click();
-  };
+  // Automatically highlight text if `highlightText` is provided
+  useEffect(() => {
+    if (highlightText) {
+      setSearchTerm(highlightText);
+    }
+  }, [highlightText]);
 
   return (
-    <div className="bg-red-300 max-w-2/5 mx-auto p-4">
+    <div className="h-screen w-2/5 p-4">
+      {/* Header with Controls */}
       <div className="flex justify-between items-center mb-4">
-        {heading && (
-          <div className="flex items-center mb-4">
-            <Type className="mr-2" />
-            <h2 className="text-xl font-bold">{heading}</h2>
-          </div>
-        )}
-
-        <div className="flex items-center space-x-2">
-          <button onClick={zoomOut} className="p-2 hover:bg-gray-100 rounded">
-            <ZoomOut />
-          </button>
-          <span>{Math.round(scale * 100)}%</span>
-          <button onClick={zoomIn} className="p-2 hover:bg-gray-100 rounded">
-            <ZoomIn />
-          </button>
+        {heading && <h2 className="text-xl font-bold">{heading}</h2>}
+        {/* <div className="flex items-center space-x-2">
+       
+          <ZoomOutButton />
+          <CurrentScale />
+          <ZoomInButton />
         </div>
-
         <div className="flex items-center space-x-2">
-          <input
-            type="text"
-            placeholder="Search PDF"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="border p-2 rounded text-stone-900"
-          />
-          <button onClick={() => {}} className="p-2 hover:bg-gray-100 rounded">
-            <Search />
+        
+          <button
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href = pdfUrl;
+              link.download = "document.pdf";
+              link.click();
+            }}
+            className="p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          >
+            Download PDF
           </button>
-        </div>
-
-        <button onClick={downloadPDF} className="p-2 hover:bg-gray-100 rounded">
-          <Download />
-        </button>
+        </div> */}
       </div>
 
-      {error ? (
-        <div className="text-red-500 text-center">{error}</div>
-      ) : (
-        <Document
-          file={"/dd12-13_0.pdf"}
-          onLoadSuccess={onDocumentLoadSuccess}
-          onLoadError={onDocumentLoadError}
-          options={{
-            workerSrc: "/pdf.worker.min.js",
-          }}
-        >
-          <Page
-            pageNumber={pageNumber}
-            scale={scale}
-            renderAnnotationLayer={false}
-            renderTextLayer={true}
-          />
-        </Document>
-      )}
+      {/* Custom Search Control */}
+      {/* <div className="mb-4">
+        <Search>
+          {({
+            keyword,
+            setKeyword,
+            search,
+            clearKeyword,
+            currentMatch,
+            jumpToNextMatch,
+            jumpToPreviousMatch,
+            matchCase,
+            wholeWords,
+            changeMatchCase,
+            changeWholeWords,
+          }) => (
+            <div className="flex flex-col space-y-2">
+              <div className="flex items-center space-x-2">
+                <input
+                  type="text"
+                  placeholder="Search PDF"
+                  value={keyword}
+                  onChange={(e) => setKeyword(e.target.value)}
+                  className="border p-2 rounded"
+                />
+                <button
+                  onClick={search}
+                  className="p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                >
+                  Search
+                </button>
+                <button
+                  onClick={clearKeyword}
+                  className="p-2 bg-gray-300 rounded hover:bg-gray-400"
+                >
+                  Clear
+                </button>
+              </div>
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={jumpToPreviousMatch}
+                  className="p-2 bg-gray-300 rounded hover:bg-gray-400"
+                >
+                  Previous
+                </button>
+                <span>
+                  Match: {currentMatch ? currentMatch.matchIndex + 1 : 0}/
+                  {currentMatch ? currentMatch.totalMatches : 0}
+                </span>
+                <button
+                  onClick={jumpToNextMatch}
+                  className="p-2 bg-gray-300 rounded hover:bg-gray-400"
+                >
+                  Next
+                </button>
+              </div>
+              <div className="flex items-center space-x-2">
+                <label>
+                  <input
+                    type="checkbox"
+                    checked={matchCase}
+                    onChange={(e) => changeMatchCase(e.target.checked)}
+                  />
+                  Match Case
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    checked={wholeWords}
+                    onChange={(e) => changeWholeWords(e.target.checked)}
+                  />
+                  Whole Words
+                </label>
+              </div>
+            </div>
+          )}
+        </Search>
+      </div> */}
 
-      {numPages && (
-        <div className="flex justify-center mt-4 space-x-2">
-          <button
-            disabled={pageNumber <= 1}
-            onClick={() => setPageNumber(pageNumber - 1)}
-            className="p-2 disabled:opacity-50"
-          >
-            Previous
-          </button>
-          <span>
-            Page {pageNumber} of {numPages}
-          </span>
-          <button
-            disabled={pageNumber >= numPages}
-            onClick={() => setPageNumber(pageNumber + 1)}
-            className="p-2 disabled:opacity-50"
-          >
-            Next
-          </button>
-        </div>
-      )}
+      {/* PDF Viewer */}
+      <div className="border h-full">
+        <Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.9.179/build/pdf.worker.min.js`}>
+          <Viewer
+            fileUrl={pdfUrl}
+            plugins={[
+              searchPluginInstance,
+              zoomPluginInstance,
+              defaultLayoutPluginInstance,
+            ]}
+            defaultScale={SpecialZoomLevel.PageWidth}
+            rotation={rotation}
+          />
+        </Worker>
+      </div>
     </div>
   );
 };

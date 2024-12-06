@@ -1,9 +1,13 @@
 import React from "react";
 import SummaryPointsCard from "./SummaryPoints/SummaryPointsCard";
+import SummaryPointSearch from "./SummaryPoints/SummaryPointSearch";
 
 const SummaryPoints = () => {
   return (
     <div className="w-2/5 px-3 py-2">
+      <div>
+        <SummaryPointSearch />
+      </div>
       <SummaryPointsCard
         confidenceLevel={"1.2"}
         description={
