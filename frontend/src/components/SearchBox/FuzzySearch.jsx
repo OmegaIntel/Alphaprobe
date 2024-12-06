@@ -36,7 +36,7 @@ const FuzzySearch = ({ section, industry, setIndustry, styles = {} }) => {
       data: {
         source: "IBIS",
         industry_name: industryName,
-        industry_code: industryCode,
+        industry_code: "0",
       },
     };
 
