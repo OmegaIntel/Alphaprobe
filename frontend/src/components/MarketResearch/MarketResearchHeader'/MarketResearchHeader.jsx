@@ -3,15 +3,22 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   setFormResponse,
   updateSelectedIndustries,
+ 
 } from "../../../redux/formResponseSlice";
 import EditIcon from "@mui/icons-material/Edit";
 import DoneIcon from "@mui/icons-material/Done";
 import FuzzySearch from "../../SearchBox/FuzzySearch";
+import { notification } from "antd";
+import { setSummaryData } from "../../../redux/industrySlice";
+import { API_BASE_URL , token } from "../../../services";
+// Replace with your API base URL
 
 const IndustryHeader = () => {
   const dispatch = useDispatch();
   const formResponse = useSelector((state) => state.formResponse.data);
-  const selectedIndustries = useSelector((state) => state.formResponse.selectedIndustries);
+  const selectedIndustries = useSelector(
+    (state) => state.formResponse.selectedIndustries
+  );
   const [isEditing, setIsEditing] = useState(false);
   const [industries, setIndustries] = useState(formResponse?.result || []);
 
@@ -40,8 +47,64 @@ const IndustryHeader = () => {
     );
   };
 
+  const fetchIndustrySummary = async (industry) => {
+    const payload = {
+      data: {
+        source: "IBIS",
+        industry_name: industry.industry_name,
+        industry_code: industry.industry_code,
+      },
+    };
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/industry-summary`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: token, // Replace with your actual token
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (!result.result || result.result.length === 0) {
+        notification.error({
+          message: "Invalid Industry",
+          description:
+            "There was an error fetching your request. Please enter a valid industry.",
+        });
+        return;
+      }
+
+      console.log("Response:", result);
+
+      // Dispatch the data to Redux
+      dispatch(setSummaryData(result));
+    } catch (error) {
+      console.error("Error:", error);
+      
+    }
+  };
+
   const handleIndustryToggle = (industry) => {
-    dispatch(updateSelectedIndustries(industry));
+    const isAlreadySelected = selectedIndustries.some(
+      (i) => i.industry_code === industry.industry_code
+    );
+
+    if (isAlreadySelected) {
+      // Remove from selected industries
+      const updatedIndustries = selectedIndustries.filter(
+        (i) => i.industry_code !== industry.industry_code
+      );
+      dispatch(updateSelectedIndustries(updatedIndustries));
+    } else {
+      // Add to selected industries and fetch data
+      dispatch(
+        updateSelectedIndustries([...selectedIndustries, industry])
+      );
+      fetchIndustrySummary(industry); // Call the API when adding a new industry
+    }
   };
 
   // Update the Redux state whenever `industries` changes
@@ -73,7 +136,11 @@ const IndustryHeader = () => {
         </div>
         {isEditing && (
           <div className="my-5">
-            <FuzzySearch section={"Search Industry"} industry={industries} setIndustry={setIndustries} />
+            <FuzzySearch
+              section={"Search Industry"}
+              industry={industries}
+              setIndustry={setIndustries}
+            />
           </div>
         )}
       </div>
