@@ -2,11 +2,12 @@ import React, { useState, useRef } from "react";
 import { API_BASE_URL, token } from "../../services";
 import { useDispatch } from "react-redux";
 import { notification } from "antd";
-import { setSummaryData, setError } from "../../redux/industrySlice"; // Adjust the import path if necessary
+import { setSummaryData, setError } from "../../redux/industrySlice";
 import Fuse from "fuse.js";
 import SearchIcon from "@mui/icons-material/Search";
+import { setFormResponse } from "../../redux/formResponseSlice";
 
-const FuzzySearch = ({ section, industry }) => {
+const FuzzySearch = ({ section, industry , setIndustry }) => {
   const dispatch = useDispatch(); // Initialize dispatch
 
   // Sample data for searching
@@ -39,11 +40,28 @@ const FuzzySearch = ({ section, industry }) => {
       },
     };
 
-    const industryToAdd = {
-      industry_code: payload.data.industry_code,
-      industry_name: payload.data.industry_name,
+    // Check if the `industry` prop is passed
+    if (industry) {
+      const industryToAdd = {
+        industry_code: payload.data.industry_code,
+        industry_name: payload.data.industry_name,
+      };
+
+      // Push to the `industry` array
+      setIndustry((prevIndustry) => [...prevIndustry, industryToAdd]);
+    } else {
+      const PreloadPayload = {
+        result: [
+          {
+            industry_code: payload.data.industry_code,
+            industry_name: payload.data.industry_name,
+          },
+        ],
+      }
+      // Dispatch `setFormResponse` to store the payload
+      dispatch(setFormResponse(PreloadPayload));
     }
-    industry.push(industryToAdd);
+
     try {
       // Send the request to the API
       const response = await fetch(`${API_BASE_URL}/api/industry-summary`, {
@@ -63,12 +81,12 @@ const FuzzySearch = ({ section, industry }) => {
             "There was an error fetching your request. Please try again.",
         });
       }
-      console.log("Search payload".payload);
+
+      console.log("Search payload", payload);
       console.log("Response:", result);
+
       if (result.result) {
-        // Dispatch the actual data, not the action creator
         dispatch(setSummaryData(result));
-        
       } else {
         dispatch(setError("No result found in API response"));
       }
@@ -77,7 +95,6 @@ const FuzzySearch = ({ section, industry }) => {
     }
   };
 
-  console.log("fuzzt", industry);
   // Handle input change and update suggestions
   const handleInputChange = async (e) => {
     e.preventDefault();
@@ -122,10 +139,6 @@ const FuzzySearch = ({ section, industry }) => {
     setSuggestions([]);
   };
 
- 
-
-
-
   return (
     <div
       style={{ position: "relative", margin: "0 auto", marginRight: "none" }}
@@ -134,19 +147,11 @@ const FuzzySearch = ({ section, industry }) => {
         <div style={{ display: "inline-flex" }}>
           <input
             type="text"
-            name='fuzzySearch'
+            name="fuzzySearch"
             value={queryRef.current}
             onChange={handleInputChange}
             placeholder={section}
             className="p-2 rounded-xl w-40 border border-gray-600 h-10 bg-[#0d0d0d] text-sm "
-            // style={{
-            //   padding: "0.5rem",
-            //   text: "#7a7a7a",
-            //   borderRadius: "0.75rem",
-            //   width: "16rem",
-            //   height: "2rem",
-            //   backgroundColor: '#0d0d0d',
-            // }}
           />
           <button
             type="submit"

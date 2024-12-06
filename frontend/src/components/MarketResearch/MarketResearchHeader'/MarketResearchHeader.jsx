@@ -1,83 +1,129 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  setSummaryData,
-  setError,
-  setLoading,
-} from "../../../redux/industrySlice";
+  setFormResponse,
+  updateSelectedIndustries,
+ 
+} from "../../../redux/formResponseSlice";
 import EditIcon from "@mui/icons-material/Edit";
 import DoneIcon from "@mui/icons-material/Done";
-import { API_BASE_URL, token } from "../../../services";
 import FuzzySearch from "../../SearchBox/FuzzySearch";
-import { setFormResponse } from "../../../redux/formResponseSlice";
-
+import { notification } from "antd";
+import { setSummaryData } from "../../../redux/industrySlice";
+import { API_BASE_URL , token } from "../../../services";
+// Replace with your API base URL
 
 const IndustryHeader = () => {
   const dispatch = useDispatch();
   const formResponse = useSelector((state) => state.formResponse.data);
-  const [activeIndustry, setActiveIndustry] = useState(null);
+  const selectedIndustries = useSelector(
+    (state) => state.formResponse.selectedIndustries
+  );
   const [isEditing, setIsEditing] = useState(false);
   const [industries, setIndustries] = useState(formResponse?.result || []);
 
-  if (!formResponse || !formResponse.result) return null;
-
-  const sendIndustryDataToApi = async (industryCode, industryName) => {
-    dispatch(setLoading());
-    try {
-      const response = await fetch(`${API_BASE_URL}/api/industry-summary`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          data: {
-            source: "IBIS",
-            industry_name: industryName,
-            industry_code: industryCode,
-          },
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      if (data.result) {
-        dispatch(setSummaryData(data));
-      } else {
-        dispatch(setError("No result found in API response"));
-      }
-    } catch (error) {
-      console.error("Error sending data to API:", error);
-      dispatch(setError(error.message));
+  // Ensure industries is not empty even if formResponse is null
+  useEffect(() => {
+    if (!formResponse || !formResponse.result) {
+      setIndustries([]);
+    } else {
+      setIndustries(formResponse.result);
     }
-  };
-
-  const handleButtonClick = (industryCode, industryName) => {
-    setActiveIndustry((prev) => (prev === industryCode ? null : industryCode));
-    sendIndustryDataToApi(industryCode, industryName);
-  };
+  }, [formResponse]);
 
   const handleEditToggle = () => {
     setIsEditing((prev) => !prev);
   };
 
-  const handleRemoveIndustry = (industryCode) => {
+  const handleRemoveIndustry = (industryName) => {
     setIndustries((prev) =>
-      prev.filter((industry) => industry.industry_code !== industryCode)
+      prev.filter((industry) => industry.industry_name !== industryName)
+    );
+    dispatch(
+      updateSelectedIndustries({
+        industry_name: industryName,
+        industry_code: null, // Assuming removal logic
+      })
     );
   };
- console.log(industries);
+
+  const fetchIndustrySummary = async (industry) => {
+    const payload = {
+      data: {
+        source: "IBIS",
+        industry_name: industry.industry_name,
+        industry_code: industry.industry_code,
+      },
+    };
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/industry-summary`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: token, // Replace with your actual token
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (!result.result || result.result.length === 0) {
+        notification.error({
+          message: "Invalid Industry",
+          description:
+            "There was an error fetching your request. Please enter a valid industry.",
+        });
+        return;
+      }
+
+      console.log("Response:", result);
+
+      // Dispatch the data to Redux
+      dispatch(setSummaryData(result));
+    } catch (error) {
+      console.error("Error:", error);
+      
+    }
+  };
+
+  const handleIndustryToggle = (industry) => {
+    const isAlreadySelected = selectedIndustries.some(
+      (i) => i.industry_code === industry.industry_code
+    );
+
+    if (isAlreadySelected) {
+      // Remove from selected industries
+      const updatedIndustries = selectedIndustries.filter(
+        (i) => i.industry_code !== industry.industry_code
+      );
+      dispatch(updateSelectedIndustries(updatedIndustries));
+    } else {
+      // Add to selected industries and fetch data
+      dispatch(
+        updateSelectedIndustries([...selectedIndustries, industry])
+      );
+      fetchIndustrySummary(industry); // Call the API when adding a new industry
+    }
+  };
+
+  // Update the Redux state whenever `industries` changes
+  useEffect(() => {
+    dispatch(setFormResponse({ result: industries }));
+  }, [industries, dispatch]);
+
   return (
     <div className="h-screen flex flex-col">
       {/* Header section */}
       <div className="p-4 bg-[#09090A]">
         <div>
-          <img src="/images/LogoCompany.png" alt="Company Logo" className="my-4"/>
+          <img
+            src="/images/LogoCompany.png"
+            alt="Company Logo"
+            className="my-4"
+          />
         </div>
-        
+
         <div className="flex justify-between items-center my-2">
           <h1 className="text-xl font-bold text-white">Industries</h1>
           <button
@@ -90,7 +136,11 @@ const IndustryHeader = () => {
         </div>
         {isEditing && (
           <div className="my-5">
-            <FuzzySearch section={"Search Industry"} industry={industries} />
+            <FuzzySearch
+              section={"Search Industry"}
+              industry={industries}
+              setIndustry={setIndustries}
+            />
           </div>
         )}
       </div>
@@ -103,7 +153,9 @@ const IndustryHeader = () => {
               key={industry.industry_code}
               className={`flex items-center space-x-3 industry-button text-white rounded-md truncate transition-colors duration-300 
               ${
-                activeIndustry === industry.industry_code
+                selectedIndustries.some(
+                  (i) => i.industry_code === industry.industry_code
+                )
                   ? "bg-[#252525]"
                   : "bg-gray-950 hover:bg-[#252525]"
               } 
@@ -112,12 +164,7 @@ const IndustryHeader = () => {
               <button
                 className="flex-1 text-left px-3 text-xs py-2 truncate"
                 title={`${industry.industry_code} - ${industry.industry_name}`}
-                onClick={() =>
-                  handleButtonClick(
-                    industry.industry_code,
-                    industry.industry_name
-                  )
-                }
+                onClick={() => handleIndustryToggle(industry)}
               >
                 {industry.industry_name}
               </button>
@@ -125,7 +172,7 @@ const IndustryHeader = () => {
                 <button
                   className="text-red-500 hover:text-red-700 px-2"
                   title="Remove"
-                  onClick={() => handleRemoveIndustry(industry.industry_code)}
+                  onClick={() => handleRemoveIndustry(industry.industry_name)}
                 >
                   ➖
                 </button>
