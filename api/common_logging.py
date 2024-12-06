@@ -11,3 +11,5 @@ logging.basicConfig(
 )
 
 loginfo = logging.info
+logerror = logging.error
+logwarning = logging.warning

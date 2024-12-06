@@ -23,6 +23,8 @@ from api.api_related_industries import related_industries_router
 from api.api_industry_summary import industry_summary_router
 from api.api_company_profile import company_profile_router
 from api.api_search_fuzzy import search_router
+from api.api_rag import rag_router
+
 
 app = FastAPI(docs_url="/api/docs", openapi_url="/api/openapi.json")
 
@@ -61,7 +63,7 @@ app.include_router(related_industries_router)
 app.include_router(industry_summary_router)
 app.include_router(company_profile_router)
 app.include_router(search_router)
-
+app.include_router(rag_router)
 
 if __name__ == "__main__":
     uvicorn.run("api.app:app", host="0.0.0.0", port=8000, reload=True, loop='asyncio')
