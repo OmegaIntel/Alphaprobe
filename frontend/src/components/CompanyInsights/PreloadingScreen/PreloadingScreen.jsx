@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Search } from "@mui/icons-material";
 import { API_BASE_URL, token } from "../../../services";
-import { fetchCompanyInsightFailure, fetchCompanyInsightSuccess } from "../../../redux/companyInsightsSlice";
+import {
+  fetchCompanyInsightFailure,
+  fetchCompanyInsightSuccess,
+} from "../../../redux/companyInsightsSlice";
 import { useDispatch } from "react-redux";
 
 const PreloadingScreen = () => {
@@ -104,23 +107,30 @@ const PreloadingScreen = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen py-20 bg-stone-950 text-white">
+    <div className="flex flex-col items-center py-32 h-screen bg-stone-950 text-white">
       {/* Search Bar */}
-      <div className="flex items-center w-1/3 bg-gray-800 rounded-md px-4 py-2 mb-4">
-        <Search className="cursor-pointer mr-3" onClick={handleSearch} />
+      <div className="inline-flex">
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          onKeyDown={handleKeyDown}
           placeholder="Search for a company..."
-          className="flex-grow bg-transparent outline-none text-white placeholder-gray-400"
+          className="p-2 rounded-xl w-[30rem] border border-gray-600 h-11 bg-gray-800 text-sm text-white"
         />
+        <button
+          type="button"
+          onClick={handleSearch}
+          className="ml-2 p-2 bg-gray-800 text-white rounded-xl h-11 w-11 hover:bg-[#121212] hover:text-[#fcfcfc] transition-all duration-200 ease-out"
+        >
+          <Search className="text-white" />
+        </button>
       </div>
 
       {/* Results Section */}
       <div className="w-1/2 p-4 rounded-md flex flex-col">
-        <h3 className="text-lg font-semibold mb-4 text-center">Search Results</h3>
+        <h3 className="text-lg font-semibold mb-4 text-center">
+          Search Results
+        </h3>
         {loading ? (
           <div className="flex justify-center items-center">
             {/* Spinner */}
@@ -145,7 +155,9 @@ const PreloadingScreen = () => {
             ))}
           </div>
         ) : (
-          <p className="text-center">No companies found. Try searching for other domains or niches.</p>
+          <p className="text-center">
+            No companies found. Try searching for other domains or niches.
+          </p>
         )}
       </div>
     </div>

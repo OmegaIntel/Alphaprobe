@@ -8,8 +8,7 @@ import MarketResearchPreload from "./MarketResearchPreload/MarketResearchPreload
 const MarketResearchLayout = () => {
   const formResponse = useSelector((state) => state.formResponse.data);
   return (
-    <>
-    
+    <>    
     {formResponse ? (
      <div className="flex h-screen overflow-hidden">
       
@@ -28,8 +27,7 @@ const MarketResearchLayout = () => {
        <MarketResearchPreload />
       </div>
     )}
-    </>
-    
+    </>    
   );
 };
 
