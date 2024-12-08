@@ -114,7 +114,7 @@ const PreloadingScreen = () => {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search for a company..."
+          placeholder="Search for companies within any industry or sector..."
           className="p-2 rounded-xl w-[30rem] border border-gray-600 h-11 bg-gray-800 text-sm text-white"
         />
         <button

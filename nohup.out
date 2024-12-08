@@ -1,0 +1,1324 @@
+#0 building with "default" instance using docker driver
+
+#1 [frontend internal] load build definition from Dockerfile
+#1 transferring dockerfile: 500B done
+#1 DONE 0.0s
+
+#2 [scraper internal] load build definition from Dockerfile
+#2 transferring dockerfile: 434B done
+#2 DONE 0.0s
+
+#3 [app internal] load build definition from Dockerfile
+#3 transferring dockerfile: 614B done
+#3 DONE 0.0s
+
+#4 [frontend internal] load metadata for docker.io/library/node:18-alpine
+#4 DONE 0.1s
+
+#5 [app internal] load metadata for docker.io/library/python:3.10-slim
+#5 DONE 0.1s
+
+#6 [frontend internal] load .dockerignore
+#6 transferring context: 2B done
+#6 DONE 0.0s
+
+#7 [frontend 1/5] FROM docker.io/library/node:18-alpine@sha256:7e43a2d633d91e8655a6c0f45d2ed987aa4930f0792f6d9dd3bffc7496e44882
+#7 DONE 0.0s
+
+#8 [app internal] load .dockerignore
+#8 transferring context: 1.34kB done
+#8 DONE 0.0s
+
+#9 [scraper internal] load .dockerignore
+#9 transferring context: 2B done
+#9 DONE 0.0s
+
+#10 [scraper 1/8] FROM docker.io/library/python:3.10-slim@sha256:61912260e578182d00b5e163eb4cfb13b35fb8782c98d1df9ed584cec8939097
+#10 DONE 0.0s
+
+#11 [frontend internal] load build context
+#11 transferring context: 12.13kB 0.0s done
+#11 DONE 0.0s
+
+#12 [frontend 3/5] COPY package*.json ./
+#12 CACHED
+
+#13 [frontend 2/5] WORKDIR /app
+#13 CACHED
+
+#14 [frontend 4/5] RUN npm install
+#14 CACHED
+
+#15 [frontend 5/5] COPY . .
+#15 CACHED
+
+#16 [frontend] exporting to image
+#16 exporting layers done
+#16 writing image sha256:6f0c5ab19a455083535345d246607a65cf86ada9f03af6b12460ffe46925b99b done
+#16 naming to docker.io/library/alphaprobe-frontend done
+#16 DONE 0.0s
+
+#17 [scraper internal] load build context
+#17 transferring context: 3.85kB done
+#17 DONE 0.0s
+
+#18 [scraper  6/10] RUN playwright install
+#18 CACHED
+
+#19 [scraper  3/10] COPY ./requirements.txt /app/requirements.txt
+#19 CACHED
+
+#20 [scraper  8/10] COPY . /app
+#20 CACHED
+
+#21 [scraper 2/8] WORKDIR /app
+#21 CACHED
+
+#22 [scraper  7/10] RUN playwright install-deps
+#22 CACHED
+
+#23 [scraper  4/10] RUN pip install --upgrade pip
+#23 CACHED
+
+#24 [scraper  9/10] RUN pip install -e .
+#24 CACHED
+
+#25 [scraper  5/10] RUN pip install -r /app/requirements.txt
+#25 CACHED
+
+#26 [scraper 10/10] WORKDIR /app/company_data_scraper
+#26 CACHED
+
+#27 [app internal] load build context
+#27 transferring context: 193.36kB 0.1s done
+#27 DONE 0.1s
+
+#28 [scraper] exporting to image
+#28 exporting layers done
+#28 writing image sha256:bbb477994c9720b68e958e60b33dbf9e536fd63b4b0926d085efe5d980d0bf39 done
+#28 naming to docker.io/library/alphaprobe-scraper done
+#28 DONE 0.0s
+
+#29 [app 4/8] COPY ./requirements.txt /app/requirements.txt
+#29 CACHED
+
+#21 [app 2/8] WORKDIR /app
+#21 CACHED
+
+#30 [app 3/8] RUN apt-get update && apt-get install -y     pkg-config     default-mysql-client     default-libmysqlclient-dev     libssl-dev     build-essential     --no-install-recommends &&     apt-get clean &&     rm -rf /var/lib/apt/lists/*
+#30 CACHED
+
+#31 [app 5/8] RUN pip install --no-cache-dir -r /app/requirements.txt
+#31 CACHED
+
+#32 [frontend] resolving provenance for metadata file
+#32 DONE 0.0s
+
+#33 [scraper] resolving provenance for metadata file
+#33 DONE 0.0s
+
+#34 [app 6/8] COPY . /app
+#34 DONE 1.1s
+
+#35 [app 7/8] RUN pip install -e .
+#35 0.786 Obtaining file:///app
+#35 0.787   Preparing metadata (setup.py): started
+#35 1.197   Preparing metadata (setup.py): finished with status 'done'
+#35 1.651 Installing collected packages: Alphaprobe
+#35 1.652   DEPRECATION: Legacy editable install of Alphaprobe==1.0 from file:///app (setup.py develop) is deprecated. pip 25.0 will enforce this behaviour change. A possible replacement is to add a pyproject.toml or enable --use-pep517, and use setuptools >= 64. If the resulting installation is not behaving as expected, try using --config-settings editable_mode=compat. Please consult the setuptools documentation for more information. Discussion can be found at https://github.com/pypa/pip/issues/11457
+#35 1.652   Running setup.py develop for Alphaprobe
+#35 2.327 Successfully installed Alphaprobe
+#35 2.327 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#35 DONE 2.5s
+
+#36 [app 8/8] WORKDIR /app/api
+#36 DONE 0.1s
+
+#37 [app] exporting to image
+#37 exporting layers 1.2s done
+#37 writing image sha256:e9affe56fe13416026251373f7a937a51152e38a00b5206329b39deb39cddc74 done
+#37 naming to docker.io/library/alphaprobe-app done
+#37 DONE 1.2s
+
+#38 [app] resolving provenance for metadata file
+#38 DONE 0.0s
+ Network alphaprobe_default  Creating
+ Network alphaprobe_default  Created
+ Container alphaprobe-scraper-1  Creating
+ Container alphaprobe-frontend-1  Creating
+ Container alphaprobe-app-1  Creating
+ Container alphaprobe-app-1  Created
+ Container alphaprobe-scraper-1  Created
+#0 building with "default" instance using docker driver
+
+#1 [frontend internal] load build definition from Dockerfile
+#1 transferring dockerfile: 500B done
+#1 DONE 0.0s
+
+#2 [app internal] load build definition from Dockerfile
+#2 transferring dockerfile: 614B done
+#2 DONE 0.0s
+
+#3 [scraper internal] load build definition from Dockerfile
+#3 transferring dockerfile: 434B done
+#3 DONE 0.0s
+
+#4 [frontend internal] load metadata for docker.io/library/node:18-alpine
+#4 DONE 0.1s
+
+#5 [scraper internal] load metadata for docker.io/library/python:3.10-slim
+#5 DONE 0.1s
+
+#6 [frontend internal] load .dockerignore
+#6 transferring context: 2B done
+#6 DONE 0.0s
+
+#7 [frontend 1/5] FROM docker.io/library/node:18-alpine@sha256:7e43a2d633d91e8655a6c0f45d2ed987aa4930f0792f6d9dd3bffc7496e44882
+#7 DONE 0.0s
+
+#8 [frontend internal] load build context
+#8 transferring context: 12.13kB 0.0s done
+#8 DONE 0.0s
+
+#9 [scraper internal] load .dockerignore
+#9 transferring context: 2B done
+#9 DONE 0.0s
+
+#10 [app internal] load .dockerignore
+#10 transferring context: 1.34kB done
+#10 DONE 0.0s
+
+#11 [frontend 4/5] RUN npm install
+#11 CACHED
+
+#12 [frontend 2/5] WORKDIR /app
+#12 CACHED
+
+#13 [frontend 3/5] COPY package*.json ./
+#13 CACHED
+
+#14 [frontend 5/5] COPY . .
+#14 CACHED
+
+#15 [scraper 1/8] FROM docker.io/library/python:3.10-slim@sha256:61912260e578182d00b5e163eb4cfb13b35fb8782c98d1df9ed584cec8939097
+#15 DONE 0.0s
+
+#16 [frontend] exporting to image
+#16 exporting layers done
+#16 writing image sha256:6f0c5ab19a455083535345d246607a65cf86ada9f03af6b12460ffe46925b99b done
+#16 naming to docker.io/library/alphaprobe-frontend done
+#16 DONE 0.0s
+
+#17 [scraper internal] load build context
+#17 transferring context: 3.85kB done
+#17 DONE 0.0s
+
+#18 [app internal] load build context
+#18 transferring context: 71.29kB 0.1s done
+#18 DONE 0.1s
+
+#19 [scraper  5/10] RUN pip install -r /app/requirements.txt
+#19 CACHED
+
+#20 [scraper  3/10] COPY ./requirements.txt /app/requirements.txt
+#20 CACHED
+
+#21 [scraper  8/10] COPY . /app
+#21 CACHED
+
+#22 [scraper  6/10] RUN playwright install
+#22 CACHED
+
+#23 [scraper  7/10] RUN playwright install-deps
+#23 CACHED
+
+#24 [scraper  4/10] RUN pip install --upgrade pip
+#24 CACHED
+
+#25 [scraper  9/10] RUN pip install -e .
+#25 CACHED
+
+#26 [scraper 10/10] WORKDIR /app/company_data_scraper
+#26 CACHED
+
+#27 [scraper] exporting to image
+#27 exporting layers done
+#27 writing image sha256:bbb477994c9720b68e958e60b33dbf9e536fd63b4b0926d085efe5d980d0bf39 done
+#27 naming to docker.io/library/alphaprobe-scraper done
+#27 DONE 0.0s
+
+#28 [frontend] resolving provenance for metadata file
+#28 DONE 0.0s
+
+#29 [app 3/8] RUN apt-get update && apt-get install -y     pkg-config     default-mysql-client     default-libmysqlclient-dev     libssl-dev     build-essential     --no-install-recommends &&     apt-get clean &&     rm -rf /var/lib/apt/lists/*
+#29 CACHED
+
+#30 [app 2/8] WORKDIR /app
+#30 CACHED
+
+#31 [app 4/8] COPY ./requirements.txt /app/requirements.txt
+#31 CACHED
+
+#32 [app 5/8] RUN pip install --no-cache-dir -r /app/requirements.txt
+#32 CACHED
+
+#33 [scraper] resolving provenance for metadata file
+#33 DONE 0.0s
+
+#34 [app 6/8] COPY . /app
+#34 DONE 2.3s
+
+#35 [app 7/8] RUN pip install -e .
+#35 0.765 Obtaining file:///app
+#35 0.766   Preparing metadata (setup.py): started
+#35 1.188   Preparing metadata (setup.py): finished with status 'done'
+#35 1.620 Installing collected packages: Alphaprobe
+#35 1.621   DEPRECATION: Legacy editable install of Alphaprobe==1.0 from file:///app (setup.py develop) is deprecated. pip 25.0 will enforce this behaviour change. A possible replacement is to add a pyproject.toml or enable --use-pep517, and use setuptools >= 64. If the resulting installation is not behaving as expected, try using --config-settings editable_mode=compat. Please consult the setuptools documentation for more information. Discussion can be found at https://github.com/pypa/pip/issues/11457
+#35 1.621   Running setup.py develop for Alphaprobe
+#35 2.291 Successfully installed Alphaprobe
+#35 2.291 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#35 DONE 2.5s
+
+#36 [app 8/8] WORKDIR /app/api
+#36 DONE 0.1s
+
+#37 [app] exporting to image
+#37 exporting layers 1.2s done
+#37 writing image sha256:581ac0f807fdda905d6cdd18522e2f43d21c2a72f4812153816e065c72613524 done
+#37 naming to docker.io/library/alphaprobe-app done
+#37 DONE 1.3s
+
+#38 [app] resolving provenance for metadata file
+#38 DONE 0.0s
+ Container alphaprobe-frontend-1  Creating
+ Container alphaprobe-app-1  Recreate
+Error response from daemon: Conflict. The container name "/alphaprobe-frontend-1" is already in use by container "c330e61a6e9e043b7927887503c915816b288ff6a0fcc7deb5df8c2fc56af203". You have to remove (or rename) that container to be able to reuse that name.
+ Container alphaprobe-frontend-1  Created
+Attaching to app-1, frontend-1, scraper-1, cfd985e69a29_alphaprobe-app-1
+Gracefully stopping... (press Ctrl+C again to force)
+Error response from daemon: driver failed programming external connectivity on endpoint alphaprobe-app-1 (49ee1ec79def945f1ad4513da26d82206e57e5e383ef7f5ea1144737026123cf): Bind for 0.0.0.0:8000 failed: port is already allocated
+#0 building with "default" instance using docker driver
+
+#1 [scraper internal] load build definition from Dockerfile
+#1 transferring dockerfile: 434B done
+#1 DONE 0.0s
+
+#2 [app internal] load build definition from Dockerfile
+#2 transferring dockerfile: 614B done
+#2 DONE 0.0s
+
+#3 [frontend internal] load build definition from Dockerfile
+#3 transferring dockerfile: 500B done
+#3 DONE 0.0s
+
+#4 [frontend internal] load metadata for docker.io/library/node:18-alpine
+#4 DONE 0.1s
+
+#5 [app internal] load metadata for docker.io/library/python:3.10-slim
+#5 DONE 0.1s
+
+#6 [frontend internal] load .dockerignore
+#6 transferring context: 2B done
+#6 DONE 0.0s
+
+#7 [frontend 1/5] FROM docker.io/library/node:18-alpine@sha256:7e43a2d633d91e8655a6c0f45d2ed987aa4930f0792f6d9dd3bffc7496e44882
+#7 DONE 0.0s
+
+#8 [scraper internal] load .dockerignore
+#8 transferring context: 2B done
+#8 DONE 0.0s
+
+#9 [app internal] load .dockerignore
+#9 transferring context: 1.34kB done
+#9 DONE 0.0s
+
+#10 [app  1/10] FROM docker.io/library/python:3.10-slim@sha256:61912260e578182d00b5e163eb4cfb13b35fb8782c98d1df9ed584cec8939097
+#10 DONE 0.0s
+
+#11 [frontend internal] load build context
+#11 transferring context: 12.13kB 0.0s done
+#11 DONE 0.0s
+
+#12 [frontend 3/5] COPY package*.json ./
+#12 CACHED
+
+#13 [frontend 2/5] WORKDIR /app
+#13 CACHED
+
+#14 [frontend 4/5] RUN npm install
+#14 CACHED
+
+#15 [frontend 5/5] COPY . .
+#15 CACHED
+
+#16 [scraper internal] load build context
+#16 transferring context: 3.85kB done
+#16 DONE 0.0s
+
+#17 [scraper  3/10] COPY ./requirements.txt /app/requirements.txt
+#17 CACHED
+
+#18 [scraper  9/10] RUN pip install -e .
+#18 CACHED
+
+#19 [scraper  7/10] RUN playwright install-deps
+#19 CACHED
+
+#20 [scraper  4/10] RUN pip install --upgrade pip
+#20 CACHED
+
+#21 [scraper  8/10] COPY . /app
+#21 CACHED
+
+#22 [scraper  2/10] WORKDIR /app
+#22 CACHED
+
+#23 [scraper  5/10] RUN pip install -r /app/requirements.txt
+#23 CACHED
+
+#24 [scraper  6/10] RUN playwright install
+#24 CACHED
+
+#25 [scraper 10/10] WORKDIR /app/company_data_scraper
+#25 CACHED
+
+#26 [frontend] exporting to image
+#26 exporting layers done
+#26 writing image sha256:6f0c5ab19a455083535345d246607a65cf86ada9f03af6b12460ffe46925b99b done
+#26 naming to docker.io/library/alphaprobe-frontend done
+#26 DONE 0.0s
+
+#27 [scraper] exporting to image
+#27 exporting layers done
+#27 writing image sha256:bbb477994c9720b68e958e60b33dbf9e536fd63b4b0926d085efe5d980d0bf39 done
+#27 naming to docker.io/library/alphaprobe-scraper done
+#27 DONE 0.0s
+
+#28 [app internal] load build context
+#28 transferring context: 131.63kB 0.1s done
+#28 DONE 0.1s
+
+#22 [app  2/10] WORKDIR /app
+#22 CACHED
+
+#29 [app 3/8] RUN apt-get update && apt-get install -y     pkg-config     default-mysql-client     default-libmysqlclient-dev     libssl-dev     build-essential     --no-install-recommends &&     apt-get clean &&     rm -rf /var/lib/apt/lists/*
+#29 CACHED
+
+#30 [app 4/8] COPY ./requirements.txt /app/requirements.txt
+#30 CACHED
+
+#31 [app 5/8] RUN pip install --no-cache-dir -r /app/requirements.txt
+#31 CACHED
+
+#32 [frontend] resolving provenance for metadata file
+#32 DONE 0.0s
+
+#33 [scraper] resolving provenance for metadata file
+#33 DONE 0.0s
+
+#34 [app 6/8] COPY . /app
+#34 DONE 1.0s
+
+#35 [app 7/8] RUN pip install -e .
+#35 0.796 Obtaining file:///app
+#35 0.797   Preparing metadata (setup.py): started
+#35 1.208   Preparing metadata (setup.py): finished with status 'done'
+#35 1.643 Installing collected packages: Alphaprobe
+#35 1.644   DEPRECATION: Legacy editable install of Alphaprobe==1.0 from file:///app (setup.py develop) is deprecated. pip 25.0 will enforce this behaviour change. A possible replacement is to add a pyproject.toml or enable --use-pep517, and use setuptools >= 64. If the resulting installation is not behaving as expected, try using --config-settings editable_mode=compat. Please consult the setuptools documentation for more information. Discussion can be found at https://github.com/pypa/pip/issues/11457
+#35 1.644   Running setup.py develop for Alphaprobe
+#35 2.334 Successfully installed Alphaprobe
+#35 2.334 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#35 DONE 2.5s
+
+#36 [app 8/8] WORKDIR /app/api
+#36 DONE 0.1s
+
+#37 [app] exporting to image
+#37 exporting layers 1.2s done
+#37 writing image sha256:9afebf28cd50b0f4e2c9d1c65cecdb02458095376656d004e3687b265f20c9b8 done
+#37 naming to docker.io/library/alphaprobe-app done
+#37 DONE 1.2s
+
+#38 [app] resolving provenance for metadata file
+#38 DONE 0.0s
+ Network alphaprobe_default  Creating
+ Network alphaprobe_default  Created
+ Container alphaprobe-frontend-1  Creating
+ Container alphaprobe-scraper-1  Creating
+ Container alphaprobe-app-1  Creating
+ Container alphaprobe-scraper-1  Created
+ Container alphaprobe-app-1  Created
+ Container alphaprobe-frontend-1  Created
+Attaching to app-1, frontend-1, scraper-1
+frontend-1  | 
+frontend-1  | > frontend@0.1.0 start
+frontend-1  | > react-scripts start
+frontend-1  | 
+app-1       | INFO  [alembic.runtime.migration] Context impl MySQLImpl.
+app-1       | INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+scraper-1   | INFO     Using path app.py                                                      
+scraper-1   | INFO     Resolved absolute path /app/company_data_scraper/app.py                
+scraper-1   | INFO     Searching for package file structure from directories with __init__.py 
+scraper-1   |          files                                                                  
+scraper-1   | INFO     Importing from /app/company_data_scraper                               
+scraper-1   |                                                                                 
+scraper-1   |  ╭─ Python module file ─╮                                                       
+scraper-1   |  │                      │                                                       
+scraper-1   |  │  🐍 app.py           │                                                       
+scraper-1   |  │                      │                                                       
+scraper-1   |  ╰──────────────────────╯                                                       
+scraper-1   |                                                                                 
+scraper-1   | INFO     Importing module app                                                   
+scraper-1   | INFO     Found importable FastAPI app                                           
+scraper-1   |                                                                                 
+scraper-1   |  ╭─ Importable FastAPI app ─╮                                                   
+scraper-1   |  │                          │                                                   
+scraper-1   |  │  from app import app     │                                                   
+scraper-1   |  │                          │                                                   
+scraper-1   |  ╰──────────────────────────╯                                                   
+scraper-1   |                                                                                 
+scraper-1   | INFO     Using import string app:app                                            
+scraper-1   |                                                                                 
+scraper-1   |  ╭─────────── FastAPI CLI - Production mode ───────────╮                        
+scraper-1   |  │                                                     │                        
+scraper-1   |  │  Serving at: http://0.0.0.0:8008                    │                        
+scraper-1   |  │                                                     │                        
+scraper-1   |  │  API docs: http://0.0.0.0:8008/docs                 │                        
+scraper-1   |  │                                                     │                        
+scraper-1   |  │  Running in production mode, for development use:   │                        
+scraper-1   |  │                                                     │                        
+scraper-1   |  │  fastapi dev                                        │                        
+scraper-1   |  │                                                     │                        
+scraper-1   |  ╰─────────────────────────────────────────────────────╯                        
+scraper-1   |                                                                                 
+scraper-1   | INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+scraper-1   | INFO:     Started parent process [1]
+app-1       | INFO:     Will watch for changes in these directories: ['/app/api']
+app-1       | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+app-1       | INFO:     Started reloader process [7] using WatchFiles
+frontend-1  | (node:25) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+frontend-1  | (Use `node --trace-deprecation ...` to show where the warning was created)
+frontend-1  | (node:25) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+frontend-1  | Starting the development server...
+frontend-1  | 
+scraper-1   | INFO:     Started server process [10]
+scraper-1   | INFO:     Waiting for application startup.
+scraper-1   | INFO:     Application startup complete.
+scraper-1   | INFO:     Started server process [11]
+scraper-1   | INFO:     Waiting for application startup.
+scraper-1   | INFO:     Application startup complete.
+scraper-1   | INFO:     Started server process [14]
+scraper-1   | INFO:     Waiting for application startup.
+scraper-1   | INFO:     Application startup complete.
+scraper-1   | INFO:     Started server process [13]
+scraper-1   | INFO:     Waiting for application startup.
+scraper-1   | INFO:     Application startup complete.
+scraper-1   | INFO:     Started server process [15]
+scraper-1   | INFO:     Waiting for application startup.
+scraper-1   | INFO:     Application startup complete.
+scraper-1   | INFO:     Started server process [8]
+scraper-1   | INFO:     Waiting for application startup.
+scraper-1   | INFO:     Application startup complete.
+scraper-1   | INFO:     Started server process [12]
+scraper-1   | INFO:     Waiting for application startup.
+scraper-1   | INFO:     Application startup complete.
+scraper-1   | INFO:     Started server process [9]
+scraper-1   | INFO:     Waiting for application startup.
+scraper-1   | INFO:     Application startup complete.
+app-1       | INFO:     Started server process [9]
+app-1       | INFO:     Waiting for application startup.
+app-1       | INFO:     Application startup complete.
+frontend-1  | [0;33mOne of your dependencies, babel-preset-react-app, is importing the
+frontend-1  | "@babel/plugin-proposal-private-property-in-object" package without
+frontend-1  | declaring it in its dependencies. This is currently working because
+frontend-1  | "@babel/plugin-proposal-private-property-in-object" is already in your
+frontend-1  | node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+frontend-1  | 
+frontend-1  | babel-preset-react-app is part of the create-react-app project, [1mwhich
+frontend-1  | is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+frontend-1  | ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+frontend-1  | your devDependencies to work around this error. This will make this message
+frontend-1  | go away.[0m
+frontend-1  |   
+frontend-1  | Compiled with warnings.
+frontend-1  | 
+frontend-1  | [eslint] 
+frontend-1  | src/App.js
+frontend-1  |   Line 12:8:  'Dashboard' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/ChatBox/index.jsx
+frontend-1  |   Line 158:6:  React Hook useEffect has a missing dependency: 'currentChatSession'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+frontend-1  |   Line 160:9:  'handleAddToWorkspace' is assigned a value but never used                                                              no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/CompanyInsights/CompanyDetails/CompanyDetailsComponent.jsx
+frontend-1  |   Line 2:8:  'PersonIcon' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/InvestmentThesis/ThesisForm.jsx
+frontend-1  |   Line 1:17:   'useEffect' is defined but never used               no-unused-vars
+frontend-1  |   Line 23:10:  'randomIcon' is assigned a value but never used     no-unused-vars
+frontend-1  |   Line 23:22:  'setRandomIcon' is assigned a value but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/InvestmentThesis/ThesisSummary/ThesisSummaryCard.jsx
+frontend-1  |   Line 2:17:   'ToastContainer' is defined but never used          no-unused-vars
+frontend-1  |   Line 4:23:   'useSelector' is defined but never used             no-unused-vars
+frontend-1  |   Line 13:28:  'industry_name' is assigned a value but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/IndustryReportSection/IndustryReport.jsx
+frontend-1  |   Line 4:10:  'DataRenderer' is defined but never used   no-unused-vars
+frontend-1  |   Line 6:7:   'data' is assigned a value but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/IndustryReportSection/ReportDropdown.jsx
+frontend-1  |   Line 2:8:   'FAQsComponent' is defined but never used  no-unused-vars
+frontend-1  |   Line 15:8:  'CostFactors' is defined but never used    no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/IndustryReportSection/ReportSectionComponents/swotAnal.jsx
+frontend-1  |   Line 8:9:   'toggleSection' is assigned a value but never used  no-unused-vars
+frontend-1  |   Line 12:9:  'toggleFAQ' is assigned a value but never used      no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/MarketResearchHeader'/MarketResearchHeader.jsx
+frontend-1  |   Line 12:10:  'setFormResponse' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/MarketResearchLayout.jsx
+frontend-1  |   Line 4:8:  'SwotAnal' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/ProtectedLayout/index.jsx
+frontend-1  |   Line 3:8:  'Sidebar' is defined but never used  no-unused-vars
+frontend-1  |   Line 4:8:  'Navbar' is defined but never used   no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/SearchBox/SearchBox.jsx
+frontend-1  |   Line 3:8:  'FuzzySearch' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/Sidebar/CollapsibleSidebar.jsx
+frontend-1  |   Line 20:11:  Headings must have content and the content must be accessible by a screen reader  jsx-a11y/heading-has-content
+frontend-1  | 
+frontend-1  | src/components/projectDetails/index.jsx
+frontend-1  |   Line 25:10:  'ThesisForm' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/projectHeaders/categories/index.jsx
+frontend-1  |   Line 3:24:   'subCategoryList' is defined but never used                  no-unused-vars
+frontend-1  |   Line 5:10:   'MoreOutlined' is defined but never used                     no-unused-vars
+frontend-1  |   Line 6:8:    'AddProgress' is defined but never used                      no-unused-vars
+frontend-1  |   Line 13:8:   'IndustryCheckboxes' is defined but never used               no-unused-vars
+frontend-1  |   Line 14:8:   'CollapsibleSidebar' is defined but never used               no-unused-vars
+frontend-1  |   Line 15:8:   'ThesisCardComponent' is defined but never used              no-unused-vars
+frontend-1  |   Line 16:8:   'IndustryReport' is defined but never used                   no-unused-vars
+frontend-1  |   Line 17:8:   'ReportDropdown' is defined but never used                   no-unused-vars
+frontend-1  |   Line 24:9:   'Option' is assigned a value but never used                  no-unused-vars
+frontend-1  |   Line 27:7:   'SearchBar' is assigned a value but never used               no-unused-vars
+frontend-1  |   Line 58:31:  'setSelectedSubcategory' is assigned a value but never used  no-unused-vars
+frontend-1  |   Line 60:10:  'progress' is assigned a value but never used                no-unused-vars
+frontend-1  |   Line 61:10:  'name' is assigned a value but never used                    no-unused-vars
+frontend-1  |   Line 62:10:  'todoTask' is assigned a value but never used                no-unused-vars
+frontend-1  |   Line 63:10:  'inprogress' is assigned a value but never used              no-unused-vars
+frontend-1  |   Line 64:10:  'done' is assigned a value but never used                    no-unused-vars
+frontend-1  |   Line 66:18:  'setToggle' is assigned a value but never used               no-unused-vars
+frontend-1  | 
+frontend-1  | Search for the keywords to learn more about each warning.
+frontend-1  | To ignore, add // eslint-disable-next-line to the line before.
+frontend-1  | 
+frontend-1  | WARNING in [eslint] 
+frontend-1  | src/App.js
+frontend-1  |   Line 12:8:  'Dashboard' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/ChatBox/index.jsx
+frontend-1  |   Line 158:6:  React Hook useEffect has a missing dependency: 'currentChatSession'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+frontend-1  |   Line 160:9:  'handleAddToWorkspace' is assigned a value but never used                                                              no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/CompanyInsights/CompanyDetails/CompanyDetailsComponent.jsx
+frontend-1  |   Line 2:8:  'PersonIcon' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/InvestmentThesis/ThesisForm.jsx
+frontend-1  |   Line 1:17:   'useEffect' is defined but never used               no-unused-vars
+frontend-1  |   Line 23:10:  'randomIcon' is assigned a value but never used     no-unused-vars
+frontend-1  |   Line 23:22:  'setRandomIcon' is assigned a value but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/InvestmentThesis/ThesisSummary/ThesisSummaryCard.jsx
+frontend-1  |   Line 2:17:   'ToastContainer' is defined but never used          no-unused-vars
+frontend-1  |   Line 4:23:   'useSelector' is defined but never used             no-unused-vars
+frontend-1  |   Line 13:28:  'industry_name' is assigned a value but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/IndustryReportSection/IndustryReport.jsx
+frontend-1  |   Line 4:10:  'DataRenderer' is defined but never used   no-unused-vars
+frontend-1  |   Line 6:7:   'data' is assigned a value but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/IndustryReportSection/ReportDropdown.jsx
+frontend-1  |   Line 2:8:   'FAQsComponent' is defined but never used  no-unused-vars
+frontend-1  |   Line 15:8:  'CostFactors' is defined but never used    no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/IndustryReportSection/ReportSectionComponents/swotAnal.jsx
+frontend-1  |   Line 8:9:   'toggleSection' is assigned a value but never used  no-unused-vars
+frontend-1  |   Line 12:9:  'toggleFAQ' is assigned a value but never used      no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/MarketResearchHeader'/MarketResearchHeader.jsx
+frontend-1  |   Line 12:10:  'setFormResponse' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/MarketResearchLayout.jsx
+frontend-1  |   Line 4:8:  'SwotAnal' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/ProtectedLayout/index.jsx
+frontend-1  |   Line 3:8:  'Sidebar' is defined but never used  no-unused-vars
+frontend-1  |   Line 4:8:  'Navbar' is defined but never used   no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/SearchBox/SearchBox.jsx
+frontend-1  |   Line 3:8:  'FuzzySearch' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/Sidebar/CollapsibleSidebar.jsx
+frontend-1  |   Line 20:11:  Headings must have content and the content must be accessible by a screen reader  jsx-a11y/heading-has-content
+frontend-1  | 
+frontend-1  | src/components/projectDetails/index.jsx
+frontend-1  |   Line 25:10:  'ThesisForm' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/projectHeaders/categories/index.jsx
+frontend-1  |   Line 3:24:   'subCategoryList' is defined but never used                  no-unused-vars
+frontend-1  |   Line 5:10:   'MoreOutlined' is defined but never used                     no-unused-vars
+frontend-1  |   Line 6:8:    'AddProgress' is defined but never used                      no-unused-vars
+frontend-1  |   Line 13:8:   'IndustryCheckboxes' is defined but never used               no-unused-vars
+frontend-1  |   Line 14:8:   'CollapsibleSidebar' is defined but never used               no-unused-vars
+frontend-1  |   Line 15:8:   'ThesisCardComponent' is defined but never used              no-unused-vars
+frontend-1  |   Line 16:8:   'IndustryReport' is defined but never used                   no-unused-vars
+frontend-1  |   Line 17:8:   'ReportDropdown' is defined but never used                   no-unused-vars
+frontend-1  |   Line 24:9:   'Option' is assigned a value but never used                  no-unused-vars
+frontend-1  |   Line 27:7:   'SearchBar' is assigned a value but never used               no-unused-vars
+frontend-1  |   Line 58:31:  'setSelectedSubcategory' is assigned a value but never used  no-unused-vars
+frontend-1  |   Line 60:10:  'progress' is assigned a value but never used                no-unused-vars
+frontend-1  |   Line 61:10:  'name' is assigned a value but never used                    no-unused-vars
+frontend-1  |   Line 62:10:  'todoTask' is assigned a value but never used                no-unused-vars
+frontend-1  |   Line 63:10:  'inprogress' is assigned a value but never used              no-unused-vars
+frontend-1  |   Line 64:10:  'done' is assigned a value but never used                    no-unused-vars
+frontend-1  |   Line 66:18:  'setToggle' is assigned a value but never used               no-unused-vars
+frontend-1  | 
+frontend-1  | webpack compiled with 1 warning
+app-1       | WARNING:  Invalid HTTP request received.
+app-1       | WARNING:  Invalid HTTP request received.
+app-1       | WARNING:  Invalid HTTP request received.
+app-1       | WARNING:  Invalid HTTP request received.
+app-1       | INFO:     43.248.153.235:9876 - "GET /api/rss-feed HTTP/1.1" 200 OK
+app-1       | INFO:     43.248.153.235:9892 - "OPTIONS /api/industries-for-thesis HTTP/1.1" 200 OK
+app-1       | user_query nn nn Growth Rate Aging Population Traditional business model n 
+app-1       | results [{'industry_name': 'retirement-communities-in-the-us', 'industry_code': '0'}, {'industry_name': 'in-home-senior-care-franchises', 'industry_code': '0'}, {'industry_name': 'residential-senior-care-franchises', 'industry_code': '0'}, {'industry_name': 'adult-diaper-manufacturing-in-the-us', 'industry_code': '0'}, {'industry_name': 'adult-day-care-in-the-us', 'industry_code': '0'}, {'industry_name': 'operating-systems-&-productivity-software-publishing-in-the-us-58:59', 'industry_code': '0'}]
+app-1       | INFO:     43.248.153.235:9896 - "POST /api/industries-for-thesis HTTP/1.1" 200 OK
+app-1       | INFO:     43.248.153.235:9953 - "GET /api/fuzzy-search?query=n HTTP/1.1" 200 OK
+app-1       | INFO:     43.248.153.235:9953 - "OPTIONS /api/industry-summary HTTP/1.1" 200 OK
+app-1       | INFO:     43.248.153.235:9956 - "POST /api/industry-summary HTTP/1.1" 200 OK
+app-1       | INFO:     43.248.153.235:10727 - "OPTIONS /api/industry-summary HTTP/1.1" 200 OK
+app-1       | INFO:     43.248.153.235:10728 - "POST /api/industry-summary HTTP/1.1" 200 OK
+app-1       | INFO:     43.248.153.235:10742 - "POST /api/industry-summary HTTP/1.1" 200 OK
+app-1       | INFO:     43.248.153.235:10742 - "POST /api/industry-summary HTTP/1.1" 200 OK
+app-1       | INFO:     43.248.153.235:10742 - "POST /api/industry-summary HTTP/1.1" 200 OK
+app-1       | INFO:     43.248.153.235:10742 - "GET /api/fuzzy-search?query=Fishing%20in%20the%20US HTTP/1.1" 200 OK
+app-1       | INFO:     43.248.153.235:10742 - "POST /api/industry-summary HTTP/1.1" 200 OK
+app-1       | INFO:     67.170.195.101:51957 - "GET /api/rss-feed HTTP/1.1" 200 OK
+app-1       | INFO:     67.170.195.101:52019 - "GET /api/docs HTTP/1.1" 200 OK
+app-1       | INFO:     67.170.195.101:52019 - "GET /api/openapi.json HTTP/1.1" 200 OK
+scraper-1   | INFO:scrapy.utils.log:Scrapy 2.11.2 started (bot: company_data_scraper)
+scraper-1   | 2024-12-06 07:29:52 [scrapy.utils.log] INFO: Scrapy 2.11.2 started (bot: company_data_scraper)
+scraper-1   | INFO:scrapy.utils.log:Versions: lxml 5.3.0.0, libxml2 2.12.9, cssselect 1.2.0, parsel 1.9.1, w3lib 2.2.1, Twisted 24.11.0, Python 3.10.16 (main, Dec  4 2024, 20:37:01) [GCC 12.2.0], pyOpenSSL 24.3.0 (OpenSSL 3.4.0 22 Oct 2024), cryptography 44.0.0, Platform Linux-6.8.0-1019-aws-x86_64-with-glibc2.36
+scraper-1   | 2024-12-06 07:29:52 [scrapy.utils.log] INFO: Versions: lxml 5.3.0.0, libxml2 2.12.9, cssselect 1.2.0, parsel 1.9.1, w3lib 2.2.1, Twisted 24.11.0, Python 3.10.16 (main, Dec  4 2024, 20:37:01) [GCC 12.2.0], pyOpenSSL 24.3.0 (OpenSSL 3.4.0 22 Oct 2024), cryptography 44.0.0, Platform Linux-6.8.0-1019-aws-x86_64-with-glibc2.36
+scraper-1   | INFO:root:Starting scraper with URLs: ['https://www.linkedin.com/company/sun-chemical']
+scraper-1   | 2024-12-06 07:29:52 [root] INFO: Starting scraper with URLs: ['https://www.linkedin.com/company/sun-chemical']
+scraper-1   | INFO:scrapy.addons:Enabled addons:
+scraper-1   | []
+scraper-1   | 2024-12-06 07:29:52 [scrapy.addons] INFO: Enabled addons:
+scraper-1   | []
+scraper-1   | DEBUG:asyncio:Using selector: EpollSelector
+scraper-1   | 2024-12-06 07:29:52 [asyncio] DEBUG: Using selector: EpollSelector
+scraper-1   | DEBUG:scrapy.utils.log:Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+scraper-1   | 2024-12-06 07:29:52 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+scraper-1   | DEBUG:scrapy.utils.log:Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+scraper-1   | 2024-12-06 07:29:52 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+scraper-1   | INFO:scrapy.extensions.telnet:Telnet Password: c11257883b3fcd0e
+scraper-1   | 2024-12-06 07:29:52 [scrapy.extensions.telnet] INFO: Telnet Password: c11257883b3fcd0e
+scraper-1   | INFO:scrapy.middleware:Enabled extensions:
+scraper-1   | ['scrapy.extensions.corestats.CoreStats',
+scraper-1   |  'scrapy.extensions.telnet.TelnetConsole',
+scraper-1   |  'scrapy.extensions.memusage.MemoryUsage',
+scraper-1   |  'scrapy.extensions.feedexport.FeedExporter',
+scraper-1   |  'scrapy.extensions.logstats.LogStats',
+scraper-1   |  'scrapy.extensions.throttle.AutoThrottle']
+scraper-1   | 2024-12-06 07:29:52 [scrapy.middleware] INFO: Enabled extensions:
+scraper-1   | ['scrapy.extensions.corestats.CoreStats',
+scraper-1   |  'scrapy.extensions.telnet.TelnetConsole',
+scraper-1   |  'scrapy.extensions.memusage.MemoryUsage',
+scraper-1   |  'scrapy.extensions.feedexport.FeedExporter',
+scraper-1   |  'scrapy.extensions.logstats.LogStats',
+scraper-1   |  'scrapy.extensions.throttle.AutoThrottle']
+scraper-1   | INFO:scrapy.crawler:Overridden settings:
+scraper-1   | {'AUTOTHROTTLE_ENABLED': True,
+scraper-1   |  'AUTOTHROTTLE_START_DELAY': 3,
+scraper-1   |  'BOT_NAME': 'company_data_scraper',
+scraper-1   |  'DEPTH_LIMIT': None,
+scraper-1   |  'DOWNLOAD_DELAY': 10,
+scraper-1   |  'DOWNLOAD_TIMEOUT': 15,
+scraper-1   |  'FEED_EXPORT_ENCODING': 'utf-8',
+scraper-1   |  'HTTPCACHE_ENABLED': True,
+scraper-1   |  'HTTPCACHE_EXPIRATION_SECS': 86400,
+scraper-1   |  'HTTPCACHE_IGNORE_HTTP_CODES': [500, 502, 503, 504, 429],
+scraper-1   |  'NEWSPIDER_MODULE': 'company_data_scraper.spiders',
+scraper-1   |  'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+scraper-1   |  'RETRY_HTTP_CODES': [500, 502, 503, 504, 429, 404, 301],
+scraper-1   |  'RETRY_TIMES': 10,
+scraper-1   |  'SPIDER_MODULES': ['company_data_scraper.spiders'],
+scraper-1   |  'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+scraper-1   |  'USER_AGENT': 'Mozilla/5.0 (Linux; Android 11; Redmi Note 8 Pro) '
+scraper-1   |                'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile '
+scraper-1   |                'Safari/537.36'}
+scraper-1   | 2024-12-06 07:29:52 [scrapy.crawler] INFO: Overridden settings:
+scraper-1   | {'AUTOTHROTTLE_ENABLED': True,
+scraper-1   |  'AUTOTHROTTLE_START_DELAY': 3,
+scraper-1   |  'BOT_NAME': 'company_data_scraper',
+scraper-1   |  'DEPTH_LIMIT': None,
+scraper-1   |  'DOWNLOAD_DELAY': 10,
+scraper-1   |  'DOWNLOAD_TIMEOUT': 15,
+scraper-1   |  'FEED_EXPORT_ENCODING': 'utf-8',
+scraper-1   |  'HTTPCACHE_ENABLED': True,
+scraper-1   |  'HTTPCACHE_EXPIRATION_SECS': 86400,
+scraper-1   |  'HTTPCACHE_IGNORE_HTTP_CODES': [500, 502, 503, 504, 429],
+scraper-1   |  'NEWSPIDER_MODULE': 'company_data_scraper.spiders',
+scraper-1   |  'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+scraper-1   |  'RETRY_HTTP_CODES': [500, 502, 503, 504, 429, 404, 301],
+scraper-1   |  'RETRY_TIMES': 10,
+scraper-1   |  'SPIDER_MODULES': ['company_data_scraper.spiders'],
+scraper-1   |  'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+scraper-1   |  'USER_AGENT': 'Mozilla/5.0 (Linux; Android 11; Redmi Note 8 Pro) '
+scraper-1   |                'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile '
+scraper-1   |                'Safari/537.36'}
+scraper-1   | INFO:scrapy.middleware:Enabled downloader middlewares:
+scraper-1   | ['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.stats.DownloaderStats',
+scraper-1   |  'scrapy.downloadermiddlewares.httpcache.HttpCacheMiddleware']
+scraper-1   | 2024-12-06 07:29:52 [scrapy.middleware] INFO: Enabled downloader middlewares:
+scraper-1   | ['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+scraper-1   |  'scrapy.downloadermiddlewares.stats.DownloaderStats',
+scraper-1   |  'scrapy.downloadermiddlewares.httpcache.HttpCacheMiddleware']
+scraper-1   | INFO:scrapy.middleware:Enabled spider middlewares:
+scraper-1   | ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+scraper-1   |  'scrapy.spidermiddlewares.referer.RefererMiddleware',
+scraper-1   |  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+scraper-1   |  'scrapy.spidermiddlewares.depth.DepthMiddleware']
+scraper-1   | 2024-12-06 07:29:52 [scrapy.middleware] INFO: Enabled spider middlewares:
+scraper-1   | ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+scraper-1   |  'scrapy.spidermiddlewares.referer.RefererMiddleware',
+scraper-1   |  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+scraper-1   |  'scrapy.spidermiddlewares.depth.DepthMiddleware']
+scraper-1   | INFO:scrapy.middleware:Enabled item pipelines:
+scraper-1   | []
+scraper-1   | 2024-12-06 07:29:52 [scrapy.middleware] INFO: Enabled item pipelines:
+scraper-1   | []
+scraper-1   | INFO:scrapy.core.engine:Spider opened
+scraper-1   | 2024-12-06 07:29:52 [scrapy.core.engine] INFO: Spider opened
+scraper-1   | INFO:scrapy.extensions.logstats:Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+scraper-1   | 2024-12-06 07:29:52 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+scraper-1   | DEBUG:scrapy.extensions.httpcache:Using filesystem cache storage in /app/company_data_scraper/.scrapy/httpcache
+scraper-1   | 2024-12-06 07:29:52 [scrapy.extensions.httpcache] DEBUG: Using filesystem cache storage in /app/company_data_scraper/.scrapy/httpcache
+scraper-1   | INFO:scrapy.extensions.telnet:Telnet console listening on 127.0.0.1:6023
+scraper-1   | 2024-12-06 07:29:52 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+scraper-1   | DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): publicsuffix.org:443
+scraper-1   | 2024-12-06 07:29:53 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): publicsuffix.org:443
+scraper-1   | DEBUG:urllib3.connectionpool:https://publicsuffix.org:443 "GET /list/public_suffix_list.dat HTTP/11" 200 86979
+scraper-1   | 2024-12-06 07:29:53 [urllib3.connectionpool] DEBUG: https://publicsuffix.org:443 "GET /list/public_suffix_list.dat HTTP/11" 200 86979
+scraper-1   | DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.linkedin.com/company/sun-chemical> (referer: None)
+scraper-1   | 2024-12-06 07:29:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.linkedin.com/company/sun-chemical> (referer: None)
+scraper-1   | ********
+scraper-1   | Scraping page: 1 of 1
+scraper-1   | ********
+scraper-1   | DEBUG:scrapy.core.scraper:Scraped from <200 https://www.linkedin.com/company/sun-chemical>
+scraper-1   | {'company_name': 'Sun Chemical', 'linkedin_followers_count': 95483, 'company_logo_url': 'https://media.licdn.com/dms/image/v2/C4E0BAQEkyvYe1K9meQ/company-logo_200_200/company-logo_200_200/0/1630575617044/sun_chemical_logo?e=2147483647&v=beta&t=AphDkvQdstbNB25AfD-HdXfpQih-acn7_xxe_FRTwis', 'about_us': 'Sun Chemical, a member of the DIC Group, is a leading producer of packaging and graphic solutions, color and display technologies, functional products, electronic materials, and products for the automotive and healthcare industries. Together with DIC, Sun Chemical is continuously working to promote and develop sustainable solutions to exceed customer expectations and better the world around us. With combined annual sales of more than $8.5 billion and 22,000+ employees worldwide, the DIC Group companies support a diverse collection of global customers.\n\nSun Chemical Corporation is a subsidiary of Sun Chemical Group Coöperatief U.A., the Netherlands, and is headquartered in Parsippany, New Jersey, U.S.A. \n\nFor more information, please visit our website at www.sunchemical.com.', 'num_of_employees': 'N/A', 'website': 'https://pgo.sunchemical.com/learnmore', 'industry': 'Chemical Manufacturing', 'company_size_approx': '10,001+', 'headquarters': 'Parsippany, NJ', 'type': 'Privately Held', 'specialties': 'N/A', 'founded': 'N/A', 'funding': 'N/A', 'funding_total_rounds': 'N/A', 'funding_option': 'N/A', 'last_funding_round': 'N/A'}
+scraper-1   | 2024-12-06 07:29:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.linkedin.com/company/sun-chemical>
+scraper-1   | {'company_name': 'Sun Chemical', 'linkedin_followers_count': 95483, 'company_logo_url': 'https://media.licdn.com/dms/image/v2/C4E0BAQEkyvYe1K9meQ/company-logo_200_200/company-logo_200_200/0/1630575617044/sun_chemical_logo?e=2147483647&v=beta&t=AphDkvQdstbNB25AfD-HdXfpQih-acn7_xxe_FRTwis', 'about_us': 'Sun Chemical, a member of the DIC Group, is a leading producer of packaging and graphic solutions, color and display technologies, functional products, electronic materials, and products for the automotive and healthcare industries. Together with DIC, Sun Chemical is continuously working to promote and develop sustainable solutions to exceed customer expectations and better the world around us. With combined annual sales of more than $8.5 billion and 22,000+ employees worldwide, the DIC Group companies support a diverse collection of global customers.\n\nSun Chemical Corporation is a subsidiary of Sun Chemical Group Coöperatief U.A., the Netherlands, and is headquartered in Parsippany, New Jersey, U.S.A. \n\nFor more information, please visit our website at www.sunchemical.com.', 'num_of_employees': 'N/A', 'website': 'https://pgo.sunchemical.com/learnmore', 'industry': 'Chemical Manufacturing', 'company_size_approx': '10,001+', 'headquarters': 'Parsippany, NJ', 'type': 'Privately Held', 'specialties': 'N/A', 'founded': 'N/A', 'funding': 'N/A', 'funding_total_rounds': 'N/A', 'funding_option': 'N/A', 'last_funding_round': 'N/A'}
+scraper-1   | INFO:scrapy.core.engine:Closing spider (finished)
+scraper-1   | 2024-12-06 07:29:53 [scrapy.core.engine] INFO: Closing spider (finished)
+scraper-1   | INFO:scrapy.extensions.feedexport:Stored json feed (1 items) in: e1ad6978-b3a3-11ef-8736-0242ac120004.json
+scraper-1   | 2024-12-06 07:29:53 [scrapy.extensions.feedexport] INFO: Stored json feed (1 items) in: e1ad6978-b3a3-11ef-8736-0242ac120004.json
+scraper-1   | INFO:scrapy.statscollectors:Dumping Scrapy stats:
+scraper-1   | {'downloader/request_bytes': 328,
+scraper-1   |  'downloader/request_count': 1,
+scraper-1   |  'downloader/request_method_count/GET': 1,
+scraper-1   |  'downloader/response_bytes': 36960,
+scraper-1   |  'downloader/response_count': 1,
+scraper-1   |  'downloader/response_status_count/200': 1,
+scraper-1   |  'elapsed_time_seconds': 0.936645,
+scraper-1   |  'feedexport/success_count/FileFeedStorage': 1,
+scraper-1   |  'finish_reason': 'finished',
+scraper-1   |  'finish_time': datetime.datetime(2024, 12, 6, 7, 29, 53, 632374, tzinfo=datetime.timezone.utc),
+scraper-1   |  'httpcache/firsthand': 1,
+scraper-1   |  'httpcache/miss': 1,
+scraper-1   |  'httpcache/store': 1,
+scraper-1   |  'httpcompression/response_bytes': 352341,
+scraper-1   |  'httpcompression/response_count': 1,
+scraper-1   |  'item_scraped_count': 1,
+scraper-1   |  'log_count/DEBUG': 8,
+scraper-1   |  'log_count/INFO': 11,
+scraper-1   |  'memusage/max': 65753088,
+scraper-1   |  'memusage/startup': 65753088,
+scraper-1   |  'response_received_count': 1,
+scraper-1   |  'scheduler/dequeued': 1,
+scraper-1   |  'scheduler/dequeued/memory': 1,
+scraper-1   |  'scheduler/enqueued': 1,
+scraper-1   |  'scheduler/enqueued/memory': 1,
+scraper-1   |  'start_time': datetime.datetime(2024, 12, 6, 7, 29, 52, 695729, tzinfo=datetime.timezone.utc)}
+scraper-1   | 2024-12-06 07:29:53 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+scraper-1   | {'downloader/request_bytes': 328,
+scraper-1   |  'downloader/request_count': 1,
+scraper-1   |  'downloader/request_method_count/GET': 1,
+scraper-1   |  'downloader/response_bytes': 36960,
+scraper-1   |  'downloader/response_count': 1,
+scraper-1   |  'downloader/response_status_count/200': 1,
+scraper-1   |  'elapsed_time_seconds': 0.936645,
+scraper-1   |  'feedexport/success_count/FileFeedStorage': 1,
+scraper-1   |  'finish_reason': 'finished',
+scraper-1   |  'finish_time': datetime.datetime(2024, 12, 6, 7, 29, 53, 632374, tzinfo=datetime.timezone.utc),
+scraper-1   |  'httpcache/firsthand': 1,
+scraper-1   |  'httpcache/miss': 1,
+scraper-1   |  'httpcache/store': 1,
+scraper-1   |  'httpcompression/response_bytes': 352341,
+scraper-1   |  'httpcompression/response_count': 1,
+scraper-1   |  'item_scraped_count': 1,
+scraper-1   |  'log_count/DEBUG': 8,
+scraper-1   |  'log_count/INFO': 11,
+scraper-1   |  'memusage/max': 65753088,
+scraper-1   |  'memusage/startup': 65753088,
+scraper-1   |  'response_received_count': 1,
+scraper-1   |  'scheduler/dequeued': 1,
+scraper-1   |  'scheduler/dequeued/memory': 1,
+scraper-1   |  'scheduler/enqueued': 1,
+scraper-1   |  'scheduler/enqueued/memory': 1,
+scraper-1   |  'start_time': datetime.datetime(2024, 12, 6, 7, 29, 52, 695729, tzinfo=datetime.timezone.utc)}
+scraper-1   | INFO:scrapy.core.engine:Spider closed (finished)
+scraper-1   | 2024-12-06 07:29:53 [scrapy.core.engine] INFO: Spider closed (finished)
+scraper-1   | INFO:     172.18.0.2:49852 - "POST /linkedin-company-profile HTTP/1.1" 200 OK
+scraper-1   | INFO:     172.18.0.2:49838 - "POST /crunchbase-company-profile HTTP/1.1" 200 OK
+scraper-1   | INFO:     172.18.0.2:49826 - "POST /owler-company-profile HTTP/1.1" 200 OK
+scraper-1   | INFO:     172.18.0.2:49832 - "POST /pitchbook-company-profile HTTP/1.1" 200 OK
+app-1       | INFO:     67.170.195.101:52255 - "POST /api/company-profile HTTP/1.1" 200 OK
+app-1       | INFO:     43.248.153.235:10965 - "GET /api/rss-feed HTTP/1.1" 200 OK
+app-1       | INFO:     67.170.195.101:50550 - "GET /api/docs HTTP/1.1" 200 OK
+app-1       | INFO:     67.170.195.101:50550 - "GET /api/openapi.json HTTP/1.1" 200 OK
+app-1       | INFO:     67.170.195.101:51288 - "GET /api/docs HTTP/1.1" 200 OK
+app-1       | INFO:     67.170.195.101:51288 - "GET /api/openapi.json HTTP/1.1" 200 OK
+app-1       | INFO:     43.248.153.235:11076 - "GET /api/rss-feed HTTP/1.1" 200 OK
+app-1       | INFO:     67.170.195.101:51951 - "GET /api/rss-feed HTTP/1.1" 200 OK
+app-1       | Failed to fetch feed from https://www.privateequitywire.co.uk/feed/ - Status code: 429
+app-1       | INFO:     43.248.153.235:10101 - "GET /api/rss-feed HTTP/1.1" 200 OK
+app-1       | INFO:     103.203.57.20:52870 - "GET / HTTP/1.1" 404 Not Found
+app-1       | INFO:     43.248.153.235:11026 - "OPTIONS /api/companies?query=industry%20in%20tech HTTP/1.1" 200 OK
+app-1       | INFO:     43.248.153.235:11027 - "GET /api/companies?query=industry%20in%20tech HTTP/1.1" 404 Not Found
+app-1       | INFO:     43.248.153.235:11090 - "GET /api/companies?query=industry%20in%20tech HTTP/1.1" 404 Not Found
+app-1       | INFO:     43.248.153.235:9893 - "GET /api/companies?query=industry%20in%20tech HTTP/1.1" 404 Not Found
+app-1       | INFO:     172.104.210.105:59579 - "GET / HTTP/1.1" 404 Not Found
+app-1       | INFO:     172.105.128.11:51288 - "GET / HTTP/1.1" 404 Not Found
+scraper-1   | INFO:     154.212.141.138:55080 - "GET / HTTP/1.1" 404 Not Found
+scraper-1   | INFO:     103.149.26.200:41760 - "GET / HTTP/1.1" 404 Not Found
+scraper-1   | INFO:     103.149.26.200:41764 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+app-1       | INFO:     122.117.91.90:57267 - "GET / HTTP/1.0" 404 Not Found
+scraper-1   | WARNING:  Invalid HTTP request received.
+app-1       | INFO:     199.45.154.126:54564 - "GET / HTTP/1.1" 404 Not Found
+app-1       | INFO:     199.45.154.126:57672 - "GET / HTTP/1.1" 404 Not Found
+app-1       | WARNING:  Invalid HTTP request received.
+app-1       | WARNING:  Invalid HTTP request received.
+app-1       | WARNING:  Invalid HTTP request received.
+app-1       | WARNING:  Invalid HTTP request received.
+frontend-1  | Compiling...
+app-1       | WARNING:  WatchFiles detected changes in 'app.py', 'api/api_related_companies.py'. Reloading...
+app-1       | INFO:     Shutting down
+app-1       | INFO:     Waiting for application shutdown.
+app-1       | INFO:     Application shutdown complete.
+app-1       | INFO:     Finished server process [9]
+app-1       | INFO:     Started server process [30]
+app-1       | INFO:     Waiting for application startup.
+app-1       | INFO:     Application startup complete.
+frontend-1  | Compiled with warnings.
+frontend-1  | 
+frontend-1  | [eslint] 
+frontend-1  | src/App.js
+frontend-1  |   Line 12:8:  'Dashboard' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/ChatBox/index.jsx
+frontend-1  |   Line 158:6:  React Hook useEffect has a missing dependency: 'currentChatSession'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+frontend-1  |   Line 160:9:  'handleAddToWorkspace' is assigned a value but never used                                                              no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/CompanyInsights/CompanyDetails/CompanyDetailsComponent.jsx
+frontend-1  |   Line 2:8:  'PersonIcon' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/InvestmentThesis/ThesisForm.jsx
+frontend-1  |   Line 1:17:   'useEffect' is defined but never used               no-unused-vars
+frontend-1  |   Line 23:10:  'randomIcon' is assigned a value but never used     no-unused-vars
+frontend-1  |   Line 23:22:  'setRandomIcon' is assigned a value but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/InvestmentThesis/ThesisSummary/ThesisSummaryCard.jsx
+frontend-1  |   Line 2:17:   'ToastContainer' is defined but never used          no-unused-vars
+frontend-1  |   Line 4:23:   'useSelector' is defined but never used             no-unused-vars
+frontend-1  |   Line 13:28:  'industry_name' is assigned a value but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/IndustryReportSection/IndustryReport.jsx
+frontend-1  |   Line 4:10:  'DataRenderer' is defined but never used   no-unused-vars
+frontend-1  |   Line 6:7:   'data' is assigned a value but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/IndustryReportSection/ReportDropdown.jsx
+frontend-1  |   Line 2:8:   'FAQsComponent' is defined but never used  no-unused-vars
+frontend-1  |   Line 15:8:  'CostFactors' is defined but never used    no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/IndustryReportSection/ReportSectionComponents/swotAnal.jsx
+frontend-1  |   Line 8:9:   'toggleSection' is assigned a value but never used  no-unused-vars
+frontend-1  |   Line 12:9:  'toggleFAQ' is assigned a value but never used      no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/MarketResearchHeader'/MarketResearchHeader.jsx
+frontend-1  |   Line 12:10:  'setFormResponse' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/MarketResearchLayout.jsx
+frontend-1  |   Line 4:8:  'SwotAnal' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/ProtectedLayout/index.jsx
+frontend-1  |   Line 3:8:  'Sidebar' is defined but never used  no-unused-vars
+frontend-1  |   Line 4:8:  'Navbar' is defined but never used   no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/SearchBox/SearchBox.jsx
+frontend-1  |   Line 3:8:  'FuzzySearch' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/Sidebar/CollapsibleSidebar.jsx
+frontend-1  |   Line 20:11:  Headings must have content and the content must be accessible by a screen reader  jsx-a11y/heading-has-content
+frontend-1  | 
+frontend-1  | src/components/projectDetails/index.jsx
+frontend-1  |   Line 25:10:  'ThesisForm' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/projectHeaders/categories/index.jsx
+frontend-1  |   Line 3:24:   'subCategoryList' is defined but never used                  no-unused-vars
+frontend-1  |   Line 5:10:   'MoreOutlined' is defined but never used                     no-unused-vars
+frontend-1  |   Line 6:8:    'AddProgress' is defined but never used                      no-unused-vars
+frontend-1  |   Line 13:8:   'IndustryCheckboxes' is defined but never used               no-unused-vars
+frontend-1  |   Line 14:8:   'CollapsibleSidebar' is defined but never used               no-unused-vars
+frontend-1  |   Line 15:8:   'ThesisCardComponent' is defined but never used              no-unused-vars
+frontend-1  |   Line 16:8:   'IndustryReport' is defined but never used                   no-unused-vars
+frontend-1  |   Line 17:8:   'ReportDropdown' is defined but never used                   no-unused-vars
+frontend-1  |   Line 24:9:   'Option' is assigned a value but never used                  no-unused-vars
+frontend-1  |   Line 27:7:   'SearchBar' is assigned a value but never used               no-unused-vars
+frontend-1  |   Line 58:31:  'setSelectedSubcategory' is assigned a value but never used  no-unused-vars
+frontend-1  |   Line 60:10:  'progress' is assigned a value but never used                no-unused-vars
+frontend-1  |   Line 61:10:  'name' is assigned a value but never used                    no-unused-vars
+frontend-1  |   Line 62:10:  'todoTask' is assigned a value but never used                no-unused-vars
+frontend-1  |   Line 63:10:  'inprogress' is assigned a value but never used              no-unused-vars
+frontend-1  |   Line 64:10:  'done' is assigned a value but never used                    no-unused-vars
+frontend-1  |   Line 66:18:  'setToggle' is assigned a value but never used               no-unused-vars
+frontend-1  | 
+frontend-1  | Search for the keywords to learn more about each warning.
+frontend-1  | To ignore, add // eslint-disable-next-line to the line before.
+frontend-1  | 
+frontend-1  | WARNING in [eslint] 
+frontend-1  | src/App.js
+frontend-1  |   Line 12:8:  'Dashboard' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/ChatBox/index.jsx
+frontend-1  |   Line 158:6:  React Hook useEffect has a missing dependency: 'currentChatSession'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+frontend-1  |   Line 160:9:  'handleAddToWorkspace' is assigned a value but never used                                                              no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/CompanyInsights/CompanyDetails/CompanyDetailsComponent.jsx
+frontend-1  |   Line 2:8:  'PersonIcon' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/InvestmentThesis/ThesisForm.jsx
+frontend-1  |   Line 1:17:   'useEffect' is defined but never used               no-unused-vars
+frontend-1  |   Line 23:10:  'randomIcon' is assigned a value but never used     no-unused-vars
+frontend-1  |   Line 23:22:  'setRandomIcon' is assigned a value but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/InvestmentThesis/ThesisSummary/ThesisSummaryCard.jsx
+frontend-1  |   Line 2:17:   'ToastContainer' is defined but never used          no-unused-vars
+frontend-1  |   Line 4:23:   'useSelector' is defined but never used             no-unused-vars
+frontend-1  |   Line 13:28:  'industry_name' is assigned a value but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/IndustryReportSection/IndustryReport.jsx
+frontend-1  |   Line 4:10:  'DataRenderer' is defined but never used   no-unused-vars
+frontend-1  |   Line 6:7:   'data' is assigned a value but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/IndustryReportSection/ReportDropdown.jsx
+frontend-1  |   Line 2:8:   'FAQsComponent' is defined but never used  no-unused-vars
+frontend-1  |   Line 15:8:  'CostFactors' is defined but never used    no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/IndustryReportSection/ReportSectionComponents/swotAnal.jsx
+frontend-1  |   Line 8:9:   'toggleSection' is assigned a value but never used  no-unused-vars
+frontend-1  |   Line 12:9:  'toggleFAQ' is assigned a value but never used      no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/MarketResearchHeader'/MarketResearchHeader.jsx
+frontend-1  |   Line 12:10:  'setFormResponse' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/MarketResearchLayout.jsx
+frontend-1  |   Line 4:8:  'SwotAnal' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/ProtectedLayout/index.jsx
+frontend-1  |   Line 3:8:  'Sidebar' is defined but never used  no-unused-vars
+frontend-1  |   Line 4:8:  'Navbar' is defined but never used   no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/SearchBox/SearchBox.jsx
+frontend-1  |   Line 3:8:  'FuzzySearch' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/Sidebar/CollapsibleSidebar.jsx
+frontend-1  |   Line 20:11:  Headings must have content and the content must be accessible by a screen reader  jsx-a11y/heading-has-content
+frontend-1  | 
+frontend-1  | src/components/projectDetails/index.jsx
+frontend-1  |   Line 25:10:  'ThesisForm' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/projectHeaders/categories/index.jsx
+frontend-1  |   Line 3:24:   'subCategoryList' is defined but never used                  no-unused-vars
+frontend-1  |   Line 5:10:   'MoreOutlined' is defined but never used                     no-unused-vars
+frontend-1  |   Line 6:8:    'AddProgress' is defined but never used                      no-unused-vars
+frontend-1  |   Line 13:8:   'IndustryCheckboxes' is defined but never used               no-unused-vars
+frontend-1  |   Line 14:8:   'CollapsibleSidebar' is defined but never used               no-unused-vars
+frontend-1  |   Line 15:8:   'ThesisCardComponent' is defined but never used              no-unused-vars
+frontend-1  |   Line 16:8:   'IndustryReport' is defined but never used                   no-unused-vars
+frontend-1  |   Line 17:8:   'ReportDropdown' is defined but never used                   no-unused-vars
+frontend-1  |   Line 24:9:   'Option' is assigned a value but never used                  no-unused-vars
+frontend-1  |   Line 27:7:   'SearchBar' is assigned a value but never used               no-unused-vars
+frontend-1  |   Line 58:31:  'setSelectedSubcategory' is assigned a value but never used  no-unused-vars
+frontend-1  |   Line 60:10:  'progress' is assigned a value but never used                no-unused-vars
+frontend-1  |   Line 61:10:  'name' is assigned a value but never used                    no-unused-vars
+frontend-1  |   Line 62:10:  'todoTask' is assigned a value but never used                no-unused-vars
+frontend-1  |   Line 63:10:  'inprogress' is assigned a value but never used              no-unused-vars
+frontend-1  |   Line 64:10:  'done' is assigned a value but never used                    no-unused-vars
+frontend-1  |   Line 66:18:  'setToggle' is assigned a value but never used               no-unused-vars
+frontend-1  | 
+frontend-1  | webpack compiled with 1 warning
+frontend-1  | Compiling...
+app-1       | WARNING:  WatchFiles detected changes in 'app.py', 'api/api_related_companies.py'. Reloading...
+app-1       | INFO:     Shutting down
+app-1       | INFO:     Waiting for application shutdown.
+app-1       | INFO:     Application shutdown complete.
+app-1       | INFO:     Finished server process [30]
+frontend-1  | Compiled with warnings.
+frontend-1  | 
+frontend-1  | [eslint] 
+frontend-1  | src/App.js
+frontend-1  |   Line 12:8:  'Dashboard' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/ChatBox/index.jsx
+frontend-1  |   Line 158:6:  React Hook useEffect has a missing dependency: 'currentChatSession'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+frontend-1  |   Line 160:9:  'handleAddToWorkspace' is assigned a value but never used                                                              no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/CompanyInsights/CompanyDetails/CompanyDetailsComponent.jsx
+frontend-1  |   Line 2:8:  'PersonIcon' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/InvestmentThesis/ThesisForm.jsx
+frontend-1  |   Line 1:17:   'useEffect' is defined but never used               no-unused-vars
+frontend-1  |   Line 23:10:  'randomIcon' is assigned a value but never used     no-unused-vars
+frontend-1  |   Line 23:22:  'setRandomIcon' is assigned a value but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/InvestmentThesis/ThesisSummary/ThesisSummaryCard.jsx
+frontend-1  |   Line 2:17:   'ToastContainer' is defined but never used          no-unused-vars
+frontend-1  |   Line 4:23:   'useSelector' is defined but never used             no-unused-vars
+frontend-1  |   Line 13:28:  'industry_name' is assigned a value but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/IndustryReportSection/IndustryReport.jsx
+frontend-1  |   Line 4:10:  'DataRenderer' is defined but never used   no-unused-vars
+frontend-1  |   Line 6:7:   'data' is assigned a value but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/IndustryReportSection/ReportDropdown.jsx
+frontend-1  |   Line 2:8:   'FAQsComponent' is defined but never used  no-unused-vars
+frontend-1  |   Line 15:8:  'CostFactors' is defined but never used    no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/IndustryReportSection/ReportSectionComponents/swotAnal.jsx
+frontend-1  |   Line 8:9:   'toggleSection' is assigned a value but never used  no-unused-vars
+frontend-1  |   Line 12:9:  'toggleFAQ' is assigned a value but never used      no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/MarketResearchHeader'/MarketResearchHeader.jsx
+frontend-1  |   Line 12:10:  'setFormResponse' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/MarketResearchLayout.jsx
+frontend-1  |   Line 4:8:  'SwotAnal' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/ProtectedLayout/index.jsx
+frontend-1  |   Line 3:8:  'Sidebar' is defined but never used  no-unused-vars
+frontend-1  |   Line 4:8:  'Navbar' is defined but never used   no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/SearchBox/SearchBox.jsx
+frontend-1  |   Line 3:8:  'FuzzySearch' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/Sidebar/CollapsibleSidebar.jsx
+frontend-1  |   Line 20:11:  Headings must have content and the content must be accessible by a screen reader  jsx-a11y/heading-has-content
+frontend-1  | 
+frontend-1  | src/components/projectDetails/index.jsx
+frontend-1  |   Line 25:10:  'ThesisForm' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/projectHeaders/categories/index.jsx
+frontend-1  |   Line 3:24:   'subCategoryList' is defined but never used                  no-unused-vars
+frontend-1  |   Line 5:10:   'MoreOutlined' is defined but never used                     no-unused-vars
+frontend-1  |   Line 6:8:    'AddProgress' is defined but never used                      no-unused-vars
+frontend-1  |   Line 13:8:   'IndustryCheckboxes' is defined but never used               no-unused-vars
+frontend-1  |   Line 14:8:   'CollapsibleSidebar' is defined but never used               no-unused-vars
+frontend-1  |   Line 15:8:   'ThesisCardComponent' is defined but never used              no-unused-vars
+frontend-1  |   Line 16:8:   'IndustryReport' is defined but never used                   no-unused-vars
+frontend-1  |   Line 17:8:   'ReportDropdown' is defined but never used                   no-unused-vars
+frontend-1  |   Line 24:9:   'Option' is assigned a value but never used                  no-unused-vars
+frontend-1  |   Line 27:7:   'SearchBar' is assigned a value but never used               no-unused-vars
+frontend-1  |   Line 58:31:  'setSelectedSubcategory' is assigned a value but never used  no-unused-vars
+frontend-1  |   Line 60:10:  'progress' is assigned a value but never used                no-unused-vars
+frontend-1  |   Line 61:10:  'name' is assigned a value but never used                    no-unused-vars
+frontend-1  |   Line 62:10:  'todoTask' is assigned a value but never used                no-unused-vars
+frontend-1  |   Line 63:10:  'inprogress' is assigned a value but never used              no-unused-vars
+frontend-1  |   Line 64:10:  'done' is assigned a value but never used                    no-unused-vars
+frontend-1  |   Line 66:18:  'setToggle' is assigned a value but never used               no-unused-vars
+frontend-1  | 
+frontend-1  | Search for the keywords to learn more about each warning.
+frontend-1  | To ignore, add // eslint-disable-next-line to the line before.
+frontend-1  | 
+frontend-1  | WARNING in [eslint] 
+frontend-1  | src/App.js
+frontend-1  |   Line 12:8:  'Dashboard' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/ChatBox/index.jsx
+frontend-1  |   Line 158:6:  React Hook useEffect has a missing dependency: 'currentChatSession'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+frontend-1  |   Line 160:9:  'handleAddToWorkspace' is assigned a value but never used                                                              no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/CompanyInsights/CompanyDetails/CompanyDetailsComponent.jsx
+frontend-1  |   Line 2:8:  'PersonIcon' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/InvestmentThesis/ThesisForm.jsx
+frontend-1  |   Line 1:17:   'useEffect' is defined but never used               no-unused-vars
+frontend-1  |   Line 23:10:  'randomIcon' is assigned a value but never used     no-unused-vars
+frontend-1  |   Line 23:22:  'setRandomIcon' is assigned a value but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/InvestmentThesis/ThesisSummary/ThesisSummaryCard.jsx
+frontend-1  |   Line 2:17:   'ToastContainer' is defined but never used          no-unused-vars
+frontend-1  |   Line 4:23:   'useSelector' is defined but never used             no-unused-vars
+frontend-1  |   Line 13:28:  'industry_name' is assigned a value but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/IndustryReportSection/IndustryReport.jsx
+frontend-1  |   Line 4:10:  'DataRenderer' is defined but never used   no-unused-vars
+frontend-1  |   Line 6:7:   'data' is assigned a value but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/IndustryReportSection/ReportDropdown.jsx
+frontend-1  |   Line 2:8:   'FAQsComponent' is defined but never used  no-unused-vars
+frontend-1  |   Line 15:8:  'CostFactors' is defined but never used    no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/IndustryReportSection/ReportSectionComponents/swotAnal.jsx
+frontend-1  |   Line 8:9:   'toggleSection' is assigned a value but never used  no-unused-vars
+frontend-1  |   Line 12:9:  'toggleFAQ' is assigned a value but never used      no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/MarketResearchHeader'/MarketResearchHeader.jsx
+frontend-1  |   Line 12:10:  'setFormResponse' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/MarketResearch/MarketResearchLayout.jsx
+frontend-1  |   Line 4:8:  'SwotAnal' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/ProtectedLayout/index.jsx
+frontend-1  |   Line 3:8:  'Sidebar' is defined but never used  no-unused-vars
+frontend-1  |   Line 4:8:  'Navbar' is defined but never used   no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/SearchBox/SearchBox.jsx
+frontend-1  |   Line 3:8:  'FuzzySearch' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/Sidebar/CollapsibleSidebar.jsx
+frontend-1  |   Line 20:11:  Headings must have content and the content must be accessible by a screen reader  jsx-a11y/heading-has-content
+frontend-1  | 
+frontend-1  | src/components/projectDetails/index.jsx
+frontend-1  |   Line 25:10:  'ThesisForm' is defined but never used  no-unused-vars
+frontend-1  | 
+frontend-1  | src/components/projectHeaders/categories/index.jsx
+frontend-1  |   Line 3:24:   'subCategoryList' is defined but never used                  no-unused-vars
+frontend-1  |   Line 5:10:   'MoreOutlined' is defined but never used                     no-unused-vars
+frontend-1  |   Line 6:8:    'AddProgress' is defined but never used                      no-unused-vars
+frontend-1  |   Line 13:8:   'IndustryCheckboxes' is defined but never used               no-unused-vars
+frontend-1  |   Line 14:8:   'CollapsibleSidebar' is defined but never used               no-unused-vars
+frontend-1  |   Line 15:8:   'ThesisCardComponent' is defined but never used              no-unused-vars
+frontend-1  |   Line 16:8:   'IndustryReport' is defined but never used                   no-unused-vars
+frontend-1  |   Line 17:8:   'ReportDropdown' is defined but never used                   no-unused-vars
+frontend-1  |   Line 24:9:   'Option' is assigned a value but never used                  no-unused-vars
+frontend-1  |   Line 27:7:   'SearchBar' is assigned a value but never used               no-unused-vars
+frontend-1  |   Line 58:31:  'setSelectedSubcategory' is assigned a value but never used  no-unused-vars
+frontend-1  |   Line 60:10:  'progress' is assigned a value but never used                no-unused-vars
+frontend-1  |   Line 61:10:  'name' is assigned a value but never used                    no-unused-vars
+frontend-1  |   Line 62:10:  'todoTask' is assigned a value but never used                no-unused-vars
+frontend-1  |   Line 63:10:  'inprogress' is assigned a value but never used              no-unused-vars
+frontend-1  |   Line 64:10:  'done' is assigned a value but never used                    no-unused-vars
+frontend-1  |   Line 66:18:  'setToggle' is assigned a value but never used               no-unused-vars
+frontend-1  | 
+frontend-1  | webpack compiled with 1 warning
+app-1       | INFO:     Started server process [36]
+app-1       | INFO:     Waiting for application startup.
+app-1       | INFO:     Application startup complete.
+app-1       | WARNING:  WatchFiles detected changes in 'app.py', 'api/api_related_companies.py'. Reloading...
+app-1       | INFO:     Shutting down
+app-1       | INFO:     Waiting for application shutdown.
+app-1       | INFO:     Application shutdown complete.
+app-1       | INFO:     Finished server process [36]
+app-1       | INFO:     Started server process [42]
+app-1       | INFO:     Waiting for application startup.
+app-1       | INFO:     Application startup complete.
+scraper-1   | INFO:     Received SIGTERM, exiting.
+scraper-1   | INFO:     Terminated child process [8]
+scraper-1   | INFO:     Terminated child process [9]
+scraper-1   | INFO:     Terminated child process [10]
+scraper-1   | INFO:     Terminated child process [11]
+scraper-1   | INFO:     Terminated child process [12]
+scraper-1   | INFO:     Terminated child process [13]
+scraper-1   | INFO:     Terminated child process [14]
+scraper-1   | INFO:     Terminated child process [15]
+scraper-1   | INFO:     Waiting for child process [8]
+scraper-1   | INFO:     Shutting down
+scraper-1   | INFO:     Shutting down
+scraper-1   | INFO:     Shutting down
+scraper-1   | INFO:     Shutting down
+scraper-1   | INFO:     Shutting down
+scraper-1   | INFO:     Shutting down
+scraper-1   | INFO:     Shutting down
+scraper-1   | INFO:     Shutting down
+scraper-1   | INFO:     Waiting for application shutdown.
+scraper-1   | INFO:     Waiting for application shutdown.
+scraper-1   | INFO:     Waiting for application shutdown.
+scraper-1   | INFO:     Waiting for application shutdown.
+scraper-1   | INFO:     Application shutdown complete.
+scraper-1   | INFO:     Application shutdown complete.
+scraper-1   | INFO:     Application shutdown complete.
+scraper-1   | INFO:     Finished server process [11]
+scraper-1   | INFO:     Finished server process [9]
+scraper-1   | INFO:     Finished server process [12]
+scraper-1   | INFO:     Application shutdown complete.
+scraper-1   | INFO:     Finished server process [13]
+scraper-1   | INFO:     Waiting for application shutdown.
+scraper-1   | INFO:     Application shutdown complete.
+scraper-1   | INFO:     Waiting for application shutdown.
+scraper-1   | INFO:     Finished server process [14]
+scraper-1   | INFO:     Application shutdown complete.
+scraper-1   | INFO:     Finished server process [15]
+scraper-1   | INFO:     Waiting for application shutdown.
+scraper-1   | INFO:     Application shutdown complete.
+scraper-1   | INFO:     Finished server process [8]
+scraper-1   | INFO:     Waiting for application shutdown.
+scraper-1   | INFO:     Application shutdown complete.
+scraper-1   | INFO:     Finished server process [10]
+scraper-1   | INFO:     Waiting for child process [9]
+scraper-1   | INFO:     Waiting for child process [10]
+scraper-1   | INFO:     Waiting for child process [11]
+scraper-1   | INFO:     Waiting for child process [12]
+scraper-1   | INFO:     Waiting for child process [13]
+scraper-1   | INFO:     Waiting for child process [14]
+scraper-1   | INFO:     Waiting for child process [15]
+scraper-1   | INFO:     Stopping parent process [1]
+frontend-1  | npm error path /app
+frontend-1  | npm error command failed
+frontend-1  | npm error signal SIGTERM
+frontend-1  | npm error command sh -c react-scripts start
+frontend-1  | npm notice
+frontend-1  | npm notice New minor version of npm available! 10.8.2 -> 10.9.2
+frontend-1  | npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.9.2
+frontend-1  | npm notice To update run: npm install -g npm@10.9.2
+frontend-1  | npm notice
+frontend-1  | npm error A complete log of this run can be found in: /root/.npm/_logs/2024-12-06T07_09_36_240Z-debug-0.log
+[Kscraper-1 exited with code 0
+[Kfrontend-1 exited with code 1
+[Kapp-1 exited with code 137
