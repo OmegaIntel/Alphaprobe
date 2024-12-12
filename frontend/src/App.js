@@ -13,6 +13,12 @@ import Dashboard from "./components/Dashboard";
 import ProtectedLayout from "./components/ProtectedLayout";
 import Categories from "./components/projectHeaders/categories";
 import DocumentsWrapper from "./components/FileUploadComponent/wrapper";
+import * as amplitude from '@amplitude/analytics-browser';
+
+
+amplitude.init('b07260e647c7c3cc3c25aac93aa17db8', undefined, {
+  defaultTracking: true, // Automatically tracks page views and session properties
+});
 
 const App = () => {
   const [token, setToken] = useState(localStorage.getItem("token") || "");
