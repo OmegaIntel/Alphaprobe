@@ -20,7 +20,7 @@ const Sidebar = ({ isOpen, onClose, data }) => {
   };
 
   return (
-    <div className={`fixed right-0 top-0 w-1/3 h-full bg-stone-900 p-4 shadow-lg transform scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800 transition-transform duration-300 ${isOpen ? 'translate-x-0 ' : 'translate-x-full'}`}>
+    <div className={`fixed right-0 top-0 w-[30%] h-full bg-stone-900 p-4 shadow-lg transform scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800 transition-transform duration-300 ${isOpen ? 'translate-x-0 ' : 'translate-x-full'}`}>
       <button onClick={onClose} className="text-red-500 absolute top-4 right-4">
         Close
       </button>
@@ -29,16 +29,16 @@ const Sidebar = ({ isOpen, onClose, data }) => {
         <table className="w-full text-white">
           <thead>
             <tr>
-              <th className="px-4 py-2">S. No.</th>
-              <th className="px-4 py-2">Title</th>
+              <th className="px-4 py-2">Page No.</th>
+              <th className="px-4 py-2">Report</th>
               <th className="px-4 py-2">Expand</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className='text-sm'>
             {data.map((item, index) => (
               <React.Fragment key={index}>
                 <tr>
-                  <td className="border px-4 py-2">{index + 1}</td>
+                  <td className="border px-4 py-2">{item.metadata['x-amz-bedrock-kb-document-page-number']}</td>
                   <td className="border px-4 py-2 cursor-pointer" onClick={() => toggleRow(index)}>{item.metadata['x-amz-bedrock-kb-source-uri'].split('/').pop()}</td>
                   <td className="border px-4 py-2 text-center cursor-pointer" onClick={() => toggleRow(index)}>{expandedRow === index ? '-' : '+'}</td>
                 </tr>
@@ -60,7 +60,7 @@ const Sidebar = ({ isOpen, onClose, data }) => {
                           />
                         </div>
                       ) : (
-                        <div className="mt-2 overflow-auto scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800" style={{ maxHeight: '150px' }}>{item.chunk_content}</div>
+                        <div className="mt-2 overflow-auto scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800" style={{ maxHeight: '300px' }}>{item.chunk_content}</div>
                       )}
                     </td>
                   </tr>

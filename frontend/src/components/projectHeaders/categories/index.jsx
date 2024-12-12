@@ -20,6 +20,7 @@ import MarketResearchLayout from "../../MarketResearch/MarketResearchLayout";
 import CompanyInsightslayout from "../../CompanyInsights/CompanyInsightslayout";
 import SearchBox from "../../SearchBox/SearchBox";
 import DashboardLayout from "../../Dashboard/DashboardLayout";
+import DocumentSummary from "../../DocumentAnalysis/DocumentSummary";
 
 const { Option } = Select;
 
@@ -213,8 +214,19 @@ const Categories = () => {
             <>
               <div className="flex-grow overflow-y-auto bg-[#0d0d0d] ml-1 scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800">
                 <div className="p-3">
+                
                   {/* <IndustryReport /> */}
                   <MarketResearchLayout />
+                </div>
+              </div>
+            </>
+          ) :activeCategory === "Document Analysis" ? (
+            <>
+              <div className="flex-grow overflow-y-auto bg-[#0d0d0d] ml-1 scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800">
+                <div className="p-3">
+              
+                  {/* <IndustryReport /> */}
+                  <DocumentSummary />
                 </div>
               </div>
             </>
