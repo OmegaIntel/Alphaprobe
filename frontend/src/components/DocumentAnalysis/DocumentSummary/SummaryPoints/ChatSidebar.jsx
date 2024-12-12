@@ -60,7 +60,7 @@ const Sidebar = ({ isOpen, onClose, data }) => {
                           />
                         </div>
                       ) : (
-                        <div className="mt-2 overflow-auto scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800" style={{ maxHeight: '310px' }}>{item.chunk_content}</div>
+                        <div className="mt-2 overflow-auto scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800" style={{ maxHeight: '300px' }}>{item.chunk_content}</div>
                       )}
                     </td>
                   </tr>
