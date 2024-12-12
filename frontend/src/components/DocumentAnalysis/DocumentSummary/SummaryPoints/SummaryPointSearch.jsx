@@ -1,21 +1,51 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SearchIcon from "@mui/icons-material/Search";
+import { useDispatch } from 'react-redux';
+import {
+  addDocumentSearchResult,
+  updateDocumentSearchResult,
+  deleteDocumentSearchResult
+} from "../../../../redux/documentSearchResultSlice";
+import { API_BASE_URL, token } from "../../../../services/index";
+
 
 const SummaryPointSearch = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [sessionId, setSessionId] = useState(localStorage.getItem("rag_session_id") || "");
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Load session ID from localStorage when component mounts
+    const storedSessionId = localStorage.getItem("rag_session_id");
+    if (storedSessionId) {
+      setSessionId(storedSessionId);
+    }
+  }, []);
 
   const handleSearch = async () => {
     if (!searchQuery.trim()) return; // Prevent empty searches
     try {
-      const response = await fetch("https://api.example.com/search", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ query: searchQuery }),
+      const endpoint = `${API_BASE_URL}/api/rag-search?query=${encodeURIComponent(searchQuery)}`;
+      const headers = {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`,
+      };
+      // Include the session ID in the request header only if it is available
+      if (sessionId) {
+        headers["Session-ID"] = sessionId;
+      }
+      const response = await fetch(endpoint, {
+        method: "GET",
+        headers: headers,
       });
       const data = await response.json();
+      dispatch(addDocumentSearchResult(data));
       console.log("Search results:", data);
+      // Update the session ID with new one from the response if it's different and exists
+      if (data.session_id && data.session_id !== sessionId) {
+        setSessionId(data.session_id);
+        localStorage.setItem("rag_session_id", data.session_id);
+      }
     } catch (error) {
       console.error("Error during search:", error);
     }
@@ -28,7 +58,7 @@ const SummaryPointSearch = () => {
   };
 
   return (
-    <div className="flex justify-center items-center w-full  p-4">
+    <div className="flex justify-center items-center w-full p-4">
       <div className="relative w-full max-w-md">
         <SearchIcon
           className="absolute left-3 top-[0.8rem] text-gray-400 cursor-pointer"

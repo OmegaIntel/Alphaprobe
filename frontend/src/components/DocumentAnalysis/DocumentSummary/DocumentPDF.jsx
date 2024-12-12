@@ -7,10 +7,19 @@ import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout"; // For s
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/search/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
+import { useSelector } from "react-redux";
+import Collapsible from "../../CollapsibleDiv/CollapsibleDiv";
 
 const DocumentPDF = ({ pdfUrl, highlightText, heading }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [rotation, setRotation] = useState(0); // For rotating pages
+  const documentSummaryResponse = useSelector(
+    (state) => state.documentSearchResults
+  );
+
+  console.log("DocumentSummaryResponse", documentSummaryResponse);
+  const agentResponse = documentSummaryResponse?.agent_response;
+  console.log("AgentResponse", agentResponse);
 
   // Initialize plugins
   const searchPluginInstance = searchPlugin();
@@ -29,7 +38,7 @@ const DocumentPDF = ({ pdfUrl, highlightText, heading }) => {
   }, [highlightText]);
 
   return (
-    <div className="h-screen w-2/5 p-4">
+    <div className="h-screen overflow-auto p-4">
       {/* Header with Controls */}
       <div className="flex justify-between items-center mb-4">
         {heading && <h2 className="text-xl font-bold">{heading}</h2>}
@@ -134,9 +143,29 @@ const DocumentPDF = ({ pdfUrl, highlightText, heading }) => {
         </Search>
       </div> */}
 
+      <div>
+        <div className="border h-full">
+          <Worker
+            workerUrl={`https://unpkg.com/pdfjs-dist@3.9.179/build/pdf.worker.min.js`}
+          >
+            <Viewer
+              fileUrl={pdfUrl}
+              plugins={[
+                searchPluginInstance,
+                zoomPluginInstance,
+                defaultLayoutPluginInstance,
+              ]}
+              defaultScale={SpecialZoomLevel.PageWidth}
+              rotation={rotation}
+            />
+          </Worker>
+        </div>
+      </div>
       {/* PDF Viewer */}
-      <div className="border h-full">
-        <Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.9.179/build/pdf.worker.min.js`}>
+      {/* <div className="border">
+        <Worker
+          workerUrl={`https://unpkg.com/pdfjs-dist@3.9.179/build/pdf.worker.min.js`}
+        >
           <Viewer
             fileUrl={pdfUrl}
             plugins={[
@@ -148,7 +177,7 @@ const DocumentPDF = ({ pdfUrl, highlightText, heading }) => {
             rotation={rotation}
           />
         </Worker>
-      </div>
+      </div> */}
     </div>
   );
 };
