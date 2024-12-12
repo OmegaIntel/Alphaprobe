@@ -16,6 +16,9 @@ const companyInsightSlice = createSlice({
       state.loading = false;
       state.data = action.payload;
     },
+    clearCompanyInsight: (state) => {
+      state.data = null; 
+    },
     fetchCompanyInsightFailure(state, action) {
       state.loading = false;
       state.error = action.payload;
@@ -23,5 +26,5 @@ const companyInsightSlice = createSlice({
   }
 });
 
-export const { fetchCompanyInsightStart, fetchCompanyInsightSuccess, fetchCompanyInsightFailure } = companyInsightSlice.actions;
+export const { fetchCompanyInsightStart, fetchCompanyInsightSuccess, fetchCompanyInsightFailure ,clearCompanyInsight} = companyInsightSlice.actions;
 export default companyInsightSlice.reducer;

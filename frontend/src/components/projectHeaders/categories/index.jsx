@@ -126,7 +126,7 @@ const Categories = () => {
     },
     {
       id: 3,
-      question: "What industry characteristics are most import to you ?",
+      question: "What industry characteristics are most important to you ?",
       type: "select",
       options: [
         "Growth Rate",
@@ -137,7 +137,7 @@ const Categories = () => {
     },
     {
       id: 4,
-      question: "Are there any specific mega-trend you want to capitalize on ?",
+      question: "Are there any specific mega-trends you want to capitalize on ?",
       type: "select",
       options: [
         "Aging Population",
@@ -155,7 +155,7 @@ const Categories = () => {
     {
       id: 6,
       question:
-        "Anyhting else we should consider in coming up with investment thesis ?",
+        "Anything else we should consider in coming up with investment thesis ?",
       type: "text",
     },
   ];

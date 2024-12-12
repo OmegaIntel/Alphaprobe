@@ -73,12 +73,12 @@ const CompanyDetailsComponent = ({ data }) => {
               </div>
             </div>
 
-            <div className="mt-14 space-y-5 w-3/4">
+            {/* <div className="mt-14 space-y-5 w-3/4">
               <p className="text-gray-400 text-xl font-semibold">About</p>
               <p className="text-gray-300/60 text-lg">
                 {data.result.company_about_us ?? "N/A"}
               </p>
-            </div>
+            </div> */}
             <div className="my-10 space-y-5 w-full">
               <p className="text-gray-400 text-xl font-semibold">Description</p>
               <p className="text-gray-300/60 text-lg">

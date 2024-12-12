@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   setFormResponse,
-  updateSelectedIndustries, 
+  updateSelectedIndustries,
+ 
 } from "../../../redux/formResponseSlice";
 import EditIcon from "@mui/icons-material/Edit";
 import DoneIcon from "@mui/icons-material/Done";

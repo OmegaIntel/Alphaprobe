@@ -8,27 +8,27 @@ const sections = [
   {
     name: "Generate an Investment Thesis",
     description:
-      "Fill out a questionnaire and Omega will suggest industries that fit your investment criteria",
+      "Identify key investment opportunities by creating a personalized thesis based on your criteria.",
     icon: StorageIcon,
     route: "Investment Thesis",
   },
   {
     name: "Browse Companies",
     description:
-      "Setup a Kickoff call with Management. Send a meeting invite using templates",
+      "Explore potential investment targets and learn more about their operations and offerings.",
     icon: CorporateFareIcon,
     route: "Company Insights" ,
   },
   {
     name: "Browse Industries",
-    description: "View recently suggested and viewed companies",
+    description: "Discover industries aligned with your investment strategy and analyze recent trends.",
     icon: CellTowerIcon,
     route: "Market Research",
   },
   {
     name: "Due Diligence Deal Room",
     description:
-      "Manage the deals in your pipeline from discovery through acquisition",
+      "Organize, evaluate, and manage deals through each stage of the acquisition process.",
     icon: SpaceDashboardIcon,
     route: null,
   },
