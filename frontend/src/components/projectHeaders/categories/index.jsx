@@ -185,11 +185,11 @@ const Categories = () => {
               ))}
             </div>
             
-            <div className="my-3">
+            {/* <div className="my-3">
               {activeCategory === "Company Insights" && (<SearchBox section={activeCategory}/>)}
                
-               {/* <SearchBar placeholder={activeCategory}/> */}
-            </div>
+              
+            </div> */}
           </div>
           {}
 
