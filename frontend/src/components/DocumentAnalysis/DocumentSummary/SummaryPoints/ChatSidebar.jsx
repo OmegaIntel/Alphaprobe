@@ -57,6 +57,7 @@ const Sidebar = ({ isOpen, onClose, data }) => {
                             pdfUrl={item.metadata.presigned_url}
                             highlightText="" // Any specific text to highlight
                             heading="View Document" // Or any dynamic heading
+                            pageNumber={item.metadata['x-amz-bedrock-kb-document-page-number']}
                           />
                         </div>
                       ) : (
