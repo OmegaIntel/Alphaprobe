@@ -216,17 +216,17 @@ const Categories = () => {
                 <div className="p-3">
                 
                   {/* <IndustryReport /> */}
-                  <MarketResearchLayout />
+                  <DocumentSummary />
                 </div>
               </div>
             </>
-          ) :activeCategory === "Document Analysis" ? (
+          ) :activeCategory === "Industry Insights" ? (
             <>
               <div className="flex-grow overflow-y-auto bg-[#0d0d0d] ml-1 scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800">
                 <div className="p-3">
               
                   {/* <IndustryReport /> */}
-                  <DocumentSummary />
+                  <MarketResearchLayout />
                 </div>
               </div>
             </>

@@ -88,7 +88,7 @@ export const activeItems = [
   "Confirm Revenue Growth Projections",
   "Verify Working Capital Requirements",
 ];
-export const categoryList = ["Dashboard","Investment Thesis", "Market Research" , "Document Analysis","Company Insights",];
+export const categoryList = ["Dashboard","Investment Thesis", "Market Research" , "Industry Insights","Company Insights",];
 
 export const documentAnalysisList = ["Summary","Document Analysis", "Financial Data" ,"Saved Data",];
 

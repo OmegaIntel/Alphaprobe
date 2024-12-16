@@ -15,7 +15,7 @@ export const chatSlice = createSlice({
       state.interactions.push({
         id: action.payload.id, // Creating a unique ID for the interaction
         query: action.payload.query,
-        response: action.payload.response || "Generating report..."
+        response: action.payload.response || "Generating response..."
       });
     },
     updateInteractionResponse: (state, action) => {
