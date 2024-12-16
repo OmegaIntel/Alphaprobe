@@ -23,14 +23,14 @@ const sections = [
     name: "Browse Industries",
     description: "Discover industries aligned with your investment strategy and analyze recent trends.",
     icon: CellTowerIcon,
-    route: "Market Research",
+    route: "Industry Insights",
   },
   {
-    name: "Due Diligence Deal Room",
+    name: "Market Research",
     description:
-      "Organize, evaluate, and manage deals through each stage of the acquisition process.",
+      "Comprehensive Market Research from Trusted Providers.",
     icon: SpaceDashboardIcon,
-    route: null,
+    route: "Market Research",
   },
 ];
 
