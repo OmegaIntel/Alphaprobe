@@ -31,6 +31,14 @@ const IndustryHeader = () => {
     }
   }, [formResponse]);
 
+  useEffect(() => {
+    if (industries.length > 0) {
+      handleIndustryToggle(industries[0]);
+    }
+    // This effect should only run once after the component mounts,
+    // hence the empty dependency array.
+  }, []);
+
   const handleEditToggle = () => {
     setIsEditing((prev) => !prev);
   };
@@ -46,13 +54,20 @@ const IndustryHeader = () => {
       })
     );
   };
+  
+  const formatIndustryName = (name) => {
+    return name
+      .replace(/[-_]/g, ' ') // Replace all hyphens and underscores with spaces
+      .replace(/\b\w/g, char => char.toUpperCase()); // Capitalize the first letter of each word
+  };
+  
 
   const fetchIndustrySummary = async (industry) => {
     const payload = {
       data: {
         source: "IBIS",
         industry_name: industry.industry_name,
-        industry_code: industry.industry_code,
+        industry_code: "0",
       },
     };
 
@@ -154,7 +169,7 @@ const IndustryHeader = () => {
               className={`flex items-center space-x-3 industry-button text-white rounded-md truncate transition-colors duration-300 
               ${
                 selectedIndustries.some(
-                  (i) => i.industry_code === industry.industry_code
+                  (i) => i.industry_name === industry.industry_name
                 )
                   ? "bg-[#252525]"
                   : "bg-gray-950 hover:bg-[#252525]"
@@ -166,7 +181,8 @@ const IndustryHeader = () => {
                 title={`${industry.industry_code} - ${industry.industry_name}`}
                 onClick={() => handleIndustryToggle(industry)}
               >
-                {industry.industry_name}
+                {formatIndustryName(industry.industry_name)}
+                {/* {industry.industry_name} */}
               </button>
               {isEditing && (
                 <button

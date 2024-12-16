@@ -1,188 +1,92 @@
-// import React from 'react'
-
-// const CompanyInsightSidebar = () => {
-//   return (
-//     <div>CompanyInsightSidebar</div>
-//   )
-// }
-
-// export default CompanyInsightSidebar
-
 import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import {
-  setFormResponse,
-  updateSelectedIndustries,
- 
-} from "../../../redux/formResponseSlice";
-import EditIcon from "@mui/icons-material/Edit";
-import DoneIcon from "@mui/icons-material/Done";
-import FuzzySearch from "../../SearchBox/FuzzySearch";
+import { useDispatch } from "react-redux";
+
 import { notification } from "antd";
-import { setSummaryData } from "../../../redux/industrySlice";
-import { API_BASE_URL , token } from "../../../services";
-// Replace with your API base URL
+import { API_BASE_URL, token } from "../../../services";
+import { fetchCompanyInsightFailure, fetchCompanyInsightSuccess } from "../../../redux/companyInsightsSlice";
 
 const CompanyInsightSidebar = () => {
   const dispatch = useDispatch();
-  const formResponse = useSelector((state) => state.formResponse.data);
-  const selectedIndustries = useSelector(
-    (state) => state.formResponse.selectedIndustries
-  );
   const [isEditing, setIsEditing] = useState(false);
-  const [industries, setIndustries] = useState(formResponse?.result || []);
+  const [items, setItems] = useState([]);
 
-  // Ensure industries is not empty even if formResponse is null
+  // Load items from localStorage on component mount
   useEffect(() => {
-    if (!formResponse || !formResponse.result) {
-      setIndustries([]);
-    } else {
-      setIndustries(formResponse.result);
+    const savedResults = localStorage.getItem("searchResults");
+    if (savedResults) {
+      setItems(JSON.parse(savedResults));
     }
-  }, [formResponse]);
+  }, []);
 
   const handleEditToggle = () => {
-    setIsEditing((prev) => !prev);
+    setIsEditing(prev => !prev);
   };
 
-  const handleRemoveIndustry = (industryName) => {
-    setIndustries((prev) =>
-      prev.filter((industry) => industry.industry_name !== industryName)
-    );
-    dispatch(
-      updateSelectedIndustries({
-        industry_name: industryName,
-        industry_code: null, // Assuming removal logic
-      })
-    );
+  const handleRemoveItem = (itemName) => {
+    const updatedItems = items.filter(item => item.name !== itemName);
+    setItems(updatedItems);
+    localStorage.setItem("searchResults", JSON.stringify(updatedItems));
   };
 
-  const fetchIndustrySummary = async (industry) => {
-    const payload = {
-      data: {
-        source: "IBIS",
-        industry_name: industry.industry_name,
-        industry_code: industry.industry_code,
-      },
-    };
-
+  const handleSelectItem = async (companyName) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/industry-summary`, {
+      const response = await fetch(`${API_BASE_URL}/api/company-profile`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: token, // Replace with your actual token
+          Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({ data: { company_name: companyName } })
       });
 
-      const result = await response.json();
-
-      if (!result.result || result.result.length === 0) {
+      if (response.ok) {
+        const result = await response.json();
+        dispatch(fetchCompanyInsightSuccess(result));
+        console.log("Search Response:", result);
+      } else {
+        const error = await response.text();
+        dispatch(fetchCompanyInsightFailure(error));
         notification.error({
-          message: "Invalid Industry",
-          description:
-            "There was an error fetching your request. Please enter a valid industry.",
+          message: "API Error",
+          description: error
         });
-        return;
       }
-
-      console.log("Response:", result);
-
-      // Dispatch the data to Redux
-      dispatch(setSummaryData(result));
     } catch (error) {
-      console.error("Error:", error);
-      
+      dispatch(fetchCompanyInsightFailure(error.toString()));
+      notification.error({
+        message: "Network Error",
+        description: error.toString()
+      });
     }
   };
-
-  const handleIndustryToggle = (industry) => {
-    const isAlreadySelected = selectedIndustries.some(
-      (i) => i.industry_code === industry.industry_code
-    );
-
-    if (isAlreadySelected) {
-      // Remove from selected industries
-      const updatedIndustries = selectedIndustries.filter(
-        (i) => i.industry_code !== industry.industry_code
-      );
-      dispatch(updateSelectedIndustries(updatedIndustries));
-    } else {
-      // Add to selected industries and fetch data
-      dispatch(
-        updateSelectedIndustries([...selectedIndustries, industry])
-      );
-      fetchIndustrySummary(industry); // Call the API when adding a new industry
-    }
-  };
-
-  // Update the Redux state whenever `industries` changes
-  useEffect(() => {
-    dispatch(setFormResponse({ result: industries }));
-  }, [industries, dispatch]);
 
   return (
     <div className="h-screen w flex flex-col">
-      {/* Header section */}
       <div className="p-4 bg-[#09090A]">
-        <div>
-          <img
-            src="/images/LogoCompany.png"
-            alt="Company Logo"
-            className="my-4"
-          />
-        </div>
-
+        <img src="/images/LogoCompany.png" alt="Company Logo" className="my-4" />
         <div className="flex justify-between items-center my-2">
-          <h1 className="text-xl font-bold text-white">Industries</h1>
-          <button
-            className="text-white hover:text-gray-400"
-            title={isEditing ? "Done" : "Edit"}
-            onClick={handleEditToggle}
-          >
-            {isEditing ? <DoneIcon /> : <EditIcon />}
-          </button>
+          <h1 className="text-xl font-bold text-white">Companies</h1>
         </div>
-        {isEditing && (
-          <div className="my-5">
-            <FuzzySearch
-              section={"Search Industry"}
-              industry={industries}
-              setIndustry={setIndustries}
-            />
-          </div>
-        )}
       </div>
-
-      {/* Scrollable industry list */}
       <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-slate-950">
         <div className="p-3 flex flex-col space-y-4">
-          {industries.map((industry) => (
+          {items.map((item) => (
             <div
-              key={industry.industry_code}
-              className={`flex items-center space-x-3 industry-button text-white rounded-md truncate transition-colors duration-300 
-              ${
-                selectedIndustries.some(
-                  (i) => i.industry_code === industry.industry_code
-                )
-                  ? "bg-[#252525]"
-                  : "bg-gray-950 hover:bg-[#252525]"
-              } 
-              h-12`}
+              key={item.id}
+              className="flex items-center space-x-3 bg-gray-950 hover:bg-[#252525] text-white rounded-md truncate transition-colors duration-300 h-12 px-3"
+              onClick={() => handleSelectItem(item)}
             >
-              <button
-                className="flex-1 text-left px-3 text-xs py-2 truncate"
-                title={`${industry.industry_code} - ${industry.industry_name}`}
-                onClick={() => handleIndustryToggle(industry)}
-              >
-                {industry.industry_name}
-              </button>
+              <span className="flex-1 text-xs py-2 font-semibold text-white truncate">
+                {item}
+              </span>
               {isEditing && (
                 <button
-                  className="text-red-500 hover:text-red-700 px-2"
+                  className="text-red-500 hover:text-red-700"
                   title="Remove"
-                  onClick={() => handleRemoveIndustry(industry.industry_name)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleRemoveItem(item.name);
+                  }}
                 >
                   ➖
                 </button>
