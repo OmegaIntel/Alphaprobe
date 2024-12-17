@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { token } from "../../services";
 import { useDispatch } from "react-redux";
 import { setFormResponse } from "../../redux/formResponseSlice";
 import { toast, ToastContainer } from "react-toastify";
-import { API_BASE_URL } from "../../services";
 import "react-toastify/dist/ReactToastify.css";
+import { API_BASE_URL, token } from "../../services";
 import EastIcon from "@mui/icons-material/East";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
@@ -20,21 +19,16 @@ export const ThesisForm = ({ questions, setActiveIndustry }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [resetNavigation, setResetNavigation] = useState(false);
   const [slideDirection, setSlideDirection] = useState("slide-in-right");
-  const [randomIcon, setRandomIcon] = useState(null);
+
   const iconList = [
     <ShowChartIcon />,
     <CurrencyExchangeIcon />,
     <MonetizationOnIcon />,
     <AllInclusiveIcon />,
-    <TransformIcon />,
+    <TransformIcon />
   ];
 
   const dispatch = useDispatch();
-
-  const getRandomIcon = () => {
-    const randomIndex = Math.floor(Math.random() * iconList.length);
-    return iconList[randomIndex];
-  };
 
   const handleInputChange = (id, option) => {
     setAnswers({ ...answers, [id]: option });
@@ -46,8 +40,6 @@ export const ThesisForm = ({ questions, setActiveIndustry }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Only validate current question when on the last question
     if (currentQuestion === questions.length - 1) {
       const currentQ = questions[currentQuestion];
       const isCurrentQuestionIncomplete =
@@ -61,7 +53,6 @@ export const ThesisForm = ({ questions, setActiveIndustry }) => {
         return;
       }
     } else {
-      // For all other cases, validate all questions up to current
       const missingFields = questions
         .slice(0, currentQuestion + 1)
         .filter((q) => {
@@ -102,14 +93,13 @@ export const ThesisForm = ({ questions, setActiveIndustry }) => {
         return response.json();
       })
       .then((data) => {
-        console.log("Success:", data);
         dispatch(setFormResponse(data));
         toast.success(
           "Thesis generated successfully! Below is the list of suggested Industries",
           { position: "top-right" }
         );
         setResetNavigation(true);
-        setActiveIndustry("Market Research");
+        setActiveIndustry("Industry Insights");
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -202,8 +192,6 @@ export const ThesisForm = ({ questions, setActiveIndustry }) => {
         }
       `}</style>
 
-      {/* <div className="absolute inset-0 bg-black opacity-75 pointer-events-none"></div> */}
-
       <ToastContainer />
 
       <div className="relative z-10 flex justify-center items-center h-full">
@@ -247,12 +235,12 @@ export const ThesisForm = ({ questions, setActiveIndustry }) => {
                   {questions[currentQuestion].type === "select" && (
                     <div className="mt-2">
                       <div className="flex-col mx-4">
-                        {questions[currentQuestion].options?.map((option) => (
+                        {questions[currentQuestion].options?.map((option, index) => (
                           <div
                             key={option}
                             className="flex items-center mb-2 bg-opacity-40 bg-black w-full h-16 px-3 border border-[#FFFFFF33]/30 py-1 rounded-lg"
                           >
-                            <div>{getRandomIcon()}</div>
+                            <div>{iconList[index % iconList.length]}</div>
                             <div className="mx-5 flex justify-between w-full">
                               <label
                                 htmlFor={`${questions[currentQuestion].id}-${option}`}

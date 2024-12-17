@@ -7,6 +7,7 @@ import {
 } from "../../../../redux/chatSlice";
 import { v4 as uuidv4 } from 'uuid';
 import { API_BASE_URL, token } from "../../../../services/index";
+import { Search } from "@mui/icons-material";
 
 const ChatInterface = ({onFirstQueryMade}) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -74,23 +75,71 @@ const ChatInterface = ({onFirstQueryMade}) => {
   };
 
   return (
-    <div className="flex justify-center items-center w-full p-4">
-      <div className="relative w-full max-w-xl">
-        <SearchIcon
-          className="absolute left-3 top-[0.8rem] text-gray-400 cursor-pointer"
-          onClick={handleSearch}
-        />
-        <input
-          type="text"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          onKeyDown={handleKeyDown} // Trigger search on Enter key
-          placeholder="Type your message..."
-          className="w-full pl-10 pr-4 py-2 bg-gray-900 text-gray-200 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
-        />
-      </div>
+  //   <div>
+  //  {hasFirstQueryBeenMade ? (<div className="flex justify-center items-center w-full ">
+  //   <div className="inline-flex">
+  //           <input
+  //              type="text"
+  //              value={searchQuery}
+  //              onChange={(e) => setSearchQuery(e.target.value)}
+  //              onKeyDown={handleKeyDown} // Trigger search on Enter key
+  //              placeholder="Type your message..."
+  //             className="p-2 rounded-xl w-[30rem] border border-gray-600 h-11 bg-gray-800 text-sm text-white"
+  //           />
+  //           <button
+  //             type="button"
+  //             onClick={handleSearch}
+  //             className="ml-2 p-2 bg-gray-800 text-white rounded-xl h-11 w-11 hover:bg-[#121212] hover:text-[#fcfcfc] transition-all duration-200 ease-out"
+  //           >
+  //             <Search className="text-white" />
+  //           </button>
+  //         </div>
+  //   </div>) : (
+      
+  //     <div className="flex flex-col items-center py-32 h-screen bg-stone-950 text-white">
+  //         {/* Search Bar */}
+  //         <div className="inline-flex">
+  //           <input
+  //              type="text"
+  //              value={searchQuery}
+  //              onChange={(e) => setSearchQuery(e.target.value)}
+  //              onKeyDown={handleKeyDown} // Trigger search on Enter key
+  //              placeholder="Type your message..."
+  //             className="p-2 rounded-xl w-[30rem] border border-gray-600 h-11 bg-gray-800 text-sm text-white"
+  //           />
+  //           <button
+  //             type="button"
+  //             onClick={handleSearch}
+  //             className="ml-2 p-2 bg-gray-800 text-white rounded-xl h-11 w-11 hover:bg-[#121212] hover:text-[#fcfcfc] transition-all duration-200 ease-out"
+  //           >
+  //             <Search className="text-white" />
+  //           </button>
+  //         </div>
+  //       </div>)}
+    
+     
+  //   </div>
+  <div className="flex justify-center items-center w-full ">
+    <div className="inline-flex bg-stone-950 px-10 py-4">
+            <input
+               type="text"
+               value={searchQuery}
+               onChange={(e) => setSearchQuery(e.target.value)}
+               onKeyDown={handleKeyDown} // Trigger search on Enter key
+               placeholder="Type your message..."
+              className="p-2 rounded-xl w-[30rem] border border-gray-600 h-11  bg-gray-800 text-sm text-white"
+            />
+            <button
+              type="button"
+              onClick={handleSearch}
+              className="ml-2 p-2 bg-gray-800 text-white rounded-xl h-11 w-11 hover:bg-[#121212] hover:text-[#fcfcfc] transition-all duration-200 ease-out"
+            >
+              <Search className="text-white" />
+            </button>
+          </div>
     </div>
   );
 };
 
 export default ChatInterface;
+

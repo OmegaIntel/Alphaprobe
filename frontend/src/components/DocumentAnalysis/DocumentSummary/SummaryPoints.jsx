@@ -15,7 +15,7 @@ const SummaryPoints = () => {
         <div className={`${isFirstQueryMade ? ' block' : 'hidden'}`}>
           <ChatDisplay />
         </div>
-        <div className={`${isFirstQueryMade ? 'fixed bottom-0 left-60 right-60' : 'flex justify-center items-center h-full'}`}>
+        <div className={`${isFirstQueryMade ? 'fixed bottom-0 left-60 right-60' : 'flex flex-col items-center py-32 h-screen bg-stone-950 text-white'}`}>
           <ChatInterface onFirstQueryMade={handleFirstQuery} />
         </div>
       </div>
