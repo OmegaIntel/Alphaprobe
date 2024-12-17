@@ -7,11 +7,11 @@ import { API_BASE_URL } from "../../services";
 import "react-toastify/dist/ReactToastify.css";
 import EastIcon from "@mui/icons-material/East";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
-import ShowChartIcon from '@mui/icons-material/ShowChart';
-import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
-import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
-import AllInclusiveIcon from '@mui/icons-material/AllInclusive';
-import TransformIcon from '@mui/icons-material/Transform';
+import ShowChartIcon from "@mui/icons-material/ShowChart";
+import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
+import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
+import AllInclusiveIcon from "@mui/icons-material/AllInclusive";
+import TransformIcon from "@mui/icons-material/Transform";
 
 export const ThesisForm = ({ questions, setActiveIndustry }) => {
   const [answers, setAnswers] = useState({});
@@ -21,16 +21,20 @@ export const ThesisForm = ({ questions, setActiveIndustry }) => {
   const [resetNavigation, setResetNavigation] = useState(false);
   const [slideDirection, setSlideDirection] = useState("slide-in-right");
   const [randomIcon, setRandomIcon] = useState(null);
-  const iconList = [<ShowChartIcon />, <CurrencyExchangeIcon />, <MonetizationOnIcon />, <AllInclusiveIcon />, <TransformIcon />];
+  const iconList = [
+    <ShowChartIcon />,
+    <CurrencyExchangeIcon />,
+    <MonetizationOnIcon />,
+    <AllInclusiveIcon />,
+    <TransformIcon />,
+  ];
 
   const dispatch = useDispatch();
-
 
   const getRandomIcon = () => {
     const randomIndex = Math.floor(Math.random() * iconList.length);
     return iconList[randomIndex];
   };
-
 
   const handleInputChange = (id, option) => {
     setAnswers({ ...answers, [id]: option });
@@ -205,12 +209,13 @@ export const ThesisForm = ({ questions, setActiveIndustry }) => {
       <div className="relative z-10 flex justify-center items-center h-full">
         <form
           onSubmit={handleSubmit}
-          className="w-1/3 flex h-[500px] flex-col justify-between bg-black bg-opacity-10 p-6 rounded-lg shadow-2xl"
+          className="w-1/3 flex flex-col justify-between h-[610px] bg-black bg-opacity-10 p-6 rounded-lg shadow-2xl"
         >
-          <div className="flex-col justify-between w-full">
+          {/* Main Content */}
+          <div className="flex flex-col flex-grow">
             <div
               key={questions[currentQuestion].id}
-              className={` ${slideDirection}`}
+              className={`${slideDirection}`}
               style={{
                 marginBottom: "20px",
                 position: "relative",
@@ -218,7 +223,7 @@ export const ThesisForm = ({ questions, setActiveIndustry }) => {
               }}
             >
               <label className="h-full">
-                <div className="flex ">
+                <div className="flex">
                   <span className="font-bold">{currentQuestion + 1}. </span>
                   <p className="ml-3 text-lg font-semibold text-gray-300">
                     {questions[currentQuestion].question}
@@ -241,13 +246,13 @@ export const ThesisForm = ({ questions, setActiveIndustry }) => {
                   )}
                   {questions[currentQuestion].type === "select" && (
                     <div className="mt-2">
-                      <div className="flex-col mx-4 ">
+                      <div className="flex-col mx-4">
                         {questions[currentQuestion].options?.map((option) => (
                           <div
                             key={option}
                             className="flex items-center mb-2 bg-opacity-40 bg-black w-full h-16 px-3 border border-[#FFFFFF33]/30 py-1 rounded-lg"
                           >
-                             <div>{getRandomIcon()}</div>
+                            <div>{getRandomIcon()}</div>
                             <div className="mx-5 flex justify-between w-full">
                               <label
                                 htmlFor={`${questions[currentQuestion].id}-${option}`}
@@ -309,43 +314,45 @@ export const ThesisForm = ({ questions, setActiveIndustry }) => {
                 </div>
               </label>
             </div>
-            <div className="mt-auto flex justify-between bottom-0">
+          </div>
+
+          {/* Buttons */}
+          <div className="mt-auto flex justify-between bottom-0">
+            <button
+              type="button"
+              disabled={currentQuestion === 0 || loading}
+              onClick={handlePrevious}
+              className="bg-gradient-to-b from-white/20 to-gray-800/30 border border-[#565656] text-white px-2 flex py-2 w-1/2 m-3 rounded"
+            >
+              <KeyboardBackspaceIcon className="mr-10" />
+              Previous
+            </button>
+            {currentQuestion === questions.length - 1 ? (
+              <button type="submit" disabled={loading} className="w-1/2">
+                {loading ? (
+                  <div className="flex items-center">
+                    <div className="bg-white hover:bg-[#151518] font-semibold hover:border-white w-full hover:border hover:text-white transition-all ease-out duration-300 text-[#151518] px-2 py-2 rounded flex items-center justify-center">
+                      Generating Thesis...
+                      <div className="animate-spin rounded-full ml-4 h-5 w-5 border-b-2 border-gray-900 hover:border-white"></div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="bg-white hover:bg-[#151518] font-semibold hover:border-white w-full hover:border hover:text-white transition-all ease-out duration-300 text-[#151518] px-2 py-2 rounded flex items-center justify-center">
+                    Generate Thesis
+                  </div>
+                )}
+              </button>
+            ) : (
               <button
                 type="button"
-                disabled={currentQuestion === 0 || loading}
-                onClick={handlePrevious}
-                className="bg-gradient-to-b from-white/20 to-gray-800/30 border border-[#565656] text-white px-2 flex  py-2 w-1/2 m-3 rounded"
+                onClick={handleNext}
+                disabled={loading}
+                className="bg-gradient-to-b from-white/20 to-gray-800/30 border border-[#565656] text-white w-1/2 px-2 py-2 m-3 rounded"
               >
-                <KeyboardBackspaceIcon className="mr-10" />
-                Previous
+                Next
+                <EastIcon className="ml-10" />
               </button>
-              {currentQuestion === questions.length - 1 ? (
-                <button type="submit" disabled={loading} className="w-1/2">
-                  {loading ? (
-                    <div className="flex items-center">
-                      <div className="bg-white hover:bg-[#151518] font-semibold hover:border-white w-full hover:border hover:text-white transition-all ease-out duration-300 text-[#151518] px-4 py-3 rounded flex items-center justify-center">
-                        Generating Thesis...
-                        <div className="animate-spin rounded-full ml-4 h-5 w-5 border-b-2 border-gray-900 hover:border-white"></div>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="bg-white hover:bg-[#151518] font-semibold hover:border-white w-full hover:border hover:text-white transition-all ease-out duration-300 text-[#151518] px-2 py-2 rounded flex items-center justify-center">
-                      Generate Thesis
-                    </div>
-                  )}
-                </button>
-              ) : (
-                <button
-                  type="button"
-                  onClick={handleNext}
-                  disabled={loading}
-                  className="bg-gradient-to-b from-white/20 to-gray-800/30 border border-[#565656] text-white w-1/2 px-2 py-2 m-3 rounded"
-                >
-                  Next
-                  <EastIcon className="ml-10" />
-                </button>
-              )}
-            </div>
+            )}
           </div>
         </form>
       </div>

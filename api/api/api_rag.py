@@ -21,7 +21,7 @@ s3_client = boto3.client('s3')
 
 # Define agent alias and ID
 agent_id = "IGC1V40HTU"  # Replace with your actual agent ID
-agent_alias_id = "TMRHXE0UZR"
+agent_alias_id = "CEFQBNZFIC"
 session_id = str(uuid.uuid1())
 
 

@@ -3,8 +3,10 @@ import dealsReducer from "./dealsSlice";
 import modalReducer from "./modalSlice";
 import formResponseReducer from "./formResponseSlice";
 import industryReducer from "./industrySlice";
-import selectedIndustriesReducer from "./selectedIndustriesSlice"
-import companyInsightReducer from "./companyInsightsSlice"
+import selectedIndustriesReducer from "./selectedIndustriesSlice";
+import companyInsightReducer from "./companyInsightsSlice";
+import { documentSearchResultsSlice } from "./documentSearchResultSlice";
+import { chatSlice } from "./chatSlice";
 
 const store = configureStore({
   reducer: {
@@ -13,7 +15,9 @@ const store = configureStore({
     industry: industryReducer,
     selectedIndustries: selectedIndustriesReducer,
     companyInsight: companyInsightReducer,
+    documentSearchResults: documentSearchResultsSlice.reducer,
     formResponse: formResponseReducer,
+    chat: chatSlice.reducer,
   },
 });
 
