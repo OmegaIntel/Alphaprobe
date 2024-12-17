@@ -8,8 +8,9 @@ import {
 import { v4 as uuidv4 } from 'uuid';
 import { API_BASE_URL, token } from "../../../../services/index";
 
-const ChatInterface = () => {
+const ChatInterface = ({onFirstQueryMade}) => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [hasFirstQueryBeenMade, setHasFirstQueryBeenMade] = useState(false)
   const [sessionId, setSessionId] = useState(
     localStorage.getItem("rag_session_id") || ""
   );
@@ -25,6 +26,12 @@ const ChatInterface = () => {
 
   const handleSearch = async () => {
     if (!searchQuery.trim()) return; // Prevent empty searches
+
+    // Check if this is the first query
+    if (!hasFirstQueryBeenMade) {
+      setHasFirstQueryBeenMade(true);
+      onFirstQueryMade();
+  }
 
     const interactionId = uuidv4(); // Consistently use uuidv4 for ID generation
     dispatch(addInteraction({ query: searchQuery, id: interactionId }));
@@ -45,6 +52,7 @@ const ChatInterface = () => {
             response: data || "No response received.",
         }));
 
+        
         if (data.session_id && data.session_id !== sessionId) {
             setSessionId(data.session_id);
             localStorage.setItem("rag_session_id", data.session_id);
