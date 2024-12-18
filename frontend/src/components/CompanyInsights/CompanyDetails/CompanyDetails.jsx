@@ -3,6 +3,7 @@ import CompanyDetailsComponent from "./CompanyDetailsComponent";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCompanyInsightSuccess, clearCompanyInsight } from "../../../redux/companyInsightsSlice";
 import PreloadingScreen from "../PreloadingScreen/PreloadingScreen";
+import CompanyInsightSidebar from "../CompanyInsightSidebar/CompanyInsightSidebar";
 
 const CompanyDetails = () => {
   // Accessing company insights data from Redux state with fallback to null
@@ -30,15 +31,23 @@ const CompanyDetails = () => {
 
   return (
     <div className="relative">
-      {/* Close Button */}
-      <button
-        className="absolute top-4 right-4  text-white rounded-full p-2 hover:bg-red-600"
+      <div className="flex">
+        <div className="w-60 flex-shrink-0 bg-[#09090A]">
+       <CompanyInsightSidebar />
+        </div>
+
+      <div>
+      {/* <button
+      ī  className="absolute top-4 right-4  text-white rounded-full p-2 hover:bg-red-600"
         onClick={handleClose}
       >
         &times;
-      </button>
-      {/* Render CompanyDetailsComponent */}
+      </button> */}
       <CompanyDetailsComponent data={data} />
+      </div>
+
+      </div>
+     
     </div>
   );
 };

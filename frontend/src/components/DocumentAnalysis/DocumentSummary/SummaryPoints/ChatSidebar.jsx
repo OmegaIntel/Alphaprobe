@@ -15,6 +15,21 @@ const Sidebar = ({ isOpen, onClose, data }) => {
     }
   };
 
+  // Enhanced formatText to handle multiple spaces
+  const formatText = (text) => {
+    return text.split('\n').flatMap((line, index) => (
+      line.split(/ +/) // Split by spaces
+        .flatMap((word, wordIndex, array) => [
+          <React.Fragment key={wordIndex}>
+            {word}{wordIndex < array.length - 1 ? ' ' : ''} {/* Reintroduce single spaces */}
+          </React.Fragment>,
+          // Add a new line if more than one space was found after a word
+          array[wordIndex + 1] && array[wordIndex + 1].length === 0 ? <br key={`br-${wordIndex}`} /> : null,
+        ])
+        .concat(<br key={`br-line-${index}`} />) // Add line break after each line
+    ));
+  };
+
   const handlePDFToggle = () => {
     setShowPDF(!showPDF);
   };
@@ -61,7 +76,9 @@ const Sidebar = ({ isOpen, onClose, data }) => {
                           />
                         </div>
                       ) : (
-                        <div className="mt-2 overflow-auto scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800" style={{ maxHeight: '300px' }}>{item.chunk_content}</div>
+                        <div className="mt-2 overflow-auto scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800" style={{ maxHeight: '300px' }}>
+                          {formatText(item.chunk_content)}
+                        </div>
                       )}
                     </td>
                   </tr>
