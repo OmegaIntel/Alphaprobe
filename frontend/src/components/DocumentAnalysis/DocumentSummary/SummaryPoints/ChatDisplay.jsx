@@ -26,14 +26,26 @@ const ChatDisplay = () => {
     setIsSidebarOpen(true);
   };
 
+  // Helper function to format text with newline characters
+  const formatText = (text) => {
+    return text.split('\n').map((line, index) => (
+      <React.Fragment key={index}>
+        {line}
+        <br />
+      </React.Fragment>
+    ));
+  };
+
   const renderResponse = (response) => {
     if (typeof response === "string") {
-      return response;
+      return formatText(response); // Use the formatText function for plain strings
     }
     if (response && typeof response === "object" && response.agent_response) {
       return (
         <>
-          <div className="flex justify-start">{response.agent_response}</div>
+          <div className="flex justify-start">
+            {formatText(response.agent_response)} {/* Apply formatting here */}
+          </div>
           <button
             onClick={() =>
               handleShowReferences(response.metadata_content_pairs)
