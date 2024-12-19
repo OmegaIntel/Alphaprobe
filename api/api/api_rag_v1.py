@@ -153,6 +153,83 @@ def generate_financial_insight(context: str, question: str) -> str:
     except boto3.exceptions.Boto3Error as e:
         raise HTTPException(status_code=500, detail=f"Model invocation failed: {e}")
 
+# @knowledgebase_rag_router.get("/api/rag-search_v1", response_model=Dict[str, Any])
+# async def rag_pipeline(query: str = Query(..., description="User query")):
+#     """
+#     Perform hybrid search and generate a concise response using AWS Bedrock Claude-3.5.
+#     """
+#     if not query:
+#         raise HTTPException(status_code=400, detail="Query parameter is required.")
+
+#     try:
+#         # Step 1: Perform hybrid search on both knowledge bases
+#         retrieval_results = hybrid_search(query, 5)
+        
+#         if not retrieval_results:
+#             raise HTTPException(status_code=404, detail="No relevant results found in the knowledge bases.")
+
+#         # Extract text content from retrieved chunks
+#         context_list = [result["content"]["text"] for result in retrieval_results]
+#         context = "\n\n".join(context_list)
+
+#         # Step 2: Generate a concise response using the retrieved context and user query
+#         llm_response = generate_financial_insight(context, query)
+
+#         # Extract text from the response if it is a list with a dictionary containing 'text'
+#         if isinstance(llm_response, list) and len(llm_response) > 0 and 'text' in llm_response[0]:
+#             llm_response_text = llm_response[0]['text']
+#         else:
+#             llm_response_text = str(llm_response)  # Fallback to string conversion if format is unexpected
+
+#         # Step 3: Format the response to match the desired structure
+#         formatted_response = {
+#             "session_id": str(uuid.uuid1()),  # Generate a unique session ID
+#             "agent_response": llm_response_text,    # Ensure this is a plain string
+#             "metadata_content_pairs": [
+#                 {
+#                     "metadata": {
+#                         "x-amz-bedrock-kb-source-uri": result["metadata"]["x-amz-bedrock-kb-source-uri"],
+#                         "x-amz-bedrock-kb-document-page-number": result["metadata"]["x-amz-bedrock-kb-document-page-number"],
+#                         "x-amz-bedrock-kb-chunk-id": result["metadata"]["x-amz-bedrock-kb-chunk-id"],
+#                         "x-amz-bedrock-kb-data-source-id": result["metadata"]["x-amz-bedrock-kb-data-source-id"]
+#                     },
+#                     "chunk_content": result["content"]["text"]
+#                 }
+#                 for result in retrieval_results
+#             ]
+#         }
+
+#         return formatted_response
+
+#     except HTTPException as e:
+#         raise e
+#     except Exception as e:
+#         raise HTTPException(status_code=500, detail=f"Error processing RAG pipeline: {e}")
+def generate_presigned_url(s3_uri: str, expiration: int = 3600) -> str:
+    """
+    Generate a presigned URL for accessing an S3 object.
+    """
+    s3_client = boto3.client("s3")
+
+    # Parse the S3 bucket and key from the URI
+    s3_prefix = "s3://"
+    if not s3_uri.startswith(s3_prefix):
+        raise ValueError("Invalid S3 URI format")
+
+    s3_path = s3_uri[len(s3_prefix):]
+    bucket_name, key = s3_path.split("/", 1)
+
+    try:
+        presigned_url = s3_client.generate_presigned_url(
+            "get_object",
+            Params={"Bucket": bucket_name, "Key": key},
+            ExpiresIn=expiration
+        )
+        return presigned_url
+    except boto3.exceptions.Boto3Error as e:
+        raise HTTPException(status_code=500, detail=f"Error generating presigned URL: {e}")
+
+
 @knowledgebase_rag_router.get("/api/rag-search_v1", response_model=Dict[str, Any])
 async def rag_pipeline(query: str = Query(..., description="User query")):
     """
@@ -175,23 +252,24 @@ async def rag_pipeline(query: str = Query(..., description="User query")):
         # Step 2: Generate a concise response using the retrieved context and user query
         llm_response = generate_financial_insight(context, query)
 
-        # Extract text from the response if it is a list with a dictionary containing 'text'
+        # Extract text from the response
         if isinstance(llm_response, list) and len(llm_response) > 0 and 'text' in llm_response[0]:
             llm_response_text = llm_response[0]['text']
         else:
-            llm_response_text = str(llm_response)  # Fallback to string conversion if format is unexpected
+            llm_response_text = str(llm_response)
 
-        # Step 3: Format the response to match the desired structure
+        # Step 3: Format the response with presigned URLs
         formatted_response = {
-            "session_id": str(uuid.uuid1()),  # Generate a unique session ID
-            "agent_response": llm_response_text,    # Ensure this is a plain string
+            "session_id": str(uuid.uuid1()),
+            "agent_response": llm_response_text,
             "metadata_content_pairs": [
                 {
                     "metadata": {
                         "x-amz-bedrock-kb-source-uri": result["metadata"]["x-amz-bedrock-kb-source-uri"],
                         "x-amz-bedrock-kb-document-page-number": result["metadata"]["x-amz-bedrock-kb-document-page-number"],
                         "x-amz-bedrock-kb-chunk-id": result["metadata"]["x-amz-bedrock-kb-chunk-id"],
-                        "x-amz-bedrock-kb-data-source-id": result["metadata"]["x-amz-bedrock-kb-data-source-id"]
+                        "x-amz-bedrock-kb-data-source-id": result["metadata"]["x-amz-bedrock-kb-data-source-id"],
+                        "pre_assigned_url": generate_presigned_url(result["metadata"]["x-amz-bedrock-kb-source-uri"])
                     },
                     "chunk_content": result["content"]["text"]
                 }

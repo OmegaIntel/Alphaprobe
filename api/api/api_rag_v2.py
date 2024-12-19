@@ -130,9 +130,7 @@ def invoke_model(prompt: str, max_tokens: int) -> str:
             "Instructions: You are an AI assistant with access to a database of research reports from multiple providers. "
             "Your task is to provide clear, accurate, and concise answers to user questions based on the information "
             "in the reports. If relevant, include specific details such as numbers, names, or statistics from the reports. "
-           
-
-
+        
         )
     })
 
@@ -157,6 +155,30 @@ def invoke_model(prompt: str, max_tokens: int) -> str:
         return content
     except boto3.exceptions.Boto3Error as e:
         raise HTTPException(status_code=500, detail=f"Model invocation failed: {e}")
+
+def generate_presigned_url(s3_uri: str, expiration: int = 3600) -> str:
+    """
+    Generate a presigned URL for accessing an S3 object.
+    """
+    s3_client = boto3.client("s3")
+
+    # Parse the S3 bucket and key from the URI
+    s3_prefix = "s3://"
+    if not s3_uri.startswith(s3_prefix):
+        raise ValueError("Invalid S3 URI format")
+
+    s3_path = s3_uri[len(s3_prefix):]
+    bucket_name, key = s3_path.split("/", 1)
+
+    try:
+        presigned_url = s3_client.generate_presigned_url(
+            "get_object",
+            Params={"Bucket": bucket_name, "Key": key},
+            ExpiresIn=expiration
+        )
+        return presigned_url
+    except boto3.exceptions.Boto3Error as e:
+        raise HTTPException(status_code=500, detail=f"Error generating presigned URL: {e}")
 
 @query_classifier_knowledgebase_rag_router.get("/api/rag-search_v2", response_model=Dict[str, Any])
 async def rag_pipeline(query: str = Query(..., description="User query")):
@@ -200,7 +222,8 @@ async def rag_pipeline(query: str = Query(..., description="User query")):
                         "x-amz-bedrock-kb-source-uri": result["metadata"].get("x-amz-bedrock-kb-source-uri"),
                         "x-amz-bedrock-kb-document-page-number": result["metadata"].get("x-amz-bedrock-kb-document-page-number"),
                         "x-amz-bedrock-kb-chunk-id": result["metadata"].get("x-amz-bedrock-kb-chunk-id"),
-                        "x-amz-bedrock-kb-data-source-id": result["metadata"].get("x-amz-bedrock-kb-data-source-id")
+                        "x-amz-bedrock-kb-data-source-id": result["metadata"].get("x-amz-bedrock-kb-data-source-id"),
+                        "pre_assigned_url": generate_presigned_url(result["metadata"]["x-amz-bedrock-kb-source-uri"])
                     },
                     "chunk_content": result["content"]["text"]
                 }
