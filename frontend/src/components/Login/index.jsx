@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { notification } from "antd";
 import { login } from "../../services/loginService";
+import * as amplitude from '@amplitude/analytics-browser';
 
 const Login = ({ setToken }) => {
   const [email, setEmail] = useState("");
@@ -46,6 +47,7 @@ const Login = ({ setToken }) => {
             "There was an error submitting your deal request. Please try again.",
         });
     }
+     amplitude.setUserId(email);
   };
 
   return (
