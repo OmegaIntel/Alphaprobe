@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ChatDisplay from "./SummaryPoints/ChatDisplay";
 import ChatInterface from "./SummaryPoints/ChatInterface";
+import ChatSession from "./SummaryPoints/ChatSessionList";
 
 const SummaryPoints = () => {
   const [isFirstQueryMade, setIsFirstQueryMade] = useState(false);
@@ -11,6 +12,9 @@ const SummaryPoints = () => {
 
   return (
     <div className="w-full h-screen bg-[#0d0d0d] scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-gray-800 overflow-y-scroll px-3 py-2">
+      <div>
+        <ChatSession />
+      </div>
       <div>
         <div className={`${isFirstQueryMade ? ' block' : 'hidden'}`}>
           <ChatDisplay />
