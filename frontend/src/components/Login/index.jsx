@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { notification } from "antd";
 import { login } from "../../services/loginService";
+import LoginButton from "../Login/LoginButton"
 import * as amplitude from '@amplitude/analytics-browser';
 
 const Login = ({ setToken }) => {
@@ -122,12 +123,13 @@ const Login = ({ setToken }) => {
             </a>
           </div> */}
           <div className="flex justify-center mt-4">
-            <button
+            {/* <button
               type="submit"
               className="w-[100px] h-[40px] bg-[#0088cc] rounded text-white text-xs hover:bg-[#0056b3]"
             >
               Login
-            </button>
+            </button> */}
+            <LoginButton />
           </div>
         </form>
       </div>

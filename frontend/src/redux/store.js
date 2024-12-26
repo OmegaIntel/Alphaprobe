@@ -7,6 +7,8 @@ import selectedIndustriesReducer from "./selectedIndustriesSlice";
 import companyInsightReducer from "./companyInsightsSlice";
 import { documentSearchResultsSlice } from "./documentSearchResultSlice";
 import { chatSlice } from "./chatSlice";
+import authSliceReducer from "./auth/authSlice"
+import { authMiddleware } from "./auth/authMiddleware";
 import * as amplitude from '@amplitude/analytics-browser';
 
 const store = configureStore({
@@ -18,8 +20,10 @@ const store = configureStore({
     companyInsight: companyInsightReducer,
     documentSearchResults: documentSearchResultsSlice.reducer,
     formResponse: formResponseReducer,
+    authSlice: authSliceReducer,
     chat: chatSlice.reducer,
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(authMiddleware)
 });
 
 

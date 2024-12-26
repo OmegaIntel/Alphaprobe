@@ -1,41 +1,30 @@
-from fastapi import APIRouter, HTTPException, Form, Depends, Request
-from pydantic import BaseModel, EmailStr
-from typing import Optional
-from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+from fastapi import APIRouter, HTTPException, Depends, Request
+from pydantic import BaseModel
+from fastapi.security import OAuth2AuthorizationCodeBearer
 import jwt
-from datetime import datetime, timedelta
-from passlib.context import CryptContext
-import os
-import logging
+import requests
+from typing import Annotated
 from sqlalchemy.orm import Session
 from db_models.users import User as DbUser
-from typing import Annotated
 from db_models.session import get_db
-from db_models.new_users import NewUsersDeals
-from db_models.shared_user_deals import SharedUserDeals
 
-# Environment variables and constants
-SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key")
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 120
+import os
 
-# FastAPI OAuth2 scheme
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+# Environment variables
+AUTH0_DOMAIN = os.getenv("AUTH0_DOMAIN", "your-auth0-domain")
+API_AUDIENCE = os.getenv("AUTH0_API_AUDIENCE", "your-api-audience")
+ALGORITHMS = ["RS256"]
 
-# Initialize the router
+# OAuth2 configuration
+auth0_scheme = OAuth2AuthorizationCodeBearer(
+    authorizationUrl=f"https://{AUTH0_DOMAIN}/authorize",
+    tokenUrl=f"https://{AUTH0_DOMAIN}/oauth/token"
+)
+
+# Router initialization
 user_router = APIRouter()
 
-# Configure password hashing context
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-
-# Pydantic models for user and token
-class Token(BaseModel):
-    access_token: str
-    token_type: str
-
-class TokenData(BaseModel):
-    email: Optional[str] = None
-
+# Pydantic models
 class User(BaseModel):
     id: str
     email: str
@@ -44,118 +33,103 @@ class User(BaseModel):
     class Config:
         from_attributes = True
 
-# Utility functions for password management and JWT handling
-def verify_password(plain_password, hashed_password):
-    return pwd_context.verify(plain_password, hashed_password)
+def get_auth0_public_key():
+    """Fetch the Auth0 public keys for token verification."""
+    jwks_url = f"https://{AUTH0_DOMAIN}/.well-known/jwks.json"
+    response = requests.get(jwks_url)
+    response.raise_for_status()
+    return response.json()["keys"]
 
-def get_password_hash(password):
-    return pwd_context.hash(password)
+def verify_auth0_token(token: str) -> dict:
+    """Verify and decode the JWT issued by Auth0."""
+    jwks = get_auth0_public_key()
+    unverified_header = jwt.get_unverified_header(token)
 
-def authenticate_user(db: Session, email: str, password: str):
+    rsa_key = {}
+    for key in jwks:
+        if key["kid"] == unverified_header["kid"]:
+            rsa_key = {
+                "kty": key["kty"],
+                "kid": key["kid"],
+                "use": key["use"],
+                "n": key["n"],
+                "e": key["e"]
+            }
+            break
+
+    if not rsa_key:
+        raise HTTPException(status_code=401, detail="Unable to find appropriate key")
+
+    try:
+        payload = jwt.decode(
+            token,
+            rsa_key,
+            algorithms=ALGORITHMS,
+            audience=API_AUDIENCE,
+            issuer=f"https://{AUTH0_DOMAIN}/"
+        )
+        return payload
+    except jwt.ExpiredSignatureError:
+        raise HTTPException(status_code=401, detail="Token has expired")
+    except jwt.JWTClaimsError:
+        raise HTTPException(status_code=401, detail="Invalid claims")
+    except Exception:
+        raise HTTPException(status_code=401, detail="Unable to parse authentication token")
+
+async def get_current_user(token: Annotated[str, Depends(auth0_scheme)], db: Session = Depends(get_db)) -> User:
+    """Extract the user from the Auth0 token."""
+    payload = verify_auth0_token(token)
+    email: str = payload.get("sub")
+    if email is None:
+        raise HTTPException(status_code=401, detail="Invalid token")
+
+    # Fetch user details from the database
     user = db.query(DbUser).filter(DbUser.email == email).first()
-    if not user:
-        return False
-    if not verify_password(password, user.password_hash):
-        return False
-    return user
-
-def create_access_token(data: dict, expires_delta: timedelta = None):
-    to_encode = data.copy()
-    if expires_delta:
-        expire = datetime.utcnow() + expires_delta
-    else:
-        expire = datetime.utcnow() + timedelta(minutes=15)
-    to_encode.update({"exp": expire})
-    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
-    return encoded_jwt
-
-async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)], db: Session = Depends(get_db)) -> User:
-    credentials_exception = HTTPException(
-        status_code=401,
-        detail="Could not validate credentials",
-        headers={"WWW-Authenticate": "Bearer"},
-    )
-    try:
-        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        email: str = payload.get("sub")
-        if email is None:
-            raise credentials_exception
-        token_data = TokenData(email=email)
-    except jwt.PyJWTError:
-        raise credentials_exception
-    
-    user = db.query(DbUser).filter(DbUser.email == token_data.email).first()
     if user is None:
-        raise credentials_exception
-    
-    return User(id=str(user.id), email=user.email,is_admin = user.is_master_admin)
+        raise HTTPException(status_code=404, detail="User not found")
 
-async def bypass_user(token: Annotated[str, Depends(oauth2_scheme)], db: Session = Depends(get_db)) -> User:
-    try:
-        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        email: str = payload.get("sub")
-        if email is None:
-            return None
-        token_data = TokenData(email=email)
-    except jwt.PyJWTError:
-        return None
-    
-    user = db.query(DbUser).filter(DbUser.email == token_data.email).first()
-    if user is None:
-        return None
-    
-    return User(id=str(user.id), email=user.email,is_admin = user.is_master_admin)
+    return User(id=str(user.id), email=user.email, is_admin=user.is_master_admin)
 
-# API route for user registration
-@user_router.post("/api/register", response_model=User)
-async def register(email: EmailStr = Form(...), password: str = Form(...), request: Request = None, db: Session = Depends(get_db)):
-    if request:
-        logging.info(f"Register request: {await request.form()}")
-    
-        user = db.query(DbUser).filter(DbUser.email == email).first()
-    if user:
-        raise HTTPException(status_code=400, detail="Email already registered")
-    
-    newUser = db.query(NewUsersDeals).filter(NewUsersDeals.email_id == email).first()
+# API route for login (redirects to Auth0)
+@user_router.get("/api/token")
+async def login():
+    """Redirect users to the Auth0 login page."""
+    return {
+        "auth_url": f"https://{AUTH0_DOMAIN}/authorize"
+                    f"?audience={API_AUDIENCE}"
+                    f"&response_type=code"
+                    f"&client_id={os.getenv('AUTH0_CLIENT_ID')}"
+                    f"&redirect_uri=http://localhost:8000/api/callback"
+    }
 
-    hashed_password = get_password_hash(password)
-    new_user = DbUser(email=email, password_hash=hashed_password)
-    db.add(new_user)
-    db.commit()
-    
-    # Refresh to get the id from the database
-    db.refresh(new_user)
+# Callback endpoint for handling Auth0 login response
+@user_router.get("/api/callback")
+async def callback(request: Request):
+    """Handle the callback from Auth0 after login."""
+    code = request.query_params.get("code")
+    if not code:
+        raise HTTPException(status_code=400, detail="Authorization code not found")
 
-    if newUser:
-        sharedUser = SharedUserDeals(
-            user_id=str(new_user.id),
-            deal_id=str(newUser.deal_id)
-        )
-        db.add(sharedUser)
-        db.commit()
-        db.refresh(sharedUser)
-    
-    # Convert UUID to string and return
-    return {"id": str(new_user.id), "email": new_user.email,'is_admin':new_user.is_master_admin}
+    token_url = f"https://{AUTH0_DOMAIN}/oauth/token"
+    headers = {"Content-Type": "application/json"}
+    payload = {
+        "grant_type": "authorization_code",
+        "client_id": os.getenv("AUTH0_CLIENT_ID"),
+        "client_secret": os.getenv("AUTH0_CLIENT_SECRET"),
+        "code": code,
+        "redirect_uri": "http://localhost:8000/api/callback"
+    }
 
+    response = requests.post(token_url, json=payload, headers=headers)
+    response_data = response.json()
 
-# API route for token-based login
-@user_router.post("/api/token")
-async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
-    user = authenticate_user(db, form_data.username, form_data.password)
-    if not user:
-        raise HTTPException(
-            status_code=401,
-            detail="Incorrect email or password",
-            headers={"WWW-Authenticate": "Bearer"},
-        )
-    access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
-    access_token = create_access_token(
-        data={"sub": user.email}, expires_delta=access_token_expires
-    )
-    return {"access_token": access_token, "token_type": "bearer"}
+    if response.status_code != 200:
+        raise HTTPException(status_code=response.status_code, detail=response_data)
 
-# API route to get the current logged-in user
+    return {"access_token": response_data["access_token"]}
+
+# Protected endpoint to fetch user details
 @user_router.get("/api/users/me")
 async def read_users_me(current_user: Annotated[User, Depends(get_current_user)]):
+    """Return the current user's information."""
     return current_user

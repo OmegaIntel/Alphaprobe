@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -13,6 +13,7 @@ import Dashboard from "./components/Dashboard";
 import ProtectedLayout from "./components/ProtectedLayout";
 import Categories from "./components/projectHeaders/categories";
 import DocumentsWrapper from "./components/FileUploadComponent/wrapper";
+import { Auth0Provider, useAuth0 } from "@auth0/auth0-react";
 import * as amplitude from '@amplitude/analytics-browser';
 import DocumentAnalysisLayout from "./components/DocumentAnalysis/DocumentAnalysisLayout";
 
@@ -33,8 +34,17 @@ const App = () => {
   const isLoggedIn = Boolean(token);
 
   return (
+    <Auth0Provider
+    domain={process.env.REACT_APP_AUTH0_DOMAIN}
+    clientId={process.env.REACT_APP_AUTH0_CLIENT_ID}
+    authorizationParams={{
+      redirect_uri: window.location.origin+"/dashboard",
+      audience: process.env.REACT_APP_AUTH0_AUDIENCE,
+    }}
+    >
     <Router>
       <Routes>
+        <Route path="/" element={<AutoLogin />} />
         <Route path="/guest/:id" element={<DocumentsWrapper />} />
         <Route
           path="/register"
@@ -92,10 +102,10 @@ const App = () => {
           }
         ></Route>
 
-        <Route
+        {/* <Route
           path="/"
           element={<Navigate to={isLoggedIn ? "/dashboard" : "/login"} />}
-        />
+        /> */}
         <Route
           path="*"
           element={<Navigate to={isLoggedIn ? "/dashboard" : "/login"} />}
@@ -104,7 +114,24 @@ const App = () => {
         {/* Trouble Shooting Route */}
       </Routes>
     </Router>
+    </Auth0Provider>
   );
+};
+
+const AutoLogin = () => {
+  const { loginWithRedirect, isAuthenticated, isLoading } = useAuth0();
+
+  useEffect(() => {
+    if (!isAuthenticated && !isLoading) {
+      loginWithRedirect();
+    }
+  }, [isAuthenticated, isLoading, loginWithRedirect]);
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  return isAuthenticated ? <p>Welcome! Redirecting to home...</p> : null;
 };
 
 export default App;
