@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { useDispatch } from "react-redux";
-import { addInteraction, updateInteractionResponse } from "../../../../redux/chatSlice";
+import {
+  addInteraction,
+  updateInteractionResponse,
+} from "../../../../redux/chatSlice";
 import { v4 as uuidv4 } from "uuid";
 import { API_BASE_URL, token } from "../../../../services/index";
 import { Search } from "@mui/icons-material";
 
-const ChatInterface = ({ onFirstQueryMade }) => {
+const ChatInterface = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [hasFirstQueryBeenMade, setHasFirstQueryBeenMade] = useState(false);
-  const [sessionId, setSessionId] = useState(localStorage.getItem("rag_session_id") || "");
+  const [sessionId, setSessionId] = useState(
+    localStorage.getItem("rag_session_id") || ""
+  );
 
   const dispatch = useDispatch();
 
@@ -18,7 +23,10 @@ const ChatInterface = ({ onFirstQueryMade }) => {
     const syncSessionIdWithLocalStorage = () => {
       const storedSessionId = localStorage.getItem("rag_session_id");
       if (storedSessionId && storedSessionId !== sessionId) {
-        console.log("Detected session ID change in localStorage:", storedSessionId);
+        console.log(
+          "Detected session ID change in localStorage:",
+          storedSessionId
+        );
         setSessionId(storedSessionId);
       }
     };
@@ -57,7 +65,11 @@ const ChatInterface = ({ onFirstQueryMade }) => {
       });
 
       if (!response.ok) {
-        console.error("Failed to create session:", response.status, response.statusText);
+        console.error(
+          "Failed to create session:",
+          response.status,
+          response.statusText
+        );
         return;
       }
 
@@ -92,7 +104,12 @@ const ChatInterface = ({ onFirstQueryMade }) => {
       if (data.session_id) {
         // Update session_id if new
         if (data.session_id !== existingSessionId) {
-          console.log("Received new session:", data.session_id, "due to:", data.status);
+          console.log(
+            "Received new session:",
+            data.session_id,
+            "due to:",
+            data.status
+          );
           setSessionId(data.session_id);
           localStorage.setItem("rag_session_id", data.session_id);
         } else {
@@ -115,42 +132,42 @@ const ChatInterface = ({ onFirstQueryMade }) => {
 
   const handleSearch = async () => {
     if (!searchQuery.trim()) return;
-  
-    // Check if this is the first query
-    if (!hasFirstQueryBeenMade) {
-      setHasFirstQueryBeenMade(true);
-      onFirstQueryMade();
-    }
-  
+
+    setSearchQuery("");
     // Ensure we have a valid session before making the request
     await ensureValidSession();
-  
+
     // Get the latest session ID from localStorage
     const latestSessionId = localStorage.getItem("rag_session_id");
-  
+
     if (!latestSessionId) {
       console.error("No session available after verification.");
       return;
     }
-  
+
     const interactionId = uuidv4();
     dispatch(addInteraction({ query: searchQuery, id: interactionId }));
-  
+
     try {
       const endpoint = new URL(`${API_BASE_URL}/api/rag-search`);
       console.log("session_id:", latestSessionId);
       endpoint.searchParams.append("query", searchQuery);
       endpoint.searchParams.append("session_id", latestSessionId);
-  
+
       const headers = {
         Authorization: `Bearer ${token}`,
       };
-  
-      const response = await fetch(endpoint.toString(), { method: "GET", headers });
-  
+
+      const response = await fetch(endpoint.toString(), {
+        method: "GET",
+        headers,
+      });
+
       if (response.status === 401) {
         // Session may have expired unexpectedly. Attempt to create a new session.
-        console.warn("Session may have expired. Attempting to create a new session...");
+        console.warn(
+          "Session may have expired. Attempting to create a new session..."
+        );
         await createSession();
         const newSessionId = localStorage.getItem("rag_session_id");
         if (!newSessionId) {
@@ -164,7 +181,10 @@ const ChatInterface = ({ onFirstQueryMade }) => {
         }
         // Retry the request with the new session_id
         endpoint.searchParams.set("session_id", newSessionId);
-        const retryResponse = await fetch(endpoint.toString(), { method: "GET", headers });
+        const retryResponse = await fetch(endpoint.toString(), {
+          method: "GET",
+          headers,
+        });
         if (!retryResponse.ok) {
           throw new Error(`Failed on retry: ${retryResponse.statusText}`);
         }
@@ -177,11 +197,11 @@ const ChatInterface = ({ onFirstQueryMade }) => {
         );
         return;
       }
-  
+
       if (!response.ok) {
         throw new Error(`Failed to fetch response: ${response.statusText}`);
       }
-  
+
       const data = await response.json();
       dispatch(
         updateInteractionResponse({
@@ -199,7 +219,6 @@ const ChatInterface = ({ onFirstQueryMade }) => {
       );
     }
   };
-  
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {

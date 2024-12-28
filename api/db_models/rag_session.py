@@ -9,7 +9,7 @@ class RagSession(Base):
     __tablename__ = "rag_sessions"
 
     session_id = Column(UUIDType(binary=False), primary_key=True, default=uuid.uuid4)
-    user_id = Column(UUIDType(binary=False), nullable=False)  # No ForeignKey constraint
+    user_id = Column(UUIDType(binary=False), nullable=False) 
     last_access_time = Column(TIMESTAMP, nullable=False, server_default=func.now())
     data = Column(JSON, nullable=False)
     created_at = Column(TIMESTAMP, nullable=False, server_default=func.now())

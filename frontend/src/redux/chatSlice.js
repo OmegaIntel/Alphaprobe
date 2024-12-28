@@ -11,7 +11,6 @@ export const chatSlice = createSlice({
   reducers: {
     addInteraction: (state, action) => {
       // Pushes a new interaction with an initial response placeholder
-      console.log('Adding interaction:', action.payload);
       state.interactions.push({
         id: action.payload.id, // Creating a unique ID for the interaction
         query: action.payload.query,
@@ -26,10 +25,13 @@ export const chatSlice = createSlice({
       } else {
         console.warn('Interaction not found for update:', action.payload.id);
       }
-    },    
+    }, 
+    resetInteractions: (state) => {
+      state.interactions = [];
+    },   
   },
 });
 
-export const { addInteraction, updateInteractionResponse } = chatSlice.actions;
+export const { addInteraction, updateInteractionResponse, resetInteractions } = chatSlice.actions;
 
 export default chatSlice.reducer;

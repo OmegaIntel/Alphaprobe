@@ -27,57 +27,77 @@ SESSION_TIMEOUT = timedelta(minutes=5)
 # Helper functions for session management
 def load_session_from_db(session_id: str, db: Session) -> Dict:
     """Load session from the database."""
-    session = db.query(RagSession).filter(RagSession.session_id == session_id).first()
-    if session:
-        return {
-            "user_id": session.user_id,
-            "last_access_time": session.last_access_time,
-            "data": session.data,
-        }
+    try:
+        session = db.query(RagSession).filter(RagSession.session_id == session_id).first()
+        if session:
+            return {
+                "user_id": session.user_id,
+                "last_access_time": session.last_access_time,
+                "data": session.data,
+            }
+    except Exception as e:
+        logerror(f"Error loading session {session_id}: {e}")
     return None
 
 def save_session_to_db(session_id: str, user_id: str, data: dict, db: Session):
     """Save or update a session in the database."""
-    existing_session = db.query(RagSession).filter(RagSession.session_id == session_id).first()
-    if existing_session:
-        existing_session.last_access_time = datetime.utcnow()
-        existing_session.data = data
-    else:
+    try:
+        existing_session = db.query(RagSession).filter(RagSession.session_id == session_id).first()
+        if existing_session:
+            loginfo(f"Updating existing session {session_id}")
+            existing_session.last_access_time = datetime.utcnow()
+            existing_session.data = data
+        else:
+            loginfo(f"Creating new session {session_id}")
+            new_session = RagSession(
+                session_id=session_id,
+                user_id=user_id,
+                last_access_time=datetime.utcnow(),
+                data=data,
+            )
+            db.add(new_session)
+        db.commit()
+        loginfo(f"Successfully saved session {session_id}")
+    except Exception as e:
+        logerror(f"Error saving session {session_id}: {e}")
+        db.rollback()
+        raise
+
+def validate_and_refresh_session(session_id: str, user_id: str, db: Session):
+    """Validate and refresh session to ensure it is active and belongs to the user."""
+    try:
+        session = db.query(RagSession).filter(RagSession.session_id == session_id, RagSession.user_id == user_id).first()
+        if not session:
+            raise HTTPException(status_code=403, detail="Session does not belong to this user.")
+
+        now = datetime.utcnow()
+        if now - session.last_access_time > SESSION_TIMEOUT:
+            raise HTTPException(status_code=401, detail="Session expired.")
+
+        session.last_access_time = now
+        db.commit()
+    except Exception as e:
+        logerror(f"Error validating session {session_id}: {e}")
+        raise
+
+def create_new_session(user_id: str, db: Session) -> str:
+    """Create a new session for a user."""
+    try:
+        session_id = str(uuid.uuid4())
         new_session = RagSession(
             session_id=session_id,
             user_id=user_id,
             last_access_time=datetime.utcnow(),
-            data=data,
+            data={}
         )
         db.add(new_session)
-    db.commit()
-
-def validate_and_refresh_session(session_id: str, user_id: str, db: Session):
-    """Validate and refresh session to ensure it is active and belongs to the user."""
-    session = db.query(RagSession).filter(RagSession.session_id == session_id, RagSession.user_id == user_id).first()
-    if not session:
-        raise HTTPException(status_code=403, detail="Session does not belong to this user.")
-
-    now = datetime.utcnow()
-    if now - session.last_access_time > SESSION_TIMEOUT:
-        raise HTTPException(status_code=401, detail="Session expired.")
-
-    # Refresh the session's last access time
-    session.last_access_time = now
-    db.commit()
-
-def create_new_session(user_id: str, db: Session) -> str:
-    """Create a new session for a user."""
-    session_id = str(uuid.uuid4())
-    new_session = RagSession(
-        session_id=session_id,
-        user_id=user_id,
-        last_access_time=datetime.utcnow(),
-        data={}
-    )
-    db.add(new_session)
-    db.commit()
-    return session_id
+        db.commit()
+        loginfo(f"New session created with ID {session_id}")
+        return session_id
+    except Exception as e:
+        logerror(f"Error creating new session: {e}")
+        db.rollback()
+        raise
 
 # Helper function for RAG response
 def decode_bytes(obj):
@@ -166,17 +186,14 @@ def rag_response(query: str, session_id: str):
 async def create_session_route(current_user=Depends(get_current_user), db: Session = Depends(get_db)):
     user_id = current_user.id
 
-    # Check if an active session exists for the user
     existing_session = db.query(RagSession).filter(RagSession.user_id == user_id).order_by(RagSession.last_access_time.desc()).first()
     if existing_session:
-        # Refresh the last access time of the existing session
         existing_session.last_access_time = datetime.utcnow()
         db.commit()
 
-    # Create a new session without deleting the old one
     session_id = create_new_session(user_id, db)
     return {"session_id": session_id}
-    
+
 @rag_router.get("/api/rag-search")
 async def get_rag_answer(
     query: str = Query(..., description="User query"),
@@ -184,20 +201,15 @@ async def get_rag_answer(
     current_user=Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
-    """
-    Process a query, update the session's history, and return the response.
-    """
     user_id = current_user.id
 
-    # Validate that the session exists and belongs to the user
     session = db.query(RagSession).filter(RagSession.session_id == session_id, RagSession.user_id == user_id).first()
     if not session:
+        logerror(f"Session {session_id} does not belong to user {user_id}.")
         raise HTTPException(status_code=403, detail="Session does not belong to this user or does not exist.")
 
-    # Generate response using RAG
     result = rag_response(query, session_id)
 
-    # Update session history
     session_data = session.data
     session_data.setdefault("history", []).append({
         "user": query,
@@ -205,18 +217,17 @@ async def get_rag_answer(
         "metadata_content_pairs": result["metadata_content_pairs"]
     })
 
-    # Update last access time and save to DB
     session.last_access_time = datetime.utcnow()
     session.data = session_data
     db.commit()
 
-    # Return the response in the required format
+    save_session_to_db(session_id, user_id, session_data, db)
+
     return {
         "session_id": session_id,
         "agent_response": result["agent_response"],
         "metadata_content_pairs": result["metadata_content_pairs"]
     }
-
 
 @rag_router.get("/api/session/verify")
 async def verify_session(
@@ -246,7 +257,6 @@ async def get_user_sessions(
 ):
     user_id = current_user.id
 
-    # Fetch all sessions for the user, sorted by last_access_time in descending order
     sessions = (
         db.query(RagSession)
         .filter(RagSession.user_id == user_id)
@@ -260,7 +270,7 @@ async def get_user_sessions(
         history = session_data.get("history", [])
         first_query = history[0]["user"] if history else None
         result.append({
-            "session_id": str(session.session_id),  # Convert UUID to string
+            "session_id": str(session.session_id),
             "first_query": first_query,
             "last_access_time": session.last_access_time.isoformat(),
         })
@@ -269,36 +279,31 @@ async def get_user_sessions(
 
 @rag_router.post("/api/session/set-active")
 async def set_active_session(
-    session_id: str = Query(..., description="Session ID to set as active"),
+    session_id: str = Query(..., description="Session ID to set active"),
     current_user=Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
-    """
-    Set the given session as active and return its history.
-    """
     user_id = current_user.id
 
-    # Validate that the session exists and belongs to the user
     session = db.query(RagSession).filter(RagSession.session_id == session_id, RagSession.user_id == user_id).first()
     if not session:
+        logerror(f"Session {session_id} does not belong to user {user_id}.")
         raise HTTPException(status_code=403, detail="Session does not belong to this user or does not exist.")
 
-    # Return session data in JSON format
-    session_data = session.data
-    history = session_data.get("history", [])
-
-    # Extract metadata and response for each query in the history
+    history = session.data.get("history", [])
     formatted_history = [
         {
-            "query": item["user"],
-            "response": item["response"],
-            "metadata": item.get("metadata_content_pairs", [])
+            "query": entry.get("user"),
+            "response": {
+                "agent_response": entry.get("response"),
+                "metadata_content_pairs": entry.get("metadata_content_pairs", [])
+            }
         }
-        for item in history
+        for entry in history
     ]
 
     return {
         "session_id": session_id,
         "status": "active_session_set",
-        "history": formatted_history,
+        "history": formatted_history
     }
