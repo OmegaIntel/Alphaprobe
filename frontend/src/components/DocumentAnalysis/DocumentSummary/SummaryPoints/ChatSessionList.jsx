@@ -52,15 +52,47 @@ const ChatSession = ({ onSessionSelect, onFirstQueryMade }) => {
     fetchSessions();
   }, []);
 
-  const handleStartNewConversation = () => {
-    dispatch(resetInteractions());
-    setActiveSessionId(null);
-    localStorage.removeItem("rag_session_id");
-    if (onFirstQueryMade) {
-      setHasFirstQueryBeenMade(false);
-      onFirstQueryMade();
+  const handleStartNewConversation = async () => {
+    try {
+      // Reset interactions in Redux
+      dispatch(resetInteractions());
+  
+      // Clear the current session ID and local state
+      setActiveSessionId(null);
+      localStorage.removeItem("rag_session_id");
+  
+      // Make API call to create a new session
+      const response = await fetch(`${API_BASE_URL}/api/new-session`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
+      });
+  
+      // Check if the response is successful
+      if (!response.ok) {
+        throw new Error(`Failed to create session: ${response.statusText}`);
+      }
+  
+      // Extract session_id from the response
+      const { session_id } = await response.json();
+  
+      // Store the new session ID in localStorage and update state
+      localStorage.setItem("rag_session_id", session_id);
+      setActiveSessionId(session_id);
+  
+      // Handle the first query state if applicable
+      if (onFirstQueryMade) {
+        setHasFirstQueryBeenMade(false);
+        onFirstQueryMade();
+      }
+    } catch (error) {
+      console.error("Error creating a new session:", error);
+      // Optionally handle the error (e.g., show a notification or fallback behavior)
     }
   };
+  
 
   const handleSessionSelect = async (sessionId) => {
     const currentSessionId = localStorage.getItem("rag_session_id");
@@ -174,12 +206,12 @@ const ChatSession = ({ onSessionSelect, onFirstQueryMade }) => {
       </div>
 
       {/* Start New Conversation Button */}
-      <div className="p-4 border-b border-gray-700 bg-gray-800">
+      <div className="p-2 bg-stone-900 hover:bg-stone-950 border-b transition-all duration-200 border-gray-700">
         <button
           onClick={handleStartNewConversation}
-          className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-all duration-200"
+          className="w-full text-white rounded text-sm"
         >
-          Start New Conversation
+          New Conversation
         </button>
       </div>
 

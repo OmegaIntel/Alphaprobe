@@ -182,6 +182,14 @@ def rag_response(query: str, session_id: str):
     return extract_metadata_with_content_tabular(trace_data, response, session_id)
 
 # API Endpoints
+@rag_router.post("/api/new-session")
+async def create_session_route(current_user=Depends(get_current_user), db: Session = Depends(get_db)):
+    user_id = current_user.id
+
+    session_id = create_new_session(user_id, db)
+    return {"session_id": session_id}
+
+
 @rag_router.post("/api/session")
 async def create_session_route(current_user=Depends(get_current_user), db: Session = Depends(get_db)):
     user_id = current_user.id
