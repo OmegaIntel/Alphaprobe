@@ -285,6 +285,39 @@ async def get_user_sessions(
 
     return {"user_id": str(user_id), "sessions": result}
 
+# @rag_router.post("/api/session/set-active")
+# async def set_active_session(
+#     session_id: str = Query(..., description="Session ID to set active"),
+#     current_user=Depends(get_current_user),
+#     db: Session = Depends(get_db)
+# ):
+#     user_id = current_user.id
+
+#     session = db.query(RagSession).filter(RagSession.session_id == session_id, RagSession.user_id == user_id).first()
+#     if not session:
+#         logerror(f"Session {session_id} does not belong to user {user_id}.")
+#         raise HTTPException(status_code=403, detail="Session does not belong to this user or does not exist.")
+
+#     history = session.data.get("history", [])
+#     formatted_history = [
+#         {
+#             "query": entry.get("user"),
+#             "response": {
+#                 "agent_response": entry.get("response"),
+#                 "metadata_content_pairs": entry.get("metadata_content_pairs", [])
+#             }
+#         }
+#         for entry in history
+#     ]
+
+#     return {
+#         "session_id": session_id,
+#         "status": "active_session_set",
+#         "history": formatted_history
+#     }
+
+
+
 @rag_router.post("/api/session/set-active")
 async def set_active_session(
     session_id: str = Query(..., description="Session ID to set active"),
@@ -293,12 +326,29 @@ async def set_active_session(
 ):
     user_id = current_user.id
 
+    # Fetch the session data
     session = db.query(RagSession).filter(RagSession.session_id == session_id, RagSession.user_id == user_id).first()
     if not session:
         logerror(f"Session {session_id} does not belong to user {user_id}.")
         raise HTTPException(status_code=403, detail="Session does not belong to this user or does not exist.")
 
+    # Access the session history
     history = session.data.get("history", [])
+    
+    # Update presigned URLs in the history
+    for entry in history:
+        for metadata_content_pair in entry.get("metadata_content_pairs", []):
+            metadata = metadata_content_pair.get("metadata", {})
+            s3_uri = metadata.get("x-amz-bedrock-kb-source-uri")
+            if s3_uri and s3_uri.startswith("s3://"):
+                try:
+                    bucket_name, key = s3_uri.replace("s3://", "").split("/", 1)
+                    new_presigned_url = generate_presigned_url(bucket_name, key)
+                    metadata["presigned_url"] = new_presigned_url
+                except Exception as e:
+                    logerror(f"Error regenerating presigned URL for {s3_uri}: {e}")
+
+    # Format the history to return
     formatted_history = [
         {
             "query": entry.get("user"),

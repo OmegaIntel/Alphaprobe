@@ -7,6 +7,7 @@ import {
 } from "../../../../redux/chatSlice"; // Ensure resetInteractions is imported
 import { v4 as uuidv4 } from "uuid";
 import { API_BASE_URL, token } from "../../../../services/index";
+import { useNavigate } from "react-router-dom";
 
 const ChatSession = ({ onSessionSelect, onFirstQueryMade }) => {
   const [sessions, setSessions] = useState([]);
@@ -16,6 +17,7 @@ const ChatSession = ({ onSessionSelect, onFirstQueryMade }) => {
   const [selectedSessionLoading, setSelectedSessionLoading] = useState(false);
   const [hasFirstQueryBeenMade, setHasFirstQueryBeenMade] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchSessions = async () => {
@@ -54,14 +56,11 @@ const ChatSession = ({ onSessionSelect, onFirstQueryMade }) => {
 
   const handleStartNewConversation = async () => {
     try {
-      // Reset interactions in Redux
-      dispatch(resetInteractions());
-  
-      // Clear the current session ID and local state
+      dispatch(resetInteractions());  
       setActiveSessionId(null);
       localStorage.removeItem("rag_session_id");
   
-      // Make API call to create a new session
+      
       const response = await fetch(`${API_BASE_URL}/api/new-session`, {
         method: 'POST',
         headers: {
@@ -70,29 +69,24 @@ const ChatSession = ({ onSessionSelect, onFirstQueryMade }) => {
         },
       });
   
-      // Check if the response is successful
+   
       if (!response.ok) {
         throw new Error(`Failed to create session: ${response.statusText}`);
       }
-  
-      // Extract session_id from the response
+
       const { session_id } = await response.json();
-  
-      // Store the new session ID in localStorage and update state
+    
       localStorage.setItem("rag_session_id", session_id);
       setActiveSessionId(session_id);
   
-      // Handle the first query state if applicable
       if (onFirstQueryMade) {
         setHasFirstQueryBeenMade(false);
         onFirstQueryMade();
       }
     } catch (error) {
       console.error("Error creating a new session:", error);
-      // Optionally handle the error (e.g., show a notification or fallback behavior)
     }
   };
-  
 
   const handleSessionSelect = async (sessionId) => {
     const currentSessionId = localStorage.getItem("rag_session_id");
@@ -198,6 +192,13 @@ const ChatSession = ({ onSessionSelect, onFirstQueryMade }) => {
     return grouped;
   }, [sessions]);
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setTimeout(() => {
+      window.location.reload();
+    }, 300);
+  };
+
   return (
     <div className="fixed top-14 left-0 bottom-0 w-1/6 h-[93%] bg-stone-900 text-gray-300 flex flex-col">
       {/* Fixed Header */}
@@ -248,8 +249,13 @@ const ChatSession = ({ onSessionSelect, onFirstQueryMade }) => {
       </div>
 
       {/* Fixed Bottom Div */}
-      <div className="p-4 border-t border-gray-700 bg-gray-800 shadow-md">
-        <p className="text-center text-sm">Bottom Div Content</p>
+      <div className="p-4 border-t border-gray-700 bg-stone-900 shadow-md">
+        <button
+          onClick={handleLogout}
+          className="w-full bg-stone-800 text-white py-2 rounded-md text-sm hover:bg-stone-950 transition"
+        >
+          Logout
+        </button>
       </div>
     </div>
   );

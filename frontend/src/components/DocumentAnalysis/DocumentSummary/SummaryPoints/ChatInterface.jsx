@@ -228,7 +228,7 @@ const ChatInterface = () => {
 
   return (
     <div className="flex justify-center items-center w-full">
-      <div className="inline-flex bg-stone-950 px-10 py-4">
+      <div className="inline-flex bg-[#0d0d0d] px-10 py-4">
         <input
           type="text"
           value={searchQuery}

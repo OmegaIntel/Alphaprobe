@@ -59,7 +59,7 @@ const SummaryPoints = () => {
           className={`${
             isFirstQueryMade
               ? "fixed bottom-0 left-60 right-60"
-              : "flex flex-col items-center py-32 h-screen bg-stone-950 text-white"
+              : "flex flex-col items-center py-32 h-screen bg-[#0d0d0d] text-white"
           }`}
         >
           <ChatInterface />
