@@ -7,6 +7,7 @@ import selectedIndustriesReducer from "./selectedIndustriesSlice";
 import companyInsightReducer from "./companyInsightsSlice";
 import { documentSearchResultsSlice } from "./documentSearchResultSlice";
 import { chatSlice } from "./chatSlice";
+import * as amplitude from '@amplitude/analytics-browser';
 
 const store = configureStore({
   reducer: {
@@ -20,5 +21,47 @@ const store = configureStore({
     chat: chatSlice.reducer,
   },
 });
+
+
+const slicesToTrack = ['companyInsight', 'deals', 'formResponse', 'industry', 'modal', 'selectedIndustries', 'documentSearchResults', 'chat'];
+
+let previousState = slicesToTrack.reduce((acc, slice) => {
+  acc[slice] = store.getState()[slice];
+  return acc;
+}, {});
+
+store.subscribe(() => {
+  const currentState = slicesToTrack.reduce((acc, slice) => {
+    acc[slice] = store.getState()[slice];
+    return acc;
+  }, {});
+
+  slicesToTrack.forEach((slice) => {
+    if (previousState[slice] !== currentState[slice]) {
+      // Log to Amplitude
+      const resultArray = currentState[slice].summaryData;
+      console.log(resultArray);
+      if(typeof resultArray === 'string') {
+        amplitude.track(`Yet to select an industry`, {
+          previousState: previousState[slice],
+          currentState: currentState[slice],
+        });
+      } else if(typeof resultArray === 'object' &&
+        resultArray.hasOwnProperty('result') &&
+        Array.isArray(resultArray.result)) { 
+          amplitude.track(`A new Industry viewed - ${resultArray.result[0].report_title}`, {
+            previousState: previousState[slice],
+            currentState: currentState[slice],
+          });
+      }
+
+
+      // Update previousState for this slice
+      previousState[slice] = currentState[slice];
+    }
+  });
+});
+
+
 
 export default store;

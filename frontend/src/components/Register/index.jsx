@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import RequestDemo from "../modals/request_demo";
 import { notification } from "antd";
 import { register } from "../../services/registerService";
@@ -8,7 +8,8 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate();
+
+  const stripePaymentLink = "https://buy.stripe.com/eVa9ASaDr8x9aE89AB";
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -27,10 +28,11 @@ const Register = () => {
       if (response.data.id) {
         notification.success({
           message: "Registered Successfully",
-          description: "Your User is created successfully.",
+          description: "Your User is created successfully. Redirecting to payment...",
         });
         setTimeout(() => {
-          navigate("/login");
+          // Redirect to Stripe payment link
+          window.location.href = stripePaymentLink;
         }, 2000);
       }
     } catch (error) {
@@ -38,12 +40,13 @@ const Register = () => {
         notification.error({
           message: error.response.data.detail,
         });
-      } else
+      } else {
         notification.error({
           message: "Something went wrong!",
           description:
-            "There was an error submitting your deal request. Please try again.",
+            "There was an error submitting your registration. Please try again.",
         });
+      }
     }
   };
 
