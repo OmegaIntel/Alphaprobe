@@ -17,7 +17,6 @@ const ChatDisplay = () => {
   };
 
   useEffect(() => {
-    console.log("Interactions updated:", interactions);
     scrollToBottom();
   }, [interactions]);
 
