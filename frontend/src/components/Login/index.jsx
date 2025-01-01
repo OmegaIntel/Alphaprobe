@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { notification } from "antd";
 import { login } from "../../services/loginService";
 import LoginButton from "../Login/LoginButton"
+import LogoutButton from "../Login/LogoutButton"
 import * as amplitude from '@amplitude/analytics-browser';
 
 const Login = ({ setToken }) => {
@@ -130,6 +131,7 @@ const Login = ({ setToken }) => {
               Login
             </button> */}
             <LoginButton />
+            <LogoutButton />
           </div>
         </form>
       </div>

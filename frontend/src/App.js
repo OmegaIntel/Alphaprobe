@@ -4,6 +4,7 @@ import {
   Route,
   Routes,
   Navigate,
+  useNavigate,
 } from "react-router-dom";
 import Register from "./components/Register";
 import Login from "./components/Login";
@@ -13,9 +14,11 @@ import Dashboard from "./components/Dashboard";
 import ProtectedLayout from "./components/ProtectedLayout";
 import Categories from "./components/projectHeaders/categories";
 import DocumentsWrapper from "./components/FileUploadComponent/wrapper";
+import CallbackPage from "./components/Login/CallbackPage";
 import { Auth0Provider, useAuth0 } from "@auth0/auth0-react";
 import * as amplitude from '@amplitude/analytics-browser';
 import DocumentAnalysisLayout from "./components/DocumentAnalysis/DocumentAnalysisLayout";
+import LoginButton from "./components/Login/LoginButton";
 
 
 amplitude.init('b07260e647c7c3cc3c25aac93aa17db8', undefined, {
@@ -24,114 +27,87 @@ amplitude.init('b07260e647c7c3cc3c25aac93aa17db8', undefined, {
 
 
 const App = () => {
-  const [token, setToken] = useState(localStorage.getItem("token") || "");
+  const { isAuthenticated, user } = useAuth0();
 
-  const handleSetToken = (newToken) => {
-    setToken(newToken);
-    localStorage.setItem("token", newToken);
-  };
-
-  const isLoggedIn = Boolean(token);
+  useEffect(() => {
+    if (isAuthenticated) {
+      console.log("User is authenticated:", user);
+      // Perform any actions based on authentication
+      // For example, fetch user data or update state
+    } else {
+      console.log("User is not authenticated.");
+    }
+  }, [isAuthenticated, user]);
 
   return (
     <Auth0Provider
-    domain={process.env.REACT_APP_AUTH0_DOMAIN}
-    clientId={process.env.REACT_APP_AUTH0_CLIENT_ID}
+    domain="dev-tenant-testing.us.auth0.com"
+    clientId="KznvQTTUvG9V24gsUxFWGILHdk0I565L"
     authorizationParams={{
-      redirect_uri: window.location.origin+"/dashboard",
-      audience: process.env.REACT_APP_AUTH0_AUDIENCE,
+      redirect_uri: window.location.origin + "/callback",
+      scope: "openid profile email",
     }}
+    cacheLocation="localstorage"
     >
-    <Router>
-      <Routes>
-        <Route path="/" element={<AutoLogin />} />
-        <Route path="/guest/:id" element={<DocumentsWrapper />} />
-        <Route
-          path="/register"
-          element={isLoggedIn ? <Navigate to="/projects" /> : <Register />}
-        />
-        <Route
-          path="/login"
-          element={
-            isLoggedIn ? (
-              <Navigate to="/projects" />
-            ) : (
-              <Login setToken={handleSetToken} />
-            )
-          }
-        />
-
-        <Route
-          path="/dashboard"
-          element={
-            <ProtectedLayout setToken={handleSetToken} isLoggedIn={isLoggedIn}>
-              <Categories />
-            </ProtectedLayout>
-          }
-        />
-         <Route
-          path="/dashboard"
-          element={
-            <ProtectedLayout setToken={handleSetToken} isLoggedIn={isLoggedIn}>
-              <Categories />
-            </ProtectedLayout>
-          }
-        />
-        <Route
-          path="/document"
-          element={
-            <ProtectedLayout setToken={handleSetToken} isLoggedIn={isLoggedIn}>
-              <DocumentAnalysisLayout />
-            </ProtectedLayout>
-          }
-        ></Route>
-        <Route
-          path="/projects"
-          element={
-            <ProtectedLayout setToken={handleSetToken} isLoggedIn={isLoggedIn}>
-              <Categories />
-            </ProtectedLayout>
-          }
-        ></Route>
-        <Route
-          path="/projects/:id"
-          element={
-            <ProtectedLayout setToken={handleSetToken} isLoggedIn={isLoggedIn}>
-              <Categories />
-            </ProtectedLayout>
-          }
-        ></Route>
-
-        {/* <Route
-          path="/"
-          element={<Navigate to={isLoggedIn ? "/dashboard" : "/login"} />}
-        /> */}
-        <Route
-          path="*"
-          element={<Navigate to={isLoggedIn ? "/dashboard" : "/login"} />}
-        />
-
-        {/* Trouble Shooting Route */}
-      </Routes>
-    </Router>
+        <Routes>
+          <Route path="/" element={<AutoLogin />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/callback" element={<CallbackPage />} />
+          <Route path="/guest/:id" element={<DocumentsWrapper />} />
+          <Route
+            path="/register"
+            element={isAuthenticated ? <Navigate to="/projects" /> : <Register />}
+          />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedLayout isLoggedIn={true}>
+                <Categories />
+              </ProtectedLayout>
+            }
+          />
+          <Route
+            path="*"
+            element={<Navigate to={isAuthenticated ? "/dashboard" : "/login"} />}
+          />
+        </Routes>
     </Auth0Provider>
   );
 };
 
 const AutoLogin = () => {
-  const { loginWithRedirect, isAuthenticated, isLoading } = useAuth0();
+  const { loginWithRedirect, isAuthenticated, isLoading, getAccessTokenSilently } = useAuth0();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    if (!isAuthenticated && !isLoading) {
-      loginWithRedirect();
+    if (!isLoading) {
+      if (isAuthenticated) {
+        const fetchToken = async () => {
+          try {
+            const token = await getAccessTokenSilently();
+            console.log("Access Token:", token); // Debugging token
+          } catch (error) {
+            console.error("Error fetching token:", error);
+          }
+        };
+        fetchToken();
+        navigate("/dashboard");
+      } else {
+        const fetchToken = async () => {
+          try {
+            const token = await getAccessTokenSilently();
+            console.log("Access Token:", token); // Debugging token
+          } catch (error) {
+            console.error("Error fetching token:", error);
+          }
+        };
+        fetchToken();
+        navigate("/login"); // Redirect to Auth0 login screen
+      }
     }
-  }, [isAuthenticated, isLoading, loginWithRedirect]);
+  }, [isAuthenticated, isLoading, loginWithRedirect, navigate]);
 
-  if (isLoading) {
-    return <p>Loading...</p>;
-  }
-
-  return isAuthenticated ? <p>Welcome! Redirecting to home...</p> : null;
+  return isLoading ? <p>Loading...</p> : null;
 };
 
 export default App;

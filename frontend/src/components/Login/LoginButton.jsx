@@ -7,8 +7,17 @@ const LoginButton = () => {
   const dispatch = useDispatch();
 
   const handleLogin = async () => {
-    await loginWithRedirect(); // Redirect user to Auth0 login
-    dispatch({ type: "AUTH0_LOGIN", payload: { getAccessTokenSilently } });
+    try {
+      await loginWithRedirect();
+      const token = await getAccessTokenSilently();
+
+      dispatch({
+        type: "AUTH0_LOGIN",
+        payload: { token },
+      });
+    } catch (error) {
+      console.error("Login failed", error);
+    }
   };
 
   return <button onClick={handleLogin}>Login</button>;
