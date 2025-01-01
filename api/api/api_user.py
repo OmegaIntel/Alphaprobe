@@ -88,7 +88,7 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)], db: Se
     if user is None:
         raise credentials_exception
     
-    return User(id=str(user.id), email=user.email,is_admin = user.is_master_admin)
+    return User(id=str(user.id), email=user.email, is_admin=user.is_master_admin)
 
 async def bypass_user(token: Annotated[str, Depends(oauth2_scheme)], db: Session = Depends(get_db)) -> User:
     try:
@@ -104,7 +104,7 @@ async def bypass_user(token: Annotated[str, Depends(oauth2_scheme)], db: Session
     if user is None:
         return None
     
-    return User(id=str(user.id), email=user.email,is_admin = user.is_master_admin)
+    return User(id=str(user.id), email=user.email, is_admin=user.is_master_admin)
 
 # API route for user registration
 @user_router.post("/api/register", response_model=User)
@@ -159,3 +159,17 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
 @user_router.get("/api/users/me")
 async def read_users_me(current_user: Annotated[User, Depends(get_current_user)]):
     return current_user
+
+# New route to verify if a token is expired or not
+@user_router.post("/api/token/verify")
+async def verify_token(token: str = Form(...)):
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        # If we reach here, token is valid and not expired
+        return {"valid": True}
+    except jwt.ExpiredSignatureError:
+        # Token has expired
+        return {"valid": False}
+    except jwt.PyJWTError:
+        # Token is invalid for other reasons
+        return {"valid": False}
