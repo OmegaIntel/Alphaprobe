@@ -64,7 +64,7 @@ const Navbar = () => {
       <div className="flex items-center gap-4">
         <a href="#" className="text-gray-600 hover:text-gray-800">How it works</a>
         <a href="#" className="text-gray-600 hover:text-gray-800">Solutions</a>
-        <a href="#" className="text-gray-600 hover:text-gray-800">Schedule a demo</a>
+        <a href="https://calendly.com/chetan-omegaintelligence" className="text-gray-600 hover:text-gray-800">Schedule a demo</a>
 
         {isAuthenticated ? (
           // If authenticated, show Dashboard

@@ -11,21 +11,34 @@ const HowWork = () => {
         </p>
       </div>
 
-      {/* Content Grid */}
-      <div className="">
-        
-
+      {/* Content */}
+      <div className="flex flex-col items-center">
         {/* Center Column - Omega Terminal */}
         <div className="flex flex-col items-center text-center">
           <img
             src="images/network.svg"
             alt="Omega AI"
-            className="mb-4  h-auto"
+            className="mb-4 h-auto"
           />
-          {/* <p className="text-lg font-semibold">Omega Terminal</p> */}
         </div>
 
-       
+        {/* List Below the Image with Background */}
+        <div
+          className="grid grid-cols-3 gap-8 mt-8 w-full max-w-4xl p-8 rounded-lg bg-gray-700 bg-opacity-30"
+        >
+          <ul className="space-y-3 text-left">
+            <li>Connect with Market Data</li>
+            <li>Connect internal datasets</li>
+          </ul>
+          <ul className="space-y-3 text-left">
+            <li>High Fidelity Proprietary Models</li>
+            <li>Fact Based with Explainable AI</li>
+          </ul>
+          <ul className="space-y-3 text-left">
+            <li>Executive ready presentations</li>
+            <li>Automate research workflows</li>
+          </ul>
+        </div>
       </div>
     </div>
   );

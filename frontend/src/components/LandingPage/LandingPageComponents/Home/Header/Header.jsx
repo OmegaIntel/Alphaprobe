@@ -28,13 +28,13 @@ const Header = () => {
           </button>
         </div>
       </div>
-
+ 
       {/* Image */}
       <div className="w-1/2 flex justify-center">
         <img
-          src="images/Circle.svg"
+          src="images/dashboard.png"
           alt="Circle Illustration"
-          className="max-w-full h-auto"
+          className="max-w-full h-auto rounded-lg shadow-xl"
         />
       </div>
     </div>
