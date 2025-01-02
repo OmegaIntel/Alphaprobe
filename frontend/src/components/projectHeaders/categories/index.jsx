@@ -21,6 +21,9 @@ import CompanyInsightslayout from "../../CompanyInsights/CompanyInsightslayout";
 import SearchBox from "../../SearchBox/SearchBox";
 import DashboardLayout from "../../Dashboard/DashboardLayout";
 import DocumentSummary from "../../DocumentAnalysis/DocumentSummary";
+import LogoutButton from "../../Login/LogoutButton";
+import * as amplitude from '@amplitude/analytics-browser';
+import { useAuth0 } from "@auth0/auth0-react";
 
 const { Option } = Select;
 
@@ -51,6 +54,8 @@ const SearchBar = ({ placeholder }) => {
 };
 
 const Categories = () => {
+  const { user } = useAuth0();
+  amplitude.setUserId(user.email);
   const [activeCategory, setActiveCategory] = useState("Dashboard");
   const [selectedSubcategory, setSelectedSubcategory] =
     useState("Current Workspace");
@@ -179,6 +184,10 @@ const Categories = () => {
                   {data}
                 </div>
               ))}
+            </div>
+
+            <div className="p-1 text-center desktop:p-2 cursor-pointer text-sm border-#3388ff-400 rounded-lg p-4 hover:bg-[#3388ff] transition duration-300">
+              <LogoutButton />
             </div>
             
             {/* <div className="my-3">

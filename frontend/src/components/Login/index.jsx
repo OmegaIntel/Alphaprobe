@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { notification } from "antd";
 import { login } from "../../services/loginService";
-import * as amplitude from '@amplitude/analytics-browser';
+import LoginButton from "../Login/LoginButton"
+import LogoutButton from "../Login/LogoutButton"
 
 const Login = ({ setToken }) => {
   const [email, setEmail] = useState("");
@@ -47,7 +48,6 @@ const Login = ({ setToken }) => {
             "There was an error submitting your deal request. Please try again.",
         });
     }
-     amplitude.setUserId(email);
   };
 
   return (
@@ -122,12 +122,14 @@ const Login = ({ setToken }) => {
             </a>
           </div> */}
           <div className="flex justify-center mt-4">
-            <button
+            {/* <button
               type="submit"
               className="w-[100px] h-[40px] bg-[#0088cc] rounded text-white text-xs hover:bg-[#0056b3]"
             >
               Login
-            </button>
+            </button> */}
+            <LoginButton />
+            <LogoutButton />
           </div>
         </form>
       </div>

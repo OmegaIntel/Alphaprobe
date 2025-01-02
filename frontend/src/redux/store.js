@@ -7,6 +7,8 @@ import selectedIndustriesReducer from "./selectedIndustriesSlice";
 import companyInsightReducer from "./companyInsightsSlice";
 import { documentSearchResultsSlice } from "./documentSearchResultSlice";
 import { chatSlice } from "./chatSlice";
+import authSliceReducer from "./auth/authSlice"
+import { authMiddleware } from "./auth/authMiddleware";
 import * as amplitude from '@amplitude/analytics-browser';
 
 const store = configureStore({
@@ -19,11 +21,13 @@ const store = configureStore({
     documentSearchResults: documentSearchResultsSlice.reducer,
     formResponse: formResponseReducer,
     chat: chatSlice.reducer,
+    authSlice: authSliceReducer,
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(authMiddleware)
 });
 
 
-const slicesToTrack = ['companyInsight', 'deals', 'formResponse', 'industry', 'modal', 'selectedIndustries', 'documentSearchResults', 'chat'];
+const slicesToTrack = ['companyInsight', 'deals', 'formResponse', 'industry', 'modal', 'selectedIndustries', 'documentSearchResults', 'chat', 'authSlice'];
 
 let previousState = slicesToTrack.reduce((acc, slice) => {
   acc[slice] = store.getState()[slice];
