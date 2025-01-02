@@ -3,4 +3,4 @@
 
 //export const API_BASE_URL = `http://ec2-52-55-181-225.compute-1.amazonaws.com:8000`; //testing purpose
 export const token = localStorage.getItem('token'); 
-export const API_BASE_URL ='http://localhost:8000';
+export const API_BASE_URL ='https://omegaintelligence.ai/api/';
