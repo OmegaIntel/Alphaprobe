@@ -13,8 +13,9 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import Categories from "./components/projectHeaders/categories";
 import DocumentsWrapper from "./components/FileUploadComponent/wrapper";
 import * as amplitude from "@amplitude/analytics-browser";
-
 import DocumentAnalysisLayout from "./components/DocumentAnalysis/DocumentAnalysisLayout";
+import Main from "./components/LandingPage/Main";
+import Home from "./components/LandingPage/LandingPageComponents/Home/Home";
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 
@@ -46,7 +47,7 @@ const App = () => {
           <Route path="/projects" element={<AutoDashboard component={Categories} />} />
           <Route path="/projects/:id" element={<AutoDashboard component={Categories} />} />
           <Route path="/checkout" element={<CheckoutForm />} />
-          <Route path="/" element={<AutoLogin />} />
+          <Route path="/" element={<Main><Home /></Main>} />
           <Route path="*" element={<AutoLogin />} />
         </Routes>
       </Elements>
