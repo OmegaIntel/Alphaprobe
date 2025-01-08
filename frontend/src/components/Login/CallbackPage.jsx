@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 const CallbackPage = () => {
   const { isAuthenticated, isLoading, user } = useAuth0();
   console.log("User - " + user?.email);
+  console.log("User id - " + user?.sub);
   console.log("Is Authenticated - " + isAuthenticated)
   const navigate = useNavigate();
   useEffect(() => {

@@ -6,17 +6,17 @@ import UploadFilesModal from "../UploadFilesModal";
 import { useDispatch } from "react-redux";
 import { setDealId } from "../../redux/dealsSlice";
 
-const ProtectedLayout = ({ children, setToken, isLoggedIn }) => {
+const ProtectedLayout = ({ children, setToken, isLoggedIn, isPaid }) => {
   const { id } = useParams();
 
   return (
-    <ProtectedLayoutInner id={id} setToken={setToken} isLoggedIn={isLoggedIn}>
+    <ProtectedLayoutInner id={id} setToken={setToken} isLoggedIn={isLoggedIn} isPaid={isPaid}>
       {children}
     </ProtectedLayoutInner>
   );
 };
 
-const ProtectedLayoutInner = ({ children, setToken, isLoggedIn, id }) => {
+const ProtectedLayoutInner = ({ children, setToken, isLoggedIn, id, isPaid }) => {
   const dispatch = useDispatch();
   useEffect(() => {
     if (id) {
@@ -28,6 +28,10 @@ const ProtectedLayoutInner = ({ children, setToken, isLoggedIn, id }) => {
 
   if (!isLoggedIn) {
     return <Navigate to="/login" />;
+  }
+
+  if(isLoggedIn && !isPaid) {
+    return <Navigate to="/checkout" />;
   }
 
   return (

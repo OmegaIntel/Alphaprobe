@@ -1,54 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import RequestDemo from "../modals/request_demo";
-import { notification } from "antd";
-import { register } from "../../services/registerService";
+import { useAuth0 } from "@auth0/auth0-react";
+import RegisterButton from '../Login/RegisterButton'
 
 const Register = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-
-  const stripePaymentLink = "https://buy.stripe.com/eVa9ASaDr8x9aE89AB";
-
-  const handleRegister = async (e) => {
-    e.preventDefault();
-    if (!email || !password) {
-      notification.error({
-        message: "Missing Required Fields",
-        description: "Please fill out all required fields.",
-      });
-      return;
-    }
-    const formData = new FormData();
-    formData.append("email", email);
-    formData.append("password", password);
-    try {
-      const response = await register(formData);
-      if (response.data.id) {
-        notification.success({
-          message: "Registered Successfully",
-          description: "Your User is created successfully. Redirecting to payment...",
-        });
-        setTimeout(() => {
-          // Redirect to Stripe payment link
-          window.location.href = stripePaymentLink;
-        }, 2000);
-      }
-    } catch (error) {
-      if (error?.response?.data?.detail) {
-        notification.error({
-          message: error.response.data.detail,
-        });
-      } else {
-        notification.error({
-          message: "Something went wrong!",
-          description:
-            "There was an error submitting your registration. Please try again.",
-        });
-      }
-    }
-  };
+  const { loginWithRedirect } = useAuth0();
 
   return (
     <div className="flex justify-center items-center min-h-screen relative">
@@ -77,57 +34,19 @@ const Register = () => {
             </Link>
           </p>
         </div>
-        <form onSubmit={handleRegister}>
-          <div className="mb-5 flex flex-col gap-3">
-            <label className="text-xs text-[#8a8a90]">Email</label>
-            <input
-              type="email"
-              placeholder="example@omegaintelligence.org"
-              className="w-full p-[10px] bg-[#212126] border border-[#303038] rounded text-white text-sm outline-none placeholder:text-[#5c5c5c]"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
+          <button
+            type="submit"
+            className="w-[120px] h-[40px] p-2.5 bg-[#0088cc] hover:bg-[#0056b3] text-white text-xs rounded-md mt-4"
+          >
+            <RegisterButton />
+          </button>
+          <div className="w-[60%] my-12 text-center border-b border-[#505059] leading-[0.1em]">
+            <span className=" bg-[#151518] px-4 text-[#a2a2a2]">or</span>
           </div>
-          <div className="mb-5 flex flex-col gap-3 relative">
-            <label className="text-xs text-[#8a8a90]">Password</label>
-            <input
-              type={showPassword ? "text" : "password"}
-              placeholder="Enter your password"
-              className="w-full p-[10px] bg-[#212126] border border-[#303038] rounded text-white text-sm outline-none placeholder:text-[#5c5c5c]"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-            <span
-              className="absolute right-[15px] top-[38px] text-gray-500 cursor-pointer hover:text-[#33bbff]"
-              onClick={() => {
-                setShowPassword(!showPassword);
-              }}
-            >
-              {showPassword ? (
-                <i className="fa fa-eye-slash"></i>
-              ) : (
-                <i className="fa fa-eye"></i>
-              )}
-            </span>
+          <div className="text-sm font-bold text-white mb-4">
+            Schedule a personalized demo
           </div>
-          <div className="flex flex-col items-center">
-            <button
-              type="submit"
-              className="w-[120px] h-[40px] p-2.5 bg-[#0088cc] hover:bg-[#0056b3] text-white text-xs rounded-md mt-4"
-            >
-              Register
-            </button>
-            <div className="w-[60%] my-12 text-center border-b border-[#505059] leading-[0.1em]">
-              <span className=" bg-[#151518] px-4 text-[#a2a2a2]">or</span>
-            </div>
-            <div className="text-sm font-bold text-white mb-4">
-              Schedule a personalized demo
-            </div>
-            <RequestDemo />
-          </div>
-        </form>
+          <RequestDemo />
       </div>
     </div>
   );

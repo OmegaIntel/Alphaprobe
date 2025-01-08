@@ -9,6 +9,7 @@ import { documentSearchResultsSlice } from "./documentSearchResultSlice";
 import { chatSlice } from "./chatSlice";
 import authSliceReducer from "./auth/authSlice"
 import { authMiddleware } from "./auth/authMiddleware";
+import paymentReducer from './paymentSlice';
 import * as amplitude from '@amplitude/analytics-browser';
 
 const store = configureStore({
@@ -22,6 +23,7 @@ const store = configureStore({
     formResponse: formResponseReducer,
     chat: chatSlice.reducer,
     authSlice: authSliceReducer,
+    payment: paymentReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(authMiddleware)
 });
