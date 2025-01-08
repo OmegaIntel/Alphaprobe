@@ -50,7 +50,7 @@ const NewsBar: React.FC = () => {
 
   return (
     <div className=" p-4 mx-20">
-      <h2 className="scroll-m-20 text-stone-950  text-2xl font-semibold tracking-tight">
+      <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight">
         Industry News
       </h2>
 

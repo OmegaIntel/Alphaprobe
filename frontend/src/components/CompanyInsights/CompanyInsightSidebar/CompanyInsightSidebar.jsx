@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-
 import { notification } from "antd";
 import { API_BASE_URL, token } from "../../../services";
 import { fetchCompanyInsightFailure, fetchCompanyInsightSuccess } from "../../../redux/companyInsightsSlice";

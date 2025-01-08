@@ -9,6 +9,9 @@ import { categoryList } from '~/constant';
 import DashboardLayout from '~/pages/dashboard/DashboardLayout';
 import MarketResearchChatLayout from '~/components/Dashboard/MarketResearch/MarketResearchChatLayout';
 import { MarketResearchPreload } from '~/components/Dashboard/IndustryInsights/PreloadingScreen';
+import { IndustrySidebar } from '~/components/Dashboard/IndustryInsights/IndustrySidebar';
+import FuzzySearch from '~/components/SearchBox/FuzzySearch';
+import IndustryInsightsLayout from '~/components/Dashboard/IndustryInsights/IndustryInsightsLayout';
 
 
 // Example question type
@@ -103,10 +106,12 @@ const DashboardPage: FC = () => {
 
         {/* Industry Insights */}
         <TabsContent value="Industry Insights" className="p-5 ">
-          <h2 className="text-xl font-semibold mb-4">Industry Insights</h2>
           {/* Insert your content here */}
-          <MarketResearchPreload />
-         
+          {/* <MarketResearchPreload />
+          <IndustrySidebar /> */}
+          <IndustryInsightsLayout />
+          {/* <FuzzySearch />
+          */}
         </TabsContent>
 
         {/* Company Insights */}
