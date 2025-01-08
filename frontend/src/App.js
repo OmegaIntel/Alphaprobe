@@ -12,7 +12,8 @@ import CallbackPage from "./components/Login/CallbackPage";
 import { Auth0Provider } from "@auth0/auth0-react";
 import Categories from "./components/projectHeaders/categories";
 import DocumentsWrapper from "./components/FileUploadComponent/wrapper";
-import * as amplitude from '@amplitude/analytics-browser';
+import * as amplitude from "@amplitude/analytics-browser";
+
 import DocumentAnalysisLayout from "./components/DocumentAnalysis/DocumentAnalysisLayout";
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
