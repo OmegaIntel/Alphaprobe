@@ -180,12 +180,6 @@ const Categories = () => {
                 </div>
               ))}
             </div>
-            
-            {/* <div className="my-3">
-              {activeCategory === "Company Insights" && (<SearchBox section={activeCategory}/>)}
-               
-              
-            </div> */}
           </div>
           {}
 
