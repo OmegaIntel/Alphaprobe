@@ -36,12 +36,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <html lang="en" className="dark">
       <head>
         <meta charSet="utf-8" />
+        <title>Alphaprobe</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
       <body>
-        <div className="">{children}</div>
+        {children}
         <ScrollRestoration />
         <Scripts />
       </body>
