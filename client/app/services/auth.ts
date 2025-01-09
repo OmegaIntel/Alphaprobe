@@ -2,6 +2,7 @@
 import { API_BASE_URL } from "~/constant";
 import { setCookie, getCookie, removeCookie } from "~/utils/cookies";
 
+// Function to log in a user
 export async function loginUser(formData: FormData) {
   const response = await fetch(`${API_BASE_URL}/api/token`, {
     method: 'POST',
@@ -74,4 +75,25 @@ export async function registerUser(formData: FormData) {
     console.error('Error parsing JSON:', error);
     throw new Error('Failed to parse server response.');
   }
+}
+
+// Function to check if a user exists in the database
+export async function checkUserExists(email: string) {
+  const url = `${API_BASE_URL}/api/check-user?email=${encodeURIComponent(
+    email
+  )}`;
+
+  const response = await fetch(url, {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error(`Failed to check user existence: ${response.statusText}`);
+  }
+
+  const data = await response.json();
+  return data.exists; // Returns true if the user exists, false otherwise
 }

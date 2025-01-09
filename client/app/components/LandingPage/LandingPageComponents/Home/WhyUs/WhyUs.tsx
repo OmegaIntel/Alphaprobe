@@ -1,12 +1,20 @@
-import React from "react";
+import React, { FC, ReactNode } from "react";
 import { Building2, Briefcase, FileSearch, BarChart3 } from "lucide-react";
 
+// Define the props for PlatformUser component
 interface PlatformUserProps {
-  icon: React.ReactNode;
+  icon: ReactNode; // Allows any JSX element
   text: string;
 }
 
-const SecurityBanner: React.FC = () => (
+const PlatformUser: FC<PlatformUserProps> = ({ icon, text }) => (
+  <div className="flex items-center gap-3 bg-orange-50 px-4 py-2 rounded-lg">
+    {icon}
+    <span className="text-sm">{text}</span>
+  </div>
+);
+
+const SecurityBanner: FC = () => (
   <div className="bg-slate-800 text-white p-12 rounded-lg mb-24">
     <h2 className="text-3xl mb-4">Built with Enterprise-Grade Security and Compliance</h2>
     <p className="text-gray-300 max-w-3xl">
@@ -15,14 +23,8 @@ const SecurityBanner: React.FC = () => (
   </div>
 );
 
-const PlatformUser: React.FC<PlatformUserProps> = ({ icon, text }) => (
-  <div className="flex items-center gap-3 bg-orange-50 px-4 py-2 rounded-lg">
-    {icon}
-    <span className="text-sm">{text}</span>
-  </div>
-);
-
-const WhyUs: React.FC = () => {
+const WhyUs: FC = () => {
+  // Define the users array with explicit typing
   const users: PlatformUserProps[] = [
     { icon: <Building2 className="w-5 h-5 text-orange-400" />, text: "Investment Banking" },
     { icon: <Briefcase className="w-5 h-5 text-orange-400" />, text: "Private Equity" },
@@ -33,7 +35,7 @@ const WhyUs: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-16">
       <SecurityBanner />
-
+      
       <div className="grid grid-cols-2 gap-24 mb-24">
         <h2 className="text-3xl font-semibold">
           Omega's Platform is used by professionals across private market investment teams
@@ -44,7 +46,7 @@ const WhyUs: React.FC = () => {
           ))}
         </div>
       </div>
-
+      
       <div className="bg-gradient-to-r from-slate-800 to-slate-700 text-white p-12 rounded-lg">
         <h2 className="text-3xl mb-4">Meet the newest member of your Deal team</h2>
         <p className="mb-8 text-gray-300">

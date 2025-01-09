@@ -1,6 +1,6 @@
-import React from "react";
+import React, { FC } from "react";
 
-const Header: React.FC = () => {
+const Header: FC = () => {
   return (
     <div className="my-24 flex items-center justify-between">
       {/* Text content */}
@@ -9,7 +9,10 @@ const Header: React.FC = () => {
           Automated Research and Diligence for Private Markets
         </h1>
         <p className="text-sm text-gray-600">
-          Our platform transforms the private market deal process by automating research, modeling, and due diligence - ingesting fragmented data from thousands of sources and turning it into actionable investment intelligence.
+          Our platform transforms the private market deal process by automating
+          research, modeling, and due diligence - ingesting fragmented data from
+          thousands of sources and turning it into actionable investment
+          intelligence.
         </p>
 
         {/* Input field */}

@@ -1,57 +1,60 @@
-import { json } from '@remix-run/node';
-import { useActionData, useNavigate } from '@remix-run/react';
-import { useEffect } from 'react';
-import Login from '~/pages/auth/login';
-import { loginUser } from '~/services/auth';
+import React, { useEffect } from "react";
+import {
+  useNavigate,
+} from "react-router-dom";
+import LoginPage from "~/components/Loguser/Login";
+import { useAuth0 } from "@auth0/auth0-react";
+import { API_BASE_URL } from "~/constant";
 
-export async function action({ request }: { request: Request }) {
-  const formData = await request.formData();
-  const username = formData.get('username')?.toString();
-  const password = formData.get('password')?.toString();
+const Login = () => {
+    const { isAuthenticated, isLoading, user, getAccessTokenSilently } = useAuth0();
+    const navigate = useNavigate();
 
-  if (!username || !password) {
-    return json(
-      { errorMessage: 'Both username and password are required' },
-      { status: 400 }
+    useEffect(() => {
+        const checkPaymentStatusAndRedirect = async () => {
+            if (isAuthenticated && user) {
+                // 1) Fetch
+                try {
+                    const response = await fetch(
+                        `${API_BASE_URL}/api/stripe-payment-details?user_sub=${user.sub}`,
+                        { method: "GET" }
+                    );
+                    if (!response.ok) {
+                        throw new Error("Failed to fetch Stripe payment details");
+                    }
+                    const data = await response.json();
+                    const isCompleted = (data.payment_status === "completed");
+
+                    // 2) Redirect immediately
+                    if (isCompleted) {
+                        navigate("/dashboard");
+                    } else {
+                        navigate("/checkout");
+                    }
+                } catch (error) {
+                    console.error("Error fetching payment status:", error);
+                    navigate("/checkout");
+                }
+            } else if (!isAuthenticated) {
+                navigate("/login");
+            }
+        };
+
+        // Only run after Auth0 has finished loading
+        if (!isLoading) {
+            checkPaymentStatusAndRedirect();
+        }
+    }, [isLoading, isAuthenticated, user, navigate]);
+
+
+    if (isLoading) {
+        return <p>Loading...</p>;
+    }
+
+    // Return whichever layout you want for the fallback
+    return (
+        isAuthenticated ? <p>Loading...</p> : <LoginPage />
     );
-  }
+};
 
-  try {
-    const { access_token } = await loginUser(formData);
-
-    if (typeof access_token !== 'string') {
-      throw new Error('Invalid token received');
-    }
-
-    // Return success and token instead of redirecting
-    return json({
-      success: true,
-      access_token
-    });
-
-  } catch (error: any) {
-    console.error('Login Error:', error.message);
-    return json({ 
-      errorMessage: error.message 
-    }, { status: 401 });
-  }
-}
-
-export default function LoginRoute() {
-  const actionData = useActionData<{ 
-    errorMessage?: string;
-    success?: boolean;
-    access_token?: string;
-  }>();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (actionData?.success && actionData.access_token) {
-      // Set cookie client-side
-      document.cookie = `authToken=${actionData.access_token}; path=/; max-age=7200; SameSite=Strict`;
-      navigate('/dashboard');
-    }
-  }, [actionData, navigate]);
-
-  return <Login errorMessage={actionData?.errorMessage} />;
-}
+export default Login;

@@ -33,21 +33,10 @@ export default function CompanyInsightSidebar() {
     dispatch(fetchCompanyInsightStart());
 
     try {
-      const token = document.cookie
-        .split('; ')
-        .find(row => row.startsWith('authToken='))
-        ?.split('=')[1];
-
-      if (!token) {
-        navigate('/login');
-        return;
-      }
-
       const response = await fetch(`${API_BASE_URL}/api/company-profile`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
         },
         body: JSON.stringify({ data: { company_name: companyName } }),
       });
