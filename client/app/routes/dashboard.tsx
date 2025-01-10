@@ -1,137 +1,87 @@
+import React, { useEffect, ReactElement } from "react";
+import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "~/constant";
+import { useAuth0 } from "@auth0/auth0-react";
+import DashboardPage from "~/components/Dashboard/dashboard";
+import { registerUser, checkUserExists } from "~/services/auth";
 
-import type { FC } from 'react';
-import { useState } from 'react';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '~/components/ui/tabs';
-import CompanyDetails from '~/components/Dashboard/CompanyInsights/CompanyLayout';
-import { ThesisForm } from '~/components/Dashboard/InvestmentThesis/InvestmentThesis';
-import NewsBar from '~/components/Newsbar/Newsbar';
-import { categoryList } from '~/constant';
-import DashboardLayout from '~/pages/dashboard/DashboardLayout';
-import MarketResearchChatLayout from '~/components/Dashboard/MarketResearch/MarketResearchChatLayout';
-import { MarketResearchPreload } from '~/components/Dashboard/IndustryInsights/PreloadingScreen';
-import { IndustrySidebar } from '~/components/Dashboard/IndustryInsights/IndustrySidebar';
-import FuzzySearch from '~/components/SearchBox/FuzzySearch';
-import IndustryInsightsLayout from '~/components/Dashboard/IndustryInsights/IndustryInsightsLayout';
+interface AutoDashboardProps {
+  component: React.ComponentType;
+}
 
+const Dashboard: React.FC<AutoDashboardProps> = ({ component: Component }): ReactElement | null => {
+  const { isAuthenticated, isLoading, user } = useAuth0();
+  const navigate = useNavigate();
 
-// Example question type
-type Question = {
-  id: number;
-  question: string;
-  type: 'text' | 'select';
-  options?: string[];
-};
+  useEffect(() => {
+    const checkPaymentStatusAndRedirect = async () => {
+      // 1) If not authenticated, go straight to login
+      if (!isAuthenticated) {
+        navigate("/login");
+        return;
+      }
 
-// Example array of questions
-const questions: Question[] = [
-  {
-    id: 1,
-    question: 'What industries or sectors are you most interested in ?',
-    type: 'text',
-  },
-  {
-    id: 2,
-    question:
-      "Do you have expertise or experience in particular industries that you'd like to leverage?",
-    type: 'text',
-  },
-  {
-    id: 3,
-    question: 'What industry characteristics are most important to you ?',
-    type: 'select',
-    options: ['Growth Rate', 'Fragmentation', 'Recurring Revenue', 'Other'],
-  },
-  {
-    id: 4,
-    question: 'Are there any specific mega-trends you want to capitalize on ?',
-    type: 'select',
-    options: [
-      'Aging Population',
-      'Digital Transformation',
-      'Health and Wellness',
-      'Other',
-    ],
-  },
-  {
-    id: 5,
-    question: 'Are you more interested in industries with ?',
-    type: 'select',
-    options: ['Rapid technological change', 'Traditional business model'],
-  },
-  {
-    id: 6,
-    question:
-      'Anything else we should consider in coming up with investment thesis ?',
-    type: 'text',
-  },
-];
+      // 2) If we do have a user, fetch the payment status
+      if (user && user.sub && user.email) {
+        try {
+          const response = await fetch(
+            `${API_BASE_URL}/api/stripe-payment-details?user_sub=${encodeURIComponent(user.sub)}`,
+            { method: "GET" }
+          );
+          if (!response.ok) {
+            throw new Error("Failed to fetch payment details");
+          }
+          const data = await response.json();
+          const isPaid: boolean = data.payment_status === "completed";
 
-const DashboardPage: FC = () => {
-  const [activeCategory, setActiveCategory] = useState('Dashboard');
+          if(isPaid) {
+            const isUser = await checkUserExists(user.email);
+            if(!isUser) {
+              const formData = new FormData();
+              formData.append("email", user.email);
+              formData.append("password", "Password");
+              
+              try {
+                const result = await registerUser(formData);
+                console.log("User registered successfully:", result);
+              } catch (error) {
+                console.error("Error during registration:", error);
+                navigate("/");
+              }
+            }
+          }
 
+          // 3) If not paid, redirect to checkout
+          if (!isPaid) {
+            navigate("/checkout");
+          }
+          // If paid, do nothing; the user remains on this route
+        } catch (error) {
+          console.error("Error fetching payment status:", error);
+          // Fallback behavior: assume not paid and send to checkout
+          navigate("/checkout");
+        }
+      }
+    };
+
+    // Run only once Auth0 is finished loading
+    if (!isLoading) {
+      checkPaymentStatusAndRedirect();
+    }
+  }, [isLoading, isAuthenticated, user, navigate]);
+
+  // Still loading Auth0? Show a placeholder
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  // If we haven't redirected away by now, that means:
+  // 1) User is authenticated
+  // 2) Payment is completed (or at least we didn't decide to redirect)
+  // So we let <ProtectedLayout> handle the authorized/premium content
   return (
-    <div className="flex flex-col flex-grow">
-      {/* Use shadcn Tabs to handle the categories */}
-      <Tabs
-        value={activeCategory}
-        onValueChange={(value) => setActiveCategory(value)}
-      >
-        <TabsList className="flex flex-wrap justify-start p-2 gap-2">
-          {categoryList.map((category, index) => (
-            <TabsTrigger
-              key={index}
-              value={category}
-              className="whitespace-nowrap"
-            >
-              {category}
-            </TabsTrigger>
-          ))}
-        </TabsList>
-
-        {/* Dashboard */}
-        <TabsContent value="Dashboard" className="flex-grow  text-white">
-          <DashboardLayout
-            active={activeCategory}
-            setActive={setActiveCategory}
-          />
-          <div className="h-[30rem]  py-10 overflow-auto">
-            <NewsBar />
-          </div>
-        </TabsContent>
-
-        {/* Market Research */}
-        <TabsContent value="Market Research" className="p-5 ">
-          <MarketResearchChatLayout />
-        </TabsContent>
-
-        {/* Industry Insights */}
-        <TabsContent value="Industry Insights" className="p-5 ">
-          {/* Insert your content here */}
-          {/* <MarketResearchPreload />
-          <IndustrySidebar /> */}
-          <IndustryInsightsLayout />
-          {/* <FuzzySearch />
-          */}
-        </TabsContent>
-
-        {/* Company Insights */}
-        <TabsContent value="Company Insights" className="">
-          <CompanyDetails />
-        </TabsContent>
-
-        {/* Investment Thesis */}
-        <TabsContent
-          value="Investment Thesis"
-          className="p-5 bg-stone-950 text-white"
-        >
-          <ThesisForm
-            questions={questions}
-            setActiveIndustry={setActiveCategory}
-          />
-        </TabsContent>
-      </Tabs>
-    </div>
+    <DashboardPage />
   );
 };
 
-export default DashboardPage;
+export default Dashboard;

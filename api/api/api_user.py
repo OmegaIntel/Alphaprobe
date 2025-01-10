@@ -173,3 +173,22 @@ async def verify_token(token: str = Form(...)):
     except jwt.PyJWTError:
         # Token is invalid for other reasons
         return {"valid": False}
+
+# api to check if a user exists in our db or not 
+@user_router.get("/api/check-user")
+async def check_user(email: EmailStr, db: Session = Depends(get_db)):
+    """
+    Check if a user exists in the database by email ID.
+
+    :param email: Email address of the user to check
+    :param db: Database session
+    :return: A JSON response indicating whether the user exists or not
+    """
+    try:
+        user = db.query(DbUser).filter(DbUser.email == email).first()
+        if user:
+            return {"exists": True, "message": "User exists in the database."}
+        return {"exists": False, "message": "User does not exist in the database."}
+    except Exception as e:
+        logging.error(f"Error checking user: {e}")
+        raise HTTPException(status_code=500, detail="An error occurred while checking the user's existence.")

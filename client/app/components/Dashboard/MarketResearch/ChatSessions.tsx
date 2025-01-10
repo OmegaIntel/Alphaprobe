@@ -13,6 +13,7 @@ import { Card, CardHeader, CardContent } from "~/components/ui/card";
 import { ScrollArea } from "~/components/ui/scroll-area";
 import { useToast } from "~/hooks/use-toast";
 import { Loader2, LogOut, Plus } from "lucide-react";
+import { useAuth0 } from "@auth0/auth0-react"
 
 interface Session {
   session_id: string;
@@ -64,36 +65,31 @@ export function ChatSession({
     if (typeof window === 'undefined') return;
 
     const fetchSessions = async () => {
+      const { user, isAuthenticated } = useAuth0();
       try {
         setLoading(true);
-        const token = document.cookie
-          .split('; ')
-          .find(row => row.startsWith('authToken='))
-          ?.split('=')[1];
+        if(isAuthenticated && user && user.email) {
+          const email = user?.email;  
+          const response = await fetch(`${API_BASE_URL}/api/user-sessions?email=${encodeURIComponent(email)}`, {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          });
+        
+          if (!response.ok) {
+            throw new Error(`Error: ${response.statusText}`);
+          }
 
-        if (!token) {
-          navigate('/login');
-          return;
+          const data = await response.json();
+          const filteredSessions = data.sessions.filter(
+            (session: Session) => session.first_query
+          );
+
+          setSessions(filteredSessions);
+        } else {
+          navigate("/login");
         }
-
-        const response = await fetch(`${API_BASE_URL}/api/user-sessions`, {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-          },
-        });
-
-        if (!response.ok) {
-          throw new Error(`Error: ${response.statusText}`);
-        }
-
-        const data = await response.json();
-        const filteredSessions = data.sessions.filter(
-          (session: Session) => session.first_query
-        );
-
-        setSessions(filteredSessions);
       } catch (err) {
         toast({
           variant: "destructive",
@@ -109,40 +105,38 @@ export function ChatSession({
   }, [navigate, toast]);
 
   const handleStartNewConversation = async () => {
+    const { user, isAuthenticated } = useAuth0();
+
     try {
       dispatch(resetInteractions());
       setActiveSessionId(null);
       localStorage.removeItem("rag_session_id");
 
-      const token = document.cookie
-        .split('; ')
-        .find(row => row.startsWith('authToken='))
-        ?.split('=')[1];
-
-      if (!token) {
-        navigate('/login');
-        return;
-      }
-
-      const response = await fetch(`${API_BASE_URL}/api/new-session`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,
-        },
-      });
-
-      if (!response.ok) {
-        throw new Error(`Failed to create session: ${response.statusText}`);
-      }
-
-      const { session_id } = await response.json();
-      localStorage.setItem("rag_session_id", session_id);
-      setActiveSessionId(session_id);
-
-      if (onFirstQueryMade) {
-        setHasFirstQueryBeenMade(false);
-        onFirstQueryMade();
+      if(isAuthenticated && user && user.email) {
+        const payload = { email: user.email };
+        const response = await fetch(`${API_BASE_URL}/api/new-session`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            "Accept": "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+  
+        if (!response.ok) {
+          throw new Error(`Failed to create session: ${response.statusText}`);
+        }
+  
+        const { session_id } = await response.json();
+        localStorage.setItem("rag_session_id", session_id);
+        setActiveSessionId(session_id);
+  
+        if (onFirstQueryMade) {
+          setHasFirstQueryBeenMade(false);
+          onFirstQueryMade();
+        }
+      } else {
+        navigate("/login");
       }
     } catch (error) {
       toast({
@@ -168,6 +162,8 @@ export function ChatSession({
   };
 
   const handleSessionSelect = async (sessionId: string) => {
+    const { isAuthenticated, user } = useAuth0();
+
     if (typeof window === 'undefined') return;
 
     // Remove the condition that prevented reselection
@@ -175,49 +171,46 @@ export function ChatSession({
     setSelectedSessionLoading(true);
 
     try {
-      const token = document.cookie
-        .split('; ')
-        .find(row => row.startsWith('authToken='))
-        ?.split('=')[1];
+      if(isAuthenticated && user && user.email) {
+        const url = new URL(`${API_BASE_URL}/api/session/set-active`);
+        url.searchParams.append("session_id", sessionId);
+        const payload = { email: user.email };
 
-      if (!token) {
-        navigate('/login');
-        return;
-      }
+        const response = await fetch(url.toString(), {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
 
-      const url = new URL(`${API_BASE_URL}/api/session/set-active`);
-      url.searchParams.append("session_id", sessionId);
-
-      const response = await fetch(url.toString(), {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-        },
-      });
-
-      if (!response.ok) {
-        throw new Error(`Error: ${response.statusText}`);
-      }
-
-      const data: SessionResponse = await response.json();
-
-      setActiveSessionId(sessionId);
-      localStorage.setItem("rag_session_id", sessionId);
-
-      if (onSessionSelect) {
-        onSessionSelect(data);
-      }
-
-      const sessionHistory = data.history || [];
-      sessionHistory.forEach(handleSessionHistory);
-
-      if (!hasFirstQueryBeenMade) {
-        setHasFirstQueryBeenMade(true);
-        if (onFirstQueryMade) {
-          onFirstQueryMade();
+        if (!response.ok) {
+          throw new Error(`Error: ${response.statusText}`);
         }
+
+        const data: SessionResponse = await response.json();
+
+        setActiveSessionId(sessionId);
+        localStorage.setItem("rag_session_id", sessionId);
+
+        if (onSessionSelect) {
+          onSessionSelect(data);
+        }
+
+        const sessionHistory = data.history || [];
+        sessionHistory.forEach(handleSessionHistory);
+
+        if (!hasFirstQueryBeenMade) {
+          setHasFirstQueryBeenMade(true);
+          if (onFirstQueryMade) {
+            onFirstQueryMade();
+          }
+        }
+      } else {
+        navigate("/login")
       }
+      
     } catch (err) {
       toast({
         variant: "destructive",

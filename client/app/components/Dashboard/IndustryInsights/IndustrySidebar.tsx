@@ -99,12 +99,6 @@ export function IndustrySidebar() {
     if (typeof window === "undefined") return;
 
     try {
-      const token = getAuthToken();
-      if (!token) {
-        navigate("/login");
-        return;
-      }
-
       const payload = {
         data: {
           source: "IBIS",
@@ -117,7 +111,6 @@ export function IndustrySidebar() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify(payload),
       });

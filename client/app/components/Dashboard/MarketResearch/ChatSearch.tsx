@@ -11,6 +11,7 @@ import { Input } from "~/components/ui/input";
 import { Button } from "~/components/ui/button";
 import { Search, Loader2 } from "lucide-react";
 import { useToast } from "~/hooks/use-toast";
+import { useAuth0 } from "@auth0/auth0-react"
 
 type SessionResponse = {
   session_id: string;
@@ -70,47 +71,39 @@ export function ChatInterface() {
     initSession();
   }, [sessionId]);
 
-  const getAuthToken = (): string | null => {
-    if (typeof document === 'undefined') return null;
-    return document.cookie
-      .split('; ')
-      .find(row => row.startsWith('authToken='))
-      ?.split('=')[1] || null;
-  };
-
   const verifySession = async (existingSessionId: string): Promise<void> => {
+    const { isAuthenticated, user } = useAuth0();
     if (typeof window === 'undefined') return;
 
     try {
-      const token = getAuthToken();
+      if(isAuthenticated && user && user.email) {
+        const endpoint = new URL(`${API_BASE_URL}/api/session/verify`);
+        endpoint.searchParams.append("session_id", existingSessionId);
+        endpoint.searchParams.append("email", user.email); // Append the email parameter
 
-      if (!token) {
-        navigate('/login');
-        return;
-      }
+        const response = await fetch(endpoint.toString(), {
+          method: "GET",
+          headers: {
+            "Accept": "application/json"
+          },
+        });
 
-      const endpoint = new URL(`${API_BASE_URL}/api/session/verify`);
-      endpoint.searchParams.append("session_id", existingSessionId);
 
-      const response = await fetch(endpoint.toString(), {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-
-      if (!response.ok) {
-        if (response.status === 401) {
-          navigate('/login');
-          return;
+        if (!response.ok) {
+          if (response.status === 401) {
+            navigate('/login');
+            return;
+          }
+          throw new Error("Session verification failed");
         }
-        throw new Error("Session verification failed");
-      }
 
-      const data = await response.json() as SessionResponse;
-      if (data.session_id && data.session_id !== existingSessionId) {
-        setSessionId(data.session_id);
-        localStorage.setItem("rag_session_id", data.session_id);
+        const data = await response.json() as SessionResponse;
+        if (data.session_id && data.session_id !== existingSessionId) {
+          setSessionId(data.session_id);
+          localStorage.setItem("rag_session_id", data.session_id);
+        }
+      } else {
+        navigate("/login");
       }
     } catch (error) {
       toast({
@@ -122,36 +115,36 @@ export function ChatInterface() {
   };
 
   const createSession = async (): Promise<void> => {
+    const { isAuthenticated, user } = useAuth0();
     if (typeof window === 'undefined') return;
 
     try {
-      const token = getAuthToken();
-
-      if (!token) {
-        navigate('/login');
-        return;
-      }
-
-      const response = await fetch(`${API_BASE_URL}/api/session`, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-        },
-      });
-
-      if (!response.ok) {
-        if (response.status === 401) {
-          navigate('/login');
-          return;
+      if(isAuthenticated && user && user.email) {
+        const payload = { email: user.email };
+        const response = await fetch(`${API_BASE_URL}/api/session`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify(payload),
+        });
+  
+        if (!response.ok) {
+          if (response.status === 401) {
+            navigate('/login');
+            return;
+          }
+          throw new Error("Failed to create session");
         }
-        throw new Error("Failed to create session");
-      }
-
-      const data = await response.json() as SessionResponse;
-      if (data.session_id) {
-        setSessionId(data.session_id);
-        localStorage.setItem("rag_session_id", data.session_id);
+  
+        const data = await response.json() as SessionResponse;
+        if (data.session_id) {
+          setSessionId(data.session_id);
+          localStorage.setItem("rag_session_id", data.session_id);
+        }
+      } else {
+        navigate("/login");
       }
     } catch (error) {
       toast({
@@ -163,6 +156,7 @@ export function ChatInterface() {
   };
 
   const handleSearch = async (): Promise<void> => {
+    const { isAuthenticated, user } = useAuth0();
     if (typeof window === 'undefined') return;
     if (!searchQuery.trim()) return;
 
@@ -175,43 +169,42 @@ export function ChatInterface() {
     }));
 
     try {
-      const token = getAuthToken();
+      if(isAuthenticated && user && user.email) {
+        const endpoint = new URL(`${API_BASE_URL}/api/rag-search`);
+        endpoint.searchParams.append("query", searchQuery);
+        endpoint.searchParams.append("session_id", sessionId);
+        endpoint.searchParams.append("email", user.email);
 
-      if (!token) {
-        navigate('/login');
-        return;
-      }
+        const response = await fetch(endpoint.toString(), {
+          method: "GET",
+          headers: {
+            "Accept": "application/json",
+          },
+        });
 
-      const endpoint = new URL(`${API_BASE_URL}/api/rag-search`);
-      endpoint.searchParams.append("query", searchQuery);
-      endpoint.searchParams.append("session_id", sessionId);
 
-      const response = await fetch(endpoint.toString(), {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-
-      if (!response.ok) {
-        if (response.status === 401) {
-          navigate('/login');
-          return;
+        if (!response.ok) {
+          if (response.status === 401) {
+            navigate('/login');
+            return;
+          }
+          throw new Error("Search request failed");
         }
-        throw new Error("Search request failed");
+
+        const data = await response.json() as SearchResponse;
+        
+        dispatch(updateInteractionResponse({
+          id: interactionId,
+          response: {
+            agent_response: data.agent_response,
+            metadata_content_pairs: data.metadata_content_pairs
+          }
+        }));
+
+        setSearchQuery("");
+      } else {
+        navigate("/login");
       }
-
-      const data = await response.json() as SearchResponse;
-      
-      dispatch(updateInteractionResponse({
-        id: interactionId,
-        response: {
-          agent_response: data.agent_response,
-          metadata_content_pairs: data.metadata_content_pairs
-        }
-      }));
-
-      setSearchQuery("");
     } catch (error) {
       dispatch(updateInteractionResponse({
         id: interactionId,

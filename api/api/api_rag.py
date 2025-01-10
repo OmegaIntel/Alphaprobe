@@ -6,11 +6,16 @@ from sqlalchemy.orm import Session
 from typing import Dict
 from datetime import datetime, timedelta
 from api.api_user import get_current_user
+from db_models.users import User as DbUser
 from db_models.rag_session import RagSession
 from db_models.session import get_db
 import json
+from pydantic import BaseModel, EmailStr
 
 rag_router = APIRouter()
+
+class EmailRequest(BaseModel):
+    email: EmailStr
 
 region = boto3.session.Session().region_name
 if not region:
@@ -183,18 +188,37 @@ def rag_response(query: str, session_id: str):
 
 # API Endpoints
 @rag_router.post("/api/new-session")
-async def create_session_route(current_user=Depends(get_current_user), db: Session = Depends(get_db)):
-    user_id = current_user.id
-
+async def create_session_route(
+    payload: EmailRequest,
+    db: Session = Depends(get_db)
+):
+    email = payload.email
+    user = db.query(DbUser).filter(DbUser.email == email).first()
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+    
+    user_id = user.id
     session_id = create_new_session(user_id, db)
     return {"session_id": session_id}
 
 
 @rag_router.post("/api/session")
-async def create_session_route(current_user=Depends(get_current_user), db: Session = Depends(get_db)):
-    user_id = current_user.id
-
-    existing_session = db.query(RagSession).filter(RagSession.user_id == user_id).order_by(RagSession.last_access_time.desc()).first()
+async def create_session_route(
+    payload: EmailRequest,
+    db: Session = Depends(get_db)
+):
+    email = payload.email
+    user = db.query(DbUser).filter(DbUser.email == email).first()
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+    
+    user_id = user.id
+    existing_session = (
+        db.query(RagSession)
+        .filter(RagSession.user_id == user_id)
+        .order_by(RagSession.last_access_time.desc())
+        .first()
+    )
     if existing_session:
         existing_session.last_access_time = datetime.utcnow()
         db.commit()
@@ -202,16 +226,24 @@ async def create_session_route(current_user=Depends(get_current_user), db: Sessi
     session_id = create_new_session(user_id, db)
     return {"session_id": session_id}
 
+
 @rag_router.get("/api/rag-search")
 async def get_rag_answer(
     query: str = Query(..., description="User query"),
     session_id: str = Query(..., description="Active session ID"),
-    current_user=Depends(get_current_user),
+    email: str = Query(..., description="User email"),
     db: Session = Depends(get_db)
 ):
-    user_id = current_user.id
-
-    session = db.query(RagSession).filter(RagSession.session_id == session_id, RagSession.user_id == user_id).first()
+    user = db.query(DbUser).filter(DbUser.email == email).first()
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+    
+    user_id = user.id
+    session = (
+        db.query(RagSession)
+        .filter(RagSession.session_id == session_id, RagSession.user_id == user_id)
+        .first()
+    )
     if not session:
         logerror(f"Session {session_id} does not belong to user {user_id}.")
         raise HTTPException(status_code=403, detail="Session does not belong to this user or does not exist.")
@@ -237,13 +269,18 @@ async def get_rag_answer(
         "metadata_content_pairs": result["metadata_content_pairs"]
     }
 
+
 @rag_router.get("/api/session/verify")
 async def verify_session(
     session_id: str = Query(None, description="Session ID to verify"),
-    current_user=Depends(get_current_user),
+    email: str = Query(..., description="User email"),
     db: Session = Depends(get_db)
 ):
-    user_id = current_user.id
+    user = db.query(DbUser).filter(DbUser.email == email).first()
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+
+    user_id = user.id
 
     if not session_id:
         new_session_id = create_new_session(user_id, db)
@@ -258,12 +295,17 @@ async def verify_session(
             return {"session_id": new_session_id, "status": "new_session_created"}
         raise
 
+
 @rag_router.get("/api/user-sessions")
 async def get_user_sessions(
-    current_user=Depends(get_current_user),
+    email: str = Query(...), 
     db: Session = Depends(get_db)
 ):
-    user_id = current_user.id
+    user = db.query(DbUser).filter(DbUser.email == email).first()
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+
+    user_id = user.id
 
     sessions = (
         db.query(RagSession)
@@ -320,14 +362,22 @@ async def get_user_sessions(
 
 @rag_router.post("/api/session/set-active")
 async def set_active_session(
+    payload: EmailRequest,
     session_id: str = Query(..., description="Session ID to set active"),
-    current_user=Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
-    user_id = current_user.id
+    email = payload.email
+    user = db.query(DbUser).filter(DbUser.email == email).first()
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
 
-    # Fetch the session data
-    session = db.query(RagSession).filter(RagSession.session_id == session_id, RagSession.user_id == user_id).first()
+    user_id = user.id
+
+    session = (
+        db.query(RagSession)
+        .filter(RagSession.session_id == session_id, RagSession.user_id == user_id)
+        .first()
+    )
     if not session:
         logerror(f"Session {session_id} does not belong to user {user_id}.")
         raise HTTPException(status_code=403, detail="Session does not belong to this user or does not exist.")

@@ -1,6 +1,6 @@
-import React from "react";
+import React, { FC } from "react";
 
-const HowWork: React.FC = () => {
+const HowWork: FC = () => {
   return (
     <div className="bg-gradient-to-r from-slate-800 to-slate-700 rounded-lg text-white py-16 px-8">
       {/* Section Header */}
@@ -15,11 +15,17 @@ const HowWork: React.FC = () => {
       <div className="flex flex-col items-center">
         {/* Center Column - Omega Terminal */}
         <div className="flex flex-col items-center text-center">
-          <img src="images/network.svg" alt="Omega AI" className="mb-4 h-auto" />
+          <img
+            src="images/network.svg"
+            alt="Omega AI"
+            className="mb-4 h-auto"
+          />
         </div>
 
         {/* List Below the Image with Background */}
-        <div className="grid grid-cols-3 gap-8 mt-8 w-full max-w-4xl p-8 rounded-lg bg-gray-700 bg-opacity-30">
+        <div
+          className="grid grid-cols-3 gap-8 mt-8 w-full max-w-4xl p-8 rounded-lg bg-gray-700 bg-opacity-30"
+        >
           <ul className="space-y-3 text-left">
             <li>Connect with Market Data</li>
             <li>Connect internal datasets</li>

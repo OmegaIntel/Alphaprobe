@@ -4,23 +4,30 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from '@remix-run/react';
-import type { LinksFunction } from '@remix-run/node';
+} from "@remix-run/react";
+import React, { useEffect, useState } from "react";
+import type { LinksFunction } from "@remix-run/node";
+import { Auth0Provider } from "@auth0/auth0-react";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+import "./tailwind.css";
+import { Provider } from "react-redux";
+import store from "./store/store";
 
-import './tailwind.css';
-import { Provider } from 'react-redux';
-import store from './store/store';
+export const stripePromise = loadStripe(
+  "pk_test_51QYEgCJNJeCsZb59NImX4wkZFUIIoVh6qSQ06uxHSpxkO6RnVdZ3ZlOoEjIwy7TXvH1CAh68hejLtLCgTPnQHqaj00k2MYGK3N"
+);
 
 export const links: LinksFunction = () => [
-  { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+  { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
-    rel: 'preconnect',
-    href: 'https://fonts.gstatic.com',
-    crossOrigin: 'anonymous',
+    rel: "preconnect",
+    href: "https://fonts.gstatic.com",
+    crossOrigin: "anonymous",
   },
   {
-    rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap',
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
 ];
 
@@ -44,13 +51,31 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
-    <>
+    <Layout>
       <Provider store={store}>
-        <Layout>
-          <Outlet />
-        </Layout>
+        {mounted && (
+          <Auth0Provider
+            domain="dev-tenant-testing.us.auth0.com"
+            clientId="KznvQTTUvG9V24gsUxFWGILHdk0I565L"
+            authorizationParams={{
+              redirect_uri: window.location.origin + "/dashboard",
+              scope: "openid profile email",
+            }}
+            cacheLocation="localstorage"
+          >
+            <Elements stripe={stripePromise}>
+              <Outlet />
+            </Elements>
+          </Auth0Provider>
+        )}
       </Provider>
-    </>
+    </Layout>
   );
 }

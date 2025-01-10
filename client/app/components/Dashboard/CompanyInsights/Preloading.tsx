@@ -79,22 +79,12 @@ export default function PreloadingScreen() {
     setGenerating(true);
 
     try {
-      const token = document.cookie
-        .split('; ')
-        .find(row => row.startsWith('authToken='))
-        ?.split('=')[1];
-
-      if (!token) {
-        throw new Error('Authentication required');
-      }
-
       const response = await fetch(
-        `${API_BASE_URL}/api/company-profile`,
+        `https://omegaintelligence.ai/api/api/company-profile`,
         {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
           },
           body: JSON.stringify({ data: { company_name: company } }),
         }
