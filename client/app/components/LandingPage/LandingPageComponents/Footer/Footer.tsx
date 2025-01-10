@@ -55,7 +55,7 @@ const Footer: FC = () => {
 
       {/* Footer */}
       <div className="text-sm text-muted-foreground">
-        © 2024 Omega Intelligence. All rights reserved.
+        © 2025 Omega Intelligence. All rights reserved.
       </div>
     </div>
   );

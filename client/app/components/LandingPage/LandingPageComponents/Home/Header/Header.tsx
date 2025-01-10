@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { Input } from "~/components/ui/input";
-import { Button } from "~/components/ui/button";
+import { FC } from 'react';
+import { Input } from '~/components/ui/input';
+import { Button } from '~/components/ui/button';
 
 const Header: FC = () => {
   return (
@@ -20,7 +20,14 @@ const Header: FC = () => {
         {/* Input field */}
         <div className="flex items-center space-x-2 w-full max-w-lg mx-auto lg:mx-0">
           <Input type="email" placeholder="Business email" />
-          <Button>
+          <Button
+            onClick={() =>
+              window.open(
+                'https://calendly.com/chetan-omegaintelligence',
+                '_blank'
+              )
+            }
+          >
             Request Access
             <span className="ml-2">&rarr;</span>
           </Button>

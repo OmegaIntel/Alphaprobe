@@ -1,8 +1,8 @@
-import React, { FC, ReactNode } from "react";
-import { Building2, Briefcase, FileSearch, BarChart3 } from "lucide-react";
-import { Card, CardHeader, CardTitle, CardContent } from "~/components/ui/card";
-import { Button } from "~/components/ui/button";
-import { cn } from "~/lib/utils";
+import React, { FC, ReactNode } from 'react';
+import { Building2, Briefcase, FileSearch, BarChart3 } from 'lucide-react';
+import { Card, CardHeader, CardTitle, CardContent } from '~/components/ui/card';
+import { Button } from '~/components/ui/button';
+import { cn } from '~/lib/utils';
 
 // Define the props for PlatformUser component
 interface PlatformUserProps {
@@ -37,10 +37,10 @@ const SecurityBanner: FC = () => (
 const WhyUs: FC = () => {
   // Define the users array with explicit typing
   const users: PlatformUserProps[] = [
-    { icon: <Building2 className="w-5 h-5" />, text: "Investment Banking" },
-    { icon: <Briefcase className="w-5 h-5" />, text: "Private Equity" },
-    { icon: <FileSearch className="w-5 h-5" />, text: "M&A Advisors" },
-    { icon: <BarChart3 className="w-5 h-5" />, text: "Corporate Strategy" },
+    { icon: <Building2 className="w-5 h-5" />, text: 'Investment Banking' },
+    { icon: <Briefcase className="w-5 h-5" />, text: 'Private Equity' },
+    { icon: <FileSearch className="w-5 h-5" />, text: 'M&A Advisors' },
+    { icon: <BarChart3 className="w-5 h-5" />, text: 'Corporate Strategy' },
   ];
 
   return (
@@ -73,7 +73,15 @@ const WhyUs: FC = () => {
             Your AI deal intelligence partner that automates months of research,
             modeling, and diligence into days.
           </p>
-          <Button className="bg-white text-slate-800 hover:bg-muted">
+          <Button
+            className="bg-white text-slate-800 hover:bg-muted"
+            onClick={() =>
+              window.open(
+                'https://calendly.com/chetan-omegaintelligence',
+                '_blank'
+              )
+            }
+          >
             Schedule a demo
           </Button>
         </CardContent>

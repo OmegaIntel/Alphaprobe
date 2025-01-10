@@ -14,7 +14,7 @@ const Navbar: FC = () => {
         {/* Logo and Title */}
         <div className="flex items-center gap-2">
           <img
-            src="/images/logo.svg"
+            src="/images/logoDark.png"
             alt="Omega Intelligence Logo"
             className="h-8 w-8"
           />
