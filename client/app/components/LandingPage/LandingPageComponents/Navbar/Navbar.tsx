@@ -48,7 +48,7 @@ const Navbar: FC = () => {
                 <DropdownMenuItem onClick={() => navigate("/dashboard")}>
                   Dashboard
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => logout({ returnTo: window.location.origin })}>
+                <DropdownMenuItem onClick={() => logout({ returnTo: window.location.origin } as any)}>
                   Logout
                 </DropdownMenuItem>
               </DropdownMenuContent>
