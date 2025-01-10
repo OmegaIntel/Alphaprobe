@@ -1,12 +1,13 @@
-import React, { FC } from "react";
+import { FC } from "react";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "~/components/ui/card";
 
 const HowWork: FC = () => {
   return (
-    <div className="bg-gradient-to-r from-slate-800 to-slate-700 rounded-lg text-white py-16 px-8">
+    <div className=" bg-muted/20 rounded-lg  py-16 px-8">
       {/* Section Header */}
       <div className="text-center mb-12">
         <h2 className="text-3xl font-semibold">How it works</h2>
-        <p className="text-sm text-gray-400 mt-2">
+        <p className="text-sm text-muted-foreground mt-2">
           Select your sources, define analysis, and you're presented with a refined output like magic
         </p>
       </div>
@@ -22,22 +23,39 @@ const HowWork: FC = () => {
           />
         </div>
 
-        {/* List Below the Image with Background */}
-        <div
-          className="grid grid-cols-3 gap-8 mt-8 w-full max-w-4xl p-8 rounded-lg bg-gray-700 bg-opacity-30"
-        >
-          <ul className="space-y-3 text-left">
-            <li>Connect with Market Data</li>
-            <li>Connect internal datasets</li>
-          </ul>
-          <ul className="space-y-3 text-left">
-            <li>High Fidelity Proprietary Models</li>
-            <li>Fact Based with Explainable AI</li>
-          </ul>
-          <ul className="space-y-3 text-left">
-            <li>Executive ready presentations</li>
-            <li>Automate research workflows</li>
-          </ul>
+        {/* Feature Cards Below the Image */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 w-full max-w-4xl">
+          {/* Card 1 */}
+          <Card className="bg-gray-700 bg-opacity-30">
+            <CardHeader>
+              <CardTitle className="text-lg">Connect with Market Data</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <CardDescription>Access rich datasets from diverse markets.</CardDescription>
+            </CardContent>
+          </Card>
+
+          {/* Card 2 */}
+          <Card className="bg-gray-700 bg-opacity-30">
+            <CardHeader>
+              <CardTitle className="text-lg">High Fidelity Proprietary Models</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <CardDescription>Generate insights with proprietary models.</CardDescription>
+            </CardContent>
+          </Card>
+
+          {/* Card 3 */}
+          <Card className="bg-gray-700 bg-opacity-30">
+            <CardHeader>
+              <CardTitle className="text-lg">Executive Ready Presentations</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <CardDescription>
+                Create polished, ready-to-deliver presentations.
+              </CardDescription>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </div>
