@@ -14,9 +14,11 @@ import "./tailwind.css";
 import { Provider } from "react-redux";
 import store from "./store/store";
 
-export const stripePromise = loadStripe(
-  "pk_live_51QYEgCJNJeCsZb59HRFE6TkrDZNFtYFQY5MBeaIwcdVJzo4M7jYE8qT1ub7GiiqrYpC8OZjjf82zZ4J4wihFuV0g003Ap19PWz"
-);
+const stripe_pb_key: string = process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY!;
+const auth0_domain: string = process.env.REACT_APP_AUTH0_DOMAIN!;
+const auth0_client_id: string = process.env.REACT_APP_AUTH0_CLIENT_ID!;
+
+export const stripePromise = loadStripe(stripe_pb_key);
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -62,8 +64,8 @@ export default function App() {
       <Provider store={store}>
         {mounted && (
           <Auth0Provider
-            domain="dev-tenant-testing.us.auth0.com"
-            clientId="KznvQTTUvG9V24gsUxFWGILHdk0I565L"
+            domain={auth0_domain}
+            clientId={auth0_client_id}
             authorizationParams={{
               redirect_uri: window.location.origin + "/dashboard",
               scope: "openid profile email",

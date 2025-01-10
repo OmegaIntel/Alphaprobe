@@ -1,26 +1,14 @@
 import React, { useState, useEffect, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { setPaymentCompleted } from "~/store/slices/paymentSlice";
-import { API_BASE_URL } from "~/constant";
 import { useAuth0 } from "@auth0/auth0-react";
-import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
-import type { StripeCardElementOptions } from "@stripe/stripe-js";
-import "~/components/Loguser/CheckoutForm.css"; 
-
-interface PaymentIntentResponse {
-  clientSecret: string;
-}
+import { API_BASE_URL } from "~/constant";
+import LogoutButton from "~/components/Loguser/LogoutButton";
 
 const CheckoutForm: React.FC = () => {
-  const stripe = useStripe();
-  const elements = useElements();
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState<boolean>(false);
-  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { isAuthenticated, isLoading, user } = useAuth0();
+  const { isAuthenticated, isLoading, user, logout } = useAuth0();
 
   useEffect(() => {
     const checkPaymentStatusAndRedirect = async () => {
@@ -55,7 +43,7 @@ const CheckoutForm: React.FC = () => {
     }
   }, [isLoading, isAuthenticated, user, navigate]);
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const handleCheckout = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setLoading(true);
 
@@ -65,44 +53,27 @@ const CheckoutForm: React.FC = () => {
       return;
     }
 
-    // Create a PaymentIntent
-    const response = await fetch(`${API_BASE_URL}/api/create-payment-intent`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ amount: 1000, user_id: user.sub })
-    });
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/create-checkout-session`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ amount: 1000, user_id: user.sub })
+      });
 
-    const paymentData: PaymentIntentResponse = await response.json();
-    const { clientSecret } = paymentData;
-
-    if (!stripe || !elements) {
-      setError("Stripe has not loaded yet.");
-      setLoading(false);
-      return;
-    }
-
-    const cardElement = elements.getElement(CardElement);
-    if (!cardElement) {
-      setError("CardElement not found.");
-      setLoading(false);
-      return;
-    }
-
-    const { error: stripeError, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
-      payment_method: {
-        card: cardElement
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.detail || "Failed to create checkout session");
       }
-    });
 
-    if (stripeError) {
-      setError(stripeError.message || "Payment failed");
-    } else if (paymentIntent && paymentIntent.status === "succeeded") {
-      setSuccess(true);
-      dispatch(setPaymentCompleted(true));
-      navigate("/dashboard");
+      const { url } = await response.json();
+
+      // Redirect user to Stripe Checkout URL
+      window.location.href = url;
+    } catch (error: any) {
+      setError(error.message || "Something went wrong");
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   };
 
   if (!isAuthenticated) {
@@ -110,40 +81,33 @@ const CheckoutForm: React.FC = () => {
     return null; // Render nothing while redirecting
   }
 
-  const cardStyle: StripeCardElementOptions = {
-    style: {
-      base: {
-        color: "white",
-        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-        fontSmoothing: "antialiased",
-        fontSize: "16px",
-        "::placeholder": {
-          color: "#d3d3d3"
-        }
-      },
-      invalid: {
-        color: "#fa755a",
-        iconColor: "#fa755a"
-      }
-    }
-  };
-
   return (
-    <div className="checkout-container">
-      <h2>Complete Your Payment</h2>
-      <form onSubmit={handleSubmit} className="checkout-form">
-        <div className="form-group">
-          <label htmlFor="card-element">Card Details</label>
-          <div className="card-element-wrapper">
-            <CardElement id="card-element" options={cardStyle} />
-          </div>
-        </div>
-        <button type="submit" disabled={!stripe || loading} className="pay-button">
-          {loading ? "Processing..." : "Pay"}
+    <div className="min-h-screen flex flex-col items-center justify-center bg-stone-950 p-6">
+      <h2 className="text-3xl font-semibold text-gray-200 mb-6">Please Subscribe</h2>
+      <form onSubmit={handleCheckout} className="w-full max-w-md">
+        <button
+          type="submit"
+          disabled={loading}
+          className="w-full bg-zinc-800 text-white py-3 px-4 border border-zinc-800 rounded-md text-lg font-medium hover:bg-stone-950 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {loading ? "Redirecting..." : "Proceed to Checkout"}
         </button>
-        {error && <p className="error-message">{error}</p>}
-        {success && <p className="success-message">Payment Successful!</p>}
+        {error && <p className="text-red-600 text-sm mt-4">{error}</p>}
       </form>
+      <p className="text-gray-200 text-lg mt-8">or</p>
+      <div className="flex items-center justify-center mt-4 gap-4">
+        <button
+          onClick={() => navigate("/")}
+          className="bg-zinc-800 text-white py-2 px-4 rounded-md border border-zinc-800 font-medium hover:bg-stone-950"
+        >
+          Visit Homepage
+        </button>
+        <div
+          className="bg-zinc-800 text-white border rounded-md border-zinc-800 hover:bg-stone-950 "
+        >
+          <LogoutButton />
+        </div>
+      </div>
     </div>
   );
 };

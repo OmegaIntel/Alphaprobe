@@ -3,11 +3,15 @@ from pydantic import BaseModel
 import stripe
 import requests
 import time
+from dotenv import load_dotenv
 import os
 
 stripe_router = APIRouter()
 
-stripe.api_key = "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"
+# Load environment variables
+load_dotenv(dotenv_path=".env")
+
+stripe.api_key = os.getenv("STRIPE_SECRET_KEY")
 
 class PaymentRequest(BaseModel):
     amount: int
@@ -19,12 +23,12 @@ class StripePaymentDetails(BaseModel):
     amount_paid: int
 
 # Auth0 configuration
-domain = "dev-tenant-testing.us.auth0.com"
-client_id = "KznvQTTUvG9V24gsUxFWGILHdk0I565L"
-client_secret = "APTn1kn4dBmnt9o1A1WdMTyWdKV0yaSfpH7s5U8N92gNI982JOp0EeYQ7hOKFN1_"
+domain = os.getenv("REACT_APP_AUTH0_DOMAIN")
+client_id = os.getenv("REACT_APP_AUTH0_CLIENT_ID")
+client_secret = os.getenv("REACT_APP_AUTH0_CLIENT_SECRET")
 audience = f"https://{domain}/api/v2/"
 token_url = f"https://{domain}/oauth/token"
-YOUR_FRONTEND_URL = "http://localhost:5173"
+YOUR_FRONTEND_URL = os.getenv("FRONTEND_URL")
 
 @stripe_router.post("/api/create-payment-intent")
 def create_payment_intent(payment_request: PaymentRequest):
@@ -60,7 +64,7 @@ def create_payment_intent(payment_request: PaymentRequest):
         # you'd update "payment_status" to "completed".
 
         # --- 2) Update the user's metadata in Auth0 ---
-        auth0_domain = "dev-tenant-testing.us.auth0.com"
+        auth0_domain = domain
 
         # 1) Dynamically get the M2M token from Auth0
         try:
@@ -124,7 +128,7 @@ async def stripe_payment_details(user_sub: str = Query(...)):
         )
 
     # 2) Construct the Auth0 Management API URL
-    domain = os.getenv("AUTH0_DOMAIN", "dev-tenant-testing.us.auth0.com")
+    domain = os.getenv("REACT_APP_AUTH0_DOMAIN", "dev-tenant-testing.us.auth0.com")
     user_metadata_url = f"https://{domain}/api/v2/users/{user_sub}"
 
     headers = {
@@ -165,16 +169,24 @@ def create_checkout_session(payment_request: dict):
                 {
                     "price_data": {
                         "currency": "usd",
-                        "product_data": {"name": "Product Name"},
-                        "unit_amount": payment_request["amount"],
+                        "product_data": {
+                            "name": "Omega Platform",
+                            "description": "Omega platform allows you access to AI-powered investment research",
+                        },
+                        "unit_amount": 9900,  # Price in cents
                     },
                     "quantity": 1,
                 }
             ],
             mode="payment",
-            success_url=f"{YOUR_FRONTEND_URL}/payment-success?session_id={{CHECKOUT_SESSION_ID}}",
-            cancel_url=f"{YOUR_FRONTEND_URL}/payment-cancel",
-            metadata={"user_id": payment_request["user_id"]},
+            success_url="https://omegaintelligence.ai/dashboard",
+            cancel_url="https://omegaintelligence.ai/payment-cancel",
+            metadata={
+                "user_id": payment_request["user_id"],  # Track the user in your system
+            },
+            appearance={  # Customize the appearance
+                "theme": "night"  # Enable dark mode
+            }
         )
 
         # Step 2: Return Checkout session URL
@@ -189,7 +201,7 @@ async def stripe_webhook(request: Request):
     sig_header = request.headers.get("Stripe-Signature")
 
     try:
-        event = stripe.Webhook.construct_event(payload, sig_header, "your-webhook-secret")
+        event = stripe.Webhook.construct_event(payload, sig_header, "whsec_TUaBfsEiAtZ459cp38tWH2ncxu7Gi4dW")
 
         if event["type"] == "checkout.session.completed":
             session = event["data"]["object"]
@@ -198,8 +210,8 @@ async def stripe_webhook(request: Request):
             user_id = session["metadata"]["user_id"]
 
             # Step 2: Update user metadata in Auth0
-            auth0_domain = "your-auth0-domain"
-            auth0_token = "your-auth0-management-api-token"
+            auth0_domain = domain
+            auth0_token = get_management_token_cached()
 
             headers = {
                 "Authorization": f"Bearer {auth0_token}",
@@ -237,8 +249,8 @@ async def stripe_webhook(request: Request):
 _management_token = None
 _token_expiry = 0
 
-AUTH0_CLIENT_ID = "IgibTgaYDsUYRl4mI0IizSsxenUlnjFW"
-AUTH0_CLIENT_SECRET = "wiRifNP3VYGXvWX4QTw7fx-OmueBTW1FHhutVKi-BrIrq3BQ0WxgiveXcFnp5LZE"
+M2M_CLIENT_ID = os.getenv("M2M_CLIENT_ID")
+M2M_CLIENT_SECRET = os.getenv("M2M_CLIENT_SECRET")
 
 def get_management_token_cached():
     global _management_token, _token_expiry
@@ -250,8 +262,8 @@ def get_management_token_cached():
     # Otherwise, request a new one
     token_url = f"https://{domain}/oauth/token"
     payload = {
-        "client_id": AUTH0_CLIENT_ID,
-        "client_secret": AUTH0_CLIENT_SECRET,
+        "client_id": M2M_CLIENT_ID,
+        "client_secret": M2M_CLIENT_SECRET,
         "audience": f"https://{domain}/api/v2/",
         "grant_type": "client_credentials"
     }

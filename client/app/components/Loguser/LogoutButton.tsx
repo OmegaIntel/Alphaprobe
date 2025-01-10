@@ -16,7 +16,7 @@ const LogoutButton: FC = () => {
   };
 
   return <button
-    className="text-gray-300 hover:text-white px-4 py-2 hover:bg-stone-950 rounded transition duration-200"
+    className="text-white hover:text-gray-200 px-4 py-2 bg-zinc-800 font-medium hover:bg-stone-950 rounded transition duration-200"
     onClick={handleLogout}
   >
     Log Out
