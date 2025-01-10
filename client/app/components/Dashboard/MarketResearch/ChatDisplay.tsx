@@ -93,7 +93,7 @@ export function ChatDisplay() {
 
   return (
     <>
-      <ScrollArea className="h-[calc(100vh-100px)] w-2/3 mx-auto ">
+      <ScrollArea className="h-[calc(100vh-120px)] w-2/3 mx-auto ">
         <div className="flex justify-center">
           <div className="w-3/5 pt-10">
             {interactions.length > 0 ? (

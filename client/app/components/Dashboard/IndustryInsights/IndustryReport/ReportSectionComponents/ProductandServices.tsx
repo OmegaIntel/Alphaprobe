@@ -41,7 +41,7 @@ const ProductsAndServices: React.FC<ProductsAndServicesProps> = ({
   };
 
   return (
-    <div className="rounded-lg p-4 shadow-md text-gray-300">
+    <div className="bg-[#171717] border rounded-xl border-[#2e2e2e] p-4 shadow-md text-gray-300">
       <div>
         {/* Product Details with Accordion */}
         <ul className="space-y-4 text-sm text-gray-300 flex-1">

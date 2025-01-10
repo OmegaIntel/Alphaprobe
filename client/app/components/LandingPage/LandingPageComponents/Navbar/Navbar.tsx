@@ -1,49 +1,73 @@
-import React, { FC } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useAuth0 } from '@auth0/auth0-react';
+import React, { FC } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
+import { Button } from "~/components/ui/button";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "~/components/ui/dropdown-menu";
 
 const Navbar: FC = () => {
   const navigate = useNavigate();
-  const { isAuthenticated } = useAuth0();
+  const { isAuthenticated, logout, loginWithRedirect } = useAuth0();
 
   return (
-    <nav className="sticky top-0 z-50 flex justify-between items-center p-4 bg-white transition-shadow duration-300">
-      {/* Logo and Title */}
-      <div className="flex items-center gap-2">
-        <img src="/images/logo.svg" alt="Omega Intelligence Logo" className="h-8 w-8" />
-        <span className="text-lg font-semibold text-gray-800">Omega Intelligence</span>
-      </div>
+    <nav className="sticky top-0 z-50 bg-background border-b px-10">
+      <div className="container mx-auto flex justify-between items-center py-4">
+        {/* Logo and Title */}
+        <div className="flex items-center gap-2">
+          <img
+            src="/images/logoDark.png"
+            alt="Omega Intelligence Logo"
+            className="h-8 w-8"
+          />
+          <span className="text-lg font-semibold">Omega Intelligence</span>
+        </div>
 
-      {/* Navigation Links and Buttons */}
-      <div className="flex items-center gap-4">
-        <a href="#" className="text-gray-600 hover:text-gray-800">How it works</a>
-        <a href="#" className="text-gray-600 hover:text-gray-800">Solutions</a>
-        <a
-          href="https://calendly.com/chetan-omegaintelligence"
-          className="text-gray-600 hover:text-gray-800"
-        >
-          Schedule a demo
-        </a>
-
-        {isAuthenticated ? (
-          // If authenticated, show Dashboard button
-          <button
-            onClick={() => navigate('/dashboard')}
-            className="px-4 py-2 rounded-md bg-slate-700 text-white hover:bg-slate-800 transition-colors"
+        {/* Navigation Links */}
+        <div className="flex items-center gap-4">
+          <Button variant="link" onClick={() => navigate("#")}>
+            How it works
+          </Button>
+          <Button variant="link" onClick={() => navigate("#")}>
+            Solutions
+          </Button>
+          <Button
+            variant="link"
+            onClick={() =>
+              window.open("https://calendly.com/chetan-omegaintelligence", "_blank")
+            }
           >
-            Dashboard
-          </button>
-        ) : (
-          // If not authenticated, show Login and Register buttons
-          <>
-            <button
-              onClick={() => navigate('/register')}
-              className="px-4 py-2 rounded-md bg-slate-700 text-white hover:bg-slate-800 transition-colors"
-            >
-              Get Started
-            </button>
-          </>
-        )}
+            Schedule a demo
+          </Button>
+
+          {isAuthenticated ? (
+            // Authenticated user dropdown
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button >Profile</Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={() => navigate("/dashboard")}>
+                  Dashboard
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => logout({ returnTo: window.location.origin })}>
+                  Logout
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          ) : (
+            // Unauthenticated user buttons
+            <div className="flex gap-2">
+              {/* <Button variant="outline" onClick={loginWithRedirect}>
+                Login
+              </Button> */}
+              <Button
+                onClick={() => navigate("/register")}
+                variant="default"
+              >
+                Get Started
+              </Button>
+            </div>
+          )}
+        </div>
       </div>
     </nav>
   );

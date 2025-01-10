@@ -8,7 +8,7 @@ interface MainProps {
 
 const Main: FC<MainProps> = ({ children }) => {
   return (
-    <div className="bg-white text-black">
+    <div className="">
       <Navbar />
       <div className="mx-48">{children}</div>
       <Footer />

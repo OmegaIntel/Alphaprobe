@@ -64,7 +64,7 @@ export function MarketResearchPreload() {
           className="w-[30rem]"
           disabled={isSearching}
         />
-        <Button
+        {/* <Button
           type="button"
           onClick={handleSearch}
           size="icon"
@@ -76,7 +76,7 @@ export function MarketResearchPreload() {
           ) : (
             <Search className="h-4 w-4" />
           )}
-        </Button>
+        </Button> */}
       </div>
     </div>
   );

@@ -126,9 +126,10 @@ export default function PreloadingScreen() {
             placeholder="Search for companies within any industry or sector..."
             className="flex-1"
           />
-          <Button 
+          {/* <Button 
             onClick={handleSearch}
             disabled={loading}
+            variant="secondary"
             size="icon"
           >
             {loading ? (
@@ -136,7 +137,7 @@ export default function PreloadingScreen() {
             ) : (
               <Search className="h-4 w-4" />
             )}
-          </Button>
+          </Button> */}
         </div>
 
         {/* Results Card */}

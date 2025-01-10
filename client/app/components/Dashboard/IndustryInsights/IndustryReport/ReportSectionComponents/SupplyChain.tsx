@@ -50,7 +50,7 @@ const TierSection: React.FC<TierSectionProps> = ({ title, items = [] }) => {
 // Main SupplyChain component
 const SupplyChain: React.FC<SupplyChainProps> = ({ supplyChain }) => {
   return (
-    <div className="p-6">
+    <div className="p-6 bg-[#171717] border rounded-xl border-[#2e2e2e]">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-32 text-gray-400 p-20">
         <TierSection title="Tier 1 Buyers" items={supplyChain.tier_1_buyers} />
         <TierSection

@@ -37,6 +37,7 @@ export default function CompanyInsightSidebar() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+        
         },
         body: JSON.stringify({ data: { company_name: companyName } }),
       });

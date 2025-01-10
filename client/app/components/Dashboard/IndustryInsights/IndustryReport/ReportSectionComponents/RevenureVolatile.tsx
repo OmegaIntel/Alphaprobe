@@ -19,7 +19,7 @@ interface RevenueVolatilityProps {
 const RevenueVolatility: React.FC<RevenueVolatilityProps> = ({
   revenueVolatility,
 }) => {
-  const [areAllOpen, setAreAllOpen] = useState<boolean>(false); // Default to open all
+  const [areAllOpen, setAreAllOpen] = useState<boolean>(false); // Default to all closed
 
   // Error handling: Check if revenueVolatility is valid
   if (
@@ -34,17 +34,16 @@ const RevenueVolatility: React.FC<RevenueVolatilityProps> = ({
   }
 
   const toggleAllAccordions = () => {
-    // Toggle the state: if any is clicked, toggle the state of all
     setAreAllOpen(!areAllOpen);
   };
 
   return (
-    <div className="p-4 shadow-md px-10 text-gray-400 mb-20">
+    <div className="p-4 bg-[#171717] border rounded-xl border-[#2e2e2e] shadow-md px-10 text-gray-400 mb-20">
       <h3 className="text-2xl font-semibold my-10 text-white">
         Revenue Volatility
       </h3>
 
-      {/* Error handling for missing volatility_level or volatility_trend */}
+      {/* Volatility Level and Trend */}
       {revenueVolatility.volatility_level ? (
         <div className="mb-4 flex justify-between">
           <p className="text-lg">
@@ -59,17 +58,14 @@ const RevenueVolatility: React.FC<RevenueVolatilityProps> = ({
           </p>
         </div>
       ) : (
-        <div className="mb-4 flex justify-between text-red-500">
-          <p className="text-lg">
-            Error: Missing volatility level or trend data
-          </p>
+        <div className="mb-4 text-red-500">
+          <p>Error: Missing volatility level or trend data</p>
         </div>
       )}
 
-      {/* Render volatility points */}
+      {/* Render Volatility Points */}
       <div className="grid grid-cols-2 gap-12">
         {revenueVolatility.volatility_points.map((point, index) => {
-          // Destructure and provide defaults for individual points
           const {
             volatility_title = "Untitled Volatility",
             volatility_description = "No description available.",
@@ -80,15 +76,9 @@ const RevenueVolatility: React.FC<RevenueVolatilityProps> = ({
               key={index}
               className="border border-gray-600 bg-gradient-to-b from-[#ffffff]/10 to-[#999999]/10 rounded-2xl p-4 py-6 shadow-md hover:shadow-lg hover:border-gray-500 transition duration-200"
             >
-              <div
-                onClick={toggleAllAccordions} // Clicking on any title toggles all accordions
-                className="flex justify-between items-center cursor-pointer"
-              >
-                <h4 className="text-lg text-[#b9bbbe] font-medium">
-                  {volatility_title}
-                </h4>
-                <span className="text-lg">{areAllOpen ? "-" : "+"}</span>
-              </div>
+              <h4 className="text-lg text-[#b9bbbe] font-medium">
+                {volatility_title}
+              </h4>
               {areAllOpen && (
                 <p className="mt-2 font-normal text-[#a8a8a8]">
                   {volatility_description}
@@ -98,6 +88,18 @@ const RevenueVolatility: React.FC<RevenueVolatilityProps> = ({
           );
         })}
       </div>
+
+      {/* Show More / Show Less Button */}
+      {revenueVolatility.volatility_points.length > 0 && (
+        <div className="flex justify-center">
+          <button
+            onClick={toggleAllAccordions}
+            className="mt-12 mb-6 w-1/5 bg-[#1d2a41] text-white border-2 border-[#404040] py-2 rounded-full font-medium hover:bg-gray-600 transition duration-200"
+          >
+            {areAllOpen ? "Show Less" : "Show More"}
+          </button>
+        </div>
+      )}
     </div>
   );
 };

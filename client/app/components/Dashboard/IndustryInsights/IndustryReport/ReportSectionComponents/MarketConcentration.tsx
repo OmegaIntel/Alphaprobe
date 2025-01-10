@@ -90,7 +90,7 @@ const MarketShareConcentration: React.FC<MarketShareConcentrationProps> = ({
   };
 
   return (
-    <div className="rounded-lg p-4 shadow-md text-gray-300">
+    <div className=" bg-[#171717] border rounded-xl border-[#2e2e2e] p-4 shadow-md text-gray-300">
       <h3 className="text-2xl font-semibold mb-4 text-white">
         Market Share Concentration
       </h3>

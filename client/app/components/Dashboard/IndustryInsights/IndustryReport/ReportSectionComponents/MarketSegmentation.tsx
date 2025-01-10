@@ -81,7 +81,7 @@ const MarketSegmentation: React.FC<MarketSegmentationProps> = ({
   };
 
   return (
-    <div className="rounded-lg p-4 shadow-md text-gray-300 ">
+    <div className="bg-[#171717] border rounded-xl border-[#2e2e2e] p-4 shadow-md text-gray-300 ">
       <div className="flex flex-col-reverse sm:flex-row sm:space-x-8 items-center">
         {/* Segment Details */}
         <div className="bg-[#1b1b1b] border border-[#2e2e2e] rounded-xl p-5">

@@ -227,7 +227,7 @@ export function ChatInterface() {
   }
 
   return (
-    <div className="flex justify-center items-center w-full mx-32">
+    <div className="flex justify-center items-center  w-2/3 mx-32">
       <div className="inline-flex bg-background px-10 py-4 gap-2">
         <Input
           type="text"
@@ -238,7 +238,7 @@ export function ChatInterface() {
           className="w-[30rem]"
           disabled={isSearching}
         />
-        <Button
+        {/* <Button
           type="button"
           onClick={handleSearch}
           size="icon"
@@ -250,7 +250,7 @@ export function ChatInterface() {
           ) : (
             <Search className="h-4 w-4" />
           )}
-        </Button>
+        </Button> */}
       </div>
     </div>
   );

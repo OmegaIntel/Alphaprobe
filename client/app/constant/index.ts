@@ -109,15 +109,15 @@ export const subCategoryList = [
   'Checklist',
 ];
 
-export const API_BASE_URL = 'https://www.omegaintelligence.ai/api';
+export const API_BASE_URL = 'http://localhost:8000';
 
 const isClient = typeof window !== 'undefined';
 
 export const Token = (): string | null => {
   if (!isClient) return null;
-  
+
   try {
-    return window.localStorage.getItem("token");
+    return window.localStorage.getItem('token');
   } catch (error) {
     console.error('LocalStorage error:', error);
     return null;

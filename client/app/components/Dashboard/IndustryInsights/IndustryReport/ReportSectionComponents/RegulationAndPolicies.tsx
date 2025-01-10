@@ -19,7 +19,7 @@ interface RegulationsAndPoliciesProps {
 const RegulationsAndPolicies: React.FC<RegulationsAndPoliciesProps> = ({
   regulations = {},
 }) => {
-  const [areAllOpen, setAreAllOpen] = useState<boolean>(false); // Default to open all
+  const [areAllOpen, setAreAllOpen] = useState<boolean>(false);
 
   // Destructure and provide defaults for regulations
   const {
@@ -29,12 +29,11 @@ const RegulationsAndPolicies: React.FC<RegulationsAndPoliciesProps> = ({
   } = regulations;
 
   const toggleAllAccordions = () => {
-    // Toggle the state: if any is clicked, toggle the state of all
     setAreAllOpen(!areAllOpen);
   };
 
   return (
-    <div className="p-4 shadow-md px-10 text-gray-400 mb-20">
+    <div className="p-4 bg-[#171717] border rounded-xl border-[#2e2e2e] shadow-md px-10 text-gray-400 mb-20">
       <h3 className="text-2xl font-semibold my-10 text-white">
         Regulations and Policies
       </h3>
@@ -56,7 +55,6 @@ const RegulationsAndPolicies: React.FC<RegulationsAndPoliciesProps> = ({
       {/* Render regulation points */}
       <div className="grid grid-cols-2 gap-12">
         {regulations_points.map((point, index) => {
-          // Destructure and provide defaults for individual points
           const {
             regulation_title = "Untitled Regulation",
             regulation_description = "No description available.",
@@ -67,15 +65,9 @@ const RegulationsAndPolicies: React.FC<RegulationsAndPoliciesProps> = ({
               key={index}
               className="border border-gray-600 bg-gradient-to-b from-[#ffffff]/10 to-[#999999]/10 rounded-2xl p-4 py-6 shadow-md hover:shadow-lg hover:border-gray-500 transition duration-200"
             >
-              <div
-                onClick={toggleAllAccordions}
-                className="flex justify-between items-center cursor-pointer"
-              >
-                <h4 className="text-lg text-[#b9bbbe] font-medium">
-                  {regulation_title}
-                </h4>
-                <span className="text-lg">{areAllOpen ? "-" : "+"}</span>
-              </div>
+              <h4 className="text-lg text-[#b9bbbe] font-medium">
+                {regulation_title}
+              </h4>
               {areAllOpen && (
                 <p className="mt-2 font-normal text-[#a8a8a8]">
                   {regulation_description}
@@ -85,6 +77,18 @@ const RegulationsAndPolicies: React.FC<RegulationsAndPoliciesProps> = ({
           );
         })}
       </div>
+
+      {/* Show More / Show Less button */}
+      {regulations_points.length > 0 && (
+        <div className="flex justify-center">
+          <button
+            onClick={toggleAllAccordions}
+            className="mt-12 mb-6 w-1/5 bg-[#1d2a41] text-white border-2 border-[#404040] py-2 rounded-full font-medium hover:bg-gray-600 transition duration-200"
+          >
+            {areAllOpen ? "Show Less" : "Show More"}
+          </button>
+        </div>
+      )}
     </div>
   );
 };
