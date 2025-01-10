@@ -24,7 +24,7 @@ interface CostFactor {
     };
   
     return (
-      <div className="rounded-lg p-4 shadow-md text-gray-400">
+      <div className="p-4 bg-[#171717] border rounded-xl border-[#2e2e2e] shadow-md text-gray-400">
         <h3 className="text-xl font-semibold mb-4">Cost Factors</h3>
   
         <div className="space-y-4">

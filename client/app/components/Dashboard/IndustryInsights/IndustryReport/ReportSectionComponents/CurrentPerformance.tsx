@@ -19,8 +19,8 @@ export function CurrentPerformanceComponent({
   };
 
   return (
-    <div className="p-10 text-gray-400">
-      <h3 className="text-xl font-semibold mb-4 text-[#e1e1e1]">Insights</h3>
+    <div className="p-10 text-gray-400 bg-[#171717] border rounded-xl border-[#2e2e2e]">
+      <h3 className="text-xl font-semibold mb-4 text-[#e1e1e1]">Performance Insights</h3>
       {currentPerformance.length > 0 ? (
         <div className="grid grid-cols-2 gap-12">
           {currentPerformance.map((point, index) => (

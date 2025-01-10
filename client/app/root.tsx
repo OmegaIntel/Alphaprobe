@@ -46,11 +46,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <>
-      {/* <Provider store={store}> */}
+      <Provider store={store}>
         <Layout>
           <Outlet />
         </Layout>
-      {/* </Provider> */}
+      </Provider>
     </>
   );
 }

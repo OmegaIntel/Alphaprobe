@@ -47,7 +47,7 @@ export default function CompanyInsightSidebar() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
+        
         },
         body: JSON.stringify({ data: { company_name: companyName } }),
       });

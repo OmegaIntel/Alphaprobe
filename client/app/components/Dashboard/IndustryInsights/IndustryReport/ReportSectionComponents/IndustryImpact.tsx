@@ -18,7 +18,7 @@ const IndustryImpact: React.FC<IndustryImpactProps> = ({ industryImpact }) => {
     industryImpact || {};
 
   return (
-    <div className="rounded-xl p-6 px-10">
+    <div className="rounded-xl  p-6 px-10">
       {/* Positive Impact Factors */}
       <div className="mb-4">
         <h4 className="text-lg font-semibold text-white">Positive</h4>

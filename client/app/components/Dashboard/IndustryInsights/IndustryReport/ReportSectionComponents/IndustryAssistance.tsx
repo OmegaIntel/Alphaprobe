@@ -31,7 +31,7 @@ export function IndustryAssistance({
   } = industryAssistance || {};
 
   return (
-    <div className="p-4 shadow-md px-10 text-gray-400 mb-20">
+    <div className="p-4 bg-[#171717] border rounded-xl border-[#2e2e2e] shadow-md px-10 text-gray-400 mb-20">
       <h3 className="text-2xl font-semibold mb-4 mt-10 text-white">
         Industry Assistance
       </h3>

@@ -23,18 +23,19 @@ const TechnologicalChange: React.FC<TechnologicalChangeProps> = ({
     technological_change_points: [],
   }, // Default value to prevent runtime errors
 }) => {
-  const [areAllOpen, setAreAllOpen] = useState<boolean>(false); // Default to open all
+  const [areAllOpen, setAreAllOpen] = useState<boolean>(false); // Default to all closed
 
   const toggleAllAccordions = () => {
     setAreAllOpen(!areAllOpen); // Toggle the state: open all or close all
   };
 
   return (
-    <div className="p-4 shadow-md px-10 text-gray-400 mb-20">
+    <div className="p-4 bg-[#171717] border rounded-xl border-[#2e2e2e] shadow-md px-10 text-gray-400 mb-20">
       <h3 className="text-2xl font-semibold my-10 text-white">
         Technological Change
       </h3>
 
+      {/* Display technological change level and trend */}
       <div className="mb-4 flex justify-between">
         <p className="text-lg">
           <span className="font-semibold text-[#e1e1e1]">
@@ -56,15 +57,9 @@ const TechnologicalChange: React.FC<TechnologicalChangeProps> = ({
               key={index}
               className="border border-gray-600 bg-gradient-to-b from-[#ffffff]/10 to-[#999999]/10 rounded-2xl p-4 py-6 shadow-md hover:shadow-lg hover:border-gray-500 transition duration-200"
             >
-              <div
-                onClick={toggleAllAccordions} // Clicking on any title toggles all accordions
-                className="flex justify-between items-center cursor-pointer"
-              >
-                <h4 className="text-lg text-[#b9bbbe] font-medium">
-                  {point.technological_change_title}
-                </h4>
-                <span className="text-lg">{areAllOpen ? "-" : "+"}</span>
-              </div>
+              <h4 className="text-lg text-[#b9bbbe] font-medium">
+                {point.technological_change_title}
+              </h4>
               {areAllOpen && (
                 <p className="mt-2 font-normal text-[#a8a8a8]">
                   {point.technological_change_description}
@@ -76,6 +71,18 @@ const TechnologicalChange: React.FC<TechnologicalChangeProps> = ({
           <p className="text-gray-500">No technological change points available.</p>
         )}
       </div>
+
+      {/* Show More / Show Less Button */}
+      {technologicalChange.technological_change_points.length > 0 && (
+        <div className="flex justify-center">
+          <button
+            onClick={toggleAllAccordions}
+            className="mt-12 mb-6 w-1/5 bg-[#1d2a41] text-white border-2 border-[#404040] py-2 rounded-full font-medium hover:bg-gray-600 transition duration-200"
+          >
+            {areAllOpen ? "Show Less" : "Show More"}
+          </button>
+        </div>
+      )}
     </div>
   );
 };
