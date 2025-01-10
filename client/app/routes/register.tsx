@@ -1,22 +1,23 @@
 import React, { useEffect, ReactElement } from "react";
 import { useNavigate } from "react-router-dom";
 import { API_BASE_URL } from "~/constant";
-import RegisterPage from "../components/Loguser/Register";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Register: React.FC = (): ReactElement | null => {
-  const { isAuthenticated, isLoading, user } = useAuth0();
+  const { isAuthenticated, isLoading, user, loginWithRedirect } = useAuth0();
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchPaymentStatusAndRedirect = async (): Promise<void> => {
-      // 1) If not authenticated, go to /register.
+      // Redirect to Auth0 signup page if not authenticated
       if (!isAuthenticated) {
-        navigate("/register");
-        return; // Stop execution here if not authenticated
+        await loginWithRedirect({
+          screen_hint: "signup", // Redirect to the signup screen
+        } as any);
+        return;
       }
 
-      // 2) If we have a user, fetch payment status.
+      // If authenticated and user exists, fetch payment status
       if (user && user.sub) {
         try {
           const response = await fetch(
@@ -30,7 +31,7 @@ const Register: React.FC = (): ReactElement | null => {
           const data = await response.json();
           const isCompleted: boolean = data.payment_status === "completed";
 
-          // 3) Decide where to redirect based on payment status.
+          // Redirect based on payment status
           if (isCompleted) {
             navigate("/dashboard");
           } else {
@@ -38,26 +39,25 @@ const Register: React.FC = (): ReactElement | null => {
           }
         } catch (error) {
           console.error("Error fetching payment status:", error);
-          // Fallback: if we can't confirm they're paid, send to checkout
+          // Fallback to checkout if payment status cannot be confirmed
           navigate("/checkout");
         }
       }
     };
 
-    // Only run after Auth0 finishes loading
+    // Execute the logic after Auth0 has finished loading
     if (!isLoading) {
       fetchPaymentStatusAndRedirect();
     }
-  }, [isLoading, isAuthenticated, user, navigate]);
+  }, [isAuthenticated, isLoading, user, loginWithRedirect, navigate]);
 
-  // While Auth0 is loading, show a spinner or message
+  // Show a loading message while waiting for Auth0 to load
   if (isLoading) {
     return <p>Loading...</p>;
   }
 
-  // If we didn’t redirect yet and user is not authenticated,
-  // render <Register />. Most of the time, the effect will navigate before this.
-  return !isAuthenticated ? <RegisterPage /> : null;
+  // Fallback UI is not required here since loginWithRedirect will handle unauthenticated users.
+  return null;
 };
 
 export default Register;

@@ -37,16 +37,10 @@ const Navbar: FC = () => {
           // If not authenticated, show Login and Register buttons
           <>
             <button
-              onClick={() => navigate('/login')}
-              className="px-4 py-2 rounded-md border border-slate-700 text-slate-700 bg-white hover:bg-slate-100 transition-colors"
-            >
-              Login
-            </button>
-            <button
               onClick={() => navigate('/register')}
               className="px-4 py-2 rounded-md bg-slate-700 text-white hover:bg-slate-800 transition-colors"
             >
-              Register
+              Get Started
             </button>
           </>
         )}
