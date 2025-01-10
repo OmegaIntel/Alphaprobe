@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "~/components/ui/card";
 import { Button } from "~/components/ui/button";
+import FlashlightText from "../FlashlightText/FlashlightText";
 
 // Define a type for a feature
 interface Feature {
@@ -51,6 +52,10 @@ const Footer: FC = () => {
             </CardContent>
           </Card>
         ))}
+      </div>
+
+      <div>
+        <FlashlightText />
       </div>
 
       {/* Footer */}

@@ -40,19 +40,23 @@ const Navbar: FC = () => {
 
           {isAuthenticated ? (
             // Authenticated user dropdown
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button >Profile</Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => navigate("/dashboard")}>
+            // <DropdownMenu>
+            //   <DropdownMenuTrigger asChild>
+            //     <Button >Profile</Button>
+            //   </DropdownMenuTrigger>
+            //   <DropdownMenuContent align="end">
+            //     <DropdownMenuItem onClick={() => navigate("/dashboard")}>
+            //       Dashboard
+            //     </DropdownMenuItem>
+            //     <DropdownMenuItem onClick={() => logout({ returnTo: window.location.origin })}>
+            //       Logout
+            //     </DropdownMenuItem>
+            //   </DropdownMenuContent>
+            // </DropdownMenu>
+
+            <Button onClick={() => navigate("/dashboard")} variant="default">
                   Dashboard
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => logout({ returnTo: window.location.origin })}>
-                  Logout
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+                </Button>
           ) : (
             // Unauthenticated user buttons
             <div className="flex gap-2">
