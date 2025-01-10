@@ -32,6 +32,7 @@ export function ChatInterface() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { toast } = useToast();
+  const { isAuthenticated, user } = useAuth0();
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -72,7 +73,6 @@ export function ChatInterface() {
   }, [sessionId]);
 
   const verifySession = async (existingSessionId: string): Promise<void> => {
-    const { isAuthenticated, user } = useAuth0();
     if (typeof window === 'undefined') return;
 
     try {
@@ -115,7 +115,6 @@ export function ChatInterface() {
   };
 
   const createSession = async (): Promise<void> => {
-    const { isAuthenticated, user } = useAuth0();
     if (typeof window === 'undefined') return;
 
     try {
@@ -156,7 +155,6 @@ export function ChatInterface() {
   };
 
   const handleSearch = async (): Promise<void> => {
-    const { isAuthenticated, user } = useAuth0();
     if (typeof window === 'undefined') return;
     if (!searchQuery.trim()) return;
 

@@ -73,7 +73,7 @@ const DashboardPage: FC = () => {
                 value={activeCategory}
                 onValueChange={(value) => setActiveCategory(value)}
             >
-                <div className="flex justify-between items-center m-0">
+                <div className="m-0">
                     {/* Category Tabs */}
                     <TabsList className="flex flex-wrap justify-start gap-2">
                         {categoryList.map((category, index) => (
@@ -85,14 +85,10 @@ const DashboardPage: FC = () => {
                                 {category}
                             </TabsTrigger>
                         ))}
+                        <LogoutButton />
                     </TabsList>
 
                     {/* Logout Button on the right */}
-                    <div>
-                        <TabsList className="flex flex-wrap justify-end gap-2 text-sm">
-                            <LogoutButton />
-                        </TabsList>
-                    </div>
 
                 </div>
                 {/* Dashboard */}
