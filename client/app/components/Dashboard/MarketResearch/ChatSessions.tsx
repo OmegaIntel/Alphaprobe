@@ -60,12 +60,12 @@ export function ChatSession({
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { toast } = useToast();
+  const { isAuthenticated, user } = useAuth0();
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
     const fetchSessions = async () => {
-      const { user, isAuthenticated } = useAuth0();
       try {
         setLoading(true);
         if(isAuthenticated && user && user.email) {
@@ -105,7 +105,6 @@ export function ChatSession({
   }, [navigate, toast]);
 
   const handleStartNewConversation = async () => {
-    const { user, isAuthenticated } = useAuth0();
 
     try {
       dispatch(resetInteractions());
@@ -162,7 +161,6 @@ export function ChatSession({
   };
 
   const handleSessionSelect = async (sessionId: string) => {
-    const { isAuthenticated, user } = useAuth0();
 
     if (typeof window === 'undefined') return;
 

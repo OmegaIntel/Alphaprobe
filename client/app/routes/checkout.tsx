@@ -113,7 +113,7 @@ const CheckoutForm: React.FC = () => {
   const cardStyle: StripeCardElementOptions = {
     style: {
       base: {
-        color: "#000",
+        color: "white",
         fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
         fontSmoothing: "antialiased",
         fontSize: "16px",

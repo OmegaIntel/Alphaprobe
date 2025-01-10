@@ -38,7 +38,7 @@ pypdf==4.3.1
 aws-s3-tools==0.3.0
 cachier==3.0.1
 timeout-decorator==0.5.0
-stripe 11.4.1
+stripe==11.4.1
 rapidfuzz==3.10.1
 scipy==1.14.1
 beautifulsoup4==4.12.0

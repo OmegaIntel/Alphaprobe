@@ -83,6 +83,7 @@ const DashboardPage: FC = () => {
                 {category}
               </TabsTrigger>
             ))}
+            <LogoutButton />
           </TabsList>
 
           {/* <div>
