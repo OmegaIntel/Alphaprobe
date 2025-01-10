@@ -7,7 +7,7 @@ import os
 
 stripe_router = APIRouter()
 
-stripe.api_key = "sk_test_51QYEgCJNJeCsZb591XWaZXpNHSzAtbiXSLOZ1qPF9N2ta8wspmdD35bXVcWLxoHjPHXH4puGfBT9ksc5JBswWTdy00CB4Ga2xH"
+stripe.api_key = "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"
 
 class PaymentRequest(BaseModel):
     amount: int

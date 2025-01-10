@@ -109,7 +109,7 @@ export const subCategoryList = [
   'Checklist',
 ];
 
-export const API_BASE_URL = 'http://ec2-54-91-85-225.compute-1.amazonaws.com:8000';
+export const API_BASE_URL = 'https://omegaintelligence.ai/api';
 
 const isClient = typeof window !== 'undefined';
 

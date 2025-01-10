@@ -15,7 +15,7 @@ import { Provider } from "react-redux";
 import store from "./store/store";
 
 export const stripePromise = loadStripe(
-  "pk_test_51QYEgCJNJeCsZb59NImX4wkZFUIIoVh6qSQ06uxHSpxkO6RnVdZ3ZlOoEjIwy7TXvH1CAh68hejLtLCgTPnQHqaj00k2MYGK3N"
+  "pk_live_51QYEgCJNJeCsZb59HRFE6TkrDZNFtYFQY5MBeaIwcdVJzo4M7jYE8qT1ub7GiiqrYpC8OZjjf82zZ4J4wihFuV0g003Ap19PWz"
 );
 
 export const links: LinksFunction = () => [
