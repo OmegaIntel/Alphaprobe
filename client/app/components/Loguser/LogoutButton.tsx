@@ -15,7 +15,13 @@ const LogoutButton: FC = () => {
     dispatch(logoutAction());
   };
 
-  return <button onClick={handleLogout}>Log Out</button>;
+  return <button
+    className="text-gray-300 hover:text-white px-4 py-2 hover:bg-stone-950 rounded transition duration-200"
+    onClick={handleLogout}
+  >
+    Log Out
+  </button>
+  ;
 };
 
 export default LogoutButton;

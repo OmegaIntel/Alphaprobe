@@ -308,14 +308,14 @@ export function ChatSession({
       </CardContent>
 
       <div className="absolute bottom-0 left-0 right-0 p-4 border-t bg-background">
-        <Button 
+        {/* <Button 
           variant="destructive" 
           className="w-full gap-2"
           onClick={handleLogout}
         >
           <LogOut className="h-4 w-4" />
           Logout
-        </Button>
+        </Button> */}
       </div>
     </Card>
   );

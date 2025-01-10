@@ -73,18 +73,25 @@ const DashboardPage: FC = () => {
         onValueChange={(value) => setActiveCategory(value)}
       >
         
-          <TabsList className="flex flex-wrap justify-start gap-2">
-            {categoryList.map((category, index) => (
-              <TabsTrigger
-                key={index}
-                value={category}
-                className="whitespace-nowrap"
-              >
-                {category}
-              </TabsTrigger>
-            ))}
-            <LogoutButton />
-          </TabsList>
+        <div className="flex items-center justify-between bg-zinc-800 m-0">
+            {/* Left Section: Tabs */}
+            <TabsList className="flex flex-wrap gap-2">
+                {categoryList.map((category, index) => (
+                <TabsTrigger
+                    key={index}
+                    value={category}
+                    className="whitespace-nowrap px-4 py-2 text-sm text-gray-300 hover:text-white"
+                >
+                    {category}
+                </TabsTrigger>
+                ))}
+            </TabsList>
+
+            {/* Right Section: Logout Button */}
+            <div className="flex items-center test-sm">
+                <LogoutButton />
+            </div>
+            </div>
 
           {/* <div>
                         <TabsList className="flex flex-wrap justify-end gap-2 text-sm">
