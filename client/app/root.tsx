@@ -17,6 +17,7 @@ import store from "./store/store";
 const stripe_pb_key: string = process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY!;
 const auth0_domain: string = process.env.REACT_APP_AUTH0_DOMAIN!;
 const auth0_client_id: string = process.env.REACT_APP_AUTH0_CLIENT_ID!;
+const frontendUrl = process.env.REACT_APP_FRONTEND_URL || window.location.origin;
 
 export const stripePromise = loadStripe(stripe_pb_key);
 
@@ -67,7 +68,7 @@ export default function App() {
             domain={auth0_domain}
             clientId={auth0_client_id}
             authorizationParams={{
-              redirect_uri: window.location.origin + "/dashboard",
+              redirect_uri: `${frontendUrl}/dashboard`,
               scope: "openid profile email",
             }}
             cacheLocation="localstorage"
