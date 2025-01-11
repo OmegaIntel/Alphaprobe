@@ -179,8 +179,8 @@ def create_checkout_session(payment_request: dict):
                 }
             ],
             mode="payment",
-            success_url="https://omegaintelligence.ai/dashboard",
-            cancel_url="https://omegaintelligence.ai/payment-cancel",
+            success_url = f"{YOUR_FRONTEND_URL}/dashboard",
+            cancel_url = f"{YOUR_FRONTEND_URL}/payment-cancel",
             metadata={
                 "user_id": payment_request["user_id"],  # Track the user in your system
             },
