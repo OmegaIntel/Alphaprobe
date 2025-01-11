@@ -14,10 +14,10 @@ import "./tailwind.css";
 import { Provider } from "react-redux";
 import store from "./store/store";
 
-const stripe_pb_key: string = process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY!;
-const auth0_domain: string = process.env.REACT_APP_AUTH0_DOMAIN!;
-const auth0_client_id: string = process.env.REACT_APP_AUTH0_CLIENT_ID!;
-const frontendUrl = process.env.REACT_APP_FRONTEND_URL || window.location.origin;
+const stripe_pb_key: string = import.meta.env.REACT_APP_STRIPE_PUBLISHABLE_KEY!;
+const auth0_domain: string = import.meta.env.REACT_APP_AUTH0_DOMAIN!;
+const auth0_client_id: string = import.meta.env.REACT_APP_AUTH0_CLIENT_ID!;
+const frontendUrl = import.meta.env.REACT_APP_FRONTEND_URL || window.location.origin;
 
 export const stripePromise = loadStripe(stripe_pb_key);
 

@@ -21,4 +21,5 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
+  envPrefix: 'REACT_APP_',
 });
