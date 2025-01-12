@@ -1,22 +1,24 @@
 import React, { useState, useEffect, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
 import { API_BASE_URL } from "~/constant";
 import LogoutButton from "~/components/Loguser/LogoutButton";
+import { useAuth } from "~/services/AuthContext"; // Use custom hook
 
 const CheckoutForm: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
-  const { isAuthenticated, isLoading, user, logout } = useAuth0();
+  
+  const { isAuthenticated, isLoading, user } = useAuth();
+
+  useEffect(() => {
+    if (!isLoading && !isAuthenticated) {
+      navigate("/login");
+    }
+  }, [isLoading, isAuthenticated, navigate]);
 
   useEffect(() => {
     const checkPaymentStatusAndRedirect = async () => {
-      if (!isAuthenticated) {
-        navigate("/login");
-        return;
-      }
-
       if (user && user.sub) {
         try {
           const response = await fetch(
@@ -38,36 +40,33 @@ const CheckoutForm: React.FC = () => {
       }
     };
 
-    if (!isLoading) {
+    if (!isLoading && isAuthenticated) {
       checkPaymentStatusAndRedirect();
     }
   }, [isLoading, isAuthenticated, user, navigate]);
 
   const handleCheckout = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setLoading(true);
 
-    if (!user || !user.sub) {
-      setError("User not authenticated");
-      setLoading(false);
+    if (isLoading || !user || !user.sub) {
+      setError("User not authenticated or loading.");
       return;
     }
-
+  
+    setLoading(true);
     try {
       const response = await fetch(`${API_BASE_URL}/api/create-checkout-session`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ amount: 1000, user_id: user.sub })
+        body: JSON.stringify({ amount: 1000, user_id: user.sub }),
       });
-
+  
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.detail || "Failed to create checkout session");
       }
-
+  
       const { url } = await response.json();
-
-      // Redirect user to Stripe Checkout URL
       window.location.href = url;
     } catch (error: any) {
       setError(error.message || "Something went wrong");
@@ -76,9 +75,12 @@ const CheckoutForm: React.FC = () => {
     }
   };
 
+  if (isLoading) {
+    return <p>Loading...</p>; // Show a loading state while checking authentication
+  }
+
   if (!isAuthenticated) {
-    navigate("/login");
-    return null; // Render nothing while redirecting
+    return null; // Prevent rendering until redirection happens
   }
 
   return (
@@ -102,9 +104,7 @@ const CheckoutForm: React.FC = () => {
         >
           Visit Homepage
         </button>
-        <div
-          className="bg-zinc-800 text-white border rounded-md border-zinc-800 hover:bg-stone-950 "
-        >
+        <div className="bg-zinc-800 text-white border rounded-md border-zinc-800 hover:bg-stone-950">
           <LogoutButton />
         </div>
       </div>

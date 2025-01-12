@@ -4,11 +4,10 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "copy-env": "cp ../.env .env",
-    "build": "npm run copy-env && remix vite:build",
-    "dev": "npm run copy-env && remix vite:dev --host",
+    "build": "remix vite:build",
+    "dev": "remix vite:dev --host",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
-    "start": "npm run copy-env && remix-serve ./build/server/index.js",
+    "start": "remix-serve ./build/server/index.js",
     "typecheck": "tsc"
   },
   "dependencies": {

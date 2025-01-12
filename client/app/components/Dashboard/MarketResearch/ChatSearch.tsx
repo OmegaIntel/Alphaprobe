@@ -11,7 +11,20 @@ import { Input } from "~/components/ui/input";
 import { Button } from "~/components/ui/button";
 import { Search, Loader2 } from "lucide-react";
 import { useToast } from "~/hooks/use-toast";
-import { useAuth0 } from "@auth0/auth0-react"
+import { useAuth } from "~/services/AuthContext";
+
+function debounce<T extends (...args: any[]) => void>(func: T, wait: number): (...args: Parameters<T>) => void {
+  let timeout: ReturnType<typeof setTimeout> | null = null;
+
+  return (...args: Parameters<T>) => {
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+    timeout = setTimeout(() => {
+      func(...args);
+    }, wait);
+  };
+}
 
 type SessionResponse = {
   session_id: string;
@@ -28,20 +41,20 @@ export function ChatInterface() {
   const [searchQuery, setSearchQuery] = useState("");
   const [sessionId, setSessionId] = useState("");
   const [isSearching, setIsSearching] = useState(false);
-  
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { toast } = useToast();
-  const { isAuthenticated, user } = useAuth0();
+  const { isAuthenticated, isLoading, user } = useAuth();
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       setSessionId(localStorage.getItem("rag_session_id") || "");
     }
   }, []);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     const syncSessionIdWithLocalStorage = () => {
       const storedSessionId = localStorage.getItem("rag_session_id");
@@ -59,8 +72,8 @@ export function ChatInterface() {
   }, [sessionId]);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    
+    if (isLoading || !isAuthenticated || !user?.email) return;
+
     const initSession = async () => {
       if (sessionId) {
         await verifySession(sessionId);
@@ -70,40 +83,33 @@ export function ChatInterface() {
     };
 
     initSession();
-  }, [sessionId]);
+  }, [isAuthenticated, isLoading, sessionId, user]);
 
   const verifySession = async (existingSessionId: string): Promise<void> => {
-    if (typeof window === 'undefined') return;
-
     try {
-      if(isAuthenticated && user && user.email) {
-        const endpoint = new URL(`${API_BASE_URL}/api/session/verify`);
-        endpoint.searchParams.append("session_id", existingSessionId);
-        endpoint.searchParams.append("email", user.email); // Append the email parameter
+      const endpoint = new URL(`${API_BASE_URL}/api/session/verify`);
+      endpoint.searchParams.append("session_id", existingSessionId);
+      endpoint.searchParams.append("email", user?.email || "");
 
-        const response = await fetch(endpoint.toString(), {
-          method: "GET",
-          headers: {
-            "Accept": "application/json"
-          },
-        });
+      const response = await fetch(endpoint.toString(), {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+        },
+      });
 
-
-        if (!response.ok) {
-          if (response.status === 401) {
-            navigate('/login');
-            return;
-          }
-          throw new Error("Session verification failed");
+      if (!response.ok) {
+        if (response.status === 401) {
+          navigate("/login");
+          return;
         }
+        throw new Error("Session verification failed");
+      }
 
-        const data = await response.json() as SessionResponse;
-        if (data.session_id && data.session_id !== existingSessionId) {
-          setSessionId(data.session_id);
-          localStorage.setItem("rag_session_id", data.session_id);
-        }
-      } else {
-        navigate("/login");
+      const data = (await response.json()) as SessionResponse;
+      if (data.session_id && data.session_id !== existingSessionId) {
+        setSessionId(data.session_id);
+        localStorage.setItem("rag_session_id", data.session_id);
       }
     } catch (error) {
       toast({
@@ -115,35 +121,29 @@ export function ChatInterface() {
   };
 
   const createSession = async (): Promise<void> => {
-    if (typeof window === 'undefined') return;
-
     try {
-      if(isAuthenticated && user && user.email) {
-        const payload = { email: user.email };
-        const response = await fetch(`${API_BASE_URL}/api/session`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-          },
-          body: JSON.stringify(payload),
-        });
-  
-        if (!response.ok) {
-          if (response.status === 401) {
-            navigate('/login');
-            return;
-          }
-          throw new Error("Failed to create session");
+      const payload = { email: user?.email };
+      const response = await fetch(`${API_BASE_URL}/api/session`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        if (response.status === 401) {
+          navigate("/login");
+          return;
         }
-  
-        const data = await response.json() as SessionResponse;
-        if (data.session_id) {
-          setSessionId(data.session_id);
-          localStorage.setItem("rag_session_id", data.session_id);
-        }
-      } else {
-        navigate("/login");
+        throw new Error("Failed to create session");
+      }
+
+      const data = (await response.json()) as SessionResponse;
+      if (data.session_id) {
+        setSessionId(data.session_id);
+        localStorage.setItem("rag_session_id", data.session_id);
       }
     } catch (error) {
       toast({
@@ -155,62 +155,62 @@ export function ChatInterface() {
   };
 
   const handleSearch = async (): Promise<void> => {
-    if (typeof window === 'undefined') return;
     if (!searchQuery.trim()) return;
 
     const interactionId = uuidv4();
     setIsSearching(true);
 
-    dispatch(addInteraction({ 
-      id: interactionId, 
-      query: searchQuery 
-    }));
+    dispatch(
+      addInteraction({
+        id: interactionId,
+        query: searchQuery,
+      })
+    );
 
     try {
-      if(isAuthenticated && user && user.email) {
-        const endpoint = new URL(`${API_BASE_URL}/api/rag-search`);
-        endpoint.searchParams.append("query", searchQuery);
-        endpoint.searchParams.append("session_id", sessionId);
-        endpoint.searchParams.append("email", user.email);
+      const endpoint = new URL(`${API_BASE_URL}/api/rag-search`);
+      endpoint.searchParams.append("query", searchQuery);
+      endpoint.searchParams.append("session_id", sessionId);
+      endpoint.searchParams.append("email", user?.email || "");
 
-        const response = await fetch(endpoint.toString(), {
-          method: "GET",
-          headers: {
-            "Accept": "application/json",
-          },
-        });
+      const response = await fetch(endpoint.toString(), {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+        },
+      });
 
-
-        if (!response.ok) {
-          if (response.status === 401) {
-            navigate('/login');
-            return;
-          }
-          throw new Error("Search request failed");
+      if (!response.ok) {
+        if (response.status === 401) {
+          navigate("/login");
+          return;
         }
+        throw new Error("Search request failed");
+      }
 
-        const data = await response.json() as SearchResponse;
-        
-        dispatch(updateInteractionResponse({
+      const data = (await response.json()) as SearchResponse;
+
+      dispatch(
+        updateInteractionResponse({
           id: interactionId,
           response: {
             agent_response: data.agent_response,
-            metadata_content_pairs: data.metadata_content_pairs
-          }
-        }));
+            metadata_content_pairs: data.metadata_content_pairs,
+          },
+        })
+      );
 
-        setSearchQuery("");
-      } else {
-        navigate("/login");
-      }
+      setSearchQuery("");
     } catch (error) {
-      dispatch(updateInteractionResponse({
-        id: interactionId,
-        response: {
-          agent_response: "Failed to fetch response.",
-          metadata_content_pairs: []
-        }
-      }));
+      dispatch(
+        updateInteractionResponse({
+          id: interactionId,
+          response: {
+            agent_response: "Failed to fetch response.",
+            metadata_content_pairs: [],
+          },
+        })
+      );
 
       toast({
         variant: "destructive",
@@ -222,12 +222,17 @@ export function ChatInterface() {
     }
   };
 
-  if (typeof window === 'undefined') {
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  if (!isAuthenticated) {
+    navigate("/login");
     return null;
   }
 
   return (
-    <div className="flex justify-center items-center  w-2/3 mx-32">
+    <div className="flex justify-center items-center w-2/3 mx-32">
       <div className="inline-flex bg-background px-10 py-4 gap-2">
         <Input
           type="text"
@@ -238,19 +243,6 @@ export function ChatInterface() {
           className="w-[30rem]"
           disabled={isSearching}
         />
-        {/* <Button
-          type="button"
-          onClick={handleSearch}
-          size="icon"
-          variant="secondary"
-          disabled={isSearching}
-        >
-          {isSearching ? (
-            <Loader2 className="h-4 w-4 animate-spin" />
-          ) : (
-            <Search className="h-4 w-4" />
-          )}
-        </Button> */}
       </div>
     </div>
   );

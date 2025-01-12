@@ -1,18 +1,21 @@
 import React, { FC } from "react";
 import { useDispatch } from "react-redux";
-import { useAuth0 } from "@auth0/auth0-react";
+import { useAuth } from "~/services/AuthContext";
+import { useNavigate } from "@remix-run/react";
 
 // Import the logout action from your auth slice
 import { auth0Logout as logoutAction } from "../../store/slices/authSlice";
 
 const LogoutButton: FC = () => {
-  const { logout } = useAuth0();
+  const navigate = useNavigate();
+  const { logout } = useAuth();
   const dispatch = useDispatch();
 
   const handleLogout = () => {
     // Call Auth0 logout and then dispatch an action to update the Redux store
-    logout({ returnTo: window.location.origin } as any);
+    logout();
     dispatch(logoutAction());
+    navigate("/");
   };
 
   return <button

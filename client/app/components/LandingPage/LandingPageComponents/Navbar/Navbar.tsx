@@ -1,12 +1,12 @@
 import React, { FC } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
+import { useAuth } from "~/services/AuthContext";
 import { Button } from "~/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "~/components/ui/dropdown-menu";
 
 const Navbar: FC = () => {
   const navigate = useNavigate();
-  const { isAuthenticated, logout, loginWithRedirect } = useAuth0();
+  const { isAuthenticated } = useAuth();
 
   return (
     <nav className="sticky top-0 z-50 bg-background border-b px-10">
@@ -64,7 +64,7 @@ const Navbar: FC = () => {
                 Login
               </Button> */}
               <Button
-                onClick={() => navigate("/register")}
+                onClick={() => navigate("/login")}
                 variant="default"
               >
                 Get Started

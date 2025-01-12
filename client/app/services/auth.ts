@@ -2,6 +2,19 @@
 import { API_BASE_URL } from "~/constant";
 import { setCookie, getCookie, removeCookie } from "~/utils/cookies";
 
+export interface LoginResponse {
+  access_token: string;
+  id_token?: string;
+  scope: string;
+  expires_in: number,
+  token_type: string
+}
+
+export interface RegisterResponse {
+  message: string;
+  // Other properties depending on response
+}
+
 // Function to log in a user
 export async function loginUser(formData: FormData) {
   const response = await fetch(`${API_BASE_URL}/api/token`, {
@@ -97,3 +110,50 @@ export async function checkUserExists(email: string) {
   const data = await response.json();
   return data.exists; // Returns true if the user exists, false otherwise
 }
+
+export const loginUserToAuth0 = async (
+  username: string,
+  password: string
+): Promise<LoginResponse> => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/login-auth`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password }),
+    });
+
+    if (!response.ok) {
+      throw new Error('Login failed');
+    }
+
+    const data: LoginResponse = await response.json();
+    localStorage.setItem("token", data.access_token);
+    return data;
+  } catch (err) {
+    console.error("Login failed", err);
+    throw err;
+  }
+};
+
+export const registerUserToAuth0 = async (
+  email: string,
+  password: string
+): Promise<RegisterResponse> => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/register-auth`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password }),
+    });
+
+    if (!response.ok) {
+      throw new Error('Registration failed');
+    }
+
+    const data: RegisterResponse = await response.json();
+    return data;
+  } catch (err) {
+    console.error("Registration failed", err);
+    throw err;
+  }
+};

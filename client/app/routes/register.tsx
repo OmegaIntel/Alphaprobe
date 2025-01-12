@@ -1,63 +1,163 @@
-import React, { useEffect, ReactElement } from "react";
-import { useNavigate } from "react-router-dom";
-import { API_BASE_URL } from "~/constant";
-import { useAuth0 } from "@auth0/auth0-react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; 
+import { Form } from "@remix-run/react";
+import { registerUser, registerUserToAuth0 } from "~/services/auth";
+import { useAuth } from "~/services/AuthContext";
 
-const Register: React.FC = (): ReactElement | null => {
-  const { isAuthenticated, isLoading, user, loginWithRedirect } = useAuth0();
+const RegisterForm: React.FC = () => {
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [confirmPassword, setConfirmPassword] = useState<string>("");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const fetchPaymentStatusAndRedirect = async (): Promise<void> => {
-      // Redirect to Auth0 signup page if not authenticated
-      if (!isAuthenticated) {
-        await loginWithRedirect({
-          screen_hint: "signup", // Redirect to the signup screen
-        } as any);
-        return;
+  // Use our custom authentication context
+    const { isAuthenticated, isLoading } = useAuth();
+  
+    // Handle navigation based on authentication state
+    useEffect(() => {
+      if (!isLoading && isAuthenticated) {
+        navigate("/dashboard");
       }
+    }, [isAuthenticated, isLoading, navigate]);
 
-      // If authenticated and user exists, fetch payment status
-      if (user && user.sub) {
-        try {
-          const response = await fetch(
-            `${API_BASE_URL}/api/stripe-payment-details?user_sub=${encodeURIComponent(user.sub)}`,
-            { method: "GET" }
-          );
-          if (!response.ok) {
-            throw new Error("Failed to fetch payment status");
-          }
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setErrorMessage(null);
 
-          const data = await response.json();
-          const isCompleted: boolean = data.payment_status === "completed";
-
-          // Redirect based on payment status
-          if (isCompleted) {
-            navigate("/dashboard");
-          } else {
-            navigate("/checkout");
-          }
-        } catch (error) {
-          console.error("Error fetching payment status:", error);
-          // Fallback to checkout if payment status cannot be confirmed
-          navigate("/checkout");
-        }
-      }
-    };
-
-    // Execute the logic after Auth0 has finished loading
-    if (!isLoading) {
-      fetchPaymentStatusAndRedirect();
+    // Client-side validation
+    if (!email || !password || !confirmPassword) {
+      setErrorMessage("All fields are required");
+      return;
     }
-  }, [isAuthenticated, isLoading, user, loginWithRedirect, navigate]);
 
-  // Show a loading message while waiting for Auth0 to load
-  if (isLoading) {
-    return <p>Loading...</p>;
-  }
+    if (password !== confirmPassword) {
+      setErrorMessage("Passwords do not match.");
+      return;
+    }
 
-  // Fallback UI is not required here since loginWithRedirect will handle unauthenticated users.
-  return null;
+    try {
+      // Create FormData and append registration fields
+      const formData = new FormData();
+      formData.append("email", email);
+      formData.append("password", password);
+      formData.append("confirmPassword", confirmPassword);
+
+      const response_auth = await registerUserToAuth0(email, password);
+      const response = await registerUser(formData);
+      console.log("Registration successful:", response);
+
+      // Redirect to login after successful registration
+      navigate("/login");
+    } catch (error: any) {
+      setErrorMessage(error.message || "Registration failed");
+    }
+  };
+
+  return (
+    <div className="flex justify-center bg-stone-950 items-center min-h-screen relative">
+      {/* Background Gradient */}
+      <div className="auth-gradient h-full absolute xl:w-[60vw] xl:bottom-[5vw] xl:right-[50vw] lg:w-[80vw] lg:bottom-0 lg:right-[45vw] md:w-[100vw] md:bottom-0 md:right-[35vw]"></div>
+
+      {/* Register Image */}
+      <div className="xl:w-[745px] xl:h-[320px] z-10 lg:w-[675px] lg:h-[270px] md:w-[585px] md:h-[185px]">
+        <img
+          src="/images/register-image.png"
+          alt="Register Illustration"
+          className="w-full h-full"
+        />
+      </div>
+
+      {/* Register Form */}
+      <div className="p-8 rounded-lg w-[450px] bg-[#212126] border border-[#303038] z-20">
+        <div className="mb-10">
+          <h2 className="text-[20px] text-white tracking-widest font-bold">
+            REGISTER
+          </h2>
+          <p className="text-sm text-white">
+            Already have an account?{" "}
+            <a href="/login" className="text-[#33bbff]">
+              Login
+            </a>
+          </p>
+        </div>
+
+        <Form method="post" onSubmit={handleSubmit}>
+          {errorMessage && (
+            <p className="text-red-500 text-sm mb-4">{errorMessage}</p>
+          )}
+
+          {/* Email Field */}
+          <div className="mb-5 flex flex-col gap-3">
+            <label className="text-xs text-[#8a8a90]">Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="example@omegaintelligence.org"
+              className="w-full p-[10px] bg-[#212126] border border-[#303038] rounded text-white text-sm outline-none placeholder:text-[#5c5c5c]"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+
+          {/* Password Field */}
+          <div className="mb-5 flex flex-col gap-3 relative">
+            <label className="text-xs text-[#8a8a90]">Password</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter your password"
+              className="w-full p-[10px] bg-[#212126] border border-[#303038] rounded text-white text-sm outline-none placeholder:text-[#5c5c5c]"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+
+          {/* Confirm Password Field */}
+          <div className="mb-5 flex flex-col gap-3">
+            <label className="text-xs text-[#8a8a90]">Confirm Password</label>
+            <input
+              type="password"
+              name="confirmPassword"
+              placeholder="Confirm your password"
+              className="w-full p-[10px] bg-[#212126] border border-[#303038] rounded text-white text-sm outline-none placeholder:text-[#5c5c5c]"
+              required
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+          </div>
+
+          {/* Submit Button */}
+          <div className="flex flex-col items-center">
+            <button
+              type="submit"
+              className="w-[120px] h-[40px] p-2.5 bg-[#0088cc] hover:bg-[#0056b3] text-white text-xs rounded-md mt-4"
+            >
+              Register
+            </button>
+
+            {/* Or Divider */}
+            <div className="w-[60%] my-12 text-center border-b border-[#505059] leading-[0.1em]">
+              <span className="bg-[#151518] px-4 text-[#a2a2a2]">or</span>
+            </div>
+
+            {/* Schedule Demo */}
+            <div className="text-sm font-bold text-white mb-4">
+              Schedule a personalized demo
+            </div>
+            <button
+              type="button"
+              className="w-[120px] h-[40px] p-2.5 bg-[#33bbff] hover:bg-[#0088cc] text-white text-xs rounded-md"
+            >
+              Request Demo
+            </button>
+          </div>
+        </Form>
+      </div>
+    </div>
+  );
 };
 
-export default Register;
+export default RegisterForm;

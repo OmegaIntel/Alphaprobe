@@ -9,11 +9,11 @@ import {
 import { v4 as uuidv4 } from "uuid";
 import { API_BASE_URL } from "~/constant";
 import { Button } from "~/components/ui/button";
-import { Card, CardHeader, CardContent } from "~/components/ui/card";
+import { Card, CardContent } from "~/components/ui/card";
 import { ScrollArea } from "~/components/ui/scroll-area";
 import { useToast } from "~/hooks/use-toast";
-import { Loader2, LogOut, Plus } from "lucide-react";
-import { useAuth0 } from "@auth0/auth0-react"
+import { Loader2, Plus } from "lucide-react";
+import { useAuth } from "~/services/AuthContext";
 
 interface Session {
   session_id: string;
@@ -60,36 +60,29 @@ export function ChatSession({
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { toast } = useToast();
-  const { isAuthenticated, user } = useAuth0();
+  const { isAuthenticated, isLoading, user } = useAuth();
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (isLoading || !isAuthenticated || !user?.email) return;
 
     const fetchSessions = async () => {
       try {
         setLoading(true);
-        if(isAuthenticated && user && user.email) {
-          const email = user?.email;  
-          const response = await fetch(`${API_BASE_URL}/api/user-sessions?email=${encodeURIComponent(email)}`, {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          });
-        
-          if (!response.ok) {
-            throw new Error(`Error: ${response.statusText}`);
-          }
+        const email = user?.email;
+        const response = await fetch(`${API_BASE_URL}/api/user-sessions?email=${encodeURIComponent(email)}`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
 
-          const data = await response.json();
-          const filteredSessions = data.sessions.filter(
-            (session: Session) => session.first_query
-          );
-
-          setSessions(filteredSessions);
-        } else {
-          navigate("/login");
+        if (!response.ok) {
+          throw new Error(`Error: ${response.statusText}`);
         }
+
+        const data = await response.json();
+        const filteredSessions = data.sessions.filter((session: Session) => session.first_query);
+        setSessions(filteredSessions);
       } catch (err) {
         toast({
           variant: "destructive",
@@ -102,40 +95,35 @@ export function ChatSession({
     };
 
     fetchSessions();
-  }, [navigate, toast]);
+  }, [isAuthenticated, isLoading, user, toast]);
 
   const handleStartNewConversation = async () => {
-
     try {
       dispatch(resetInteractions());
       setActiveSessionId(null);
       localStorage.removeItem("rag_session_id");
 
-      if(isAuthenticated && user && user.email) {
-        const payload = { email: user.email };
-        const response = await fetch(`${API_BASE_URL}/api/new-session`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            "Accept": "application/json",
-          },
-          body: JSON.stringify(payload),
-        });
-  
-        if (!response.ok) {
-          throw new Error(`Failed to create session: ${response.statusText}`);
-        }
-  
-        const { session_id } = await response.json();
-        localStorage.setItem("rag_session_id", session_id);
-        setActiveSessionId(session_id);
-  
-        if (onFirstQueryMade) {
-          setHasFirstQueryBeenMade(false);
-          onFirstQueryMade();
-        }
-      } else {
-        navigate("/login");
+      const payload = { email: user?.email };
+      const response = await fetch(`${API_BASE_URL}/api/new-session`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Failed to create session: ${response.statusText}`);
+      }
+
+      const { session_id } = await response.json();
+      localStorage.setItem("rag_session_id", session_id);
+      setActiveSessionId(session_id);
+
+      if (onFirstQueryMade) {
+        setHasFirstQueryBeenMade(false);
+        onFirstQueryMade();
       }
     } catch (error) {
       toast({
@@ -148,67 +136,62 @@ export function ChatSession({
 
   const handleSessionHistory = (entry: SessionHistory) => {
     const interactionId = uuidv4();
-    
-    dispatch(addInteraction({
-      id: interactionId,
-      query: entry.query,
-    }));
 
-    dispatch(updateInteractionResponse({
-      id: interactionId,
-      response: entry.response
-    }));
+    dispatch(
+      addInteraction({
+        id: interactionId,
+        query: entry.query,
+      })
+    );
+
+    dispatch(
+      updateInteractionResponse({
+        id: interactionId,
+        response: entry.response,
+      })
+    );
   };
 
   const handleSessionSelect = async (sessionId: string) => {
-
-    if (typeof window === 'undefined') return;
-
-    // Remove the condition that prevented reselection
     dispatch(resetInteractions());
     setSelectedSessionLoading(true);
 
     try {
-      if(isAuthenticated && user && user.email) {
-        const url = new URL(`${API_BASE_URL}/api/session/set-active`);
-        url.searchParams.append("session_id", sessionId);
-        const payload = { email: user.email };
+      const url = new URL(`${API_BASE_URL}/api/session/set-active`);
+      url.searchParams.append("session_id", sessionId);
+      const payload = { email: user?.email };
 
-        const response = await fetch(url.toString(), {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-          },
-          body: JSON.stringify(payload),
-        });
+      const response = await fetch(url.toString(), {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
 
-        if (!response.ok) {
-          throw new Error(`Error: ${response.statusText}`);
-        }
-
-        const data: SessionResponse = await response.json();
-
-        setActiveSessionId(sessionId);
-        localStorage.setItem("rag_session_id", sessionId);
-
-        if (onSessionSelect) {
-          onSessionSelect(data);
-        }
-
-        const sessionHistory = data.history || [];
-        sessionHistory.forEach(handleSessionHistory);
-
-        if (!hasFirstQueryBeenMade) {
-          setHasFirstQueryBeenMade(true);
-          if (onFirstQueryMade) {
-            onFirstQueryMade();
-          }
-        }
-      } else {
-        navigate("/login")
+      if (!response.ok) {
+        throw new Error(`Error: ${response.statusText}`);
       }
-      
+
+      const data: SessionResponse = await response.json();
+
+      setActiveSessionId(sessionId);
+      localStorage.setItem("rag_session_id", sessionId);
+
+      if (onSessionSelect) {
+        onSessionSelect(data);
+      }
+
+      const sessionHistory = data.history || [];
+      sessionHistory.forEach(handleSessionHistory);
+
+      if (!hasFirstQueryBeenMade) {
+        setHasFirstQueryBeenMade(true);
+        if (onFirstQueryMade) {
+          onFirstQueryMade();
+        }
+      }
     } catch (err) {
       toast({
         variant: "destructive",
@@ -251,14 +234,12 @@ export function ChatSession({
     return grouped;
   }, [sessions]);
 
-  const handleLogout = () => {
-    if (typeof window === 'undefined') return;
-    
-    document.cookie = 'authToken=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-    navigate('/login');
-  };
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
 
-  if (typeof window === 'undefined') {
+  if (!isAuthenticated) {
+    navigate("/login");
     return null;
   }
 

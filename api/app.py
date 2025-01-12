@@ -27,6 +27,7 @@ from api.api_rag import rag_router
 from api.api_related_companies import companies_router
 from api.api_industry_search import search_industries_router
 from api.api_stripe import stripe_router
+from api.api_auth import auth_router
 
 app = FastAPI(docs_url="/api/docs", openapi_url="/api/openapi.json")
 
@@ -69,6 +70,7 @@ app.include_router(rag_router)
 app.include_router(companies_router)
 app.include_router(search_industries_router)
 app.include_router(stripe_router)
+app.include_router(auth_router)
 
 if __name__ == "__main__":
     uvicorn.run("api.app:app", host="0.0.0.0", port=8000, reload=True, loop='asyncio')

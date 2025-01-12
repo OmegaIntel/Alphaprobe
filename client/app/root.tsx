@@ -7,7 +7,7 @@ import {
 } from "@remix-run/react";
 import React, { useEffect, useState } from "react";
 import type { LinksFunction } from "@remix-run/node";
-import { Auth0Provider } from "@auth0/auth0-react";
+import { AuthProvider } from "~/services/AuthContext";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import "./tailwind.css";
@@ -63,21 +63,11 @@ export default function App() {
   return (
     <Layout>
       <Provider store={store}>
-        {mounted && (
-          <Auth0Provider
-            domain={auth0_domain}
-            clientId={auth0_client_id}
-            authorizationParams={{
-              redirect_uri: `${frontendUrl}/dashboard`,
-              scope: "openid profile email",
-            }}
-            cacheLocation="localstorage"
-          >
+          <AuthProvider>
             <Elements stripe={stripePromise}>
               <Outlet />
             </Elements>
-          </Auth0Provider>
-        )}
+          </AuthProvider>
       </Provider>
     </Layout>
   );
