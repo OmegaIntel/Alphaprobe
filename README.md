@@ -13,11 +13,6 @@
     git checkout development
     ```
 
-1. Run Weaviate Docker Container (you may need to use `sudo`):
-    ```
-    docker compose -f docker-compose-weaviate.yaml up --build
-    ```
-
 1. Copy credentials from Slack or Notion page into `.env` file in the root folder.
 
 
