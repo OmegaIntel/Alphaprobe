@@ -12,7 +12,7 @@ interface LoginProps {
 
 export default function Login({ errorMessage }: LoginProps) {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-slate-50">
+    <div className="flex justify-center items-center min-h-screen bg-muted/20">
       {/* Logo */}
       <img
         src="/images/company-logo.png"

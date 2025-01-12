@@ -1,73 +1,38 @@
-
-import type { FC } from 'react';
-import { useState } from 'react';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '~/components/ui/tabs';
-import CompanyDetails from '~/components/Dashboard/CompanyInsights/CompanyLayout';
-import { ThesisForm } from '~/components/Dashboard/InvestmentThesis/InvestmentThesis';
-import NewsBar from '~/components/Newsbar/Newsbar';
-import { categoryList } from '~/constant';
-import DashboardLayout from '~/pages/dashboard/DashboardLayout';
-import MarketResearchChatLayout from '~/components/Dashboard/MarketResearch/MarketResearchChatLayout';
-import { MarketResearchPreload } from '~/components/Dashboard/IndustryInsights/PreloadingScreen';
-import { IndustrySidebar } from '~/components/Dashboard/IndustryInsights/IndustrySidebar';
-import FuzzySearch from '~/components/SearchBox/FuzzySearch';
-import IndustryInsightsLayout from '~/components/Dashboard/IndustryInsights/IndustryInsightsLayout';
-
-
-// Example question type
-type Question = {
-  id: number;
-  question: string;
-  type: 'text' | 'select';
-  options?: string[];
-};
-
-// Example array of questions
-const questions: Question[] = [
-  {
-    id: 1,
-    question: 'What industries or sectors are you most interested in ?',
-    type: 'text',
-  },
-  {
-    id: 2,
-    question:
-      "Do you have expertise or experience in particular industries that you'd like to leverage?",
-    type: 'text',
-  },
-  {
-    id: 3,
-    question: 'What industry characteristics are most important to you ?',
-    type: 'select',
-    options: ['Growth Rate', 'Fragmentation', 'Recurring Revenue', 'Other'],
-  },
-  {
-    id: 4,
-    question: 'Are there any specific mega-trends you want to capitalize on ?',
-    type: 'select',
-    options: [
-      'Aging Population',
-      'Digital Transformation',
-      'Health and Wellness',
-      'Other',
-    ],
-  },
-  {
-    id: 5,
-    question: 'Are you more interested in industries with ?',
-    type: 'select',
-    options: ['Rapid technological change', 'Traditional business model'],
-  },
-  {
-    id: 6,
-    question:
-      'Anything else we should consider in coming up with investment thesis ?',
-    type: 'text',
-  },
-];
+import type { FC } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "@remix-run/react";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "~/components/ui/tabs";
+import CompanyDetails from "~/components/Dashboard/CompanyInsights/CompanyLayout";
+import { ThesisForm } from "~/components/Dashboard/InvestmentThesis/InvestmentThesis";
+import NewsBar from "~/components/Newsbar/Newsbar";
+import { categoryList } from "~/constant";
+import DashboardLayout from "~/pages/dashboard/DashboardLayout";
+import MarketResearchChatLayout from "~/components/Dashboard/MarketResearch/MarketResearchChatLayout";
+import IndustryInsightsLayout from "~/components/Dashboard/IndustryInsights/IndustryInsightsLayout";
+import { Button } from "~/components/ui/button";
 
 const DashboardPage: FC = () => {
-  const [activeCategory, setActiveCategory] = useState('Dashboard');
+  const [activeCategory, setActiveCategory] = useState("Dashboard");
+  const navigate = useNavigate();
+
+  // Check authentication on mount
+  useEffect(() => {
+    const token = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("authToken="))
+      ?.split("=")[1];
+
+    if (!token) {
+      // Redirect to login if no token is found
+      navigate("/login");
+    }
+  }, [navigate]);
+
+  // Logout handler
+  const handleLogout = () => {
+    document.cookie = "authToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    navigate("/login");
+  };
 
   return (
     <div className="flex flex-col flex-grow">
@@ -76,46 +41,49 @@ const DashboardPage: FC = () => {
         value={activeCategory}
         onValueChange={(value) => setActiveCategory(value)}
       >
-        <TabsList className="flex flex-wrap justify-start p-2 gap-2">
-          {categoryList.map((category, index) => (
-            <TabsTrigger
-              key={index}
-              value={category}
-              className="whitespace-nowrap"
-            >
-              {category}
-            </TabsTrigger>
-          ))}
-        </TabsList>
+        <div className="flex items-center justify-between bg-zinc-800">
+          {/* Navigation Tabs */}
+          <TabsList className="flex flex-wrap justify-start gap-2">
+            {categoryList.map((category, index) => (
+              <TabsTrigger
+                key={index}
+                value={category}
+                className="whitespace-nowrap"
+              >
+                {category}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+
+          {/* Logout Button */}
+          <Button variant="destructive" className="m-1" onClick={handleLogout}>
+            Logout
+          </Button>
+        </div>
 
         {/* Dashboard */}
-        <TabsContent value="Dashboard" className="flex-grow  text-white">
+        <TabsContent value="Dashboard" className="flex-grow text-white">
           <DashboardLayout
             active={activeCategory}
             setActive={setActiveCategory}
           />
-          <div className="h-[30rem]  py-10 overflow-auto">
+          <div className="h-[30rem] py-10 overflow-auto">
             <NewsBar />
           </div>
         </TabsContent>
 
         {/* Market Research */}
-        <TabsContent value="Market Research" className="p-5 ">
+        <TabsContent value="Market Research" className="p-5">
           <MarketResearchChatLayout />
         </TabsContent>
 
         {/* Industry Insights */}
-        <TabsContent value="Industry Insights" className="p-5 ">
-          {/* Insert your content here */}
-          {/* <MarketResearchPreload />
-          <IndustrySidebar /> */}
+        <TabsContent value="Industry Insights" className="p-5">
           <IndustryInsightsLayout />
-          {/* <FuzzySearch />
-          */}
         </TabsContent>
 
         {/* Company Insights */}
-        <TabsContent value="Company Insights" className="">
+        <TabsContent value="Company Insights">
           <CompanyDetails />
         </TabsContent>
 
@@ -125,7 +93,48 @@ const DashboardPage: FC = () => {
           className="p-5 bg-stone-950 text-white"
         >
           <ThesisForm
-            questions={questions}
+            questions={[
+              {
+                id: 1,
+                question: "What industries or sectors are you most interested in?",
+                type: "text",
+              },
+              {
+                id: 2,
+                question:
+                  "Do you have expertise or experience in particular industries that you'd like to leverage?",
+                type: "text",
+              },
+              {
+                id: 3,
+                question: "What industry characteristics are most important to you?",
+                type: "select",
+                options: ["Growth Rate", "Fragmentation", "Recurring Revenue", "Other"],
+              },
+              {
+                id: 4,
+                question: "Are there any specific mega-trends you want to capitalize on?",
+                type: "select",
+                options: [
+                  "Aging Population",
+                  "Digital Transformation",
+                  "Health and Wellness",
+                  "Other",
+                ],
+              },
+              {
+                id: 5,
+                question: "Are you more interested in industries with?",
+                type: "select",
+                options: ["Rapid technological change", "Traditional business model"],
+              },
+              {
+                id: 6,
+                question:
+                  "Anything else we should consider in coming up with investment thesis?",
+                type: "text",
+              },
+            ]}
             setActiveIndustry={setActiveCategory}
           />
         </TabsContent>

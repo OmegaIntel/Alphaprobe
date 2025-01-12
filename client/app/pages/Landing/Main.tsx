@@ -1,16 +1,17 @@
-import React from "react";
+import{ FC, ReactNode } from "react";
+import Navbar from "~/components/Navbar/Navbar";
+import Footer from "~/components/Footer/Footer";
 
 interface MainProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const Main: React.FC<MainProps> = ({ children }) => {
-    console.log("Maint rendering")
+const Main: FC<MainProps> = ({ children }) => {
   return (
-    <div className="bg-white text-black">
-      {/* <Navbar /> */}
+    <div className="">
+      <Navbar />
       <div className="mx-48">{children}</div>
-     {/* // <Footer /> */}
+      <Footer />
     </div>
   );
 };

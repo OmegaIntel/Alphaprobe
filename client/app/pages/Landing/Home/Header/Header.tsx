@@ -1,37 +1,45 @@
-import React from "react";
+import { FC } from 'react';
+import { Input } from '~/components/ui/input';
+import { Button } from '~/components/ui/button';
 
-const Header: React.FC = () => {
+const Header: FC = () => {
   return (
-    <div className="my-24 flex items-center justify-between">
+    <div className="my-24 flex flex-col lg:flex-row items-center justify-between space-y-10 lg:space-y-0">
       {/* Text content */}
-      <div className="w-1/2 space-y-8">
-        <h1 className="text-3xl font-medium">
+      <div className="lg:w-1/2 space-y-8 text-center lg:text-left">
+        <h1 className="text-3xl font-semibold">
           Automated Research and Diligence for Private Markets
         </h1>
-        <p className="text-sm text-gray-600">
-          Our platform transforms the private market deal process by automating research, modeling, and due diligence - ingesting fragmented data from thousands of sources and turning it into actionable investment intelligence.
+        <p className="text-muted-foreground">
+          Our platform transforms the private market deal process by automating
+          research, modeling, and due diligence - ingesting fragmented data from
+          thousands of sources and turning it into actionable investment
+          intelligence.
         </p>
 
         {/* Input field */}
-        <div className="flex items-center border border-gray-300 rounded-full overflow-hidden shadow-sm w-full max-w-lg">
-          <input
-            type="email"
-            placeholder="Business email"
-            className="flex-1 px-4 py-2 text-gray-800 focus:outline-none"
-          />
-          <button className="flex items-center px-6 py-2 text-sm font-medium hover:bg-gray-100 transition-colors">
+        <div className="flex items-center space-x-2 w-full max-w-lg mx-auto lg:mx-0">
+          <Input type="email" placeholder="Business email" />
+          <Button
+            onClick={() =>
+              window.open(
+                'https://calendly.com/chetan-omegaintelligence',
+                '_blank'
+              )
+            }
+          >
             Request Access
             <span className="ml-2">&rarr;</span>
-          </button>
+          </Button>
         </div>
       </div>
 
       {/* Image */}
-      <div className="w-1/2 flex justify-center">
+      <div className="lg:w-1/2 flex justify-center">
         <img
           src="images/dashboard.png"
-          alt="Circle Illustration"
-          className="max-w-full h-auto rounded-lg shadow-xl"
+          alt="Dashboard Illustration"
+          className="rounded-lg shadow-xl"
         />
       </div>
     </div>

@@ -1,33 +1,35 @@
-import React from "react";
+import React, { FC, ReactNode } from "react";
 import { Laptop, Network, FileText, Database } from "lucide-react";
+import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "~/components/ui/card";
 
-interface FeatureProps {
-  icon: React.ReactNode;
+// Define props for FeatureCard
+interface FeatureCardProps {
+  icon: ReactNode; // Accepts JSX elements
   title: string;
   description: string;
-  darkBg?: boolean;
 }
 
-const FeatureCard: React.FC<FeatureProps> = ({ icon, title, description, darkBg = false }) => {
+const FeatureCard: FC<FeatureCardProps> = ({ icon, title, description }) => {
   return (
-    <div className={`p-8 rounded-lg ${darkBg ? "bg-slate-700" : "bg-blue-50"}`}>
-      <div className={`mb-4 ${darkBg ? "text-white" : "text-black"}`}>{icon}</div>
-      <h3 className={`text-xl font-medium mb-2 ${darkBg ? "text-white" : "text-black"}`}>
-        {title}
-      </h3>
-      <p className={`text-sm ${darkBg ? "text-gray-300" : "text-gray-600"}`}>{description}</p>
-    </div>
+    <Card className="bg-muted/20">
+      <CardHeader className="flex flex-col gap-2 items-start">
+        <div className="text-primary text-xl">{icon}</div>
+        <CardTitle>{title}</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <CardDescription>{description}</CardDescription>
+      </CardContent>
+    </Card>
   );
 };
 
-const Features: React.FC = () => {
-  const features: FeatureProps[] = [
+const Features: FC = () => {
+  const features = [
     {
       icon: <Laptop className="w-6 h-6" />,
       title: "Investment Thesis & Market Research",
       description:
         "Build investment theses and perform market and company research leveraging public and private market data sources",
-      darkBg: true,
     },
     {
       icon: <Network className="w-6 h-6" />,
@@ -54,9 +56,8 @@ const Features: React.FC = () => {
       <h2 className="text-3xl font-semibold mb-4">
         Integrated Solution for Private Market Transactions
       </h2>
-      <p className="text-gray-600 mb-12 max-w-3xl">
-        Omega's platform eliminates the need to juggle multiple software tools and data sources,
-        addressing the fragmentation and inefficiencies in the current private market landscape.
+      <p className="text-muted-foreground mb-12 max-w-3xl">
+        Omega's platform eliminates the need to juggle multiple software tools and data sources, addressing the fragmentation and inefficiencies in the current private market landscape.
       </p>
       <div className="grid grid-rows-2 grid-cols-2 gap-6">
         {features.map((feature, index) => (
