@@ -1,8 +1,8 @@
-import { json, redirect } from '@remix-run/node';
-import { useActionData } from '@remix-run/react';
+import { json } from '@remix-run/node';
+import { useActionData, useNavigate } from '@remix-run/react';
+import { useEffect } from 'react';
 import Login from '~/pages/auth/login';
 import { loginUser } from '~/services/auth';
-import { commitSession, getSession } from '~/utils/session.server';
 
 export async function action({ request }: { request: Request }) {
   const formData = await request.formData();
@@ -19,27 +19,39 @@ export async function action({ request }: { request: Request }) {
   try {
     const { access_token } = await loginUser(formData);
 
-    // Debugging the access_token type
-    console.log('Access Token Type:', typeof access_token);
     if (typeof access_token !== 'string') {
-      throw new Error('Access token is not a string');
+      throw new Error('Invalid token received');
     }
 
-    const session = await getSession(request.headers.get('Cookie'));
-    session.set('token', access_token); // This must be a string
-
-    return redirect('/dashboard', {
-      headers: {
-        'Set-Cookie': await commitSession(session),
-      },
+    // Return success and token instead of redirecting
+    return json({
+      success: true,
+      access_token
     });
+
   } catch (error: any) {
     console.error('Login Error:', error.message);
-    return json({ errorMessage: error.message }, { status: 401 });
+    return json({ 
+      errorMessage: error.message 
+    }, { status: 401 });
   }
 }
 
 export default function LoginRoute() {
-  const actionData = useActionData<{ errorMessage?: string }>();
+  const actionData = useActionData<{ 
+    errorMessage?: string;
+    success?: boolean;
+    access_token?: string;
+  }>();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (actionData?.success && actionData.access_token) {
+      // Set cookie client-side
+      document.cookie = `authToken=${actionData.access_token}; path=/; max-age=7200; SameSite=Strict`;
+      navigate('/dashboard');
+    }
+  }, [actionData, navigate]);
+
   return <Login errorMessage={actionData?.errorMessage} />;
 }

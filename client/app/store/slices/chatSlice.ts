@@ -1,9 +1,14 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
+interface Response {
+  agent_response: string;
+  metadata_content_pairs: any; // Type this based on your data structure
+}
+
 interface Interaction {
   id: string;
   query: string;
-  response: string;
+  response?: Response;
 }
 
 interface ChatState {
@@ -18,13 +23,16 @@ export const chatSlice = createSlice({
   name: "chat",
   initialState,
   reducers: {
-    addInteraction(state, action: PayloadAction<Interaction>) {
+    addInteraction(state, action: PayloadAction<{ id: string; query: string }>) {
       console.log("Adding interaction:", action.payload);
-      state.interactions.push(action.payload);
+      state.interactions.push({
+        id: action.payload.id,
+        query: action.payload.query
+      });
     },
     updateInteractionResponse(
       state,
-      action: PayloadAction<{ id: string; response: string }>
+      action: PayloadAction<{ id: string; response: Response }>
     ) {
       console.log("Updating interaction:", action.payload);
       const index = state.interactions.findIndex(
@@ -36,9 +44,12 @@ export const chatSlice = createSlice({
         console.warn("Interaction not found for update:", action.payload.id);
       }
     },
+    resetInteractions(state) {
+      state.interactions = [];
+    }
   },
 });
 
-export const { addInteraction, updateInteractionResponse } = chatSlice.actions;
+export const { addInteraction, updateInteractionResponse, resetInteractions } = chatSlice.actions;
 
 export default chatSlice.reducer;
