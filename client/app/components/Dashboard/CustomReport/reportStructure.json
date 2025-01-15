@@ -1,0 +1,55 @@
+{
+    "templates": [
+      {
+        "id": "1",
+        "name": "Company Financial Analysis",
+        "sections": [
+          { "id": "1", "title": "Financial Overview & Key Metrics" },
+          { "id": "2", "title": "Market Position & Competitive Analysis" },
+          { "id": "3", "title": "Risk Assessment & Mitigation" },
+          { "id": "4", "title": "Growth Projections & Valuation" }
+        ]
+      },
+      {
+        "id": "2",
+        "name": "Industry Deep Dive",
+        "sections": [
+          { "id": "1", "title": "Sector Performance Analysis" },
+          { "id": "2", "title": "Market Trends & Dynamics" },
+          { "id": "3", "title": "Regulatory Environment" },
+          { "id": "4", "title": "Future Outlook & Opportunities" }
+        ]
+      },
+      {
+        "id": "3",
+        "name": "Market Entry Strategy",
+        "sections": [
+          { "id": "1", "title": "Target Market Identification" },
+          { "id": "2", "title": "Competitive Landscape" },
+          { "id": "3", "title": "Regulatory Challenges" },
+          { "id": "4", "title": "Entry Strategy Framework" }
+        ]
+      },
+      {
+        "id": "4",
+        "name": "Product Launch Analysis",
+        "sections": [
+          { "id": "1", "title": "Product Positioning & Target Audience" },
+          { "id": "2", "title": "Marketing & Outreach Plan" },
+          { "id": "3", "title": "Launch Metrics & KPIs" },
+          { "id": "4", "title": "Feedback & Iteration Strategy" }
+        ]
+      },
+      {
+        "id": "5",
+        "name": "Sustainability & ESG Analysis",
+        "sections": [
+          { "id": "1", "title": "Environmental Impact Assessment" },
+          { "id": "2", "title": "Social Responsibility Initiatives" },
+          { "id": "3", "title": "Governance Structures" },
+          { "id": "4", "title": "Sustainability Goals & Metrics" }
+        ]
+      }
+    ]
+  }
+  

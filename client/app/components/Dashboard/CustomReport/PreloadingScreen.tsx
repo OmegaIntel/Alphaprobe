@@ -1,8 +1,26 @@
 import React, { useState } from 'react';
 import { Button } from "~/components/ui/button";
 import { Input } from '~/components/ui/input';
-import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
-import { Trash2, Edit2, Plus, Search } from "lucide-react";
+import { Card, CardContent } from "~/components/ui/card";
+import { 
+  Trash2, Edit2, PlusCircle, Loader2, 
+  FileText, FileImage, File, FileSpreadsheet,
+  Maximize2
+} from "lucide-react";
+import { Alert, AlertDescription } from "~/components/ui/alert";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "~/components/ui/dialog";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "~/components/ui/select";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -12,20 +30,75 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
+} from "~/components/ui/alert-dialog";
+import FileUpload from '~/components/UploadFile/UploadFile';
+import { API_BASE_URL } from '~/constant';
 
-const SearchForm = () => {
-  const [query, setQuery] = useState("");
-  const [headings, setHeadings] = useState([]);
-  const [editingIndex, setEditingIndex] = useState(-1);
-  const [newHeading, setNewHeading] = useState("");
-  const [showDeleteDialog, setShowDeleteDialog] = useState(false);
-  const [deleteIndex, setDeleteIndex] = useState(-1);
+interface FormData {
+  query: string;
+  headings: string[];
+}
 
-  const handleAddHeading = () => {
+interface Template {
+  id: string;
+  name: string;
+  headings: string[];
+}
+
+const templates: Template[] = [
+  {
+    id: "financial",
+    name: "Financial Analysis",
+    headings: [
+      "Financial Overview",
+      "Revenue Analysis",
+      "Cost Structure",
+      "Profitability Metrics",
+      "Cash Flow Analysis"
+    ]
+  },
+  {
+    id: "market",
+    name: "Market Analysis",
+    headings: [
+      "Market Overview",
+      "Competitive Landscape",
+      "Market Trends",
+      "Growth Opportunities",
+      "Market Challenges"
+    ]
+  }
+];
+
+const CustomReportSearchForm: React.FC = () => {
+  const [query, setQuery] = useState<string>("");
+  const [headings, setHeadings] = useState<string[]>([]);
+  const [editingIndex, setEditingIndex] = useState<number>(-1);
+  const [newHeading, setNewHeading] = useState<string>("");
+  const [showDeleteDialog, setShowDeleteDialog] = useState<boolean>(false);
+  const [deleteIndex, setDeleteIndex] = useState<number>(-1);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isFormVisible, setIsFormVisible] = useState<boolean>(false);
+
+  const handleTemplateSelect = (templateId: string) => {
+    const selectedTemplate = templates.find(t => t.id === templateId);
+    if (selectedTemplate) {
+      setHeadings(selectedTemplate.headings);
+    }
+  };
+
+  const handleNewReport = (): void => {
+    setQuery("");
+    setHeadings([]);
+    setNewHeading("");
+    setEditingIndex(-1);
+    setIsFormVisible(true);
+  };
+
+  const handleAddHeading = (): void => {
     if (newHeading.trim()) {
       if (editingIndex >= 0) {
-        const updatedHeadings = [...headings];
+        const updatedHeadings: string[] = [...headings];
         updatedHeadings[editingIndex] = newHeading;
         setHeadings(updatedHeadings);
         setEditingIndex(-1);
@@ -36,35 +109,37 @@ const SearchForm = () => {
     }
   };
 
-  const handleEdit = (index) => {
+  const handleEdit = (index: number): void => {
     setNewHeading(headings[index]);
     setEditingIndex(index);
   };
 
-  const handleDelete = (index) => {
+  const handleDelete = (index: number): void => {
     setDeleteIndex(index);
     setShowDeleteDialog(true);
   };
 
-  const confirmDelete = () => {
-    const updatedHeadings = headings.filter((_, idx) => idx !== deleteIndex);
+  const confirmDelete = (): void => {
+    const updatedHeadings: string[] = headings.filter((_, idx) => idx !== deleteIndex);
     setHeadings(updatedHeadings);
     setShowDeleteDialog(false);
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (): Promise<void> => {
     if (!query.trim()) {
       alert("Please enter a search query");
       return;
     }
 
-    const formData = {
+    setIsLoading(true);
+
+    const formData: FormData = {
       query: query.trim(),
       headings: headings
     };
 
     try {
-      const response = await fetch('/api/search', {
+      const response = await fetch(`${API_BASE_URL}/api/company-profile`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -78,93 +153,157 @@ const SearchForm = () => {
 
       const data = await response.json();
       console.log('Success:', data);
-      // Handle success (e.g., show success message, clear form, etc.)
+      setIsFormVisible(false);
     } catch (error) {
       console.error('Error:', error);
-      // Handle error (e.g., show error message)
+    } finally {
+      setIsLoading(false);
     }
   };
 
+  if (!isFormVisible) {
+    return (
+      <div className="flex justify-center">
+        <Button
+          onClick={handleNewReport}
+          className="flex items-center gap-2"
+          size="lg"
+        >
+          <PlusCircle className="h-5 w-5" />
+          Create New Report
+        </Button>
+      </div>
+    );
+  }
+
   return (
-    <Card className="w-full max-w-2xl mx-auto">
-      <CardHeader>
-        <CardTitle>Search Form</CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-4">
-        <div className="flex gap-2">
-          <Input
-            type="text"
-            placeholder="Enter your search query"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-          />
-          <Button variant="outline" size="icon">
-            <Search className="h-4 w-4" />
-          </Button>
-        </div>
+    <div className="flex gap-6">
+      <Card className="w-1/3 space-y-6">
+        <CardContent className="pt-6">
+          <div className="space-y-4">
+            <div>
+              <h2 className="text-lg font-semibold mb-2">Report Templates</h2>
+              <Select onValueChange={handleTemplateSelect}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Choose a template" />
+                </SelectTrigger>
+                <SelectContent>
+                  {templates.map((template) => (
+                    <SelectItem key={template.id} value={template.id}>
+                      {template.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
 
-        <div className="flex gap-2">
-          <Input
-            type="text"
-            placeholder="Enter heading"
-            value={newHeading}
-            onChange={(e) => setNewHeading(e.target.value)}
-          />
-          <Button 
-            onClick={handleAddHeading}
-            variant="outline"
-          >
-            {editingIndex >= 0 ? 'Update' : 'Add'} Heading
-          </Button>
-        </div>
+            <div className="space-y-4">
+              <h2 className="text-lg font-semibold">Upload Documents</h2>
+              <FileUpload onFilesUploaded={(files) => console.log(files)} />
+            </div>
+          </div>
+        </CardContent>
+      </Card>
 
-        <div className="space-y-2">
-          {headings.map((heading, index) => (
-            <div key={index} className="flex items-center gap-2 p-2 border rounded">
-              <span className="flex-1">{heading}</span>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => handleEdit(index)}
+      {/* Main Form Card */}
+      <Card className="w-2/3">
+        <CardContent className="pt-6">
+          <h2 className="text-lg font-semibold mb-4">Generate your Custom Report</h2>
+          <div className="space-y-4">
+            <div className="flex gap-2">
+              <Input
+                type="text"
+                placeholder="Enter your search query"
+                value={query}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setQuery(e.target.value)}
+              />
+            </div>
+
+            <div className="flex gap-2">
+              <Input
+                type="text"
+                placeholder="Enter heading"
+                value={newHeading}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewHeading(e.target.value)}
+              />
+              <Button 
+                onClick={handleAddHeading}
+                variant="outline"
               >
-                <Edit2 className="h-4 w-4" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => handleDelete(index)}
-              >
-                <Trash2 className="h-4 w-4" />
+                {editingIndex >= 0 ? 'Update' : 'Add'} Heading
               </Button>
             </div>
-          ))}
-        </div>
 
-        <Button 
-          onClick={handleSubmit}
-          className="w-full"
-          disabled={!query.trim() || headings.length === 0}
-        >
-          Submit
-        </Button>
+            <div className="space-y-2">
+              {headings.map((heading, index) => (
+                <div key={index} className="flex items-center gap-2 p-2 border rounded">
+                  <span className="flex-1">{heading}</span>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => handleEdit(index)}
+                  >
+                    <Edit2 className="h-4 w-4" />
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => handleDelete(index)}
+                  >
+                    <Trash2 className="h-4 w-4" />
+                  </Button>
+                </div>
+              ))}
+            </div>
 
-        <AlertDialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
-          <AlertDialogContent>
-            <AlertDialogHeader>
-              <AlertDialogTitle>Are you sure?</AlertDialogTitle>
-              <AlertDialogDescription>
-                This action cannot be undone. This will permanently delete the heading.
-              </AlertDialogDescription>
-            </AlertDialogHeader>
-            <AlertDialogFooter>
-              <AlertDialogCancel>Cancel</AlertDialogCancel>
-              <AlertDialogAction onClick={confirmDelete}>Delete</AlertDialogAction>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialog>
-      </CardContent>
-    </Card>
+            {isLoading && (
+              <Alert>
+                <AlertDescription className="flex items-center gap-2">
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                  Generating report please wait while your custom report is being generated for {query}
+                </AlertDescription>
+              </Alert>
+            )}
+
+            <Button 
+              onClick={handleSubmit}
+              className="w-full"
+              disabled={!query.trim() || headings.length === 0 || isLoading}
+            >
+              {isLoading ? (
+                <Loader2 className="h-4 w-4 animate-spin mr-2" />
+              ) : null}
+              Submit
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+
+      <AlertDialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+            <AlertDialogDescription>
+              This action cannot be undone. This will permanently delete the heading.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction onClick={confirmDelete}>Delete</AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+
+      <Dialog open={false} onOpenChange={() => {}}>
+        <DialogContent className="max-w-4xl">
+          <DialogHeader>
+            <DialogTitle>Preview</DialogTitle>
+          </DialogHeader>
+          <div className="mt-4">Preview Content</div>
+        </DialogContent>
+      </Dialog>
+    </div>
   );
 };
 
-export default SearchForm;
+export default CustomReportSearchForm;

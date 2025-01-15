@@ -94,15 +94,14 @@ export const categoryList = [
   'Market Research',
   'Industry Insights',
   'Company Insights',
+  'Custom Reports',
 ];
-
 export const documentAnalysisList = [
   'Summary',
   'Document Analysis',
   'Financial Data',
   'Saved Data',
 ];
-
 export const subCategoryList = [
   'Current Workspace',
   'Knowledge Base',

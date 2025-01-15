@@ -10,6 +10,7 @@ import DashboardLayout from "~/pages/dashboard/DashboardLayout";
 import MarketResearchChatLayout from "~/components/Dashboard/MarketResearch/MarketResearchChatLayout";
 import IndustryInsightsLayout from "~/components/Dashboard/IndustryInsights/IndustryInsightsLayout";
 import { Button } from "~/components/ui/button";
+import CustomReportLayout from "~/components/Dashboard/CustomReport/CustomReportLayout";
 
 const DashboardPage: FC = () => {
   const [activeCategory, setActiveCategory] = useState("Dashboard");
@@ -23,7 +24,6 @@ const DashboardPage: FC = () => {
       ?.split("=")[1];
 
     if (!token) {
-      // Redirect to login if no token is found
       navigate("/login");
     }
   }, [navigate]);
@@ -85,6 +85,11 @@ const DashboardPage: FC = () => {
         {/* Company Insights */}
         <TabsContent value="Company Insights">
           <CompanyDetails />
+        </TabsContent>
+
+        {/* Company Insights */}
+        <TabsContent value="Custom Reports">
+          <CustomReportLayout />
         </TabsContent>
 
         {/* Investment Thesis */}
