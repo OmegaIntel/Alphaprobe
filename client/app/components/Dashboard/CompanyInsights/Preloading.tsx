@@ -28,6 +28,9 @@ export default function PreloadingScreen() {
   const [isFirstVisit, setIsFirstVisit] = useState(true);
 
   useEffect(() => {
+
+    localStorage.clear();
+
     const savedResults = localStorage.getItem('searchResults');
     if (savedResults) {
       setResults(JSON.parse(savedResults));
@@ -136,18 +139,6 @@ export default function PreloadingScreen() {
             placeholder="Search for companies within any industry or sector..."
             className="flex-1"
           />
-          {/* <Button 
-            onClick={handleSearch}
-            disabled={loading}
-            variant="secondary"
-            size="icon"
-          >
-            {loading ? (
-              <Loader2 className="h-4 w-4 animate-spin" />
-            ) : (
-              <Search className="h-4 w-4" />
-            )}
-          </Button> */}
         </div>
 
         {/* Results Card */}

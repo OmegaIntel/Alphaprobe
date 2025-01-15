@@ -11,6 +11,8 @@ import {
 
 // Badge component for competitors and others
 import { Badge } from "~/components/ui/badge";
+import { Button } from "~/components/ui/button";
+import { Navigate, useNavigate } from "@remix-run/react";
 
 // -------------- TYPES --------------
 interface InfoItemProps {
@@ -91,6 +93,7 @@ const CompetitorList: React.FC<CompetitorListProps> = ({ competitors }) => {
 // -------------- MAIN COMPONENT --------------
 const CompanyDetailsComponent: React.FC<{ data: CompanyData }> = ({ data }) => {
   const [icons, setIcons] = useState<React.ElementType[]>([]);
+  const navigate = useNavigate()
 
   useEffect(() => {
     const loadIcons = async () => {
@@ -113,37 +116,46 @@ const CompanyDetailsComponent: React.FC<{ data: CompanyData }> = ({ data }) => {
     <div className="my-6 space-y-6">
       {/* 1. Basic Company Info */}
       <Card className="bg-card text-card-foreground">
-        <CardHeader className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <CardTitle>{data.result.company_name ?? "N/A"}</CardTitle>
-            <CardDescription>
-              {icons.length > 0 && (
-                <div className="flex space-x-3 mt-2">
-                  {data.result.company_linkedin_url && (
-                    <a
-                      href={data.result.company_linkedin_url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-sm text-primary hover:underline"
-                    >
-                      {React.createElement(icons[1])}
-                    </a>
-                  )}
-                  {data.result.company_website && (
-                    <a
-                      href={data.result.company_website}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-sm text-primary hover:underline"
-                    >
-                      {React.createElement(icons[2])}
-                    </a>
-                  )}
-                </div>
-              )}
-            </CardDescription>
-          </div>
-        </CardHeader>
+      <CardHeader className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+  <div>
+    <CardTitle>{data.result.company_name ?? "N/A"}</CardTitle>
+    <CardDescription>
+      {icons.length > 0 && (
+        <div className="flex space-x-3 mt-2">
+          {data.result.company_linkedin_url && (
+            <a
+              href={data.result.company_linkedin_url}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm text-primary hover:underline"
+            >
+              {React.createElement(icons[1])}
+            </a>
+          )}
+          {data.result.company_website && (
+            <a
+              href={data.result.company_website}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm text-primary hover:underline"
+            >
+              {React.createElement(icons[2])}
+            </a>
+          )}
+        </div>
+      )}
+    </CardDescription>
+  </div>
+  <div className="mt-4 sm:mt-0">
+    <Button
+      type="button"
+      className="px-4 py-2 text-sm font-medium rounded-md"
+      onClick={() => navigate("/duedeligence")}
+    >
+      Continue to Due Deligence
+    </Button>
+  </div>
+</CardHeader>
         <CardContent className="space-y-3">
           <p className="text-sm font-semibold text-muted-foreground">
             Description

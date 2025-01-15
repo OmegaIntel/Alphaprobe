@@ -78,7 +78,7 @@ const CustomReportSearchForm: React.FC = () => {
   const [showDeleteDialog, setShowDeleteDialog] = useState<boolean>(false);
   const [deleteIndex, setDeleteIndex] = useState<number>(-1);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [isFormVisible, setIsFormVisible] = useState<boolean>(false);
+  const [isFormVisible, setIsFormVisible] = useState<boolean>(true);
 
   const handleTemplateSelect = (templateId: string) => {
     const selectedTemplate = templates.find(t => t.id === templateId);
@@ -210,29 +210,16 @@ const CustomReportSearchForm: React.FC = () => {
         <CardContent className="pt-6">
           <h2 className="text-lg font-semibold mb-4">Generate your Custom Report</h2>
           <div className="space-y-4">
-            <div className="flex gap-2">
+            {/* <div className="flex gap-2">
               <Input
                 type="text"
                 placeholder="Enter your search query"
                 value={query}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setQuery(e.target.value)}
               />
-            </div>
+            </div> */}
 
-            <div className="flex gap-2">
-              <Input
-                type="text"
-                placeholder="Enter heading"
-                value={newHeading}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewHeading(e.target.value)}
-              />
-              <Button 
-                onClick={handleAddHeading}
-                variant="outline"
-              >
-                {editingIndex >= 0 ? 'Update' : 'Add'} Heading
-              </Button>
-            </div>
+            
 
             <div className="space-y-2">
               {headings.map((heading, index) => (
@@ -255,7 +242,20 @@ const CustomReportSearchForm: React.FC = () => {
                 </div>
               ))}
             </div>
-
+            <div className="flex gap-2">
+              <Input
+                type="text"
+                placeholder="Enter heading"
+                value={newHeading}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewHeading(e.target.value)}
+              />
+              <Button 
+                onClick={handleAddHeading}
+                variant="outline"
+              >
+                {editingIndex >= 0 ? 'Update' : 'Add'} Heading
+              </Button>
+            </div>
             {isLoading && (
               <Alert>
                 <AlertDescription className="flex items-center gap-2">
