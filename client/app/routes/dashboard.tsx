@@ -88,7 +88,7 @@ const DashboardPage: FC = () => {
         </TabsContent>
 
         {/* Company Insights */}
-        <TabsContent value="Custom Reports">
+        <TabsContent value="Deal Room">
           <CustomReportLayout />
         </TabsContent>
 

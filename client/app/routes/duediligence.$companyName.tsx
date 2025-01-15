@@ -1,0 +1,20 @@
+import CustomReportLayout from "~/components/Dashboard/CustomReport/CustomReportLayout";
+import { useNavigate, useParams } from "@remix-run/react";
+import { Button } from "~/components/ui/button";
+
+export default function DueDeligence() {
+  const { companyName } = useParams();
+  const navigate = useNavigate();
+  
+  // Log the company name parameter
+  console.log("Company Name from URL:", companyName);
+  
+  return (
+    <div>
+       <Button onClick={()=>{navigate("/dashboard")}}>Back to DashBoard</Button>
+      <div>
+        <CustomReportLayout companyName={`${companyName}`} />
+      </div>
+    </div>
+  );
+}

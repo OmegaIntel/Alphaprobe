@@ -1,17 +1,29 @@
-import CustomReportSearchForm from "./PreloadingScreen";
-import DynamicContent from "./Report";
-import data from "./reportdata.json"
+import { useSelector } from 'react-redux';
+import CustomReportSearchForm from './PreloadingScreen';
+import DynamicContent from './Report';
+import { RootState } from '~/store/store';
 
-export function CustomReportLayout() {
-  return <div>
-    <CustomReportSearchForm />
-    {/* <div className="flex justify-end">
+interface UrlParams {
+  companyName?: string;
+}
 
-    <div className="w-3/5">
-    <DynamicContent data={data.data} />
+
+export function CustomReportLayout({ companyName }: UrlParams) {
+  const { data } = useSelector((state : RootState) => state.customReport);
+
+  return (
+    <div>
+      {data && data.report && data.dealId ? (
+        <div className="flex justify-center">
+          <div className="w-3/5">
+            <DynamicContent report={data.report} />
+          </div>
+        </div>
+      ) : (
+        <CustomReportSearchForm companyQuery={companyName} />
+      )}
     </div>
-    </div> */}
-  </div>;
+  );
 }
 
 export default CustomReportLayout;

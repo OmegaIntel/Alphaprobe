@@ -33,6 +33,9 @@ import {
 } from "~/components/ui/alert-dialog";
 import FileUpload from '~/components/UploadFile/UploadFile';
 import { API_BASE_URL } from '~/constant';
+import { useNavigate } from '@remix-run/react';
+import { setData } from '~/store/slices/customReport';
+import { useDispatch } from 'react-redux';
 
 interface FormData {
   query: string;
@@ -43,6 +46,10 @@ interface Template {
   id: string;
   name: string;
   headings: string[];
+}
+
+interface CustomReportSearchFormProps {
+  companyQuery?: string;
 }
 
 const templates: Template[] = [
@@ -70,8 +77,7 @@ const templates: Template[] = [
   }
 ];
 
-const CustomReportSearchForm: React.FC = () => {
-  const [query, setQuery] = useState<string>("");
+const CustomReportSearchForm: React.FC<CustomReportSearchFormProps> = ({ companyQuery }) => {
   const [headings, setHeadings] = useState<string[]>([]);
   const [editingIndex, setEditingIndex] = useState<number>(-1);
   const [newHeading, setNewHeading] = useState<string>("");
@@ -80,6 +86,9 @@ const CustomReportSearchForm: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isFormVisible, setIsFormVisible] = useState<boolean>(true);
 
+  // Set a constant query value
+  const query = "Sample Query";
+
   const handleTemplateSelect = (templateId: string) => {
     const selectedTemplate = templates.find(t => t.id === templateId);
     if (selectedTemplate) {
@@ -87,8 +96,10 @@ const CustomReportSearchForm: React.FC = () => {
     }
   };
 
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const handleNewReport = (): void => {
-    setQuery("");
     setHeadings([]);
     setNewHeading("");
     setEditingIndex(-1);
@@ -125,57 +136,65 @@ const CustomReportSearchForm: React.FC = () => {
     setShowDeleteDialog(false);
   };
 
+
   const handleSubmit = async (): Promise<void> => {
     if (!query.trim()) {
       alert("Please enter a search query");
       return;
     }
-
+  
     setIsLoading(true);
-
+  
+    const dealId = localStorage.getItem("dealId"); // Retrieve dealId from localStorage
+    if (!dealId) {
+      alert("No deal ID found. Please upload documents first.");
+      setIsLoading(false);
+      return;
+    }
+  
     const formData: FormData = {
-      query: query.trim(),
-      headings: headings
+      query: companyQuery || "Nike" ,
+      headings: headings,
     };
-
+  
     try {
-      const response = await fetch(`${API_BASE_URL}/api/company-profile`, {
-        method: 'POST',
+      const token = document.cookie
+        .split("; ")
+        .find((row) => row.startsWith("authToken="))
+        ?.split("=")[1];
+  
+      if (!token) {
+        navigate("/login");
+        return;
+      }
+  
+      const response = await fetch(`${API_BASE_URL}/api/generate-report?deal_id=${dealId}`, { // Correct query parameter
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify(formData),
       });
-
+  
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error("Network response was not ok");
       }
-
+  
       const data = await response.json();
       console.log('Success:', data);
+
+      // Store the report and deal ID in Redux
+      dispatch(setData({ report: data.report, dealId: data.deal_id }));
+
       setIsFormVisible(false);
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
     } finally {
       setIsLoading(false);
     }
   };
-
-  if (!isFormVisible) {
-    return (
-      <div className="flex justify-center">
-        <Button
-          onClick={handleNewReport}
-          className="flex items-center gap-2"
-          size="lg"
-        >
-          <PlusCircle className="h-5 w-5" />
-          Create New Report
-        </Button>
-      </div>
-    );
-  }
-
+  
   return (
     <div className="flex gap-6">
       <Card className="w-1/3 space-y-6">
@@ -210,17 +229,6 @@ const CustomReportSearchForm: React.FC = () => {
         <CardContent className="pt-6">
           <h2 className="text-lg font-semibold mb-4">Generate your Custom Report</h2>
           <div className="space-y-4">
-            {/* <div className="flex gap-2">
-              <Input
-                type="text"
-                placeholder="Enter your search query"
-                value={query}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setQuery(e.target.value)}
-              />
-            </div> */}
-
-            
-
             <div className="space-y-2">
               {headings.map((heading, index) => (
                 <div key={index} className="flex items-center gap-2 p-2 border rounded">

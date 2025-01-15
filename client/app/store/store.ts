@@ -7,7 +7,7 @@ import selectedIndustriesReducer from "./slices/selectedIndustriesSlice";
 import companyInsightReducer from "./slices/companyInsightsSlice";
 import { documentSearchResultsSlice } from "./slices/documentSearchResultSlice";
 import { chatSlice } from "./slices/chatSlice";
-
+import customReport from "./slices/customReport"
 
 const store = configureStore({
   reducer: {
@@ -18,6 +18,7 @@ const store = configureStore({
     companyInsight: companyInsightReducer,
     documentSearchResults: documentSearchResultsSlice.reducer,
     formResponse: formResponseReducer,
+    customReport: customReport,
     chat: chatSlice.reducer,
   },
 });

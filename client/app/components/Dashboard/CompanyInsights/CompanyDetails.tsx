@@ -150,7 +150,7 @@ const CompanyDetailsComponent: React.FC<{ data: CompanyData }> = ({ data }) => {
     <Button
       type="button"
       className="px-4 py-2 text-sm font-medium rounded-md"
-      onClick={() => navigate("/duedeligence")}
+      onClick={() => navigate(`/duediligence/${data.result.company_name}`)}
     >
       Continue to Due Deligence
     </Button>

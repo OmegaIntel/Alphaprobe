@@ -94,7 +94,7 @@ export const categoryList = [
   'Market Research',
   'Industry Insights',
   'Company Insights',
-  'Custom Reports',
+  'Deal Room',
 ];
 export const documentAnalysisList = [
   'Summary',

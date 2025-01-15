@@ -2,10 +2,12 @@ import uuid
 import boto3
 from common_logging import loginfo, logerror
 from fastapi import APIRouter, HTTPException, Query, Depends, File, UploadFile
+from fastapi.responses import JSONResponse
 from sqlalchemy.orm import Session
 from typing import List, Dict
 from datetime import datetime, timedelta
 from api.api_user import get_current_user
+from db_models.deals import Deal, DealStatus
 from db_models.rag_session import RagSession
 from db_models.session import get_db
 import json
@@ -115,74 +117,100 @@ async def upload_documents(
     files: List[UploadFile] = File(...),
     current_user=Depends(get_current_user),
     db: Session = Depends(get_db),
-    ):
+):
     user_id = current_user.id
     deal_id = str(uuid.uuid4())  # Generate a unique deal ID for this upload
 
     try:
+        print("Step 1: Received files", [file.filename for file in files])  # Debugging
+
         # Save uploaded files to disk
         file_paths = await save_uploaded_files(files)
+        print("Step 2: Files saved to disk", file_paths)  # Debugging
 
         # Process the uploaded documents
         success = await process_uploaded_documents(file_paths, user_id, deal_id)
+        print("Step 3: Documents processed successfully:", success)  # Debugging
 
         if not success:
             raise HTTPException(status_code=500, detail="Failed to process documents")
 
-        # Save the session with the deal ID
-        session_id = create_new_session(user_id, db)
-        save_session_to_db(session_id, user_id, {"deal_id": deal_id, "file_paths": file_paths}, db)
+        # Save the deal information into the database
+        new_deal = Deal(
+            id=deal_id,
+            user_id=user_id,
+            name="Uploaded Documents Deal",  # Placeholder name, modify as needed
+            overview="Documents uploaded and processed successfully.",
+            industry="General",  # Placeholder, modify as per your requirements
+            status=DealStatus.IN_PROGRESS,  # Set the initial status
+            document_location=", ".join(file_paths),  # Store document locations as a comma-separated string
+        )
+        db.add(new_deal)
+        db.commit()
+        print("Step 4: Deal information saved to DB")  # Debugging
 
         return JSONResponse(
             content={
                 "message": "Documents processed successfully",
-                "session_id": session_id,
                 "deal_id": deal_id,
+                "file_paths": file_paths,
             },
             status_code=200,
         )
     except Exception as e:
+        print("Error encountered:", str(e))  # Debugging
         logerror(f"Error in upload_documents: {e}")
+        db.rollback()
         raise HTTPException(status_code=500, detail=str(e))
+
 
 # Endpoint to generate a structured report
 @document_router.post("/api/generate-report")
 async def generate_report(
     query: dict,
-    session_id: str = Query(..., description="Active session ID"),
+    deal_id: str = Query(..., description="Unique ID of the deal"),
     current_user=Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
     user_id = current_user.id
 
     try:
-        # Validate the session
-        validate_and_refresh_session(session_id, user_id, db)
+        print(f"Step 1: Received query: {query}")  # Debugging
+        print(f"Step 2: Received deal_id: {deal_id}")  # Debugging
 
-        # Retrieve the deal ID from the session
-        session_data = load_session_from_db(session_id, db)
-        if not session_data or "deal_id" not in session_data["data"]:
-            raise HTTPException(status_code=404, detail="No processed documents found for this session.")
-
-        deal_id = session_data["data"]["deal_id"]
+        # Validate the deal ID and ensure it belongs to the user
+        print("Step 3: Validating deal ID and user...")  # Debugging
+        deal = db.query(Deal).filter(Deal.id == deal_id, Deal.user_id == user_id).first()
+        if not deal:
+            print(f"Step 3.1: Deal validation failed for deal_id: {deal_id}")  # Debugging
+            raise HTTPException(status_code=404, detail="Deal not found or access denied.")
+        
+        print("Step 4: Deal validation successful.")  # Debugging
 
         # Generate the structured report
+        print("Step 5: Generating structured report...")  # Debugging
         report = await generate_structured_report(query, user_id, deal_id)
 
         if not report:
+            print("Step 5.1: Report generation failed.")  # Debugging
             raise HTTPException(status_code=404, detail="Failed to generate report.")
-
-        # Save the report to the session
-        session_data["data"]["report"] = report
-        save_session_to_db(session_id, user_id, session_data["data"], db)
+        
+        print("Step 6: Report generated successfully.")  # Debugging
 
         return JSONResponse(
-            content={"message": "Report generated successfully", "report": report},
+            content={
+                "message": "Report generated successfully",
+                "deal_id": deal_id,
+                "report": report,
+            },
             status_code=200,
         )
     except Exception as e:
+        print(f"Error encountered: {str(e)}")  # Debugging
         logerror(f"Error in generate_report: {e}")
         raise HTTPException(status_code=500, detail=str(e))
+
+
 
 # Endpoint to retrieve the generated report
 @document_router.get("/api/get-report")

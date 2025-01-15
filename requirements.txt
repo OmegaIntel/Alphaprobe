@@ -38,11 +38,11 @@ aws-s3-tools==0.3.0
 
 cachier==3.0.1
 timeout-decorator==0.5.0
-
+llama-index==0.12.10
 rapidfuzz==3.10.1
 scipy==1.14.1
 beautifulsoup4>=4.12.3
-
+nest_asyncio=1.6.0
 python-multipart>=0.0.7
 llama-parse==0.5.19
 llama-index==0.12.10
