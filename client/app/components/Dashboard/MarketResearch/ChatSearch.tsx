@@ -8,8 +8,6 @@ import {
   updateInteractionResponse,
 } from "~/store/slices/chatSlice";
 import { Input } from "~/components/ui/input";
-import { Button } from "~/components/ui/button";
-import { Search, Loader2 } from "lucide-react";
 import { useToast } from "~/hooks/use-toast";
 
 type SessionResponse = {
