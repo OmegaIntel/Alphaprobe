@@ -1,5 +1,6 @@
 import uuid
 import boto3
+from api.api_rag import SESSION_TIMEOUT
 from common_logging import loginfo, logerror
 from fastapi import APIRouter, HTTPException, Query, Depends, File, UploadFile
 from fastapi.responses import JSONResponse
@@ -19,11 +20,17 @@ from .customize_reports import (
     process_uploaded_documents,
     generate_structured_report,
     get_index_from_storage,
+    upload_files_to_s3,
     BASE_PERSIST_DIR,
 )
 
 # Initialize the new router for document processing
 document_router = APIRouter()
+
+# S3 Configuration
+S3_BUCKET="deal-room-docs"
+S3_REGION=os.environ["S3_REGION"]
+BASE_DIR = "uploads"
 
 # Helper functions for session management (reused from your existing code)
 def load_session_from_db(session_id: str, db: Session) -> Dict:
@@ -111,8 +118,8 @@ async def save_uploaded_files(files: List[UploadFile]) -> List[str]:
         saved_paths.append(file_path)
     return saved_paths
 
-# Endpoint to upload and process documents
-@document_router.post("/api/upload-documents")
+# Endpoints
+@document_router.post("/api/upload-documents") 
 async def upload_documents(
     files: List[UploadFile] = File(...),
     current_user=Depends(get_current_user),
@@ -124,12 +131,12 @@ async def upload_documents(
     try:
         print("Step 1: Received files", [file.filename for file in files])  # Debugging
 
-        # Save uploaded files to disk
-        file_paths = await save_uploaded_files(files)
-        print("Step 2: Files saved to disk", file_paths)  # Debugging
+        # Upload files to S3
+        s3_file_paths = upload_files_to_s3(files, BASE_DIR, deal_id, S3_BUCKET)
+        print("Step 2: Files uploaded to S3", s3_file_paths)  # Debugging
 
-        # Process the uploaded documents
-        success = await process_uploaded_documents(file_paths, user_id, deal_id)
+        # Process the uploaded documents (if any additional processing is required)
+        success = await process_uploaded_documents(s3_file_paths, user_id, deal_id)
         print("Step 3: Documents processed successfully:", success)  # Debugging
 
         if not success:
@@ -143,7 +150,7 @@ async def upload_documents(
             overview="Documents uploaded and processed successfully.",
             industry="General",  # Placeholder, modify as per your requirements
             status=DealStatus.IN_PROGRESS,  # Set the initial status
-            document_location=", ".join(file_paths),  # Store document locations as a comma-separated string
+            document_location=", ".join(s3_file_paths),  # Store document locations as a comma-separated string
         )
         db.add(new_deal)
         db.commit()
@@ -153,7 +160,7 @@ async def upload_documents(
             content={
                 "message": "Documents processed successfully",
                 "deal_id": deal_id,
-                "file_paths": file_paths,
+                "file_paths": s3_file_paths,
             },
             status_code=200,
         )
