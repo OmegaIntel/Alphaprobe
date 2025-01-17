@@ -2,6 +2,18 @@ import React from "react";
 import { Card, CardContent } from "~/components/ui/card";
 import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "~/components/ui/tooltip";
 import { ExternalLink } from "lucide-react";
+import jsPDF from "jspdf";
+import { Button } from "~/components/ui/button";
+
+interface Subheading {
+  title: string;
+  content: string;
+}
+
+interface Section {
+  main_heading: string;
+  subheadings: Subheading[];
+}
 
 interface DynamicContentProps {
   report: string;
@@ -9,8 +21,8 @@ interface DynamicContentProps {
 
 const DynamicContent: React.FC<DynamicContentProps> = ({ report }) => {
   // Function to parse the report into sections and subheadings dynamically
-  const parseReport = (report: string) => {
-    const sections = report
+  const parseReport = (report: string): Section[] => {
+    return report
       .split("\n\n## ") // Split by sections
       .filter((section) => section.trim())
       .map((section) => {
@@ -21,8 +33,8 @@ const DynamicContent: React.FC<DynamicContentProps> = ({ report }) => {
           // Apply formatting rules for content
           const formattedContent = content
             .join("\n")
-            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // Bold text between double asterisks
-            .replace(/####(.*?)/g, '<br/><strong>$1</strong>'); // Add new line and bold for ####
+            .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") // Bold text between double asterisks
+            .replace(/####(.*?)/g, "<br/><strong>$1</strong>"); // Add new line and bold for ####
 
           return { title: title.trim(), content: formattedContent };
         });
@@ -31,10 +43,51 @@ const DynamicContent: React.FC<DynamicContentProps> = ({ report }) => {
           subheadings,
         };
       });
-    return sections;
   };
 
   const data = parseReport(report);
+
+  // Function to download PDF
+  const handleDownloadPDF = () => {
+    const pdf = new jsPDF("p", "mm", "a4");
+    let y = 10;
+
+    data.forEach((section) => {
+      pdf.setFontSize(16);
+      pdf.setTextColor(0, 0, 0);
+      pdf.text(section.main_heading, 10, y);
+      y += 10;
+
+      section.subheadings.forEach((subheading) => {
+        if (y > 280) {
+          pdf.addPage();
+          y = 10;
+        }
+
+        pdf.setFontSize(14);
+        pdf.setTextColor(0, 0, 255);
+        pdf.text(subheading.title, 10, y);
+        y += 8;
+
+        const contentLines = pdf.splitTextToSize(
+          subheading.content.replace(/<[^>]*>?/gm, ""),
+          190
+        );
+        pdf.setFontSize(12);
+        pdf.setTextColor(0, 0, 0);
+        contentLines.forEach((line: string) => {
+          if (y > 280) {
+            pdf.addPage();
+            y = 10;
+          }
+          pdf.text(line, 10, y);
+          y += 7;
+        });
+      });
+    });
+
+    pdf.save("report.pdf");
+  };
 
   return (
     <TooltipProvider>
@@ -57,6 +110,14 @@ const DynamicContent: React.FC<DynamicContentProps> = ({ report }) => {
             </CardContent>
           </Card>
         ))}
+      </div>
+      <div className="flex justify-end mt-6">
+        <Button
+          className=""
+          onClick={handleDownloadPDF}
+        >
+          Download PDF
+        </Button>
       </div>
     </TooltipProvider>
   );

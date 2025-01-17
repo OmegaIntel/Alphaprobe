@@ -12,7 +12,7 @@ export function CustomReportLayout({ companyName }: UrlParams) {
   const { data } = useSelector((state : RootState) => state.customReport);
 
   return (
-    <div>
+    <div className='p-3'>
       {data && data.report && data.dealId ? (
         <div className="flex justify-center">
           <div className="w-3/5">

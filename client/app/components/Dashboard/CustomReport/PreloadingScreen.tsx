@@ -268,7 +268,7 @@ const CustomReportSearchForm: React.FC<CustomReportSearchFormProps> = ({ company
               <Alert>
                 <AlertDescription className="flex items-center gap-2">
                   <Loader2 className="h-4 w-4 animate-spin" />
-                  Generating report please wait while your custom report is being generated for {query}
+                  Generating report please wait while your custom report is being generated for {companyQuery}
                 </AlertDescription>
               </Alert>
             )}

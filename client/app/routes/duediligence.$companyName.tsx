@@ -6,8 +6,6 @@ export default function DueDeligence() {
   const { companyName } = useParams();
   const navigate = useNavigate();
   
-  // Log the company name parameter
-  console.log("Company Name from URL:", companyName);
   
   return (
     <div>
