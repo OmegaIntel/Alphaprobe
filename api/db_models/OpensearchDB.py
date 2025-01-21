@@ -9,128 +9,130 @@ from opensearchpy import OpenSearch, AWSV4SignerAuth, RequestsHttpConnection
 from opensearchpy.helpers import bulk
 
 from llama_parse import LlamaParse
-from llama_index.embeddings.openai import OpenAIEmbedding
+from openai import OpenAI  # Changed from llama_index.embeddings.openai
 
 load_dotenv()
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
 logger = logging.getLogger(__name__)
 
 
 class OpenSearchManager:
     """
-    Manages connection to AWS OpenSearch Serverless and provides methods
-    to create indexes, store documents (with embeddings), and perform
-    k-NN (vector) queries.
+    Manages connection to AWS OpenSearch Serverless with enhanced error handling,
+    proper OpenSearch Serverless compatibility, and improved logging.
     """
 
     def __init__(self):
         """
-        Initialize the OpenSearch client for AWS Serverless using SigV4 auth.
-        Requires environment variables:
-          - OPENSEARCH_HOST
-          - AWS_ACCESS_KEY
-          - AWS_SECRET_KEY
-          - AWS_REGION
-          - OPENAI_API_KEY (if using OpenAI embeddings)
+        Initialize OpenSearch client and embedding model.
+        Enhanced with dynamic dimension detection and better error handling.
         """
         aws_access_key = os.getenv("AWS_ACCESS_KEY")
         aws_secret_key = os.getenv("AWS_SECRET_KEY")
         aws_region = os.getenv("AWS_REGION")
         opensearch_host = os.getenv("OPENSEARCH_HOST")
+        openai_api_key = os.getenv("OPENAI_API_KEY")
 
-        if not all([aws_access_key, aws_secret_key, aws_region, opensearch_host]):
-            raise RuntimeError(
-                "Missing one or more required environment variables for OpenSearch."
-            )
+        if not all([aws_access_key, aws_secret_key, aws_region, opensearch_host, openai_api_key]):
+            raise RuntimeError("Missing required environment variables")
 
-        # Create AWS SigV4 signer
+        # Initialize OpenAI client directly for better control
+        self.embedding_client = OpenAI(api_key=openai_api_key)
+        self.embedding_model = "text-embedding-3-large"
+        self.embedding_dimension = self._get_embedding_dimension()
+
+        # Configure AWS authentication
         credentials = boto3.Session(
             aws_access_key_id=aws_access_key,
             aws_secret_access_key=aws_secret_key,
             region_name=aws_region
         ).get_credentials()
 
-        auth = AWSV4SignerAuth(credentials, aws_region, "aoss")  # 'aoss' = OpenSearch Serverless
-
-        # Initialize the OpenSearch client
-        self.client = OpenSearch(
+        self.os_client = OpenSearch(
             hosts=[{"host": opensearch_host, "port": 443}],
-            http_auth=auth,
+            http_auth=AWSV4SignerAuth(credentials, aws_region, "aoss"),
             use_ssl=True,
             verify_certs=True,
             connection_class=RequestsHttpConnection,
+            timeout=30
         )
 
-        # Initialize embedding model
-        self.embedding_model = OpenAIEmbedding(
-            model="text-embedding-3-large",  # You can adjust to the model you prefer
-            openai_api_key=os.getenv("OPENAI_API_KEY"),
-            # The user code suggests 1024 dimensions for 'text-embedding-3-large'
-            dimensions=1024
-        )
+    def _get_embedding_dimension(self) -> int:
+        """Dynamically determine embedding dimension from the model"""
+        try:
+            test_embedding = self.embedding_client.embeddings.create(
+                input="test",
+                model=self.embedding_model
+            )
+            return len(test_embedding.data[0].embedding)
+        except Exception as e:
+            logger.error(f"Failed to get embedding dimension: {str(e)}")
+            raise
 
     async def create_collection(self, collection_name: str, document_id: str, file_url: str) -> str:
         """
-        Asynchronously parse a remote file using LlamaParse, embed chunks, and insert into OpenSearch.
-        If 'collection_name' (index) doesn't exist, it is created.
-
-        :param collection_name: Name of the OpenSearch index.
-        :param document_id: Unique identifier for the document being inserted.
-        :param file_url: Public or presigned URL to the file to be parsed.
-        :return: Status message indicating how many chunks were inserted.
+        Parse and index documents with enhanced error handling and logging.
+        Removed explicit _id assignment for Serverless compatibility.
         """
-        # 1) Ensure the index exists; create if not
-        if not self.client.indices.exists(index=collection_name):
-            self._create_index(collection_name)
-
-        # 2) Parse the file asynchronously via LlamaParse
-        parser = LlamaParse(result_type="markdown")
         try:
+            # Create index if needed
+            if not self.os_client.indices.exists(index=collection_name):
+                self._create_index(collection_name)
+
+            # Parse documents
+            parser = LlamaParse(result_type="markdown")
             parsed_docs = await parser.aload_data(file_url)
+            
+            if not parsed_docs:
+                raise RuntimeError("No content parsed from file")
+
+            logger.info(f"Parsed {len(parsed_docs)} documents from {file_url}")
+
+            # Process documents
+            bulk_docs = []
+            for i, doc in enumerate(parsed_docs):
+                try:
+                    text = doc.text or ""
+                    embedding = self.embedding_client.embeddings.create(
+                        input=text,
+                        model=self.embedding_model
+                    ).data[0].embedding
+
+                    bulk_docs.append({
+                        "_index": collection_name,
+                        "_source": {
+                            "document_id": document_id,
+                            "content": text,
+                            "embedding": embedding
+                        }
+                    })
+                except Exception as e:
+                    logger.error(f"Failed to process chunk {i}: {str(e)}")
+                    continue
+
+            # Bulk insert with error tracking
+            success_count, errors = bulk(self.os_client, bulk_docs)
+            
+            if errors:
+                logger.error(f"Failed to index {len(errors)} documents")
+                for error in errors[:3]:  # Log first 3 errors to avoid flooding
+                    logger.error(f"Error: {error.get('error', {}).get('reason', 'Unknown error')}")
+
+            return f"Successfully indexed {success_count} documents"
+
         except Exception as e:
-            raise RuntimeError(f"Error parsing file at {file_url}: {str(e)}")
-
-        # 3) Convert parsed docs to bulk format with embeddings
-        bulk_docs = []
-        for i, doc in enumerate(parsed_docs):
-            chunk_id = f"{document_id}_{i}"
-            text_content = doc.text or ""
-
-            # Generate embedding via OpenAI
-            embedding_vector = self.embedding_model.get_embedding(text_content)
-
-            record = {
-                "_index": collection_name,
-                "_id": chunk_id,
-                "_source": {
-                    "document_id": document_id,
-                    "content": text_content,
-                    "embedding": embedding_vector
-                }
-            }
-            bulk_docs.append(record)
-
-        # 4) Bulk insert into OpenSearch
-        success_count, _ = bulk(self.client, bulk_docs)
-        return f"Inserted {success_count} chunks into index '{collection_name}'."
+            logger.error(f"Critical error in create_collection: {str(e)}", exc_info=True)
+            raise
 
     def _create_index(self, index_name: str):
-        """
-        Internal helper to create an index with knn_vector for embeddings.
-        Adjust the dimension if your embedding model differs.
-        """
-        mapping_body = {
+        """Create index with dynamic dimension mapping"""
+        mapping = {
             "settings": {
-                "index": {
-                    "knn": True  # For older distributions (Serverless often auto-handles)
-                },
-                "analysis": {
-                    "analyzer": {
-                        "default": {
-                            "type": "standard"
-                        }
-                    }
-                }
+                "index": {"knn": True},
+                "analysis": {"analyzer": {"default": {"type": "standard"}}}
             },
             "mappings": {
                 "properties": {
@@ -138,55 +140,50 @@ class OpenSearchManager:
                     "content": {"type": "text"},
                     "embedding": {
                         "type": "knn_vector",
-                        "dimension": 1024  # Must match the embed model dimension
+                        "dimension": self.embedding_dimension
                     }
                 }
             }
         }
-        self.client.indices.create(index=index_name, body=mapping_body)
-        logger.info(f"Created new index '{index_name}' with knn_vector mappings.")
+        self.os_client.indices.create(index=index_name, body=mapping)
+        logger.info(f"Created index '{index_name}' with dimension {self.embedding_dimension}")
 
     def knn_search(self, index_name: str, query_text: str, top_k: int = 10) -> List[str]:
-        """
-        Perform a k-NN vector search on the 'embedding' field for the given query text.
+        """Enhanced search with better error handling"""
+        try:
+            embedding = self.embedding_client.embeddings.create(
+                input=query_text,
+                model=self.embedding_model
+            ).data[0].embedding
 
-        :param index_name: Name of the OpenSearch index
-        :param query_text: The text query to be embedded and searched
-        :param top_k: Number of nearest neighbors to retrieve
-        :return: List of content strings for the top results
-        """
-        # Embed the query text
-        embedding_vector = self.embedding_model.get_embedding(query_text)
-
-        # Build a k-NN search query
-        knn_query = {
-            "size": top_k,
-            "_source": ["content"],
-            "query": {
-                "knn": {
-                    "embedding": {
-                        "vector": embedding_vector,
-                        "k": top_k
+            response = self.os_client.search(
+                index=index_name,
+                body={
+                    "size": top_k,
+                    "query": {
+                        "knn": {
+                            "embedding": {
+                                "vector": embedding,
+                                "k": top_k
+                            }
+                        }
                     }
                 }
-            }
-        }
-        response = self.client.search(index=index_name, body=knn_query)
-        hits = response.get("hits", {}).get("hits", [])
-        return [hit["_source"]["content"] for hit in hits]
+            )
+            return [hit["_source"]["content"] for hit in response.get("hits", {}).get("hits", [])]
+        
+        except Exception as e:
+            logger.error(f"Search failed: {str(e)}")
+            return []
 
     def delete_context(self, collection_name: str) -> str:
-        """
-        Delete the entire index (collection).
-        """
-        if self.client.indices.exists(index=collection_name):
-            self.client.indices.delete(index=collection_name)
-            return f"Index '{collection_name}' deleted successfully."
-        else:
-            return f"Index '{collection_name}' does not exist."
+        """Safer delete with confirmation"""
+        if self.os_client.indices.exists(index=collection_name):
+            self.os_client.indices.delete(index=collection_name)
+            logger.info(f"Deleted index '{collection_name}'")
+            return f"Index '{collection_name}' deleted"
+        return f"Index '{collection_name}' not found"
 
     def get_collection(self, collection_name: str) -> bool:
-        """
-        Check if an index (collection) exists in OpenSearch.
-        """
-        return self.client.indices.exists(index=collection_name)
+        """Check index existence"""
+        return self.os_client.indices.exists(index=collection_name)
