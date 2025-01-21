@@ -183,7 +183,6 @@ const CustomReportSearchForm: React.FC<CustomReportSearchFormProps> = ({ company
   
       const data = await response.json();
       console.log('Success:', data);
-
       // Store the report and deal ID in Redux
       dispatch(setData({ report: data.report, dealId: data.deal_id }));
 

@@ -67,94 +67,113 @@ async def upload_files(
     Upload files to S3, store metadata in the database, and index content in OpenSearch.
     Expects a valid deal_id (deal is already created in a separate deals API).
     """
+    print(f"Received upload request for deal_id: {deal_id}")
+    print(f"Request metadata: name={name}, description={description}, category={category}, sub_category={sub_category}, tags={tags}")
+
     # Validate deal_id
-    deal = db.query(Deal).filter(Deal.id == deal_id).first()
-    if not deal:
-        logger.error(f"Deal not found: {deal_id}")
-        raise HTTPException(status_code=400, detail="Deal not found")
+    try:
+        deal = db.query(Deal).filter(Deal.id == deal_id).first()
+        if not deal:
+            print(f"Deal not found for deal_id: {deal_id}")
+            raise HTTPException(status_code=400, detail="Deal not found")
+        print(f"Deal validated successfully for deal_id: {deal_id}")
+    except Exception as e:
+        print(f"Error validating deal_id {deal_id}: {str(e)}")
+        raise HTTPException(status_code=500, detail="Error validating deal_id")
 
     uploaded_documents = []
 
     # Process each file
     for file in files:
-        original_filename = file.filename
-        existing_document = db.query(Document).filter(
-            Document.deal_id == deal_id,
-            Document.original_filename == original_filename
-        ).first()
-
-        if existing_document:
-            logger.error(f"File already exists in deal {deal_id}: {original_filename}")
-            raise HTTPException(
-                status_code=400,
-                detail=f"A file named '{original_filename}' already exists in this deal."
-            )
-
-        # Sanitize and generate a unique file path based on userID/dealID/filename
-        user_id = current_user.id
-        sanitized_filename = original_filename.replace(" ", "_").replace("/", "_").replace("\\", "_")
-        file_location = f"{user_id}/{deal_id}/{sanitized_filename}"
-
-        # Upload file to S3
         try:
-            s3.upload_fileobj(
-                file.file,      # File-like object
-                S3_BUCKET,      # S3 bucket name
-                file_location   # S3 file path
+            original_filename = file.filename
+            print(f"Processing file: {original_filename}")
+
+            # Check for existing document
+            existing_document = db.query(Document).filter(
+                Document.deal_id == deal_id,
+                Document.original_filename == original_filename
+            ).first()
+
+            if existing_document:
+                print(f"File already exists in deal {deal_id}: {original_filename}")
+                raise HTTPException(
+                    status_code=400,
+                    detail=f"A file named '{original_filename}' already exists in this deal."
+                )
+
+            # Sanitize filename
+            user_id = current_user.id
+            sanitized_filename = original_filename.replace(" ", "_").replace("/", "_").replace("\\", "_")
+            file_location = f"{user_id}/{deal_id}/{sanitized_filename}"
+            print(f"Sanitized file path: {file_location}")
+
+            # Upload file to S3
+            try:
+                print(f"Uploading file {original_filename} to S3 at {file_location}")
+                s3.upload_fileobj(
+                    file.file,      # File-like object
+                    S3_BUCKET,      # S3 bucket name
+                    file_location   # S3 file path
+                )
+                print(f"File uploaded to S3: {file_location}")
+            except NoCredentialsError:
+                print("S3 credentials not available")
+                raise HTTPException(status_code=500, detail="S3 credentials not available")
+            except Exception as e:
+                print(f"Failed to upload file to S3: {str(e)}")
+                raise HTTPException(status_code=500, detail=f"File upload to S3 failed: {str(e)}")
+
+            # Convert tags to JSON list
+            if tags:
+                tags_list = [tag.strip() for tag in tags.split(",") if tag.strip().lower() != "null"]
+                tags = json.dumps(tags_list) if tags_list else None
+            else:
+                tags = None
+            print(f"Tags processed: {tags}")
+
+            # Create a new document record
+            new_document = Document(
+                name=name,
+                description=description,
+                category=category,
+                sub_category=sub_category,
+                tags=tags,
+                file_path=file_location,
+                deal_id=deal_id,
+                original_filename=original_filename
             )
-            logger.info(f"File uploaded to S3: {file_location}")
-        except NoCredentialsError:
-            logger.error("S3 credentials not available")
-            raise HTTPException(status_code=500, detail="S3 credentials not available")
+            db.add(new_document)
+            uploaded_documents.append(new_document)
+            print(f"Document record created for file: {original_filename}")
+
         except Exception as e:
-            logger.error(f"Failed to upload file to S3: {str(e)}")
-            raise HTTPException(status_code=500, detail=f"File upload to S3 failed: {str(e)}")
-
-        # Convert tags to JSON list
-        if tags:
-            tags_list = [tag.strip() for tag in tags.split(",") if tag.strip().lower() != "null"]
-            tags = json.dumps(tags_list) if tags_list else None
-        else:
-            tags = None
-
-        # Create a new document record
-        new_document = Document(
-            name=name,
-            description=description,
-            category=category,
-            sub_category=sub_category,
-            tags=tags,
-            file_path=file_location,
-            deal_id=deal_id,
-            original_filename=original_filename
-        )
-        db.add(new_document)
-        uploaded_documents.append(new_document)
+            print(f"Error processing file {file.filename}: {str(e)}")
+            raise HTTPException(status_code=500, detail=f"Error processing file: {file.filename}")
 
     # Update deal timestamp
-    deal.updated_at = func.current_timestamp()
-    db.add(deal)
-
-    # Commit the DB transaction
     try:
+        deal.updated_at = func.current_timestamp()
+        db.add(deal)
         db.commit()
-        logger.info(f"Documents added to database for deal {deal_id}")
+        print(f"Deal timestamp updated for deal_id: {deal_id}")
     except Exception as e:
         db.rollback()
-        logger.error(f"Failed to commit DB transaction: {str(e)}")
-        raise HTTPException(status_code=500, detail="Failed to save document metadata.")
+        print(f"Failed to update deal timestamp for deal_id {deal_id}: {str(e)}")
+        raise HTTPException(status_code=500, detail="Failed to update deal timestamp.")
 
     # Generate presigned URLs and index documents in OpenSearch
     for doc in uploaded_documents:
         try:
+            print(f"Generating presigned URL for document: {doc.id}")
             presigned_url = s3.generate_presigned_url(
                 'get_object',
                 Params={'Bucket': S3_BUCKET, 'Key': doc.file_path},
                 ExpiresIn=86400  # 24 hours
             )
-            logger.info(f"Generated presigned URL for document {doc.id}")
+            print(f"Presigned URL generated for document: {doc.id}")
         except Exception as e:
-            logger.error(f"Failed to generate presigned URL: {str(e)}")
+            print(f"Failed to generate presigned URL for document {doc.id}: {str(e)}")
             raise HTTPException(status_code=500, detail=f"Error generating presigned URL: {str(e)}")
 
         # Determine collection name (index) based on user role / deal ID
@@ -163,26 +182,25 @@ async def upload_files(
                 collection_name = "dadmin"
             else:
                 collection_name = f"d{str(deal_id)}"
-        except HTTPException as auth_exception:
-            # Fallback if user is not authenticated
-            if auth_exception.status_code == 401:
-                collection_name = f"d{str(deal_id)}"
-                logger.warning(f"Authentication failed, using fallback collection name: {collection_name}")
-            else:
-                raise auth_exception
+        except Exception as e:
+            print(f"Failed to determine collection name for deal_id {deal_id}: {str(e)}")
+            raise HTTPException(status_code=500, detail=f"Error determining collection name: {str(e)}")
 
         collection_name = sanitize_class_name(collection_name)
+        print(f"Using collection name: {collection_name}")
 
         # Index document in OpenSearch
         try:
+            print(f"Indexing document {doc.id} in OpenSearch collection {collection_name}")
             result = await opensearch_manager.create_collection(
                 collection_name, str(doc.id), presigned_url
             )
-            logger.info(f"Document indexed in OpenSearch: {doc.id} => {result}")
+            print(f"Document indexed in OpenSearch: {doc.id} => {result}")
         except Exception as e:
-            logger.error(f"Failed to index document in OpenSearch: {str(e)}")
+            print(f"Failed to index document in OpenSearch: {doc.id}: {str(e)}")
             raise HTTPException(status_code=500, detail=f"Failed to index document in OpenSearch: {str(e)}")
 
+    print(f"Files uploaded and indexed successfully for deal_id: {deal_id}")
     return {
         "message": "Files uploaded and indexed successfully",
         "documents": [
@@ -194,73 +212,6 @@ async def upload_files(
             for doc in uploaded_documents
         ]
     }
-
-
-@upload_file_router.put("/api/documents/{document_id}")
-async def update_document(
-    document_id: str,
-    name: str = Form(...),
-    description: Optional[str] = Form(None),
-    category: Optional[str] = Form(None),
-    sub_category: Optional[str] = Form(None),
-    tags: Optional[str] = Form(None),
-    db: Session = Depends(get_db)
-):
-    """
-    Update metadata for an existing document (name, description, category, sub_category, tags).
-    """
-    # Validate UUID
-    try:
-        document_uuid = uuid.UUID(document_id)
-    except ValueError:
-        raise HTTPException(status_code=400, detail="Invalid document ID format.")
-
-    # Fetch document
-    document = db.query(Document).filter(Document.id == document_uuid).first()
-    if not document:
-        raise HTTPException(status_code=404, detail="Document not found.")
-
-    # Convert comma-separated tags to JSON
-    if tags:
-        tags_list = [tag.strip() for tag in tags.split(",") if tag.strip().lower() != "null"]
-        tags = json.dumps(tags_list) if tags_list else None
-    else:
-        tags = None
-
-    # Update document
-    document.name = name
-    document.description = description
-    document.category = category
-    document.sub_category = sub_category
-    document.tags = tags
-
-    # Update deal timestamp
-    deal = db.query(Deal).filter(Deal.id == document.deal_id).first()
-    if deal:
-        deal.updated_at = func.current_timestamp()
-        db.add(deal)
-
-    # Commit changes
-    try:
-        db.commit()
-        db.refresh(document)
-    except Exception as e:
-        db.rollback()
-        raise HTTPException(status_code=500, detail=f"Failed to update document: {str(e)}")
-
-    # Return updated document info
-    return {
-        "message": "Document updated successfully.",
-        "document": {
-            "id": str(document.id),
-            "name": document.name,
-            "description": document.description,
-            "category": document.category,
-            "sub_category": document.sub_category,
-            "tags": json.loads(document.tags) if document.tags else None
-        }
-    }
-
 
 @upload_file_router.delete("/api/documents/{document_id}")
 async def delete_document(document_id: str, db: Session = Depends(get_db)):

@@ -12,7 +12,10 @@ import {
 // Badge component for competitors and others
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
-import { Navigate, useNavigate } from "@remix-run/react";
+import { useNavigate } from "@remix-run/react";
+import { useDispatch } from "react-redux";
+import { setDealId } from "~/store/slices/dealSlice";
+import { API_BASE_URL } from "~/constant";
 
 // -------------- TYPES --------------
 interface InfoItemProps {
@@ -51,6 +54,58 @@ interface CompanyData {
   };
 }
 
+
+// -----------------Helper Function------------
+
+// API call to create a deal
+// API call to create a deal
+const createDeal = async (
+  companyName: string,
+  companyDescription: string | null,
+  industry: string | null
+) => {
+  try {
+    const payload = {
+      name: companyName,
+      overview: companyDescription || "No overview provided",
+      industry: industry || "General",
+      start_date: new Date().toISOString().split("T")[0], // Current date
+      due_date: null, // Optional: Can be null
+      progress: "0%", // Use a default progress value
+      investment_thesis: "Initial investment thesis content. Please update.",
+    };
+
+    console.log("Payload:", payload); // Debugging the payload
+
+    const token = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("authToken="))
+      ?.split("=")[1];
+
+    if (!token) {
+      throw new Error("You are not authenticated. Please log in.");
+    }
+
+    const response = await fetch(`${API_BASE_URL}/api/deals/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.detail || "Failed to create deal");
+    }
+
+    return await response.json();
+  } catch (error: any) {
+    console.error("Error creating deal:", error);
+    throw error;
+  }
+};
 // -------------- SUBCOMPONENTS --------------
 
 // InfoItem component
@@ -93,7 +148,8 @@ const CompetitorList: React.FC<CompetitorListProps> = ({ competitors }) => {
 // -------------- MAIN COMPONENT --------------
 const CompanyDetailsComponent: React.FC<{ data: CompanyData }> = ({ data }) => {
   const [icons, setIcons] = useState<React.ElementType[]>([]);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const loadIcons = async () => {
@@ -111,6 +167,31 @@ const CompanyDetailsComponent: React.FC<{ data: CompanyData }> = ({ data }) => {
 
     loadIcons();
   }, []);
+
+  const handleDueDiligence = async () => {
+    const companyName = data.result.company_name;
+    if (!companyName) {
+      alert("Company name is required to create a deal.");
+      return;
+    }
+
+    try {
+      const dealData = await createDeal(
+        companyName,
+        data.result.company_description,
+        data.result.company_primary_industry
+      );
+
+      // Save dealId to Redux and LocalStorage
+      dispatch(setDealId(dealData.id));
+      localStorage.setItem("dealId", dealData.id);
+
+      // Navigate to Due Diligence page
+      navigate(`/duediligence/${companyName}`);
+    } catch (error: any) {
+      alert(`Error creating deal: ${error.message}`);
+    }
+  };
 
   return (
     <div className="my-6 space-y-6">
@@ -147,13 +228,13 @@ const CompanyDetailsComponent: React.FC<{ data: CompanyData }> = ({ data }) => {
     </CardDescription>
   </div>
   <div className="mt-4 sm:mt-0">
-    <Button
-      type="button"
-      className="px-4 py-2 text-sm font-medium rounded-md"
-      onClick={() => navigate(`/duediligence/${data.result.company_name}`)}
-    >
-      Continue to Due Deligence
-    </Button>
+  <Button
+              type="button"
+              className="px-4 py-2 text-sm font-medium rounded-md"
+              onClick={handleDueDiligence}
+            >
+              Continue to Due Diligence
+            </Button>
   </div>
 </CardHeader>
         <CardContent className="space-y-3">

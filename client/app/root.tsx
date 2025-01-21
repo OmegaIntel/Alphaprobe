@@ -10,7 +10,15 @@ import type { LinksFunction } from '@remix-run/node';
 import './tailwind.css';
 import { Provider } from 'react-redux';
 import store from './store/store';
+import type { LoaderFunctionArgs } from "@remix-run/node";
 
+export async function loader({ request }: LoaderFunctionArgs) {
+  return Response.json({
+    ENV: {
+      REMIX_API_BASE_URL: process.env.REMIX_API_BASE_URL
+    }
+  });
+}
 export const links: LinksFunction = () => [
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
   {
