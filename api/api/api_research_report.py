@@ -10,7 +10,6 @@ from sqlalchemy.orm import Session
 from llama_index.llms.openai import OpenAI
 from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.core import Settings
-from llama_index.core.tools import Tool
 from llama_index.core.workflow import (
     step,
     Event,
@@ -238,7 +237,7 @@ class DocumentResearchAgent(Workflow):
         return ReviewEvent(report=report_text)
 
     @step()
-    async def review_report(self, ctx: Context, ev: ReviewEvent):
+    async def review_report(self, ctx: Context, ev: ReviewEvent) -> Union[StopEvent, QuestionEvent, None]:
         """
         Final review step. If 'APPROVED', we stop. Else we ask more questions.
         """
