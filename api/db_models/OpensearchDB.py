@@ -42,7 +42,10 @@ class OpenSearchManager:
         # Initialize OpenAI client directly for better control
         self.embedding_client = OpenAI(api_key=openai_api_key)
         self.embedding_model = "text-embedding-3-large"
-        self.embedding_dimension = self._get_embedding_dimension()
+        self.embedding_dimension = 1024
+        
+        # Initialize OpenAI client with dimension specification
+        self.embedding_client = OpenAI(api_key=openai_api_key)
 
         # Configure AWS authentication
         credentials = boto3.Session(
@@ -73,16 +76,22 @@ class OpenSearchManager:
             raise
 
     async def create_collection(self, collection_name: str, document_id: str, file_url: str) -> str:
-        """
-        Parse and index documents with enhanced error handling and logging.
-        Removed explicit _id assignment for Serverless compatibility.
-        """
+        """Create collection with dynamic dimension mapping"""
         try:
-            # Create index if needed
-            if not self.os_client.indices.exists(index=collection_name):
+            # 1. Validate/Create index with correct dimensions
+            if self.os_client.indices.exists(index=collection_name):
+                # Get current mapping to check dimensions
+                current_mapping = self.os_client.indices.get_mapping(index=collection_name)
+                existing_dim = current_mapping[collection_name]["mappings"]["properties"]["embedding"]["dimension"]
+                
+                if existing_dim != self.embedding_dimension:
+                    logger.info(f"Dimension mismatch detected ({existing_dim} vs {self.embedding_dimension}). Recreating index '{collection_name}'")
+                    self.os_client.indices.delete(index=collection_name)
+                    self._create_index(collection_name)
+            else:
                 self._create_index(collection_name)
 
-            # Parse documents
+            # 2. Parse documents
             parser = LlamaParse(result_type="markdown")
             parsed_docs = await parser.aload_data(file_url)
             
@@ -91,15 +100,27 @@ class OpenSearchManager:
 
             logger.info(f"Parsed {len(parsed_docs)} documents from {file_url}")
 
-            # Process documents
+            # 3. Process documents with content validation
             bulk_docs = []
             for i, doc in enumerate(parsed_docs):
                 try:
                     text = doc.text or ""
+                    
+                    # Skip empty or very short content
+                    if not text.strip() or len(text) < 10:
+                        logger.warning(f"Skipping invalid chunk {i}")
+                        continue
+
+                    # Generate embedding with explicit dimension specification
                     embedding = self.embedding_client.embeddings.create(
                         input=text,
-                        model=self.embedding_model
+                        model=self.embedding_model,
+                        dimensions=self.embedding_dimension  # Force specific dimension
                     ).data[0].embedding
+
+                    # Validate embedding dimension
+                    if len(embedding) != self.embedding_dimension:
+                        raise ValueError(f"Embedding dimension mismatch. Expected {self.embedding_dimension}, got {len(embedding)}")
 
                     bulk_docs.append({
                         "_index": collection_name,
@@ -113,19 +134,24 @@ class OpenSearchManager:
                     logger.error(f"Failed to process chunk {i}: {str(e)}")
                     continue
 
-            # Bulk insert with error tracking
+            # 4. Bulk insert with error tracking
+            if not bulk_docs:
+                raise RuntimeError("No valid documents to index after processing")
+
             success_count, errors = bulk(self.os_client, bulk_docs)
             
             if errors:
                 logger.error(f"Failed to index {len(errors)} documents")
-                for error in errors[:3]:  # Log first 3 errors to avoid flooding
+                for error in errors[:3]:  # Log first 3 errors
                     logger.error(f"Error: {error.get('error', {}).get('reason', 'Unknown error')}")
 
-            return f"Successfully indexed {success_count} documents"
+            return f"Successfully indexed {success_count} documents with {self.embedding_dimension}D embeddings"
 
         except Exception as e:
             logger.error(f"Critical error in create_collection: {str(e)}", exc_info=True)
-            raise
+            raise        
+
+
 
     def _create_index(self, index_name: str):
         """Create index with dynamic dimension mapping"""
@@ -140,7 +166,7 @@ class OpenSearchManager:
                     "content": {"type": "text"},
                     "embedding": {
                         "type": "knn_vector",
-                        "dimension": self.embedding_dimension
+                        "dimension": 1024
                     }
                 }
             }
