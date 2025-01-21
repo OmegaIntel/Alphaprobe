@@ -1,201 +1,312 @@
+import os
 import uuid
-import boto3
-from common_logging import loginfo, logerror
-from fastapi import APIRouter, HTTPException, Query, Depends, File, UploadFile
+import nest_asyncio
+from typing import Dict, List, Union
+
+from fastapi import APIRouter, HTTPException, Query, Depends
 from fastapi.responses import JSONResponse
 from sqlalchemy.orm import Session
-from typing import List, Dict
-from datetime import datetime, timedelta
-from api.api_user import get_current_user
-from db_models.deals import Deal, DealStatus
-from db_models.rag_session import RagSession
-from db_models.session import get_db
-import json
-import os
-import asyncio
 
-# Import your existing document processing code
-from .customize_reports import (
-    process_uploaded_documents,
-    generate_structured_report,
-    get_index_from_storage,
-    BASE_PERSIST_DIR,
+from llama_index.llms.openai import OpenAI
+from llama_index.embeddings.openai import OpenAIEmbedding
+from llama_index.core import Settings
+from llama_index.core.tools import Tool
+from llama_index.core.workflow import (
+    step,
+    Event,
+    Context,
+    StartEvent,
+    StopEvent,
+    Workflow,
 )
 
-# Initialize the new router for document processing
+from db_models.deals import Deal
+from db_models.session import get_db
+from api.api_user import get_current_user, User as UserModelSerializer
+from db_models.OpensearchDB import OpenSearchManager
+from common_logging import loginfo, logerror
+
+nest_asyncio.apply()
+
+# -------------------------------------------------------------------------
+# 1) LLM & Embedding Setup
+# -------------------------------------------------------------------------
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+def setup_models():
+    """Initialize LLM and embedding models for the workflow."""
+    Settings.llm = OpenAI(
+        model="gpt-4o-mini",  # Example; change to the actual model you use
+        temperature=0.1,
+        openai_api_key=OPENAI_API_KEY
+    )
+    # Keep an embedding model in case we need it in prompts
+    Settings.embed_model = OpenAIEmbedding(
+        model="text-embedding-3-large",
+        dimensions=1024,
+        openai_api_key=OPENAI_API_KEY
+    )
+
+# -------------------------------------------------------------------------
+# 2) Workflow Classes & Agent
+# -------------------------------------------------------------------------
+
+class OutlineEvent(Event):
+    outline: str
+
+class QuestionEvent(Event):
+    question: str
+
+class AnswerEvent(Event):
+    question: str
+    answer: str
+
+class ReviewEvent(Event):
+    report: str
+
+class ProgressEvent(Event):
+    progress: str
+
+opensearch_manager = OpenSearchManager()
+
+async def generate_structured_report(query: dict, user_id: str, deal_id: str):
+    """
+    Generate a due diligence report by orchestrating an LLM-based agent with
+    vector retrieval from OpenSearch.
+    """
+    try:
+        setup_models()
+
+        # Typically you might name your OpenSearch index after the deal_id.
+        index_name = f"d{deal_id}".lower()
+
+        # Create and run the agent
+        agent = DocumentResearchAgent(timeout=600, verbose=True, index_name=index_name)
+        handler = agent.run(query=query, tools=None)
+
+        final_report = None
+        async for ev in handler.stream_events():
+            if isinstance(ev, ProgressEvent):
+                print(ev.progress)  # or use loginfo(ev.progress)
+            elif isinstance(ev, StopEvent):
+                final_report = ev.result
+
+        return final_report
+    except Exception as e:
+        logerror(f"Error generating report: {str(e)}")
+        return None
+
+class DocumentResearchAgent(Workflow):
+    """
+    Financial Due Diligence Report Generation Workflow.
+    Uses an OpenSearch index (self.index_name) for k-NN vector search,
+    then synthesizes a final report via multiple LLM steps.
+    """
+    def __init__(self, timeout=600, verbose=True, index_name=""):
+        super().__init__(timeout=timeout, verbose=verbose)
+        self.index_name = index_name
+
+    @step()
+    async def formulate_plan(self, ctx: Context, ev: StartEvent) -> OutlineEvent:
+        data = ev.query
+        query_context = data.get("query", "")
+        headings = data.get("headings", [])
+
+        if headings:
+            headings_text = "\n".join([f"{i+1}. {heading}" for i, heading in enumerate(headings)])
+        else:
+            headings_text = "No specific headings provided."
+
+        await ctx.set("original_query", query_context)
+        await ctx.set("headings", headings)
+
+        prompt = f"""You are an expert financial analyst conducting research and due diligence.
+        Create a detailed outline for a comprehensive due diligence report. The outline should
+        reflect standard due diligence practices and cover critical areas of financial analysis.
+
+        Provided Headings:
+        {headings_text}
+
+        Query Context: {query_context}
+
+        Produce a structured, actionable outline for thorough financial diligence.
+        """
+        response = await Settings.llm.acomplete(prompt)
+        outline_text = response.text if hasattr(response, "text") else str(response)
+
+        ctx.write_event_to_stream(
+            ProgressEvent(progress="Due Diligence Outline:\n" + outline_text)
+        )
+        return OutlineEvent(outline=outline_text)
+
+    @step()
+    async def formulate_questions(self, ctx: Context, ev: OutlineEvent) -> None:
+        outline = ev.outline
+        await ctx.set("outline", outline)
+
+        prompt = f"""As a financial expert, create specific questions to extract critical
+        financial information from the company documents. Limit to about 15 key questions.
+
+        Outline to analyze:
+        {outline}
+        """
+        response = await Settings.llm.acomplete(prompt)
+        questions_raw = response.text if hasattr(response, "text") else str(response)
+        questions = [x.strip() for x in questions_raw.split("\n") if x.strip()]
+
+        await ctx.set("num_questions", len(questions))
+        ctx.write_event_to_stream(
+            ProgressEvent(progress="Financial Analysis Questions:\n" + "\n".join(questions))
+        )
+        for q in questions:
+            ctx.send_event(QuestionEvent(question=q))
+
+    @step()
+    async def answer_questions(self, ctx: Context, ev: QuestionEvent) -> AnswerEvent:
+        """
+        k-NN vector search in OpenSearch for context, then feed context + question to LLM.
+        """
+        question = ev.question
+        top_chunks = opensearch_manager.knn_search(self.index_name, question, top_k=10)
+        context_text = "\n".join(top_chunks)
+
+        prompt = f"""You are a financial analyst. Provide a detailed answer to the question:
+
+        Question: {question}
+
+        Context (retrieved from documents):
+        {context_text}
+
+        Answer:
+        """
+        response = await Settings.llm.acomplete(prompt)
+        answer_text = response.text if hasattr(response, "text") else str(response)
+
+        ctx.write_event_to_stream(
+            ProgressEvent(progress=f"Answered: {question}\nAnswer: {answer_text}")
+        )
+        return AnswerEvent(question=question, answer=answer_text)
+
+    @step()
+    async def write_report(self, ctx: Context, ev: AnswerEvent) -> ReviewEvent:
+        """
+        Gather all answers and build a draft report.
+        """
+        num_questions = await ctx.get("num_questions")
+        all_answers = ctx.collect_events(ev, expected=[AnswerEvent])
+        results = all_answers[:num_questions]
+
+        if not results:
+            ctx.write_event_to_stream(
+                ProgressEvent(progress="No answers found to generate the report.")
+            )
+            return ReviewEvent(report="No report generated, missing answers.")
+
+        # Accumulate these answers so we can pass them into the final summary prompt
+        try:
+            previous_questions = await ctx.get("previous_questions")
+        except Exception:
+            previous_questions = []
+
+        previous_questions.extend(results)
+        await ctx.set("previous_questions", previous_questions)
+
+        outline = await ctx.get('outline')
+        prompt = f"""You are a senior financial analyst preparing a comprehensive due diligence report.
+        Using the provided research findings, create a structured financial report that includes:
+        
+        1. Clear, professional formatting
+        2. Detailed financial analysis with specific data points
+        3. Potential risks and red flags
+        4. Actionable conclusions and recommendations
+
+        Outline: {outline}
+
+        Research Findings:
+        """
+        for ans in previous_questions:
+            prompt += f"\nQ: {ans.question}\nA: {ans.answer}\n"
+
+        ctx.write_event_to_stream(
+            ProgressEvent(progress="Generating Diligence Report...")
+        )
+
+        response = await Settings.llm.acomplete(prompt)
+        report_text = response.text if hasattr(response, "text") else str(response)
+
+        return ReviewEvent(report=report_text)
+
+    @step()
+    async def review_report(self, ctx: Context, ev: ReviewEvent):
+        """
+        Final review step. If 'APPROVED', we stop. Else we ask more questions.
+        """
+        try:
+            num_reviews = await ctx.get("num_reviews")
+        except Exception:
+            num_reviews = 0
+        num_reviews += 1
+        await ctx.set("num_reviews", num_reviews)
+
+        report = ev.report
+        original_query = await ctx.get("original_query")
+        prompt = f"""Review this due diligence report for completeness and accuracy.
+        Original Request: '{original_query}'
+
+        Report:
+        {report}
+
+        If the report meets professional standards, respond with 'APPROVED'.
+        Otherwise, list up to 3 follow-up questions to improve it.
+        """
+        response = await Settings.llm.acomplete(prompt)
+        result_text = response.text if hasattr(response, "text") else str(response)
+
+        cleaned_result = result_text.strip().upper()
+        if cleaned_result == "APPROVED" or num_reviews >= 3:
+            ctx.write_event_to_stream(ProgressEvent(progress="Report Approved."))
+            return StopEvent(result=report)
+        else:
+            # The LLM presumably returned additional questions
+            followup_questions = [line.strip() for line in result_text.split("\n") if line.strip()]
+            await ctx.set("num_questions", len(followup_questions))
+            ctx.write_event_to_stream(ProgressEvent(progress="Additional analysis required."))
+            for fq in followup_questions:
+                ctx.send_event(QuestionEvent(question=fq))
+            return None
+
+# -------------------------------------------------------------------------
+# 3) FastAPI Router with Endpoints
+# -------------------------------------------------------------------------
+
 document_router = APIRouter()
 
-# Helper functions for session management (reused from your existing code)
-def load_session_from_db(session_id: str, db: Session) -> Dict:
-    """Load session from the database."""
-    try:
-        session = db.query(RagSession).filter(RagSession.session_id == session_id).first()
-        if session:
-            return {
-                "user_id": session.user_id,
-                "last_access_time": session.last_access_time,
-                "data": session.data,
-            }
-    except Exception as e:
-        logerror(f"Error loading session {session_id}: {e}")
-    return None
-
-def save_session_to_db(session_id: str, user_id: str, data: dict, db: Session):
-    """Save or update a session in the database."""
-    try:
-        existing_session = db.query(RagSession).filter(RagSession.session_id == session_id).first()
-        if existing_session:
-            loginfo(f"Updating existing session {session_id}")
-            existing_session.last_access_time = datetime.utcnow()
-            existing_session.data = data
-        else:
-            loginfo(f"Creating new session {session_id}")
-            new_session = RagSession(
-                session_id=session_id,
-                user_id=user_id,
-                last_access_time=datetime.utcnow(),
-                data=data,
-            )
-            db.add(new_session)
-        db.commit()
-        loginfo(f"Successfully saved session {session_id}")
-    except Exception as e:
-        logerror(f"Error saving session {session_id}: {e}")
-        db.rollback()
-        raise
-
-def validate_and_refresh_session(session_id: str, user_id: str, db: Session):
-    """Validate and refresh session to ensure it is active and belongs to the user."""
-    try:
-        session = db.query(RagSession).filter(RagSession.session_id == session_id, RagSession.user_id == user_id).first()
-        if not session:
-            raise HTTPException(status_code=403, detail="Session does not belong to this user.")
-
-        now = datetime.utcnow()
-        if now - session.last_access_time > SESSION_TIMEOUT:
-            raise HTTPException(status_code=401, detail="Session expired.")
-
-        session.last_access_time = now
-        db.commit()
-    except Exception as e:
-        logerror(f"Error validating session {session_id}: {e}")
-        raise
-
-def create_new_session(user_id: str, db: Session) -> str:
-    """Create a new session for a user."""
-    try:
-        session_id = str(uuid.uuid4())
-        new_session = RagSession(
-            session_id=session_id,
-            user_id=user_id,
-            last_access_time=datetime.utcnow(),
-            data={}
-        )
-        db.add(new_session)
-        db.commit()
-        loginfo(f"New session created with ID {session_id}")
-        return session_id
-    except Exception as e:
-        logerror(f"Error creating new session: {e}")
-        db.rollback()
-        raise
-
-# Helper function to save uploaded files
-async def save_uploaded_files(files: List[UploadFile]) -> List[str]:
-    saved_paths = []
-    for file in files:
-        file_path = f"./uploads/{file.filename}"
-        os.makedirs(os.path.dirname(file_path), exist_ok=True)
-        with open(file_path, "wb") as buffer:
-            buffer.write(await file.read())
-        saved_paths.append(file_path)
-    return saved_paths
-
-# Endpoint to upload and process documents
-@document_router.post("/api/upload-documents")
-async def upload_documents(
-    files: List[UploadFile] = File(...),
-    current_user=Depends(get_current_user),
-    db: Session = Depends(get_db),
-):
-    user_id = current_user.id
-    deal_id = str(uuid.uuid4())  # Generate a unique deal ID for this upload
-
-    try:
-        print("Step 1: Received files", [file.filename for file in files])  # Debugging
-
-        # Save uploaded files to disk
-        file_paths = await save_uploaded_files(files)
-        print("Step 2: Files saved to disk", file_paths)  # Debugging
-
-        # Process the uploaded documents
-        success = await process_uploaded_documents(file_paths, user_id, deal_id)
-        print("Step 3: Documents processed successfully:", success)  # Debugging
-
-        if not success:
-            raise HTTPException(status_code=500, detail="Failed to process documents")
-
-        # Save the deal information into the database
-        new_deal = Deal(
-            id=deal_id,
-            user_id=user_id,
-            name="Uploaded Documents Deal",  # Placeholder name, modify as needed
-            overview="Documents uploaded and processed successfully.",
-            industry="General",  # Placeholder, modify as per your requirements
-            status=DealStatus.IN_PROGRESS,  # Set the initial status
-            document_location=", ".join(file_paths),  # Store document locations as a comma-separated string
-        )
-        db.add(new_deal)
-        db.commit()
-        print("Step 4: Deal information saved to DB")  # Debugging
-
-        return JSONResponse(
-            content={
-                "message": "Documents processed successfully",
-                "deal_id": deal_id,
-                "file_paths": file_paths,
-            },
-            status_code=200,
-        )
-    except Exception as e:
-        print("Error encountered:", str(e))  # Debugging
-        logerror(f"Error in upload_documents: {e}")
-        db.rollback()
-        raise HTTPException(status_code=500, detail=str(e))
-
-
-# Endpoint to generate a structured report
 @document_router.post("/api/generate-report")
 async def generate_report(
-    query: dict,
-    deal_id: str = Query(..., description="Unique ID of the deal"),
-    current_user=Depends(get_current_user),
+    query: Dict,
+    deal_id: str = Query(..., description="Unique ID of the existing deal"),
+    current_user: UserModelSerializer = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
+    """
+    Generate a comprehensive due diligence report by orchestrating an LLM-based agent
+    and retrieving relevant text from OpenSearch.
+    """
     user_id = current_user.id
 
     try:
-        print(f"Step 1: Received query: {query}")  # Debugging
-        print(f"Step 2: Received deal_id: {deal_id}")  # Debugging
-
-        # Validate the deal ID and ensure it belongs to the user
-        print("Step 3: Validating deal ID and user...")  # Debugging
+        # Validate the deal belongs to the user (or is shared, if applicable).
         deal = db.query(Deal).filter(Deal.id == deal_id, Deal.user_id == user_id).first()
         if not deal:
-            print(f"Step 3.1: Deal validation failed for deal_id: {deal_id}")  # Debugging
-            raise HTTPException(status_code=404, detail="Deal not found or access denied.")
-        
-        print("Step 4: Deal validation successful.")  # Debugging
+            raise HTTPException(
+                status_code=404,
+                detail="Deal not found or you do not have access to it."
+            )
 
-        # Generate the structured report
-        print("Step 5: Generating structured report...")  # Debugging
         report = await generate_structured_report(query, user_id, deal_id)
-
         if not report:
-            print("Step 5.1: Report generation failed.")  # Debugging
             raise HTTPException(status_code=404, detail="Failed to generate report.")
-        
-        print("Step 6: Report generated successfully.")  # Debugging
 
         return JSONResponse(
             content={
@@ -206,42 +317,30 @@ async def generate_report(
             status_code=200,
         )
     except Exception as e:
-        print(f"Error encountered: {str(e)}")  # Debugging
         logerror(f"Error in generate_report: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 
-
-# Endpoint to retrieve the generated report
 @document_router.get("/api/get-report")
 async def get_report(
-    session_id: str = Query(..., description="Active session ID"),
-    current_user=Depends(get_current_user),
+    session_id: str = Query(..., description="Session ID (if used)"),
+    current_user: UserModelSerializer = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
-    user_id = current_user.id
-
+    """
+    Example endpoint to retrieve a previously stored or cached report.
+    (If your app uses sessions or stores final reports in DB, adapt accordingly.)
+    """
     try:
-        # Validate the session
-        validate_and_refresh_session(session_id, user_id, db)
-
-        # Retrieve the report from the session
-        session_data = load_session_from_db(session_id, db)
-        if not session_data or "report" not in session_data["data"]:
-            raise HTTPException(status_code=404, detail="No report found for this session.")
-
-        report = session_data["data"]["report"]
-
+        # Replace with your real logic for retrieving the saved report.
+        # E.g. querying a RagSession or some cache. For now, a placeholder:
         return JSONResponse(
-            content={"message": "Report retrieved successfully", "report": report},
+            content={
+                "message": "Report retrieved successfully",
+                "report": f"Placeholder for session {session_id}"
+            },
             status_code=200,
         )
     except Exception as e:
         logerror(f"Error in get_report: {e}")
         raise HTTPException(status_code=500, detail=str(e))
-
-# Include the new router in the main FastAPI app
-# Example:
-# from fastapi import FastAPI
-# app = FastAPI()
-# app.include_router(document_router)
