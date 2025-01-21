@@ -60,7 +60,7 @@ const FileUpload: React.FC<FileUploadProps> = ({ onFilesUploaded }) => {
           navigate('/login');
           return;
         }
-        const response = await fetch(`${API_BASE_URL}/api/upload-documents`, {
+        const response = await fetch(`${API_BASE_URL}/api/upload`, {
           method: 'POST',
           headers: {
             Authorization: `Bearer ${token}`,
