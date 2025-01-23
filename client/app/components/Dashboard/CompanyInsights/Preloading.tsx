@@ -92,7 +92,7 @@ export default function PreloadingScreen() {
       }
 
       const response = await fetch(
-        `${API_BASE_URL}/api/company-profile`,
+        `https://omegaintelligence.ai/api/company-profile`,
         {
           method: 'POST',
           headers: {

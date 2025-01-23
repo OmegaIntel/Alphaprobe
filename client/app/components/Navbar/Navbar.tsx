@@ -59,7 +59,7 @@ const Navbar: FC = () => {
           ) : (
             // Unauthenticated user buttons
             <div className="flex gap-2">
-              <Button onClick={() => navigate("/register")} variant="default">
+              <Button onClick={() => navigate("/login")} variant="default">
                 Get Started
               </Button>
             </div>

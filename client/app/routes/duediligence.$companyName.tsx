@@ -9,9 +9,9 @@ export default function DueDeligence() {
   
   return (
     <div>
-      <div className="flex justify-end my-5">
+      {/* <div className="flex justify-end my-5">
        <Button onClick={()=>{navigate("/dashboard")}}>Back to DashBoard</Button>
-      </div>
+      </div> */}
       <div>
         <CustomReportLayout companyName={`${companyName}`} />
       </div>

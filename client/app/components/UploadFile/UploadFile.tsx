@@ -11,8 +11,15 @@ import { setDealId } from '~/store/slices/dealSlice';
 
 interface FileWithProgress {
   file: File;
+  name: string;
   progress: number;
   uploaded: boolean;
+}
+
+interface Document {
+  id: string;
+  name: string;
+  description: string | null;
 }
 
 interface FileUploadProps {
@@ -21,34 +28,65 @@ interface FileUploadProps {
 
 const FileUpload: React.FC<FileUploadProps> = ({ onFilesUploaded }) => {
   const [uploadedFiles, setUploadedFiles] = useState<FileWithProgress[]>([]);
+  const [documents, setDocuments] = useState<Document[]>([]);
   const [warning, setWarning] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [hasDocuments, setHasDocuments] = useState(false);
   const dealId = useSelector((state: RootState) => state.deals?.dealId);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    // Check if dealId is not in Redux state
-    if (!dealId) {
-      // Try to get it from localStorage
-      const storedDealId = localStorage.getItem('dealId');
-      if (storedDealId) {
-        // If found in localStorage, update Redux state
-        dispatch(setDealId(storedDealId));
-        setWarning(null);
-      } else {
-        setWarning('Deal ID is missing. Please select or create a deal first.');
+  const fetchDocuments = async (currentDealId: string) => {
+    try {
+      setLoading(true);
+      const token = document.cookie
+        .split('; ')
+        .find((row) => row.startsWith('authToken='))
+        ?.split('=')[1];
+
+      if (!token) {
+        navigate('/login');
+        return;
       }
-    } else {
-      // If dealId exists in Redux, ensure it's also in localStorage
-      localStorage.setItem('dealId', dealId);
-      setWarning(null);
+
+      const response = await fetch(`${API_BASE_URL}/api/documents/${currentDealId}`, {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        if (errorData.detail === "No documents found for this deal ID.") {
+          setHasDocuments(false);
+          setDocuments([]);
+          return;
+        }
+        throw new Error('Failed to fetch documents');
+      }
+
+      const data = await response.json();
+      setDocuments(data.documents);
+      setHasDocuments(true);
+    } catch (error) {
+      console.error('Error fetching documents:', error);
+      setHasDocuments(false);
+    } finally {
+      setLoading(false);
     }
-  }, [dealId, dispatch]);
+  };
+
+  useEffect(() => {
+    if (dealId) {
+      fetchDocuments(dealId);
+    }
+  }, [dealId]);
 
   const handleFileUpload = async (files: FileList) => {
-    // First check for dealId before proceeding
     const currentDealId = dealId || localStorage.getItem('dealId');
-    
+
     if (!currentDealId) {
       setWarning('Deal ID is missing. Please select or create a deal first.');
       return;
@@ -63,16 +101,25 @@ const FileUpload: React.FC<FileUploadProps> = ({ onFilesUploaded }) => {
       'application/vnd.ms-excel',
     ];
 
-    const newFiles = Array.from(files).filter((file) => validFileTypes.includes(file.type));
+    const newFiles = Array.from(files).filter((file) =>
+      validFileTypes.includes(file.type)
+    );
 
     if (newFiles.length === 0) {
-      alert('No valid files selected. Please upload PDF, DOC, JPG, PNG, or Excel files.');
+      alert(
+        'No valid files selected. Please upload PDF, DOC, JPG, PNG, or Excel files.'
+      );
       return;
     }
 
     setUploadedFiles((prev) => [
       ...prev,
-      ...newFiles.map((file) => ({ file, progress: 0, uploaded: false })),
+      ...newFiles.map((file) => ({
+        file,
+        progress: 0,
+        uploaded: false,
+        name: file.name,
+      })),
     ]);
 
     for (const fileObj of newFiles) {
@@ -86,7 +133,7 @@ const FileUpload: React.FC<FileUploadProps> = ({ onFilesUploaded }) => {
           .split('; ')
           .find((row) => row.startsWith('authToken='))
           ?.split('=')[1];
-        
+
         if (!token) {
           navigate('/login');
           return;
@@ -107,9 +154,13 @@ const FileUpload: React.FC<FileUploadProps> = ({ onFilesUploaded }) => {
 
         setUploadedFiles((prevFiles) =>
           prevFiles.map((file) =>
-            file.file.name === fileObj.name ? { ...file, progress: 100, uploaded: true } : file
+            file.file.name === fileObj.name
+              ? { ...file, progress: 100, uploaded: true }
+              : file
           )
         );
+        
+        fetchDocuments(currentDealId);
       } catch (error) {
         console.error('Error uploading file:', error);
         alert(`Error uploading file: ${fileObj.name}`);
@@ -119,11 +170,12 @@ const FileUpload: React.FC<FileUploadProps> = ({ onFilesUploaded }) => {
     onFilesUploaded(newFiles);
   };
 
-  // Rest of the component remains the same...
   return (
     <div>
       {warning && (
-        <div className="mb-4 p-2 bg-yellow-200 text-yellow-800 rounded">{warning}</div>
+        <div className="mb-4 p-2 bg-yellow-200 text-yellow-800 rounded">
+          {warning}
+        </div>
       )}
       <div className="border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-slate-400 transition-colors">
         <Input
@@ -144,28 +196,46 @@ const FileUpload: React.FC<FileUploadProps> = ({ onFilesUploaded }) => {
         </label>
       </div>
 
-      {uploadedFiles.length > 0 && (
-        <div className="mt-4 space-y-4">
-          {uploadedFiles.map((fileObj, index) => (
-            <div
-              key={index}
-              className="flex items-center gap-4 p-2 border rounded"
-            >
-              <span className="truncate flex-1">{fileObj.file.name}</span>
-              <Progress value={fileObj.progress} className="w-full" />
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() =>
-                  setUploadedFiles((prev) => prev.filter((_, i) => i !== index))
-                }
-                title="Remove file"
-              >
-                <Trash2 className="h-4 w-4" />
-              </Button>
-            </div>
-          ))}
+      {uploadedFiles.map((fileObj, index) => (
+        <div key={index} className="flex items-center gap-4 p-2 border rounded mt-2">
+          <span className="truncate flex-1">{fileObj.name}</span>
+          <Progress value={fileObj.progress} className="w-full" />
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() =>
+              setUploadedFiles((prev) => prev.filter((_, i) => i !== index))
+            }
+            title="Remove file"
+          >
+            <Trash2 className="h-4 w-4" />
+          </Button>
         </div>
+      ))}
+
+      {loading ? (
+        <div className="mt-4 text-center">Loading documents...</div>
+      ) : (
+        hasDocuments && documents.length > 0 && (
+          <div className="mt-4 space-y-2">
+            <h3 className="font-medium">Uploaded Documents</h3>
+            {documents.map((doc) => (
+              <div key={doc.id} className="flex items-center gap-4 p-2 border rounded">
+                <span className="truncate flex-1">{doc.name}</span>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => {
+                    // Handle document deletion if needed
+                  }}
+                  title="Remove document"
+                >
+                  <Trash2 className="h-4 w-4" />
+                </Button>
+              </div>
+            ))}
+          </div>
+        )
       )}
     </div>
   );

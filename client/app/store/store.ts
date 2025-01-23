@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-// import dealsReducer from "./slices/dealsSlice";
+import dealsReducer from "./slices/dealSlice";
 // import modalReducer from "./slices/modalSlice";
 import formResponseReducer from "./slices/formResponseSlice";
 import industryReducer from "./slices/industrySlice";
@@ -13,6 +13,7 @@ const store = configureStore({
   reducer: {
     // deals: dealsReducer,
     // modal: modalReducer,
+    deals: dealsReducer,
     industry: industryReducer,
     selectedIndustries: selectedIndustriesReducer,
     companyInsight: companyInsightReducer,
