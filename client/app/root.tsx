@@ -11,7 +11,7 @@ import './tailwind.css';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import type { LoaderFunctionArgs } from '@remix-run/node';
-import amplitudeJs from 'amplitude-js'; // Correct import for CommonJS module
+import './analytics.client';
 
 export async function loader({ request }: LoaderFunctionArgs) {
   return new Response(JSON.stringify({
@@ -35,12 +35,12 @@ export const links: LinksFunction = () => [
   },
 ];
 
-// Initialize Amplitude
-const amplitude = amplitudeJs.getInstance();
-amplitude.init('b07260e647c7c3cc3c25aac93aa17db8', undefined, {
-  batchEvents: true,
-  eventUploadPeriodMillis: 30000,
-});
+// // Initialize Amplitude
+// const amplitude = amplitudeJs.getInstance();
+// amplitude.init('b07260e647c7c3cc3c25aac93aa17db8', undefined, {
+//   batchEvents: true,
+//   eventUploadPeriodMillis: 30000,
+// });
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
