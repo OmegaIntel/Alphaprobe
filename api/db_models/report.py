@@ -9,7 +9,7 @@ class Report(Base):
     __tablename__ = "reports"
 
     id = Column(UUIDType(binary=False), primary_key=True, default=uuid.uuid4)
-    deal_id = Column(String(32), nullable=False)  # Removed ForeignKey constraint
+    deal_id = Column(UUIDType(binary=False), nullable=False)  # Updated to UUIDType
     report_data = Column(Text, nullable=False)
     created_at = Column(DateTime, server_default=func.now())
     updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())
