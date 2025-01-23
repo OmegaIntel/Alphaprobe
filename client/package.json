@@ -34,6 +34,8 @@
     "@remix-run/node": "^2.15.1",
     "@remix-run/react": "^2.15.1",
     "@remix-run/serve": "^2.15.1",
+    "@types/amplitude-js": "^8.16.5",
+    "amplitude-js": "^8.21.9",
     "antd": "^5.22.7",
     "chart.js": "^4.4.7",
     "class-variance-authority": "^0.7.1",
@@ -55,6 +57,7 @@
     "uuidv4": "^6.2.13"
   },
   "devDependencies": {
+    "@amplitude/analytics-browser": "^2.11.9",
     "@remix-run/dev": "^2.15.1",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",

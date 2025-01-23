@@ -3,6 +3,7 @@ import { useActionData, useNavigate } from '@remix-run/react';
 import { useEffect } from 'react';
 import Login from '~/pages/auth/login';
 import { loginUser } from '~/services/auth';
+import * as amplitude from '@amplitude/analytics-browser';
 
 export async function action({ request }: { request: Request }) {
   const formData = await request.formData();
@@ -23,6 +24,8 @@ export async function action({ request }: { request: Request }) {
       throw new Error('Invalid token received');
     }
 
+    amplitude.setUserId(formData.get('username')?.toString());
+    
     // Return success and token instead of redirecting
     return json({
       success: true,
