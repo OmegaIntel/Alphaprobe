@@ -32,6 +32,7 @@ const FileUpload: React.FC<FileUploadProps> = ({ onFilesUploaded }) => {
   const [warning, setWarning] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [hasDocuments, setHasDocuments] = useState(false);
+  const [isDeleting, setIsDeleting] = useState<string | null>(null);
   const dealId = useSelector((state: RootState) => state.deals?.dealId);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -61,6 +62,7 @@ const FileUpload: React.FC<FileUploadProps> = ({ onFilesUploaded }) => {
         const errorData = await response.json();
         if (errorData.detail === "No documents found for this deal ID.") {
           setHasDocuments(false);
+      setIsDeleting(null);
           setDocuments([]);
           return;
         }
@@ -75,6 +77,47 @@ const FileUpload: React.FC<FileUploadProps> = ({ onFilesUploaded }) => {
       setHasDocuments(false);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleDeleteDocument = async (documentId: string) => {
+    try {
+      setIsDeleting(documentId);
+      const token = document.cookie
+        .split('; ')
+        .find((row) => row.startsWith('authToken='))
+        ?.split('=')[1];
+
+      if (!token) {
+        navigate('/login');
+        return;
+      }
+
+      const response = await fetch(`${API_BASE_URL}/api/documents/${documentId}`, {
+        method: 'DELETE',
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to delete document');
+      }
+
+      // Remove the document from the local state
+      setDocuments((prevDocuments) => 
+        prevDocuments.filter((doc) => doc.id !== documentId)
+      );
+
+      // Update hasDocuments if there are no documents left
+      if (documents.length === 1) {
+        setHasDocuments(false);
+      }
+
+    } catch (error) {
+      console.error('Error deleting document:', error);
+      alert('Error deleting document. Please try again.');
     }
   };
 
@@ -225,12 +268,15 @@ const FileUpload: React.FC<FileUploadProps> = ({ onFilesUploaded }) => {
                 <Button
                   variant="ghost"
                   size="icon"
-                  onClick={() => {
-                    // Handle document deletion if needed
-                  }}
+                  onClick={() => handleDeleteDocument(doc.id)}
                   title="Remove document"
+                  disabled={isDeleting === doc.id}
                 >
-                  <Trash2 className="h-4 w-4" />
+                  {isDeleting === doc.id ? (
+                    <span className="animate-spin h-4 w-4">◌</span>
+                  ) : (
+                    <Trash2 className="h-4 w-4" />
+                  )}
                 </Button>
               </div>
             ))}
