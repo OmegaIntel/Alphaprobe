@@ -1,26 +1,32 @@
 import React, { useState } from 'react';
-import { Button } from "~/components/ui/button";
+import { Button } from '~/components/ui/button';
 import { Input } from '~/components/ui/input';
-import { Card, CardContent } from "~/components/ui/card";
-import { 
-  Trash2, Edit2, PlusCircle, Loader2, 
-  FileText, FileImage, File, FileSpreadsheet,
-  Maximize2
-} from "lucide-react";
-import { Alert, AlertDescription } from "~/components/ui/alert";
+import { Card, CardContent } from '~/components/ui/card';
+import {
+  Trash2,
+  Edit2,
+  PlusCircle,
+  Loader2,
+  FileText,
+  FileImage,
+  File,
+  FileSpreadsheet,
+  Maximize2,
+} from 'lucide-react';
+import { Alert, AlertDescription } from '~/components/ui/alert';
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "~/components/ui/dialog";
+} from '~/components/ui/dialog';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "~/components/ui/select";
+} from '~/components/ui/select';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -30,7 +36,7 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from "~/components/ui/alert-dialog";
+} from '~/components/ui/alert-dialog';
 import FileUpload from '~/components/UploadFile/UploadFile';
 import { API_BASE_URL } from '~/constant';
 import { useNavigate } from '@remix-run/react';
@@ -54,43 +60,45 @@ interface CustomReportSearchFormProps {
 
 const templates: Template[] = [
   {
-    id: "financial",
-    name: "Financial Analysis",
+    id: 'financial',
+    name: 'Financial Analysis',
     headings: [
-      "Financial Overview",
-      "Revenue Analysis",
-      "Cost Structure",
-      "Profitability Metrics",
-      "Cash Flow Analysis"
-    ]
+      'Financial Overview',
+      'Revenue Analysis',
+      'Cost Structure',
+      'Profitability Metrics',
+      'Cash Flow Analysis',
+    ],
   },
   {
-    id: "market",
-    name: "Market Analysis",
+    id: 'market',
+    name: 'Market Analysis',
     headings: [
-      "Market Overview",
-      "Competitive Landscape",
-      "Market Trends",
-      "Growth Opportunities",
-      "Market Challenges"
-    ]
-  }
+      'Market Overview',
+      'Competitive Landscape',
+      'Market Trends',
+      'Growth Opportunities',
+      'Market Challenges',
+    ],
+  },
 ];
 
-const CustomReportSearchForm: React.FC<CustomReportSearchFormProps> = ({ companyQuery }) => {
+const CustomReportSearchForm: React.FC<CustomReportSearchFormProps> = ({
+  companyQuery,
+}) => {
   const [headings, setHeadings] = useState<string[]>([]);
   const [editingIndex, setEditingIndex] = useState<number>(-1);
-  const [newHeading, setNewHeading] = useState<string>("");
+  const [newHeading, setNewHeading] = useState<string>('');
   const [showDeleteDialog, setShowDeleteDialog] = useState<boolean>(false);
   const [deleteIndex, setDeleteIndex] = useState<number>(-1);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isFormVisible, setIsFormVisible] = useState<boolean>(true);
 
   // Set a constant query value
-  const query = "Sample Query";
+  const query = 'Sample Query';
 
   const handleTemplateSelect = (templateId: string) => {
-    const selectedTemplate = templates.find(t => t.id === templateId);
+    const selectedTemplate = templates.find((t) => t.id === templateId);
     if (selectedTemplate) {
       setHeadings(selectedTemplate.headings);
     }
@@ -101,7 +109,7 @@ const CustomReportSearchForm: React.FC<CustomReportSearchFormProps> = ({ company
 
   const handleNewReport = (): void => {
     setHeadings([]);
-    setNewHeading("");
+    setNewHeading('');
     setEditingIndex(-1);
     setIsFormVisible(true);
   };
@@ -116,7 +124,7 @@ const CustomReportSearchForm: React.FC<CustomReportSearchFormProps> = ({ company
       } else {
         setHeadings([...headings, newHeading]);
       }
-      setNewHeading("");
+      setNewHeading('');
     }
   };
 
@@ -131,56 +139,61 @@ const CustomReportSearchForm: React.FC<CustomReportSearchFormProps> = ({ company
   };
 
   const confirmDelete = (): void => {
-    const updatedHeadings: string[] = headings.filter((_, idx) => idx !== deleteIndex);
+    const updatedHeadings: string[] = headings.filter(
+      (_, idx) => idx !== deleteIndex
+    );
     setHeadings(updatedHeadings);
     setShowDeleteDialog(false);
   };
 
-
   const handleSubmit = async (): Promise<void> => {
     if (!query.trim()) {
-      alert("Please enter a search query");
+      alert('Please enter a search query');
       return;
     }
-  
+
     setIsLoading(true);
-  
-    const dealId = localStorage.getItem("dealId"); // Retrieve dealId from localStorage
+
+    const dealId = localStorage.getItem('dealId'); // Retrieve dealId from localStorage
     if (!dealId) {
-      alert("No deal ID found. Please upload documents first.");
+      alert('No deal ID found. Please upload documents first.');
       setIsLoading(false);
       return;
     }
-  
+
     const formData: FormData = {
-      query: companyQuery || "Nike" ,
+      query: companyQuery || 'Nike',
       headings: headings,
     };
-  
+
     try {
       const token = document.cookie
-        .split("; ")
-        .find((row) => row.startsWith("authToken="))
-        ?.split("=")[1];
-  
+        .split('; ')
+        .find((row) => row.startsWith('authToken='))
+        ?.split('=')[1];
+
       if (!token) {
-        navigate("/login");
+        navigate('/login');
         return;
       }
-  
-      const response = await fetch(`${API_BASE_URL}/api/generate-report?deal_id=${dealId}`, { // Correct query parameter
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify(formData),
-      });
-  
+
+      const response = await fetch(
+        `${API_BASE_URL}/api/generate-report?deal_id=${dealId}`,
+        {
+          // Correct query parameter
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        throw new Error('Network response was not ok');
       }
-  
+
       const data = await response.json();
       console.log('Success:', data);
       // Store the report and deal ID in Redux
@@ -188,12 +201,12 @@ const CustomReportSearchForm: React.FC<CustomReportSearchFormProps> = ({ company
 
       setIsFormVisible(false);
     } catch (error) {
-      console.error("Error:", error);
+      console.error('Error:', error);
     } finally {
       setIsLoading(false);
     }
   };
-  
+
   return (
     <div className="flex gap-6">
       <Card className="w-1/3 space-y-6">
@@ -222,81 +235,93 @@ const CustomReportSearchForm: React.FC<CustomReportSearchFormProps> = ({ company
           </div>
         </CardContent>
       </Card>
-
-      {/* Main Form Card */}
-      <Card className="w-2/3">
-        <CardContent className="pt-6">
-          <h2 className="text-lg font-semibold mb-4">Generate your Custom Report</h2>
-          <div className="space-y-4">
-            <div className="space-y-2">
-              {headings.map((heading, index) => (
-                <div key={index} className="flex items-center gap-2 p-2 border rounded">
-                  <span className="flex-1">{heading}</span>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={() => handleEdit(index)}
-                  >
-                    <Edit2 className="h-4 w-4" />
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={() => handleDelete(index)}
-                  >
-                    <Trash2 className="h-4 w-4" />
-                  </Button>
-                </div>
-              ))}
-            </div>
-            <div className="flex gap-2">
-              <Input
-                type="text"
-                placeholder="Enter heading"
-                value={newHeading}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewHeading(e.target.value)}
-              />
-              <Button 
-                onClick={handleAddHeading}
-                variant="outline"
+{/* Main Form Card */}
+<Card className="w-2/3 min-w-[500px] max-w-[500px]">
+  <CardContent className="pt-6">
+    <h2 className="text-lg font-semibold mb-4">
+      Generate your Custom Report
+    </h2>
+    <div className="flex flex-col">
+      <div className="flex-1 space-y-4">
+        <div className="space-y-2">
+          {headings.map((heading, index) => (
+            <div
+              key={index}
+              className="flex items-center gap-2 p-2 border rounded"
+            >
+              <span className="flex-1">{heading}</span>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => handleEdit(index)}
               >
-                {editingIndex >= 0 ? 'Update' : 'Add'} Heading
+                <Edit2 className="h-4 w-4" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => handleDelete(index)}
+              >
+                <Trash2 className="h-4 w-4" />
               </Button>
             </div>
-            {isLoading && (
-              <Alert>
-                <AlertDescription className="flex items-center gap-2">
-                  <Loader2 className="h-4 w-4 animate-spin" />
-                  Generating report please wait while your custom report is being generated for {companyQuery}
-                </AlertDescription>
-              </Alert>
-            )}
+          ))}
+        </div>
+      </div>
 
-            <Button 
-              onClick={handleSubmit}
-              className="w-full"
-              disabled={!query.trim() || headings.length === 0 || isLoading}
-            >
-              {isLoading ? (
-                <Loader2 className="h-4 w-4 animate-spin mr-2" />
-              ) : null}
-              Submit
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
+      <div className="mt-auto space-y-4">
+        <div className="flex gap-2">
+          <Input
+            type="text"
+            placeholder="Enter heading"
+            value={newHeading}
+            onChange={(e) => setNewHeading(e.target.value)}
+          />
+          <Button onClick={handleAddHeading} variant="outline">
+            {editingIndex >= 0 ? 'Update' : 'Add'} Heading
+          </Button>
+        </div>
+
+        {isLoading && (
+          <Alert>
+            <AlertDescription className="flex items-center gap-2">
+              <Loader2 className="h-4 w-4 animate-spin" />
+              Generating report please wait while your custom report is being
+              generated for {companyQuery}
+            </AlertDescription>
+          </Alert>
+        )}
+
+        <Button
+          onClick={handleSubmit}
+          className="w-full"
+          disabled={!query.trim() || headings.length === 0 || isLoading}
+        >
+          {isLoading ? (
+            <Loader2 className="h-4 w-4 animate-spin mr-2" />
+          ) : null}
+          Submit
+        </Button>
+      </div>
+    </div>
+  </CardContent>
+</Card>
+
 
       <AlertDialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>Are you sure?</AlertDialogTitle>
             <AlertDialogDescription>
-              This action cannot be undone. This will permanently delete the heading.
+              This action cannot be undone. This will permanently delete the
+              heading.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction onClick={confirmDelete}>Delete</AlertDialogAction>
+            <AlertDialogAction onClick={confirmDelete}>
+              Delete
+            </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>

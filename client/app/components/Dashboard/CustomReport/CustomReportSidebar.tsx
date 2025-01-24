@@ -17,6 +17,7 @@ import {
 import { Input } from '~/components/ui/input';
 import { Textarea } from '~/components/ui/textarea';
 import { Label } from '~/components/ui/label';
+import { setData } from '~/store/slices/customReport';
 
 interface Deal {
   id: string;
@@ -359,6 +360,14 @@ export function DealsSidebar() {
                                   <div
                                     key={report.report_id}
                                     className="text-sm flex items-center gap-2 text-gray-400 hover:text-gray-900 transition-colors cursor-pointer px-2 py-1 rounded hover:bg-gray-100"
+                                    onClick={() => {
+                                      dispatch(
+                                        setData({
+                                          report: report.report_data,
+                                          dealId: deal.id,
+                                        })
+                                      );
+                                    }}
                                   >
                                     <ScrollText className="h-4 w-4 flex-shrink-0" />
                                     <span className="truncate">
@@ -381,7 +390,7 @@ export function DealsSidebar() {
             </div>
           </ScrollArea>
         </CardContent>
-        <div className='m-4'>
+        <div className="m-4">
           <Button
             onClick={() => {
               navigate('/dashboard');
