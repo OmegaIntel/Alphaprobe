@@ -80,7 +80,7 @@ class ReviewEvent(Event):
 class ProgressEvent(Event):
     progress: str
 
-def upload_files_to_s3(files: List[UploadFile], base_dir: str, deal_id: str, bucket_name: str) -> List[str]:
+def upload_files_to_s3(files: List[UploadFile], base_dir: str, user_id: str, deal_id: str, bucket_name: str) -> List[str]:
     """
     Uploads a list of files to S3 with a structured directory path.
 
@@ -94,12 +94,11 @@ def upload_files_to_s3(files: List[UploadFile], base_dir: str, deal_id: str, buc
         List[str]: List of S3 file paths.
     """
     uploaded_file_paths = []
-    timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
 
     for file in files:
         original_filename = file.filename
         sanitized_filename = original_filename.replace(" ", "_").replace("/", "_").replace("\\", "_")
-        s3_path = f"{base_dir}/{deal_id}/{timestamp}_{sanitized_filename}"
+        s3_path = f"{base_dir}/{user_id}/{deal_id}/{sanitized_filename}"
 
         try:
             # Upload file to S3
@@ -122,36 +121,18 @@ def upload_files_to_s3(files: List[UploadFile], base_dir: str, deal_id: str, buc
 async def process_uploaded_documents(file_paths: List[str], user_id: str, deal_id: str) -> bool:
     """
     Process multiple uploaded documents from S3 and create a combined index.
-    Downloads files from S3, checks for an existing index, and creates a new one if necessary.
-    Returns True if successful (either existing or new), False otherwise.
+    Downloads files from S3 to a temporary directory, processes them, and uploads the index back to S3.
+    Returns True if successful, False otherwise.
     """
     try:
+        # Set up necessary models or configurations
         setup_models()
-        
-        # Create persist directory path
-        persist_dir = os.path.join(BASE_PERSIST_DIR, user_id, deal_id)
-        
-        # Check if persist directory and index files exist
-        if os.path.exists(persist_dir) and os.path.exists(os.path.join(persist_dir, "docstore.json")):
-            try:
-                # Try to load existing index
-                storage_context = StorageContext.from_defaults(persist_dir=persist_dir)
-                index = load_index_from_storage(storage_context)
-                print(f"Found and loaded existing index from: {persist_dir}")
-                return True
-            except Exception as e:
-                print(f"Error loading existing index: {str(e)}. Will create new index.")
-                # If loading fails, continue to create a new index
-                pass
-        
-        # Create directory if it doesn't exist
-        os.makedirs(persist_dir, exist_ok=True)
-        
-        # Temporary directory for downloading files
+
+        # Use a temporary directory for all file operations
         with tempfile.TemporaryDirectory() as temp_dir:
             downloaded_files = []
 
-            # Download each file from S3 to the temporary directory
+            # Download files from S3 to the temporary directory
             for s3_path in file_paths:
                 filename = os.path.basename(s3_path)
                 temp_file_path = os.path.join(temp_dir, filename)
@@ -163,22 +144,24 @@ async def process_uploaded_documents(file_paths: List[str], user_id: str, deal_i
                 except Exception as e:
                     print(f"Failed to download {s3_path} from S3: {str(e)}")
                     continue
-            
+
             # Parse all downloaded documents and create a combined index
             print(f"Creating new index for downloaded documents: {downloaded_files}")
             parser = LlamaParse(result_type="markdown")
             all_documents = []
-            
+
             for file_path in downloaded_files:
                 documents = await parser.aload_data(file_path)
                 all_documents.extend(documents)
-            
-            # Create and persist combined index
+
+            # Create the index directly in the temporary directory
+            persist_dir = os.path.join(temp_dir, "index")
+            os.makedirs(persist_dir, exist_ok=True)
             index = VectorStoreIndex.from_documents(all_documents)
             index.storage_context.persist(persist_dir=persist_dir)
 
             # Upload index files to S3
-            index_files = ["docstore.json", "index.json", "vectorstore.pkl"]
+            index_files = os.listdir(persist_dir)
             s3_index_dir = f"indexes/{user_id}/{deal_id}"
 
             for index_file in index_files:
@@ -190,7 +173,7 @@ async def process_uploaded_documents(file_paths: List[str], user_id: str, deal_i
                         try:
                             s3_client.head_object(Bucket=S3_BUCKET, Key=s3_path)
                             print(f"{s3_path} already exists in S3. Skipping upload.")
-                            continue  # Skip this file, as it already exists in S3
+                            continue  # Skip if file already exists
                         except s3_client.exceptions.ClientError:
                             pass  # File does not exist, proceed with upload
 
@@ -203,17 +186,15 @@ async def process_uploaded_documents(file_paths: List[str], user_id: str, deal_i
                             status_code=500,
                             detail=f"Failed to upload index file '{index_file}' to S3: {str(e)}",
                         )
-        
-        print(f"Successfully created and stored new combined index in: {persist_dir}")
+
+        print(f"Successfully created and stored new combined index for user_id={user_id}, deal_id={deal_id}")
         return True
-        
+
     except Exception as e:
         print(f"Error in process_uploaded_documents: {str(e)}")
         import traceback
         traceback.print_exc()
         return False
-
-
 
 def get_index_from_storage(user_id: str, deal_id: str) -> Union[VectorStoreIndex, None]:
     """
@@ -221,33 +202,51 @@ def get_index_from_storage(user_id: str, deal_id: str) -> Union[VectorStoreIndex
     """
     try:
         persist_dir = os.path.join(BASE_PERSIST_DIR, user_id, deal_id)
-        
+
         # Check if index exists locally
         if os.path.exists(persist_dir):
             print(f"Found index locally for user {user_id} and deal {deal_id}")
             storage_context = StorageContext.from_defaults(persist_dir=persist_dir)
             return load_index_from_storage(storage_context)
-        
+
         # Fallback to fetching from S3 if local index is not available
         s3_index_dir = f"indexes/{user_id}/{deal_id}"
         with tempfile.TemporaryDirectory() as temp_dir:
             try:
-                # Download all index files from S3
+                # List of required files for the index
+                required_files = ["default__vector_store.json", "docstore.json", "graph_store.json", "index_store.json", "image__vector_store.json"]
+
                 print(f"Fetching index files from S3 path: {s3_index_dir}")
-                for index_file in ["docstore.json", "index.json", "vectorstore.pkl"]:
+                for index_file in required_files:
                     s3_file_path = f"{s3_index_dir}/{index_file}"
                     local_path = os.path.join(temp_dir, index_file)
+
+                    print(f"Checking existence of {s3_file_path} in S3...")
+                    try:
+                        s3_client.head_object(Bucket=S3_BUCKET, Key=s3_file_path)
+                    except s3_client.exceptions.ClientError as e:
+                        print(f"File {s3_file_path} does not exist in S3: {e}")
+                        return None
+
+                    print(f"Downloading {index_file} from S3 to {local_path}...")
                     s3_client.download_file(S3_BUCKET, s3_file_path, local_path)
+
+                    if not os.path.exists(local_path) or os.path.getsize(local_path) <= 0:
+                        print(f"File {local_path} is missing or empty after download.")
+                        return None
 
                 # Load index from the temporary directory
                 storage_context = StorageContext.from_defaults(persist_dir=temp_dir)
                 return load_index_from_storage(storage_context)
+
             except Exception as e:
                 print(f"Error fetching index from S3: {e}")
                 return None
+
     except Exception as e:
         print(f"Error loading index: {str(e)}")
         return None
+
 
 class DocumentResearchAgent(Workflow):
     """Financial Due Diligence Report Generation Workflow"""
@@ -485,39 +484,44 @@ async def generate_structured_report(query: dict, user_id: str, deal_id: str):
     """
     try:
         setup_models()
-        
+
         # Get existing index
         index = get_index_from_storage(user_id, deal_id)
         if not index:
             return {"error": "No processed document found for this user/deal combination"}
-            
+
         # Create query tool
         query_tool = QueryEngineTool.from_defaults(
             index.as_query_engine(similarity_top_k=10),
             name="document_analysis_tool",
             description="Tool for analyzing document content"
         )
-        
+
         # Initialize and run agent
         agent = DocumentResearchAgent(timeout=600, verbose=True)
         handler = agent.run(query=query, tools=[query_tool])
-        
+
         final_report = None
         async for ev in handler.stream_events():
             if isinstance(ev, ProgressEvent):
                 print(ev.progress)
             elif isinstance(ev, StopEvent):
                 final_report = ev.result
-        
+
         if final_report:
-            persist_dir = os.path.join(BASE_PERSIST_DIR, user_id, deal_id)
-            output_path = os.path.join(persist_dir, "generated_report.txt")
-            with open(output_path, "w", encoding="utf-8") as f:
-                f.write(final_report)
-            print(f"Report exported to: {output_path}")
-                
+            with tempfile.TemporaryDirectory() as temp_dir:
+                temp_file_path = os.path.join(temp_dir, "generated_report.txt")
+                with open(temp_file_path, "w", encoding="utf-8") as f:
+                    f.write(final_report)
+                print(f"Temporary report path: {temp_file_path}")
+
+                # Upload the report to S3
+                s3_report_path = f"indexes/{user_id}/{deal_id}/generated_report.txt"
+                s3_client.upload_file(temp_file_path, S3_BUCKET, s3_report_path)
+                print(f"Report uploaded to S3 at: {s3_report_path}")
+
         return final_report
-        
+
     except Exception as e:
         print(f"Error generating report: {str(e)}")
         import traceback

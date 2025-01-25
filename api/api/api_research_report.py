@@ -132,7 +132,7 @@ async def upload_documents(
         print("Step 1: Received files", [file.filename for file in files])  # Debugging
 
         # Upload files to S3
-        s3_file_paths = upload_files_to_s3(files, BASE_DIR, deal_id, S3_BUCKET)
+        s3_file_paths = upload_files_to_s3(files, BASE_DIR, user_id, deal_id, S3_BUCKET)
         print("Step 2: Files uploaded to S3", s3_file_paths)  # Debugging
 
         # Process the uploaded documents (if any additional processing is required)
@@ -246,9 +246,3 @@ async def get_report(
     except Exception as e:
         logerror(f"Error in get_report: {e}")
         raise HTTPException(status_code=500, detail=str(e))
-
-# Include the new router in the main FastAPI app
-# Example:
-# from fastapi import FastAPI
-# app = FastAPI()
-# app.include_router(document_router)
