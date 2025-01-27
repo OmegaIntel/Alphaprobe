@@ -24,12 +24,11 @@ export async function action({ request }: { request: Request }) {
       throw new Error('Invalid token received');
     }
 
-    amplitude.setUserId(formData.get('username')?.toString());
-    
-    // Return success and token instead of redirecting
+    // Return success and token (do not set amplitude here as it's client-side)
     return json({
       success: true,
-      access_token
+      access_token,
+      email: username, // Send the username back for setting user ID on the client
     });
 
   } catch (error: any) {
@@ -45,6 +44,7 @@ export default function LoginRoute() {
     errorMessage?: string;
     success?: boolean;
     access_token?: string;
+    email?: string; // Add email to action data
   }>();
   const navigate = useNavigate();
 
@@ -52,6 +52,14 @@ export default function LoginRoute() {
     if (actionData?.success && actionData.access_token) {
       // Set cookie client-side
       document.cookie = `authToken=${actionData.access_token}; path=/; max-age=7200; SameSite=Strict`;
+
+      // Set Amplitude user ID
+      if (actionData.email) {
+        amplitude.setUserId(actionData.email); // Set user ID in Amplitude
+        amplitude.track('Login Successful', { user: actionData.email }); // Optional: Track login event
+      }
+
+      // Navigate to the dashboard
       navigate('/dashboard');
     }
   }, [actionData, navigate]);
