@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Login from '~/pages/auth/login';
 import { loginUser } from '~/services/auth';
 import * as amplitude from '@amplitude/analytics-browser';
+import { sendAnalyticsEvent } from '~/root';
 
 export async function action({ request }: { request: Request }) {
   const formData = await request.formData();
@@ -55,8 +56,9 @@ export default function LoginRoute() {
 
       // Set Amplitude user ID
       if (actionData.email) {
-        amplitude.setUserId(actionData.email); // Set user ID in Amplitude
-        amplitude.track('Login Successful', { user: actionData.email }); // Optional: Track login event
+        localStorage.setItem('user_id', actionData.email);
+        sendAnalyticsEvent('Login Successful', { loginMethod: 'password' });
+        amplitude.setUserId(actionData.email)
       }
 
       // Navigate to the dashboard

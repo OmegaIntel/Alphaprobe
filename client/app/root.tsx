@@ -11,20 +11,58 @@ import type { LinksFunction, LoaderFunctionArgs } from '@remix-run/node';
 import './tailwind.css';
 import { Provider } from 'react-redux';
 import store from './store/store';
-import './analytics.client';
-import { useEffect, useState } from 'react';
-import * as amplitude from '@amplitude/analytics-browser';
+import type { LoaderFunctionArgs } from '@remix-run/node';
+import { useLocation } from '@remix-run/react';
+import { useEffect } from 'react';
+
 import React from 'react';
+import { API_BASE_URL } from './constant';
 
-const AMPLITUDE_API_KEY = 'b07260e647c7c3cc3c25aac93aa17db8';
+// Function to get or generate a device ID
+function getDeviceId() {
+  let deviceId = localStorage.getItem('device_id');
+  if (!deviceId) {
+    deviceId = `device_${Math.random().toString(36).substring(2, 15)}`;
+    localStorage.setItem('device_id', deviceId);
+  }
+  return deviceId;
+}
 
-// Add proper typing for the loader data
-type LoaderData = {
-  ENV: {
-    REMIX_API_BASE_URL: string;
-  };
-};
+// Custom function to send events to your backend with fallback to Amplitude Browser SDK
+export async function sendAnalyticsEvent(eventType: string, eventProperties = {}) {
+  // Retrieve the user_id (fallback to 'anonymous_user' if not logged in)
+  const userId = localStorage.getItem('user_id') || 'anonymous_user';
 
+  // Retrieve the device ID
+  const deviceId = getDeviceId();
+
+  try {
+    // Attempt to send the event to the backend
+    const response = await fetch(`${API_BASE_URL}/api/analytics`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        event_type: eventType,
+        event_properties: eventProperties,
+        user_id: userId, // Include user ID dynamically
+        device_id: deviceId, // Always include device ID
+      }),
+    });
+
+    if (!response.ok) {
+      console.error(`Backend failed to send event: ${eventType}`, await response.text());
+      throw new Error('Backend failed'); // Trigger fallback
+    } else {
+      console.log(`Event sent to backend: ${eventType}`, await response.json());
+    }
+  } catch (error) {
+    console.error(`Error sending event to backend, falling back to Amplitude: ${eventType}`, error);
+  }
+}
+
+// Loader function for Remix
 export async function loader({ request }: LoaderFunctionArgs) {
   return new Response(
     JSON.stringify({
@@ -38,6 +76,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
   );
 }
 
+// Links for Remix
 export const links: LinksFunction = () => [
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
   {
@@ -51,6 +90,7 @@ export const links: LinksFunction = () => [
   },
 ];
 
+// Layout Component
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="dark">
@@ -70,54 +110,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
+// Main App Component
 export default function App() {
   const location = useLocation();
-  const loaderData = useLoaderData<LoaderData>();
-  const [isAmplitudeInitialized, setIsAmplitudeInitialized] = useState(false);
-
-  // Initialize Amplitude
-  useEffect(() => {
-    if (typeof window !== 'undefined' && !isAmplitudeInitialized) {
-      try {
-        amplitude.init(AMPLITUDE_API_KEY, {
-          defaultTracking: {
-            pageViews: true,
-            sessions: true,
-            formInteractions: true,
-            fileDownloads: true,
-          },
-          logLevel: process.env.NODE_ENV === 'development' ? amplitude.Types.LogLevel.Debug : amplitude.Types.LogLevel.Error,
-        });
-
-        // Track the initial app load with more context
-        amplitude.track('App Loaded', {
-          environment: process.env.NODE_ENV,
-          url: window.location.href,
-          timestamp: new Date().toISOString(),
-        });
-
-        setIsAmplitudeInitialized(true);
-      } catch (error) {
-        console.error('Failed to initialize Amplitude:', error);
-      }
-    }
-  }, [isAmplitudeInitialized]);
 
   // Track page views on route changes
   useEffect(() => {
-    if (isAmplitudeInitialized) {
-      try {
-        amplitude.track('Page View', {
-          path: location.pathname,
-          search: location.search,
-          hash: location.hash,
-          timestamp: new Date().toISOString(),
-        });
-      } catch (error) {
-        console.error('Failed to track page view:', error);
-      }
-    }
-  }, [location, isAmplitudeInitialized]);
+    sendAnalyticsEvent('Page View', { path: location.pathname });
+  }, [location]);
 
   return (
     <Provider store={store}>
