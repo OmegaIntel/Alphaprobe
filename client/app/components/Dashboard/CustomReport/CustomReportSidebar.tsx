@@ -347,7 +347,7 @@ export function DealsSidebar() {
                               activeDealId === deal.id ? 'secondary' : 'ghost'
                             }
                             className="w-full justify-start text-sm h-auto py-2"
-                            onClick={() => handleDealSelect(deal.id)}
+                            onClick={() => {handleDealSelect(deal.id); navigate(`/duediligence/${deal.name}`);}}
                           >
                             {deal.name}
                           </Button>

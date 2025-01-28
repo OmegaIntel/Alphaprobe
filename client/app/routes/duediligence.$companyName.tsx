@@ -4,8 +4,6 @@ import { Button } from "~/components/ui/button";
 
 export default function DueDeligence() {
   const { companyName } = useParams();
-  const navigate = useNavigate();
-  
   
   return (
     <div>
