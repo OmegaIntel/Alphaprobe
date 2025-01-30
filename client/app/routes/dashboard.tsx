@@ -1,47 +1,151 @@
-import type { LoaderFunction, MetaFunction } from '@remix-run/node';
-import { useLoaderData } from '@remix-run/react';
-import { json, redirect } from '@remix-run/node';
-import { getSession } from '~/utils/session.server';
+import type { FC } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "@remix-run/react";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "~/components/ui/tabs";
+import CompanyDetails from "~/components/Dashboard/CompanyInsights/CompanyLayout";
+import { ThesisForm } from "~/components/Dashboard/InvestmentThesis/InvestmentThesis";
+import NewsBar from "~/components/Newsbar/Newsbar";
+import { categoryList } from "~/constant";
+import DashboardLayout from "~/pages/dashboard/DashboardLayout";
+import MarketResearchChatLayout from "~/components/Dashboard/MarketResearch/MarketResearchChatLayout";
+import IndustryInsightsLayout from "~/components/Dashboard/IndustryInsights/IndustryInsightsLayout";
+import { Button } from "~/components/ui/button";
+import CustomReportLayout from "~/components/Dashboard/CustomReport/CustomReportLayout";
 
-export const meta: MetaFunction = () => [
-  { title: 'Dashboard | MyApp' },
-  { name: 'description', content: 'Your personalized dashboard.' },
-];
+const DashboardPage: FC = () => {
+  const [activeCategory, setActiveCategory] = useState("Dashboard");
+  const navigate = useNavigate();
 
-// Loader to fetch data or check authentication
-export const loader: LoaderFunction = async ({ request }) => {
-  const session = await getSession(request.headers.get('Cookie'));
-  const token = session.get('token');
+  // Check authentication on mount
+  useEffect(() => {
+    const token = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("authToken="))
+      ?.split("=")[1];
 
-  if (!token) {
-    return redirect('/login');
-  }
+    if (!token) {
+      navigate("/login");
+    }
+  }, [navigate]);
 
-  // Simulate fetching user data (replace with your actual API call)
-  const userData = {
-    name: 'John Doe',
-    email: 'john@example.com',
+  // Logout handler
+  const handleLogout = () => {
+    document.cookie = "authToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    navigate("/login");
   };
 
-  return json({ user: userData });
-};
-
-// Default view for `/dashboard`
-export default function DashboardIndex() {
-  const { user } = useLoaderData<typeof loader>();
-
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold">Welcome, {user.name}!</h1>
-      <p className="text-gray-600 mt-2">Your email: {user.email}</p>
-      <div className="mt-6">
-        <a
-          href="/dashboard/settings"
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+    <div className="flex flex-col flex-grow">
+      {/* Use shadcn Tabs to handle the categories */}
+      <Tabs
+        value={activeCategory}
+        onValueChange={(value) => setActiveCategory(value)}
+      >
+        <div className="flex items-center justify-between bg-zinc-800">
+          {/* Navigation Tabs */}
+          <TabsList className="flex flex-wrap justify-start gap-2">
+            {categoryList.map((category, index) => (
+              <TabsTrigger
+                key={index}
+                value={category}
+                className="whitespace-nowrap"
+              >
+                {category}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+
+          {/* Logout Button */}
+          <Button variant="destructive" className="m-1" onClick={handleLogout}>
+            Logout
+          </Button>
+        </div>
+
+        {/* Dashboard */}
+        <TabsContent value="Dashboard" className="flex-grow text-white">
+          <DashboardLayout
+            active={activeCategory}
+            setActive={setActiveCategory}
+          />
+          <div className="h-[30rem] py-10 overflow-auto">
+            <NewsBar />
+          </div>
+        </TabsContent>
+
+        {/* Market Research */}
+        <TabsContent value="Market Research" className="p-5">
+          <MarketResearchChatLayout />
+        </TabsContent>
+
+        {/* Industry Insights */}
+        <TabsContent value="Industry Insights" className="p-5">
+          <IndustryInsightsLayout />
+        </TabsContent>
+
+        {/* Company Insights */}
+        <TabsContent value="Company Insights">
+          <CompanyDetails />
+        </TabsContent>
+
+        {/* Company Insights */}
+        <TabsContent value="Deal Room">
+          <CustomReportLayout />
+        </TabsContent>
+
+        {/* Investment Thesis */}
+        <TabsContent
+          value="Investment Thesis"
+          className="p-5 bg-stone-950 text-white"
         >
-          Go to Settings
-        </a>
-      </div>
+          <ThesisForm
+            questions={[
+              {
+                id: 1,
+                question: "What industries or sectors are you most interested in?",
+                type: "text",
+              },
+              {
+                id: 2,
+                question:
+                  "Do you have expertise or experience in particular industries that you'd like to leverage?",
+                type: "text",
+              },
+              {
+                id: 3,
+                question: "What industry characteristics are most important to you?",
+                type: "select",
+                options: ["Growth Rate", "Fragmentation", "Recurring Revenue", "Other"],
+              },
+              {
+                id: 4,
+                question: "Are there any specific mega-trends you want to capitalize on?",
+                type: "select",
+                options: [
+                  "Aging Population",
+                  "Digital Transformation",
+                  "Health and Wellness",
+                  "Other",
+                ],
+              },
+              {
+                id: 5,
+                question: "Are you more interested in industries with?",
+                type: "select",
+                options: ["Rapid technological change", "Traditional business model"],
+              },
+              {
+                id: 6,
+                question:
+                  "Anything else we should consider in coming up with investment thesis?",
+                type: "text",
+              },
+            ]}
+            setActiveIndustry={setActiveCategory}
+          />
+        </TabsContent>
+      </Tabs>
     </div>
   );
-}
+};
+
+export default DashboardPage;

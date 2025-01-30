@@ -1322,3 +1322,1014 @@ frontend-1  | npm error A complete log of this run can be found in: /root/.npm/_
 [Kscraper-1 exited with code 0
 [Kfrontend-1 exited with code 1
 [Kapp-1 exited with code 137
+time="2025-01-10T19:20:51Z" level=warning msg="The \"REMIX_API_BASE_URL\" variable is not set. Defaulting to a blank string."
+#0 building with "default" instance using docker driver
+
+#1 [app internal] load build definition from Dockerfile
+#1 transferring dockerfile: 614B done
+#1 DONE 0.0s
+
+#2 [scraper internal] load build definition from Dockerfile
+#2 transferring dockerfile: 434B done
+#2 DONE 0.0s
+
+#3 [frontend internal] load build definition from Dockerfile
+#3 transferring dockerfile: 537B done
+#3 DONE 0.0s
+
+#4 [scraper internal] load metadata for docker.io/library/python:3.10-slim
+#4 DONE 0.1s
+
+#5 [frontend internal] load metadata for docker.io/library/node:20-alpine
+#5 DONE 0.1s
+
+#6 [scraper internal] load .dockerignore
+#6 transferring context: 2B done
+#6 DONE 0.0s
+
+#7 [app  1/10] FROM docker.io/library/python:3.10-slim@sha256:bdc6c5b8f725df8b009b32da65cbf46bfd24d1c86dce2e6169452c193ad660b4
+#7 DONE 0.0s
+
+#8 [app internal] load .dockerignore
+#8 transferring context: 1.34kB done
+#8 DONE 0.0s
+
+#9 [frontend internal] load .dockerignore
+#9 transferring context: 2B done
+#9 DONE 0.0s
+
+#10 [frontend 1/6] FROM docker.io/library/node:20-alpine@sha256:24fb6aa7020d9a20b00d6da6d1714187c45ed00d1eb4adb01395843c338b9372
+#10 DONE 0.0s
+
+#11 [scraper internal] load build context
+#11 transferring context: 3.85kB done
+#11 DONE 0.0s
+
+#12 [scraper  7/10] RUN playwright install-deps
+#12 CACHED
+
+#13 [scraper  6/10] RUN playwright install
+#13 CACHED
+
+#14 [scraper  5/10] RUN pip install -r /app/requirements.txt
+#14 CACHED
+
+#15 [scraper  8/10] COPY . /app
+#15 CACHED
+
+#16 [scraper  3/10] COPY ./requirements.txt /app/requirements.txt
+#16 CACHED
+
+#17 [scraper  2/10] WORKDIR /app
+#17 CACHED
+
+#18 [scraper  4/10] RUN pip install --upgrade pip
+#18 CACHED
+
+#19 [scraper  9/10] RUN pip install -e .
+#19 CACHED
+
+#20 [scraper 10/10] WORKDIR /app/company_data_scraper
+#20 CACHED
+
+#21 [scraper] exporting to image
+#21 exporting layers done
+#21 writing image sha256:b064ea5c0d1c6029df895100ecfcdb24c6a7e8c615f05e48105bf59eef82fcf5 done
+#21 naming to docker.io/library/alphaprobe-scraper 0.0s done
+#21 DONE 0.0s
+
+#22 [app internal] load build context
+#22 transferring context: 3.18MB 0.1s done
+#22 DONE 0.1s
+
+#17 [app  2/10] WORKDIR /app
+#17 CACHED
+
+#23 [app 3/8] RUN apt-get update && apt-get install -y     pkg-config     default-mysql-client     default-libmysqlclient-dev     libssl-dev     build-essential     --no-install-recommends &&     apt-get clean &&     rm -rf /var/lib/apt/lists/*
+#23 CACHED
+
+#24 [app 4/8] COPY ./requirements.txt /app/requirements.txt
+#24 DONE 0.1s
+
+#25 [frontend internal] load build context
+#25 transferring context: 2.23MB 2.4s done
+#25 DONE 2.4s
+
+#26 [frontend 2/6] WORKDIR /app
+#26 CACHED
+
+#27 [frontend 3/6] COPY package*.json ./
+#27 DONE 0.3s
+
+#28 [app 5/8] RUN pip install --no-cache-dir -r /app/requirements.txt
+#28 2.940 ERROR: Invalid requirement: 'stripe 11.4.1' (from line 41 of /app/requirements.txt)
+#28 3.093 
+#28 3.093 [notice] A new release of pip is available: 23.0.1 -> 24.3.1
+#28 3.093 [notice] To update, run: pip install --upgrade pip
+#28 ERROR: process "/bin/sh -c pip install --no-cache-dir -r /app/requirements.txt" did not complete successfully: exit code: 1
+
+#29 [frontend 4/6] RUN npm install
+#29 CANCELED
+------
+ > [app 5/8] RUN pip install --no-cache-dir -r /app/requirements.txt:
+2.940 ERROR: Invalid requirement: 'stripe 11.4.1' (from line 41 of /app/requirements.txt)
+3.093 
+3.093 [notice] A new release of pip is available: 23.0.1 -> 24.3.1
+3.093 [notice] To update, run: pip install --upgrade pip
+------
+failed to solve: process "/bin/sh -c pip install --no-cache-dir -r /app/requirements.txt" did not complete successfully: exit code: 1
+time="2025-01-10T19:25:27Z" level=warning msg="The \"REMIX_API_BASE_URL\" variable is not set. Defaulting to a blank string."
+#0 building with "default" instance using docker driver
+
+#1 [scraper internal] load build definition from Dockerfile
+#1 transferring dockerfile: 434B done
+#1 DONE 0.0s
+
+#2 [app internal] load build definition from Dockerfile
+#2 transferring dockerfile: 614B done
+#2 DONE 0.1s
+
+#3 [frontend internal] load build definition from Dockerfile
+#3 transferring dockerfile: 537B done
+#3 DONE 0.2s
+
+#4 [frontend internal] load metadata for docker.io/library/node:20-alpine
+#4 DONE 0.1s
+
+#5 [app internal] load metadata for docker.io/library/python:3.10-slim
+#5 DONE 0.1s
+
+#6 [frontend internal] load .dockerignore
+#6 transferring context: 2B done
+#6 DONE 0.0s
+
+#7 [app internal] load .dockerignore
+#7 transferring context: 1.34kB done
+#7 DONE 0.0s
+
+#8 [frontend 1/6] FROM docker.io/library/node:20-alpine@sha256:24fb6aa7020d9a20b00d6da6d1714187c45ed00d1eb4adb01395843c338b9372
+#8 DONE 0.0s
+
+#9 [scraper internal] load .dockerignore
+#9 transferring context: 2B done
+#9 DONE 0.0s
+
+#10 [scraper 1/8] FROM docker.io/library/python:3.10-slim@sha256:bdc6c5b8f725df8b009b32da65cbf46bfd24d1c86dce2e6169452c193ad660b4
+#10 DONE 0.0s
+
+#11 [frontend internal] load build context
+#11 transferring context: 10.51kB 0.0s done
+#11 DONE 0.0s
+
+#12 [scraper internal] load build context
+#12 transferring context: 3.85kB done
+#12 DONE 0.0s
+
+#13 [frontend 2/6] WORKDIR /app
+#13 CACHED
+
+#14 [frontend 3/6] COPY package*.json ./
+#14 CACHED
+
+#15 [scraper  7/10] RUN playwright install-deps
+#15 CACHED
+
+#16 [scraper 2/8] WORKDIR /app
+#16 CACHED
+
+#17 [scraper  6/10] RUN playwright install
+#17 CACHED
+
+#18 [scraper  9/10] RUN pip install -e .
+#18 CACHED
+
+#19 [scraper  4/10] RUN pip install --upgrade pip
+#19 CACHED
+
+#20 [scraper  3/10] COPY ./requirements.txt /app/requirements.txt
+#20 CACHED
+
+#21 [scraper  5/10] RUN pip install -r /app/requirements.txt
+#21 CACHED
+
+#22 [scraper  8/10] COPY . /app
+#22 CACHED
+
+#23 [scraper 10/10] WORKDIR /app/company_data_scraper
+#23 CACHED
+
+#24 [scraper] exporting to image
+#24 exporting layers done
+#24 writing image sha256:b064ea5c0d1c6029df895100ecfcdb24c6a7e8c615f05e48105bf59eef82fcf5 0.0s done
+#24 naming to docker.io/library/alphaprobe-scraper
+#24 naming to docker.io/library/alphaprobe-scraper done
+#24 DONE 0.0s
+
+#25 [app internal] load build context
+#25 transferring context: 232.07kB 0.1s done
+#25 DONE 0.1s
+
+#16 [app 2/8] WORKDIR /app
+#16 CACHED
+
+#26 [app 3/8] RUN apt-get update && apt-get install -y     pkg-config     default-mysql-client     default-libmysqlclient-dev     libssl-dev     build-essential     --no-install-recommends &&     apt-get clean &&     rm -rf /var/lib/apt/lists/*
+#26 CACHED
+
+#27 [app 4/8] COPY ./requirements.txt /app/requirements.txt
+#27 DONE 0.1s
+
+#28 [frontend 4/6] RUN npm install
+#28 ...
+
+#29 [app 5/8] RUN pip install --no-cache-dir -r /app/requirements.txt
+#29 2.430 Collecting dask-expr==1.1.7
+#29 2.481   Downloading dask_expr-1.1.7-py3-none-any.whl (241 kB)
+#29 2.513      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 241.7/241.7 kB 8.4 MB/s eta 0:00:00
+#29 2.584 Collecting alembic==1.13.2
+#29 2.589   Downloading alembic-1.13.2-py3-none-any.whl (232 kB)
+#29 2.597      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 233.0/233.0 kB 55.8 MB/s eta 0:00:00
+#29 2.729 Collecting fastapi==0.111.1
+#29 2.735   Downloading fastapi-0.111.1-py3-none-any.whl (92 kB)
+#29 2.739      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.2/92.2 kB 143.4 MB/s eta 0:00:00
+#29 2.825 Collecting httptools==0.6.1
+#29 2.831   Downloading httptools-0.6.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (341 kB)
+#29 2.837      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 341.4/341.4 kB 114.9 MB/s eta 0:00:00
+#29 2.860 Collecting linkify-it-py==2.0.3
+#29 2.864   Downloading linkify_it_py-2.0.3-py3-none-any.whl (19 kB)
+#29 2.890 Collecting mdit-py-plugins==0.4.1
+#29 2.898   Downloading mdit_py_plugins-0.4.1-py3-none-any.whl (54 kB)
+#29 2.902      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.8/54.8 kB 141.1 MB/s eta 0:00:00
+#29 2.941 Collecting openpyxl==3.1.5
+#29 2.946   Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+#29 2.950      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 250.9/250.9 kB 174.0 MB/s eta 0:00:00
+#29 3.007 Collecting pipdeptree==2.23.1
+#29 3.012   Downloading pipdeptree-2.23.1-py3-none-any.whl (32 kB)
+#29 3.556 Collecting PyMuPDF==1.24.7
+#29 3.569   Downloading PyMuPDF-1.24.7-cp310-none-manylinux2014_x86_64.whl (3.5 MB)
+#29 3.594      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.5/3.5 MB 157.1 MB/s eta 0:00:00
+#29 3.807 Collecting watchfiles==0.22.0
+#29 3.815   Downloading watchfiles-0.22.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+#29 3.824      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 180.2 MB/s eta 0:00:00
+#29 4.114 Collecting websockets==12.0
+#29 4.121   Downloading websockets-12.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (130 kB)
+#29 4.125      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.2/130.2 kB 174.9 MB/s eta 0:00:00
+#29 4.245 Collecting weaviate-client==4.7.1
+#29 4.250   Downloading weaviate_client-4.7.1-py3-none-any.whl (368 kB)
+#29 4.255      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 368.3/368.3 kB 197.9 MB/s eta 0:00:00
+#29 4.508 Collecting langchain==0.2.12
+#29 4.521   Downloading langchain-0.2.12-py3-none-any.whl (990 kB)
+#29 4.530      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 990.6/990.6 kB 175.1 MB/s eta 0:00:00
+#29 4.647 Collecting langgraph==0.1.9
+#29 4.652   Downloading langgraph-0.1.9-py3-none-any.whl (95 kB)
+#29 4.656      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.0/96.0 kB 158.3 MB/s eta 0:00:00
+#29 4.717 Collecting langchain_community==0.2.11
+#29 4.725   Downloading langchain_community-0.2.11-py3-none-any.whl (2.3 MB)
+#29 4.741      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 172.8 MB/s eta 0:00:00
+#29 4.885 Collecting openai==1.35.14
+#29 4.891   Downloading openai-1.35.14-py3-none-any.whl (328 kB)
+#29 4.896      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 328.5/328.5 kB 181.9 MB/s eta 0:00:00
+#29 5.002 Collecting tqdm==4.66.4
+#29 5.006   Downloading tqdm-4.66.4-py3-none-any.whl (78 kB)
+#29 5.009      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.3/78.3 kB 167.6 MB/s eta 0:00:00
+#29 5.139 Collecting streamlit==1.37.0
+#29 5.144   Downloading streamlit-1.37.0-py2.py3-none-any.whl (8.7 MB)
+#29 5.205      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 148.4 MB/s eta 0:00:00
+#29 5.298 Collecting werkzeug==3.0.3
+#29 5.303   Downloading werkzeug-3.0.3-py3-none-any.whl (227 kB)
+#29 5.307      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 227.3/227.3 kB 181.7 MB/s eta 0:00:00
+#29 5.329 Collecting jose==1.0.0
+#29 5.333   Downloading jose-1.0.0.tar.gz (9.2 kB)
+#29 5.340   Preparing metadata (setup.py): started
+#29 6.240   Preparing metadata (setup.py): finished with status 'done'
+#29 6.277 Collecting pyjwt==2.8.0
+#29 6.280   Downloading PyJWT-2.8.0-py3-none-any.whl (22 kB)
+#29 6.301 Collecting passlib==1.7.4
+#29 6.306   Downloading passlib-1.7.4-py2.py3-none-any.whl (525 kB)
+#29 6.312      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 525.6/525.6 kB 194.0 MB/s eta 0:00:00
+#29 6.364 Collecting langchain-openai==0.1.20
+#29 6.370   Downloading langchain_openai-0.1.20-py3-none-any.whl (48 kB)
+#29 6.373      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.2/48.2 kB 144.1 MB/s eta 0:00:00
+#29 6.391 Collecting llmsherpa==0.1.4
+#29 6.397   Downloading llmsherpa-0.1.4-py3-none-any.whl (13 kB)
+#29 ...
+
+#28 [frontend 4/6] RUN npm install
+#28 6.552 npm warn deprecated uuidv4@6.2.13: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+#28 6.879 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+#28 7.849 npm warn deprecated npmlog@5.0.1: This package is no longer supported.
+#28 8.875 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+#28 9.588 npm warn deprecated gauge@3.0.2: This package is no longer supported.
+#28 10.33 npm warn deprecated are-we-there-yet@2.0.0: This package is no longer supported.
+#28 11.78 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+#28 11.85 npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+#28 12.42 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#28 ...
+
+#29 [app 5/8] RUN pip install --no-cache-dir -r /app/requirements.txt
+#29 6.761 Collecting pydantic==2.9.2
+#29 6.765   Downloading pydantic-2.9.2-py3-none-any.whl (434 kB)
+#29 6.771      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 434.9/434.9 kB 173.0 MB/s eta 0:00:00
+#29 7.741 Collecting SQLAlchemy==2.0.35
+#29 7.749   Downloading SQLAlchemy-2.0.35-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
+#29 7.778      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 135.6 MB/s eta 0:00:00
+#29 7.841 Collecting sqlalchemy_utils==0.41.2
+#29 7.846   Downloading SQLAlchemy_Utils-0.41.2-py3-none-any.whl (93 kB)
+#29 7.850      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 93.1/93.1 kB 185.4 MB/s eta 0:00:00
+#29 7.898 Collecting mysqlclient==2.2.4
+#29 7.903   Downloading mysqlclient-2.2.4.tar.gz (90 kB)
+#29 7.907      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.4/90.4 kB 175.8 MB/s eta 0:00:00
+#29 7.931   Installing build dependencies: started
+#29 10.38   Installing build dependencies: finished with status 'done'
+#29 10.38   Getting requirements to build wheel: started
+#29 10.76   Getting requirements to build wheel: finished with status 'done'
+#29 10.76   Preparing metadata (pyproject.toml): started
+#29 11.07   Preparing metadata (pyproject.toml): finished with status 'done'
+#29 11.09 Collecting pdfminer==20191125
+#29 11.11   Downloading pdfminer-20191125.tar.gz (4.2 MB)
+#29 11.14      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 164.6 MB/s eta 0:00:00
+#29 11.31   Preparing metadata (setup.py): started
+#29 11.63   Preparing metadata (setup.py): finished with status 'done'
+#29 11.68 Collecting pdfminer.six==20240706
+#29 11.69   Downloading pdfminer.six-20240706-py3-none-any.whl (5.6 MB)
+#29 11.72      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.6/5.6 MB 170.4 MB/s eta 0:00:00
+#29 12.65 Collecting boto3
+#29 12.66   Downloading boto3-1.35.96-py3-none-any.whl (139 kB)
+#29 12.66      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.2/139.2 kB 190.5 MB/s eta 0:00:00
+#29 12.68 Collecting fastapi_cors==0.0.6
+#29 12.68   Downloading fastapi_cors-0.0.6-py3-none-any.whl (5.0 kB)
+#29 12.73 Collecting httpx==0.27.0
+#29 12.74   Downloading httpx-0.27.0-py3-none-any.whl (75 kB)
+#29 12.74      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.6/75.6 kB 170.8 MB/s eta 0:00:00
+#29 12.76 Collecting xmltodict==0.13.0
+#29 12.76   Downloading xmltodict-0.13.0-py2.py3-none-any.whl (10.0 kB)
+#29 12.79 Collecting python-dateutil
+#29 12.80   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#29 12.80      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 171.1 MB/s eta 0:00:00
+#29 12.85 Collecting pypdf==4.3.1
+#29 13.12   Downloading pypdf-4.3.1-py3-none-any.whl (295 kB)
+#29 13.13      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 295.8/295.8 kB 58.3 MB/s eta 0:00:00
+#29 13.23 Collecting aws-s3-tools==0.3.0
+#29 13.30   Downloading aws_s3_tools-0.3.0-py3-none-any.whl (22 kB)
+#29 13.33 Collecting cachier==3.0.1
+#29 13.34   Downloading cachier-3.0.1-py3-none-any.whl (22 kB)
+#29 13.35 Collecting timeout-decorator==0.5.0
+#29 13.36   Downloading timeout-decorator-0.5.0.tar.gz (4.8 kB)
+#29 13.36   Preparing metadata (setup.py): started
+#29 13.65   Preparing metadata (setup.py): finished with status 'done'
+#29 13.90 Collecting stripe==11.4.1
+#29 13.91   Downloading stripe-11.4.1-py2.py3-none-any.whl (1.6 MB)
+#29 13.92      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 189.2 MB/s eta 0:00:00
+#29 15.73 Collecting rapidfuzz==3.10.1
+#29 15.74   Downloading rapidfuzz-3.10.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
+#29 15.76      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 190.2 MB/s eta 0:00:00
+#29 16.10 Collecting scipy==1.14.1
+#29 16.10   Downloading scipy-1.14.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (41.2 MB)
+#29 16.39      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.2/41.2 MB 148.2 MB/s eta 0:00:00
+#29 16.58 Collecting beautifulsoup4==4.12.0
+#29 16.59   Downloading beautifulsoup4-4.12.0-py3-none-any.whl (132 kB)
+#29 16.59      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.2/132.2 kB 180.6 MB/s eta 0:00:00
+#29 16.84 Collecting pyarrow>=7.0.0
+#29 16.85   Downloading pyarrow-18.1.0-cp310-cp310-manylinux_2_28_x86_64.whl (40.1 MB)
+#29 17.13      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.1/40.1 MB 146.2 MB/s eta 0:00:00
+#29 17.39 Collecting dask==2024.7.0
+#29 17.57   Downloading dask-2024.7.0-py3-none-any.whl (1.2 MB)
+#29 17.60      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 36.6 MB/s eta 0:00:00
+#29 18.03 Collecting pandas>=2
+#29 18.04   Downloading pandas-2.2.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.1 MB)
+#29 18.13      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.1/13.1 MB 152.4 MB/s eta 0:00:00
+#29 18.23 Collecting Mako
+#29 18.23   Downloading Mako-1.3.8-py3-none-any.whl (78 kB)
+#29 18.24      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.6/78.6 kB 174.2 MB/s eta 0:00:00
+#29 18.27 Collecting typing-extensions>=4
+#29 18.28   Downloading typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+#29 18.36 Collecting email_validator>=2.0.0
+#29 18.37   Downloading email_validator-2.2.0-py3-none-any.whl (33 kB)
+#29 18.47 Collecting starlette<0.38.0,>=0.37.2
+#29 18.47   Downloading starlette-0.37.2-py3-none-any.whl (71 kB)
+#29 18.48      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.9/71.9 kB 149.0 MB/s eta 0:00:00
+#29 18.54 Collecting uvicorn[standard]>=0.12.0
+#29 18.54   Downloading uvicorn-0.34.0-py3-none-any.whl (62 kB)
+#29 18.55      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.3/62.3 kB 153.0 MB/s eta 0:00:00
+#29 18.58 Collecting jinja2>=2.11.2
+#29 18.58   Downloading jinja2-3.1.5-py3-none-any.whl (134 kB)
+#29 18.59      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.6/134.6 kB 178.1 MB/s eta 0:00:00
+#29 18.61 Collecting python-multipart>=0.0.7
+#29 18.61   Downloading python_multipart-0.0.20-py3-none-any.whl (24 kB)
+#29 18.63 Collecting fastapi-cli>=0.0.2
+#29 18.64   Downloading fastapi_cli-0.0.7-py3-none-any.whl (10 kB)
+#29 18.67 Collecting uc-micro-py
+#29 18.68   Downloading uc_micro_py-1.0.3-py3-none-any.whl (6.2 kB)
+#29 18.73 Collecting markdown-it-py<4.0.0,>=1.0.0
+#29 18.73   Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+#29 18.74      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 kB 160.1 MB/s eta 0:00:00
+#29 18.75 Collecting et-xmlfile
+#29 18.76   Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+#29 18.82 Collecting packaging>=23.1
+#29 18.82   Downloading packaging-24.2-py3-none-any.whl (65 kB)
+#29 18.83      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.5/65.5 kB 166.1 MB/s eta 0:00:00
+#29 18.91 Collecting pip>=23.1.2
+#29 18.92   Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+#29 18.93      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 185.5 MB/s eta 0:00:00
+#29 18.98 Collecting PyMuPDFb==1.24.6
+#29 18.99   Downloading PyMuPDFb-1.24.6-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (15.7 MB)
+#29 19.10      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.7/15.7 MB 145.3 MB/s eta 0:00:00
+#29 19.20 Collecting anyio>=3.0.0
+#29 19.21   Downloading anyio-4.8.0-py3-none-any.whl (96 kB)
+#29 19.21      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.0/96.0 kB 163.5 MB/s eta 0:00:00
+#29 ...
+
+#28 [frontend 4/6] RUN npm install
+#28 19.43 npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+#28 ...
+
+#29 [app 5/8] RUN pip install --no-cache-dir -r /app/requirements.txt
+#29 20.97 Collecting grpcio-tools<2.0.0,>=1.57.0
+#29 20.98   Downloading grpcio_tools-1.69.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.5 MB)
+#29 21.00      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 106.9 MB/s eta 0:00:00
+#29 21.05 Collecting authlib<2.0.0,>=1.2.1
+#29 21.05   Downloading Authlib-1.4.0-py2.py3-none-any.whl (225 kB)
+#29 21.05      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 225.5/225.5 kB 165.4 MB/s eta 0:00:00
+#29 21.15 Collecting requests<3.0.0,>=2.30.0
+#29 21.15   Downloading requests-2.32.3-py3-none-any.whl (64 kB)
+#29 21.15      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.9/64.9 kB 157.9 MB/s eta 0:00:00
+#29 21.24 Collecting grpcio-health-checking<2.0.0,>=1.57.0
+#29 21.25   Downloading grpcio_health_checking-1.69.0-py3-none-any.whl (18 kB)
+#29 22.79 Collecting grpcio<2.0.0,>=1.57.0
+#29 22.79   Downloading grpcio-1.69.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.0 MB)
+#29 22.83      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.0/6.0 MB 154.0 MB/s eta 0:00:00
+#29 22.90 Collecting validators==0.33.0
+#29 22.90   Downloading validators-0.33.0-py3-none-any.whl (43 kB)
+#29 22.90      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.3/43.3 kB 148.8 MB/s eta 0:00:00
+#29 22.95 Collecting langchain-text-splitters<0.3.0,>=0.2.0
+#29 22.96   Downloading langchain_text_splitters-0.2.4-py3-none-any.whl (25 kB)
+#29 22.98 Collecting async-timeout<5.0.0,>=4.0.0
+#29 22.99   Downloading async_timeout-4.0.3-py3-none-any.whl (5.7 kB)
+#29 23.15 Collecting langchain-core<0.3.0,>=0.2.27
+#29 23.15   Downloading langchain_core-0.2.43-py3-none-any.whl (397 kB)
+#29 23.16      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 397.1/397.1 kB 190.7 MB/s eta 0:00:00
+#29 23.35 Collecting langsmith<0.2.0,>=0.1.17
+#29 23.36   Downloading langsmith-0.1.147-py3-none-any.whl (311 kB)
+#29 23.36      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 311.8/311.8 kB 189.8 MB/s eta 0:00:00
+#29 23.89 Collecting numpy<2,>=1
+#29 23.89   Downloading numpy-1.26.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+#29 24.02      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 148.0 MB/s eta 0:00:00
+#29 24.19 Collecting PyYAML>=5.3
+#29 24.20   Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (751 kB)
+#29 24.20      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 751.2/751.2 kB 189.4 MB/s eta 0:00:00
+#29 25.57 Collecting aiohttp<4.0.0,>=3.8.3
+#29 25.57   Downloading aiohttp-3.11.11-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.6 MB)
+#29 25.59      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 185.3 MB/s eta 0:00:00
+#29 25.66 Collecting tenacity!=8.4.0,<9.0.0,>=8.1.0
+#29 25.66   Downloading tenacity-8.5.0-py3-none-any.whl (28 kB)
+#29 25.83 Collecting dataclasses-json<0.7,>=0.5.7
+#29 25.84   Downloading dataclasses_json-0.6.7-py3-none-any.whl (28 kB)
+#29 25.90 Collecting distro<2,>=1.7.0
+#29 25.90   Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+#29 25.92 Collecting sniffio
+#29 25.92   Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#29 26.04 Collecting blinker<2,>=1.0.0
+#29 26.05   Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#29 26.14 Collecting tornado<7,>=6.0.3
+#29 26.14   Downloading tornado-6.4.2-cp38-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (437 kB)
+#29 26.15      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 437.2/437.2 kB 189.3 MB/s eta 0:00:00
+#29 26.20 Collecting click<9,>=7.0
+#29 26.20   Downloading click-8.1.8-py3-none-any.whl (98 kB)
+#29 26.21      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.2/98.2 kB 160.1 MB/s eta 0:00:00
+#29 26.35 Collecting rich<14,>=10.14.0
+#29 26.35   Downloading rich-13.9.4-py3-none-any.whl (242 kB)
+#29 26.35      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 242.4/242.4 kB 195.4 MB/s eta 0:00:00
+#29 26.86 Collecting protobuf<6,>=3.20
+#29 26.87   Downloading protobuf-5.29.3-cp38-abi3-manylinux2014_x86_64.whl (319 kB)
+#29 26.87      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 319.7/319.7 kB 180.1 MB/s eta 0:00:00
+#29 26.91 Collecting pydeck<1,>=0.8.0b4
+#29 26.91   Downloading pydeck-0.9.1-py2.py3-none-any.whl (6.9 MB)
+#29 26.96      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 152.9 MB/s eta 0:00:00
+#29 27.06 Collecting gitpython!=3.1.19,<4,>=3.0.7
+#29 27.06   Downloading GitPython-3.1.44-py3-none-any.whl (207 kB)
+#29 27.07      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 207.6/207.6 kB 197.9 MB/s eta 0:00:00
+#29 27.11 Collecting cachetools<6,>=4.0
+#29 27.11   Downloading cachetools-5.5.0-py3-none-any.whl (9.5 kB)
+#29 27.27 Collecting watchdog<5,>=2.1.5
+#29 27.28   Downloading watchdog-4.0.2-py3-none-manylinux2014_x86_64.whl (82 kB)
+#29 27.28      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.9/82.9 kB 130.5 MB/s eta 0:00:00
+#29 27.31 Collecting altair<6,>=4.0
+#29 27.32   Downloading altair-5.5.0-py3-none-any.whl (731 kB)
+#29 27.33      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 731.2/731.2 kB 183.3 MB/s eta 0:00:00
+#29 27.37 Collecting toml<2,>=0.10.1
+#29 27.37   Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+#29 27.87 Collecting pillow<11,>=7.1.0
+#29 27.87   Downloading pillow-10.4.0-cp310-cp310-manylinux_2_28_x86_64.whl (4.5 MB)
+#29 27.91      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 127.8 MB/s eta 0:00:00
+#29 28.10 Collecting MarkupSafe>=2.1.1
+#29 28.10   Downloading MarkupSafe-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20 kB)
+#29 28.25 Collecting tiktoken<1,>=0.7
+#29 28.25   Downloading tiktoken-0.8.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+#29 28.27      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 134.3 MB/s eta 0:00:00
+#29 28.37 Collecting urllib3
+#29 28.38   Downloading urllib3-2.3.0-py3-none-any.whl (128 kB)
+#29 28.38      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 128.4/128.4 kB 179.6 MB/s eta 0:00:00
+#29 28.58 Collecting annotated-types>=0.6.0
+#29 28.59   Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+#29 30.44 Collecting pydantic-core==2.23.4
+#29 30.45   Downloading pydantic_core-2.23.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+#29 30.47      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 133.0 MB/s eta 0:00:00
+#29 30.90 Collecting greenlet!=0.4.17
+#29 30.91   Downloading greenlet-3.1.1-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (599 kB)
+#29 30.91      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 599.5/599.5 kB 158.2 MB/s eta 0:00:00
+#29 31.27 Collecting pycryptodome
+#29 31.27   Downloading pycryptodome-3.21.0-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.3 MB)
+#29 31.29      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 137.5 MB/s eta 0:00:00
+#29 31.54 Collecting charset-normalizer>=2.0.0
+#29 31.54   Downloading charset_normalizer-3.4.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (146 kB)
+#29 31.54      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 146.1/146.1 kB 185.1 MB/s eta 0:00:00
+#29 ...
+
+#28 [frontend 4/6] RUN npm install
+#28 31.89 
+#28 31.89 added 1116 packages, and audited 1117 packages in 32s
+#28 31.89 
+#28 31.89 300 packages are looking for funding
+#28 31.89   run `npm fund` for details
+#28 31.98 
+#28 31.98 26 vulnerabilities (7 low, 19 high)
+#28 31.98 
+#28 31.98 To address issues that do not require attention, run:
+#28 31.98   npm audit fix
+#28 31.98 
+#28 31.98 To address all issues possible (including breaking changes), run:
+#28 31.98   npm audit fix --force
+#28 31.98 
+#28 31.98 Some issues need review, and may require choosing
+#28 31.98 a different dependency.
+#28 31.98 
+#28 31.98 Run `npm audit` for details.
+#28 31.99 npm notice
+#28 31.99 npm notice New major version of npm available! 10.8.2 -> 11.0.0
+#28 31.99 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.0.0
+#28 31.99 npm notice To update run: npm install -g npm@11.0.0
+#28 31.99 npm notice
+#28 DONE 36.5s
+
+#29 [app 5/8] RUN pip install --no-cache-dir -r /app/requirements.txt
+#29 32.06 Collecting cryptography>=36.0.0
+#29 32.06   Downloading cryptography-44.0.0-cp39-abi3-manylinux_2_28_x86_64.whl (4.2 MB)
+#29 32.09      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 169.9 MB/s eta 0:00:00
+#29 32.16 Collecting environs>=9.5.0
+#29 32.16   Downloading environs-14.1.0-py3-none-any.whl (15 kB)
+#29 32.23 Collecting certifi
+#29 32.27   Downloading certifi-2024.12.14-py3-none-any.whl (164 kB)
+#29 32.27      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 164.9/164.9 kB 178.6 MB/s eta 0:00:00
+#29 32.32 Collecting httpcore==1.*
+#29 32.32   Downloading httpcore-1.0.7-py3-none-any.whl (78 kB)
+#29 32.33      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.6/78.6 kB 176.6 MB/s eta 0:00:00
+#29 32.35 Collecting idna
+#29 32.36   Downloading idna-3.10-py3-none-any.whl (70 kB)
+#29 32.36      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 70.4/70.4 kB 156.2 MB/s eta 0:00:00
+#29 32.83 Collecting ujson<6,>=5
+#29 32.83   Downloading ujson-5.10.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (53 kB)
+#29 32.84      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.6/53.6 kB 158.3 MB/s eta 0:00:00
+#29 32.88 Collecting portalocker>=2.3.2
+#29 32.89   Downloading portalocker-3.1.1-py3-none-any.whl (19 kB)
+#29 33.04 Collecting soupsieve>1.2
+#29 33.05   Downloading soupsieve-2.6-py3-none-any.whl (36 kB)
+#29 33.14 Collecting fsspec>=2021.09.0
+#29 33.18   Downloading fsspec-2024.12.0-py3-none-any.whl (183 kB)
+#29 33.18      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 183.9/183.9 kB 185.7 MB/s eta 0:00:00
+#29 33.28 Collecting importlib-metadata>=4.13.0
+#29 33.28   Downloading importlib_metadata-8.5.0-py3-none-any.whl (26 kB)
+#29 33.30 Collecting partd>=1.4.0
+#29 33.31   Downloading partd-1.4.2-py3-none-any.whl (18 kB)
+#29 33.35 Collecting cloudpickle>=1.5.0
+#29 33.36   Downloading cloudpickle-3.1.0-py3-none-any.whl (22 kB)
+#29 33.38 Collecting toolz>=0.10.0
+#29 33.38   Downloading toolz-1.0.0-py3-none-any.whl (56 kB)
+#29 33.39      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.4/56.4 kB 163.6 MB/s eta 0:00:00
+#29 33.42 Collecting h11<0.15,>=0.13
+#29 33.42   Downloading h11-0.14.0-py3-none-any.whl (58 kB)
+#29 33.43      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.3/58.3 kB 166.4 MB/s eta 0:00:00
+#29 33.50 Collecting jmespath<2.0.0,>=0.7.1
+#29 33.50   Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
+#29 34.64 Collecting botocore<1.36.0,>=1.35.96
+#29 34.64   Downloading botocore-1.35.96-py3-none-any.whl (13.3 MB)
+#29 34.73      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.3/13.3 MB 159.1 MB/s eta 0:00:00
+#29 34.83 Collecting s3transfer<0.11.0,>=0.10.0
+#29 34.83   Downloading s3transfer-0.10.4-py3-none-any.whl (83 kB)
+#29 34.83      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.2/83.2 kB 165.7 MB/s eta 0:00:00
+#29 34.87 Collecting six>=1.5
+#29 34.87   Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#29 34.93 Collecting aiohappyeyeballs>=2.3.0
+#29 34.94   Downloading aiohappyeyeballs-2.4.4-py3-none-any.whl (14 kB)
+#29 35.75 Collecting yarl<2.0,>=1.17.0
+#29 35.75   Downloading yarl-1.18.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (319 kB)
+#29 35.76      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 319.7/319.7 kB 192.9 MB/s eta 0:00:00
+#29 35.79 Collecting attrs>=17.3.0
+#29 35.80   Downloading attrs-24.3.0-py3-none-any.whl (63 kB)
+#29 35.80      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.4/63.4 kB 173.1 MB/s eta 0:00:00
+#29 35.88 Collecting propcache>=0.2.0
+#29 35.88   Downloading propcache-0.2.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (205 kB)
+#29 35.89      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 205.1/205.1 kB 193.0 MB/s eta 0:00:00
+#29 35.91 Collecting aiosignal>=1.1.2
+#29 35.91   Downloading aiosignal-1.3.2-py2.py3-none-any.whl (7.6 kB)
+#29 36.06 Collecting frozenlist>=1.1.1
+#29 36.07   Downloading frozenlist-1.5.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (241 kB)
+#29 36.07      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 241.9/241.9 kB 196.1 MB/s eta 0:00:00
+#29 ...
+
+#30 [frontend 5/6] COPY . .
+#30 DONE 0.1s
+
+#29 [app 5/8] RUN pip install --no-cache-dir -r /app/requirements.txt
+#29 36.57 Collecting multidict<7.0,>=4.5
+#29 36.58   Downloading multidict-6.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (124 kB)
+#29 36.58      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.6/124.6 kB 182.5 MB/s eta 0:00:00
+#29 36.73 Collecting narwhals>=1.14.2
+#29 36.74   Downloading narwhals-1.21.1-py3-none-any.whl (282 kB)
+#29 36.74      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 282.7/282.7 kB 193.6 MB/s eta 0:00:00
+#29 36.81 Collecting jsonschema>=3.0
+#29 36.81   Downloading jsonschema-4.23.0-py3-none-any.whl (88 kB)
+#29 36.82      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.5/88.5 kB 180.2 MB/s eta 0:00:00
+#29 36.89 Collecting exceptiongroup>=1.0.2
+#29 36.89   Downloading exceptiongroup-1.2.2-py3-none-any.whl (16 kB)
+#29 37.35 Collecting cffi>=1.12
+#29 37.36   Downloading cffi-1.17.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (446 kB)
+#29 37.36      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 446.2/446.2 kB 191.7 MB/s eta 0:00:00
+#29 37.40 Collecting typing-inspect<1,>=0.4.0
+#29 37.40   Downloading typing_inspect-0.9.0-py3-none-any.whl (8.8 kB)
+#29 37.50 Collecting marshmallow<4.0.0,>=3.18.0
+#29 37.50   Downloading marshmallow-3.25.0-py3-none-any.whl (49 kB)
+#29 37.50      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.5/49.5 kB 142.2 MB/s eta 0:00:00
+#29 37.56 Collecting dnspython>=2.0.0
+#29 37.56   Downloading dnspython-2.7.0-py3-none-any.whl (313 kB)
+#29 37.57      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 313.6/313.6 kB 196.8 MB/s eta 0:00:00
+#29 37.63 Collecting python-dotenv
+#29 37.63   Downloading python_dotenv-1.0.1-py3-none-any.whl (19 kB)
+#29 37.69 Collecting typer>=0.12.3
+#29 37.69   Downloading typer-0.15.1-py3-none-any.whl (44 kB)
+#29 37.70      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.9/44.9 kB 164.2 MB/s eta 0:00:00
+#29 37.74 Collecting rich-toolkit>=0.11.1
+#29 37.74   Downloading rich_toolkit-0.12.0-py3-none-any.whl (13 kB)
+#29 37.79 Collecting gitdb<5,>=4.0.1
+#29 37.80   Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+#29 37.80      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.8/62.8 kB 157.0 MB/s eta 0:00:00
+#29 37.90 Requirement already satisfied: setuptools in /usr/local/lib/python3.10/site-packages (from grpcio-tools<2.0.0,>=1.57.0->weaviate-client==4.7.1->-r /app/requirements.txt (line 12)) (65.5.1)
+#29 38.00 Collecting jsonpatch<2.0,>=1.33
+#29 38.00   Downloading jsonpatch-1.33-py2.py3-none-any.whl (12 kB)
+#29 38.13 Collecting requests-toolbelt<2.0.0,>=1.0.0
+#29 38.14   Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+#29 38.14      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.5/54.5 kB 162.3 MB/s eta 0:00:00
+#29 38.88 Collecting orjson<4.0.0,>=3.9.14
+#29 38.89   Downloading orjson-3.10.14-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (130 kB)
+#29 38.89      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.4/130.4 kB 177.2 MB/s eta 0:00:00
+#29 38.95 Collecting mdurl~=0.1
+#29 38.95   Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+#29 39.15 Collecting tzdata>=2022.7
+#29 39.15   Downloading tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+#29 39.15      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 346.6/346.6 kB 194.2 MB/s eta 0:00:00
+#29 39.51 Collecting pytz>=2020.1
+#29 39.52   Downloading pytz-2024.2-py2.py3-none-any.whl (508 kB)
+#29 39.53      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 508.0/508.0 kB 156.6 MB/s eta 0:00:00
+#29 39.88 Collecting pygments<3.0.0,>=2.13.0
+#29 39.88   Downloading pygments-2.19.1-py3-none-any.whl (1.2 MB)
+#29 39.89      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 187.0 MB/s eta 0:00:00
+#29 41.24 Collecting regex>=2022.1.18
+#29 41.25   Downloading regex-2024.11.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (781 kB)
+#29 41.26      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 781.7/781.7 kB 128.5 MB/s eta 0:00:00
+#29 41.53 Collecting uvloop!=0.15.0,!=0.15.1,>=0.14.0
+#29 41.54   Downloading uvloop-0.21.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.8 MB)
+#29 41.57      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 130.7 MB/s eta 0:00:00
+#29 41.61 Collecting uvicorn[standard]>=0.12.0
+#29 41.62   Downloading uvicorn-0.33.0-py3-none-any.whl (62 kB)
+#29 41.62      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.3/62.3 kB 139.8 MB/s eta 0:00:00
+#29 41.65   Downloading uvicorn-0.32.1-py3-none-any.whl (63 kB)
+#29 41.66      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.8/63.8 kB 142.4 MB/s eta 0:00:00
+#29 41.69   Downloading uvicorn-0.32.0-py3-none-any.whl (63 kB)
+#29 41.69      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.7/63.7 kB 149.7 MB/s eta 0:00:00
+#29 41.97 Collecting pycparser
+#29 41.98   Downloading pycparser-2.22-py3-none-any.whl (117 kB)
+#29 41.98      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 117.6/117.6 kB 181.9 MB/s eta 0:00:00
+#29 42.27 Collecting smmap<6,>=3.0.1
+#29 42.28   Downloading smmap-5.0.2-py3-none-any.whl (24 kB)
+#29 42.39 Collecting zipp>=3.20
+#29 42.39   Downloading zipp-3.21.0-py3-none-any.whl (9.6 kB)
+#29 42.44 Collecting jsonpointer>=1.9
+#29 42.45   Downloading jsonpointer-3.0.0-py2.py3-none-any.whl (7.6 kB)
+#29 42.52 Collecting jsonschema-specifications>=2023.03.6
+#29 42.52   Downloading jsonschema_specifications-2024.10.1-py3-none-any.whl (18 kB)
+#29 42.59 Collecting referencing>=0.28.4
+#29 42.60   Downloading referencing-0.35.1-py3-none-any.whl (26 kB)
+#29 43.33 Collecting rpds-py>=0.7.1
+#29 43.34   Downloading rpds_py-0.22.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (381 kB)
+#29 43.34      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 382.0/382.0 kB 181.6 MB/s eta 0:00:00
+#29 43.57 Collecting locket
+#29 43.57   Downloading locket-1.0.0-py2.py3-none-any.whl (4.4 kB)
+#29 43.88 Collecting shellingham>=1.3.0
+#29 43.89   Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+#29 43.97 Collecting mypy-extensions>=0.3.0
+#29 43.97   Downloading mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+#29 44.49 Building wheels for collected packages: jose, mysqlclient, pdfminer, timeout-decorator
+#29 44.49   Building wheel for jose (setup.py): started
+#29 45.04   Building wheel for jose (setup.py): finished with status 'done'
+#29 45.04   Created wheel for jose: filename=jose-1.0.0-py3-none-any.whl size=8826 sha256=a49f883b0d447aa63eb50bf992e7b4eb3d65f9ee9712f109469e4c5a56fccb5f
+#29 45.04   Stored in directory: /tmp/pip-ephem-wheel-cache-vu7jujty/wheels/ae/7f/27/6fdc1409ff47dc04c30d20fcc088df116c791368a1ab7a0603
+#29 45.04   Building wheel for mysqlclient (pyproject.toml): started
+#29 ...
+
+#31 [frontend 6/6] RUN npm run build
+#31 0.428 
+#31 0.428 > build
+#31 0.428 > remix vite:build
+#31 0.428 
+#31 2.372 vite v5.4.11 building for production...
+#31 2.477 transforming...
+#31 4.767 app/hooks/use-toast.ts (1:0): Error when using sourcemap for reporting an error: Can't resolve original location of error.
+#31 ...
+
+#29 [app 5/8] RUN pip install --no-cache-dir -r /app/requirements.txt
+#29 47.17   Building wheel for mysqlclient (pyproject.toml): finished with status 'done'
+#29 47.17   Created wheel for mysqlclient: filename=mysqlclient-2.2.4-cp310-cp310-linux_x86_64.whl size=132648 sha256=293c451a112c9d7331a17fe61ec4105a2e1b3e82f54937e0aca15cd204155cf4
+#29 47.17   Stored in directory: /tmp/pip-ephem-wheel-cache-vu7jujty/wheels/ac/96/ac/2a4d8cb58a4d95de1dffc3f8b0ea42e0e5b63ab97640edbda3
+#29 47.17   Building wheel for pdfminer (setup.py): started
+#29 ...
+
+#31 [frontend 6/6] RUN npm run build
+#31 16.14 node_modules/pdfjs-dist/build/pdf.js (1950:23): Use of eval in "node_modules/pdfjs-dist/build/pdf.js" is strongly discouraged as it poses security risks and may cause issues with minification.
+#31 20.30 ✓ 5228 modules transformed.
+#31 20.84 rendering chunks...
+#31 21.42 computing gzip size...
+#31 21.48 build/client/.vite/manifest.json                         17.24 kB │ gzip:   1.61 kB
+#31 21.48 build/client/assets/checkout-DpRjIxzA.css                 0.97 kB │ gzip:   0.44 kB
+#31 21.48 build/client/assets/dashboard-DqG-v1eR.css               42.88 kB │ gzip:   6.77 kB
+#31 21.48 build/client/assets/root-DjMEQrd5.css                    45.01 kB │ gzip:   8.76 kB
+#31 21.48 build/client/assets/index-BkNxfoR2.js                     0.18 kB │ gzip:   0.17 kB
+#31 21.48 build/client/assets/dashboard-BPkDH8zc.js                 0.33 kB │ gzip:   0.22 kB
+#31 21.48 build/client/assets/404-DFO0Ef0p.js                       0.47 kB │ gzip:   0.31 kB
+#31 21.48 build/client/assets/East-aYYOlTiu.js                      0.47 kB │ gzip:   0.31 kB
+#31 21.48 build/client/assets/ShowChart-CFJSKDA8.js                 0.48 kB │ gzip:   0.32 kB
+#31 21.48 build/client/assets/KeyboardBackspace-nmb43cFQ.js         0.48 kB │ gzip:   0.32 kB
+#31 21.48 build/client/assets/Storage-BL9DfWCq.js                   0.49 kB │ gzip:   0.32 kB
+#31 21.48 build/client/assets/Transform-UAQKJgNZ.js                 0.52 kB │ gzip:   0.35 kB
+#31 21.48 build/client/assets/SpaceDashboard-BQGpEJW7.js            0.52 kB │ gzip:   0.34 kB
+#31 21.48 build/client/assets/Person-BuXnaOos.js                    0.52 kB │ gzip:   0.34 kB
+#31 21.48 build/client/assets/CorporateFare-DUfRhklr.js             0.53 kB │ gzip:   0.34 kB
+#31 21.48 build/client/assets/ThumbUp-BRS3IGG6.js                   0.61 kB │ gzip:   0.41 kB
+#31 21.48 build/client/assets/ThumbDownAlt-De8teyxA.js              0.67 kB │ gzip:   0.44 kB
+#31 21.48 build/client/assets/LinkedIn-DGg_ov8t.js                  0.78 kB │ gzip:   0.46 kB
+#31 21.48 build/client/assets/register-CC1alAti.js                  0.78 kB │ gzip:   0.51 kB
+#31 21.48 build/client/assets/HighlightOffRounded-DjLyXSuT.js       0.81 kB │ gzip:   0.45 kB
+#31 21.48 build/client/assets/login-rI1okDSz.js                     0.81 kB │ gzip:   0.51 kB
+#31 21.48 build/client/assets/MonetizationOn-BZTnZMgR.js            0.85 kB │ gzip:   0.52 kB
+#31 21.48 build/client/assets/AllInclusive-C9WBmuWg.js              0.94 kB │ gzip:   0.56 kB
+#31 21.48 build/client/assets/TaskAltRounded-Bu_lzTGI.js            0.98 kB │ gzip:   0.58 kB
+#31 21.48 build/client/assets/CellTower-D0ivK1bd.js                 1.00 kB │ gzip:   0.58 kB
+#31 21.48 build/client/assets/CurrencyExchange-CrbKFOsy.js          1.01 kB │ gzip:   0.61 kB
+#31 21.48 build/client/assets/Language-PCOgmVEc.js                  1.19 kB │ gzip:   0.68 kB
+#31 21.48 build/client/assets/checkout-B6io3fyf.js                  2.33 kB │ gzip:   1.22 kB
+#31 21.48 build/client/assets/authSlice-CYxjIEPg.js                 2.44 kB │ gzip:   0.87 kB
+#31 21.48 build/client/assets/entry.client-D0e3uAPx.js              3.81 kB │ gzip:   1.45 kB
+#31 21.48 build/client/assets/root-Bd4PxSlJ.js                      5.15 kB │ gzip:   2.58 kB
+#31 21.48 build/client/assets/jsx-runtime-D4zAsKth.js               8.57 kB │ gzip:   3.17 kB
+#31 21.48 build/client/assets/paymentSlice-D-2cJ6bU.js              9.59 kB │ gzip:   3.82 kB
+#31 21.48 build/client/assets/redux-toolkit.modern-CdOGh0vj.js     21.00 kB │ gzip:   8.06 kB
+#31 21.48 build/client/assets/auth0-react.esm-Dc-X6F0R.js          49.19 kB │ gzip:  16.18 kB
+#31 21.48 build/client/assets/components-D4LORH9F.js               51.59 kB │ gzip:  17.03 kB
+#31 21.48 
+#31 21.48 (!) Some chunks are larger than 500 kB after minification. Consider:
+#31 21.48 - Using dynamic import() to code-split the application
+#31 21.48 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+#31 21.48 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+#31 21.48 build/client/assets/index--AQ0e780.js                    57.28 kB │ gzip:  19.56 kB
+#31 21.48 build/client/assets/_index-CnsJJ39B.js                   59.91 kB │ gzip:  19.58 kB
+#31 21.48 build/client/assets/index-94uEslAV.js                    61.37 kB │ gzip:  21.05 kB
+#31 21.48 build/client/assets/createSvgIcon-DdppV9Kz.js            69.63 kB │ gzip:  25.54 kB
+#31 21.48 build/client/assets/index-xUwt6x-k.js                   134.36 kB │ gzip:  43.31 kB
+#31 21.48 build/client/assets/dashboard-DPRjd3OJ.js             1,150.13 kB │ gzip: 328.41 kB
+#31 21.48 ✓ built in 19.07s
+#31 21.58 vite v5.4.11 building SSR bundle for production...
+#31 21.59 transforming...
+#31 21.98 app/hooks/use-toast.ts (1:0): Error when using sourcemap for reporting an error: Can't resolve original location of error.
+#31 22.28 ✓ 92 modules transformed.
+#31 22.36 rendering chunks...
+#31 22.37 build/server/.vite/manifest.json                 0.22 kB
+#31 22.37 build/server/assets/server-build-BXxD7WA_.css   88.86 kB
+#31 22.37 build/server/index.js                          194.86 kB
+#31 22.37 ✓ built in 787ms
+#31 DONE 22.6s
+
+#29 [app 5/8] RUN pip install --no-cache-dir -r /app/requirements.txt
+#29 ...
+
+#32 [frontend] exporting to image
+#32 exporting layers
+#32 exporting layers 10.1s done
+#32 writing image sha256:cde1d961a12708306075272e6ec38be2f1c08f97c4e7ec6caf8396a5caa48d5b done
+#32 naming to docker.io/library/alphaprobe-frontend done
+#32 DONE 10.1s
+
+#29 [app 5/8] RUN pip install --no-cache-dir -r /app/requirements.txt
+#29 69.67   Building wheel for pdfminer (setup.py): finished with status 'done'
+#29 69.69   Created wheel for pdfminer: filename=pdfminer-20191125-py3-none-any.whl size=6140109 sha256=d49317bfc25d268ac79945740f87d0d82a32341b488610250486957b6bafc869
+#29 69.69   Stored in directory: /tmp/pip-ephem-wheel-cache-vu7jujty/wheels/4e/c1/68/f7bd0a8f514661f76b5cbe3b5f76e0033d79f1296012cbbf72
+#29 69.69   Building wheel for timeout-decorator (setup.py): started
+#29 70.08   Building wheel for timeout-decorator (setup.py): finished with status 'done'
+#29 70.08   Created wheel for timeout-decorator: filename=timeout_decorator-0.5.0-py3-none-any.whl size=5006 sha256=532c33a97df8e3bde209d3a984fceca6342b07c3ab1ba4e35ef09f366f0f663c
+#29 70.08   Stored in directory: /tmp/pip-ephem-wheel-cache-vu7jujty/wheels/68/2f/bc/76f1192d474666d41ae6f09813fccbd00fe3f07e8261c4cff5
+#29 70.08 Successfully built jose mysqlclient pdfminer timeout-decorator
+#29 71.51 Installing collected packages: timeout-decorator, pytz, passlib, jose, zipp, xmltodict, websockets, watchdog, validators, uvloop, urllib3, ujson, uc-micro-py, tzdata, typing-extensions, tqdm, tornado, toolz, toml, tenacity, soupsieve, sniffio, smmap, six, shellingham, rpds-py, regex, rapidfuzz, PyYAML, python-multipart, python-dotenv, PyMuPDFb, pyjwt, pygments, pycryptodome, pycparser, pyarrow, protobuf, propcache, portalocker, pip, pillow, packaging, orjson, numpy, narwhals, mysqlclient, mypy-extensions, mdurl, MarkupSafe, locket, jsonpointer, jmespath, idna, httptools, h11, grpcio, greenlet, fsspec, frozenlist, exceptiongroup, et-xmlfile, dnspython, distro, cloudpickle, click, charset-normalizer, certifi, cachetools, blinker, attrs, async-timeout, annotated-types, aiohappyeyeballs, werkzeug, uvicorn, typing-inspect, SQLAlchemy, scipy, requests, referencing, python-dateutil, pypdf, PyMuPDF, pydantic-core, pipdeptree, pdfminer, partd, openpyxl, multidict, marshmallow, markdown-it-py, Mako, llmsherpa, linkify-it-py, jsonpatch, jinja2, importlib-metadata, httpcore, grpcio-tools, grpcio-health-checking, gitdb, email_validator, cffi, cachier, beautifulsoup4, anyio, aiosignal, yarl, watchfiles, tiktoken, stripe, starlette, sqlalchemy_utils, rich, requests-toolbelt, pydeck, pydantic, pandas, mdit-py-plugins, jsonschema-specifications, httpx, gitpython, environs, dataclasses-json, dask, cryptography, botocore, alembic, typer, s3transfer, rich-toolkit, pdfminer.six, openai, langsmith, jsonschema, dask-expr, authlib, aiohttp, weaviate-client, langchain-core, fastapi-cli, boto3, altair, streamlit, langgraph, langchain-text-splitters, langchain-openai, fastapi, aws-s3-tools, langchain, fastapi_cors, langchain_community
+#29 77.36   Attempting uninstall: pip
+#29 77.36     Found existing installation: pip 23.0.1
+#29 77.62     Uninstalling pip-23.0.1:
+#29 78.33       Successfully uninstalled pip-23.0.1
+#29 111.6 Successfully installed Mako-1.3.8 MarkupSafe-3.0.2 PyMuPDF-1.24.7 PyMuPDFb-1.24.6 PyYAML-6.0.2 SQLAlchemy-2.0.35 aiohappyeyeballs-2.4.4 aiohttp-3.11.11 aiosignal-1.3.2 alembic-1.13.2 altair-5.5.0 annotated-types-0.7.0 anyio-4.8.0 async-timeout-4.0.3 attrs-24.3.0 authlib-1.4.0 aws-s3-tools-0.3.0 beautifulsoup4-4.12.0 blinker-1.9.0 boto3-1.35.96 botocore-1.35.96 cachetools-5.5.0 cachier-3.0.1 certifi-2024.12.14 cffi-1.17.1 charset-normalizer-3.4.1 click-8.1.8 cloudpickle-3.1.0 cryptography-44.0.0 dask-2024.7.0 dask-expr-1.1.7 dataclasses-json-0.6.7 distro-1.9.0 dnspython-2.7.0 email_validator-2.2.0 environs-14.1.0 et-xmlfile-2.0.0 exceptiongroup-1.2.2 fastapi-0.111.1 fastapi-cli-0.0.7 fastapi_cors-0.0.6 frozenlist-1.5.0 fsspec-2024.12.0 gitdb-4.0.12 gitpython-3.1.44 greenlet-3.1.1 grpcio-1.69.0 grpcio-health-checking-1.69.0 grpcio-tools-1.69.0 h11-0.14.0 httpcore-1.0.7 httptools-0.6.1 httpx-0.27.0 idna-3.10 importlib-metadata-8.5.0 jinja2-3.1.5 jmespath-1.0.1 jose-1.0.0 jsonpatch-1.33 jsonpointer-3.0.0 jsonschema-4.23.0 jsonschema-specifications-2024.10.1 langchain-0.2.12 langchain-core-0.2.43 langchain-openai-0.1.20 langchain-text-splitters-0.2.4 langchain_community-0.2.11 langgraph-0.1.9 langsmith-0.1.147 linkify-it-py-2.0.3 llmsherpa-0.1.4 locket-1.0.0 markdown-it-py-3.0.0 marshmallow-3.25.0 mdit-py-plugins-0.4.1 mdurl-0.1.2 multidict-6.1.0 mypy-extensions-1.0.0 mysqlclient-2.2.4 narwhals-1.21.1 numpy-1.26.4 openai-1.35.14 openpyxl-3.1.5 orjson-3.10.14 packaging-24.2 pandas-2.2.3 partd-1.4.2 passlib-1.7.4 pdfminer-20191125 pdfminer.six-20240706 pillow-10.4.0 pip-24.3.1 pipdeptree-2.23.1 portalocker-3.1.1 propcache-0.2.1 protobuf-5.29.3 pyarrow-18.1.0 pycparser-2.22 pycryptodome-3.21.0 pydantic-2.9.2 pydantic-core-2.23.4 pydeck-0.9.1 pygments-2.19.1 pyjwt-2.8.0 pypdf-4.3.1 python-dateutil-2.9.0.post0 python-dotenv-1.0.1 python-multipart-0.0.20 pytz-2024.2 rapidfuzz-3.10.1 referencing-0.35.1 regex-2024.11.6 requests-2.32.3 requests-toolbelt-1.0.0 rich-13.9.4 rich-toolkit-0.12.0 rpds-py-0.22.3 s3transfer-0.10.4 scipy-1.14.1 shellingham-1.5.4 six-1.17.0 smmap-5.0.2 sniffio-1.3.1 soupsieve-2.6 sqlalchemy_utils-0.41.2 starlette-0.37.2 streamlit-1.37.0 stripe-11.4.1 tenacity-8.5.0 tiktoken-0.8.0 timeout-decorator-0.5.0 toml-0.10.2 toolz-1.0.0 tornado-6.4.2 tqdm-4.66.4 typer-0.15.1 typing-extensions-4.12.2 typing-inspect-0.9.0 tzdata-2024.2 uc-micro-py-1.0.3 ujson-5.10.0 urllib3-2.3.0 uvicorn-0.32.0 uvloop-0.21.0 validators-0.33.0 watchdog-4.0.2 watchfiles-0.22.0 weaviate-client-4.7.1 websockets-12.0 werkzeug-3.0.3 xmltodict-0.13.0 yarl-1.18.3 zipp-3.21.0
+#29 111.6 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#29 DONE 117.6s
+
+#33 [app 6/8] COPY . /app
+#33 DONE 2.4s
+
+#34 [app 7/8] RUN pip install -e .
+#34 0.794 Obtaining file:///app
+#34 0.795   Preparing metadata (setup.py): started
+#34 1.217   Preparing metadata (setup.py): finished with status 'done'
+#34 1.663 Installing collected packages: Alphaprobe
+#34 1.664   DEPRECATION: Legacy editable install of Alphaprobe==1.0 from file:///app (setup.py develop) is deprecated. pip 25.0 will enforce this behaviour change. A possible replacement is to add a pyproject.toml or enable --use-pep517, and use setuptools >= 64. If the resulting installation is not behaving as expected, try using --config-settings editable_mode=compat. Please consult the setuptools documentation for more information. Discussion can be found at https://github.com/pypa/pip/issues/11457
+#34 1.664   Running setup.py develop for Alphaprobe
+#34 2.403 Successfully installed Alphaprobe
+#34 2.404 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#34 DONE 2.5s
+
+#35 [app 8/8] WORKDIR /app/api
+#35 DONE 0.2s
+
+#36 [app] exporting to image
+#36 exporting layers
+#36 exporting layers 7.1s done
+#36 writing image sha256:fdd26f29c4f7d0df33b4b2ce90772bc35603f42bc3c5c5e20898da7e885f50aa done
+#36 naming to docker.io/library/alphaprobe-app
+#36 naming to docker.io/library/alphaprobe-app done
+#36 DONE 7.2s
+ Network alphaprobe_default  Creating
+ Network alphaprobe_default  Created
+ Container alphaprobe-app-1  Creating
+ Container alphaprobe-scraper-1  Creating
+ Container alphaprobe-frontend-1  Creating
+ Container alphaprobe-app-1  Created
+ Container alphaprobe-scraper-1  Created
+ Container alphaprobe-frontend-1  Created
+Attaching to alphaprobe-app-1, alphaprobe-frontend-1, alphaprobe-scraper-1
+alphaprobe-frontend-1  | 
+alphaprobe-frontend-1  | > dev
+alphaprobe-frontend-1  | > remix vite:dev --host
+alphaprobe-frontend-1  | 
+alphaprobe-frontend-1  | 
+alphaprobe-app-1       | INFO  [alembic.runtime.migration] Context impl MySQLImpl.
+alphaprobe-app-1       | INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+alphaprobe-scraper-1   | INFO     Using path app.py                                                      
+alphaprobe-scraper-1   | INFO     Resolved absolute path /app/company_data_scraper/app.py                
+alphaprobe-scraper-1   | INFO     Searching for package file structure from directories with __init__.py 
+alphaprobe-scraper-1   |          files                                                                  
+alphaprobe-scraper-1   | INFO     Importing from /app/company_data_scraper                               
+alphaprobe-scraper-1   |                                                                                 
+alphaprobe-scraper-1   |  ╭─ Python module file ─╮                                                       
+alphaprobe-scraper-1   |  │                      │                                                       
+alphaprobe-scraper-1   |  │  🐍 app.py           │                                                       
+alphaprobe-scraper-1   |  │                      │                                                       
+alphaprobe-scraper-1   |  ╰──────────────────────╯                                                       
+alphaprobe-scraper-1   |                                                                                 
+alphaprobe-scraper-1   | INFO     Importing module app                                                   
+alphaprobe-scraper-1   | INFO     Found importable FastAPI app                                           
+alphaprobe-app-1       | INFO:     Will watch for changes in these directories: ['/app/api']
+alphaprobe-app-1       | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+alphaprobe-app-1       | INFO:     Started reloader process [8] using WatchFiles
+alphaprobe-scraper-1   |                                                                                 
+alphaprobe-scraper-1   |  ╭─ Importable FastAPI app ─╮                                                   
+alphaprobe-scraper-1   |  │                          │                                                   
+alphaprobe-scraper-1   |  │  from app import app     │                                                   
+alphaprobe-scraper-1   |  │                          │                                                   
+alphaprobe-scraper-1   |  ╰──────────────────────────╯                                                   
+alphaprobe-scraper-1   |                                                                                 
+alphaprobe-scraper-1   | INFO     Using import string app:app                                            
+alphaprobe-scraper-1   |                                                                                 
+alphaprobe-scraper-1   |  ╭─────────── FastAPI CLI - Production mode ───────────╮                        
+alphaprobe-scraper-1   |  │                                                     │                        
+alphaprobe-scraper-1   |  │  Serving at: http://0.0.0.0:8008                    │                        
+alphaprobe-scraper-1   |  │                                                     │                        
+alphaprobe-scraper-1   |  │  API docs: http://0.0.0.0:8008/docs                 │                        
+alphaprobe-scraper-1   |  │                                                     │                        
+alphaprobe-scraper-1   |  │  Running in production mode, for development use:   │                        
+alphaprobe-scraper-1   |  │                                                     │                        
+alphaprobe-scraper-1   |  │  fastapi dev                                        │                        
+alphaprobe-scraper-1   |  │                                                     │                        
+alphaprobe-scraper-1   |  ╰─────────────────────────────────────────────────────╯                        
+alphaprobe-scraper-1   |                                                                                 
+alphaprobe-scraper-1   | INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+alphaprobe-scraper-1   | INFO:     Started parent process [1]
+alphaprobe-frontend-1  |   ➜  Local:   http://localhost:5173/
+alphaprobe-frontend-1  |   ➜  Network: http://172.18.0.3:5173/
+alphaprobe-scraper-1   | INFO:     Started server process [9]
+alphaprobe-scraper-1   | INFO:     Waiting for application startup.
+alphaprobe-scraper-1   | INFO:     Application startup complete.
+alphaprobe-scraper-1   | INFO:     Started server process [14]
+alphaprobe-scraper-1   | INFO:     Waiting for application startup.
+alphaprobe-scraper-1   | INFO:     Application startup complete.
+alphaprobe-scraper-1   | INFO:     Started server process [8]
+alphaprobe-scraper-1   | INFO:     Waiting for application startup.
+alphaprobe-scraper-1   | INFO:     Application startup complete.
+alphaprobe-scraper-1   | INFO:     Started server process [10]
+alphaprobe-scraper-1   | INFO:     Waiting for application startup.
+alphaprobe-scraper-1   | INFO:     Application startup complete.
+alphaprobe-scraper-1   | INFO:     Started server process [11]
+alphaprobe-scraper-1   | INFO:     Waiting for application startup.
+alphaprobe-scraper-1   | INFO:     Application startup complete.
+alphaprobe-scraper-1   | INFO:     Started server process [15]
+alphaprobe-scraper-1   | INFO:     Waiting for application startup.
+alphaprobe-scraper-1   | INFO:     Application startup complete.
+alphaprobe-scraper-1   | INFO:     Started server process [12]
+alphaprobe-scraper-1   | INFO:     Waiting for application startup.
+alphaprobe-scraper-1   | INFO:     Application startup complete.
+alphaprobe-scraper-1   | INFO:     Started server process [13]
+alphaprobe-scraper-1   | INFO:     Waiting for application startup.
+alphaprobe-scraper-1   | INFO:     Application startup complete.
+alphaprobe-app-1       | INFO:     Started server process [10]
+alphaprobe-app-1       | INFO:     Waiting for application startup.
+alphaprobe-app-1       | INFO:     Application startup complete.
+alphaprobe-app-1       | INFO:     43.248.153.250:30055 - "OPTIONS /api/rss-feed HTTP/1.1" 200 OK
+alphaprobe-app-1       | INFO:     43.248.153.250:30056 - "GET /api/stripe-payment-details?user_sub=auth0%7C67816c69f3d0637f90a20327 HTTP/1.1" 401 Unauthorized
+alphaprobe-app-1       | INFO:     43.248.153.250:30055 - "GET /api/stripe-payment-details?user_sub=auth0%7C67816c69f3d0637f90a20327 HTTP/1.1" 401 Unauthorized
+alphaprobe-app-1       | INFO:     43.248.153.250:30056 - "GET /api/stripe-payment-details?user_sub=auth0%7C67816c69f3d0637f90a20327 HTTP/1.1" 401 Unauthorized
+alphaprobe-app-1       | INFO:     43.248.153.250:30057 - "GET /api/rss-feed HTTP/1.1" 200 OK
+alphaprobe-scraper-1   | WARNING:  Invalid HTTP request received.
+alphaprobe-app-1       | WARNING:  Invalid HTTP request received.
+alphaprobe-app-1       | WARNING:  Invalid HTTP request received.
+alphaprobe-app-1       | INFO:     178.32.170.30:40447 - "GET / HTTP/1.1" 404 Not Found
+alphaprobe-app-1       | WARNING:  Invalid HTTP request received.
+alphaprobe-app-1       | INFO:     199.45.155.109:48396 - "GET / HTTP/1.1" 404 Not Found
+alphaprobe-app-1       | INFO:     199.45.155.109:45272 - "GET / HTTP/1.1" 404 Not Found
+alphaprobe-app-1       | WARNING:  Invalid HTTP request received.
+alphaprobe-app-1       | INFO:     65.49.20.99:25981 - "GET / HTTP/1.1" 404 Not Found
+alphaprobe-app-1       | INFO:     65.49.20.107:7417 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+alphaprobe-app-1       | INFO:     198.235.24.30:65314 - "GET / HTTP/1.1" 404 Not Found
+alphaprobe-app-1       | INFO:     65.49.20.87:18873 - "GET /?format=json HTTP/1.1" 404 Not Found
+alphaprobe-app-1       | WARNING:  Invalid HTTP request received.
+alphaprobe-app-1       | INFO:     147.185.132.88:64160 - "GET / HTTP/1.1" 404 Not Found
+alphaprobe-app-1       | INFO:     94.190.231.28:57014 - "GET / HTTP/1.0" 404 Not Found
+alphaprobe-app-1       | INFO:     24.160.203.114:62506 - "GET / HTTP/1.0" 404 Not Found
+alphaprobe-app-1       | INFO:     218.147.181.107:60334 - "GET / HTTP/1.0" 404 Not Found
+alphaprobe-app-1       | INFO:     165.154.41.201:42242 - "GET / HTTP/1.1" 404 Not Found
+alphaprobe-app-1       | WARNING:  Invalid HTTP request received.
+alphaprobe-app-1       | WARNING:  Invalid HTTP request received.
+alphaprobe-app-1       | INFO:     123.58.215.102:50136 - "GET / HTTP/1.1" 404 Not Found
+alphaprobe-app-1       | INFO:     123.58.215.102:50292 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+alphaprobe-app-1       | INFO:     123.58.215.102:50452 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+alphaprobe-app-1       | INFO:     123.58.215.102:50450 - "GET /robots.txt HTTP/1.1" 404 Not Found
+alphaprobe-app-1       | INFO:     2.44.42.197:63280 - "GET / HTTP/1.0" 404 Not Found
+alphaprobe-app-1       | WARNING:  Invalid HTTP request received.
+alphaprobe-app-1       | WARNING:  Invalid HTTP request received.
+alphaprobe-app-1       | INFO:     161.35.222.194:34874 - "GET / HTTP/1.1" 404 Not Found
+alphaprobe-app-1       | INFO:     161.35.222.194:34890 - "GET /login HTTP/1.1" 404 Not Found
+alphaprobe-app-1       | INFO:     106.75.190.150:35772 - "POST /token HTTP/1.1" 404 Not Found
+alphaprobe-app-1       | WARNING:  Invalid HTTP request received.
+alphaprobe-app-1       | INFO:     121.159.7.103:62342 - "GET / HTTP/1.0" 404 Not Found
+alphaprobe-app-1       | INFO:     203.251.0.215:62755 - "GET / HTTP/1.0" 404 Not Found
+alphaprobe-scraper-1   | WARNING:  Invalid HTTP request received.
+alphaprobe-app-1       | INFO:     154.212.141.196:24966 - "GET / HTTP/1.1" 404 Not Found
+alphaprobe-frontend-1  | 9:29:02 PM [vite] page reload app/components/Dashboard/MarketResearch/ChatSessions.tsx
+alphaprobe-frontend-1  | 9:29:02 PM [vite] page reload app/components/Dashboard/dashboard.tsx
+alphaprobe-frontend-1  | 9:29:02 PM [vite] hmr update /app/components/LandingPage/LandingPageComponents/Footer/Footer.tsx, /app/tailwind.css
+alphaprobe-frontend-1  | 9:29:02 PM [vite] hmr update /app/components/LandingPage/LandingPageComponents/Navbar/Navbar.tsx, /app/tailwind.css
+alphaprobe-frontend-1  | 9:29:02 PM [vite] page reload app/components/Loguser/LogoutButton.tsx
+alphaprobe-frontend-1  | 9:29:02 PM [vite] page reload app/constant/index.ts
+alphaprobe-frontend-1  | 9:29:02 PM [vite] vite.config.ts changed, restarting server...
+alphaprobe-frontend-1  | 9:29:02 PM [vite] hmr update /app/root.tsx, /app/tailwind.css
+alphaprobe-frontend-1  | 9:29:02 PM [vite] page reload app/routes/checkout.tsx
+alphaprobe-app-1       | WARNING:  WatchFiles detected changes in 'api/api_stripe.py'. Reloading...
+alphaprobe-app-1       | INFO:     Shutting down
+alphaprobe-app-1       | INFO:     Waiting for application shutdown.
+alphaprobe-app-1       | INFO:     Application shutdown complete.
+alphaprobe-app-1       | INFO:     Finished server process [10]
+alphaprobe-frontend-1  | 9:29:03 PM [vite] server restarted.
+alphaprobe-app-1       | INFO:     Started server process [21]
+alphaprobe-app-1       | INFO:     Waiting for application startup.
+alphaprobe-app-1       | INFO:     Application startup complete.
+alphaprobe-scraper-1   | INFO:     13.91.165.58:41838 - "GET /setup/eureka_info HTTP/1.1" 404 Not Found
+alphaprobe-frontend-1  | 9:50:44 PM [vite] Error when evaluating SSR module /app/root.tsx:
+alphaprobe-frontend-1  | |- ReferenceError: window is not defined
+alphaprobe-frontend-1  |     at eval (/app/app/root.tsx:24:76)
+alphaprobe-frontend-1  |     at instantiateModule (file:///app/node_modules/vite/dist/node/chunks/dep-CB_7IfJ-.js:52972:5)
+alphaprobe-frontend-1  | 
+alphaprobe-frontend-1  | 
+alphaprobe-frontend-1  | 9:50:44 PM [vite] Error when evaluating SSR module virtual:remix/server-build:
+alphaprobe-frontend-1  | |- ReferenceError: window is not defined
+alphaprobe-frontend-1  |     at eval (/app/app/root.tsx:24:76)
+alphaprobe-frontend-1  |     at instantiateModule (file:///app/node_modules/vite/dist/node/chunks/dep-CB_7IfJ-.js:52972:5)
+alphaprobe-frontend-1  | 
+alphaprobe-frontend-1  | 
+alphaprobe-frontend-1  | 9:50:44 PM [vite] Internal server error: window is not defined
+alphaprobe-frontend-1  |       at eval (/app/app/root.tsx:24:76)
+alphaprobe-frontend-1  |       at instantiateModule (file:///app/node_modules/vite/dist/node/chunks/dep-CB_7IfJ-.js:52972:5)
+Gracefully stopping... (press Ctrl+C again to force)
+Aborting on container exit...
+ Container alphaprobe-app-1  Stopping
+ Container alphaprobe-frontend-1  Stopping
+ Container alphaprobe-scraper-1  Stopping
+ Container alphaprobe-frontend-1  Stopped
+ Container alphaprobe-scraper-1  Stopped

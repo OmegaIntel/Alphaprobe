@@ -26,3 +26,4 @@ class Deal(Base):
     progress = Column(String(255))
     status = Column(Enum(DealStatus), default=DealStatus.NOT_STARTED)
     updated_at = Column(TIMESTAMP, default=func.current_timestamp())
+    document_location = Column(Text, nullable=True)  # New field for document location

@@ -1,0 +1,53 @@
+{
+    "data": [
+      {
+        "main_heading": "Market Analysis",
+        "subheadings": [
+          {
+            "title": "Overview",
+            "content": "The market for renewable energy has been growing steadily over the past decade. Renewable energy capacity grew by 9% in 2023 and is expected to continue into 2025.",
+            "source": "http://example.com/reports/international-energy-agency"
+          },
+          {
+            "title": "Key Drivers",
+            "content": "The primary drivers include government incentives, declining costs of solar panels, and increased public awareness. A report highlights a 15% reduction in manufacturing costs.",
+            "source": "http://example.com/reports/solarworld-2024"
+          }
+        ]
+      },
+      {
+        "main_heading": "Technological Trends",
+        "subheadings": [
+          {
+            "title": "Emerging Technologies",
+            "content": "Emerging technologies such as perovskite solar cells are expected to revolutionize the industry. These cells achieve efficiency rates above 30%, significantly higher than traditional silicon-based cells.",
+            "source": "http://example.com/journals/nature-energy"
+          },
+          {
+            "title": "AI Integration",
+            "content": "Artificial intelligence is being integrated into grid management systems. Recent studies demonstrate that AI-based systems reduced energy loss by 12%. Further reductions in maintenance costs are projected.",
+            "sources": [
+              "http://example.com/studies/mit-ai-grid",
+              "http://example.com/research/techinsights"
+            ]
+          }
+        ]
+      },
+      {
+        "main_heading": "Challenges and Opportunities",
+        "subheadings": [
+          {
+            "title": "Regulatory Hurdles",
+            "content": "Many countries face regulatory challenges delaying green energy projects. For example, the EU approval process for wind farms can take up to 5 years.",
+            "source": "http://example.com/reports/eu-energy-commission"
+          },
+          {
+            "title": "Investment Opportunities",
+            "content": "Despite challenges, there are significant investment opportunities. Clean energy investments are predicted to grow by 20% in 2025, focusing on solar and wind sectors.",
+            "source": "http://example.com/reports/goldman-sachs-2025"
+          }
+        ]
+      }
+    ]
+  }
+  
