@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useNavigate } from '@remix-run/react';
 import { useDispatch } from 'react-redux';
 import { API_BASE_URL } from '~/constant';
@@ -15,45 +15,59 @@ import { useToast } from '~/hooks/use-toast';
 
 interface CompanySearchResults {
   companies: string[];
+  industries?: string[];
 }
 
-export default function PreloadingScreen() {
+export default function CompanySearch() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { toast } = useToast();
+  const [screen, setScreen] = useState<'initial' | 'search'>('initial');
+  const [searchType, setSearchType] = useState<'company' | 'industry'>('company');
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
   const [generating, setGenerating] = useState(false);
-  const [isFirstVisit, setIsFirstVisit] = useState(true);
 
-  useEffect(() => {
+  // Handle initial card selection
+  const handleCardSelection = (type: 'company' | 'industry') => {
+    setSearchType(type);
+    setScreen('search');
+  };
 
-    localStorage.clear();
-
-    const savedResults = localStorage.getItem('searchResults');
-    if (savedResults) {
-      setResults(JSON.parse(savedResults));
-      setIsFirstVisit(false);
-    }
-  }, []);
-
+  // Handle search functionality
   const handleSearch = async () => {
     if (!query.trim()) return;
 
     setLoading(true);
-    setIsFirstVisit(false);
 
     try {
-      const response = await fetch(
-        `${API_BASE_URL}/api/companies?query=${encodeURIComponent(query.trim())}`,
-        {
-          method: 'GET',
-          headers: {
-            'Authorization': `Bearer ${document.cookie.split('authToken=')[1]?.split(';')[0] || ''}`
+      const token = document.cookie.split('authToken=')[1]?.split(';')[0] || '';
+      let response: Response;
+
+      if (searchType === 'company') {
+        response = await fetch(
+          `${API_BASE_URL}/api/company-profile`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify({ data: { company_name: query.trim() } }),
           }
-        }
-      );
+        );
+      } else {
+        response = await fetch(
+          `${API_BASE_URL}/api/companies?query=${encodeURIComponent(query.trim())}`,
+          {
+            method: 'GET',
+            headers: {
+              'Authorization': `Bearer ${token}`
+            }
+          }
+        );
+      }
 
       if (!response.ok) {
         if (response.status === 401) {
@@ -63,9 +77,8 @@ export default function PreloadingScreen() {
         throw new Error(await response.text());
       }
 
-      const data = await response.json();
-      setResults(data.companies);
-      localStorage.setItem('searchResults', JSON.stringify(data.companies));
+      const data: CompanySearchResults = await response.json();
+      setResults(data.companies || data.industries || []);
     } catch (error) {
       toast({
         variant: "destructive",
@@ -77,7 +90,8 @@ export default function PreloadingScreen() {
     }
   };
 
-  const handleCompanySelection = async (company: string) => {
+  // Handle company/industry selection and API call
+  const handleSelection = async (selectedItem: string) => {
     dispatch(fetchCompanyInsightStart());
     setGenerating(true);
 
@@ -99,7 +113,7 @@ export default function PreloadingScreen() {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`
           },
-          body: JSON.stringify({ data: { company_name: company } }),
+          body: JSON.stringify({ data: { company_name: selectedItem } }),
         }
       );
 
@@ -128,59 +142,95 @@ export default function PreloadingScreen() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-background p-4">
-      <div className="w-full max-w-2xl space-y-8">
-        {/* Search Input */}
-        <div className="flex gap-2">
-          <Input
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
-            placeholder="Search for companies within any industry or sector..."
-            className="flex-1"
-          />
-        </div>
+      {screen === 'initial' ? (
+        // Initial Screen
+        <div className="w-full max-w-2xl space-y-8">
+          <Card className="w-full cursor-pointer" onClick={() => handleCardSelection('company')}>
+            <CardHeader>
+              <h3 className="text-lg font-semibold text-center">
+                Search by Company
+              </h3>
+            </CardHeader>
+            <CardContent>
+              <p className="text-center text-muted-foreground">
+                Find specific companies by name.
+              </p>
+            </CardContent>
+          </Card>
 
-        {/* Results Card */}
-        <Card className="w-full">
-          <CardHeader>
-            <h3 className="text-lg font-semibold text-center">
-              Search Results
-            </h3>
-          </CardHeader>
-          <CardContent>
-            {generating ? (
-              <div className="text-center space-y-2">
-                <Loader2 className="h-6 w-6 animate-spin mx-auto" />
-                <p className="text-muted-foreground">
-                  Generating data for the selected company...
+          <Card className="w-full cursor-pointer" onClick={() => handleCardSelection('industry')}>
+            <CardHeader>
+              <h3 className="text-lg font-semibold text-center">
+                Search by Industry
+              </h3>
+            </CardHeader>
+            <CardContent>
+              <p className="text-center text-muted-foreground">
+                Find companies within a specific industry.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      ) : (
+        // Search Screen
+        <div className="w-full max-w-2xl space-y-8">
+          {/* Search Input */}
+          <div className="flex gap-2">
+            <Input
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
+              placeholder={`Search for ${searchType === 'company' ? 'companies' : 'industries'}...`}
+              className="flex-1"
+            />
+            <Button onClick={handleSearch} disabled={loading}>
+              {loading ? (
+                <Loader2 className="h-4 w-4 animate-spin" />
+              ) : (
+                <Search className="h-4 w-4" />
+              )}
+            </Button>
+          </div>
+
+          {/* Results Card */}
+          <Card className="w-full">
+            <CardHeader>
+              <h3 className="text-lg font-semibold text-center">
+                Search Results
+              </h3>
+            </CardHeader>
+            <CardContent>
+              {generating ? (
+                <div className="text-center space-y-2">
+                  <Loader2 className="h-6 w-6 animate-spin mx-auto" />
+                  <p className="text-muted-foreground">
+                    Generating data for the selected {searchType}...
+                  </p>
+                </div>
+              ) : results.length > 0 ? (
+                <div className="grid grid-cols-2 gap-4">
+                  {results.map((item, index) => (
+                    <Button
+                      key={index}
+                      variant="secondary"
+                      className="h-auto py-2 px-4 text-sm"
+                      onClick={() => handleSelection(item)}
+                      disabled={generating}
+                    >
+                      {item}
+                    </Button>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-center text-muted-foreground">
+                  No {searchType === 'company' ? 'companies' : 'industries'} found. Try another search.
                 </p>
-              </div>
-            ) : isFirstVisit ? (
-              <p className="text-center text-muted-foreground">
-                Search for a company to begin.
-              </p>
-            ) : results.length > 0 ? (
-              <div className="grid grid-cols-2 gap-4">
-                {results.map((company, index) => (
-                  <Button
-                    key={index}
-                    variant="secondary"
-                    className="h-auto py-2 px-4 text-sm"
-                    onClick={() => handleCompanySelection(company)}
-                  >
-                    {company}
-                  </Button>
-                ))}
-              </div>
-            ) : (
-              <p className="text-center text-muted-foreground">
-                No companies found. Try searching for other domains or niches.
-              </p>
-            )}
-          </CardContent>
-        </Card>
-      </div>
+              )}
+            </CardContent>
+          </Card>
+        </div>
+      )}
     </div>
   );
 }
