@@ -227,11 +227,14 @@ class DocumentResearchAgent(Workflow):
         # Retrieve top_k relevant chunks for the question
         retrieved_chunks = query_tool.query_engine.query(question)
         
-        prompt = f"""You are a financial analyst. Provide a detailed and accurate answer to the following question based on the provided company documents:
+        prompt = f"""You are a financial analyst. You must answer the question **only** using the text from the provided context.
+        If the context does not contain an answer or is insufficient, you should say: 
+        'MISSING INFORMATION: The provided context does not contain details to answer this question.'
 
         Question: {question}
 
-        Context: {retrieved_chunks}
+        Context (retrieved from documents):
+        {retrieved_chunks}
 
         Answer:"""
         

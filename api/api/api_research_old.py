@@ -18,8 +18,6 @@ import json
 import os
 import asyncio
 
-
-
 from llama_index.llms.openai import OpenAI
 from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.core import Settings
@@ -36,7 +34,6 @@ from db_models.deals import Deal
 from db_models.session import get_db
 from api.api_user import get_current_user, User as UserModelSerializer
 from db_models.OpensearchDB import OpenSearchManager
-from db_models.KB_retrieval import KnowledgeBaseRetriever
 from common_logging import loginfo, logerror
 
 nest_asyncio.apply()
@@ -119,12 +116,6 @@ class DocumentResearchAgent(Workflow):
     def __init__(self, timeout=600, verbose=True, index_name=""):
         super().__init__(timeout=timeout, verbose=verbose)
         self.index_name = index_name
-        self.kb_retriever = KnowledgeBaseRetriever(
-            aws_access_key=os.getenv("AWS_ACCESS_KEY"),
-            aws_secret_key=os.getenv("AWS_SECRET_KEY"),
-            aws_region=os.getenv("AWS_REGION"),
-            kb_id=os.getenv("KB_ID")
-        )
 
     @step()
     async def formulate_plan(self, ctx: Context, ev: StartEvent) -> OutlineEvent:
@@ -209,14 +200,14 @@ class DocumentResearchAgent(Workflow):
         k-NN vector search in OpenSearch for context, then feed context + question to LLM.
         """
         question = ev.question
-        top_chunks = self.kb_retriever.query_knowledge_base(query_text=question, top_k=10)
+        top_chunks = opensearch_manager.knn_search(self.index_name, question, top_k=10)
         context_text = "\n".join(top_chunks)
         
         print(f"Retrieved context for question '{question}': {top_chunks}")
 
         prompt = f"""
         
-        You are a financial analyst. You must answer the question **only** using the text from the provided context.
+        You are a market research analyst. You must answer the question **only** using the text from the provided context.
         If the context does not contain an answer or is insufficient, you should say: 
         'MISSING INFORMATION: The provided context does not contain details to answer this question.'
 
