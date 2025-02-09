@@ -90,7 +90,6 @@ export const activeItems = [
 ];
 export const categoryList = [
   'Dashboard',
-  'Investment Thesis',
   'Market Research',
   'Industry Insights',
   'Company Insights',
