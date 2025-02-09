@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { ChevronLeft, ChevronRight, X } from 'lucide-react'; // <-- import the X icon
+import { ChevronLeft, ChevronRight, X } from 'lucide-react'; 
 import CustomReportSearchForm from './PreloadingScreen';
 import DynamicContent from './Report';
 import { RootState } from '~/store/store';
 import { DealsSidebar } from './CustomReportSidebar';
 import { Button } from '~/components/ui/button';
-import { setData } from '~/store/slices/customReport'; // <-- adjust to your actual action
+import { setData } from '~/store/slices/customReport'; 
 
 interface UrlParams {
   companyName?: string;
