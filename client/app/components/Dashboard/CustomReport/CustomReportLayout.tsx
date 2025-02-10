@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { ChevronLeft, ChevronRight, X } from 'lucide-react'; 
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import CustomReportSearchForm from './PreloadingScreen';
 import DynamicContent from './Report';
 import { RootState } from '~/store/store';
 import { DealsSidebar } from './CustomReportSidebar';
 import { Button } from '~/components/ui/button';
-import { setData } from '~/store/slices/customReport'; 
+import { setData } from '~/store/slices/customReport';
 
 interface UrlParams {
   companyName?: string;
@@ -25,34 +25,32 @@ export function CustomReportLayout({ companyName }: UrlParams) {
 
   return (
     <div className="flex h-screen">
-      {/* Only render the sidebar if a companyName is provided */}
-      {companyName ? (
-        <aside
-          className={`relative transition-all duration-300 ease-in-out border-r ${
-            isSidebarCollapsed ? 'w-2' : 'w-64'
+      {/* Sidebar is always visible now, with toggling enabled. */}
+      <aside
+        className={`relative transition-all duration-300 ease-in-out border-r ${
+          isSidebarCollapsed ? 'w-2' : 'w-64'
+        }`}
+      >
+        <Button
+          variant="ghost"
+          size="icon"
+          className="absolute -right-3 top-4 z-10 rounded-full border shadow-sm"
+          onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
+        >
+          {isSidebarCollapsed ? (
+            <ChevronRight className="h-3 w-3" />
+          ) : (
+            <ChevronLeft className="h-3 w-3" />
+          )}
+        </Button>
+        <div
+          className={`overflow-hidden ${
+            isSidebarCollapsed ? 'opacity-0' : 'opacity-100'
           }`}
         >
-          <Button
-            variant="ghost"
-            size="icon"
-            className="absolute -right-3 top-4 z-10 rounded-full border shadow-sm"
-            onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
-          >
-            {isSidebarCollapsed ? (
-              <ChevronRight className="h-3 w-3 " />
-            ) : (
-              <ChevronLeft className="h-3 w-3" />
-            )}
-          </Button>
-          <div
-            className={`overflow-hidden ${
-              isSidebarCollapsed ? 'opacity-0' : 'opacity-100'
-            }`}
-          >
-            <DealsSidebar />
-          </div>
-        </aside>
-      ) : null}
+          <DealsSidebar />
+        </div>
+      </aside>
 
       {/* Main Content */}
       <main className="flex-1 p-6 overflow-y-auto">
