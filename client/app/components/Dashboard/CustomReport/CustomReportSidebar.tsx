@@ -423,7 +423,7 @@ export function DealsSidebar() {
                             </Button>
                             {/* Trash Icon for deleting the deal */}
                             <Button
-                              className="ml-2 p-2 rounded text-red-500"
+                              className="-ml-4 bg-zinc-900 opacity-50 p-2 rounded text-red-500"
                               onClick={(e) => handleDealDelete(e, deal.id)}
                               title="Delete Deal"
                             >
