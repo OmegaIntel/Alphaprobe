@@ -146,6 +146,7 @@ export function DealsSidebar() {
     return reportData?.title || 'Untitled Report';
   };
 
+  // Load any previously active deal from local storage
   useEffect(() => {
     const storedDealId = localStorage.getItem('dealId');
     if (storedDealId) {
@@ -155,6 +156,7 @@ export function DealsSidebar() {
     }
   }, [dispatch]);
 
+  // Fetch deals from the API
   useEffect(() => {
     const fetchDeals = async () => {
       try {
@@ -189,6 +191,7 @@ export function DealsSidebar() {
 
         setDeals(data);
 
+        // If we have an active deal stored but no reports fetched, load them
         const storedDealId = localStorage.getItem('dealId');
         if (storedDealId && !reports[storedDealId] && !reportLoading[storedDealId]) {
           fetchReports(storedDealId);
@@ -410,20 +413,35 @@ export function DealsSidebar() {
                   .map(([timeRange, groupedDeals]) => (
                     <div key={timeRange} className="space-y-2">
                       <h3 className="text-sm font-medium text-left">{timeRange}</h3>
+
                       {groupedDeals.map((deal) => (
-                        <div key={deal.id}>
-                          {/* Main Deal Row */}
-                          <div className="flex items-center">
+                        <div key={deal.id} className="space-y-1">
+                          {/* Main Deal Row: text fade + trash icon on the right */}
+                          <div
+                            className="flex items-center justify-between"
+                            onClick={() => handleDealSelect(deal.id, deal.name)}
+                          >
+                            {/* Deal name container with fade-out if it's too long */}
                             <Button
                               variant={activeDealId === deal.id ? 'secondary' : 'ghost'}
-                              className="text-sm h-auto py-2 flex-1 justify-start text-left"
-                              onClick={() => handleDealSelect(deal.id, deal.name)}
+                              className="relative h-auto py-2 flex-1 text-left"
                             >
-                              {deal.name}
+                              <div className="pointer-events-none flex items-center">
+                                {/* Fading text container */}
+                                <div className="relative overflow-hidden max-w-[120px]">
+                                  <div className="whitespace-nowrap overflow-hidden pr-8">
+                                    {deal.name}
+                                  </div>
+                                  {/* Fading gradient on the right */}
+                                  <div className="pointer-events-none absolute top-0 right-0 h-full w-8 bg-gradient-to-l from-gray-50 dark:from-gray-900 to-transparent" />
+                                </div>
+                              </div>
                             </Button>
-                            {/* Trash Icon for deleting the deal */}
+
+                            {/* Trash Icon (stopPropagation handled in onClick) */}
                             <Button
-                              className="-ml-4 bg-zinc-900 opacity-50 p-2 rounded text-red-500"
+                              variant="ghost"
+                              className="p-2 text-red-500 hover:bg-transparent"
                               onClick={(e) => handleDealDelete(e, deal.id)}
                               title="Delete Deal"
                             >
@@ -431,17 +449,21 @@ export function DealsSidebar() {
                             </Button>
                           </div>
 
-                          {/* If expanded, show associated reports */}
+                          {/* If expanded, show associated reports with fade */}
                           {expandedDeals[deal.id] && (
-                            <div className="ml-4 space-y-2 mt-1">
+                            <div className="ml-3 space-y-1 mt-1">
                               {reportLoading[deal.id] ? (
                                 <Loader2 className="h-6 w-6 animate-spin" />
                               ) : reports[deal.id]?.length > 0 ? (
                                 reports[deal.id].map((report) => (
                                   <div
                                     key={report.report_id}
-                                    className="text-sm flex items-center gap-2 text-gray-400 hover:text-gray-900 transition-colors cursor-pointer px-2 py-1 rounded hover:bg-gray-100"
-                                    onClick={() => {
+                                    className="text-sm flex items-center gap-2 text-gray-500 hover:text-gray-800 transition-colors cursor-pointer px-2 py-1 rounded hover:bg-gray-100"
+                                    onClick={(event) => {
+                                      // Avoid toggling deals again
+                                      event.stopPropagation();
+
+                                      // Send data to your store so it displays in the main area
                                       dispatch(
                                         setData({
                                           report: report.report_data,
@@ -451,9 +473,13 @@ export function DealsSidebar() {
                                     }}
                                   >
                                     <ScrollText className="h-4 w-4 flex-shrink-0" />
-                                    <span className="truncate">
-                                      {getReportPreview(report.report_data)}
-                                    </span>
+                                    {/* Fading text container for the report */}
+                                    <div className="relative overflow-hidden max-w-[110px]">
+                                      <div className="whitespace-nowrap overflow-hidden pr-6">
+                                        {getReportPreview(report.report_data)}
+                                      </div>
+                                      <div className="pointer-events-none absolute top-0 right-0 h-full w-6 bg-gradient-to-l from-gray-100 dark:from-gray-900 to-transparent" />
+                                    </div>
                                   </div>
                                 ))
                               ) : (
