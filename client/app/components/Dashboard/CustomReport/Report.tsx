@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, CardContent } from "~/components/ui/card";
 import { TooltipProvider } from "~/components/ui/tooltip";
-import jsPDF from "jspdf";
 import { Button } from "~/components/ui/button";
+import { Input } from "~/components/ui/input";
+import { Label } from "~/components/ui/label";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { useToast } from "~/hooks/use-toast";
+import { API_BASE_URL } from "~/constant";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 interface Subheading {
   title: string;
-  content: string; // raw (sanitized) markdown
+  content: string;
 }
 
 interface Section {
@@ -18,9 +23,9 @@ interface Section {
 
 interface DynamicContentProps {
   report: string;
+  defaultFileName?: string;
 }
 
-// 1. A basic cleanup for triple asterisks and extra blank lines
 const sanitizeReport = (report: string): string => {
   let sanitized = report.replace(/\r/g, "");
   sanitized = sanitized.replace(/\*{3,}/g, "**");
@@ -28,13 +33,18 @@ const sanitizeReport = (report: string): string => {
   return sanitized.trim();
 };
 
-const DynamicContent: React.FC<DynamicContentProps> = ({ report }) => {
-  // 2. Split into sections based on "##" and "###" headings
+const DynamicContent: React.FC<DynamicContentProps> = ({ 
+  report, 
+  defaultFileName = "Report" 
+}) => {
+  const { toast } = useToast();
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [fileName, setFileName] = useState(defaultFileName);
+
   const parseReport = (rawReport: string): Section[] => {
     const cleanedReport = sanitizeReport(rawReport);
 
     if (!cleanedReport.includes("## ")) {
-      // If no "##" headings found, just put entire content in a single subheading
       return [
         {
           main_heading: "Report",
@@ -52,9 +62,7 @@ const DynamicContent: React.FC<DynamicContentProps> = ({ report }) => {
       .split("\n\n## ")
       .filter((section) => section.trim())
       .map((section) => {
-        // Remove leading "##" from the heading
         const normalizedSection = section.replace(/^##\s*/, "");
-        // Now split by "###" to get subheadings
         const [mainHeading, ...subsections] = normalizedSection.split("\n### ");
 
         const subheadings = subsections.map((subsection) => {
@@ -66,7 +74,6 @@ const DynamicContent: React.FC<DynamicContentProps> = ({ report }) => {
         });
 
         if (subheadings.length === 0) {
-          // If no subheadings, treat the entire section as content under "Details"
           return {
             main_heading: mainHeading.trim(),
             subheadings: [
@@ -87,53 +94,103 @@ const DynamicContent: React.FC<DynamicContentProps> = ({ report }) => {
 
   const data = parseReport(report);
 
-  // 3. Convert each subheading to plain text when exporting PDF (same as before)
-  const handleDownloadPDF = () => {
-    const pdf = new jsPDF("p", "mm", "a4");
-    let y = 10;
-
-    data.forEach((section) => {
-      pdf.setFontSize(16);
-      pdf.setTextColor(0, 0, 0);
-      pdf.text(section.main_heading, 10, y);
-      y += 10;
-
-      section.subheadings.forEach((subheading) => {
-        if (y > 280) {
-          pdf.addPage();
-          y = 10;
-        }
-        pdf.setFontSize(14);
-        pdf.setTextColor(0, 0, 255);
-        pdf.text(subheading.title, 10, y);
-        y += 8;
-
-        const plainText = subheading.content.replace(/<[^>]*>/g, "");
-        pdf.setFontSize(12);
-        pdf.setTextColor(0, 0, 0);
-        const contentLines = pdf.splitTextToSize(plainText, 190);
-
-        contentLines.forEach((line: string) => {
-          if (y > 280) {
-            pdf.addPage();
-            y = 10;
-          }
-          pdf.text(line, 10, y);
-          y += 7;
-        });
-      });
-    });
-
-    pdf.save("report.pdf");
+  const getReportMetadata = () => {
+    const firstSection = data[0];
+    return {
+      title: firstSection?.main_heading || "Generated Report",
+      sub_title: firstSection?.subheadings[0]?.title || "Analysis Details"
+    };
   };
 
-  // 4. Custom ReactMarkdown renderers for tables, code, etc.
+  const handleGeneratePDF = async () => {
+    setIsGenerating(true);
+    try {
+      const { title, sub_title } = getReportMetadata();
+      
+      const response = await fetch(`${API_BASE_URL}/api/generate-pdf`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          markdown: report,
+          title,
+          sub_title,
+          theme: "professional"
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      // Get the HTML content from the backend
+      const htmlContent = await response.text();
+
+      // Open a new window and write the HTML content into it.
+      const newWindow = window.open("", "_blank");
+      if (!newWindow) {
+        throw new Error("Could not open new window");
+      }
+      newWindow.document.open();
+      newWindow.document.write(htmlContent);
+      newWindow.document.close();
+
+      // Wait until the new window is fully loaded and allow extra time for external scripts/charts.
+      await new Promise((resolve) => {
+        newWindow.onload = () => {
+          // Wait an extra 2000ms for Chart.js and other scripts to finish rendering
+          setTimeout(resolve, 2000);
+        };
+      });
+
+      // Use html2canvas on the new window's body with a scale of 10.
+      const canvas = await html2canvas(newWindow.document.body, { scale: 10 });
+      const imgData = canvas.toDataURL("image/png");
+
+      // Create a new PDF document using jsPDF.
+      const pdf = new jsPDF("p", "mm", "a4");
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
+
+      // Add a 10mm margin on all sides.
+      const margin = 10; // 10 mm margin
+      const contentWidth = pdfWidth - 2 * margin;
+      
+      // Get image properties to calculate the aspect ratio and dimensions.
+      const imgProps = pdf.getImageProperties(imgData);
+      const imgWidth = contentWidth;
+      const imgHeight = (imgProps.height * contentWidth) / imgProps.width;
+
+      // Add the image to the PDF document with margins.
+      pdf.addImage(imgData, "PNG", margin, margin, imgWidth, imgHeight);
+
+      // Trigger the download of the PDF file.
+      pdf.save(`${fileName}.pdf`);
+
+      // Close the temporary window.
+      newWindow.close();
+
+      toast({
+        title: "Success",
+        description: "PDF generated and downloaded successfully!",
+        variant: "default",
+      });
+    } catch (error) {
+      console.error("Error generating PDF:", error);
+      toast({
+        title: "Error",
+        description: "Failed to generate PDF. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsGenerating(false);
+    }
+  };
+
   const customComponents = {
     table: ({ node, children, ...props }: any) => (
-      <table
-        className="border-collapse border-separate border-spacing-4 w-full"
-        {...props}
-      >
+      <table className="border-collapse border-separate border-spacing-4 w-full" {...props}>
         {children}
       </table>
     ),
@@ -148,15 +205,9 @@ const DynamicContent: React.FC<DynamicContentProps> = ({ report }) => {
       </td>
     ),
     code: ({ node, inline, className, children, ...props }: any) => {
-      // If there's a language indicated, we can parse it from className
       const match = /language-(\w+)/.exec(className || "");
       return !inline ? (
-        <pre
-          className={`rounded bg-gray-800 p-4 overflow-x-auto ${
-            match ? `language-${match[1]}` : ""
-          }`}
-          {...props}
-        >
+        <pre className={`rounded bg-gray-800 p-4 overflow-x-auto ${match ? `language-${match[1]}` : ""}`} {...props}>
           <code>{children}</code>
         </pre>
       ) : (
@@ -167,19 +218,14 @@ const DynamicContent: React.FC<DynamicContentProps> = ({ report }) => {
     },
   };
 
-  // 5. Render the subheading content with ReactMarkdown + remarkGfm
   const renderSubheadingContent = (content: string) => (
-    <ReactMarkdown
-      remarkPlugins={[remarkGfm]}
-      components={customComponents}
-    >
+    <ReactMarkdown remarkPlugins={[remarkGfm]} components={customComponents}>
       {content}
     </ReactMarkdown>
   );
 
   return (
     <TooltipProvider>
-      {/* Container for the entire report */}
       <div className="space-y-8">
         {data.map((section, sectionIndex) => (
           <Card key={sectionIndex} className="space-y-4">
@@ -204,10 +250,41 @@ const DynamicContent: React.FC<DynamicContentProps> = ({ report }) => {
         ))}
       </div>
 
-      {/* Download PDF button */}
-      <div className="flex justify-end mt-6">
-        <Button onClick={handleDownloadPDF}>
-          Download PDF
+      {isGenerating && (
+        <div className="mt-4 flex justify-center items-center space-x-2">
+          <span className="animate-spin text-2xl">⚪</span>
+          <span className="text-lg font-medium">Your PDF is being generated. Please wait...</span>
+        </div>
+      )}
+
+      <div className="flex items-center justify-end gap-4 mt-6">
+        <div className="flex-1 max-w-xs">
+          <Label htmlFor="filename" className="text-sm text-gray-500">
+            Filename (optional)
+          </Label>
+          <Input
+            id="filename"
+            type="text"
+            placeholder="Enter filename"
+            value={fileName}
+            onChange={(e) => setFileName(e.target.value)}
+            className="mt-1"
+          />
+        </div>
+        
+        <Button 
+          onClick={handleGeneratePDF} 
+          disabled={isGenerating}
+          className="relative"
+        >
+          {isGenerating ? (
+            <>
+              <span className="animate-spin mr-2">⚪</span>
+              Generating PDF...
+            </>
+          ) : (
+            'Generate PDF'
+          )}
         </Button>
       </div>
     </TooltipProvider>
