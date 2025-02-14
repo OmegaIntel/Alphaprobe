@@ -62,7 +62,7 @@ const SummaryReport: React.FC = () => {
 
   return (
     <div className="mb-20 pb-10 rounded-lg">
-      <div className="px-10 py-5">
+      <div className="">
         {isValidReportData(summaryData) ? (
           <>
             <ReportLayout data={summaryData} />

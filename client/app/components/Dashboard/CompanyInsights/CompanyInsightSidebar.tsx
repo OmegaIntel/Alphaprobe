@@ -78,8 +78,8 @@ export default function CompanyInsightSidebar() {
   };
 
   return (
-    <Card className="h-screen flex flex-col border-0 rounded-none">
-      <CardHeader className="bg-background border-b">
+    <Card className="flex flex-col border-0 rounded-none">
+      {/* <CardHeader className=" border-b">
         <div className="p-4">
           <img
             src="/images/LogoCompany.png"
@@ -88,7 +88,7 @@ export default function CompanyInsightSidebar() {
           />
           <CardTitle>Companies</CardTitle>
         </div>
-      </CardHeader>
+      </CardHeader> */}
 
       <CardContent className="flex-1 p-0">
         <ScrollArea className="h-full">

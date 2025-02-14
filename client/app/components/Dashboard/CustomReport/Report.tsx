@@ -119,58 +119,187 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
           theme: "professional"
         }),
       });
-
+  
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-
-      // Get the HTML content from the backend
+  
       const htmlContent = await response.text();
-
-      // Open a new window and write the HTML content into it.
-      const newWindow = window.open("", "_blank");
-      if (!newWindow) {
-        throw new Error("Could not open new window");
+  
+      // Create container for content
+      const tempDiv = document.createElement('div');
+      tempDiv.style.width = '1600px';
+      tempDiv.style.padding = '40px';
+      tempDiv.style.backgroundColor = '#ffffff';
+      tempDiv.style.position = 'absolute';
+      tempDiv.style.left = '-9999px';
+      document.body.appendChild(tempDiv);
+  
+      // Add the content
+      tempDiv.innerHTML = htmlContent;
+  
+      // Function to load scripts with proper error handling
+      const loadScript = (url) => {
+        return new Promise((resolve, reject) => {
+          const script = document.createElement('script');
+          script.src = url;
+          script.async = true;
+          script.onload = resolve;
+          script.onerror = reject;
+          document.head.appendChild(script);
+        });
+      };
+  
+      // Load all required scripts in parallel
+      await Promise.all([
+        loadScript('https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js')
+      ]);
+  
+      // Initialize chart after scripts are loaded
+      const revenueCanvas = tempDiv.querySelector('#revenueChart');
+      if (revenueCanvas) {
+        revenueCanvas.style.width = '800px';
+        revenueCanvas.style.height = '400px';
+        revenueCanvas.style.margin = '20px auto';
+        revenueCanvas.style.backgroundColor = '#ffffff';
+        
+        const ctx = revenueCanvas.getContext('2d');
+        await new Promise((resolve) => {
+          new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: ['2021', '2022', '2023'],
+              datasets: [{
+                label: 'Revenue',
+                data: [1000000, 1200000, 1500000],
+                backgroundColor: 'rgba(52, 152, 219, 0.8)',
+                borderColor: 'rgba(41, 128, 185, 1)',
+                borderWidth: 2
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              animation: {
+                duration: 0 // Disable animations for PDF
+              },
+              plugins: {
+                legend: {
+                  display: true,
+                  position: 'top',
+                  labels: {
+                    font: { size: 14, weight: 'bold' },
+                    color: '#2C3E50',
+                    padding: 20
+                  }
+                }
+              },
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  ticks: {
+                    callback: (value) => '$' + value.toLocaleString(),
+                    font: { size: 12, weight: 'bold' }
+                  },
+                  grid: {
+                    color: 'rgba(0, 0, 0, 0.1)'
+                  }
+                },
+                x: {
+                  ticks: {
+                    font: { size: 12, weight: 'bold' }
+                  },
+                  grid: {
+                    color: 'rgba(0, 0, 0, 0.1)'
+                  }
+                }
+              }
+            }
+          });
+          // Wait for chart render
+          setTimeout(resolve, 1000);
+        });
       }
-      newWindow.document.open();
-      newWindow.document.write(htmlContent);
-      newWindow.document.close();
-
-      // Wait until the new window is fully loaded and allow extra time for external scripts/charts.
-      await new Promise((resolve) => {
-        newWindow.onload = () => {
-          // Wait an extra 2000ms for Chart.js and other scripts to finish rendering
-          setTimeout(resolve, 2000);
-        };
+  
+      // Function to remove empty space
+      const removeEmptySpace = (element) => {
+        const children = element.children;
+        for (let i = children.length - 1; i >= 0; i--) {
+          const child = children[i];
+          if (child.innerHTML === '' || child.innerHTML === '&nbsp;') {
+            child.remove();
+          } else {
+            removeEmptySpace(child);
+          }
+        }
+      };
+  
+      // Remove empty space
+      removeEmptySpace(tempDiv);
+  
+      // Create PDF in landscape
+      const pdf = new jsPDF({
+        orientation: 'landscape',
+        unit: 'mm',
+        format: 'a4',
+        compress: true
       });
-
-      // Use html2canvas on the new window's body with a scale of 10.
-      const canvas = await html2canvas(newWindow.document.body, { scale: 10 });
-      const imgData = canvas.toDataURL("image/png");
-
-      // Create a new PDF document using jsPDF.
-      const pdf = new jsPDF("p", "mm", "a4");
-      const pdfWidth = pdf.internal.pageSize.getWidth();
-      const pdfHeight = pdf.internal.pageSize.getHeight();
-
-      // Add a 10mm margin on all sides.
-      const margin = 10; // 10 mm margin
-      const contentWidth = pdfWidth - 2 * margin;
+  
+      const contentWidth = tempDiv.offsetWidth;
+      const contentHeight = tempDiv.offsetHeight;
       
-      // Get image properties to calculate the aspect ratio and dimensions.
-      const imgProps = pdf.getImageProperties(imgData);
-      const imgWidth = contentWidth;
-      const imgHeight = (imgProps.height * contentWidth) / imgProps.width;
-
-      // Add the image to the PDF document with margins.
-      pdf.addImage(imgData, "PNG", margin, margin, imgWidth, imgHeight);
-
-      // Trigger the download of the PDF file.
+      // Calculate page dimensions
+      const pageWidth = pdf.internal.pageSize.getWidth();
+      const pageHeight = pdf.internal.pageSize.getHeight();
+      const margin = 10;
+      
+      // Calculate content scaling
+      const scale = (pageWidth - 2 * margin) / contentWidth;
+      const scaledHeight = contentHeight * scale;
+      
+      // Calculate number of pages needed
+      const totalPages = Math.ceil(scaledHeight / (pageHeight - 2 * margin));
+      
+      for (let i = 0; i < totalPages; i++) {
+        if (i > 0) {
+          pdf.addPage();
+        }
+  
+        const yOffset = i * (pageHeight - 2 * margin) / scale;
+        
+        const canvas = await html2canvas(tempDiv, {
+          scale: 2,
+          useCORS: true,
+          logging: false,
+          width: contentWidth,
+          height: Math.min(contentHeight - yOffset, (pageHeight - 2 * margin) / scale),
+          y: yOffset,
+          backgroundColor: '#ffffff',
+          onclone: (document, element) => {
+            removeEmptySpace(element);
+          }
+        });
+  
+        const imgData = canvas.toDataURL('image/jpeg', 1.0);
+        
+        pdf.addImage(
+          imgData,
+          'JPEG',
+          margin,
+          margin,
+          pageWidth - 2 * margin,
+          Math.min(scaledHeight - i * (pageHeight - 2 * margin), pageHeight - 2 * margin),
+          '',
+          'FAST'
+        );
+      }
+  
+      // Clean up
+      document.body.removeChild(tempDiv);
+  
+      // Save PDF
       pdf.save(`${fileName}.pdf`);
-
-      // Close the temporary window.
-      newWindow.close();
-
+  
       toast({
         title: "Success",
         description: "PDF generated and downloaded successfully!",
@@ -190,7 +319,7 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
 
   const customComponents = {
     table: ({ node, children, ...props }: any) => (
-      <table className="border-collapse border-separate border-spacing-4 w-full" {...props}>
+      <table className="border-collapse  border-spacing-4 w-full" {...props}>
         {children}
       </table>
     ),

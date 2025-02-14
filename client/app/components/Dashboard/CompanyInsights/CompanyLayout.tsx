@@ -30,9 +30,9 @@ export default function CompanyDetails() {
   return (
     <Card className="flex h-full bg-background">
       {/* Sidebar */}
-      <div className="w-60 flex-shrink-0 border-r">
+      {/* <div className="w-60 flex-shrink-0 border-r">
         <CompanyInsightSidebar />
-      </div>
+      </div> */}
 
       {/* Main Content */}
       <div className="flex-1">
