@@ -78,7 +78,7 @@ export default function CompanyInsightSidebar() {
   };
 
   return (
-    <Card className="flex flex-col border-0 rounded-none">
+    <Card className="flex flex-col rounded-none">
       {/* <CardHeader className=" border-b">
         <div className="p-4">
           <img

@@ -273,10 +273,6 @@ export function ChatSession({
 
   return (
     <Card className="bg-zinc-800 border-0 rounded-none">
-      {/* <CardHeader className="border-b">
-        <h2 className="text-lg font-bold">Chat Sessions</h2>
-      </CardHeader> */}
-
       <Button
         variant="ghost"
         className="w-full justify-start gap-2 rounded-none"

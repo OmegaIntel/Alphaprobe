@@ -73,14 +73,6 @@ export function Sidebar({ isOpen, onClose, data }: SidebarProps) {
         <SheetHeader className="p-4 border-b border-stone-800">
           <div className="flex justify-between items-center">
             <SheetTitle className="text-white">References</SheetTitle>
-            {/* <Button 
-              variant="ghost" 
-              size="icon"
-              onClick={onClose}
-              className="text-white hover:text-red-500"
-            >
-              <X className="h-4 w-4" />
-            </Button> */}
           </div>
         </SheetHeader>
 
