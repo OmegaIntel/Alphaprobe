@@ -18,6 +18,7 @@ from api.api_industry_search import search_industries_router
 from api.api_research_report import document_router
 from api.api_file_upload import upload_file_router
 from api.api_amplitude import amplitude_router
+from api.api_perplexity_research import perplexity_router
 from api.api_langgraph_doc import langgraph_router
 
 
@@ -54,6 +55,7 @@ app.include_router(search_industries_router)
 app.include_router(upload_file_router)
 app.include_router(amplitude_router)
 app.include_router(langgraph_router)
+app.include_router(perplexity_router)
 
 if __name__ == "__main__":
     uvicorn.run("api.app:app", host="0.0.0.0", port=8000, reload=True, loop='asyncio')

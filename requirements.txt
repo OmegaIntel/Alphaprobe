@@ -52,3 +52,6 @@ opensearch-py==2.5.0
 llama-index-vector-stores-opensearch
 langchain-core==0.3.31
 langchain-text-splitters==0.3.5
+pandas==2.2.3
+numpy==2.2.3
+matplotlib==3.10.1
