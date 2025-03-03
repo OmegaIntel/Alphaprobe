@@ -48,6 +48,39 @@ class ResearchQuery(BaseModel):
     include_charts: Optional[bool] = Field(True, description="Include chart generation")
     include_tables: Optional[bool] = Field(True, description="Include tables extraction")
 
+
+
+# helper function to transform the chart data
+def transform_chart_data(chart_suggestion):
+    """
+    Transform OpenAI chart suggestion format to the format expected by generate_chart
+    """
+    transformed = {
+        "chart_type": chart_suggestion.get("chart_type", "bar"),
+        "title": chart_suggestion.get("title", "Chart"),
+        "x_label": chart_suggestion.get("x_label", ""),
+        "y_label": chart_suggestion.get("y_label", "")
+    }
+    
+    # Handle the data format transformation
+    if "data" in chart_suggestion and isinstance(chart_suggestion["data"], list):
+        # Check if data is in {x, y} format
+        if all(isinstance(item, dict) and "x" in item and "y" in item for item in chart_suggestion["data"]):
+            transformed["labels"] = [item["x"] for item in chart_suggestion["data"]]
+            transformed["values"] = [item["y"] for item in chart_suggestion["data"]]
+        else:
+            # Fallback: assume data is already in expected format
+            print("⚠️ [transform_chart_data] Data format is not in {x,y} structure. Using as is.")
+            transformed["labels"] = chart_suggestion.get("labels", [])
+            transformed["values"] = chart_suggestion.get("values", [])
+    else:
+        # If no data property, check for direct labels and values
+        transformed["labels"] = chart_suggestion.get("labels", [])
+        transformed["values"] = chart_suggestion.get("values", [])
+    
+    print(f"📊 [transform_chart_data] Transformed chart: {transformed['title']}, Labels: {len(transformed['labels'])}, Values: {len(transformed['values'])}")
+    
+    return transformed
 # -------------------- Perplexity API Call --------------------
 
 async def get_perplexity_response(query: str, depth: int = 3, headings: List[str] = []):
@@ -101,54 +134,114 @@ Conduct the most **detailed** and **comprehensive** research on:
         raise HTTPException(status_code=500, detail=f"Perplexity API error: {str(e)}")
 
 # -------------------- OpenAI Structuring --------------------
+
 async def segment_research_with_openai(research_text: str):
     """Processes Perplexity's response using OpenAI for structured segmentation."""
     print("🔄 [segment_research_with_openai] Processing research text with OpenAI...")
-    
-    prompt = f"""
-📌 **Objective:** Extract structured insights from the following research document.
 
-**Tasks:**
-1️⃣ **Segment information into logical sections.**
+    # **Enhanced Prompt for Structured Output**
+    prompt = f"""
+📌 **Objective:** Process the given research document and extract structured insights for easy visualization.
+
+---
+
+### **Tasks:**
+1️⃣ **Segment information into logical sections with clear headings.**
 2️⃣ **Extract key statistics and figures in structured JSON format.**
 3️⃣ **Summarize critical takeaways in bullet points.**
-4️⃣ **Identify data points for visualizations.**
-5️⃣ **Extract tables in a structured JSON format.**
-6️⃣ **Output `chart_suggestions` as JSON, not as text descriptions.**
+4️⃣ **Identify numerical data suitable for charts and provide JSON-ready chart suggestions.**
+5️⃣ **Extract tables in a structured JSON format (with column names and rows).**
+6️⃣ **Detect and list image URLs (if any) for relevant sections.**
+7️⃣ **Ensure ALL structured outputs are in a valid JSON format, without Markdown code fences.**
 
-🔹 **Research Document:**
+---
+
+### **Research Document:**
 {research_text}
 
-📌 **Expected JSON Output Format:** (Ensure NO markdown code fences like ```json)
+---
+
+### **Expected JSON Output Format:**
 {{
-    "sections": [...],
-    "key_statistics": [...],
-    "takeaways": [...],
+    "sections": [
+        {{
+            "title": "Heading 1",
+            "content": "Detailed content of the section..."
+        }},
+        {{
+            "title": "Heading 2",
+            "content": "More detailed content..."
+        }}
+    ],
+    
+    "key_statistics": [
+        {{
+            "name": "Market Size (2023)",
+            "value": "500 Billion USD"
+        }},
+        {{
+            "name": "Annual Growth Rate",
+            "value": "8.2%"
+        }}
+    ],
+    
+    "takeaways": [
+        "Key insight 1...",
+        "Key insight 2...",
+        "Key insight 3..."
+    ],
+
     "chart_suggestions": [
         {{
-            "type": "bar",
-            "x": ["Country"],
-            "y": ["EV Sales"],
+            "chart_type": "bar",
+            "title": "Market Growth by Region",
+            "x_label": "Region",
+            "y_label": "Market Size (Billion USD)",
             "data": [
-                ["Germany", 500000],
-                ["France", 450000]
+                {{"x": "North America", "y": 150}},
+                {{"x": "Europe", "y": 130}},
+                {{"x": "Asia", "y": 220}}
             ]
         }},
         {{
-            "type": "pie",
-            "x": ["Market Share"],
-            "y": ["Company"],
+            "chart_type": "pie",
+            "title": "Market Share Distribution",
             "data": [
-                ["Volkswagen", 30],
-                ["Tesla", 40]
+                {{"x": "Company A", "y": 40}},
+                {{"x": "Company B", "y": 35}},
+                {{"x": "Company C", "y": 25}}
             ]
         }}
     ],
-    "tables": [...]
+
+    "tables": [
+        {{
+            "title": "Top Market Segments",
+            "headers": ["Segment", "Revenue (Billion USD)", "Growth Rate"],
+            "rows": [
+                ["Food & Beverage", "50", "6.2%"],
+                ["Healthcare", "80", "7.5%"],
+                ["Technology", "120", "10.1%"]
+            ]
+        }}
+    ],
+
+    "image_urls": [
+        "https://example.com/image1.png",
+        "https://example.com/image2.jpg"
+    ]
 }}
+
+---
+
+📌 **Guidelines:**
+- **ALL extracted data must be structured as JSON** (no Markdown or text descriptions).
+- **Ensure numerical data is correctly formatted for visualization**.
+- **Provide only valid JSON output**, ensuring keys like `"chart_suggestions"`, `"tables"`, and `"key_statistics"` are properly structured.
 """
 
     try:
+        # **Call OpenAI API for structured response**
         response = openai_client.chat.completions.create(
             model="gpt-4o",
             messages=[
@@ -160,7 +253,8 @@ async def segment_research_with_openai(research_text: str):
         )
 
         print("✅ [segment_research_with_openai] OpenAI API response received.")
-        
+
+        # Extract response content
         raw_response = response.choices[0].message.content.strip() if response.choices else ""
         print("🔍 [OpenAI Raw Response]:", raw_response)  # Logs full response
 
@@ -172,7 +266,7 @@ async def segment_research_with_openai(research_text: str):
         raw_response = re.sub(r"^```json\n?", "", raw_response)  # Remove opening ```json
         raw_response = re.sub(r"\n?```$", "", raw_response)  # Remove closing ```
 
-        # Attempt to parse JSON
+        # **Attempt to parse JSON**
         try:
             structured_output = json.loads(raw_response)
         except json.JSONDecodeError:
@@ -211,7 +305,18 @@ async def generate_research(
     # **Step 3: Generate Charts (if required)**
     if query.include_charts:
         print("📊 [generate_research] Generating charts from structured data...")
-        structured_output["generated_charts"] = [generate_chart(chart) for chart in structured_output["chart_suggestions"]]
+        generated_charts = []
+        
+        for chart_suggestion in structured_output.get("chart_suggestions", []):
+            # Transform data format if needed
+            chart_data = transform_chart_data(chart_suggestion)
+            chart_image = generate_chart(chart_data)
+            generated_charts.append({
+                "suggestion": chart_suggestion,
+                "image": chart_image
+            })
+            
+        structured_output["generated_charts"] = generated_charts
 
     print("🚀 [generate_research] Research successfully processed and structured.")
 

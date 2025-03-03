@@ -117,61 +117,102 @@ def extract_image_urls(text: str) -> List[str]:
     
     return list(set(markdown_matches + html_matches))
 
+
 def generate_chart(chart_data: Dict[str, Any], chart_type: Optional[str] = None) -> str:
     """
-    Generate a chart image and return as base64 encoded string
+    Generate a chart image and return as base64 encoded string.
+    Handles different data formats and provides error handling.
     """
-    plt.figure(figsize=(10, 6))
-    
-    # Get chart type from data or use provided type
-    chart_type = chart_data.get("chart_type", chart_type or "bar").lower()
-    
-    # Extract data
-    labels = chart_data.get("labels", [])
-    values = chart_data.get("values", [])
-    title = chart_data.get("title", "Chart")
-    x_label = chart_data.get("x_label", "")
-    y_label = chart_data.get("y_label", "")
-    
-    # Create different chart types
-    if chart_type == "bar":
-        plt.bar(labels, values, color='skyblue')
-        plt.xticks(rotation=45, ha='right')
-    
-    elif chart_type == "line":
-        plt.plot(labels, values, marker='o', linestyle='-', color='green')
-        plt.xticks(rotation=45, ha='right')
-    
-    elif chart_type == "pie":
-        plt.pie(values, labels=labels, autopct='%1.1f%%', startangle=90)
-        plt.axis('equal')
-    
-    elif chart_type == "scatter":
-        plt.scatter(range(len(values)), values, color='purple')
-    
-    else:  # Default to bar chart
-        plt.bar(labels, values, color='skyblue')
-    
-    # Add labels and title
-    plt.title(title)
-    if x_label:
-        plt.xlabel(x_label)
-    if y_label:
-        plt.ylabel(y_label)
-    
-    # Tight layout for better appearance
-    plt.tight_layout()
-    
-    # Save to BytesIO buffer
-    buffer = BytesIO()
-    plt.savefig(buffer, format='png', dpi=100)
-    plt.close()
-    
-    # Convert to base64
-    buffer.seek(0)
-    img_base64 = base64.b64encode(buffer.getvalue()).decode()
-    
-    return f"data:image/png;base64,{img_base64}"
+    try:
+        plt.figure(figsize=(10, 6))  # Create a new figure to avoid overlap
+        
+        # Get chart type
+        chart_type = chart_data.get("chart_type", chart_type or "bar").lower()
+        
+        # Extract data
+        labels = chart_data.get("labels", [])
+        values = chart_data.get("values", [])
+        title = chart_data.get("title", "Chart")
+        x_label = chart_data.get("x_label", "")
+        y_label = chart_data.get("y_label", "")
+        
+        # Validate data
+        if not labels or not values:
+            print(f"⚠️ [generate_chart] Empty data detected: Labels: {labels}, Values: {values}")
+            plt.text(0.5, 0.5, "No data available", 
+                    horizontalalignment='center', verticalalignment='center')
+            plt.title(title)
+        else:
+            # Ensure we are working with new figures
+            plt.clf()
+
+            # Ensure values are numeric
+            try:
+                values = [float(v) if v is not None else 0 for v in values]
+            except (ValueError, TypeError) as e:
+                print(f"⚠️ [generate_chart] Error converting values to numeric: {e}")
+                plt.text(0.5, 0.5, "Error in data format", 
+                        horizontalalignment='center', verticalalignment='center')
+                plt.title(title)
+                
+            # Generate chart
+            if chart_type == "bar" and all(v is not None for v in values):
+                plt.bar(labels, values, color='skyblue')
+                plt.xticks(rotation=45, ha='right')
+            
+            elif chart_type == "line" and all(v is not None for v in values):
+                plt.plot(labels, values, marker='o', linestyle='-', color='green')
+                plt.xticks(rotation=45, ha='right')
+            
+            elif chart_type == "pie" and all(v is not None for v in values) and all(v >= 0 for v in values):
+                plt.pie(values, labels=labels, autopct='%1.1f%%', startangle=90)
+                plt.axis('equal')
+            
+            elif chart_type == "scatter" and all(v is not None for v in values):
+                plt.scatter(range(len(values)), values, color='purple')
+            
+            else:  # Default to bar chart
+                print(f"⚠️ [generate_chart] Using default bar chart for type: {chart_type}")
+                plt.bar(labels, values, color='skyblue')
+
+            # Add labels and title
+            plt.title(title)
+            if x_label:
+                plt.xlabel(x_label)
+            if y_label:
+                plt.ylabel(y_label)
+
+        # Adjust layout
+        plt.tight_layout()
+
+        # Save to BytesIO buffer
+        buffer = BytesIO()
+        plt.savefig(buffer, format='png', dpi=100)
+        plt.close()  # Ensure the figure is closed
+
+        # Convert to base64
+        buffer.seek(0)
+        img_base64 = base64.b64encode(buffer.getvalue()).decode()
+
+        return f"data:image/png;base64,{img_base64}"
+        
+    except Exception as e:
+        print(f"❌ [generate_chart] Error generating chart: {str(e)}")
+        # Create an error image
+        plt.figure(figsize=(10, 6))
+        plt.text(0.5, 0.5, f"Error generating chart: {str(e)}", 
+                horizontalalignment='center', verticalalignment='center')
+        plt.title("Chart Generation Error")
+        
+        buffer = BytesIO()
+        plt.savefig(buffer, format='png', dpi=100)
+        plt.close()
+        
+        buffer.seek(0)
+        img_base64 = base64.b64encode(buffer.getvalue()).decode()
+        
+        return f"data:image/png;base64,{img_base64}"
+
 
 def analyze_table_data(table_data: Dict[str, Any]) -> Dict[str, Any]:
     """
