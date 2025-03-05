@@ -17,7 +17,7 @@ export default function Layout({ children }: LayoutProps) {
       <Header />
         <div className="flex-1 flex flex-row">
           <Sidebar collapsed={isSidebarCollapsed} setCollapsed={() => setIsSidebarCollapsed(!isSidebarCollapsed)} />
-          <main className="flex-1 p-4">{children}</main>
+          <main className="flex-1">{children}</main>
         </div>
       </div>
     </Provider>

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Button } from "../ui/button";
 import { Upload, X, Send } from "lucide-react";
+import { Textarea } from "../ui/textarea";
 
 export default function PromtInput() {
   const [files, setFiles] = useState<File[]>([]);
@@ -16,9 +17,8 @@ export default function PromtInput() {
   };
 
   return (
-    <div className="flex items-center border rounded-full px-4 py-2 w-full max-w-3xl bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500">
-      <input
-        type="text"
+    <div className="flex items-center border rounded-lg px-4 py-2 w-full max-w-3xl bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500">
+      <textarea
         placeholder="Enter a prompt, ask a question, or search the web"
         className="flex-1 bg-transparent outline-none text-gray-700"
       />
@@ -37,7 +37,7 @@ export default function PromtInput() {
       </label>
 
       {/* Submit Button */}
-      <Button className="ml-2 px-3 py-2 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white">
+      <Button className="ml-2 px-3 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white">
         <Send />
       </Button>
 

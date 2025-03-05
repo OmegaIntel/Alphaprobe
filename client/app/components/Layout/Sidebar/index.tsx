@@ -1,36 +1,42 @@
-import {
-  Settings,
-  ChartPie,
-  ChevronsRight,
-  ChevronsLeft,
-  FileChartColumn,
-  PlusCircle,
-} from 'lucide-react';
+import { ChevronsRight, ChevronsLeft, PlusCircle } from 'lucide-react';
 import { NavLink } from '@remix-run/react';
 import { useState } from 'react';
 import { items, ItemType } from './SidebarItems';
 import { Button } from '~/components/ui/button';
+import { useNavigate } from '@remix-run/react';
+import { useSelector } from 'react-redux';
+import { RootState } from '~/store/store';
 
 type SidebarProps = {
   collapsed: boolean;
   setCollapsed: () => void;
 };
 
+
+
 export default function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
   const [activeMenu, setActiveMenu] = useState<string>('new');
+  const navigate = useNavigate();
+  const { isCanvas, projects, activeProjectId } = useSelector((state: RootState) => state.sidebar)
 
-  
   const onClick = (e: ItemType): void => {
     setActiveMenu(e.id as string);
   };
 
   return (
     <div
-      className={`h-screen text-gray-600 shadow-lg p-4 flex flex-col transition-all duration-300 ${collapsed ? 'w-16' : 'w-72'}`}
+      className={`h-screen text-gray-600 shadow-lg p-4 flex flex-col transition-all duration-300 ${collapsed ? 'w-16' : 'w-72'} ${isCanvas && 'hidden'}`}
     >
-      <div className={`flex items-center justify-between mb-4 ${collapsed ? 'flex-col space-y-2': ''}`}>
+      <div
+        className={`flex items-center justify-between mb-4 ${collapsed ? 'flex-col space-y-2' : ''}`}
+      >
         {!collapsed && (
-          <button className="p-1 rounded hover:bg-gray-200 text-sm font-medium space-x-2 items-center flex">
+          <button
+            onClick={() => {
+              navigate('./');
+            }}
+            className="p-1 rounded hover:bg-gray-200 text-sm font-medium space-x-2 items-center flex"
+          >
             <PlusCircle className="w-5 h-5" />
             <div className="font-semibold">{'Create New Document'}</div>
           </button>
@@ -46,7 +52,12 @@ export default function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
           )}
         </button>
         {collapsed && (
-          <button className="p-1 rounded hover:bg-gray-200 text-xl font-medium items-center">
+          <button
+            onClick={() => {
+              navigate('./');
+            }}
+            className="p-1 rounded hover:bg-gray-200 text-xl font-medium items-center"
+          >
             <PlusCircle className="w-5 h-5" />
           </button>
         )}

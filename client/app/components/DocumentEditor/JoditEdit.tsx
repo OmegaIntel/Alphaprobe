@@ -1,6 +1,7 @@
 import JoditEditor, { Jodit } from 'jodit-react';
 import PropTypes from 'prop-types';
 import React, { forwardRef, useEffect, useLayoutEffect, useRef } from 'react';
+import './JoditEdit.css'
 
 
 type JoditEditorProps = {
@@ -129,6 +130,7 @@ const JoditEdit = forwardRef<HTMLTextAreaElement, JoditEditorProps>(
 
     return (
       <JoditEditor
+        //className=''
         ref={editorRef}
         value={value}
         config={{...defaultConfig, ...config}}

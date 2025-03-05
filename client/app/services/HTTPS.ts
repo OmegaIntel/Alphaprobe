@@ -11,9 +11,8 @@ export const fetcher = async <T>(
   url: string,
   options: RequestInit = {}
 ): Promise<ApiResponse<T>> => {
-  const token = localStorage.getItem('accessToken');
-  const controller = new AbortController();
-  const { signal } = controller;
+  const token = localStorage.getItem('authToken');
+
 
   const config: RequestInit = {
     ...options,
@@ -21,16 +20,16 @@ export const fetcher = async <T>(
       'Content-Type': 'application/json',
       Authorization: token ? `Bearer ${token}` : '',
       ...options.headers,
-    },
-    signal,
+    }
   };
 
   try {
     const response = await fetch(`${API_BASE_URL}${url}`, config);
 
-    if (response.status === 401) {
-      return handleRefreshToken(url, options);
-    }
+    // if (response.status === 401) {
+    //   return handleRefreshToken(url, options);
+    // }
+    console.log('HTTP-------------', response)
 
     if (!response.ok) {
       throw new Error(`Error ${response.status}: ${response.statusText}`);
@@ -38,9 +37,6 @@ export const fetcher = async <T>(
 
     return response.json();
   } catch (error) {
-    if (error === 'AbortError') {
-      console.log('Request cancelled:', url);
-    }
     throw error;
   }
 };
@@ -66,7 +62,7 @@ const handleRefreshToken = async <T>(
   }
 
   const { accessToken } = await refreshResponse.json();
-  localStorage.setItem('accessToken', accessToken);
+  localStorage.setItem('authToken', accessToken);
 
   // Retry original request with new token
   return fetcher(url, {

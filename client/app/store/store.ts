@@ -8,6 +8,7 @@ import companyInsightReducer from "./slices/companyInsightsSlice";
 import { documentSearchResultsSlice } from "./slices/documentSearchResultSlice";
 import { chatSlice } from "./slices/chatSlice";
 import customReport from "./slices/customReport"
+import sidebarReducer from './slices/sideBar'
 
 const store = configureStore({
   reducer: {
@@ -21,6 +22,7 @@ const store = configureStore({
     formResponse: formResponseReducer,
     customReport: customReport,
     chat: chatSlice.reducer,
+    sidebar: sidebarReducer
   },
 });
 

@@ -1,8 +1,14 @@
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from '@radix-ui/react-dropdown-menu';
 import { UserCircle, CircleUserRound, Settings,LogOut, Sparkles } from 'lucide-react';
+import { useNavigate } from '@remix-run/react';
 
 
 export default function Header() {
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem('authToken');
+    navigate("/login");
+  };
   return (
     <div className="bg-gray-100 dark:bg-gray-900 p-4 flex justify-between items-center">
       <div className='text-lg font-semibold'>Omega Intelligence</div>
@@ -22,7 +28,7 @@ export default function Header() {
             <DropdownMenuItem className='flex items-center space-x-2 px-3 py-2 hover:bg-gray-200 rounded border-none'>
               <Sparkles /> <div>Upgrade Plan</div>
             </DropdownMenuItem>
-            <DropdownMenuItem className='flex items-center space-x-2 px-3 py-2 hover:bg-gray-200 rounded border-none'>
+            <DropdownMenuItem onClick={()=>{handleLogout()}} className='flex items-center space-x-2 px-3 py-2 hover:bg-gray-200 rounded border-none'>
               <LogOut /> <div>Logout</div>
             </DropdownMenuItem>
           </DropdownMenuContent>

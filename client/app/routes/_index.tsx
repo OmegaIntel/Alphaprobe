@@ -2,7 +2,7 @@ import { NavLink } from '@remix-run/react';
 import DocumentPage from '~/components/DocumentPage';
 export default function Index() {
   return (
-    <div className="">
+    <div className="p-4">
       {/* <h1 className="text-3xl font-bold mb-4">Welcome to Your AI Application</h1>
       <p className="mb-4">
         This is the main dashboard. From here, you can navigate to different sections of your application using the sidebar.

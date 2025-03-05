@@ -1,0 +1,16 @@
+.highlight {
+	background-color: yellow;
+}
+.selectHighlight {
+	background-color: orangered;
+}
+.jodit-wysiwyg {
+	/* padding: 10px 1.5cm !important; */
+	/* min-height: 73vh !important; */
+	/* width: 90% !important; */
+	word-wrap: break-word !important;
+}
+
+.jodit-container:not(.jodit_inline) {
+	border: 0px !important;
+}

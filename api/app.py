@@ -18,6 +18,12 @@ from api.api_industry_search import search_industries_router
 from api.api_research_report import document_router
 from api.api_file_upload import upload_file_router
 from api.api_amplitude import amplitude_router
+from api.api_generate_pdf import pdf_report_router
+from api.api_documents import upload_doc_router
+from api.api_projects import project_router
+from api.api_perplexity_research import perplexity_router
+from api.api_langgraph_doc import langgraph_router
+from api.api_langflow import langflow_router
 
 
 app = FastAPI(docs_url="/api/docs", openapi_url="/api/openapi.json")
@@ -52,6 +58,12 @@ app.include_router(companies_router)
 app.include_router(search_industries_router)
 app.include_router(upload_file_router)
 app.include_router(amplitude_router)
+app.include_router(pdf_report_router)
+app.include_router(upload_doc_router)
+app.include_router(project_router) 
+app.include_router(langgraph_router)
+app.include_router(perplexity_router)
+app.include_router(langflow_router)
 
 if __name__ == "__main__":
     uvicorn.run("api.app:app", host="0.0.0.0", port=8000, reload=True, loop='asyncio')

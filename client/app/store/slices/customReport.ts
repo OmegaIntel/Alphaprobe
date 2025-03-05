@@ -43,7 +43,7 @@ const customReportSlice = createSlice({
       let current = state.data;
 
       for (let i = 0; i < keys.length - 1; i++) {
-        if (!current[keys[i]]) {
+        if (!current[keys[i]]) {  
           return; // If path doesn't exist, do nothing
         }
         current = current[keys[i]];

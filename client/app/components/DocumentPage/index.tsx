@@ -6,44 +6,15 @@ import PromtInput from './PromtInput';
 import { useState } from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@radix-ui/react-tabs';
 import { cn } from '~/lib/utils';
+import { categories, templates } from './utils';
+import { useNavigate } from '@remix-run/react';
 
-const categories = [
-  { id: 'all', name: 'All Templates' },
-  { id: 'research', name: 'Research' },
-  { id: 'markets', name: 'Markets' },
-  { id: 'strategy', name: 'Strategy' },
-  { id: 'productivity', name: 'Productivity' },
-];
 
-const templates = [
-  {
-    id: 'blank',
-    category: 'all',
-    title: 'Blank Document',
-    description: 'Start a new workspace with all tools available.',
-    tags: ['Free writing', 'Brainstorming', 'Note Taking', 'Content Writing'],
-  },
-  {
-    id: 'free-form',
-    category: 'research',
-    title: 'Free Form',
-    description:
-      'A foundational template for executing complex tasks step-by-step.',
-    tags: ['Multi-step Research', 'Data Analysis', 'Task Delegation'],
-  },
-  {
-    id: 'deep-research',
-    category: 'research',
-    title: 'Deep Researcher',
-    description:
-      'A template for holistic topic examination, generating insights.',
-    tags: ['Knowledge Mapping', 'Deep Dives', 'Problem Solving'],
-  },
-];
 
 export default function DocumentCreator() {
   const [activeTab, setActiveTab] = useState('all');
   const [search, setSearch] = useState('');
+  const navigate = useNavigate();
 
   return (
     <div className="mx-auto">
@@ -75,10 +46,10 @@ export default function DocumentCreator() {
                   key={cat.id}
                   value={cat.id}
                   className={cn(
-                    'w-full text-left px-3 py-2 rounded-md text-gray-700',
+                    'w-full text-left px-3 py-2 rounded-md text-gray-700 text-sm',
                     activeTab === cat.id
-                      ? 'bg-indigo-100 text-indigo-700'
-                      : 'hover:bg-gray-200'
+                      ? 'bg-indigo-100 text-indigo-600 border-indigo-600 font-semibold'
+                      : 'hover:bg-indigo-100 bg-gray-100'
                   )}
                 >
                   {cat.name}
@@ -90,26 +61,31 @@ export default function DocumentCreator() {
 
         {/* Content Area */}
         <div className="flex-1 px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-3 h-[470px] overflow-y-scroll">
             {templates
               .filter(
                 (template) =>
-                  activeTab === 'all' || template.category === activeTab
+                  activeTab === 'all' || template.category.some((cat)=> cat === activeTab) 
               )
               .map((template) => (
                 <div
                   key={template.id}
-                  className="p-4 border rounded-lg shadow-sm"
+                  className="p-4 border rounded-lg shadow-sm hover:bg-indigo-100"
+                  onClick={()=>{
+                    navigate({pathname: "/newdocument",
+                      search: `?template=${template.id}`,
+                      hash: ""})
+                  }}
                 >
-                  <h3 className="text-lg font-medium">{template.title}</h3>
-                  <p className="text-sm text-gray-600">
+                  <h3 className="text-sm font-semibold">{template.title}</h3>
+                  <p className="text-xs text-gray-400">
                     {template.description}
                   </p>
                   <div className="mt-2 flex flex-wrap gap-1">
                     {template.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-md"
+                        className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-md"
                       >
                         {tag}
                       </span>
