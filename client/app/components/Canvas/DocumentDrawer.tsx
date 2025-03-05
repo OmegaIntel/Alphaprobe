@@ -49,7 +49,7 @@ const DocumentDrawer: React.FC<DocumentDrawerProps> = ({nodes}) => {
         <Dialog.Overlay className="z-[1] fixed inset-0 bg-black/50" />
 
         {/* Drawer Content */}
-        <Dialog.Content className="z-[1] fixed right-0 top-0 h-full w-[650px] bg-white shadow-lg transition-transform data-[state=open]:translate-x-0 data-[state=closed]:translate-x-full">
+        <Dialog.Content className="overflow-x-scroll z-[1] fixed right-0 top-0 h-full w-[650px] bg-white shadow-lg transition-transform data-[state=open]:translate-x-0 data-[state=closed]:translate-x-full">
           <div className="p-4 flex h-11 justify-between items-center border-b">
             <h2 className="text-lg font-bold">Drawer Title</h2>
             <Dialog.Close className="p-2">
@@ -57,7 +57,7 @@ const DocumentDrawer: React.FC<DocumentDrawerProps> = ({nodes}) => {
             </Dialog.Close>
           </div>
 
-          <div className='overflow-x-scroll'>
+          <div>
             <Suspense fallback={<p>Loading editor...</p>}>
               <JoditEdit
                 ref={editor}
