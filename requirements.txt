@@ -48,7 +48,7 @@ llama-index==0.12.10
 loguru==0.7.0
 nest-asyncio>=1.5.8
 pytest==7.4.0
-opensearch-py==2.5.0
+opensearch-py==2.8.0
 llama-index-vector-stores-opensearch
 langchain-core==0.3.31
 langchain-text-splitters==0.3.5
