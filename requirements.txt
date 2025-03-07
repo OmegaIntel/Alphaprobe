@@ -20,7 +20,7 @@ werkzeug==3.0.3
 jose==1.0.0
 pyjwt==2.8.0
 passlib==1.7.4
-langchain-openai==0.3.1
+langchain-openai==0.2.12
 llmsherpa==0.1.4
 pydantic==2.9.2
 SQLAlchemy==2.0.35
