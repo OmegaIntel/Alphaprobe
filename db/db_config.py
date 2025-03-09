@@ -5,9 +5,7 @@ from typing import AsyncGenerator
 
 # Third-Party Imports
 import redis
-import psycopg2
-import pyodbc
-from sqlalchemy import Engine, create_engine
+from sqlalchemy import Engine
 from sqlalchemy.ext.asyncio import AsyncEngine, create_async_engine, AsyncSession
 
 # Local Application Imports

@@ -5,7 +5,7 @@ import os
 import time
 from typing import Any, Dict, List, Tuple, Union
 
-LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()  # Ensure uppercase for consistency
+LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
 
 if LOG_LEVEL == "":
     LOG_LEVEL = "INFO"
