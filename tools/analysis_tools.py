@@ -9,8 +9,12 @@ from google import genai
 from google.genai.types import Tool, GenerateContentConfig, GoogleSearch
 
 # Local Application/Library Specific Imports
-from tools.analysis_models import AnswerQuestionInput
+from tools.analysis_models import (
+    AnswerQuestionInput,
+    AnswerQuestionViaPDFCitationsInput,
+)
 from utils.utils_logging import LOGGER
+from utils.utils_oracle import get_pdf_content
 
 
 async def web_search_tool(
@@ -61,11 +65,69 @@ async def web_search_tool(
         }
 
 
+async def pdf_citations_tool(
+    input: AnswerQuestionViaPDFCitationsInput,
+) -> str:
+    """
+    Given a user question and a list of PDF ids, this tool will attempt to answer the question from the information that is available in the PDFs.
+    It will return the answer as a JSON.
+    """
+    LOGGER.info(
+        f"Calling PDF Citations tool with question: {input.question} and PDF ids: {input.pdf_files}"
+    )
+    client = AsyncAnthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+    file_content_messages = []
+    for file_id in input.pdf_files:
+        pdf_content = await get_pdf_content(file_id)
+        title = pdf_content["file_name"]
+        base_64_pdf = pdf_content["base64_data"]
+        file_content_messages.append(
+            {
+                "type": "document",
+                "source": {
+                    "type": "base64",
+                    "media_type": "application/pdf",
+                    "data": base_64_pdf,
+                },
+                "title": title,
+                "citations": {"enabled": True},
+                "cache_control": {"type": "ephemeral"},
+            }
+        )
+
+    messages = [
+        {
+            "role": "user",
+            "content": file_content_messages
+            + [
+                {
+                    "type": "text",
+                    "text": input.question + "\nUse citations to back up your answer",
+                }
+            ],
+        }
+    ]
+
+    response = await client.messages.create(
+        model="claude-3-7-sonnet-latest",
+        messages=messages,
+        max_tokens=4096,
+    )
+    return [item.to_dict() for item in response.content]
+
+
 async def main():
-    input_data = AnswerQuestionInput(
+    web_search_input_data = AnswerQuestionInput(
         question="What is the capital of France?",
     )
-    result = await web_search_tool(input_data)
+    result = await web_search_tool(web_search_input_data)
+    print(result)
+
+    pdf_search_input_data = AnswerQuestionViaPDFCitationsInput(
+        question="What are the main findings in the provided research papers?",
+        pdf_files=[1, 2, 3],  # Example PDF file IDs
+    )
+    result = await pdf_citations_tool(pdf_search_input_data)
     print(result)
 
 
