@@ -9,7 +9,11 @@ import { cn } from '~/lib/utils';
 import { categories, templates } from './utils';
 import { useNavigate } from '@remix-run/react';
 
-
+const workingTemp = [
+  'financial-statement-analysis',
+  'company-profile',
+  'market-sizing',
+];
 
 export default function DocumentCreator() {
   const [activeTab, setActiveTab] = useState('all');
@@ -27,11 +31,11 @@ export default function DocumentCreator() {
           <PromtInput />
         </div>
       </div>
-      <div className='my-7'>
-      <h1 className="text-xl font-semibold">
-          Or choose a template
-      </h1>
-      <p className='text-xs text-gray-500'>Choose the right template below for your document type</p>
+      <div className="my-7">
+        <h1 className="text-xl font-semibold">Or choose a template</h1>
+        <p className="text-xs text-gray-500">
+          Choose the right template below for your document type
+        </p>
       </div>
       <div className="flex">
         <div className="w-60">
@@ -65,16 +69,24 @@ export default function DocumentCreator() {
             {templates
               .filter(
                 (template) =>
-                  activeTab === 'all' || template.category.some((cat)=> cat === activeTab) 
+                  activeTab === 'all' ||
+                  template.category.some((cat) => cat === activeTab)
               )
               .map((template) => (
                 <div
                   key={template.id}
                   className="p-4 border rounded-lg shadow-sm hover:bg-indigo-100"
-                  onClick={()=>{
-                    navigate({pathname: "/newdocument",
-                      search: `?template=${template.id}`,
-                      hash: ""})
+                  onClick={() => {
+                    const isTemplates = workingTemp.some(
+                      (temp) => temp === template.id
+                    );
+                    if (isTemplates) {
+                      navigate({
+                        pathname: '/newdocument',
+                        search: `?template=${template.id}`,
+                        hash: '',
+                      });
+                    }
                   }}
                 >
                   <h3 className="text-sm font-semibold">{template.title}</h3>

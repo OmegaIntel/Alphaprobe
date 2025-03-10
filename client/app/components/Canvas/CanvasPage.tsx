@@ -1,4 +1,4 @@
-import { Fragment, FC, useCallback, useState, useEffect } from 'react';
+import { Fragment, FC, useCallback, useState, useEffect, useRef } from 'react';
 import ReactFlow, {
   ReactFlowProvider,
   Node,
@@ -51,13 +51,15 @@ const CanvasPage: FC = () => {
   const initialInstuctions = location.state?.instructions || '';
   const [promt, setPromt] = useState<string>(initialInstuctions);
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
+  const [templateId, setTemplateId] = useState<string>('');
+  const isInitalCalled = useRef<boolean>(false);
 
-  const getReport = async (value: string) => {
+  const getReport = async (value: string, tempId: string) => {
     const res: string = await getDocumentReport({
-      title: promt,
-      subTitle: 'Market Size report',
+      title: value,
+      templateId: tempId,
     });
-    console.log('report------------------', res);
+    //console.log('report------------------', res);
     setNodes([
       ...nodes,
       {
@@ -74,8 +76,11 @@ const CanvasPage: FC = () => {
   };
 
   useEffect(() => {
-    if (location.state?.instructions && promt) {
-      getReport(promt);
+    const tempId : string =  localStorage.getItem('templateId') || 'market-sizing';
+    setTemplateId(tempId)
+    if (location.state?.instructions && promt && !isInitalCalled.current) {
+       getReport(promt, tempId);
+       isInitalCalled.current = true;
     }
   }, []);
 
@@ -105,7 +110,7 @@ const CanvasPage: FC = () => {
             </div>
             <div
               onClick={() => {
-                getReport('Why should i invest in Tesla(TSLA)');
+                getReport('Why should i invest in Tesla(TSLA)', templateId);
               }}
               className="p-2 bg-white rounded-lg border items-center flex space-x-1 border-gray-600"
             >

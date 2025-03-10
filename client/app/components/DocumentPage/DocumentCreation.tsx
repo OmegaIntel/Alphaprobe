@@ -178,6 +178,7 @@ const DocumentCreation: FC = () => {
                 state: { instructions: values.instructions },
               });
               dispatch(setIsCanvas(true));
+              localStorage.setItem('templateId', templateId)
             }}
             className="bg-indigo-600 py-3 rounded-md hover:bg-indigo-700"
           >

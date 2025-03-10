@@ -28,7 +28,7 @@ const DocumentDrawer: React.FC<DocumentDrawerProps> = ({nodes}) => {
     try {
       const selectedDoc = localStorage.getItem('selectedDocument') || '';
       console.log('selectedDoc-------', selectedDoc);
-      let data = JSON.parse(selectedDoc);
+      const data = JSON.parse(selectedDoc);
       const node = nodes.find((item: Node)=> data?.id === item?.id)
       console.log('selectedDoc1-------', data, node);
       setValue(data?.content || '');
