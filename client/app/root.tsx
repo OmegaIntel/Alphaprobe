@@ -11,8 +11,6 @@ import type { LinksFunction, LoaderFunctionArgs } from '@remix-run/node';
 import './tailwind.css';
 import { Provider } from 'react-redux';
 import store from './store/store';
-import type { LoaderFunctionArgs } from '@remix-run/node';
-import { useLocation } from '@remix-run/react';
 import { useEffect } from 'react';
 
 import React from 'react';
@@ -100,13 +98,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
-         {/* Google Analytics */}
-         <script async src="https://www.googletagmanager.com/gtag/js?id=G-6PXKFC1LJR"></script>
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-6PXKFC1LJR"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
+              function gtag(...args) {
+                window.dataLayer.push(args);
+              }
               gtag('js', new Date());
               gtag('config', 'G-6PXKFC1LJR');
             `,
