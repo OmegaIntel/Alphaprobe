@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException, Depends
+from fastapi import APIRouter, HTTPException
 from tools.analysis_tools import (
     web_search_tool,
     anthropic_tool,
@@ -26,22 +26,22 @@ async def handle_tool_request(tool_function, user_query: UserQuery):
 
 
 @router.get("/web-search")
-async def web_search(user_query: UserQuery = Depends()):
+async def web_search(user_query: UserQuery):
     return await handle_tool_request(web_search_tool, user_query)
 
 
 @router.get("/anthropic-api")
-async def anthropic_api(user_query: UserQuery = Depends()):
+async def anthropic_api(user_query: UserQuery):
     return await handle_tool_request(anthropic_tool, user_query)
 
 
 @router.get("/openai-api")
-async def openai_api(user_query: UserQuery = Depends()):
+async def openai_api(user_query: UserQuery):
     return await handle_tool_request(openai_api_tool, user_query)
 
 
 @router.get("/pdf-citation")
-async def pdf_citation(user_query: UserQuery = Depends()):
+async def pdf_citation(user_query: UserQuery):
     return await handle_tool_request(pdf_search_tool, user_query)
 
 
@@ -63,5 +63,5 @@ def upload_pdf():
 
 
 @router.get("/deep-research")
-async def deep_research(user_query: UserQuery = Depends()):
+async def deep_research(user_query: UserQuery):
     return await handle_tool_request(deep_research_tool, user_query)
