@@ -12,6 +12,13 @@ interface ContactFormModalProps {
   onClose: () => void;
 }
 
+// Define API response type
+interface ApiResponse {
+  message: string;
+  success: boolean;
+  id?: string;
+}
+
 import {
   Dialog,
   DialogContent,
@@ -30,7 +37,7 @@ const ContactFormModal: FC<ContactFormModalProps> = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
+    phone_number: "",
     message: "",
   });
 
@@ -45,7 +52,7 @@ const ContactFormModal: FC<ContactFormModalProps> = ({ isOpen, onClose }) => {
   const [showCalendly, setShowCalendly] = useState(false);
 
   // Handle input changes
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -54,22 +61,49 @@ const ContactFormModal: FC<ContactFormModalProps> = ({ isOpen, onClose }) => {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus({ ...status, loading: true });
 
-    // Here you would normally send the form data to your backend
-    // For now, we'll just simulate a successful submission
-    setTimeout(() => {
+    try {
+      // Send form data to API
+      const response = await fetch(`http://localhost:8000/api/contact-us`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.detail || 'Failed to submit contact form');
+      }
+
+      const data = await response.json();
+      
+      console.log("API Response:", data);
+      
+      // First update status
       setStatus({
         submitted: true,
         loading: false,
         error: null,
       });
       
-      // Show the calendly embed
-      setShowCalendly(true);
-    }, 800);
+      // Then explicitly show Calendly in a separate state update
+      setTimeout(() => {
+        setShowCalendly(true);
+      }, 100);
+      
+    } catch (error) {
+      console.error("Submit error:", error);
+      setStatus({
+        submitted: false,
+        loading: false,
+        error: error instanceof Error ? error.message : 'An error occurred',
+      });
+    }
   };
 
   // Reset form and status
@@ -77,7 +111,7 @@ const ContactFormModal: FC<ContactFormModalProps> = ({ isOpen, onClose }) => {
     setFormData({
       name: "",
       email: "",
-      phone: "",
+      phone_number: "",
       message: "",
     });
     setStatus({
@@ -103,19 +137,19 @@ const ContactFormModal: FC<ContactFormModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-[425px] md:max-w-[650px]">
-        <DialogHeader>
-          <DialogTitle>Contact Us</DialogTitle>
-          <DialogDescription>
+      <DialogContent className="w-[95vw] max-w-[425px] md:max-w-[650px] p-4 md:p-6">
+        <DialogHeader className="space-y-2">
+          <DialogTitle className="text-xl md:text-2xl text-center md:text-left">Contact Us</DialogTitle>
+          <DialogDescription className="text-sm md:text-base text-center md:text-left">
             Fill out the form below to get started with Omega Intelligence. We'll
             schedule a call to discuss your needs.
           </DialogDescription>
         </DialogHeader>
 
         {status.submitted ? (
-          <>
+          <div className="w-full">
             {showCalendly ? (
-              <div className="calendly-container" style={{ height: "600px" }}>
+              <div className="calendly-container w-full h-[50vh] md:h-[60vh] lg:h-[600px]">
                 <iframe
                   src={`https://calendly.com/chetan-omegaintelligence?name=${encodeURIComponent(formData.name)}&email=${encodeURIComponent(formData.email)}&a1=${encodeURIComponent(formData.message)}`}
                   width="100%"
@@ -124,92 +158,105 @@ const ContactFormModal: FC<ContactFormModalProps> = ({ isOpen, onClose }) => {
                 ></iframe>
               </div>
             ) : (
-              <div className="text-center py-4">
-                <h3 className="font-semibold text-lg mb-2">
-                  Something went wrong with the calendar.
+              <div className="text-center py-4 space-y-4">
+                <p className="text-green-600 text-sm md:text-base">Your message has been sent successfully!</p>
+                <h3 className="font-semibold text-base md:text-lg mb-2">
+                  Loading calendar...
                 </h3>
-                <Button onClick={openCalendlyInNewTab} className="w-full mb-2">
-                  Open Scheduler in New Tab
-                </Button>
-                <Button
-                  variant="outline"
-                  onClick={resetForm}
-                  className="w-full"
-                >
-                  Send Another Message
-                </Button>
+                <div className="flex flex-col space-y-2">
+                  <Button onClick={() => setShowCalendly(true)} className="w-full">
+                    Show Scheduler
+                  </Button>
+                  <Button onClick={openCalendlyInNewTab} variant="outline" className="w-full">
+                    Open Scheduler in New Tab
+                  </Button>
+                </div>
               </div>
             )}
-          </>
+          </div>
         ) : (
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="w-full">
             <div className="grid gap-4 py-4">
-              <div className="grid grid-cols-4 items-center gap-4">
-                <Label htmlFor="name" className="text-right">
+              {/* Mobile-friendly layout - Stack on small screens, grid on larger */}
+              <div className="grid grid-cols-1 md:grid-cols-4 items-start md:items-center gap-2 md:gap-4">
+                <Label htmlFor="name" className="md:text-right text-sm md:text-base">
                   Name
                 </Label>
-                <Input
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="col-span-3"
-                  required
-                />
+                <div className="md:col-span-3">
+                  <Input
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full"
+                    required
+                  />
+                </div>
               </div>
-              <div className="grid grid-cols-4 items-center gap-4">
-                <Label htmlFor="email" className="text-right">
+              
+              <div className="grid grid-cols-1 md:grid-cols-4 items-start md:items-center gap-2 md:gap-4">
+                <Label htmlFor="email" className="md:text-right text-sm md:text-base">
                   Email
                 </Label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="col-span-3"
-                  required
-                />
+                <div className="md:col-span-3">
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full"
+                    required
+                  />
+                </div>
               </div>
-              <div className="grid grid-cols-4 items-center gap-4">
-                <Label htmlFor="phone" className="text-right">
+              
+              <div className="grid grid-cols-1 md:grid-cols-4 items-start md:items-center gap-2 md:gap-4">
+                <Label htmlFor="phone_number" className="md:text-right text-sm md:text-base">
                   Phone
                 </Label>
-                <Input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="col-span-3"
-                />
+                <div className="md:col-span-3">
+                  <Input
+                    id="phone_number"
+                    name="phone_number"
+                    type="tel"
+                    value={formData.phone_number}
+                    onChange={handleChange}
+                    className="w-full"
+                  />
+                </div>
               </div>
-              <div className="grid grid-cols-4 items-center gap-4">
-                <Label htmlFor="message" className="text-right">
+              
+              <div className="grid grid-cols-1 md:grid-cols-4 items-start gap-2 md:gap-4">
+                <Label htmlFor="message" className="md:text-right text-sm md:text-base pt-2">
                   Message
                 </Label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="col-span-3"
-                  rows={4}
-                  required
-                />
+                <div className="md:col-span-3">
+                  <Textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full"
+                    rows={4}
+                    required
+                  />
+                </div>
               </div>
             </div>
-            <DialogFooter>
+            
+            <DialogFooter className="flex-col sm:flex-row gap-2 sm:gap-0 mt-2">
               <Button
                 type="submit"
                 disabled={status.loading}
+                className="w-full sm:w-auto"
               >
                 {status.loading ? "Submitting..." : "Submit & Schedule Call"}
               </Button>
             </DialogFooter>
             
             {status.error && (
-              <div className="text-red-500 text-center mt-2">
+              <div className="text-red-500 text-center mt-4 text-sm md:text-base">
                 {status.error}
               </div>
             )}

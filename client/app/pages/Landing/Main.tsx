@@ -10,7 +10,7 @@ const Main: FC<MainProps> = ({ children }) => {
   return (
     <div className="">
       <Navbar />
-      <div className="mx-48">{children}</div>
+      <div className="sm:mx-48">{children}</div>
       <Footer />
     </div>
   );
