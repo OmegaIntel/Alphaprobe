@@ -31,6 +31,7 @@ import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
 import { Textarea } from "~/components/ui/textarea";
+import { API_BASE_URL } from "~/constant";
 
 const ContactFormModal: FC<ContactFormModalProps> = ({ isOpen, onClose }) => {
   // Form state
@@ -67,7 +68,7 @@ const ContactFormModal: FC<ContactFormModalProps> = ({ isOpen, onClose }) => {
 
     try {
       // Send form data to API
-      const response = await fetch(`http://localhost:8000/api/contact-us`, {
+      const response = await fetch(`${API_BASE_URL}/api/contact-us`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

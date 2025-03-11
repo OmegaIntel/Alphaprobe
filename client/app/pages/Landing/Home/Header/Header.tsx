@@ -2,6 +2,7 @@ import { FC, useState } from 'react';
 import { Input } from '~/components/ui/input';
 import { Button } from '~/components/ui/button';
 import { toast } from '~/hooks/use-toast';
+import { API_BASE_URL } from '~/constant';
 
 const Header: FC = () => {
   const [email, setEmail] = useState('');
@@ -24,7 +25,7 @@ const Header: FC = () => {
     
     try {
       // Send email to your contact form API
-      const response = await fetch('http://localhost:8000/api/contact-us', {
+      const response = await fetch(`${API_BASE_URL}/api/contact-us`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
