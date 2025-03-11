@@ -63,6 +63,10 @@ async def web_search_tool(input: UserQuery) -> Dict[str, Any]:
 
 
 async def anthropic_tool(input: UserQuery) -> Dict[str, Any]:
+    """
+    Given a user question, this tool will attempt to answer the question using the Anthropic API.
+    It will return the answer as a JSON.
+    """
     LOGGER.info(f"Calling Anthropic tool with question: {input.question}")
     client = AsyncAnthropic(api_key=ANTHROPIC_API_KEY)
 
@@ -112,7 +116,7 @@ async def openai_api_tool(input: UserQuery) -> Dict[str, Any]:
 
 async def pdf_search_tool(input: UserQuery) -> Dict[str, Any]:
     """
-    Given a user question and a list of PDF ids, this tool will attempt to answer the question from the information that is available in the PDFs.
+    Given a user question, this tool will attempt to answer the question from the information that is available in the PDFs.
     It will return the answer as a JSON.
     """
     LOGGER.info(f"Calling PDF Citations tool with question: {input.question}")
