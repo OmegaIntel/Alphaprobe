@@ -1,4 +1,6 @@
 import { fetcher } from '~/services/HTTPS';
+import { jsPDF } from "jspdf";
+import html2canvas from "html2canvas";
 
 export const getHtmlFormat = (data: any) => {
   const tables = data?.tables || [];
@@ -86,7 +88,7 @@ export const getHtmlFormat = (data: any) => {
             <p>${section.content}</p>
           `
            )
-           .join('')}
+           .join('')} 
 
       
         ${tables
@@ -290,4 +292,90 @@ export function extractMessageFromOutput(output: {
   if (type === 'message') return message.text;
   if (type === 'object') return message.text;
   return 'Unknown message structure';
+}
+
+
+
+export const exportToPDF = async (htmlContent: string, filename: string = "document.pdf") => {
+  const container = document.createElement("div");
+  container.innerHTML = htmlContent;
+  container.style.width = "800px"; // Set a fixed width for accurate rendering
+  container.style.padding = "20px";
+  container.style.position = "absolute";
+  container.style.left = "-9999px"; // Hide off-screen
+  document.body.appendChild(container);
+
+  const canvas = await html2canvas(container, { scale: 2 });
+  const imgData = canvas.toDataURL("image/png");
+
+  document.body.removeChild(container);
+
+  const pdf = new jsPDF("p", "mm", "a4");
+  const pdfWidth = pdf.internal.pageSize.getWidth();
+  const pdfHeight = pdf.internal.pageSize.getHeight();
+  const margin = 10;
+  const usableHeight = pdfHeight - 2 * margin;
+
+  let imgWidth = pdfWidth - 2 * margin;
+  let imgHeight = (canvas.height * imgWidth) / canvas.width;
+  let renderedHeight = 0;
+
+  
+  const imgElements = container.querySelectorAll("img");
+  const imagePositions: { top: number; height: number }[] = [];
+
+  imgElements.forEach((img) => {
+    const rect = img.getBoundingClientRect();
+    imagePositions.push({
+      top: rect.top,
+      height: rect.height,
+    });
+  });
+
+  while (renderedHeight < canvas.height) {
+    let chunkCanvas = document.createElement("canvas");
+    chunkCanvas.width = canvas.width;
+    chunkCanvas.height = Math.min(canvas.height - renderedHeight, (usableHeight * canvas.width) / imgWidth);
+
+    const chunkCtx = chunkCanvas.getContext("2d");
+    if (chunkCtx) {
+      chunkCtx.drawImage(
+        canvas,
+        0,
+        renderedHeight,
+        canvas.width,
+        chunkCanvas.height,
+        0,
+        0,
+        chunkCanvas.width,
+        chunkCanvas.height
+      );
+    }
+
+    const chunkImgData = chunkCanvas.toDataURL("image/png");
+
+    let adjustedHeight = chunkCanvas.height;
+    for (const imgPos of imagePositions) {
+      const imgStart = imgPos.top;
+      const imgEnd = imgStart + imgPos.height;
+      const pageStart = renderedHeight;
+      const pageEnd = renderedHeight + chunkCanvas.height;
+
+      if (imgStart < pageEnd && imgEnd > pageEnd) {
+        adjustedHeight = imgStart - renderedHeight;
+        break;
+      }
+    }
+
+    pdf.addImage(chunkImgData, "PNG", margin, margin, imgWidth, (adjustedHeight * imgWidth) / canvas.width);
+
+    renderedHeight += adjustedHeight;
+
+    if (renderedHeight < canvas.height) {
+      pdf.addPage();
+    }
+  }
+
+  pdf.save(filename);
+
 }

@@ -13,14 +13,13 @@ export const fetcher = async <T>(
 ): Promise<ApiResponse<T>> => {
   const token = localStorage.getItem('authToken');
 
-
   const config: RequestInit = {
     ...options,
     headers: {
       'Content-Type': 'application/json',
       Authorization: token ? `Bearer ${token}` : '',
       ...options.headers,
-    }
+    },
   };
 
   try {
@@ -29,7 +28,7 @@ export const fetcher = async <T>(
     // if (response.status === 401) {
     //   return handleRefreshToken(url, options);
     // }
-    console.log('HTTP-------------', response)
+    console.log('HTTP-------------', response);
 
     if (!response.ok) {
       throw new Error(`Error ${response.status}: ${response.statusText}`);
