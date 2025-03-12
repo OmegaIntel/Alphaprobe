@@ -20,6 +20,7 @@ import { useDispatch } from 'react-redux';
 import { setIsCanvas } from '~/store/slices/sideBar';
 import { useNavigate, useLocation } from '@remix-run/react';
 import { getDocumentReport } from './api';
+import CanvasLoader from './components/CanvasLoader';
 
 const documents = [
   {
@@ -53,26 +54,36 @@ const CanvasPage: FC = () => {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [templateId, setTemplateId] = useState<string>('');
   const isInitalCalled = useRef<boolean>(false);
+  const [loader, setLoader] = useState<boolean>(false);
 
   const getReport = async (value: string, tempId: string) => {
-    const res: string = await getDocumentReport({
-      title: value,
-      templateId: tempId,
-    });
-    //console.log('report------------------', res);
-    setNodes([
-      ...nodes,
-      {
-        id: `${nodes.length}-1`,
-        type: 'node',
-        position: { x: nodes.length * 720, y: 100 },
-        data: {
-          title: 'Detailed Analysis of Current Global Market Trends',
-          content: `${res}`,
+    try {
+      setLoader(true)
+      const res: string = await getDocumentReport({
+        title: value,
+        templateId: tempId,
+      });
+      //console.log('report------------------', res);
+      setNodes([
+        ...nodes,
+        {
           id: `${nodes.length}-1`,
+          type: 'node',
+          position: { x: nodes.length * 720, y: 100 },
+          data: {
+            title: 'Detailed Analysis of Current Global Market Trends',
+            content: `${res}`,
+            id: `${nodes.length}-1`,
+          },
         },
-      },
-    ]);
+      ]);
+      setLoader(false);
+      
+    } catch (error) {
+      setLoader(false)
+      console.error('error--------',error)
+    }
+   
   };
 
   useEffect(() => {
@@ -139,7 +150,11 @@ const CanvasPage: FC = () => {
           >
             <Background />
           </ReactFlow>
-          <div className="absolute bottom-4 left-4 w-64 p-2 bg-white shadow-md rounded-lg">
+
+          
+          <div className="absolute bottom-4 space-y-2 left-4 w-72 p-2">
+          {loader && <CanvasLoader instruction={promt} />}
+           <div className='bg-white shadow-md rounded-lg p-2'>
             <Input
               placeholder="What would you like to know?"
               className="w-full p-2 border rounded"
@@ -147,6 +162,7 @@ const CanvasPage: FC = () => {
                 setPromt(e.target.value);
               }}
             />
+            </div>
           </div>
         </div>
       </ReactFlowProvider>

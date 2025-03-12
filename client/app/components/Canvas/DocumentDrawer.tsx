@@ -1,7 +1,8 @@
 import * as Dialog from '@radix-ui/react-dialog';
-import { X } from 'lucide-react'; // For close icon
+import { X, FileUp } from 'lucide-react'; // For close icon
 import React, { useRef, useState, lazy, Suspense, useEffect } from 'react';
 import { Node } from 'reactflow';
+import { exportToPDF } from './api';
 const JoditEdit = lazy(() => import('../DocumentEditor/JoditEdit'));
 //import Document
 
@@ -18,19 +19,20 @@ interface DocumentDrawerProps {
   nodes: Node[]; // 👈 Correctly typed nodes prop
 }
 
-
-const DocumentDrawer: React.FC<DocumentDrawerProps> = ({nodes}) => {
+const DocumentDrawer: React.FC<DocumentDrawerProps> = ({ nodes }) => {
   const editor = useRef(null);
   const editorRef = useRef(null);
   const [value, setValue] = useState<string>(contents);
+
+  console.log('editor---------------', editor, editorRef)
 
   useEffect(() => {
     try {
       const selectedDoc = localStorage.getItem('selectedDocument') || '';
       console.log('selectedDoc-------', selectedDoc);
       const data = JSON.parse(selectedDoc);
-      const node = nodes.find((item: Node)=> data?.id === item?.id)
-      console.log('selectedDoc1-------', data, node);
+      //const node = nodes.find((item: Node) => data?.id === item?.id);
+      console.log('selectedDoc1-------', data);
       setValue(data?.content || '');
     } catch (error) {
       console.error('error---------');
@@ -51,10 +53,29 @@ const DocumentDrawer: React.FC<DocumentDrawerProps> = ({nodes}) => {
         {/* Drawer Content */}
         <Dialog.Content className="overflow-x-scroll z-[1] fixed right-0 top-0 h-full w-[650px] bg-white shadow-lg transition-transform data-[state=open]:translate-x-0 data-[state=closed]:translate-x-full">
           <div className="p-4 flex h-11 justify-between items-center border-b">
-            <h2 className="text-lg font-bold">Drawer Title</h2>
-            <Dialog.Close className="p-2">
-              <X className="w-5 h-5" />
-            </Dialog.Close>
+            <div>
+              <p className="text-lg font-semibold">Drawer Title</p>
+            </div>
+            <div className="flex p-2 items-center">
+              <button
+                onClick={async () => {
+                  try {
+                    await exportToPDF(value, `generated-report.pdf`);
+                  } catch (error) {
+                    console.error('error------------', error);
+                  }
+
+                  // navigate('../');
+                  // dispatch(setIsCanvas(false));
+                }}
+                className="p-1 h-full rounded bg-indigo-200 text-sm font-medium items-center"
+              >
+                <FileUp className="w-4 h-4 text-indigo-600" />
+              </button>
+              <Dialog.Close className="p-2">
+                <X className="w-5 h-5" />
+              </Dialog.Close>
+            </div>
           </div>
 
           <div>
@@ -88,5 +109,3 @@ const DocumentDrawer: React.FC<DocumentDrawerProps> = ({nodes}) => {
 };
 
 export default DocumentDrawer;
-
- 
