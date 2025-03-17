@@ -1,5 +1,7 @@
+import { Suspense, lazy } from 'react';
 import { NavLink } from '@remix-run/react';
 import DocumentPage from '~/components/DocumentPage';
+const ReportPage = lazy(() => import('~/components/Report/ReportPage'));
 export default function Index() {
   return (
     <div className="p-4">
@@ -11,7 +13,11 @@ export default function Index() {
         <NavLink to="/profile" className="text-blue-500 hover:underline">Go to Profile</NavLink>
         <NavLink to="/settings" className="text-blue-500 hover:underline">Go to Settings</NavLink>
       </div> */}
-     <DocumentPage />
+      <Suspense fallback={<p>Loading...</p>}>
+        <ReportPage />
+      </Suspense>
+
+      {/* <DocumentPage /> */}
     </div>
   );
-} 
+}

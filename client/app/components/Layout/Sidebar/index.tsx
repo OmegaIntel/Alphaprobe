@@ -25,7 +25,7 @@ export default function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
 
   return (
     <div
-      className={`h-screen text-gray-600 shadow-lg p-4 flex flex-col transition-all duration-300 ${collapsed ? 'w-16' : 'w-72'} ${isCanvas && 'hidden'}`}
+      className={`h-screen text-gray-600 bg-gray-50 border-r p-4 flex flex-col transition-all duration-300 ${collapsed ? 'w-16' : 'w-72'} ${isCanvas && 'hidden'}`}
     >
       <div
         className={`flex items-center justify-between mb-4 ${collapsed ? 'flex-col space-y-2' : ''}`}
