@@ -468,7 +468,7 @@ def set_query_engine(engine: BaseQueryEngine):
 # -------------------- BASE STORAGE DIRECTORY ----------------------
 BASE_STORAGE_DIR = "./storage"
 
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 openai.api_key = OPENAI_API_KEY
 
 
@@ -975,16 +975,23 @@ async def start_graph(topic: str = Body(..., media_type="text/plain")):
     state_snapshot = workflow.get_state(config)
     print("[DEBUG] start_graph: Retrieved state:", state_snapshot)
     if not state_snapshot.tasks:
-        # If there are no pending tasks, then the workflow is complete.
         return {"status": "completed", "result": state_snapshot.values}
-    
+
     # Extract the interrupt information from the first pending task.
-    interrupt_value = state_snapshot.tasks[0].interrupts[0].value
+    interrupt_info = state_snapshot.tasks[0].interrupts[0]
+    interrupt_value = interrupt_info.value
+
+    # Extract node information using getattr.
+    interrupt_node = getattr(interrupt_info, "node", "unknown")
+
     print("[DEBUG] start_graph: interrupt_value:", interrupt_value)
+    print("[DEBUG] start_graph: interrupt_node:", interrupt_node)
+
     return {
         "status": "paused",
         "thread_id": thread_id,
-        "interrupt": interrupt_value
+        "interrupt": state_snapshot,
+        "interrupt_node": interrupt_node
     }
 
 
@@ -1001,14 +1008,25 @@ async def resume_graph(request: ResumeRequest):
         # Retrieve the updated state.
         state_snapshot = workflow.get_state(config)
         print("[DEBUG] resume_graph: Retrieved state:", state_snapshot)
+        
         if state_snapshot.tasks:
-            # If there is another pending interrupt, return its details.
-            interrupt_value = state_snapshot.tasks[0].interrupts[0].value
+            # If there is another pending interrupt, extract its details.
+            interrupt_info = state_snapshot.tasks[0].interrupts[0]
+            interrupt_value = interrupt_info.value
+            
+            # Extract node information from the interrupt if available.
+            # This assumes the interrupt_info object has either an attribute or a key named "node".
+            # Extract node information using getattr.
+            interrupt_node = getattr(interrupt_info, "node", "unknown")
+
+
             print("[DEBUG] resume_graph: New interrupt found:", interrupt_value)
+            print("[DEBUG] resume_graph: Interrupt node:", interrupt_node)
             return {
                 "status": "paused",
                 "thread_id": request.thread_id,
-                "interrupt": interrupt_value
+                "interrupt": state_snapshot,
+                "interrupt_node": interrupt_node
             }
         else:
             print("[DEBUG] resume_graph: No pending tasks, workflow complete.")
