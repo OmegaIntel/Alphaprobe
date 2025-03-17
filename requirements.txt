@@ -48,6 +48,7 @@ pytest==7.4.0
 opensearch-py==2.8.0
 llama-index-vector-stores-opensearch
 langchain-core==0.3.31
+google==3.0.0 
 langchain-text-splitters==0.3.5
 pandas==2.2.3
 numpy==1.26.4

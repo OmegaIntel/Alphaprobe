@@ -89,13 +89,15 @@ export const activeItems = [
   'Verify Working Capital Requirements',
 ];
 export const categoryList = [
-  'Dashboard',
-  'Investment Thesis',
+ 
   'Market Research',
-  'Industry Insights',
-  'Company Insights',
-  'Deal Room',
+  
 ];
+
+export const categoryRoutes = {
+  'Market Research': '/market-research',
+  'Home' : '/'
+};
 export const documentAnalysisList = [
   'Summary',
   'Document Analysis',
