@@ -22,6 +22,7 @@ type CategoryRoutes = {
 const categoryRoutes: CategoryRoutes = {
   'Home': '/',
   'Market Research': '/market-research',
+  'Company House' : '/company-house'
 };
 
 type SidebarProps = {
