@@ -27,7 +27,7 @@ from api.api_langflow import langflow_router
 from api.api_deep_research import deep_research_router
 from websocket_manager import WebSocketManager
 from utils.websocket_utils import handle_websocket_communication
-
+from api.api_deep_researcher import research_deep_router
 
 app = FastAPI(docs_url="/api/docs", openapi_url="/api/openapi.json")
 
@@ -79,6 +79,7 @@ app.include_router(langgraph_router)
 app.include_router(perplexity_router)
 app.include_router(langflow_router)
 app.include_router(deep_research_router)
+app.include_router(research_deep_router)
 
 if __name__ == "__main__":
     uvicorn.run("api.app:app", host="0.0.0.0", port=8000, reload=True, loop='asyncio')

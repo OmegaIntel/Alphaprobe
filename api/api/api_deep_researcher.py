@@ -1,0 +1,909 @@
+import os
+import uuid
+import asyncio
+import operator
+import inspect
+import json
+from typing import List, TypedDict, Any, Optional
+from typing_extensions import Annotated
+from pydantic import BaseModel, Field
+from dataclasses import dataclass, fields
+
+from api.api_user import get_current_user
+
+from fastapi import APIRouter, Depends, File, UploadFile, HTTPException
+import boto3, botocore, uuid
+from botocore.config import Config
+
+from langchain_core.runnables import RunnableConfig
+from langchain_core.messages import SystemMessage, HumanMessage
+
+# ------------------------------------------------------------------------
+# LlamaIndex for loading/creating a vector index and querying
+# ------------------------------------------------------------------------
+from llama_index.core import Settings, VectorStoreIndex, StorageContext, load_index_from_storage
+from llama_parse import LlamaParse
+from llama_index.core.query_engine import BaseQueryEngine
+from llama_index.embeddings.openai import OpenAIEmbedding
+
+# ------------------------------------------------------------------------
+# LangChain + LLM
+# ------------------------------------------------------------------------
+from langchain_openai import ChatOpenAI
+import openai
+
+# ------------------------------------------------------------------------
+# langgraph-based StateGraph
+# ------------------------------------------------------------------------
+from langgraph.constants import Send
+from langgraph.graph import START, END, StateGraph
+
+# ------------------------------------------------------------------------
+# Prompts 
+# 1. Company profile
+# 2. Financial Statement Analysis
+# 3. Market Sizing
+# ------------------------------------------------------------------------
+# 1. report_planner_query_writer_instructions
+report_planner_query_writer_instructions = [
+    """You are an expert financial and industry analyst. Your task is to propose specific search queries that will extract the necessary data to populate an industry report. 
+    Query Context: {topic}
+    Focus on company profile elements such as management, business models, industry position, financial performance, corporate actions, and news. Incorporate insights from the following tags: Investment Research, Target Screening, Corporate Due Diligence, Competitive Research.
+    """,
+    """You are an expert financial and industry analyst. Your task is to propose specific search queries that will extract the necessary data to populate an industry report.
+    Query Context: {topic}
+    Focus on financial statement analysis, including the evaluation of financial health, profitability, liquidity, and solvency. Incorporate analysis angles from the following tags: Financial Analysis, Ratio and Trend Analysis, Portfolio Monitoring, Valuation.
+    """,
+    """You are an expert financial and industry analyst. Your task is to propose specific search queries that will extract the necessary data to populate an industry report.
+    Query Context: {topic}
+    Focus on market sizing elements, including market size, segmentation, key players, trends, and competitive dynamics. Incorporate analysis angles from the following tags: Market Research, Business Consulting, Strategy, Marketing.
+    """
+]
+
+# 2. report_planner_instructions
+report_planner_instructions = [
+    """You are an expert financial and industry analyst. Based on the topic and the combined relevant content from the local documents, produce a structured outline for an industry report.
+Topic: {topic}
+Document Context: {context}
+This outline should emphasize a comprehensive company profile with detailed overviews of management, business models, industry position, financial performance, corporate actions, and news. Include considerations from the following tags: Investment Research, Target Screening, Corporate Due Diligence, Competitive Research.
+    """,
+    """You are an expert financial and industry analyst. Based on the topic and the combined relevant content from the local documents, produce a structured outline for an industry report.
+Topic: {topic}
+Document Context: {context}
+This outline should detail a comprehensive financial statement analysis, emphasizing key financial metrics, ratio trends, and valuation insights. Include considerations from the following tags: Financial Analysis, Ratio and Trend Analysis, Portfolio Monitoring, Valuation.
+    """,
+    """You are an expert financial and industry analyst. Based on the topic and the combined relevant content from the local documents, produce a structured outline for an industry report.
+Topic: {topic}
+Document Context: {context}
+This outline should emphasize market sizing by detailing market size, segmentation, key players, trends, and competitive dynamics. Include considerations from the following tags: Market Research, Business Consulting, Strategy, Marketing.
+    """
+]
+
+# 3. section_writer_instructions
+section_writer_instructions = [
+    """You are an expert financial and industry analyst. Draft a very detailed and comprehensive content for the following section of an industry report based on the relevant document excerpts provided. Your content should directly address the data or questions implied by the section and include extended analysis, examples, and additional insights.
+Section Title: {section_title}
+Section Description: {section_topic}
+Relevant Document Excerpts:
+{context}
+Ensure the analysis reflects deep insights into company management, business models, industry standing, financial performance, corporate actions, and news. Leverage the following tags for focus: Investment Research, Target Screening, Corporate Due Diligence, Competitive Research.
+    """,
+    """You are an expert financial and industry analyst. Draft a very detailed and comprehensive content for the following section of an industry report based on the relevant document excerpts provided. Your content should directly address the data or questions implied by the section and include extended analysis, examples, and additional insights.
+Section Title: {section_title}
+Section Description: {section_topic}
+Relevant Document Excerpts:
+{context}
+Ensure your analysis delves into financial health, key performance ratios, trend analysis, and valuation techniques. Leverage insights from the following tags: Financial Analysis, Ratio and Trend Analysis, Portfolio Monitoring, Valuation.
+    """,
+    """You are an expert financial and industry analyst. Draft a very detailed and comprehensive content for the following section of an industry report based on the relevant document excerpts provided. Your content should directly address the data or questions implied by the section and include extended analysis, examples, and additional insights.
+Section Title: {section_title}
+Section Description: {section_topic}
+Relevant Document Excerpts:
+{context}
+Ensure your analysis focuses on market size, segmentation, competitive landscape, and trend analysis. Leverage insights from the following tags: Market Research, Business Consulting, Strategy, Marketing.
+    """
+]
+
+# 4. final_section_writer_instructions
+final_section_writer_instructions = [
+    """You are an expert financial and industry analyst. Compile the final sections of the industry report by synthesizing and polishing the content from all completed sections. Produce a comprehensive narrative report of at least 3000 words that includes thorough analysis, detailed examples, and extended insights.
+Context from Completed Sections:
+{context}
+Generate the final, integrated content for the industry report, ensuring that the comprehensive company profile is clearly outlined with details on management, business models, industry position, financial performance, corporate actions, and news. Factor in the following tags: Investment Research, Target Screening, Corporate Due Diligence, Competitive Research.
+    """,
+    """You are an expert financial and industry analyst. Compile the final sections of the industry report by synthesizing and polishing the content from all completed sections. Produce a comprehensive narrative report of at least 3000 words that includes thorough analysis, detailed examples, and extended insights.
+Context from Completed Sections:
+{context}
+Generate the final, integrated content for the industry report, ensuring that the financial statement analysis is clearly outlined with detailed assessments of financial performance, ratios, trends, and valuation methodologies. Factor in the following tags: Financial Analysis, Ratio and Trend Analysis, Portfolio Monitoring, Valuation.
+    """,
+    """You are an expert financial and industry analyst. Compile the final sections of the industry report by synthesizing and polishing the content from all completed sections. Produce a comprehensive narrative report of at least 3000 words that includes thorough analysis, detailed examples, and extended insights.
+Context from Completed Sections:
+{context}
+Generate the final, integrated content for the industry report, ensuring that the market sizing aspects are clearly delineated with insights on market size, player segmentation, competitive trends, and strategic analysis. Factor in the following tags: Market Research, Business Consulting, Strategy, Marketing.
+    """
+]
+
+# 5. query_prompt_for_iteration (for generating additional queries)
+query_prompt_for_iteration = [
+    """You are an expert financial analyst. Generate up to 5 queries to find more data for the following section in a manner that deepens the research conducted so far and is likely to return non-empty results from the document index.
+
+Section Description: {description}
+
+Previous Queries and Compiled Answers:
+Previous Queries:
+{previous_text}
+Compiled Answers:
+{previous_section_output}
+
+Focus on:
+- Key financial details regarding company management and performance
+- Specific business models and industry positioning insights
+- Relevant corporate actions and recent news
+- Extended analysis based on the tags: Investment Research, Target Screening, Corporate Due Diligence, Competitive Research
+
+Ensure that your new queries build upon the previous research and are specific enough to generate valuable document search results.
+    """,
+    """You are an expert financial analyst. Generate up to 5 queries to find more data for the following section in a manner that deepens the research conducted so far and is likely to return non-empty results from the document index.
+
+Section Description: {section.description}
+
+Previous Queries and Compiled Answers:
+Previous Queries:
+{previous_text}
+Compiled Answers:
+{previous_section_output}
+
+Focus on:
+- Detailed financial metrics and ratio analysis
+- Identification of trends and historical financial performance
+- Insights into portfolio monitoring and valuation practices
+- Extended analysis based on the tags: Financial Analysis, Ratio and Trend Analysis, Portfolio Monitoring, Valuation
+
+Ensure that your new queries build upon the previous research and are specific enough to generate valuable document search results.
+    """,
+    """You are an expert financial analyst. Generate up to 5 queries to find more data for the following section in a manner that deepens the research conducted so far and is likely to return non-empty results from the document index.
+
+Section Description: {section.description}
+
+Previous Queries and Compiled Answers:
+Previous Queries:
+{previous_text}
+Compiled Answers:
+{previous_section_output}
+
+Focus on:
+- Key market size metrics and segmentation details
+- Analysis of competitive landscape and emerging market trends
+- Strategic insights based on the tags: Market Research, Business Consulting, Strategy, Marketing
+- Extended analysis on market contours and identification of key players
+
+Ensure that your new queries build upon the previous research and are specific enough to generate valuable document search results.
+    """
+]
+
+
+# ------------------------------------------------------------------------
+# Knowledge-base implementation
+# ------------------------------------------------------------------------
+import boto3
+
+s3_client = boto3.client(
+    "s3",
+    aws_access_key_id="AKIA5FTZD4AADPXMJD7C",
+    aws_secret_access_key="k1OveeJ7XKxO1PExUSTk/NulLMWkFjYwlXGrmQR/",
+    region_name="us-east-1"  # Change to your AWS region
+)
+
+bedrock_client = boto3.client('bedrock',
+    aws_access_key_id="AKIA5FTZD4AADPXMJD7C",
+    aws_secret_access_key="k1OveeJ7XKxO1PExUSTk/NulLMWkFjYwlXGrmQR/",
+    region_name="us-east-1"
+)  # for control-plane ops like ingestion
+
+bedrock_runtime = boto3.client('bedrock-agent-runtime',
+    aws_access_key_id="AKIA5FTZD4AADPXMJD7C",
+    aws_secret_access_key="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",
+    region_name="us-east-1"
+)
+
+BUCKET_NAME = "deep-research-docs"
+KNOWLEDGE_BASE_ID = "ITOY3SGHN2"
+DATA_SOURCE_ID = "RIM2FNYUIO"
+MODEL_ARN = "amazon.nova-lite-v1:0"
+
+generationPrompt="""
+You are an intelligent assistant tasked with organizing and prioritizing search results for a user query. 
+Analyze the following search results and rank them based on relevance to the user's question. 
+If any results are irrelevant or redundant, exclude them.
+
+User Query: $query$
+
+Search Results:
+$search_results$
+
+Instructions:
+1. Rank the search results by relevance to the user's query.
+2. Remove any duplicate or irrelevant results.
+3. Summarize the key points from the top results.
+
+current time $current_time$
+
+Output the organized and prioritized results in a structured format."""
+
+orchestrationPrompt="""
+You are a knowledgeable assistant with access to a comprehensive knowledge base. 
+Use the following organized search results to answer the user's question. 
+If the search results do not contain enough information, say "I don't know."
+
+User Query: $query$
+
+Instructions:
+1. Provide a clear and concise answer to the user's question.
+2. Use only the information from the search results.
+3. If the search results are insufficient, say "I don't know."
+4. Format the response in a professional and easy-to-read manner.
+
+Underlying instructions for formatting the response generation and citations. $output_format_instructions$
+
+Here is the conversation history $conversation_history$
+
+current time - $current_time$
+
+Answer:"""
+
+def query_kb(input, kbId, user_id, modelId=None):
+    vector_search_config = {'numberOfResults': 5}
+    if user_id:
+        vector_search_config['filter'] = {"user_id": user_id}
+
+    response = bedrock_runtime.retrieve_and_generate(
+        input={
+            'text': input
+        },
+        retrieveAndGenerateConfiguration={
+            'knowledgeBaseConfiguration': {
+                'generationConfiguration': {
+                    'promptTemplate': {
+                        'textPromptTemplate': generationPrompt
+                    }
+                },
+                'orchestrationConfiguration': {
+                    'promptTemplate': {
+                        'textPromptTemplate': orchestrationPrompt
+                    }
+                },
+                'knowledgeBaseId': kbId,
+                'modelArn': modelId,
+                "retrievalConfiguration": {
+                    'vectorSearchConfiguration': vector_search_config
+                }
+            },
+            'type': 'KNOWLEDGE_BASE'
+        }
+    )
+    
+    return response
+
+# ------------------------ Configuration ------------------------
+@dataclass(kw_only=True)
+class Configuration:
+    """The configurable fields for the chatbot."""
+    number_of_queries: int = 2
+    tavily_topic: str = "general"
+    tavily_days: Optional[str] = None
+    section_iterations: int = 3  # Increased from 2 to 3 for deeper research
+
+    @classmethod
+    def from_runnable_config(
+        cls, config: Optional[RunnableConfig] = None
+    ) -> "Configuration":
+        configurable = (
+            config["configurable"] if config and "configurable" in config else {}
+        )
+        values: dict[str, Any] = {
+            f.name: os.environ.get(f.name.upper(), configurable.get(f.name))
+            for f in fields(cls)
+            if f.init
+        }
+        return cls(**{k: v for k, v in values.items() if v})
+
+# ------------------- GLOBAL QUERY ENGINE ------------------------
+query_engine: BaseQueryEngine = None
+
+def set_query_engine(engine: BaseQueryEngine):
+    """
+    Store a global reference to a LlamaIndex QueryEngine,
+    so that the rest of the code can use it for doc searches.
+    """
+    global query_engine
+    query_engine = engine
+
+# -------------------- BASE STORAGE DIRECTORY ----------------------
+BASE_STORAGE_DIR = "./storage"
+
+OPENAI_API_KEY = "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"
+openai.api_key = OPENAI_API_KEY
+
+# ------------------------------------------------------------------------
+# Build or Load Index for Multiple Documents with Random Persist Folder
+# ------------------------------------------------------------------------
+async def build_or_load_index_random(
+    directory_paths: Any,  # Accepts a single path (str) or a list of paths
+    base_storage_dir: str = BASE_STORAGE_DIR,
+    rebuild: bool = False
+) -> VectorStoreIndex:
+    print(f"[DEBUG] Entering build_or_load_index_random")
+    if isinstance(directory_paths, str):
+        directory_paths = [directory_paths]
+
+    # Generate a random folder name under the base storage directory
+    random_folder = os.path.join(base_storage_dir, str(uuid.uuid4()))
+    os.makedirs(random_folder, exist_ok=True)
+    print(f"[INFO] Using persist directory: {random_folder}")
+
+    # Check if folder is empty; if so, force rebuild
+    if not os.listdir(random_folder):
+        print(f"[INFO] Folder {random_folder} is empty. Forcing index rebuild.")
+        rebuild = True
+    else:
+        print(f"[DEBUG] Folder {random_folder} contents: {os.listdir(random_folder)}")
+
+    # Try to load the index from storage if not forcing rebuild
+    if not rebuild:
+        try:
+            print(f"[INFO] Attempting to load existing index from storage.")
+            storage_context = StorageContext.from_defaults(persist_dir=random_folder)
+            index = load_index_from_storage(storage_context)
+            print(f"[INFO] Loaded existing index successfully.")
+            return index
+        except Exception as e:
+            print(f"[ERROR] Error loading existing index: {e}. Proceeding to rebuild the index.")
+
+    # Rebuild the index from the documents
+    print(f"[INFO] Building a new index from documents...")
+    try:
+        parser = LlamaParse(
+            api_key="llx-Erd0RHKTagtHmXwstTZu9xwEK79mvxIC33Q5LkcHad492MBV",
+            result_type="markdown"
+        )
+        all_documents = []
+        for path in directory_paths:
+            print(f"[DEBUG] Starting document parsing from: {path}")
+            docs = await parser.aload_data(path)
+            print(f"[INFO] Parsed {len(docs)} documents from {path} successfully.")
+            all_documents.extend(docs)
+    except Exception as e:
+        print(f"[ERROR] Error parsing documents from {directory_paths}: {e}")
+        raise
+
+    try:
+        embedding_model = OpenAIEmbedding(model="text-embedding-ada-002")
+        print(f"[DEBUG] Creating VectorStoreIndex from parsed documents using the embedding model.")
+        index = VectorStoreIndex.from_documents(all_documents, embedding=embedding_model)
+        index.storage_context.persist(persist_dir=random_folder)
+        print(f"[INFO] Index built and persisted to {random_folder}.")
+    except Exception as e:
+        print(f"[ERROR] Error building or persisting the index: {e}")
+        raise
+
+    print(f"[DEBUG] Exiting build_or_load_index_random")
+    return index
+
+# ------------------------------------------------------------------------
+# Web Search Function (using Tavily API and SerpAPI as an example)
+# ------------------------------------------------------------------------
+async def tavily_search(query: str) -> Any:
+    """
+    Perform a web search using the Tavily API.
+    Returns a list of results.
+    """
+    import requests, time  # local import for async context
+    print(f"[DEBUG] Starting Tavily search for query: {query}")
+    api_url = "https://api.tavily.com/search"
+    TAVILY_API_KEY = "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"
+    headers = {"Authorization": f"Bearer {TAVILY_API_KEY}", "Content-Type": "application/json"}
+    payload = {"query": query, "max_results": 5, "include_raw_content": True}
+    results = []
+    for attempt in range(3):
+        print(f"[DEBUG] Tavily search attempt {attempt+1}")
+        try:
+            response = requests.post(api_url, json=payload, headers=headers, timeout=10)
+            if response.status_code == 200:
+                data = response.json()
+                for item in data.get("results", []):
+                    results.append({
+                        "title": item.get("title", ""),
+                        "url": item.get("url", ""),
+                        "content": item.get("content", "")
+                    })
+                break
+        except Exception as e:
+            print(f"[DEBUG] Tavily search attempt {attempt+1} failed with error: {e}")
+            if attempt < 2:
+                time.sleep(2)
+    print(f"[DEBUG] Tavily search completed with {len(results)} results")
+    return results
+
+async def serpapi_search(query: str) -> Any:
+    import requests, time  # local import for async context
+    print(f"[DEBUG] Starting SerpAPI search for query: {query}")
+    api_url = "https://serpapi.com/search"
+    SERPAPI_API_KEY = "a9ab3a28a7a26009b622b6bfebb4dc2d85aa1ab5cf491e6aaf9bf532ebcfd05e"
+    params = {
+        "q": query,
+        "api_key": SERPAPI_API_KEY,
+        "engine": "google",
+        "num": 5,        # Number of results to return
+        "hl": "en"       # Language (optional)
+    }
+    results = []
+    for attempt in range(3):
+        print(f"[DEBUG] SerpAPI search attempt {attempt+1}")
+        try:
+            response = requests.get(api_url, params=params, timeout=10)
+            if response.status_code == 200:
+                data = response.json()
+                organic_results = data.get("organic_results", [])
+                for item in organic_results:
+                    results.append({
+                        "title": item.get("title", ""),
+                        "url": item.get("link", ""),
+                        "content": item.get("snippet", "")
+                    })
+                break
+        except Exception as e:
+            print(f"[DEBUG] SerpAPI search attempt {attempt+1} failed with error: {e}")
+            if attempt < 2:
+                time.sleep(2)
+    print(f"[DEBUG] SerpAPI search completed with {len(results)} results")
+    return results
+
+# ------------------------------------------------------------------------
+# SCHEMAS
+# ------------------------------------------------------------------------
+class Section(BaseModel):
+    name: str = Field(description="Name for this section of the report.")
+    description: str = Field(description="Brief overview of the main topics.")
+    research: bool = Field(description="Whether we need to query local docs.")
+    content: str = Field(description="The content of this section.", default="")
+
+class Sections(BaseModel):
+    sections: List[Section] = Field(description="List of sections for the report.")
+
+class SearchQuery(BaseModel):
+    search_query: str = Field(..., description="A doc query relevant for the section.")
+
+class Queries(BaseModel):
+    queries: List[SearchQuery] = Field(description="List of doc queries.")
+
+class ReportStateInput(TypedDict):
+    topic: str  # e.g. "Financial due diligence for Company X"
+
+class ReportStateOutput(TypedDict):
+    final_report: str
+
+class ReportState(TypedDict, total=False):
+    topic: str
+    user_id: str
+    report_type: int
+    sections: List[Section]
+    completed_sections: Annotated[List[Section], operator.add]
+    report_sections_from_research: str
+    final_report: str
+    reflection_count: int
+    reflection_needed: bool
+
+class SectionState(TypedDict):
+    section: Section
+    report_type: int
+    search_queries: List[SearchQuery]
+    source_str: str
+    report_sections_from_research: str
+    completed_sections: List[Section]
+
+class SectionOutputState(TypedDict):
+    completed_sections: List[Section]
+
+# ------------------------------------------------------------------------
+# LLM Setup
+# ------------------------------------------------------------------------
+gpt_4 = ChatOpenAI(model="gpt-4o-mini", temperature=0.0, api_key=OPENAI_API_KEY)
+
+# ------------------------------------------------------------------------
+# HELPER: Format completed sections
+# ------------------------------------------------------------------------
+def format_sections(sections: List[Section]) -> str:
+    """
+    Turn a list of completed sections into a text block for reference.
+    """
+    out = []
+    for idx, sec in enumerate(sections, 1):
+        out.append(f"""
+============================================================
+Section {idx}: {sec.name}
+============================================================
+Description:
+{sec.description}
+Needs Research: {sec.research}
+
+Content:
+{sec.content if sec.content else '[Not yet written]'}
+""")
+    return "\n".join(out)
+
+# ------------------------------------------------------------------------
+# GRAPH NODES
+# ------------------------------------------------------------------------
+async def generate_report_plan(state: ReportState, config: RunnableConfig):
+    """
+    1) Generate an initial set of queries to gather relevant data about the topic from local docs.
+    2) Retrieve doc context.
+    3) Generate an outline (sections) for the report.
+    """
+    topic = state["topic"]
+    report_type = state["report_type"]
+
+    # Step 1: Generate queries (structured response)
+    structured_llm_queries = gpt_4.with_structured_output(Queries)
+    system_prompt_for_queries = report_planner_query_writer_instructions[report_type].format(topic=topic)
+
+    queries_obj = structured_llm_queries.invoke([
+        SystemMessage(content=system_prompt_for_queries),
+        HumanMessage(content="Generate a list of doc queries in JSON under 'queries'.")
+    ])
+    print(f"[DEBUG] Generated queries")
+
+    # Step 2: Query the local documents
+    doc_context_list = []
+    if query_engine:
+        for q in queries_obj.queries:
+            resp = query_engine.query(q.search_query)
+            doc_context_list.append(f"Query: {q.search_query}\n{str(resp)}\n")
+    combined_context = "\n".join(doc_context_list)
+
+    # Step 3: Create sections from that context
+    structured_llm_sections = gpt_4.with_structured_output(Sections, method="function_calling")
+    system_prompt_for_sections = report_planner_instructions[report_type].format(
+        topic=topic,
+        context=combined_context
+    )
+
+    sections_obj = structured_llm_sections.invoke([
+        SystemMessage(content=system_prompt_for_sections),
+        HumanMessage(content="Generate the JSON array of sections under 'sections'.")
+    ])
+    print(f"[DEBUG] Generated report sections")
+
+    return {"sections": sections_obj.sections}
+
+def generate_queries(state: SectionState, config: RunnableConfig):
+    """
+    For each section, generate up to 5 specialized queries to find more data.
+    Only filter out any queries that have already been asked.
+    Additionally, include previous queries and their compiled document search outputs
+    to ensure that new queries build upon and deepen the research.
+    """
+    section = state["section"]
+    report_type = state["report_type"]
+    structured_llm_queries = gpt_4.with_structured_output(Queries)
+    
+    # Gather previous queries and their compiled answers (if available)
+    previous_queries = state.get("previous_queries", [])
+    if previous_queries:
+        previous_text = "\n".join([f"Q: {pq.search_query}" for pq in previous_queries])
+    else:
+        previous_text = "None"
+    previous_section_output = state.get("source_str", "No previous document search results available.")
+    
+    prompt = query_prompt_for_iteration[report_type].format(
+        description=section.description,
+        previous_text=previous_text,
+        previous_section_output=previous_section_output
+    )
+    
+    queries_obj = structured_llm_queries.invoke([
+        SystemMessage(content=prompt),
+        HumanMessage(content="Return 'queries' in JSON.")
+    ])
+    print(f"[DEBUG] Generated specialized queries for section '{section.name}': {queries_obj}")
+    # Filter out queries that have been generated in previous iterations.
+    previous = state.get("previous_queries", [])
+    unique_queries = [q for q in queries_obj.queries if q.search_query not in [pq.search_query for pq in previous]]
+    state.setdefault("previous_queries", []).extend(unique_queries)
+    return {"search_queries": unique_queries}
+
+def search_document(state: SectionState, config: RunnableConfig):
+    search_queries = state["search_queries"]
+    user_id = state["user_id"]
+    results = []
+    for sq in search_queries:
+        resp = query_kb(sq.search_query, KNOWLEDGE_BASE_ID, user_id, MODEL_ARN)
+        doc_text = f"Query: {sq.search_query}\nResult: {resp['output']}\n"
+        
+        # Extract citation info if available
+        citation = resp.get("citation")
+        if citation:
+            # Get citation text
+            cit_text = citation.get("generatedResponsePart", {}) \
+                               .get("textResponsePart", {}) \
+                               .get("text", "")
+            # Extract URLs from the retrieved references
+            references = citation.get("retrievedReferences", [])
+            ref_urls = []
+            for ref in references:
+                location = ref.get("location", {})
+                url = (location.get("webLocation", {}) or 
+                       location.get("confluenceLocation", {}) or 
+                       location.get("s3Location", {})).get("url") or \
+                      (location.get("s3Location", {}) or {}).get("uri")
+                if url:
+                    ref_urls.append(url)
+            # Append citation string with Markdown formatting if citation text or URLs exist
+            if cit_text or ref_urls:
+                formatted_refs = ", ".join([f"[Reference]({url})" for url in ref_urls]) if ref_urls else "None"
+                citation_str = f"**Citation:** {cit_text} **References:** {formatted_refs}"
+                doc_text += citation_str + "\n"
+                
+        results.append(doc_text)
+    combined = "\n".join(results)
+    print(f"[DEBUG] Combined document excerpts for section '{state['section'].name}' with citations.")
+    return {"source_str": combined}
+
+def write_section(state: SectionState):
+    """
+    Build the final text for this section from the combined source_str.
+    """
+    section = state["section"]
+    src = state["source_str"]
+    report_type = state["report_type"]
+
+    prompt = section_writer_instructions[report_type].format(
+        section_title=section.name,
+        section_topic=section.description,
+        context=src
+    )
+
+    response = gpt_4.invoke([
+        SystemMessage(content=prompt),
+        HumanMessage(content="Draft the content for this section.")
+    ])
+    # Append a citation to the generated content.
+    section.content = response.content
+    print(f"[DEBUG] Wrote section '{section.name}'")
+    return {"completed_sections": [section]}
+
+async def iterate_section_research(state: SectionState, config: RunnableConfig):
+    """
+    For a given section, perform multiple iterations of query generation and search
+    (document index and web). The accumulated context is then used to draft the final section.
+    """
+    section_iterations = config.get("section_iterations", 2)
+    accumulated_context = ""
+    
+    for i in range(section_iterations):
+        print(f"[DEBUG] Iteration {i+1} for section '{state['section'].name}'")
+        
+        # Generate specialized queries for this section.
+        queries_result = generate_queries(state, config)
+        state["search_queries"] = queries_result["search_queries"]
+        
+        # Document search.
+        doc_result = await search_document(state, config)
+        
+        # Web search.
+        web_result = await serpapi_search(state["section"].name)
+        if isinstance(web_result, list):
+            web_result_str = "\n".join([
+                f"Title: {r['title']}\nURL: {r['url']}\nContent: {r['content']}"
+                for r in web_result
+            ])
+        else:
+            web_result_str = str(web_result)
+        
+        # Combine both search results for this iteration.
+        combined_iteration = (
+            f"--- Iteration {i+1} ---\n"
+            f"Document Results:\n{doc_result['source_str']}\n\n"
+            f"Web Results:\n{web_result_str}\n"
+        )
+
+        print(f"[DEBUG] The combined answers for the queries for this section's Iteration {i} are:\n{combined_iteration}\n")
+        accumulated_context += combined_iteration + "\n"
+    
+    state["source_str"] = accumulated_context
+    # Now draft the section using the accumulated context.
+    final_output = write_section(state)
+    return final_output
+
+def gather_completed_sections(state: ReportState):
+    """
+    After all sections are processed, gather them into a single reference string.
+    """
+    completed_sections = state.get("completed_sections", [])
+    joined = format_sections(completed_sections)
+    print(f"[DEBUG] Gathered completed sections")
+    return {"report_sections_from_research": joined}
+
+def write_final_sections(state: SectionState):
+    """
+    For sections that do not require additional doc-based research,
+    finalize them by leveraging context from 'report_sections_from_research'.
+    This function now expects a single section in state["section"].
+    """
+    section = state["section"]
+    report_type = state["report_type"]
+    prompt = final_section_writer_instructions[report_type].format(
+        context=state["report_sections_from_research"]
+    )
+    response = gpt_4.invoke([
+        SystemMessage(content=f"Generate the final text for {section.name}: {section.description}"),
+        HumanMessage(content=prompt)
+    ])
+    section.content = response.content
+    print(f"[DEBUG] Finalized section '{section.name}' without additional doc research")
+    return {"completed_sections": [section]}
+
+def compile_final_report(state: ReportState):
+    """
+    Combine all sections into a single text block for the final output.
+    """
+    sections = state["sections"]
+    completed_map = {s.name: s.content for s in state.get("completed_sections", [])}
+    for s in sections:
+        if s.name in completed_map:
+            s.content = completed_map[s.name]
+    final_report_text = "\n\n".join([sec.content for sec in sections])
+    print(f"[DEBUG] Compiled final report")
+    return {"final_report": final_report_text}
+
+# ------------------------------------------------------------------------
+# BUILD THE MAIN GRAPH
+# ------------------------------------------------------------------------
+builder = StateGraph(
+    state_schema=ReportState,
+    input=ReportStateInput,
+    output=ReportStateOutput,
+    config_schema=Configuration
+)
+
+# IMPORTANT: Add an edge from START to your first node.
+builder.add_edge(START, "generate_report_plan")
+
+# 1) Generate overall report plan
+builder.add_node("generate_report_plan", generate_report_plan)
+
+# 2) Build a subgraph for sections that require document/web research.
+# Use the new iterative node.
+builder.add_node("iterate_section_research", iterate_section_research)
+
+# After generating the plan, for each section that requires research, send it to the iterative node.
+def initiate_section_writing(state: ReportState):
+    return [
+        Send("iterate_section_research", {"section": s, "report_type": state["report_type"]})
+        for s in state["sections"]
+        if s.research
+    ]
+builder.add_conditional_edges("generate_report_plan", initiate_section_writing, ["iterate_section_research"])
+
+# 3) Gather completed sections.
+builder.add_node("gather_completed_sections", gather_completed_sections)
+builder.add_edge("iterate_section_research", "gather_completed_sections")
+
+# 4) Finalize sections that do NOT require doc research.
+builder.add_node("write_final_sections", write_final_sections)
+def initiate_final_section_writing(state: ReportState):
+    return [
+        Send("write_final_sections", {
+            "section": s,
+            "report_type": state["report_type"],
+            "report_sections_from_research": state["report_sections_from_research"]
+        })
+        for s in state["sections"]
+        if not s.research
+    ]
+builder.add_conditional_edges("gather_completed_sections", initiate_final_section_writing, ["write_final_sections"])
+builder.add_edge("write_final_sections", "compile_final_report")
+
+# 5) Compile the final report.
+builder.add_node("compile_final_report", compile_final_report)
+
+# Remove the reflection node; directly end the graph.
+builder.add_edge("compile_final_report", END)
+
+document_graph = builder.compile()
+
+# ------------------------------------------------------------------------
+# ROUTER
+# ------------------------------------------------------------------------
+research_deep_router = APIRouter()
+
+@research_deep_router.post("/api/deep-research")
+async def deep_research_tool(query: str, report_type: int, current_user=Depends(get_current_user)):
+    """
+    Example usage:
+      1. Build or load the index from local data.
+      2. Create a query engine.
+      3. Set the global query engine.
+      4. Run the state machine with a topic.
+    """
+    user_id = current_user.id
+    # Step 4: Prepare your input state.
+    input_data = {"topic": query, "user_id": user_id, "report_type":report_type}
+    
+    # Step 5: Invoke the state graph.
+    result = await document_graph.ainvoke(input_data)
+    
+    if result is None:
+        print("[ERROR] The state graph returned None. Check the graph flow and node return values.")
+    else:
+        final_report = result.get("final_report", "")
+        output_file = "final_report.txt"
+        with open(output_file, "w", encoding="utf-8") as f:
+            f.write(final_report)
+        print(f"Final report saved to {output_file}")
+
+@research_deep_router.post("/api/upload-deep-research")
+async def upload_file(file: UploadFile = File(...), current_user=Depends(get_current_user)):
+    user_id = current_user.id
+    key = f"{user_id}/{file.filename}"
+    try:
+        s3_client.upload_fileobj(file.file, BUCKET_NAME, key, ExtraArgs={"Metadata": {"user_id": str(user_id)}})
+    except botocore.exceptions.ClientError as e:
+        raise HTTPException(status_code=500, detail="Upload to S3 failed")
+    # (Optional) Trigger ingestion immediately
+    try:
+        bedrock_client.start_ingestion_job(
+            knowledgeBaseId=KNOWLEDGE_BASE_ID,
+            dataSourceId=DATA_SOURCE_ID,
+            clientToken=str(uuid.uuid4())
+        )
+    except botocore.exceptions.ClientError:
+        # Log the error, but don't fail the upload response
+        print("Ingestion job start failed for key:", key)
+    return {"message": "File uploaded successfully", "s3_key": key}
+
+
+# --------------------------------------------------------------------------------------------------------------------
+#  Snippets that were being used before knowledgebase implementation
+# --------------------------------------------------------------------------------------------------------------------
+
+
+# file_paths = [
+#     "C:/Users/Rushil Shrivastava/Downloads/85_Redacted.pdf"
+# ]
+
+# with open(file_paths[0], "rb") as f:
+#     # Create an UploadFile instance (FastAPI uses Starlette's UploadFile)
+#     file_content = f.read()
+
+# file_stream = io.BytesIO(file_content)
+
+# upload_file_obj = StarletteUploadFile(filename=os.path.basename(file_paths[0]), file=file_stream)
+# key = f"123/85_Redacted.pdf"
+# try:
+#     s3_client.upload_fileobj(upload_file_obj, BUCKET_NAME, key)
+# except botocore.exceptions.ClientError as e:
+#     raise HTTPException(status_code=500, detail="Upload to S3 failed")
+
+# # (Optional) Trigger ingestion immediately
+# try:
+#     bedrock_client.start_ingestion_job(
+#         knowledgeBaseId=KNOWLEDGE_BASE_ID,
+#         dataSourceId=DATA_SOURCE_ID,
+#         clientToken=str(uuid.uuid4())
+#     )
+# except botocore.exceptions.ClientError:
+#     # Log the error, but don't fail the upload response
+#     print("Ingestion job start failed for key:", key)
+# return {"message": "File uploaded successfully", "s3_key": key}
+
+
+
+# Step 1: Build or load index from your local data.
+# index = await build_or_load_index_random(directory_paths=file_paths, rebuild=True)
+
+# Step 2: Create a query engine from the index.
+# engine = index.as_query_engine(similarity_top_k=10)
+
+# Step 3: Set the global query engine.
+# set_query_engine(engine)
