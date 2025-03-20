@@ -55,6 +55,13 @@ export interface ResearchHistoryItem {
   orderedData: Data[];
 }
 
+export interface ConversationData {
+  query: string;
+  res: string;
+  res_id?: string;
+};
+
+
 export const preprocessOrderedData = (data: Data[]) => {
   let groupedData: any[] = [];
   let currentAccordionGroup: any = null;

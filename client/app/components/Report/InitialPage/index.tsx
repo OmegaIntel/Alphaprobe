@@ -6,6 +6,13 @@ import * as Switch from '@radix-ui/react-switch';
 import { Globe, FileSearch, GalleryVerticalEnd } from 'lucide-react';
 import clsx from 'clsx';
 import { templates } from '../reportUtils';
+import FileUpload from './FileUpload';
+import {
+  CircleX,
+  LoaderCircle,
+  LoaderPinwheel,
+  FileSpreadsheet,
+} from 'lucide-react';
 
 type ReportType =
   | 'market-sizing'
@@ -43,13 +50,32 @@ const InitialPage: FC<THeroProps> = ({
 
   const onSubmit = (data: FormData) => {
     console.log('Report Data:', data.uploadedDocuments);
-    let newData = { reportType : data.reportType,preferences:  data.preferences, uploadedDocuments: data.uploadedDocuments};
-  
-    localStorage.setItem('promtPreferance', JSON.stringify(newData))
+    let newData = {
+      reportType: data.reportType,
+      preferences: data.preferences,
+      uploadedDocuments: data.uploadedDocuments,
+    };
+
+    localStorage.setItem('promtPreferance', JSON.stringify(newData));
   };
 
   const handleClickSuggestion = (value: string) => {
     setPromptValue(value);
+  };
+
+  const handleFileUpload = (file: File) => {
+    let files = formWatch.uploadedDocuments;
+    files.push(file);
+    console.log('File uploaded:', file);
+    setValue('uploadedDocuments', files);
+
+    // TODO: Implement backend API upload logic
+  };
+
+  const removeFile = (fileName: string) => {
+    let files = formWatch.uploadedDocuments;
+    let newFiles = files.filter((file) => file.name !== fileName);
+    setValue('uploadedDocuments', newFiles);
   };
 
   return (
@@ -131,23 +157,59 @@ const InitialPage: FC<THeroProps> = ({
           {/* Advanced Reasoning */}
           <Controller
             name="preferences.file"
-            disabled={true}
+            // disabled={true}
             control={control}
             render={({ field }) => (
-              <label className="flex items-center justify-between py-2 border rounded-lg px-4">
-                <div className="flex items-center space-x-4">
-                  <FileSearch className="w-4 h-4" />
-                  <span className="text-sm font-medium">Files</span>
-                </div>
+              <div className="border rounded-lg py-2 px-4">
+                <label className="flex items-center justify-between">
+                  <div className="flex items-center space-x-4">
+                    <FileSearch className="w-4 h-4" />
+                    <span className="text-sm font-medium">Files</span>
+                  </div>
 
-                <input
-                  type="checkbox"
-                  disabled
-                  checked={field.value}
-                  onChange={field.onChange}
-                  className="w-4 h-4 scheme-dark !bg-indigo-600 accent-indigo-600"
-                />
-              </label>
+                  <input
+                    type="checkbox"
+                    // disabled
+                    checked={field.value}
+                    onChange={field.onChange}
+                    className="w-4 h-4 scheme-dark !bg-indigo-600 accent-indigo-600"
+                  />
+                </label>
+                {field.value && (
+                  <div className="mt-3">
+                    <FileUpload onFileUpload={handleFileUpload} />
+                    {formWatch.uploadedDocuments.length ? (
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {formWatch.uploadedDocuments.map((file, index) => (
+                          <div
+                            key={file.name}
+                            className="flex items-center gap-2 p-2 border rounded-lg bg-gray-100"
+                          >
+                            <div className="w-6 h-6 bg-indigo-200 text-white flex items-center justify-center rounded-full">
+                              {true ? (
+                                <span className="animate-spin">
+                                  <LoaderPinwheel className="w-4 h-4 text-gray-600" />
+                                </span>
+                              ) : (
+                                <FileSpreadsheet className="w-4 h-4 text-gray-600" />
+                              )}
+                            </div>
+                            <div className="text-sm font-medium">
+                              {file.name}
+                            </div>
+                            <button
+                              onClick={() => removeFile(file.name)}
+                              className="ml-auto"
+                            >
+                              <CircleX className="w-4 h-4 text-gray-600 hover:text-red-600" />
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                    ): null}
+                  </div>
+                )}
+              </div>
             )}
           />
         </div>
@@ -159,9 +221,15 @@ const InitialPage: FC<THeroProps> = ({
               setPromptValue(prompt);
               setValue('promptValue', prompt);
             }}
-            handleSubmit={(prompt)=>{
+            handleSubmit={(prompt) => {
               setValue('promptValue', prompt);
-              handleDisplayResult(formWatch)
+              handleDisplayResult(formWatch);
+              let newData = {
+                reportType: formWatch.reportType,
+                preferences: formWatch.preferences,
+                uploadedDocuments: formWatch.uploadedDocuments,
+              };
+              localStorage.setItem('promtPreferance', JSON.stringify(newData));
             }}
           />
         </div>

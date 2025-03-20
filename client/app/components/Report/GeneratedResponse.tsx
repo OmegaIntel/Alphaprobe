@@ -1,16 +1,17 @@
 import { useEffect, useState } from 'react';
-import { remark } from 'remark';
+import { remark,  } from 'remark';
 import html from 'remark-html';
 import { Compatible } from 'vfile';
 import './styles/markdown.css';
 import { Copy } from 'lucide-react';
+import gfm from "remark-gfm"
 
 export default function GeneratedResponse({ response }: { response: string }) {
   const [htmlContent, setHtmlContent] = useState('');
   
   async function markdownToHtml(markdown: Compatible | undefined) {
     try {
-      const result = await remark().use(html).process(markdown);
+      const result = await remark().use(gfm).use(html).process(markdown);
       return result.toString();
     } catch (error) {
       console.error('Error converting Markdown to HTML:', error);

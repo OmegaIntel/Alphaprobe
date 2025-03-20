@@ -106,7 +106,7 @@ export default function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
 
           {!isMarketResearch && (
             <div className="space-y-2">
-              <h6 className="font-semibold text-sm">Your Projects</h6>
+              <h6 className="font-semibold text-sm">Histroy</h6>
               <div className="space-y-1">
                 {items.map((item) => (
                   <NavLink key={item.id} to={`/${item.id}`} onClick={() => setActiveMenu(item.id as string)} className={`flex text-sm items-center space-x-2 p-2 min-w-10 hover:bg-gray-200 rounded ${activeMenu === item.id ? 'bg-gray-200' : ''}`}>

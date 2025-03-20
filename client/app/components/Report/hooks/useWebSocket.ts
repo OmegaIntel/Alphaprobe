@@ -3,10 +3,15 @@ import { Data, ChatBoxSettings, QuestionData } from '../reportUtils';
 import { API_BASE_URL } from '~/constant';
 import { InitialFormData } from '../reportUtils';
 
+type ConversationData = {
+  query: string;
+  res: string;
+  res_id?: string;
+}
+
 export const useWebSocket = (
-  setOrderedData: React.Dispatch<React.SetStateAction<Data[]>>,
-  setAnswer: React.Dispatch<React.SetStateAction<string>>, 
   setLoading: React.Dispatch<React.SetStateAction<boolean>>,
+  setConversation:React.Dispatch<React.SetStateAction<ConversationData[]>>
 ) => {
   const [socket, setSocket] = useState<WebSocket | null>(null);
   const heartbeatInterval = useRef<number>();
@@ -35,8 +40,7 @@ export const useWebSocket = (
   };
 
   const initializeWebSocket = (promptValue: InitialFormData) => {
-    const storedConfig = localStorage.getItem('apiVariables');
-    const apiVariables = storedConfig ? JSON.parse(storedConfig) : {};
+  
 
     if (!socket && typeof window !== 'undefined') {
       const fullHost = API_BASE_URL;
@@ -59,19 +63,22 @@ export const useWebSocket = (
 
           // Try to parse JSON data
           const data = JSON.parse(event.data);
-          if (data.type === 'human_feedback' && data.content === 'request') {
-            // setQuestionForHuman(data.output);
-            // setShowHumanFeedback(true);
-          } else {
-            const contentAndType = `${data.content}-${data.type}`;
-            setOrderedData((prevOrder) => [...prevOrder, { ...data, contentAndType }]);
-
             if (data.type === 'report') {
-              setAnswer((prev: string) => prev + data.output);
+              setConversation((prev: ConversationData[]) => {
+                let lastCon = [...prev].pop();
+                // console.log('lastCon', lastCon, prev)
+                return prev.map((resData)=> {
+                  if(resData.res_id === lastCon?.res_id){
+                    return {...resData, res: resData.res + data.output}
+                  }
+                  return resData;
+
+                });
+              })
             } else if (data.type === 'END') {
               setLoading(false);
+              newSocket.close();
             }
-          }
         } catch (error) {
           console.error('Error parsing WebSocket message:', error, event.data);
         }

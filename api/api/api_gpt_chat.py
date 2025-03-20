@@ -94,10 +94,9 @@ async def get_ai_response(data: str, websocket: WebSocket) -> AsyncGenerator[str
     message = parsed_data.get("promptValue")
     temp_id = parsed_data.get("reportType")
     prompt = generate_prompt(message, temp_id)
-
+    
     response = await client.chat.completions.create(
         model="gpt-4o-mini",
-
         messages=[
             {"role": "system", "content": "You are an expert financial analyst."},
             {
@@ -105,6 +104,7 @@ async def get_ai_response(data: str, websocket: WebSocket) -> AsyncGenerator[str
                 "content": prompt,
             },
         ],
+        
         stream=True,
     )
 

@@ -44,6 +44,7 @@ export default function App() {
     // Check if user is authenticated and not on an auth page
     if (!isAuthenticated() && !isAuthPage) {
       // Redirect to login with the return URL
+      // navigate(`/login?returnTo=${encodeURIComponent(location.pathname)}`, { replace: true });
       navigate(`/login?returnTo=${encodeURIComponent(location.pathname)}`, { replace: true });
     }
   }, [isAuthenticated, isAuthPage, navigate, location.pathname]);

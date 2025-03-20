@@ -1,8 +1,13 @@
 import { useState, useEffect } from 'react';
-import { ResearchHistoryItem, Data } from '../reportUtils';
+import { ResearchHistoryItem, Data, ConversationData } from '../reportUtils';
+
+type HistoryData ={
+  id: string;
+  conversation: ConversationData[]
+}
 
 export const useResearchHistory = () => {
-  const [history, setHistory] = useState<ResearchHistoryItem[]>([]);
+  const [history, setHistory] = useState<HistoryData[]>([]);
   
   // Load history from localStorage on initial render
   useEffect(() => {
@@ -19,13 +24,10 @@ export const useResearchHistory = () => {
   }, []);
 
   // Save research to history
-  const saveResearch = (question: string, answer: string, orderedData: Data[]) => {
-    const newItem: ResearchHistoryItem = {
+  const saveResearch = (question: string, answer: string, conversationData: ConversationData[]) => {
+    const newItem: HistoryData = {
       id: Date.now().toString(),
-      question,
-      answer,
-      timestamp: Date.now(),
-      orderedData,
+      conversation: conversationData
     };
 
     const updatedHistory = [newItem, ...history];

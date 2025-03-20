@@ -13,23 +13,19 @@ import { MoveDown } from 'lucide-react';
 import Loader from './Loader';
 import InitialPage from './InitialPage';
 import { InitialFormData } from './reportUtils';
+import { getDocumentReport } from './api';
+
+type ConversationData = {
+  query: string;
+  res: string;
+  res_id?: string;
+};
 
 const ReportPage: FC = () => {
   const [promptValue, setPromptValue] = useState('');
   const [showResult, setShowResult] = useState(false);
-  const [answer, setAnswer] = useState('');
   const [loading, setLoading] = useState(false);
-  const [chatBoxSettings, setChatBoxSettings] = useState<ChatBoxSettings>({
-    report_source: 'web',
-    report_type: 'deep',
-    tone: 'Objective',
-    domains: [],
-    defaultReportType: 'deep',
-  });
-  const [question, setQuestion] = useState('');
-  const [orderedData, setOrderedData] = useState<Data[]>([]);
-  const [allLogs, setAllLogs] = useState<any[]>([]);
-  const chatContainerRef = useRef<HTMLDivElement>(null);
+  const [conversation, setConversation] = useState<ConversationData[]>([]);
   const [isStopped, setIsStopped] = useState(false);
   const [showScrollButton, setShowScrollButton] = useState(false);
   const mainContentRef = useRef<HTMLDivElement>(null);
@@ -38,90 +34,59 @@ const ReportPage: FC = () => {
     useResearchHistory();
 
   const { socket, initializeWebSocket } = useWebSocket(
-    setOrderedData,
-    setAnswer,
-    setLoading
+    setLoading,
+    setConversation
   );
 
-  const handleChat = async (message: string) => {
-    if (socket) {
-      setShowResult(true);
-      setQuestion(message);
-      setLoading(true);
-      setPromptValue('');
-      setAnswer('');
-
-      const questionData: QuestionData = { type: 'question', content: message };
-      setOrderedData((prevOrder) => [...prevOrder, questionData]);
-
-      socket.send(`start${JSON.stringify({ message })}`);
-    }
-  };
+  console.log('report--------------------------', conversation);
 
   const handleDisplayResult = async (newQuestion: InitialFormData) => {
-    setShowResult(true);
-    setLoading(true);
-    setQuestion(newQuestion.promptValue);
-    setPromptValue('');
-    setAnswer('');
-    setOrderedData((prevOrder) => [
-      ...prevOrder,
-      { type: 'question', content: newQuestion.promptValue },
-    ]);
+    try {
+      console.log('report--------------------------');
+      setShowResult(true);
+      setLoading(true);
+      // setQuestion(newQuestion.promptValue);
+      setPromptValue('');
+      setConversation((prevOrder) => [
+        ...prevOrder,
+        {
+          query: newQuestion.promptValue,
+          res: '',
+          res_id: `${conversation.length}`,
+        },
+      ]);
+      // setOrderedData((prevOrder) => [
+      //   ...prevOrder,
+      //   { type: 'question', content: newQuestion.promptValue },
+      // ]);
+      const response: string = await getDocumentReport({
+        promptValue: newQuestion.promptValue,
+        web_search: newQuestion.preferences.web,
+        file_search: newQuestion.preferences.file,
+        templateId: newQuestion.reportType,
+      });
 
-    // const storedConfig = localStorage.getItem('apiVariables');
-    // const apiVariables = storedConfig ? JSON.parse(storedConfig) : {};
-    // const langgraphHostUrl = apiVariables.LANGGRAPH_HOST_URL;
+      console.log('res----------------', response);
 
-    // if (chatBoxSettings.report_type === 'multi_agents' && langgraphHostUrl) {
-    //   let { streamResponse, host, thread_id } = await startLanggraphResearch(newQuestion, chatBoxSettings.report_source, langgraphHostUrl);
-    //   const langsmithGuiLink = `https://smith.langchain.com/studio/thread/${thread_id}?baseUrl=${host}`;
-    //   setOrderedData((prevOrder) => [...prevOrder, { type: 'langgraphButton', link: langsmithGuiLink }]);
-
-    //   let previousChunk = null;
-    //   for await (const chunk of streamResponse) {
-    //     if (chunk.data.report != null && chunk.data.report != "Full report content here") {
-    //       setOrderedData((prevOrder) => [...prevOrder, { ...chunk.data, output: chunk.data.report, type: 'report' }]);
-    //       setLoading(false);
-    //     } else if (previousChunk) {
-    //       const differences = findDifferences(previousChunk, chunk);
-    //       setOrderedData((prevOrder) => [...prevOrder, { type: 'differences', content: 'differences', output: JSON.stringify(differences) }]);
-    //     }
-    //     previousChunk = chunk;
-    //   }
-    // } else {
-    initializeWebSocket(newQuestion);
-    //}
-  };
-
-  const reset = () => {
-    // Reset UI states
-    setShowResult(false);
-    setPromptValue('');
-    setIsStopped(false);
-
-    // Clear previous research data
-    setQuestion('');
-    setAnswer('');
-    setOrderedData([]);
-    setAllLogs([]);
-
-    // Reset feedback states
-    // setShowHumanFeedback(false);
-    // setQuestionForHuman(false);
-
-    // Clean up connections
-    if (socket) {
-      socket.close();
-    }
-    setLoading(false);
-  };
-
-  const handleClickSuggestion = (value: string) => {
-    setPromptValue(value);
-    const element = document.getElementById('input-area');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      if (response) {
+        setConversation((prev: ConversationData[]) => {
+          let lastCon = [...prev].pop();
+          // console.log('lastCon', lastCon, prev)
+          return prev.map((resData) => {
+            if (resData.res_id === lastCon?.res_id) {
+              return { ...resData, res: `${response}` };
+            }
+            return resData;
+          });
+        });
+      }
+      setLoading(false);
+      // setTimeout(()=>{
+      //   initializeWebSocket(newQuestion);
+      // },500)
+    } catch (error) {
+      setLoading(false);
+      console.error('error-----------', error);
     }
   };
 
@@ -132,13 +97,6 @@ const ReportPage: FC = () => {
    * - Marks research as stopped
    * - Preserves current results
    */
-  const handleStopResearch = () => {
-    if (socket) {
-      socket.close();
-    }
-    setLoading(false);
-    setIsStopped(true);
-  };
 
   /**
    * Handles starting a new research
@@ -148,76 +106,11 @@ const ReportPage: FC = () => {
    */
 
   // Save completed research to history
-  useEffect(() => {
-    // Only save when research is complete and not loading
-    if (
-      showResult &&
-      !loading &&
-      answer &&
-      question &&
-      orderedData.length > 0
-    ) {
-      // Check if this is a new research (not loaded from history)
-      //@ts-ignore
-      const isNewResearch = !history.some(
-        (item) => item.question === question && item.answer === answer
-      );
-
-      if (isNewResearch) {
-        saveResearch(question, answer, orderedData);
-      }
-    }
-  }, [
-    showResult,
-    loading,
-    answer,
-    question,
-    orderedData,
-    history,
-    saveResearch,
-  ]);
 
   /**
    * Processes ordered data into logs for display
    * Updates whenever orderedData changes
    */
-  useEffect(() => {
-    const groupedData = preprocessOrderedData(orderedData);
-    const statusReports = [
-      'agent_generated',
-      'starting_research',
-      'planning_research',
-      'error',
-    ];
-
-    const newLogs = groupedData.reduce((acc: any[], data) => {
-      // Process accordion blocks (grouped data)
-      if (data.type === 'accordionBlock') {
-        const logs = data.items.map((item: any, subIndex: any) => ({
-          header: item.content,
-          text: item.output,
-          metadata: item.metadata,
-          key: `${item.type}-${item.content}-${subIndex}`,
-        }));
-        return [...acc, ...logs];
-      }
-      // Process status reports
-      else if (statusReports.includes(data.content)) {
-        return [
-          ...acc,
-          {
-            header: data.content,
-            text: data.output,
-            metadata: data.metadata,
-            key: `${data.type}-${data.content}`,
-          },
-        ];
-      }
-      return acc;
-    }, []);
-
-    setAllLogs(newLogs);
-  }, [orderedData]);
 
   const handleScroll = useCallback(() => {
     // Calculate if we're near bottom (within 100px)
@@ -288,26 +181,25 @@ const ReportPage: FC = () => {
             <div className="container w-full space-y-2">
               <div className="container space-y-2 task-components">
                 <ReportBlock
-                  orderedData={orderedData}
-                  response={answer}
-                  allLogs={allLogs}
-                  chatBoxSettings={chatBoxSettings}
-                  handleClickSuggestion={handleClickSuggestion}
+                  orderedData={conversation}
+                  // response={answer}
+                  // allLogs={allLogs}
+                  // chatBoxSettings={chatBoxSettings}
+                  // handleClickSuggestion={handleClickSuggestion}
                 />
               </div>
             </div>
           </div>
         )}
         {showResult && (
-          <div className="bottom-8 flex items-center w-full pb-8 md:pb-10">
+          <div className="bottom-8 flex items-center w-full pb-8 md:pb-10 mr-4">
             {loading ? (
               <Loader />
             ) : (
               <InputComponent
                 promptValue={promptValue}
                 setPromptValue={setPromptValue}
-                handleSubmit={handleChat}
-                handleSecondary={(value: string) => {
+                handleSubmit={(value: string) => {
                   const pref = JSON.parse(
                     localStorage.getItem('promtPreferance') || ''
                   );
@@ -315,8 +207,9 @@ const ReportPage: FC = () => {
                     handleDisplayResult({ ...pref, promptValue: value });
                   }
                 }}
+                // handleSecondary={}
                 disabled={loading}
-                reset={reset}
+                // reset={reset}
                 isStopped={isStopped}
               />
             )}

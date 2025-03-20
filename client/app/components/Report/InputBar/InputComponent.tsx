@@ -99,7 +99,7 @@ const InputComponent: FC<TInputComponentProps> = ({
         type="submit"
         onClick={(e) => {
           //e.preventDefault();
-          if (reset) reset();
+          // if (reset) reset();
           handleSubmit(promptValue);
           setPromptValue('');
           resetHeight();
