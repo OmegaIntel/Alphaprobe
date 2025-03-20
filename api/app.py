@@ -24,6 +24,7 @@ from api.api_projects import project_router
 from api.api_perplexity_research import perplexity_router
 from api.api_langgraph_doc import langgraph_router
 from api.api_langflow import langflow_router
+# from api.api_deep_research import deep_research_router
 from api.api_deep_research import deep_research_router
 from websocket_manager import WebSocketManager
 from utils.websocket_utils import handle_websocket_communication
@@ -78,7 +79,7 @@ app.include_router(project_router)
 app.include_router(langgraph_router)
 app.include_router(perplexity_router)
 app.include_router(langflow_router)
-app.include_router(deep_research_router)
+# app.include_router(deep_research_router)
 
 if __name__ == "__main__":
     uvicorn.run("api.app:app", host="0.0.0.0", port=8000, reload=True, loop='asyncio')

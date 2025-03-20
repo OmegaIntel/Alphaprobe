@@ -6,10 +6,14 @@ import {
   ScrollRestoration,
   LiveReload,
   useMatches,
+  useNavigate,
+  useLocation,
 } from '@remix-run/react';
+import { useEffect } from 'react';
 import type { LinksFunction } from '@remix-run/node';
 import './tailwind.css';
 import Layout from './Layout';
+import { useAuth } from '~/hooks/useAuth';
 
 // Links for Remix
 export const links: LinksFunction = () => [
@@ -28,9 +32,22 @@ export const links: LinksFunction = () => [
 // Main App Component
 export default function App() {
   const matches = useMatches();
+  const { isAuthenticated } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  
   const isAuthPage = matches.some(
     (match) => match.pathname === '/login' || match.pathname === '/register'
   );
+
+  useEffect(() => {
+    // Check if user is authenticated and not on an auth page
+    if (!isAuthenticated() && !isAuthPage) {
+      // Redirect to login with the return URL
+      navigate(`/login?returnTo=${encodeURIComponent(location.pathname)}`, { replace: true });
+    }
+  }, [isAuthenticated, isAuthPage, navigate, location.pathname]);
+
   return (
     <html lang="en">
       <head>

@@ -272,7 +272,7 @@ export function ChatSession({
   }
 
   return (
-    <Card className="fixed top-14 left-0 bottom-0 w-1/6 h-[93%] border-0 rounded-none">
+    <Card className="left-0 bottom-0 w-full h-[93%] border-0 rounded-none">
       {/* <CardHeader className="border-b">
         <h2 className="text-lg font-bold">Chat Sessions</h2>
       </CardHeader> */}
