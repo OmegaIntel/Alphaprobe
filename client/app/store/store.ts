@@ -9,6 +9,7 @@ import { documentSearchResultsSlice } from "./slices/documentSearchResultSlice";
 import { chatSlice } from "./slices/chatSlice";
 import customReport from "./slices/customReport"
 import sidebarReducer from './slices/sideBar'
+import projectReducer from './slices/projectSlice';
 
 const store = configureStore({
   reducer: {
@@ -22,7 +23,8 @@ const store = configureStore({
     formResponse: formResponseReducer,
     customReport: customReport,
     chat: chatSlice.reducer,
-    sidebar: sidebarReducer
+    sidebar: sidebarReducer,
+    project: projectReducer
   },
 });
 

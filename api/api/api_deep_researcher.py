@@ -87,21 +87,24 @@ Section Title: {section_title}
 Section Description: {section_topic}
 Relevant Document Excerpts:
 {context}
-Ensure the analysis reflects deep insights into company management, business models, industry standing, financial performance, corporate actions, and news. Leverage the following tags for focus: Investment Research, Target Screening, Corporate Due Diligence, Competitive Research. Include the Page number and File name in the citations heading at the each section. Don't bring redundancy in File name, don't repeat it. Don't Hallucinate the citations
+Ensure the analysis reflects deep insights into company management, business models, industry standing, financial performance, corporate actions, and news. Leverage the following tags for focus: Investment Research, Target Screening, Corporate Due Diligence, Competitive Research.
+Include the Page number and File name in the citations heading at the each section if it's present in the context. Don't bring redundancy in File name, don't repeat it. Don't Hallucinate the citations if they are not there.
     """,
     """You are an expert financial and industry analyst. Draft a very detailed and comprehensive content for the following section of an industry report based on the relevant document excerpts provided. Your content should directly address the data or questions implied by the section and include extended analysis, examples, and additional insights.
 Section Title: {section_title}
 Section Description: {section_topic}
 Relevant Document Excerpts:
 {context}
-Ensure your analysis delves into financial health, key performance ratios, trend analysis, and valuation techniques. Leverage insights from the following tags: Financial Analysis, Ratio and Trend Analysis, Portfolio Monitoring, Valuation.  Include the Page number and File name in the citations heading at the each section. Don't bring redundancy in File name, don't repeat it. Don't Hallucinate the citations
+Ensure your analysis delves into financial health, key performance ratios, trend analysis, and valuation techniques. Leverage insights from the following tags: Financial Analysis, Ratio and Trend Analysis, Portfolio Monitoring, Valuation.
+Include the Page number and File name in the citations heading at the each section if it's present in the context. Don't bring redundancy in File name, don't repeat it. Don't Hallucinate the citations if they are not there.
     """,
     """You are an expert financial and industry analyst. Draft a very detailed and comprehensive content for the following section of an industry report based on the relevant document excerpts provided. Your content should directly address the data or questions implied by the section and include extended analysis, examples, and additional insights.
 Section Title: {section_title}
 Section Description: {section_topic}
 Relevant Document Excerpts:
 {context}
-Ensure your analysis focuses on market size, segmentation, competitive landscape, and trend analysis. Leverage insights from the following tags: Market Research, Business Consulting, Strategy, Marketing.  Include the Page number and File name in the citations heading at the each section. Don't bring redundancy in File name, don't repeat it. Don't Hallucinate the citations
+Ensure your analysis focuses on market size, segmentation, competitive landscape, and trend analysis. Leverage insights from the following tags: Market Research, Business Consulting, Strategy, Marketing.
+Include the Page number and File name in the citations heading at the each section if it's present in the context. Don't bring redundancy in File name, don't repeat it. Don't Hallucinate the citations if they are not there.
     """
 ]
 
@@ -267,15 +270,33 @@ current time - $current_time$
 
 Answer:"""
 
-def query_kb(input, kbId, user_id, modelId=None):
+def query_kb(input, kbId, user_id, project_id, modelId=None): 
     vector_search_config = {'numberOfResults': 5}
+    filters = []
+
     if user_id:
-        vector_search_config['filter'] = {
+        filters.append({
             "equals": {
                 "key": "user_id",
                 "value": str(user_id)
             }
-        }
+        })
+
+    # Only add a project_id filter if it's not "none"
+    if project_id and project_id != "none":
+        filters.append({
+            "equals": {
+                "key": "project_id",
+                "value": project_id
+            }
+        })
+
+    # Combine filters if necessary using "andAll"
+    if filters:
+        if len(filters) == 1:
+            vector_search_config['filter'] = filters[0]
+        else:
+            vector_search_config['filter'] = {"andAll": filters}
 
     response = bedrock_runtime.retrieve_and_generate(
         input={
@@ -504,6 +525,7 @@ class ReportStateInput(TypedDict):
     report_type: int
     file_search: bool
     web_search: bool
+    project_id: str
 
 class ReportStateOutput(TypedDict):
     final_report: str
@@ -514,6 +536,7 @@ class ReportState(TypedDict, total=False):
     report_type: int
     file_search: bool
     web_search: bool
+    project_id: str
     sections: List[Section]
     completed_sections: Annotated[List[Section], operator.add]
     report_sections_from_research: str
@@ -527,6 +550,7 @@ class SectionState(TypedDict):
     user_id: str
     file_search: bool
     web_search: bool
+    project_id: str
     search_queries: List[SearchQuery]
     source_str: str
     report_sections_from_research: str
@@ -534,12 +558,6 @@ class SectionState(TypedDict):
 
 class SectionOutputState(TypedDict):
     completed_sections: List[Section]
-
-class ResearchQuery(BaseModel):
-    text: str
-    report_type: int
-    file_search: bool
-    web_search: bool
 
 # ------------------------------------------------------------------------
 # LLM Setup
@@ -653,9 +671,10 @@ def generate_queries(state: SectionState, config: RunnableConfig):
 def search_document(state: SectionState, config: RunnableConfig):
     search_queries = state["search_queries"]
     user_id = state["user_id"]
+    project_id = state["project_id"]
     results = []
     for sq in search_queries:
-        resp = query_kb(sq.search_query, KNOWLEDGE_BASE_ID, user_id, MODEL_ARN)
+        resp = query_kb(sq.search_query, KNOWLEDGE_BASE_ID, user_id, project_id, MODEL_ARN)
         doc_text = f"Query: {sq.search_query}\nResult: {resp['output']}\n"
         
         # Extract citation info if available
@@ -815,7 +834,8 @@ def initiate_section_writing(state: ReportState):
             "report_type": state["report_type"],
             "file_search": state["file_search"],
             "web_search": state["web_search"],
-            "user_id": state["user_id"]
+            "user_id": state["user_id"],
+            "project_id": state["project_id"]
         })
         for s in state["sections"]
         if s.research
@@ -835,6 +855,7 @@ def initiate_final_section_writing(state: ReportState):
         Send("write_final_sections", {
             "section": s,
             "report_type": state["report_type"],
+            "project_id": state["project_id"],
             "report_sections_from_research": state["report_sections_from_research"]
         })
         for s in state["sections"]
@@ -864,7 +885,7 @@ class InstructionRequest(BaseModel):
     report_type: int 
     file_search:bool
     web_search:bool
-
+    project_id: str
 
 @research_deep_router.post("/api/deep-researcher-langgraph")
 async def deep_research_tool(query: InstructionRequest, current_user=Depends(get_current_user)):
@@ -878,7 +899,7 @@ async def deep_research_tool(query: InstructionRequest, current_user=Depends(get
 
     user_id = current_user.id
     # Step 4: Prepare your input state.
-    input_data = {"topic": query.instruction, "user_id": user_id, "report_type":int(query.report_type), "file_search": query.file_search, "web_search": query.web_search}
+    input_data = {"topic": query.instruction, "user_id": user_id, "report_type":int(query.report_type), "file_search": query.file_search, "web_search": query.web_search, "project_id": query.project_id}
     
     # Step 5: Invoke the state graph.
     result = await document_graph.ainvoke(input_data)
@@ -896,40 +917,64 @@ async def deep_research_tool(query: InstructionRequest, current_user=Depends(get
     )
 
 @research_deep_router.post("/api/upload-deep-research")
-async def upload_file(file: UploadFile = File(...), current_user=Depends(get_current_user)):
+async def upload_files(files: List[UploadFile] = File(...), current_user=Depends(get_current_user)):
     user_id = current_user.id
-    key = f"{user_id}/{file.filename}"
-    try:
-        s3_client.upload_fileobj(file.file, BUCKET_NAME, key, ExtraArgs={"Metadata": {"user_id": str(user_id)}})
+    project_id = str(uuid.uuid4())
+    results = []
+    
+    for file in files:
+        key = f"{user_id}/{project_id}/{file.filename}"
+        try:
+            # Upload the file to S3 with metadata
+            s3_client.upload_fileobj(
+                file.file, 
+                BUCKET_NAME, 
+                key, 
+                ExtraArgs={"Metadata": {"user_id": str(user_id)}}
+            )
 
-        # Prepare metadata content in the required format
-        metadata_dict = {
-            "metadataAttributes": {
-                "user_id": str(user_id)
+            # Prepare metadata content
+            metadata_dict = {
+                "metadataAttributes": {
+                    "user_id": str(user_id),
+                    "project_id": str(project_id)
+                }
             }
-        }
-        metadata_content = json.dumps(metadata_dict)
-        
-        # Define the metadata file key (document key + ".metadata.json")
-        metadata_key = f"{key}.metadata.json"
-        
-        # Upload the metadata file
-        s3_client.put_object(
-            Bucket=BUCKET_NAME,
-            Key=metadata_key,
-            Body=metadata_content,
-            ContentType='application/json'
-        )
-    except botocore.exceptions.ClientError as e:
-        raise HTTPException(status_code=500, detail="Upload to S3 failed")
-    # (Optional) Trigger ingestion immediately
-    try:
-        bedrock_client.start_ingestion_job(
-            knowledgeBaseId=KNOWLEDGE_BASE_ID,
-            dataSourceId=DATA_SOURCE_ID,
-            clientToken=str(uuid.uuid4())
-        )
-    except botocore.exceptions.ClientError:
-        # Log the error, but don't fail the upload response
-        print("Ingestion job start failed for key:", key)
-    return {"message": "File uploaded successfully", "s3_key": key}
+            metadata_content = json.dumps(metadata_dict)
+            metadata_key = f"{key}.metadata.json"
+            
+            # Upload the metadata file
+            s3_client.put_object(
+                Bucket=BUCKET_NAME,
+                Key=metadata_key,
+                Body=metadata_content,
+                ContentType='application/json'
+            )
+        except botocore.exceptions.ClientError as e:
+            raise HTTPException(status_code=500, detail=f"Upload to S3 failed for file: {file.filename}")
+
+        results.append({"s3_key": key})
+
+        # Retry ingestion job up to 3 times if it fails
+        max_retries = 3
+        for attempt in range(1, max_retries + 1):
+            try:
+                bedrock_client.start_ingestion_job(
+                    knowledgeBaseId=KNOWLEDGE_BASE_ID,
+                    dataSourceId=DATA_SOURCE_ID,
+                    clientToken=str(uuid.uuid4())
+                )
+                # Ingestion job started successfully, break out of the retry loop.
+                break
+            except botocore.exceptions.ClientError as e:
+                print(f"Ingestion job attempt {attempt} failed for key: {key}")
+                print("Error details:", e.response)
+                if attempt == max_retries:
+                    # After max retries, log and move on.
+                    print(f"Max retries reached for key: {key}. Moving on to next file.")
+                else:
+                    # Wait for a short period before retrying.
+                    import time
+                    time.sleep(1)
+    
+    return {"message": "Files uploaded successfully", "files": results, "project_id": project_id}

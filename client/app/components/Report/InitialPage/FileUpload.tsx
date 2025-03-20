@@ -1,18 +1,29 @@
+import { CircleX, FileSpreadsheet, LoaderPinwheel } from "lucide-react";
 import { useState, FC } from "react";
 import { cn } from "~/lib/utils";
-interface FileUploadProps {
-  onFileUpload: (file: File) => void;
-}
+import { uploadDeepResearchFiles } from "../api";
+import { useDispatch } from "react-redux";
+import { setProjectId } from "../../../store/slices/projectSlice"; // adjust the path as needed
 
-const FileUpload : FC<FileUploadProps> = ({ onFileUpload }: FileUploadProps) => {
-  const [file, setFile] = useState<File | null>(null);
+const FileUpload: FC = () => {
+  const [files, setFiles] = useState<File[]>([]);
   const [dragActive, setDragActive] = useState(false);
+  const [uploadStatus, setUploadStatus] = useState<"idle" | "loading" | "success">("idle");
+  const dispatch = useDispatch();
+
+  // Helper to add new files from a FileList to our state.
+  const handleFiles = (newFiles: FileList) => {
+    const fileArray = Array.from(newFiles);
+    setFiles((prevFiles) => [...prevFiles, ...fileArray]);
+    // If new files are added after a successful upload, reset the status.
+    if (uploadStatus === "success") {
+      setUploadStatus("idle");
+    }
+  };
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const selectedFile = event.target.files?.[0];
-    if (selectedFile) {
-      setFile(selectedFile);
-      onFileUpload(selectedFile);
+    if (event.target.files) {
+      handleFiles(event.target.files);
     }
   };
 
@@ -26,17 +37,34 @@ const FileUpload : FC<FileUploadProps> = ({ onFileUpload }: FileUploadProps) => 
   const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
     setDragActive(false);
-
-    const droppedFile = event.dataTransfer.files?.[0];
-    if (droppedFile) {
-      setFile(droppedFile);
-      onFileUpload(droppedFile);
+    if (event.dataTransfer.files) {
+      handleFiles(event.dataTransfer.files);
     }
   };
 
+  const removeFile = (index: number) => {
+    setFiles((prevFiles) => prevFiles.filter((_, i) => i !== index));
+  };
+
+  async function handleUpload(files: File[]) {
+    setUploadStatus("loading");
+    try {
+      const response = await uploadDeepResearchFiles(files);
+      const projectId = response.project_id;
+      console.log("Project ID:", projectId);
+      // Set the projectId in Redux store
+      dispatch(setProjectId(projectId));
+      // Clear files after successful upload so we show the success message.
+      setFiles([]);
+      setUploadStatus("success");
+    } catch (error) {
+      console.error("Upload failed", error);
+      setUploadStatus("idle");
+    }
+  }
+
   return (
     <div className="flex flex-col items-center justify-center w-full">
-      {/* ✅ Remove <Slot> and wrap everything inside a div */}
       <div
         className={cn(
           "w-full border border-dashed rounded-lg p-6 text-center cursor-pointer transition-all",
@@ -48,15 +76,71 @@ const FileUpload : FC<FileUploadProps> = ({ onFileUpload }: FileUploadProps) => 
       >
         <input
           type="file"
-          accept="image/*"
           className="hidden"
           id="fileInput"
           onChange={handleFileChange}
+          multiple
         />
         <label htmlFor="fileInput" className="cursor-pointer">
-          <p className="text-sm font-medium text-gray-400">Drag & drop a file here, or click to select</p>
+          <p className="text-sm font-medium text-gray-400">
+            Drag & drop files here, or click to select
+          </p>
         </label>
       </div>
+
+      {/* Loading state */}
+      {uploadStatus === "loading" && (
+        <div className="mt-4 flex items-center">
+          <span className="animate-spin">
+            <LoaderPinwheel className="w-6 h-6 text-gray-600" />
+          </span>
+          <span className="ml-2 text-sm">Uploading...</span>
+        </div>
+      )}
+
+      {/* Show file list and submit button if files exist and not loading */}
+      {files.length > 0 && uploadStatus !== "loading" && (
+        <div className="mt-4 w-full">
+          <div className="space-y-2">
+            {files.map((file, index) => (
+              <div
+                key={`${file.name}-${index}`}
+                className="inline-flex items-center gap-2 p-2 border rounded-lg bg-gray-100 w-fit"
+              >
+                <div className="w-6 h-6 bg-indigo-200 text-white flex items-center justify-center rounded-full">
+                  {true ? (
+                    <span className="animate-spin">
+                      <LoaderPinwheel className="w-4 h-4 text-gray-600" />
+                    </span>
+                  ) : (
+                    <FileSpreadsheet className="w-4 h-4 text-gray-600" />
+                  )}
+                </div>
+                <div className="text-sm font-medium">{file.name}</div>
+                <button onClick={() => removeFile(index)} className="ml-auto">
+                  <CircleX className="w-4 h-4 text-gray-600 hover:text-red-600" />
+                </button>
+              </div>
+            ))}
+          </div>
+          <button
+            type="button"
+            onClick={() => handleUpload(files)}
+            className="mt-4 px-4 py-2 bg-indigo-600 text-white rounded-lg"
+          >
+            Submit Files
+          </button>
+        </div>
+      )}
+
+      {/* Success message */}
+      {files.length === 0 && uploadStatus === "success" && (
+        <div className="mt-4">
+          <p className="text-green-600 text-sm">
+            Files uploaded successfully.
+          </p>
+        </div>
+      )}
     </div>
   );
 };
