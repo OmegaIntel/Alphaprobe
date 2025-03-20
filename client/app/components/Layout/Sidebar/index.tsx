@@ -68,8 +68,12 @@ export default function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
   };
 
   return (
-    <div className={`h-screen text-gray-600 shadow-lg p-4 flex flex-col transition-all duration-300 ${collapsed ? 'w-16' : 'w-72'} ${isCanvas && 'hidden'}`}> 
-      <div className={`flex items-center justify-between mb-4 ${collapsed ? 'flex-col space-y-2' : ''}`}> 
+    <div
+      className={`h-screen text-gray-600 bg-gray-50 border-r p-4 flex flex-col transition-all duration-300 ${collapsed ? 'w-16' : 'w-72'} ${isCanvas && 'hidden'}`}
+    >
+      <div
+        className={`flex items-center justify-between mb-4 ${collapsed ? 'flex-col space-y-2' : ''}`}
+      >
         {!collapsed && (
           <button onClick={() => navigate('./')} className="p-1 rounded hover:bg-gray-200 text-sm font-medium space-x-2 items-center flex">
             <PlusCircle className="w-5 h-5" />

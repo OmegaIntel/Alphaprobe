@@ -1,6 +1,6 @@
 # app.py
 import uvicorn
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, WebSocket, WebSocketDisconnect
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from api.api_user import user_router
@@ -25,11 +25,17 @@ from api.api_perplexity_research import perplexity_router
 from api.api_langgraph_doc import langgraph_router
 from api.api_langflow import langflow_router
 # from api.api_deep_research import deep_research_router
+from api.api_deep_research import deep_research_router
+from websocket_manager import WebSocketManager
+from utils.websocket_utils import handle_websocket_communication
 
 
 app = FastAPI(docs_url="/api/docs", openapi_url="/api/openapi.json")
 
-# Configure CORS
+# WebSocket manager
+manager = WebSocketManager()
+
+# Middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Allows all origins
@@ -44,6 +50,14 @@ async def validation_exception_handler(request: Request, exc: ValidationError):
         status_code=422,
         content={"detail": exc.errors(), "body": exc.body},
     )
+
+@app.websocket("/ws")
+async def websocket_endpoint(websocket: WebSocket):
+    await manager.connect(websocket)
+    try:
+        await handle_websocket_communication(websocket, manager)
+    except WebSocketDisconnect:
+        await manager.disconnect(websocket)
 
 app.include_router(user_router)
 app.include_router(demo_request_router)

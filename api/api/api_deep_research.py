@@ -4,8 +4,8 @@ from fastapi import APIRouter, File, UploadFile
 from pydantic import BaseModel, Field
 from openai import OpenAI
 import asyncio
-from google import genai
-from google.genai.types import Tool, GenerateContentConfig, GoogleSearch
+# from google import genai
+# from google.genai.types import Tool, GenerateContentConfig, GoogleSearch
 from anthropic import AsyncAnthropic
 from db_models.OpensearchDB import store_documents, query_index
 
@@ -49,30 +49,30 @@ async def web_search_tool(input: str) -> Dict[str, Any]:
     with a "reference_sources" key that lists the web pages from which the information was extracted and an "answer" key
     that contains the concisely answered question.
     """
-    client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
-    google_search_tool = Tool(google_search=GoogleSearch())
+    # client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+    # google_search_tool = Tool(google_search=GoogleSearch())
 
-    try:
-        response = await client.aio.models.generate_content(
-            model="gemini-2.0-flash",
-            config=GenerateContentConfig(
-                tools=[google_search_tool],
-                response_modalities=["TEXT"],
-            ),
-            contents=f"{input}\nNote: you must **always** use the google search tool to answer questions - no exceptions. Answers should be direct, clear, as short as possible, and no need additional information or description.",
-        )
+    # try:
+    #     response = await client.aio.models.generate_content(
+    #         model="gemini-2.0-flash",
+    #         config=GenerateContentConfig(
+    #             tools=[google_search_tool],
+    #             response_modalities=["TEXT"],
+    #         ),
+    #         contents=f"{input}\nNote: you must **always** use the google search tool to answer questions - no exceptions. Answers should be direct, clear, as short as possible, and no need additional information or description.",
+    #     )
 
-        sources = [
-            {"source": chunk.web.title, "url": chunk.web.uri}
-            for candidate in response.candidates
-            if candidate.grounding_metadata
-            and candidate.grounding_metadata.grounding_chunks
-            for chunk in candidate.grounding_metadata.grounding_chunks
-        ]
+    #     sources = [
+    #         {"source": chunk.web.title, "url": chunk.web.uri}
+    #         for candidate in response.candidates
+    #         if candidate.grounding_metadata
+    #         and candidate.grounding_metadata.grounding_chunks
+    #         for chunk in candidate.grounding_metadata.grounding_chunks
+    #     ]
 
-        return response.text
-    except Exception as e:
-        return f"Error calling web search API: {str(e)}"
+    #     return response.text
+    # except Exception as e:
+    #     return f"Error calling web search API: {str(e)}"
 
 
 async def anthropic_tool(input: str) -> Dict[str, Any]:
@@ -178,11 +178,11 @@ async def deep_research(user_query: UserQuery, files: List[UploadFile] = File(No
             with open(file_path, "wb") as f:
                 f.write(await file.read())
 
-        store_documents(documents_dir=save_directory)
+        #store_documents(documents_dir=save_directory)
         file_status = True
 
     try:
-        result = await deep_research_tool(user_query.query, file_status=file_status)
+        result = {}; #await deep_research_tool(user_query.query, file_status=file_status)
         return result
     except Exception as e:
         return {"response": "Error calling deep research API", "error": str(e)}
