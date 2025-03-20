@@ -741,7 +741,7 @@ async def iterate_section_research(state: SectionState, config: RunnableConfig):
         
         # Web search.
         if web_search:
-            web_result = await serpapi_search(state["section"].name)
+            web_result = await tavily_search(state["section"].name)
         else:
             web_result = "Not searching web for this request"
         
