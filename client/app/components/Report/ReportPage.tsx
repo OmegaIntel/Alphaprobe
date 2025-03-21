@@ -14,6 +14,8 @@ import Loader from './Loader';
 import InitialPage from './InitialPage';
 import { InitialFormData } from './reportUtils';
 import { getDocumentReport } from './api';
+import { useSelector } from "react-redux";
+import { RootState } from "../../store/store";
 
 type ConversationData = {
   query: string;
@@ -22,6 +24,8 @@ type ConversationData = {
 };
 
 const ReportPage: FC = () => {
+  const projectId = useSelector((state: RootState) => state.project.projectId);
+  console.log(projectId)
   const [promptValue, setPromptValue] = useState('');
   const [showResult, setShowResult] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -64,6 +68,7 @@ const ReportPage: FC = () => {
         web_search: newQuestion.preferences.web,
         file_search: newQuestion.preferences.file,
         templateId: newQuestion.reportType,
+        projectId: projectId ? projectId : "none",
       });
 
       console.log('res----------------', response);

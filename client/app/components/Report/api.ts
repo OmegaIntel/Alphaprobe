@@ -1,4 +1,4 @@
-import { fetcher } from '~/services/HTTPS';
+import { fetcher, fileFetcher } from '~/services/HTTPS';
 
 const templateCode = {
   'market-sizing': 2,
@@ -21,11 +21,13 @@ export const getDocumentReport = async ({
   web_search,
   file_search,
   templateId,
+  projectId,
 }: {
   promptValue: string;
   web_search: boolean;
   file_search: boolean;
   templateId: string;
+  projectId: string;
 }): Promise<string> => {
   try {
     // const headingTemp = templateHeading.find((heading) => heading.templateId === templateId)
@@ -41,6 +43,7 @@ export const getDocumentReport = async ({
         web_search: web_search,
         file_search: file_search,
         report_type: tempNum,
+        project_id: projectId,
         // text: title,
         // headings: headingTemp?.heading,
         // max_depth: 3,
@@ -55,5 +58,29 @@ export const getDocumentReport = async ({
   } catch (error) {
     console.error(error);
     return error as string;
+  }
+};
+
+export const uploadDeepResearchFiles = async (files: File[]): Promise<any> => {
+  try {
+    // Create FormData and append each file with the key "files"
+    const formData = new FormData();
+    files.forEach((file) => {
+      formData.append("files", file);
+    });
+
+    // Set up the POST request configuration
+    const config: RequestInit = {
+      method: "POST",
+      body: formData,
+    };
+
+    // Call the API endpoint
+    const response = await fileFetcher("/api/upload-deep-research", config);
+    // Parse the response JSON if fileFetcher returns a Response object
+    return response
+  } catch (error) {
+    console.error("Error uploading files:", error);
+    throw error;
   }
 };
