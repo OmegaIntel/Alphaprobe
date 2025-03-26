@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, useCallback, FC } from 'react';
+import { useRef, useState, useEffect, useCallback, FC } from 'react'; 
 import { useWebSocket } from './hooks/useWebSocket';
 import { useResearchHistory } from './hooks/useResearchHistory';
 import ReportBlock from './ReportBlock';
@@ -19,6 +19,14 @@ import { setProject } from '~/store/slices/sideBar';
 
 import Query from './Query';
 
+type Section = {
+  name: string;
+  description: string;
+  research: boolean;
+  content: string;
+  citations: any[];
+};
+
 type ConversationData = {
   id?: string;
   query: string;
@@ -28,7 +36,6 @@ type ConversationData = {
 };
 
 const ReportPage: FC = () => {
-  // console.log(projectId)
   const location = useLocation();
   const { id = null } = useParams();
   const dispatch = useDispatch<AppDispatch>();
@@ -38,13 +45,9 @@ const ReportPage: FC = () => {
   const [conversation, setConversation] = useState<ConversationData[]>([]);
   const [isStopped, setIsStopped] = useState(false);
   const [showScrollButton, setShowScrollButton] = useState(false);
+  const [sections, setSections] = useState<Section[]>([]);
   const mainContentRef = useRef<HTMLDivElement>(null);
   const { activeProjectId } = useSelector((state: RootState) => state.sidebar);
-
-  // const { socket, initializeWebSocket } = useWebSocket(
-  //   setLoading,
-  //   setConversation
-  // );
 
   useEffect(() => {
     setTimeout(() => {
@@ -57,32 +60,28 @@ const ReportPage: FC = () => {
             res = await getReports(id);
           } catch (err) {
             console.error('error-------', err);
-
             setLoading(false);
           } finally {
             if (res?.length) {
-              const conv = res.map((item) => {
-                return {
-                  id: item.id,
-                  query: item.query,
-                  res: item.response,
-                  res_id: item.id,
-                  updated_at: item.updated_at,
-                };
-              });
+              const conv = res.map((item) => ({
+                id: item.id,
+                query: item.query,
+                res: item.response,
+                res_id: item.id,
+                updated_at: item.updated_at,
+              }));
               setConversation([...conv]);
               setLoading(false);
             }
           }
         };
-
         getSaved();
       } else {
         setShowResult(false);
         setLoading(false);
       }
     }, 1000);
-  }, [location]);
+  }, [location, id]);
 
   console.log('report--------------------------', conversation);
 
@@ -99,12 +98,12 @@ const ReportPage: FC = () => {
         ...prevOrder,
         {
           query: newQuestion.promptValue,
-          res: '',
-          res_id: `${conversation.length}`,
+          res: "",
+          res_id: `${prevOrder.length}`,
         },
       ]);
 
-      let response: { report: string; project: any } | null = null;
+      let response: { report: string; sections?: Section[]; project: any } | null = null;
 
       if (!projectID) {
         response = await createGetDocumentReport({
@@ -116,10 +115,9 @@ const ReportPage: FC = () => {
           uploaded_files: newQuestion.uploadedDocuments,
         });
         if (response?.project) {
-          dispatch(setProject(response?.project));
-
+          dispatch(setProject(response.project));
           const generateReport: { project_id: string } = {
-            project_id: response?.project?.id,
+            project_id: response.project.id,
           };
           //@ts-ignore
           globalThis.reportGeneration = generateReport;
@@ -142,7 +140,6 @@ const ReportPage: FC = () => {
       if (response) {
         setConversation((prev: ConversationData[]) => {
           let lastCon = [...prev].pop();
-          // console.log('lastCon', lastCon, prev)
           return prev.map((resData) => {
             if (resData.res_id === lastCon?.res_id) {
               return { ...resData, res: `${response.report}` };
@@ -150,52 +147,27 @@ const ReportPage: FC = () => {
             return resData;
           });
         });
+        // Update sections state with a check for the API response data
+        if (response.sections) {
+          setSections(response.sections);
+        } else {
+          setSections([]);
+        }
       }
       setLoading(false);
-      // setTimeout(()=>{
-      //   initializeWebSocket(newQuestion);
-      // },500)
     } catch (error) {
       setLoading(false);
       console.error('error-----------', error);
     }
   };
 
-  /**
-   * Handles stopping the current research
-   * - Closes WebSocket connection
-   * - Stops loading state
-   * - Marks research as stopped
-   * - Preserves current results
-   */
-
-  /**
-   * Handles starting a new research
-   * - Clears all previous research data and states
-   * - Resets UI to initial state
-   * - Closes any existing WebSocket connections
-   */
-
-  // Save completed research to history
-
-  /**
-   * Processes ordered data into logs for display
-   * Updates whenever orderedData changes
-   */
-
   const handleScroll = useCallback(() => {
-    // Calculate if we're near bottom (within 100px)
     const scrollPosition = window.scrollY + window.innerHeight;
-    const nearBottom =
-      scrollPosition >= document.documentElement.scrollHeight - 100;
-
-    // Show button if we're not near bottom and page is scrollable
-    const isPageScrollable =
-      document.documentElement.scrollHeight > window.innerHeight;
+    const nearBottom = scrollPosition >= document.documentElement.scrollHeight - 100;
+    const isPageScrollable = document.documentElement.scrollHeight > window.innerHeight;
     setShowScrollButton(isPageScrollable && !nearBottom);
   }, []);
 
-  // Add ResizeObserver to watch for content changes
   useEffect(() => {
     const mainContentElement = mainContentRef.current;
     const resizeObserver = new ResizeObserver(() => {
@@ -228,10 +200,7 @@ const ReportPage: FC = () => {
 
   return (
     <div className="flex h-[calc(100vh-80px)] justify-center">
-      <div
-        //ref={mainContentRef}
-        className="h-full max-w-[800px] space-y-2"
-      >
+      <div className="h-full max-w-[800px] space-y-2">
         {!showResult && (
           <InitialPage
             promptValue={promptValue}
@@ -253,10 +222,7 @@ const ReportPage: FC = () => {
               <div className="container space-y-2 task-components">
                 <ReportBlock
                   orderedData={conversation}
-                  // response={answer}
-                  // allLogs={allLogs}
-                  // chatBoxSettings={chatBoxSettings}
-                  // handleClickSuggestion={handleClickSuggestion}
+                  sections={sections}
                 />
               </div>
             </div>
@@ -275,12 +241,14 @@ const ReportPage: FC = () => {
                     localStorage.getItem('promtPreferance') || ''
                   );
                   if (value) {
-                    handleDisplayResult({ ...pref, promptValue: value, temp_project_id: activeProjectId?.temp_project_id });
+                    handleDisplayResult({
+                      ...pref,
+                      promptValue: value,
+                      temp_project_id: activeProjectId?.temp_project_id
+                    });
                   }
                 }}
-                // handleSecondary={}
                 disabled={loading}
-                // reset={reset}
                 isStopped={isStopped}
               />
             )}

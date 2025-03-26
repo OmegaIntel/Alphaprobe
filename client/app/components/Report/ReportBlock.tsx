@@ -5,6 +5,14 @@ import AgentLogs from './AgentLog';
 import { preprocessOrderedData, Data } from './reportUtils';
 import GeneratedResponse from './GeneratedResponse';
 
+type Section = {
+  name: string;
+  description: string;
+  research: boolean;
+  content: string;
+  citations: any[];
+};
+
 type ConversationData = {
   query: string;
   res: string;
@@ -13,10 +21,12 @@ type ConversationData = {
 
 interface ReportBlockProps {
   orderedData: ConversationData[];
+  sections: Section[];
 }
 
 const ReportBlock: React.FC<ReportBlockProps> = ({
   orderedData,
+  sections,
 }) => {
 
   return (
@@ -25,7 +35,7 @@ const ReportBlock: React.FC<ReportBlockProps> = ({
         return (
           <>
             {data.query && <Query key={index} question={data.query} />}
-            {data.res && <GeneratedResponse key={index} response={data.res} />}
+            {data.res && <GeneratedResponse key={index} sections={sections} />}
           </>
         );
       })}
