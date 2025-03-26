@@ -1,5 +1,6 @@
-import { notification } from "antd";
+
 import { API_BASE_URL } from "~/constant";
+import { toast } from "~/hooks/use-toast";
 
 interface NewsItem {
   title: string;
@@ -36,8 +37,9 @@ export const fetchNewsFeed = async (): Promise<NewsItem[]> => {
     return data;
   } catch (error: any) {
     console.error("Error fetching news data:", error);
-    notification.error({
-      message: "Error",
+    toast({
+      variant: "destructive",
+      title: "Error fetching news",
       description: error.message || "Failed to fetch news feed.",
     });
     throw error;

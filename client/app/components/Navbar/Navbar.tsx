@@ -24,7 +24,7 @@ const Navbar: FC = () => {
         {/* Logo and Title */}
         <div className="flex items-center gap-2">
           <img
-            src="/images/logoDark.png"
+            src="/images/omegalogo.png"
             alt="Omega Intelligence Logo"
             className="h-8 w-8"
           />
@@ -39,7 +39,7 @@ const Navbar: FC = () => {
           <Button variant="link" onClick={() => navigate("#")}>
             Solutions
           </Button>
-          <Button
+          {/* <Button
             variant="link"
             onClick={() =>
               window.open(
@@ -49,7 +49,7 @@ const Navbar: FC = () => {
             }
           >
             Schedule a demo
-          </Button>
+          </Button> */}
 
           {/* Conditional Rendering Based on Authentication */}
           {isAuthenticated ? (
@@ -59,8 +59,14 @@ const Navbar: FC = () => {
           ) : (
             // Unauthenticated user buttons
             <div className="flex gap-2">
-              <Button onClick={() => navigate("/login")} variant="default">
-                Get Started
+              <Button  variant="default"
+            onClick={() =>
+              window.open(
+                "https://calendly.com/chetan-omegaintelligence",
+                "_blank"
+              )
+            }>
+                 Schedule a demo
               </Button>
             </div>
           )}

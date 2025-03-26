@@ -18,7 +18,7 @@ const PlatformUser: FC<PlatformUserProps> = ({ icon, text }) => (
 );
 
 const SecurityBanner: FC = () => (
-  <Card className="bg-muted/20 p-12 mb-24">
+  <Card className="bg-stone-950 p-12 mb-24">
     <CardHeader>
       <CardTitle className="text-3xl mb-4">
         Built with Enterprise-Grade Security and Compliance
@@ -62,7 +62,7 @@ const WhyUs: FC = () => {
       </div>
 
       {/* CTA Section */}
-      <Card className="bg-muted/20 p-12">
+      <Card className="bg-stone-950 p-12">
         <CardHeader>
           <CardTitle className="text-3xl mb-4">
             Meet the newest member of your Deal team

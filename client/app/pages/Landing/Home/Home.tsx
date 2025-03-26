@@ -9,8 +9,8 @@ const Home: React.FC = () => {
     <div>
       {/* Page Components */}
       <Header />
-      <HowWork />
       <Features />
+      <HowWork />
       <WhyUs />
     </div>
   );

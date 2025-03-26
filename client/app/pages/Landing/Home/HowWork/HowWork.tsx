@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "~/com
 
 const HowWork: FC = () => {
   return (
-    <div className=" bg-muted/20 rounded-lg  py-16 px-8">
+    <div className=" bg-stone-950/50 rounded-lg  py-16 px-8">
       {/* Section Header */}
       <div className="text-center mb-12">
         <h2 className="text-3xl font-semibold">How it works</h2>
@@ -26,7 +26,7 @@ const HowWork: FC = () => {
         {/* Feature Cards Below the Image */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 w-full max-w-4xl">
           {/* Card 1 */}
-          <Card className="bg-gray-700 bg-opacity-30">
+          <Card className="bg-stone-950 bg-opacity-30">
             <CardHeader>
               <CardTitle className="text-lg">Connect with Market Data</CardTitle>
             </CardHeader>
@@ -36,7 +36,7 @@ const HowWork: FC = () => {
           </Card>
 
           {/* Card 2 */}
-          <Card className="bg-gray-700 bg-opacity-30">
+          <Card className="bg-stone-950 bg-opacity-30">
             <CardHeader>
               <CardTitle className="text-lg">High Fidelity Proprietary Models</CardTitle>
             </CardHeader>
@@ -46,7 +46,7 @@ const HowWork: FC = () => {
           </Card>
 
           {/* Card 3 */}
-          <Card className="bg-gray-700 bg-opacity-30">
+          <Card className="bg-stone-950 bg-opacity-30">
             <CardHeader>
               <CardTitle className="text-lg">Executive Ready Presentations</CardTitle>
             </CardHeader>
