@@ -1,6 +1,7 @@
 import { API_BASE_URL } from '~/constant';
 
 interface ApiResponse<T = unknown> {
+  sections: any[] | PromiseLike<any[]>;
   data: T;
   message?: string;
 }

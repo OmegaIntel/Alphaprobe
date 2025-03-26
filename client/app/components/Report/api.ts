@@ -1,5 +1,13 @@
 import { fetcher, fileFetcher } from '~/services/HTTPS';
 
+type Section = {
+  name: string;
+  description: string;
+  research: boolean;
+  content: string;
+  citations: any[];
+};
+
 const templateCode = {
   'market-sizing': 2,
   'company-profile': 0,
@@ -28,10 +36,9 @@ export const getDocumentReport = async ({
   file_search: boolean;
   templateId: string;
   projectId: string;
-}): Promise<string> => {
+}): Promise<Section[]> => {
   try {
-    // const headingTemp = templateHeading.find((heading) => heading.templateId === templateId)
-    const tempNum  =  getThetempId(templateId);
+    const tempNum = getThetempId(templateId);
     const config: RequestInit = {
       method: 'POST',
       body: JSON.stringify({
@@ -52,14 +59,21 @@ export const getDocumentReport = async ({
       }),
     };
 
+    // This fetcher should return a JSON object:
+    // { description: string; data: string; message: string; sections: any[] }
     const res = await fetcher('/api/deep-researcher-langgraph', config);
-    console.log('reports--------------------', res.data);
-    return res.data as string;
+
+    // The 'sections' array is inside 'res.sections'
+    console.log('reports--------------------', res);
+
+    // Return ONLY the sections array
+    return res.sections;
   } catch (error) {
     console.error(error);
-    return error as string;
+    throw error; // or return [] if you prefer
   }
 };
+
 
 export const uploadDeepResearchFiles = async (files: File[]): Promise<any> => {
   try {

@@ -5,9 +5,17 @@ import AgentLogs from './AgentLog';
 import { preprocessOrderedData, Data } from './reportUtils';
 import GeneratedResponse from './GeneratedResponse';
 
+type Section = {
+  name: string;
+  description: string;
+  research: boolean;
+  content: string;
+  citations: any[];
+};
+
 type ConversationData = {
   query: string;
-  res: string;
+  res: Section[];
   res_id?: string;
 };
 
@@ -25,7 +33,7 @@ const ReportBlock: React.FC<ReportBlockProps> = ({
         return (
           <>
             {data.query && <Query key={index} question={data.query} />}
-            {data.res && <GeneratedResponse key={index} response={data.res} />}
+            {data.res && <GeneratedResponse key={index} sections={data.res} />}
           </>
         );
       })}

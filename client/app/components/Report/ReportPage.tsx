@@ -17,9 +17,17 @@ import { getDocumentReport } from './api';
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 
+type Section = {
+  name: string;
+  description: string;
+  research: boolean;
+  content: string;
+  citations: any[];
+};
+
 type ConversationData = {
   query: string;
-  res: string;
+  res: Section[];
   res_id?: string;
 };
 
@@ -37,10 +45,10 @@ const ReportPage: FC = () => {
   const { history, saveResearch, getResearchById, deleteResearch } =
     useResearchHistory();
 
-  const { socket, initializeWebSocket } = useWebSocket(
-    setLoading,
-    setConversation
-  );
+  // const { socket, initializeWebSocket } = useWebSocket(
+  //   setLoading,
+  //   setConversation
+  // );
 
   console.log('report--------------------------', conversation);
 
@@ -55,7 +63,7 @@ const ReportPage: FC = () => {
         ...prevOrder,
         {
           query: newQuestion.promptValue,
-          res: '',
+          res: [],
           res_id: `${conversation.length}`,
         },
       ]);
@@ -63,7 +71,7 @@ const ReportPage: FC = () => {
       //   ...prevOrder,
       //   { type: 'question', content: newQuestion.promptValue },
       // ]);
-      const response: string = await getDocumentReport({
+      const response: Section[] = await getDocumentReport({
         promptValue: newQuestion.promptValue,
         web_search: newQuestion.preferences.web,
         file_search: newQuestion.preferences.file,
@@ -76,10 +84,10 @@ const ReportPage: FC = () => {
       if (response) {
         setConversation((prev: ConversationData[]) => {
           let lastCon = [...prev].pop();
-          // console.log('lastCon', lastCon, prev)
           return prev.map((resData) => {
             if (resData.res_id === lastCon?.res_id) {
-              return { ...resData, res: `${response}` };
+              // Directly assign the sections array to res instead of converting to a string.
+              return { ...resData, res: response };
             }
             return resData;
           });
