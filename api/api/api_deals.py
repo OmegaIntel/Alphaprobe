@@ -23,6 +23,8 @@ from datetime import datetime
 from api.api_user import get_current_user, User as UserModelSerializer
 from db_models.checklist import Checklist
 from datetime import datetime
+from fastapi import Query
+
 
 deals_router = APIRouter()
 
@@ -253,6 +255,57 @@ def update_deal(
         db.rollback()  # Rollback the session in case of an error
         raise HTTPException(status_code=500, detail=str(e))
 
+
+
+@deals_router.delete("/api/delete_deal")
+def delete_deal(
+    deal_id: str = Query(...),
+    db: Session = Depends(get_db),
+    current_user: UserModelSerializer = Depends(get_current_user)
+):
+    """
+    Delete a deal by its ID if the user is the owner or has shared access.
+    deal_id is provided as a query parameter.
+    """
+    # 1. Attempt to find the deal directly by user ownership
+    deal = db.query(Deal).filter(
+        Deal.id == deal_id,
+        Deal.user_id == current_user.id
+    ).first()
+
+    # 2. If not found, check if it is a shared deal
+    if not deal:
+        shared_deal = db.query(SharedUserDeals).filter(
+            SharedUserDeals.deal_id == deal_id,
+            SharedUserDeals.user_id == current_user.id
+        ).first()
+        if shared_deal:
+            deal = db.query(Deal).filter(Deal.id == shared_deal.deal_id).first()
+        else:
+            raise HTTPException(
+                status_code=404,
+                detail="Deal not found or you do not have access to it"
+            )
+
+    # 3. If we have a deal, delete any related records if necessary 
+    #    (only if you don't have cascade deletes set up on the DB).
+    
+    # Example of deleting related records (if no DB cascading is configured):
+    
+    # Delete from checklists
+    db.query(Checklist).filter(Checklist.deal_id == deal.id).delete()
+
+    # Delete from workspace
+    db.query(CurrentWorkspace).filter(CurrentWorkspace.deal_id == deal.id).delete()
+
+    # Delete from shared deals
+    db.query(SharedUserDeals).filter(SharedUserDeals.deal_id == deal.id).delete()
+    
+    # 4. Finally, delete the deal itself
+    db.delete(deal)
+    db.commit()
+
+    return {"detail": f"Deal with id {deal_id} has been deleted."}
 
 @deals_router.get("/api/fetch_deals", response_model=List[DealResponse])
 def get_deals(

@@ -28,13 +28,13 @@ interface DashboardProps {
 }
 
 const sections: Section[] = [
-  {
-    name: "Generate an Investment Thesis",
-    description:
-      "Identify key investment opportunities by creating a personalized thesis based on your criteria.",
-    icon: StorageIcon,
-    route: "Investment Thesis",
-  },
+  // {
+  //   name: "Generate an Investment Thesis",
+  //   description:
+  //     "Identify key investment opportunities by creating a personalized thesis based on your criteria.",
+  //   icon: StorageIcon,
+  //   route: "Investment Thesis",
+  // },
   {
     name: "Browse Companies",
     description:
@@ -54,6 +54,12 @@ const sections: Section[] = [
     description: "Comprehensive Market Research from Trusted Providers.",
     icon: SpaceDashboardIcon,
     route: "Market Research",
+  },
+  {
+    name: "Deal Room",
+    description: "Identify key investment opportunities by creating a personalized deal based on your criteria.",
+    icon: StorageIcon,
+    route: "Deal Room",
   },
 ];
 

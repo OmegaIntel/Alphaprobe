@@ -22,6 +22,7 @@ export default function CompanySearch() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { toast } = useToast();
+
   const [screen, setScreen] = useState<'initial' | 'search'>('initial');
   const [searchType, setSearchType] = useState<'company' | 'industry'>('company');
   const [query, setQuery] = useState('');
@@ -35,36 +36,55 @@ export default function CompanySearch() {
     setScreen('search');
   };
 
-  // Handle search functionality
+  // ---------------------------
+  // UPDATED handleSearch
+  // ---------------------------
   const handleSearch = async () => {
     if (!query.trim()) return;
 
     setLoading(true);
+    dispatch(fetchCompanyInsightStart()); // Start the fetch (optional if you want a loading flag in Redux)
 
     try {
-      const token = document.cookie.split('authToken=')[1]?.split(';')[0] || '';
+      const token = document.cookie
+        .split('; ')
+        .find(row => row.startsWith('authToken='))
+        ?.split('=')[1] || '';
+
+      if (!token) {
+        navigate('/login');
+        return;
+      }
+
       let response: Response;
 
       if (searchType === 'company') {
-        response = await fetch(
-          `${API_BASE_URL}/api/company-profile`,
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ${token}`
+        // ---------------------------
+        // 1. Search by single company name
+        // ---------------------------
+        response = await fetch(`${API_BASE_URL}/api/company-profile`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            data: {
+              company_name: query.trim(),
             },
-            body: JSON.stringify({ data: { company_name: query.trim() } }),
-          }
-        );
+          }),
+        });
       } else {
+        // ---------------------------
+        // 2. Search by industry => get list
+        // ---------------------------
         response = await fetch(
           `${API_BASE_URL}/api/companies?query=${encodeURIComponent(query.trim())}`,
           {
             method: 'GET',
             headers: {
-              'Authorization': `Bearer ${token}`
-            }
+              'Authorization': `Bearer ${token}`,
+            },
           }
         );
       }
@@ -77,20 +97,38 @@ export default function CompanySearch() {
         throw new Error(await response.text());
       }
 
-      const data: CompanySearchResults = await response.json();
-      setResults(data.companies || data.industries || []);
+      const data = await response.json();
+
+      if (searchType === 'company') {
+        // For a single company search, dispatch to Redux store
+        dispatch(fetchCompanyInsightSuccess(data));
+        // If you do NOT want to list results, you can skip `setResults`.
+        // But if your API sometimes returns multiple suggestions, you might
+        // handle that differently. For now, let’s skip local results.
+        setResults([]); // or omit this if you prefer
+      } else {
+        // For industry search, store the array of results in local state
+        const resultsList = data.companies || data.industries || [];
+        setResults(resultsList);
+      }
     } catch (error) {
+      const errorMessage = error instanceof Error
+        ? error.message
+        : 'An error occurred while searching';
+
+      dispatch(fetchCompanyInsightFailure(errorMessage)); // Dispatch failure to Redux
+
       toast({
         variant: "destructive",
         title: "Error",
-        description: error instanceof Error ? error.message : 'An error occurred while searching'
+        description: errorMessage
       });
     } finally {
       setLoading(false);
     }
   };
 
-  // Handle company/industry selection and API call
+  // Handle selection from the displayed results
   const handleSelection = async (selectedItem: string) => {
     dispatch(fetchCompanyInsightStart());
     setGenerating(true);
@@ -105,17 +143,14 @@ export default function CompanySearch() {
         throw new Error('Authentication required');
       }
 
-      const response = await fetch(
-        `${API_BASE_URL}/api/company-profile`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
-          },
-          body: JSON.stringify({ data: { company_name: selectedItem } }),
-        }
-      );
+      const response = await fetch(`${API_BASE_URL}/api/company-profile`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
+        body: JSON.stringify({ data: { company_name: selectedItem } }),
+      });
 
       if (!response.ok) {
         if (response.status === 401) {
@@ -145,7 +180,10 @@ export default function CompanySearch() {
       {screen === 'initial' ? (
         // Initial Screen
         <div className="w-full max-w-2xl space-y-8">
-          <Card className="w-full cursor-pointer" onClick={() => handleCardSelection('company')}>
+          <Card
+            className="w-full cursor-pointer"
+            onClick={() => handleCardSelection('company')}
+          >
             <CardHeader>
               <h3 className="text-lg font-semibold text-center">
                 Search by Company
@@ -158,7 +196,10 @@ export default function CompanySearch() {
             </CardContent>
           </Card>
 
-          <Card className="w-full cursor-pointer" onClick={() => handleCardSelection('industry')}>
+          <Card
+            className="w-full cursor-pointer"
+            onClick={() => handleCardSelection('industry')}
+          >
             <CardHeader>
               <h3 className="text-lg font-semibold text-center">
                 Search by Industry
@@ -181,7 +222,9 @@ export default function CompanySearch() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
-              placeholder={`Search for ${searchType === 'company' ? 'companies' : 'industries'}...`}
+              placeholder={`Search for ${
+                searchType === 'company' ? 'companies' : 'industries'
+              }...`}
               className="flex-1"
             />
             <Button onClick={handleSearch} disabled={loading}>

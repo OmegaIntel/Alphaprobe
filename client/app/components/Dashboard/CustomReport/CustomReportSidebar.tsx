@@ -5,7 +5,7 @@ import { Button } from '~/components/ui/button';
 import { Card, CardContent } from '~/components/ui/card';
 import { ScrollArea } from '~/components/ui/scroll-area';
 import { useToast } from '~/hooks/use-toast';
-import { Loader2, Plus, ScrollText } from 'lucide-react';
+import { Loader2, Plus, ScrollText, Trash2 } from 'lucide-react';
 import { useDispatch } from 'react-redux';
 import { setDealId } from '~/store/slices/dealSlice';
 import {
@@ -47,13 +47,9 @@ export function DealsSidebar() {
   const [deals, setDeals] = useState<Deal[]>([]);
   const [loading, setLoading] = useState(true);
   const [activeDealId, setActiveDealId] = useState<string | null>(null);
-  const [expandedDeals, setExpandedDeals] = useState<Record<string, boolean>>(
-    {}
-  );
+  const [expandedDeals, setExpandedDeals] = useState<Record<string, boolean>>({});
   const [reports, setReports] = useState<Record<string, Report[]>>({});
-  const [reportLoading, setReportLoading] = useState<Record<string, boolean>>(
-    {}
-  );
+  const [reportLoading, setReportLoading] = useState<Record<string, boolean>>({});
   const [isCreatingDeal, setIsCreatingDeal] = useState(false);
   const [formOpen, setFormOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -65,6 +61,9 @@ export function DealsSidebar() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  /**
+   * Helper to create a new Deal
+   */
   const createDeal = async (
     name: string,
     overview: string,
@@ -106,6 +105,38 @@ export function DealsSidebar() {
     return await response.json();
   };
 
+  /**
+   * Helper to delete a deal
+   */
+  const deleteDeal = async (dealId: string) => {
+    const token = document.cookie
+      .split('; ')
+      .find((row) => row.startsWith('authToken='))
+      ?.split('=')[1];
+
+    if (!token) {
+      throw new Error('You are not authenticated. Please log in.');
+    }
+
+    const response = await fetch(
+      `${API_BASE_URL}/api/delete_deal?deal_id=${dealId}`,
+      {
+        method: 'DELETE',
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.detail || 'Failed to delete deal');
+    }
+  };
+
+  /**
+   * Get a short preview of the report content
+   */
   const getReportPreview = (reportData: any) => {
     if (typeof reportData === 'string' && reportData.startsWith('#')) {
       const lines = reportData.split('\n');
@@ -115,6 +146,7 @@ export function DealsSidebar() {
     return reportData?.title || 'Untitled Report';
   };
 
+  // Load any previously active deal from local storage
   useEffect(() => {
     const storedDealId = localStorage.getItem('dealId');
     if (storedDealId) {
@@ -124,6 +156,7 @@ export function DealsSidebar() {
     }
   }, [dispatch]);
 
+  // Fetch deals from the API
   useEffect(() => {
     const fetchDeals = async () => {
       try {
@@ -158,12 +191,9 @@ export function DealsSidebar() {
 
         setDeals(data);
 
+        // If we have an active deal stored but no reports fetched, load them
         const storedDealId = localStorage.getItem('dealId');
-        if (
-          storedDealId &&
-          !reports[storedDealId] &&
-          !reportLoading[storedDealId]
-        ) {
+        if (storedDealId && !reports[storedDealId] && !reportLoading[storedDealId]) {
           fetchReports(storedDealId);
         }
       } catch (err) {
@@ -181,6 +211,9 @@ export function DealsSidebar() {
     fetchDeals();
   }, [navigate, toast]);
 
+  /**
+   * Fetch the reports for a given deal
+   */
   const fetchReports = async (dealId: string) => {
     try {
       setReportLoading((prev) => ({ ...prev, [dealId]: true }));
@@ -195,16 +228,13 @@ export function DealsSidebar() {
         return;
       }
 
-      const response = await fetch(
-        `${API_BASE_URL}/api/fetch-reports/${dealId}`,
-        {
-          method: 'GET',
-          headers: {
-            Authorization: `Bearer ${token}`,
-            'Content-Type': 'application/json',
-          },
-        }
-      );
+      const response = await fetch(`${API_BASE_URL}/api/fetch-reports/${dealId}`, {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+      });
 
       if (!response.ok) {
         throw new Error(`Error: ${response.statusText}`);
@@ -224,6 +254,9 @@ export function DealsSidebar() {
     }
   };
 
+  /**
+   * Handles Deal creation form submission
+   */
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name.trim()) {
@@ -237,14 +270,13 @@ export function DealsSidebar() {
 
     setIsCreatingDeal(true);
     try {
-      const dealData = await createDeal(
-        formData.name,
-        formData.overview,
-        formData.industry
-      );
+      const dealData = await createDeal(formData.name, formData.overview, formData.industry);
 
+      // Persist the newly created Deal in local storage / Redux
       dispatch(setDealId(dealData.id));
       localStorage.setItem('dealId', dealData.id);
+
+      // Navigate to the new deal's page
       navigate(`/duediligence/${formData.name}`);
       setFormOpen(false);
 
@@ -265,6 +297,9 @@ export function DealsSidebar() {
     }
   };
 
+  /**
+   * Memoized grouping of deals by date
+   */
   const groupedDeals = useMemo(() => {
     const now = new Date();
     const grouped: GroupedDeals = {
@@ -296,17 +331,57 @@ export function DealsSidebar() {
     return grouped;
   }, [deals]);
 
-  const handleDealSelect = (dealId: string) => {
+  /**
+   * Expand/collapse deals and fetch reports if not already fetched
+   */
+  const handleDealSelect = (dealId: string, dealName: string) => {
     setActiveDealId(dealId);
     localStorage.setItem('dealId', dealId);
     dispatch(setDealId(dealId));
     setExpandedDeals((prev) => ({ ...prev, [dealId]: !prev[dealId] }));
 
+    // Navigate to the due diligence page for that deal
+    navigate(`/duediligence/${dealName}`);
+
+    // Fetch reports if not already loaded
     if (!reports[dealId] && !reportLoading[dealId]) {
       fetchReports(dealId);
     }
   };
 
+  /**
+   * On clicking the trash icon, confirm and then delete the deal
+   */
+  const handleDealDelete = async (e: React.MouseEvent, dealId: string) => {
+    e.stopPropagation(); // Prevents triggering deal selection
+    if (!window.confirm('Are you sure you want to delete this deal?')) {
+      return;
+    }
+    try {
+      await deleteDeal(dealId);
+      // Remove from local state
+      setDeals((prev) => prev.filter((d) => d.id !== dealId));
+      // If currently active, clear local storage
+      if (activeDealId === dealId) {
+        setActiveDealId(null);
+        localStorage.removeItem('dealId');
+      }
+      toast({
+        title: 'Deal Deleted',
+        description: 'The deal has been successfully deleted.',
+      });
+    } catch (err: any) {
+      toast({
+        variant: 'destructive',
+        title: 'Error',
+        description: err.message,
+      });
+    }
+  };
+
+  /**
+   * Trigger the Deal creation Dialog
+   */
   const handleNewDealClick = () => {
     setFormOpen(true);
   };
@@ -316,7 +391,7 @@ export function DealsSidebar() {
       <Card className="fixed top-14 left-0 bottom-0 w-1/6 h-[93%] border-0 rounded-none">
         <Button
           variant="ghost"
-          className="w-full justify-start gap-2 rounded-none"
+          className="w-full justify-start gap-2 rounded-none text-left"
           onClick={handleNewDealClick}
         >
           <Plus className="h-4 w-4" />
@@ -331,36 +406,64 @@ export function DealsSidebar() {
                   <Loader2 className="h-6 w-6 animate-spin" />
                 </div>
               ) : deals.length === 0 ? (
-                <div className="text-center text-gray-500">
-                  No deals available
-                </div>
+                <div className="text-center text-gray-500">No deals available</div>
               ) : (
                 Object.entries(groupedDeals)
-                  .filter(([_, deals]) => deals.length > 0)
-                  .map(([timeRange, deals]) => (
+                  .filter(([_, groupedDeals]) => groupedDeals.length > 0)
+                  .map(([timeRange, groupedDeals]) => (
                     <div key={timeRange} className="space-y-2">
-                      <h3 className="text-sm font-medium">{timeRange}</h3>
-                      {deals.map((deal) => (
-                        <div key={deal.id} className="space-y-2">
-                          <Button
-                            variant={
-                              activeDealId === deal.id ? 'secondary' : 'ghost'
-                            }
-                            className="w-full justify-start text-sm h-auto py-2"
-                            onClick={() => {handleDealSelect(deal.id); navigate(`/duediligence/${deal.name}`);}}
+                      <h3 className="text-sm font-medium text-left">{timeRange}</h3>
+
+                      {groupedDeals.map((deal) => (
+                        <div key={deal.id} className="space-y-1">
+                          {/* Main Deal Row: text fade + trash icon on the right */}
+                          <div
+                            className="flex items-center justify-between"
+                            onClick={() => handleDealSelect(deal.id, deal.name)}
                           >
-                            {deal.name}
-                          </Button>
+                            {/* Deal name container with fade-out if it's too long */}
+                            <Button
+                              variant={activeDealId === deal.id ? 'secondary' : 'ghost'}
+                              className="relative h-auto py-2 flex-1 text-left"
+                            >
+                              <div className="pointer-events-none flex items-center">
+                                {/* Fading text container */}
+                                <div className="relative overflow-hidden max-w-[120px]">
+                                  <div className="whitespace-nowrap overflow-hidden pr-8">
+                                    {deal.name}
+                                  </div>
+                                  {/* Fading gradient on the right */}
+                                  <div className="pointer-events-none absolute top-0 right-0 h-full w-8 bg-gradient-to-l from-gray-50 dark:from-gray-900 to-transparent" />
+                                </div>
+                              </div>
+                            </Button>
+
+                            {/* Trash Icon (stopPropagation handled in onClick) */}
+                            <Button
+                              variant="ghost"
+                              className="p-2 text-red-500 hover:bg-transparent"
+                              onClick={(e) => handleDealDelete(e, deal.id)}
+                              title="Delete Deal"
+                            >
+                              <Trash2 className="h-4 w-4" />
+                            </Button>
+                          </div>
+
+                          {/* If expanded, show associated reports with fade */}
                           {expandedDeals[deal.id] && (
-                            <div className="ml-4 space-y-2">
+                            <div className="ml-3 space-y-1 mt-1">
                               {reportLoading[deal.id] ? (
                                 <Loader2 className="h-6 w-6 animate-spin" />
                               ) : reports[deal.id]?.length > 0 ? (
                                 reports[deal.id].map((report) => (
                                   <div
                                     key={report.report_id}
-                                    className="text-sm flex items-center gap-2 text-gray-400 hover:text-gray-900 transition-colors cursor-pointer px-2 py-1 rounded hover:bg-gray-100"
-                                    onClick={() => {
+                                    className="text-sm flex items-center gap-2 text-gray-500 hover:text-gray-800 transition-colors cursor-pointer px-2 py-1 rounded hover:bg-gray-100"
+                                    onClick={(event) => {
+                                      // Avoid toggling deals again
+                                      event.stopPropagation();
+
+                                      // Send data to your store so it displays in the main area
                                       dispatch(
                                         setData({
                                           report: report.report_data,
@@ -370,9 +473,13 @@ export function DealsSidebar() {
                                     }}
                                   >
                                     <ScrollText className="h-4 w-4 flex-shrink-0" />
-                                    <span className="truncate">
-                                      {getReportPreview(report.report_data)}
-                                    </span>
+                                    {/* Fading text container for the report */}
+                                    <div className="relative overflow-hidden max-w-[110px]">
+                                      <div className="whitespace-nowrap overflow-hidden pr-6">
+                                        {getReportPreview(report.report_data)}
+                                      </div>
+                                      <div className="pointer-events-none absolute top-0 right-0 h-full w-6 bg-gradient-to-l from-gray-100 dark:from-gray-900 to-transparent" />
+                                    </div>
                                   </div>
                                 ))
                               ) : (
@@ -390,17 +497,20 @@ export function DealsSidebar() {
             </div>
           </ScrollArea>
         </CardContent>
+
         <div className="m-4">
           <Button
             onClick={() => {
               navigate('/dashboard');
             }}
+            className="justify-start"
           >
             Back to DashBoard
           </Button>
         </div>
       </Card>
 
+      {/* Dialog for creating a new deal */}
       <Dialog open={formOpen} onOpenChange={setFormOpen}>
         <DialogContent>
           <DialogHeader>

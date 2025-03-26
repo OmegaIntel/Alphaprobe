@@ -272,11 +272,7 @@ export function ChatSession({
   }
 
   return (
-    <Card className="fixed top-14 left-0 bottom-0 w-1/6 h-[93%] border-0 rounded-none">
-      {/* <CardHeader className="border-b">
-        <h2 className="text-lg font-bold">Chat Sessions</h2>
-      </CardHeader> */}
-
+    <Card className="bg-zinc-800 border-0 rounded-none">
       <Button
         variant="ghost"
         className="w-full justify-start gap-2 rounded-none"
@@ -315,17 +311,6 @@ export function ChatSession({
           </div>
         </ScrollArea>
       </CardContent>
-
-      <div className="absolute bottom-0 left-0 right-0 p-4 border-t bg-background">
-        {/* <Button 
-          variant="destructive" 
-          className="w-full gap-2"
-          onClick={handleLogout}
-        >
-          <LogOut className="h-4 w-4" />
-          Logout
-        </Button> */}
-      </div>
     </Card>
   );
 }

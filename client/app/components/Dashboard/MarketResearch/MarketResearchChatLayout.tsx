@@ -45,9 +45,9 @@ export function SummaryPoints() {
      <ScrollArea className="px-3 py-2">
        <div className="relative">
          {/* Chat Session */}
-         <div>
+         {/* <div>
            <ChatSession />
-         </div>
+         </div> */}
 
          {/* Main Content */}
          <div>

@@ -174,15 +174,15 @@ export function IndustrySidebar() {
   }
 
   return (
-    <div className="h-screen flex flex-col">
-      <div className="p-4 bg-background border-b">
-        <div>
+    <div className="flex flex-col">
+      <div className="p-4  border-b">
+        {/* <div>
           <img
             src="/images/LogoCompany.png"
             alt="Company Logo"
             className="my-4 h-8"
           />
-        </div>
+        </div> */}
 
         <div className="flex justify-between items-center my-2">
           <h1 className="text-xl font-bold">Industries</h1>
