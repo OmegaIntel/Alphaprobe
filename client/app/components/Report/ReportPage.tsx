@@ -1,31 +1,37 @@
 import { useRef, useState, useEffect, useCallback, FC } from 'react';
 import { useWebSocket } from './hooks/useWebSocket';
 import { useResearchHistory } from './hooks/useResearchHistory';
-import {
-  Data,
-  ChatBoxSettings,
-  QuestionData,
-  preprocessOrderedData,
-} from './reportUtils';
 import ReportBlock from './ReportBlock';
 import InputComponent from './InputBar/InputComponent';
 import { MoveDown } from 'lucide-react';
 import Loader from './Loader';
 import InitialPage from './InitialPage';
 import { InitialFormData } from './reportUtils';
-import { getDocumentReport } from './api';
-import { useSelector } from "react-redux";
-import { RootState } from "../../store/store";
+import {
+  createGetDocumentReport,
+  updateGetDocumentReport,
+  getReports,
+} from './api';
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState, AppDispatch } from '../../store/store';
+import { useLocation, useParams } from '@remix-run/react';
+import { setProject } from '~/store/slices/sideBar';
+
+import Query from './Query';
 
 type ConversationData = {
+  id?: string;
   query: string;
   res: string;
   res_id?: string;
+  updated_at?: string;
 };
 
 const ReportPage: FC = () => {
-  const projectId = useSelector((state: RootState) => state.project.projectId);
-  console.log(projectId)
+  // console.log(projectId)
+  const location = useLocation();
+  const { id = null } = useParams();
+  const dispatch = useDispatch<AppDispatch>();
   const [promptValue, setPromptValue] = useState('');
   const [showResult, setShowResult] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -33,23 +39,61 @@ const ReportPage: FC = () => {
   const [isStopped, setIsStopped] = useState(false);
   const [showScrollButton, setShowScrollButton] = useState(false);
   const mainContentRef = useRef<HTMLDivElement>(null);
+  const { activeProjectId } = useSelector((state: RootState) => state.sidebar);
 
-  const { history, saveResearch, getResearchById, deleteResearch } =
-    useResearchHistory();
+  // const { socket, initializeWebSocket } = useWebSocket(
+  //   setLoading,
+  //   setConversation
+  // );
 
-  const { socket, initializeWebSocket } = useWebSocket(
-    setLoading,
-    setConversation
-  );
+  useEffect(() => {
+    setTimeout(() => {
+      if (id) {
+        setLoading(true);
+        setShowResult(true);
+        const getSaved = async () => {
+          let res = null;
+          try {
+            res = await getReports(id);
+          } catch (err) {
+            console.error('error-------', err);
+
+            setLoading(false);
+          } finally {
+            if (res?.length) {
+              const conv = res.map((item) => {
+                return {
+                  id: item.id,
+                  query: item.query,
+                  res: item.response,
+                  res_id: item.id,
+                  updated_at: item.updated_at,
+                };
+              });
+              setConversation([...conv]);
+              setLoading(false);
+            }
+          }
+        };
+
+        getSaved();
+      } else {
+        setShowResult(false);
+        setLoading(false);
+      }
+    }, 1000);
+  }, [location]);
 
   console.log('report--------------------------', conversation);
 
   const handleDisplayResult = async (newQuestion: InitialFormData) => {
     try {
       console.log('report--------------------------');
+      //@ts-ignore
+      const projectID = globalThis.reportGeneration.project_id || id;
+
       setShowResult(true);
       setLoading(true);
-      // setQuestion(newQuestion.promptValue);
       setPromptValue('');
       setConversation((prevOrder) => [
         ...prevOrder,
@@ -59,17 +103,39 @@ const ReportPage: FC = () => {
           res_id: `${conversation.length}`,
         },
       ]);
-      // setOrderedData((prevOrder) => [
-      //   ...prevOrder,
-      //   { type: 'question', content: newQuestion.promptValue },
-      // ]);
-      const response: string = await getDocumentReport({
-        promptValue: newQuestion.promptValue,
-        web_search: newQuestion.preferences.web,
-        file_search: newQuestion.preferences.file,
-        templateId: newQuestion.reportType,
-        projectId: projectId ? projectId : "none",
-      });
+
+      let response: { report: string; project: any } | null = null;
+
+      if (!projectID) {
+        response = await createGetDocumentReport({
+          promptValue: newQuestion.promptValue,
+          web_search: newQuestion.preferences.web,
+          file_search: newQuestion.preferences.file,
+          templateId: newQuestion.reportType,
+          temp_project_id: newQuestion.temp_project_id,
+          uploaded_files: newQuestion.uploadedDocuments,
+        });
+        if (response?.project) {
+          dispatch(setProject(response?.project));
+
+          const generateReport: { project_id: string } = {
+            project_id: response?.project?.id,
+          };
+          //@ts-ignore
+          globalThis.reportGeneration = generateReport;
+        }
+      } else {
+        const project_id = id || projectID;
+        response = await updateGetDocumentReport({
+          promptValue: newQuestion.promptValue,
+          web_search: newQuestion.preferences.web,
+          file_search: newQuestion.preferences.file,
+          templateId: newQuestion.reportType,
+          temp_project_id: newQuestion.temp_project_id,
+          uploaded_files: newQuestion.uploadedDocuments || [],
+          projectId: project_id,
+        });
+      }
 
       console.log('res----------------', response);
 
@@ -79,7 +145,7 @@ const ReportPage: FC = () => {
           // console.log('lastCon', lastCon, prev)
           return prev.map((resData) => {
             if (resData.res_id === lastCon?.res_id) {
-              return { ...resData, res: `${response}` };
+              return { ...resData, res: `${response.report}` };
             }
             return resData;
           });
@@ -164,13 +230,13 @@ const ReportPage: FC = () => {
     <div className="flex min-h-screen justify-center">
       <div
         //ref={mainContentRef}
-        className="min-h-[100vh] max-w-[800px]"
+        className="min-h-[100vh] max-w-[800px] space-y-2"
       >
         {!showResult && (
           <InitialPage
             promptValue={promptValue}
             setPromptValue={setPromptValue}
-            handleDisplayResult={(query) => {
+            handleDisplayResult={(query: InitialFormData) => {
               if (query.promptValue) {
                 handleDisplayResult(query);
               }
@@ -209,7 +275,7 @@ const ReportPage: FC = () => {
                     localStorage.getItem('promtPreferance') || ''
                   );
                   if (value) {
-                    handleDisplayResult({ ...pref, promptValue: value });
+                    handleDisplayResult({ ...pref, promptValue: value, temp_project_id: activeProjectId?.temp_project_id });
                   }
                 }}
                 // handleSecondary={}
@@ -224,7 +290,7 @@ const ReportPage: FC = () => {
       {showScrollButton && showResult && (
         <button
           onClick={scrollToBottom}
-          className="fixed bottom-8 right-8 flex items-center justify-center w-12 h-12 text-gray-600 bg-gray-200 rounded-full hover:bg-gray-400 transform hover:scale-105 transition-all duration-200 shadow-lg z-50"
+          className="fixed bottom-4 right-8 flex items-center justify-center w-12 h-12 text-gray-600 bg-gray-200 rounded-full hover:bg-gray-400 transform hover:scale-105 transition-all duration-200 shadow-lg z-50"
         >
           <MoveDown className="w-12 h-12" />
         </button>

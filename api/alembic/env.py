@@ -14,6 +14,10 @@ from db_models.shared_user_deals import Base as SharedUserDeals
 from db_models.new_users import Base as NewUsers
 from db_models.request_document import Base as RequestBase
 from db_models.rag_session import Base as RagSessionBase
+from db_models.documents import Base as DocumentTableBase
+from db_models.projects import Base as ProjectBase
+from db_models.reports import Base as ReportTableBase
+from db_models.relationships import *
 from alembic import context
 import os
 from dotenv import load_dotenv
@@ -42,7 +46,8 @@ if config.config_file_name is not None:
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
 target_metadata = [UserBase.metadata, DemoRequestBase.metadata, DealsBase.metadata, TaskStatusBase.metadata, WorkspaceBase.metadata, KnowledgeBase.metadata,
-                   ChecklistBase.metadata, DocumentBase.metadata, ChatBase.metadata, SharedUserDeals.metadata, NewUsers.metadata, RequestBase.metadata,RagSessionBase.metadata, ]
+                   ChecklistBase.metadata, DocumentBase.metadata, ChatBase.metadata, SharedUserDeals.metadata, NewUsers.metadata, RequestBase.metadata,RagSessionBase.metadata,
+                   ProjectBase.metadata, ReportTableBase.metadata, DocumentTableBase.metadata ]
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:

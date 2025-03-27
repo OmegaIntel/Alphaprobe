@@ -1,20 +1,24 @@
 
-
+import { FileText, Building2, LucideIcon } from "lucide-react";
 export interface ItemType {
     label?: string;
     id?: string;
-    docCount?: number;
+    icon: LucideIcon;
+    url:string;
 };
   
 export const items: ItemType[] = [
     {
-      label: 'Valuation of Organization',
-      id: 'dashboard',
-      docCount: 1
+      label: 'Reports',
+      id: 'reports',
+      icon: FileText,
+      url:'/'
+
     },
     {
-      label: 'Valuation of Organization',
-      id: 'dashboardewewe',
-      docCount: 2
+      label: 'Company House',
+      id: 'company-house',
+      icon: Building2,
+      url:'/company-house'
     },
 ];

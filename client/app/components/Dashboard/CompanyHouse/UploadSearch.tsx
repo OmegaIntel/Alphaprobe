@@ -9,8 +9,8 @@ const UploadSearch: React.FC = () => {
   };
 
   const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Implement your search logic here
+    e.preventDefault(); 
+     
     console.log("Searching for:", searchQuery);
   };
 

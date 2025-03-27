@@ -48,7 +48,7 @@ export default function CoreSignalMain() {
   return (
     <Card className="w-full max-w-6xl mx-auto">
       <CardHeader>
-        <CardTitle>CoreSignal Company Search</CardTitle>
+        <CardTitle>Company Search</CardTitle>
         <CardDescription>
           Enter a natural language query to search companies
         </CardDescription>

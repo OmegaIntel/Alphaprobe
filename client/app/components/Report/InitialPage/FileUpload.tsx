@@ -4,8 +4,20 @@ import { cn } from "~/lib/utils";
 import { uploadDeepResearchFiles } from "../api";
 import { useDispatch } from "react-redux";
 import { setProjectId } from "../../../store/slices/projectSlice"; // adjust the path as needed
+import { UploadFile } from "../api";
 
-const FileUpload: FC = () => {
+type UploadedDOC = {
+  file_name:string;
+  file_path: string;
+}
+interface FileUploadProps {
+  temp_project_id: string;
+  setUploadedDocuments : (files : UploadedDOC[]) => void
+}
+
+
+const FileUpload: FC<FileUploadProps> = (props) => {
+  const { temp_project_id, setUploadedDocuments } = props;
   const [files, setFiles] = useState<File[]>([]);
   const [dragActive, setDragActive] = useState(false);
   const [uploadStatus, setUploadStatus] = useState<"idle" | "loading" | "success">("idle");
@@ -49,11 +61,17 @@ const FileUpload: FC = () => {
   async function handleUpload(files: File[]) {
     setUploadStatus("loading");
     try {
-      const response = await uploadDeepResearchFiles(files);
+      const data : UploadFile = {
+        files : files,
+        project_id: '',
+        temp_project_id: temp_project_id
+      }
+      const response = await uploadDeepResearchFiles(data);
       const projectId = response.project_id;
-      console.log("Project ID:", projectId);
+      console.log("Project ID:", projectId, response.data);
+      setUploadedDocuments(response.data)
       // Set the projectId in Redux store
-      dispatch(setProjectId(projectId));
+      dispatch(setProjectId(temp_project_id));
       // Clear files after successful upload so we show the success message.
       setFiles([]);
       setUploadStatus("success");
@@ -108,7 +126,7 @@ const FileUpload: FC = () => {
                 className="inline-flex items-center gap-2 p-2 border rounded-lg bg-gray-100 w-fit"
               >
                 <div className="w-6 h-6 bg-indigo-200 text-white flex items-center justify-center rounded-full">
-                  {true ? (
+                  {false ? (
                     <span className="animate-spin">
                       <LoaderPinwheel className="w-4 h-4 text-gray-600" />
                     </span>

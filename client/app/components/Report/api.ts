@@ -16,19 +16,73 @@ const getThetempId = (tempid: string) => {
   return 0;
 };
 
-export const getDocumentReport = async ({
+
+export const createGetDocumentReport = async ({
+  promptValue,
+  web_search,
+  file_search,
+  templateId,
+  temp_project_id,
+  uploaded_files
+}: {
+  promptValue: string;
+  web_search: boolean;
+  file_search: boolean;
+  templateId: string;
+  temp_project_id: string;
+  uploaded_files: any[]
+}): Promise<any> => {
+  try {
+    // const headingTemp = templateHeading.find((heading) => heading.templateId === templateId)
+    const tempNum  =  getThetempId(templateId);
+    const config: RequestInit = {
+      method: 'POST',
+      body: JSON.stringify({
+        // markdown: 'stocks',
+        // title: title,
+        // sub_title: subTitle,
+        // theme: 'professional',
+        instruction: promptValue,
+        web_search: web_search,
+        file_search: file_search,
+        report_type: tempNum,
+        project_id: '',
+        temp_project_id: temp_project_id,
+        uploaded_files: uploaded_files
+        // text: title,
+        // headings: headingTemp?.heading,
+        // max_depth: 3,
+        // include_charts: true,
+        // include_tables: true,
+      }),
+    };
+
+    const res = await fetcher('/api/deep-researcher-langgraph/create', config);
+    console.log('reports--------------------', res.data);
+    return res.data as string;
+  } catch (error) {
+    console.error(error);
+    return error as string;
+  }
+};
+
+export const updateGetDocumentReport = async ({
   promptValue,
   web_search,
   file_search,
   templateId,
   projectId,
+  temp_project_id,
+  uploaded_files
 }: {
   promptValue: string;
   web_search: boolean;
   file_search: boolean;
   templateId: string;
   projectId: string;
-}): Promise<string> => {
+  temp_project_id: string;
+  uploaded_files: any[]
+}): Promise<any> => {
   try {
     // const headingTemp = templateHeading.find((heading) => heading.templateId === templateId)
     const tempNum  =  getThetempId(templateId);
@@ -44,15 +98,17 @@ export const getDocumentReport = async ({
         file_search: file_search,
         report_type: tempNum,
         project_id: projectId,
+        temp_project_id: temp_project_id ,
+        uploaded_files: uploaded_files
         // text: title,
         // headings: headingTemp?.heading,
-        // max_depth: 3,
+        // max_depth: 3, 
         // include_charts: true,
         // include_tables: true,
       }),
     };
 
-    const res = await fetcher('/api/deep-researcher-langgraph', config);
+    const res = await fetcher('/api/deep-researcher-langgraph/update', config);
     console.log('reports--------------------', res.data);
     return res.data as string;
   } catch (error) {
@@ -61,13 +117,22 @@ export const getDocumentReport = async ({
   }
 };
 
-export const uploadDeepResearchFiles = async (files: File[]): Promise<any> => {
+export interface UploadFile{
+    files: File[];
+    project_id: string;
+    temp_project_id:string;
+}
+
+export const uploadDeepResearchFiles = async (data: UploadFile): Promise<any> => {
   try {
     // Create FormData and append each file with the key "files"
+    const files = data.files || [];
     const formData = new FormData();
     files.forEach((file) => {
       formData.append("files", file);
     });
+
+    formData.append("temp_project_id", data.temp_project_id);
 
     // Set up the POST request configuration
     const config: RequestInit = {
@@ -84,3 +149,24 @@ export const uploadDeepResearchFiles = async (files: File[]): Promise<any> => {
     throw error;
   }
 };
+
+export interface ReportList {
+  id: string;
+  query: string;
+  response:string;
+  updated_at: string;
+}
+export const getReports = async (project_id : string): Promise<ReportList[]> =>{
+  try {
+    const config: RequestInit = {
+      method: 'GET',
+    };
+    
+    const res = await fetcher(`/api/project/${project_id}/reports`, config);
+  
+    return Array.isArray(res.data) ? res.data : [];
+  } catch (error) {
+     console.error('error------------', error);
+     return []
+  }
+}

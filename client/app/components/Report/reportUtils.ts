@@ -183,7 +183,7 @@ export const preprocessOrderedData = (data: Data[]) => {
   return groupedData;
 };
 
-type ReportType =
+export type ReportType =
   | 'market-sizing'
   | 'financial-statement-analysis'
   | 'custom_report';
@@ -192,9 +192,9 @@ type ReportType =
 export interface InitialFormData {
     reportType: ReportType;
     preferences: { web: boolean; file: boolean };
-    uploadedDocuments: File[];
+    uploadedDocuments: any[];
     promptValue: string;
-  
+    temp_project_id: string;
 }
 
 export const templates = [

@@ -12,8 +12,8 @@ from sqlalchemy.orm import Session
 from datetime import datetime
 from fastapi.responses import JSONResponse
 
-from db_models.Projects import Project
-from db_models.Documents import Document
+from db_models.projects import Project
+from db_models.documents import DocumentTable
 from db_models.session import get_db
 
 # Import the OpenSearch manager (make sure the path matches your structure)
@@ -90,9 +90,9 @@ async def upload_documents(
             print(f"Processing file: {original_filename}")
 
             # Check for existing document
-            existing_document = db.query(Document).filter(
-                Document.project_id == project_id,
-                Document.original_filename == original_filename
+            existing_document = db.query(DocumentTable).filter(
+                DocumentTable.project_id == project_id,
+                DocumentTable.original_filename == original_filename
             ).first()
 
             if existing_document:
@@ -134,7 +134,7 @@ async def upload_documents(
             # print(f"Tags processed: {tags}")
 
             # Create a new document record
-            new_document = Document(
+            new_document = DocumentTable(
                project_id=project_id, filename=original_filename, filepath=file_location
             )
             db.add(new_document)
@@ -217,7 +217,7 @@ async def delete_document(document_id: str, db: Session = Depends(get_db)):
     except ValueError:
         raise HTTPException(status_code=400, detail="Invalid document ID format.")
 
-    document = db.query(Document).filter(Document.id == document_uuid).first()
+    document = db.query(DocumentTable).filter(DocumentTable.id == document_uuid).first()
     if not document:
         raise HTTPException(status_code=404, detail="Document not found.")
 
@@ -261,7 +261,7 @@ async def get_uploaded_documents(project_id: str, db: Session = Depends(get_db))
     except ValueError:
         raise HTTPException(status_code=400, detail="Invalid deal ID format.")
 
-    documents = db.query(Document).filter(Document.project_id == project_uuid).all()
+    documents = db.query(DocumentTable).filter(DocumentTable.project_id == project_uuid).all()
     if not documents:
         raise HTTPException(status_code=404, detail="No documents found for this deal ID.")
 
@@ -290,7 +290,7 @@ async def get_document_details(document_id: str, db: Session = Depends(get_db)):
     except ValueError:
         raise HTTPException(status_code=400, detail="Invalid document ID format.")
 
-    document = db.query(Document).filter(Document.id == document_uuid).first()
+    document = db.query(DocumentTable).filter(DocumentTable.id == document_uuid).first()
     if not document:
         raise HTTPException(status_code=404, detail="Document not found.")
 

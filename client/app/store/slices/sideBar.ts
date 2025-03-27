@@ -1,14 +1,23 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
+import { fetcher } from "~/services/HTTPS";
 
 interface Project {
-  id: string;
+  id?: string;
   name: string; 
+  created_at?: string;
+  updated_at?: string;
+  user_id?:string;
+  temp_project_id:string;
+  documents?: string[];
 }
 
 interface SideBarState {
   isCanvas: boolean;
-  activeProjectId: string | null;
+  activeProjectId: Project | null;
   projects: Project[];
+  loading?: boolean;
+  error?: string | null;
+  
 }
 
 // Default initial state without localStorage
@@ -16,10 +25,28 @@ const defaultInitialState: SideBarState = {
   isCanvas: false,
   activeProjectId: null,
   projects: [],
+  loading: false,
+  error: null,
 };
 
 // Helper function to safely access localStorage (Remix-friendly)
 const isServer = typeof window === 'undefined';
+
+export const fetchProjects = createAsyncThunk("sidebar/fetchProjects", async () => {
+  const config: RequestInit = { method: "GET" };
+  const res = await fetcher("/api/project-list", config);
+  return Array.isArray(res.data) ? res.data : [];
+});
+
+const getProjects = async (): Promise<Project[]> =>{
+  const config: RequestInit = {
+    method: 'GET',
+  };
+  
+  const res = await fetcher('/api/project-list', config);
+
+  return Array.isArray(res.data) ? res.data : [];
+}
 
 // Helper function to load state from localStorage
 const loadStateFromLocalStorage = (): SideBarState => {
@@ -61,29 +88,29 @@ const sidebarSlice = createSlice({
   name: "sidebar",
   initialState,
   reducers: {
-    initializeFromLocalStorage(state) {
-      // This action is explicitly called after hydration
+    initializeStates(state) {
       if (!isServer) {
         const savedState = loadStateFromLocalStorage();
         state.isCanvas = savedState.isCanvas;
         state.activeProjectId = savedState.activeProjectId;
-        state.projects = savedState.projects;
+        //state.projects = savedState.projects;
       }
     },
     setIsCanvas(state, action: PayloadAction<boolean>) {
       state.isCanvas = action.payload;
       saveStateToLocalStorage(state);
     },
-    setProject(state, action: PayloadAction<{ id: string; name: string }>) {
-      const { id, name } = action.payload;
-      state.projects = [...state.projects, { id, name }];
+    setProject(state, action: PayloadAction<Project>) {
+      //const { id, name } = action.payload;
+      state.projects = [...state.projects, { ...action.payload }];
+      state.activeProjectId = action.payload || null
       saveStateToLocalStorage(state);
     },
     setProjects(state, action: PayloadAction<Project[]>) {
       state.projects = action.payload;
       saveStateToLocalStorage(state);
     },
-    setActiveProject(state, action: PayloadAction<string>) {
+    setActiveProject(state, action: PayloadAction<Project>) {
       state.activeProjectId = action.payload;
       saveStateToLocalStorage(state);
     },
@@ -105,11 +132,26 @@ const sidebarSlice = createSlice({
       }
     },
   },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchProjects.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchProjects.fulfilled, (state, action: PayloadAction<Project[]>) => {
+        state.loading = false;
+        state.projects = action.payload;
+      })
+      .addCase(fetchProjects.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message ?? "Failed to fetch projects";
+      });
+  }
 });
 
 // Export actions
 export const {
-  initializeFromLocalStorage,
+  initializeStates,
   setIsCanvas,
   setProject,
   setProjects,

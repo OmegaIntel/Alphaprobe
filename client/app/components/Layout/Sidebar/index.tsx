@@ -2,17 +2,18 @@ import {
   ChevronsRight,
   ChevronsLeft,
   PlusCircle,
-  FileText,
-  BarChart,
-  PieChart,
+  SquarePen,
 } from 'lucide-react';
 import { NavLink, useLocation } from '@remix-run/react';
 import { useState, useEffect } from 'react';
 import { items, ItemType } from './SidebarItems';
 import { useNavigate } from '@remix-run/react';
-import { useSelector } from 'react-redux';
-import { RootState } from '~/store/store';
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState, AppDispatch } from '~/store/store';
 import { ChatSession } from '~/components/Dashboard/MarketResearch/ChatSessions';
+import { fetchProjects } from '~/store/slices/sideBar';
+import { setProject, setActiveProject } from '~/store/slices/sideBar';
+import { getUniqueID } from '~/lib/utils';
 //import { categoryRoutes : cat } from '~/constant';
 
 type CategoryRoutes = {
@@ -20,9 +21,8 @@ type CategoryRoutes = {
 };
 
 const categoryRoutes: CategoryRoutes = {
-  'Home': '/',
-  'Market Research': '/market-research',
-  'Company House' : '/company-house'
+  Reports: '/',
+  'Company House': '/company-house',
 };
 
 type SidebarProps = {
@@ -31,40 +31,37 @@ type SidebarProps = {
 };
 
 export default function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
-  const [activeMenu, setActiveMenu] = useState<string>('new');
   const [activeCategory, setActiveCategory] = useState<string>('');
   const navigate = useNavigate();
+  const dispatch = useDispatch<AppDispatch>();
   const location = useLocation();
+
   const { isCanvas, projects, activeProjectId } = useSelector(
     (state: RootState) => state.sidebar
   );
 
-  const isMarketResearch: boolean = location.pathname.includes('market-research');
-
-  const marketResearchItems: { id: string; label: string; icon: JSX.Element }[] = [
-    { id: 'industry-analysis', label: 'Industry Analysis', icon: <BarChart className="w-4 h-4" /> },
-    { id: 'competitor-analysis', label: 'Competitor Analysis', icon: <PieChart className="w-4 h-4" /> },
-    { id: 'market-trends', label: 'Market Trends', icon: <FileText className="w-4 h-4" /> },
-    { id: 'reports', label: 'Research Reports', icon: <FileText className="w-4 h-4" /> },
-  ];
+  console.log('projects--------', projects);
 
   useEffect(() => {
+    if (!projects.length) {
+      dispatch(fetchProjects());
+    }
     const currentPath: string = location.pathname;
-    const matchedCategory: string | undefined = Object.keys(categoryRoutes).find(
-      (category) => categoryRoutes[category] === currentPath
+    const matchedCategory: ItemType | undefined = items.find(
+      (category) => category.url === currentPath
     );
     if (matchedCategory) {
-      setActiveCategory(matchedCategory);
+      setActiveCategory(matchedCategory.id || '');
     }
   }, [location.pathname]);
 
-  const handleCategoryClick = (category: string): void => {
-    setActiveCategory(category);
-    navigate(categoryRoutes[category]);
-  };
-
-  const handleSubcategoryClick = (id: string): void => {
-    navigate(`/market-research/${id}`);
+  const handleCategoryClick = (item: ItemType): void => {
+    setActiveCategory(item.id || '');
+    if (item.id === 'reports') {
+      const newID = getUniqueID();
+      dispatch(setActiveProject({ id: '', name: '', temp_project_id: newID }));
+    }
+    navigate(item.url);
   };
 
   return (
@@ -75,14 +72,44 @@ export default function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
         className={`flex items-center justify-between mb-4 ${collapsed ? 'flex-col space-y-2' : ''}`}
       >
         {!collapsed && (
-          <button onClick={() => navigate('./')} className="p-1 rounded hover:bg-gray-200 text-sm font-medium space-x-2 items-center flex">
-            <PlusCircle className="w-5 h-5" />
-            <div className="font-semibold">{'Create New Document'}</div>
+          <button
+            onClick={() => {
+              navigate('./');
+              const newID = getUniqueID();
+              dispatch(
+                setActiveProject({ id: '', name: '', temp_project_id: newID })
+              );
+            }}
+            className="p-1 rounded hover:bg-gray-200 text-sm font-medium space-x-2 items-center flex"
+          >
+            <SquarePen className="w-5 h-5" />
+            <div className="font-semibold">{'Create New Report'}</div>
           </button>
         )}
-        <button onClick={() => setCollapsed()} className="p-1 rounded hover:bg-gray-200">
-          {collapsed ? <ChevronsRight className="w-5 h-5" /> : <ChevronsLeft className="w-5 h-5" />}
+        <button
+          onClick={() => setCollapsed()}
+          className="p-1 rounded hover:bg-gray-200"
+        >
+          {collapsed ? (
+            <ChevronsRight className="w-5 h-5" />
+          ) : (
+            <ChevronsLeft className="w-5 h-5" />
+          )}
         </button>
+        {collapsed && (
+          <button
+            onClick={() => {
+              navigate('./');
+              const newID = getUniqueID();
+              dispatch(
+                setActiveProject({ id: '', name: '', temp_project_id: newID })
+              );
+            }}
+            className="p-1 rounded hover:bg-gray-200 text-sm font-medium space-x-2 items-center flex"
+          >
+            <SquarePen className="w-5 h-5" />
+          </button>
+        )}
       </div>
 
       {!collapsed && (
@@ -90,32 +117,39 @@ export default function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
           <div className="space-y-2">
             <h6 className="font-semibold text-sm">Categories</h6>
             <div className="space-y-1">
-              {Object.keys(categoryRoutes).map((category) => (
-                <button key={category} onClick={() => handleCategoryClick(category)} className={`flex text-sm items-center space-x-2 p-2 w-full text-left hover:bg-gray-200 rounded ${activeCategory === category ? 'bg-gray-200' : ''}`}>
-                  <span>{category}</span>
-                </button>
-              ))}
+              {items.map((item: ItemType) => {
+                const Icon = item.icon;
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => handleCategoryClick(item)}
+                    className={`flex text-sm items-center space-x-2 p-2 w-full text-left hover:bg-gray-200 rounded ${activeCategory === item.label ? 'bg-gray-200' : ''}`}
+                  >
+                    <Icon className="w-5 h-5" />
+                    <span>{item.label}</span>
+                  </button>
+                );
+              })}
             </div>
           </div>
 
-          {isMarketResearch && (
-            <div className="space-y-2">
-              <ChatSession />
+          <div className="space-y-2">
+            <h6 className="font-semibold text-sm">Histroy</h6>
+            <div className="space-y-1">
+              {projects.map((item) => (
+                <NavLink
+                  key={item.id}
+                  to={`/r/${item.id}`}
+                  onClick={() => {
+                    dispatch(setActiveProject(item));
+                  }}
+                  className={`flex text-xs items-center space-x-2 p-2 min-w-10 hover:bg-gray-200 rounded ${activeProjectId?.id === item.id ? 'bg-gray-200' : ''}`}
+                >
+                  <div>{item.name}</div>
+                </NavLink>
+              ))}
             </div>
-          )}
-
-          {!isMarketResearch && (
-            <div className="space-y-2">
-              <h6 className="font-semibold text-sm">Histroy</h6>
-              <div className="space-y-1">
-                {items.map((item) => (
-                  <NavLink key={item.id} to={`/${item.id}`} onClick={() => setActiveMenu(item.id as string)} className={`flex text-sm items-center space-x-2 p-2 min-w-10 hover:bg-gray-200 rounded ${activeMenu === item.id ? 'bg-gray-200' : ''}`}>
-                    <div>{item.label}</div>
-                  </NavLink>
-                ))}
-              </div>
-            </div>
-          )}
+          </div>
         </nav>
       )}
     </div>

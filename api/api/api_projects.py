@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from db_models.session import get_db
 from pydantic import BaseModel
 from datetime import datetime
-from db_models.Projects import Project
+from db_models.projects import Project
 from fastapi.responses import JSONResponse
 
 project_router = APIRouter()

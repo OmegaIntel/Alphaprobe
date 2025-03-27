@@ -7,23 +7,24 @@ import { Globe, FileSearch, GalleryVerticalEnd } from 'lucide-react';
 import clsx from 'clsx';
 import { templates } from '../reportUtils';
 import FileUpload from './FileUpload';
+import { v4 as uuidv4 } from "uuid";
+import { InitialFormData, ReportType } from '../reportUtils';
+import { getUniqueID } from '~/lib/utils';
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState } from '~/store/store';
 
-type ReportType =
-  | 'market-sizing'
-  | 'financial-statement-analysis'
-  | 'custom_report';
 
-interface FormData {
-  reportType: ReportType;
-  preferences: { web: boolean; file: boolean };
-  uploadedDocuments: File[];
-  promptValue: string;
+type UploadedDOC = {
+  file_name:string;
+  file_path: string;
 }
+
+
 
 type THeroProps = {
   promptValue: string;
   setPromptValue: React.Dispatch<React.SetStateAction<string>>;
-  handleDisplayResult: (query: FormData) => void;
+  handleDisplayResult: (query: InitialFormData) => void;
 };
 
 const InitialPage: FC<THeroProps> = ({
@@ -31,18 +32,29 @@ const InitialPage: FC<THeroProps> = ({
   setPromptValue,
   handleDisplayResult,
 }) => {
-  const { control, handleSubmit, watch, setValue } = useForm<FormData>({
+  const { activeProjectId } = useSelector((state: RootState) => state.sidebar);
+  const tempProjectID = activeProjectId?.temp_project_id || getUniqueID();
+  const { control, handleSubmit, watch, setValue } = useForm<InitialFormData>({
     defaultValues: {
       reportType: 'market-sizing',
       preferences: { web: true, file: false },
       uploadedDocuments: [],
       promptValue: '',
+      temp_project_id: tempProjectID
     },
   });
 
+  const generateReport : { project_id: string} = {
+     project_id : '', 
+  }
+  
+  //@ts-ignore
+  globalThis.reportGeneration = generateReport;
+  
+
   const formWatch = watch();
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit = (data: InitialFormData) => {
     console.log('Report Data:', data.uploadedDocuments);
     let newData = {
       reportType: data.reportType,
@@ -56,12 +68,15 @@ const InitialPage: FC<THeroProps> = ({
   const handleClickSuggestion = (value: string) => {
     setPromptValue(value);
   };
-
-  const removeFile = (fileName: string) => {
-    let files = formWatch.uploadedDocuments;
-    let newFiles = files.filter((file) => file.name !== fileName);
-    setValue('uploadedDocuments', newFiles);
-  };
+  
+  const setUploadedDocuments = (files: UploadedDOC[]) =>{
+        setValue('uploadedDocuments', files)
+  }
+  //const removeFile = (fileName: string) => {
+    // let files = formWatch.uploadedDocuments;
+    // let newFiles = files.filter((file) => file.name !== fileName);
+    // setValue('uploadedDocuments', newFiles);
+  //};
 
   return (
     <div className="flex flex-col items-center py-8 md:py-12 lg:pt-8 lg:pb-16">
@@ -162,7 +177,7 @@ const InitialPage: FC<THeroProps> = ({
                 </label>
                 {field.value && (
                   <div className="mt-3">
-                    <FileUpload />
+                    <FileUpload temp_project_id={formWatch.temp_project_id} setUploadedDocuments={setUploadedDocuments}  />
                   </div>
                 )}
               </div>

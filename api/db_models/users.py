@@ -1,5 +1,6 @@
-from sqlalchemy import Column, String, TIMESTAMP, func,Text,Boolean
+from sqlalchemy import Column, String, TIMESTAMP, func, Text, Boolean
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship
 from sqlalchemy_utils import UUIDType
 import uuid
 
