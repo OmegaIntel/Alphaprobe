@@ -82,14 +82,14 @@ const Header: FC = () => {
     <div className="py-12 md:py-16 lg:py-24 px-4 sm:px-6 w-full flex flex-col items-center justify-between space-y-8 md:space-y-10 lg:space-y-12">
       {/* Text content with fade-in animation */}
       <div 
-        className={`w-full md:w-5/6 lg:w-2/3 space-y-4 sm:space-y-6 md:space-y-8 text-center transition-opacity duration-1000 ease-in-out ${
+        className={`w-full md:w-5/6 lg:w-2/3 space-y-6 sm:space-y-8 md:space-y-10 text-center transition-opacity duration-1000 ease-in-out ${
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight bg-gradient-to-br from-white to-white/70 bg-clip-text text-transparent">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-normal md:leading-tight bg-gradient-to-br from-white to-white/70 bg-clip-text text-transparent pb-2">
           Automated Research and Diligence for Private Markets
         </h1>
-        <p className="text-muted-foreground text-base sm:text-lg max-w-3xl mx-auto">
+        <p className="text-muted-foreground text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
           Transforming the private market deal making process by automating research, modeling, and due diligence.
         </p>
 
