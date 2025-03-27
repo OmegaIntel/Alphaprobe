@@ -79,23 +79,23 @@ const Header: FC = () => {
   };
 
   return (
-    <div className="my-24 flex flex-col items-center justify-between space-y-10 lg:space-y-0">
+    <div className="py-12 md:py-16 lg:py-24 px-4 sm:px-6 w-full flex flex-col items-center justify-between space-y-8 md:space-y-10 lg:space-y-12">
       {/* Text content with fade-in animation */}
       <div 
-        className={`lg:w-2/3 space-y-8 text-center transition-opacity duration-1000 ease-in-out ${
+        className={`w-full md:w-5/6 lg:w-2/3 space-y-4 sm:space-y-6 md:space-y-8 text-center transition-opacity duration-1000 ease-in-out ${
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight bg-gradient-to-br from-white to-white/70 bg-clip-text text-transparent">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight bg-gradient-to-br from-white to-white/70 bg-clip-text text-transparent">
           Automated Research and Diligence for Private Markets
         </h1>
-        <p className="text-muted-foreground text-lg">
+        <p className="text-muted-foreground text-base sm:text-lg max-w-3xl mx-auto">
           Transforming the private market deal making process by automating research, modeling, and due diligence.
         </p>
 
         {/* Email form */}
-        <form onSubmit={handleSubmit} className="w-full max-w-lg mx-auto mt-8">
-          <div className="flex flex-col sm:flex-row items-center gap-4 w-full">
+        <form onSubmit={handleSubmit} className="w-full max-w-lg mx-auto mt-6 sm:mt-8">
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full">
             <Input 
               type="email" 
               placeholder="Business Email" 
@@ -107,7 +107,7 @@ const Header: FC = () => {
             />
             <Button
               type="submit"
-              className="w-full sm:w-auto whitespace-nowrap"
+              className="w-full sm:w-auto whitespace-nowrap mt-3 sm:mt-0"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Processing..." : "Schedule A Demo"}
@@ -118,7 +118,7 @@ const Header: FC = () => {
 
       {/* Image with fade-in and slight slide-up animation */}
       <div 
-        className={`w-full flex justify-center mt-10 transition-all duration-1000 ease-in-out ${
+        className={`w-full flex justify-center mt-6 sm:mt-8 lg:mt-10 transition-all duration-1000 ease-in-out ${
           isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'
         }`}
         style={{ transitionDelay: '300ms' }}
@@ -126,7 +126,7 @@ const Header: FC = () => {
         <img
           src="images/omegalanding.png"
           alt="Dashboard Illustration"
-          className="rounded-lg shadow-xl"
+          className="w-full max-w-6xl mx-auto rounded-lg shadow-xl"
           loading="eager"
         />
       </div>

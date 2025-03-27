@@ -14,7 +14,7 @@ const Main: FC<MainProps> = ({ children, backgroundImage = "/images/omegabkgrnd.
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <Navbar />
-      <div className="mx-48 relative z-10">{children}</div>
+      <div className="md:mx-48 relative z-10">{children}</div>
       <Footer />
     </div>
   );
