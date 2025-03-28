@@ -3,7 +3,7 @@ import { remark,  } from 'remark';
 import html from 'remark-html';
 import { Compatible } from 'vfile';
 import './styles/markdown.css';
-import { Copy } from 'lucide-react';
+import { Copy, FileUp } from 'lucide-react';
 import gfm from "remark-gfm"
 
 export default function GeneratedResponse({ response }: { response: string }) {
@@ -28,7 +28,7 @@ export default function GeneratedResponse({ response }: { response: string }) {
       <div className="w-full">
         <div className="flex items-center justify-between pb-3">
           {response && (
-            <div className="flex items-center gap-3">
+            <div className="flex justify-end items-center gap-3">
               <button
                 className="p-1 rounded bg-gray-200 text-sm font-medium items-center"
                 onClick={() => {
@@ -36,6 +36,14 @@ export default function GeneratedResponse({ response }: { response: string }) {
                 }}
               >
                 <Copy className="w-4 h-4 text-indigo-600" />
+              </button>
+              <button
+                className="p-1 rounded bg-gray-200 text-sm font-medium items-center"
+                onClick={() => {
+                  navigator.clipboard.writeText(response.trim());
+                }}
+              >
+                <FileUp className="w-4 h-4 text-indigo-600" />
               </button>
             </div>
           )}

@@ -10,7 +10,7 @@ export default function Header() {
     navigate("/login");
   };
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 p-4 flex justify-between items-center">
+    <div className="sticky top-0 z-50 h-12 bg-gray-100 dark:bg-gray-900 p-4 flex justify-between items-center border-b">
       <div className='text-lg font-semibold'>Omega Intelligence</div>
       <div className="flex items-center">
         <DropdownMenu>

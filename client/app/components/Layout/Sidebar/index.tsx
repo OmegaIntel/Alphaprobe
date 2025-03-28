@@ -10,7 +10,7 @@ import { items, ItemType } from './SidebarItems';
 import { useNavigate } from '@remix-run/react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from '~/store/store';
-import { ChatSession } from '~/components/Dashboard/MarketResearch/ChatSessions';
+import { Loader, LoaderPinwheel } from 'lucide-react';
 import { fetchProjects } from '~/store/slices/sideBar';
 import { setProject, setActiveProject } from '~/store/slices/sideBar';
 import { getUniqueID } from '~/lib/utils';
@@ -36,7 +36,7 @@ export default function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
   const dispatch = useDispatch<AppDispatch>();
   const location = useLocation();
 
-  const { isCanvas, projects, activeProjectId } = useSelector(
+  const { isCanvas, projects, activeProjectId, loading } = useSelector(
     (state: RootState) => state.sidebar
   );
 
@@ -66,7 +66,7 @@ export default function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
 
   return (
     <div
-      className={`h-screen text-gray-600 bg-gray-50 border-r p-4 flex flex-col transition-all duration-300 ${collapsed ? 'w-16' : 'w-72'} ${isCanvas && 'hidden'}`}
+      className={`h-[calc(100vh-48px)] sticky top-[48px] text-gray-600 bg-gray-50 border-r p-4 flex flex-col transition-all duration-300 ${collapsed ? 'w-16' : 'w-72'} ${isCanvas && 'hidden'}`}
     >
       <div
         className={`flex items-center justify-between mb-4 ${collapsed ? 'flex-col space-y-2' : ''}`}
@@ -135,20 +135,26 @@ export default function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
 
           <div className="space-y-2">
             <h6 className="font-semibold text-sm">Histroy</h6>
-            <div className="space-y-1">
-              {projects.map((item) => (
-                <NavLink
-                  key={item.id}
-                  to={`/r/${item.id}`}
-                  onClick={() => {
-                    dispatch(setActiveProject(item));
-                  }}
-                  className={`flex text-xs items-center space-x-2 p-2 min-w-10 hover:bg-gray-200 rounded ${activeProjectId?.id === item.id ? 'bg-gray-200' : ''}`}
-                >
-                  <div>{item.name}</div>
-                </NavLink>
-              ))}
-            </div>
+            {loading ? (
+              <span className="h-14 flex text-xs items-center justify-center space-x-2 p-2 min-w-10 hover:bg-gray-200 rounded">
+                <Loader className="mt-8 w-4 h-4 text-gray-600 animate-spin" />
+              </span>
+            ) : (
+              <div className="space-y-1">
+                {projects.map((item) => (
+                  <NavLink
+                    key={item.id}
+                    to={`/r/${item.id}`}
+                    onClick={() => {
+                      dispatch(setActiveProject(item));
+                    }}
+                    className={`flex text-xs items-center space-x-2 p-2 min-w-10 hover:bg-gray-200 rounded ${activeProjectId?.id === item.id ? 'bg-gray-200' : ''}`}
+                  >
+                    <div className="truncate w-[95%]">{item.name}</div>
+                  </NavLink>
+                ))}
+              </div>
+            )}
           </div>
         </nav>
       )}

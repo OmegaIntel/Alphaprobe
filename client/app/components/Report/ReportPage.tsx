@@ -124,7 +124,7 @@ const ReportPage: FC = () => {
           //@ts-ignore
           globalThis.reportGeneration = generateReport;
         }
-      } else {
+      } else { 
         const project_id = id || projectID;
         response = await updateGetDocumentReport({
           promptValue: newQuestion.promptValue,
@@ -227,10 +227,10 @@ const ReportPage: FC = () => {
   };
 
   return (
-    <div className="flex min-h-screen justify-center">
+    <div className="flex h-[calc(100vh-80px)] justify-center">
       <div
         //ref={mainContentRef}
-        className="min-h-[100vh] max-w-[800px] space-y-2"
+        className="h-full max-w-[800px] space-y-2"
       >
         {!showResult && (
           <InitialPage
@@ -247,7 +247,7 @@ const ReportPage: FC = () => {
         {showResult && (
           <div
             ref={mainContentRef}
-            className="flex h-[500px] w-full grow flex-col items-center justify-between overflow-x-auto"
+            className="flex h-[88%] w-full grow flex-col items-center justify-between overflow-x-auto"
           >
             <div className="container w-full space-y-2">
               <div className="container space-y-2 task-components">
@@ -263,7 +263,7 @@ const ReportPage: FC = () => {
           </div>
         )}
         {showResult && (
-          <div className="bottom-8 flex items-center w-full pb-8 md:pb-10 mr-4">
+          <div className="sticky bottom-0 flex items-center w-full mr-4">
             {loading ? (
               <Loader />
             ) : (
@@ -287,14 +287,14 @@ const ReportPage: FC = () => {
           </div>
         )}
       </div>
-      {showScrollButton && showResult && (
+      {/* {showScrollButton && showResult && (
         <button
           onClick={scrollToBottom}
           className="fixed bottom-4 right-8 flex items-center justify-center w-12 h-12 text-gray-600 bg-gray-200 rounded-full hover:bg-gray-400 transform hover:scale-105 transition-all duration-200 shadow-lg z-50"
         >
           <MoveDown className="w-12 h-12" />
         </button>
-      )}
+      )} */}
     </div>
   );
 };
