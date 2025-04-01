@@ -17,7 +17,15 @@ from db_models.session import get_db
 from api.api_user import get_current_user, bypass_user, User as UserModelSerializer
 
 # Import the OpenSearch manager (make sure the path matches your structure)
-from db_models.OpensearchDB import OpenSearchManager
+
+from db_models.opensearch_llamaindex import (
+    create_collection,     # For creating a new index (collection)
+    update_collection,       # For updating an existing index with new documents
+    delete_index,            # For deleting an index
+    query_index              # For performing a KNN query
+)
+
+
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -38,8 +46,7 @@ s3 = boto3.client(
     region_name=S3_REGION
 )
 
-# Initialize OpenSearch manager
-opensearch_manager = OpenSearchManager()
+
 
 
 def sanitize_class_name(name: str) -> str:
@@ -186,15 +193,13 @@ async def upload_files(
             print(f"Failed to determine collection name for deal_id {deal_id}: {str(e)}")
             raise HTTPException(status_code=500, detail=f"Error determining collection name: {str(e)}")
 
-        collection_name = sanitize_class_name(collection_name)
+        #collection_name = sanitize_class_name(collection_name)
         print(f"Using collection name: {collection_name}")
 
         # Index document in OpenSearch
         try:
             print(f"Indexing document {doc.id} in OpenSearch collection {collection_name}")
-            result = await opensearch_manager.create_collection(
-                collection_name, str(doc.id), presigned_url
-            )
+            result = await create_collection(collection_name, str(doc.id), presigned_url)
             print(f"Document indexed in OpenSearch: {doc.id} => {result}")
         except Exception as e:
             print(f"Failed to index document in OpenSearch: {doc.id}: {str(e)}")

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Loader2 } from 'lucide-react'
 
 import { Alert, AlertTitle, AlertDescription } from '~/components/ui/alert'
-import { fetchNewsFeed } from '~/services/news'
 
 interface NewsItem {
   title: string
@@ -21,27 +20,7 @@ const NewsBar: React.FC = () => {
     setIsClient(true)
   }, [])
 
-  useEffect(() => {
-    if (!isClient) return
-
-    const fetchNewsData = async () => {
-      try {
-        setLoading(true)
-        setError(null)
-        const response = await fetchNewsFeed()
-        setNewsData(response)
-      } catch (err) {
-        console.error('Error fetching news data:', err)
-        setError(
-          'There was an error fetching the news. Please try again later.'
-        )
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    fetchNewsData()
-  }, [isClient])
+  
 
   if (!isClient) {
     // Return null during SSR

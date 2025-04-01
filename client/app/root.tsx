@@ -4,77 +4,16 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  LiveReload,
+  useMatches,
+  useNavigate,
   useLocation,
-  useLoaderData,
 } from '@remix-run/react';
-import type { LinksFunction, LoaderFunctionArgs } from '@remix-run/node';
-import './tailwind.css';
-import { Provider } from 'react-redux';
-import store from './store/store';
-import type { LoaderFunctionArgs } from '@remix-run/node';
-import { useLocation } from '@remix-run/react';
 import { useEffect } from 'react';
-
-import React from 'react';
-import { API_BASE_URL } from './constant';
-
-// Function to get or generate a device ID
-function getDeviceId() {
-  let deviceId = localStorage.getItem('device_id');
-  if (!deviceId) {
-    deviceId = `device_${Math.random().toString(36).substring(2, 15)}`;
-    localStorage.setItem('device_id', deviceId);
-  }
-  return deviceId;
-}
-
-// Custom function to send events to your backend with fallback to Amplitude Browser SDK
-export async function sendAnalyticsEvent(eventType: string, eventProperties = {}) {
-  // Retrieve the user_id (fallback to 'anonymous_user' if not logged in)
-  const userId = localStorage.getItem('user_id') || 'anonymous_user';
-
-  // Retrieve the device ID
-  const deviceId = getDeviceId();
-
-  try {
-    // Attempt to send the event to the backend
-    const response = await fetch(`${API_BASE_URL}/api/analytics`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        event_type: eventType,
-        event_properties: eventProperties,
-        user_id: userId, // Include user ID dynamically
-        device_id: deviceId, // Always include device ID
-      }),
-    });
-
-    if (!response.ok) {
-      console.error(`Backend failed to send event: ${eventType}`, await response.text());
-      throw new Error('Backend failed'); // Trigger fallback
-    } else {
-      console.log(`Event sent to backend: ${eventType}`, await response.json());
-    }
-  } catch (error) {
-    console.error(`Error sending event to backend, falling back to Amplitude: ${eventType}`, error);
-  }
-}
-
-// Loader function for Remix
-export async function loader({ request }: LoaderFunctionArgs) {
-  return new Response(
-    JSON.stringify({
-      ENV: {
-        REMIX_API_BASE_URL: process.env.REMIX_API_BASE_URL,
-      },
-    }),
-    {
-      headers: { 'Content-Type': 'application/json' },
-    }
-  );
-}
+import type { LinksFunction } from '@remix-run/node';
+import './tailwind.css';
+import Layout from './Layout';
+import { useAuth } from '~/hooks/useAuth';
 
 // Links for Remix
 export const links: LinksFunction = () => [
@@ -90,10 +29,28 @@ export const links: LinksFunction = () => [
   },
 ];
 
-// Layout Component
-export function Layout({ children }: { children: React.ReactNode }) {
+// Main App Component
+export default function App() {
+  const matches = useMatches();
+  const { isAuthenticated } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  
+  const isAuthPage = matches.some(
+    (match) => match.pathname === '/login' || match.pathname === '/register'
+  );
+
+  useEffect(() => {
+    // Check if user is authenticated and not on an auth page
+    if (!isAuthenticated() && !isAuthPage) {
+      // Redirect to login with the return URL
+      // navigate(`/login?returnTo=${encodeURIComponent(location.pathname)}`, { replace: true });
+      navigate(`/login?returnTo=${encodeURIComponent(location.pathname)}`, { replace: true });
+    }
+  }, [isAuthenticated, isAuthPage, navigate, location.pathname]);
+
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <head>
         <meta charSet="utf-8" />
         <title>Alphaprobe</title>
@@ -102,42 +59,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        {isAuthPage ? (
+          <Outlet />
+        ) : (
+          <Layout>
+            <Outlet />
+          </Layout>
+        )}
         <ScrollRestoration />
         <Scripts />
+        <LiveReload />
       </body>
     </html>
   );
-}
-
-// Main App Component
-export default function App() {
-  const location = useLocation();
-
-  // Track page views on route changes
-  useEffect(() => {
-    sendAnalyticsEvent('Page View', { path: location.pathname });
-  }, [location]);
-
-  return (
-    <Provider store={store}>
-      <Layout>
-        <Outlet />
-      </Layout>
-    </Provider>
-  );
-}
-
-// Optional: Create a custom hook for tracking events
-export function useAmplitudeTrack() {
-  return React.useCallback((eventName: string, eventProperties?: Record<string, any>) => {
-    try {
-      amplitude.track(eventName, {
-        ...eventProperties,
-        timestamp: new Date().toISOString(),
-      });
-    } catch (error) {
-      console.error(`Failed to track event ${eventName}:`, error);
-    }
-  }, []);
 }

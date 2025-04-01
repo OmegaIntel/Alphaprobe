@@ -89,13 +89,15 @@ export const activeItems = [
   'Verify Working Capital Requirements',
 ];
 export const categoryList = [
-  'Dashboard',
-  'Investment Thesis',
+ 
   'Market Research',
-  'Industry Insights',
-  'Company Insights',
-  'Deal Room',
+  
 ];
+
+export const categoryRoutes = {
+  'Market Research': '/market-research',
+  'Home' : '/'
+};
 export const documentAnalysisList = [
   'Summary',
   'Document Analysis',
@@ -109,4 +111,6 @@ export const subCategoryList = [
 ];
 
 export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+
+export const CORESIGNAL_API_KEY=import.meta.env.VITE_CORESIGNAL_API_KEY ;
 
