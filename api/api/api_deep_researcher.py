@@ -1,4 +1,5 @@
 import os
+import time
 import uuid
 import asyncio
 import operator
@@ -228,6 +229,7 @@ bedrock_runtime = boto3.client('bedrock-agent-runtime',
     region_name="us-east-1"
 )
 
+EXCEL_BUCKET_NAME = os.getenv("EXCEL_BUCKET_NAME", "kb-bucket-tester")
 BUCKET_NAME = os.getenv("BUCKET_NAME", "deep-research-docs")
 KNOWLEDGE_BASE_ID = os.getenv("KNOWLEDGE_BASE_ID")
 DATA_SOURCE_ID = os.getenv("DATA_SOURCE_ID")
@@ -1181,18 +1183,29 @@ class UploadRequest(BaseModel):
     temp_project_id:str
 
 @research_deep_router.post("/api/upload-deep-research")
-async def upload_files(files: List[UploadFile] = File(...), temp_project_id: str = Form(...), current_user=Depends(get_current_user)):
+async def upload_files(
+    files: List[UploadFile] = File(...), 
+    temp_project_id: str = Form(...), 
+    current_user=Depends(get_current_user)
+):
     user_id = current_user.id
-
     results = []
     
     for file in files:
+        # Determine the target bucket based on file type.
+        # If Excel file, use EXCEL_BUCKET_NAME; otherwise, use the default BUCKET_NAME.
+        if file.filename.lower().endswith(('.xls', '.xlsx')):
+            target_bucket = EXCEL_BUCKET_NAME
+        else:
+            target_bucket = BUCKET_NAME
+
         key = f"{user_id}/{temp_project_id}/{file.filename}"
+        
         try:
             # Upload the file to S3 with metadata
             s3_client.upload_fileobj(
                 file.file, 
-                BUCKET_NAME, 
+                target_bucket, 
                 key, 
                 ExtraArgs={"Metadata": {"user_id": str(user_id)}}
             )
@@ -1207,9 +1220,9 @@ async def upload_files(files: List[UploadFile] = File(...), temp_project_id: str
             metadata_content = json.dumps(metadata_dict)
             metadata_key = f"{key}.metadata.json"
             
-            # Upload the metadata file
+            # Upload the metadata file to the same bucket
             s3_client.put_object(
-                Bucket=BUCKET_NAME,
+                Bucket=target_bucket,
                 Key=metadata_key,
                 Body=metadata_content,
                 ContentType='application/json'
@@ -1217,7 +1230,7 @@ async def upload_files(files: List[UploadFile] = File(...), temp_project_id: str
         except botocore.exceptions.ClientError as e:
             raise HTTPException(status_code=500, detail=f"Upload to S3 failed for file: {file.filename}")
 
-        results.append({"file_name": file.filename, "file_path": key})
+        results.append({"file_name": file.filename, "file_path": key, "bucket": target_bucket})
 
         # Retry ingestion job up to 3 times if it fails
         max_retries = 3  
@@ -1238,7 +1251,6 @@ async def upload_files(files: List[UploadFile] = File(...), temp_project_id: str
                     print(f"Max retries reached for key: {key}. Moving on to next file.")
                 else:
                     # Wait for a short period before retrying.
-                    import time
                     time.sleep(1)
     
     return JSONResponse(
