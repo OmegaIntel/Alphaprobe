@@ -1,3 +1,6 @@
+import React from "react";
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
 export interface BaseData {
   type: string;
 }
@@ -220,3 +223,41 @@ export const templates = [
     ],
   },
 ]
+
+
+export const generatePDF = async (filename : string, contentRef : React.RefObject<HTMLDivElement>) => {
+  const content = contentRef.current;
+  
+
+  console.log("contentRef--------------", content)
+  if (!content) return;
+
+  const pdf = new jsPDF({
+    orientation: "p", // Portrait mode
+    unit: "mm",
+    format: "a4",
+    compress: true, // Enable compression for a smaller PDF
+  });
+
+
+
+  if (!content) {
+    console.error("No content found to convert to PDF!");
+    return;
+  }
+
+  // Convert HTML to PDF (without images)
+  pdf.html(content, {
+    callback: (pdf) => {
+      pdf.save("document.pdf");
+    },
+    x: 10, // Left margin
+    y: 10, // Top margin
+    width: 180, // Adjust to fit within A4
+    windowWidth: 700, // Simulates screen width for proper scaling
+  });
+  
+  
+
+
+};

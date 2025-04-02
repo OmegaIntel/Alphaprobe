@@ -1,11 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { remark } from 'remark';
 import html from 'remark-html';
 import { Compatible } from 'vfile';
 import './styles/markdown.css';
 import gfm from 'remark-gfm';
-import { Copy } from 'lucide-react';
+import { Copy, FileUp } from 'lucide-react';
 import CitationSidebar from './CitationSidebar';
+import { generatePDF } from './reportUtils';
 
 type Section = {
   name: string;
@@ -16,12 +17,10 @@ type Section = {
 };
 
 export default function GeneratedResponse({ sections }: { sections: Section[] }) {
-  // Process each section's markdown content into HTML
   const [htmlSections, setHtmlSections] = useState<(Section & { htmlContent: string })[]>([]);
-
-  // Sidebar state: track if the sidebar is open and store the citations for the clicked section
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [currentCitations, setCurrentCitations] = useState<any[]>([]);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   async function markdownToHtml(markdown: Compatible | undefined) {
     try {
@@ -46,6 +45,13 @@ export default function GeneratedResponse({ sections }: { sections: Section[] })
         })
       );
       setHtmlSections(processed);
+      
+      // Update the PDF content ref when sections change
+      if (contentRef.current) {
+        contentRef.current.innerHTML = processed
+          .map(section => section.htmlContent)
+          .join('\n\n');
+      }
     }
     processSections();
   }, [sections]);
@@ -59,7 +65,6 @@ export default function GeneratedResponse({ sections }: { sections: Section[] })
               <button
                 className="p-1 rounded bg-gray-200 text-sm font-medium items-center"
                 onClick={() => {
-                  // Join all the sections' content with two newlines between each
                   const joinedText = htmlSections
                     .map((section) => section.htmlContent)
                     .join("\n\n");
@@ -68,17 +73,25 @@ export default function GeneratedResponse({ sections }: { sections: Section[] })
               >
                 <Copy className="w-4 h-4 text-indigo-600" />
               </button>
+              <button
+                className="p-1 rounded bg-gray-200 text-sm font-medium items-center"
+                onClick={async () => {
+                  if (contentRef.current) {
+                    await generatePDF("new_report", contentRef);
+                  }
+                }}
+              >
+                <FileUp className="w-4 h-4 text-indigo-600" />
+              </button>
             </div>
           )}
         </div>
         <div className="flex flex-wrap content-center items-center gap-[15px] pl-10 pr-10">
-          <div className="w-full whitespace-pre-wrap text-base font-light leading-[152.5%] text-gray-600 log-message">
+          <div ref={contentRef} className="w-full whitespace-pre-wrap text-base font-light leading-[152.5%] text-gray-600 log-message">
             {htmlSections.length > 0 ? (
               htmlSections.map((section, index) => (
                 <div key={index} className="section-wrapper mb-6">
-                  {/* Render the converted markdown content */}
                   <div className="markdown-content" dangerouslySetInnerHTML={{ __html: section.htmlContent }} />
-                  {/* Only show the "Click to view sources" link if there are citations */}
                   {section.citations && section.citations.length > 0 && (
                     <a
                       href="#"
