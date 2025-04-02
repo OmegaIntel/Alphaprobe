@@ -1,4 +1,5 @@
 import os
+import time
 import uuid
 import asyncio
 import operator
@@ -94,24 +95,21 @@ Section Description: {section_topic}
 Relevant Document Excerpts:
 {context}
 Ensure the analysis reflects deep insights into company management, business models, industry standing, financial performance, corporate actions, and news. Leverage the following tags for focus: Investment Research, Target Screening, Corporate Due Diligence, Competitive Research.
-Include the Page number and File name in the citations heading at the each section if it's present in the context. Don't bring redundancy in File name, don't repeat it. Don't Hallucinate the citations if they are not there.
-    """,
+""",
     """You are an expert financial and industry analyst. Draft a very detailed and comprehensive content for the following section of an industry report based on the relevant document excerpts provided. Your content should directly address the data or questions implied by the section and include extended analysis, examples, and additional insights.
 Section Title: {section_title}
 Section Description: {section_topic}
 Relevant Document Excerpts:
 {context}
 Ensure your analysis delves into financial health, key performance ratios, trend analysis, and valuation techniques. Leverage insights from the following tags: Financial Analysis, Ratio and Trend Analysis, Portfolio Monitoring, Valuation.
-Include the Page number and File name in the citations heading at the each section if it's present in the context. Don't bring redundancy in File name, don't repeat it. Don't Hallucinate the citations if they are not there.
-    """,
+""",
     """You are an expert financial and industry analyst. Draft a very detailed and comprehensive content for the following section of an industry report based on the relevant document excerpts provided. Your content should directly address the data or questions implied by the section and include extended analysis, examples, and additional insights.
 Section Title: {section_title}
 Section Description: {section_topic}
 Relevant Document Excerpts:
 {context}
 Ensure your analysis focuses on market size, segmentation, competitive landscape, and trend analysis. Leverage insights from the following tags: Market Research, Business Consulting, Strategy, Marketing.
-Include the Page number and File name in the citations heading at the each section if it's present in the context. Don't bring redundancy in File name, don't repeat it. Don't Hallucinate the citations if they are not there.
-    """
+"""
 ]
 
 # 4. final_section_writer_instructions
@@ -120,17 +118,17 @@ final_section_writer_instructions = [
 Context from Completed Sections:
 {context}
 Generate the final, integrated content for the industry report, ensuring that the comprehensive company profile is clearly outlined with details on management, business models, industry position, financial performance, corporate actions, and news. Factor in the following tags: Investment Research, Target Screening, Corporate Due Diligence, Competitive Research.
-    Don't Hallucinate the citations""",
+""",
     """You are an expert financial and industry analyst. Compile the final sections of the industry report by synthesizing and polishing the content from all completed sections. Produce a comprehensive narrative report of at least 3000 words that includes thorough analysis, detailed examples, and extended insights.
 Context from Completed Sections:
 {context}
 Generate the final, integrated content for the industry report, ensuring that the financial statement analysis is clearly outlined with detailed assessments of financial performance, ratios, trends, and valuation methodologies. Factor in the following tags: Financial Analysis, Ratio and Trend Analysis, Portfolio Monitoring, Valuation.
-    Don't Hallucinate the citations""",
+""",
     """You are an expert financial and industry analyst. Compile the final sections of the industry report by synthesizing and polishing the content from all completed sections. Produce a comprehensive narrative report of at least 3000 words that includes thorough analysis, detailed examples, and extended insights.
 Context from Completed Sections:
 {context}
 Generate the final, integrated content for the industry report, ensuring that the market sizing aspects are clearly delineated with insights on market size, player segmentation, competitive trends, and strategic analysis. Factor in the following tags: Market Research, Business Consulting, Strategy, Marketing.
-    Don't Hallucinate the citations"""
+"""
 ]
 
 # 5. query_prompt_for_iteration (for generating additional queries)
@@ -231,6 +229,7 @@ bedrock_runtime = boto3.client('bedrock-agent-runtime',
     region_name="us-east-1"
 )
 
+EXCEL_BUCKET_NAME = os.getenv("EXCEL_BUCKET_NAME", "kb-bucket-tester")
 BUCKET_NAME = os.getenv("BUCKET_NAME", "deep-research-docs")
 KNOWLEDGE_BASE_ID = os.getenv("KNOWLEDGE_BASE_ID")
 DATA_SOURCE_ID = os.getenv("DATA_SOURCE_ID")
@@ -508,6 +507,43 @@ async def serpapi_search(query: str) -> Any:
     return results
 
 # ------------------------------------------------------------------------
+# S3 HELPERS
+# ------------------------------------------------------------------------
+
+def get_presigned_url_from_source_uri(source_uri: str, expiration: int = 3600) -> str:
+    """
+    Generate a presigned URL from an S3 source_uri.
+    
+    Parameters:
+      - source_uri (str): The S3 URI (e.g. "s3://bucket-name/path/to/object.pdf")
+      - expiration (int): The expiration time of the URL in seconds
+      
+    Returns:
+      - str: The presigned URL.
+    """
+    # Check the format
+    if not source_uri.startswith("s3://"):
+        raise ValueError("source_uri must start with 's3://'")
+    
+    # Remove the "s3://" prefix and split into bucket and key
+    without_prefix = source_uri.replace("s3://", "")
+    parts = without_prefix.split("/", 1)
+    if len(parts) != 2:
+        raise ValueError("Invalid source_uri format. Expected s3://bucket/key")
+    
+    bucket, key = parts
+    try:
+        url = s3_client.generate_presigned_url(
+            "get_object",
+            Params={"Bucket": bucket, "Key": key},
+            ExpiresIn=expiration
+        )
+        return url
+    except Exception as e:
+        print(f"Error generating presigned URL: {e}")
+        return None
+
+# ------------------------------------------------------------------------
 # SCHEMAS
 # ------------------------------------------------------------------------
 class Section(BaseModel):
@@ -515,6 +551,7 @@ class Section(BaseModel):
     description: str = Field(description="Brief overview of the main topics.")
     research: bool = Field(description="Whether we need to query local docs.")
     content: str = Field(description="The content of this section.", default="")
+    citations: List[dict] = Field(default_factory=list, description="List of references/citations used for this section.")
 
 class Sections(BaseModel):
     sections: List[Section] = Field(description="List of sections for the report.")
@@ -535,6 +572,7 @@ class ReportStateInput(TypedDict):
 
 class ReportStateOutput(TypedDict):
     final_report: str
+    sections: List[Section]
 
 class ReportState(TypedDict, total=False):
     topic: str
@@ -674,13 +712,34 @@ def generate_queries(state: SectionState, config: RunnableConfig):
     state.setdefault("previous_queries", []).extend(unique_queries)
     return {"search_queries": unique_queries}
 
+def get_file_name(source_uri: str) -> str:
+    """
+    Extract the file name from an S3 URI or HTTP URL.
+    For S3 URIs (e.g., "s3://bucket-name/path/to/file.pdf"), returns "file.pdf".
+    For HTTP URLs, uses the URL path.
+    """
+    if source_uri.startswith("s3://"):
+        parts = source_uri.split("/")
+        return parts[-1] if parts else source_uri
+    else:
+        from urllib.parse import urlparse
+        parsed = urlparse(source_uri)
+        path = parsed.path
+        return path.split("/")[-1] if path else source_uri
+
 def search_document(state: SectionState, config: RunnableConfig):
     search_queries = state["search_queries"]
     user_id = state["user_id"]
     project_id = state["project_id"]
     results = []
+    
+    # We'll accumulate references from each query here:
+    all_citations = []
+    
     for sq in search_queries:
         resp = query_kb(sq.search_query, KNOWLEDGE_BASE_ID, user_id, project_id, MODEL_ARN)
+        
+        # The textual content you had before
         doc_text = f"Query: {sq.search_query}\nResult: {resp['output']}\n"
         
         # Extract citation info if available
@@ -689,15 +748,50 @@ def search_document(state: SectionState, config: RunnableConfig):
                 metadata = reference.get("metadata", {})
                 page_number = metadata.get("x-amz-bedrock-kb-document-page-number")
                 source_uri = metadata.get("x-amz-bedrock-kb-source-uri")
-                # Extract the file name from the URI (last part after '/')
-                file_name = source_uri.split("/")[-1] if source_uri else None
+                chunk_content = reference.get("content", {})
+                chunk_text = chunk_content.get("text", "")
                 
-                doc_text += f"Page Number: {page_number}\nFile Name: {file_name}\n"
+                # Build a citation entry with the extracted file name for deduplication.
+                citation_entry = {
+                    "query": sq.search_query,
+                    "pageNumber": page_number,
+                    "sourceUri": get_presigned_url_from_source_uri(source_uri),
+                    "chunk_text": chunk_text,
+                    "file_name": get_file_name(source_uri)
+                }
                 
+                # Check if a citation with the same file name and page number is already in the list.
+                exists = False
+                for cit in all_citations:
+                    if citation_entry.get("pageNumber"):
+                        # Document citation: compare file name and page number.
+                        if cit.get("pageNumber") and cit["file_name"] == citation_entry["file_name"] and cit["pageNumber"] == citation_entry["pageNumber"]:
+                            exists = True
+                            break
+                    else:
+                        # Web citation: compare only file name.
+                        if cit["file_name"] == citation_entry["file_name"]:
+                            exists = True
+                            break
+                if not exists:
+                    all_citations.append(citation_entry)
+
         results.append(doc_text)
+    
+    # (Optional) Remove the temporary "file_name" field from each citation before returning.
+    unique_citations = []
+    for cit in all_citations:
+        cit.pop("file_name", None)
+        unique_citations.append(cit)
+    
     combined = "\n".join(results)
-    print(f"[DEBUG] Combined document excerpts for section '{state['section'].name}' with citations.")
-    return {"source_str": combined}
+    print(f"[DEBUG] Combined document excerpts for section '{state['section'].name}' with deduplicated citations based on file name.")
+    
+    # Return both the raw text and the deduplicated citations.
+    return {
+        "source_str": combined,
+        "citations": unique_citations
+    }
 
 def write_section(state: SectionState):
     """
@@ -723,34 +817,46 @@ def write_section(state: SectionState):
     return {"completed_sections": [section]}
 
 async def iterate_section_research(state: SectionState, config: RunnableConfig):
-    """
-    For a given section, perform multiple iterations of query generation and search
-    (document index and web). The accumulated context is then used to draft the final section.
-    """
     section_iterations = config.get("section_iterations", 2)
     accumulated_context = ""
     file_search = state["file_search"]
     web_search = state["web_search"]
     
+    # We'll track all citations across iterations
+    all_citations_for_section = []
+    
     for i in range(section_iterations):
         print(f"[DEBUG] Iteration {i+1} for section '{state['section'].name}'")
         
-        # Generate specialized queries for this section.
+        # 1) Generate specialized queries
         queries_result = generate_queries(state, config)
         state["search_queries"] = queries_result["search_queries"]
         
-        # Document search.
+        # 2) Document search
         if file_search:
             doc_result = search_document(state, config)
+            # Accumulate citations from each iteration
+            all_citations_for_section.extend(doc_result["citations"])
         else:
             doc_result = {"source_str": "Not searching documents for this request"}
         
-        # Web search.
+        # 3) Web search (optional)
         if web_search:
             web_result = await tavily_search(state["section"].name)
+            # You can build citations for web results here if desired
+            # e.g. each item in web_result could be appended to all_citations_for_section
+            for item in web_result:
+                citation_entry = {
+                    "query": state["section"].name,
+                    "title": item.get("title", ""),
+                    "sourceUri": item.get("url", ""),
+                    "chunk_text": item.get("content", "")
+                }
+                all_citations_for_section.append(citation_entry)
         else:
             web_result = "Not searching web for this request"
         
+        # Combine textual results
         if isinstance(web_result, list):
             web_result_str = "\n".join([
                 f"Title: {r['title']}\nURL: {r['url']}\nContent: {r['content']}"
@@ -759,19 +865,25 @@ async def iterate_section_research(state: SectionState, config: RunnableConfig):
         else:
             web_result_str = str(web_result)
         
-        # Combine both search results for this iteration.
         combined_iteration = (
             f"--- Iteration {i+1} ---\n"
             f"Document Results:\n{doc_result['source_str']}\n\n"
             f"Web Results:\n{web_result_str}\n"
         )
-
-        print(f"[DEBUG] The combined answers for the queries for this section's Iteration {i} are:\n{combined_iteration}\n")
+        
         accumulated_context += combined_iteration + "\n"
     
+    # Store the combined context in state
     state["source_str"] = accumulated_context
-    # Now draft the section using the accumulated context.
+    
+    # 4) Draft the final text for this section
     final_output = write_section(state)
+    
+    # 5) Attach the citations to the section object
+    # final_output["completed_sections"] is a list with one item, the updated section
+    completed_section = final_output["completed_sections"][0]
+    completed_section.citations = all_citations_for_section
+    
     return final_output
 
 def gather_completed_sections(state: ReportState):
@@ -804,16 +916,45 @@ def write_final_sections(state: SectionState):
 
 def compile_final_report(state: ReportState):
     """
-    Combine all sections into a single text block for the final output.
+    Combine all sections into a single text block for the final output,
+    and return them in a structured format so the frontend can display references.
     """
-    sections = state["sections"]
-    completed_map = {s.name: s.content for s in state.get("completed_sections", [])}
+    # Convert each section in state["sections"] to a Section object
+    raw_sections = state["sections"]
+    sections = []
+    for s in raw_sections:
+        if isinstance(s, dict):
+            sections.append(Section.parse_obj(s))
+        else:
+            sections.append(s)
+    
+    # Similarly, convert completed_sections to Section objects
+    raw_completed = state.get("completed_sections", [])
+    completed_sections = []
+    for s in raw_completed:
+        if isinstance(s, dict):
+            completed_sections.append(Section.parse_obj(s))
+        else:
+            completed_sections.append(s)
+    
+    # Create a mapping from section name to its corresponding completed section
+    completed_map = {s.name: s for s in completed_sections}
+    print(f"[DEBUG] Completed Map: {completed_map}")
+
+    # Update sections with final content and citations from completed_map
     for s in sections:
         if s.name in completed_map:
-            s.content = completed_map[s.name]
+            s.content = completed_map[s.name].content
+            s.citations = completed_map[s.name].citations
+    
+    # Build the final report by concatenating the content of each section
     final_report_text = "\n\n".join([sec.content for sec in sections])
     print(f"[DEBUG] Compiled final report")
-    return {"final_report": final_report_text}
+    
+    return {
+        "final_report": final_report_text,
+        "sections": [s.dict() for s in sections]  # Convert Pydantic models to dict for output
+    }
 
 # ------------------------------------------------------------------------
 # BUILD THE MAIN GRAPH
@@ -925,23 +1066,44 @@ async def deep_research_tool(query: InstructionRequest, current_user=Depends(get
     
     print(f"user-email-------------------------------", current_user)
     # Step 4: Prepare your input state.
-    input_data = {"topic": query.instruction, "user_id": user_id, "report_type":int(query.report_type), "file_search": query.file_search, "web_search": query.web_search, "project_id": query.temp_project_id}
-    
+    input_data = {
+        "topic": query.instruction,
+        "user_id": user_id,
+        "report_type": int(query.report_type),
+        "file_search": query.file_search,
+        "web_search": query.web_search,
+        "project_id": query.temp_project_id
+    }
+
     # Step 5: Invoke the state graph.
+    input_data = {
+        "topic": query.instruction,
+        "user_id": user_id,
+        "report_type": int(query.report_type),
+        "file_search": query.file_search,
+        "web_search": query.web_search,
+        "project_id": query.project_id
+    }
+    
     result = await document_graph.ainvoke(input_data)
     
     if result is None:
         print("[ERROR] The state graph returned None. Check the graph flow and node return values.")
+        return JSONResponse(content={"message": "No data returned"}, status_code=500)
     else:
         final_report = result.get("final_report", "")
+        sections = result.get("sections", [])
         report = ReportTable(project_id=project.id, query=query.instruction, response=final_report)
         db.add(report)
         db.commit()
+        # 'sections' will have the references
+        sections = result.get("sections", [])
         return JSONResponse(
         content={
             "message": "Research generated successfully",
             "data": {
                 "report":final_report,
+                "sections": sections,
                 "project": {
                     "id": str(project.id),
                     "name": project.name,
@@ -954,8 +1116,6 @@ async def deep_research_tool(query: InstructionRequest, current_user=Depends(get
         },
         status_code=200
     )
-
-
 
 @research_deep_router.post("/api/deep-researcher-langgraph/update")
 async def deep_research_tool_update(query: InstructionRequest, current_user=Depends(get_current_user), db: Session = Depends(get_db)):
@@ -971,14 +1131,14 @@ async def deep_research_tool_update(query: InstructionRequest, current_user=Depe
     # Step 4: Prepare your input state.
     input_data = {"topic": query.instruction, "user_id": user_id, "report_type":int(query.report_type), "file_search": query.file_search, "web_search": query.web_search, "project_id": query.temp_project_id}
     
-    # Step 5: Invoke the state graph.
     result = await document_graph.ainvoke(input_data)
     
     if result is None:
         print("[ERROR] The state graph returned None. Check the graph flow and node return values.")
+        return JSONResponse(content={"message": "No data returned"}, status_code=500)
     else:
         final_report = result.get("final_report", "")
-        
+        sections = result.get("sections", [])
         report = ReportTable(project_id=query.project_id, query=query.instruction, response=final_report)
         db.add(report)
         db.commit()
@@ -1003,6 +1163,7 @@ async def deep_research_tool_update(query: InstructionRequest, current_user=Depe
             "message": "Research generated successfully",
             "data": {
                 "report":final_report,
+                "sections": sections,
                 "project": {
                     "id": str(project.id),
                     "name": project.name,
@@ -1022,18 +1183,29 @@ class UploadRequest(BaseModel):
     temp_project_id:str
 
 @research_deep_router.post("/api/upload-deep-research")
-async def upload_files(files: List[UploadFile] = File(...), temp_project_id: str = Form(...), current_user=Depends(get_current_user)):
+async def upload_files(
+    files: List[UploadFile] = File(...), 
+    temp_project_id: str = Form(...), 
+    current_user=Depends(get_current_user)
+):
     user_id = current_user.id
-
     results = []
     
     for file in files:
+        # Determine the target bucket based on file type.
+        # If Excel file, use EXCEL_BUCKET_NAME; otherwise, use the default BUCKET_NAME.
+        if file.filename.lower().endswith(('.xls', '.xlsx')):
+            target_bucket = EXCEL_BUCKET_NAME
+        else:
+            target_bucket = BUCKET_NAME
+
         key = f"{user_id}/{temp_project_id}/{file.filename}"
+        
         try:
             # Upload the file to S3 with metadata
             s3_client.upload_fileobj(
                 file.file, 
-                BUCKET_NAME, 
+                target_bucket, 
                 key, 
                 ExtraArgs={"Metadata": {"user_id": str(user_id)}}
             )
@@ -1048,9 +1220,9 @@ async def upload_files(files: List[UploadFile] = File(...), temp_project_id: str
             metadata_content = json.dumps(metadata_dict)
             metadata_key = f"{key}.metadata.json"
             
-            # Upload the metadata file
+            # Upload the metadata file to the same bucket
             s3_client.put_object(
-                Bucket=BUCKET_NAME,
+                Bucket=target_bucket,
                 Key=metadata_key,
                 Body=metadata_content,
                 ContentType='application/json'
@@ -1058,7 +1230,7 @@ async def upload_files(files: List[UploadFile] = File(...), temp_project_id: str
         except botocore.exceptions.ClientError as e:
             raise HTTPException(status_code=500, detail=f"Upload to S3 failed for file: {file.filename}")
 
-        results.append({"file_name": file.filename, "file_path": key})
+        results.append({"file_name": file.filename, "file_path": key, "bucket": target_bucket})
 
         # Retry ingestion job up to 3 times if it fails
         max_retries = 3  
@@ -1079,7 +1251,6 @@ async def upload_files(files: List[UploadFile] = File(...), temp_project_id: str
                     print(f"Max retries reached for key: {key}. Moving on to next file.")
                 else:
                     # Wait for a short period before retrying.
-                    import time
                     time.sleep(1)
     
     return JSONResponse(
@@ -1089,8 +1260,6 @@ async def upload_files(files: List[UploadFile] = File(...), temp_project_id: str
         },
         status_code=200
     )
-
-
 
 @research_deep_router.get("/api/project-list")
 def get_all_projects_sorted_by_updated_at(current_user=Depends(get_current_user), db: Session = Depends(get_db)):
@@ -1128,7 +1297,6 @@ def get_all_projects_sorted_by_updated_at(current_user=Depends(get_current_user)
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
-
 
 @research_deep_router.get("/api/project/{project_id}/reports")
 def get_reports_sorted_by_updated_at(project_id: str, current_user=Depends(get_current_user), db: Session = Depends(get_db)):

@@ -1,5 +1,13 @@
 import { fetcher, fileFetcher } from '~/services/HTTPS';
 
+type Section = {
+  name: string;
+  description: string;
+  research: boolean;
+  content: string;
+  citations: any[];
+};
+
 const templateCode = {
   'market-sizing': 2,
   'company-profile': 0,
@@ -29,12 +37,12 @@ export const createGetDocumentReport = async ({
   web_search: boolean;
   file_search: boolean;
   templateId: string;
+  projectId?: string;
   temp_project_id: string;
   uploaded_files: any[]
 }): Promise<any> => {
   try {
-    // const headingTemp = templateHeading.find((heading) => heading.templateId === templateId)
-    const tempNum  =  getThetempId(templateId);
+    const tempNum = getThetempId(templateId);
     const config: RequestInit = {
       method: 'POST',
       body: JSON.stringify({
@@ -59,10 +67,10 @@ export const createGetDocumentReport = async ({
 
     const res = await fetcher('/api/deep-researcher-langgraph/create', config);
     console.log('reports--------------------', res.data);
-    return res.data as string;
+    return res.data;
   } catch (error) {
     console.error(error);
-    return error as string;
+    throw error; // or return [] if you prefer
   }
 };
 
@@ -81,11 +89,10 @@ export const updateGetDocumentReport = async ({
   templateId: string;
   projectId: string;
   temp_project_id: string;
-  uploaded_files: any[]
+  uploaded_files: any[];
 }): Promise<any> => {
   try {
-    // const headingTemp = templateHeading.find((heading) => heading.templateId === templateId)
-    const tempNum  =  getThetempId(templateId);
+    const tempNum = getThetempId(templateId);
     const config: RequestInit = {
       method: 'POST',
       body: JSON.stringify({
@@ -108,14 +115,15 @@ export const updateGetDocumentReport = async ({
       }),
     };
 
-    const res = await fetcher('/api/deep-researcher-langgraph/update', config);
+    const res = await fetcher('/api/deep-researcher-langgraph', config);
     console.log('reports--------------------', res.data);
-    return res.data as string;
+    return res.data;
   } catch (error) {
     console.error(error);
-    return error as string;
+    throw error; // or return [] if you prefer
   }
 };
+
 
 export interface UploadFile{
     files: File[];

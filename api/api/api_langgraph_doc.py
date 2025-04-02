@@ -45,6 +45,131 @@ from db_models.opensearch_llamaindex import (
 
 nest_asyncio.apply()
 
+# ------------------------------------------------------------------------
+# Knowledge-base implementation
+# ------------------------------------------------------------------------
+import boto3
+
+s3_client = boto3.client(
+    "s3",
+    aws_access_key_id="AKIA5FTZD4AADPXMJD7C",
+    aws_secret_access_key="k1OveeJ7XKxO1PExUSTk/NulLMWkFjYwlXGrmQR/",
+    region_name="us-east-1"  # Change to your AWS region
+)
+
+bedrock_client = boto3.client('bedrock-agent',
+    aws_access_key_id="AKIA5FTZD4AADPXMJD7C",
+    aws_secret_access_key="k1OveeJ7XKxO1PExUSTk/NulLMWkFjYwlXGrmQR/",
+    region_name="us-east-1"
+)  # for control-plane ops like ingestion
+
+bedrock_runtime = boto3.client('bedrock-agent-runtime',
+    aws_access_key_id="AKIA5FTZD4AADPXMJD7C",
+    aws_secret_access_key="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",
+    region_name="us-east-1"
+)
+
+BUCKET_NAME = os.getenv("BUCKET_NAME", "deep-research-docs")
+KNOWLEDGE_BASE_ID = os.getenv("KNOWLEDGE_BASE_ID")
+DATA_SOURCE_ID = os.getenv("DATA_SOURCE_ID")
+MODEL_ARN = os.getenv("MODEL_ARN")
+
+generationPrompt="""
+You are an intelligent assistant tasked with organizing and prioritizing search results for a user query. 
+Analyze the following search results and rank them based on relevance to the user's question. 
+If any results are irrelevant or redundant, exclude them.
+
+User Query: $query$
+
+Search Results:
+$search_results$
+
+Instructions:
+1. Rank the search results by relevance to the user's query.
+2. Remove any duplicate or irrelevant results.
+3. Summarize the key points from the top results.
+
+current time $current_time$
+
+Output the organized and prioritized results in a structured format."""
+
+orchestrationPrompt="""
+You are a knowledgeable assistant with access to a comprehensive knowledge base. 
+Use the following organized search results to answer the user's question. 
+If the search results do not contain enough information, say "I don't know."
+
+User Query: $query$
+
+Instructions:
+1. Provide a clear and concise answer to the user's question.
+2. Use only the information from the search results.
+3. If the search results are insufficient, say "I don't know."
+4. Format the response in a professional and easy-to-read manner.
+
+Underlying instructions for formatting the response generation and citations. $output_format_instructions$
+
+Here is the conversation history $conversation_history$
+
+current time - $current_time$
+
+Answer:"""
+
+def query_kb(input, kbId, user_id, project_id, modelId=None): 
+    vector_search_config = {'numberOfResults': 5}
+    filters = []
+
+    if user_id:
+        filters.append({
+            "equals": {
+                "key": "user_id",
+                "value": str(user_id)
+            }
+        })
+
+    # Only add a project_id filter if it's not "none"
+    if project_id and project_id != "none":
+        filters.append({
+            "equals": {
+                "key": "project_id",
+                "value": project_id
+            }
+        })
+
+    # Combine filters if necessary using "andAll"
+    if filters:
+        if len(filters) == 1:
+            vector_search_config['filter'] = filters[0]
+        else:
+            vector_search_config['filter'] = {"andAll": filters}
+
+    response = bedrock_runtime.retrieve_and_generate(
+        input={
+            'text': input
+        },
+        retrieveAndGenerateConfiguration={
+            'knowledgeBaseConfiguration': {
+                'generationConfiguration': {
+                    'promptTemplate': {
+                        'textPromptTemplate': generationPrompt
+                    }
+                },
+                'orchestrationConfiguration': {
+                    'queryTransformationConfiguration': {
+                        'type': 'QUERY_DECOMPOSITION'  # Allowed enum value.
+                    }
+                },
+                'knowledgeBaseId': kbId,
+                'modelArn': modelId,
+                'retrievalConfiguration': {
+                    'vectorSearchConfiguration': vector_search_config
+                }
+            },
+            'type': 'KNOWLEDGE_BASE'
+        }
+    )
+
+    return response
+
 # ------------------------ Configuration ------------------------
 DEFAULT_REPORT_STRUCTURE = """The report structure should focus on providing a comprehensive breakdown of the user-provided topic. Ensure sections are logically structured, with research-driven insights where applicable.
 
@@ -165,18 +290,92 @@ def setup_models():
     print("[DEBUG] Exiting setup_models")
 
 # ------------------------------------------------------------------------
+# Web Search Function (using Tavily API and SerpAPI as an example)
+# ------------------------------------------------------------------------
+TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
+SERPAPI_API_KEY = os.getenv("SERPAPI_API_KEY")
+
+async def tavily_search(query: str) -> Any:
+    """
+    Perform a web search using the Tavily API.
+    Returns a list of results.
+    """
+    import requests, time  # local import for async context
+    print(f"[DEBUG] Starting Tavily search for query: {query}")
+    api_url = "https://api.tavily.com/search"
+    headers = {"Authorization": f"Bearer {TAVILY_API_KEY}", "Content-Type": "application/json"}
+    payload = {"query": query, "max_results": 5, "include_raw_content": True}
+    results = []
+    for attempt in range(3):
+        print(f"[DEBUG] Tavily search attempt {attempt+1}")
+        try:
+            response = requests.post(api_url, json=payload, headers=headers, timeout=10)
+            if response.status_code == 200:
+                data = response.json()
+                for item in data.get("results", []):
+                    results.append({
+                        "title": item.get("title", ""),
+                        "url": item.get("url", ""),
+                        "content": item.get("content", "")
+                    })
+                break
+        except Exception as e:
+            print(f"[DEBUG] Tavily search attempt {attempt+1} failed with error: {e}")
+            if attempt < 2:
+                time.sleep(2)
+    print(f"[DEBUG] Tavily search completed with {len(results)} results")
+    return results
+
+async def serpapi_search(query: str) -> Any:
+    import requests, time  # local import for async context
+    print(f"[DEBUG] Starting SerpAPI search for query: {query}")
+    api_url = "https://serpapi.com/search"
+    params = {
+        "q": query,
+        "api_key": SERPAPI_API_KEY,
+        "engine": "google",
+        "num": 5,        # Number of results to return
+        "hl": "en"       # Language (optional)
+    }
+    results = []
+    for attempt in range(3):
+        print(f"[DEBUG] SerpAPI search attempt {attempt+1}")
+        try:
+            response = requests.get(api_url, params=params, timeout=10)
+            if response.status_code == 200:
+                data = response.json()
+                organic_results = data.get("organic_results", [])
+                for item in organic_results:
+                    results.append({
+                        "title": item.get("title", ""),
+                        "url": item.get("link", ""),
+                        "content": item.get("snippet", "")
+                    })
+                break
+        except Exception as e:
+            print(f"[DEBUG] SerpAPI search attempt {attempt+1} failed with error: {e}")
+            if attempt < 2:
+                time.sleep(2)
+    print(f"[DEBUG] SerpAPI search completed with {len(results)} results")
+    return results
+
+# ------------------------------------------------------------------------
 # SCHEMAS
 # ------------------------------------------------------------------------
 class ReportStateInput(TypedDict):
     topic: str  # e.g. "Financial due diligence for Company X"
     headings: List[str]
     index: str
+    user_id: str
+    project_id: str
 
 class ReportStateOutput(TypedDict):
     report: str
 
 class ReportState(TypedDict):
     topic: str
+    user_id: str
+    project_id: str
     headings: List[str]
     index: str
     outline: str
@@ -184,6 +383,13 @@ class ReportState(TypedDict):
     answers: List[Tuple[str, str]]
     previous_questions: List[Tuple[str, str]]
     report: str
+
+class InstructionRequest(BaseModel):
+    query: str
+    report_type: int
+    file_search:bool
+    web_search:bool
+    project_id: str
 
 # ------------------------------------------------------------------------
 # GRAPH NODES
@@ -253,39 +459,64 @@ async def answer_questions(state: ReportState, config: RunnableConfig):
     print("[DEBUG] Entering answer_questions with state:", state)
     questions = state["questions"]
     index = state["index"]
+    user_id = state["user_id"]
+    project_id = state["project_id"]
 
     answers = []
 
     for question in questions:
         question = question.strip()
         print(f"\n[answer_questions] Received question:\n'{question}'")
-        # >>>>>>>>>>>>> ADDITIONAL LOG HERE <<<<<<<<<<<
         print(f"[answer_questions] Querying index: {index}")
 
-        # Retrieve context from OpenSearch (in a thread, so it won't block the event loop)
-        answer_context = await asyncio.to_thread(query_index, question, index, 5)
-        if not answer_context:
-            answer_context = "Empty Response"
-        print(f"[answer_questions] Context for '{question}':\n", answer_context)
+        # Retrieve document search context (if enabled)
+        file_context = ""
+        if state.get("file_search"):
+            file_context_data = query_kb(question, KNOWLEDGE_BASE_ID, user_id, project_id, MODEL_ARN)
+            if file_context_data and "output" in file_context_data:
+                file_context = file_context_data["output"]
+            else:
+                file_context = "Empty Document Response"
+            print(f"[answer_questions] Document context for '{question}':\n", file_context)
+
+        # Retrieve web search context (if enabled)
+        web_context = ""
+        if state.get("web_search"):
+            web_results = await tavily_search(question)
+            if web_results:
+                # Combine each result's title, URL, and content
+                web_context = "\n\n".join([
+                    f"Title: {r['title']}\nURL: {r['url']}\nContent: {r['content']}"
+                    for r in web_results
+                ])
+            else:
+                web_context = "Empty Web Response"
+            print(f"[answer_questions] Web context for '{question}':\n", web_context)
+
+        # Combine contexts from document and web searches
+        combined_context = (file_context + "\n\n" + web_context).strip()
+        if not combined_context:
+            combined_context = "Empty Response"
+        print(f"[answer_questions] Combined context for '{question}':\n", combined_context)
 
         prompt = f"""
-    You are a market research analyst. You must answer the following question using ONLY the text from this context:
-    {answer_context}
+You are a market research analyst. You must answer the following question using ONLY the text from this context:
+{combined_context}
 
-    Question: {question}
+Question: {question}
 
-    If the context does not have enough info, respond with:
-    'MISSING INFORMATION: The provided context does not contain details to answer this question.'
+If the context does not have enough info, respond with:
+'MISSING INFORMATION: The provided context does not contain details to answer this question.'
 
-    Answer:
-    """
+Answer:
+"""
         print("\n[answer_questions] LLM Prompt:\n", prompt)
         response = await Settings.llm.acomplete(prompt)
         answer_text = response.text if hasattr(response, "text") else str(response)
 
         print(f"[answer_questions] Answer for '{question}':\n", answer_text)
 
-        # Store the result in context
+        # Store the result
         answers.append((question, answer_text))
         print(f"[DEBUG] Answer appended for question: '{question}'")
     
@@ -397,11 +628,11 @@ def validate_input_state(input_state: dict) -> ReportStateInput:
     
     return input_state  # Now it's guaranteed to match ReportStateInput
 
-async def generate_structured_report(query: dict, user_id: str, deal_id: str):
-    print("[DEBUG] Entering generate_structured_report with query:", query, "user_id:", user_id, "deal_id:", deal_id)
+async def generate_structured_report(query: InstructionRequest, user_id: str, project_id: str):
+    print("[DEBUG] Entering generate_structured_report with query:", query, "user_id:", user_id, "project_id:", project_id)
     try:
         setup_models()
-        index_name = f"d{deal_id}".lower()
+        index_name = f"d{project_id}".lower()
         print(f"[generate_structured_report] Using index name: {index_name}")
 
         document_graph = build_document_graph()
@@ -412,6 +643,8 @@ async def generate_structured_report(query: dict, user_id: str, deal_id: str):
             "topic": query.get("query", ""),
             "headings": query.get("headings", []),
             "index": index_name,
+            "user_id": user_id,
+            "project_id": project_id,
             "previous_questions": [],
             "outline": "",
             "questions": [],
@@ -448,8 +681,7 @@ langgraph_router = APIRouter()
 
 @langgraph_router.post("/api/lang-report")
 async def generate_report(
-    query: Dict,
-    deal_id: str = Query(..., description="Unique ID of the existing deal"),
+    query: InstructionRequest,
     current_user: UserModelSerializer = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
@@ -458,18 +690,18 @@ async def generate_report(
 
     try:
         print(f"[generate_report] Step 1: Received query: {query}")
-        print(f"[generate_report] Step 2: Received deal_id: {deal_id}")
+        print(f"[generate_report] Step 2: Received project_id: {query.project_id}")
         print("[generate_report] Step 3: Validating deal ID and user...")
 
-        deal = db.query(Deal).filter(Deal.id == deal_id, Deal.user_id == user_id).first()
+        deal = db.query(Deal).filter(Deal.id == query.project_id, Deal.user_id == user_id).first()
         if not deal:
-            print(f"[generate_report] Deal validation failed for deal_id: {deal_id}")
+            print(f"[generate_report] Deal validation failed for project_id: {query.project_id}")
             raise HTTPException(status_code=404, detail="Deal not found or access denied.")
         
         print("[generate_report] Step 4: Deal validation successful.")
         print("[generate_report] Step 5: Generating structured report...")
 
-        report_content = await generate_structured_report(query, user_id, deal_id)
+        report_content = await generate_structured_report(query, user_id, query.project_id)
         if not report_content:
             print("[generate_report] Step 5.1: Report generation failed.")
             raise HTTPException(status_code=404, detail="Failed to generate report.")
@@ -478,7 +710,7 @@ async def generate_report(
         print("[generate_report] Step 7: Saving report to database...")
         try:
             new_report = Report(
-                deal_id=deal_id,
+                project_id=query.project_id,
                 report_data=json.dumps(report_content)
             )
             db.add(new_report)
@@ -494,7 +726,7 @@ async def generate_report(
         return JSONResponse(
             content={
                 "message": "Report generated and saved successfully",
-                "deal_id": str(deal_id),
+                "project_id": str(query.project_id),
                 "report_id": str(new_report.id),
                 "report": report_content.get("report", ""),
             },
