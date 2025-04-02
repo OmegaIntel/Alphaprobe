@@ -1074,6 +1074,15 @@ async def deep_research_tool(query: InstructionRequest, current_user=Depends(get
     }
 
     # Step 5: Invoke the state graph.
+    input_data = {
+        "topic": query.instruction,
+        "user_id": user_id,
+        "report_type": int(query.report_type),
+        "file_search": query.file_search,
+        "web_search": query.web_search,
+        "project_id": query.project_id
+    }
+    
     result = await document_graph.ainvoke(input_data)
     
     if result is None:
@@ -1085,6 +1094,8 @@ async def deep_research_tool(query: InstructionRequest, current_user=Depends(get
         report = ReportTable(project_id=project.id, query=query.instruction, response=final_report)
         db.add(report)
         db.commit()
+        # 'sections' will have the references
+        sections = result.get("sections", [])
         return JSONResponse(
         content={
             "message": "Research generated successfully",
@@ -1118,14 +1129,14 @@ async def deep_research_tool_update(query: InstructionRequest, current_user=Depe
     # Step 4: Prepare your input state.
     input_data = {"topic": query.instruction, "user_id": user_id, "report_type":int(query.report_type), "file_search": query.file_search, "web_search": query.web_search, "project_id": query.temp_project_id}
     
-    # Step 5: Invoke the state graph.
     result = await document_graph.ainvoke(input_data)
     
     if result is None:
         print("[ERROR] The state graph returned None. Check the graph flow and node return values.")
+        return JSONResponse(content={"message": "No data returned"}, status_code=500)
     else:
         final_report = result.get("final_report", "")
-        
+        sections = result.get("sections", [])
         report = ReportTable(project_id=query.project_id, query=query.instruction, response=final_report)
         db.add(report)
         db.commit()
@@ -1150,6 +1161,7 @@ async def deep_research_tool_update(query: InstructionRequest, current_user=Depe
             "message": "Research generated successfully",
             "data": {
                 "report":final_report,
+                "sections": sections,
                 "project": {
                     "id": str(project.id),
                     "name": project.name,

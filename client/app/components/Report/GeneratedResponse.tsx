@@ -4,7 +4,7 @@ import html from 'remark-html';
 import { Compatible } from 'vfile';
 import './styles/markdown.css';
 import gfm from 'remark-gfm';
-import { Copy, FileUp } from 'lucide-react';
+import { Copy } from 'lucide-react';
 import CitationSidebar from './CitationSidebar';
 
 type Section = {

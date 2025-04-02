@@ -42,8 +42,7 @@ export const createGetDocumentReport = async ({
   uploaded_files: any[]
 }): Promise<any> => {
   try {
-    // const headingTemp = templateHeading.find((heading) => heading.templateId === templateId)
-    const tempNum  =  getThetempId(templateId);
+    const tempNum = getThetempId(templateId);
     const config: RequestInit = {
       method: 'POST',
       body: JSON.stringify({
@@ -71,7 +70,7 @@ export const createGetDocumentReport = async ({
     return res.data;
   } catch (error) {
     console.error(error);
-    return error as string;
+    throw error; // or return [] if you prefer
   }
 };
 
