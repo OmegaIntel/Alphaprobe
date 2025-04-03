@@ -1,15 +1,8 @@
 import React from 'react';
 import Query from './Query';
-import SubQuestions from './SubQuestions';
-import AgentLogs from './AgentLog';
-import { preprocessOrderedData, Data } from './reportUtils';
+import { ConversationData } from './reportUtils';
 import GeneratedResponse from './GeneratedResponse';
 
-type ConversationData = {
-  query: string;
-  res: string;
-  res_id?: string;
-};
 
 interface ReportBlockProps {
   orderedData: ConversationData[];
@@ -25,7 +18,7 @@ const ReportBlock: React.FC<ReportBlockProps> = ({
         return (
           <>
             {data.query && <Query key={index} question={data.query} />}
-            {data.res && <GeneratedResponse key={index} response={data.res} />}
+            {data.res && <GeneratedResponse key={index} sections={data.sections} response={data.res} researchType={data.researchType} />}
           </>
         );
       })}

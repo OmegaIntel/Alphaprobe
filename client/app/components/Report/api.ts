@@ -1,4 +1,6 @@
 import { fetcher, fileFetcher } from '~/services/HTTPS';
+import { researchType, Section, ConversationData } from './reportUtils';
+
 
 const templateCode = {
   'market-sizing': 2,
@@ -23,18 +25,20 @@ export const createGetDocumentReport = async ({
   file_search,
   templateId,
   temp_project_id,
-  uploaded_files
+  uploaded_files,
+  researchType
 }: {
   promptValue: string;
   web_search: boolean;
   file_search: boolean;
   templateId: string;
+  projectId?: string;
   temp_project_id: string;
-  uploaded_files: any[]
+  uploaded_files: any[];
+  researchType: researchType;
 }): Promise<any> => {
   try {
-    // const headingTemp = templateHeading.find((heading) => heading.templateId === templateId)
-    const tempNum  =  getThetempId(templateId);
+    const tempNum = getThetempId(templateId);
     const config: RequestInit = {
       method: 'POST',
       body: JSON.stringify({
@@ -48,7 +52,8 @@ export const createGetDocumentReport = async ({
         report_type: tempNum,
         project_id: '',
         temp_project_id: temp_project_id,
-        uploaded_files: uploaded_files
+        uploaded_files: uploaded_files,
+        researchType: researchType
         // text: title,
         // headings: headingTemp?.heading,
         // max_depth: 3,
@@ -59,10 +64,10 @@ export const createGetDocumentReport = async ({
 
     const res = await fetcher('/api/deep-researcher-langgraph/create', config);
     console.log('reports--------------------', res.data);
-    return res.data as string;
+    return res.data;
   } catch (error) {
     console.error(error);
-    return error as string;
+    throw error; // or return [] if you prefer
   }
 };
 
@@ -73,7 +78,8 @@ export const updateGetDocumentReport = async ({
   templateId,
   projectId,
   temp_project_id,
-  uploaded_files
+  uploaded_files,
+  researchType
 }: {
   promptValue: string;
   web_search: boolean;
@@ -81,11 +87,11 @@ export const updateGetDocumentReport = async ({
   templateId: string;
   projectId: string;
   temp_project_id: string;
-  uploaded_files: any[]
+  uploaded_files: any[];
+  researchType: researchType;
 }): Promise<any> => {
   try {
-    // const headingTemp = templateHeading.find((heading) => heading.templateId === templateId)
-    const tempNum  =  getThetempId(templateId);
+    const tempNum = getThetempId(templateId);
     const config: RequestInit = {
       method: 'POST',
       body: JSON.stringify({
@@ -99,7 +105,8 @@ export const updateGetDocumentReport = async ({
         report_type: tempNum,
         project_id: projectId,
         temp_project_id: temp_project_id ,
-        uploaded_files: uploaded_files
+        uploaded_files: uploaded_files,
+        researchType: researchType
         // text: title,
         // headings: headingTemp?.heading,
         // max_depth: 3, 
@@ -108,14 +115,15 @@ export const updateGetDocumentReport = async ({
       }),
     };
 
-    const res = await fetcher('/api/deep-researcher-langgraph/update', config);
+    const res = await fetcher('/api/deep-researcher-langgraph', config);
     console.log('reports--------------------', res.data);
-    return res.data as string;
+    return res.data;
   } catch (error) {
     console.error(error);
-    return error as string;
+    throw error; // or return [] if you prefer
   }
 };
+
 
 export interface UploadFile{
     files: File[];
@@ -155,6 +163,8 @@ export interface ReportList {
   query: string;
   response:string;
   updated_at: string;
+  sections: Section[]
+  research: researchType;
 }
 export const getReports = async (project_id : string): Promise<ReportList[]> =>{
   try {

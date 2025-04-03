@@ -10,6 +10,7 @@ import { chatSlice } from "./slices/chatSlice";
 import customReport from "./slices/customReport"
 import sidebarReducer from './slices/sideBar'
 import projectReducer from './slices/projectSlice';
+import userReducer from './slices/userSlice'
 
 const store = configureStore({
   reducer: {
@@ -24,7 +25,8 @@ const store = configureStore({
     customReport: customReport,
     chat: chatSlice.reducer,
     sidebar: sidebarReducer,
-    project: projectReducer
+    project: projectReducer,
+    user: userReducer
   },
 });
 

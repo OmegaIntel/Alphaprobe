@@ -3,23 +3,31 @@ import InputComponent from '../InputBar/InputComponent';
 import { useForm, Controller } from 'react-hook-form';
 import * as RadioGroup from '@radix-ui/react-radio-group';
 import * as Switch from '@radix-ui/react-switch';
-import { Globe, FileSearch, GalleryVerticalEnd } from 'lucide-react';
+import {
+  Globe,
+  FileSearch,
+  GalleryVerticalEnd,
+  Timer,
+  CircleCheck,
+  CheckCircle,
+} from 'lucide-react';
 import clsx from 'clsx';
-import { templates } from '../reportUtils';
+import { researchType, templates } from '../reportUtils';
 import FileUpload from './FileUpload';
-import { v4 as uuidv4 } from "uuid";
-import { InitialFormData, ReportType } from '../reportUtils';
+import { v4 as uuidv4 } from 'uuid';
+import {
+  InitialFormData,
+  ReportType,
+  researchTypeOptions,
+} from '../reportUtils';
 import { getUniqueID } from '~/lib/utils';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '~/store/store';
 
-
 type UploadedDOC = {
-  file_name:string;
+  file_name: string;
   file_path: string;
-}
-
-
+};
 
 type THeroProps = {
   promptValue: string;
@@ -40,17 +48,17 @@ const InitialPage: FC<THeroProps> = ({
       preferences: { web: true, file: false },
       uploadedDocuments: [],
       promptValue: '',
-      temp_project_id: tempProjectID
+      temp_project_id: tempProjectID,
+      researchType: 'research',
     },
   });
 
-  const generateReport : { project_id: string} = {
-     project_id : '', 
-  }
-  
+  const generateReport: { project_id: string } = {
+    project_id: '',
+  };
+
   //@ts-ignore
   globalThis.reportGeneration = generateReport;
-  
 
   const formWatch = watch();
 
@@ -68,14 +76,14 @@ const InitialPage: FC<THeroProps> = ({
   const handleClickSuggestion = (value: string) => {
     setPromptValue(value);
   };
-  
-  const setUploadedDocuments = (files: UploadedDOC[]) =>{
-        setValue('uploadedDocuments', files)
-  }
+
+  const setUploadedDocuments = (files: UploadedDOC[]) => {
+    setValue('uploadedDocuments', files);
+  };
   //const removeFile = (fileName: string) => {
-    // let files = formWatch.uploadedDocuments;
-    // let newFiles = files.filter((file) => file.name !== fileName);
-    // setValue('uploadedDocuments', newFiles);
+  // let files = formWatch.uploadedDocuments;
+  // let newFiles = files.filter((file) => file.name !== fileName);
+  // setValue('uploadedDocuments', newFiles);
   //};
 
   return (
@@ -177,10 +185,53 @@ const InitialPage: FC<THeroProps> = ({
                 </label>
                 {field.value && (
                   <div className="mt-3">
-                    <FileUpload temp_project_id={formWatch.temp_project_id} setUploadedDocuments={setUploadedDocuments}  />
+                    <FileUpload
+                      temp_project_id={formWatch.temp_project_id}
+                      setUploadedDocuments={setUploadedDocuments}
+                    />
                   </div>
                 )}
               </div>
+            )}
+          />
+
+          <Controller
+            name="researchType"
+            control={control}
+            render={({ field }) => (
+              <RadioGroup.Root
+                className="flex gap-4"
+                {...field}
+                onValueChange={(value) => field.onChange(value as researchType)}
+              >
+                {researchTypeOptions.map((option) => (
+                  <label
+                    key={option.id}
+                    className={clsx(
+                      'cursor-pointer border p-[2px] w-36 rounded-full flex',
+                      formWatch.researchType === option.value
+                        ? 'border-green-500 bg-green-50'
+                        : 'border-gray-300 bg-white'
+                    )}
+                  >
+                    <RadioGroup.Item className="hidden" value={option.value} />
+                    <CircleCheck
+                      className={`w-8 h-8 ${
+                        formWatch.researchType === option.value
+                          ? 'text-green-300'
+                          : 'text-gray-300'
+                      }`}
+                    />
+                    <div className="flex flex-col ml-1">
+                      <h3 className="text-xs font-semibold">{option.label}</h3>
+                      <p className="flex items-center text-xs text-gray-400">
+                        <Timer className="w-3 h-3 mr-1" />
+                        {option.timeDurations}
+                      </p>
+                    </div>
+                  </label>
+                ))}
+              </RadioGroup.Root>
             )}
           />
         </div>
@@ -199,6 +250,7 @@ const InitialPage: FC<THeroProps> = ({
                 reportType: formWatch.reportType,
                 preferences: formWatch.preferences,
                 uploadedDocuments: formWatch.uploadedDocuments,
+                researchType: formWatch.researchType
               };
               localStorage.setItem('promtPreferance', JSON.stringify(newData));
             }}
