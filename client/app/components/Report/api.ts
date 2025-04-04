@@ -1,5 +1,5 @@
 import { fetcher, fileFetcher } from '~/services/HTTPS';
-import { researchType, Section, ConversationData } from './reportUtils';
+import { ResearchType, Section, ConversationData } from './reportUtils';
 
 
 const templateCode = {
@@ -35,7 +35,7 @@ export const createGetDocumentReport = async ({
   projectId?: string;
   temp_project_id: string;
   uploaded_files: any[];
-  researchType: researchType;
+  researchType: ResearchType;
 }): Promise<any> => {
   try {
     const tempNum = getThetempId(templateId);
@@ -60,7 +60,7 @@ export const createGetDocumentReport = async ({
         // include_charts: true,
         // include_tables: true,
       }),
-    };
+    }; 
 
     const res = await fetcher('/api/deep-researcher-langgraph/create', config);
     console.log('reports--------------------', res.data);
@@ -88,7 +88,7 @@ export const updateGetDocumentReport = async ({
   projectId: string;
   temp_project_id: string;
   uploaded_files: any[];
-  researchType: researchType;
+  researchType: ResearchType;
 }): Promise<any> => {
   try {
     const tempNum = getThetempId(templateId);
@@ -164,7 +164,7 @@ export interface ReportList {
   response:string;
   updated_at: string;
   sections: Section[]
-  research: researchType;
+  research: ResearchType;
 }
 export const getReports = async (project_id : string): Promise<ReportList[]> =>{
   try {

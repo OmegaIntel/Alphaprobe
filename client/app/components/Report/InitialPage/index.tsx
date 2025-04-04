@@ -12,7 +12,7 @@ import {
   CheckCircle,
 } from 'lucide-react';
 import clsx from 'clsx';
-import { researchType, templates } from '../reportUtils';
+import { ResearchType, templates } from '../reportUtils';
 import FileUpload from './FileUpload';
 import { v4 as uuidv4 } from 'uuid';
 import {
@@ -87,7 +87,7 @@ const InitialPage: FC<THeroProps> = ({
   //};
 
   return (
-    <div className="flex flex-col items-center py-8 md:py-12 lg:pt-8 lg:pb-16">
+    <div className="flex flex-col items-center py-8 md:py-12 lg:pt-8 lg:pb-16 overflow-x-auto">
       <div className="w-full">
         <h1 className="text-xl font-semibold mb-2">AI Report Generation</h1>
         <p className="text-sm text-gray-500">
@@ -202,7 +202,7 @@ const InitialPage: FC<THeroProps> = ({
               <RadioGroup.Root
                 className="flex gap-4"
                 {...field}
-                onValueChange={(value) => field.onChange(value as researchType)}
+                onValueChange={(value) => field.onChange(value as ResearchType)}
               >
                 {researchTypeOptions.map((option) => (
                   <label

@@ -6,7 +6,7 @@ import InputComponent from './InputBar/InputComponent';
 import { MoveDown } from 'lucide-react';
 import Loader from './Loader';
 import InitialPage from './InitialPage';
-import { InitialFormData, ConversationData, Section } from './reportUtils';
+import { InitialFormData, ConversationData, Section, ResearchType } from './reportUtils';
 import {
   createGetDocumentReport,
   updateGetDocumentReport,
@@ -88,11 +88,11 @@ const ReportPage: FC = () => {
           res: "",
           res_id: `${prevOrder.length}`,
           sections:[],
-          researchType:'deep'
+          researchType: newQuestion.researchType
         },
       ]);
 
-      let response: { report: string; sections?: Section[]; project: any } | null = null;
+      let response: { report: string; sections?: Section[]; project: any, researchType: ResearchType } | null = null;
 
       if (!projectID) {
         response = await createGetDocumentReport({

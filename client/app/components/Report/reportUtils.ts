@@ -58,7 +58,7 @@ export interface ResearchHistoryItem {
   orderedData: Data[];
 }
 
-export type researchType = 'deep' | 'research'
+export type ResearchType = 'deep' | 'research'
 
 export interface Section {
   name: string;
@@ -75,7 +75,7 @@ export interface ConversationData  {
   res_id?: string;
   updated_at?: string;
   sections: Section[];
-  researchType: researchType;
+  researchType: ResearchType;
 };
 
 
@@ -91,7 +91,7 @@ export interface InitialFormData {
     uploadedDocuments: any[];
     promptValue: string;
     temp_project_id: string;
-    researchType: researchType;
+    researchType: ResearchType;
 }
 
 export const templates = [

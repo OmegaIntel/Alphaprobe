@@ -628,6 +628,45 @@ def validate_input_state(input_state: dict) -> ReportStateInput:
     
     return input_state  # Now it's guaranteed to match ReportStateInput
 
+template_heading = [
+    {
+        "heading": [
+            "Company Overview",
+            "Business Model & Operations",
+            "Industry Position & Competitive Landscape",
+            "Financial Performance",
+            "Corporate Actions & Strategic Initiatives",
+            "Corporate Actions & Strategic Initiatives",
+            " Investment & Risk Analysis",
+            "ESG (Environmental, Social, Governance) Factors"
+        ],
+        "templateId": "company-profile"
+    },
+    {
+        "heading": [
+            "Company Overview & Financial Context",
+            "Financial Statements Breakdown",
+            "Ratio & Trend Analysis",
+            "Comparative & Benchmarking Analysis",
+            "Financial Health & Risk Assessment",
+            "Valuation & Investment Potential"
+        ],
+        "templateId": "financial-statement-analysis"
+    },
+    {
+        "heading": [
+            "Market Overview",
+            "Market Segmentation & Trends",
+            "Competitive Landscape & Key Players",
+            "Customer Insights & Buying Behavior",
+            "Market Opportunities & Challenges",
+            "Business & Marketing Strategy Implications",
+            "Regional & Global Market Analysis"
+        ],
+        "templateId": "market-size"
+    },
+]
+
 async def generate_structured_report(instruction: str, report_type: int, file_search:bool, web_search:bool, project_id: str, user_id: str):
     print("[DEBUG] Entering generate_structured_report with query:", instruction, "user_id:", user_id, "project_id:", project_id)
     try:
@@ -638,10 +677,12 @@ async def generate_structured_report(instruction: str, report_type: int, file_se
         document_graph = build_document_graph()
         print("[generate_structured_report] Document graph built successfully.")
 
+        headings = template_heading[report_type]["heading"]
+
         input_state = {
             "__start__": {},
             "topic": instruction,
-            "headings": [],
+            "headings": headings,
             "index": index_name,
             "user_id": user_id,
             "project_id": project_id,

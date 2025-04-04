@@ -71,6 +71,11 @@ MODEL_ARN = os.getenv("MODEL_ARN")
 # ------------------------------------------------------------------------
 research_deep_router = APIRouter()
 
+class UploadedFileData(BaseModel):
+    file_name: str
+    file_path: str
+
+
 class InstructionRequest(BaseModel):
     instruction: str
     report_type: int 
@@ -78,7 +83,7 @@ class InstructionRequest(BaseModel):
     web_search:bool
     project_id: str
     temp_project_id:str
-    uploaded_files: List
+    uploaded_files: List[UploadedFileData]
     researchType: str
 
 
@@ -125,11 +130,13 @@ async def deep_research_tool(query: InstructionRequest, current_user=Depends(get
 
     else:
         final_report = result.get("report", "")
-        report = ReportTable(project_id=project.id, query=query.instruction, response=final_report, sections=sections, research=query.research)
+        sections = result.get("sections", [])
+        
+        report = ReportTable(project_id=project.id, query=query.instruction, response=final_report, sections=sections, research=query.researchType)
         db.add(report)
         db.commit()
 
-        sections = result.get("sections", [])
+        
 
         return JSONResponse(
         content={
@@ -178,11 +185,11 @@ async def deep_research_tool_update(query: InstructionRequest, current_user=Depe
     if result is None:
         print("[ERROR] The state graph returned None. Check the graph flow and node return values.")
     else:
-        final_report = result.get("final_report", "")
+        final_report = result.get("report", "")
         sections = result.get("sections", [])
 
         
-        report = ReportTable(project_id=query.project_id, query=query.instruction, response=final_report, sections=sections, research=query.research)
+        report = ReportTable(project_id=query.project_id, query=query.instruction, response=final_report, sections=sections, research=query.researchType)
         db.add(report)
         db.commit()
 
@@ -354,8 +361,10 @@ def get_reports_sorted_by_updated_at(project_id: str, current_user=Depends(get_c
                 {
                     "id": str(report.id),
                     "query": str(report.query),
-                    "response":str( report.response),
-                    "updated_at": str(report.updated_at)
+                    "response": str( report.response),
+                    "updated_at": str(report.updated_at),
+                    "sections": report.sections,
+                    "research" : str(report.research)
                 }
                 for report in reports
             ]
