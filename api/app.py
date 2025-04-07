@@ -1,4 +1,3 @@
-# app.py
 import uvicorn
 from fastapi import FastAPI, Request, WebSocket, WebSocketDisconnect
 from fastapi.responses import JSONResponse
@@ -44,12 +43,14 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
+
 @app.exception_handler(ValidationError)
 async def validation_exception_handler(request: Request, exc: ValidationError):
     return JSONResponse(
         status_code=422,
         content={"detail": exc.errors(), "body": exc.body},
     )
+
 
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
@@ -58,6 +59,7 @@ async def websocket_endpoint(websocket: WebSocket):
         await handle_websocket_communication(websocket, manager)
     except WebSocketDisconnect:
         await manager.disconnect(websocket)
+
 
 app.include_router(user_router)
 app.include_router(demo_request_router)
@@ -75,7 +77,7 @@ app.include_router(upload_file_router)
 app.include_router(amplitude_router)
 app.include_router(pdf_report_router)
 app.include_router(upload_doc_router)
-app.include_router(project_router) 
+app.include_router(project_router)
 app.include_router(langgraph_router)
 app.include_router(perplexity_router)
 app.include_router(langflow_router)
@@ -83,4 +85,4 @@ app.include_router(research_deep_router)
 # app.include_router(deep_research_router)
 
 if __name__ == "__main__":
-    uvicorn.run("api.app:app", host="0.0.0.0", port=8000, reload=True, loop='asyncio')
+    uvicorn.run("api.app:app", host="0.0.0.0", port=8000, reload=True, loop="asyncio")

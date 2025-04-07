@@ -131,4 +131,6 @@ cython_debug/
 # VS Code
 .vscode/
 node_modules
-
+ec2_credential
+vector_db
+.gradio
