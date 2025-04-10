@@ -8,8 +8,7 @@ from pydantic import BaseModel
 import logging
 from fastapi.responses import JSONResponse
 from api.api_user import get_current_user
-
-from fastapi import APIRouter, Depends, File, Form, UploadFile, HTTPException
+from fastapi import APIRouter, Depends, File, Form, UploadFile, HTTPException,Query
 import boto3, botocore, uuid
 from db_models.documents import DocumentTable
 from db_models.reports import ReportTable
@@ -309,45 +308,57 @@ async def upload_files(files: List[UploadFile] = File(...), temp_project_id: str
     )
 
 
-
 @research_deep_router.get("/api/project-list")
-def get_all_projects_sorted_by_updated_at(current_user=Depends(get_current_user), db: Session = Depends(get_db)):
+def get_all_projects_sorted_by_updated_at(
+    current_user=Depends(get_current_user), 
+    db: Session = Depends(get_db),
+    limit: int = Query(10, description="Number of projects to return"),
+    offset: int = Query(0, description="Number of projects to skip")
+):
     try:
         user_id = current_user.id
-        # 1**Fetch projects sorted by `updated_at` in descending order**
-        print(f"print---------------------", user_id)
-        projects = db.query(Project).filter(Project.user_id == user_id).order_by(desc(Project.updated_at)).all()
+        
+        # Get total count for pagination metadata
+        total_count = db.query(Project).filter(Project.user_id == user_id).count()
+        
+        # Fetch projects with pagination applied
+        projects = db.query(Project).filter(
+            Project.user_id == user_id
+        ).order_by(
+            desc(Project.updated_at)
+        ).offset(offset).limit(limit).all()
 
-        print(f"print2---------------------", user_id)
-
-        if not projects:
+        if not projects and offset == 0:
             raise HTTPException(status_code=404, detail="No projects found")
         
         fetched_projects = [
-                {
-                    "id": str(project.id),
-                    "name": str(project.name),
-                    "updated_at": str(project.updated_at),  
-                    "temp_project_id":str(project.temp_project_id),
-                    "user_id": str(project.user_id),
-                }
-                for project in projects
-            ]
-        
-        print(f"print3---------------------", user_id)
+            {
+                "id": str(project.id),
+                "name": str(project.name),
+                "updated_at": str(project.updated_at),  
+                "temp_project_id": str(project.temp_project_id),
+                "user_id": str(project.user_id),
+            }
+            for project in projects
+        ]
         
         return JSONResponse(
             content={
-               "message": "Projects fetched successfully",
-               "data": fetched_projects
+                "message": "Projects fetched successfully",
+                "data": fetched_projects,
+                "pagination": {
+                    "total": total_count,
+                    "offset": offset,
+                    "limit": limit,
+                    "has_more": offset + limit < total_count
+                }
             },
             status_code=200
         )
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
-
-
+    
 @research_deep_router.get("/api/project/{project_id}/reports")
 def get_reports_sorted_by_updated_at(project_id: str, current_user=Depends(get_current_user), db: Session = Depends(get_db)):
     try:

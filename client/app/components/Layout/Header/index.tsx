@@ -15,8 +15,7 @@ export default function Header() {
       <div className="flex items-center">
         <DropdownMenu>
           <DropdownMenuTrigger className="flex items-center space-x-2">
-            <UserCircle />
-            
+            <UserCircle />            
           </DropdownMenuTrigger>
           <DropdownMenuContent align='end' className='w-48 bg-white border rounded-lg shadow-md p-2 space-y-1'>
             <DropdownMenuItem className='flex items-center space-x-2 px-3 py-2 hover:bg-gray-200 rounded border-none'>

@@ -37,7 +37,7 @@ export const items: ItemType[] = [
     label: "Due Diligence",
     id: "due-diligence",
     icon: FileText,
-    url: "/",
+    url: "/due-diligence",
   },
   {
     label: "Market Research",
