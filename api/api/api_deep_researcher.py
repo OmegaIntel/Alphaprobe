@@ -20,7 +20,7 @@ from sqlalchemy import func, asc, desc
 
 from services.deep_research import deep_research
 from services.researcher import generate_report
-
+from utils.excel_utils import build_or_load_excel_index
 
 # Configure logging
 logging.basicConfig(
@@ -57,24 +57,20 @@ bedrock_runtime = boto3.client('bedrock-agent-runtime',
     aws_secret_access_key="k1OveeJ7XKxO1PExUSTk/NulLMWkFjYwlXGrmQR/",
     region_name="us-east-1"
 )
- 
-EXCEL_BUCKET_NAME = os.getenv("EXCEL_BUCKET_NAME", "kb-bucket-tester")
+
+EXCEL_BUCKET_NAME = os.getenv("EXCEL_BUCKET_NAME", "excel-file-indexes")
+OUTLINE_BUCKET_NAME = os.getenv("OUTLINE_BUCKET_NAME", "outline-helper")
 BUCKET_NAME = os.getenv("BUCKET_NAME", "deep-research-docs")
 KNOWLEDGE_BASE_ID = os.getenv("KNOWLEDGE_BASE_ID")
 DATA_SOURCE_ID = os.getenv("DATA_SOURCE_ID")
 MODEL_ARN = os.getenv("MODEL_ARN")
 
-
-
 # ------------------------------------------------------------------------
-# ROUTER
+# CLASSES
 # ------------------------------------------------------------------------
-research_deep_router = APIRouter()
-
 class UploadedFileData(BaseModel):
     file_name: str
     file_path: str
-
 
 class InstructionRequest(BaseModel):
     instruction: str
@@ -86,178 +82,300 @@ class InstructionRequest(BaseModel):
     uploaded_files: List[UploadedFileData]
     researchType: str
 
-
-@research_deep_router.post("/api/deep-researcher-langgraph/create")
-async def deep_research_tool(query: InstructionRequest, current_user=Depends(get_current_user), db: Session = Depends(get_db)):
-    """
-    Example usage:
-      1. Build or load the index from local data. 
-      2. Create a query engine.
-      3. Set the global query engine.
-      4. Run the state machine with a topic.
-    """
-
-    user_id = current_user.id
-
-    print(f"user-email-------------------------------", current_user.id)
-    #priject
-    project = Project(name=query.instruction, temp_project_id=query.temp_project_id, user_id=user_id)  # No need to manually set `id`
-    db.add(project)
-    db.commit()
-    db.refresh(project)  # This will assign the auto-generated `id`
-
-    if query.file_search:
-        files = query.uploaded_files
-        for file in files:
-            document = DocumentTable(project_id=project.id, file_name=file.file_name, file_path=file.file_path)
-            db.add(document)
-        db.commit()
-
-    
-    print(f"user-email-------------------------------", current_user)
-    # Step 4: Prepare your input state.
-    # input_data = {"topic": query.instruction, "user_id": user_id, "report_type":int(query.report_type), "file_search": query.file_search, "web_search": query.web_search, "project_id": query.temp_project_id}
-    
-    # Step 5: Invoke the state graph.
-    result = None
-    if query.researchType == "deep":
-        result = await deep_research(query.instruction, int(query.report_type), query.file_search, query.web_search, query.temp_project_id, user_id)
-    else: 
-        result = await generate_report(query.instruction, int(query.report_type), query.file_search, query.web_search, query.temp_project_id, user_id)
-    
-    if result is None:
-        print("[ERROR] The state graph returned None. Check the graph flow and node return values.")
-
-    else:
-        final_report = result.get("report", "")
-        sections = result.get("sections", [])
-        
-        report = ReportTable(project_id=project.id, query=query.instruction, response=final_report, sections=sections, research=query.researchType)
-        db.add(report)
-        db.commit()
-
-        
-
-        return JSONResponse(
-        content={
-            "message": "Research generated successfully",
-            "data": {
-                "report":final_report,
-                "sections": sections,
-                "researchType": query.researchType,
-                "project": {
-                    "id": str(project.id),
-                    "name": project.name,
-                    "temp_project_id": str(project.temp_project_id) if project.temp_project_id else None,
-                    "user_id": str(project.user_id),
-                    "created_at": project.created_at.isoformat()if project.created_at else None,
-                    "updated_at": project.updated_at.isoformat() if project.updated_at else None
-                }
-            }
-        },
-        status_code=200
-    )
-
-
-
-@research_deep_router.post("/api/deep-researcher-langgraph/update")
-async def deep_research_tool_update(query: InstructionRequest, current_user=Depends(get_current_user), db: Session = Depends(get_db)):
-    """
-    Example usage: 
-      1. Build or load the index from local data.
-      2. Create a query engine.
-      3. Set the global query engine.
-      4. Run the state machine with a topic.
-    """
-
-    user_id = current_user.id
-    # Step 4: Prepare your input state.
-    # input_data = {"topic": query.instruction, "user_id": user_id, "report_type":int(query.report_type), "file_search": query.file_search, "web_search": query.web_search, "project_id": query.temp_project_id}
-    
-    # Step 5: Invoke the state graph.
-    result = None
-    if query.researchType == "deep":
-        result = await deep_research(query.instruction, int(query.report_type), query.file_search, query.web_search, query.temp_project_id, user_id)
-    else: 
-        result = await generate_report(query.instruction, int(query.report_type), query.file_search, query.web_search, query.temp_project_id, user_id)
-
-    
-    if result is None:
-        print("[ERROR] The state graph returned None. Check the graph flow and node return values.")
-    else:
-        final_report = result.get("report", "")
-        sections = result.get("sections", [])
-
-        
-        report = ReportTable(project_id=query.project_id, query=query.instruction, response=final_report, sections=sections, research=query.researchType)
-        db.add(report)
-        db.commit()
-
-        project = db.query(Project).filter(Project.id == query.project_id).first()
-        if not project:
-            return JSONResponse(
-               content={
-                  "message": "project not found",
-                  "data": None
-               },
-               status_code=404 
-            )
-
-        project.updated_at = func.now()
-        db.commit()
-        db.refresh(project)
-
-
-        return JSONResponse(
-        content={
-            "message": "Research generated successfully",
-            "data": {
-                "report":final_report,
-                "sections": sections,
-                "research": query.researchType,
-                "project": {
-                    "id": str(project.id),
-                    "name": project.name,
-                    "temp_project_id": str(project.temp_project_id) if project.temp_project_id else None,
-                    "user_id": str(project.user_id),
-                    "created_at": project.created_at.isoformat()if project.created_at else None,
-                    "updated_at": project.updated_at.isoformat() if project.updated_at else None
-                }
-            }
-        },
-        status_code=200 
-    )
-
 class UploadRequest(BaseModel):
     files: List[UploadFile] = File(...)
     project_id: str
     temp_project_id:str
 
+# ------------------------------------------------------------------------
+# HELPER
+# ------------------------------------------------------------------------
+def close_previous_ingestion_jobs():
+    """
+    List any ongoing ingestion jobs for the given knowledge base and data source,
+    and stop them using the correct AWS Bedrock API methods.
+    """
+    try:
+        print("[DEBUG] Checking for ongoing ingestion jobs...")
+        
+        # List ingestion jobs with pagination handling
+        paginator = bedrock_client.get_paginator('list_ingestion_jobs')
+        job_summaries = []
+        
+        for page in paginator.paginate(
+            knowledgeBaseId=KNOWLEDGE_BASE_ID,
+            dataSourceId=DATA_SOURCE_ID
+        ):
+            job_summaries.extend(page.get('ingestionJobSummaries', []))
+        
+        # Process each job
+        jobs_stopped = 0
+        for job in job_summaries:
+            status = job.get('status', '').upper()
+            ingestion_job_id = job.get('ingestionJobId')
+            
+            # Skip jobs that are already in terminal states
+            if status in ["COMPLETE", "STOPPED", "FAILED"]:
+                continue
+                
+            print(f"[DEBUG] Stopping ingestion job {ingestion_job_id} with status {status}")
+            try:
+                bedrock_client.stop_ingestion_job(
+                    knowledgeBaseId=KNOWLEDGE_BASE_ID,
+                    dataSourceId=DATA_SOURCE_ID,
+                    ingestionJobId=ingestion_job_id
+                )
+                jobs_stopped += 1
+            except botocore.exceptions.ClientError as e:
+                error_code = e.response.get('Error', {}).get('Code')
+                if error_code == 'ResourceNotFoundException':
+                    print(f"[INFO] Job {ingestion_job_id} no longer exists")
+                else:
+                    print(f"[WARNING] Failed to stop ingestion job {ingestion_job_id}: {str(e)}")
+            except Exception as e:
+                print(f"[WARNING] Unexpected error stopping job {ingestion_job_id}: {str(e)}")
+        
+        print(f"[DEBUG] Stopped {jobs_stopped} ingestion jobs. Total jobs checked: {len(job_summaries)}")
+        
+    except botocore.exceptions.ClientError as e:
+        print(f"[ERROR] AWS API error checking ingestion jobs: {str(e)}")
+    except Exception as e:
+        print(f"[ERROR] Unexpected error in close_previous_ingestion_jobs: {str(e)}")
+
+# ------------------------------------------------------------------------
+# ROUTER
+# ------------------------------------------------------------------------
+research_deep_router = APIRouter()
+
+@research_deep_router.post("/api/deep-researcher-langgraph/create")
+async def deep_research_tool(query: InstructionRequest, current_user=Depends(get_current_user), db: Session = Depends(get_db)):
+    try:
+        user_id = current_user.id
+        
+        # Create project with retry logic
+        max_retries = 3
+        for attempt in range(max_retries):
+            try:
+                project = Project(name=query.instruction, temp_project_id=query.temp_project_id, user_id=user_id)
+                db.add(project)
+                db.commit()
+                db.refresh(project)
+                break
+            except Exception as e:
+                if attempt == max_retries - 1:
+                    raise
+                db.rollback()
+                time.sleep(1)  # Wait before retrying
+
+        if query.file_search:
+            files = query.uploaded_files
+            for file in files:
+                document = DocumentTable(project_id=project.id, file_name=file.file_name, file_path=file.file_path)
+                db.add(document)
+            db.commit()
+
+        # Run research
+        if query.researchType == "deep":
+            result = await deep_research(query.instruction, int(query.report_type), query.file_search, query.web_search, query.temp_project_id, user_id)
+        else: 
+            result = await generate_report(query.instruction, int(query.report_type), query.file_search, query.web_search, query.temp_project_id, user_id)
+        
+        if result is None:
+            raise HTTPException(status_code=500, detail="Research failed to generate results")
+
+        # Save report with retry logic
+        for attempt in range(max_retries):
+            try:
+                report = ReportTable(
+                    project_id=project.id, 
+                    query=query.instruction, 
+                    response=result.get("report", ""), 
+                    sections=result.get("sections", []), 
+                    research=query.researchType
+                )
+                db.add(report)
+                db.commit()
+                break
+            except Exception as e:
+                if attempt == max_retries - 1:
+                    raise HTTPException(status_code=500, detail="Failed to save report after multiple attempts")
+                db.rollback()
+                time.sleep(1)
+
+        return JSONResponse(
+            content={
+                "message": "Research generated successfully",
+                "data": {
+                    "report": result.get("report", ""),
+                    "sections": result.get("sections", []),
+                    "researchType": query.researchType,
+                    "project": {
+                        "id": str(project.id),
+                        "name": project.name,
+                        "temp_project_id": str(project.temp_project_id) if project.temp_project_id else None,
+                        "user_id": str(project.user_id),
+                        "created_at": project.created_at.isoformat() if project.created_at else None,
+                        "updated_at": project.updated_at.isoformat() if project.updated_at else None
+                    }
+                }
+            },
+            status_code=200
+        )
+
+    except Exception as e:
+        db.rollback()
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@research_deep_router.post("/api/deep-researcher-langgraph/update")
+async def deep_research_tool_update(
+    query: InstructionRequest, 
+    current_user=Depends(get_current_user), 
+    db: Session = Depends(get_db)
+):
+    """Update an existing research project with new research data"""
+    MAX_RETRIES = 3
+    RETRY_DELAY = 1  # seconds
+    
+    try:
+        user_id = current_user.id
+        
+        # Validate project exists
+        project = db.query(Project).filter(Project.id == query.project_id).first()
+        if not project:
+            return JSONResponse(
+                content={"message": "Project not found", "data": None},
+                status_code=404
+            )
+
+        # Run research with proper state handling
+        result = None
+        for attempt in range(MAX_RETRIES):
+            try:
+                if query.researchType == "deep":
+                    result = await deep_research(
+                        query.instruction, 
+                        int(query.report_type), 
+                        query.file_search, 
+                        query.web_search, 
+                        query.temp_project_id, 
+                        user_id
+                    )
+                else:
+                    result = await generate_report(
+                        query.instruction, 
+                        int(query.report_type), 
+                        query.file_search, 
+                        query.web_search, 
+                        query.temp_project_id, 
+                        user_id
+                    )
+                break
+            except Exception as e:
+                if attempt == MAX_RETRIES - 1:
+                    raise
+                time.sleep(RETRY_DELAY)
+                continue
+
+        if result is None:
+            raise HTTPException(
+                status_code=500,
+                detail="Research failed to generate results after multiple attempts"
+            )
+
+        # Convert result if needed
+        final_report = result.get("report", "")
+        sections = result.get("sections", [])
+
+        # Save report with transaction and retry logic
+        for attempt in range(MAX_RETRIES):
+            try:
+                # Start transaction
+                db.begin()
+
+                # Create new report entry
+                report = ReportTable(
+                    project_id=query.project_id,
+                    query=query.instruction,
+                    response=final_report,
+                    sections=sections,
+                    research=query.researchType
+                )
+                db.add(report)
+
+                # Update project timestamp
+                project.updated_at = func.now()
+                db.add(project)
+
+                # Commit transaction
+                db.commit()
+                db.refresh(project)
+                db.refresh(report)
+                break
+
+            except Exception as e:
+                db.rollback()
+                if attempt == MAX_RETRIES - 1:
+                    raise HTTPException(
+                        status_code=500,
+                        detail=f"Failed to save report after {MAX_RETRIES} attempts"
+                    )
+                time.sleep(RETRY_DELAY)
+                continue
+
+        return JSONResponse(
+            content={
+                "message": "Research updated successfully",
+                "data": {
+                    "report": final_report,
+                    "sections": sections,
+                    "research": query.researchType,
+                    "project": {
+                        "id": str(project.id),
+                        "name": project.name,
+                        "temp_project_id": str(project.temp_project_id) if project.temp_project_id else None,
+                        "user_id": str(project.user_id),
+                        "created_at": project.created_at.isoformat() if project.created_at else None,
+                        "updated_at": project.updated_at.isoformat() if project.updated_at else None
+                    }
+                }
+            },
+            status_code=200
+        )
+
+    except HTTPException:
+        raise  # Re-raise HTTP exceptions
+    except Exception as e:
+        db.rollback()
+        logger.error(f"Error in deep_research_tool_update: {str(e)}", exc_info=True)
+        raise HTTPException(
+            status_code=500,
+            detail=f"An unexpected error occurred: {str(e)}"
+        )
+
+
 @research_deep_router.post("/api/upload-deep-research")
 async def upload_files(files: List[UploadFile] = File(...), temp_project_id: str = Form(...), current_user=Depends(get_current_user)):
     user_id = current_user.id
     results = []
-    
+
+    # Upload every file into the same file bucket (BUCKET_NAME)
     for file in files:
-        # Determine the target bucket based on file type.
-        # If Excel file, use EXCEL_BUCKET_NAME; otherwise, use the default BUCKET_NAME.
-        if file.filename.lower().endswith(('.xls', '.xlsx')):
-            target_bucket = EXCEL_BUCKET_NAME
-        else:
-            target_bucket = BUCKET_NAME
-
         key = f"{user_id}/{temp_project_id}/{file.filename}"
-        
         try:
-            # Upload the file to S3 with metadata
             s3_client.upload_fileobj(
-                file.file, 
-                target_bucket, 
-                key, 
-                ExtraArgs={"Metadata": {"user_id": str(user_id)}}
+                file.file,
+                BUCKET_NAME,
+                key,
+                ExtraArgs={
+                    "Metadata": {
+                        "user_id": str(user_id),
+                        "project_id": str(temp_project_id)
+                    }
+                }
             )
-
-            # Prepare metadata content
+            
+            # Optionally, upload additional metadata as a separate JSON object.
             metadata_dict = {
                 "metadataAttributes": {
                     "user_id": str(user_id),
@@ -266,48 +384,63 @@ async def upload_files(files: List[UploadFile] = File(...), temp_project_id: str
             }
             metadata_content = json.dumps(metadata_dict)
             metadata_key = f"{key}.metadata.json"
-            
-            # Upload the metadata file to the same bucket
             s3_client.put_object(
-                Bucket=target_bucket,
+                Bucket=BUCKET_NAME,
                 Key=metadata_key,
                 Body=metadata_content,
-                ContentType='application/json'
+                ContentType="application/json"
             )
         except botocore.exceptions.ClientError as e:
-            raise HTTPException(status_code=500, detail=f"Upload to S3 failed for file: {file.filename}")
+            raise HTTPException(
+                status_code=500,
+                detail=f"Upload to S3 failed for file: {file.filename}"
+            )
+        results.append({
+            "file_name": file.filename,
+            "file_path": key,
+            "bucket": BUCKET_NAME
+        })
 
-        results.append({"file_name": file.filename, "file_path": key, "bucket": target_bucket})
+        # Close prev ingestion jobs
+        close_previous_ingestion_jobs()
 
-        # Retry ingestion job up to 3 times if it fails
+        # Start non-Excel ingestion job with retries if needed.
         max_retries = 3  
         for attempt in range(1, max_retries + 1):
             try:
                 bedrock_client.start_ingestion_job(
                     knowledgeBaseId=KNOWLEDGE_BASE_ID,
                     dataSourceId=DATA_SOURCE_ID,
-                    clientToken=str(uuid.uuid4())
+                    clientToken=str(uuid.uuid4()),
+                    description="starting ingestion"
                 )
-                # Ingestion job started successfully, break out of the retry loop.
-                break
+                break  # Exit retry loop if successful.
             except botocore.exceptions.ClientError as e:
                 print(f"Ingestion job attempt {attempt} failed for key: {key}")
                 print("Error details:", e.response)
                 if attempt == max_retries:
-                    # After max retries, log and move on.
                     print(f"Max retries reached for key: {key}. Moving on to next file.")
                 else:
-                    # Wait for a short period before retrying.
                     time.sleep(1)
-    
+
+    # After all files are uploaded, check if any Excel files were submitted.
+    excel_file_uploaded = any(
+        file.filename.lower().endswith((".xls", ".xlsx"))
+        for file in files
+    )
+    if excel_file_uploaded:
+        # Call the index builder function to process Excel files from the file bucket
+        # and upload the resulting index into the separate index bucket.
+        index = build_or_load_excel_index(user_id, temp_project_id)
+        if index is None:
+            print("[DEBUG] No Excel index was created.")
+        else:
+            print("[DEBUG] Excel index successfully built and uploaded.")
+
     return JSONResponse(
-        content={
-            "message": "Files uploaded successfully",
-            "data": results
-        },
+        content={"message": "Files uploaded successfully", "data": results},
         status_code=200
     )
-
 
 
 @research_deep_router.get("/api/project-list")
@@ -379,3 +512,35 @@ def get_reports_sorted_by_updated_at(project_id: str, current_user=Depends(get_c
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
+
+
+@research_deep_router.get("/api/upload-outline-file")
+async def upload_files(files: UploadFile = File(...), temp_project_id: str = Form(...), current_user=Depends(get_current_user)):
+    user_id = current_user.id
+    key = f"{user_id}/{temp_project_id}/{files.filename}"
+    
+    try:
+        # Upload the file to S3
+        s3_client.upload_fileobj(
+            files.file,
+            OUTLINE_BUCKET_NAME,
+            key,
+            ExtraArgs={
+                "Metadata": {
+                    "user_id": str(user_id),
+                    "project_id": str(temp_project_id)
+                }
+            }
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Upload to S3 failed: {str(e)}")
+    
+    return JSONResponse(
+        content={
+            "message": "File uploaded successfully",
+            "file_name": files.filename,
+            "file_path": key,
+            "bucket": OUTLINE_BUCKET_NAME
+        },
+        status_code=200
+    )
