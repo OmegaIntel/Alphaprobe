@@ -1341,16 +1341,16 @@ def deduplicate_citations(citations: List[Citation]) -> List[Citation]:
             key = (citation.file_name, citation.page)
             if key not in unique_kb:
                 unique_kb[key] = citation
-        elif isinstance(citation, WebCitation):
-            # Use title and url as the unique key
-            key = (citation.title, citation.url)
-            if key not in unique_web:
-                unique_web[key] = citation
         elif isinstance(citation, ExcelCitation):
             # Use file_name, sheet, row, and col as the unique key
             key = (citation.file_name, citation.sheet, citation.row, citation.col)
             if key not in unique_excel:
                 unique_excel[key] = citation
+        elif isinstance(citation, WebCitation):
+            # Use title and url as the unique key
+            key = (citation.title, citation.url)
+            if key not in unique_web:
+                unique_web[key] = citation
         else:
             # For any other citation types, you can use their id() or any comparable attribute.
             # This just adds them if they haven't been added yet.
@@ -1358,7 +1358,7 @@ def deduplicate_citations(citations: List[Citation]) -> List[Citation]:
                 unique_others.append(citation)
 
     # Combine all unique citations in a single list
-    deduped_list = list(unique_kb.values()) + list(unique_web.values()) + list(unique_excel.values()) + unique_others
+    deduped_list = list(unique_kb.values()) + list(unique_excel.values()) + list(unique_web.values()) + unique_others
     return deduped_list
 
 def citation_to_dict(citation):
