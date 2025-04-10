@@ -1,50 +1,38 @@
+import asyncio  # ensure asyncio is imported
 import os
-import time
-import uuid
-import asyncio
-import operator
-import inspect
-import json
-from typing import List, TypedDict, Any, Optional
-from typing_extensions import Annotated
+import re
+from typing import Dict, List, TypedDict, Any, Optional, Tuple, Annotated, Union
 from pydantic import BaseModel, Field
-from dataclasses import dataclass, fields
-import logging
-from fastapi.responses import JSONResponse
-from api.api_user import get_current_user
+from dataclasses import dataclass, field, fields
+from pydantic import create_model
 
-from fastapi import APIRouter, Depends, File, Form, UploadFile, HTTPException
-import boto3, botocore, uuid
-from botocore.config import Config
-
+# LangChain imports
 from langchain_core.runnables import RunnableConfig
 from langchain_core.messages import SystemMessage, HumanMessage
-from db_models.documents import DocumentTable
-from db_models.reports import ReportTable
-from db_models.projects import Project
-from db_models.session import get_db
-from sqlalchemy.orm import Session
-from sqlalchemy import func, asc, desc
 
-# ------------------------------------------------------------------------
 # LlamaIndex for loading/creating a vector index and querying
-# ------------------------------------------------------------------------
-from llama_index.core import Settings, VectorStoreIndex, StorageContext, load_index_from_storage
-from llama_parse import LlamaParse
 from llama_index.core.query_engine import BaseQueryEngine
-from llama_index.embeddings.openai import OpenAIEmbedding
 
-# ------------------------------------------------------------------------
+from fuzzywuzzy import fuzz  # For section title matching
+
 # LangChain + LLM
-# ------------------------------------------------------------------------
 from langchain_openai import ChatOpenAI
 import openai
+import tiktoken
 
-# ------------------------------------------------------------------------
 # langgraph-based StateGraph
-# ------------------------------------------------------------------------
-from langgraph.constants import Send
 from langgraph.graph import START, END, StateGraph
+
+# Helpers
+from utils.pdf_parser import extract_pdf_from_s3, parse_pdf_structure
+from utils.excel_utils import extract_excel_index, has_excel_files
+from utils.kb_search import query_kb, get_presigned_url_from_source_uri
+from utils.websearch_utils import call_tavily_api, call_perplexity_api
+
+KNOWLEDGE_BASE_ID = os.getenv("KNOWLEDGE_BASE_ID", "my-knowledge-base")
+BUCKET_NAME = os.getenv("BUCKET_NAME", "deep-research-docs")
+DATA_SOURCE_ID = os.getenv("DATA_SOURCE_ID", "my-data-source")
+MODEL_ARN = os.getenv("MODEL_ARN", "arn:aws:bedrock:my-model")
 
 # ------------------------------------------------------------------------
 # Prompts 
@@ -52,7 +40,6 @@ from langgraph.graph import START, END, StateGraph
 # 2. Financial Statement Analysis
 # 3. Market Sizing
 # ------------------------------------------------------------------------
-# 1. report_planner_query_writer_instructions
 report_planner_query_writer_instructions = [
     """You are an expert financial and industry analyst. Your task is to propose specific search queries that will extract the necessary data to populate an industry report. 
     Query Context: {topic}
@@ -68,26 +55,104 @@ report_planner_query_writer_instructions = [
     """
 ]
 
-# 2. report_planner_instructions
 report_planner_instructions = [
-    """You are an expert financial and industry analyst. Based on the topic and the combined relevant content from the local documents, produce a structured outline for an industry report.
-Topic: {topic}
-Document Context: {context}
-This outline should emphasize a comprehensive company profile with detailed overviews of management, business models, industry position, financial performance, corporate actions, and news. Include considerations from the following tags: Investment Research, Target Screening, Corporate Due Diligence, Competitive Research.
-    """,
-    """You are an expert financial and industry analyst. Based on the topic and the combined relevant content from the local documents, produce a structured outline for an industry report.
-Topic: {topic}
-Document Context: {context}
-This outline should detail a comprehensive financial statement analysis, emphasizing key financial metrics, ratio trends, and valuation insights. Include considerations from the following tags: Financial Analysis, Ratio and Trend Analysis, Portfolio Monitoring, Valuation.
-    """,
-    """You are an expert financial and industry analyst. Based on the topic and the combined relevant content from the local documents, produce a structured outline for an industry report.
-Topic: {topic}
-Document Context: {context}
-This outline should emphasize market sizing by detailing market size, segmentation, key players, trends, and competitive dynamics. Include considerations from the following tags: Market Research, Business Consulting, Strategy, Marketing.
     """
+You are an expert financial and industry analyst. Based on the topic and combined content, produce a structured outline for an industry report.
+
+Required PDF Sections (MUST INCLUDE VERBATIM):
+{pdf_sections}
+
+Additional Context:
+Topic: {topic}
+Document Context: {context}
+
+Generate an outline that:
+1. Preserves all PDF sections exactly as provided.
+2. Any new section should not be similar to the already provided sections in the PDF.
+3. Adds complementary sections for a comprehensive company profile covering:
+   - Management structure
+   - Business model analysis  
+   - Industry positioning
+   - Financial performance highlights
+   - Recent corporate actions
+   - Relevant news/developments
+
+Tags to incorporate: Investment Research, Target Screening, Corporate Due Diligence, Competitive Research
+
+Output format:
+- Output the outline as a JSON array of section objects.
+- Each section object must include exactly one key for the section title (use the key "name") and one key for the section description.
+- Use the EXACT same section titles from the PDF where applicable.
+- Mark new sections with the "[Additional Research]" prefix.
+- All section objects must be unique.
+- IMPORTANT: Do not include duplicate title fields or multiple values for a section's title.
+- Create At most 10 sections
+""",
+    """
+You are an expert financial analyst. Based on the topic and combined content, produce a structured financial analysis outline.
+
+Required PDF Sections (MUST INCLUDE VERBATIM):
+{pdf_sections}
+
+Additional Context:
+Topic: {topic}
+Document Context: {context}
+
+Generate an outline that:
+1. Preserves all financial tables/charts from the PDF exactly.
+2. Any new section should not be similar to the already provided sections in the PDF.
+3. Adds necessary sections for complete analysis, including:
+   - Financial health assessment
+   - Profitability deep dive  
+   - Liquidity analysis
+   - Solvency evaluation
+   - Ratio trends
+   - Valuation methodologies
+
+Tags to incorporate: Financial Analysis, Ratio and Trend Analysis, Portfolio Monitoring, Valuation
+
+Output format:
+- Output the outline as a JSON array of section objects.
+- Each section object must include exactly one key for the section title (use the key "name") and one key for the section description.
+- Keep original PDF section titles unchanged.
+- Flag new sections with the "[Additional Analysis]" prefix.
+- All section objects must be unique.
+- IMPORTANT: Ensure that each section object has only one title value and no duplicate title keys.
+- Create At most 10 sections
+""",
+    """
+You are an expert market analyst. Based on the topic and combined content, produce a market sizing report outline.
+
+Required PDF Sections (MUST INCLUDE VERBATIM):
+{pdf_sections}
+
+Additional Context:
+Topic: {topic}
+Document Context: {context}
+
+Generate an outline that:
+1. Retains all market data sections from the PDF unchanged.
+2. Any new section should not be similar to the already provided sections in the PDF.
+3. Expands the report with additional sections covering:
+   - Market segmentation analysis
+   - Key player benchmarking  
+   - Growth trend projections
+   - Competitive landscape
+   - Emerging market dynamics
+
+Tags to incorporate: Market Research, Business Consulting, Strategy, Marketing
+
+Output format:
+- Output the outline as a JSON array of section objects.
+- Each section object must include exactly one key for the section title (use the key "name") and one key for the section description.
+- Preserve original PDF section titles.
+- Mark supplemental sections with the "[Extended Research]" prefix.
+- All section objects must be unique.
+- IMPORTANT: Each section must contain only one title field; do not output duplicate or multiple values for the section's title.
+- Create At most 10 sections
+"""
 ]
 
-# 3. section_writer_instructions
 section_writer_instructions = [
     """You are an expert financial and industry analyst. Draft a very detailed and comprehensive content for the following section of an industry report based on the relevant document excerpts provided. Your content should directly address the data or questions implied by the section and include extended analysis, examples, and additional insights.
 Section Title: {section_title}
@@ -112,7 +177,6 @@ Ensure your analysis focuses on market size, segmentation, competitive landscape
 """
 ]
 
-# 4. final_section_writer_instructions
 final_section_writer_instructions = [
     """You are an expert financial and industry analyst. Compile the final sections of the industry report by synthesizing and polishing the content from all completed sections. Produce a comprehensive narrative report of at least 3000 words that includes thorough analysis, detailed examples, and extended insights.
 Context from Completed Sections:
@@ -131,205 +195,101 @@ Generate the final, integrated content for the industry report, ensuring that th
 """
 ]
 
-# 5. query_prompt_for_iteration (for generating additional queries)
 query_prompt_for_iteration = [
-    """You are an expert financial analyst. Generate up to 5 queries to find more data for the following section in a manner that deepens the research conducted so far and is likely to return non-empty results from the document index.
+    """You are an expert financial analyst. Generate up to 5 refined queries to deepen research for this section, building on previous findings and addressing any gaps. Prioritize queries likely to return valuable new information.
+    Section Context:
+    Title: {section_title}
+    Description: {description}
 
-Section Description: {description}
+    Research History:
+    Previous Queries Attempted:
+    {previous_queries}
+    Responses Received:
+    {previous_responses}
+    Feedback on Results:
+    {feedback}
 
-Previous Queries and Compiled Answers:
-Previous Queries:
-{previous_text}
-Compiled Answers:
-{previous_section_output}
+    Current Focus Areas:
+    1. Management effectiveness and compensation alignment with performance
+    2. Business model scalability and differentiation factors  
+    3. Market share dynamics and competitive moat analysis
+    4. Recent M&A activity and capital allocation decisions
+    5. ESG factors impacting valuation
 
-Focus on:
-- Key financial details regarding company management and performance
-- Specific business models and industry positioning insights
-- Relevant corporate actions and recent news
-- Extended analysis based on the tags: Investment Research, Target Screening, Corporate Due Diligence, Competitive Research
+    Query Generation Guidelines:
+    - Explicitly reference specific data points from previous responses that need expansion
+    - Address any unanswered aspects from prior queries
+    - Incorporate analyst feedback on missing/depth requirements
+    - Maintain focus on: {tags}
 
-Ensure that your new queries build upon the previous research and are specific enough to generate valuable document search results.
-    """,
-    """You are an expert financial analyst. Generate up to 5 queries to find more data for the following section in a manner that deepens the research conducted so far and is likely to return non-empty results from the document index.
+    Format Requirements:
+    For each query, specify:
+    - Data source target (web/kb/excel)
+    - Rationale for why this query will yield new insights
+    - Connection to previous research thread""",
+    """You are an expert financial analyst. Generate up to 5 precision queries to extract deeper financial insights, using prior results as foundation.
+    Section Context:  
+    Title: {section_title}
+    Description: {description}
 
-Section Description: {description}
+    Research History:
+    Previous Queries Attempted:
+    {previous_queries}  
+    Responses Received:
+    {previous_responses}
+    Feedback on Results:
+    {feedback}
 
-Previous Queries and Compiled Answers:
-Previous Queries:
-{previous_text}
-Compiled Answers:
-{previous_section_output}
+    Current Focus Areas:
+    1. Margin decomposition by product/geography
+    2. Working capital cycle trends  
+    3. Debt covenant compliance metrics
+    4. Non-GAAP reconciliation analysis
+    5. Forward-looking guidance accuracy
 
-Focus on:
-- Detailed financial metrics and ratio analysis
-- Identification of trends and historical financial performance
-- Insights into portfolio monitoring and valuation practices
-- Extended analysis based on the tags: Financial Analysis, Ratio and Trend Analysis, Portfolio Monitoring, Valuation
+    Query Generation Guidelines:
+    - Cross-reference specific financial metrics needing verification
+    - Identify ratio correlations requiring explanation
+    - Target periods with anomalous results
+    - Incorporate: {tags}
 
-Ensure that your new queries build upon the previous research and are specific enough to generate valuable document search results.
-    """,
-    """You are an expert financial analyst. Generate up to 5 queries to find more data for the following section in a manner that deepens the research conducted so far and is likely to return non-empty results from the document index.
+    Format Requirements:
+    For each query, specify:
+    - Required dataset (income statement/balance sheet/cash flow)
+    - Comparison timeframe requested
+    - Specific calculation methodology if relevant""",
+    """You are an expert market analyst. Develop 5 strategic queries to expand market understanding based on existing data.
+    Section Context:
+    Title: {section_title}
+    Description: {description}
 
-Section Description: {description}
+    Research History:
+    Previous Queries Attempted:
+    {previous_queries}
+    Responses Received:  
+    {previous_responses}
+    Feedback on Results:
+    {feedback}
 
-Previous Queries and Compiled Answers:
-Previous Queries:
-{previous_text}
-Compiled Answers:
-{previous_section_output}
+    Current Focus Areas:
+    1. TAM/SAM/SOM validation
+    2. Customer acquisition cost trends
+    3. Regulatory impact analysis  
+    4. Technological disruption vectors
+    5. Emerging market penetration strategies
 
-Focus on:
-- Key market size metrics and segmentation details
-- Analysis of competitive landscape and emerging market trends
-- Strategic insights based on the tags: Market Research, Business Consulting, Strategy, Marketing
-- Extended analysis on market contours and identification of key players
+    Query Generation Guidelines:
+    - Benchmark against competitors mentioned in prior results
+    - Identify geographic/service gaps in current data
+    - Project growth rates using multiple scenarios  
+    - Incorporate: {tags}
 
-Ensure that your new queries build upon the previous research and are specific enough to generate valuable document search results.
-    """
+    Format Requirements:
+    For each query, specify:
+    - Geographic/segment specificity
+    - Time horizon (historical/forward-looking)
+    - Comparator requirements"""
 ]
-
-# ------------------------------------------------------------------------
-# Logger Config
-# ------------------------------------------------------------------------
-
-# Configure logging
-logging.basicConfig(
-    level=logging.DEBUG,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.StreamHandler(),
-        logging.FileHandler("app.log"),
-    ],
-)
-
-logger = logging.getLogger(__name__)
-
-# ------------------------------------------------------------------------
-# Knowledge-base implementation
-# ------------------------------------------------------------------------
-import boto3
-
-s3_client = boto3.client(
-    "s3",
-    aws_access_key_id="AKIA5FTZD4AADPXMJD7C",
-    aws_secret_access_key="k1OveeJ7XKxO1PExUSTk/NulLMWkFjYwlXGrmQR/",
-    region_name="us-east-1"  # Change to your AWS region
-)
-
-bedrock_client = boto3.client('bedrock-agent',
-    aws_access_key_id="AKIA5FTZD4AADPXMJD7C",
-    aws_secret_access_key="k1OveeJ7XKxO1PExUSTk/NulLMWkFjYwlXGrmQR/",
-    region_name="us-east-1"
-)  # for control-plane ops like ingestion
-
-bedrock_runtime = boto3.client('bedrock-agent-runtime',
-    aws_access_key_id="AKIA5FTZD4AADPXMJD7C",
-    aws_secret_access_key="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",
-    region_name="us-east-1"
-)
-
-EXCEL_BUCKET_NAME = os.getenv("EXCEL_BUCKET_NAME", "kb-bucket-tester")
-BUCKET_NAME = os.getenv("BUCKET_NAME", "deep-research-docs")
-KNOWLEDGE_BASE_ID = os.getenv("KNOWLEDGE_BASE_ID")
-DATA_SOURCE_ID = os.getenv("DATA_SOURCE_ID")
-MODEL_ARN = os.getenv("MODEL_ARN")
-
-generationPrompt="""
-You are an intelligent assistant tasked with organizing and prioritizing search results for a user query. 
-Analyze the following search results and rank them based on relevance to the user's question. 
-If any results are irrelevant or redundant, exclude them.
-
-User Query: $query$
-
-Search Results:
-$search_results$
-
-Instructions:
-1. Rank the search results by relevance to the user's query.
-2. Remove any duplicate or irrelevant results.
-3. Summarize the key points from the top results.
-
-current time $current_time$
-
-Output the organized and prioritized results in a structured format."""
-
-orchestrationPrompt="""
-You are a knowledgeable assistant with access to a comprehensive knowledge base. 
-Use the following organized search results to answer the user's question. 
-If the search results do not contain enough information, say "I don't know."
-
-User Query: $query$
-
-Instructions:
-1. Provide a clear and concise answer to the user's question.
-2. Use only the information from the search results.
-3. If the search results are insufficient, say "I don't know."
-4. Format the response in a professional and easy-to-read manner.
-
-Underlying instructions for formatting the response generation and citations. $output_format_instructions$
-
-Here is the conversation history $conversation_history$
-
-current time - $current_time$
-
-Answer:"""
-
-def query_kb(input, kbId, user_id, project_id, modelId=None): 
-    vector_search_config = {'numberOfResults': 5}
-    filters = []
-
-    if user_id:
-        filters.append({
-            "equals": {
-                "key": "user_id",
-                "value": str(user_id)
-            }
-        })
-
-    # Only add a project_id filter if it's not "none"
-    if project_id and project_id != "none":
-        filters.append({
-            "equals": {
-                "key": "project_id",
-                "value": project_id
-            }
-        })
-
-    # Combine filters if necessary using "andAll"
-    if filters:
-        if len(filters) == 1:
-            vector_search_config['filter'] = filters[0]
-        else:
-            vector_search_config['filter'] = {"andAll": filters}
-
-    response = bedrock_runtime.retrieve_and_generate(
-        input={
-            'text': input
-        },
-        retrieveAndGenerateConfiguration={
-            'knowledgeBaseConfiguration': {
-                'generationConfiguration': {
-                    'promptTemplate': {
-                        'textPromptTemplate': generationPrompt
-                    }
-                },
-                'orchestrationConfiguration': {
-                    'queryTransformationConfiguration': {
-                        'type': 'QUERY_DECOMPOSITION'  # Allowed enum value.
-                    }
-                },
-                'knowledgeBaseId': kbId,
-                'modelArn': modelId,
-                'retrievalConfiguration': {
-                    'vectorSearchConfiguration': vector_search_config
-                }
-            },
-            'type': 'KNOWLEDGE_BASE'
-        }
-    )
-
-    return response
 
 # ------------------------ Configuration ------------------------
 @dataclass(kw_only=True)
@@ -352,6 +312,7 @@ class Configuration:
             for f in fields(cls)
             if f.init
         }
+        print(f"[DEBUG] Loaded Configuration values: {values}")
         return cls(**{k: v for k, v in values.items() if v})
 
 # ------------------- GLOBAL QUERY ENGINE ------------------------
@@ -362,205 +323,30 @@ def set_query_engine(engine: BaseQueryEngine):
     Store a global reference to a LlamaIndex QueryEngine,
     so that the rest of the code can use it for doc searches.
     """
+    print("[DEBUG] Setting global query engine")
     global query_engine
     query_engine = engine
 
 # -------------------- BASE STORAGE DIRECTORY ----------------------
-BASE_STORAGE_DIR = "./storage"
-
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 openai.api_key = OPENAI_API_KEY
-
-# ------------------------------------------------------------------------
-# Build or Load Index for Multiple Documents with Random Persist Folder
-# ------------------------------------------------------------------------
-async def build_or_load_index_random(
-    directory_paths: Any,  # Accepts a single path (str) or a list of paths
-    base_storage_dir: str = BASE_STORAGE_DIR,
-    rebuild: bool = False
-) -> VectorStoreIndex:
-    print(f"[DEBUG] Entering build_or_load_index_random")
-    if isinstance(directory_paths, str):
-        directory_paths = [directory_paths]
-
-    # Generate a random folder name under the base storage directory
-    random_folder = os.path.join(base_storage_dir, str(uuid.uuid4()))
-    os.makedirs(random_folder, exist_ok=True)
-    print(f"[INFO] Using persist directory: {random_folder}")
-
-    # Check if folder is empty; if so, force rebuild
-    if not os.listdir(random_folder):
-        print(f"[INFO] Folder {random_folder} is empty. Forcing index rebuild.")
-        rebuild = True
-    else:
-        print(f"[DEBUG] Folder {random_folder} contents: {os.listdir(random_folder)}")
-
-    # Try to load the index from storage if not forcing rebuild
-    if not rebuild:
-        try:
-            print(f"[INFO] Attempting to load existing index from storage.")
-            storage_context = StorageContext.from_defaults(persist_dir=random_folder)
-            index = load_index_from_storage(storage_context)
-            print(f"[INFO] Loaded existing index successfully.")
-            return index
-        except Exception as e:
-            print(f"[ERROR] Error loading existing index: {e}. Proceeding to rebuild the index.")
-
-    # Rebuild the index from the documents
-    print(f"[INFO] Building a new index from documents...")
-    try:
-        parser = LlamaParse(
-            api_key="llx-Erd0RHKTagtHmXwstTZu9xwEK79mvxIC33Q5LkcHad492MBV",
-            result_type="markdown"
-        )
-        all_documents = []
-        for path in directory_paths:
-            print(f"[DEBUG] Starting document parsing from: {path}")
-            docs = await parser.aload_data(path)
-            print(f"[INFO] Parsed {len(docs)} documents from {path} successfully.")
-            all_documents.extend(docs)
-    except Exception as e:
-        print(f"[ERROR] Error parsing documents from {directory_paths}: {e}")
-        raise
-
-    try:
-        embedding_model = OpenAIEmbedding(model="text-embedding-ada-002")
-        print(f"[DEBUG] Creating VectorStoreIndex from parsed documents using the embedding model.")
-        index = VectorStoreIndex.from_documents(all_documents, embedding=embedding_model)
-        index.storage_context.persist(persist_dir=random_folder)
-        print(f"[INFO] Index built and persisted to {random_folder}.")
-    except Exception as e:
-        print(f"[ERROR] Error building or persisting the index: {e}")
-        raise
-
-    print(f"[DEBUG] Exiting build_or_load_index_random")
-    return index
-
-# ------------------------------------------------------------------------
-# Web Search Function (using Tavily API and SerpAPI as an example)
-# ------------------------------------------------------------------------
-TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
-SERPAPI_API_KEY = os.getenv("SERPAPI_API_KEY")
-
-async def tavily_search(query: str) -> Any:
-    """
-    Perform a web search using the Tavily API.
-    Returns a list of results.
-    """
-    import requests, time  # local import for async context
-    print(f"[DEBUG] Starting Tavily search for query: {query}")
-    api_url = "https://api.tavily.com/search"
-    headers = {"Authorization": f"Bearer {TAVILY_API_KEY}", "Content-Type": "application/json"}
-    payload = {"query": query, "max_results": 5, "include_raw_content": True}
-    results = []
-    for attempt in range(3):
-        print(f"[DEBUG] Tavily search attempt {attempt+1}")
-        try:
-            response = requests.post(api_url, json=payload, headers=headers, timeout=10)
-            if response.status_code == 200:
-                data = response.json()
-                for item in data.get("results", []):
-                    results.append({
-                        "title": item.get("title", ""),
-                        "url": item.get("url", ""),
-                        "content": item.get("content", "")
-                    })
-                break
-        except Exception as e:
-            print(f"[DEBUG] Tavily search attempt {attempt+1} failed with error: {e}")
-            if attempt < 2:
-                time.sleep(2)
-    print(f"[DEBUG] Tavily search completed with {len(results)} results")
-    return results
-
-async def serpapi_search(query: str) -> Any:
-    import requests, time  # local import for async context
-    print(f"[DEBUG] Starting SerpAPI search for query: {query}")
-    api_url = "https://serpapi.com/search"
-    params = {
-        "q": query,
-        "api_key": SERPAPI_API_KEY,
-        "engine": "google",
-        "num": 5,        # Number of results to return
-        "hl": "en"       # Language (optional)
-    }
-    results = []
-    for attempt in range(3):
-        print(f"[DEBUG] SerpAPI search attempt {attempt+1}")
-        try:
-            response = requests.get(api_url, params=params, timeout=10)
-            if response.status_code == 200:
-                data = response.json()
-                organic_results = data.get("organic_results", [])
-                for item in organic_results:
-                    results.append({
-                        "title": item.get("title", ""),
-                        "url": item.get("link", ""),
-                        "content": item.get("snippet", "")
-                    })
-                break
-        except Exception as e:
-            print(f"[DEBUG] SerpAPI search attempt {attempt+1} failed with error: {e}")
-            if attempt < 2:
-                time.sleep(2)
-    print(f"[DEBUG] SerpAPI search completed with {len(results)} results")
-    return results
-
-# ------------------------------------------------------------------------
-# S3 HELPERS
-# ------------------------------------------------------------------------
-
-def get_presigned_url_from_source_uri(source_uri: str, expiration: int = 3600) -> str:
-    """
-    Generate a presigned URL from an S3 source_uri.
-    
-    Parameters:
-      - source_uri (str): The S3 URI (e.g. "s3://bucket-name/path/to/object.pdf")
-      - expiration (int): The expiration time of the URL in seconds
-      
-    Returns:
-      - str: The presigned URL.
-    """
-    # Check the format
-    if not source_uri.startswith("s3://"):
-        raise ValueError("source_uri must start with 's3://'")
-    
-    # Remove the "s3://" prefix and split into bucket and key
-    without_prefix = source_uri.replace("s3://", "")
-    parts = without_prefix.split("/", 1)
-    if len(parts) != 2:
-        raise ValueError("Invalid source_uri format. Expected s3://bucket/key")
-    
-    bucket, key = parts
-    try:
-        url = s3_client.generate_presigned_url(
-            "get_object",
-            Params={"Bucket": bucket, "Key": key},
-            ExpiresIn=expiration
-        )
-        return url
-    except Exception as e:
-        print(f"Error generating presigned URL: {e}")
-        return None
+ENC = tiktoken.encoding_for_model("gpt-4o-mini")
+MAX_TOKENS = 120000
+print(f"[DEBUG] OpenAI API key set: {bool(OPENAI_API_KEY)}")
 
 # ------------------------------------------------------------------------
 # SCHEMAS
 # ------------------------------------------------------------------------
-class Section(BaseModel):
-    name: str = Field(description="Name for this section of the report.")
-    description: str = Field(description="Brief overview of the main topics.")
-    research: bool = Field(description="Whether we need to query local docs.")
-    content: str = Field(description="The content of this section.", default="")
-    citations: List[dict] = Field(default_factory=list, description="List of references/citations used for this section.")
-
-class Sections(BaseModel):
-    sections: List[Section] = Field(description="List of sections for the report.")
-
 class SearchQuery(BaseModel):
     search_query: str = Field(..., description="A doc query relevant for the section.")
 
 class Queries(BaseModel):
     queries: List[SearchQuery] = Field(description="List of doc queries.")
+
+class SourceQueries(BaseModel):
+    web_queries: List[str]
+    kb_queries: List[str]
+    excel_queries: List[str]
 
 class ReportStateInput(TypedDict):
     topic: str  # e.g. "Financial due diligence for Company X"
@@ -572,484 +358,1098 @@ class ReportStateInput(TypedDict):
 
 class ReportStateOutput(TypedDict):
     final_report: str
-    sections: List[Section]
 
-class ReportState(TypedDict, total=False):
+class Section(BaseModel):
+    name: str = Field(description="Name for this section of the report.")
+    description: str = Field(description="Brief overview of the main topics.")
+    research: bool = Field(description="Whether we need to query local docs.")
+    content: str = Field(description="The content of this section.", default="")
+
+class Sections(BaseModel):
+    sections: List[Section] = Field(description="List of sections for the report.")
+
+class DataPoint(BaseModel):
+    name: str = Field(..., description="Descriptive name of the metric")
+    value: Optional[Union[float, int, str]] = Field(None, description="The numerical value or percentage")
+    unit: Optional[str] = Field(None, description="Unit of measurement (%, $, etc.)")
+    time_period: Optional[str] = Field(None, description="Time period this applies to (e.g., '2023', 'Q1 2024')")
+    source: Optional[str] = Field(None, description="Source of the data point")
+    significance: Optional[str] = Field(None, description="Why this data point matters to the analysis")
+    trend: Optional[str] = Field(
+        None,
+        description="Trend direction if available (up/down/stable)",
+        choices=["up", "down", "stable"]
+    )
+    comparison: Optional[Dict[str, Union[float, str]]] = Field(
+        None,
+        description="Comparison data (industry avg, competitor, etc.)"
+    )
+    data_type: Optional[str] = Field(
+        None,
+        description="Type of financial data",
+        choices=[
+            "revenue", "profit", "margin", "growth_rate", 
+            "market_share", "valuation", "ratio", "other"
+        ]
+    )
+
+class SectionContent(BaseModel):
+    content: str
+    data_points: Optional[List[DataPoint]] = Field(
+        default_factory=list,
+        description="Key numerical findings extracted from research"
+    )
+    key_takeaways: List[str] = Field(
+        default_factory=list,
+        description="3-5 main conclusions from this section"
+    )
+    further_research: bool = Field(
+        default=False,
+        description="Whether additional research is needed"
+    )
+
+@dataclass
+class ReportConfig:
+    use_tavily: bool = True
+    use_serpapi: bool = False
+    use_perplexity: bool = True
+    perplexity_api_key: Optional[str] = None
+    retain_temp_files: bool = False
+    section_iterations: int = 2
+    web_research: bool = True
+    file_search: bool = True
+    excel_search: bool = False
+
+@dataclass
+class Citation:
+    pass
+
+@dataclass
+class KBCitation(Citation):
+    chunk_text: str
+    page: Optional[int]
+    file_name: str
+    url: str
+
+@dataclass
+class WebCitation(Citation):
+    title: str
+    url: str
+    snippet: str
+
+@dataclass
+class ExcelCitation(Citation):
+    file_name: str
+    sheet: str
+    row: int
+    col: str
+    value: str
+
+@dataclass
+class SearchResult:
+    citations: List[Citation]  # For UI display
+    context_text: str         # For LLM content generation
+    original_queries: List[str]
+
+# Modify SectionState to use annotated fields for concurrent updates
+@dataclass
+class SectionState:
+    title: str  # Prevent concurrent updates from overwriting title.
+    web_research: bool
+    excel_search: bool
+    kb_search: bool
+    report_type: Annotated[int, lambda old, new: old]
+    description: str = ""
+    # Annotated fields for concurrent writes
+    web_results: Annotated[Optional[List[SearchResult]], lambda x, y: x + [y]] = field(default_factory=list)  # type: ignore
+    excel_results: Annotated[Optional[List[SearchResult]], lambda x, y: x + [y]] = field(default_factory=list)  # type: ignore
+    kb_results: Annotated[Optional[List[SearchResult]], lambda x, y: x + [y]] = field(default_factory=list)  # type: ignore
+    citations: Annotated[List[Citation], lambda x, y: x + y] = field(default_factory=list)  # type: ignore
+    context: Annotated[List[str], lambda x, y: x + [y]] = field(default_factory=list) # type: ignore
+    # Regular fields
+    content: str = ""
+    report_state: Any = None
+    queries: List[SearchQuery] = field(default_factory=list)
+    attempts: int = 0
+    excel_queries: List[str] = field(default_factory=list)
+    web_queries: List[str] = field(default_factory=list)
+    kb_queries: List[str] = field(default_factory=list)
+
+@dataclass
+class ReportState:
     topic: str
     user_id: str
+    project_id: str
     report_type: int
     file_search: bool
-    web_search: bool
-    project_id: str
-    sections: List[Section]
-    completed_sections: Annotated[List[Section], operator.add]
-    report_sections_from_research: str
-    final_report: str
-    reflection_count: int
-    reflection_needed: bool
-
-class SectionState(TypedDict):
-    section: Section
-    report_type: int
-    user_id: str
-    file_search: bool
-    web_search: bool
-    project_id: str
-    search_queries: List[SearchQuery]
-    source_str: str
-    report_sections_from_research: str
-    completed_sections: List[Section]
-
-class SectionOutputState(TypedDict):
-    completed_sections: List[Section]
+    web_research: bool
+    config: ReportConfig = field(default_factory=ReportConfig)
+    outline: List[SectionState] = field(default_factory=list)
+    current_section_idx: int = 0
+    final_report: str = ""
 
 # ------------------------------------------------------------------------
 # LLM Setup
 # ------------------------------------------------------------------------
+print("[DEBUG] Initializing ChatOpenAI with model gpt-4o-mini")
 gpt_4 = ChatOpenAI(model="gpt-4o-mini", temperature=0.0, api_key=OPENAI_API_KEY)
 
-# ------------------------------------------------------------------------
-# HELPER: Format completed sections
-# ------------------------------------------------------------------------
-def format_sections(sections: List[Section]) -> str:
-    """
-    Turn a list of completed sections into a text block for reference.
-    """
-    out = []
-    for idx, sec in enumerate(sections, 1):
-        out.append(f"""
-============================================================
-Section {idx}: {sec.name}
-============================================================
-Description:
-{sec.description}
-Needs Research: {sec.research}
-
-Content:
-{sec.content if sec.content else '[Not yet written]'}
-""")
-    return "\n".join(out)
 
 # ------------------------------------------------------------------------
+# HELPER: Format completed sections, Call llm
+# ------------------------------------------------------------------------
+CITATIONS: List[Citation] = []
+
+def similar(a: str, b: str) -> bool:
+    print(f"[DEBUG] Comparing titles: '{a}' and '{b}'")
+    a = a.lower().replace('_', ' ').replace('-', ' ')
+    b = b.lower().replace('_', ' ').replace('-', ' ')
+    result = a in b or b in a or fuzz.ratio(a, b) > 70
+    print(f"[DEBUG] Similarity result: {result}")
+    return result
+
+def validate_outline_against_pdf(outline_sections, pdf_sections):
+    """Ensure all PDF sections are included"""
+    print("[DEBUG] Validating outline against PDF sections")
+    pdf_titles = {sec['title'].lower() for sec in pdf_sections}
+    missing_sections = []
+    
+    for title in pdf_titles:
+        if not any(title in sec.name.lower() for sec in outline_sections):
+            missing_sections.append(title)
+            
+    if missing_sections:
+        print(f"[WARNING] Missing PDF sections: {missing_sections}")
+        # Add missing sections with placeholder content
+        for title in missing_sections:
+            outline_sections.append(Section(
+                name=title,
+                description=f"Placeholder for required PDF section: {title}",
+            ))
+    print("[DEBUG] Validation complete")
+    return outline_sections
+
+def flatten_context(data):
+    """
+    Recursively flatten a nested list structure.
+    Returns a flat list of strings.
+    """
+    flat = []
+    if isinstance(data, list):
+        for item in data:
+            flat.extend(flatten_context(item))
+    else:
+        flat.append(str(data))
+    return flat
+
+def convert_to_section_state(base_state: ReportState, data: dict) -> SectionState:
+    """Convert dictionary to SectionState with all required fields"""
+    return SectionState(
+        title=data.get('title', base_state.outline[base_state.current_section_idx].title),
+        web_research=data.get('web_research', base_state.web_research),
+        excel_search=data.get('excel_search', base_state.config.excel_search),
+        kb_search=data.get('kb_search', base_state.file_search),
+        report_type=data.get('report_type', base_state.report_type),
+        # Optional fields
+        description=data.get('description', ''),
+        web_results=data.get('web_results', []),
+        excel_results=data.get('excel_results', []),
+        kb_results=data.get('kb_results', []),
+        citations=data.get('citations', []),
+        context=data.get('context', []),
+        content=data.get('content', ''),
+        report_state=base_state,
+        queries=data.get('queries', []),
+        attempts=data.get('attempts', 0),
+        excel_queries=data.get('excel_queries', []),
+        web_queries=data.get('web_queries', []),
+        kb_queries=data.get('kb_queries', [])
+    )
+
+def trim_to_tokens(text: str, max_tokens: int = MAX_TOKENS) -> str:
+    tokens = ENC.encode(text)
+    if len(tokens) <= max_tokens:
+        return text
+    # Keep the first N tokens and decode back
+    return ENC.decode(tokens[:max_tokens])
+
+# =============================================================================
+# SEARCH FUNCTIONS
+# =============================================================================
+def parallel_excel_search(report_state: ReportState, queries: List[str]) -> SearchResult:
+    """Search Excel files with section-specific query"""
+    print("[DEBUG] Entering parallel_excel_search")
+    if not report_state.config.excel_search:
+        print("[DEBUG] Excel search disabled in config")
+        return SearchResult(context_text="", citations=[], original_queries=queries)
+
+    index = extract_excel_index(report_state.user_id, report_state.project_id)
+    if not index:
+        print("[DEBUG] No Excel index found")
+        return SearchResult(context_text="", citations=[], original_queries=queries)
+    
+    citations = []
+    context_parts = []
+
+    try:
+        for sq in queries:
+            print(f"[DEBUG] Excel search query: {sq}")
+            query_engine = index.as_query_engine()
+            excel_resp = query_engine.query(sq)
+            for node in excel_resp.source_nodes:
+                metadata = node.metadata
+                citations.append(ExcelCitation(
+                    file_name=metadata.get("file_name", "unknown"),
+                    sheet=metadata.get("sheet", "unknown"),
+                    row=metadata.get("row", 0),
+                    col=metadata.get("col", "unknown"),
+                    value=node.text
+                ))
+                CITATIONS.append(ExcelCitation(
+                    file_name=metadata.get("file_name", "unknown"),
+                    sheet=metadata.get("sheet", "unknown"),
+                    row=metadata.get("row", 0),
+                    col=metadata.get("col", "unknown"),
+                    value=node.text
+                ))
+            context_parts.append(f"Excel Search Answer:\n{excel_resp}")
+        result = SearchResult(citations=citations, context_text="\n\n".join(context_parts), original_queries=queries)
+        print("[DEBUG] Excel search completed successfully")
+        return result
+    except Exception as e:
+        print(f"[DEBUG] Excel query failed: {e}")
+        return SearchResult(context_text="", citations=[], original_queries=queries)
+
+def parallel_web_search(report_state: ReportState, queries: List[str]) -> SearchResult:
+    """Search web using Perplexity as primary source with Tavily fallback"""
+    print("[DEBUG] Entering parallel_web_search")
+    if not report_state.config.web_research:
+        print("[DEBUG] Web research disabled in config")
+        return SearchResult(citations=[], context_text="", original_queries=queries)
+    
+    citations = []
+    context_parts = []
+    
+    try:
+        for sq in queries:
+            print(f"[DEBUG] Web search (Tavily) query: {sq}")
+            tavily_results = call_tavily_api(sq)
+            for r in tavily_results:
+                citation = WebCitation(
+                    title=r.get("title", "Unknown Source"),
+                    url=r.get("url", ""),
+                    snippet=r.get("content", r.get("snippet", ""))
+                )
+                citations.append(citation)
+                CITATIONS.append(citation)
+                context_parts.append(
+                    f"Web Result: {citation.title}\n"
+                    f"{citation.snippet}"
+                )
+        result = SearchResult(
+            citations=citations,
+            context_text="\n\n---\n\n".join(context_parts) if citations else "",
+            original_queries=queries
+        )
+        print("[DEBUG] Web search (Tavily) fallback completed successfully")
+        return result
+    except Exception as e:
+        print(f"[WARNING] Tavily search failed: {str(e)}")
+    
+    return SearchResult(
+        citations=citations,
+        context_text="\n\n---\n\n".join(context_parts) if citations else "",
+        original_queries=queries
+    )
+
+def parallel_kb_query(report_state: ReportState, queries: List[str]) -> SearchResult:
+    """Query knowledge base and return both citations and context"""
+    print("[DEBUG] Entering parallel_kb_query")
+    citations = []
+    context_parts = []
+    
+    for sq in queries:
+        print(f"[DEBUG] KB query: {sq}")
+        resp = query_kb(sq, KNOWLEDGE_BASE_ID, report_state.user_id, report_state.project_id, MODEL_ARN)
+        for cobj in resp.get("citations", []):
+            # Get the generated answer text
+            answer_text = resp.get('output', {}).get('text', 'No results found')
+            print(f"[DEBUG] KB answer text: {answer_text[:20]}")
+            context_parts.append(f"Knowledge Base Answer:\n{answer_text}")
+            
+            # Process references
+            for ref in cobj.get("retrievedReferences", []):
+                citation = KBCitation(
+                    chunk_text=ref.get("content", {}).get("text", ""),
+                    page=ref.get("metadata", {}).get("x-amz-bedrock-kb-document-page-number"),
+                    file_name=os.path.basename(ref.get("metadata", {}).get("x-amz-bedrock-kb-source-uri", "")),
+                    url=get_presigned_url_from_source_uri(ref.get("metadata", {}).get("x-amz-bedrock-kb-source-uri", ""))
+                )
+                citations.append(citation)
+                CITATIONS.append(citation)
+                print(f"[DEBUG] Added KB citation")
+    
+    result = SearchResult(
+        citations=citations,
+        context_text="\n\n".join(context_parts),
+        original_queries=queries
+    )
+    print("[DEBUG] KB search completed successfully")
+    return result
+
+# =============================================================================
 # GRAPH NODES
-# ------------------------------------------------------------------------
-async def generate_report_plan(state: ReportState, config: RunnableConfig):
+# =============================================================================
+async def node_generate_outline(state: ReportState):
+    """Generate report outline from PDF in S3 using structured LLM calls.
+    
+    If PDF sections are found, use them directly to create the outline without further KB or web searches.
+    Otherwise, perform KB search and LLM outline generation.
     """
-    1) Generate an initial set of queries to gather relevant data about the topic from local docs.
-    2) Retrieve doc context.
-    3) Generate an outline (sections) for the report.
-    """
-    logger.debug(f"State when entering generate_report_plan: {state}")
-    topic = state["topic"]
-    report_type = state["report_type"]
+    print(f"[DEBUG] Entering node_generate_outline for topic: {state.topic}")
 
-    # Step 1: Generate queries (structured response)
-    structured_llm_queries = gpt_4.with_structured_output(Queries)
-    system_prompt_for_queries = report_planner_query_writer_instructions[report_type].format(topic=topic)
+    # 1. Download and parse PDF from S3.
+    pdf_text = await extract_pdf_from_s3(state.user_id, state.project_id)
+    print(f"[DEBUG] PDF text length: {len(pdf_text) if pdf_text else 0}")
+    
+    pdf_sections = []
+    if pdf_text:
+        pdf_sections = parse_pdf_structure(pdf_text)
+        print(f"[DEBUG] Parsed {len(pdf_sections)} PDF sections")
+    else:
+        default = await extract_pdf_from_s3("default", "outline")
+        if default:
+            pdf_sections = parse_pdf_structure(default)
+            print(f"[DEBUG] Parsed {len(pdf_sections)} PDF sections")
 
+    # ---------------------------------------
+    # CASE 1: PDF sections exist – use them as-is.
+    # ---------------------------------------
+    if pdf_sections:
+        print("[DEBUG] PDF sections found. Using them directly to create outline without KB or web search.")
+        for sec in pdf_sections:
+            title = sec.get("title", "Untitled Section")
+            content = sec.get("content", "")
+            # Use the first 200 characters as a brief description (if desired)
+            description = content[:200] if content else ""
+            new_section_state = SectionState(
+                title=title,
+                description=description,
+                content=content,
+                report_state=state,
+                # Maintain original configuration values
+                web_research=state.config.web_search if hasattr(state.config, "web_search") else False,
+                excel_search=state.config.file_search if hasattr(state.config, "file_search") else False,
+                kb_search=state.config.file_search if hasattr(state.config, "file_search") else False,
+                report_type=state.report_type
+            )
+            state.outline.append(new_section_state)
+            print(f"[DEBUG] Created outline section from PDF: {new_section_state.title} (Total sections: {len(state.outline)})")
+        print(f"[DEBUG] Exiting node_generate_outline with {len(state.outline)} sections created from PDF.")
+        return state
+
+    # ---------------------------------------
+    # CASE 2: No PDF sections – perform KB search and generate outline via LLM.
+    # ---------------------------------------
+    print("[DEBUG] No PDF sections found. Proceeding with KB search and LLM outline generation.")
+    
+    # Generate queries (structured response) to find content using KB search.
+    structured_llm_queries = gpt_4.with_structured_output(Queries, method="function_calling")
+    system_prompt_for_queries = report_planner_query_writer_instructions[state.report_type].format(topic=state.topic)
+    print(f"[DEBUG] System prompt for queries prepared")
+    
     queries_obj = structured_llm_queries.invoke([
         SystemMessage(content=system_prompt_for_queries),
         HumanMessage(content="Generate a list of doc queries in JSON under 'queries'.")
     ])
-    print(f"[DEBUG] Generated queries")
+    print(f"[DEBUG] Generated queries: {queries_obj.queries}")
 
-    # Step 2: Query the local documents
+    # Query the local documents (KB search) for each generated query.
     doc_context_list = []
-    if query_engine:
-        for q in queries_obj.queries:
-            resp = query_engine.query(q.search_query)
-            doc_context_list.append(f"Query: {q.search_query}\n{str(resp)}\n")
+    for q in queries_obj.queries:
+        print(f"[DEBUG] Querying KB with query: {q.search_query}")
+        resp = query_kb(q.search_query, KNOWLEDGE_BASE_ID, state.user_id, state.project_id, MODEL_ARN)
+        output_text = resp.get('output', {}).get('text', 'No results found')
+        doc_text = f"Query: {q.search_query}\nResult: {output_text}\n"
+        doc_context_list.append(doc_text)
     combined_context = "\n".join(doc_context_list)
+    print(f"[DEBUG] Combined context from KB queries generated")
 
-    # Step 3: Create sections from that context
+    # Since no PDF sections, prepare an empty prompt for PDF sections text.
+    pdf_sections_text = ""
+    print(f"[DEBUG] No PDF sections text prepared (empty)")
+
+    # Create sections from context using LLM.
     structured_llm_sections = gpt_4.with_structured_output(Sections, method="function_calling")
-    system_prompt_for_sections = report_planner_instructions[report_type].format(
-        topic=topic,
-        context=combined_context
+    outline_prompt = report_planner_instructions[state.report_type].format(
+        topic=state.topic,
+        context=combined_context,
+        pdf_sections=pdf_sections_text
     )
+    print(f"[DEBUG] Outline prompt prepared: {outline_prompt[:200]}...")
 
     sections_obj = structured_llm_sections.invoke([
-        SystemMessage(content=system_prompt_for_sections),
+        SystemMessage(content=outline_prompt),
         HumanMessage(content="Generate the JSON array of sections under 'sections'.")
     ])
-    print(f"[DEBUG] Generated report sections")
+    print(f"[DEBUG] Sections generated by LLM")
 
-    return {"sections": sections_obj.sections}
-
-def generate_queries(state: SectionState, config: RunnableConfig):
-    """
-    For each section, generate up to 5 specialized queries to find more data.
-    Only filter out any queries that have already been asked.
-    Additionally, include previous queries and their compiled document search outputs
-    to ensure that new queries build upon and deepen the research.
-    """
-    section = state["section"]
-    report_type = state["report_type"]
-    structured_llm_queries = gpt_4.with_structured_output(Queries)
-    
-    # Gather previous queries and their compiled answers (if available)
-    previous_queries = state.get("previous_queries", [])
-    if previous_queries:
-        previous_text = "\n".join([f"Q: {pq.search_query}" for pq in previous_queries])
-    else:
-        previous_text = "None"
-    previous_section_output = state.get("source_str", "No previous document search results available.")
-    
-    prompt = query_prompt_for_iteration[report_type].format(
-        description=section.description,
-        previous_text=previous_text,
-        previous_section_output=previous_section_output
+    # Validate outline against PDF sections. Here, pdf_sections is empty, so the validator should handle it gracefully.
+    sections_obj.sections = validate_outline_against_pdf(
+        sections_obj.sections,
+        pdf_sections
     )
-    
-    queries_obj = structured_llm_queries.invoke([
-        SystemMessage(content=prompt),
-        HumanMessage(content="Return 'queries' in JSON.")
-    ])
-    print(f"[DEBUG] Generated specialized queries for section '{section.name}': {queries_obj}")
-    # Filter out queries that have been generated in previous iterations.
-    previous = state.get("previous_queries", [])
-    unique_queries = [q for q in queries_obj.queries if q.search_query not in [pq.search_query for pq in previous]]
-    state.setdefault("previous_queries", []).extend(unique_queries)
-    return {"search_queries": unique_queries}
+    print(f"[DEBUG] Outline after validation has {len(sections_obj.sections)} sections")
 
-def get_file_name(source_uri: str) -> str:
-    """
-    Extract the file name from an S3 URI or HTTP URL.
-    For S3 URIs (e.g., "s3://bucket-name/path/to/file.pdf"), returns "file.pdf".
-    For HTTP URLs, uses the URL path.
-    """
-    if source_uri.startswith("s3://"):
-        parts = source_uri.split("/")
-        return parts[-1] if parts else source_uri
-    else:
-        from urllib.parse import urlparse
-        parsed = urlparse(source_uri)
-        path = parsed.path
-        return path.split("/")[-1] if path else source_uri
-
-def search_document(state: SectionState, config: RunnableConfig):
-    search_queries = state["search_queries"]
-    user_id = state["user_id"]
-    project_id = state["project_id"]
-    results = []
-    
-    # We'll accumulate references from each query here:
-    all_citations = []
-    
-    for sq in search_queries:
-        resp = query_kb(sq.search_query, KNOWLEDGE_BASE_ID, user_id, project_id, MODEL_ARN)
-        
-        # The textual content you had before
-        doc_text = f"Query: {sq.search_query}\nResult: {resp['output']}\n"
-        
-        # Extract citation info if available
-        for citation in resp.get("citations", []):
-            for reference in citation.get("retrievedReferences", []):
-                metadata = reference.get("metadata", {})
-                page_number = metadata.get("x-amz-bedrock-kb-document-page-number")
-                source_uri = metadata.get("x-amz-bedrock-kb-source-uri")
-                chunk_content = reference.get("content", {})
-                chunk_text = chunk_content.get("text", "")
-                
-                # Build a citation entry with the extracted file name for deduplication.
-                citation_entry = {
-                    "query": sq.search_query,
-                    "pageNumber": page_number,
-                    "sourceUri": get_presigned_url_from_source_uri(source_uri),
-                    "chunk_text": chunk_text,
-                    "file_name": get_file_name(source_uri)
-                }
-                
-                # Check if a citation with the same file name and page number is already in the list.
-                exists = False
-                for cit in all_citations:
-                    if citation_entry.get("pageNumber"):
-                        # Document citation: compare file name and page number.
-                        if cit.get("pageNumber") and cit["file_name"] == citation_entry["file_name"] and cit["pageNumber"] == citation_entry["pageNumber"]:
-                            exists = True
-                            break
-                    else:
-                        # Web citation: compare only file name.
-                        if cit["file_name"] == citation_entry["file_name"]:
-                            exists = True
-                            break
-                if not exists:
-                    all_citations.append(citation_entry)
-
-        results.append(doc_text)
-    
-    # (Optional) Remove the temporary "file_name" field from each citation before returning.
-    unique_citations = []
-    for cit in all_citations:
-        cit.pop("file_name", None)
-        unique_citations.append(cit)
-    
-    combined = "\n".join(results)
-    print(f"[DEBUG] Combined document excerpts for section '{state['section'].name}' with deduplicated citations based on file name.")
-    
-    # Return both the raw text and the deduplicated citations.
-    return {
-        "source_str": combined,
-        "citations": unique_citations
-    }
-
-def write_section(state: SectionState):
-    """
-    Build the final text for this section from the combined source_str.
-    """
-    section = state["section"]
-    src = state["source_str"]
-    report_type = state["report_type"]
-
-    prompt = section_writer_instructions[report_type].format(
-        section_title=section.name,
-        section_topic=section.description,
-        context=src
-    )
-
-    response = gpt_4.invoke([
-        SystemMessage(content=prompt),
-        HumanMessage(content="Draft the content for this section.")
-    ])
-    # Append a citation to the generated content.
-    section.content = response.content
-    print(f"[DEBUG] Wrote section '{section.name}'")
-    return {"completed_sections": [section]}
-
-async def iterate_section_research(state: SectionState, config: RunnableConfig):
-    section_iterations = config.get("section_iterations", 2)
-    accumulated_context = ""
-    file_search = state["file_search"]
-    web_search = state["web_search"]
-    
-    # We'll track all citations across iterations
-    all_citations_for_section = []
-    
-    for i in range(section_iterations):
-        print(f"[DEBUG] Iteration {i+1} for section '{state['section'].name}'")
-        
-        # 1) Generate specialized queries
-        queries_result = generate_queries(state, config)
-        state["search_queries"] = queries_result["search_queries"]
-        
-        # 2) Document search
-        if file_search:
-            doc_result = search_document(state, config)
-            # Accumulate citations from each iteration
-            all_citations_for_section.extend(doc_result["citations"])
-        else:
-            doc_result = {"source_str": "Not searching documents for this request"}
-        
-        # 3) Web search (optional)
-        if web_search:
-            web_result = await tavily_search(state["section"].name)
-            # You can build citations for web results here if desired
-            # e.g. each item in web_result could be appended to all_citations_for_section
-            for item in web_result:
-                citation_entry = {
-                    "query": state["section"].name,
-                    "title": item.get("title", ""),
-                    "sourceUri": item.get("url", ""),
-                    "chunk_text": item.get("content", "")
-                }
-                all_citations_for_section.append(citation_entry)
-        else:
-            web_result = "Not searching web for this request"
-        
-        # Combine textual results
-        if isinstance(web_result, list):
-            web_result_str = "\n".join([
-                f"Title: {r['title']}\nURL: {r['url']}\nContent: {r['content']}"
-                for r in web_result
-            ])
-        else:
-            web_result_str = str(web_result)
-        
-        combined_iteration = (
-            f"--- Iteration {i+1} ---\n"
-            f"Document Results:\n{doc_result['source_str']}\n\n"
-            f"Web Results:\n{web_result_str}\n"
+    # Convert the generated sections into SectionState objects.
+    for section in sections_obj.sections:
+        # Since there are no PDF sections, we set content as empty.
+        new_section_state = SectionState(
+            title=section.name,
+            description=section.description,
+            content="",
+            report_state=state,
+            web_research=state.config.web_search if hasattr(state.config, "web_search") else False,
+            excel_search=state.config.excel_search if hasattr(state.config, "excel_search") else False,
+            kb_search=state.config.file_search if hasattr(state.config, "file_search") else False,
+            report_type=state.report_type
         )
-        
-        accumulated_context += combined_iteration + "\n"
-    
-    # Store the combined context in state
-    state["source_str"] = accumulated_context
-    
-    # 4) Draft the final text for this section
-    final_output = write_section(state)
-    
-    # 5) Attach the citations to the section object
-    # final_output["completed_sections"] is a list with one item, the updated section
-    completed_section = final_output["completed_sections"][0]
-    completed_section.citations = all_citations_for_section
-    
-    return final_output
+        state.outline.append(new_section_state)
+        print(f"[DEBUG] Created outline section from LLM: {new_section_state.title} (Total sections: {len(state.outline)})")
 
-def gather_completed_sections(state: ReportState):
-    """
-    After all sections are processed, gather them into a single reference string.
-    """
-    completed_sections = state.get("completed_sections", [])
-    joined = format_sections(completed_sections)
-    print(f"[DEBUG] Gathered completed sections")
-    return {"report_sections_from_research": joined}
+    print(f"[DEBUG] Exiting node_generate_outline with {len(state.outline)} sections created (via KB & LLM).")
+    return state
 
-def write_final_sections(state: SectionState):
-    """
-    For sections that do not require additional doc-based research,
-    finalize them by leveraging context from 'report_sections_from_research'.
-    This function now expects a single section in state["section"].
-    """
-    section = state["section"]
-    report_type = state["report_type"]
-    prompt = final_section_writer_instructions[report_type].format(
-        context=state["report_sections_from_research"]
+async def node_process_section(state: ReportState):
+    print(f"[DEBUG] Processing section index: {state.current_section_idx}")
+    
+    # Get current section
+    current_section = state.outline[state.current_section_idx]
+    
+    # Initialize section state
+    section_state = SectionState(
+        title=current_section.title,
+        web_research=state.web_research,
+        excel_search=state.config.excel_search,
+        kb_search=state.file_search,
+        report_type=state.report_type,
+        description=current_section.description,
+        report_state=state
     )
-    response = gpt_4.invoke([
-        SystemMessage(content=f"Generate the final text for {section.name}: {section.description}"),
-        HumanMessage(content=prompt)
-    ])
-    section.content = response.content
-    print(f"[DEBUG] Finalized section '{section.name}' without additional doc research")
-    return {"completed_sections": [section]}
+    
+    # Process section
+    processed_data = await section_subgraph_compiled.ainvoke(section_state)
+    
+    # Convert back to SectionState if needed
+    if isinstance(processed_data, dict):
+        processed_state = convert_to_section_state(state, processed_data)
+    else:
+        processed_state = processed_data
+    
+    # Generate content
+    await generate_section_content(state, processed_state)
+    
+    # Retry logic
+    for attempt in range(state.config.section_iterations):
+        success, feedback = evaluate_section(current_section)
+        if success:
+            break
+            
+        print(f"[RETRY] Researching section (Attempt {attempt+1})")
+        processed_data = await section_subgraph_compiled.ainvoke(processed_state)
+        if isinstance(processed_data, dict):
+            processed_state = convert_to_section_state(state, processed_data)
+        await generate_section_content(state, processed_state)
+    
+    # Update state
+    state.current_section_idx += 1
+    return state
 
-def compile_final_report(state: ReportState):
+def node_compile_final(state: ReportState):
+    """Compile all sections into final report"""
+    print(f"[DEBUG] Entering node_compile_final, compiling final report with {len(state.outline)} sections")
+    out = []
+    for i, sec in enumerate(state.outline, start=1):
+        print(f"[DEBUG] Compiling section {i}: {sec.title}")
+        out.append(f"## {i}. {sec.title}\n\n{sec.content.strip()}\n")
+    state.final_report = "\n".join(out)
+    print(f"[DEBUG] Final report compiled")
+    return state
+
+# =============================================================================
+# SUB-GRAPH NODES
+# =============================================================================
+def node_section_data_needs(state: SectionState):
+    """Determine what data this specific section needs"""
+    print(f"[DEBUG] Entering node_section_data_needs for section: {state.title}")
+    determine_section_queries(state)
+    print(f"[DEBUG] Exiting node_section_data_needs for section: {state.title}")
+    return state
+
+async def node_parallel_search(state: SectionState) -> SectionState:
     """
-    Combine all sections into a single text block for the final output,
-    and return them in a structured format so the frontend can display references.
+    Run Excel, Web, and KB searches concurrently using asyncio.gather.
+    Each search function runs in a separate thread (if blocking) via asyncio.to_thread.
     """
-    # Convert each section in state["sections"] to a Section object
-    raw_sections = state["sections"]
-    sections = []
-    for s in raw_sections:
-        if isinstance(s, dict):
-            sections.append(Section.parse_obj(s))
-        else:
-            sections.append(s)
+    tasks = []
     
-    # Similarly, convert completed_sections to Section objects
-    raw_completed = state.get("completed_sections", [])
-    completed_sections = []
-    for s in raw_completed:
-        if isinstance(s, dict):
-            completed_sections.append(Section.parse_obj(s))
-        else:
-            completed_sections.append(s)
+    if state.excel_queries:
+        # Run the Excel search concurrently in a thread
+        tasks.append(asyncio.to_thread(parallel_excel_search, state.report_state, state.excel_queries))
+    if state.web_queries:
+        # Run the Web search concurrently in a thread
+        tasks.append(asyncio.to_thread(parallel_web_search, state.report_state, state.web_queries))
+    if state.kb_queries:
+        # Run the KB search concurrently in a thread
+        tasks.append(asyncio.to_thread(parallel_kb_query, state.report_state, state.kb_queries))
     
-    # Create a mapping from section name to its corresponding completed section
-    completed_map = {s.name: s for s in completed_sections}
-    print(f"[DEBUG] Completed Map: {completed_map}")
+    # Launch all tasks concurrently and wait for all to complete.
+    results = await asyncio.gather(*tasks, return_exceptions=True)
+    
+    # Process results: for successful tasks, extend the state with their context and citations.
+    for res in results:
+        if not isinstance(res, Exception):
+            state.citations.extend(res.citations)
+            # Append the context text to the state (if already a list, merge; otherwise, combine as a string)
+            state.context.append(res.context_text)
+    return state
 
-    # Update sections with final content and citations from completed_map
-    for s in sections:
-        if s.name in completed_map:
-            s.content = completed_map[s.name].content
-            s.citations = completed_map[s.name].citations
-    
-    # Build the final report by concatenating the content of each section
-    final_report_text = "\n\n".join([sec.content for sec in sections])
-    print(f"[DEBUG] Compiled final report")
-    
-    return {
-        "final_report": final_report_text,
-        "sections": [s.dict() for s in sections]  # Convert Pydantic models to dict for output
-    }
+def node_section_excel_search(state: SectionState):
+    print(f"[DEBUG] Entering node_section_excel_search for section: {state.title}")
+    if len(state.excel_queries) > 0:
+        results = parallel_excel_search(state.report_state, state.excel_queries)
+        print(f"[DEBUG] Excel search returned results for section {state.title}")
+        state.excel_results.append(results)
+        state.citations.extend(results.citations)
+        state.context.append(results.context_text)
+        return {
+            "excel_results": [results],
+            "citations": results.citations,
+            "context": results.context_text 
+        }
+    print(f"[DEBUG] No Excel queries or Excel search disabled for section: {state.title}")
+    return {}
 
-# ------------------------------------------------------------------------
-# BUILD THE MAIN GRAPH
-# ------------------------------------------------------------------------
-builder = StateGraph(
-    state_schema=ReportState,
-    input=ReportStateInput,
-    output=ReportStateOutput,
-    config_schema=Configuration
+def node_section_web_search(state: SectionState):
+    print(f"[DEBUG] Entering node_section_web_search for section: {state.title}")
+    if len(state.web_queries) > 0:
+        results = parallel_web_search(state.report_state, state.web_queries)
+        print(f"[DEBUG] Web search returned results for section {state.title}")
+        state.web_results.append(results)
+        print(f"[DEBUG] Appended web results")
+        state.citations.extend(results.citations)
+        print(f"[DEBUG] Extended citations")
+        state.context.append(results.context_text)
+        print(f"[DEBUG] Appended context")
+        return {
+            "web_results": [results],  # Return the object directly
+            "citations": results.citations,
+            "context": results.context_text  # String, not list
+        }
+    print(f"[DEBUG] No Web queries or Web research disabled for section: {state.title}")
+    return {}
+
+def node_section_kb_search(state: SectionState):
+    print(f"[DEBUG] Entering node_section_kb_search for section: {state.title}")
+
+    if len(state.kb_queries) > 0:
+        results = parallel_kb_query(state.report_state, state.kb_queries)
+        print(f"[DEBUG] Knowledge Base search returned results for section {state.title}")
+        state.kb_results.append(results)
+        state.citations.extend(results.citations)
+        state.context.append(results.context_text)
+        return {
+            "kb_results": [results],  # Return the object directly
+            "citations": results.citations,
+            "context": results.context_text  # String, not list
+        }
+    print(f"[DEBUG] No KB queries or File search disabled for section: {state.title}")
+    return {}
+
+def node_merge_section_data(state: SectionState) -> SectionState:
+    """Bulletproof merge handling all possible input formats"""
+    print(f"[DEBUG] Entered node merge section for section {state.title}")
+    
+    def ensure_list(item: Any) -> List:
+        if item is None:
+            return []
+        if isinstance(item, list):
+            return item
+        return [item]
+    
+    # Normalize all inputs to lists
+    excel_results = ensure_list(state.excel_results)
+    web_results = ensure_list(state.web_results)
+    kb_results = ensure_list(state.kb_results)
+    context = ensure_list(state.context)
+    
+    # Process context - flatten nested lists
+    flat_context = []
+    for item in context:
+        if isinstance(item, list):
+            flat_context.extend([x for x in item if isinstance(x, str)])
+        elif isinstance(item, str):
+            flat_context.append(item)
+    
+    # Instead of only pulling from result lists, start with existing state.citations.
+    all_citations = list(state.citations)
+    for result in excel_results + web_results + kb_results:
+        if hasattr(result, 'citations'):
+            all_citations.extend(result.citations)
+    
+    # Process content similarly
+    content_parts = []
+    for result in excel_results + web_results + kb_results:
+        if hasattr(result, 'context_text'):
+            content_parts.append(result.context_text)
+    
+    # Update state
+    state.context = "\n\n---\n\n".join(flat_context)
+    state.citations = all_citations
+    state.content = "\n\n".join(content_parts)
+    print(f"[DEBUG] Exiting node_merge_section_data for section {state.title}")
+    return state
+
+# =============================================================================
+# SECTION PROCESSING
+# =============================================================================
+def determine_section_queries(state: SectionState) -> SectionState:
+    """
+    Generate targeted queries for all enabled data sources.
+    """
+    print(f"[DEBUG] Entering determine_section_queries for section: {state.title}")
+    print(f"CONFIG: Web={state.web_research}, KB={state.kb_search}, Excel={state.excel_search}")
+    # Debug current search settings
+    print(f"[DEBUG] Current search settings - Web: {state.web_research}, KB: {state.kb_search}, Excel: {state.excel_search}")
+    
+    # Build dynamic model fields
+    fields = {}
+    if state.web_research:
+        fields["web_queries"] = (List[str], Field(default_factory=list, description="Web search queries"))
+    if state.kb_search:
+        fields["kb_queries"] = (List[str], Field(default_factory=list, description="Knowledge base queries"))
+    if state.excel_search:
+        fields["excel_queries"] = (List[str], Field(default_factory=list, description="Excel data queries"))
+
+    if not fields:
+        print(f"[DEBUG] No search enabled for section: {state.title}")
+        return state
+
+    # Create model with explicit field descriptions
+    DynamicQueries = create_model("DynamicQueries", **fields)
+
+    print(f"Dynamic model fields: {DynamicQueries.model_computed_fields}")
+    # Build enhanced prompt
+    prompt_template = query_prompt_for_iteration[state.report_type]
+    
+    # Create source-specific instructions
+    source_instructions = []
+    if state.web_research:
+        source_instructions.append("WEB RESEARCH: Find recent market data, trends, and competitive intelligence")
+    if state.kb_search:
+        source_instructions.append("KNOWLEDGE BASE: Search internal documents, reports, and proprietary research")
+    if state.excel_search:
+        source_instructions.append("EXCEL DATA: Query financial spreadsheets for metrics, ratios, and historical data")
+    
+    enhanced_instruction = (
+        "\nGENERATE QUERIES FOR:\n" + "\n".join(f"- {s}" for s in source_instructions) +
+        "\nFORMAT: Return exactly 2 queries if WEB RESEARCH is enabled, 3 queries if KNOWLEDGE BASE is enabled and 3 queries if EXCEL DATA is enabled as given in the GENERATE QUERIES instruction."
+    )
+    
+    formatted_prompt = prompt_template.format(
+        section_title=state.title,
+        description=state.description,
+        previous_queries="\n".join([f"- {q}" for q in (state.web_queries + state.kb_queries + state.excel_queries)]),
+        previous_responses=state.content if state.content else "No responses yet",
+        feedback=state.feedback if hasattr(state, 'feedback') else "No specific feedback yet",
+        tags=report_planner_instructions[state.report_type].split("Tags to incorporate:")[1].split("\n")[0].strip()
+    ) + enhanced_instruction
+    
+    print(f"[DEBUG] Full prompt:\n{formatted_prompt}")
+    
+    # Create structured LLM caller
+    structured_llm = gpt_4.with_structured_output(
+        DynamicQueries,
+        method="function_calling",
+        include_raw=False
+    )
+    
+    try:
+        queries_obj = structured_llm.invoke([
+            SystemMessage(content="You are an expert research analyst. Generate precise queries for ALL enabled data sources."),
+            HumanMessage(content=formatted_prompt)
+        ])
+        print(f"[DEBUG] Received queries object: {queries_obj}")
+        
+        # Process all enabled query types
+        if state.web_research:
+            state.web_queries.extend(getattr(queries_obj, "web_queries", []))[:5]
+            print(f"[DEBUG] Added {len(state.web_queries)} web queries")
+        
+        if state.kb_search:
+            state.kb_queries.extend(getattr(queries_obj, "kb_queries", []))[:5]
+            print(f"[DEBUG] Added {len(state.kb_queries)} KB queries")
+        
+        if state.excel_search:
+            state.excel_queries.extend(getattr(queries_obj, "excel_queries", []))[:5]
+            print(f"[DEBUG] Added {len(state.excel_queries)} Excel queries")
+            
+    except Exception as e:
+        print(f"[ERROR] Query generation failed: {str(e)}")
+        # Fallback queries with more specific examples
+        if state.web_research:
+            state.web_queries.extend([
+                f"Latest financial performance metrics for {state.title}",
+                f"Current market trends affecting {state.title}",
+                f"Competitive analysis of {state.title} vs industry peers",
+                f"Regulatory changes impacting {state.title}",
+                f"Recent news and developments about {state.title}"
+            ])
+        
+        if state.kb_search:
+            state.kb_queries.extend([
+                f"Internal reports on {state.title} financials",
+                f"Proprietary research about {state.title} market position",
+                f"Historical performance data for {state.title}",
+                f"Analyst assessments of {state.title} business model",
+                f"Strategic documents mentioning {state.title}"
+            ])
+        
+        if state.excel_search:
+            state.excel_queries.extend([
+                f"{state.title} revenue by product line last 5 years",
+                f"{state.title} quarterly EBITDA margins",
+                f"{state.title} working capital ratios historical data",
+                f"{state.title} capex vs opex breakdown",
+                f"{state.title} regional sales performance"
+            ])
+    
+    print(f"[DEBUG] Final queries - Web: {state.web_queries}, KB: {state.kb_queries}, Excel: {state.excel_queries}")
+    return state
+
+async def generate_section_content(state: ReportState, section_state: Union[SectionState, dict]) -> SectionState:
+    """Generate structured section content using collected research data"""
+    print("[DEBUG] Entering Generate Section Content")
+    
+    # Convert dict-like input to proper SectionState
+    if isinstance(section_state, dict):
+        section_state = SectionState(
+            title=section_state.get('title'),
+            web_research=section_state.get('web_research'),
+            excel_search=section_state.get('excel_search'),
+            kb_search=section_state.get('kb_search'),
+            report_type=section_state.get('report_type'),
+            description=section_state.get('description', ''),
+            web_results=section_state.get('web_results'),
+            excel_results=section_state.get('excel_results'),
+            kb_results=section_state.get('kb_results'),
+            citations=section_state.get('citations', []),
+            context=section_state.get('context', ''),
+            content=section_state.get('content', ''),
+            report_state=state,
+            queries=section_state.get('queries', []),
+            attempts=section_state.get('attempts', 0),
+            excel_queries=section_state.get('excel_queries', []),
+            web_queries=section_state.get('web_queries', []),
+            kb_queries=section_state.get('kb_queries', [])
+        )
+    
+    section = state.outline[state.current_section_idx]
+    section_state.attempts += 1
+    print(f"[DEBUG] Entering generate_section_content for section: {section.title} (Attempt {section_state.attempts})")
+
+    # Combine context from all sources
+    # Combine context from all sources - PROPERLY HANDLE LIST CASE
+    raw_context = section_state.context if hasattr(section_state, 'context') else []
+    
+    # Convert context to string whether it's a list or single value
+    if isinstance(raw_context, list):
+        context_text = "\n\n---\n\n".join(str(item) for item in raw_context if item)
+    else:
+        context_text = str(raw_context) if raw_context else "No additional context"
+    
+    # Now safely trim tokens
+    try:
+        context_llm_text = trim_to_tokens(context_text)
+    except Exception as e:
+        print(f"[ERROR] Token trimming failed: {str(e)}")
+        context_llm_text = context_text[:8000]  # Fallback simple truncation
+    print(f"[DEBUG] Combined context for section: {section.title}")
+
+    # Create structured LLM caller - make sure SectionContent model has data_points as optional
+    structured_llm = gpt_4.with_structured_output(SectionContent, method="function_calling")
+
+    # Generate the content
+    try:
+        section_content = await structured_llm.ainvoke([
+            SystemMessage(content=f"""
+            You are a senior financial analyst writing detailed report sections.
+            Report Topic: {state.topic}
+            """),
+            HumanMessage(content=f"""
+            Generate comprehensive content for this report section using clear formatting guidelines.
+
+            Title: {section.title}
+            Description: {section.description}
+            Research Context:
+            {context_llm_text}
+
+            Requirements:
+            1. The narrative should be between 300-500 words and provide clear analysis.
+            2. Extract key numbers/statistics
+            3. Provide 3-5 key takeaways in a field called "key_takeaways"
+            4. Flag if further research is needed in a boolean field "further_research"
+            5. Include all relevant data points (ensure each data point includes a valid value, e.g., a number or a string; do not leave it null)
+            6. **Table Formatting:**  
+            - If any tables are included in the output, format them using standard markdown table syntax with a header row and a separator (e.g., using pipes and dashes).  
+            - Ensure that any narrative text following a table starts on a new line, outside the table block. For example, after the markdown table, include a clear paragraph break before additional text.
+            7. **Conclusion Section:**  
+            - If generating a conclusion, format its header as a sub-section using a smaller header (e.g., use "### Conclusion" instead of "## Conclusion") to differentiate it from the main section header.
+            8. Use clear paragraph breaks to separate different types of content (e.g., tables versus narrative text).
+            9. The output must include the fields "data_points", "key_takeaways", and "further_research" in a structured JSON format, ensuring that these keys are populated with valid values.
+
+            Please make sure that any text meant to appear after a table is not mistakenly merged into the table itself.
+
+            IMPORTANT: You must include the 'data_points', 'key_takeaways', and 'further_research' fields in your response, and the 'value' for each data point must be non-null.
+            """)
+        ])
+        
+        print(f"[DEBUG] LLM generated section content successfully")
+        
+        # Update section with results
+        if hasattr(section_content, 'content'):
+            section.content += section_content.content
+        else:
+            section.content += "Content generated but no content field returned"
+            
+        print(f"[DEBUG] generate_section_content Section Content {section.content}")
+        print(f"[SUCCESS] Generated structured content for section: {section.title}")
+    except Exception as e:
+        print(f"[ERROR] LLM call failed for section {section.title}: {str(e)}")
+        section.content = f"Content generation failed: {str(e)}"
+
+    print(f"[DEBUG] Exiting generate_section_content for section: {section.title}")
+    return section_state
+
+def evaluate_section(section: SectionState) -> Tuple[bool, str]:
+    print(f"[DEBUG] Evaluating section: {section.title}")
+    txt = section.content
+    fails = []
+    words = txt.split()
+    print(f"[DEBUG] generate_section_content Section Content {txt}")
+    if len(words) < 120:
+        fails.append(f"- Too short: {len(words)} words.")
+    placeholders = ["TBD", "???", "placeholder"]
+    if any(p in txt for p in placeholders):
+        fails.append("- Found placeholder text.")
+    lower_title = section.title.lower()
+    if any(k in lower_title for k in ["financial", "analysis", "data", "metrics", "market"]):
+        if not re.search(r"\d", txt):
+            fails.append("- No numeric data found, but expected.")
+    if fails:
+        feed = "Please fix:\n" + "\n".join(fails)
+        print(f"[DEBUG] Section '{section.title}' failed evaluation: {feed}")
+        return False, feed
+    print(f"[DEBUG] Section '{section.title}' passed evaluation.")
+    return True, ""
+
+# =============================================================================
+# SECTION-LEVEL SUBGRAPH
+# =============================================================================
+
+print("[DEBUG] Building section subgraph")
+section_subgraph = StateGraph(SectionState)
+
+# New version with concurrent execution:
+section_subgraph.add_node("data_needs", node_section_data_needs)
+section_subgraph.add_node("parallel_search", node_parallel_search)
+section_subgraph.add_node("merge_data", node_merge_section_data)
+
+# Update the edges:
+section_subgraph.add_edge(START, "data_needs")
+# After determining queries, launch all searches concurrently:
+section_subgraph.add_edge("data_needs", "parallel_search")
+# Merge the results after the concurrent searches complete:
+section_subgraph.add_edge("parallel_search", "merge_data")
+section_subgraph.add_edge("merge_data", END)
+
+section_subgraph_compiled = section_subgraph.compile()
+print("[DEBUG] Section subgraph compiled")
+
+# =============================================================================
+# MAIN REPORT GRAPH
+# =============================================================================
+
+print("[DEBUG] Building main report graph")
+report_graph = StateGraph(state_schema=ReportState)
+
+# Build main graph
+report_graph.add_node("gen_outline", node_generate_outline)
+report_graph.add_node("init_sections", lambda state: setattr(state, "current_section_idx", 0) or state)
+report_graph.add_node("process_section", node_process_section)
+report_graph.add_node("compile_final", node_compile_final)
+
+report_graph.add_edge(START, "gen_outline")
+report_graph.add_edge("gen_outline", "init_sections")
+report_graph.add_edge("init_sections", "process_section")
+
+def should_continue(state: ReportState):
+    print(f"[DEBUG] Checking continuation: current index {state.current_section_idx} vs total sections {len(state.outline)}")
+    if state.current_section_idx < len(state.outline):
+        return "process_section"
+    return "compile_final"
+
+report_graph.add_conditional_edges(
+    "process_section",
+    should_continue
 )
 
-# IMPORTANT: Add an edge from START to your first node.
-# 1) Generate overall report plan
-builder.add_edge(START, "generate_report_plan")
-builder.add_node("generate_report_plan", generate_report_plan)
-
-# 2) Iterate research for sections that require doc-based searches
-builder.add_node("iterate_section_research", iterate_section_research)
-
-def initiate_section_writing(state: ReportState):
-    return [
-        Send("iterate_section_research", {
-            "section": s,
-            "report_type": state["report_type"],
-            "file_search": state["file_search"],
-            "web_search": state["web_search"],
-            "user_id": state["user_id"],
-            "project_id": state["project_id"]
-        })
-        for s in state["sections"]
-        if s.research
-    ]
-
-builder.add_conditional_edges("generate_report_plan", initiate_section_writing, ["iterate_section_research"])
-
-# 3) Gather completed sections
-builder.add_node("gather_completed_sections", gather_completed_sections)
-builder.add_edge("iterate_section_research", "gather_completed_sections")
-
-# 4) Finalize sections that do NOT require doc research
-builder.add_node("write_final_sections", write_final_sections)
-
-def initiate_final_section_writing(state: ReportState):
-    return [
-        Send("write_final_sections", {
-            "section": s,
-            "report_type": state["report_type"],
-            "project_id": state["project_id"],
-            "report_sections_from_research": state["report_sections_from_research"]
-        })
-        for s in state["sections"]
-        if not s.research
-    ]
-
-builder.add_conditional_edges("gather_completed_sections", initiate_final_section_writing, ["write_final_sections"])
-
-# The critical addition: a direct path to compile_final_report
-# so that if there are NO non-research sections, we still continue
-builder.add_edge("gather_completed_sections", "compile_final_report")
-
-# 5) Compile the final report
-builder.add_node("compile_final_report", compile_final_report)
-builder.add_edge("write_final_sections", "compile_final_report")
-builder.add_edge("compile_final_report", END)
-
-document_graph = builder.compile()
+report_graph.add_edge("compile_final", END)
+report_graph_compiled = report_graph.compile()
+print("[DEBUG] Report graph compiled")
 
 # ------------------------------------------------------------------------
-# ROUTER
+# Function call
 # ------------------------------------------------------------------------
-
-async def deep_research(instruction: str, report_type: int, file_search:bool, web_search:bool, project_id: str, user_id: str):
-
-    input_data = {
-        "topic": instruction,
-        "user_id": user_id,
-        "report_type": int(report_type),
-        "file_search": file_search,
-        "web_search": web_search,
-        "project_id": project_id
-    }
-    
-    result = await document_graph.ainvoke(input_data)
-    
-    if result is None:
-        print("[ERROR] The state graph returned None. Check the graph flow and node return values.")
-        return {"message": "No data returned",  "data": "","sections": [] }
+def validate_report_state(state: Union[ReportState, dict]):
+    required = ['final_report', 'outline']
+    if isinstance(state, dict):
+        for field in required:
+            if field not in state:
+                raise ValueError(f"Missing required field in state: {field}")
     else:
-        final_report = result.get("final_report", "")
-        # 'sections' will have the references
-        sections = result.get("sections", [])
-        return {
-                "message": "Research generated successfully",
-                "report": final_report,
-                "sections": sections
-            }
-          
+        for field in required:
+            if not hasattr(state, field):
+                raise ValueError(f"Missing required attribute in state: {field}")
 
+def deduplicate_citations(citations: List[Citation]) -> List[Citation]:
+    """
+    Remove duplicate citations by type:
+      - KB citations: unique by (file_name, page)
+      - Web citations: unique by (title, url)
+      - Excel citations: unique by (file_name, sheet, row, col)
+    Citations that do not match these types are kept as-is if not already added.
+    """
+    unique_kb = {}
+    unique_web = {}
+    unique_excel = {}
+    unique_others = []
+
+    for citation in citations:
+        if isinstance(citation, KBCitation):
+            # Create key using file_name and page (page can be None)
+            key = (citation.file_name, citation.page)
+            if key not in unique_kb:
+                unique_kb[key] = citation
+        elif isinstance(citation, ExcelCitation):
+            # Use file_name, sheet, row, and col as the unique key
+            key = (citation.file_name, citation.sheet, citation.row, citation.col)
+            if key not in unique_excel:
+                unique_excel[key] = citation
+        elif isinstance(citation, WebCitation):
+            # Use title and url as the unique key
+            key = (citation.title, citation.url)
+            if key not in unique_web:
+                unique_web[key] = citation
+        else:
+            # For any other citation types, you can use their id() or any comparable attribute.
+            # This just adds them if they haven't been added yet.
+            if citation not in unique_others:
+                unique_others.append(citation)
+
+    # Combine all unique citations in a single list
+    deduped_list = list(unique_kb.values()) + list(unique_excel.values()) + list(unique_web.values()) + unique_others
+    return deduped_list
+
+def citation_to_dict(citation):
+    if isinstance(citation, KBCitation):
+        return {
+            "type": "kb",
+            "chunk_text": citation.chunk_text,
+            "page": citation.page,
+            "file_name": citation.file_name,
+            "url": citation.url,
+        }
+    elif isinstance(citation, WebCitation):
+        return {
+            "type": "web",
+            "title": citation.title,
+            "url": citation.url,
+            "snippet": citation.snippet,
+        }
+    elif isinstance(citation, ExcelCitation):
+        return {
+            "type": "excel",
+            "file_name": citation.file_name,
+            "sheet": citation.sheet,
+            "row": citation.row,
+            "col": citation.col,
+            "value": citation.value,
+        }
+    else:
+        # Fallback for other types
+        return citation.__dict__
+
+async def deep_research(instruction: str, report_type: int, 
+                       file_search: bool, web_search: bool,
+                       project_id: str, user_id: str):
+    """Execute full research workflow with error handling"""
+    print("[DEBUG] ===========================================================================================================================================================================")
+    print("[DEBUG] ===================================================================== Starting deep_research workflow =====================================================================")
+    print("[DEBUG] ===========================================================================================================================================================================")
+    try:
+        excel_search = has_excel_files(user_id, project_id)
+        input_data = {
+            "topic": instruction,
+            "user_id": user_id,
+            "report_type": int(report_type),
+            "file_search": file_search,
+            "web_research": web_search,
+            "project_id": project_id,
+            "config": ReportConfig(
+                use_perplexity=True,
+                perplexity_api_key=os.getenv("PERPLEXITY_API_KEY"),
+                section_iterations=2,
+                web_research=web_search,
+                file_search=file_search,
+                excel_search=excel_search
+            )
+        }
+        print(f"[DEBUG] Value of excel_search {excel_search}, Value of kb_search {file_search}, Value of web_research {web_search}")
+        # Run the graph
+        graph_result = await report_graph_compiled.ainvoke(input_data)
+        validate_report_state(graph_result)
+        # Convert the result to a proper ReportState if needed
+        if not isinstance(graph_result, ReportState):
+            report_state = ReportState(
+                topic=graph_result.get("topic", ""),
+                user_id=graph_result.get("user_id", ""),
+                project_id=graph_result.get("project_id", ""),
+                report_type=graph_result.get("report_type", 0),
+                file_search=graph_result.get("file_search", False),
+                web_research=graph_result.get("web_research", False),
+                final_report=graph_result.get("final_report"),
+                outline=graph_result.get("outline", []),
+                current_section_idx=graph_result.get("current_section_idx", 0)
+            )
+        else:
+            report_state = graph_result
+        print("[DEBUG] ==========================================================================================================================================================================")
+        print("[DEBUG] ===================================================================== Exiting deep_research workflow =====================================================================")
+        print("[DEBUG] ==========================================================================================================================================================================")
+        deduped_list = deduplicate_citations(CITATIONS)
+        report_sections = [citation_to_dict(c) for c in deduped_list]
+        return {
+            "status": "success",
+            "report": report_state.final_report,
+            "sections": report_sections
+        }
+
+    except Exception as e:
+        print(f"[DEBUG] Research failed: {str(e)}")
+        return {
+            "status": "error",
+            "message": f"Research failed: {str(e)}",
+            "report": "",
+            "sections": []
+        }
