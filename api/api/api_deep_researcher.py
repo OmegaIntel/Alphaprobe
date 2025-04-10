@@ -526,7 +526,7 @@ def get_reports_sorted_by_updated_at(project_id: str, current_user=Depends(get_c
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
 
 
-@research_deep_router.get("/api/upload-outline-file")
+@research_deep_router.post("/api/upload-outline-file")
 async def upload_files(files: UploadFile = File(...), temp_project_id: str = Form(...), current_user=Depends(get_current_user)):
     user_id = current_user.id
     key = f"{user_id}/{temp_project_id}/{files.filename}"

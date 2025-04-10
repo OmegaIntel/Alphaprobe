@@ -1,17 +1,12 @@
-import React from 'react'
-import PageHeader from '../WorkflowPageHeader'
-import ChecklistSelector from './DueDiligenceChecklist'
+import { Suspense, lazy } from 'react';
+const ChecklistSelector = lazy(() => import('./DueDiligenceChecklist'));
 
-const DueDiligencePage = () => {
+export default function DiligencePage() {
   return (
-    <div>
-        <PageHeader description='Get ready for rapid insights and comprehensive research' heading='Due Diligence'/>
-        <div className='px-24'>
-
+    <div className="p-4 overflow-x-auto">
+      <Suspense fallback={<p>Loading...</p>}>
         <ChecklistSelector />
-        </div>
+      </Suspense>
     </div>
-  )
+  );
 }
-
-export default DueDiligencePage
