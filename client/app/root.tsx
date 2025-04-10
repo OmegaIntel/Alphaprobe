@@ -41,12 +41,17 @@ export default function App() {
   );
 
   useEffect(() => {
-    // Check if user is authenticated and not on an auth page
-    if (!isAuthenticated() && !isAuthPage) {
-      // Redirect to login with the return URL
-      // navigate(`/login?returnTo=${encodeURIComponent(location.pathname)}`, { replace: true });
-      navigate(`/login?returnTo=${encodeURIComponent(location.pathname)}`, { replace: true });
-    }
+    // Add a small delay to ensure routes are registered
+    const checkAuthTimeout = setTimeout(() => {
+      // Check if user is authenticated and not on an auth page
+      if (!isAuthenticated() && !isAuthPage) {
+        // Redirect to login with the return URL
+        // console.log('Redirecting to login, pathname:', location.pathname);
+        navigate(`/login?returnTo=${encodeURIComponent(location.pathname)}`, { replace: true });
+      }
+    }, 50); // A small delay of 50ms
+    
+    return () => clearTimeout(checkAuthTimeout);
   }, [isAuthenticated, isAuthPage, navigate, location.pathname]);
 
   return (

@@ -158,6 +158,47 @@ export const uploadDeepResearchFiles = async (data: UploadFile): Promise<any> =>
   }
 };
 
+
+//////////// DUE DILIGENCE OUTLINE FILE UPLOAD FUNCTION /////////////////////////////////
+export type UploadOutlineFile = {
+  files: File[];
+  temp_project_id: string;
+};
+
+export type UploadedOutlineFile = {
+  file_name: string;
+  file_path: string;
+  bucket: string;
+};
+
+export const uploadOutlineFiles = async (data: UploadOutlineFile): Promise<any> => {
+  try {
+    // Create FormData and append each file with the key "files"
+    const files = data.files || [];
+    const formData = new FormData();
+    
+    files.forEach((file) => {
+      formData.append("files", file);
+    });
+
+    formData.append("temp_project_id", data.temp_project_id);
+
+    // Set up the POST request configuration
+    const config: RequestInit = {
+      method: "POST",
+      body: formData,
+    };
+
+    // Call the API endpoint using your custom fetcher
+    const response = await fileFetcher("/api/upload-outline-file", config);
+    
+    return response;
+  } catch (error) {
+    console.error("Error uploading outline files:", error);
+    throw error;
+  }
+};
+
 export interface ReportList {
   id: string;
   query: string;
