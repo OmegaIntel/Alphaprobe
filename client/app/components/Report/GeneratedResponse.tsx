@@ -8,12 +8,21 @@ import { Copy, FileUp } from 'lucide-react';
 import CitationSidebar from './CitationSidebar';
 import { generatePDF } from './reportUtils';
 
-type Section = {
-  name: string;
-  description: string;
-  research: boolean;
-  content: string;
-  citations: any[];
+type Citation = {
+  type: string;
+  // Excel citations
+  file_name?: string;
+  sheet?: string;
+  row?: number;
+  col?: number;
+  value?: string;
+  // Kb citations
+  chunk_text?: string;
+  page?: number;
+  url?: string;
+  // Web citations
+  title?: string;
+  snippet?: string;
 };
 
 export default function GeneratedResponse({
@@ -21,14 +30,11 @@ export default function GeneratedResponse({
   response,
   researchType,
 }: {
-  sections: Section[];
+  sections: Citation[];
   response: string;
   researchType: string;
 }) {
   const [htmlContent, setHtmlContent] = useState('');
-  const [htmlSections, setHtmlSections] = useState<
-    (Section & { htmlContent: string })[]
-  >([]);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [currentCitations, setCurrentCitations] = useState<any[]>([]);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -44,46 +50,53 @@ export default function GeneratedResponse({
   }
 
   useEffect(() => {
-    if (researchType === 'deep') {
-      async function processSections() {
-        if (!sections || !Array.isArray(sections)) return;
-        const processed = await Promise.all(
-          sections.map(async (section) => {
-            const htmlContent = await markdownToHtml(section.content);
-            return {
-              ...section,
-              htmlContent,
-            };
-          })
-        );
-        setHtmlSections(processed);
-
-        // Update the PDF content ref when sections change
-        // if (contentRef.current) {
-        //   contentRef.current.innerHTML = processed
-        //     .map(section => section.htmlContent)
-        //     .join('\n\n');
-        // }
+    async function processContent() {
+      // Convert the report text (from the response) to HTML.
+      if (response) {
+        const convertedHtml = await markdownToHtml(response);
+        setHtmlContent(convertedHtml);
       }
-      processSections();
-    } else {
-      markdownToHtml(response).then((html) => setHtmlContent(html));
+      // Aggregate citations from the sections.
+      let aggregatedCitations: Citation[] = [];
+      if (sections && Array.isArray(sections)) {
+        sections.forEach((section) => {
+          if (section) {
+            const formattedCitation: Citation = {
+              type: section.type,
+              // Common fields
+              file_name: section.file_name || undefined,
+              url: section.url || undefined,
+              // Knowledge base specific
+              chunk_text: section.chunk_text || undefined,
+              page: section.page || undefined,
+              // Web specific
+              title: section.title || undefined,
+              snippet: section.snippet || undefined,
+              // Excel specific
+              sheet: section.sheet || undefined,
+              row: section.row || undefined,
+              col: section.col || undefined,
+              value: section.value || undefined
+            };
+            aggregatedCitations.push(formattedCitation);
+          }
+        });
+      }
+      setCurrentCitations(aggregatedCitations);
     }
-  }, [sections, response]);
+    processContent();
+  }, [response, sections]);
 
   return (
     <div className="container flex h-auto w-full shrink-0 gap-4 rounded-lg border border-solid border-gray-200 p-5">
       <div className="w-full">
         <div className="flex items-center justify-between pb-3">
-          {sections && (
+          {response && (
             <div className="flex items-center gap-3">
               <button
                 className="p-1 rounded bg-gray-200 text-sm font-medium items-center"
                 onClick={() => {
-                  const joinedText = htmlSections
-                    .map((section) => section.htmlContent)
-                    .join('\n\n');
-                  navigator.clipboard.writeText(joinedText);
+                  navigator.clipboard.writeText(htmlContent);
                 }}
               >
                 <Copy className="w-4 h-4 text-indigo-600" />
@@ -98,6 +111,14 @@ export default function GeneratedResponse({
               >
                 <FileUp className="w-4 h-4 text-indigo-600" />
               </button>
+              {currentCitations.length > 0 && (
+                <button
+                  className="p-1 rounded bg-gray-200 text-sm font-medium items-center"
+                  onClick={() => setIsSidebarOpen(true)}
+                >
+                  View Sources
+                </button>
+              )}
             </div>
           )}
         </div>
@@ -106,44 +127,18 @@ export default function GeneratedResponse({
             ref={contentRef}
             className="w-full whitespace-pre-wrap text-base font-light leading-[152.5%] text-gray-600 log-message"
           >
-            {htmlSections.length > 0 && researchType === 'deep' ? (
-              htmlSections.map((section, index) => (
-                <div key={index} className="section-wrapper mb-6">
-                  <div
-                    className="markdown-content"
-                    dangerouslySetInnerHTML={{ __html: section.htmlContent }}
-                  />
-                  {section.citations && section.citations.length > 0 && (
-                    <a
-                      href="#"
-                      className="source-link text-blue-500 text-xs"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setCurrentCitations(section.citations);
-                        setIsSidebarOpen(true);
-                      }}
-                    >
-                      Click to view sources
-                    </a>
-                  )}
-                </div>
-              ))
+            {htmlContent ? (
+              <div
+                className="markdown-content"
+                dangerouslySetInnerHTML={{ __html: htmlContent }}
+              />
             ) : (
-              <>
-                {response ? (
-                  <div
-                    className="markdown-content"
-                    dangerouslySetInnerHTML={{ __html: htmlContent }}
-                  />
-                ) : (
-                  <div className="flex w-full flex-col gap-2">
-                    <div className="h-6 w-full animate-pulse rounded-md bg-gray-300" />
-                    <div className="h-6 w-full animate-pulse rounded-md bg-gray-300" />
-                    <div className="h-6 w-full animate-pulse rounded-md bg-gray-300" />
-                    <div className="h-6 w-full animate-pulse rounded-md bg-gray-300" />
-                  </div>
-                )}
-              </>
+              <div className="flex w-full flex-col gap-2">
+                <div className="h-6 w-full animate-pulse rounded-md bg-gray-300" />
+                <div className="h-6 w-full animate-pulse rounded-md bg-gray-300" />
+                <div className="h-6 w-full animate-pulse rounded-md bg-gray-300" />
+                <div className="h-6 w-full animate-pulse rounded-md bg-gray-300" />
+              </div>
             )}
           </div>
           {isSidebarOpen && (
