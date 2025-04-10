@@ -1,8 +1,9 @@
 import {
   ChevronsRight,
   ChevronsLeft,
-  PlusCircle,
   SquarePen,
+  ChevronDown,
+  ChevronRight
 } from 'lucide-react';
 import { NavLink, useLocation } from '@remix-run/react';
 import { useState, useEffect } from 'react';
@@ -10,19 +11,13 @@ import { items, ItemType } from './SidebarItems';
 import { useNavigate } from '@remix-run/react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from '~/store/store';
-import { Loader, LoaderPinwheel } from 'lucide-react';
+import { Loader } from 'lucide-react';
 import { fetchProjects } from '~/store/slices/sideBar';
 import { setProject, setActiveProject } from '~/store/slices/sideBar';
 import { getUniqueID } from '~/lib/utils';
-//import { categoryRoutes : cat } from '~/constant';
 
 type CategoryRoutes = {
   [key: string]: string;
-};
-
-const categoryRoutes: CategoryRoutes = {
-  Reports: '/',
-  'Company House': '/company-house',
 };
 
 type SidebarProps = {
@@ -32,6 +27,7 @@ type SidebarProps = {
 
 export default function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
   const [activeCategory, setActiveCategory] = useState<string>('');
+  const [isHistoryOpen, setIsHistoryOpen] = useState<boolean>(false);
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
   const location = useLocation();
@@ -43,25 +39,40 @@ export default function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
   console.log('projects--------', projects);
 
   useEffect(() => {
-    if (!projects.length) {
-      dispatch(fetchProjects());
-    }
     const currentPath: string = location.pathname;
     const matchedCategory: ItemType | undefined = items.find(
       (category) => category.url === currentPath
     );
     if (matchedCategory) {
       setActiveCategory(matchedCategory.id || '');
+      
+      // Only fetch projects when due-diligence is the active category
+      if (matchedCategory.id === 'due-diligence' && !projects.length) {
+        dispatch(fetchProjects());
+      }
     }
-  }, [location.pathname]);
+  }, [location.pathname, dispatch, projects.length]);
 
   const handleCategoryClick = (item: ItemType): void => {
     setActiveCategory(item.id || '');
-    if (item.id === 'reports') {
+    if (item.id === 'due-diligence') {
       const newID = getUniqueID();
       dispatch(setActiveProject({ id: '', name: '', temp_project_id: newID }));
+      
+      // Fetch projects when switching to due-diligence
+      dispatch(fetchProjects());
+      
+      // Open the history dropdown automatically when clicking due-diligence
+      setIsHistoryOpen(true);
+    } else {
+      // Close history dropdown when clicking other items
+      setIsHistoryOpen(false);
     }
     navigate(item.url);
+  };
+
+  const toggleHistory = () => {
+    setIsHistoryOpen(!isHistoryOpen);
   };
 
   return (
@@ -113,48 +124,69 @@ export default function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
       </div>
 
       {!collapsed && (
-        <nav className="h-screen space-y-6 font-medium mt-2 overflow-y-auto">
+        <nav className="h-screen space-y-2 font-medium mt-2 overflow-y-auto">
           <div className="space-y-2">
-            <h6 className="font-semibold text-sm">Categories</h6>
+            <h6 className="font-semibold text-sm">Workflows</h6>
             <div className="space-y-1">
               {items.map((item: ItemType) => {
                 const Icon = item.icon;
+                const isActive = activeCategory === item.id;
+                
                 return (
-                  <button
-                    key={item.id}
-                    onClick={() => handleCategoryClick(item)}
-                    className={`flex text-sm items-center space-x-2 p-2 w-full text-left hover:bg-gray-200 rounded ${activeCategory === item.label ? 'bg-gray-200' : ''}`}
-                  >
-                    <Icon className="w-5 h-5" />
-                    <span>{item.label}</span>
-                  </button>
+                  <div key={item.id} className="flex flex-col">
+                    <button
+                      onClick={() => handleCategoryClick(item)}
+                      className={`flex text-sm items-center space-x-2 p-2 w-full text-left hover:bg-gray-200 rounded ${isActive ? 'bg-gray-200' : ''}`}
+                    >
+                      <Icon className="w-5 h-5" />
+                      <span>{item.label}</span>
+                    </button>
+                    
+                    {/* Show history dropdown only for due-diligence category */}
+                    {isActive && item.id === 'due-diligence' && (
+                      <div className="ml-4 mt-2">
+                        {/* <button 
+                          onClick={toggleHistory} 
+                          className="flex items-center space-x-2 p-1 text-sm font-semibold text-gray-500 hover:bg-gray-100 rounded"
+                        >
+                          <div className={`transform transition-transform duration-300 ${isHistoryOpen ? 'rotate-180' : 'rotate-0'}`}>
+                            <ChevronRight className="w-4 h-4" />
+                          </div>
+                          <span>History</span>
+                        </button> */}
+                        
+                        <div 
+                          className={`ml-2 mt-1 space-y-1 overflow-hidden transition-all duration-300 ease-in-out ${
+                            isHistoryOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+                          }`}
+                        >
+                          {loading ? (
+                            <span className="flex text-xs items-center justify-center space-x-2 p-2 min-w-10 rounded">
+                              <Loader className="w-4 h-4 text-gray-600 animate-spin" />
+                            </span>
+                          ) : (
+                            <div className="space-y-1">
+                              {projects.map((item) => (
+                                <NavLink
+                                  key={item.id}
+                                  to={`/r/${item.id}`}
+                                  onClick={() => {
+                                    dispatch(setActiveProject(item));
+                                  }}
+                                  className={`flex text-xs items-center space-x-2 p-2 min-w-10 hover:bg-gray-200 rounded ${activeProjectId?.id === item.id ? 'bg-gray-200' : ''}`}
+                                >
+                                  <div className="truncate w-[95%]">{item.name}</div>
+                                </NavLink>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 );
               })}
             </div>
-          </div>
-
-          <div className="space-y-2">
-            <h6 className="font-semibold text-sm">Histroy</h6>
-            {loading ? (
-              <span className="h-14 flex text-xs items-center justify-center space-x-2 p-2 min-w-10 hover:bg-gray-200 rounded">
-                <Loader className="mt-8 w-4 h-4 text-gray-600 animate-spin" />
-              </span>
-            ) : (
-              <div className="space-y-1">
-                {projects.map((item) => (
-                  <NavLink
-                    key={item.id}
-                    to={`/r/${item.id}`}
-                    onClick={() => {
-                      dispatch(setActiveProject(item));
-                    }}
-                    className={`flex text-xs items-center space-x-2 p-2 min-w-10 hover:bg-gray-200 rounded ${activeProjectId?.id === item.id ? 'bg-gray-200' : ''}`}
-                  >
-                    <div className="truncate w-[95%]">{item.name}</div>
-                  </NavLink>
-                ))}
-              </div>
-            )}
           </div>
         </nav>
       )}
