@@ -494,9 +494,12 @@ class ReportState:
 print("[DEBUG] Initializing ChatOpenAI with model gpt-4o-mini")
 gpt_4 = ChatOpenAI(model="gpt-4o-mini", temperature=0.0, api_key=OPENAI_API_KEY)
 
+
 # ------------------------------------------------------------------------
 # HELPER: Format completed sections, Call llm
 # ------------------------------------------------------------------------
+CITATIONS: List[Citation] = []
+
 def similar(a: str, b: str) -> bool:
     print(f"[DEBUG] Comparing titles: '{a}' and '{b}'")
     a = a.lower().replace('_', ' ').replace('-', ' ')
@@ -602,6 +605,13 @@ def parallel_excel_search(report_state: ReportState, queries: List[str]) -> Sear
                     col=metadata.get("col", "unknown"),
                     value=node.text
                 ))
+                CITATIONS.append(ExcelCitation(
+                    file_name=metadata.get("file_name", "unknown"),
+                    sheet=metadata.get("sheet", "unknown"),
+                    row=metadata.get("row", 0),
+                    col=metadata.get("col", "unknown"),
+                    value=node.text
+                ))
             context_parts.append(f"Excel Search Answer:\n{excel_resp}")
         result = SearchResult(citations=citations, context_text="\n\n".join(context_parts), original_queries=queries)
         print("[DEBUG] Excel search completed successfully")
@@ -620,68 +630,6 @@ def parallel_web_search(report_state: ReportState, queries: List[str]) -> Search
     citations = []
     context_parts = []
     
-    # 1. Try Perplexity first (primary source)
-    try:
-        for sq in queries:
-            print(f"[DEBUG] Web search (Perplexity) query: {sq}")
-            perplexity_result = call_perplexity_api(
-                query=sq,
-                api_key=report_state.config.perplexity_api_key,
-                depth=report_state.config.section_iterations  # Use configured depth
-            )
-            
-            # Check if the API response indicates an error by inspecting the content.
-            if perplexity_result.get("success"):
-                content = perplexity_result["content"]
-                # If the content appears to be an HTML error (e.g. starting with <html> or contains 401), raise an error.
-                if content.strip().lower().startswith("<html") or "401 authorization required" in content.lower():
-                    raise Exception("Perplexity API returned an authorization error or non-text response")
-                
-                raw_response = perplexity_result.get("raw_response", {})
-                
-                # Extract sources from the raw response
-                sources = []
-                if "usage" in raw_response and "sources" in raw_response["usage"]:
-                    sources = raw_response["usage"]["sources"]
-                elif "sources" in raw_response:  # Fallback location
-                    sources = raw_response["sources"]
-                
-                # Build context with source attribution
-                context_parts.append(f"## Perplexity AI Research Findings\n{content}")
-                
-                # Create citations for each source
-                for idx, source in enumerate(sources, 1):
-                    if isinstance(source, dict):
-                        citations.append(WebCitation(
-                            title=source.get("name", f"Source {idx}"),
-                            url=source.get("url", ""),
-                            snippet=source.get("snippet", content[:200])[:200] + "..."
-                        ))
-                        context_parts.append(f"\nSource {idx}: {source.get('name', '')}\nURL: {source.get('url', '')}")
-                
-                # If no sources found, create a generic Perplexity citation
-                if not citations:
-                    citations.append(WebCitation(
-                        title=f"Perplexity AI Research: {sq[:50]}...",
-                        url="https://perplexity.ai",
-                        snippet=content[:200] + "..." if len(content) > 200 else content
-                    ))
-            else:
-                # If not successful, raise an error to switch to fallback.
-                raise Exception("Perplexity API did not succeed for the query.")
-        
-        result = SearchResult(
-            citations=citations,
-            context_text="\n\n".join(context_parts),
-            original_queries=queries
-        )
-        print("[DEBUG] Web search (Perplexity) completed successfully")
-        print(f"[DEBUG] Perplexity result context: {result.context_text[:200]}...")
-        return result     
-    except Exception as e:
-        print(f"[WARNING] Perplexity search failed: {str(e)}")
-    
-    # 2. Fallback to Tavily
     try:
         for sq in queries:
             print(f"[DEBUG] Web search (Tavily) query: {sq}")
@@ -693,6 +641,7 @@ def parallel_web_search(report_state: ReportState, queries: List[str]) -> Search
                     snippet=r.get("content", r.get("snippet", ""))
                 )
                 citations.append(citation)
+                CITATIONS.append(citation)
                 context_parts.append(
                     f"Web Result: {citation.title}\n"
                     f"{citation.snippet}"
@@ -737,6 +686,7 @@ def parallel_kb_query(report_state: ReportState, queries: List[str]) -> SearchRe
                     url=get_presigned_url_from_source_uri(ref.get("metadata", {}).get("x-amz-bedrock-kb-source-uri", ""))
                 )
                 citations.append(citation)
+                CITATIONS.append(citation)
                 print(f"[DEBUG] Added KB citation")
     
     result = SearchResult(
@@ -1103,7 +1053,7 @@ def determine_section_queries(state: SectionState) -> SectionState:
     
     enhanced_instruction = (
         "\nGENERATE QUERIES FOR:\n" + "\n".join(f"- {s}" for s in source_instructions) +
-        "\nFORMAT: Return exactly 3 queries per enabled source"
+        "\nFORMAT: Return exactly 2 queries if WEB RESEARCH is enabled, 3 queries if KNOWLEDGE BASE is enabled and 3 queries if EXCEL DATA is enabled as given in the GENERATE QUERIES instruction."
     )
     
     formatted_prompt = prompt_template.format(
@@ -1237,20 +1187,28 @@ async def generate_section_content(state: ReportState, section_state: Union[Sect
             Report Topic: {state.topic}
             """),
             HumanMessage(content=f"""
-            Generate comprehensive content for this report section:
+            Generate comprehensive content for this report section using clear formatting guidelines.
 
             Title: {section.title}
             Description: {section.description}
-
             Research Context:
             {context_llm_text}
 
             Requirements:
-            - 300-500 words of professional analysis
-            - Include all relevant data points (ensure each data point includes a valid value, e.g., a number or a string; do not leave it null)
-            - Extract key numbers/statistics
-            - Provide 3-5 key takeaways in a field called "key_takeaways"
-            - Flag if further research is needed in a boolean field "further_research"
+            1. The narrative should be between 300-500 words and provide clear analysis.
+            2. Extract key numbers/statistics
+            3. Provide 3-5 key takeaways in a field called "key_takeaways"
+            4. Flag if further research is needed in a boolean field "further_research"
+            5. Include all relevant data points (ensure each data point includes a valid value, e.g., a number or a string; do not leave it null)
+            6. **Table Formatting:**  
+            - If any tables are included in the output, format them using standard markdown table syntax with a header row and a separator (e.g., using pipes and dashes).  
+            - Ensure that any narrative text following a table starts on a new line, outside the table block. For example, after the markdown table, include a clear paragraph break before additional text.
+            7. **Conclusion Section:**  
+            - If generating a conclusion, format its header as a sub-section using a smaller header (e.g., use "### Conclusion" instead of "## Conclusion") to differentiate it from the main section header.
+            8. Use clear paragraph breaks to separate different types of content (e.g., tables versus narrative text).
+            9. The output must include the fields "data_points", "key_takeaways", and "further_research" in a structured JSON format, ensuring that these keys are populated with valid values.
+
+            Please make sure that any text meant to appear after a table is not mistakenly merged into the table itself.
 
             IMPORTANT: You must include the 'data_points', 'key_takeaways', and 'further_research' fields in your response, and the 'value' for each data point must be non-null.
             """)
@@ -1364,6 +1322,74 @@ def validate_report_state(state: Union[ReportState, dict]):
             if not hasattr(state, field):
                 raise ValueError(f"Missing required attribute in state: {field}")
 
+def deduplicate_citations(citations: List[Citation]) -> List[Citation]:
+    """
+    Remove duplicate citations by type:
+      - KB citations: unique by (file_name, page)
+      - Web citations: unique by (title, url)
+      - Excel citations: unique by (file_name, sheet, row, col)
+    Citations that do not match these types are kept as-is if not already added.
+    """
+    unique_kb = {}
+    unique_web = {}
+    unique_excel = {}
+    unique_others = []
+
+    for citation in citations:
+        if isinstance(citation, KBCitation):
+            # Create key using file_name and page (page can be None)
+            key = (citation.file_name, citation.page)
+            if key not in unique_kb:
+                unique_kb[key] = citation
+        elif isinstance(citation, WebCitation):
+            # Use title and url as the unique key
+            key = (citation.title, citation.url)
+            if key not in unique_web:
+                unique_web[key] = citation
+        elif isinstance(citation, ExcelCitation):
+            # Use file_name, sheet, row, and col as the unique key
+            key = (citation.file_name, citation.sheet, citation.row, citation.col)
+            if key not in unique_excel:
+                unique_excel[key] = citation
+        else:
+            # For any other citation types, you can use their id() or any comparable attribute.
+            # This just adds them if they haven't been added yet.
+            if citation not in unique_others:
+                unique_others.append(citation)
+
+    # Combine all unique citations in a single list
+    deduped_list = list(unique_kb.values()) + list(unique_web.values()) + list(unique_excel.values()) + unique_others
+    return deduped_list
+
+def citation_to_dict(citation):
+    if isinstance(citation, KBCitation):
+        return {
+            "type": "kb",
+            "chunk_text": citation.chunk_text,
+            "page": citation.page,
+            "file_name": citation.file_name,
+            "url": citation.url,
+        }
+    elif isinstance(citation, WebCitation):
+        return {
+            "type": "web",
+            "title": citation.title,
+            "url": citation.url,
+            "snippet": citation.snippet,
+        }
+    elif isinstance(citation, ExcelCitation):
+        return {
+            "type": "excel",
+            "file_name": citation.file_name,
+            "sheet": citation.sheet,
+            "row": citation.row,
+            "col": citation.col,
+            "value": citation.value,
+        }
+    else:
+        # Fallback for other types
+        return citation.__dict__
+
 async def deep_research(instruction: str, report_type: int, 
                        file_search: bool, web_search: bool,
                        project_id: str, user_id: str):
@@ -1411,14 +1437,12 @@ async def deep_research(instruction: str, report_type: int,
         print("[DEBUG] ==========================================================================================================================================================================")
         print("[DEBUG] ===================================================================== Exiting deep_research workflow =====================================================================")
         print("[DEBUG] ==========================================================================================================================================================================")
+        deduped_list = deduplicate_citations(CITATIONS)
+        report_sections = [citation_to_dict(c) for c in deduped_list]
         return {
             "status": "success",
             "report": report_state.final_report,
-            "sections": [{
-                "title": sec.title,
-                "content": sec.content,
-                "citations": [c.__dict__ for c in sec.citations]
-            } for sec in report_state.outline]
+            "sections": report_sections
         }
 
     except Exception as e:

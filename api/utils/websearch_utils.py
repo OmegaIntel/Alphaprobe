@@ -11,7 +11,7 @@ def call_tavily_api(query: str) -> List[Dict[str, str]]:
     print(f"[DEBUG] call_tavily_api: {query}")
     api_url = "https://api.tavily.com/search"
     headers = {"Authorization": f"Bearer {TAVILY_API_KEY}", "Content-Type": "application/json"}
-    payload = {"query": query, "max_results": 5, "include_raw_content": True}
+    payload = {"query": query, "max_results": 3, "include_raw_content": True}
     results = []
     for attempt in range(3):
         print(f"[DEBUG] Tavily API attempt {attempt+1}")

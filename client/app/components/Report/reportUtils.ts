@@ -60,12 +60,21 @@ export interface ResearchHistoryItem {
 
 export type ResearchType = 'deep' | 'research'
 
-export interface Section {
-  name: string;
-  description: string;
-  research: boolean;
-  content: string;
-  citations: any[];
+export type Citation = {
+  type: string;
+  // Excel citations
+  file_name?: string;
+  sheet?: string;
+  row?: number;
+  col?: number;
+  value?: string;
+  // Kb citations
+  chunk_text?: string;
+  page?: number;
+  url?: string;
+  // Web citations
+  title?: string;
+  snippet?: string;
 };
 
 export interface ConversationData  {
@@ -74,7 +83,7 @@ export interface ConversationData  {
   res: string;
   res_id?: string;
   updated_at?: string;
-  sections: Section[];
+  sections: Citation[];
   researchType: ResearchType;
 };
 
