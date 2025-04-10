@@ -1,175 +1,37 @@
-import os
-import uuid
 import asyncio
+import os
 import nest_asyncio
 import json
-from typing import List, TypedDict, Any, Optional, Tuple, Dict
+from typing import List, TypedDict, Any, Optional, Tuple
 from pydantic import BaseModel, Field
 from dataclasses import dataclass, fields
-import pandas as pd
 import re
-from common_logging import loginfo, logerror
+from common_logging import logerror
 
-from fastapi import APIRouter, HTTPException, Query, Depends
-from fastapi.responses import JSONResponse
-from sqlalchemy.orm import Session
+from utils.kb_search import query_kb
+from utils.websearch_utils import call_tavily_api
 
-from api.api_user import get_current_user, User as UserModelSerializer
-from db_models.deals import Deal, DealStatus
-from db_models.rag_session import RagSession
-from db_models.report import Report
-from db_models.session import get_db
+from fastapi import HTTPException
 
 from langchain_core.runnables import RunnableConfig
-from langchain_core.messages import SystemMessage, HumanMessage
 
 # ------------------------------------------------------------------------
 # LlamaIndex for loading/creating a vector index and querying
 # ------------------------------------------------------------------------
-from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.llms.openai import OpenAI
 from llama_index.core import Settings
 
 # ------------------------------------------------------------------------
 # langgraph-based StateGraph
 # ------------------------------------------------------------------------
-from langgraph.constants import Send
 from langgraph.graph import START, END, StateGraph
 
-from db_models.opensearch_llamaindex import (
-    create_collection,
-    update_collection,
-    delete_index,
-    query_index
-)
-
 nest_asyncio.apply()
-
-# ------------------------------------------------------------------------
-# Knowledge-base implementation
-# ------------------------------------------------------------------------
-import boto3
-
-s3_client = boto3.client(
-    "s3",
-    aws_access_key_id="AKIA5FTZD4AADPXMJD7C",
-    aws_secret_access_key="k1OveeJ7XKxO1PExUSTk/NulLMWkFjYwlXGrmQR/",
-    region_name="us-east-1"  # Change to your AWS region
-)
-
-bedrock_client = boto3.client('bedrock-agent',
-    aws_access_key_id="AKIA5FTZD4AADPXMJD7C",
-    aws_secret_access_key="k1OveeJ7XKxO1PExUSTk/NulLMWkFjYwlXGrmQR/",
-    region_name="us-east-1"
-)  # for control-plane ops like ingestion
-
-bedrock_runtime = boto3.client('bedrock-agent-runtime',
-    aws_access_key_id="AKIA5FTZD4AADPXMJD7C",
-    aws_secret_access_key="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",
-    region_name="us-east-1"
-)
 
 BUCKET_NAME = os.getenv("BUCKET_NAME", "deep-research-docs")
 KNOWLEDGE_BASE_ID = os.getenv("KNOWLEDGE_BASE_ID")
 DATA_SOURCE_ID = os.getenv("DATA_SOURCE_ID")
 MODEL_ARN = os.getenv("MODEL_ARN")
-
-generationPrompt="""
-You are an intelligent assistant tasked with organizing and prioritizing search results for a user query. 
-Analyze the following search results and rank them based on relevance to the user's question. 
-If any results are irrelevant or redundant, exclude them.
-
-User Query: $query$
-
-Search Results:
-$search_results$
-
-Instructions:
-1. Rank the search results by relevance to the user's query.
-2. Remove any duplicate or irrelevant results.
-3. Summarize the key points from the top results.
-
-current time $current_time$
-
-Output the organized and prioritized results in a structured format."""
-
-orchestrationPrompt="""
-You are a knowledgeable assistant with access to a comprehensive knowledge base. 
-Use the following organized search results to answer the user's question. 
-If the search results do not contain enough information, say "I don't know."
-
-User Query: $query$
-
-Instructions:
-1. Provide a clear and concise answer to the user's question.
-2. Use only the information from the search results.
-3. If the search results are insufficient, say "I don't know."
-4. Format the response in a professional and easy-to-read manner.
-
-Underlying instructions for formatting the response generation and citations. $output_format_instructions$
-
-Here is the conversation history $conversation_history$
-
-current time - $current_time$
-
-Answer:"""
-
-def query_kb(input, kbId, user_id, project_id, modelId=None): 
-    vector_search_config = {'numberOfResults': 5}
-    filters = []
-
-    if user_id:
-        filters.append({
-            "equals": {
-                "key": "user_id",
-                "value": str(user_id)
-            }
-        })
-
-    # Only add a project_id filter if it's not "none"
-    if project_id and project_id != "none":
-        filters.append({
-            "equals": {
-                "key": "project_id",
-                "value": project_id
-            }
-        })
-
-    # Combine filters if necessary using "andAll"
-    if filters:
-        if len(filters) == 1:
-            vector_search_config['filter'] = filters[0]
-        else:
-            vector_search_config['filter'] = {"andAll": filters}
-
-    response = bedrock_runtime.retrieve_and_generate(
-        input={
-            'text': input
-        },
-        retrieveAndGenerateConfiguration={
-            'knowledgeBaseConfiguration': {
-                'generationConfiguration': {
-                    'promptTemplate': {
-                        'textPromptTemplate': generationPrompt
-                    }
-                },
-                'orchestrationConfiguration': {
-                    'queryTransformationConfiguration': {
-                        'type': 'QUERY_DECOMPOSITION'  # Allowed enum value.
-                    }
-                },
-                'knowledgeBaseId': kbId,
-                'modelArn': modelId,
-                'retrievalConfiguration': {
-                    'vectorSearchConfiguration': vector_search_config
-                }
-            },
-            'type': 'KNOWLEDGE_BASE'
-        }
-    )
-
-    return response
-
 # ------------------------ Configuration ------------------------
 DEFAULT_REPORT_STRUCTURE = """The report structure should focus on providing a comprehensive breakdown of the user-provided topic. Ensure sections are logically structured, with research-driven insights where applicable.
 
@@ -280,85 +142,6 @@ def setup_models():
         openai_api_key=OPENAI_API_KEY
     )
     print("[DEBUG] LLM model set up with model: gpt-4o-mini")
-    # If using text-embedding-ada-002 (1536D), do NOT specify 'dimensions='
-    # Let the library detect dimension automatically.
-    Settings.embed_model = OpenAIEmbedding(
-        model="text-embedding-ada-002",
-        openai_api_key=OPENAI_API_KEY
-    )
-    print("[DEBUG] Embedding model set up with model: text-embedding-ada-002")
-    print("[DEBUG] Exiting setup_models")
-
-# ------------------------------------------------------------------------
-# Web Search Function (using Tavily API and SerpAPI as an example)
-# ------------------------------------------------------------------------
-TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
-SERPAPI_API_KEY = os.getenv("SERPAPI_API_KEY")
-
-async def tavily_search(query: str) -> Any:
-    """
-    Perform a web search using the Tavily API.
-    Returns a list of results.
-    """
-    import requests, time  # local import for async context
-    print(f"[DEBUG] Starting Tavily search for query: {query}")
-    api_url = "https://api.tavily.com/search"
-    headers = {"Authorization": f"Bearer {TAVILY_API_KEY}", "Content-Type": "application/json"}
-    payload = {"query": query, "max_results": 5, "include_raw_content": True}
-    results = []
-    for attempt in range(3):
-        print(f"[DEBUG] Tavily search attempt {attempt+1}")
-        try:
-            response = requests.post(api_url, json=payload, headers=headers, timeout=10)
-            if response.status_code == 200:
-                data = response.json()
-                for item in data.get("results", []):
-                    results.append({
-                        "title": item.get("title", ""),
-                        "url": item.get("url", ""),
-                        "content": item.get("content", "")
-                    })
-                break
-        except Exception as e:
-            print(f"[DEBUG] Tavily search attempt {attempt+1} failed with error: {e}")
-            if attempt < 2:
-                time.sleep(2)
-    print(f"[DEBUG] Tavily search completed with {len(results)} results")
-    return results
-
-async def serpapi_search(query: str) -> Any:
-    import requests, time  # local import for async context
-    print(f"[DEBUG] Starting SerpAPI search for query: {query}")
-    api_url = "https://serpapi.com/search"
-    params = {
-        "q": query,
-        "api_key": SERPAPI_API_KEY,
-        "engine": "google",
-        "num": 5,        # Number of results to return
-        "hl": "en"       # Language (optional)
-    }
-    results = []
-    for attempt in range(3):
-        print(f"[DEBUG] SerpAPI search attempt {attempt+1}")
-        try:
-            response = requests.get(api_url, params=params, timeout=10)
-            if response.status_code == 200:
-                data = response.json()
-                organic_results = data.get("organic_results", [])
-                for item in organic_results:
-                    results.append({
-                        "title": item.get("title", ""),
-                        "url": item.get("link", ""),
-                        "content": item.get("snippet", "")
-                    })
-                break
-        except Exception as e:
-            print(f"[DEBUG] SerpAPI search attempt {attempt+1} failed with error: {e}")
-            if attempt < 2:
-                time.sleep(2)
-    print(f"[DEBUG] SerpAPI search completed with {len(results)} results")
-    return results
-
 # ------------------------------------------------------------------------
 # SCHEMAS
 # ------------------------------------------------------------------------
@@ -368,6 +151,8 @@ class ReportStateInput(TypedDict):
     index: str
     user_id: str
     project_id: str
+    file_search: bool
+    web_search: bool
 
 class ReportStateOutput(TypedDict):
     report: str
@@ -383,6 +168,8 @@ class ReportState(TypedDict):
     answers: List[Tuple[str, str]]
     previous_questions: List[Tuple[str, str]]
     report: str
+    web_search: bool
+    file_search: bool
 
 class InstructionRequest(BaseModel):
     query: str
@@ -456,71 +243,88 @@ Output your answer as JSON, e.g.:
     return {"questions": questions}
 
 async def answer_questions(state: ReportState, config: RunnableConfig):
-    print("[DEBUG] Entering answer_questions with state:", state)
+    print("[answer_questions] Entering answer_questions function")
+    
+    # Show initial state details (only keys that are safe to log)
+    print(f"[answer_questions] State keys: {list(state.keys())}")
+    
     questions = state["questions"]
-    index = state["index"]
     user_id = state["user_id"]
     project_id = state["project_id"]
+    file_search = state["file_search"]
+    web_search = state["web_search"]
 
+    print(f"[answer_questions] 1. Questions {questions}\n[answer_questions] 2. User_id {user_id}\n[answer_questions] 3. Project_id {project_id}\n[answer_questions] 4. File_search {file_search}\n[answer_questions] 5. Web_search {web_search}")
     answers = []
-
-    for question in questions:
+    
+    print(f"[answer_questions] Number of questions to process: {len(questions)}")
+    
+    for idx, question in enumerate(questions, start=1):
+        print(f"[answer_questions] Processing question {idx}: {question.strip()}")
         question = question.strip()
-        print(f"\n[answer_questions] Received question:\n'{question}'")
-        print(f"[answer_questions] Querying index: {index}")
-
-        # Retrieve document search context (if enabled)
         file_context = ""
-        if state.get("file_search"):
-            file_context_data = query_kb(question, KNOWLEDGE_BASE_ID, user_id, project_id, MODEL_ARN)
-            if file_context_data and "output" in file_context_data:
-                file_context = file_context_data["output"]
-            else:
-                file_context = "Empty Document Response"
-            print(f"[answer_questions] Document context for '{question}':\n", file_context)
-
-        # Retrieve web search context (if enabled)
         web_context = ""
-        if state.get("web_search"):
-            web_results = await tavily_search(question)
-            if web_results:
-                # Combine each result's title, URL, and content
+    
+        # File search using query_kb if enabled
+        if file_search:
+            print(f"[answer_questions] File search enabled for question: {question}")
+            try:
+                kb_response = query_kb(
+                    question, 
+                    KNOWLEDGE_BASE_ID, 
+                    user_id, 
+                    project_id, 
+                    MODEL_ARN
+                )
+                print(f"[answer_questions] KB response received for question: {question}")
+                if kb_response and "output" in kb_response:
+                    file_context = kb_response["output"].get("text", "")
+                    print(f"[answer_questions] Extracted file_context of length: {len(file_context)}")
+                else:
+                    print(f"[answer_questions] KB response did not contain 'output' key for question: {question}")
+            except Exception as e:
+                print(f"[ERROR] KB query failed for question: {question} with error: {str(e)}")
+                file_context = "Error retrieving document context"
+    
+        # Web search using Tavily if enabled
+        if web_search:
+            print(f"[answer_questions] Web search enabled for question: {question}")
+            try:
+                # Run the synchronous API call in a thread
+                web_results = await asyncio.to_thread(call_tavily_api, question)
+                print(f"[answer_questions] Tavily API returned {len(web_results)} results for question: {question}")
                 web_context = "\n\n".join([
-                    f"Title: {r['title']}\nURL: {r['url']}\nContent: {r['content']}"
+                    f"Title: {r['title']}\nURL: {r['url']}\nContent: {r['snippet']}"
                     for r in web_results
-                ])
-            else:
-                web_context = "Empty Web Response"
-            print(f"[answer_questions] Web context for '{question}':\n", web_context)
-
-        # Combine contexts from document and web searches
+                ]) if web_results else ""
+                print(f"[answer_questions] Compiled web_context length: {len(web_context)}")
+            except Exception as e:
+                print(f"[ERROR] Web search failed for question: {question} with error: {str(e)}")
+                web_context = "Error retrieving web context"
+    
         combined_context = (file_context + "\n\n" + web_context).strip()
+        print(f"[answer_questions] Combined context length: {len(combined_context)} for question: {question}")
         if not combined_context:
-            combined_context = "Empty Response"
-        print(f"[answer_questions] Combined context for '{question}':\n", combined_context)
-
-        prompt = f"""
-You are a market research analyst. You must answer the following question using ONLY the text from this context:
-{combined_context}
+            combined_context = "No relevant context found"
+            print(f"[answer_questions] No context found for question: {question}")
+    
+        prompt = f"""Answer the following question using ONLY the provided context:
+Context: {combined_context}
 
 Question: {question}
 
-If the context does not have enough info, respond with:
-'MISSING INFORMATION: The provided context does not contain details to answer this question.'
+If the context doesn't contain the answer, respond with:
+'INSUFFICIENT INFORMATION: Could not find answer in provided sources.'
 
-Answer:
-"""
-        print("\n[answer_questions] LLM Prompt:\n", prompt)
+Provide a concise, accurate answer:"""
+    
+        print(f"[answer_questions] Generated prompt for question: {question[:100]}...")
         response = await Settings.llm.acomplete(prompt)
         answer_text = response.text if hasattr(response, "text") else str(response)
-
-        print(f"[answer_questions] Answer for '{question}':\n", answer_text)
-
-        # Store the result
+        print(f"[answer_questions] Received answer of length {len(answer_text)} for question: {question}")
         answers.append((question, answer_text))
-        print(f"[DEBUG] Answer appended for question: '{question}'")
     
-    print("[DEBUG] Exiting answer_questions with answers.")
+    print("[answer_questions] Exiting answer_questions function")
     return {"answers": answers}
 
 async def write_report(state: ReportState, config: RunnableConfig):
@@ -680,17 +484,13 @@ async def generate_structured_report(instruction: str, report_type: int, file_se
         headings = template_heading[report_type]["heading"]
 
         input_state = {
-            "__start__": {},
             "topic": instruction,
             "headings": headings,
             "index": index_name,
             "user_id": user_id,
             "project_id": project_id,
-            "previous_questions": [],
-            "outline": "",
-            "questions": [],
-            "answers": [],
-            "report": ""
+            "file_search": file_search,
+            "web_search": web_search
         }
 
         # Validate the input state (optional)
@@ -716,7 +516,6 @@ async def generate_structured_report(instruction: str, report_type: int, file_se
 # -------------------------------------------------------------------------
 # 3) FastAPI Router with Endpoints
 # -------------------------------------------------------------------------
-
 
 async def generate_report(instruction: str, report_type: int, file_search:bool, web_search:bool, project_id: str, user_id: str):
     print("[DEBUG] Entering generate_report endpoint")
