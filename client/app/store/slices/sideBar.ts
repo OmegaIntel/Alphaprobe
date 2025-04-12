@@ -1,52 +1,55 @@
-import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-import { fetcher } from "~/services/HTTPS";
+import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
+import { fetcher } from '~/services/HTTPS';
 
+// Define types
 interface Project {
   id?: string;
-  name: string; 
+  name: string;
+  temp_project_id: string;
   created_at?: string;
   updated_at?: string;
-  user_id?:string;
-  temp_project_id:string;
+  user_id?: string;
   documents?: string[];
 }
 
+interface PaginationParams {
+  limit: number;
+  offset: number;
+}
+
+interface PaginationMetadata {
+  total: number;
+  offset: number;
+  limit: number;
+  has_more: boolean;
+}
+
+// Match the actual API response structure
+interface ProjectsResponse {
+  message?: string;
+  data: Project[];
+  pagination?: PaginationMetadata;  // Make pagination optional
+}
+
 interface SideBarState {
-  isCanvas: boolean;
-  activeProjectId: Project | null;
   projects: Project[];
-  loading?: boolean;
-  error?: string | null;
-  
+  activeProjectId: Project | null;
+  loading: boolean;
+  error: string | null;
+  isCanvas: boolean;
 }
 
 // Default initial state without localStorage
 const defaultInitialState: SideBarState = {
-  isCanvas: false,
-  activeProjectId: null,
   projects: [],
+  activeProjectId: null,
   loading: false,
   error: null,
+  isCanvas: false
 };
 
 // Helper function to safely access localStorage (Remix-friendly)
 const isServer = typeof window === 'undefined';
-
-export const fetchProjects = createAsyncThunk("sidebar/fetchProjects", async () => {
-  const config: RequestInit = { method: "GET" };
-  const res = await fetcher("/api/project-list", config);
-  return Array.isArray(res.data) ? res.data : [];
-});
-
-const getProjects = async (): Promise<Project[]> =>{
-  const config: RequestInit = {
-    method: 'GET',
-  };
-  
-  const res = await fetcher('/api/project-list', config);
-
-  return Array.isArray(res.data) ? res.data : [];
-}
 
 // Helper function to load state from localStorage
 const loadStateFromLocalStorage = (): SideBarState => {
@@ -80,12 +83,44 @@ const saveStateToLocalStorage = (state: SideBarState) => {
   }
 };
 
+// Update the fetchProjects thunk to handle pagination
+export const fetchProjects = createAsyncThunk(
+  "sidebar/fetchProjects", 
+  async (params?: PaginationParams) => {
+    const limit = params?.limit || 10;
+    const offset = params?.offset || 0;
+    
+    const config: RequestInit = { method: "GET" };
+    const response = await fetcher(
+      `/api/project-list?limit=${limit}&offset=${offset}`, 
+      config
+    );
+    
+    // Type assertion to access any properties safely
+    const anyResponse = response as any;
+    
+    // Create a standardized return structure that matches ProjectsResponse
+    const result: ProjectsResponse = {
+      message: anyResponse.message || "Projects fetched",
+      data: Array.isArray(anyResponse.data) ? anyResponse.data : [],
+      pagination: {
+        total: anyResponse.pagination?.total ?? (Array.isArray(anyResponse.data) ? anyResponse.data.length : 0),
+        offset: anyResponse.pagination?.offset ?? offset,
+        limit: anyResponse.pagination?.limit ?? limit,
+        has_more: anyResponse.pagination?.has_more ?? false
+      }
+    };
+    
+    return result;
+  }
+);
+
 // Initialize state with default values first 
 // (hydration will happen client-side)
 const initialState: SideBarState = defaultInitialState;
 
 const sidebarSlice = createSlice({
-  name: "sidebar",
+  name: 'sidebar',
   initialState,
   reducers: {
     initializeStates(state) {
@@ -93,7 +128,7 @@ const sidebarSlice = createSlice({
         const savedState = loadStateFromLocalStorage();
         state.isCanvas = savedState.isCanvas;
         state.activeProjectId = savedState.activeProjectId;
-        //state.projects = savedState.projects;
+        // Don't load projects from localStorage as we'll fetch them from API
       }
     },
     setIsCanvas(state, action: PayloadAction<boolean>) {
@@ -101,9 +136,8 @@ const sidebarSlice = createSlice({
       saveStateToLocalStorage(state);
     },
     setProject(state, action: PayloadAction<Project>) {
-      //const { id, name } = action.payload;
       state.projects = [...state.projects, { ...action.payload }];
-      state.activeProjectId = action.payload || null
+      state.activeProjectId = action.payload || null;
       saveStateToLocalStorage(state);
     },
     setProjects(state, action: PayloadAction<Project[]>) {
@@ -130,7 +164,7 @@ const sidebarSlice = createSlice({
       if (!isServer) {
         window.localStorage.removeItem('sidebarState');
       }
-    },
+    }
   },
   extraReducers: (builder) => {
     builder
@@ -138,13 +172,26 @@ const sidebarSlice = createSlice({
         state.loading = true;
         state.error = null;
       })
-      .addCase(fetchProjects.fulfilled, (state, action: PayloadAction<Project[]>) => {
+      .addCase(fetchProjects.fulfilled, (state, action) => {
+        const { data, pagination } = action.payload;
+        
+        // If this is the first page (offset 0), replace the projects array
+        // Otherwise, concatenate the new projects to the existing ones
+        if (!pagination || pagination.offset === 0) {
+          state.projects = data;
+        } else {
+          // Avoid duplicates by checking IDs
+          const existingIds = new Set(state.projects.map(p => p.id || ''));
+          const newProjects = data.filter(p => !existingIds.has(p.id || ''));
+          state.projects = [...state.projects, ...newProjects];
+        }
+        
         state.loading = false;
-        state.projects = action.payload;
+        // We don't save projects to localStorage here as it could get large
       })
       .addCase(fetchProjects.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.error.message ?? "Failed to fetch projects";
+        state.error = action.error.message || "Failed to fetch projects";
       });
   }
 });

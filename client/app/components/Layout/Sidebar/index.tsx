@@ -3,17 +3,21 @@ import {
   ChevronsLeft,
   SquarePen,
   ChevronDown,
-  ChevronRight
+  ChevronRight,
+  Loader
 } from 'lucide-react';
 import { NavLink, useLocation } from '@remix-run/react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { items, ItemType } from './SidebarItems';
 import { useNavigate } from '@remix-run/react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from '~/store/store';
-import { Loader } from 'lucide-react';
-import { fetchProjects } from '~/store/slices/sideBar';
-import { setProject, setActiveProject } from '~/store/slices/sideBar';
+import { 
+  fetchProjects, 
+  setProject, 
+  setActiveProject, 
+  initializeStates 
+} from '~/store/slices/sideBar';
 import { getUniqueID } from '~/lib/utils';
 
 type CategoryRoutes = {
@@ -27,7 +31,12 @@ type SidebarProps = {
 
 export default function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
   const [activeCategory, setActiveCategory] = useState<string>('');
-  const [isHistoryOpen, setIsHistoryOpen] = useState<boolean>(false);
+  const [isHistoryOpen, setIsHistoryOpen] = useState<boolean>(true);
+  const [page, setPage] = useState<number>(0);
+  const [hasMore, setHasMore] = useState<boolean>(true);
+  const observerRef = useRef<IntersectionObserver | null>(null);
+  const lastProjectRef = useRef<HTMLAnchorElement | null>(null);
+  
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
   const location = useLocation();
@@ -36,8 +45,12 @@ export default function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
     (state: RootState) => state.sidebar
   );
 
-  console.log('projects--------', projects);
+  // Initialize redux state from localStorage
+  useEffect(() => {
+    dispatch(initializeStates());
+  }, [dispatch]);
 
+  // Load initial projects
   useEffect(() => {
     const currentPath: string = location.pathname;
     const matchedCategory: ItemType | undefined = items.find(
@@ -47,11 +60,47 @@ export default function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
       setActiveCategory(matchedCategory.id || '');
       
       // Only fetch projects when due-diligence is the active category
-      if (matchedCategory.id === 'due-diligence' && !projects.length) {
-        dispatch(fetchProjects());
+      if (matchedCategory.id === 'due-diligence' && projects.length === 0) {
+        dispatch(fetchProjects({ limit: 10, offset: 0 }))
+          .then((action) => {
+            // Safely access pagination data
+            const payload = action.payload as any;
+            if (action.type === fetchProjects.fulfilled.type && payload.pagination) {
+              setHasMore(payload.pagination.has_more);
+              setPage(1); // Initial page loaded
+            }
+          });
       }
     }
   }, [location.pathname, dispatch, projects.length]);
+
+  // Set up the intersection observer for infinite scrolling
+  const lastProjectCallback = useCallback((node: HTMLAnchorElement | null) => {
+    if (loading) return;
+    
+    if (observerRef.current) observerRef.current.disconnect();
+    
+    observerRef.current = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && hasMore) {
+        // Load more projects when the last item is visible
+        if (!loading) {
+          const offset = page * 10;
+          dispatch(fetchProjects({ limit: 10, offset }))
+            .then((action) => {
+              // Safely access pagination data
+              const payload = action.payload as any;
+              if (action.type === fetchProjects.fulfilled.type && payload.pagination) {
+                setHasMore(payload.pagination.has_more);
+                setPage(prev => prev + 1);
+              }
+            });
+        }
+      }
+    });
+    
+    if (node) observerRef.current.observe(node);
+    lastProjectRef.current = node;
+  }, [loading, hasMore, page, dispatch]);
 
   const handleCategoryClick = (item: ItemType): void => {
     setActiveCategory(item.id || '');
@@ -59,8 +108,20 @@ export default function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
       const newID = getUniqueID();
       dispatch(setActiveProject({ id: '', name: '', temp_project_id: newID }));
       
-      // Fetch projects when switching to due-diligence
-      dispatch(fetchProjects());
+      // Reset pagination state
+      setPage(0);
+      setHasMore(true);
+      
+      // Fetch initial projects when switching to due-diligence
+      dispatch(fetchProjects({ limit: 10, offset: 0 }))
+        .then((action) => {
+          // Safely access pagination data
+          const payload = action.payload as any;
+          if (action.type === fetchProjects.fulfilled.type && payload.pagination) {
+            setHasMore(payload.pagination.has_more);
+            setPage(1);
+          }
+        });
       
       // Open the history dropdown automatically when clicking due-diligence
       setIsHistoryOpen(true);
@@ -150,36 +211,59 @@ export default function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
                           className="flex items-center space-x-2 p-1 text-sm font-semibold text-gray-500 hover:bg-gray-100 rounded"
                         >
                           <div className={`transform transition-transform duration-300 ${isHistoryOpen ? 'rotate-180' : 'rotate-0'}`}>
-                            <ChevronRight className="w-4 h-4" />
+                            <ChevronDown className="w-4 h-4" />
                           </div>
                           <span>History</span>
                         </button> */}
                         
                         <div 
                           className={`ml-2 mt-1 space-y-1 overflow-hidden transition-all duration-300 ease-in-out ${
-                            isHistoryOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+                            isHistoryOpen ? 'max-h-72 opacity-100' : 'max-h-0 opacity-0'
                           }`}
                         >
-                          {loading ? (
-                            <span className="flex text-xs items-center justify-center space-x-2 p-2 min-w-10 rounded">
-                              <Loader className="w-4 h-4 text-gray-600 animate-spin" />
-                            </span>
-                          ) : (
-                            <div className="space-y-1">
-                              {projects.map((item) => (
-                                <NavLink
-                                  key={item.id}
-                                  to={`/r/${item.id}`}
-                                  onClick={() => {
-                                    dispatch(setActiveProject(item));
-                                  }}
-                                  className={`flex text-xs items-center space-x-2 p-2 min-w-10 hover:bg-gray-200 rounded ${activeProjectId?.id === item.id ? 'bg-gray-200' : ''}`}
-                                >
-                                  <div className="truncate w-[95%]">{item.name}</div>
-                                </NavLink>
-                              ))}
-                            </div>
-                          )}
+                          {/* Fixed height container with scroll */}
+                          <div className="h-72 overflow-y-auto pr-1 space-y-1">
+                            {loading && projects.length === 0 ? (
+                              <span className="flex text-xs items-center justify-center space-x-2 p-2 min-w-10 rounded">
+                                <Loader className="w-4 h-4 text-gray-600 animate-spin" />
+                              </span>
+                            ) : (
+                              <div className="space-y-1">
+                                {projects.map((item, index) => {
+                                  // Determine if this is the last item to observe
+                                  const isLastItem = index === projects.length - 1;
+                                  
+                                  return (
+                                    <NavLink
+                                      key={item.id}
+                                      ref={isLastItem ? lastProjectCallback : null}
+                                      to={`/r/${item.id}`}
+                                      onClick={() => {
+                                        dispatch(setActiveProject(item));
+                                      }}
+                                      className={`flex text-xs items-center space-x-2 p-2 min-w-10 hover:bg-gray-200 rounded ${activeProjectId?.id === item.id ? 'bg-gray-200' : ''}`}
+                                    >
+                                      <div className="truncate w-[95%]">{item.name}</div>
+                                    </NavLink>
+                                  );
+                                })}
+                                
+                                {/* Loading indicator for pagination */}
+                                {loading && projects.length > 0 && (
+                                  <div className="flex justify-center py-2">
+                                    <Loader className="w-4 h-4 text-gray-600 animate-spin" />
+                                  </div>
+                                )}
+                                
+                                {/* End of list message */}
+                                {!hasMore && projects.length > 0 && (
+                                  <div className="text-xs text-center text-gray-400 py-2">
+                                    No more projects
+                                  </div>
+                                )}
+                              </div>
+                            )}
+                          </div>
                         </div>
                       </div>
                     )}
