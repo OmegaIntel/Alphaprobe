@@ -17,9 +17,8 @@ from fuzzywuzzy import fuzz  # For section title matching
 
 # LangChain + LLM
 from langchain_openai import ChatOpenAI
-import openai
 import tiktoken
-
+ 
 # langgraph-based StateGraph
 from langgraph.graph import START, END, StateGraph
 
@@ -27,7 +26,8 @@ from langgraph.graph import START, END, StateGraph
 from utils.pdf_parser import extract_pdf_from_s3, parse_pdf_structure
 from utils.excel_utils import extract_excel_index, has_excel_files
 from utils.kb_search import query_kb, get_presigned_url_from_source_uri
-from utils.websearch_utils import call_tavily_api, call_perplexity_api
+from utils.websearch_utils import call_tavily_api
+from utils.deepseek import DeepSeekWrapper
 
 KNOWLEDGE_BASE_ID = os.getenv("KNOWLEDGE_BASE_ID", "my-knowledge-base")
 BUCKET_NAME = os.getenv("BUCKET_NAME", "deep-research-docs")
@@ -328,11 +328,8 @@ def set_query_engine(engine: BaseQueryEngine):
     query_engine = engine
 
 # -------------------- BASE STORAGE DIRECTORY ----------------------
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-openai.api_key = OPENAI_API_KEY
 ENC = tiktoken.encoding_for_model("gpt-4o-mini")
 MAX_TOKENS = 4000
-print(f"[DEBUG] OpenAI API key set: {bool(OPENAI_API_KEY)}")
 
 # ------------------------------------------------------------------------
 # SCHEMAS
@@ -492,7 +489,7 @@ class ReportState:
 # LLM Setup
 # ------------------------------------------------------------------------
 print("[DEBUG] Initializing ChatOpenAI with model gpt-4o-mini")
-gpt_4 = ChatOpenAI(model="gpt-4o-mini", temperature=0.0, api_key=OPENAI_API_KEY)
+gpt_4 = DeepSeekWrapper(model="deepseek/deepseek-r1-zero:free", temperature=0.0)
 
 
 # ------------------------------------------------------------------------

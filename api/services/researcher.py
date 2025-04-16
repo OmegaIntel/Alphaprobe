@@ -6,10 +6,13 @@ from typing import List, TypedDict, Any, Optional, Tuple
 from pydantic import BaseModel, Field
 from dataclasses import dataclass, fields
 import re
+
+import tiktoken
 from common_logging import logerror
 
 from utils.kb_search import query_kb
 from utils.websearch_utils import call_tavily_api
+from utils.pdf_parser import extract_pdf_from_s3, parse_pdf_structure
 
 from fastapi import HTTPException
 
@@ -32,80 +35,12 @@ BUCKET_NAME = os.getenv("BUCKET_NAME", "deep-research-docs")
 KNOWLEDGE_BASE_ID = os.getenv("KNOWLEDGE_BASE_ID")
 DATA_SOURCE_ID = os.getenv("DATA_SOURCE_ID")
 MODEL_ARN = os.getenv("MODEL_ARN")
+ENC = tiktoken.encoding_for_model("gpt-4o-mini")
+MAX_TOKENS = 4000
 # ------------------------ Configuration ------------------------
-DEFAULT_REPORT_STRUCTURE = """The report structure should focus on providing a comprehensive breakdown of the user-provided topic. Ensure sections are logically structured, with research-driven insights where applicable.
-
-1. **Introduction** (no research needed)
-   - Overview of the topic area, including its relevance and importance.
-   - Purpose and scope of the report.
-
-2. **Executive Summary** (high-level overview)
-   - Brief summary of the key findings.
-   - Summary of recommendations.
-
-3. **Main Body Sections** (customizable to the topic):
-   3.1 **Financial Performance Analysis** (or core performance analysis)  
-       - Historical trends, revenue growth, and profitability.
-       - Quality of earnings or performance metrics.
-       - Cost structure, margin analysis, and adjustments.
-       - Key risks and challenges (e.g., customer concentration risks).
-
-   3.2 **Balance Sheet Review**  
-       - Asset quality, valuation, and receivables.
-       - Debt and liability structure.
-       - Off-balance sheet items.
-
-   3.3 **Cash Flow Analysis**  
-       - Operating cash flow health.
-       - Capital expenditures and allocation.
-       - Working capital and liquidity management.
-
-   3.4 **Projections and Assumptions**  
-       - Management forecasts and underlying assumptions.
-       - Stress-testing and sensitivity analysis.
-       - Comparisons to historical trends.
-
-   3.5 **Key Financial Metrics and KPIs**  
-       - Liquidity, profitability, and efficiency metrics.
-       - Areas for improvement.
-
-   3.6 **Risk Assessment**  
-       - Financial risks (e.g., credit, liquidity, and market risks).
-       - Operational and supply chain risks.
-       - External risks (e.g., competition and regulatory risks).
-
-4. **Accounting Policies and Practices**  
-   - Compliance with accounting standards.
-   - Internal controls and financial integrity.
-   - Identification of irregularities, if any.
-
-5. **Tax Considerations**  
-   - Tax compliance and strategies.
-   - Outstanding disputes or liabilities.
-
-6. **Key Findings and Red Flags**  
-   - Critical findings from the report.
-   - Potential risks and red flags for immediate attention.
-   - Implications for future financial health.
-
-7. **Recommendations**  
-   - Actionable recommendations based on findings.
-   - Cost management and operational efficiency improvements.
-   - Cash flow and revenue optimization strategies.
-
-8. **Conclusion**  
-   - Recap of the key points.
-   - High-level summary of risks, findings, and suggested actions.
-   - Include any tables, lists, or visual summaries to enhance clarity.
-
----
-**Note**: This structure is flexible enough to be adapted for topics outside financial due diligence, focusing on organizing key findings, risks, and actionable recommendations in any complex analysis.
-"""
-
 @dataclass(kw_only=True)
 class Configuration:
     """The configurable fields for the chatbot."""
-    report_structure: str = DEFAULT_REPORT_STRUCTURE
     number_of_queries: int = 2
     tavily_topic: str = "general"
     tavily_days: Optional[str] = None
@@ -179,29 +114,128 @@ class InstructionRequest(BaseModel):
     project_id: str
 
 # ------------------------------------------------------------------------
+# HELPER FUNCTIONS
+# ------------------------------------------------------------------------
+def trim_to_tokens(text: str, max_tokens: int = MAX_TOKENS) -> str:
+    tokens = ENC.encode(text)
+    if len(tokens) <= max_tokens:
+        return text
+    # Keep the first N tokens and decode back
+    return ENC.decode(tokens[:max_tokens])
+
+def parse_llm_questions(questions_raw: str) -> List[str]:
+    """Parse LLM-generated questions that might be in JSON, code blocks, or plain text."""
+    # Normalize whitespace first
+    questions_raw = questions_raw.strip()
+    
+    # Try to detect and remove markdown/code fences
+    if questions_raw.startswith("```") and questions_raw.endswith("```"):
+        questions_raw = re.sub(r"^```(?:json)?\s*", "", questions_raw, flags=re.IGNORECASE)
+        questions_raw = re.sub(r"\s*```$", "", questions_raw)
+    
+    # Attempt JSON parsing first
+    try:
+        questions = json.loads(questions_raw)
+        if isinstance(questions, list):
+            # Validate each item is a string
+            return [str(q).strip() for q in questions if str(q).strip()]
+        elif isinstance(questions, dict):
+            # Handle case where LLM returns {"questions": [...]}
+            if "questions" in questions and isinstance(questions["questions"], list):
+                return [str(q).strip() for q in questions["questions"] if str(q).strip()]
+    except json.JSONDecodeError:
+        pass  # Not JSON, try other formats
+    
+    # Fallback to line-based parsing
+    questions = []
+    for line in questions_raw.split("\n"):
+        line = line.strip()
+        # Skip empty lines and list markers (e.g., "1. ", "- ")
+        if not line or re.match(r'^[\d\-]+\.[\s]*', line):
+            continue
+        # Remove any remaining list markers or quotes
+        line = re.sub(r'^[\"\'\-\*]\s*|\s*[\"\'\-\*]$', '', line)
+        if line:
+            questions.append(line)
+    
+    return questions
+
+def preprocess_tavily_results(web_results):
+    """Extract most relevant snippets from Tavily results"""
+    processed = []
+    for result in web_results:
+        processed.append(
+            f"Source: {result.get('title', 'Unknown')}\n"
+            f"URL: {result.get('url', '')}\n"
+            f"Content: {result.get('content', result.get('snippet', ''))[:500]}\n"
+        )
+    return "\n---\n".join(processed)
+
+def validate_report(report: str, answers: list) -> bool:
+    """Check if report properly incorporates answers"""
+    required_coverage = sum(1 for q,a in answers if "MISSING" not in a and "PARTIAL" not in a)
+    actual_coverage = sum(1 for q,a in answers if a.lower() in report.lower())
+    return actual_coverage >= required_coverage * 0.7  # At least 70% coverage
+# ------------------------------------------------------------------------
 # GRAPH NODES
 # ------------------------------------------------------------------------
 async def formulate_plan(state: ReportState, config: RunnableConfig):
     print("[DEBUG] Entering formulate_plan with state:", state)
+    
+    # 1. Extract PDF from S3 (similar to node_generate_outline)
+    pdf_text = await extract_pdf_from_s3(state["user_id"], state["project_id"])
+    print(f"[DEBUG] PDF text length: {len(pdf_text) if pdf_text else 0}")
+    
+    pdf_sections = []
+    if pdf_text:
+        pdf_sections = parse_pdf_structure(pdf_text)
+        print(f"[DEBUG] Parsed {len(pdf_sections)} PDF sections")
+    else:
+        default = await extract_pdf_from_s3("default", "outline")
+        if default:
+            pdf_sections = parse_pdf_structure(default)
+            print(f"[DEBUG] Parsed {len(pdf_sections)} default PDF sections")
+
+    # ---------------------------------------
+    # CASE 1: PDF sections exist - use them directly
+    # ---------------------------------------
+    if pdf_sections:
+        print("[DEBUG] Using PDF sections directly for outline")
+        outline_sections = []
+        for sec in pdf_sections:
+            title = sec.get("title", "Untitled Section")
+            content = sec.get("content", "")
+            outline_sections.append(f"## {title}\n\n{content}")
+        
+        outline_text = "\n\n".join(outline_sections)
+        print(f"[DEBUG] Generated outline from PDF with {len(outline_sections)} sections")
+        return {"outline": outline_text}
+
+    # ---------------------------------------
+    # CASE 2: No PDF - generate outline via LLM
+    # ---------------------------------------
+    print("[DEBUG] No PDF sections found, generating outline via LLM")
     query_context = state["topic"]
     headings = state["headings"]
     headings_text = "\n".join([f"{i+1}. {h}" for i, h in enumerate(headings)]) if headings else "No specific headings provided."
 
-    outline_prompt = f"""You are an expert market research analyst.
-Create a detailed outline for a comprehensive market analysis report.
-The outline should cover:
-- Market size and growth trends
-- Consumer behavior and segmentation
-- Competitive landscape and positioning
-- Regulatory environment and economic influences
-- Emerging trends and growth opportunities
+    outline_prompt = f"""You are an expert financial and industry analyst. Based on the topic and headings, produce a structured outline for a report.
 
-Provided Headings:
+Required Headings (MUST INCLUDE VERBATIM):
 {headings_text}
 
-Query Context: {query_context}
+Additional Context:
+Topic: {query_context}
 
-Produce a structured, actionable outline for a complete market analysis.
+Generate an outline that:
+1. Preserves all required headings exactly as provided
+2. Adds complementary sections for a comprehensive analysis
+3. Follows logical flow from overview to detailed analysis to conclusions
+
+Output format:
+- Use markdown formatting with ## for main sections and ### for subsections
+- Include brief descriptions under each section heading
+- Create at most 10 main sections
 """
 
     print("\n[formulate_plan] Outline Prompt:\n", outline_prompt)
@@ -216,27 +250,47 @@ async def formulate_questions(state: ReportState, config: RunnableConfig) -> Non
     print("[DEBUG] Entering formulate_questions with state:", state)
     outline = state["outline"]
 
-    question_prompt = f"""As a market research expert, generate up to 15 specific questions (JSON array) 
-that will help extract key market insights from the following outline:
+    question_prompt = f"""You are an expert financial and industry analyst. Generate precise research questions to populate the following report outline.
+
+Report Outline:
 {outline}
 
-Output your answer as JSON, e.g.:
-["Question 1?", "Question 2?", ...]
-"""
+Generate questions that:
+1. Extract specific data points needed for each section
+2. Cover both quantitative and qualitative aspects
+3. Address competitive landscape and market positioning
+4. Explore financial performance and key ratios (if applicable)
+5. Investigate emerging trends and growth opportunities
+
+Question Requirements:
+- Each question should target a specific data need
+- Include questions that would require different data sources (documents, web, Excel)
+- Prioritize questions that will yield actionable insights
+- Ensure coverage of all key aspects in the outline
+
+Output Format:
+- Return exactly 10 questions as a JSON array
+- Order questions logically following the outline structure
+- Each question should be self-contained and specific
+
+Example:
+[
+    "What is the current market size in USD and growth rate for the last 5 years?",
+    "Who are the top 3 competitors and what are their market shares?",
+    "What are the key regulatory factors impacting this market?"
+]
+
+Generate your questions:"""
+    
     print("\n[formulate_questions] Questions Prompt:\n", question_prompt)
-    response = await Settings.llm.acomplete(question_prompt)
+    response = await Settings.llm.acomplete(trim_to_tokens(question_prompt))
     questions_raw = response.text if hasattr(response, "text") else str(response)
 
-    # Strip out possible code fences
-    questions_raw = re.sub(r"^```(?:json)?\n", "", questions_raw)
-    questions_raw = re.sub(r"\n```$", "", questions_raw)
     try:
-        questions = json.loads(questions_raw)
-        if not isinstance(questions, list):
-            questions = []
+        questions = parse_llm_questions(questions_raw)
     except Exception as e:
-        logerror(f"Error parsing JSON questions: {e}")
-        questions = [x.strip() for x in questions_raw.split("\n") if x.strip()]
+        logerror(f"Error parsing questions: {e}")
+        questions = []  # Or some default fallback
     
     print(f"\n[formulate_questions] Parsed {len(questions)} questions:\n", questions)
     print("[DEBUG] Exiting formulate_questions with questions.")
@@ -292,11 +346,10 @@ async def answer_questions(state: ReportState, config: RunnableConfig):
             try:
                 # Run the synchronous API call in a thread
                 web_results = await asyncio.to_thread(call_tavily_api, question)
-                print(f"[answer_questions] Tavily API returned {len(web_results)} results for question: {question}")
-                web_context = "\n\n".join([
-                    f"Title: {r['title']}\nURL: {r['url']}\nContent: {r['snippet']}"
-                    for r in web_results
-                ]) if web_results else ""
+                if web_results:
+                    web_context = preprocess_tavily_results(web_results)
+                else:
+                    combined_context += "No web results found"
                 print(f"[answer_questions] Compiled web_context length: {len(web_context)}")
             except Exception as e:
                 print(f"[ERROR] Web search failed for question: {question} with error: {str(e)}")
@@ -308,21 +361,29 @@ async def answer_questions(state: ReportState, config: RunnableConfig):
             combined_context = "No relevant context found"
             print(f"[answer_questions] No context found for question: {question}")
     
-        prompt = f"""Answer the following question using ONLY the provided context:
-Context: {combined_context}
+        prompt = f"""Extract relevant information to answer: {question}
+        
+CONTEXT:
+{combined_context}
 
-Question: {question}
+INSTRUCTIONS:
+1. Provide the most accurate answer possible from the context
+2. Include specific numbers, names, dates when available
+3. Cite sources using [Source: title/url]
+4. If unsure, provide partial information marked with "PARTIAL:"
 
-If the context doesn't contain the answer, respond with:
-'INSUFFICIENT INFORMATION: Could not find answer in provided sources.'
-
-Provide a concise, accurate answer:"""
-    
-        print(f"[answer_questions] Generated prompt for question: {question[:100]}...")
-        response = await Settings.llm.acomplete(prompt)
-        answer_text = response.text if hasattr(response, "text") else str(response)
-        print(f"[answer_questions] Received answer of length {len(answer_text)} for question: {question}")
-        answers.append((question, answer_text))
+ANSWER FORMAT:
+<answer content>
+[Source: <most relevant source>]"""
+        
+        response = await Settings.llm.acomplete(trim_to_tokens(prompt))
+        answer = response.text.strip()
+        
+        # Fallback if answer is too short
+        if len(answer) < 20 and web_context:
+            answer = f"PARTIAL: Relevant context found but exact answer unclear\n{web_context[:500]}"
+            
+        answers.append((question, answer))
     
     print("[answer_questions] Exiting answer_questions function")
     return {"answers": answers}
@@ -352,40 +413,42 @@ async def write_report(state: ReportState, config: RunnableConfig):
     outline = state["outline"]
 
     # --- NEW: Updated Final Prompt ---
-    final_prompt = f"""You are a senior market research analyst preparing a comprehensive market analysis report.
-Using the following outline and Q&A, create a structured report with:
+    final_prompt = f"""Transform these research findings into a professional market report:
 
-1. Overview of the market landscape and key trends
-2. Detailed insights into market size, segmentation, and growth prospects
-3. Analysis of the competitive environment and consumer behavior
-4. Identification of emerging opportunities and potential challenges
-5. Actionable recommendations for market entry, expansion, or strategic adjustment
-
-Outline:
+REPORT OUTLINE:
 {outline}
 
-Research Findings:
-"""
+RESEARCH FINDINGS:
+{previous_questions}
+
+INSTRUCTIONS:
+1. Create a flowing narrative using the Q&A data
+2. Keep all numerical data and sources intact
+3. Use markdown formatting with:
+   - ## for main sections
+   - ### for subsections
+   - Bullet points for lists
+   - Tables for comparative data
+4. Highlight data gaps with "[NEEDS MORE RESEARCH]"
+5. For missing information, write: "[DATA NOT FOUND]"
+6. Maintain formal business tone throughout
+
+OUTPUT REQUIREMENTS:
+- Minimum 800 words
+- All figures and statistics must come from the research findings
+- Include a 'Data Limitations' section at the end"""
     
     for idx, (question, answer) in enumerate(answers, start=1):
         final_prompt += f"\nQ{idx}: {question}\nA{idx}: {answer}\n"
 
     print("\n[write_report] Final Summarize Prompt:\n", final_prompt)
-    response = await Settings.llm.acomplete(final_prompt)
+    response = await Settings.llm.acomplete(trim_to_tokens(final_prompt))
     report_text = response.text if hasattr(response, "text") else str(response)
+    if not validate_report(report_text, state["answers"]):
+        print("[WARNING] Generated report has low answer coverage")
     print("\n[write_report] Final Report (preview):\n", report_text[:300], "...")
     print("[DEBUG] Exiting write_report with report generated.")
     return {"report": report_text, "previous_questions": previous_questions}
-
-async def review_report(state: ReportState, config: RunnableConfig):
-    print("[DEBUG] Entering review_report with state:", state)
-    """
-    For testing, we forcibly approve the final report to produce a StopEvent.
-    """
-    report = state["report"]
-    print("\n[review_report] Forcing approval for testing.\n")
-    print("[DEBUG] Exiting review_report with report approved.")
-    return {"report": report}
 
 # ------------------------------------------------------------------------
 # BUILD THE MAIN GRAPH
@@ -404,7 +467,7 @@ def build_document_graph():
     builder.add_node("formulate_questions", formulate_questions)
     builder.add_node("answer_questions", answer_questions)
     builder.add_node("write_report", write_report)
-
+ 
     # Define the edges between nodes
     builder.add_edge(START, "formulate_plan")
     builder.add_edge("formulate_plan", "formulate_questions")
@@ -416,22 +479,9 @@ def build_document_graph():
     print("[DEBUG] Exiting build_document_graph")
     return document_graph
 
-def validate_input_state(input_state: dict) -> ReportStateInput:
-    required_keys = {"topic", "headings", "index"}
-    if not required_keys.issubset(input_state.keys()):
-        raise ValueError(f"Input state must contain the following keys: {required_keys}")
-    
-    if not isinstance(input_state["topic"], str):
-        raise TypeError("'topic' must be a string")
-    
-    if not isinstance(input_state["headings"], list) or not all(isinstance(h, str) for h in input_state["headings"]):
-        raise TypeError("'headings' must be a list of strings")
-    
-    if not isinstance(input_state["index"], str):
-        raise TypeError("'index' must be a string")
-    
-    return input_state  # Now it's guaranteed to match ReportStateInput
-
+# ------------------------------------------------------------------------
+# CALLING FUNCTION AND HELPERS
+# ------------------------------------------------------------------------
 template_heading = [
     {
         "heading": [
@@ -470,6 +520,22 @@ template_heading = [
         "templateId": "market-size"
     },
 ]
+
+def validate_input_state(input_state: dict) -> ReportStateInput:
+    required_keys = {"topic", "headings", "index"}
+    if not required_keys.issubset(input_state.keys()):
+        raise ValueError(f"Input state must contain the following keys: {required_keys}")
+    
+    if not isinstance(input_state["topic"], str):
+        raise TypeError("'topic' must be a string")
+    
+    if not isinstance(input_state["headings"], list) or not all(isinstance(h, str) for h in input_state["headings"]):
+        raise TypeError("'headings' must be a list of strings")
+    
+    if not isinstance(input_state["index"], str):
+        raise TypeError("'index' must be a string")
+    
+    return input_state  # Now it's guaranteed to match ReportStateInput
 
 async def generate_structured_report(instruction: str, report_type: int, file_search:bool, web_search:bool, project_id: str, user_id: str):
     print("[DEBUG] Entering generate_structured_report with query:", instruction, "user_id:", user_id, "project_id:", project_id)
@@ -513,10 +579,10 @@ async def generate_structured_report(instruction: str, report_type: int, file_se
         logerror(f"Error generating report: {str(e)}")
         print("[DEBUG] Exception in generate_structured_report:", e)
         return None
+
 # -------------------------------------------------------------------------
 # 3) FastAPI Router with Endpoints
 # -------------------------------------------------------------------------
-
 async def generate_report(instruction: str, report_type: int, file_search:bool, web_search:bool, project_id: str, user_id: str):
     print("[DEBUG] Entering generate_report endpoint")
     

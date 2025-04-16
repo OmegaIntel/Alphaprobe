@@ -1,5 +1,5 @@
 import { fetcher, fileFetcher } from '~/services/HTTPS';
-import { ResearchType, Section, ConversationData } from './reportUtils';
+import { ResearchType, Citation, ConversationData } from './reportUtils';
 
 
 const templateCode = {
@@ -204,7 +204,7 @@ export interface ReportList {
   query: string;
   response:string;
   updated_at: string;
-  sections: Section[]
+  sections: Citation[]
   research: ResearchType;
 }
 export const getReports = async (project_id : string): Promise<ReportList[]> =>{
