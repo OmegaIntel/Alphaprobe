@@ -17,7 +17,7 @@ from db_models.session import get_db
 from sqlalchemy.orm import Session
 from sqlalchemy import func, asc, desc
 
-from services.deep_research import deep_research
+from services.deep_research import deep_research, report_graph_compiled, SectionState, ReportState
 from services.researcher import generate_report
 from utils.excel_utils import build_or_load_excel_index
 
@@ -141,6 +141,35 @@ def close_previous_ingestion_jobs():
     except Exception as e:
         print(f"[ERROR] Unexpected error in close_previous_ingestion_jobs: {str(e)}")
 
+# Deserialize stored JSON into in‑memory SectionState list
+def deserialize_outline(sections_json):
+    states = []
+    for sec in sections_json or []:
+        states.append(SectionState(
+            title=sec["title"],
+            description=sec.get("description", ""),
+            content=sec.get("content", ""),
+            citations=sec.get("citations", []),
+            report_state=None,       # we’ll set this below
+            web_research=False,      # not used here
+            excel_search=False,
+            kb_search=False,
+            report_type=0
+        ))
+    return states
+
+# Serialize SectionState list (with citations) back to JSON
+def serialize_outline(outline: List[SectionState]):
+    out = []
+    for sec in outline:
+        out.append({
+            "title": sec.title,
+            "description": sec.description,
+            "content": sec.content,
+            "citations": sec.citations
+        })
+    return out
+
 # ------------------------------------------------------------------------
 # ROUTER
 # ------------------------------------------------------------------------
@@ -228,129 +257,59 @@ async def deep_research_tool(query: InstructionRequest, current_user=Depends(get
 
 @research_deep_router.post("/api/deep-researcher-langgraph/update")
 async def deep_research_tool_update(
-    query: InstructionRequest, 
-    current_user=Depends(get_current_user), 
-    db: Session = Depends(get_db)
+    query: InstructionRequest,
+    current_user=Depends(get_current_user),
+    db: Session = Depends(get_db),
 ):
-    """Update an existing research project with new research data"""
-    MAX_RETRIES = 3
-    RETRY_DELAY = 1  # seconds
-    
-    try:
-        user_id = current_user.id
-        
-        # Validate project exists
-        project = db.query(Project).filter(Project.id == query.project_id).first()
-        if not project:
-            return JSONResponse(
-                content={"message": "Project not found", "data": None},
-                status_code=404
-            )
+    user_id = current_user.id
 
-        # Run research with proper state handling
-        result = None
-        for attempt in range(MAX_RETRIES):
-            try:
-                if query.researchType == "deep":
-                    result = await deep_research(
-                        query.instruction, 
-                        int(query.report_type), 
-                        query.file_search, 
-                        query.web_search, 
-                        query.temp_project_id, 
-                        user_id
-                    )
-                else:
-                    result = await generate_report(
-                        query.instruction, 
-                        int(query.report_type), 
-                        query.file_search, 
-                        query.web_search, 
-                        query.temp_project_id, 
-                        user_id
-                    )
-                break
-            except Exception as e:
-                if attempt == MAX_RETRIES - 1:
-                    raise
-                time.sleep(RETRY_DELAY)
-                continue
+    # 1️⃣ Load project & latest report
+    project = db.query(Project).filter_by(id=query.project_id).first()
+    if not project:
+        raise HTTPException(404, "Project not found")
+    latest = (
+        db.query(ReportTable)
+          .filter_by(project_id=query.project_id)
+          .order_by(desc(ReportTable.updated_at))
+          .first()
+    )
+    if not latest:
+        raise HTTPException(404, "No existing report to update")
 
-        if result is None:
-            raise HTTPException(
-                status_code=500,
-                detail="Research failed to generate results after multiple attempts"
-            )
+    # 2️⃣ Build ReportState with existing outline
+    outline_states = deserialize_outline(latest.sections)
+    state = ReportState(
+        topic=latest.query,
+        user_id=user_id,
+        project_id=query.project_id,
+        report_type=int(query.report_type),
+        file_search=query.file_search,
+        web_research=query.web_search,
+        outline=outline_states,
+        update_query=query.instruction
+    )
+    # link back each SectionState to parent ReportState
+    for sec in state.outline:
+        sec.report_state = state
 
-        # Convert result if needed
-        final_report = result.get("report", "")
-        sections = result.get("sections", [])
+    # 3️⃣ Invoke our new graph:
+    updated_state = report_graph_compiled.invoke(state)
 
-        # Save report with transaction and retry logic
-        for attempt in range(MAX_RETRIES):
-            try:
-                # Start transaction
-                db.begin()
+    # 4️⃣ Persist back to DB
+    latest.response = updated_state.final_report
+    latest.sections = serialize_outline(updated_state.outline)
+    project.updated_at = func.now()
+    db.add(latest)
+    db.add(project)
+    db.commit()
 
-                # Create new report entry
-                report = ReportTable(
-                    project_id=query.project_id,
-                    query=query.instruction,
-                    response=final_report,
-                    sections=sections,
-                    research=query.researchType
-                )
-                db.add(report)
-
-                # Update project timestamp
-                project.updated_at = func.now()
-                db.add(project)
-
-                # Commit transaction
-                db.commit()
-                db.refresh(project)
-                db.refresh(report)
-                break
-
-            except Exception as e:
-                db.rollback()
-                if attempt == MAX_RETRIES - 1:
-                    raise HTTPException(
-                        status_code=500,
-                        detail=f"Failed to save report after {MAX_RETRIES} attempts"
-                    )
-                time.sleep(RETRY_DELAY)
-                continue
-
-        return JSONResponse(
-            content={
-                "message": "Research updated successfully",
-                "data": {
-                    "report": final_report,
-                    "sections": sections,
-                    "research": query.researchType,
-                    "project": {
-                        "id": str(project.id),
-                        "name": project.name,
-                        "temp_project_id": str(project.temp_project_id) if project.temp_project_id else None,
-                        "user_id": str(project.user_id),
-                        "created_at": project.created_at.isoformat() if project.created_at else None,
-                        "updated_at": project.updated_at.isoformat() if project.updated_at else None
-                    }
-                }
-            },
-            status_code=200
-        )
-
-    except HTTPException:
-        raise  # Re-raise HTTP exceptions
-    except Exception as e:
-        db.rollback()
-        logger.error(f"Error in deep_research_tool_update: {str(e)}", exc_info=True)
-        raise HTTPException(
-            status_code=500,
-            detail=f"An unexpected error occurred: {str(e)}"
-        )
+    return JSONResponse({
+        "message": "Research updated successfully",
+        "data": {
+            "report": updated_state.final_report,
+            "sections": latest.sections
+        }
+    })
 
 
 @research_deep_router.post("/api/upload-deep-research")
