@@ -1,26 +1,28 @@
 import { useRef, useState, useEffect, useCallback, FC } from 'react'; 
-import { useWebSocket } from './hooks/useWebSocket';
-import { useResearchHistory } from './hooks/useResearchHistory';
-import ReportBlock from './ReportBlock';
-import InputComponent from './InputBar/InputComponent';
-import { MoveDown } from 'lucide-react';
-import Loader from './Loader';
-import InitialPage from './InitialPage';
-import { InitialFormData, ConversationData, Citation, ResearchType } from './reportUtils';
+import ReportBlock from '~/components/Report/ReportBlock';
+import InputComponent from '~/components/Report/InputBar/InputComponent';
+import { MoveDown, FileDown, BarChart } from 'lucide-react';
+import Loader from '~/components/Report/Loader';
+import MarketResearchInitialPage, { MarketResearchFormData } from './MarketResearchInitialPage';
+import { 
+  InitialFormData, 
+  ConversationData, 
+  Citation, 
+  ResearchType, 
+  generatePDF
+} from '~/components/Report/reportUtils';
 import {
   createGetDocumentReport,
   updateGetDocumentReport,
   getReports,
-} from './api';
+  uploadDeepResearchFiles
+} from '~/components/Report/api';
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState, AppDispatch } from '../../store/store';
+import { RootState, AppDispatch } from '~/store/store';
 import { useLocation, useParams } from '@remix-run/react';
 import { setProject } from '~/store/slices/sideBar';
 
-
-import Query from './Query';
-
-const ReportPage: FC = () => {
+const MarketResearchComponent: FC = () => {
   const location = useLocation();
   const { id = null } = useParams();
   const dispatch = useDispatch<AppDispatch>();
@@ -30,8 +32,8 @@ const ReportPage: FC = () => {
   const [conversation, setConversation] = useState<ConversationData[]>([]);
   const [isStopped, setIsStopped] = useState(false);
   const [showScrollButton, setShowScrollButton] = useState(false);
-  //const [sections, setSections] = useState<Section[]>([]);
   const mainContentRef = useRef<HTMLDivElement>(null);
+  const reportContentRef = useRef<HTMLDivElement>(null);
   const { activeProjectId } = useSelector((state: RootState) => state.sidebar);
 
   useEffect(() => {
@@ -48,7 +50,7 @@ const ReportPage: FC = () => {
             setLoading(false);
           } finally {
             if (res?.length) {
-              const conv = res.map((item) => ({
+              const conv = res.map((item:any) => ({
                 id: item.id,
                 query: item.query,
                 res: item.response,
@@ -58,6 +60,8 @@ const ReportPage: FC = () => {
                 researchType: item.research
               }));
               setConversation([...conv]);
+              setLoading(false);
+            } else {
               setLoading(false);
             }
           }
@@ -70,13 +74,10 @@ const ReportPage: FC = () => {
     }, 1000);
   }, [location, id]);
 
-  console.log('report--------------------------', conversation);
-
-  const handleDisplayResult = async (newQuestion: InitialFormData) => {
+  const handleDisplayResult = async (newQuestion: MarketResearchFormData) => {
     try {
-      // console.log('report--------------------------');
       //@ts-ignore
-      const projectID = globalThis.reportGeneration.project_id || id;
+      const projectID = globalThis.reportGeneration?.project_id || id;
 
       setShowResult(true);
       setLoading(true);
@@ -99,7 +100,7 @@ const ReportPage: FC = () => {
           promptValue: newQuestion.promptValue,
           web_search: newQuestion.preferences.web,
           file_search: newQuestion.preferences.file,
-          templateId: newQuestion.reportType,
+          templateId: newQuestion.reportType, 
           temp_project_id: newQuestion.temp_project_id,
           uploaded_files: newQuestion.uploadedDocuments,
           researchType: newQuestion.researchType
@@ -125,8 +126,6 @@ const ReportPage: FC = () => {
           researchType: newQuestion.researchType
         });
       }
-
-      // console.log('res----------------', response);
 
       if (response) {
         setConversation((prev: ConversationData[]) => {
@@ -182,15 +181,22 @@ const ReportPage: FC = () => {
       behavior: 'smooth',
     });
   };
+  
+  const handleExportPDF = () => {
+    if (conversation.length > 0) {
+      const fileName = `market-research-${new Date().toISOString().slice(0, 10)}`;
+      generatePDF(fileName, reportContentRef);
+    }
+  };
 
   return (
     <div className="flex h-[calc(100vh-80px)] justify-center">
       <div className="h-full max-w-[800px] space-y-2">
         {!showResult && (
-          <InitialPage
+          <MarketResearchInitialPage
             promptValue={promptValue}
             setPromptValue={setPromptValue}
-            handleDisplayResult={(query: InitialFormData) => { 
+            handleDisplayResult={(query: MarketResearchFormData) => { 
               if (query.promptValue) {
                 handleDisplayResult(query);
               }
@@ -204,7 +210,19 @@ const ReportPage: FC = () => {
             className="flex h-[88%] w-full grow flex-col items-center justify-between overflow-x-auto"
           >
             <div className="container w-full space-y-2">
-              <div className="container space-y-2 task-components">
+              <div className="flex justify-end mb-4">
+                <button
+                  onClick={handleExportPDF}
+                  className="px-4 py-2 text-sm text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition-colors"
+                  disabled={conversation.length === 0}
+                >
+                  Export to PDF
+                </button>
+              </div>
+              <div 
+                ref={reportContentRef} 
+                className="container space-y-2 task-components"
+              >
                 <ReportBlock
                   orderedData={conversation}
                 />
@@ -222,14 +240,14 @@ const ReportPage: FC = () => {
                 setPromptValue={setPromptValue}
                 handleSubmit={(value: string) => {
                   const pref = JSON.parse(
-                    localStorage.getItem('promtPreferance') || ''
+                    localStorage.getItem('marketResearchPreference') || '{}'
                   );
                   if (value) {
                     handleDisplayResult({
                       ...pref,
                       promptValue: value,
                       temp_project_id: activeProjectId?.temp_project_id
-                    });
+                    } as MarketResearchFormData);
                   }
                 }}
                 disabled={loading}
@@ -239,16 +257,16 @@ const ReportPage: FC = () => {
           </div>
         )}
       </div>
-      {/* {showScrollButton && showResult && (
+      {showScrollButton && showResult && (
         <button
           onClick={scrollToBottom}
           className="fixed bottom-4 right-8 flex items-center justify-center w-12 h-12 text-gray-600 bg-gray-200 rounded-full hover:bg-gray-400 transform hover:scale-105 transition-all duration-200 shadow-lg z-50"
         >
           <MoveDown className="w-12 h-12" />
         </button>
-      )} */}
+      )}
     </div>
   );
 };
 
-export default ReportPage;
+export default MarketResearchComponent;
