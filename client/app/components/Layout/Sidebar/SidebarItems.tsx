@@ -43,7 +43,7 @@ export const items: ItemType[] = [
     label: "Market Research",
     id: "market-research",
     icon: BookOpen,
-    url: "/company-house",
+    url: "/market-research",
   },
   {
     label: "Sourcing",

@@ -1,11 +1,19 @@
 import { useRef, useState, useEffect, useCallback, FC } from 'react';
 import { Card, CardContent } from '~/components/ui/card';
 import { Checkbox } from '~/components/ui/checkbox';
-import { Upload, Globe, FileText, MoveDown } from 'lucide-react';
+import {
+  Upload,
+  Globe,
+  FileText,
+  MoveDown,
+  FileSearch,
+  CheckCircle,
+} from 'lucide-react';
 import { getUniqueID } from '~/lib/utils';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from '~/store/store';
 import OutlineFileUpload from './UploadOutline';
+import FileUpload from '~/components/Report/InitialPage/FileUpload';
 import InputComponent from '~/components/Report/InputBar/InputComponent';
 import { useLocation, useParams } from '@remix-run/react';
 import { setProject } from '~/store/slices/sideBar';
@@ -20,6 +28,11 @@ type UploadedOutlineFile = {
   bucket: string;
 };
 
+type UploadedDocument = {
+  file_name: string;
+  file_path: string;
+};
+
 // Define any other types we need to match the API structure
 type OutlineFileUploadProps = {
   temp_project_id: string;
@@ -27,32 +40,43 @@ type OutlineFileUploadProps = {
 };
 
 // Import the correct types from reportUtils
-import { 
+import {
   ConversationData,
   ResearchType,
-  Citation
+  Citation,
 } from '~/components/Report/reportUtils';
-import { createGetDocumentReport, updateGetDocumentReport } from '~/components/Report/api';
+import {
+  createGetDocumentReport,
+  updateGetDocumentReport,
+} from '~/components/Report/api';
 
 const ChecklistSelector: FC = () => {
   const location = useLocation();
   const { id = null } = useParams();
   const dispatch = useDispatch<AppDispatch>();
-  
+
   // State management
   const [selectedTemplate, setSelectedTemplate] = useState<string>('standard');
   const [connectToDataRoom, setConnectToDataRoom] = useState<boolean>(false);
-  const [uploadAdditionalDocs, setUploadAdditionalDocs] = useState<boolean>(false);
-  const [uploadedOutlineFiles, setUploadedOutlineFiles] = useState<UploadedOutlineFile[]>([]);
+  const [uploadAdditionalDocs, setUploadAdditionalDocs] =
+    useState<boolean>(false);
+  const [uploadSupportingFiles, setUploadSupportingFiles] =
+    useState<boolean>(false); // New state for second upload option
+  const [uploadedOutlineFiles, setUploadedOutlineFiles] = useState<
+    UploadedOutlineFile[]
+  >([]);
+  const [uploadedDocuments, setUploadedDocuments] = useState<
+    UploadedDocument[]
+  >([]); // New state for second upload type
   const [requirements, setRequirements] = useState<string>('');
-  
+
   // States for report display
   const [showResult, setShowResult] = useState(false);
   const [loading, setLoading] = useState(false);
   const [conversation, setConversation] = useState<ConversationData[]>([]);
   const [isStopped, setIsStopped] = useState(false);
   const [showScrollButton, setShowScrollButton] = useState(false);
-  
+
   const mainContentRef = useRef<HTMLDivElement>(null);
   const { activeProjectId } = useSelector((state: RootState) => state.sidebar);
   const tempProjectID = activeProjectId?.temp_project_id || getUniqueID();
@@ -67,7 +91,7 @@ const ChecklistSelector: FC = () => {
           let res = null;
           try {
             // Replace with your actual API call
-            res = await fetch(`/api/reports/${id}`).then(r => r.json());
+            res = await fetch(`/api/reports/${id}`).then((r) => r.json());
           } catch (err) {
             console.error('error-------', err);
             setLoading(false);
@@ -80,7 +104,7 @@ const ChecklistSelector: FC = () => {
                 res_id: item.id,
                 updated_at: item.updated_at,
                 sections: item.sections,
-                researchType: 'research' as ResearchType // Explicitly type as ResearchType as default
+                researchType: 'research' as ResearchType, // Explicitly type as ResearchType as default
               }));
               setConversation([...conv]);
               setLoading(false);
@@ -100,6 +124,11 @@ const ChecklistSelector: FC = () => {
     console.log('Uploaded outline files:', files);
   };
 
+  const handleUploadedDocuments = (files: UploadedDocument[]) => {
+    setUploadedDocuments(files);
+    console.log('Uploaded supporting documents:', files);
+  };
+
   // Handle form submission and API call
   const handleSubmitRequirements = async (value: string) => {
     try {
@@ -109,33 +138,45 @@ const ChecklistSelector: FC = () => {
       setShowResult(true);
       setLoading(true);
       setRequirements('');
-      
+
       // Add the new question to conversation
       setConversation((prevOrder) => [
         ...prevOrder,
         {
           query: value,
-          res: "",
+          res: '',
           res_id: `${prevOrder.length}`,
           sections: [],
-          researchType: 'research' as ResearchType // Explicitly type as ResearchType
+          researchType: 'research' as ResearchType, // Explicitly type as ResearchType
         },
       ]);
 
-      let response: { report: string; sections?: any[]; project: any, researchType: ResearchType } | null = null;
+      let response: {
+        report: string;
+        sections?: any[];
+        project: any;
+        researchType: ResearchType;
+      } | null = null;
 
       // Make the API call based on if we have a project ID or not
       if (!projectID) {
         response = await createGetDocumentReport({
           promptValue: value,
           web_search: true,
-          file_search: uploadAdditionalDocs,
+          file_search: uploadAdditionalDocs || uploadSupportingFiles,
           templateId: selectedTemplate,
           temp_project_id: tempProjectID,
-          uploaded_files: uploadedOutlineFiles,
-          researchType: 'research' as ResearchType
+          uploaded_files: [
+            ...uploadedOutlineFiles,
+            ...uploadedDocuments.map((doc) => ({
+              file_name: doc.file_name,
+              file_path: doc.file_path,
+              bucket: 'default', // Assuming a default bucket for supporting files
+            })),
+          ],
+          researchType: 'research' as ResearchType,
         });
-        
+
         if (response?.project) {
           dispatch(setProject(response.project));
           const generateReport: { project_id: string } = {
@@ -149,12 +190,19 @@ const ChecklistSelector: FC = () => {
         response = await updateGetDocumentReport({
           promptValue: value,
           web_search: true,
-          file_search: uploadAdditionalDocs,
+          file_search: uploadAdditionalDocs || uploadSupportingFiles,
           templateId: selectedTemplate,
           temp_project_id: tempProjectID,
-          uploaded_files: uploadedOutlineFiles || [],
+          uploaded_files: [
+            ...uploadedOutlineFiles,
+            ...uploadedDocuments.map((doc) => ({
+              file_name: doc.file_name,
+              file_path: doc.file_path,
+              bucket: 'default', // Assuming a default bucket for supporting files
+            })),
+          ],
           projectId: project_id,
-          researchType: 'research' as ResearchType
+          researchType: 'research' as ResearchType,
         });
       }
 
@@ -164,17 +212,17 @@ const ChecklistSelector: FC = () => {
           let lastCon = [...prev].pop();
           return prev.map((resData) => {
             if (resData.res_id === lastCon?.res_id) {
-              return { 
-                ...resData, 
-                res: `${response.report}`, 
-                sections: response.sections || [] 
+              return {
+                ...resData,
+                res: `${response.report}`,
+                sections: response.sections || [],
               };
             }
             return resData;
           });
         });
       }
-      
+
       setLoading(false);
     } catch (error) {
       setLoading(false);
@@ -185,8 +233,10 @@ const ChecklistSelector: FC = () => {
   // Scroll handling logic
   const handleScroll = useCallback(() => {
     const scrollPosition = window.scrollY + window.innerHeight;
-    const nearBottom = scrollPosition >= document.documentElement.scrollHeight - 100;
-    const isPageScrollable = document.documentElement.scrollHeight > window.innerHeight;
+    const nearBottom =
+      scrollPosition >= document.documentElement.scrollHeight - 100;
+    const isPageScrollable =
+      document.documentElement.scrollHeight > window.innerHeight;
     setShowScrollButton(isPageScrollable && !nearBottom);
   }, []);
 
@@ -234,9 +284,9 @@ const ChecklistSelector: FC = () => {
                 <h2 className="text-lg font-medium text-gray-900">
                   Choose A Due Diligence Checklist
                 </h2>
-                <p className="text-sm text-gray-500">
-                  Choose the right template below for your report type
-                </p>
+                {/* <p className="text-sm text-gray-500">
+                  Choose between an industry standard checklist or your own custom checklist
+                </p> */}
               </div>
             </div>
 
@@ -251,7 +301,9 @@ const ChecklistSelector: FC = () => {
                 onClick={() => setSelectedTemplate('standard')}
               >
                 <CardContent className="p-4">
-                  <h3 className="font-medium mb-1">Omega Pre-Populated Checklist</h3>
+                  <h3 className="font-medium mb-1">
+                    Omega Pre-Populated Checklist
+                  </h3>
                   <p className="text-sm text-gray-500">
                     Use our industry standard diligence checklist
                   </p>
@@ -268,60 +320,120 @@ const ChecklistSelector: FC = () => {
               >
                 <CardContent className="flex flex-col p-4">
                   <h3 className="font-medium mb-1">Your Custom Checklist</h3>
-                  <p className="text-sm text-gray-500">Upload your custom template</p>
+                  <p className="text-sm text-gray-500">
+                    Upload your custom template
+                  </p>
                   <Upload className="w-5 h-5 text-gray-500 mx-auto mt-2" />
                 </CardContent>
               </Card>
             </div>
 
             {/* Optional Options */}
-            <div className="space-y-3 mb-4">
-              <div
-                className="flex items-center justify-between p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50"
-                onClick={() => setConnectToDataRoom(!connectToDataRoom)}
-              >
-                <div className="flex items-center gap-2">
-                  <Globe className="w-5 h-5 text-gray-700" />
-                  <span>Connect to a Third-Party Data Room</span>
-                </div>
-                <Checkbox
-                  checked={connectToDataRoom}
-                  onCheckedChange={() => setConnectToDataRoom(!connectToDataRoom)}
-                />
-              </div>
+            <div className="space-y-4 mb-4">
+              <h3 className="text-sm font-medium">Additional Options</h3>
 
-              <div
-                className="flex items-center justify-between p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50"
-                onClick={() => setUploadAdditionalDocs(!uploadAdditionalDocs)}
-              >
-                <div className="flex items-center gap-2">
-                  <Upload className="w-5 h-5 text-gray-700" />
-                  <span>Upload Additional Documents</span>
+              <div className="space-y-3">
+                {/* First upload option - Outline Files */}
+                <div
+                  className="flex items-center justify-between p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50"
+                  onClick={() => setUploadAdditionalDocs(!uploadAdditionalDocs)}
+                >
+                  <div className="flex items-center gap-2">
+                    <Upload className="w-5 h-5 text-gray-700" />
+                    <div className="flex flex-col">
+                      <span className="text-sm font-medium">Upload Checklist Documents</span>
+                      <span className="text-xs text-gray-500">Upload templates to guide the structure and format of your report</span>
+                    </div>
+                  </div>
+                  <Checkbox
+                    checked={uploadAdditionalDocs}
+                    onCheckedChange={() => setUploadAdditionalDocs(!uploadAdditionalDocs)}
+                  />
                 </div>
-                <Checkbox
-                  checked={uploadAdditionalDocs}
-                  onCheckedChange={() =>
-                    setUploadAdditionalDocs(!uploadAdditionalDocs)
-                  }
-                />
+
+                {/* Second upload option - Supporting Files */}
+                <div
+                  className="flex items-center justify-between p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50"
+                  onClick={() => setUploadSupportingFiles(!uploadSupportingFiles)}
+                >
+                  <div className="flex items-center gap-2">
+                    <FileSearch className="w-5 h-5 text-gray-700" />
+                    <div className="flex flex-col">
+                      <span className="text-sm font-medium">Upload Supporting Documents</span>
+                      <span className="text-xs text-gray-500">Upload data files containing market information for AI to analyze and extract insights</span>
+                    </div>
+                  </div>
+                  <Checkbox
+                    checked={uploadSupportingFiles}
+                    onCheckedChange={() => setUploadSupportingFiles(!uploadSupportingFiles)}
+                  />
+                </div>
+
+                {/* Keep the data room option as a separate toggle */}
+                <div
+                  className="flex items-center justify-between p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50"
+                  onClick={() => setConnectToDataRoom(!connectToDataRoom)}
+                >
+                  <div className="flex items-center gap-2">
+                    <Globe className="w-5 h-5 text-gray-700" />
+                    <span>Connect to a Third-Party Data Room</span>
+                  </div>
+                  <Checkbox
+                    checked={connectToDataRoom}
+                    onCheckedChange={() => setConnectToDataRoom(!connectToDataRoom)}
+                  />
+                </div>
               </div>
             </div>
 
-            {/* File Upload Section */}
-            {uploadAdditionalDocs && (
-              <div className="mb-4">
-                <OutlineFileUpload
-                  temp_project_id={tempProjectID}
-                  setUploadedOutlineFiles={handleUploadedFiles}
-                />
+            {/* File Upload Sections */}
+            <div className="space-y-6 mb-4">
+              {/* First File Upload Section - Outline Files */}
+              {uploadAdditionalDocs && (
+                <Card className="border border-blue-100 bg-blue-50/30">
+                  <CardContent className="p-4">
+                    <h4 className="text-sm font-medium mb-3">
+                      Upload Checklist Documents
+                    </h4>
+                    <OutlineFileUpload
+                      temp_project_id={tempProjectID}
+                      setUploadedOutlineFiles={handleUploadedFiles}
+                    />
 
-                {uploadedOutlineFiles.length > 0 && (
-                  <div className="mt-2 text-sm text-green-600">
-                    {uploadedOutlineFiles.length} file(s) uploaded successfully
-                  </div>
-                )}
-              </div>
-            )}
+                    {uploadedOutlineFiles.length > 0 && (
+                      <div className="mt-3 text-sm text-green-600 flex items-center">
+                        <CheckCircle className="w-4 h-4 mr-1" />
+                        {uploadedOutlineFiles.length} checklist file(s) uploaded
+                        successfully
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              )}
+
+              {/* Second File Upload Section - Supporting Files */}
+              {uploadSupportingFiles && (
+                <Card className="border border-blue-100 bg-blue-50/30">
+                  <CardContent className="p-4">
+                    <h4 className="text-sm font-medium mb-3">
+                      Upload Supporting Documents
+                    </h4>
+                    <FileUpload
+                      temp_project_id={tempProjectID}
+                      setUploadedDocuments={handleUploadedDocuments}
+                    />
+
+                    {uploadedDocuments.length > 0 && (
+                      <div className="mt-3 text-sm text-green-600 flex items-center">
+                        <CheckCircle className="w-4 h-4 mr-1" />
+                        {uploadedDocuments.length} supporting file(s) uploaded
+                        successfully
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              )}
+            </div>
 
             {/* Prompt Input Section */}
             <form
@@ -353,14 +465,12 @@ const ChecklistSelector: FC = () => {
           >
             <div className="container w-full space-y-2">
               <div className="container space-y-2 task-components">
-                <ReportBlock
-                  orderedData={conversation}
-                />
+                <ReportBlock orderedData={conversation} />
               </div>
             </div>
           </div>
         )}
-        
+
         {showResult && (
           <div className="sticky bottom-0 flex items-center w-full mr-4">
             {loading ? (
@@ -381,7 +491,7 @@ const ChecklistSelector: FC = () => {
           </div>
         )}
       </div>
-      
+
       {showScrollButton && showResult && (
         <button
           onClick={scrollToBottom}
