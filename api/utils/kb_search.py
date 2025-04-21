@@ -2,6 +2,10 @@ import os
 import boto3
 import botocore
 from typing import Dict, Any
+from dotenv import load_dotenv, find_dotenv
+
+env_path = find_dotenv()              # walks up until it finds .env
+loaded  = load_dotenv(env_path)
 
 # =============================================================================
 # ENV / AWS CONFIG

@@ -3,6 +3,10 @@ from typing import List, Dict
 import os
 from llama_parse import LlamaParse  # For PDF parsing
 import boto3
+from dotenv import load_dotenv, find_dotenv
+
+env_path = find_dotenv()              # walks up until it finds .env
+loaded  = load_dotenv(env_path)
 
 BUCKET_NAME = os.getenv("OUTLINE_BUCKET_NAME", "outline-helper")
 LLAMA_CLOUD_API_KEY = os.getenv("LLAMA_CLOUD_API_KEY")

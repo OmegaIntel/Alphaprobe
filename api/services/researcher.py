@@ -3,31 +3,44 @@ import os
 import nest_asyncio
 import json
 from typing import List, TypedDict, Any, Optional, Tuple
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 from dataclasses import dataclass, fields
 import re
 from common_logging import logerror
+import tiktoken
 
-from utils.kb_search import query_kb
-from utils.websearch_utils import call_tavily_api
+from utils.kb_search import get_presigned_url_from_source_uri, query_kb
+from utils.websearch_utils import call_tavily_api, fetch_article
+from utils.pdf_parser import extract_pdf_from_s3, parse_pdf_structure
 
 from fastapi import HTTPException
 
 from langchain_core.runnables import RunnableConfig
 
 # ------------------------------------------------------------------------
-# LlamaIndex for loading/creating a vector index and querying
+# deepseek & OpenRouter Setup
 # ------------------------------------------------------------------------
-from llama_index.llms.openai import OpenAI
+from openai import OpenAI as ORouterClient
+from utils.bedrock_llm import ClaudeWrapper, DeepSeekWrapper, trim_fenced, unwrap_boxed
+
+# configure OpenAI SDK to hit OpenRouter
+import openai
 from llama_index.core import Settings
 
 # ------------------------------------------------------------------------
 # langgraph-based StateGraph
 # ------------------------------------------------------------------------
 from langgraph.graph import START, END, StateGraph
+from dotenv import load_dotenv, find_dotenv
+
+env_path = find_dotenv()              # walks up until it finds .env
+loaded  = load_dotenv(env_path)
 
 nest_asyncio.apply()
-
+# Load environment variables
+# ------------------------ Environment Variables ------------------------
+enc = tiktoken.get_encoding("cl100k_base")
+MAX_CTX_TOKENS = 30000  # safeguard for deepseek
 BUCKET_NAME = os.getenv("BUCKET_NAME", "deep-research-docs")
 KNOWLEDGE_BASE_ID = os.getenv("KNOWLEDGE_BASE_ID")
 DATA_SOURCE_ID = os.getenv("DATA_SOURCE_ID")
@@ -130,18 +143,17 @@ class Configuration:
 # -------------------------------------------------------------------------
 # 1) LLM & Embedding Setup
 # -------------------------------------------------------------------------
+openai.base_url = "https://openrouter.ai/api/v1"
+openai.api_key  = os.getenv("OPENROUTER_API_KEY")
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# build a client that knows how to talk to OpenRouter
+client = ORouterClient()
 
-def setup_models():
-    print("[DEBUG] Entering setup_models")
-    """Initialize LLM and embedding models for the workflow."""
-    Settings.llm = OpenAI(
-        model="gpt-4o-mini",  # Change to your actual model if needed
-        temperature=0.1,
-        openai_api_key=OPENAI_API_KEY
-    )
-    print("[DEBUG] LLM model set up with model: gpt-4o-mini")
+# Update deepseek initialization - remove the old gpt_4 reference
+print("[DEBUG] Initializing deepseek with model deepseek.r1-v1:0")
+deepseek = DeepSeekWrapper(temperature=0.0)
+haiku = ClaudeWrapper(temperature=0.0)
+
 # ------------------------------------------------------------------------
 # SCHEMAS
 # ------------------------------------------------------------------------
@@ -156,6 +168,7 @@ class ReportStateInput(TypedDict):
 
 class ReportStateOutput(TypedDict):
     report: str
+    citations: List[dict[str, Any]]
 
 class ReportState(TypedDict):
     topic: str
@@ -164,7 +177,9 @@ class ReportState(TypedDict):
     headings: List[str]
     index: str
     outline: str
-    questions: List[str]
+    questions: List[Tuple[str, str]]
+    questions_by_section: List[dict[str, Any]]
+    citations: List[dict[str, Any]]
     answers: List[Tuple[str, str]]
     previous_questions: List[Tuple[str, str]]
     report: str
@@ -174,18 +189,66 @@ class ReportState(TypedDict):
 class InstructionRequest(BaseModel):
     query: str
     report_type: int
-    file_search:bool
-    web_search:bool
+    file_search: bool
+    web_search: bool
     project_id: str
+
+@dataclass
+class Citation:
+    pass
+
+@dataclass
+class KBCitation(Citation):
+    chunk_text: str
+    page: Optional[int]
+    file_name: str
+    url: str
+
+@dataclass
+class WebCitation(Citation):
+    title: str
+    url: str
+    snippet: str
+
+# global collector
+CITATIONS: List[Citation] = []
+
 
 # ------------------------------------------------------------------------
 # GRAPH NODES
 # ------------------------------------------------------------------------
 async def formulate_plan(state: ReportState, config: RunnableConfig):
     print("[DEBUG] Entering formulate_plan with state:", state)
-    query_context = state["topic"]
-    headings = state["headings"]
-    headings_text = "\n".join([f"{i+1}. {h}" for i, h in enumerate(headings)]) if headings else "No specific headings provided."
+
+    # 1. User-specific PDF extraction
+    pdf_text = await extract_pdf_from_s3(state['user_id'], state['project_id'])
+    print(f"[DEBUG] PDF text length (user): {len(pdf_text) if pdf_text else 0}")
+    pdf_sections = parse_pdf_structure(pdf_text) if pdf_text else []
+
+    # 2. Default outline PDF extraction if no user PDF sections
+    if not pdf_sections:
+        default_text = await extract_pdf_from_s3("default", "outline")
+        print(f"[DEBUG] PDF text length (default): {len(default_text) if default_text else 0}")
+        pdf_sections = parse_pdf_structure(default_text) if default_text else []
+
+    # CASE: PDF sections exist (from user or default)
+    if pdf_sections:
+        print(f"[DEBUG] PDF sections found: {len(pdf_sections)}. Using them for outline.")
+        outline_lines = [
+            f"{idx+1}. {sec.get('title', 'Untitled Section')}"
+            for idx, sec in enumerate(pdf_sections)
+        ]
+        outline_text = "\n".join(outline_lines)
+        return {"outline": outline_text}
+
+    # 3. No PDF sections – fallback to LLM-based outline generation
+    print("[DEBUG] No PDF sections found. Generating outline via LLM.")
+    query_context = state.get("topic", "")
+    headings = state.get("headings", [])
+    headings_text = (
+        "\n".join([f"{i+1}. {h}" for i, h in enumerate(headings)])
+        if headings else "No specific headings provided."
+    )
 
     outline_prompt = f"""You are an expert market research analyst.
 Create a detailed outline for a comprehensive market analysis report.
@@ -204,178 +267,215 @@ Query Context: {query_context}
 Produce a structured, actionable outline for a complete market analysis.
 """
 
-    print("\n[formulate_plan] Outline Prompt:\n", outline_prompt)
-    response = await Settings.llm.acomplete(outline_prompt)
-    outline_text = response.text if hasattr(response, "text") else str(response)
+    messages = [
+        {"role": "system", "content": "You are an expert market research analyst."},
+        {"role": "user",   "content": outline_prompt}
+    ]
 
-    print("\n[formulate_plan] Outline Generated:\n", outline_text)
-    print("[DEBUG] Exiting formulate_plan with outline.")
-    return {"outline": outline_text}
-
-async def formulate_questions(state: ReportState, config: RunnableConfig) -> None:
-    print("[DEBUG] Entering formulate_questions with state:", state)
-    outline = state["outline"]
-
-    question_prompt = f"""As a market research expert, generate up to 15 specific questions (JSON array) 
-that will help extract key market insights from the following outline:
-{outline}
-
-Output your answer as JSON, e.g.:
-["Question 1?", "Question 2?", ...]
-"""
-    print("\n[formulate_questions] Questions Prompt:\n", question_prompt)
-    response = await Settings.llm.acomplete(question_prompt)
-    questions_raw = response.text if hasattr(response, "text") else str(response)
-
-    # Strip out possible code fences
-    questions_raw = re.sub(r"^```(?:json)?\n", "", questions_raw)
-    questions_raw = re.sub(r"\n```$", "", questions_raw)
     try:
-        questions = json.loads(questions_raw)
-        if not isinstance(questions, list):
-            questions = []
+        outline_text = await deepseek.ainvoke(messages)
+        return {"outline": outline_text}
     except Exception as e:
-        logerror(f"Error parsing JSON questions: {e}")
-        questions = [x.strip() for x in questions_raw.split("\n") if x.strip()]
-    
-    print(f"\n[formulate_questions] Parsed {len(questions)} questions:\n", questions)
-    print("[DEBUG] Exiting formulate_questions with questions.")
-    return {"questions": questions}
+        print(f"[ERROR] Outline generation failed: {e}")
+        return {"outline": "Failed to generate outline"}
+
+async def formulate_questions(state: ReportState, config: RunnableConfig):
+    """Generate ~5 focused questions for **each numbered section** in the outline.
+    Stores:
+      • `questions` – flat list used downstream
+      • `questions_by_section` – for debugging / future use
+    """
+    outline = state["outline"].strip()
+    if not outline:
+        return {"questions": [], "questions_by_section": []}
+
+    blocks = re.split(r"(?m)^\s*(?=\d+\.\s+)", outline)
+    blocks = [b.strip() for b in blocks if b.strip()]
+
+    all_qs: list[str] = []
+    by_section: list[dict[str, Any]] = []
+
+    async def _ask_llm(prompt_msgs):
+        for attempt in range(6):
+            try:
+                return await haiku.ainvoke(prompt_msgs)
+            except RuntimeError as e:
+                if "ThrottlingException" not in str(e):
+                    raise
+                await asyncio.sleep(2 ** attempt)
+        raise RuntimeError("deepseek throttling persisted after retries.")
+
+    for block in blocks:
+        lines = block.splitlines()
+        header = lines[0].strip()
+        rest_lines = lines[1:]
+        sub_outline = "\n".join(rest_lines).strip()
+
+        # now build a prompt that includes only the sub‑outline
+        prompt = (
+            f"You’re a senior market‑research analyst.\n"
+            f"Report Topic: {state['topic']}\n\n"
+            f"Section Title: {header}\n"
+            f"Sub‑points to cover:\n{sub_outline}\n\n"
+            "Draft exactly five concise, open‑ended questions that begin with “What” or “How”, and include the report topic's essence"
+            "and that will elicit the specific facts, metrics, or insights needed to fully flesh out each sub‑point above. "
+            "Return only a JSON array of strings."
+        )
+
+        msgs = [
+            {"role": "system", "content": "You are a market‑research expert."},
+            {"role": "user", "content": prompt},
+        ]
+        raw = await _ask_llm(msgs)
+        cleaned = trim_fenced(unwrap_boxed(raw))
+        cleaned = re.sub(r"^```(?:json)?\n|\n```$", "", cleaned)
+        try:
+            qs = json.loads(cleaned)
+            if not isinstance(qs, list):
+                raise ValueError
+        except Exception:
+            qs = []
+            for line in cleaned.splitlines():
+                text = line.strip()              # remove leading/trailing whitespace
+                text = text.lstrip('•')          # remove bullet if it’s at the start
+                text = text.strip('"')           # remove surrounding quotes
+                if text:
+                    qs.append(text)
+                if len(qs) == 5:
+                    break
+
+        all_qs.extend(qs)
+        by_section.append({"section": header, "questions": qs})
+
+    return {"questions": all_qs, "questions_by_section": by_section}
 
 async def answer_questions(state: ReportState, config: RunnableConfig):
-    print("[answer_questions] Entering answer_questions function")
-    
-    # Show initial state details (only keys that are safe to log)
-    print(f"[answer_questions] State keys: {list(state.keys())}")
-    
-    questions = state["questions"]
-    user_id = state["user_id"]
-    project_id = state["project_id"]
-    file_search = state["file_search"]
-    web_search = state["web_search"]
+    """Collect context snippets and structured citations for each question."""
+    questions: list[str] = state.get("questions", [])
 
-    print(f"[answer_questions] 1. Questions {questions}\n[answer_questions] 2. User_id {user_id}\n[answer_questions] 3. Project_id {project_id}\n[answer_questions] 4. File_search {file_search}\n[answer_questions] 5. Web_search {web_search}")
-    answers = []
-    
-    print(f"[answer_questions] Number of questions to process: {len(questions)}")
-    
-    for idx, question in enumerate(questions, start=1):
-        print(f"[answer_questions] Processing question {idx}: {question.strip()}")
-        question = question.strip()
-        file_context = ""
-        web_context = ""
-    
-        # File search using query_kb if enabled
-        if file_search:
-            print(f"[answer_questions] File search enabled for question: {question}")
-            try:
-                kb_response = query_kb(
-                    question, 
-                    KNOWLEDGE_BASE_ID, 
-                    user_id, 
-                    project_id, 
-                    MODEL_ARN
+    answers: list[tuple[str, str]] = []
+    citations: list[dict[str, Any]] = []
+
+    async def _gather_ctx(q: str):
+        # Kick off KB and web searches concurrently
+        kb_task = (
+            asyncio.to_thread(query_kb, q, KNOWLEDGE_BASE_ID, state["user_id"], state["project_id"], MODEL_ARN)
+            if state.get("file_search") else asyncio.sleep(0, result={})
+        )
+        web_task = (
+            asyncio.to_thread(call_tavily_api, q)
+            if state.get("web_search") else asyncio.sleep(0, result=[])
+        )
+        kb_resp, web_resp = await asyncio.gather(kb_task, web_task)
+
+        # Extract plain text answer
+        file_ctx = kb_resp.get("output", {}).get("text", "") if isinstance(kb_resp, dict) else ""
+        hits = web_resp or []
+        answer_text = "\n\n".join([file_ctx] + [f"{h.get('title','')}\n{h.get('answer') or h.get('snippet','')}" for h in hits]).strip()
+
+        # Build structured citations
+        local_cits: list[Citation] = []
+        # KB citations
+        if isinstance(kb_resp, dict):
+            for ref in kb_resp.get("retrievedReferences", []):
+                cit = KBCitation(
+                    chunk_text=ref.get("content", {}).get("text", ""),
+                    page=ref.get("metadata", {}).get("x-amz-bedrock-kb-document-page-number"),
+                    file_name=os.path.basename(ref.get("metadata", {}).get("x-amz-bedrock-kb-source-uri", "")),
+                    url=get_presigned_url_from_source_uri(ref.get("metadata", {}).get("x-amz-bedrock-kb-source-uri", ""))
                 )
-                print(f"[answer_questions] KB response received for question: {question}")
-                if kb_response and "output" in kb_response:
-                    file_context = kb_response["output"].get("text", "")
-                    print(f"[answer_questions] Extracted file_context of length: {len(file_context)}")
-                else:
-                    print(f"[answer_questions] KB response did not contain 'output' key for question: {question}")
-            except Exception as e:
-                print(f"[ERROR] KB query failed for question: {question} with error: {str(e)}")
-                file_context = "Error retrieving document context"
-    
-        # Web search using Tavily if enabled
-        if web_search:
-            print(f"[answer_questions] Web search enabled for question: {question}")
-            try:
-                # Run the synchronous API call in a thread
-                web_results = await asyncio.to_thread(call_tavily_api, question)
-                print(f"[answer_questions] Tavily API returned {len(web_results)} results for question: {question}")
-                web_context = "\n\n".join([
-                    f"Title: {r['title']}\nURL: {r['url']}\nContent: {r['snippet']}"
-                    for r in web_results
-                ]) if web_results else ""
-                print(f"[answer_questions] Compiled web_context length: {len(web_context)}")
-            except Exception as e:
-                print(f"[ERROR] Web search failed for question: {question} with error: {str(e)}")
-                web_context = "Error retrieving web context"
-    
-        combined_context = (file_context + "\n\n" + web_context).strip()
-        print(f"[answer_questions] Combined context length: {len(combined_context)} for question: {question}")
-        if not combined_context:
-            combined_context = "No relevant context found"
-            print(f"[answer_questions] No context found for question: {question}")
-    
-        prompt = f"""Answer the following question using ONLY the provided context:
-Context: {combined_context}
+                local_cits.append(cit)
+        # Web citations
+        for h in hits:
+            cit = WebCitation(
+                title=h.get("title", ""),
+                url=h.get("url", ""),
+                snippet=h.get("answer") or h.get("snippet", "")
+            )
+            local_cits.append(cit)
 
-Question: {question}
+        return q, answer_text, local_cits
 
-If the context doesn't contain the answer, respond with:
-'INSUFFICIENT INFORMATION: Could not find answer in provided sources.'
+    # Gather results for all questions
+    gathered = await asyncio.gather(*[asyncio.create_task(_gather_ctx(q)) for q in questions])
 
-Provide a concise, accurate answer:"""
-    
-        print(f"[answer_questions] Generated prompt for question: {question[:100]}...")
-        response = await Settings.llm.acomplete(prompt)
-        answer_text = response.text if hasattr(response, "text") else str(response)
-        print(f"[answer_questions] Received answer of length {len(answer_text)} for question: {question}")
-        answers.append((question, answer_text))
-    
-    print("[answer_questions] Exiting answer_questions function")
-    return {"answers": answers}
+    # Serialize answers and citations
+    for q, ans, local_cits in gathered:
+        answers.append((q, ans))
+        for c in local_cits:
+            if isinstance(c, KBCitation):
+                CITATIONS.append({
+                    "type": "kb",
+                    "chunk_text": c.chunk_text,
+                    "page": c.page,
+                    "file_name": c.file_name,
+                    "url": c.url,
+                })
+            else:
+                CITATIONS.append({
+                    "type": "web",
+                    "title": c.title,
+                    "url": c.url,
+                    "snippet": c.snippet,
+                })
+
+    return {"answers": answers, "citations": citations}
 
 async def write_report(state: ReportState, config: RunnableConfig):
-    print("[DEBUG] Entering write_report with state:", state)
-    """
-    Gather all answers, wait a short time for all question events to complete,
-    then build a final report with the LLM.
-    """
-    answers = state["answers"]
-    questions = state["questions"]
-
-    print(f"[write_report] Found {len(answers)} answers. Expected {len(questions)} originally.")
-
+    """Compose the final report section‑by‑section, inserting citations list."""
+    answers = state.get("answers", [])
+    citations = state.get("citations", [])
     if not answers:
-        print("[write_report] No answers found, returning None.")
-        return None
+        return {"report": "*No answers were available to generate a report.*", "citations": []}
+    outline = state.get("outline", "")
+    section_blocks = [b.strip() for b in re.split(r"(?m)^\s*(?=\d+\.\s+)", outline) if b.strip()]
 
-    # Log each answer for debugging
-    for idx, (question, answer) in enumerate(answers, start=1):
-        print(f"[write_report] Answer {idx}:\n Q: '{question}'\n A: '{answer}'\n")
+    citation_map = {c["question"]: c["links"] for c in citations}
+    report_parts = []
 
-    # Merge with previously answered (if any)
-    previous_questions = state.get("previous_questions", [])
-    previous_questions.extend(answers)
-    outline = state["outline"]
+    async def _ask_llm_retry(msgs):
+        for attempt in range(6):
+            try:
+                return await haiku.ainvoke(msgs)
+            except RuntimeError as e:
+                if "ThrottlingException" not in str(e):
+                    raise
+                await asyncio.sleep(2 ** attempt)
+        raise RuntimeError("deepseek throttling persisted after retries.")
 
-    # --- NEW: Updated Final Prompt ---
-    final_prompt = f"""You are a senior market research analyst preparing a comprehensive market analysis report.
-Using the following outline and Q&A, create a structured report with:
+    for block in section_blocks:
+        title, *rest = block.splitlines()
+        subs = [r.strip("-• ") for r in rest if r.strip()]
+        sub_set = [title] + subs
+        relevant_qas = [(q, a, citation_map.get(q, [])) for q, a in answers if any(s.lower() in q.lower() for s in sub_set)]
+        qa_text = "\n".join(f"**{q}**:\n{a}" for q, a, _ in relevant_qas)
+        prompt = (
+            f"Please draft only the final Markdown content for section **{title}** as follows:\n\n"
+            f"## {title}\n\n"
+            "Use `##` for the section title and `###` for each sub-point. "
+            "Include each sub-point only when evidence exists; omit any without data. if the section must include data that u don't have, hallucinate or research on your own little but don't send X in place of data"
+            "Render numeric data as Markdown tables when appropriate; otherwise write concise paragraphs. "
+            "Do not output any reasoning steps, internal thoughts, or process details—only the completed section. "
+            "Ensure the section is fully generated and not cut off.\n\n"
+            "### Sub‑points\n"
+            + "\n".join(f"- {s}" for s in subs)
+            + "\n\n"
+            "Return the content in pure Markdown."
+        )
 
-1. Overview of the market landscape and key trends
-2. Detailed insights into market size, segmentation, and growth prospects
-3. Analysis of the competitive environment and consumer behavior
-4. Identification of emerging opportunities and potential challenges
-5. Actionable recommendations for market entry, expansion, or strategic adjustment
+        msgs = [
+            {"role": "system", "content": ("You are a professional report writer. "
+                                        "When drafting a Markdown section, do not include any internal thoughts, reasoning steps, or planning—only return the completed section."
+                                        "You are a seasoned market‑research analyst."
+                                        "You are an expert in financial due diligence and market analysis.")},
+            {"role": "user", "content": prompt},
+        ]
+        raw = await _ask_llm_retry(msgs)
+        section_txt = trim_fenced(unwrap_boxed(raw)).strip()
+        report_parts.append(f"{section_txt}")
 
-Outline:
-{outline}
-
-Research Findings:
-"""
-    
-    for idx, (question, answer) in enumerate(answers, start=1):
-        final_prompt += f"\nQ{idx}: {question}\nA{idx}: {answer}\n"
-
-    print("\n[write_report] Final Summarize Prompt:\n", final_prompt)
-    response = await Settings.llm.acomplete(final_prompt)
-    report_text = response.text if hasattr(response, "text") else str(response)
-    print("\n[write_report] Final Report (preview):\n", report_text[:300], "...")
-    print("[DEBUG] Exiting write_report with report generated.")
-    return {"report": report_text, "previous_questions": previous_questions}
+    full_report = "\n\n".join(report_parts)
+    return {"report": full_report, "citations": citations}
 
 async def review_report(state: ReportState, config: RunnableConfig):
     print("[DEBUG] Entering review_report with state:", state)
@@ -474,7 +574,6 @@ template_heading = [
 async def generate_structured_report(instruction: str, report_type: int, file_search:bool, web_search:bool, project_id: str, user_id: str):
     print("[DEBUG] Entering generate_structured_report with query:", instruction, "user_id:", user_id, "project_id:", project_id)
     try:
-        setup_models()
         index_name = f"d{project_id}".lower()
         print(f"[generate_structured_report] Using index name: {index_name}")
 
@@ -541,7 +640,7 @@ async def generate_report(instruction: str, report_type: int, file_search:bool, 
         return {
                 "message": "Report generated and saved successfully",
                 "report": report_content.get("report", ""),
-                "sections": []
+                "sections": CITATIONS,
             }
     except Exception as e:
         print(f"[generate_report] Error encountered: {str(e)}")

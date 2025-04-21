@@ -2,6 +2,7 @@ import asyncio  # ensure asyncio is imported
 import os
 import re
 from typing import Dict, List, TypedDict, Any, Optional, Tuple, Annotated, Union
+import openai
 from pydantic import BaseModel, Field
 from dataclasses import dataclass, field, fields
 from pydantic import create_model
@@ -17,9 +18,8 @@ from fuzzywuzzy import fuzz  # For section title matching
 
 # LangChain + LLM
 from langchain_openai import ChatOpenAI
-import openai
 import tiktoken
-
+ 
 # langgraph-based StateGraph
 from langgraph.graph import START, END, StateGraph
 
@@ -27,7 +27,8 @@ from langgraph.graph import START, END, StateGraph
 from utils.pdf_parser import extract_pdf_from_s3, parse_pdf_structure
 from utils.excel_utils import extract_excel_index, has_excel_files
 from utils.kb_search import query_kb, get_presigned_url_from_source_uri
-from utils.websearch_utils import call_tavily_api, call_perplexity_api
+from utils.websearch_utils import call_tavily_api
+from utils.deepseek import DeepSeekWrapper
 
 KNOWLEDGE_BASE_ID = os.getenv("KNOWLEDGE_BASE_ID", "my-knowledge-base")
 BUCKET_NAME = os.getenv("BUCKET_NAME", "deep-research-docs")
@@ -328,11 +329,8 @@ def set_query_engine(engine: BaseQueryEngine):
     query_engine = engine
 
 # -------------------- BASE STORAGE DIRECTORY ----------------------
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-openai.api_key = OPENAI_API_KEY
 ENC = tiktoken.encoding_for_model("gpt-4o-mini")
-MAX_TOKENS = 4000
-print(f"[DEBUG] OpenAI API key set: {bool(OPENAI_API_KEY)}")
+MAX_TOKENS = 40000
 
 # ------------------------------------------------------------------------
 # SCHEMAS
@@ -491,9 +489,11 @@ class ReportState:
 # ------------------------------------------------------------------------
 # LLM Setup
 # ------------------------------------------------------------------------
-print("[DEBUG] Initializing ChatOpenAI with model gpt-4o-mini")
-gpt_4 = ChatOpenAI(model="gpt-4o-mini", temperature=0.0, api_key=OPENAI_API_KEY)
+OPENAI_API_KEY= os.getenv("OPENAI_API_KEY")
+openai.api_key = OPENAI_API_KEY
 
+print("[DEBUG] Initializing ChatOpenAI with model gpt-4o-mini")
+gpt_4 = ChatOpenAI(model="gpt-4o-mini", temperature=0.0, api_key=OPENAI_API_KEY, model_kwargs={"parallel_tool_calls": False})
 
 # ------------------------------------------------------------------------
 # HELPER: Format completed sections, Call llm
@@ -576,8 +576,8 @@ def trim_to_tokens(text: str, max_tokens: int = MAX_TOKENS) -> str:
 # =============================================================================
 # SEARCH FUNCTIONS
 # =============================================================================
-def parallel_excel_search(report_state: ReportState, queries: List[str]) -> SearchResult:
-    """Search Excel files with section-specific query"""
+async def parallel_excel_search(report_state: ReportState, queries: List[str]) -> SearchResult:
+    """Asynchronously search Excel files with section-specific queries."""
     print("[DEBUG] Entering parallel_excel_search")
     if not report_state.config.excel_search:
         print("[DEBUG] Excel search disabled in config")
@@ -587,115 +587,109 @@ def parallel_excel_search(report_state: ReportState, queries: List[str]) -> Sear
     if not index:
         print("[DEBUG] No Excel index found")
         return SearchResult(context_text="", citations=[], original_queries=queries)
-    
+
     citations = []
     context_parts = []
 
-    try:
-        for sq in queries:
-            print(f"[DEBUG] Excel search query: {sq}")
-            query_engine = index.as_query_engine()
-            excel_resp = query_engine.query(sq)
-            for node in excel_resp.source_nodes:
-                metadata = node.metadata
-                citations.append(ExcelCitation(
-                    file_name=metadata.get("file_name", "unknown"),
-                    sheet=metadata.get("sheet", "unknown"),
-                    row=metadata.get("row", 0),
-                    col=metadata.get("col", "unknown"),
-                    value=node.text
-                ))
-                CITATIONS.append(ExcelCitation(
-                    file_name=metadata.get("file_name", "unknown"),
-                    sheet=metadata.get("sheet", "unknown"),
-                    row=metadata.get("row", 0),
-                    col=metadata.get("col", "unknown"),
-                    value=node.text
-                ))
-            context_parts.append(f"Excel Search Answer:\n{excel_resp}")
-        result = SearchResult(citations=citations, context_text="\n\n".join(context_parts), original_queries=queries)
-        print("[DEBUG] Excel search completed successfully")
-        return result
-    except Exception as e:
-        print(f"[DEBUG] Excel query failed: {e}")
-        return SearchResult(context_text="", citations=[], original_queries=queries)
+    # Worker to run each query in thread
+    def _search(sq: str):
+        query_engine = index.as_query_engine()
+        resp = query_engine.query(sq)
+        return sq, resp
 
-def parallel_web_search(report_state: ReportState, queries: List[str]) -> SearchResult:
-    """Search web using Perplexity as primary source with Tavily fallback"""
+    tasks = [asyncio.to_thread(_search, sq) for sq in queries]
+    results = await asyncio.gather(*tasks, return_exceptions=True)
+
+    for res in results:
+        if isinstance(res, Exception):
+            print(f"[DEBUG] Excel task failed: {res}")
+            continue
+        sq, excel_resp = res
+        print(f"[DEBUG] Excel result for query: {sq}")
+        for node in excel_resp.source_nodes:
+            meta = node.metadata
+            cit = ExcelCitation(
+                file_name=meta.get("file_name", "unknown"),
+                sheet=meta.get("sheet", "unknown"),
+                row=meta.get("row", 0),
+                col=meta.get("col", "unknown"),
+                value=node.text
+            )
+            CITATIONS.append(cit)
+            citations.append(cit)
+        context_parts.append(f"Excel Search Answer for '{sq}':\n{excel_resp}")
+
+    combined = "\n\n".join(context_parts)
+    return SearchResult(citations=citations, context_text=combined, original_queries=queries)
+
+async def parallel_web_search(report_state: ReportState, queries: List[str]) -> SearchResult:
+    """Asynchronously search web using Tavily for each query."""
     print("[DEBUG] Entering parallel_web_search")
     if not report_state.config.web_research:
         print("[DEBUG] Web research disabled in config")
         return SearchResult(citations=[], context_text="", original_queries=queries)
-    
+
     citations = []
     context_parts = []
-    
-    try:
-        for sq in queries:
-            print(f"[DEBUG] Web search (Tavily) query: {sq}")
-            tavily_results = call_tavily_api(sq)
-            for r in tavily_results:
-                citation = WebCitation(
-                    title=r.get("title", "Unknown Source"),
-                    url=r.get("url", ""),
-                    snippet=r.get("content", r.get("snippet", ""))
-                )
-                citations.append(citation)
-                CITATIONS.append(citation)
-                context_parts.append(
-                    f"Web Result: {citation.title}\n"
-                    f"{citation.snippet}"
-                )
-        result = SearchResult(
-            citations=citations,
-            context_text="\n\n---\n\n".join(context_parts) if citations else "",
-            original_queries=queries
-        )
-        print("[DEBUG] Web search (Tavily) fallback completed successfully")
-        return result
-    except Exception as e:
-        print(f"[WARNING] Tavily search failed: {str(e)}")
-    
-    return SearchResult(
-        citations=citations,
-        context_text="\n\n---\n\n".join(context_parts) if citations else "",
-        original_queries=queries
-    )
 
-def parallel_kb_query(report_state: ReportState, queries: List[str]) -> SearchResult:
-    """Query knowledge base and return both citations and context"""
+    tasks = [asyncio.to_thread(call_tavily_api, sq) for sq in queries]
+    results = await asyncio.gather(*tasks, return_exceptions=True)
+
+    for sq, res in zip(queries, results):
+        if isinstance(res, Exception):
+            print(f"[DEBUG] Web task failed for '{sq}': {res}")
+            continue
+        print(f"[DEBUG] Web results for query: {sq}")
+        for r in res:
+            cit = WebCitation(
+                title=r.get("title", "Unknown Source"),
+                url=r.get("url", ""),
+                snippet=r.get("content", r.get("snippet", ""))
+            )
+            CITATIONS.append(cit)
+            citations.append(cit)
+            context_parts.append(f"Web Result for '{sq}': {cit.title}\n{cit.snippet}")
+
+    combined = "\n\n---\n\n".join(context_parts)
+    return SearchResult(citations=citations, context_text=combined, original_queries=queries)
+
+async def parallel_kb_query(report_state: ReportState, queries: List[str]) -> SearchResult:
+    """Asynchronously query knowledge base for each query."""
     print("[DEBUG] Entering parallel_kb_query")
     citations = []
     context_parts = []
-    
-    for sq in queries:
-        print(f"[DEBUG] KB query: {sq}")
+
+    # Worker to run KB query
+    def _kb(sq: str):
         resp = query_kb(sq, KNOWLEDGE_BASE_ID, report_state.user_id, report_state.project_id, MODEL_ARN)
+        return sq, resp
+
+    tasks = [asyncio.to_thread(_kb, sq) for sq in queries]
+    results = await asyncio.gather(*tasks, return_exceptions=True)
+
+    for res in results:
+        if isinstance(res, Exception):
+            print(f"[DEBUG] KB task error: {res}")
+            continue
+        sq, resp = res
+        text = resp.get('output', {}).get('text', 'No results found')
+        print(f"[DEBUG] KB answer for '{sq}': {text[:30]}")
+        context_parts.append(f"Knowledge Base Answer for '{sq}':\n{text}")
+
         for cobj in resp.get("citations", []):
-            # Get the generated answer text
-            answer_text = resp.get('output', {}).get('text', 'No results found')
-            print(f"[DEBUG] KB answer text: {answer_text[:20]}")
-            context_parts.append(f"Knowledge Base Answer:\n{answer_text}")
-            
-            # Process references
             for ref in cobj.get("retrievedReferences", []):
-                citation = KBCitation(
+                cit = KBCitation(
                     chunk_text=ref.get("content", {}).get("text", ""),
                     page=ref.get("metadata", {}).get("x-amz-bedrock-kb-document-page-number"),
                     file_name=os.path.basename(ref.get("metadata", {}).get("x-amz-bedrock-kb-source-uri", "")),
                     url=get_presigned_url_from_source_uri(ref.get("metadata", {}).get("x-amz-bedrock-kb-source-uri", ""))
                 )
-                citations.append(citation)
-                CITATIONS.append(citation)
-                print(f"[DEBUG] Added KB citation")
-    
-    result = SearchResult(
-        citations=citations,
-        context_text="\n\n".join(context_parts),
-        original_queries=queries
-    )
-    print("[DEBUG] KB search completed successfully")
-    return result
+                CITATIONS.append(cit)
+                citations.append(cit)
+                print("[DEBUG] Added KB citation")
+
+    combined = "\n\n".join(context_parts)
+    return SearchResult(citations=citations, context_text=combined, original_queries=queries)
 
 # =============================================================================
 # GRAPH NODES
@@ -887,37 +881,25 @@ def node_section_data_needs(state: SectionState):
     return state
 
 async def node_parallel_search(state: SectionState) -> SectionState:
-    """
-    Run Excel, Web, and KB searches concurrently using asyncio.gather.
-    Each search function runs in a separate thread (if blocking) via asyncio.to_thread.
-    """
     tasks = []
-    
     if state.excel_queries:
-        # Run the Excel search concurrently in a thread
-        tasks.append(asyncio.to_thread(parallel_excel_search, state.report_state, state.excel_queries))
+        tasks.append(parallel_excel_search(state.report_state, state.excel_queries))
     if state.web_queries:
-        # Run the Web search concurrently in a thread
-        tasks.append(asyncio.to_thread(parallel_web_search, state.report_state, state.web_queries))
+        tasks.append(parallel_web_search(state.report_state, state.web_queries))
     if state.kb_queries:
-        # Run the KB search concurrently in a thread
-        tasks.append(asyncio.to_thread(parallel_kb_query, state.report_state, state.kb_queries))
-    
-    # Launch all tasks concurrently and wait for all to complete.
+        tasks.append(parallel_kb_query(state.report_state, state.kb_queries))
+
     results = await asyncio.gather(*tasks, return_exceptions=True)
-    
-    # Process results: for successful tasks, extend the state with their context and citations.
     for res in results:
         if not isinstance(res, Exception):
             state.citations.extend(res.citations)
-            # Append the context text to the state (if already a list, merge; otherwise, combine as a string)
             state.context.append(res.context_text)
     return state
 
-def node_section_excel_search(state: SectionState):
+async def node_section_excel_search(state: SectionState):
     print(f"[DEBUG] Entering node_section_excel_search for section: {state.title}")
     if len(state.excel_queries) > 0:
-        results = parallel_excel_search(state.report_state, state.excel_queries)
+        results = await parallel_excel_search(state.report_state, state.excel_queries)
         print(f"[DEBUG] Excel search returned results for section {state.title}")
         state.excel_results.append(results)
         state.citations.extend(results.citations)
@@ -930,10 +912,10 @@ def node_section_excel_search(state: SectionState):
     print(f"[DEBUG] No Excel queries or Excel search disabled for section: {state.title}")
     return {}
 
-def node_section_web_search(state: SectionState):
+async def node_section_web_search(state: SectionState):
     print(f"[DEBUG] Entering node_section_web_search for section: {state.title}")
     if len(state.web_queries) > 0:
-        results = parallel_web_search(state.report_state, state.web_queries)
+        results = await parallel_web_search(state.report_state, state.web_queries)
         print(f"[DEBUG] Web search returned results for section {state.title}")
         state.web_results.append(results)
         print(f"[DEBUG] Appended web results")
@@ -949,11 +931,11 @@ def node_section_web_search(state: SectionState):
     print(f"[DEBUG] No Web queries or Web research disabled for section: {state.title}")
     return {}
 
-def node_section_kb_search(state: SectionState):
+async def node_section_kb_search(state: SectionState):
     print(f"[DEBUG] Entering node_section_kb_search for section: {state.title}")
 
     if len(state.kb_queries) > 0:
-        results = parallel_kb_query(state.report_state, state.kb_queries)
+        results = await parallel_kb_query(state.report_state, state.kb_queries)
         print(f"[DEBUG] Knowledge Base search returned results for section {state.title}")
         state.kb_results.append(results)
         state.citations.extend(results.citations)
@@ -1053,7 +1035,7 @@ def determine_section_queries(state: SectionState) -> SectionState:
     
     enhanced_instruction = (
         "\nGENERATE QUERIES FOR:\n" + "\n".join(f"- {s}" for s in source_instructions) +
-        "\nFORMAT: Return exactly 2 queries if WEB RESEARCH is enabled, 3 queries if KNOWLEDGE BASE is enabled and 3 queries if EXCEL DATA is enabled as given in the GENERATE QUERIES instruction."
+        "\nFORMAT: Return exactly 10 as given in the GENERATE QUERIES instruction."
     )
     
     formatted_prompt = prompt_template.format(
@@ -1197,20 +1179,23 @@ async def generate_section_content(state: ReportState, section_state: Union[Sect
             Requirements:
             1. The narrative should be between 300-500 words and provide clear analysis.
             2. Extract key numbers/statistics
-            3. Provide 3-5 key takeaways in a field called "key_takeaways"
-            4. Flag if further research is needed in a boolean field "further_research"
-            5. Include all relevant data points (ensure each data point includes a valid value, e.g., a number or a string; do not leave it null)
-            6. **Table Formatting:**  
+            3. Include all relevant data points (ensure each data point includes a valid value, e.g., a number or a string; do not leave it null)
+            4. **Table Formatting:**  
             - If any tables are included in the output, format them using standard markdown table syntax with a header row and a separator (e.g., using pipes and dashes).  
             - Ensure that any narrative text following a table starts on a new line, outside the table block. For example, after the markdown table, include a clear paragraph break before additional text.
-            7. **Conclusion Section:**  
-            - If generating a conclusion, format its header as a sub-section using a smaller header (e.g., use "### Conclusion" instead of "## Conclusion") to differentiate it from the main section header.
-            8. Use clear paragraph breaks to separate different types of content (e.g., tables versus narrative text).
-            9. The output must include the fields "data_points", "key_takeaways", and "further_research" in a structured JSON format, ensuring that these keys are populated with valid values.
+            5. Use clear paragraph breaks to separate different types of content (e.g., tables versus narrative text).
+            
+            Please present:
+
+            1. A **short closing paragraph** (no “### Conclusion” heading, just a clean paragraph).
+            2. Up to five **key takeaways** as a bulleted list (no extra heading).
+            3. A **markdown table** of your data points, with these columns: Metric, Value, Unit, Period, Source, Significance, Trend.
+
+            Do *not* emit any JSON.  Just pure markdown.
 
             Please make sure that any text meant to appear after a table is not mistakenly merged into the table itself.
 
-            IMPORTANT: You must include the 'data_points', 'key_takeaways', and 'further_research' fields in your response, and the 'value' for each data point must be non-null.
+            IMPORTANT: The 'value' for each data point must be non-null. And no extra heading for any of the sub-sections generated through llms
             """)
         ])
         
