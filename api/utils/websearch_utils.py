@@ -1,6 +1,12 @@
 import os
 import time
 from typing import List, Dict, Any
+import textwrap, aiohttp
+from bs4 import BeautifulSoup
+from dotenv import load_dotenv, find_dotenv
+
+env_path = find_dotenv()              # walks up until it finds .env
+loaded  = load_dotenv(env_path)
 
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 SERPAPI_API_KEY = os.getenv("SERPAPI_API_KEY")
@@ -11,7 +17,7 @@ def call_tavily_api(query: str) -> List[Dict[str, str]]:
     print(f"[DEBUG] call_tavily_api: {query}")
     api_url = "https://api.tavily.com/search"
     headers = {"Authorization": f"Bearer {TAVILY_API_KEY}", "Content-Type": "application/json"}
-    payload = {"query": query, "max_results": 3, "include_raw_content": True}
+    payload = {"query": query, "max_results": 3, "include_answer": True}
     results = []
     for attempt in range(3):
         print(f"[DEBUG] Tavily API attempt {attempt+1}")
@@ -140,3 +146,16 @@ def call_perplexity_api(query: str, api_key: str, max_results: int = 5, depth: i
             "error": error_msg,
             "status_code": 500
         }
+
+async def fetch_article(url: str, max_chars: int = 2000) -> str:
+    try:
+        async with aiohttp.ClientSession() as sess:
+            async with sess.get(url, timeout=10) as r:
+                html = await r.text()
+        soup = BeautifulSoup(html, "html.parser")
+        for bad in soup(["header", "footer", "nav", "script", "style", "aside"]):
+            bad.decompose()
+        text = " ".join(p.get_text(" ", strip=True) for p in soup.find_all("p"))
+        return textwrap.shorten(text, width=max_chars, placeholder=" …")
+    except Exception as e:
+        return ""

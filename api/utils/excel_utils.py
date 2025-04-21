@@ -10,6 +10,10 @@ from llama_index.core.node_parser import JSONNodeParser
 from llama_index.core import VectorStoreIndex, StorageContext, load_index_from_storage
 from llama_index.embeddings.openai import OpenAIEmbedding
 import openai
+from dotenv import load_dotenv, find_dotenv
+
+env_path = find_dotenv()              # walks up until it finds .env
+loaded  = load_dotenv(env_path)
 
 # File bucket – where all files are stored (should match the BUCKET_NAME used in your API endpoint)
 FILE_BUCKET = os.getenv("BUCKET_NAME", "deep-research-docs")
