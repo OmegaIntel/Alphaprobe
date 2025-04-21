@@ -1,6 +1,6 @@
 import { Suspense, lazy } from 'react';
 import PageHeader from '../WorkflowPageHeader';
-const ChecklistSelector = lazy(() => import('./DueDiligenceChecklist'));
+import ChecklistSelector from './DueDiligenceChecklist';
 
 export default function DiligencePage() {
   return (
