@@ -329,8 +329,8 @@ def set_query_engine(engine: BaseQueryEngine):
     query_engine = engine
 
 # -------------------- BASE STORAGE DIRECTORY ----------------------
-ENC = tiktoken.encoding_for_model("gpt-4o-mini")
-MAX_TOKENS = 40000
+ENC = tiktoken.get_encoding("cl100k_base")
+MAX_TOKENS = 400000
 
 # ------------------------------------------------------------------------
 # SCHEMAS
@@ -492,8 +492,8 @@ class ReportState:
 OPENAI_API_KEY= os.getenv("OPENAI_API_KEY")
 openai.api_key = OPENAI_API_KEY
 
-print("[DEBUG] Initializing ChatOpenAI with model gpt-4o-mini")
-gpt_4 = ChatOpenAI(model="gpt-4o-mini", temperature=0.0, api_key=OPENAI_API_KEY, model_kwargs={"parallel_tool_calls": False})
+print("[DEBUG] Initializing ChatOpenAI with model o4-mini")
+gpt_4 = ChatOpenAI(model="o4-mini", temperature=0.0, api_key=OPENAI_API_KEY)
 
 # ------------------------------------------------------------------------
 # HELPER: Format completed sections, Call llm
@@ -691,6 +691,7 @@ async def parallel_kb_query(report_state: ReportState, queries: List[str]) -> Se
     combined = "\n\n".join(context_parts)
     return SearchResult(citations=citations, context_text=combined, original_queries=queries)
 
+
 # =============================================================================
 # GRAPH NODES
 # =============================================================================
@@ -813,6 +814,8 @@ async def node_generate_outline(state: ReportState):
 
     print(f"[DEBUG] Exiting node_generate_outline with {len(state.outline)} sections created (via KB & LLM).")
     return state
+
+
 
 async def node_process_section(state: ReportState):
     print(f"[DEBUG] Processing section index: {state.current_section_idx}")

@@ -11,7 +11,7 @@ from openai import OpenAI
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
 
-def respond_to_prompt(prompt: str, model='gpt-4o-mini', temperature=0) -> dict:
+def respond_to_prompt(prompt: str, model='o4-mini', temperature=0) -> dict:
     """Responds to the prompt."""
     response = client.chat.completions.create(
         model=model,
