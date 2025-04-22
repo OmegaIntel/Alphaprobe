@@ -39,7 +39,7 @@ rapidfuzz==3.10.1
 scipy==1.14.1
 beautifulsoup4>=4.12.3
 nest_asyncio==1.6.0
-python-multipart>=0.0.7
+python-multipart>=0.0.18
 llama-parse==0.5.19
 llama-index==0.12.10
 loguru==0.7.3
@@ -57,3 +57,4 @@ certifi==2024.8.30
 fuzzywuzzy==0.18.0
 python-Levenshtein==0.27.1
 uvicorn==0.34.0
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
