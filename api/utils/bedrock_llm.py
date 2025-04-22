@@ -20,7 +20,7 @@ from botocore.config import Config
 from botocore.exceptions import ClientError
 
 # ───────────────── AWS / Bedrock config ─────────────────
-AWS_REGION = os.getenv("AWS_REGION", "us-east-1")
+AWS_REGION = os.getenv("AWS_REGION", "us-west-2")
 AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
 AWS_SESSION_TOKEN = os.getenv("AWS_SESSION_TOKEN")
@@ -30,7 +30,7 @@ if not AWS_ACCESS_KEY_ID or not AWS_SECRET_ACCESS_KEY:
 
 DEFAULT_MODEL_ID = os.getenv(
     "BEDROCK_CLAUDE_MODEL_ID",
-    "us.anthropic.claude-3-haiku-20240307-v1:0",  # default to Claude 3 Haiku (on‑demand)
+    "us.anthropic.claude-3-7-sonnet-20250219-v1:0",  # default to Claude 3 Haiku (on‑demand)
 )
 DEFAULT_PROFILE_ARN = os.getenv("BEDROCK_CLAUDE_PROFILE_ID")  # optional for provisioned
 

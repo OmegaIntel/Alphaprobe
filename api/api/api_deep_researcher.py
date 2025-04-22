@@ -20,10 +20,7 @@ from sqlalchemy import func, asc, desc
 from services.deep_research import deep_research
 from services.researcher import generate_report
 from utils.excel_utils import build_or_load_excel_index
-from dotenv import load_dotenv, find_dotenv
 
-env_path = find_dotenv()              # walks up until it finds .env
-loaded  = load_dotenv(env_path)
 
 # Configure logging
 logging.basicConfig(
