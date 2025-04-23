@@ -21,4 +21,14 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
+  server: {
+    host: "0.0.0.0",
+    allowedHosts: [
+      // your EC2 public DNS
+      "ec2-54-91-85-225.compute-1.amazonaws.com",
+      // add other hostnames or domains here if needed
+    ],
+    // If you ever need to allow *all* hosts (not recommended for production):
+    // allowedHosts: "all",
+  },
 });

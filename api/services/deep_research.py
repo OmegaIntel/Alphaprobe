@@ -493,7 +493,7 @@ OPENAI_API_KEY= os.getenv("OPENAI_API_KEY")
 openai.api_key = OPENAI_API_KEY
 
 print("[DEBUG] Initializing ChatOpenAI with model o4-mini")
-gpt_4 = ChatOpenAI(model="o4-mini", temperature=0.0, api_key=OPENAI_API_KEY)
+gpt_4 = ChatOpenAI(model="gpt-4o-mini", temperature=0.0, api_key=OPENAI_API_KEY, model_kwargs={"parallel_tool_calls": False} )
 
 # ------------------------------------------------------------------------
 # HELPER: Format completed sections, Call llm
@@ -749,7 +749,7 @@ async def node_generate_outline(state: ReportState):
     print("[DEBUG] No PDF sections found. Proceeding with KB search and LLM outline generation.")
     
     # Generate queries (structured response) to find content using KB search.
-    structured_llm_queries = gpt_4.with_structured_output(Queries, method="function_calling")
+    structured_llm_queries = gpt_4.with_structured_output(Queries, method="function_calling" )
     system_prompt_for_queries = report_planner_query_writer_instructions[state.report_type].format(topic=state.topic)
     print(f"[DEBUG] System prompt for queries prepared")
     
@@ -775,7 +775,7 @@ async def node_generate_outline(state: ReportState):
     print(f"[DEBUG] No PDF sections text prepared (empty)")
 
     # Create sections from context using LLM.
-    structured_llm_sections = gpt_4.with_structured_output(Sections, method="function_calling")
+    structured_llm_sections = gpt_4.with_structured_output(Sections, method="function_calling" )
     outline_prompt = report_planner_instructions[state.report_type].format(
         topic=state.topic,
         context=combined_context,

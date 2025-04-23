@@ -178,7 +178,7 @@ async def deep_research_tool(query: InstructionRequest, current_user=Depends(get
         if query.researchType == "deep":
             result = await deep_research(query.instruction, int(query.report_type), query.file_search, query.web_search, query.temp_project_id, user_id)
         else: 
-            result = await generate_report(query.instruction, int(query.report_type), query.file_search, query.web_search, query.temp_project_id, user_id)
+            result = await deep_research(query.instruction, int(query.report_type), query.file_search, query.web_search, query.temp_project_id, user_id)
         
         if result is None:
             raise HTTPException(status_code=500, detail="Research failed to generate results")

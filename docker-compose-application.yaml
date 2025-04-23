@@ -7,6 +7,7 @@ services:
       - "8000:8000"
     volumes:
       - .:/app
+      - ./logs:/app/logs 
     environment:
       - PYTHONUNBUFFERED=1
       - OPENAI_MODEL_NAME=${OPENAI_MODEL_NAME}
@@ -32,9 +33,7 @@ services:
       - WEAVIATE_HOST=${WEAVIATE_HOST}
       - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
-    command: >
-      /bin/sh -c "alembic upgrade head && uvicorn app:app --host 0.0.0.0 --port 8000 --reload --loop asyncio"
-
+    
   frontend:
     build:
       context: ./client

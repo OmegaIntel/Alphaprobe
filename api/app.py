@@ -1,4 +1,5 @@
 # app.py
+import logging_config   
 import uvicorn
 from fastapi import FastAPI, Request, WebSocket, WebSocketDisconnect
 from fastapi.responses import JSONResponse
@@ -9,7 +10,6 @@ from api.api_file_upload import upload_file_router
 from api.api_generate_pdf import pdf_report_router
 from api.api_documents import upload_doc_router
 from api.api_projects import project_router
-# from api.api_deep_research import deep_research_router
 from websocket_manager import WebSocketManager
 from utils.websocket_utils import handle_websocket_communication
 from api.api_deep_researcher import research_deep_router
