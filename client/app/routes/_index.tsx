@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react';
 import { NavLink } from '@remix-run/react';
 import DocumentPage from '~/components/DocumentPage';
+import Loader from '~/components/Report/Loader';
 const ReportPage = lazy(() => import('~/components/Report/ReportPage'));
 export default function Index() {
   return (
