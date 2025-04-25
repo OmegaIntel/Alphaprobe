@@ -226,15 +226,15 @@ export const searchCompanies = async (query: string, apiKey: string = DEFAULT_AP
     // This ensures we always have a key
     const effectiveApiKey = apiKey || DEFAULT_API_KEY;
     
-    // Server-side API call using Elasticsearch DSL endpoint
-    const url = "https://api.coresignal.com/cdapi/v1/professional_network/company/search/es_dsl";
-    
+    // Updated endpoint as per v2 API documentation
+    const url = "https://api.coresignal.com/cdapi/v2/company_base/search/es_dsl";
     
     const response = await fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${effectiveApiKey}`
+        // Updated authorization header format
+        "apikey": effectiveApiKey
       },
       body: JSON.stringify(dslQuery)
     });
@@ -266,13 +266,15 @@ export const searchCompanies = async (query: string, apiKey: string = DEFAULT_AP
     // Fetch details for companies on the current page
     let companiesData = [];
     for (const id of pageCompanyIds) {
-      const detailUrl = `https://api.coresignal.com/cdapi/v1/professional_network/company/collect/${id}`;
+      // Updated endpoint as per v2 API documentation
+      const detailUrl = `https://api.coresignal.com/cdapi/v2/company_base/collect/${id}`;
       
       const detailResponse = await fetch(detailUrl, {
         method: "GET",
         headers: {
           "Accept": "application/json",
-          "Authorization": `Bearer ${effectiveApiKey}`
+          // Updated authorization header format
+          "apikey": effectiveApiKey
         }
       });
       
@@ -313,15 +315,15 @@ export const getCompanyDetails = async (companyId: string, apiKey: string = DEFA
     // Always use default API key if none provided, or use the provided one
     const effectiveApiKey = apiKey || DEFAULT_API_KEY;
     
-    // Fetch the basic company data
-    const url = `https://api.coresignal.com/cdapi/v1/professional_network/company/collect/${companyId}`;
-    
+    // Updated endpoint as per v2 API documentation
+    const url = `https://api.coresignal.com/cdapi/v2/company_base/collect/${companyId}`;
     
     const response = await fetch(url, {
       method: "GET",
       headers: {
         "Accept": "application/json",
-        "Authorization": `Bearer ${effectiveApiKey}`
+        // Updated authorization header format
+        "apikey": effectiveApiKey
       }
     });
     
@@ -345,21 +347,20 @@ export const getCompanyDetails = async (companyId: string, apiKey: string = DEFA
           ? companyData.website 
           : `https://${companyData.website}`;
           
-        const enrichUrl = `https://api.coresignal.com/cdapi/v1/multi_source/company/enrich/?website=${encodeURIComponent(websiteUrl)}`;
-        
-     
+        // Updated endpoint as per v2 API documentation
+        const enrichUrl = `https://api.coresignal.com/cdapi/v2/company_multi_source/enrich/?website=${encodeURIComponent(websiteUrl)}`;
         
         const enrichResponse = await fetch(enrichUrl, {
           method: "GET",
           headers: {
             "Accept": "application/json",
-            "Authorization": `Bearer ${effectiveApiKey}`
+            // Updated authorization header format
+            "apikey": effectiveApiKey
           }
         });
         
         if (enrichResponse.ok) {
           enrichedData = await enrichResponse.json();
-        
         }
       } catch (error) {
         console.error("Error fetching enriched data:", error);
