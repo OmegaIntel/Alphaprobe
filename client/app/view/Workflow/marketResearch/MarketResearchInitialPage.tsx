@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import InputComponent from '~/components/Report/InputBar/InputComponent';
+import InputComponent from '~/view/Report/InputBar/InputComponent';
 import { useForm, Controller } from 'react-hook-form';
 import * as RadioGroup from '@radix-ui/react-radio-group';
 import * as Switch from '@radix-ui/react-switch';
@@ -12,8 +12,8 @@ import {
   CheckCircle
 } from 'lucide-react';
 import clsx from 'clsx';
-import { ResearchType } from '~/components/Report/reportUtils';
-import FileUpload from '~/components/Report/InitialPage/FileUpload';
+import { ResearchType } from '~/view/Report/reportUtils';
+import FileUpload from '~/view/Report/InitialPage/FileUpload';
 import OutlineFileUpload from '../duediligence/UploadOutline';
 import { v4 as uuidv4 } from 'uuid';
 import { getUniqueID } from '~/lib/utils';

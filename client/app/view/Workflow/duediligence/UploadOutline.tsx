@@ -8,7 +8,7 @@ import { Progress } from "~/components/ui/progress";
 import { Alert, AlertDescription } from "~/components/ui/alert";
 import { X, FileSpreadsheet, Upload, Loader2 } from "lucide-react";
 import { cn } from "~/lib/utils";
-import { uploadOutlineFiles } from "~/components/Report/api";
+import { uploadOutlineFiles } from "~/view/Report/api";
 
 type UploadOutlineFile = {
   files: File[];

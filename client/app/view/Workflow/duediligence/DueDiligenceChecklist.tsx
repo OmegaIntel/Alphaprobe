@@ -13,14 +13,14 @@ import { getUniqueID } from '~/lib/utils';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from '~/store/store';
 import OutlineFileUpload from './UploadOutline';
-import FileUpload from '~/components/Report/InitialPage/FileUpload';
-import InputComponent from '~/components/Report/InputBar/InputComponent';
+import FileUpload from '~/view/Report/InitialPage/FileUpload';
+import InputComponent from '~/view/Report/InputBar/InputComponent';
 import { useLocation, useParams } from '@remix-run/react';
 import { setProject } from '~/store/slices/sideBar';
-import Loader from '~/components/Report/Loader';
+import Loader from '~/view/Report/Loader';
 
 // Import necessary components for results display
-import ReportBlock from '~/components/Report/ReportBlock';
+import ReportBlock from '~/view/Report/ReportBlock';
 
 type UploadedOutlineFile = {
   file_name: string;
@@ -44,11 +44,11 @@ import {
   ConversationData,
   ResearchType,
   Citation,
-} from '~/components/Report/reportUtils';
+} from '~/view/Report/reportUtils';
 import {
   createGetDocumentReport,
   updateGetDocumentReport,
-} from '~/components/Report/api';
+} from '~/view/Report/api';
 
 const ChecklistSelector: FC = () => {
   const location = useLocation();

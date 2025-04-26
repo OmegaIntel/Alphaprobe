@@ -31,7 +31,7 @@ export default function GeneratedResponse({
   researchType,
 }: {
   sections: Citation[];
-  response: string;
+  response: string; 
   researchType: string;
 }) {
   const [htmlContent, setHtmlContent] = useState('');

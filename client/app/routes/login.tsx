@@ -1,7 +1,7 @@
 import { json } from '@remix-run/node';
 import { useActionData, useNavigate, redirect, useLocation } from '@remix-run/react';
 import { useEffect } from 'react';
-import Login from '~/pages/auth/login';
+import Login from '~/view/auth/login';
 import { loginUser } from '~/services/auth';
 import * as amplitude from '@amplitude/analytics-browser';
 //import { sendAnalyticsEvent } from '~/root';

@@ -2,8 +2,8 @@ import os
 import uuid
 import time
 import json
-from typing import List
-
+from typing import Optional, List
+from enum import Enum
 from pydantic import BaseModel
 import logging
 from fastapi.responses import JSONResponse
@@ -75,6 +75,11 @@ class UploadedFileData(BaseModel):
     file_name: str
     file_path: str
 
+class WorkflowEnum(str, Enum):
+    general = "general"
+    due_diligence = "due_diligence"
+    market_research = "market_research"
+    competitive_analysis = "competitive_analysis"
 class InstructionRequest(BaseModel):
     instruction: str
     report_type: int 
@@ -84,6 +89,7 @@ class InstructionRequest(BaseModel):
     temp_project_id:str
     uploaded_files: List[UploadedFileData]
     researchType: str
+    workflow: WorkflowEnum = WorkflowEnum.general
 
 class UploadRequest(BaseModel):
     files: List[UploadFile] = File(...)
@@ -159,7 +165,7 @@ async def deep_research_tool(query: InstructionRequest, current_user=Depends(get
         max_retries = 3
         for attempt in range(max_retries):
             try:
-                project = Project(name=query.instruction, temp_project_id=query.temp_project_id, user_id=user_id)
+                project = Project(name=query.instruction, temp_project_id=query.temp_project_id, user_id=user_id,workflow=query.workflow)
                 db.add(project)
                 db.commit()
                 db.refresh(project)
@@ -445,41 +451,35 @@ async def upload_files(files: List[UploadFile] = File(...), temp_project_id: str
         status_code=200
     )
 
-
 @research_deep_router.get("/api/project-list")
 def get_all_projects_sorted_by_updated_at(
     current_user=Depends(get_current_user), 
     db: Session = Depends(get_db),
-    limit: int = Query(10, description="Number of projects to return"),
-    offset: int = Query(0, description="Number of projects to skip")
+    limit: int = Query(10),
+    offset: int = Query(0),
+    workflow: Optional[str] = Query(None)  # 👈 NEW
 ):
     try:
         user_id = current_user.id
-        
-        # Get total count for pagination metadata
-        total_count = db.query(Project).filter(Project.user_id == user_id).count()
-        
-        # Fetch projects with pagination applied
-        projects = db.query(Project).filter(
-            Project.user_id == user_id
-        ).order_by(
-            desc(Project.updated_at)
-        ).offset(offset).limit(limit).all()
+        query = db.query(Project).filter(Project.user_id == user_id)
+        if workflow:
+            query = query.filter(Project.workflow == workflow)
 
-        if not projects and offset == 0:
-            raise HTTPException(status_code=404, detail="No projects found")
-        
+        total_count = query.count()
+        projects = query.order_by(desc(Project.updated_at)).offset(offset).limit(limit).all()
+
         fetched_projects = [
             {
                 "id": str(project.id),
                 "name": str(project.name),
-                "updated_at": str(project.updated_at),  
+                "updated_at": str(project.updated_at),
                 "temp_project_id": str(project.temp_project_id),
                 "user_id": str(project.user_id),
+                "workflow": str(project.workflow)
             }
             for project in projects
         ]
-        
+
         return JSONResponse(
             content={
                 "message": "Projects fetched successfully",
@@ -496,6 +496,7 @@ def get_all_projects_sorted_by_updated_at(
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
+    
     
 @research_deep_router.get("/api/project/{project_id}/reports")
 def get_reports_sorted_by_updated_at(project_id: str, current_user=Depends(get_current_user), db: Session = Depends(get_db)):

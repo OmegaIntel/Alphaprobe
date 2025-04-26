@@ -1,6 +1,6 @@
 import { json, redirect } from "@remix-run/node";
 import { useActionData } from "@remix-run/react";
-import Register from "~/pages/auth/register";
+import Register from "~/view/auth/register";
 import { registerUser } from "~/services/auth";
 
 export async function action({ request }: { request: Request }) {

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import DocumentPDF from '../PDFViewer/PDFViewer';
+import DocumentPDF from '../../components/PDFViewer/PDFViewer';
 import { CircleX, EllipsisVertical, FileText, FileSpreadsheet, Link } from 'lucide-react';
 
 export type Citation = {

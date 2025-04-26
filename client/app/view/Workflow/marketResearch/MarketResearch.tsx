@@ -1,8 +1,8 @@
 import { useRef, useState, useEffect, useCallback, FC } from 'react'; 
-import ReportBlock from '~/components/Report/ReportBlock';
-import InputComponent from '~/components/Report/InputBar/InputComponent';
+import ReportBlock from '~/view/Report/ReportBlock';
+import InputComponent from '~/view/Report/InputBar/InputComponent';
 import { MoveDown, FileDown, BarChart } from 'lucide-react';
-import Loader from '~/components/Report/Loader';
+import Loader from '~/view/Report/Loader';
 import MarketResearchInitialPage, { MarketResearchFormData } from './MarketResearchInitialPage';
 import { 
   InitialFormData, 
@@ -10,13 +10,13 @@ import {
   Citation, 
   ResearchType, 
   generatePDF
-} from '~/components/Report/reportUtils';
+} from '~/view/Report/reportUtils';
 import {
   createGetDocumentReport,
   updateGetDocumentReport,
   getReports,
   uploadDeepResearchFiles
-} from '~/components/Report/api';
+} from '~/view/Report/api';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from '~/store/store';
 import { useLocation, useParams } from '@remix-run/react';
