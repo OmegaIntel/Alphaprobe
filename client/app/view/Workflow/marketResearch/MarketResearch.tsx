@@ -22,7 +22,7 @@ import { RootState, AppDispatch } from '~/store/store';
 import { useLocation, useParams } from '@remix-run/react';
 import { setProject } from '~/store/slices/sideBar';
 
-const MarketResearchComponent: FC = () => {
+const MarketResearch: FC = () => {
   const location = useLocation();
   const { id = null } = useParams();
   const dispatch = useDispatch<AppDispatch>();
@@ -269,4 +269,4 @@ const MarketResearchComponent: FC = () => {
   );
 };
 
-export default MarketResearchComponent;
+export default MarketResearch;

@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import PageHeader from '../WorkflowPageHeader';
-import MarketResearchComponent from './MarketResearch';
+import MarketResearch from './MarketResearch';
 
 const MarketResearchPage = () => {
   return (
@@ -11,7 +11,7 @@ const MarketResearchPage = () => {
           heading="Market Research"
         />
         {/* <MarketResearchPage /> */}
-        <MarketResearchComponent />
+        <MarketResearch />
       </Suspense>
     </div>
   );
