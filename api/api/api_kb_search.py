@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from utils.kb_search import query_kb 
+from services.utils.kb_search import query_kb 
 
 aws_kb_router = APIRouter()
 

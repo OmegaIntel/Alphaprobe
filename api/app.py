@@ -11,7 +11,7 @@ from api.api_generate_pdf import pdf_report_router
 from api.api_documents import upload_doc_router
 from api.api_projects import project_router
 from websocket_manager import WebSocketManager
-from utils.websocket_utils import handle_websocket_communication
+from services.utils.websocket_utils import handle_websocket_communication
 from api.api_deep_researcher import research_deep_router
 from api.api_kb_search import aws_kb_router
 

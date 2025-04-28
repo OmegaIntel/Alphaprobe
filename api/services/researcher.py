@@ -9,9 +9,9 @@ import re
 from common_logging import logerror
 import tiktoken
 
-from utils.kb_search import get_presigned_url_from_source_uri, query_kb
-from utils.websearch_utils import call_tavily_api, fetch_article
-from utils.pdf_parser import extract_pdf_from_s3, parse_pdf_structure
+from services.utils.kb_search import get_presigned_url_from_source_uri, query_kb
+from services.utils.websearch_utils import call_tavily_api, fetch_article
+from services.utils.pdf_parser import extract_pdf_from_s3, parse_pdf_structure
 
 from fastapi import HTTPException
 
@@ -21,7 +21,7 @@ from langchain_core.runnables import RunnableConfig
 # deepseek & OpenRouter Setup
 # ------------------------------------------------------------------------
 from openai import OpenAI as ORouterClient
-from utils.bedrock_llm import ClaudeWrapper, DeepSeekWrapper, trim_fenced, unwrap_boxed
+from services.utils.bedrock_llm import ClaudeWrapper, DeepSeekWrapper, trim_fenced, unwrap_boxed
 
 # configure OpenAI SDK to hit OpenRouter
 import openai

@@ -17,9 +17,9 @@ from db_models.session import get_db
 from sqlalchemy.orm import Session
 from sqlalchemy import func, asc, desc
 
-from services.deep_research import deep_research
+from services.deepresearch import deep_research
 from services.researcher import generate_report
-from utils.excel_utils import build_or_load_excel_index
+from services.utils.excel_utils import build_or_load_excel_index
 
 
 # Configure logging
