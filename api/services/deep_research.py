@@ -695,12 +695,13 @@ async def parallel_kb_query(report_state: ReportState, queries: List[str]) -> Se
 # =============================================================================
 # GRAPH NODES
 # =============================================================================
+"""
 async def node_generate_outline(state: ReportState):
-    """Generate report outline from PDF in S3 using structured LLM calls.
+    #Generate report outline from PDF in S3 using structured LLM calls.
     
-    If PDF sections are found, use them directly to create the outline without further KB or web searches.
-    Otherwise, perform KB search and LLM outline generation.
-    """
+    #If PDF sections are found, use them directly to create the outline without further KB or web searches.
+    #Otherwise, perform KB search and LLM outline generation.
+    
     print(f"[DEBUG] Entering node_generate_outline for topic: {state.topic}")
 
     # 1. Download and parse PDF from S3.
@@ -741,6 +742,7 @@ async def node_generate_outline(state: ReportState):
             state.outline.append(new_section_state)
             print(f"[DEBUG] Created outline section from PDF: {new_section_state.title} (Total sections: {len(state.outline)})")
         print(f"[DEBUG] Exiting node_generate_outline with {len(state.outline)} sections created from PDF.")
+        state.outline.append(new_section_state)
         return state
 
     # ---------------------------------------
@@ -814,6 +816,59 @@ async def node_generate_outline(state: ReportState):
 
     print(f"[DEBUG] Exiting node_generate_outline with {len(state.outline)} sections created (via KB & LLM).")
     return state
+"""
+
+# -----------------------------------------------------------------------------
+# Replacement: use a fixed outline for report generation
+# -----------------------------------------------------------------------------
+async def node_generate_outline(state: ReportState):
+    """
+    Replace dynamic outline generation with a fixed, manually defined outline.
+    """
+    print(f"[DEBUG] Using fixed report outline for topic: {state.topic}")
+
+    # ----- 1) Define your fixed outline here -----
+    # Each tuple is (section_title, section_description)
+    fixed_outline = [
+        ("Executive Summary", "Concise overview of key findings and recommendations."),
+        ("Market Overview", "Definition, scope, value chain, and high-level industry dynamics."),
+        ("Market Size & Growth", "Historical, current, and projected market size and growth rates."),
+        ("Segmentation Analysis", "Breakdown of the market by major segments with their sizes."),
+        ("Competitive Landscape", "Key competitors, market share, and positioning."),
+        ("Customer Insights", "Profiles, needs, and buying behavior of major customer segments."),
+        ("Financial Performance", "Summary of recent financial metrics and trends."),
+        ("Valuation & Forecast", "Valuation approaches, multiples, and forward projections."),
+        ("Risks & Mitigants", "Principal risks and strategies to manage them."),
+        ("Conclusions & Next Steps", "Key takeaways and recommended actions.")
+    ]
+    # -----------------------------------------------
+
+    # ----- 2) Clear any existing outline and build new SectionState objects -----
+    state.outline.clear()
+    for title, description in fixed_outline:
+        section = SectionState(
+            title=title,
+            description=description,
+            content="",  # will be filled later
+            report_state=state,
+            web_research=state.web_research,
+            excel_search=state.config.excel_search,
+            kb_search=state.config.file_search,
+            report_type=state.report_type
+        )
+        state.outline.append(section)
+        print(f"[DEBUG] Added fixed section: {title}")
+
+    print(f"[DEBUG] Finished fixed outline with {len(state.outline)} sections.")
+    return state
+
+
+
+
+
+
+
+
 
 
 

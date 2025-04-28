@@ -19,7 +19,7 @@ werkzeug==3.0.3
 jose==1.0.0
 pyjwt==2.8.0
 passlib==1.7.4
-langchain-openai==0.2.12
+langchain-openai>=0.3.9,<0.4.0
 llmsherpa==0.1.4
 pydantic==2.10.6
 SQLAlchemy==2.0.38
@@ -57,3 +57,4 @@ certifi==2024.8.30
 fuzzywuzzy==0.18.0
 python-Levenshtein==0.27.1
 uvicorn==0.34.0
+-e git+https://github.com/langchain-ai/local-deep-researcher.git#egg=ollama_deep_researcher
