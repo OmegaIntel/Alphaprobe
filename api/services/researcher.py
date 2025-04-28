@@ -6,11 +6,10 @@ from typing import List, TypedDict, Any, Optional, Tuple
 from pydantic import BaseModel
 from dataclasses import dataclass, fields
 import re
-from common_logging import logerror
 import tiktoken
 
 from services.utils.kb_search import get_presigned_url_from_source_uri, query_kb
-from services.utils.websearch_utils import call_tavily_api, fetch_article
+from services.utils.websearch_utils import tavily_search, fetch_article
 from services.utils.pdf_parser import extract_pdf_from_s3, parse_pdf_structure
 
 from fastapi import HTTPException
@@ -32,6 +31,11 @@ from llama_index.core import Settings
 # ------------------------------------------------------------------------
 from langgraph.graph import START, END, StateGraph
 from dotenv import load_dotenv, find_dotenv
+
+import logging
+logger = logging.getLogger(__name__)
+
+
 
 env_path = find_dotenv()              # walks up until it finds .env
 loaded  = load_dotenv(env_path)
@@ -362,15 +366,23 @@ async def answer_questions(state: ReportState, config: RunnableConfig):
             asyncio.to_thread(query_kb, q, KNOWLEDGE_BASE_ID, state["user_id"], state["project_id"], MODEL_ARN)
             if state.get("file_search") else asyncio.sleep(0, result={})
         )
+        
         web_task = (
-            asyncio.to_thread(call_tavily_api, q)
+           # tavily_search returns {"results":[ {title,url,content,raw_content}, … ]}
+            asyncio.to_thread(tavily_search, q, True, 3)
             if state.get("web_search") else asyncio.sleep(0, result=[])
         )
-        kb_resp, web_resp = await asyncio.gather(kb_task, web_task)
+        
 
-        # Extract plain text answer
-        file_ctx = kb_resp.get("output", {}).get("text", "") if isinstance(kb_resp, dict) else ""
-        hits = web_resp or []
+        kb_resp, web_resp_dict = await asyncio.gather(kb_task, web_task)
+        # Build our combined contexts
+        file_ctx = (
+            kb_resp.get("output", {}).get("text", "")
+            if isinstance(kb_resp, dict)
+            else ""
+        )
+        hits: List[dict] = web_resp_dict.get("results", [])
+        
         answer_text = "\n\n".join([file_ctx] + [f"{h.get('title','')}\n{h.get('answer') or h.get('snippet','')}" for h in hits]).strip()
 
         # Build structured citations
@@ -385,12 +397,17 @@ async def answer_questions(state: ReportState, config: RunnableConfig):
                     url=get_presigned_url_from_source_uri(ref.get("metadata", {}).get("x-amz-bedrock-kb-source-uri", ""))
                 )
                 local_cits.append(cit)
-        # Web citations
-        for h in hits:
+        
+            # Web citations & full‐page context
+        for item in hits:
+            snippet = item.get("content", "")
+            raw_md  = item.get("raw_content", snippet)
+
+            # record our snippet for the citation
             cit = WebCitation(
-                title=h.get("title", ""),
-                url=h.get("url", ""),
-                snippet=h.get("answer") or h.get("snippet", "")
+                title=item.get("title", ""),
+                url=item.get("url", ""),
+                snippet=snippet
             )
             local_cits.append(cit)
 
@@ -609,7 +626,7 @@ async def generate_structured_report(instruction: str, report_type: int, file_se
             raise ValueError("Report not found in final state.")
         return {"report": report}
     except Exception as e:
-        logerror(f"Error generating report: {str(e)}")
+        logger.error("Error generating report", exc_info=True)
         print("[DEBUG] Exception in generate_structured_report:", e)
         return None
 # -------------------------------------------------------------------------
@@ -644,6 +661,6 @@ async def generate_report(instruction: str, report_type: int, file_search:bool, 
             }
     except Exception as e:
         print(f"[generate_report] Error encountered: {str(e)}")
-        logerror(f"Error in generate_report: {e}")
+        logger.error("Error in generate_report", exc_info=True)
         print("[DEBUG] Exiting generate_report endpoint with error.")
         raise HTTPException(status_code=500, detail=str(e))

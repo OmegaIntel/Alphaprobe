@@ -1,70 +1,50 @@
+# state.py
+# =============================================================================
+from dataclasses import dataclass, field
+from typing import Any, Dict, List, Optional
+from enum import Enum
 
 from pydantic import BaseModel, Field
-from dataclasses import dataclass, field
-from typing import Dict, List, TypedDict, Any, Optional, Annotated, Union
 
 # ------------------------------------------------------------------------
-# SCHEMAS
+# DATA MODELS
 # ------------------------------------------------------------------------
-class SearchQuery(BaseModel):
-    search_query: str = Field(..., description="A doc query relevant for the section.")
 
-class Queries(BaseModel):
-    queries: List[SearchQuery] = Field(description="List of doc queries.")
+class Trend(Enum):
+    up = "up"
+    down = "down"
+    stable = "stable"
 
-class SourceQueries(BaseModel):
-    web_queries: List[str]
-    kb_queries: List[str]
-    excel_queries: List[str]
-
-class ReportStateInput(TypedDict):
-    topic: str  # e.g. "Financial due diligence for Company X"
-    user_id: str
-    report_type: int
-    file_search: bool
-    web_search: bool
-    project_id: str
-
-class ReportStateOutput(TypedDict):
-    final_report: str
-
-class Section(BaseModel):
-    name: str = Field(description="Name for this section of the report.")
-    description: str = Field(description="Brief overview of the main topics.")
-    research: bool = Field(description="Whether we need to query local docs.")
-    content: str = Field(description="The content of this section.", default="")
-
-class Sections(BaseModel):
-    sections: List[Section] = Field(description="List of sections for the report.")
+class DataType(Enum):
+    revenue = "revenue"
+    profit = "profit"
+    margin = "margin"
+    growth_rate = "growth_rate"
+    market_share = "market_share"
+    valuation = "valuation"
+    ratio = "ratio"
+    other = "other"
 
 class DataPoint(BaseModel):
     name: str = Field(..., description="Descriptive name of the metric")
-    value: Optional[Union[float, int, str]] = Field(None, description="The numerical value or percentage")
+    value: Optional[float] = Field(None, description="The numerical value or percentage")
     unit: Optional[str] = Field(None, description="Unit of measurement (%, $, etc.)")
     time_period: Optional[str] = Field(None, description="Time period this applies to (e.g., '2023', 'Q1 2024')")
     source: Optional[str] = Field(None, description="Source of the data point")
     significance: Optional[str] = Field(None, description="Why this data point matters to the analysis")
-    trend: Optional[str] = Field(
+    trend: Optional[Trend] = Field(None, description="Trend direction if available (up/down/stable)")
+    comparison: Optional[Dict[str, float]] = Field(
         None,
-        description="Trend direction if available (up/down/stable)",
-        choices=["up", "down", "stable"]
+        description="Comparison data (e.g., industry avg, competitor metrics)"
     )
-    comparison: Optional[Dict[str, Union[float, str]]] = Field(
+    data_type: Optional[DataType] = Field(
         None,
-        description="Comparison data (industry avg, competitor, etc.)"
-    )
-    data_type: Optional[str] = Field(
-        None,
-        description="Type of financial data",
-        choices=[
-            "revenue", "profit", "margin", "growth_rate", 
-            "market_share", "valuation", "ratio", "other"
-        ]
+        description="Type of financial data"
     )
 
 class SectionContent(BaseModel):
-    content: str
-    data_points: Optional[List[DataPoint]] = Field(
+    content: str = Field(..., description="Generated markdown content for this section")
+    data_points: List[DataPoint] = Field(
         default_factory=list,
         description="Key numerical findings extracted from research"
     )
@@ -77,17 +57,21 @@ class SectionContent(BaseModel):
         description="Whether additional research is needed"
     )
 
+# ------------------------------------------------------------------------
+# CONFIG & STATE
+# ------------------------------------------------------------------------
+
 @dataclass
 class ReportConfig:
-    use_tavily: bool = True
-    use_serpapi: bool = False
-    use_perplexity: bool = True
-    perplexity_api_key: Optional[str] = None
-    retain_temp_files: bool = False
     section_iterations: int = 2
     web_research: bool = True
     file_search: bool = True
     excel_search: bool = False
+    use_perplexity: bool = True
+    perplexity_api_key: Optional[str] = None
+    use_tavily: bool = False
+    use_serpapi: bool = False
+    retain_temp_files: bool = False
 
 @dataclass
 class Citation:
@@ -116,32 +100,34 @@ class ExcelCitation(Citation):
 
 @dataclass
 class SearchResult:
-    citations: List[Citation]  # For UI display
-    context_text: str         # For LLM content generation
+    citations: List[Citation]
+    context_text: str
     original_queries: List[str]
 
-# Modify SectionState to use annotated fields for concurrent updates
 @dataclass
 class SectionState:
-    title: str  # Prevent concurrent updates from overwriting title.
-    web_research: bool
-    excel_search: bool
-    kb_search: bool
-    report_type: Annotated[int, lambda old, new: old]
+    title: str
     description: str = ""
-    # Annotated fields for concurrent writes
-    web_results: Annotated[Optional[List[SearchResult]], lambda x, y: x + [y]] = field(default_factory=list)  # type: ignore
-    excel_results: Annotated[Optional[List[SearchResult]], lambda x, y: x + [y]] = field(default_factory=list)  # type: ignore
-    kb_results: Annotated[Optional[List[SearchResult]], lambda x, y: x + [y]] = field(default_factory=list)  # type: ignore
-    citations: Annotated[List[Citation], lambda x, y: x + y] = field(default_factory=list)  # type: ignore
-    context: Annotated[List[str], lambda x, y: x + [y]] = field(default_factory=list) # type: ignore
-    # Regular fields
-    content: str = ""
     report_state: Any = None
-    queries: List[SearchQuery] = field(default_factory=list)
+    web_research: bool = False
+    excel_search: bool = False
+    kb_search: bool = False
+    report_type: int = 0
+
+    # Results and context
+    web_results: List[SearchResult] = field(default_factory=list)
+    excel_results: List[SearchResult] = field(default_factory=list)
+    kb_results: List[SearchResult] = field(default_factory=list)
+    citations: List[Citation] = field(default_factory=list)
+    context: List[str] = field(default_factory=list)
+
+    # Generated content & state
+    content: str = Field(default="")  # markdown content
     attempts: int = 0
-    excel_queries: List[str] = field(default_factory=list)
+
+    # Queries
     web_queries: List[str] = field(default_factory=list)
+    excel_queries: List[str] = field(default_factory=list)
     kb_queries: List[str] = field(default_factory=list)
 
 @dataclass

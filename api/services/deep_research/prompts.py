@@ -1,7 +1,5 @@
+# prompts.py 
 
-
-# ------------------------------------------------------------------------
-# Prompts 
 # 1. Company profile
 # 2. Financial Statement Analysis
 # 3. Market Sizing
@@ -21,12 +19,11 @@ report_planner_query_writer_instructions = [
     """
 ]
 
+#not used currently - Fixed Outline - change this to a dynamic outline using file content from user provided pdf
+# -----------------------------------------------------------------------------
 report_planner_instructions = [
     """
 You are an expert financial and industry analyst. Based on the topic and combined content, produce a structured outline for an industry report.
-
-Required PDF Sections (MUST INCLUDE VERBATIM):
-{pdf_sections}
 
 Additional Context:
 Topic: {topic}
@@ -57,9 +54,6 @@ Output format:
     """
 You are an expert financial analyst. Based on the topic and combined content, produce a structured financial analysis outline.
 
-Required PDF Sections (MUST INCLUDE VERBATIM):
-{pdf_sections}
-
 Additional Context:
 Topic: {topic}
 Document Context: {context}
@@ -88,9 +82,6 @@ Output format:
 """,
     """
 You are an expert market analyst. Based on the topic and combined content, produce a market sizing report outline.
-
-Required PDF Sections (MUST INCLUDE VERBATIM):
-{pdf_sections}
 
 Additional Context:
 Topic: {topic}

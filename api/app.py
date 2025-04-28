@@ -1,5 +1,5 @@
 # app.py
-import logging_config   
+import logging_config  
 import uvicorn
 from fastapi import FastAPI, Request, WebSocket, WebSocketDisconnect
 from fastapi.responses import JSONResponse
@@ -14,6 +14,9 @@ from websocket_manager import WebSocketManager
 from services.utils.websocket_utils import handle_websocket_communication
 from api.api_deep_researcher import research_deep_router
 from api.api_kb_search import aws_kb_router
+
+import logging
+logger = logging.getLogger(__name__)
 
 
 app = FastAPI(docs_url="/api/docs", openapi_url="/api/openapi.json")

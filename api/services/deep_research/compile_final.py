@@ -1,13 +1,21 @@
+#compile_final.py
+
+import logging
 from services.deep_research.state import ReportState
 
+# Configure logger
+logger = logging.getLogger(__name__)
 
-def node_compile_final(state: ReportState):
-    """Compile all sections into final report"""
-    print(f"[DEBUG] Entering node_compile_final, compiling final report with {len(state.outline)} sections")
-    out = []
-    for i, sec in enumerate(state.outline, start=1):
-        print(f"[DEBUG] Compiling section {i}: {sec.title}")
-        out.append(f"## {i}. {sec.title}\n\n{sec.content.strip()}\n")
-    state.final_report = "\n".join(out)
-    print(f"[DEBUG] Final report compiled")
+def node_compile_final(state: ReportState) -> ReportState:
+    """Compile all sections into a single markdown report."""
+    logger.debug("Entering node_compile_final with %d sections", len(state.outline))
+    report_lines = []
+    for idx, section in enumerate(state.outline, start=1):
+        logger.debug("Adding section %d: %s", idx, section.title)
+        header = f"## {idx}. {section.title}\n"
+        content = section.content.strip() if section.content else "*No content generated.*"
+        report_lines.append(f"{header}\n{content}\n")
+
+    state.final_report = "\n".join(report_lines)
+    logger.debug("Final report compiled successfully (length: %d chars)", len(state.final_report))
     return state

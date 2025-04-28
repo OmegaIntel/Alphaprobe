@@ -1,13 +1,38 @@
-# logging_config.py
+# /api/logging_config.py
+
+import os
 import logging
 from logging.handlers import RotatingFileHandler
 
-LOG_FILE = "/app/logs/app.log"
-handler = RotatingFileHandler(LOG_FILE, maxBytes=10*1024*1024, backupCount=5)
-fmt = "%(asctime)s %(levelname)s %(name)s — %(message)s"
-handler.setFormatter(logging.Formatter(fmt, datefmt="%Y-%m-%d %H:%M:%S"))
+LOG_FILE = os.getenv("LOG_FILE", "/app/logs/app.log")
 
-for name in ("uvicorn", "uvicorn.error", "uvicorn.access"):
-    log = logging.getLogger(name)
-    log.setLevel(logging.INFO)
-    log.addHandler(handler)
+handler = RotatingFileHandler(
+    LOG_FILE,
+    maxBytes=10 * 1024 * 1024,
+    backupCount=5,
+)
+formatter = logging.Formatter(
+    "%(asctime)s %(levelname)s %(name)s — %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
+handler.setFormatter(formatter)
+
+root = logging.getLogger()
+root.setLevel(logging.DEBUG)
+root.addHandler(handler)
+
+# Also echo to stdout so container logs capture it
+stream_handler = logging.StreamHandler()
+stream_handler.setFormatter(formatter)
+root.addHandler(stream_handler)
+
+for noisy in (
+    "botocore",
+    "boto3",
+    "urllib3",
+    "s3transfer",
+    "passlib",
+    "passlib.utils.compat",
+    "passlib.registry",
+):
+    logging.getLogger(noisy).setLevel(logging.WARNING)
