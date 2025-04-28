@@ -1,8 +1,6 @@
 import { Suspense, lazy } from 'react';
-import { NavLink } from '@remix-run/react';
-import DocumentPage from '~/components/DocumentPage';
-import Loader from '~/components/Report/Loader';
-const ReportPage = lazy(() => import('~/components/Report/ReportPage'));
+const ReportPage = lazy(() => import('~/view/Report/ReportPage'));
+
 export default function Index() {
   return (
     <div className="p-4 overflow-x-auto">

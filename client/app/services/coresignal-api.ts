@@ -1,5 +1,4 @@
 // app/services/coresignal-api.ts
-import { json } from "@remix-run/node";
 import { CORESIGNAL_API_KEY } from "~/constant";
 
 // Define types for API response data

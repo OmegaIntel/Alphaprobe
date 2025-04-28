@@ -215,7 +215,7 @@ export default function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
                       </div>
                     )}
                   </div>
-                );
+                ); 
               })}
             </div>
           </div>
