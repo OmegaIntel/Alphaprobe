@@ -91,6 +91,7 @@ async def node_process_section(state: ReportState) -> ReportState:
 
     # Commit content back to outline and advance
     current_state.content = processed_state.content
+    current_state.citations = processed_state.citations
     state.current_section_idx += 1
     return state
 
