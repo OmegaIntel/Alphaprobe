@@ -210,7 +210,7 @@ const MarketResearchComponent: FC = () => {
             className="flex h-[88%] w-full grow flex-col items-center justify-between overflow-x-auto"
           >
             <div className="container w-full space-y-2">
-              <div className="flex justify-end mb-4">
+              {/* <div className="flex justify-end mb-4">
                 <button
                   onClick={handleExportPDF}
                   className="px-4 py-2 text-sm text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition-colors"
@@ -218,7 +218,7 @@ const MarketResearchComponent: FC = () => {
                 >
                   Export to PDF
                 </button>
-              </div>
+              </div> */}
               <div 
                 ref={reportContentRef} 
                 className="container space-y-2 task-components"
