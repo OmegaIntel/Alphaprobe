@@ -34,5 +34,7 @@ for noisy in (
     "passlib",
     "passlib.utils.compat",
     "passlib.registry",
+    "httpcore",
+    "httpx",
 ):
     logging.getLogger(noisy).setLevel(logging.WARNING)

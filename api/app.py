@@ -6,14 +6,11 @@ from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from api.api_user import user_router
 from pydantic import ValidationError
-from api.api_file_upload import upload_file_router
 from api.api_generate_pdf import pdf_report_router
-from api.api_documents import upload_doc_router
 from api.api_projects import project_router
 from websocket_manager import WebSocketManager
 from services.utils.websocket_utils import handle_websocket_communication
 from api.api_deep_researcher import research_deep_router
-from api.api_kb_search import aws_kb_router
 
 import logging
 logger = logging.getLogger(__name__)
@@ -49,14 +46,10 @@ async def websocket_endpoint(websocket: WebSocket):
         await manager.disconnect(websocket)
 
 app.include_router(user_router)
-#app.include_router(demo_request_router)
-app.include_router(upload_file_router)
 app.include_router(pdf_report_router)
-app.include_router(upload_doc_router)
 app.include_router(project_router) 
 app.include_router(research_deep_router)
-app.include_router(aws_kb_router)
-# app.include_router(deep_research_router)
+
 
 if __name__ == "__main__":
     uvicorn.run("api.app:app", host="0.0.0.0", port=8000, reload=True, loop='asyncio')
