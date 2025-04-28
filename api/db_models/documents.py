@@ -14,4 +14,3 @@ class DocumentTable(Base):
     project_id = Column(UUIDType(binary=False), ForeignKey(Project.id, ondelete='CASCADE'), nullable=False)
     file_name = Column(Text, nullable=False)
     file_path = Column(Text, nullable=False)  # Store the path where the document is saved
-
