@@ -8,6 +8,8 @@ import {
   MoveDown,
   FileSearch,
   CheckCircle,
+  CircleCheck,
+  Timer,
 } from 'lucide-react';
 import { getUniqueID } from '~/lib/utils';
 import { useSelector, useDispatch } from 'react-redux';
@@ -18,6 +20,9 @@ import InputComponent from '~/view/Report/InputBar/InputComponent';
 import { useLocation, useParams } from '@remix-run/react';
 import { setProject } from '~/store/slices/sideBar';
 import Loader from '~/view/Report/Loader';
+import { researchTypeOptions } from '~/view/Report/reportUtils';
+import * as RadioGroup from '@radix-ui/react-radio-group';
+import clsx from 'clsx';
 
 // Import necessary components for results display
 import ReportBlock from '~/view/Report/ReportBlock';
@@ -69,6 +74,7 @@ const ChecklistSelector: FC = () => {
     UploadedDocument[]
   >([]); // New state for second upload type
   const [requirements, setRequirements] = useState<string>('');
+  const [researchType, setResearchType] = useState<ResearchType>('research');
 
   // States for report display
   const [showResult, setShowResult] = useState(false);
@@ -174,7 +180,7 @@ const ChecklistSelector: FC = () => {
               bucket: 'default', // Assuming a default bucket for supporting files
             })),
           ],
-          researchType: 'research' as ResearchType,
+          researchType: researchType,
         });
 
         if (response?.project) {
@@ -202,7 +208,7 @@ const ChecklistSelector: FC = () => {
             })),
           ],
           projectId: project_id,
-          researchType: 'research' as ResearchType,
+          researchType: researchType,
         });
       }
 
@@ -341,31 +347,47 @@ const ChecklistSelector: FC = () => {
                   <div className="flex items-center gap-2">
                     <Upload className="w-5 h-5 text-gray-700" />
                     <div className="flex flex-col">
-                      <span className="text-sm font-medium">Upload Checklist Documents</span>
-                      <span className="text-xs text-gray-500">Upload templates to guide the structure and format of your report</span>
+                      <span className="text-sm font-medium">
+                        Upload Checklist Documents
+                      </span>
+                      <span className="text-xs text-gray-500">
+                        Upload templates to guide the structure and format of
+                        your report
+                      </span>
                     </div>
                   </div>
                   <Checkbox
                     checked={uploadAdditionalDocs}
-                    onCheckedChange={() => setUploadAdditionalDocs(!uploadAdditionalDocs)}
+                    onCheckedChange={() =>
+                      setUploadAdditionalDocs(!uploadAdditionalDocs)
+                    }
                   />
                 </div>
 
                 {/* Second upload option - Supporting Files */}
                 <div
                   className="flex items-center justify-between p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50"
-                  onClick={() => setUploadSupportingFiles(!uploadSupportingFiles)}
+                  onClick={() =>
+                    setUploadSupportingFiles(!uploadSupportingFiles)
+                  }
                 >
                   <div className="flex items-center gap-2">
                     <FileSearch className="w-5 h-5 text-gray-700" />
                     <div className="flex flex-col">
-                      <span className="text-sm font-medium">Upload Supporting Documents</span>
-                      <span className="text-xs text-gray-500">Upload data files containing market information for AI to analyze and extract insights</span>
+                      <span className="text-sm font-medium">
+                        Upload Supporting Documents
+                      </span>
+                      <span className="text-xs text-gray-500">
+                        Upload data files containing market information for AI
+                        to analyze and extract insights
+                      </span>
                     </div>
                   </div>
                   <Checkbox
                     checked={uploadSupportingFiles}
-                    onCheckedChange={() => setUploadSupportingFiles(!uploadSupportingFiles)}
+                    onCheckedChange={() =>
+                      setUploadSupportingFiles(!uploadSupportingFiles)
+                    }
                   />
                 </div>
 
@@ -380,7 +402,9 @@ const ChecklistSelector: FC = () => {
                   </div>
                   <Checkbox
                     checked={connectToDataRoom}
-                    onCheckedChange={() => setConnectToDataRoom(!connectToDataRoom)}
+                    onCheckedChange={() =>
+                      setConnectToDataRoom(!connectToDataRoom)
+                    }
                   />
                 </div>
               </div>
@@ -433,6 +457,43 @@ const ChecklistSelector: FC = () => {
                   </CardContent>
                 </Card>
               )}
+            </div>
+
+            <div className="mb-4">
+              <RadioGroup.Root
+                className="flex gap-4"
+                onValueChange={(value) =>
+                  setResearchType(value as ResearchType)
+                }
+              >
+                {researchTypeOptions.map((option) => (
+                  <label
+                    key={option.id}
+                    className={clsx(
+                      'cursor-pointer border p-[2px] w-36 rounded-full flex',
+                      researchType === option.value
+                        ? 'border-green-500 bg-green-50'
+                        : 'border-gray-300 bg-white'
+                    )}
+                  >
+                    <RadioGroup.Item className="hidden" value={option.value} />
+                    <CircleCheck
+                      className={`w-8 h-8 ${
+                        researchType === option.value
+                          ? 'text-green-300'
+                          : 'text-gray-300'
+                      }`}
+                    />
+                    <div className="flex flex-col ml-1">
+                      <h3 className="text-xs font-semibold">{option.label}</h3>
+                      <p className="flex items-center text-xs text-gray-400">
+                        <Timer className="w-3 h-3 mr-1" />
+                        {option.timeDurations}
+                      </p>
+                    </div>
+                  </label>
+                ))}
+              </RadioGroup.Root>
             </div>
 
             {/* Prompt Input Section */}
