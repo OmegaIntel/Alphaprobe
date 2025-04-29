@@ -1,3 +1,5 @@
+# db_models/new_users.py
+
 from sqlalchemy import Column, String, Text, TIMESTAMP, ForeignKey, func, Enum
 from sqlalchemy_utils import UUIDType
 from sqlalchemy.ext.declarative import declarative_base

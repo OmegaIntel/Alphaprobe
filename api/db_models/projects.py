@@ -1,3 +1,5 @@
+# db_models/projects.py
+
 from sqlalchemy import Column, String, Text, TIMESTAMP, func, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy_utils import UUIDType

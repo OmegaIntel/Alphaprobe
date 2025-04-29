@@ -1,3 +1,5 @@
+# db_models/documents.py
+
 from sqlalchemy import Column, Integer, String, Text,  ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy_utils import UUIDType
