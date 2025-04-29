@@ -97,6 +97,7 @@ def get_presigned_url_from_source_uri(source_uri: str, expiration: int = 3600) -
 def query_kb(input_text: str, kb_id: str, user_id: str, project_id: str, model_arn: str) -> Dict[str, Any]:
     print(f"[DEBUG] query_kb with text={input_text}")
     vector_search_config = {"numberOfResults": 5}
+    """
     filters = []
     if user_id:
         filters.append({"equals": {"key": "user_id", "value": str(user_id)}})
@@ -107,6 +108,7 @@ def query_kb(input_text: str, kb_id: str, user_id: str, project_id: str, model_a
             vector_search_config["filter"] = filters[0]
         else:
             vector_search_config["filter"] = {"andAll": filters}
+    """
     try:
         resp = bedrock_runtime.retrieve_and_generate(
             input={"text": input_text},
@@ -135,3 +137,30 @@ def query_kb(input_text: str, kb_id: str, user_id: str, project_id: str, model_a
     except botocore.exceptions.ClientError as e:
         print(f"[DEBUG] query_kb() client error: {e}")
         return {}
+    
+
+
+
+if __name__ == "__main__":
+    import json
+
+    # hard-code your IDs here so you only have to enter the question
+    KB_ID       = "ITOY3SGHN2"
+    USER_ID     = "12c7bf504d714cca99f3ce6265d3f8ae"
+    PROJECT_ID  = "6dad2acf-6e3f-4c30-8545-d30b090cc444"
+    MODEL_ARN   = "amazon.nova-lite-v1:0"
+
+    # prompt for your query
+    question = input("Enter your question: ")
+
+    # call the RAG‐style retrieval + generation
+    resp = query_kb(
+        input_text=question,
+        kb_id=KB_ID,
+        user_id=USER_ID,
+        project_id=PROJECT_ID,
+        model_arn=MODEL_ARN
+    )
+
+    # print it nicely
+    print(json.dumps(resp, indent=2))
