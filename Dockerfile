@@ -1,30 +1,43 @@
+# Use official Python slim image
 FROM python:3.11-slim
 
 # Upgrade pip
 RUN pip install --upgrade pip
 
+# Set working dir
 WORKDIR /app
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    pkg-config \
-    default-mysql-client \
-    default-libmysqlclient-dev \
-    libssl-dev \
-    build-essential \
+# Install system deps
+RUN apt-get update && \
+    apt-get install -y \
+      pkg-config \
+      default-mysql-client \
+      default-libmysqlclient-dev \
+      libssl-dev \
+      build-essential \
     --no-install-recommends && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements and install Python dependencies
-COPY ./requirements.txt /app/requirements.txt
-RUN pip install --no-cache-dir -r /app/requirements.txt
+# Copy & install Python deps
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the application code
-COPY . /app
-
+# Copy entire project & install it
+COPY . .
 RUN pip install -e .
 
+# Create logs folder
+RUN mkdir -p /app/logs
+
+# Copy entrypoint script
+COPY start.sh /usr/local/bin/start.sh
+RUN chmod +x /usr/local/bin/start.sh
+
+# Work inside your API folder
 WORKDIR /app/api
 
+# Expose FastAPI port
 EXPOSE 8000
+
+# Launch migrations + app
+ENTRYPOINT [ "start.sh" ]
