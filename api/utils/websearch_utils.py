@@ -4,6 +4,7 @@ from typing import List, Dict, Any
 import textwrap, aiohttp
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv, find_dotenv
+from tavily import TavilyClient
 
 env_path = find_dotenv()  # walks up until it finds .env
 loaded = load_dotenv(env_path)
@@ -12,6 +13,21 @@ TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 SERPAPI_API_KEY = os.getenv("SERPAPI_API_KEY")
 PERPLEXITY_API_KEY = os.getenv("PERPLEXITY_API_KEY")
 
+def tavily_search(
+    query: str,
+    fetch_full_page: bool = True,
+    max_results: int = 3
+    ) -> Dict[str, List[Dict[str, Any]]]:
+    """
+    Uses the TavilyClient to return up to `max_results` hits,
+    each with both a short `content` snippet and full `raw_content`.
+    """
+    client = TavilyClient()
+    return client.search(
+        query,
+        max_results=max_results,
+        include_raw_content=fetch_full_page
+    )
 
 def call_tavily_api(query: str) -> List[Dict[str, str]]:
     import requests

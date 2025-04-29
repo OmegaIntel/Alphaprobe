@@ -4,7 +4,7 @@ import nest_asyncio
 import json
 from typing import List, Any
 import re
-from researcher.stats import (
+from api.services.researcher.stats import (
     ReportState,
     Citation,
     KBCitation,

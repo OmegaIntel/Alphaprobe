@@ -1,11 +1,11 @@
-from researcher.stats import (
+from api.services.researcher.stats import (
     ReportStateInput,
     ReportStateOutput,
     ReportState,
 )
 from langgraph.graph import START, END, StateGraph
-from researcher.config import Configuration
-from researcher.process_node import (
+from api.services.researcher.config import Configuration
+from api.services.researcher.process_node import (
     formulate_plan,
     formulate_questions,
     answer_questions,

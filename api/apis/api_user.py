@@ -3,7 +3,7 @@ from pydantic import BaseModel, EmailStr
 from typing import Optional
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 import jwt
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from passlib.context import CryptContext
 import os
 import logging
@@ -69,9 +69,9 @@ def authenticate_user(db: Session, email: str, password: str):
 def create_access_token(data: dict, expires_delta: timedelta = None):
     to_encode = data.copy()
     if expires_delta:
-        expire = datetime.now(datetime.timezone.utc) + expires_delta
+        expire = datetime.now(timezone.utc) + expires_delta
     else:
-        expire =  datetime.now(datetime.timezone.utc) + timedelta(minutes=15)
+        expire =  datetime.now(timezone.utc) + timedelta(minutes=15)
     to_encode.update({"exp": expire})
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
