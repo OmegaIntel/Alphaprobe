@@ -1,60 +1,40 @@
-
-// import { FileText, Building2, LucideIcon } from "lucide-react";
-// export interface ItemType {
-//     label?: string;
-//     id?: string;
-//     icon: LucideIcon;
-//     url:string;
-// };
-  
-// export const items: ItemType[] = [
-//     {
-//       label: 'Due Diligence',
-//       id: 'duediligence',
-//       icon: FileText,
-//       url:'/'
-
-//     },
-//     {
-//       label: 'Company House',
-//       id: 'company-house',
-//       icon: Building2,
-//       url:'/company-house'
-//     },
-// ];
-
-import { FileText, BookOpen, Search, Scale, LucideIcon } from "lucide-react";
+import { FileText, BookOpen, Search, Scale, LucideIcon } from 'lucide-react';
 
 export interface ItemType {
   label?: string;
   id?: string;
   icon: LucideIcon;
   url: string;
+  workflowType: 'due_diligence' | 'market_research' | 'competitive_analysis' | 'general';
 }
 
 export const items: ItemType[] = [
   {
-    label: "Due Diligence",
-    id: "due-diligence",
+    label: 'Due Diligence',
+    id: 'due-diligence',
     icon: FileText,
-    url: "/due-diligence",
+    url: '/due-diligence',
+    workflowType: 'due_diligence',
   },
   {
-    label: "Market Research",
-    id: "market-research",
+    label: 'Market Research',
+    id: 'market-research',
     icon: BookOpen,
-    url: "/market-research",
+    url: '/market-research',
+    workflowType: 'market_research',
   },
   {
-    label: "Sourcing",
-    id: "sourcing",
+    label: 'Sourcing',
+    id: 'sourcing',
     icon: Search,
-    url: "/company-house",
+    url: '/company-house',
+    workflowType: 'competitive_analysis',
   },
   {
-    label: "Valuation",
-    id: "valuation",
+    label: 'Valuation',
+    id: 'valuation',
     icon: Scale,
-    url: "/company-house",
+    url: '/company-house',
+    workflowType: 'general',
   },
 ];

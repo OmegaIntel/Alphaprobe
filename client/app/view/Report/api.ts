@@ -8,6 +8,11 @@ const templateCode = {
   'financial-statement-analysis': 1,
 };
 
+// Convert frontend enum (e.g., "DUE_DILIGENCE") to backend enum (e.g., "due_diligence")
+const mapWorkflowType = (workflow: string): string => {
+  return workflow.toLowerCase().replace(/_/g, '_');
+};
+
 const getThetempId = (tempid: string) => {
   if (tempid === 'market-sizing') {
     return 2;
@@ -26,51 +31,47 @@ export const createGetDocumentReport = async ({
   templateId,
   temp_project_id,
   uploaded_files,
-  researchType
+  researchType,
+  workflow
 }: {
   promptValue: string;
   web_search: boolean;
   file_search: boolean;
   templateId: string;
-  projectId?: string;
   temp_project_id: string;
   uploaded_files: any[];
   researchType: ResearchType;
+  workflow: 'DUE_DILIGENCE' | 'MARKET_RESEARCH' | 'SOURCING' | 'VALUATION';
 }): Promise<any> => {
   try {
     const tempNum = getThetempId(templateId);
     const config: RequestInit = {
       method: 'POST',
       body: JSON.stringify({
-        // markdown: 'stocks',
-        // title: title,
-        // sub_title: subTitle,
-        // theme: 'professional',
         instruction: promptValue,
-        web_search: web_search,
-        file_search: file_search,
+        web_search,
+        file_search,
         report_type: tempNum,
         project_id: '',
-        temp_project_id: temp_project_id,
-        uploaded_files: uploaded_files,
-        researchType: researchType
-        // text: title,
-        // headings: headingTemp?.heading,
-        // max_depth: 3,
-        // include_charts: true,
-        // include_tables: true,
+        temp_project_id,
+        uploaded_files,
+        researchType,
+        workflow: mapWorkflowType(workflow) // ✅ Send mapped workflow string
       }),
-    }; 
+    };
 
     const res = await fetcher('/api/deep-researcher-langgraph/create', config);
     console.log('reports--------------------', res.data);
     return res.data;
   } catch (error) {
     console.error(error);
-    throw error; // or return [] if you prefer
+    throw error;
   }
 };
 
+// -----------------------------
+// UPDATE REPORT FUNCTION
+// -----------------------------
 export const updateGetDocumentReport = async ({
   promptValue,
   web_search,
@@ -79,7 +80,8 @@ export const updateGetDocumentReport = async ({
   projectId,
   temp_project_id,
   uploaded_files,
-  researchType
+  researchType,
+  workflow
 }: {
   promptValue: string;
   web_search: boolean;
@@ -89,40 +91,34 @@ export const updateGetDocumentReport = async ({
   temp_project_id: string;
   uploaded_files: any[];
   researchType: ResearchType;
+  workflow: 'DUE_DILIGENCE' | 'MARKET_RESEARCH' | 'SOURCING' | 'VALUATION';
 }): Promise<any> => {
   try {
     const tempNum = getThetempId(templateId);
     const config: RequestInit = {
       method: 'POST',
       body: JSON.stringify({
-        // markdown: 'stocks',
-        // title: title,
-        // sub_title: subTitle,
-        // theme: 'professional',
         instruction: promptValue,
-        web_search: web_search,
-        file_search: file_search,
+        web_search,
+        file_search,
         report_type: tempNum,
         project_id: projectId,
-        temp_project_id: temp_project_id ,
-        uploaded_files: uploaded_files,
-        researchType: researchType
-        // text: title,
-        // headings: headingTemp?.heading,
-        // max_depth: 3, 
-        // include_charts: true,
-        // include_tables: true,
+        temp_project_id,
+        uploaded_files,
+        researchType,
+        workflow: mapWorkflowType(workflow) // ✅ Send mapped workflow string
       }),
     };
 
-    const res = await fetcher('/api/deep-researcher-langgraph', config);
+    const res = await fetcher('/api/deep-researcher-langgraph/update', config);
     console.log('reports--------------------', res.data);
     return res.data;
   } catch (error) {
     console.error(error);
-    throw error; // or return [] if you prefer
+    throw error;
   }
 };
+
 
 
 export interface UploadFile{
@@ -221,3 +217,20 @@ export const getReports = async (project_id : string): Promise<ReportList[]> =>{
      return []
   }
 }
+
+
+
+
+
+
+// const getThetempId = (tempid: string) => {
+//   if (tempid === 'market-sizing') return 2;
+//   if (tempid === 'financial-statement-analysis') return 1;
+//   return 0;
+// };
+
+// -----------------------------
+// CREATE REPORT FUNCTION
+// -----------------------------
+
+

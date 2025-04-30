@@ -94,7 +94,7 @@ export const fetchProjects = createAsyncThunk(
 
     const config: RequestInit = { method: "GET" };
 
-    const url = `/api/project-list?limit=${limit}&offset=${offset}${workflowType ? `&workflow_type=${workflowType}` : ''}`;
+    const url = `/api/project-list?limit=${limit}&offset=${offset}${workflowType ? `&workflow=${workflowType.toLowerCase()}` : ''}`;
 
     const response = await fetcher(url, config);
 

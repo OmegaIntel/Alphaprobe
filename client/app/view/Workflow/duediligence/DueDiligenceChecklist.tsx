@@ -60,6 +60,13 @@ const ChecklistSelector: FC = () => {
   const { id = null } = useParams();
   const dispatch = useDispatch<AppDispatch>();
 
+  const getWorkflowFromPath = (path: string): string => {
+    if (path.includes('/due-diligence')) return 'due_diligence';
+    if (path.includes('/market-research')) return 'market_research';
+    if (path.includes('/valuation')) return 'valuation';
+    if (path.includes('/company-house')) return 'sourcing';
+    return 'general';
+  };
   // State management
   const [selectedTemplate, setSelectedTemplate] = useState<string>('standard');
   const [connectToDataRoom, setConnectToDataRoom] = useState<boolean>(false);
@@ -86,6 +93,11 @@ const ChecklistSelector: FC = () => {
   const mainContentRef = useRef<HTMLDivElement>(null);
   const { activeProjectId } = useSelector((state: RootState) => state.sidebar);
   const tempProjectID = activeProjectId?.temp_project_id || getUniqueID();
+  const workflow = getWorkflowFromPath(location.pathname).toUpperCase() as
+  | 'DUE_DILIGENCE'
+  | 'MARKET_RESEARCH'
+  | 'SOURCING'
+  | 'VALUATION';
 
   // Check for saved report data on component mount
   useEffect(() => {
@@ -181,6 +193,7 @@ const ChecklistSelector: FC = () => {
             })),
           ],
           researchType: researchType,
+          workflow,
         });
 
         if (response?.project) {
@@ -209,6 +222,7 @@ const ChecklistSelector: FC = () => {
           ],
           projectId: project_id,
           researchType: researchType,
+          workflow,
         });
       }
 
