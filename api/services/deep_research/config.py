@@ -1,5 +1,5 @@
-#config.py
-# ------------------------ Configuration ------------------------
+# service/deep_research/config.py
+
 
 from dataclasses import dataclass, fields
 from typing import Any, Optional

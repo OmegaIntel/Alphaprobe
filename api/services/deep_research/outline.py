@@ -1,4 +1,4 @@
-#outline.py
+# service/deep_research/outline.py
 # -----------------------------------------------------------------------------
 
 import logging

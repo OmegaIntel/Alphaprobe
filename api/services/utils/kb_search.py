@@ -139,8 +139,6 @@ def query_kb(input_text: str, kb_id: str, user_id: str, project_id: str, model_a
         return {}
     
 
-
-
 if __name__ == "__main__":
     import json
 

@@ -36,5 +36,6 @@ for noisy in (
     "passlib.registry",
     "httpcore",
     "httpx",
+    "python_multipart",
 ):
     logging.getLogger(noisy).setLevel(logging.WARNING)

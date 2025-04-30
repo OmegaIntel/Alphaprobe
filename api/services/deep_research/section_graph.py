@@ -1,4 +1,4 @@
-#section_graph.py
+# services/deep_research/section_graph.py
 
 import os
 import asyncio

@@ -1,4 +1,4 @@
-# prompts.py 
+# services/deep_research/prompts.py
 
 # 1. Company profile
 # 2. Financial Statement Analysis

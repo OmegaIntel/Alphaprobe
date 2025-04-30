@@ -1,3 +1,5 @@
+# services/utils/excel_utils.py
+
 import os
 import traceback
 import boto3
@@ -88,6 +90,7 @@ def upload_index_to_s3(local_path: str, user_id: str, project_id: str, bucket: s
             s3_key = os.path.join(s3_path, os.path.relpath(local_file, local_path))
             s3_client.upload_file(local_file, bucket, s3_key)
 
+
 def parse_excel_file(file_bytes: bytes, file_name: str) -> List[Document]:
     """Parse Excel files into structured documents with metadata."""
     documents = []
@@ -135,6 +138,7 @@ def parse_excel_file(file_bytes: bytes, file_name: str) -> List[Document]:
         print(f"[ERROR] Failed to parse {file_name}: {str(e)}")
     
     return documents
+
 
 def build_or_load_excel_index(user_id: str, project_id: str) -> Optional[VectorStoreIndex]:
     excel_files = list_s3_excel_files(user_id, project_id, bucket=FILE_BUCKET)
@@ -215,3 +219,47 @@ def extract_excel_index(user_id: str, project_id: str) -> Optional[VectorStoreIn
         else:
             print("[DEBUG] No Excel index found in S3")
             return None
+
+
+if __name__ == "__main__":
+    import asyncio
+    from types import SimpleNamespace
+    # import the parallel search from your process_section module
+    from services.deep_research.process_section import parallel_excel_search
+
+    async def main():
+        # --- CONFIGURE THESE ---
+        user_id = "12c7bf50-4d71-4cca-99f3-ce6265d3f8ae"
+        project_id = "6dad2acf-6e3f-4c30-8545-d30b090cc444"
+        queries = [
+            "what is the company's revenue in January 2024",
+            "what is the company's revenue growth for last 5 years?"
+        ]
+        # ------------------------
+
+        # Build (or load) the Excel index
+        idx = build_or_load_excel_index(user_id, project_id)
+        if not idx:
+            print(" No Excel files found or failed to build index.")
+            return
+
+        # Prepare a minimal report_state with excel_search enabled
+        report_state = SimpleNamespace(
+            user_id=user_id,
+            project_id=project_id,
+            config=SimpleNamespace(excel_search=True),
+            web_research=False,
+            file_search=False
+        )
+
+        # Run the queries
+        result = await parallel_excel_search(report_state, queries)
+
+        # Print out context and citations
+        print("\n--- CONTEXT ---\n")
+        print(result.context_text)
+        print("\n--- CITATIONS ---\n")
+        for cit in result.citations:
+            print(f"{cit.file_name} | sheet={cit.sheet} | row={cit.row} | col={cit.col} → {cit.value}")
+
+    asyncio.run(main())

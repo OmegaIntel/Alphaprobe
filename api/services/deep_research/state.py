@@ -1,5 +1,5 @@
-# state.py
-# =============================================================================
+# services/deep_research/state.py
+
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 from enum import Enum

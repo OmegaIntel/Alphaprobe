@@ -229,34 +229,142 @@ async def deep_research_tool(query: InstructionRequest, current_user=Depends(get
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@research_deep_router.post("/api/upload-deep-research")
-async def upload_files(
-    files: List[UploadFile] = File(...),
-    temp_project_id: str = Form(...),
-    current_user=Depends(get_current_user),
-    db: Session = Depends(get_db),
+@research_deep_router.post("/api/deep-researcher-langgraph/update")
+async def deep_research_tool_update(
+    query: InstructionRequest, 
+    current_user=Depends(get_current_user), 
+    db: Session = Depends(get_db)
 ):
+    """Update an existing research project with new research data"""
+    MAX_RETRIES = 3
+    RETRY_DELAY = 1  # seconds
+    
+    try:
+        user_id = current_user.id
+        
+        # Validate project exists
+        project = db.query(Project).filter(Project.id == query.project_id).first()
+        if not project:
+            return JSONResponse(
+                content={"message": "Project not found", "data": None},
+                status_code=404
+            )
+
+        # Run research with proper state handling
+        result = None
+        for attempt in range(MAX_RETRIES):
+            try:
+                if query.researchType == "deep":
+                    result = await deep_research(
+                        query.instruction, 
+                        int(query.report_type), 
+                        query.file_search, 
+                        query.web_search, 
+                        query.temp_project_id, 
+                        user_id
+                    )
+                else:
+                    result = await generate_report(
+                        query.instruction, 
+                        int(query.report_type), 
+                        query.file_search, 
+                        query.web_search, 
+                        query.temp_project_id, 
+                        user_id
+                    )
+                break
+            except Exception as e:
+                if attempt == MAX_RETRIES - 1:
+                    raise
+                time.sleep(RETRY_DELAY)
+                continue
+
+        if result is None:
+            raise HTTPException(
+                status_code=500,
+                detail="Research failed to generate results after multiple attempts"
+            )
+
+        # Convert result if needed
+        final_report = result.get("report", "")
+        sections = result.get("sections", [])
+
+        # Save report with transaction and retry logic
+        for attempt in range(MAX_RETRIES):
+            try:
+                # Start transaction
+                db.begin()
+
+                # Create new report entry
+                report = ReportTable(
+                    project_id=query.project_id,
+                    query=query.instruction,
+                    response=final_report,
+                    sections=sections,
+                    research=query.researchType
+                )
+                db.add(report)
+
+                # Update project timestamp
+                project.updated_at = func.now()
+                db.add(project)
+
+                # Commit transaction
+                db.commit()
+                db.refresh(project)
+                db.refresh(report)
+                break
+
+            except Exception as e:
+                db.rollback()
+                if attempt == MAX_RETRIES - 1:
+                    raise HTTPException(
+                        status_code=500,
+                        detail=f"Failed to save report after {MAX_RETRIES} attempts"
+                    )
+                time.sleep(RETRY_DELAY)
+                continue
+
+        return JSONResponse(
+            content={
+                "message": "Research updated successfully",
+                "data": {
+                    "report": final_report,
+                    "sections": sections,
+                    "research": query.researchType,
+                    "project": {
+                        "id": str(project.id),
+                        "name": project.name,
+                        "temp_project_id": str(project.temp_project_id) if project.temp_project_id else None,
+                        "user_id": str(project.user_id),
+                        "created_at": project.created_at.isoformat() if project.created_at else None,
+                        "updated_at": project.updated_at.isoformat() if project.updated_at else None
+                    }
+                }
+            },
+            status_code=200
+        )
+
+    except HTTPException:
+        raise  # Re-raise HTTP exceptions
+    except Exception as e:
+        db.rollback()
+        logger.error(f"Error in deep_research_tool_update: {str(e)}", exc_info=True)
+        raise HTTPException(
+            status_code=500,
+            detail=f"An unexpected error occurred: {str(e)}"
+        )
+
+
+@research_deep_router.post("/api/upload-deep-research")
+async def upload_files(files: List[UploadFile] = File(...), temp_project_id: str = Form(...), current_user=Depends(get_current_user)):
     user_id = current_user.id
     results = []
 
-    # 🔍 1) Find the real project by temp_project_id
-    project = (
-        db.query(Project)
-          .filter(
-              Project.temp_project_id == temp_project_id,
-              Project.user_id == user_id
-          )
-          .first()
-    )
-    if not project:
-        raise HTTPException(404, f"No project found for temp_project_id: {temp_project_id}")
-    real_proj_id = str(project.id)
-
-    # 🗄️ 2) Upload each file, its metadata, and record it
+    # Upload every file into the same file bucket (BUCKET_NAME)
     for file in files:
-        key = f"{user_id}/{real_proj_id}/{file.filename}"
+        key = f"{user_id}/{temp_project_id}/{file.filename}"
         try:
-            # a) upload the file itself
             s3_client.upload_fileobj(
                 file.file,
                 BUCKET_NAME,
@@ -264,82 +372,77 @@ async def upload_files(
                 ExtraArgs={
                     "Metadata": {
                         "user_id": str(user_id),
-                        "project_id": real_proj_id,
+                        "project_id": str(temp_project_id)
                     }
                 }
             )
-            # b) upload the .metadata.json companion
-            metadata = {
+            
+            # Optionally, upload additional metadata as a separate JSON object.
+            metadata_dict = {
                 "metadataAttributes": {
                     "user_id": str(user_id),
-                    "project_id": real_proj_id,
+                    "project_id": str(temp_project_id)
                 }
             }
+            metadata_content = json.dumps(metadata_dict)
+            metadata_key = f"{key}.metadata.json"
             s3_client.put_object(
                 Bucket=BUCKET_NAME,
-                Key=f"{key}.metadata.json",
-                Body=json.dumps(metadata),
+                Key=metadata_key,
+                Body=metadata_content,
                 ContentType="application/json"
             )
-            # c) persist a database record
-            db.add(DocumentTable(
-                project_id=project.id,
-                file_name=file.filename,
-                file_path=key
-            ))
-
-            results.append({
-                "file_name": file.filename,
-                "file_path": key,
-                "bucket": BUCKET_NAME
-            })
-
         except botocore.exceptions.ClientError as e:
-            db.rollback()
-            raise HTTPException(500, f"Failed uploading {file.filename}: {e}")
+            raise HTTPException(
+                status_code=500,
+                detail=f"Upload to S3 failed for file: {file.filename}"
+            )
+        results.append({
+            "file_name": file.filename,
+            "file_path": key,
+            "bucket": BUCKET_NAME
+        })
 
-    # commit all DocumentTable inserts at once
-    db.commit()
+        # Close prev ingestion jobs
+        close_previous_ingestion_jobs()
 
-    # 🔄 3) Ingestion: stop old jobs, start one new, poll to finish
-    close_previous_ingestion_jobs()
+        # Start non-Excel ingestion job with retries if needed.
+        max_retries = 3  
+        for attempt in range(1, max_retries + 1):
+            try:
+                bedrock_client.start_ingestion_job(
+                    knowledgeBaseId=KNOWLEDGE_BASE_ID,
+                    dataSourceId=DATA_SOURCE_ID,
+                    clientToken=str(uuid.uuid4()),
+                    description="starting ingestion"
+                )
+                break  # Exit retry loop if successful.
+            except botocore.exceptions.ClientError as e:
+                print(f"Ingestion job attempt {attempt} failed for key: {key}")
+                print("Error details:", e.response)
+                if attempt == max_retries:
+                    print(f"Max retries reached for key: {key}. Moving on to next file.")
+                else:
+                    time.sleep(1)
 
-    resp = bedrock_client.start_ingestion_job(
-        knowledgeBaseId=KNOWLEDGE_BASE_ID,
-        dataSourceId=DATA_SOURCE_ID,
-        clientToken=str(uuid.uuid4()),
-        description="batch ingest project files"
+    # After all files are uploaded, check if any Excel files were submitted.
+    excel_file_uploaded = any(
+        file.filename.lower().endswith((".xls", ".xlsx"))
+        for file in files
     )
-    job_id = resp["ingestionJob"]["ingestionJobId"]
+    if excel_file_uploaded:
+        # Call the index builder function to process Excel files from the file bucket
+        # and upload the resulting index into the separate index bucket.
+        index = build_or_load_excel_index(user_id, temp_project_id)
+        if index is None:
+            print("[DEBUG] No Excel index was created.")
+        else:
+            print("[DEBUG] Excel index successfully built and uploaded.")
 
-    # poll until COMPLETE or FAILED
-    while True:
-        info = bedrock_client.get_ingestion_job(
-            knowledgeBaseId=KNOWLEDGE_BASE_ID,
-            dataSourceId=DATA_SOURCE_ID,
-            ingestionJobId=job_id
-        )["ingestionJob"]
-        status = info["status"].upper()
-        if status in ("COMPLETE", "FAILED"):
-            break
-        time.sleep(5)
-
-    if status == "FAILED":
-        raise HTTPException(500, f"Ingestion job {job_id} failed: {info.get('failureReasons')}")
-
-    # 📊 4) (optional) rebuild any Excel index
-    if any(f.filename.lower().endswith((".xls", ".xlsx")) for f in files):
-        idx = build_or_load_excel_index(user_id, real_proj_id)
-        if idx:
-            print("[DEBUG] Excel index built/uploaded.")
-
-    # ✅ 5) Respond only once ingestion is done
     return JSONResponse(
-        content={"message": "Files uploaded & ingested successfully", "data": results},
+        content={"message": "Files uploaded successfully", "data": results},
         status_code=200
     )
-
-
 
 
 @research_deep_router.get("/api/project-list")
@@ -392,10 +495,7 @@ def get_all_projects_sorted_by_updated_at(
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
-
-
-
-
+    
 @research_deep_router.get("/api/project/{project_id}/reports")
 def get_reports_sorted_by_updated_at(project_id: str, current_user=Depends(get_current_user), db: Session = Depends(get_db)):
     try:

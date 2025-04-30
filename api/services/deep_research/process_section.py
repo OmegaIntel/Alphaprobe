@@ -1,5 +1,4 @@
-#process_section.py
-# =============================================================================
+# services/deep_research/process_section.py
 
 import os
 import re
@@ -232,6 +231,8 @@ async def node_section_kb_search(state: SectionState) -> dict:
     logger.debug("No KB queries for section: %s", state.title)
     return {}
 
+
+
 async def parallel_excel_search(report_state: ReportState, queries: List[str]) -> SearchResult:
     logger.debug("parallel_excel_search with %d queries", len(queries))
     if not report_state.config.excel_search:
@@ -276,6 +277,8 @@ async def parallel_excel_search(report_state: ReportState, queries: List[str]) -
         context_text="\n\n".join(context_parts),
         original_queries=queries
     )
+
+
 
 async def parallel_web_search(report_state: ReportState, queries: List[str]) -> SearchResult:
     logger.debug("parallel_web_search with %d queries", len(queries))
