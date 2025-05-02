@@ -11,9 +11,10 @@ from db_models.reports import Base as ReportTableBase
 from db_models.relationships import *
 from alembic import context
 import os
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 
-load_dotenv()
+env_path = find_dotenv()  # walks up until it finds .env
+loaded = load_dotenv(env_path)
 
 DATABASE_USER_NAME = os.getenv("DATABASE_USER_NAME")
 DATABASE_PASSWORD = os.getenv("DATABASE_PASSWORD")
