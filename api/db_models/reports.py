@@ -17,4 +17,5 @@ class ReportTable(Base):
     query = Column(Text, nullable=False)
     response = Column(Text, nullable=True)
     sections = Column(JSON, nullable=True)
+    citations = Column(JSON, nullable=True)
     research = Column(Enum("deep", "research", name="research_type"), nullable=False, default="research")
