@@ -13,10 +13,6 @@
     git checkout development
     ```
 
-1. Run Weaviate Docker Container (you may need to use `sudo`):
-    ```
-    docker compose -f docker-compose-weaviate.yaml up --build
-    ```
 
 1. Copy credentials from Slack or Notion page into `.env` file in the root folder.
 
@@ -28,7 +24,7 @@
 
 1. Start the frontend/backend container.
     ```
-    docker compose -f docker-compose-application.yaml up --build
+    docker compose -f docker-compose-application.yaml up --build -d
     ```
 
 ## Access the application
@@ -37,7 +33,7 @@ Once all the containers (4 in total) finished building, you can access the front
 
 Frontend (React):
 ```
-http://localhost:3000
+http://localhost:5173
 ```
 
 Backend (FastAPI):
@@ -47,7 +43,7 @@ http://localhost:8000/api/docs
 
 ## Manual deployment to AWS host
 
-1. Login into the box, such as `ssh ubuntu@ec2-34-228-44-47.compute-1.amazonaws.com`.
+1. Login into the dev server, such as `ssh -i “PEM File path”  ubuntu@3.90.252.178`.
 
 1. Execute the following commands:
     ```

@@ -7,6 +7,7 @@
 ▸ Exposes   sync `invoke()`   |   async `ainvoke()`   |   `with_structured_output()`.
 ▸ Prints token‑usage for debugging.
 """
+
 from __future__ import annotations
 
 import asyncio
@@ -18,12 +19,11 @@ from typing import Any, List, Mapping
 import boto3
 from botocore.config import Config
 from botocore.exceptions import ClientError
+from utils.aws_utils import AwsUtlis
 
 # ───────────────── AWS / Bedrock config ─────────────────
-AWS_REGION = os.getenv("AWS_REGION", "us-east-1")
 AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
-AWS_SESSION_TOKEN = os.getenv("AWS_SESSION_TOKEN")
 
 if not AWS_ACCESS_KEY_ID or not AWS_SECRET_ACCESS_KEY:
     raise EnvironmentError("AWS credentials are not set in ENV.")
@@ -34,24 +34,21 @@ DEFAULT_MODEL_ID = os.getenv(
 )
 DEFAULT_PROFILE_ARN = os.getenv("BEDROCK_CLAUDE_PROFILE_ID")  # optional for provisioned
 
-bedrock = boto3.client(
-    "bedrock-runtime",
-    region_name=AWS_REGION,
-    aws_access_key_id=AWS_ACCESS_KEY_ID,
-    aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
-    aws_session_token=AWS_SESSION_TOKEN,
-    config=Config(retries={"max_attempts": 3}),
-)
+bedrock = AwsUtlis.get_bedrock_runtime()
 
 # ───────── helper cleaning ─────────
+
 
 def unwrap_boxed(text: str) -> str:
     """Remove LaTeX \boxed{…} wrappers and stray quotes."""
     t = text.strip()
-    if (t.startswith("'") and t.endswith("'")) or (t.startswith('"') and t.endswith('"')):
+    if (t.startswith("'") and t.endswith("'")) or (
+        t.startswith('"') and t.endswith('"')
+    ):
         t = t[1:-1].strip()
     m = re.search(r"\\boxed\{([\s\S]*?)\}", t)
     return m.group(1).strip() if m else t
+
 
 def trim_fenced(text: str) -> str:
     t = text.strip()
@@ -59,7 +56,9 @@ def trim_fenced(text: str) -> str:
         return "\n".join(t.splitlines()[1:-1]).strip()
     return t
 
+
 # ───────── wrapper ─────────
+
 
 class ClaudeWrapper:
     def __init__(
@@ -140,11 +139,10 @@ class ClaudeWrapper:
             content = data["choices"][0].get("message", {}).get("content")
         else:  # new schema (March‑2025)
             content = data.get("content")
-                # ── normalize Bedrock 2025 block list format ──
+            # ── normalize Bedrock 2025 block list format ──
         if isinstance(content, list):
             content = "".join(
-                p.get("text", "") if isinstance(p, dict) else str(p)
-                for p in content
+                p.get("text", "") if isinstance(p, dict) else str(p) for p in content
             )
         if content is None:
             raise RuntimeError("Claude returned empty content.")
@@ -159,67 +157,71 @@ class ClaudeWrapper:
         class StructuredCaller:
             def __init__(self, parent):
                 self._parent = parent
+
             def invoke(self, msgs):
                 return self._parent.invoke(msgs)
+
             async def ainvoke(self, msgs):
                 return await self._parent.ainvoke(msgs)
+
         return StructuredCaller(self)
+
 
 # ═════════════════════════════════════════════════════════════════════════════
 #  DeepSeek wrapper
 # ═════════════════════════════════════════════════════════════════════════════
 
-DEEPSEEK_MODEL_ID   = os.getenv(
+DEEPSEEK_MODEL_ID = os.getenv(
     "BEDROCK_DEEPSEEK_MODEL_ID",
-    "us.deepseek.r1-v1:0",   # update to whatever ID you were given
+    "us.deepseek.r1-v1:0",  # update to whatever ID you were given
 )
+
 
 class DeepSeekWrapper:
     def __init__(
         self,
-        model: str = DEEPSEEK_MODEL_ID,      # e.g. "us.deepseek.r1-v1:0"
+        model: str = DEEPSEEK_MODEL_ID,  # e.g. "us.deepseek.r1-v1:0"
         temperature: float = 0.0,
-        max_tokens: int  = 4096,
-        top_p: float      = 1.0,
-        stop: list[str]   = None
+        max_tokens: int = 4096,
+        top_p: float = 1.0,
+        stop: list[str] = None,
     ):
-        self.model_id    = model
+        self.model_id = model
         self.temperature = temperature
-        self.max_tokens  = max_tokens
-        self.top_p       = top_p
-        self.stop        = stop or []
+        self.max_tokens = max_tokens
+        self.top_p = top_p
+        self.stop = stop or []
 
     def invoke(self, messages):
         # Build your prompt as before
         last_user = next(
-            (m for m in reversed(messages) if m["role"] == "user"),
-            messages[-1]
+            (m for m in reversed(messages) if m["role"] == "user"), messages[-1]
         )
         prompt_text = last_user["content"]
 
         payload = {
-            "prompt":      prompt_text,
-            "max_tokens":  self.max_tokens,
+            "prompt": prompt_text,
+            "max_tokens": self.max_tokens,
             "temperature": self.temperature,
-            "top_p":       self.top_p,
-            "stop":        self.stop,
+            "top_p": self.top_p,
+            "stop": self.stop,
         }
 
         try:
             resp = bedrock.invoke_model(
-                modelId     = self.model_id,
-                body        = json.dumps(payload),
-                contentType = "application/json",
-                accept      = "application/json",
+                modelId=self.model_id,
+                body=json.dumps(payload),
+                contentType="application/json",
+                accept="application/json",
             )
         except ClientError as e:
             raise RuntimeError(f"Bedrock invocation failed: {e}")
 
         # ----- NEW: handle the StreamingBody -----
-        stream = resp.get("body")                 # a botocore.response.StreamingBody
-        raw_bytes = stream.read()                 # read all bytes from the stream
-        text      = raw_bytes.decode("utf-8")     # decode to string
-        data      = json.loads(text)              # parse JSON
+        stream = resp.get("body")  # a botocore.response.StreamingBody
+        raw_bytes = stream.read()  # read all bytes from the stream
+        text = raw_bytes.decode("utf-8")  # decode to string
+        data = json.loads(text)  # parse JSON
 
         # -----------------------------------------
 

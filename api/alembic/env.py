@@ -2,39 +2,31 @@ from logging.config import fileConfig
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 from db_models.users import Base as UserBase
-from db_models.demo_requests import Base as DemoRequestBase
 from db_models.deals import Base as DealsBase
-from db_models.task_status import Base as TaskStatusBase
-from db_models.workspace import Base as WorkspaceBase
-from db_models.checklist import Base as ChecklistBase
-from db_models.knowledgebase import Base as KnowledgeBase
-from db_models.file_upload import Base as DocumentBase
-from db_models.chat import Base as ChatBase
 from db_models.shared_user_deals import Base as SharedUserDeals
 from db_models.new_users import Base as NewUsers
-from db_models.request_document import Base as RequestBase
-from db_models.rag_session import Base as RagSessionBase
 from db_models.documents import Base as DocumentTableBase
 from db_models.projects import Base as ProjectBase
 from db_models.reports import Base as ReportTableBase
 from db_models.relationships import *
 from alembic import context
 import os
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 
-load_dotenv()
+env_path = find_dotenv()  # walks up until it finds .env
+loaded = load_dotenv(env_path)
 
-DATABASE_USER_NAME = os.getenv('DATABASE_USER_NAME')
-DATABASE_PASSWORD = os.getenv('DATABASE_PASSWORD')
-DATABASE_HOST = os.getenv('DATABASE_HOST')
-DATABASE_PORT = int(os.getenv('DATABASE_PORT'))
-DATABASE_NAME = os.getenv('DATABASE_NAME')
+DATABASE_USER_NAME = os.getenv("DATABASE_USER_NAME")
+DATABASE_PASSWORD = os.getenv("DATABASE_PASSWORD")
+DATABASE_HOST = os.getenv("DATABASE_HOST")
+DATABASE_PORT = int(os.getenv("DATABASE_PORT"))
+DATABASE_NAME = os.getenv("DATABASE_NAME")
 
 DATABASE_URL = f"mysql+mysqldb://{DATABASE_USER_NAME}:{DATABASE_PASSWORD}@{DATABASE_HOST}:{DATABASE_PORT}/{DATABASE_NAME}"
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
-config.set_main_option('sqlalchemy.url', DATABASE_URL)
+config.set_main_option("sqlalchemy.url", DATABASE_URL)
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
@@ -45,9 +37,15 @@ if config.config_file_name is not None:
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
-target_metadata = [UserBase.metadata, DemoRequestBase.metadata, DealsBase.metadata, TaskStatusBase.metadata, WorkspaceBase.metadata, KnowledgeBase.metadata,
-                   ChecklistBase.metadata, DocumentBase.metadata, ChatBase.metadata, SharedUserDeals.metadata, NewUsers.metadata, RequestBase.metadata,RagSessionBase.metadata,
-                   ProjectBase.metadata, ReportTableBase.metadata, DocumentTableBase.metadata ]
+target_metadata = [
+    UserBase.metadata,
+    DealsBase.metadata,
+    SharedUserDeals.metadata,
+    NewUsers.metadata,
+    ProjectBase.metadata,
+    ReportTableBase.metadata,
+    DocumentTableBase.metadata,
+]
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
@@ -93,9 +91,7 @@ def run_migrations_online() -> None:
     )
 
     with connectable.connect() as connection:
-        context.configure(
-            connection=connection, target_metadata=target_metadata
-        )
+        context.configure(connection=connection, target_metadata=target_metadata)
 
         with context.begin_transaction():
             context.run_migrations()

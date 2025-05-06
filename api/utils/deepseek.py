@@ -4,8 +4,8 @@ import asyncio
 from openai import OpenAI as ORouterClient
 from dotenv import load_dotenv, find_dotenv
 
-env_path = find_dotenv()              # walks up until it finds .env
-loaded  = load_dotenv(env_path)
+env_path = find_dotenv()  # walks up until it finds .env
+loaded = load_dotenv(env_path)
 
 # Validate API key
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
@@ -18,8 +18,8 @@ client = ORouterClient(
     api_key=OPENROUTER_API_KEY,
     default_headers={
         "HTTP-Referer": "http://localhost:5173",  # your domain
-        "X-Title": "Alphaprobe API"  # your app name
-    }
+        "X-Title": "Alphaprobe API",  # your app name
+    },
 )
 
 
@@ -29,7 +29,9 @@ def unwrap_boxed(text: str) -> str:
     """
     t = text.strip()
     # Strip surrounding single or double quotes
-    if (t.startswith("'") and t.endswith("'")) or (t.startswith('"') and t.endswith('"')):
+    if (t.startswith("'") and t.endswith("'")) or (
+        t.startswith('"') and t.endswith('"')
+    ):
         t = t[1:-1].strip()
     # Remove \boxed{...} wrapper
     pattern = r"\\boxed\{([\s\S]*?)\}"
@@ -63,7 +65,7 @@ class DeepSeekWrapper:
             messages=formatted,
             temperature=self.temperature,
             max_tokens=self.max_tokens,
-            stop=None
+            stop=None,
         )
 
         # --- new validation block ---
