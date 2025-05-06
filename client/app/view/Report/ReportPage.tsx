@@ -123,7 +123,7 @@ const ReportPage: FC = () => {
           temp_project_id: newQuestion.temp_project_id,
           uploaded_files: newQuestion.uploadedDocuments,
           researchType: newQuestion.researchType,
-          workflow, // ✅ passed here
+          workflow, 
         });
         if (response?.project) {
           dispatch(setProject(response.project));
@@ -144,7 +144,7 @@ const ReportPage: FC = () => {
           uploaded_files: newQuestion.uploadedDocuments || [],
           projectId: project_id,
           researchType: newQuestion.researchType,
-          workflow, // ✅ passed here
+          workflow, 
         });
       }
 

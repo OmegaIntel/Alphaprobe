@@ -29,6 +29,7 @@ from websocket_manager import WebSocketManager
 from utils.websocket_utils import handle_websocket_communication
 from api.api_deep_researcher import research_deep_router
 from api.api_kb_search import aws_kb_router
+from api.api_financial_model_files import router as financial_model_router
 
 
 app = FastAPI(docs_url="/api/docs", openapi_url="/api/openapi.json")
@@ -82,6 +83,8 @@ app.include_router(perplexity_router)
 app.include_router(langflow_router)
 app.include_router(research_deep_router)
 app.include_router(aws_kb_router)
+app.include_router(financial_model_router)
+
 # app.include_router(deep_research_router)
 
 if __name__ == "__main__":
