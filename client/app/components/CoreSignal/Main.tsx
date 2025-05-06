@@ -7,8 +7,11 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
+  CardFooter,
 } from '~/components/ui/card';
 import { Dialog } from '~/components/ui/dialog';
+import { Alert, AlertDescription, AlertTitle } from '~/components/ui/alert';
+import { InfoIcon } from 'lucide-react';
 import { CORESIGNAL_API_KEY } from '~/constant';
 
 // Import components and types
@@ -37,14 +40,17 @@ export default function CoreSignalMain() {
         enrichedData: actionData.enrichedData,
       };
       
-      // Log the company data that will be displayed in the UI
-    //   console.log("🔍 Selected company data (client-side):", companyWithEnriched);
-      
       setSelectedCompany(companyWithEnriched);
       setShowDetailsDialog(true);
     }
   }, [actionData]);
 
+  // Current date is within the transition period (Apr 24, 2025 - Jul 23, 2025)
+  const today = new Date();
+  const transitionStartDate = new Date('2025-04-24');
+  const transitionEndDate = new Date('2025-07-23');
+  const isInTransitionPeriod = today >= transitionStartDate && today <= transitionEndDate;
+  
   return (
     <Card className="w-full max-w-6xl mx-auto">
       <CardHeader>
@@ -53,6 +59,20 @@ export default function CoreSignalMain() {
           Enter a natural language query to search companies
         </CardDescription>
       </CardHeader>
+
+      {/* {isInTransitionPeriod && (
+        <CardContent className="pt-0">
+          <Alert className="mb-4">
+            <InfoIcon className="h-4 w-4" />
+            <AlertTitle>API Authorization Changes</AlertTitle>
+            <AlertDescription>
+              Coresignal is updating their API authorization process. Please ensure you have 
+              updated your API key from the Coresignal dashboard. The transition period ends 
+              on July 23, 2025.
+            </AlertDescription>
+          </Alert>
+        </CardContent>
+      )} */}
 
       <CardContent>
         {/* Add a hidden API key input that will be included in all forms */}

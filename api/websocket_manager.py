@@ -29,7 +29,7 @@ class WebSocketManager:
     async def disconnect(self, websocket: WebSocket):
         """Disconnect a websocket."""
         if websocket in self.active_connections:
-            self.active_connections.remove(websocket) 
+            self.active_connections.remove(websocket)
             if websocket in self.message_queues:
                 del self.message_queues[websocket]
             try:

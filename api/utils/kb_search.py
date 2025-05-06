@@ -3,33 +3,19 @@ import boto3
 import botocore
 from typing import Dict, Any
 from dotenv import load_dotenv, find_dotenv
+from utils.aws_utils import AwsUtlis
 
-env_path = find_dotenv()              # walks up until it finds .env
-loaded  = load_dotenv(env_path)
+env_path = find_dotenv()  # walks up until it finds .env
+loaded = load_dotenv(env_path)
 
 # =============================================================================
 # ENV / AWS CONFIG
 # =============================================================================
-s3_client = boto3.client(
-    "s3",
-    aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
-    aws_secret_access_key=os.getenv("AWS_SECRET_ACCESS_KEY"),
-    region_name=os.getenv("AWS_REGION", "us-east-1")
-)
+s3_client = AwsUtlis.get_s3_client()
 
-bedrock_client = boto3.client(
-    "bedrock-agent",
-    aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
-    aws_secret_access_key=os.getenv("AWS_SECRET_ACCESS_KEY"),
-    region_name=os.getenv("AWS_REGION", "us-east-1")
-)
+bedrock_client = AwsUtlis.get_bedrock_agent()
 
-bedrock_runtime = boto3.client(
-    "bedrock-agent-runtime",
-    aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
-    aws_secret_access_key=os.getenv("AWS_SECRET_ACCESS_KEY"),
-    region_name=os.getenv("AWS_REGION", "us-east-1")
-)
+bedrock_runtime = AwsUtlis.get_bedrock_agent_runtime()
 
 # =============================================================================
 # BEDROCK / KB (Re-added as per original)
@@ -53,7 +39,7 @@ Instructions:
 current time $current_time$
 
 Output the organized and prioritized results in a structured format."""
- 
+
 orchestrationPrompt = """
 You are a knowledgeable assistant with access to a comprehensive knowledge base. 
 Use the following organized search results to answer the user's question. 
@@ -75,6 +61,7 @@ current time - $current_time$
 
 Answer:"""
 
+
 def get_presigned_url_from_source_uri(source_uri: str, expiration: int = 3600) -> str:
     if not source_uri.startswith("s3://"):
         return source_uri
@@ -85,16 +72,17 @@ def get_presigned_url_from_source_uri(source_uri: str, expiration: int = 3600) -
     bucket, key = parts
     try:
         url = s3_client.generate_presigned_url(
-            "get_object",
-            Params={"Bucket": bucket, "Key": key},
-            ExpiresIn=expiration
+            "get_object", Params={"Bucket": bucket, "Key": key}, ExpiresIn=expiration
         )
         return url
     except Exception as e:
         print(f"[DEBUG] Error generating presigned URL: {e}")
         return source_uri
 
-def query_kb(input_text: str, kb_id: str, user_id: str, project_id: str, model_arn: str) -> Dict[str, Any]:
+
+def query_kb(
+    input_text: str, kb_id: str, user_id: str, project_id: str, model_arn: str
+) -> Dict[str, Any]:
     print(f"[DEBUG] query_kb with text={input_text}")
     vector_search_config = {"numberOfResults": 5}
     filters = []
@@ -113,9 +101,7 @@ def query_kb(input_text: str, kb_id: str, user_id: str, project_id: str, model_a
             retrieveAndGenerateConfiguration={
                 "knowledgeBaseConfiguration": {
                     "generationConfiguration": {
-                        "promptTemplate": {
-                            "textPromptTemplate": generationPrompt
-                        }
+                        "promptTemplate": {"textPromptTemplate": generationPrompt}
                     },
                     "orchestrationConfiguration": {
                         "queryTransformationConfiguration": {
@@ -126,10 +112,10 @@ def query_kb(input_text: str, kb_id: str, user_id: str, project_id: str, model_a
                     "modelArn": model_arn,
                     "retrievalConfiguration": {
                         "vectorSearchConfiguration": vector_search_config
-                    }
+                    },
                 },
-                "type": "KNOWLEDGE_BASE"
-            }
+                "type": "KNOWLEDGE_BASE",
+            },
         )
         return resp
     except botocore.exceptions.ClientError as e:

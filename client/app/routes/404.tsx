@@ -1,4 +1,4 @@
-import NotFound from "~/pages/NotFound";
+import NotFound from "~/components/NotFound";
 
 
 export function loader() {

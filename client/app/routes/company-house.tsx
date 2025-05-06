@@ -7,7 +7,7 @@ import {
   DEFAULT_API_KEY
 } from "~/services/coresignal-api";
 import CoreSignalMain from "~/components/CoreSignal/Main";import React, { useState } from "react";
-import UploadSearch from "~/components/Dashboard/CompanyHouse/UploadSearch";
+import UploadSearch from "~/view/CompanyHouse/UploadSearch";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "~/components/ui/tabs";
 import { Card, CardContent } from "~/components/ui/card";
 

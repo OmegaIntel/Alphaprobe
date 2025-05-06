@@ -1,5 +1,5 @@
 import React from 'react';
-import DueDiligencePage from '~/components/Workflow/duediligence/page';
+import DueDiligencePage from '~/view/Workflow/duediligence/page';
 
 const DueDiligence: React.FC = () => {
   return (

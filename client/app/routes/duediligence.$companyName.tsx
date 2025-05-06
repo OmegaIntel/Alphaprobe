@@ -1,4 +1,4 @@
-import CustomReportLayout from "~/components/Dashboard/CustomReport/CustomReportLayout";
+import CustomReportLayout from "~/view/CustomReport/CustomReportLayout";
 import { useNavigate, useParams } from "@remix-run/react";
 import { Button } from "~/components/ui/button";
 
