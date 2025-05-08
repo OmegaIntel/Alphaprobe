@@ -23,6 +23,14 @@ import { useLocation, useParams } from '@remix-run/react';
 import { setProject } from '~/store/slices/sideBar';
 
 const MarketResearch: FC = () => {
+  const getWorkflowFromPath = (path: string): string => {
+    if (path.includes('/due-diligence')) return 'due_diligence';
+    if (path.includes('/market-research')) return 'market_research';
+    if (path.includes('/valuation')) return 'valuation';
+    if (path.includes('/company-house')) return 'sourcing';
+    return 'general';
+  };
+
   const location = useLocation();
   const { id = null } = useParams();
   const dispatch = useDispatch<AppDispatch>();
@@ -35,6 +43,12 @@ const MarketResearch: FC = () => {
   const mainContentRef = useRef<HTMLDivElement>(null);
   const reportContentRef = useRef<HTMLDivElement>(null);
   const { activeProjectId } = useSelector((state: RootState) => state.sidebar);
+  
+  const workflow = getWorkflowFromPath(location.pathname).toUpperCase() as
+  | 'DUE_DILIGENCE'
+  | 'MARKET_RESEARCH'
+  | 'SOURCING'
+  | 'VALUATION';
 
   useEffect(() => {
     setTimeout(() => {
@@ -103,7 +117,8 @@ const MarketResearch: FC = () => {
           templateId: newQuestion.reportType, 
           temp_project_id: newQuestion.temp_project_id,
           uploaded_files: newQuestion.uploadedDocuments,
-          researchType: newQuestion.researchType
+          researchType: newQuestion.researchType,
+          workflow,
         });
         if (response?.project) {
           dispatch(setProject(response.project));
@@ -123,7 +138,8 @@ const MarketResearch: FC = () => {
           temp_project_id: newQuestion.temp_project_id,
           uploaded_files: newQuestion.uploadedDocuments || [],
           projectId: project_id,
-          researchType: newQuestion.researchType
+          researchType: newQuestion.researchType,
+          workflow,
         });
       }
 
@@ -210,7 +226,7 @@ const MarketResearch: FC = () => {
             className="flex h-[88%] w-full grow flex-col items-center justify-between overflow-x-auto"
           >
             <div className="container w-full space-y-2">
-              <div className="flex justify-end mb-4">
+              {/* <div className="flex justify-end mb-4">
                 <button
                   onClick={handleExportPDF}
                   className="px-4 py-2 text-sm text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition-colors"
@@ -218,7 +234,7 @@ const MarketResearch: FC = () => {
                 >
                   Export to PDF
                 </button>
-              </div>
+              </div> */}
               <div 
                 ref={reportContentRef} 
                 className="container space-y-2 task-components"

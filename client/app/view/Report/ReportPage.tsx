@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, useCallback, FC } from 'react'; 
+import { useRef, useState, useEffect, useCallback, FC } from 'react';
 import { useWebSocket } from './hooks/useWebSocket';
 import { useResearchHistory } from './hooks/useResearchHistory';
 import ReportBlock from './ReportBlock';
@@ -6,7 +6,12 @@ import InputComponent from './InputBar/InputComponent';
 import { MoveDown } from 'lucide-react';
 import Loader from './Loader';
 import InitialPage from './InitialPage';
-import { InitialFormData, ConversationData, Citation, ResearchType } from './reportUtils';
+import {
+  InitialFormData,
+  ConversationData,
+  Citation,
+  ResearchType,
+} from './reportUtils';
 import {
   createGetDocumentReport,
   updateGetDocumentReport,
@@ -16,9 +21,16 @@ import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from '../../store/store';
 import { useLocation, useParams } from '@remix-run/react';
 import { setProject } from '~/store/slices/sideBar';
-
-
 import Query from './Query';
+
+// 🔧 Helper: map route to workflow
+const getWorkflowFromPath = (path: string): string => {
+  if (path.includes('/due-diligence')) return 'due_diligence';
+  if (path.includes('/market-research')) return 'market_research';
+  if (path.includes('/valuation')) return 'valuation';
+  if (path.includes('/company-house')) return 'sourcing';
+  return 'general';
+};
 
 const ReportPage: FC = () => {
   const location = useLocation();
@@ -30,9 +42,15 @@ const ReportPage: FC = () => {
   const [conversation, setConversation] = useState<ConversationData[]>([]);
   const [isStopped, setIsStopped] = useState(false);
   const [showScrollButton, setShowScrollButton] = useState(false);
-  //const [sections, setSections] = useState<Section[]>([]);
   const mainContentRef = useRef<HTMLDivElement>(null);
   const { activeProjectId } = useSelector((state: RootState) => state.sidebar);
+
+  // ✅ Derive workflow from path
+  const workflow = getWorkflowFromPath(location.pathname).toUpperCase() as
+    | 'DUE_DILIGENCE'
+    | 'MARKET_RESEARCH'
+    | 'SOURCING'
+    | 'VALUATION';
 
   useEffect(() => {
     setTimeout(() => {
@@ -48,14 +66,14 @@ const ReportPage: FC = () => {
             setLoading(false);
           } finally {
             if (res?.length) {
-              const conv = res.map((item) => ({
+              const conv = res.map((item:any) => ({
                 id: item.id,
                 query: item.query,
                 res: item.response,
                 res_id: item.id,
                 updated_at: item.updated_at,
                 sections: item.sections,
-                researchType: item.research
+                researchType: item.research,
               }));
               setConversation([...conv]);
               setLoading(false);
@@ -70,11 +88,8 @@ const ReportPage: FC = () => {
     }, 1000);
   }, [location, id]);
 
-  console.log('report--------------------------', conversation);
-
   const handleDisplayResult = async (newQuestion: InitialFormData) => {
     try {
-      // console.log('report--------------------------');
       //@ts-ignore
       const projectID = globalThis.reportGeneration.project_id || id;
 
@@ -85,14 +100,19 @@ const ReportPage: FC = () => {
         ...prevOrder,
         {
           query: newQuestion.promptValue,
-          res: "",
+          res: '',
           res_id: `${prevOrder.length}`,
-          sections:[],
-          researchType: newQuestion.researchType
+          sections: [],
+          researchType: newQuestion.researchType,
         },
       ]);
 
-      let response: { report: string; sections?: Citation[]; project: any, researchType: ResearchType } | null = null;
+      let response: {
+        report: string;
+        sections?: Citation[];
+        project: any;
+        researchType: ResearchType;
+      } | null = null;
 
       if (!projectID) {
         response = await createGetDocumentReport({
@@ -102,7 +122,8 @@ const ReportPage: FC = () => {
           templateId: newQuestion.reportType,
           temp_project_id: newQuestion.temp_project_id,
           uploaded_files: newQuestion.uploadedDocuments,
-          researchType: newQuestion.researchType
+          researchType: newQuestion.researchType,
+          workflow, // ✅ passed here
         });
         if (response?.project) {
           dispatch(setProject(response.project));
@@ -112,7 +133,7 @@ const ReportPage: FC = () => {
           //@ts-ignore
           globalThis.reportGeneration = generateReport;
         }
-      } else { 
+      } else {
         const project_id = id || projectID;
         response = await updateGetDocumentReport({
           promptValue: newQuestion.promptValue,
@@ -122,18 +143,21 @@ const ReportPage: FC = () => {
           temp_project_id: newQuestion.temp_project_id,
           uploaded_files: newQuestion.uploadedDocuments || [],
           projectId: project_id,
-          researchType: newQuestion.researchType
+          researchType: newQuestion.researchType,
+          workflow, // ✅ passed here
         });
       }
-
-      // console.log('res----------------', response);
 
       if (response) {
         setConversation((prev: ConversationData[]) => {
           let lastCon = [...prev].pop();
           return prev.map((resData) => {
             if (resData.res_id === lastCon?.res_id) {
-              return { ...resData, res: `${response.report}`, sections : response.sections || [] };
+              return {
+                ...resData,
+                res: `${response.report}`,
+                sections: response.sections || [],
+              };
             }
             return resData;
           });
@@ -148,8 +172,10 @@ const ReportPage: FC = () => {
 
   const handleScroll = useCallback(() => {
     const scrollPosition = window.scrollY + window.innerHeight;
-    const nearBottom = scrollPosition >= document.documentElement.scrollHeight - 100;
-    const isPageScrollable = document.documentElement.scrollHeight > window.innerHeight;
+    const nearBottom =
+      scrollPosition >= document.documentElement.scrollHeight - 100;
+    const isPageScrollable =
+      document.documentElement.scrollHeight > window.innerHeight;
     setShowScrollButton(isPageScrollable && !nearBottom);
   }, []);
 
@@ -190,7 +216,7 @@ const ReportPage: FC = () => {
           <InitialPage
             promptValue={promptValue}
             setPromptValue={setPromptValue}
-            handleDisplayResult={(query: InitialFormData) => { 
+            handleDisplayResult={(query: InitialFormData) => {
               if (query.promptValue) {
                 handleDisplayResult(query);
               }
@@ -205,9 +231,7 @@ const ReportPage: FC = () => {
           >
             <div className="container w-full space-y-2">
               <div className="container space-y-2 task-components">
-                <ReportBlock
-                  orderedData={conversation}
-                />
+                <ReportBlock orderedData={conversation} />
               </div>
             </div>
           </div>
@@ -228,7 +252,7 @@ const ReportPage: FC = () => {
                     handleDisplayResult({
                       ...pref,
                       promptValue: value,
-                      temp_project_id: activeProjectId?.temp_project_id
+                      temp_project_id: activeProjectId?.temp_project_id,
                     });
                   }
                 }}
@@ -239,14 +263,6 @@ const ReportPage: FC = () => {
           </div>
         )}
       </div>
-      {/* {showScrollButton && showResult && (
-        <button
-          onClick={scrollToBottom}
-          className="fixed bottom-4 right-8 flex items-center justify-center w-12 h-12 text-gray-600 bg-gray-200 rounded-full hover:bg-gray-400 transform hover:scale-105 transition-all duration-200 shadow-lg z-50"
-        >
-          <MoveDown className="w-12 h-12" />
-        </button>
-      )} */}
     </div>
   );
 };

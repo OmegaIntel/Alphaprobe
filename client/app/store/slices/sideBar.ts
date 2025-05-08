@@ -15,6 +15,7 @@ interface Project {
 interface PaginationParams {
   limit: number;
   offset: number;
+  workflowType?: string;
 }
 
 interface PaginationMetadata {
@@ -89,17 +90,16 @@ export const fetchProjects = createAsyncThunk(
   async (params?: PaginationParams) => {
     const limit = params?.limit || 10;
     const offset = params?.offset || 0;
-    
+    const workflowType = params?.workflowType || '';
+
     const config: RequestInit = { method: "GET" };
-    const response = await fetcher(
-      `/api/project-list?limit=${limit}&offset=${offset}`, 
-      config
-    );
-    
-    // Type assertion to access any properties safely
+
+    const url = `/api/project-list?limit=${limit}&offset=${offset}${workflowType ? `&workflow=${workflowType.toLowerCase()}` : ''}`;
+
+    const response = await fetcher(url, config);
+
     const anyResponse = response as any;
-    
-    // Create a standardized return structure that matches ProjectsResponse
+
     const result: ProjectsResponse = {
       message: anyResponse.message || "Projects fetched",
       data: Array.isArray(anyResponse.data) ? anyResponse.data : [],
