@@ -151,7 +151,26 @@ class ReportState:
     report_type: int
     file_search: bool
     web_research: bool
+    update_query: Optional[str] = None
+    update_section_index: Optional[int] = None
+    update_queries: List[str] = field(default_factory=list)
+    exists: bool = False
     config: ReportConfig = field(default_factory=ReportConfig)
     outline: List[SectionState] = field(default_factory=list)
     current_section_idx: int = 0
     final_report: str = ""
+
+class SectionChooser(BaseModel):
+    chosen_index: Optional[int] = Field(
+        None, description="Index of the section that best matches `state.update_query`, or null."
+    )
+
+class UpdateQueries(BaseModel):
+    queries: List[str] = Field(
+        ..., description="Two follow-up queries to research the update."
+    )
+
+class UpdateParagraph(BaseModel):
+    paragraph: str = Field(
+        ..., description="The paragraph to be updated with new information."
+    )

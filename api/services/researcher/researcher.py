@@ -107,7 +107,7 @@ async def generate_report(
         return {
             "message": "Report generated and saved successfully",
             "report": report_content.get("report", ""),
-            "sections": CITATIONS,
+            "citations": CITATIONS,
         }
     except Exception as e:
         print(f"[generate_report] Error encountered: {str(e)}")
