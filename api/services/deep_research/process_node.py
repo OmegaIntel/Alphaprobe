@@ -5,7 +5,7 @@ import logging
 from typing import List, Union, Tuple
 
 from langgraph.graph import StateGraph
-from api.services.deep_research.stats import (
+from services.deep_research.stats import (
     ReportState,
     SectionState,
     SectionContent,

@@ -3,30 +3,30 @@ import uvicorn
 from fastapi import FastAPI, Request, WebSocket, WebSocketDisconnect
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-from api.apis.api_verify_user import verify_user_router
-from api.apis.api_generate_token import user_generate_token_router
-from api.apis.api_register_user import user_register_router
-from api.apis.api_get_current_user import current_user_router
+from apis.api_verify_user import verify_user_router
+from apis.api_generate_token import user_generate_token_router
+from apis.api_register_user import user_register_router
+from apis.api_get_current_user import current_user_router
 from pydantic import ValidationError
 from apis.api_generate_pdf import pdf_report_router
 from apis.api_projects import project_router
 from websocket_manager import WebSocketManager
 from utils.websocket_utils import handle_websocket_communication
-from api.apis.api_create_deep_researcher import create_research_deep_router
-from api.apis.api_update_deep_researcher import update_deep_researcher_router
-from api.apis.api_upload_deep_research_files import deer_research_upload_files_router
-from api.apis.api_get_project_list import project_list_router
-from api.apis.api_get_reports import reports_router
-from api.apis.api_upload_outline_file import upload_outline_file_router
+from apis.api_create_deep_researcher import create_research_deep_router
+from apis.api_update_deep_researcher import update_deep_researcher_router
+from apis.api_upload_deep_research_files import deer_research_upload_files_router
+from apis.api_get_project_list import project_list_router
+from apis.api_get_reports import reports_router
+from apis.api_upload_outline_file import upload_outline_file_router
 from apis.api_kb_search import aws_kb_router
 
 
 import logging
 
 logger = logging.getLogger(__name__)
-from api.api_deep_researcher import research_deep_router
-from api.api_kb_search import aws_kb_router
-from api.api_financial_model_files import router as financial_model_router
+# from apis.api_create_deep_researcher import create_research_deep_router
+# from apis.api_kb_search import aws_kb_router
+from apis.api_financial_model_files import router as financial_model_router
 
 
 app = FastAPI(docs_url="/api/docs", openapi_url="/api/openapi.json")

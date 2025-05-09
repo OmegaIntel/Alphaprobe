@@ -8,13 +8,13 @@ from pydantic import Field, create_model
 from langgraph.graph import StateGraph, START, END
 from langchain_core.messages import SystemMessage, HumanMessage
 
-from api.services.deep_research.stats import SectionState
+from services.deep_research.stats import SectionState
 from services.deep_research.llm import gpt_4
 from services.deep_research.prompts import (
     REPORT_PLANNER_QUERY_WRITER_INSTRUCTIONS,
     QUERY_PROMPT_FOR_ITERATION,
 )
-from api.services.deep_research.process_node import (
+from services.deep_research.process_node import (
     parallel_excel_search,
     parallel_web_search,
     parallel_kb_query,

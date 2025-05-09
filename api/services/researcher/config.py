@@ -2,7 +2,7 @@ import os
 from typing import Any, Optional
 from dataclasses import dataclass, fields
 from langchain_core.runnables import RunnableConfig
-from api.services.researcher.prompts import DEFAULT_REPORT_STRUCTURE
+from services.researcher.prompts import DEFAULT_REPORT_STRUCTURE
 
 # ------------------------ Configuration ------------------------
 

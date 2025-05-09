@@ -1,6 +1,6 @@
 from typing import Optional
 from fastapi.responses import JSONResponse
-from api.apis.api_get_current_user import get_current_user
+from apis.api_get_current_user import get_current_user
 from fastapi import APIRouter, Depends, HTTPException, Query
 from db_models.projects import Project
 from db.db_session import get_db

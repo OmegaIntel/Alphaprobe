@@ -4,15 +4,15 @@ from enum import Enum
 from pydantic import BaseModel
 import logging
 from fastapi.responses import JSONResponse
-from api.apis.api_get_current_user import get_current_user
+from apis.api_get_current_user import get_current_user
 from fastapi import APIRouter, Depends, HTTPException
 from db_models.documents import DocumentTable
 from db_models.reports import ReportTable
 from db_models.projects import Project
 from db.db_session import get_db
 from sqlalchemy.orm import Session
-from api.services.deep_research.deep_research import deep_research
-from api.services.researcher.researcher import generate_report
+from services.deep_research.deep_research import deep_research
+from services.researcher.researcher import generate_report
 from dotenv import load_dotenv, find_dotenv
 
 env_path = find_dotenv()  # walks up until it finds .env

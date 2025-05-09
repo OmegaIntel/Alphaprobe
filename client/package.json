@@ -37,6 +37,7 @@
     "amplitude-js": "^8.21.9",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
     "html2canvas": "^1.4.1",
     "isbot": "^4.1.0",
     "jspdf": "^2.5.2",
@@ -55,7 +56,8 @@
     "tailwind-scrollbar": "^2.1.0",
     "tailwindcss-animate": "^1.0.7",
     "uuidv4": "^6.2.13",
-    "vfile": "^6.0.3"
+    "vfile": "^6.0.3",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@amplitude/analytics-browser": "^2.11.11",

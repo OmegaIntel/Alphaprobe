@@ -4,7 +4,7 @@ import time
 import json
 from typing import List
 from fastapi.responses import JSONResponse
-from api.apis.api_get_current_user import get_current_user
+from apis.api_get_current_user import get_current_user
 from fastapi import APIRouter, Depends, File, Form, UploadFile, HTTPException
 import botocore
 from utils.aws_utils import AwsUtlis

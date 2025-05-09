@@ -6,8 +6,8 @@ from typing import List, Union
 logger = logging.getLogger(__name__)
 
 from utils.excel_utils import has_excel_files
-from api.services.deep_research.graph_node import report_graph_compiled
-from api.services.deep_research.stats import (
+from services.deep_research.graph_node import report_graph_compiled
+from services.deep_research.stats import (
     SearchResult,
     Citation,
     ReportState,

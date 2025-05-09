@@ -4,7 +4,7 @@ import nest_asyncio
 import json
 from typing import List, Any
 import re
-from api.services.researcher.stats import (
+from services.researcher.stats import (
     ReportState,
     Citation,
     KBCitation,
@@ -15,7 +15,7 @@ from utils.websearch_utils import call_tavily_api
 from utils.pdf_parser import extract_pdf_from_s3, parse_pdf_structure
 from langchain_core.runnables import RunnableConfig
 from utils.bedrock_llm import ClaudeWrapper, DeepSeekWrapper, trim_fenced, unwrap_boxed
-from api.services.researcher.prompts import OUTLINE_PROMPT
+from services.researcher.prompts import OUTLINE_PROMPT
 from dotenv import load_dotenv, find_dotenv
 
 env_path = find_dotenv()  # walks up until it finds .env

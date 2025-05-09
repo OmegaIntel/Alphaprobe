@@ -1,5 +1,5 @@
 import logging
-from api.services.deep_research.stats import ReportState, SectionState
+from services.deep_research.stats import ReportState, SectionState
 
 # Configure logger
 logger = logging.getLogger(__name__)

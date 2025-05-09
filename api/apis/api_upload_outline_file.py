@@ -1,6 +1,6 @@
 import os
 from fastapi.responses import JSONResponse
-from api.apis.api_get_current_user import get_current_user
+from apis.api_get_current_user import get_current_user
 from fastapi import APIRouter, Depends, File, Form, UploadFile, HTTPException
 from utils.aws_utils import AwsUtlis
 from dotenv import load_dotenv, find_dotenv

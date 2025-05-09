@@ -1,10 +1,10 @@
 import logging
 
 from langgraph.graph import StateGraph, START, END
-from api.services.deep_research.stats import ReportState
-from api.services.deep_research.outline_node import node_generate_outline
-from api.services.deep_research.process_node import node_process_section
-from api.services.deep_research.compile_node import node_compile_final
+from services.deep_research.stats import ReportState
+from services.deep_research.outline_node import node_generate_outline
+from services.deep_research.process_node import node_process_section
+from services.deep_research.compile_node import node_compile_final
 
 # Configure module‐level logger
 logger = logging.getLogger(__name__)
