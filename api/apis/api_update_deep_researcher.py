@@ -80,9 +80,21 @@ async def deep_research_tool_update(
 
         # Run research with proper state handling
         result = None
+
+        # ---------------------------- Update Workflow if needed ----------------------------
+        existing = (
+            db.query(ReportTable)
+              .filter(ReportTable.project_id == project.id)
+              .order_by(ReportTable.updated_at.desc())
+              .first()
+        )
+        report_exists = existing is not None
+
+        logger.info(f"[DEBUG] Report exists: {report_exists}")
         for attempt in range(MAX_RETRIES):
             try:
                 if query.researchType == "deep":
+                    outline = getattr(existing, "sections", []) or []
                     result = await deep_research(
                         query.instruction,
                         int(query.report_type),
@@ -90,6 +102,8 @@ async def deep_research_tool_update(
                         query.web_search,
                         query.temp_project_id,
                         user_id,
+                        report_exists,
+                        outline,
                     )
                 else:
                     result = await generate_report(
@@ -116,6 +130,7 @@ async def deep_research_tool_update(
         # Convert result if needed
         final_report = result.get("report", "")
         sections = result.get("sections", [])
+        citations = result.get("citations", [])
 
         # Save report with transaction and retry logic
         for attempt in range(MAX_RETRIES):
@@ -129,6 +144,7 @@ async def deep_research_tool_update(
                     query=query.instruction,
                     response=final_report,
                     sections=sections,
+                    citations=citations,
                     research=query.researchType,
                 )
                 db.add(report)
@@ -158,7 +174,7 @@ async def deep_research_tool_update(
                 "message": "Research updated successfully",
                 "data": {
                     "report": final_report,
-                    "sections": sections,
+                    "citations": citations,
                     "research": query.researchType,
                     "project": {
                         "id": str(project.id),

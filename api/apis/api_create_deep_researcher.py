@@ -137,6 +137,7 @@ async def deep_research_tool(
                     query=query.instruction,
                     response=result.get("report", ""),
                     sections=result.get("sections", []),
+                    citations=result.get("citations", []),
                     research=query.researchType,
                 )
                 db.add(report)
@@ -156,7 +157,7 @@ async def deep_research_tool(
                 "message": "Research generated successfully",
                 "data": {
                     "report": result.get("report", ""),
-                    "sections": result.get("sections", []),
+                    "citations": result.get("citations", []),
                     "researchType": query.researchType,
                     "project": {
                         "id": str(project.id),
