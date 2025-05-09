@@ -72,8 +72,8 @@ const ReportPage: FC = () => {
                 res: item.response,
                 res_id: item.id,
                 updated_at: item.updated_at,
-                sections: item.sections,
-                researchType: item.research,
+                citations: item.citations,
+                researchType: item.research
               }));
               setConversation([...conv]);
               setLoading(false);
@@ -102,17 +102,12 @@ const ReportPage: FC = () => {
           query: newQuestion.promptValue,
           res: '',
           res_id: `${prevOrder.length}`,
-          sections: [],
-          researchType: newQuestion.researchType,
+          citations:[],
+          researchType: newQuestion.researchType
         },
       ]);
 
-      let response: {
-        report: string;
-        sections?: Citation[];
-        project: any;
-        researchType: ResearchType;
-      } | null = null;
+      let response: { report: string; citations?: Citation[]; project: any, researchType: ResearchType } | null = null;
 
       if (!projectID) {
         response = await createGetDocumentReport({
@@ -153,11 +148,7 @@ const ReportPage: FC = () => {
           let lastCon = [...prev].pop();
           return prev.map((resData) => {
             if (resData.res_id === lastCon?.res_id) {
-              return {
-                ...resData,
-                res: `${response.report}`,
-                sections: response.sections || [],
-              };
+              return { ...resData, res: `${response.report}`, citations : response.citations || [] };
             }
             return resData;
           });
@@ -227,7 +218,7 @@ const ReportPage: FC = () => {
         {showResult && (
           <div
             ref={mainContentRef}
-            className="flex h-[88%] w-full grow flex-col items-center justify-between overflow-x-auto"
+            className="flex w-full grow flex-col items-center justify-between"
           >
             <div className="container w-full space-y-2">
               <div className="container space-y-2 task-components">

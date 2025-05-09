@@ -18,7 +18,7 @@ const ReportBlock: React.FC<ReportBlockProps> = ({
         return (
           <>
             {data.query && <Query key={index} question={data.query} />}
-            {data.res && <GeneratedResponse key={index} sections={data.sections} response={data.res} researchType={data.researchType} />}
+            {data.res && <GeneratedResponse key={index} citations={data.citations} response={data.res} researchType={data.researchType} />}
           </>
         );
       })}

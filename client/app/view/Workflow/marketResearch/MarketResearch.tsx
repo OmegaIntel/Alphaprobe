@@ -70,7 +70,7 @@ const MarketResearch: FC = () => {
                 res: item.response,
                 res_id: item.id,
                 updated_at: item.updated_at,
-                sections: item.sections,
+                citations: item.citations,
                 researchType: item.research
               }));
               setConversation([...conv]);
@@ -102,12 +102,12 @@ const MarketResearch: FC = () => {
           query: newQuestion.promptValue,
           res: "",
           res_id: `${prevOrder.length}`,
-          sections:[],
+          citations:[],
           researchType: newQuestion.researchType
         },
       ]);
 
-      let response: { report: string; sections?: Citation[]; project: any, researchType: ResearchType } | null = null;
+      let response: { report: string; citations?: Citation[]; project: any, researchType: ResearchType } | null = null;
 
       if (!projectID) {
         response = await createGetDocumentReport({
@@ -148,7 +148,7 @@ const MarketResearch: FC = () => {
           let lastCon = [...prev].pop();
           return prev.map((resData) => {
             if (resData.res_id === lastCon?.res_id) {
-              return { ...resData, res: `${response.report}`, sections : response.sections || [] };
+              return { ...resData, res: `${response.report}`, citations : response.citations || [] };
             }
             return resData;
           });
