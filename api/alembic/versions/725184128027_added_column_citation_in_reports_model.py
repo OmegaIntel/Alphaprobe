@@ -19,8 +19,11 @@ depends_on: Union[str, Sequence[str], None] = None
 
 
 def upgrade() -> None:
-    pass
+    op.add_column(
+        'reports_table',
+        sa.Column('citations', sa.JSON(), nullable=True),
+    )
 
 
 def downgrade() -> None:
-    pass
+    op.drop_column('reports_table', 'citations')
