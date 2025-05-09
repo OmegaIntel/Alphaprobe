@@ -57,7 +57,12 @@ async def generate_structured_report(
         )
 
         # Run the graph
-        final_state = await document_graph.ainvoke(input_state)
+        final_state = await document_graph.ainvoke(input_state, config={
+            "configurable": {
+                "thread_id": project_id,   # shows up as top-level run id
+                "user_id": user_id,                # trace filter
+            }
+        })
         if final_state is None:
             print(
                 "[ERROR] The state graph returned None. Check the graph flow and node return values."
