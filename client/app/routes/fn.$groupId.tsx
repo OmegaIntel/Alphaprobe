@@ -128,7 +128,7 @@ export default function FinancialModelGroupPage() {
             <Card>
               <CardHeader>
                 <CardTitle>
-                  📌 Reference File: {initialModel.company_name}
+                  Reference File: {initialModel.company_name}
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -164,7 +164,7 @@ export default function FinancialModelGroupPage() {
           {updateModels.length > 0 && (
             <div className="space-y-4">
               <h2 className="text-lg font-semibold mt-6">
-                📈 Updates Timeline
+                Updates Timeline
               </h2>
               {updateModels.map((model, idx) => (
                 <Card key={model.id} className="border-l-4 border-blue-500">

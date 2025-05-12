@@ -33,7 +33,7 @@ async def call_openai(prompt: str) -> str:
         # Check if we should use a different model based on size
         if estimated_tokens > 3000:
             print("⚠️ Large prompt detected, using newer model with larger context window")
-            model = "gpt-3.5-turbo"  # Use the chat model which has a larger context window
+            model = "gpt-4.0-mini"  # Use the chat model which has a larger context window
             
             # For chat models, we need to structure the request differently
             payload = {
