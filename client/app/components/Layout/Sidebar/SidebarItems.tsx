@@ -1,4 +1,4 @@
-import { FileText, BookOpen, Search, Scale, LucideIcon } from 'lucide-react';
+import { FileText, BookOpen, Search, Scale, LucideIcon, FileChartColumnIncreasing } from 'lucide-react';
 
 export interface ItemType {
   label?: string;
@@ -35,6 +35,13 @@ export const items: ItemType[] = [
     id: 'valuation',
     icon: Scale,
     url: '/company-house',
+    workflowType: 'general',
+  },
+  {
+    label: 'Financial Model',
+    id: 'financialmodel',
+    icon: FileChartColumnIncreasing,
+    url: '/financial-model',
     workflowType: 'general',
   },
 ];
