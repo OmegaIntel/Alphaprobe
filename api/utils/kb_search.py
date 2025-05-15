@@ -3,7 +3,7 @@ import boto3
 import botocore
 from typing import Dict, Any
 from dotenv import load_dotenv, find_dotenv
-from utils.aws_utils import AwsUtlis
+from api.utils.aws_utils import AwsUtlis
 
 env_path = find_dotenv()  # walks up until it finds .env
 loaded = load_dotenv(env_path)
@@ -121,3 +121,40 @@ def query_kb(
     except botocore.exceptions.ClientError as e:
         print(f"[DEBUG] query_kb() client error: {e}")
         return {}
+
+def retrieve_kb_contexts(
+    query: str,
+    kb_id: str,
+    user_id: str | None,
+    project_id: str | None,
+    model_arn: str,           # you still need this later for invoke_model
+    top_k: int = 5,
+) -> list[str]:
+    """
+    Return the raw text chunks that Bedrock KB retrieves for *query*.
+    """
+    # Build the vectorSearchConfiguration
+    vec_cfg: dict = {"numberOfResults": top_k}
+
+    # Optional metadata filters
+    filters = []
+    if user_id:
+        filters.append({"equals": {"key": "user_id", "value": str(user_id)}})
+    if project_id and project_id.lower() != "none":
+        filters.append({"equals": {"key": "project_id", "value": project_id}})
+    if filters:
+        vec_cfg["filter"] = filters[0] if len(filters) == 1 else {"andAll": filters}
+
+    try:
+        resp = bedrock_runtime.retrieve(
+            knowledgeBaseId=kb_id,
+            retrievalQuery={"text": query},
+            retrievalConfiguration={
+                # **only** vectorSearchConfiguration goes here
+                "vectorSearchConfiguration": vec_cfg
+            },
+        )
+        return [r["content"]["text"] for r in resp.get("retrievalResults", [])]
+    except botocore.exceptions.ClientError as e:
+        print(f"[retrieve_kb_contexts] AWS error: {e}")
+        return []
