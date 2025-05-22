@@ -1,7 +1,7 @@
 import nest_asyncio
 from typing import List
-from api.services.researcher.stats import Citation
-from api.services.researcher.graph_node import build_document_graph
+from api.services.researcher.classes import Citation
+from api.services.researcher.graph_main import build_document_graph
 from fastapi import HTTPException
 from api.services.researcher.prompts import TEMPLATE_HEADING
 

@@ -12,7 +12,7 @@ from db.db_session import get_db
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 from api.services.deep_research.deep_research import deep_research
-from api.services.researcher.researcher import generate_report
+from api.services.researcher.generate_report import generate_report
 from dotenv import load_dotenv, find_dotenv
 
 env_path = find_dotenv()  # walks up until it finds .env

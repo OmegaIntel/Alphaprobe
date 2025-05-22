@@ -7,7 +7,7 @@ from fastapi.responses import JSONResponse
 from api.apis.api_get_current_user import get_current_user
 from fastapi import APIRouter, Depends, File, Form, UploadFile, HTTPException
 import botocore
-from utils.aws_utils import AwsUtlis
+from utils.aws_utils import AwsUtils
 from utils.excel_utils import build_or_load_excel_index
 from dotenv import load_dotenv, find_dotenv
 
@@ -20,8 +20,8 @@ KNOWLEDGE_BASE_ID = os.getenv("KNOWLEDGE_BASE_ID")
 DATA_SOURCE_ID = os.getenv("DATA_SOURCE_ID")
 BUCKET_NAME = os.getenv("BUCKET_NAME", "deep-research-docs")
 
-bedrock_client = AwsUtlis.get_bedrock_agent()
-s3_client = AwsUtlis.get_s3_client()
+bedrock_client = AwsUtils.get_bedrock_agent()
+s3_client = AwsUtils.get_s3_client()
 
 
 @deer_research_upload_files_router.post("/api/upload-deep-research")
@@ -73,7 +73,7 @@ async def upload_files(
         )
 
         # Close prev ingestion jobs
-        AwsUtlis.close_previous_ingestion_jobs()
+        AwsUtils.close_previous_ingestion_jobs()
 
         # Start non-Excel ingestion job with retries if needed.
         max_retries = 3

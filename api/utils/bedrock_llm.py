@@ -19,7 +19,7 @@ from typing import Any, List, Mapping
 import boto3
 from botocore.config import Config
 from botocore.exceptions import ClientError
-from utils.aws_utils import AwsUtlis
+from utils.aws_utils import AwsUtils
 
 # ───────────────── AWS / Bedrock config ─────────────────
 AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
@@ -34,7 +34,7 @@ DEFAULT_MODEL_ID = os.getenv(
 )
 DEFAULT_PROFILE_ARN = os.getenv("BEDROCK_CLAUDE_PROFILE_ID")  # optional for provisioned
 
-bedrock = AwsUtlis.get_bedrock_runtime()
+bedrock = AwsUtils.get_bedrock_runtime()
 
 # ───────── helper cleaning ─────────
 

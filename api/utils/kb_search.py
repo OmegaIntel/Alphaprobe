@@ -3,7 +3,7 @@ import boto3
 import botocore
 from typing import Dict, Any
 from dotenv import load_dotenv, find_dotenv
-from api.utils.aws_utils import AwsUtlis
+from api.utils.aws_utils import AwsUtils
 
 env_path = find_dotenv()  # walks up until it finds .env
 loaded = load_dotenv(env_path)
@@ -11,11 +11,11 @@ loaded = load_dotenv(env_path)
 # =============================================================================
 # ENV / AWS CONFIG
 # =============================================================================
-s3_client = AwsUtlis.get_s3_client()
+s3_client = AwsUtils.get_s3_client()
 
-bedrock_client = AwsUtlis.get_bedrock_agent()
+bedrock_client = AwsUtils.get_bedrock_agent()
 
-bedrock_runtime = AwsUtlis.get_bedrock_agent_runtime()
+bedrock_runtime = AwsUtils.get_bedrock_agent_runtime()
 
 # =============================================================================
 # BEDROCK / KB (Re-added as per original)

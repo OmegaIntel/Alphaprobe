@@ -7,6 +7,7 @@ from db.db_session import get_db
 from sqlalchemy.orm import Session
 from sqlalchemy import desc
 from dotenv import load_dotenv, find_dotenv
+from uuid import UUID
 
 env_path = find_dotenv()  # walks up until it finds .env
 loaded = load_dotenv(env_path)
@@ -25,10 +26,11 @@ def get_all_projects_sorted_by_updated_at(
     workflow: Optional[str] = Query(None),  # 👈 NEW
 ):
     try:
-        user_id = current_user.id
-        query = db.query(Project).filter(Project.user_id == user_id)
-        if workflow:
-            query = query.filter(Project.workflow == workflow)
+        user_uuid = UUID(current_user.id)
+        query = db.query(Project).filter(Project.user_id == user_uuid)
+        print(f"Workflow: {workflow} and it's type: {type(workflow)}")
+        # if workflow:
+        #     query = query.filter(Project.workflow == workflow)
 
         total_count = query.count()
         projects = (

@@ -10,7 +10,7 @@ KNOWLEDGE_BASE_ID = os.getenv("KNOWLEDGE_BASE_ID")
 DATA_SOURCE_ID = os.getenv("DATA_SOURCE_ID")
 
 
-class AwsUtlis:
+class AwsUtils:
 
     @classmethod
     def get_s3_client(cls):

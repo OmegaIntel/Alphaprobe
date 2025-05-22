@@ -1,11 +1,10 @@
-from api.services.researcher.stats import (
+from api.services.researcher.classes import (
     ReportStateInput,
     ReportStateOutput,
     ReportState,
 )
 from langgraph.graph import START, END, StateGraph
-from api.services.researcher.config import Configuration
-from api.services.researcher.process_node import (
+from api.services.researcher.graph_nodes import (
     formulate_plan,
     formulate_questions,
     answer_questions,
@@ -22,7 +21,6 @@ def build_document_graph():
         state_schema=ReportState,
         input=ReportStateInput,
         output=ReportStateOutput,
-        config_schema=Configuration,
     )
 
     # Add nodes with their associated functions

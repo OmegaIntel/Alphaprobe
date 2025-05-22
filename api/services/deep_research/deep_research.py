@@ -5,10 +5,9 @@ from typing import Any, Dict, List, Union
 # Configure root logger for debug output
 logger = logging.getLogger(__name__)
 
-from utils.excel_utils import has_excel_files
-from api.services.deep_research.graph_node import report_graph_compiled
-from api.services.deep_research.stats import (
-    SearchResult,
+from api.utils.excel_utils import has_excel_files
+from services.deep_research.graph_main import report_graph_compiled
+from services.deep_research.classes import (
     Citation,
     ReportState,
     SectionState,
@@ -17,7 +16,6 @@ from api.services.deep_research.stats import (
     WebCitation,
     ExcelCitation,
 )
-
 
 # -----------------------------------------------------------------------------
 # HELPERS
@@ -49,7 +47,6 @@ def deduplicate_citations(citations: List[Citation]) -> List[Citation]:
         + unique_others
     )
 
-
 def validate_report_state(state: Union[ReportState, dict]):
     required = ["final_report", "outline"]
     if isinstance(state, dict):
@@ -60,7 +57,6 @@ def validate_report_state(state: Union[ReportState, dict]):
         for field in required:
             if not hasattr(state, field):
                 raise ValueError(f"Missing required attribute in state: {field}")
-
 
 def citation_to_dict(citation: Citation) -> dict:
     if isinstance(citation, KBCitation):
@@ -146,6 +142,9 @@ def outline_dicts_to_section_states(
     """
     states: List[SectionState] = []
     for sec in outline_dicts:
+        if not isinstance(sec, dict):
+            logger.warning("Outline item is not a dict: %s", sec)
+            continue
         state = SectionState(
             title=sec.get("title", ""),
             description=sec.get("description", ""),
@@ -231,46 +230,53 @@ async def deep_research(
             }
 
         logger.debug(f"\n\n================\n\nInvoking report graph with input: {input_data}\n\n================\n\n")
-        graph_result = await report_graph_compiled.ainvoke(input_data,config={
-            "configurable": {
-                "thread_id": project_id,   # shows up as top-level run id
-                "user_id": user_id,                # trace filter
-            }
+        graph_result = await report_graph_compiled.ainvoke(input_data, config={
+            "configurable": {"thread_id": project_id, "user_id": user_id}
         })
         validate_report_state(graph_result)
 
-        # Map raw dict back into ReportState if necessary
+        # Ensure we have a ReportState instance
         if not isinstance(graph_result, ReportState):
-            logger.debug("Mapping graph_result dict into ReportState object")
             report_state = ReportState(
-                topic=graph_result.get("topic", ""),
-                user_id=graph_result.get("user_id", ""),
-                project_id=graph_result.get("project_id", ""),
-                report_type=graph_result.get("report_type", 2),
-                file_search=graph_result.get("file_search", False),
-                web_research=graph_result.get("web_research", False),
-                config=input_data["config"],
-                outline=graph_result.get("outline", []),
-                current_section_idx=graph_result.get("current_section_idx", 0),
-                final_report=graph_result.get("final_report", ""),
+                topic        = graph_result.get("topic", ""),
+                user_id      = graph_result.get("user_id", ""),
+                project_id   = graph_result.get("project_id", ""),
+                report_type  = graph_result.get("report_type", 2),
+                file_search  = graph_result.get("file_search", False),
+                web_research = graph_result.get("web_research", False),
+                config       = input_data["config"],
+                outline      = graph_result.get("outline", []),
+                current_section_idx = graph_result.get("current_section_idx", 0),
+                final_report = graph_result.get("final_report", ""),
             )
         else:
             report_state = graph_result
 
-        logger.debug("=== deep_research workflow completed successfully ===")
+        # 🚫──────────── BREAK THE CIRCULAR REFERENCES ────────────────────
+        for sec in report_state.outline:
+            sec.report_state = None
 
+        # ───────────────────────── collect citations ─────────────────────
         all_citations: List[Citation] = []
         for section in report_state.outline:
             all_citations.extend(section.citations)
 
-        # dedupe and serialize citations
         deduped = deduplicate_citations(all_citations)
-        cits = [citation_to_dict(c) for c in deduped]
+        cits    = [citation_to_dict(c) for c in deduped]
 
+        # ───────────────────────── final return payload ──────────────────
         return {
-            "status": "success",
-            "report": report_state.final_report,
-            "sections": [{"title": s.title, "description": s.description, "content": s.content, "citations": [c.__dict__ for c in s.citations]} for s in report_state.outline],
+            "status"   : "success",
+            "report"   : report_state.final_report,         # ← still available
+            "sections" : [
+                {
+                    "title"      : s.title,
+                    "description": s.description,
+                    "content"    : s.content,
+                    "citations"  : [c.__dict__ for c in s.citations],
+                }
+                for s in report_state.outline
+            ],
             "citations": cits,
         }
 

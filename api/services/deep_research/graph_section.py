@@ -3,7 +3,6 @@ import asyncio
 import logging
 from typing import List, Any
 
-import tiktoken
 from pydantic import Field, create_model
 from langgraph.graph import StateGraph, START, END
 from langchain_core.messages import SystemMessage, HumanMessage
@@ -11,8 +10,8 @@ from langchain_core.messages import SystemMessage, HumanMessage
 from api.utils.excel_utils import extract_excel_index
 from api.utils.kb_search import get_presigned_url_from_source_uri, query_kb
 from api.utils.websearch_utils import tavily_search
-from api.services.deep_research.stats import ExcelCitation, KBCitation, ReportState, SearchResult, SectionState, WebCitation
-from services.deep_research.llm import gpt_4
+from services.deep_research.classes import ExcelCitation, KBCitation, ReportState, SearchResult, SectionState, WebCitation
+from services.deep_research.llm import gpt_4, trim_to_tokens
 from services.deep_research.prompts import (
     REPORT_PLANNER_QUERY_WRITER_INSTRUCTIONS,
     QUERY_PROMPT_FOR_ITERATION,
@@ -22,23 +21,13 @@ from services.deep_research.prompts import (
 # Configure logger
 logger = logging.getLogger(__name__)
 
-# Tokenization constants
-encoder = tiktoken.encoding_for_model("gpt-4o-mini")
-MAX_TOKENS = 40000
-
 # Environment constants
 KNOWLEDGE_BASE_ID = os.getenv("KNOWLEDGE_BASE_ID", "my-knowledge-base")
 MODEL_ARN = os.getenv("MODEL_ARN", "arn:aws:bedrock:my-model")
 
-
-def trim_to_tokens(text: str, max_tokens: int = MAX_TOKENS) -> str:
-    """Safely truncate text by token count."""
-    tokens = encoder.encode(text)
-    if len(tokens) <= max_tokens:
-        return text
-    return encoder.decode(tokens[:max_tokens])
-
-
+# ======================================================================= #
+# -------------------------- Search  Functions -------------------------- #
+# ======================================================================= #
 async def parallel_excel_search(
     report_state: ReportState, queries: List[str]
 ) -> SearchResult:
@@ -85,7 +74,6 @@ async def parallel_excel_search(
         original_queries=queries,
     )
 
-
 async def parallel_web_search(
     report_state: ReportState, queries: List[str]
 ) -> SearchResult:
@@ -124,7 +112,6 @@ async def parallel_web_search(
         context_text="\n\n---\n\n".join(context_parts),
         original_queries=queries,
     )
-
 
 async def parallel_kb_query(
     report_state: ReportState, queries: List[str]
@@ -175,7 +162,9 @@ async def parallel_kb_query(
         original_queries=queries,
     )
 
-
+# ======================================================================= #
+# -------------------------- Sub  Graph  Nodes -------------------------- #
+# ======================================================================= #
 async def node_section_data_needs(state: SectionState) -> SectionState:
     """Determine which queries are needed for this section using LLM."""
     logger.debug(
@@ -285,7 +274,6 @@ async def node_section_data_needs(state: SectionState) -> SectionState:
     )
     return state
 
-
 async def node_parallel_search(state: SectionState) -> SectionState:
     """Run all enabled searches concurrently."""
     logger.debug("Running parallel searches for section '%s'", state.title)
@@ -312,7 +300,6 @@ async def node_parallel_search(state: SectionState) -> SectionState:
         state.context.append(res.context_text)
 
     return state
-
 
 def node_merge_section_data(state: SectionState) -> SectionState:
     """Merge all search results into the section context"""
@@ -349,7 +336,9 @@ def node_merge_section_data(state: SectionState) -> SectionState:
     state.content = "\n\n".join(parts)
     return state
 
-
+# ======================================================================= #
+# -------------------------- Subgraph Creation -------------------------- #
+# ======================================================================= #
 def create_section_subgraph():
     sub = StateGraph(state_schema=SectionState)
     sub.add_node("data_needs", node_section_data_needs)

@@ -1,20 +1,11 @@
 import logging
 
 from langgraph.graph import StateGraph, START, END
-from api.services.deep_research.stats import ReportState
-from api.services.deep_research.outline_node import node_generate_outline
-from api.services.deep_research.process_node import node_check_report_exists, node_generate_update_queries, node_process_section, recognize_section_to_update
-from api.services.deep_research.compile_node import node_compile_final
+from services.deep_research.classes import ReportState
+from services.deep_research.graph_nodes import node_generate_outline, node_compile_final, node_check_report_exists, node_generate_update_queries, node_process_section, recognize_section_to_update, init_sections
 
 # Configure module‐level logger
 logger = logging.getLogger(__name__)
-
-
-def init_sections(state: ReportState) -> ReportState:
-    """Initialize section index to zero."""
-    state.current_section_idx = 0
-    return state
-
 
 def should_continue(state: ReportState) -> str:
     """Decide whether to loop back into processing or move to compilation."""
@@ -32,7 +23,6 @@ def should_continue(state: ReportState) -> str:
     if state.current_section_idx < len(state.outline):
         return "process_section"
     return "compile_final"
-
 
 # -----------------------------------------------------------------------------
 logger.debug("Building main report graph")

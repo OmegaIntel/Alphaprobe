@@ -24,7 +24,7 @@ def add_repo_root(repo_name: str = "Alphaprobe") -> None:
 # call once, before any project-internal imports
 add_repo_root()
 
-from api.utils.aws_utils import AwsUtlis
+from api.utils.aws_utils import AwsUtils
 from api.utils.kb_search import retrieve_kb_contexts
 
 # ── CONSTANTS ───────────────────────────────────────────────────────────
@@ -45,7 +45,7 @@ if "OPENAI_API_KEY" not in os.environ:
 
 # ── AWS CLIENTS ─────────────────────────────────────────────────────────
 s3     = boto3.client("s3")
-agent  = AwsUtlis.get_bedrock_agent()
+agent  = AwsUtils.get_bedrock_agent()
 
 # ── HELPERS ──────────────────────────────────────────────────────────────
 def fetch_finqa_slice(split: str = "validation[:100]"):
@@ -168,4 +168,4 @@ def run_finqa_rag_eval(
     return df
 
 # ── RUN ─────────────────────────────────────────────────────────────────
-run_finqa_rag_eval(split="validation[:100]", ingest=True)
+run_finqa_rag_eval(split="validation[:100]", ingest=False)

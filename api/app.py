@@ -19,6 +19,7 @@ from api.apis.api_get_project_list import project_list_router
 from api.apis.api_get_reports import reports_router
 from api.apis.api_upload_outline_file import upload_outline_file_router
 from apis.api_kb_search import aws_kb_router
+from apis.api_graph_update import update_graph_router
 
 
 import logging
@@ -71,6 +72,7 @@ app.include_router(deer_research_upload_files_router)
 app.include_router(project_list_router)
 app.include_router(reports_router)
 app.include_router(upload_outline_file_router)
+app.include_router(update_graph_router)
 
 if __name__ == "__main__":
     uvicorn.run("api.app:app", host="0.0.0.0", port=8000, reload=True, loop="asyncio")

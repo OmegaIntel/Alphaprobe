@@ -2,24 +2,20 @@ import os
 import re
 import asyncio
 import logging
-from typing import List, Union, Tuple
+from typing import Union, Tuple
 
-from api.services.deep_research.stats import (
+from services.deep_research.classes import (
     ReportState,
     SectionState,
     SectionContent,
-    SearchResult,
-    KBCitation,
-    WebCitation,
-    ExcelCitation,
     SectionChooser,
     UpdateQueries,
     UpdateParagraph,
 )
-from services.deep_research.llm import gpt_4
+from services.deep_research.llm import gpt_4, trim_to_tokens
 from langchain_core.messages import SystemMessage, HumanMessage
 
-from api.services.deep_research.section_graph_node import node_merge_section_data, parallel_excel_search, parallel_web_search, parallel_kb_query
+from services.deep_research.graph_section import node_merge_section_data, parallel_excel_search, parallel_web_search, parallel_kb_query, section_subgraph_compiled
 
 # Configure logger
 logger = logging.getLogger(__name__)
@@ -28,24 +24,144 @@ logger = logging.getLogger(__name__)
 KNOWLEDGE_BASE_ID = os.getenv("KNOWLEDGE_BASE_ID", "my-knowledge-base")
 MODEL_ARN = os.getenv("MODEL_ARN", "arn:aws:bedrock:my-model")
 
-# Token trimming
-try:
-    import tiktoken
+# ======================================================================= #
+# -------------------------- Graph Nodes Func. -------------------------- #
+# ======================================================================= #
+def node_check_report_exists(state: ReportState) -> ReportState:
+    """First node: set state.exists to True if we already have an outline."""
+    state.exists = len(state.outline) > 0
+    return state
 
-    enum_encoding = tiktoken.encoding_for_model("gpt-4o-mini")
-except ImportError:
-    enum_encoding = None
+async def node_generate_outline(state: ReportState) -> ReportState:
+    """
+    Generate a fixed outline for the report based on the topic.
+    """
+    logger.debug("Using fixed report outline for topic: %s", state.topic)
 
-MAX_TOKENS = 40000
+    # Define your fixed outline here as (title, description) pairs
+    fixed_outline = [
+        ("Executive Summary", "Concise overview of key findings and recommendations."),
+        (
+            "Market Overview",
+            "Definition, scope, value chain, and high-level industry dynamics.",
+        ),
+        (
+            "Market Size & Growth",
+            "Historical, current, and projected market size and growth rates.",
+        ),
+        (
+            "Segmentation Analysis",
+            "Breakdown of the market by major segments with their sizes.",
+        ),
+        ("Competitive Landscape", "Key competitors, market share, and positioning."),
+        (
+            "Customer Insights",
+            "Profiles, needs, and buying behavior of major customer segments.",
+        ),
+        ("Financial Performance", "Summary of recent financial metrics and trends."),
+        (
+            "Valuation & Forecast",
+            "Valuation approaches, multiples, and forward projections.",
+        ),
+        ("Risks & Mitigants", "Principal risks and strategies to manage them."),
+        ("Conclusions & Next Steps", "Key takeaways and recommended actions."),
+    ]
 
+    # Clear any existing outline
+    state.outline.clear()
 
-def trim_to_tokens(text: str, max_tokens: int = MAX_TOKENS) -> str:
-    if not enum_encoding:
-        return text[:8000]
-    tokens = enum_encoding.encode(text)
-    if len(tokens) <= max_tokens:
-        return text
-    return enum_encoding.decode(tokens[:max_tokens])
+    # Build and append SectionState objects
+    for title, description in fixed_outline:
+        section = SectionState(
+            title=title,
+            description=description,
+            content="",  # Will be populated later
+            report_state=state,
+            web_research=state.web_research,
+            excel_search=state.config.excel_search,
+            kb_search=state.config.file_search,
+            report_type=state.report_type,
+        )
+        state.outline.append(section)
+        logger.debug("Added fixed section: %s", title)
+
+    logger.debug("Finished fixed outline with %d sections.", len(state.outline))
+    return state
+
+async def recognize_section_to_update(state: ReportState) -> ReportState:
+    """
+    Pick which existing section (by index) is most relevant to state.update_query.
+    """
+    # build prompt listing titles & descriptions
+    lines = []
+    for idx, sec in enumerate(state.outline):
+        lines.append(f"{idx}: Title = “{sec.title}”\n   Desc  = {sec.description!r}")
+    sections_list = "\n\n".join(lines)
+
+    prompt = f"""
+    I have the following report sections (index: title + description):
+
+    {sections_list}
+
+    Now I have an update query:
+    “{state.update_query}”
+
+    Please return the single integer field `chosen_index` corresponding to the section
+    that best matches this update. If none are relevant, return null.
+    """
+
+    logger.debug("Recognizing section to update: %s", prompt)
+
+    chooser = gpt_4.with_structured_output(SectionChooser, method="function_calling")
+    resp = await chooser.ainvoke([
+        SystemMessage(content="You are a precise section classifier."),
+        HumanMessage(content=prompt)
+    ])
+
+    logger.debug("Section chooser response: %s", resp)
+    state.update_section_index = resp.chosen_index
+    return state
+
+async def node_generate_update_queries(state: ReportState) -> ReportState:
+    """
+    Generates exactly two follow-up queries to research the update,
+    using the section’s title & description for context.
+    """
+    idx = state.update_section_index
+    # Safely fetch the section
+    if idx is None or idx < 0 or idx >= len(state.outline):
+        raise ValueError(f"No valid section at index {idx}")
+
+    section = state.outline[idx]
+    title = section.title
+    desc = section.description or "No description provided"
+
+    prompt = f"""
+        I have an update query:
+        “{state.update_query}”
+
+        This update applies to **section #{idx}**:
+        - **Title:** {title}
+        - **Description:** {desc}
+
+        Please generate **exactly two** highly targeted follow-up queries that will 
+        help me drill into the precise facts needed to update this section. 
+        Return them as a JSON array under the key `queries`.
+        """
+
+    caller = gpt_4.with_structured_output(UpdateQueries, method="function_calling")
+    resp = await caller.ainvoke([
+        SystemMessage(content="You are a precise research-query generator."),
+        HumanMessage(content=prompt)
+    ])
+
+    state.update_queries = resp.queries
+    return state
+
+def init_sections(state: ReportState) -> ReportState:
+    """Initialize section index to zero."""
+    state.current_section_idx = 0
+    return state
 
 async def node_process_section(state: ReportState) -> ReportState:
     idx = state.current_section_idx
@@ -119,6 +235,7 @@ async def node_process_section(state: ReportState) -> ReportState:
         # 5) Append the paragraph & citations, advance index, clear update mode
         current_uq.content = current_uq.content.rstrip() + "\n\n" + new_para
         current_uq.citations.extend(merged.citations)
+        current_uq.context = merged.context
 
         state.current_section_idx += 1
         state.update_queries = []  # so we only do this once
@@ -126,7 +243,6 @@ async def node_process_section(state: ReportState) -> ReportState:
 
     # ─── FULL-BUILD MODE: fall back to your existing subgraph ─────────────
     logger.debug("Entering FULL-BUILD for section #%d: %s", idx, current.title)
-    from api.services.deep_research.section_graph_node import section_subgraph_compiled
     # 1) Run section subgraph (data_needs → parallel_search → merge_data)
     section_state = SectionState(
         title=current.title,
@@ -164,7 +280,28 @@ async def node_process_section(state: ReportState) -> ReportState:
     state.current_section_idx += 1
     return state
 
+def node_compile_final(state: ReportState) -> ReportState:
+    """Compile all sections into a single markdown report, or just the updated section in update‐mode."""
+    logger.debug("Entering node_compile_final with %d sections", len(state.outline))
 
+    report_lines = []
+    for idx, section in enumerate(state.outline, start=1):
+        logger.debug("Adding section %d: %s", idx, section.title)
+        header = f"## {idx}. {section.title}\n"
+        content = (
+            section.content.strip() if section.content else "*No content generated.*"
+        )
+        report_lines.append(f"{header}\n{content}\n")
+
+    state.final_report = "\n".join(report_lines)
+    logger.debug(
+        "Final report compiled successfully (length: %d chars)", len(state.final_report)
+    )
+    return state
+
+# ======================================================================= #
+# -------------------------- Utility Functions -------------------------- #
+# ======================================================================= #
 def convert_to_section_state(base_state: ReportState, data: dict) -> SectionState:
     return SectionState(
         title=data.get(
@@ -186,7 +323,6 @@ def convert_to_section_state(base_state: ReportState, data: dict) -> SectionStat
         web_queries=data.get("web_queries", []),
         kb_queries=data.get("kb_queries", []),
     )
-
 
 async def generate_section_content(
     state: ReportState, section_state: Union[SectionState, dict]
@@ -250,7 +386,6 @@ async def generate_section_content(
 
     return section_state
 
-
 def evaluate_section(section_state: SectionState) -> Tuple[bool, str]:
     logger.debug("Evaluating section: %s", section_state.title)
     txt = section_state.content or ""
@@ -268,129 +403,3 @@ def evaluate_section(section_state: SectionState) -> Tuple[bool, str]:
     if fails:
         return False, "; ".join(fails)
     return True, ""
-
-
-async def node_section_excel_search(state: SectionState) -> dict:
-    logger.debug("Entering node_section_excel_search for section: %s", state.title)
-    if state.excel_queries:
-        results = await parallel_excel_search(state.report_state, state.excel_queries)
-        state.excel_results.append(results)
-        state.citations.extend(results.citations)
-        state.context.append(results.context_text)
-        return {
-            "excel_results": [results],
-            "citations": results.citations,
-            "context": [results.context_text],
-        }
-    logger.debug("No Excel queries for section: %s", state.title)
-    return {}
-
-
-async def node_section_web_search(state: SectionState) -> dict:
-    logger.debug("Entering node_section_web_search for section: %s", state.title)
-    if state.web_queries:
-        results = await parallel_web_search(state.report_state, state.web_queries)
-        state.web_results.append(results)
-        state.citations.extend(results.citations)
-        state.context.append(results.context_text)
-        return {
-            "web_results": [results],
-            "citations": results.citations,
-            "context": [results.context_text],
-        }
-    logger.debug("No Web queries for section: %s", state.title)
-    return {}
-
-
-async def node_section_kb_search(state: SectionState) -> dict:
-    logger.debug("Entering node_section_kb_search for section: %s", state.title)
-    if state.kb_queries:
-        results = await parallel_kb_query(state.report_state, state.kb_queries)
-        state.kb_results.append(results)
-        state.citations.extend(results.citations)
-        state.context.append(results.context_text)
-        return {
-            "kb_results": [results],
-            "citations": results.citations,
-            "context": [results.context_text],
-        }
-    logger.debug("No KB queries for section: %s", state.title)
-    return {}
-
-
-def node_check_report_exists(state: ReportState) -> ReportState:
-    """First node: set state.exists to True if we already have an outline."""
-    state.exists = len(state.outline) > 0
-    return state
-
-
-async def recognize_section_to_update(state: ReportState) -> ReportState:
-    """
-    Pick which existing section (by index) is most relevant to state.update_query.
-    """
-    # build prompt listing titles & descriptions
-    lines = []
-    for idx, sec in enumerate(state.outline):
-        lines.append(f"{idx}: Title = “{sec.title}”\n   Desc  = {sec.description!r}")
-    sections_list = "\n\n".join(lines)
-
-    prompt = f"""
-    I have the following report sections (index: title + description):
-
-    {sections_list}
-
-    Now I have an update query:
-    “{state.update_query}”
-
-    Please return the single integer field `chosen_index` corresponding to the section
-    that best matches this update. If none are relevant, return null.
-    """
-
-    logger.debug("Recognizing section to update: %s", prompt)
-
-    chooser = gpt_4.with_structured_output(SectionChooser, method="function_calling")
-    resp = await chooser.ainvoke([
-        SystemMessage(content="You are a precise section classifier."),
-        HumanMessage(content=prompt)
-    ])
-
-    logger.debug("Section chooser response: %s", resp)
-    state.update_section_index = resp.chosen_index
-    return state
-
-
-async def node_generate_update_queries(state: ReportState) -> ReportState:
-    """
-    Generates exactly two follow-up queries to research the update,
-    using the section’s title & description for context.
-    """
-    idx = state.update_section_index
-    # Safely fetch the section
-    if idx is None or idx < 0 or idx >= len(state.outline):
-        raise ValueError(f"No valid section at index {idx}")
-
-    section = state.outline[idx]
-    title = section.title
-    desc = section.description or "No description provided"
-
-    prompt = f"""
-        I have an update query:
-        “{state.update_query}”
-
-        This update applies to **section #{idx}**:
-        - **Title:** {title}
-        - **Description:** {desc}
-
-        Please generate **exactly two** highly targeted follow-up queries that will 
-        help me drill into the precise facts needed to update this section. 
-        Return them as a JSON array under the key `queries`.
-        """
-
-    caller = gpt_4.with_structured_output(UpdateQueries, method="function_calling")
-    resp = await caller.ainvoke([
-        SystemMessage(content="You are a precise research-query generator."),
-        HumanMessage(content=prompt)
-    ])
-
-    state.update_queries = resp.queries
-    return state
