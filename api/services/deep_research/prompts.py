@@ -259,6 +259,3 @@ QUERY_PROMPT_FOR_ITERATION = [
     - Time horizon (historical/forward-looking)
     - Comparator requirements""",
 ]
-
-
-

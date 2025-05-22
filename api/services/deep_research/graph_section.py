@@ -3,44 +3,168 @@ import asyncio
 import logging
 from typing import List, Any
 
-import tiktoken
 from pydantic import Field, create_model
 from langgraph.graph import StateGraph, START, END
 from langchain_core.messages import SystemMessage, HumanMessage
 
-from api.services.deep_research.stats import SectionState
-from services.deep_research.llm import gpt_4
+from api.utils.excel_utils import extract_excel_index
+from api.utils.kb_search import get_presigned_url_from_source_uri, query_kb
+from api.utils.websearch_utils import tavily_search
+from services.deep_research.classes import ExcelCitation, KBCitation, ReportState, SearchResult, SectionState, WebCitation
+from services.deep_research.llm import gpt_4, trim_to_tokens
 from services.deep_research.prompts import (
     REPORT_PLANNER_QUERY_WRITER_INSTRUCTIONS,
     QUERY_PROMPT_FOR_ITERATION,
-)
-from api.services.deep_research.process_node import (
-    parallel_excel_search,
-    parallel_web_search,
-    parallel_kb_query,
 )
 
 
 # Configure logger
 logger = logging.getLogger(__name__)
 
-# Tokenization constants
-encoder = tiktoken.encoding_for_model("gpt-4o-mini")
-MAX_TOKENS = 40000
-
 # Environment constants
 KNOWLEDGE_BASE_ID = os.getenv("KNOWLEDGE_BASE_ID", "my-knowledge-base")
 MODEL_ARN = os.getenv("MODEL_ARN", "arn:aws:bedrock:my-model")
 
+# ======================================================================= #
+# -------------------------- Search  Functions -------------------------- #
+# ======================================================================= #
+async def parallel_excel_search(
+    report_state: ReportState, queries: List[str]
+) -> SearchResult:
+    logger.debug("parallel_excel_search with %d queries", len(queries))
+    if not report_state.config.excel_search:
+        return SearchResult(citations=[], context_text="", original_queries=queries)
 
-def trim_to_tokens(text: str, max_tokens: int = MAX_TOKENS) -> str:
-    """Safely truncate text by token count."""
-    tokens = encoder.encode(text)
-    if len(tokens) <= max_tokens:
-        return text
-    return encoder.decode(tokens[:max_tokens])
+    index = extract_excel_index(report_state.user_id, report_state.project_id)
+    if not index:
+        return SearchResult(citations=[], context_text="", original_queries=queries)
 
+    citations = []
+    context_parts = []
 
+    def _search(q: str):
+        eng = index.as_query_engine()
+        return q, eng.query(q)
+
+    results = await asyncio.gather(
+        *[asyncio.to_thread(_search, q) for q in queries], return_exceptions=True
+    )
+
+    for r in results:
+        if isinstance(r, Exception):
+            logger.error("Excel search error: %s", r)
+            continue
+        q, resp = r
+        for node in getattr(resp, "source_nodes", []):
+            meta = node.metadata
+            citations.append(
+                ExcelCitation(
+                    file_name=meta.get("file_name", ""),
+                    sheet=meta.get("sheet", ""),
+                    row=meta.get("row", 0),
+                    col=meta.get("col", ""),
+                    value=node.text,
+                )
+            )
+        context_parts.append(f"Excel Q '{q}': {resp}")
+
+    return SearchResult(
+        citations=citations,
+        context_text="\n\n".join(context_parts),
+        original_queries=queries,
+    )
+
+async def parallel_web_search(
+    report_state: ReportState, queries: List[str]
+) -> SearchResult:
+    logger.debug("parallel_web_search with %d queries", len(queries))
+    if not report_state.config.web_research:
+        return SearchResult(citations=[], context_text="", original_queries=queries)
+
+    citations: List[WebCitation] = []
+    context_parts: List[str] = []
+
+    results = await asyncio.gather(
+        *[asyncio.to_thread(tavily_search, q, True, 3) for q in queries],
+        return_exceptions=True,
+    )
+
+    for q, res in zip(queries, results):
+        if isinstance(res, Exception):
+            logger.error("Web search error for '%s': %s", q, res)
+            continue
+        hits = res.get("results", [])
+        for item in hits:
+            # build your citation
+            cit = WebCitation(
+                title=item.get("title", ""),
+                url=item.get("url", ""),
+                snippet=item.get("content", ""),  # still keep snippet
+            )
+            citations.append(cit)
+
+            # now use the _full_ raw_content for context
+            raw = item.get("raw_content") or item.get("content", "")
+            context_parts.append(f"Web Q '{q}':\n{raw}")
+
+    return SearchResult(
+        citations=citations,
+        context_text="\n\n---\n\n".join(context_parts),
+        original_queries=queries,
+    )
+
+async def parallel_kb_query(
+    report_state: ReportState, queries: List[str]
+) -> SearchResult:
+    logger.debug("parallel_kb_query with %d queries", len(queries))
+    citations = []
+    context_parts = []
+
+    def _kb(q: str):
+        return q, query_kb(
+            q,
+            KNOWLEDGE_BASE_ID,
+            report_state.user_id,
+            report_state.project_id,
+            MODEL_ARN,
+        )
+
+    results = await asyncio.gather(
+        *[asyncio.to_thread(_kb, q) for q in queries], return_exceptions=True
+    )
+
+    for r in results:
+        if isinstance(r, Exception):
+            logger.error("KB search error: %s", r)
+            continue
+        q, resp = r
+        text = resp.get("output", {}).get("text", "")
+        context_parts.append(f"KB Q '{q}': {text}")
+        for cobj in resp.get("citations", []):
+            for ref in cobj.get("retrievedReferences", []):
+                metadata = ref.get("metadata", {})
+                citations.append(
+                    KBCitation(
+                        chunk_text=ref.get("content", {}).get("text", ""),
+                        page=metadata.get("x-amz-bedrock-kb-document-page-number"),
+                        file_name=os.path.basename(
+                            metadata.get("x-amz-bedrock-kb-source-uri", "")
+                        ),
+                        url=get_presigned_url_from_source_uri(
+                            metadata.get("x-amz-bedrock-kb-source-uri", "")
+                        ),
+                    )
+                )
+
+    return SearchResult(
+        citations=citations,
+        context_text="\n\n".join(context_parts),
+        original_queries=queries,
+    )
+
+# ======================================================================= #
+# -------------------------- Sub  Graph  Nodes -------------------------- #
+# ======================================================================= #
 async def node_section_data_needs(state: SectionState) -> SectionState:
     """Determine which queries are needed for this section using LLM."""
     logger.debug(
@@ -150,10 +274,14 @@ async def node_section_data_needs(state: SectionState) -> SectionState:
     )
     return state
 
-
 async def node_parallel_search(state: SectionState) -> SectionState:
     """Run all enabled searches concurrently."""
     logger.debug("Running parallel searches for section '%s'", state.title)
+
+    # Ensure `state.context` is always a list before appending to it
+    if not isinstance(state.context, list):
+        state.context = [state.context] if state.context else []
+
     tasks = []
     if state.excel_queries:
         tasks.append(parallel_excel_search(state.report_state, state.excel_queries))
@@ -163,14 +291,15 @@ async def node_parallel_search(state: SectionState) -> SectionState:
         tasks.append(parallel_kb_query(state.report_state, state.kb_queries))
 
     results = await asyncio.gather(*tasks, return_exceptions=True)
+
     for res in results:
         if isinstance(res, Exception):
             logger.error("Search task error: %s", res)
             continue
         state.citations.extend(res.citations)
         state.context.append(res.context_text)
-    return state
 
+    return state
 
 def node_merge_section_data(state: SectionState) -> SectionState:
     """Merge all search results into the section context"""
@@ -207,7 +336,9 @@ def node_merge_section_data(state: SectionState) -> SectionState:
     state.content = "\n\n".join(parts)
     return state
 
-
+# ======================================================================= #
+# -------------------------- Subgraph Creation -------------------------- #
+# ======================================================================= #
 def create_section_subgraph():
     sub = StateGraph(state_schema=SectionState)
     sub.add_node("data_needs", node_section_data_needs)

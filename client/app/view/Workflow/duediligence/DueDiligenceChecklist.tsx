@@ -121,7 +121,7 @@ const ChecklistSelector: FC = () => {
                 res: item.response,
                 res_id: item.id,
                 updated_at: item.updated_at,
-                sections: item.sections,
+                citations: item.citations,
                 researchType: 'research' as ResearchType, // Explicitly type as ResearchType as default
               }));
               setConversation([...conv]);
@@ -164,14 +164,14 @@ const ChecklistSelector: FC = () => {
           query: value,
           res: '',
           res_id: `${prevOrder.length}`,
-          sections: [],
+          citations: [],
           researchType: 'research' as ResearchType, // Explicitly type as ResearchType
         },
       ]);
 
       let response: {
         report: string;
-        sections?: any[];
+        citations?: any[];
         project: any;
         researchType: ResearchType;
       } | null = null;
@@ -235,7 +235,7 @@ const ChecklistSelector: FC = () => {
               return {
                 ...resData,
                 res: `${response.report}`,
-                sections: response.sections || [],
+                citations: response.citations || [],
               };
             }
             return resData;

@@ -83,7 +83,7 @@ export interface ConversationData  {
   res: string;
   res_id?: string;
   updated_at?: string;
-  sections: Citation[];
+  citations: Citation[];
   researchType: ResearchType;
 };
 

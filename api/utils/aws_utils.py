@@ -10,18 +10,24 @@ KNOWLEDGE_BASE_ID = os.getenv("KNOWLEDGE_BASE_ID")
 DATA_SOURCE_ID = os.getenv("DATA_SOURCE_ID")
 
 
-class AwsUtlis:
+class AwsUtils:
 
     @classmethod
     def get_s3_client(cls):
         """
         Returns a boto3 client for AWS s3.
         """
+        cfg = Config(
+            region_name="us-east-1",
+            max_pool_connections=50,    # bump this up as needed
+            retries={"max_attempts": 3, "mode": "standard"},
+        )
         return boto3.client(
             "s3",
             aws_access_key_id=AWS_ACCESS_KEY_ID,
             aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
             region_name=AWS_REGION,
+            config=cfg,
         )
 
     @classmethod
@@ -29,11 +35,17 @@ class AwsUtlis:
         """
         Returns a boto3 client for bedrock-agent.
         """
+        cfg = Config(
+            region_name="us-east-1",
+            max_pool_connections=50,    # bump this up as needed
+            retries={"max_attempts": 3, "mode": "standard"},
+        )
         return boto3.client(
             "bedrock-agent",
             aws_access_key_id=AWS_ACCESS_KEY_ID,
             aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
             region_name=AWS_REGION,
+            config=cfg,
         )
 
     @classmethod
@@ -41,11 +53,17 @@ class AwsUtlis:
         """
         Returns a boto3 client for bedrock-agent-runtime.
         """
+        cfg = Config(
+            region_name="us-east-1",
+            max_pool_connections=50,    # bump this up as needed
+            retries={"max_attempts": 3, "mode": "standard"},
+        )
         return boto3.client(
             "bedrock-agent-runtime",
             aws_access_key_id=AWS_ACCESS_KEY_ID,
             aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
             region_name=AWS_REGION,
+            config=cfg,
         )
 
     @classmethod
@@ -53,13 +71,18 @@ class AwsUtlis:
         """
         Returns a boto3 client for bedrock-runtime.
         """
+        cfg = Config(
+            region_name="us-east-1",
+            max_pool_connections=50,    # bump this up as needed
+            retries={"max_attempts": 3, "mode": "standard"},
+        )
         return boto3.client(
             "bedrock-runtime",
             region_name=AWS_REGION,
             aws_access_key_id=AWS_ACCESS_KEY_ID,
             aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
             aws_session_token=AWS_SESSION_TOKEN,
-            config=Config(retries={"max_attempts": 3}),
+            config=cfg,
         )
 
     @classmethod

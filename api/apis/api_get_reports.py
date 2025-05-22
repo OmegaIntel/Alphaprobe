@@ -40,7 +40,7 @@ def get_reports_sorted_by_updated_at(
                 "query": str(report.query),
                 "response": str(report.response),
                 "updated_at": str(report.updated_at),
-                "sections": report.sections,
+                "citations": report.citations,
                 "research": str(report.research),
             }
             for report in reports

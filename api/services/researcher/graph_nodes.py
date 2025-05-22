@@ -4,7 +4,7 @@ import nest_asyncio
 import json
 from typing import List, Any
 import re
-from api.services.researcher.stats import (
+from api.services.researcher.classes import (
     ReportState,
     Citation,
     KBCitation,
@@ -90,7 +90,6 @@ async def formulate_plan(state: ReportState, config: RunnableConfig):
         print(f"[ERROR] Outline generation failed: {e}")
         return {"outline": "Failed to generate outline"}
 
-
 async def formulate_questions(state: ReportState, config: RunnableConfig):
     """Generate ~5 focused questions for **each numbered section** in the outline.
     Stores:
@@ -160,7 +159,6 @@ async def formulate_questions(state: ReportState, config: RunnableConfig):
         by_section.append({"section": header, "questions": qs})
 
     return {"questions": all_qs, "questions_by_section": by_section}
-
 
 async def answer_questions(state: ReportState, config: RunnableConfig):
     """Collect context snippets and structured citations for each question."""
@@ -265,7 +263,6 @@ async def answer_questions(state: ReportState, config: RunnableConfig):
 
     return {"answers": answers, "citations": citations}
 
-
 async def write_report(state: ReportState, config: RunnableConfig):
     """Compose the final report section‑by‑section, inserting citations list."""
     answers = state.get("answers", [])
@@ -333,4 +330,3 @@ async def write_report(state: ReportState, config: RunnableConfig):
 
     full_report = "\n\n".join(report_parts)
     return {"report": full_report, "citations": citations}
-

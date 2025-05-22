@@ -12,7 +12,7 @@ from db_models.projects import Project
 from db.db_session import get_db
 from sqlalchemy.orm import Session
 from api.services.deep_research.deep_research import deep_research
-from api.services.researcher.researcher import generate_report
+from api.services.researcher.generate_report import generate_report
 from dotenv import load_dotenv, find_dotenv
 
 env_path = find_dotenv()  # walks up until it finds .env
@@ -137,6 +137,7 @@ async def deep_research_tool(
                     query=query.instruction,
                     response=result.get("report", ""),
                     sections=result.get("sections", []),
+                    citations=result.get("citations", []),
                     research=query.researchType,
                 )
                 db.add(report)
@@ -156,7 +157,7 @@ async def deep_research_tool(
                 "message": "Research generated successfully",
                 "data": {
                     "report": result.get("report", ""),
-                    "sections": result.get("sections", []),
+                    "citations": result.get("citations", []),
                     "researchType": query.researchType,
                     "project": {
                         "id": str(project.id),

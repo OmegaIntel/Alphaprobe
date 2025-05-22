@@ -1,7 +1,7 @@
 import nest_asyncio
 from typing import List
-from api.services.researcher.stats import Citation
-from api.services.researcher.graph_node import build_document_graph
+from api.services.researcher.classes import Citation
+from api.services.researcher.graph_main import build_document_graph
 from fastapi import HTTPException
 from api.services.researcher.prompts import TEMPLATE_HEADING
 
@@ -57,7 +57,12 @@ async def generate_structured_report(
         )
 
         # Run the graph
-        final_state = await document_graph.ainvoke(input_state)
+        final_state = await document_graph.ainvoke(input_state, config={
+            "configurable": {
+                "thread_id": project_id,   # shows up as top-level run id
+                "user_id": user_id,                # trace filter
+            }
+        })
         if final_state is None:
             print(
                 "[ERROR] The state graph returned None. Check the graph flow and node return values."
@@ -107,7 +112,7 @@ async def generate_report(
         return {
             "message": "Report generated and saved successfully",
             "report": report_content.get("report", ""),
-            "sections": CITATIONS,
+            "citations": CITATIONS,
         }
     except Exception as e:
         print(f"[generate_report] Error encountered: {str(e)}")

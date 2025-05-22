@@ -2,16 +2,16 @@ import os
 from fastapi.responses import JSONResponse
 from api.apis.api_get_current_user import get_current_user
 from fastapi import APIRouter, Depends, File, Form, UploadFile, HTTPException
-from utils.aws_utils import AwsUtlis
+from utils.aws_utils import AwsUtils
 from dotenv import load_dotenv, find_dotenv
 
-OUTLINE_BUCKET_NAME = os.getenv("OUTLINE_BUCKET_NAME", "outline-helper")
 
-s3_client = AwsUtlis.get_s3_client()
+s3_client = AwsUtils.get_s3_client()
 
 env_path = find_dotenv()  # walks up until it finds .env
 loaded = load_dotenv(env_path)
 
+OUTLINE_BUCKET_NAME = os.getenv("OUTLINE_BUCKET_NAME", "outline-helper")
 
 upload_outline_file_router = APIRouter()
 

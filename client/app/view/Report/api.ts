@@ -110,7 +110,7 @@ export const updateGetDocumentReport = async ({
       }),
     };
 
-    const res = await fetcher('/api/deep-researcher-langgraph/update', config);
+    const res = await fetcher('/api/update-report', config);
     console.log('reports--------------------', res.data);
     return res.data;
   } catch (error) {
@@ -200,7 +200,7 @@ export interface ReportList {
   query: string;
   response:string;
   updated_at: string;
-  sections: Citation[]
+  citations: Citation[]
   research: ResearchType;
 }
 export const getReports = async (project_id : string): Promise<ReportList[]> =>{

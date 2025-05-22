@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Text, Enum, JSON, TIMESTAMP, func, ForeignKey
+from sqlalchemy import Column, Text, Enum, JSON, TIMESTAMP, func, ForeignKey, Index
 from sqlalchemy.orm import relationship
 from sqlalchemy_utils import UUIDType
 from sqlalchemy.ext.declarative import declarative_base
@@ -9,6 +9,13 @@ Base = declarative_base()
 
 class ReportTable(Base):
     __tablename__ = "reports_table"
+    __table_args__ = (
+        Index(
+            "ix_reports_table_proj_upd",
+            "project_id",
+            "updated_at"
+        ),
+    )
 
     id = Column(UUIDType(binary=False), primary_key=True, index=True, default=uuid.uuid4)
     created_at = Column(TIMESTAMP, default=func.current_timestamp())

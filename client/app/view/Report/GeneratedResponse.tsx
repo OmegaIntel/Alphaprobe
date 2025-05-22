@@ -26,11 +26,11 @@ type Citation = {
 };
 
 export default function GeneratedResponse({
-  sections,
+  citations,
   response,
   researchType,
 }: {
-  sections: Citation[];
+  citations: Citation[];
   response: string; 
   researchType: string;
 }) {
@@ -56,27 +56,27 @@ export default function GeneratedResponse({
         const convertedHtml = await markdownToHtml(response);
         setHtmlContent(convertedHtml);
       }
-      // Aggregate citations from the sections.
+      // Aggregate citation from the citations.
       let aggregatedCitations: Citation[] = [];
-      if (sections && Array.isArray(sections)) {
-        sections.forEach((section) => {
-          if (section) {
+      if (citations && Array.isArray(citations)) {
+        citations.forEach((citation) => {
+          if (citation) {
             const formattedCitation: Citation = {
-              type: section.type,
+              type: citation.type,
               // Common fields
-              file_name: section.file_name || undefined,
-              url: section.url || undefined,
+              file_name: citation.file_name || undefined,
+              url: citation.url || undefined,
               // Knowledge base specific
-              chunk_text: section.chunk_text || undefined,
-              page: section.page || undefined,
+              chunk_text: citation.chunk_text || undefined,
+              page: citation.page || undefined,
               // Web specific
-              title: section.title || undefined,
-              snippet: section.snippet || undefined,
+              title: citation.title || undefined,
+              snippet: citation.snippet || undefined,
               // Excel specific
-              sheet: section.sheet || undefined,
-              row: section.row || undefined,
-              col: section.col || undefined,
-              value: section.value || undefined
+              sheet: citation.sheet || undefined,
+              row: citation.row || undefined,
+              col: citation.col || undefined,
+              value: citation.value || undefined
             };
             aggregatedCitations.push(formattedCitation);
           }
@@ -85,7 +85,7 @@ export default function GeneratedResponse({
       setCurrentCitations(aggregatedCitations);
     }
     processContent();
-  }, [response, sections]);
+  }, [response, citations]);
 
   return (
     <div className="container flex h-auto w-full shrink-0 gap-4 rounded-lg border border-solid border-gray-200 p-5">

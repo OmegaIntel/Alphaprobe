@@ -91,6 +91,6 @@ const markdownToHtml = async (markdown: string): Promise<string> => {
   }
 };
 
-const plainTextFields = ['task', 'sections', 'headers', 'sources', 'research_data'];
+const plainTextFields = ['task', 'sections', 'headers', 'sources', 'research_data', 'citations'];
 
 export default LogMessages;

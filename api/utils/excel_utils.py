@@ -11,7 +11,7 @@ from llama_index.core import VectorStoreIndex, StorageContext, load_index_from_s
 from llama_index.embeddings.openai import OpenAIEmbedding
 import openai
 from dotenv import load_dotenv, find_dotenv
-from utils.aws_utils import AwsUtlis
+from utils.aws_utils import AwsUtils
 
 env_path = find_dotenv()  # walks up until it finds .env
 loaded = load_dotenv(env_path)
@@ -23,7 +23,7 @@ FILE_BUCKET = os.getenv("BUCKET_NAME", "deep-research-docs")
 INDEX_BUCKET = os.getenv("EXCEL_BUCKET_NAME", "excel-file-indexes")
 
 # Create an S3 client for Excel utils operations (you can also share the client if you wish).
-s3_client = AwsUtlis.get_s3_client()
+s3_client = AwsUtils.get_s3_client()
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 openai.api_key = OPENAI_API_KEY

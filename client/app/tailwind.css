@@ -20,10 +20,10 @@
     scrollbar-width: none;  /* Firefox */
 }
 
-::-webkit-scrollbar {
-  width: 0; /* Remove scrollbar space */
-  background: transparent; /* Optional: just make scrollbar invisible */
-}
+/* ::-webkit-scrollbar {
+  width: 0; Remove scrollbar space
+  background: transparent; Optional: just make scrollbar invisible
+} */
 
 
 
@@ -80,6 +80,16 @@
         --chart-3: 30 80% 55%;
         --chart-4: 280 65% 60%;
         --chart-5: 340 75% 55%;
+    }
+    /* apply border color + bg/text defaults */
+    * { @apply border-border; }
+    body { @apply bg-background text-foreground; }
+
+    /* ← NEW: lock the viewport and prevent outer scrolling */
+    html, body, #root {
+      height: 100vh;
+      margin: 0;
+      /* overflow-y: auto;  */
     }
 }
 

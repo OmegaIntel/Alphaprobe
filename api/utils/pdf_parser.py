@@ -4,7 +4,7 @@ import os
 from llama_parse import LlamaParse  # For PDF parsing
 import boto3
 from dotenv import load_dotenv, find_dotenv
-from utils.aws_utils import AwsUtlis
+from utils.aws_utils import AwsUtils
 
 env_path = find_dotenv()  # walks up until it finds .env
 loaded = load_dotenv(env_path)
@@ -12,7 +12,7 @@ loaded = load_dotenv(env_path)
 BUCKET_NAME = os.getenv("OUTLINE_BUCKET_NAME", "outline-helper")
 LLAMA_CLOUD_API_KEY = os.getenv("LLAMA_CLOUD_API_KEY")
 
-s3_client = AwsUtlis.get_s3_client()
+s3_client = AwsUtils.get_s3_client()
 
 
 async def extract_pdf_from_s3(user_id: str, project_id: str) -> str:
