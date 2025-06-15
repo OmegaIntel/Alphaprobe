@@ -1,5 +1,5 @@
 # Use official Python slim image
-FROM python:3.11-slim
+FROM python:3.13.5-slim
 
 # Upgrade pip
 RUN pip install --upgrade pip
